@@ -1,22 +1,18 @@
-# Old School Essentials System for Foundry VTT (Unofficial)
-All the features you need to play Old School Essentials or B/X Games in Foundry VTT.
+# Worlds Without Number for Foundry VTT (Unofficial)
+All-- Most...
+
+Some the features you need to play Worlds Without Number in Foundry VTT. This was forked from v1.1.2 of the Old School Essentials project developed by U~man. I have managed to mangle his beautiful project into something that sort of works for Worlds Without Number. All praise should be directed toward him. Any bugs or mistakes are undoubtedly my own.
+
+Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludiques/foundryvtt-ose
 
 ## Installation
-You can find this Foundry VTT game system within Foundry VTT in the system browser. You could also download the latest archive in the package folder, or use the manifest link below.\
-https://gitlab.com/mesfoliesludiques/foundryvtt-ose/-/raw/master/src/system.json
+TBD
 
 ## License
-This Foundry VTT system requires Old-School Essentials Core Rules that you can find [here](https://necroticgnome.com).
+This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
-This third party product is not affiliated with or approved by Necrotic Gnome. \
-Old-School Essentials is a trademark of Necrotic Gnome.\
-The trademark and Old-School Essentials logo are used with permission of Necrotic Gnome, under license.
+This third party product is not affiliated with or approved by Sine Nomine Publishing. \
+Old-School Essentials is a trademark of Sine Nomine Publishing.\
 
 ## Artwork
 Weapon quality icons, and the Treasure chest are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
-
-## Contributions
-Any feedback is deeply appreciated. Please issue [tickets](https://gitlab.com/mesfoliesludiques/foundryvtt-ose/-/boards).\
-Feel free to grab a TO DO issue from the gitlab board. You can then do a merge request on the `development` branch.
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H21WMKA)
