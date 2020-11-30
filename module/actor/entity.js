@@ -415,17 +415,21 @@ export class WwnActor extends Actor {
     }
 
     let ascending = game.settings.get("wwn", "ascendingAC");
+    let statAttack = attData.item.data.score;
     if (ascending) {
       rollParts.push(data.thac0.bba.toString());
     }
+
+    // TODO: Add skill to attack roll.
+
     if (options.type == "missile") {
       rollParts.push(
-        data.scores.dex.mod.toString(),
+        data.scores[statAttack].mod.toString(),
         data.thac0.mod.missile.toString()
       );
     } else if (options.type == "melee") {
       rollParts.push(
-        data.scores.str.mod.toString(),
+        data.scores[statAttack].mod.toString(),
         data.thac0.mod.melee.toString()
       );
     }
@@ -433,9 +437,10 @@ export class WwnActor extends Actor {
       rollParts.push(attData.item.data.bonus);
     }
     let thac0 = data.thac0.value;
-    if (options.type == "melee") {
-      dmgParts.push(data.scores.str.mod);
-    }
+    
+    //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
+    dmgParts.push(data.scores[statAttack].mod);
+    
     const rollData = {
       actor: this.data,
       item: attData.item,

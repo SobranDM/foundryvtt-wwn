@@ -123,6 +123,18 @@
         </div>
         {{/if}}
         <div class="form-group">
+          <label>{{localize 'WWN.attribute'}}</label>
+          <div class="form-fields select-attribute selectAttribute">
+            <select name="data.score">
+              {{#select data.score}}
+              {{#each config.scores as |stat a|}}
+              <option value="{{a}}">{{stat}}</option>
+              {{/each}}
+              {{/select}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
           <label>{{localize 'WWN.spells.Save'}}</label>
           <div class="form-fields">
             <select name="data.save">
@@ -133,19 +145,6 @@
               {{/each}}
               {{/select}}
             </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Slow'}}</label>
-          <div class="form-fields">
-            <input
-              type="checkbox"
-              name="data.slow"
-              value="{{data.slow}}"
-              {{checked
-              data.slow}}
-              data-dtype="Number"
-              />
           </div>
         </div>
       </div>

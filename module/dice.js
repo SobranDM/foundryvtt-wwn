@@ -137,35 +137,20 @@ export class WwnDice {
       : 0;
     result.victim = data.roll.target ? data.roll.target.data.name : null;
 
-    if (game.settings.get("wwn", "ascendingAC")) {
-      if (roll.total < targetAac) {
-        result.details = game.i18n.format(
-          "WWN.messages.AttackAscendingFailure",
-          {
-            bonus: result.target,
-          }
-        );
-        return result;
+    if (roll.total < targetAac) {
+      result.details = game.i18n.format(
+        "WWN.messages.AttackAscendingFailure",
+        {
+          bonus: result.target,
+        }
+      );
+      return result;
       }
       result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
         result: roll.total,
       });
       result.isSuccess = true;
-    } else {
-      // B/X Historic THAC0 Calculation
-      if (result.target - roll.total > targetAc) {
-        result.details = game.i18n.format("WWN.messages.AttackFailure", {
-          bonus: result.target,
-        });
-        return result;
-      }
-      result.isSuccess = true;
-      let value = Math.clamped(result.target - roll.total, -3, 9);
-      result.details = game.i18n.format("WWN.messages.AttackSuccess", {
-        result: value,
-        bonus: result.target,
-      });
-    }
+
     return result;
   }
 

@@ -9,9 +9,9 @@
           "wage": ""
         },
         "hp": {
-          "hd": "1d8",
-          "value": 20,
-          "max": 20
+          "hd": "1d6",
+          "value": 4,
+          "max": 4
         },
         "ac": {
           "value": 0,
