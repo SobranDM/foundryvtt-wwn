@@ -1,15 +1,15 @@
 export const augmentTable = (table, html, data) => {
   // Treasure Toggle
   let head = html.find(".sheet-header");
-  const flag = table.object.getFlag("ose", "treasure");
+  const flag = table.object.getFlag("wwn", "treasure");
   const treasure = flag
     ? "<div class='toggle-treasure active'></div>"
     : "<div class='toggle-treasure'></div>";
   head.append(treasure);
 
   html.find(".toggle-treasure").click((ev) => {
-    let isTreasure = table.object.getFlag("ose", "treasure");
-    table.object.setFlag("ose", "treasure", !isTreasure);
+    let isTreasure = table.object.getFlag("wwn", "treasure");
+    table.object.setFlag("wwn", "treasure", !isTreasure);
   });
 
   // Treasure table formatting
@@ -21,7 +21,7 @@ export const augmentTable = (table, html, data) => {
     html.find(".result-weight").first().text("Chance");
 
     // Replace Roll button
-    const roll = `<button class="roll-treasure" type="button"><i class="fas fa-gem"></i> ${game.i18n.localize('OSE.table.treasure.roll')}</button>`;
+    const roll = `<button class="roll-treasure" type="button"><i class="fas fa-gem"></i> ${game.i18n.localize('WWN.table.treasure.roll')}</button>`;
     html.find(".sheet-footer .roll").replaceWith(roll);
   }
 
@@ -36,7 +36,7 @@ function drawTreasure(table, data) {
     return roll.total <= chance;
   };
   data.treasure = {};
-  if (table.getFlag('ose', 'treasure')) {
+  if (table.getFlag('wwn', 'treasure')) {
     table.results.forEach((r) => {
       if (percent(r.weight)) {
         const text = table._getResultChatText(r);
@@ -82,13 +82,13 @@ async function rollTreasure(table, options = {}) {
   }
 
   let html = await renderTemplate(
-    "systems/ose/templates/chat/roll-treasure.html",
+    "systems/wwn/templates/chat/roll-treasure.html",
     templateData
   );
 
   let chatData = {
     content: html,
-    // sound: "/systems/ose/assets/coins.mp3"
+    // sound: "/systems/wwn/assets/coins.mp3"
   }
 
   let rollMode = game.settings.get("core", "rollMode");

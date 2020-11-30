@@ -6,16 +6,16 @@
     {{#if user.isGM}}
     <div class="item-controls flexrow">
       <div class="item-control">
-        <button type="button" class="deal-xp" title="{{localize 'OSE.dialog.dealXP'}}"><i class="fas fa-hand-holding"></i></button>
+        <button type="button" class="deal-xp" title="{{localize 'WWN.dialog.dealXP'}}"><i class="fas fa-hand-holding"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="select-actors" title="{{localize 'OSE.dialog.selectActors'}}"><i class="fas fa-users"></i></button>
+        <button type="button" class="select-actors" title="{{localize 'WWN.dialog.selectActors'}}"><i class="fas fa-users"></i></button>
       </div>
     </div>
     {{/if}}
   </div>
   <ol class="actor-list">
-    {{#each data.entities as |e|}} {{#if e.data.flags.ose.party}}
+    {{#each data.entities as |e|}} {{#if e.data.flags.wwn.party}}
     <li class="actor flexrow" data-actor-id="{{e.id}}">
       <div class="field-img">
         <img src="{{e.img}}" />
@@ -28,11 +28,11 @@
           <div class="field-name flex2">
             <strong>{{e.name}}</strong>
           </div>
-          <div class="field-long" title="{{localize 'OSE.Health'}}">
+          <div class="field-long" title="{{localize 'WWN.Health'}}">
             <i class="fas fa-heart"></i>
             {{e.data.data.hp.value}}/{{e.data.data.hp.max}}
           </div>
-          <div class="field-short" title="{{localize 'OSE.ArmorClass'}}">
+          <div class="field-short" title="{{localize 'WWN.ArmorClass'}}">
             <i class="fas fa-shield-alt"></i>
             {{#if @root.settings.ascending}}<strong>{{e.data.data.aac.value}}</strong>
             <sub>{{e.data.data.aac.naked}}</sub>
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="flexrow field-row">
-          <div class="field-short" title="{{localize 'OSE.Thac0'}}">
+          <div class="field-short" title="{{localize 'WWN.Thac0'}}">
             <i class="fas fa-crosshairs"></i>
             {{#unless settings.ascendingAC}}
             {{e.data.data.thac0.value}}
@@ -50,23 +50,23 @@
             {{/unless}}
           </div>
           {{#if (eq e.data.type 'character')}}
-          <div class="field-short" title="{{localize 'OSE.Melee'}}">
+          <div class="field-short" title="{{localize 'WWN.Melee'}}">
             <i class="fas fa-fist-raised"></i>
             {{add e.data.data.scores.str.mod e.data.data.thac0.mod.melee}}
           </div>
-          <div class="field-short" title="{{localize 'OSE.Missile'}}">
+          <div class="field-short" title="{{localize 'WWN.Missile'}}">
             <i class="fas fa-bullseye"></i>
             {{add e.data.data.scores.dex.mod e.data.data.thac0.mod.missile}}
           </div>
           {{/if}}
           <div class="field-short flex2">
-            <i class="fas fa-shoe-prints" title="{{localize 'OSE.movement.base'}}"></i>
-            <span title="{{localize 'OSE.movement.encounter.long'}}">{{e.data.data.movement.encounter}}</span> <sub
-              title="{{localize 'OSE.movement.exploration.long'}}">{{e.data.data.movement.base}}</sub>
+            <i class="fas fa-shoe-prints" title="{{localize 'WWN.movement.base'}}"></i>
+            <span title="{{localize 'WWN.movement.encounter.long'}}">{{e.data.data.movement.encounter}}</span> <sub
+              title="{{localize 'WWN.movement.exploration.long'}}">{{e.data.data.movement.base}}</sub>
           </div>
           {{#if (eq e.data.type 'character')}}
           <div class="field-short flex2">
-            <i class="fas fa-weight-hanging" title="{{localize 'OSE.Encumbrance'}}"></i>
+            <i class="fas fa-weight-hanging" title="{{localize 'WWN.Encumbrance'}}"></i>
             {{roundWeight e.data.data.encumbrance.value}}k
           </div>
           {{/if}}
@@ -74,10 +74,10 @@
         <div class="flexrow field-row">
           <div class="field-longer flexrow">
             {{#each e.data.data.saves as |s i|}}
-            <span title="{{lookup @root.config.saves_long i}}">{{lookup @root.config.saves_short i}} {{s.value}}</span>
+            <span title="{{lookup @root.config.saves i}}">{{lookup @root.config.saves i}} {{s.value}}</span>
             {{/each}}
             {{#if (eq e.data.type 'character')}}<span><i class="fas fa-magic"
-                title="{{localize 'OSE.saves.magic.long'}}"></i>{{mod e.data.data.scores.wis.mod}}</span>{{/if}}
+                title="{{localize 'WWN.saves.magic.long'}}"></i>{{mod e.data.data.scores.wis.mod}}</span>{{/if}}
           </div>
         </div>
       </div>

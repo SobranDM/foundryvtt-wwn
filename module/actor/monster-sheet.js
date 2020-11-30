@@ -1,10 +1,10 @@
-import { OseActor } from "./entity.js";
-import { OseActorSheet } from "./actor-sheet.js";
+import { WwnActor } from "./entity.js";
+import { WwnActorSheet } from "./actor-sheet.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  */
-export class OseActorSheetMonster extends OseActorSheet {
+export class WwnActorSheetMonster extends WwnActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -17,8 +17,8 @@ export class OseActorSheetMonster extends OseActorSheet {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "sheet", "monster", "actor"],
-      template: "systems/ose/templates/actors/monster-sheet.html",
+      classes: ["wwn", "sheet", "monster", "actor"],
+      template: "systems/wwn/templates/actors/monster-sheet.html",
       width: 450,
       height: 560,
       resizable: true,
@@ -36,20 +36,20 @@ export class OseActorSheetMonster extends OseActorSheet {
    * Monster creation helpers
    */
   async generateSave() {
-    let choices = CONFIG.OSE.monster_saves;
+    let choices = CONFIG.WWN.monster_saves;
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
-        "/systems/ose/templates/actors/dialogs/monster-saves.html",
+        "/systems/wwn/templates/actors/dialogs/monster-saves.html",
         templateData
       );
     //Create Dialog window
     new Dialog({
-      title: game.i18n.localize("OSE.dialog.generateSaves"),
+      title: game.i18n.localize("WWN.dialog.generateSaves"),
       content: dlg,
       buttons: {
         ok: {
-          label: game.i18n.localize("OSE.Ok"),
+          label: game.i18n.localize("WWN.Ok"),
           icon: '<i class="fas fa-check"></i>',
           callback: (html) => {
             let hd = html.find('select[name="choice"]').val();
@@ -58,7 +58,7 @@ export class OseActorSheetMonster extends OseActorSheet {
         },
         cancel: {
           icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("OSE.Cancel"),
+          label: game.i18n.localize("WWN.Cancel"),
         },
       },
       default: "ok",
@@ -75,7 +75,7 @@ export class OseActorSheetMonster extends OseActorSheet {
     const data = super.getData();
 
     // Settings
-    data.config.morale = game.settings.get("ose", "morale");
+    data.config.morale = game.settings.get("wwn", "morale");
     data.data.details.treasure.link = TextEditor.enrichHTML(data.data.details.treasure.table);
     data.isNew = this.actor.isNew();
     return data;
@@ -104,20 +104,20 @@ export class OseActorSheetMonster extends OseActorSheet {
 
   /* -------------------------------------------- */
 
-  async _chooseItemType(choices = ["weapon", "armor", "shield", "gear"]) {
+  async _chowwnItemType(choices = ["weapon", "armor", "shield", "gear"]) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
-        "systems/ose/templates/items/entity-create.html",
+        "systems/wwn/templates/items/entity-create.html",
         templateData
       );
     //Create Dialog window
     return new Promise((resolve) => {
       new Dialog({
-        title: game.i18n.localize("OSE.dialog.createItem"),
+        title: game.i18n.localize("WWN.dialog.createItem"),
         content: dlg,
         buttons: {
           ok: {
-            label: game.i18n.localize("OSE.Ok"),
+            label: game.i18n.localize("WWN.Ok"),
             icon: '<i class="fas fa-check"></i>',
             callback: (html) => {
               resolve({
@@ -128,7 +128,7 @@ export class OseActorSheetMonster extends OseActorSheet {
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
-            label: game.i18n.localize("OSE.Cancel"),
+            label: game.i18n.localize("WWN.Cancel"),
           },
         },
         default: "ok",
@@ -224,7 +224,7 @@ export class OseActorSheetMonster extends OseActorSheet {
       // Getting back to main logic
       if (type == "choice") {
         const choices = header.dataset.choices.split(",");
-        this._chooseItemType(choices).then((dialogInput) => {
+        this._chowwnItemType(choices).then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
           this.actor.createOwnedItem(itemData, {});
         });
@@ -252,7 +252,7 @@ export class OseActorSheetMonster extends OseActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.getOwnedItem(li.data("itemId"));
       let currentColor = item.data.data.pattern;
-      let colors = Object.keys(CONFIG.OSE.colors);
+      let colors = Object.keys(CONFIG.WWN.colors);
       let index = colors.indexOf(currentColor);
       if (index + 1 == colors.length) {
         index = 0;

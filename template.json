@@ -5,7 +5,7 @@
       "common": {
         "retainer": {
           "enabled": false,
-          "loyalty": 0,
+          "morale": 0,
           "wage": ""
         },
         "hp": {
@@ -30,19 +30,16 @@
           }
         },
         "saves": {
-          "death": {
+          "evasion": {
             "value": 0
           },
-          "wand": {
+          "mental": {
             "value": 0
           },
-          "paralysis": {
+          "physical": {
             "value": 0
           },
-          "breath": {
-            "value": 0
-          },
-          "spell": {
+          "luck": {
             "value": 0
           }
         },
@@ -71,9 +68,6 @@
           },
           "5": {
             "max": 0
-          },
-          "6": {
-            "max": 0
           }
         }
       }
@@ -92,45 +86,100 @@
         "level": 1,
         "xp": {
           "share": 100,
-          "next": 2000,
+          "next": 3,
           "value": 0,
           "bonus": 0
+        },
+        "strain": {
+          "value": 0,
+          "max": 10
         }
       },
-      "exploration": {
-        "ld": 1,
-        "od": 2,
-        "sd": 1,
-        "ft": 1
+      "skills": {
+        "administer": {
+          "value": -1 },
+        "connect": {
+          "value": -1 },
+        "convince": {
+          "value": -1 },
+        "craft": {
+          "value": -1 },
+        "exert": {
+          "value": -1 },
+        "heal": {
+          "value": -1 },
+        "know": {
+          "value": -1 },
+        "lead": {
+          "value": -1 },
+        "magic": {
+          "value": -1 },
+        "notice": {
+          "value": -1 },
+        "perform": {
+          "value": -1 },
+        "pray": {
+          "value": -1 },
+        "punch": {
+          "value": -1 },
+        "ride": {
+          "value": -1 },
+        "sail": {
+          "value": -1 },
+        "shoot": {
+          "value": -1 },
+        "sneak": {
+          "value": -1 },
+        "stab": {
+          "value": -1 },
+        "survive": {
+          "value": -1 },
+        "trade": {
+          "value": -1 },
+        "work": {
+          "value": -1 }
       },
       "scores": {
         "str": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         },
         "int": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         },
         "wis": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         },
         "dex": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         },
         "con": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         },
         "cha": {
           "value": 0,
-          "bonus": 0
+          "bonus": 0,
+          "mod": 0
         }
       },
       "encumbrance": {
-        "max": 1600
+        "readied": {
+          "max": 5,
+          "value": 0
+        },
+        "stowed": {
+          "max": 10,
+          "value": 0
+        }
       },
       "languages": {
         "value": []
@@ -165,7 +214,9 @@
       },
       "treasure": false,
       "cost": 0,
-      "weight": 0
+      "weight": 0,
+      "readied": false,
+      "stowed": false
     },
     "weapon": {
       "range": {
@@ -201,7 +252,7 @@
     },
     "spell": {
       "lvl": 1,
-      "class": "Magic-User",
+      "class": "High Mage",
       "duration": "",
       "range": "",
       "roll": "",

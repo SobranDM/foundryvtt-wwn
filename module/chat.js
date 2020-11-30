@@ -11,13 +11,13 @@ export const addChatMessageContextOptions = function(html, options) {
   let canApply = li => canvas.tokens.controlled.length && li.find(".dice-roll").length;
   options.push(
     {
-      name: game.i18n.localize("OSE.messages.applyDamage"),
+      name: game.i18n.localize("WWN.messages.applyDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
       condition: canApply,
       callback: li => applyChatCardDamage(li, 1)
     },
     {
-      name: game.i18n.localize("OSE.messages.applyHealing"),
+      name: game.i18n.localize("WWN.messages.applyHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
       condition: canApply,
       callback: li => applyChatCardDamage(li, -1)

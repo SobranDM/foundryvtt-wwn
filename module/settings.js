@@ -1,36 +1,36 @@
 export const registerSettings = function () {
 
-  game.settings.register("ose", "initiative", {
-    name: game.i18n.localize("OSE.Setting.Initiative"),
-    hint: game.i18n.localize("OSE.Setting.InitiativeHint"),
+  game.settings.register("wwn", "initiative", {
+    name: game.i18n.localize("WWN.Setting.Initiative"),
+    hint: game.i18n.localize("WWN.Setting.InitiativeHint"),
     default: "group",
     scope: "world",
     type: String,
     config: true,
     choices: {
-      individual: "OSE.Setting.InitiativeIndividual",
-      group: "OSE.Setting.InitiativeGroup",
+      individual: "WWN.Setting.InitiativeIndividual",
+      group: "WWN.Setting.InitiativeGroup",
     },
     onChange: _ => window.location.reload()
   });
 
-  game.settings.register("ose", "rerollInitiative", {
-    name: game.i18n.localize("OSE.Setting.RerollInitiative"),
-    hint: game.i18n.localize("OSE.Setting.RerollInitiativeHint"),
+  game.settings.register("wwn", "rerollInitiative", {
+    name: game.i18n.localize("WWN.Setting.RerollInitiative"),
+    hint: game.i18n.localize("WWN.Setting.RerollInitiativeHint"),
     default: "reset",
     scope: "world",
     type: String,
     config: true,
     choices: {
-      keep: "OSE.Setting.InitiativeKeep",
-      reset: "OSE.Setting.InitiativeReset",
-      reroll: "OSE.Setting.InitiativeReroll",
+      keep: "WWN.Setting.InitiativeKeep",
+      reset: "WWN.Setting.InitiativeReset",
+      reroll: "WWN.Setting.InitiativeReroll",
     }
   });
 
-  game.settings.register("ose", "ascendingAC", {
-    name: game.i18n.localize("OSE.Setting.AscendingAC"),
-    hint: game.i18n.localize("OSE.Setting.AscendingACHint"),
+  game.settings.register("wwn", "ascendingAC", {
+    name: game.i18n.localize("WWN.Setting.AscendingAC"),
+    hint: game.i18n.localize("WWN.Setting.AscendingACHint"),
     default: false,
     scope: "world",
     type: Boolean,
@@ -38,34 +38,34 @@ export const registerSettings = function () {
     onChange: _ => window.location.reload()
   });
 
-  game.settings.register("ose", "morale", {
-    name: game.i18n.localize("OSE.Setting.Morale"),
-    hint: game.i18n.localize("OSE.Setting.MoraleHint"),
+  game.settings.register("wwn", "morale", {
+    name: game.i18n.localize("WWN.Setting.Morale"),
+    hint: game.i18n.localize("WWN.Setting.MoraleHint"),
     default: false,
     scope: "world",
     type: Boolean,
     config: true,
   });
 
-  game.settings.register("ose", "encumbranceOption", {
-    name: game.i18n.localize("OSE.Setting.Encumbrance"),
-    hint: game.i18n.localize("OSE.Setting.EncumbranceHint"),
+  game.settings.register("wwn", "encumbranceOption", {
+    name: game.i18n.localize("WWN.Setting.Encumbrance"),
+    hint: game.i18n.localize("WWN.Setting.EncumbranceHint"),
     default: "detailed",
     scope: "world",
     type: String,
     config: true,
     choices: {
-      disabled: "OSE.Setting.EncumbranceDisabled",
-      basic: "OSE.Setting.EncumbranceBasic",
-      detailed: "OSE.Setting.EncumbranceDetailed",
-      complete: "OSE.Setting.EncumbranceComplete",
+      disabled: "WWN.Setting.EncumbranceDisabled",
+      basic: "WWN.Setting.EncumbranceBasic",
+      detailed: "WWN.Setting.EncumbranceDetailed",
+      complete: "WWN.Setting.EncumbranceComplete",
     },
     onChange: _ => window.location.reload()
   });
 
-  game.settings.register("ose", "significantTreasure", {
-    name: game.i18n.localize("OSE.Setting.SignificantTreasure"),
-    hint: game.i18n.localize("OSE.Setting.SignificantTreasureHint"),
+  game.settings.register("wwn", "significantTreasure", {
+    name: game.i18n.localize("WWN.Setting.SignificantTreasure"),
+    hint: game.i18n.localize("WWN.Setting.SignificantTreasureHint"),
     default: 800,
     scope: "world",
     type: Number,

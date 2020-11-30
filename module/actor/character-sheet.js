@@ -1,12 +1,12 @@
-import { OseActor } from "./entity.js";
-import { OseActorSheet } from "./actor-sheet.js";
-import { OseCharacterModifiers } from "../dialog/character-modifiers.js";
-import { OseCharacterCreator } from "../dialog/character-creation.js";
+import { WwnActor } from "./entity.js";
+import { WwnActorSheet } from "./actor-sheet.js";
+import { WwnCharacterModifiers } from "../dialog/character-modifiers.js";
+import { WwnCharacterCreator } from "../dialog/character-creation.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  */
-export class OseActorSheetCharacter extends OseActorSheet {
+export class WwnActorSheetCharacter extends WwnActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -19,8 +19,8 @@ export class OseActorSheetCharacter extends OseActorSheet {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "sheet", "actor", "character"],
-      template: "systems/ose/templates/actors/character-sheet.html",
+      classes: ["wwn", "sheet", "actor", "character"],
+      template: "systems/wwn/templates/actors/character-sheet.html",
       width: 450,
       height: 530,
       resizable: true,
@@ -35,7 +35,7 @@ export class OseActorSheetCharacter extends OseActorSheet {
   }
 
   generateScores() {
-    new OseCharacterCreator(this.actor, {
+    new WwnCharacterCreator(this.actor, {
       top: this.position.top + 40,
       left: this.position.left + (this.position.width - 400) / 2,
     }).render(true);
@@ -48,21 +48,21 @@ export class OseActorSheetCharacter extends OseActorSheet {
   getData() {
     const data = super.getData();
 
-    data.config.ascendingAC = game.settings.get("ose", "ascendingAC");
-    data.config.initiative = game.settings.get("ose", "initiative") != "group";
-    data.config.encumbrance = game.settings.get("ose", "encumbranceOption");
+    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
+    data.config.initiative = game.settings.get("wwn", "initiative") != "group";
+    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
 
     data.isNew = this.actor.isNew();
     return data;
   }
 
 
-  async _chooseLang() {
-    let choices = CONFIG.OSE.languages;
+  async _chowwnLang() {
+    let choices = CONFIG.WWN.languages;
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
-        "/systems/ose/templates/actors/dialogs/lang-create.html",
+        "/systems/wwn/templates/actors/dialogs/lang-create.html",
         templateData
       );
     //Create Dialog window
@@ -72,7 +72,7 @@ export class OseActorSheetCharacter extends OseActorSheet {
         content: dlg,
         buttons: {
           ok: {
-            label: game.i18n.localize("OSE.Ok"),
+            label: game.i18n.localize("WWN.Ok"),
             icon: '<i class="fas fa-check"></i>',
             callback: (html) => {
               resolve({
@@ -82,7 +82,7 @@ export class OseActorSheetCharacter extends OseActorSheet {
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
-            label: game.i18n.localize("OSE.Cancel"),
+            label: game.i18n.localize("WWN.Cancel"),
           },
         },
         default: "ok",
@@ -93,8 +93,8 @@ export class OseActorSheetCharacter extends OseActorSheet {
   _pushLang(table) {
     const data = this.actor.data.data;
     let update = duplicate(data[table]);
-    this._chooseLang().then((dialogInput) => {
-      const name = CONFIG.OSE.languages[dialogInput.choice];
+    this._chowwnLang().then((dialogInput) => {
+      const name = CONFIG.WWN.languages[dialogInput.choice];
       if (update.value) {
         update.value.push(name);
       } else {
@@ -125,7 +125,7 @@ export class OseActorSheetCharacter extends OseActorSheet {
 
   _onShowModifiers(event) {
     event.preventDefault();
-    new OseCharacterModifiers(this.actor, {
+    new WwnCharacterModifiers(this.actor, {
       top: this.position.top + 40,
       left: this.position.left + (this.position.width - 400) / 2,
     }).render(true);
@@ -152,11 +152,11 @@ export class OseActorSheetCharacter extends OseActorSheet {
       }
     });
 
-    html.find(".exploration .attribute-name a").click((ev) => {
+    html.find(".skills .attribute-name a").click((ev) => {
       let actorObject = this.actor;
       let element = event.currentTarget;
-      let expl = element.parentElement.parentElement.dataset.exploration;
-      actorObject.rollExploration(expl, { event: event });
+      let expl = element.parentElement.parentElement.dataset.skills;
+      actorObject.rollSkills(expl, { event: event });
     });
 
     html.find(".inventory .item-titles .item-caret").click((ev) => {

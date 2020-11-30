@@ -2,7 +2,7 @@
     <section class="flexrow">
         <ul class="attributes flexrow">
             <li class="attribute health">
-                <h4 class="attribute-name box-title" title="{{localize 'OSE.Health'}}">{{ localize "OSE.HealthShort" }}
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.Health'}}">{{ localize "WWN.HealthShort" }}
                     <a class="hp-roll"><i class="fas fa-dice"></i></a></h4>
                 <div class="attribute-value flexrow">
                     <input name="data.hp.value" type="text" value="{{data.hp.value}}" data-dtype="Number"
@@ -12,8 +12,8 @@
                 </div>
             </li>
             <li class="attribute hit-dice">
-                <h4 class="attribute-name box-title" title="{{localize 'OSE.HitDice'}}">
-                    <a>{{ localize "OSE.HitDiceShort" }}</a>
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.HitDice'}}">
+                    <a>{{ localize "WWN.HitDiceShort" }}</a>
                 </h4>
                 <div class="attribute-value">
                     <input name="data.hp.hd" type="text" value="{{data.hp.hd}}" data-dtype="String" />
@@ -21,15 +21,15 @@
             </li>
             <li class="attribute">
                 {{#if config.ascendingAC}}
-                <h4 class="attribute-name box-title" title="{{ localize 'OSE.ArmorClass' }}">
-                    {{ localize "OSE.AscArmorClassShort" }}</h4>
+                <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
+                    {{ localize "WWN.AscArmorClassShort" }}</h4>
                 <div class="attribute-value">
                     <input name="data.aac.value" type="text" value="{{data.aac.value}}" data-dtype="Number"
                         placeholder="10" data-dtype="Number" />
                 </div>
                 {{else}}
-                <h4 class="attribute-name box-title" title="{{ localize 'OSE.ArmorClass' }}">
-                    {{ localize "OSE.ArmorClassShort" }}</h4>
+                <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
+                    {{ localize "WWN.ArmorClassShort" }}</h4>
                 <div class="attribute-value">
                     <input name="data.ac.value" type="text" value="{{data.ac.value}}" data-dtype="Number"
                         placeholder="9" data-dtype="Number" />
@@ -38,14 +38,14 @@
             </li>
             <li class="attribute attack">
                 {{#if config.ascendingAC}}
-                <h4 class="attribute-name box-title" title="{{localize 'OSE.AB'}}"><a>{{ localize "OSE.ABShort" }}</a>
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}"><a>{{ localize "WWN.ABShort" }}</a>
                 </h4>
                 <div class="attribute-value">
                     <input name="data.thac0.bba" type="text" value="{{data.thac0.bba}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
                 {{else}}
-                <h4 class="attribute-name box-title" title="{{localize 'OSE.Thac0'}}"><a>{{ localize "OSE.Thac0" }}</a>
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.Thac0'}}"><a>{{ localize "WWN.Thac0" }}</a>
                 </h4>
                 <div class="attribute-value">
                     <input name="data.thac0.value" type="text" value="{{data.thac0.value}}" placeholder="0"
@@ -55,8 +55,8 @@
             </li>
             {{#if data.retainer.enabled}}
             <li class="attribute">
-                <h4 class="attribute-name box-title" title="{{ localize 'OSE.Loyalty' }}">
-                    {{ localize "OSE.LoyaltyShort" }}
+                <h4 class="attribute-name box-title" title="{{ localize 'WWN.Loyalty' }}">
+                    {{ localize "WWN.LoyaltyShort" }}
                 </h4>
                 <div class="attribute-value">
                     <input name="data.retainer.loyalty" type="text" value="{{data.retainer.loyalty}}" placeholder="0"
@@ -65,8 +65,8 @@
             </li>
             {{/if}}
             <li class="attribute">
-                <h4 class="attribute-name box-title" title="{{localize 'OSE.movement.base'}}">
-                    {{ localize "OSE.movement.short" }}
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.movement.base'}}">
+                    {{ localize "WWN.movement.short" }}
                 </h4>
                 <div class="attribute-value">
                     <input name="data.movement.base" type="text" value="{{data.movement.base}}" placeholder="0"
@@ -80,12 +80,12 @@
         <div class="flex3 panel inventory abilities">
             <div>
                 <li class="item-titles flexrow panel-title">
-                    <div class="item-name">{{localize 'OSE.category.abilities'}} & {{localize 'OSE.category.equipment'}}</div>
+                    <div class="item-name">{{localize 'WWN.category.abilities'}} & {{localize 'WWN.category.equipment'}}</div>
                     <div class="item-controls">
                         {{#if owner}}
-                        <a class="item-control item-reset" title='{{localize "OSE.items.resetAttacks"}}'><i
+                        <a class="item-control item-reset" title='{{localize "WWN.items.resetAttacks"}}'><i
                                 class="fas fa-sync"></i></a>
-                        <a class="item-control item-create" title='{{localize "OSE.Add"}}' data-type="choice"
+                        <a class="item-control item-create" title='{{localize "WWN.Add"}}' data-type="choice"
                             data-choices="weapon,ability,armor,item"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </div>
@@ -94,7 +94,7 @@
                     {{#each abilities as |item|}}
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item._id}}">
-                            <div class="item-pattern" title="{{localize 'OSE.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
+                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
                             <div class="item-name {{#if item.data.roll}}item-rollable{{/if}} flexrow">
                                 <div class="item-image" style="background-image: url({{item.img}})"></div>
                                 <h4 title="{{item.name}}">
@@ -103,11 +103,11 @@
                             </div>
                             <div class="item-controls">
                                 {{#if ../owner}}
-                                <a class="item-control item-show" title='{{localize "OSE.Show"}}'><i
+                                <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i
                                         class="fas fa-eye"></i></a>
-                                <a class="item-control item-edit" title='{{localize "OSE.Edit"}}'><i
+                                <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i
                                         class="fas fa-edit"></i></a>
-                                <a class="item-control item-delete" title='{{localize "OSE.Delete"}}'><i
+                                <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i
                                         class="fas fa-trash"></i></a>
                                 {{/if}}
                             </div>
@@ -119,7 +119,7 @@
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item._id}}">
                             {{#if (eq item.type 'weapon')}}
-                            <div class="item-pattern" title="{{localize 'OSE.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
+                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
                             {{/if}}
                             <div class="item-name {{#if (eq item.type 'weapon')}}item-rollable{{/if}}  flexrow">
                                 <div class="item-image" style="background-image: url({{item.img}})"></div>
@@ -130,17 +130,17 @@
                             {{#if (eq item.type 'weapon')}}
                             <div class="field-long counter flexrow">
                                 <input type="text" value="{{item.data.counter.value}}" data-dtype="Number"
-                                    placeholder="0" data-field="value" title="{{localize 'OSE.items.roundAttacks'}}">
+                                    placeholder="0" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
                                 /
                                 <input type="text" value="{{item.data.counter.max}}" data-field="max"
                                     data-dtype="Number" placeholder="0"
-                                    title="{{localize 'OSE.items.roundAttacksMax'}}"></div>
+                                    title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}
-                                <a class="item-control item-edit" title='{{localize "OSE.Edit"}}'><i
+                                <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i
                                         class="fas fa-edit"></i></a>
-                                <a class="item-control item-delete" title='{{localize "OSE.Delete"}}'><i
+                                <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i
                                         class="fas fa-trash"></i></a>
                                 {{/if}}
                             </div>
@@ -156,46 +156,39 @@
             <ul class="attributes">
                 <li class="attacks-description">
                     {{#unless isNew}}
-                    <label>{{ localize "OSE.movement.details" }}</label>
+                    <label>{{ localize "WWN.movement.details" }}</label>
                     <input name="data.movement.value" type="text" value="{{data.movement.value}}" data-dtype="String" />
                     {{else}}
-                    <button data-action="generate-saves">{{localize "OSE.dialog.generateSaves"}}</button>
+                    <button data-action="generate-saves">{{localize "WWN.dialog.generateSaves"}}</button>
                     {{/unless}}
                 </li>
-                <li class="attribute saving-throw" data-save="death">
+                <li class="attribute saving-throw" data-save="evasion">
                     <h4 class="attribute-name box-title">
-                        <a>{{ localize "OSE.saves.death.long" }}</a></h4>
+                        <a>{{ localize "WWN.saves.evasion" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.death.value" type="text" value="{{data.saves.death.value}}"
+                        <input name="data.saves.evasion.value" type="text" value="{{data.saves.evasion.value}}"
                             placeholder="0" data-dtype="Number" />
                 </li>
-                <li class="attribute saving-throw" data-save="wand">
+                <li class="attribute saving-throw" data-save="mental">
                     <h4 class="attribute-name box-title">
-                        <a>{{ localize "OSE.saves.wand.long" }}</a></h4>
+                        <a>{{ localize "WWN.saves.mental" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.wand.value" type="text" value="{{data.saves.wand.value}}"
+                        <input name="data.saves.mental.value" type="text" value="{{data.saves.mental.value}}"
                             placeholder="0" data-dtype="Number" />
                 </li>
-                <li class="attribute saving-throw" data-save="paralysis">
+                <li class="attribute saving-throw" data-save="physical">
                     <h4 class="attribute-name box-title">
-                        <a>{{ localize "OSE.saves.paralysis.long" }}</a></h4>
+                        <a>{{ localize "WWN.saves.physical" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.paralysis.value" type="text" value="{{data.saves.paralysis.value}}"
+                        <input name="data.saves.paralysis.value" type="text" value="{{data.saves.physical.value}}"
                             placeholder="0" data-dtype="Number" />
                 </li>
-                <li class="attribute saving-throw" data-save="breath">
+                <li class="attribute saving-throw" data-save="luck">
                     <h4 class="attribute-name box-title">
-                        <a>{{ localize "OSE.saves.breath.long" }}</a></h4>
+                        <a>{{ localize "WWN.saves.luck" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.breath.value" type="text" value="{{data.saves.breath.value}}"
+                        <input name="data.saves.luck.value" type="text" value="{{data.saves.luck.value}}"
                             placeholder="0" data-dtype="Number" />
-                </li>
-                <li class="attribute saving-throw" data-save="spell">
-                    <h4 class="attribute-name box-title">
-                        <a>{{ localize "OSE.saves.spell.long" }}</a></h4>
-                    <div class="attribute-value">
-                        <input name="data.saves.spell.value" type="text" value="{{data.saves.spell.value}}"
-                            placeholder="0" />
                 </li>
             </ul>
         </div>

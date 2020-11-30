@@ -1,4 +1,4 @@
-export class OseDice {
+export class WwnDice {
   static digestResult(data, roll) {
     let result = {
       isSuccess: false,
@@ -29,6 +29,7 @@ export class OseDice {
       } else {
         result.isFailure = true;
       }
+    } else if (data.roll.type == "skill") {
     } else if (data.roll.type == "table") {
       // Reaction
       let table = data.roll.table;
@@ -51,7 +52,7 @@ export class OseDice {
     speaker = null,
     form = null,
   } = {}) {
-    const template = "systems/ose/templates/chat/roll-result.html";
+    const template = "systems/wwn/templates/chat/roll-result.html";
 
     let chatData = {
       user: game.user._id,
@@ -88,11 +89,11 @@ export class OseDice {
       data.roll.blindroll = true;
     }
 
-    templateData.result = OseDice.digestResult(data, roll);
+    templateData.result = WwnDice.digestResult(data, roll);
 
     return new Promise((resolve) => {
       roll.render().then((r) => {
-        templateData.rollOSE = r;
+        templateData.rollWWN = r;
         renderTemplate(template, templateData).then((content) => {
           chatData.content = content;
           // Dice So Nice
@@ -136,31 +137,31 @@ export class OseDice {
       : 0;
     result.victim = data.roll.target ? data.roll.target.data.name : null;
 
-    if (game.settings.get("ose", "ascendingAC")) {
+    if (game.settings.get("wwn", "ascendingAC")) {
       if (roll.total < targetAac) {
         result.details = game.i18n.format(
-          "OSE.messages.AttackAscendingFailure",
+          "WWN.messages.AttackAscendingFailure",
           {
             bonus: result.target,
           }
         );
         return result;
       }
-      result.details = game.i18n.format("OSE.messages.AttackAscendingSuccess", {
+      result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
         result: roll.total,
       });
       result.isSuccess = true;
     } else {
       // B/X Historic THAC0 Calculation
       if (result.target - roll.total > targetAc) {
-        result.details = game.i18n.format("OSE.messages.AttackFailure", {
+        result.details = game.i18n.format("WWN.messages.AttackFailure", {
           bonus: result.target,
         });
         return result;
       }
       result.isSuccess = true;
       let value = Math.clamped(result.target - roll.total, -3, 9);
-      result.details = game.i18n.format("OSE.messages.AttackSuccess", {
+      result.details = game.i18n.format("WWN.messages.AttackSuccess", {
         result: value,
         bonus: result.target,
       });
@@ -176,7 +177,7 @@ export class OseDice {
     speaker = null,
     form = null,
   } = {}) {
-    const template = "systems/ose/templates/chat/roll-attack.html";
+    const template = "systems/wwn/templates/chat/roll-attack.html";
 
     let chatData = {
       user: game.user._id,
@@ -187,7 +188,7 @@ export class OseDice {
       title: title,
       flavor: flavor,
       data: data,
-      config: CONFIG.OSE,
+      config: CONFIG.WWN,
     };
 
     // Optionally include a situational bonus
@@ -213,11 +214,11 @@ export class OseDice {
       data.roll.blindroll = true;
     }
 
-    templateData.result = OseDice.digestAttackResult(data, roll);
+    templateData.result = WwnDice.digestAttackResult(data, roll);
 
     return new Promise((resolve) => {
       roll.render().then((r) => {
-        templateData.rollOSE = r;
+        templateData.rollWWN = r;
         dmgRoll.render().then((dr) => {
           templateData.rollDamage = dr;
           renderTemplate(template, templateData).then((content) => {
@@ -272,7 +273,7 @@ export class OseDice {
     title = null,
   } = {}) {
     let rolled = false;
-    const template = "systems/ose/templates/chat/roll-dialog.html";
+    const template = "systems/wwn/templates/chat/roll-dialog.html";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -287,32 +288,21 @@ export class OseDice {
       flavor: flavor,
       speaker: speaker,
     };
-    if (skipDialog) { return OseDice.sendRoll(rollData); }
+    if (skipDialog) { return WwnDice.sendRoll(rollData); }
 
     let buttons = {
       ok: {
-        label: game.i18n.localize("OSE.Roll"),
+        label: game.i18n.localize("WWN.Roll"),
         icon: '<i class="fas fa-dice-d20"></i>',
         callback: (html) => {
           rolled = true;
           rollData.form = html[0].querySelector("form");
-          roll = OseDice.sendRoll(rollData);
-        },
-      },
-      magic: {
-        label: game.i18n.localize("OSE.saves.magic.short"),
-        icon: '<i class="fas fa-magic"></i>',
-        callback: (html) => {
-          rolled = true;
-          rollData.form = html[0].querySelector("form");
-          rollData.data.roll.target = parseInt(rollData.data.roll.target) + parseInt(rollData.data.roll.magic);
-          rollData.title += ` ${game.i18n.localize("OSE.saves.magic.short")} (${rollData.data.roll.magic})`;
-          roll = OseDice.sendRoll(rollData);
+          roll = WwnDice.sendRoll(rollData);
         },
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("OSE.Cancel"),
+        label: game.i18n.localize("WWN.Cancel"),
         callback: (html) => { },
       },
     };
@@ -327,7 +317,7 @@ export class OseDice {
         content: html,
         buttons: buttons,
         default: "ok",
-        close: () => {
+        clwwn: () => {
           resolve(rolled ? roll : false);
         },
       }).render(true);
@@ -343,7 +333,7 @@ export class OseDice {
     title = null,
   } = {}) {
     let rolled = false;
-    const template = "systems/ose/templates/chat/roll-dialog.html";
+    const template = "systems/wwn/templates/chat/roll-dialog.html";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -360,25 +350,25 @@ export class OseDice {
     };
     if (skipDialog) {
       return ["melee", "missile", "attack"].includes(data.roll.type)
-        ? OseDice.sendAttackRoll(rollData)
-        : OseDice.sendRoll(rollData);
+        ? WwnDice.sendAttackRoll(rollData)
+        : WwnDice.sendRoll(rollData);
     }
 
     let buttons = {
       ok: {
-        label: game.i18n.localize("OSE.Roll"),
+        label: game.i18n.localize("WWN.Roll"),
         icon: '<i class="fas fa-dice-d20"></i>',
         callback: (html) => {
           rolled = true;
           rollData.form = html[0].querySelector("form");
           roll = ["melee", "missile", "attack"].includes(data.roll.type)
-            ? OseDice.sendAttackRoll(rollData)
-            : OseDice.sendRoll(rollData);
+            ? WwnDice.sendAttackRoll(rollData)
+            : WwnDice.sendRoll(rollData);
         },
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("OSE.Cancel"),
+        label: game.i18n.localize("WWN.Cancel"),
         callback: (html) => { },
       },
     };
@@ -393,7 +383,7 @@ export class OseDice {
         content: html,
         buttons: buttons,
         default: "ok",
-        close: () => {
+        clwwn: () => {
           resolve(rolled ? roll : false);
         },
       }).render(true);

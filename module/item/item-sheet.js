@@ -1,7 +1,7 @@
 /**
  * Extend the basic ItemSheet with some very simple modifications
  */
-export class OseItemSheet extends ItemSheet {
+export class WwnItemSheet extends ItemSheet {
   constructor(...args) {
     super(...args);
 
@@ -17,7 +17,7 @@ export class OseItemSheet extends ItemSheet {
    */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "sheet", "item"],
+      classes: ["wwn", "sheet", "item"],
       width: 520,
       height: 390,
       resizable: false,
@@ -35,7 +35,7 @@ export class OseItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/ose/templates/items/";
+    const path = "systems/wwn/templates/items/";
     return `${path}/${this.item.data.type}-sheet.html`;
   }
 
@@ -45,7 +45,7 @@ export class OseItemSheet extends ItemSheet {
    */
   getData() {
     const data = super.getData();
-    data.config = CONFIG.OSE;
+    data.config = CONFIG.WWN;
     return data;
   }
 

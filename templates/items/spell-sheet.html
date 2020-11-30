@@ -11,36 +11,36 @@
     <div class="flexrow">
       <div class="stats narrow">
         <div class="form-group">
-          <label>{{localize 'OSE.spells.Level'}}</label>
+          <label>{{localize 'WWN.spells.Level'}}</label>
           <div class="form-fields">
             <input type="text" name="data.lvl" value="{{data.lvl}}" data-dtype="Number" />
           </div>
         </div>
         <div class="form-group block-input">
-          <label>{{localize 'OSE.spells.Class'}}</label>
+          <label>{{localize 'WWN.spells.Class'}}</label>
           <div class="form-fields">
             <input type="text" name="data.class" value="{{data.class}}" data-dtype="String" />
           </div>
         </div>
         <div class="form-group block-input">
-          <label>{{localize 'OSE.spells.Duration'}}</label>
+          <label>{{localize 'WWN.spells.Duration'}}</label>
           <div class="form-fields">
             <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" />
           </div>
         </div>
         <div class="form-group block-input">
-          <label>{{localize 'OSE.spells.Range'}}</label>
+          <label>{{localize 'WWN.spells.Range'}}</label>
           <div class="form-fields">
             <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" />
           </div>
         </div>
         <div class="form-group">
-          <label>{{localize 'OSE.spells.Save'}}</label>
+          <label>{{localize 'WWN.spells.Save'}}</label>
           <div class="form-fields">
             <select name="data.save">
               {{#select data.save}}
               <option value=""></option>
-              {{#each config.saves_short as |save a|}}
+              {{#each config.saves as |save a|}}
               <option value="{{a}}">{{save}}</option>
               {{/each}}
               {{/select}}
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="form-group block-input">
-          <label>{{localize 'OSE.items.Roll'}}</label>
+          <label>{{localize 'WWN.items.Roll'}}</label>
           <div class="form-fields">
             <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
           </div>

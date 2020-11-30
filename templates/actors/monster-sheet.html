@@ -1,37 +1,37 @@
 <form class="{{cssClass}}" autocomplete="off">
   {{! Sheet Header }}
   <header class="sheet-header flexrow">
-    {{> "systems/ose/templates/actors/partials/monster-header.html"}}
+    {{> "systems/wwn/templates/actors/partials/monster-header.html"}}
   </header>
 
   {{! Sheet Tab Navigation }}
   <nav class="sheet-tabs tabs flexrow" data-group="primary">
     <a class="item" data-tab="attributes">
-      {{localize "OSE.category.attributes"}}
+      {{localize "WWN.category.attributes"}}
     </a>
     {{#if data.spells.enabled}}
     <a class="item" data-tab="spells">
-      {{localize "OSE.category.spells"}}
+      {{localize "WWN.category.spells"}}
     </a>
     {{/if}}
     <a class="item" data-tab="notes">
-      {{localize "OSE.category.notes"}}
+      {{localize "WWN.category.notes"}}
     </a>
   </nav>
   {{! Sheet Body }}
   <section class="sheet-body">
     {{! Attributes Tab }}
     <div class="tab" data-group="primary" data-tab="attributes">
-      {{> "systems/ose/templates/actors/partials/monster-attributes-tab.html"}}
+      {{> "systems/wwn/templates/actors/partials/monster-attributes-tab.html"}}
     </div>
     {{#if data.spells.enabled}}
     <div class="tab" data-group="primary" data-tab="spells">
-      {{> "systems/ose/templates/actors/partials/character-spells-tab.html"}}
+      {{> "systems/wwn/templates/actors/partials/character-spells-tab.html"}}
     </div>
     {{/if}}
     <div class="tab" data-group="primary" data-tab="notes">
       <div class="inventory">
-        <div class="item-titles">{{localize "OSE.category.notes"}}</div>
+        <div class="item-titles">{{localize "WWN.category.notes"}}</div>
         <div class="resizable-editor" data-editor-size="320">
           {{editor content=data.details.biography target="data.details.biography"
           button=true owner=owner editable=editable}}

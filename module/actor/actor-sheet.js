@@ -1,7 +1,7 @@
-import { OseActor } from "./entity.js";
-import { OseEntityTweaks } from "../dialog/entity-tweaks.js";
+import { WwnActor } from "./entity.js";
+import { WwnEntityTweaks } from "../dialog/entity-tweaks.js";
 
-export class OseActorSheet extends ActorSheet {
+export class WwnActorSheet extends ActorSheet {
   constructor(...args) {
     super(...args);
   }
@@ -10,10 +10,10 @@ export class OseActorSheet extends ActorSheet {
   getData() {
     const data = super.getData();
 
-    data.config = CONFIG.OSE;
+    data.config = CONFIG.WWN;
     // Settings
-    data.config.ascendingAC = game.settings.get("ose", "ascendingAC");
-    data.config.encumbrance = game.settings.get("ose", "encumbranceOption");
+    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
+    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
 
     // Prepare owned items
     this._prepareItems(data);
@@ -234,7 +234,7 @@ export class OseActorSheet extends ActorSheet {
 
   _onConfigureActor(event) {
     event.preventDefault();
-    new OseEntityTweaks(this.actor, {
+    new WwnEntityTweaks(this.actor, {
       top: this.position.top + 40,
       left: this.position.left + (this.position.width - 400) / 2,
     }).render(true);
@@ -252,7 +252,7 @@ export class OseActorSheet extends ActorSheet {
     if (this.options.editable && canConfigure) {
       buttons = [
         {
-          label: game.i18n.localize("OSE.dialog.tweaks"),
+          label: game.i18n.localize("WWN.dialog.tweaks"),
           class: "configure-actor",
           icon: "fas fa-code",
           onclick: (ev) => this._onConfigureActor(ev),

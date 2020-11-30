@@ -1,9 +1,9 @@
-import { OseDice } from "../dice.js";
+import { WwnDice } from "../dice.js";
 
 /**
  * Override and extend the basic :class:`Item` implementation
  */
-export class OseItem extends Item {
+export class WwnItem extends Item {
   /* -------------------------------------------- */
   /*	Data Preparation														*/
   /* -------------------------------------------- */
@@ -15,19 +15,19 @@ export class OseItem extends Item {
     let img = CONST.DEFAULT_TOKEN;
     switch (this.data.type) {
       case "spell":
-        img = "/systems/ose/assets/default/spell.png";
+        img = "/systems/wwn/assets/default/spell.png";
         break;
       case "ability":
-        img = "/systems/ose/assets/default/ability.png";
+        img = "/systems/wwn/assets/default/ability.png";
         break;
       case "armor":
-        img = "/systems/ose/assets/default/armor.png";
+        img = "/systems/wwn/assets/default/armor.png";
         break;
       case "weapon":
-        img = "/systems/ose/assets/default/weapon.png";
+        img = "/systems/wwn/assets/default/weapon.png";
         break;
       case "item":
-        img = "/systems/ose/assets/default/item.png";
+        img = "/systems/wwn/assets/default/item.png";
         break;
     }
     if (!this.data.img) this.data.img = img;
@@ -132,14 +132,14 @@ export class OseItem extends Item {
     };
 
     // Roll and return
-    return OseDice.Roll({
+    return WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: newData,
       skipDialog: true,
       speaker: ChatMessage.getSpeaker({ actor: this }),
-      flavor: game.i18n.format("OSE.roll.formula", { label: label }),
-      title: game.i18n.format("OSE.roll.formula", { label: label }),
+      flavor: game.i18n.format("WWN.roll.formula", { label: label }),
+      title: game.i18n.format("WWN.roll.formula", { label: label }),
     });
   }
 
@@ -170,7 +170,7 @@ export class OseItem extends Item {
         data.tags.forEach((t) => {
           wTags += formatTag(t.value);
         });
-        wTags += formatTag(CONFIG.OSE.saves_long[data.save], "fa-skull");
+        wTags += formatTag(CONFIG.WWN.saves[data.save], "fa-skull");
         if (data.missile) {
           wTags += formatTag(
             data.range.short + "/" + data.range.medium + "/" + data.range.long,
@@ -179,7 +179,7 @@ export class OseItem extends Item {
         }
         return wTags;
       case "armor":
-        return `${formatTag(CONFIG.OSE.armor[data.type], "fa-tshirt")}`;
+        return `${formatTag(CONFIG.WWN.armor[data.type], "fa-tshirt")}`;
       case "item":
         return "";
       case "spell":
@@ -187,13 +187,13 @@ export class OseItem extends Item {
           data.range
         )}${formatTag(data.duration)}${formatTag(data.roll)}`;
         if (data.save) {
-          sTags += formatTag(CONFIG.OSE.saves_long[data.save], "fa-skull");
+          sTags += formatTag(CONFIG.WWN.saves[data.save], "fa-skull");
         }
         return sTags;
       case "ability":
         let roll = "";
         roll += data.roll ? data.roll : "";
-        roll += data.rollTarget ? CONFIG.OSE.roll_type[data.rollType] : "";
+        roll += data.rollTarget ? CONFIG.WWN.roll_type[data.rollType] : "";
         roll += data.rollTarget ? data.rollTarget : "";
         return `${formatTag(data.requirements)}${formatTag(roll)}`;
     }
@@ -222,13 +222,13 @@ export class OseItem extends Item {
         }
         // Auto fill checkboxes
         switch (val) {
-          case CONFIG.OSE.tags.melee:
+          case CONFIG.WWN.tags.melee:
             newData.melee = true;
             break;
-          case CONFIG.OSE.tags.slow:
+          case CONFIG.WWN.tags.slow:
             newData.slow = true;
             break;
-          case CONFIG.OSE.tags.missile:
+          case CONFIG.WWN.tags.missile:
             newData.missile = true;
             break;
         }
@@ -288,11 +288,11 @@ export class OseItem extends Item {
       hasDamage: this.hasDamage,
       isSpell: this.data.type === "spell",
       hasSave: this.hasSave,
-      config: CONFIG.OSE,
+      config: CONFIG.WWN,
     };
 
     // Render the chat card template
-    const template = `systems/ose/templates/chat/item-card.html`;
+    const template = `systems/wwn/templates/chat/item-card.html`;
     const html = await renderTemplate(template, templateData);
 
     // Basic chat message data

@@ -1,11 +1,11 @@
-import { OsePartyXP } from "./party-xp.js";
+import { WwnPartyXP } from "./party-xp.js";
 
-export class OsePartySheet extends FormApplication {
+export class WwnPartySheet extends FormApplication {
   
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["ose", "dialog", "party-sheet"],
-      template: "systems/ose/templates/apps/party-sheet.html",
+      classes: ["wwn", "dialog", "party-sheet"],
+      template: "systems/wwn/templates/apps/party-sheet.html",
       width: 280,
       height: 400,
       resizable: true,
@@ -19,7 +19,7 @@ export class OsePartySheet extends FormApplication {
    * @type {String}
    */
   get title() {
-    return game.i18n.localize("OSE.dialog.partysheet");
+    return game.i18n.localize("WWN.dialog.partysheet");
   }
 
   /* -------------------------------------------- */
@@ -30,11 +30,11 @@ export class OsePartySheet extends FormApplication {
    */
   getData() {
     const settings = {
-      ascending: game.settings.get('ose', 'ascendingAC')
+      ascending: game.settings.get('wwn', 'ascendingAC')
     };
     let data = {
       data: this.object,
-      config: CONFIG.OSE,
+      config: CONFIG.WWN,
       user: game.user,
       settings: settings
     };
@@ -55,11 +55,11 @@ export class OsePartySheet extends FormApplication {
   /* -------------------------------------------- */
 
   async _dealXP(ev) {
-    new OsePartyXP(this.object, {}).render(true);
+    new WwnPartyXP(this.object, {}).render(true);
   }
 
   async _selectActors(ev) {
-    const template = "/systems/ose/templates/apps/party-select.html";
+    const template = "/systems/wwn/templates/apps/party-select.html";
     const templateData = {
       actors: this.object.entities
     }
@@ -70,12 +70,12 @@ export class OsePartySheet extends FormApplication {
       buttons: {
         set: {
           icon: '<i class="fas fa-save"></i>',
-          label: game.i18n.localize("OSE.Update"),
+          label: game.i18n.localize("WWN.Update"),
           callback: (html) => {
             let checks = html.find("input[data-action='select-actor']");
             checks.each(async (_, c) => {
               let key = c.getAttribute('name');
-              await this.object.entities[key].setFlag('ose', 'party', c.checked);
+              await this.object.entities[key].setFlag('wwn', 'party', c.checked);
             });
           },
         },
