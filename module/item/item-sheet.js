@@ -18,8 +18,8 @@ export class WwnItemSheet extends ItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "item"],
-      width: 520,
-      height: 390,
+      width: 550,
+      height: 430,
       resizable: false,
       tabs: [
         {

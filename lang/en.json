@@ -301,6 +301,7 @@
   "WWN.skills.desc.trade": "Buy and sell at a profit, identify the worth of goods or treasures, deal with merchants and traders, find black-market goods and services, and know laws regarding smuggling and contraband.",
   "WWN.skills.work": "Work",
   "WWN.skills.desc.work": "This skill is a catch-all for any profession that might not otherwise merit its own skill, such as a painter, lawyer, farmer, or herdsman. The precise skill it represents will vary with the PC’s background.",
+  "WWN.skill": "Skill",
 
   "WWN.messages.GetExperience": "{name} gained {value} experience points!",
   "WWN.messages.AttackSuccess": "<b>Hits AC {result}!</b> ({bonus})",
