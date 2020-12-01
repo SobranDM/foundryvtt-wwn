@@ -750,7 +750,6 @@
     margin-bottom: 5px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
-    background-size: ;
     text-align: center;
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
@@ -992,7 +991,7 @@
   .wwn.sheet.item .sheet-header .profile-img {
     border: none;
     flex: 0 0 84px;
-    height: 84px;
+    height: 95px;
   }
   .wwn.sheet.item .sheet-header .tag-list {
     margin: 0;
