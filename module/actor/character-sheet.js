@@ -48,9 +48,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   getData() {
     const data = super.getData();
 
-    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
-    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
 
     data.isNew = this.actor.isNew();
     return data;

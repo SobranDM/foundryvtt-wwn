@@ -550,14 +550,26 @@ export class WwnActor extends Actor {
     const data = this.data.data;
     let ecumbTotal = data.encumbrance.readied.value * 2 + data.encumbrance.stowed.value;
     let ecumbLimit = data.encumbrance.stowed.max * 2;
-    if (ecumbTotal <= ecumbLimit) {
-      data.movement.base = 120;
-    } else if (ecumbTotal <= ecumbLimit + 4) {
-      data.movement.base = 90;
-    } else if (ecumbTotal <= ecumbLimit + 8) {
-      data.movement.base = 60;
-    } else {
-      data.movement.base = 0;
+    if (game.settings.get("wwn", "movementRate") == "movebx") {
+      if (ecumbTotal <= ecumbLimit) {
+        data.movement.base = 120;
+      } else if (ecumbTotal <= ecumbLimit + 4) {
+        data.movement.base = 90;
+      } else if (ecumbTotal <= ecumbLimit + 8) {
+        data.movement.base = 60;
+      } else {
+        data.movement.base = 0;
+      }
+    } else if (game.settings.get("wwn", "movementRate") == "movewwn") {
+      if (ecumbTotal <= ecumbLimit) {
+        data.movement.base = 90;
+      } else if (ecumbTotal <= ecumbLimit + 4) {
+        data.movement.base = 60;
+      } else if (ecumbTotal <= ecumbLimit + 8) {
+        data.movement.base = 45;
+      } else {
+        data.movement.base = 0;
+      }
     }
   }
 

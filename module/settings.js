@@ -28,48 +28,26 @@ export const registerSettings = function () {
     }
   });
 
-  game.settings.register("wwn", "ascendingAC", {
-    name: game.i18n.localize("WWN.Setting.AscendingAC"),
-    hint: game.i18n.localize("WWN.Setting.AscendingACHint"),
-    default: false,
+  game.settings.register("wwn", "movementRate", {
+    name: game.i18n.localize("WWN.Setting.MovementRate"),
+    hint: game.i18n.localize("WWN.Setting.MovementRateHint"),
+    default: "movewwn",
     scope: "world",
-    type: Boolean,
+    type: String,
     config: true,
+    choices: {
+      movewwn: "WWN.Setting.MoveWWN",
+      movebx: "WWN.Setting.MoveBX",
+    },
     onChange: _ => window.location.reload()
   });
 
   game.settings.register("wwn", "morale", {
     name: game.i18n.localize("WWN.Setting.Morale"),
     hint: game.i18n.localize("WWN.Setting.MoraleHint"),
-    default: false,
+    default: true,
     scope: "world",
     type: Boolean,
     config: true,
-  });
-
-  game.settings.register("wwn", "encumbranceOption", {
-    name: game.i18n.localize("WWN.Setting.Encumbrance"),
-    hint: game.i18n.localize("WWN.Setting.EncumbranceHint"),
-    default: "detailed",
-    scope: "world",
-    type: String,
-    config: true,
-    choices: {
-      disabled: "WWN.Setting.EncumbranceDisabled",
-      basic: "WWN.Setting.EncumbranceBasic",
-      detailed: "WWN.Setting.EncumbranceDetailed",
-      complete: "WWN.Setting.EncumbranceComplete",
-    },
-    onChange: _ => window.location.reload()
-  });
-
-  game.settings.register("wwn", "significantTreasure", {
-    name: game.i18n.localize("WWN.Setting.SignificantTreasure"),
-    hint: game.i18n.localize("WWN.Setting.SignificantTreasureHint"),
-    default: 800,
-    scope: "world",
-    type: Number,
-    config: true,
-    onChange: _ => window.location.reload()
   });
 };

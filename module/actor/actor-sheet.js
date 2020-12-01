@@ -12,8 +12,6 @@ export class WwnActorSheet extends ActorSheet {
 
     data.config = CONFIG.WWN;
     // Settings
-    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
-    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
 
     // Prepare owned items
     this._prepareItems(data);
