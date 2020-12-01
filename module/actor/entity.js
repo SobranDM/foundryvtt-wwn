@@ -519,7 +519,19 @@ export class WwnActor extends Actor {
       if (item.type == "item" && !item.data.treasure) {
         hasItems = true;
       }
-      if (item.type == "item" && item.data.readied) {
+      if (item.type == "weapon" && item.data.equipped) {
+        totalReadied += item.data.weight;
+      }
+      if (item.type == "weapon" && item.data.stowed) {
+        totalStowed += item.data.weight;
+      }
+      if (item.type == "armor" && item.data.equipped) {
+        totalReadied += item.data.weight;
+      }
+      if (item.type == "armor" && item.data.stowed) {
+        totalStowed += item.data.weight;
+      }
+      if (item.type == "item" && item.data.equipped) {
         totalReadied += item.data.quantity.value * item.data.weight;
       }
       if (item.type == "item" && item.data.stowed) {

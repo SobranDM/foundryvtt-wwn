@@ -58,6 +58,9 @@ export class WwnItem extends Item {
     if (data.hasOwnProperty("equipped")) {
       props.push(data.equipped ? "Equipped" : "Not Equipped");
     }
+    if (data.hasOwnProperty("stowed")) {
+      props.push(data.stowed ? "Stowed" : "Not Stowed");
+    }
 
     // Filter properties and return
     data.properties = props.filter((p) => !!p);
