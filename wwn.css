@@ -132,15 +132,18 @@
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
   }
-  .wwn.sheet.actor .sheet-body .attributes .attribute.ability-score {
+  .wwn.sheet.actor .sheet-body .attributes .attribute.art-score {
     height: 40px;
   }
-  .wwn.sheet.actor .sheet-body .attributes .attribute.ability-score .attribute-value {
+  .wwn.sheet.actor .sheet-body .attributes .attribute.art-score .attribute-value {
     line-height: 36px;
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
     text-align: center;
     padding: 4px;
+  }
+  .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-mod {
+    border-left: 1px solid #7a7971;
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value .sep {
     flex: 0 0 5px;
@@ -369,6 +372,11 @@
     margin-bottom: 10px;
     display: flex;
     width: 10px;
+  }
+  .wwn.sheet.actor .flexrow .unspentPoints {
+    display: flex;
+    border: 1px solid #000000;
+    box-shadow: 0 0 2px #7a7971;
   }
   .wwn.sheet.actor .sheet-body .editor {
     height: 300px;
@@ -769,12 +777,27 @@
     text-align: center;
     font-size: 13px;
     color: whitesmoke;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
+    flex: 60px;
+  }
+  .form-group .form-fields #unspentPoints {
+    padding: 0px;
+    text-align: center;
+    font-size: 13px;
+    color: whitesmoke;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    background: url("/systems/wwn/assets/back.png");
+    text-align: center;
+    flex: 60px;
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
     position: relative;

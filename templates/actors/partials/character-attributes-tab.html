@@ -9,56 +9,80 @@
             {{/unless}}
         </div>
         <ul class="attributes">
-            <li class="attribute ability-score" data-score="str">
+            <li class="attribute art-score" data-score="str">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.str.long' }}">
                     <a>{{ localize "WWN.scores.str.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.str.value" type="text" value="{{data.scores.str.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.str.mod" type="text" value="{{data.scores.str.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
-            <li class="attribute ability-score" data-score="dex">
+            <li class="attribute art-score" data-score="dex">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.dex.long' }}">
                     <a>{{ localize "WWN.scores.dex.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.dex.value" type="text" value="{{data.scores.dex.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.dex.mod" type="text" value="{{data.scores.dex.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
-            <li class="attribute ability-score" data-score="con">
+            <li class="attribute art-score" data-score="con">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.con.long' }}">
                     <a>{{ localize "WWN.scores.con.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.con.value" type="text" value="{{data.scores.con.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.con.mod" type="text" value="{{data.scores.con.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
-            <li class="attribute ability-score" data-score="int">
+            <li class="attribute art-score" data-score="int">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.int.long' }}">
                     <a>{{ localize "WWN.scores.int.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.int.value" type="text" value="{{data.scores.int.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.int.mod" type="text" value="{{data.scores.int.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
-            <li class="attribute ability-score" data-score="wis">
+            <li class="attribute art-score" data-score="wis">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.wis.long' }}">
                     <a>{{ localize "WWN.scores.wis.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.wis.value" type="text" value="{{data.scores.wis.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.wis.mod" type="text" value="{{data.scores.wis.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
-            <li class="attribute ability-score" data-score="cha">
+            <li class="attribute art-score" data-score="cha">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.cha.long' }}">
                     <a>{{ localize "WWN.scores.cha.short" }}</a></h4>
                 <div class="attribute-value">
                     <input name="data.scores.cha.value" type="text" value="{{data.scores.cha.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.cha.mod" type="text" value="{{data.scores.cha.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
             {{#if data.retainer.enabled}}
-            <li class="attribute ability-score" data-stat="lr">
+            <li class="attribute art-score" data-stat="lr">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.Loyalty' }}">
                     <a>{{ localize "WWN.LoyaltyShort" }}</a>
                 </h4>

@@ -20,38 +20,20 @@
                 </div>
             </li>
             <li class="attribute">
-                {{#if config.ascendingAC}}
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
                     {{ localize "WWN.AscArmorClassShort" }}</h4>
                 <div class="attribute-value">
                     <input name="data.aac.value" type="text" value="{{data.aac.value}}" data-dtype="Number"
                         placeholder="10" data-dtype="Number" />
                 </div>
-                {{else}}
-                <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
-                    {{ localize "WWN.ArmorClassShort" }}</h4>
-                <div class="attribute-value">
-                    <input name="data.ac.value" type="text" value="{{data.ac.value}}" data-dtype="Number"
-                        placeholder="9" data-dtype="Number" />
-                </div>
-                {{/if}}
             </li>
             <li class="attribute attack">
-                {{#if config.ascendingAC}}
                 <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}"><a>{{ localize "WWN.ABShort" }}</a>
                 </h4>
                 <div class="attribute-value">
                     <input name="data.thac0.bba" type="text" value="{{data.thac0.bba}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
-                {{else}}
-                <h4 class="attribute-name box-title" title="{{localize 'WWN.Thac0'}}"><a>{{ localize "WWN.Thac0" }}</a>
-                </h4>
-                <div class="attribute-value">
-                    <input name="data.thac0.value" type="text" value="{{data.thac0.value}}" placeholder="0"
-                        data-dtype="Number" />
-                </div>
-                {{/if}}
             </li>
             {{#if data.retainer.enabled}}
             <li class="attribute">
@@ -86,7 +68,7 @@
                         <a class="item-control item-reset" title='{{localize "WWN.items.resetAttacks"}}'><i
                                 class="fas fa-sync"></i></a>
                         <a class="item-control item-create" title='{{localize "WWN.Add"}}' data-type="choice"
-                            data-choices="weapon,ability,armor,item"><i class="fas fa-plus"></i></a>
+                            data-choices="weapon,art,armor,item"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </div>
                 </li>

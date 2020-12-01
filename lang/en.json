@@ -50,7 +50,7 @@
 
   "WWN.details.name": "Name",
   "WWN.details.class": "Class",
-  "WWN.details.title": "Title",
+  "WWN.details.background": "Background",
   "WWN.details.alignment": "Alignment",
   "WWN.details.level": "Level",
   "WWN.details.experience.base": "Experience",
@@ -151,7 +151,7 @@
   "WWN.category.saves": "Saves",
   "WWN.category.attributes": "Attributes",
   "WWN.category.inventory": "Inventory",
-  "WWN.category.abilities": "Abilities",
+  "WWN.category.skills": "Skills",
   "WWN.category.spells": "Spells",
   "WWN.category.notes": "Notes",
   "WWN.category.languages": "Languages",
@@ -263,6 +263,13 @@
   "WWN.spells.Level": "Level",
   "WWN.spells.Save": "Save",
   "WWN.spells.ResetSlots": "Reset Spell slots",
+  "WWN.spells.Arts": "Art",
+  "WWN.spells.ArtSource": "Source",
+  "WWN.spells.ArtSourceHint": "Source of Art",
+  "WWN.spells.Time": "Time",
+  "WWN.spells.TimeHint": "Length of time effort is committed",
+  "WWN.spells.EffortCommitted": "Effort",
+  "WWN.spells.EffortCommittedHint": "Effort Committed",
 
   "WWN.abilities.Requirements": "Requirements",
 
@@ -309,6 +316,8 @@
   "WWN.skills.work": "Work",
   "WWN.skills.desc.work": "This skill is a catch-all for any profession that might not otherwise merit its own skill, such as a painter, lawyer, farmer, or herdsman. The precise skill it represents will vary with the PC’s background.",
   "WWN.skill": "Skill",
+  "WWN.skills.unspentPoints": "Unspent Skill Points",
+  "WWN.skills.unspentPointsHint": "Unspent Skill Points",
 
   "WWN.messages.GetExperience": "{name} gained {value} experience points!",
   "WWN.messages.AttackSuccess": "<b>Hits AC {result}!</b> ({bonus})",

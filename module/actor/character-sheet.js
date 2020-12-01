@@ -21,8 +21,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 450,
-      height: 530,
+      width: 470,
+      height: 460,
       resizable: true,
       tabs: [
         {
@@ -137,7 +137,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find(".ability-score .attribute-name a").click((ev) => {
+    html.find(".art-score .attribute-name a").click((ev) => {
       let actorObject = this.actor;
       let element = event.currentTarget;
       let score = element.parentElement.parentElement.dataset.score;
