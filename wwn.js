@@ -64,7 +64,7 @@ Hooks.once("init", async function () {
  */
 Hooks.once("setup", function () {
   // Localize CONFIG objects once up-front
-  const toLocalize = ["saves", "scores", "armor", "colors", "tags", "skills", "attackSkills"];
+  const toLocalize = ["saves", "scores", "armor", "colors", "tags", "skills", "attackSkills", "encumbLocation"];
   for (let o of toLocalize) {
     CONFIG.WWN[o] = Object.entries(CONFIG.WWN[o]).reduce((obj, e) => {
       obj[e[0]] = game.i18n.localize(e[1]);

@@ -57,7 +57,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   }
 
 
-  async _chowwnLang() {
+  async _chooseLang() {
     let choices = CONFIG.WWN.languages;
 
     let templateData = { choices: choices },
@@ -93,7 +93,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   _pushLang(table) {
     const data = this.actor.data.data;
     let update = duplicate(data[table]);
-    this._chowwnLang().then((dialogInput) => {
+    this._chooseLang().then((dialogInput) => {
       const name = CONFIG.WWN.languages[dialogInput.choice];
       if (update.value) {
         update.value.push(name);
@@ -235,6 +235,17 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         _id: li.data("itemId"),
         data: {
           equipped: !item.data.data.equipped,
+        },
+      });
+    });
+
+    html.find(".stow-toggle").click(async (ev) => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.getOwnedItem(li.data("itemId"));
+      await this.actor.updateOwnedItem({
+        _id: li.data("itemId"),
+        data: {
+          stowed: !item.data.data.stowed,
         },
       });
     });

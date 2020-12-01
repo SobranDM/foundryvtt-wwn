@@ -215,8 +215,9 @@
       "treasure": false,
       "cost": 0,
       "weight": 0,
-      "readied": false,
+      "equipped": false,
       "stowed": false
+      }
     },
     "weapon": {
       "range": {
@@ -238,7 +239,6 @@
       "missile": false,
       "melee": true,
       "cost": 0,
-      "equipped": false,
       "weight": 0,
       "counter": {
         "value": 0,
@@ -251,7 +251,6 @@
       "aac": 10,
       "type": "light",
       "cost": 0,
-      "equipped": false,
       "weight": 0
     },
     "spell": {
