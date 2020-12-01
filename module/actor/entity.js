@@ -414,27 +414,26 @@ export class WwnActor extends Actor {
       dmgParts.push(attData.item.data.damage);
     }
 
-    let ascending = game.settings.get("wwn", "ascendingAC");
     let statAttack = attData.item.data.score;
     let skillAttack = attData.item.data.skill;
-    if (ascending) {
-      rollParts.push(data.thac0.bba.toString());
-    }
+    let unskilledAttack = -2;
 
-    // TODO: Add skill to attack roll.
+    rollParts.push(
+      data.thac0.bba.toString(),
+      data.scores[statAttack].mod.toString()
+      );
 
-    if (options.type == "missile") {
+    // TODO: Add range selector in dialogue if missile attack.
+    /* if (options.type == "missile") {
       rollParts.push(
-        data.thac0.mod.missile.toString(),
-        data.scores[statAttack].mod.toString(),
-        data.skills[skillAttack].value.toString()
+        
       );
-    } else if (options.type == "melee") {
-      rollParts.push(
-        data.thac0.mod.melee.toString(),
-        data.scores[statAttack].mod.toString(),
-        data.skills[skillAttack].value.toString()
-      );
+    } */
+
+    if (data.skills[skillAttack].value == -1) {
+      rollParts.push( unskilledAttack.toString() );
+    } else {
+      rollParts.push( data.skills[skillAttack].value.toString()) ;
     }
     if (attData.item && attData.item.data.bonus) {
       rollParts.push(attData.item.data.bonus);
