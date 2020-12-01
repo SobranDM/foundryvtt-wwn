@@ -42,6 +42,16 @@ export const registerSettings = function () {
     onChange: _ => window.location.reload()
   });
 
+  game.settings.register("wwn", "showMovement", {
+    name: game.i18n.localize("WWN.Setting.showMovement"),
+    hint: game.i18n.localize("WWN.Setting.showMovementHint"),
+    default: true,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
+
   game.settings.register("wwn", "morale", {
     name: game.i18n.localize("WWN.Setting.Morale"),
     hint: game.i18n.localize("WWN.Setting.MoraleHint"),

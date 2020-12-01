@@ -176,6 +176,8 @@
   "WWN.Setting.MoveWWN": "Worlds Without Number",
   "WWN.Setting.MoveBX": "B/X Movement",
   "WWN.Setting.MovementRateHint": "WWN or B/X movement rate.",
+  "WWN.Setting.showMovement": "Other Movement Rates",
+  "WWN.Setting.showMovementHint": "Show Turn and Overland movement rates.",
   "WWN.Setting.SignificantTreasure": "Significant Treasure Weight",
   "WWN.Setting.SignificantTreasureHint": "Weight at which treasure will reduce the movement, only useful for basic encumbrance",
 

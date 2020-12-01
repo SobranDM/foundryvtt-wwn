@@ -49,6 +49,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const data = super.getData();
 
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
+    data.config.showMovement = game.settings.get("wwn", "showMovement");
 
     data.isNew = this.actor.isNew();
     return data;
