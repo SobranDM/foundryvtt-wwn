@@ -1,3 +1,21 @@
+<section>
+  <div class="flexrow">
+    <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
+    <div class="readied">
+      <input name="data.encumbrance.readied.value" type="text" value="{{data.encumbrance.readied.value}}"
+        data-dtype="Number" disabled />/
+      <input name="data.encumbrance.readied.max" type="text" value="{{data.encumbrance.readied.max}}"
+        data-dtype="Number" disabled />
+    </div>
+    <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
+    <div class=readied>
+      <input name="data.encumbrance.stowed.value" type="text" value="{{data.encumbrance.stowed.value}}"
+        data-dtype="Number" disabled />/
+      <input name="data.encumbrance.stowed.max" type="text" value="{{data.encumbrance.stowed.max}}" data-dtype="Number"
+        disabled />
+    </div>
+  </div>
+</section>
 <section class="inventory resizable" data-base-size="310">
   <div>
     <li class="item-titles flexrow">
@@ -190,19 +208,5 @@
       {{/if}}
       {{/each}}
     </ol>
-  </div>
-</section>
-<section>
-  {{#with data.encumbrance}}
-  <div class="encumbrance {{#if encumbered}}encumbered{{/if}}">
-    <span class="encumbrance-bar" style="width:{{pct}}%"></span>
-    <span class="encumbrance-label">{{value}} / {{max}}</span>
-    <i class="encumbrance-breakpoint encumbrance-25 arrow-up"></i>
-    <i class="encumbrance-breakpoint encumbrance-25 arrow-down"></i>
-    <i class="encumbrance-breakpoint encumbrance-50 arrow-up"></i>
-    <i class="encumbrance-breakpoint encumbrance-50 arrow-down"></i>
-    <i class="encumbrance-breakpoint encumbrance-75 arrow-up"></i>
-    <i class="encumbrance-breakpoint encumbrance-75 arrow-down"></i>
-    {{/with}}
   </div>
 </section>

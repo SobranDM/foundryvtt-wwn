@@ -346,6 +346,27 @@
   .wwn.sheet.actor .sheet-body .inventory.spells .item-controls {
     flex-basis: 45px;
   }
+  .wwn.sheet.actor .flexrow .readied-header {
+    color: whitesmoke;
+    padding: 2px;
+    padding-top: 5px;
+    margin: 10px;
+    margin-right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    background: url("/systems/wwn/assets/back.png");
+    text-align: center;
+  }
+  .wwn.sheet.actor .flexrow .readied {
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #000000;
+    box-shadow: 0 0 2px #7a7971;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 10px;
+  }
   .wwn.sheet.actor .sheet-body .editor {
     height: 300px;
     padding: 4px;

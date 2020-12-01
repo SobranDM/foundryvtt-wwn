@@ -210,6 +210,8 @@
   "WWN.items.typeTag": "Type a comma separated list of tag e.g 'Melee,Missile (5’–10’ / 11’–20’ / 21’–30’)' and press ENTER",
   "WWN.items.enterTag": "Tags",
   "WWN.items.pattern": "Attack pattern marker",
+  "WWN.items.readied": "Readied",
+  "WWN.items.stowed": "Stowed",
 
   "WWN.items.Range": "Range",
   "WWN.items.Range.desc": "Ranged Weapon",
