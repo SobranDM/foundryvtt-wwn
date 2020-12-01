@@ -229,6 +229,10 @@
       "description": "",
       "damage": "1d6",
       "bonus": 0,
+      "shock": {
+        "damage": "",
+        "ac": ""
+      },
       "tags": [],
       "slow": false,
       "missile": false,

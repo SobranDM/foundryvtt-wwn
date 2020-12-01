@@ -197,6 +197,8 @@
   "WWN.items.RollTarget": "Target",
   "WWN.items.RollType": "Type",
   "WWN.items.Damage": "Damage",
+  "WWN.items.Shock": "Shock",
+  "WWN.items.Shock.Damage": "Shock damage",
   "WWN.items.ArmorAC": "AC",
   "WWN.items.ArmorAAC": "AC",
   "WWN.items.Bonus": "Bonus",
@@ -311,6 +313,7 @@
   "WWN.messages.InflictsDamage": "Inflicts damage!",
   "WWN.messages.applyDamage": "Apply Damage",
   "WWN.messages.applyHealing": "Apply Healing",
+  "WWN.messages.applyShock": "<b>Inflicts {shockDam} Shock damage to {shockAC} or less!</b>",
 
   "WWN.colors.green": "Green",
   "WWN.colors.red": "Red",
