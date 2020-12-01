@@ -416,6 +416,7 @@ export class WwnActor extends Actor {
 
     let ascending = game.settings.get("wwn", "ascendingAC");
     let statAttack = attData.item.data.score;
+    let skillAttack = attData.item.data.skill;
     if (ascending) {
       rollParts.push(data.thac0.bba.toString());
     }
@@ -424,13 +425,15 @@ export class WwnActor extends Actor {
 
     if (options.type == "missile") {
       rollParts.push(
+        data.thac0.mod.missile.toString(),
         data.scores[statAttack].mod.toString(),
-        data.thac0.mod.missile.toString()
+        data.skills[skillAttack].value.toString()
       );
     } else if (options.type == "melee") {
       rollParts.push(
+        data.thac0.mod.melee.toString(),
         data.scores[statAttack].mod.toString(),
-        data.thac0.mod.melee.toString()
+        data.skills[skillAttack].value.toString()
       );
     }
     if (attData.item && attData.item.data.bonus) {
