@@ -1,3 +1,37 @@
+<section class="attributes">
+  <div class="form-group">
+    <div class="form-group">
+      <label>{{localize 'WWN.spells.EffortCommitted'}}</label>
+    </div>
+    <div class="form-group">
+      {{#if data.classes.effort1.name}}
+      <div class="form-fields readied">
+        <label>{{data.classes.effort1.name}}</label>
+        <input name="data.classes.effort1.value" type="text" value="{{data.classes.effort1.value}}" data-dtype="Number" disabled />/
+        <input name="data.classes.effort1.max" type="text" value="{{data.classes.effort1.max}}" data-dtype="Number" disabled />
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      {{#if data.classes.effort2.name}}
+      <div class="form-fields readied">
+        <label>{{data.classes.effort2.name}}</label>
+        <input name="data.classes.effort2.value" type="text" value="{{data.classes.effort2.value}}" data-dtype="Number" disabled />/
+        <input name="data.classes.effort2.max" type="text" value="{{data.classes.effort2.max}}" data-dtype="Number" disabled />
+      </div>
+      {{/if}}
+    </div>
+    <div class="form-group">
+      {{#if data.classes.effort3.name}}
+      <div class="form-fields readied">
+        <label>{{data.classes.effort3.name}}</label>
+        <input name="data.classes.effort3.value" type="text" value="{{data.classes.effort3.value}}" data-dtype="Number" disabled />/
+        <input name="data.classes.effort3.max" type="text" value="{{data.classes.effort3.max}}" data-dtype="Number" disabled />
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>
 <section class="inventory" data-base-size="310">
   <div>
     <li class="item-titles flexrow">
@@ -42,12 +76,6 @@
       </li>
       {{/each}}
     </ol>
-
-
-
-
-
-    
   </div>
 </section>
 <section class="inventory spells resizable" data-base-size="320">
