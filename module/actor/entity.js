@@ -15,6 +15,7 @@ export class WwnActor extends Actor {
     this.computeAC();
     this.computeEncumbrance();
     this.computeTreasure();
+    this.computeEffort();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -421,7 +422,7 @@ export class WwnActor extends Actor {
     rollParts.push(
       data.thac0.bba.toString(),
       data.scores[statAttack].mod.toString()
-      );
+    );
 
     // TODO: Add range selector in dialogue if missile attack.
     /* if (options.type == "missile") {
@@ -431,18 +432,18 @@ export class WwnActor extends Actor {
     } */
 
     if (data.skills[skillAttack].value == -1) {
-      rollParts.push( unskilledAttack.toString() );
+      rollParts.push(unskilledAttack.toString());
     } else {
-      rollParts.push( data.skills[skillAttack].value.toString()) ;
+      rollParts.push(data.skills[skillAttack].value.toString());
     }
     if (attData.item && attData.item.data.bonus) {
       rollParts.push(attData.item.data.bonus);
     }
     let thac0 = data.thac0.value;
-    
+
     //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
     dmgParts.push(data.scores[statAttack].mod);
-    
+
     const rollData = {
       actor: this.data,
       item: attData.item,
@@ -548,7 +549,8 @@ export class WwnActor extends Actor {
 
   _calculateMovement() {
     const data = this.data.data;
-    let ecumbTotal = data.encumbrance.readied.value * 2 + data.encumbrance.stowed.value;
+    let ecumbTotal =
+      data.encumbrance.readied.value * 2 + data.encumbrance.stowed.value;
     let ecumbLimit = data.encumbrance.stowed.max * 2;
     if (game.settings.get("wwn", "movementRate") == "movebx") {
       if (ecumbTotal <= ecumbLimit) {
@@ -575,17 +577,30 @@ export class WwnActor extends Actor {
 
   // Compute Effort
   computeEffort() {
-    if (this.data.type != "character") {
+    const data=this.data.data;
+    if (this.data.type != "character" || data.spells.enabled != true) {
       return;
     }
-    let effort1 = 0;
-    let effort2 = 0;
-    let effort3 = 0;
+    let effortOne = 0;
+    let effortTwo = 0;
+    let effortThree = 0;
+    let effortType1 = data.classes.effort1.name;
+    let effortType2 = data.classes.effort2.name;
+    let effortType3 = data.classes.effort3.name;
     Object.values(this.data.items).forEach((item) => {
-      if ( item.type =="art" && this.data.classes.effort1.name == item.source ) {
-        effort1 += item.effort;
+      if (effortType1 == item.data.source) {
+        effortOne += item.data.effort;
+      }
+      if (effortType2 == item.data.source) {
+        effortTwo += item.data.effort;
+      }
+      if (effortType3 == item.data.source) {
+        effortThree += item.data.effort;
       }
     });
+    data.classes.effort1.value = effortOne;
+    data.classes.effort2.value = effortTwo;
+    data.classes.effort3.value = effortThree;
   }
 
   computeTreasure() {
