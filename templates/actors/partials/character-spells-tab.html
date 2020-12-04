@@ -1,36 +1,58 @@
-<section class="attributes">
-  <div class="form-group">
-    <div class="form-group">
-      <label>{{localize 'WWN.spells.EffortCommitted'}}</label>
-    </div>
-    <div class="form-group">
+<section class="inventory">
+  <div>
+    <li class="item-titles flexrow">
+      <div class="item-name">{{localize "WWN.spells.Effort"}}</div>
+      <div class="field-short">{{localize "WWN.spells.Committed"}}</div>
+      <div class="field-short">{{localize "WWN.Max"}}</div>
+    </li>
+    <ol class="item-list">
       {{#if data.classes.effort1.name}}
-      <div class="form-fields readied">
-        <label>{{data.classes.effort1.name}}</label>
-        <input name="data.classes.effort1.value" type="text" value="{{data.classes.effort1.value}}" data-dtype="Number" disabled />/
-        <input name="data.classes.effort1.max" type="text" value="{{data.classes.effort1.max}}" data-dtype="Number" disabled />
-      </div>
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort1.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort1.value" type="text" value="{{data.classes.effort1.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort1.max" type="text" value="{{data.classes.effort1.max}}" data-dtype="Number"
+              disabled />
+          </div>
+      </li>
       {{/if}}
-    </div>
-    <div class="form-group">
       {{#if data.classes.effort2.name}}
-      <div class="form-fields readied">
-        <label>{{data.classes.effort2.name}}</label>
-        <input name="data.classes.effort2.value" type="text" value="{{data.classes.effort2.value}}" data-dtype="Number" disabled />/
-        <input name="data.classes.effort2.max" type="text" value="{{data.classes.effort2.max}}" data-dtype="Number" disabled />
-      </div>
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort2.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort2.value" type="text" value="{{data.classes.effort2.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort2.max" type="text" value="{{data.classes.effort2.max}}" data-dtype="Number"
+              disabled />
+          </div>
+      </li>
       {{/if}}
-    </div>
-    <div class="form-group">
       {{#if data.classes.effort3.name}}
-      <div class="form-fields readied">
-        <label>{{data.classes.effort3.name}}</label>
-        <input name="data.classes.effort3.value" type="text" value="{{data.classes.effort3.value}}" data-dtype="Number" disabled />/
-        <input name="data.classes.effort3.max" type="text" value="{{data.classes.effort3.max}}" data-dtype="Number" disabled />
-      </div>
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort3.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort3.value" type="text" value="{{data.classes.effort3.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort3.max" type="text" value="{{data.classes.effort3.max}}" data-dtype="Number"
+              disabled />
+          </div>
+      </li>
       {{/if}}
-    </div>
   </div>
+
 </section>
 <section class="inventory" data-base-size="310">
   <div>
@@ -38,7 +60,8 @@
       <div class="item-caret"><i class="fas fa-caret-down"></i></div>
       <div class="item-name">{{localize "WWN.spells.Arts"}}</div>
       <div class="field-long" title="{{localize 'WWN.spells.ArtSourceHint'}}">{{localize "WWN.spells.ArtSource"}}</div>
-      <div class="field-short" title="{{localize 'WWN.spells.EffortCommittedHint'}}">{{localize "WWN.spells.EffortCommitted"}}</div>
+      <div class="field-short" title="{{localize 'WWN.spells.Effort'}}{{localize 'WWN.spells.Committed'}}">
+        {{localize "WWN.spells.Effort"}}</div>
       <div class="field-short" title="{{localize 'WWN.spells.TimeHint'}}">{{localize "WWN.spells.Time"}}</div>
       <div class="item-controls">
         <a class="item-control item-create" data-type="art" title="{{localize 'WWN.Add'}}"><i
