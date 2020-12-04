@@ -552,6 +552,7 @@ export class WwnActor extends Actor {
 
   _calculateMovement() {
     const data = this.data.data;
+    if (data.config.movementAuto) {
     let ecumbTotal =
       data.encumbrance.readied.value * 2 + data.encumbrance.stowed.value;
     let ecumbLimit = data.encumbrance.stowed.max * 2;
@@ -577,6 +578,7 @@ export class WwnActor extends Actor {
       }
     }
   }
+}
 
   // Compute Effort
   computeEffort() {
