@@ -49,7 +49,7 @@ export const WWN = {
   attackSkills: {
     punch: "WWN.skills.punch",
     shoot: "WWN.skills.shoot",
-    "stab": "WWN.skills.stab"
+    stab: "WWN.skills.stab"
   },
   armor : {
     unarmored: "WWN.armor.unarmored",

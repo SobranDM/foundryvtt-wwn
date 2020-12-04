@@ -427,7 +427,7 @@ export class WwnActor extends Actor {
     } */
     if (data.character) {
       rollParts.push(
-      data.scores[statAttack].mod.toString()
+        this.data.data.scores[statAttack].mod.toString()
       );
       if (data.skills[skillAttack].value == -1) {
         rollParts.push(unskilledAttack.toString());
