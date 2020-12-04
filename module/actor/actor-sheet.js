@@ -33,7 +33,7 @@ export class WwnActorSheet extends ActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, spells, arts] = data.items.reduce(
+    let [items, weapons, armors, arts, spells] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -64,9 +64,8 @@ export class WwnActorSheet extends ActorSheet {
       items: items,
       weapons: weapons,
       armors: armors,
-      arts: arts,
+      arts: arts
     };
-    data.arts = arts;
     data.spells = sortedSpells;
   }
 

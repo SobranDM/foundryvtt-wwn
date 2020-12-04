@@ -137,7 +137,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find(".art-score .attribute-name a").click((ev) => {
+    html.find(".ability-score .attribute-name a").click((ev) => {
       let actorObject = this.actor;
       let element = event.currentTarget;
       let score = element.parentElement.parentElement.dataset.score;

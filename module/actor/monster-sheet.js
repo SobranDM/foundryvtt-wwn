@@ -224,7 +224,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       // Getting back to main logic
       if (type == "choice") {
         const choices = header.dataset.choices.split(",");
-        this._chowwnItemType(choices).then((dialogInput) => {
+        this._chooseItemType(choices).then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
           this.actor.createOwnedItem(itemData, {});
         });

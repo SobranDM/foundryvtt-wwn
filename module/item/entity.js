@@ -29,9 +29,6 @@ export class WwnItem extends Item {
       case "item":
         img = "/systems/wwn/assets/default/item.png";
         break;
-      case "art":
-        img = "/systems/wwn/assets/default/ability.png";
-        break;
     }
     if (!this.data.img) this.data.img = img;
     super.prepareData();

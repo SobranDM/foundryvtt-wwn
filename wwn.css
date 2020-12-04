@@ -132,10 +132,10 @@
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
   }
-  .wwn.sheet.actor .sheet-body .attributes .attribute.art-score {
+  .wwn.sheet.actor .sheet-body .attributes .attribute.ability-score {
     height: 40px;
   }
-  .wwn.sheet.actor .sheet-body .attributes .attribute.art-score .attribute-value {
+  .wwn.sheet.actor .sheet-body .attributes .attribute.ability-score .attribute-value {
     line-height: 36px;
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
