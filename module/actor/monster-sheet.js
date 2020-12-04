@@ -35,36 +35,10 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   /**
    * Monster creation helpers
    */
-  async generateSave() {
-    let choices = CONFIG.WWN.monster_saves;
-
-    let templateData = { choices: choices },
-      dlg = await renderTemplate(
-        "/systems/wwn/templates/actors/dialogs/monster-saves.html",
-        templateData
-      );
+  
+   async generateSave() {
     //Create Dialog window
-    new Dialog({
-      title: game.i18n.localize("WWN.dialog.generateSaves"),
-      content: dlg,
-      buttons: {
-        ok: {
-          label: game.i18n.localize("WWN.Ok"),
-          icon: '<i class="fas fa-check"></i>',
-          callback: (html) => {
-            let hd = html.find('select[name="choice"]').val();
-            this.actor.generateSave(hd);
-          },
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("WWN.Cancel"),
-        },
-      },
-      default: "ok",
-    }, {
-      width: 250
-    }).render(true);
+    this.actor.generateSave();
   }
 
   /**

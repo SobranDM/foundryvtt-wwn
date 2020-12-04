@@ -34,10 +34,8 @@
           </div>
           <div class="field-short" title="{{localize 'WWN.ArmorClass'}}">
             <i class="fas fa-shield-alt"></i>
-            {{#if @root.settings.ascending}}<strong>{{e.data.data.aac.value}}</strong>
+            <strong>{{e.data.data.aac.value}}</strong>
             <sub>{{e.data.data.aac.naked}}</sub>
-            {{else}}<strong>{{e.data.data.ac.value}}</strong> <sub>{{e.data.data.ac.naked}}</sub>
-            {{/if}}
           </div>
         </div>
         <div class="flexrow field-row">

@@ -112,11 +112,11 @@
                             {{#if (eq item.type 'weapon')}}
                             <div class="field-long counter flexrow">
                                 <input type="text" value="{{item.data.counter.value}}" data-dtype="Number"
-                                    placeholder="0" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
+                                    data-field="value" title="{{localize 'WWN.items.roundAttacks'}}" value="1">
                                 /
                                 <input type="text" value="{{item.data.counter.max}}" data-field="max"
-                                    data-dtype="Number" placeholder="0"
-                                    title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
+                                    data-dtype="Number"
+                                    title="{{localize 'WWN.items.roundAttacksMax'}}" value="1"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}
@@ -162,7 +162,7 @@
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.physical" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.paralysis.value" type="text" value="{{data.saves.physical.value}}"
+                        <input name="data.saves.physical.value" type="text" value="{{data.saves.physical.value}}"
                             placeholder="0" data-dtype="Number" />
                 </li>
                 <li class="attribute saving-throw" data-save="luck">

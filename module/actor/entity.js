@@ -69,30 +69,26 @@ export class WwnActor extends Actor {
     }
   }
 
-  generateSave(hd) {
-    let saves = {};
-    for (let i = 0; i <= hd; i++) {
-      let tmp = CONFIG.WWN.monster_saves[i];
-      if (tmp) {
-        saves = tmp;
-      }
-    }
-    this.update({
-      "data.saves": {
-        evasion: {
-          value: saves.evasion,
-        },
-        mental: {
-          value: saves.mental,
-        },
-        physical: {
-          value: saves.physical,
-        },
-        luck: {
-          value: saves.luck,
-        },
-      },
-    });
+  generateSave() {
+    let hd = this.data.data.hp.hd.substring(0, this.data.data.hp.hd.indexOf("d"));
+    let save = Math.ceil((15 - hd / 2));
+    return this.update({
+      data: {
+        saves: {
+          evasion: {
+            value: save
+          },
+          mental: {
+            value: save
+          },
+          physical: {
+            value: save
+          },
+          luck: {
+            value: save
+          }
+        }
+      }});
   }
 
   /* -------------------------------------------- */
@@ -421,7 +417,6 @@ export class WwnActor extends Actor {
 
     rollParts.push(
       data.thac0.bba.toString(),
-      data.scores[statAttack].mod.toString()
     );
 
     // TODO: Add range selector in dialogue if missile attack.
@@ -430,19 +425,27 @@ export class WwnActor extends Actor {
         
       );
     } */
+    if (data.character) {
+      rollParts.push(
+      data.scores[statAttack].mod.toString()
+      );
+      if (data.skills[skillAttack].value == -1) {
+        rollParts.push(unskilledAttack.toString());
+      } else {
+        rollParts.push(data.skills[skillAttack].value.toString());
+      }
+    };
 
-    if (data.skills[skillAttack].value == -1) {
-      rollParts.push(unskilledAttack.toString());
-    } else {
-      rollParts.push(data.skills[skillAttack].value.toString());
-    }
     if (attData.item && attData.item.data.bonus) {
       rollParts.push(attData.item.data.bonus);
     }
     let thac0 = data.thac0.value;
 
     //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
-    dmgParts.push(data.scores[statAttack].mod);
+    if (data.character) {
+      dmgParts.push(data.scores[statAttack].mod)
+    };
+    
 
     const rollData = {
       actor: this.data,
@@ -630,20 +633,15 @@ export class WwnActor extends Actor {
     let AacShield = 0;
     const data = this.data.data;
     data.aac.naked = baseAac + data.scores.dex.mod;
-    data.ac.naked = baseAc - data.scores.dex.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (a.data.equipped && a.data.type != "shield") {
-        baseAc = a.data.ac.value;
         baseAac = a.data.aac.value;
       } else if (a.data.equipped && a.data.type == "shield") {
-        AcShield = a.data.ac.value;
         AacShield = a.data.aac.value;
       }
     });
     data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;
-    data.ac.value = baseAc - data.scores.dex.mod - AcShield - data.ac.mod;
-    data.ac.shield = AcShield;
     data.aac.shield = AacShield;
   }
 

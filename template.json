@@ -272,8 +272,8 @@
     "damage": "1d6",
     "bonus": 0,
     "shock": {
-      "damage": "",
-      "ac": ""
+      "damage": "1",
+      "ac": "20"
     },
     "tags": [],
     "slow": false,
