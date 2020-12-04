@@ -68,7 +68,7 @@
                         <a class="item-control item-reset" title='{{localize "WWN.items.resetAttacks"}}'><i
                                 class="fas fa-sync"></i></a>
                         <a class="item-control item-create" title='{{localize "WWN.Add"}}' data-type="choice"
-                            data-choices="weapon,art,armor,item"><i class="fas fa-plus"></i></a>
+                            data-choices="weapon,armor,item"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </div>
                 </li>
@@ -101,7 +101,7 @@
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item._id}}">
                             {{#if (eq item.type 'weapon')}}
-                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
+                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent"></div>
                             {{/if}}
                             <div class="item-name {{#if (eq item.type 'weapon')}}item-rollable{{/if}}  flexrow">
                                 <div class="item-image" style="background-image: url({{item.img}})"></div>
@@ -111,12 +111,9 @@
                             </div>
                             {{#if (eq item.type 'weapon')}}
                             <div class="field-long counter flexrow">
-                                <input type="text" value="{{item.data.counter.value}}" data-dtype="Number"
-                                    placeholder="0" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
+                                <input name="{{item.data.counter.value}}" type="text" value="{{item.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
                                 /
-                                <input type="text" value="{{item.data.counter.max}}" data-field="max"
-                                    data-dtype="Number" placeholder="0"
-                                    title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
+                                <input type="text" value="{{item.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}
@@ -148,28 +145,28 @@
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.evasion" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.evasion.value" type="text" value="{{data.saves.evasion.value}}"
-                            placeholder="0" data-dtype="Number" />
+                        <input name="data.saves.evasion.value" type="number" value="{{data.saves.evasion.value}}"
+                            data-dtype="Number" />
                 </li>
                 <li class="attribute saving-throw" data-save="mental">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.mental" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.mental.value" type="text" value="{{data.saves.mental.value}}"
-                            placeholder="0" data-dtype="Number" />
+                        <input name="data.saves.mental.value" type="number" value="{{data.saves.mental.value}}"
+                            data-dtype="Number" />
                 </li>
                 <li class="attribute saving-throw" data-save="physical">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.physical" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.paralysis.value" type="text" value="{{data.saves.physical.value}}"
-                            placeholder="0" data-dtype="Number" />
+                        <input name="data.saves.physical.value" type="number" value="{{data.saves.physical.value}}"
+                            data-dtype="Number" />
                 </li>
                 <li class="attribute saving-throw" data-save="luck">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.luck" }}</a></h4>
                     <div class="attribute-value">
-                        <input name="data.saves.luck.value" type="text" value="{{data.saves.luck.value}}"
+                        <input name="data.saves.luck.value" type="number" value="{{data.saves.luck.value}}"
                             placeholder="0" data-dtype="Number" />
                 </li>
             </ul>

@@ -128,10 +128,6 @@ export class WwnDice {
       total: roll.total,
     };
     result.target = data.roll.thac0;
-
-    const targetAc = data.roll.target
-      ? data.roll.target.actor.data.data.ac.value
-      : 9;
     const targetAac = data.roll.target
       ? data.roll.target.actor.data.data.aac.value
       : 0;
