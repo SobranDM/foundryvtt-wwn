@@ -16,6 +16,3 @@ Old-School Essentials is a trademark of Sine Nomine Publishing.\
 
 ## Artwork
 Weapon quality icons, and the Treasure chest (and now some others) are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
-
-TODO: Focus Tab
-TODO: Add Arts and Effort tracking to spellcaster tab.
