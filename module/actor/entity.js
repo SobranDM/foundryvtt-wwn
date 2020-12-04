@@ -573,6 +573,21 @@ export class WwnActor extends Actor {
     }
   }
 
+  // Compute Effort
+  computeEffort() {
+    if (this.data.type != "character") {
+      return;
+    }
+    let effort1 = 0;
+    let effort2 = 0;
+    let effort3 = 0;
+    Object.values(this.data.items).forEach((item) => {
+      if ( item.type =="art" && this.data.classes.effort1.name == item.source ) {
+        effort1 += item.effort;
+      }
+    });
+  }
+
   computeTreasure() {
     if (this.data.type != "character") {
       return;
