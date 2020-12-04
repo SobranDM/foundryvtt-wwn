@@ -246,7 +246,7 @@
     }
   },
   "Item": {
-    "types": ["item", "weapon", "armor", "spell", "art"],
+    "types": ["item", "weapon", "armor", "spell", "art", "focus"],
     "item": {
       "description": "",
       "quantity": {
@@ -318,5 +318,9 @@
     "time": "Scene",
     "range": "",
     "damage": ""
+  },
+  "focus": {
+    "description": "",
+    "ownedLevel": 1
   }
 }

@@ -33,7 +33,7 @@ export class WwnActorSheet extends ActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, arts, spells] = data.items.reduce(
+    let [items, weapons, armors, arts, spells, foci] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -41,9 +41,10 @@ export class WwnActorSheet extends ActorSheet {
         else if (item.type === "armor") arr[2].push(item);
         else if (item.type === "art") arr[3].push(item);
         else if (item.type === "spell") arr[4].push(item);
+        else if (item.type === "focus") arr[5].push(item);
         return arr;
       },
-      [[], [], [], [], []]
+      [[], [], [], [], [], []]
     );
 
     // Sort spells by level
@@ -64,7 +65,8 @@ export class WwnActorSheet extends ActorSheet {
       items: items,
       weapons: weapons,
       armors: armors,
-      arts: arts
+      arts: arts,
+      foci: foci
     };
     data.spells = sortedSpells;
   }

@@ -29,6 +29,9 @@ export class WwnItem extends Item {
       case "item":
         img = "/systems/wwn/assets/default/item.png";
         break;
+      case "focus":
+        img = "/systems/wwn/assets/default/focus.png";
+        break;
     }
     if (!this.data.img) this.data.img = img;
     super.prepareData();
@@ -184,6 +187,8 @@ export class WwnItem extends Item {
       case "armor":
         return `${formatTag(CONFIG.WWN.armor[data.type], "fa-tshirt")}`;
       case "item":
+        return "";
+      case "focus":
         return "";
       case "spell":
         let sTags = `${formatTag(data.class)}${formatTag(
