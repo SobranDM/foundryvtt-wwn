@@ -54,6 +54,7 @@ export const WWN = {
   armor : {
     unarmored: "WWN.armor.unarmored",
     light: "WWN.armor.light",
+    medium: "WWN.armor.medium",
     heavy: "WWN.armor.heavy",
     shield: "WWN.armor.shield",
   },
