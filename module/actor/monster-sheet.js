@@ -104,7 +104,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
   /* -------------------------------------------- */
 
-  async _chowwnItemType(choices = ["weapon", "armor", "shield", "gear"]) {
+  async _chooseItemType(choices = ["weapon", "armor", "shield", "gear"]) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
         "systems/wwn/templates/items/entity-create.html",
@@ -224,7 +224,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       // Getting back to main logic
       if (type == "choice") {
         const choices = header.dataset.choices.split(",");
-        this._chowwnItemType(choices).then((dialogInput) => {
+        this._chooseItemType(choices).then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
           this.actor.createOwnedItem(itemData, {});
         });

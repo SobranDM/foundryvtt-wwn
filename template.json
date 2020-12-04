@@ -69,7 +69,24 @@
           "5": {
             "max": 0
           }
-        }
+        },
+        "classes": {
+          "effort1": {
+            "name": "",
+            "value": 1,
+            "max": 1
+          },
+          "effort2": {
+            "name": "",
+            "value": 1,
+            "max": 1
+          },
+          "effort3": {
+            "name": "",
+            "value": 1,
+            "max": 1
+          }
+      }
       }
     },
     "character": {
@@ -81,7 +98,7 @@
         "biography": "",
         "notes": "",
         "class": "",
-        "title": "",
+        "background": "",
         "alignment": "",
         "level": 1,
         "xp": {
@@ -95,49 +112,72 @@
           "max": 10
         }
       },
+      "character": true,
       "skills": {
         "administer": {
-          "value": -1 },
+          "value": -1
+        },
         "connect": {
-          "value": -1 },
+          "value": -1
+        },
         "convince": {
-          "value": -1 },
+          "value": -1
+        },
         "craft": {
-          "value": -1 },
+          "value": -1
+        },
         "exert": {
-          "value": -1 },
+          "value": -1
+        },
         "heal": {
-          "value": -1 },
+          "value": -1
+        },
         "know": {
-          "value": -1 },
+          "value": -1
+        },
         "lead": {
-          "value": -1 },
+          "value": -1
+        },
         "magic": {
-          "value": -1 },
+          "value": -1
+        },
         "notice": {
-          "value": -1 },
+          "value": -1
+        },
         "perform": {
-          "value": -1 },
+          "value": -1
+        },
         "pray": {
-          "value": -1 },
+          "value": -1
+        },
         "punch": {
-          "value": -1 },
+          "value": -1
+        },
         "ride": {
-          "value": -1 },
+          "value": -1
+        },
         "sail": {
-          "value": -1 },
+          "value": -1
+        },
         "shoot": {
-          "value": -1 },
+          "value": -1
+        },
         "sneak": {
-          "value": -1 },
+          "value": -1
+        },
         "stab": {
-          "value": -1 },
+          "value": -1
+        },
         "survive": {
-          "value": -1 },
+          "value": -1
+        },
         "trade": {
-          "value": -1 },
+          "value": -1
+        },
         "work": {
-          "value": -1 }
+          "value": -1
+        },
+        "unspent:": 0
       },
       "scores": {
         "str": {
@@ -201,11 +241,12 @@
         },
         "morale": 0
       },
-      "attacks": ""
+      "attacks": "",
+      "character": false
     }
   },
   "Item": {
-    "types": ["item", "weapon", "armor", "spell", "ability"],
+    "types": ["item", "weapon", "armor", "spell", "art", "focus"],
     "item": {
       "description": "",
       "quantity": {
@@ -215,61 +256,71 @@
       "treasure": false,
       "cost": 0,
       "weight": 0,
-      "readied": false,
+      "equipped": false,
       "stowed": false
-    },
-    "weapon": {
-      "range": {
-        "short": 0,
-        "medium": 0,
-        "long": 0
-      },
-      "save": "",
-      "pattern": "transparent",
-      "description": "",
-      "damage": "1d6",
-      "bonus": 0,
-      "tags": [],
-      "slow": false,
-      "missile": false,
-      "melee": true,
-      "cost": 0,
-      "equipped": false,
-      "weight": 0,
-      "counter": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "armor": {
-      "description": "",
-      "ac": 9,
-      "aac": 10,
-      "type": "light",
-      "cost": 0,
-      "equipped": false,
-      "weight": 0
-    },
-    "spell": {
-      "lvl": 1,
-      "class": "High Mage",
-      "duration": "",
-      "range": "",
-      "roll": "",
-      "description": "",
-      "memorized": 0,
-      "cast": 0,
-      "save": ""
-    },
-    "ability": {
-      "pattern": "white",
-      "requirements": "",
-      "roll": "",
-      "rollType": "result",
-      "rollTarget": 0,
-      "blindroll": false,
-      "description": "",
-      "save": ""
     }
+  },
+  "weapon": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": ""
+    },
+    "tags": [],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "cost": 0,
+    "weight": 0,
+    "counter": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "armor": {
+    "description": "",
+    "ac": 9,
+    "aac": 10,
+    "type": "light",
+    "cost": 0,
+    "weight": 0
+  },
+  "spell": {
+    "lvl": 1,
+    "class": "High Mage",
+    "duration": "",
+    "range": "",
+    "roll": "",
+    "description": "",
+    "memorized": 0,
+    "cast": 0,
+    "save": ""
+  },
+  "art": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "",
+    "save": "",
+    "source": "High Mage",
+    "effort": 0,
+    "time": "Scene",
+    "range": "",
+    "damage": ""
+  },
+  "focus": {
+    "description": "",
+    "ownedLevel": 1
   }
 }

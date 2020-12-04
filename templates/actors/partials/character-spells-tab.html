@@ -1,3 +1,106 @@
+<section class="inventory">
+  <div>
+    <li class="item-titles flexrow">
+      <div class="item-name">{{localize "WWN.spells.Effort"}}</div>
+      <div class="field-short">{{localize "WWN.spells.Committed"}}</div>
+      <div class="field-short">{{localize "WWN.Max"}}</div>
+    </li>
+    <ol class="item-list">
+      {{#if data.classes.effort1.name}}
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort1.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort1.value" type="number" value="{{data.classes.effort1.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort1.max" type="number" value="{{data.classes.effort1.max}}"
+            data-dtype="Number" />
+          </div>
+      </li>
+      {{/if}}
+      {{#if data.classes.effort2.name}}
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort2.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort2.value" type="number" value="{{data.classes.effort2.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort2.max" type="number" value="{{data.classes.effort2.max}}"
+            data-dtype="Number" />
+          </div>
+      </li>
+      {{/if}}
+      {{#if data.classes.effort3.name}}
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{data.classes.effort3.name}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.classes.effort3.value" type="number" value="{{data.classes.effort3.value}}"
+              data-dtype="Number" disabled />
+          </div>
+          <div class="field-short">
+            <input name="data.classes.effort3.max" type="number" value="{{data.classes.effort3.max}}" 
+            data-dtype="Number" />
+          </div>
+      </li>
+      {{/if}}
+  </div>
+
+</section>
+<section class="inventory" data-base-size="310">
+  <div>
+    <li class="item-titles flexrow">
+      <div class="item-caret"><i class="fas fa-caret-down"></i></div>
+      <div class="item-name">{{localize "WWN.spells.Arts"}}</div>
+      <div class="field-long" title="{{localize 'WWN.spells.ArtSourceHint'}}">{{localize "WWN.spells.ArtSource"}}</div>
+      <div class="field-short" title="{{localize 'WWN.spells.Effort'}}{{localize 'WWN.spells.Committed'}}">
+        {{localize "WWN.spells.Effort"}}</div>
+      <div class="field-short" title="{{localize 'WWN.spells.TimeHint'}}">{{localize "WWN.spells.Time"}}</div>
+      <div class="item-controls">
+        <a class="item-control item-create" data-type="art" title="{{localize 'WWN.Add'}}"><i
+            class="fa fa-plus"></i></a>
+      </div>
+    </li>
+    <ol class="item-list">
+      {{#each owned.arts as |art|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{art._id}}">
+          <div class="item-name flexrow">
+            <div class="item-image" style="background-image: url({{art.img}})"></div>
+            <a>
+              <h4 title="{{art.name}}">
+                {{art.name~}}
+              </h4>
+            </a>
+          </div>
+          <div class="field-long artSource">
+            <input value="{{art.data.source}}" type="text" placeholder="High Mage" />
+          </div>
+          <div class="field-short artEffort">
+            <input value="{{art.data.effort}}" type="number" data-dtype="Number" placeholder=0 />
+          </div>
+          <div class="field-short artTime">
+            <input value="{{art.data.time}}" type="text" placeholder="Scene" />
+          </div>
+          <div class="item-controls">
+            <!-- {{#if ../owner}} -->
+            <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
+            <!-- {{/if}} -->
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>
 <section class="inventory spells resizable" data-base-size="320">
   <div class="item-titles flexrow" style="line-height:15px">
     <div class="item-name">{{localize "WWN.category.spells"}}</div>

@@ -76,7 +76,7 @@ export class WwnDice {
     let rollMode = game.settings.get("core", "rollMode");
     rollMode = form ? form.rollMode.value : rollMode;
 
-    // Force blind roll (ability formulas)
+    // Force blind roll (art formulas)
     if (data.roll.blindroll) {
       rollMode = game.user.isGM ? "selfroll" : "blindroll";
     }
@@ -186,7 +186,7 @@ export class WwnDice {
     let rollMode = game.settings.get("core", "rollMode");
     rollMode = form ? form.rollMode.value : rollMode;
 
-    // Force blind roll (ability formulas)
+    // Force blind roll (art formulas)
     if (data.roll.blindroll) {
       rollMode = game.user.isGM ? "selfroll" : "blindroll";
     }

@@ -21,8 +21,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 450,
-      height: 530,
+      width: 470,
+      height: 460,
       resizable: true,
       tabs: [
         {
@@ -48,16 +48,15 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   getData() {
     const data = super.getData();
 
-    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
-    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
+    data.config.showMovement = game.settings.get("wwn", "showMovement");
 
     data.isNew = this.actor.isNew();
     return data;
   }
 
 
-  async _chowwnLang() {
+  async _chooseLang() {
     let choices = CONFIG.WWN.languages;
 
     let templateData = { choices: choices },
@@ -93,7 +92,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   _pushLang(table) {
     const data = this.actor.data.data;
     let update = duplicate(data[table]);
-    this._chowwnLang().then((dialogInput) => {
+    this._chooseLang().then((dialogInput) => {
       const name = CONFIG.WWN.languages[dialogInput.choice];
       if (update.value) {
         update.value.push(name);
@@ -121,6 +120,27 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.getOwnedItem(itemId);
     return item.update({ "data.quantity.value": parseInt(event.target.value) });
+  }
+
+  async _onEffortChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.effort": parseInt(event.target.value) });
+  }
+
+  async _onArtSourceChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.source": event.target.value });
+  }
+
+  async _onArtTimeChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.time": event.target.value });
   }
 
   _onShowModifiers(event) {
@@ -239,10 +259,36 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       });
     });
 
+    html.find(".stow-toggle").click(async (ev) => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.getOwnedItem(li.data("itemId"));
+      await this.actor.updateOwnedItem({
+        _id: li.data("itemId"),
+        data: {
+          stowed: !item.data.data.stowed,
+        },
+      });
+    });
+
     html
       .find(".quantity input")
       .click((ev) => ev.target.select())
       .change(this._onQtChange.bind(this));
+
+    html
+      .find(".artEffort input")
+      .click((ev) => ev.target.select())
+      .change(this._onEffortChange.bind(this));
+
+     html
+      .find(".artSource input")
+      .click((ev) => ev.target.select())
+      .change(this._onArtSourceChange.bind(this));
+
+    html
+      .find(".artTime input")
+      .click((ev) => ev.target.select())
+      .change(this._onArtTimeChange.bind(this));
 
     html.find("a[data-action='generate-scores']").click((ev) => {
       this.generateScores(ev);

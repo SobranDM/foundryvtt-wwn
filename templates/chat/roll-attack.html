@@ -26,6 +26,14 @@
                 <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>
             </div>
             <div class="damage-roll">{{{rollDamage}}}</div>
+            {{#if data.item.data.shock.damage}}
+            <div class="chat-details">
+                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}{{data.item.data.shock.damage}}
+                    {{localize 'WWN.messages.applyShock2'}}{{data.item.data.shock.ac}}
+                    {{localize 'WWN.messages.applyShock3'}}</b>
+                </div>
+            </div>
+            {{/if}}
             {{#if data.roll.save}}
             <div class="card-buttons">
                 <button data-action="save" data-save="{{data.roll.save}}" disabled>

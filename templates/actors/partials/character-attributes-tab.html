@@ -16,6 +16,10 @@
                     <input name="data.scores.str.value" type="text" value="{{data.scores.str.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.str.mod" type="text" value="{{data.scores.str.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
             <li class="attribute ability-score" data-score="dex">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.dex.long' }}">
@@ -23,6 +27,10 @@
                 <div class="attribute-value">
                     <input name="data.scores.dex.value" type="text" value="{{data.scores.dex.value}}" placeholder="0"
                         data-dtype="Number" />
+                </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.dex.mod" type="text" value="{{data.scores.dex.mod}}"
+                    data-dtype="Number" disabled />
                 </div>
             </li>
             <li class="attribute ability-score" data-score="con">
@@ -32,6 +40,10 @@
                     <input name="data.scores.con.value" type="text" value="{{data.scores.con.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.con.mod" type="text" value="{{data.scores.con.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
             <li class="attribute ability-score" data-score="int">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.int.long' }}">
@@ -39,6 +51,10 @@
                 <div class="attribute-value">
                     <input name="data.scores.int.value" type="text" value="{{data.scores.int.value}}" placeholder="0"
                         data-dtype="Number" />
+                </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.int.mod" type="text" value="{{data.scores.int.mod}}"
+                    data-dtype="Number" disabled />
                 </div>
             </li>
             <li class="attribute ability-score" data-score="wis">
@@ -48,6 +64,10 @@
                     <input name="data.scores.wis.value" type="text" value="{{data.scores.wis.value}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.wis.mod" type="text" value="{{data.scores.wis.mod}}"
+                    data-dtype="Number" disabled />
+                </div>
             </li>
             <li class="attribute ability-score" data-score="cha">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.cha.long' }}">
@@ -55,6 +75,10 @@
                 <div class="attribute-value">
                     <input name="data.scores.cha.value" type="text" value="{{data.scores.cha.value}}" placeholder="0"
                         data-dtype="Number" />
+                </div>
+                <div class="attribute-value attribute-mod">
+                    <input name="data.scores.cha.mod" type="text" value="{{data.scores.cha.mod}}"
+                    data-dtype="Number" disabled />
                 </div>
             </li>
             {{#if data.retainer.enabled}}
@@ -141,6 +165,7 @@
                         </div>
                     </div>
                 </li>
+                {{#if config.showMovement}}
                 <li class="attribute">
                     <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.exploration.long' }}">
                         {{ localize "WWN.movement.exploration.short" }}</h4>
@@ -158,6 +183,7 @@
                         </div>
                     </div>
                 </li>
+                {{/if}}
             </ul>
         </div>
     </div>

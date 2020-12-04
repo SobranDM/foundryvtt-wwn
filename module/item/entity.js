@@ -17,8 +17,8 @@ export class WwnItem extends Item {
       case "spell":
         img = "/systems/wwn/assets/default/spell.png";
         break;
-      case "ability":
-        img = "/systems/wwn/assets/default/ability.png";
+      case "art":
+        img = "/systems/wwn/assets/default/art.png";
         break;
       case "armor":
         img = "/systems/wwn/assets/default/armor.png";
@@ -28,6 +28,9 @@ export class WwnItem extends Item {
         break;
       case "item":
         img = "/systems/wwn/assets/default/item.png";
+        break;
+      case "focus":
+        img = "/systems/wwn/assets/default/focus.png";
         break;
     }
     if (!this.data.img) this.data.img = img;
@@ -57,6 +60,9 @@ export class WwnItem extends Item {
     }
     if (data.hasOwnProperty("equipped")) {
       props.push(data.equipped ? "Equipped" : "Not Equipped");
+    }
+    if (data.hasOwnProperty("stowed")) {
+      props.push(data.stowed ? "Stowed" : "Not Stowed");
     }
 
     // Filter properties and return
@@ -182,6 +188,8 @@ export class WwnItem extends Item {
         return `${formatTag(CONFIG.WWN.armor[data.type], "fa-tshirt")}`;
       case "item":
         return "";
+      case "focus":
+        return "";
       case "spell":
         let sTags = `${formatTag(data.class)}${formatTag(
           data.range
@@ -190,7 +198,7 @@ export class WwnItem extends Item {
           sTags += formatTag(CONFIG.WWN.saves[data.save], "fa-skull");
         }
         return sTags;
-      case "ability":
+      case "art":
         let roll = "";
         roll += data.roll ? data.roll : "";
         roll += data.rollTarget ? CONFIG.WWN.roll_type[data.rollType] : "";
@@ -258,7 +266,7 @@ export class WwnItem extends Item {
       case "spell":
         this.spendSpell();
         break;
-      case "ability":
+      case "art":
         if (this.data.data.roll) {
           this.rollFormula();
         } else {

@@ -12,8 +12,6 @@ export class WwnActorSheet extends ActorSheet {
 
     data.config = CONFIG.WWN;
     // Settings
-    data.config.ascendingAC = game.settings.get("wwn", "ascendingAC");
-    data.config.encumbrance = game.settings.get("wwn", "encumbranceOption");
 
     // Prepare owned items
     this._prepareItems(data);
@@ -35,17 +33,18 @@ export class WwnActorSheet extends ActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, abilities, spells] = data.items.reduce(
+    let [items, weapons, armors, arts, spells, foci] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
         else if (item.type === "weapon") arr[1].push(item);
         else if (item.type === "armor") arr[2].push(item);
-        else if (item.type === "ability") arr[3].push(item);
+        else if (item.type === "art") arr[3].push(item);
         else if (item.type === "spell") arr[4].push(item);
+        else if (item.type === "focus") arr[5].push(item);
         return arr;
       },
-      [[], [], [], [], []]
+      [[], [], [], [], [], []]
     );
 
     // Sort spells by level
@@ -66,8 +65,9 @@ export class WwnActorSheet extends ActorSheet {
       items: items,
       weapons: weapons,
       armors: armors,
+      arts: arts,
+      foci: foci
     };
-    data.abilities = abilities;
     data.spells = sortedSpells;
   }
 
