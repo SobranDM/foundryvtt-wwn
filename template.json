@@ -258,8 +258,7 @@
       "weight": 0,
       "equipped": false,
       "stowed": false
-    }
-  },
+    },
   "weapon": {
     "range": {
       "short": 0,
@@ -323,4 +322,5 @@
     "description": "",
     "ownedLevel": 1
   }
+}
 }
