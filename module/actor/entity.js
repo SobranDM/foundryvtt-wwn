@@ -627,9 +627,7 @@ export class WwnActor extends Actor {
       return;
     }
     // Compute AC
-    let baseAc = 9;
     let baseAac = 10;
-    let AcShield = 0;
     let AacShield = 0;
     const data = this.data.data;
     data.aac.naked = baseAac + data.scores.dex.mod;
