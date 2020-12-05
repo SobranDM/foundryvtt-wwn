@@ -162,6 +162,29 @@ export class WwnActor extends Actor {
     });
   }
 
+  rollInstinct(options = {}) {
+    const rollParts = ["1d10"];
+
+    const data = {
+      actor: this.data,
+      roll: {
+        type: "above",
+        target: this.data.data.details.instinct,
+      },
+    };
+
+    // Roll and return
+    return WwnDice.Roll({
+      event: options.event,
+      parts: rollParts,
+      data: data,
+      skipDialog: true,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: game.i18n.localize("WWN.roll.instinct"),
+      title: game.i18n.localize("WWN.roll.instinct"),
+    });
+  }
+
   rollLoyalty(options = {}) {
     const label = game.i18n.localize(`WWN.roll.loyalty`);
     const rollParts = ["2d6"];
@@ -288,10 +311,10 @@ export class WwnActor extends Actor {
     let label = "";
     if (options.check == "wilderness") {
       rollParts.push(this.data.data.details.appearing.w);
-      label = "(2)";
+      label = "(lair/wilderness)";
     } else {
       rollParts.push(this.data.data.details.appearing.d);
-      label = "(1)";
+      label = "(dungeon)";
     }
     const data = {
       actor: this.data,
