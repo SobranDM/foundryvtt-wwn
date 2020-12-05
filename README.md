@@ -15,6 +15,10 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * This can be disabled in Tweaks. Currently this only enables manual entering of Exploration Movement Rate, from which the others will still be calculated. This will be changed later.
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
+## Recent Changes
+* Exposed monster initiative and added Instinct rolls
+* Added Compendium of RollTables for Instinct
+* Added Compendiums for weapons and armor
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage

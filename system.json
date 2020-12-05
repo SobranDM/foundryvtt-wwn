@@ -2,7 +2,7 @@
   "name": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.5",
   "templateVersion": 2,
@@ -17,6 +17,22 @@
       "module": "wwn",
       "path": "packs/instinct.db",
       "entity": "RollTable"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/armor.db",
+      "entity": "Item"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/weapons.db",
+      "entity": "Item"
     }
   ],
   "languages": [
@@ -30,5 +46,5 @@
   "gridUnits": "ft",
   "url": "https://gitlab.com/sobran/foundryvtt-wwn",
   "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/master/system.json",
-  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.6.2/foundryvtt-wwn-v0.6.2.zip"
+  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.6.3/foundryvtt-wwn-v0.6.3.zip"
 }
