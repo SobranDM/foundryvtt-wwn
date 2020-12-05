@@ -348,9 +348,9 @@
   "WWN.colors.white": "White",
 
   "WWN.reaction.check": "Reaction Check",
-  "WWN.reaction.Hostile": "{name} is Hostile",
-  "WWN.reaction.Unfriendly": "{name} is Unfriendly",
-  "WWN.reaction.Neutral": "{name} is Neutral",
-  "WWN.reaction.Indifferent": "{name} is Indifferent",
-  "WWN.reaction.Friendly": "{name} is Friendly"
+  "WWN.reaction.Hostile": "{name} is as aggressively hostile as the situation allows.",
+  "WWN.reaction.Unfriendly": "{name} is more unfriendly and hostile than they'd be expected to be in the given situation.",
+  "WWN.reaction.Neutral": "{name} is as predictably hostile or friendly as they'd usually be in this situation.",
+  "WWN.reaction.Indifferent": "{name} is more friendly and benign than you'd expect them to be, given the circumstances.",
+  "WWN.reaction.Friendly": "{name} is as friendly and helpful as their nature and the situation permits them to be."
 }
