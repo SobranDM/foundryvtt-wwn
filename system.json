@@ -9,7 +9,16 @@
   "author": "SobranDM",
   "esmodules": ["wwn.js"],
   "styles": ["wwn.css"],
-  "packs": [],
+  "packs": [
+    {
+      "name": "instinct",
+      "label": "Instinct",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/instinct.db",
+      "entity": "RollTable"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
