@@ -23,6 +23,9 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * This now shows useful information but needs more formatting work
 * Added support for Specialist and similar Foci in the Tweaks menu
     * Characters created before update will need to open and close the Tweaks menu once before Skill Rolls function correctly
+* Compendium now includes all Arts and Spells from the Free Version
+    * Thanks to reddit user Studbeastank for doing a lot of the legwork on this. I removed the Arts/Spells from the Deluxe edition but left the artwork edits he made to support those should users wish to manually add them in their games.
+    * I have done my best to catch any changes/additions from the newest Beta version (0.19) of WWN but please point out anything I've missed.
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage

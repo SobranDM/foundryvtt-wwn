@@ -2,9 +2,9 @@
   "name": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "0.6.5",
+  "version": "0.7.0",
   "minimumCoreVersion": "0.7.5",
-  "compatibleCoreVersion": "0.7.5",
+  "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
   "author": "SobranDM",
   "esmodules": ["wwn.js"],
@@ -33,6 +33,30 @@
       "module": "wwn",
       "path": "packs/weapons.db",
       "entity": "Item"
+    },
+    {
+      "name": "arts",
+      "label": "Arts",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/arts.db",
+      "entity": "Item"
+    },
+    {
+      "name": "foci",
+      "label": "Foci",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/foci.db",
+      "entity": "Item"
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/spells.db",
+      "entity": "Item"
     }
   ],
   "languages": [
@@ -46,5 +70,5 @@
   "gridUnits": "ft",
   "url": "https://gitlab.com/sobran/foundryvtt-wwn",
   "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/master/system.json",
-  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.6.5/foundryvtt-wwn-v0.6.5.zip"
+  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.7.0/foundryvtt-wwn-v0.7.0.zip"
 }
