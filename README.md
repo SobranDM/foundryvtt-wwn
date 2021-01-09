@@ -16,15 +16,18 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
 ## Recent Changes
-* Fixed Group Initiative (thanks to Discord user BWebby)
+* Fixed Group Initiative die type
+    * Thanks to Discord user BWebby for pointing this out
 * Separated Foci into their own tab
 * Party sheet (small button in the actors pane, below Create Actor) now functions again
     * This now shows useful information but needs more formatting work
-    
+* Added support for Specialist and similar Foci in the Tweaks menu
+    * Characters created before update will need to open and close the Tweaks menu once before Skill Rolls function correctly
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage
 * Manual entry of all movement modes
+* Auto-add highest Dex mod when using Group Initiative
 ## Installation
 To install, copy the following URL and paste it into the Install System dialog in Foundry VTT:
 https://gitlab.com/sobran/foundryvtt-wwn/-/raw/master/system.json
