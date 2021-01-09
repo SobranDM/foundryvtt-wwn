@@ -77,9 +77,9 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 365px;
-    right: -169px;
-    width: 320px;
+    top: 340px;
+    right: -179px;
+    width: 340px;
     border-top: none;
     height: 18px;
     z-index: -1;
