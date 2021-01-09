@@ -41,7 +41,7 @@ It will be available through Foundry itself at a future date.
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
 This third party product is not affiliated with or approved by Sine Nomine Publishing. \
-Worlds Without Number is a trademark of Sine Nomine Publishing.\
+Worlds Without Number is a trademark of Sine Nomine Publishing. \
 
 ## Artwork
 Weapon quality icons, and the Treasure chest (and now some others) are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
