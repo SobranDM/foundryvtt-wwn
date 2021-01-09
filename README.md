@@ -16,15 +16,21 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
 ## Recent Changes
-* Exposed monster initiative and added Instinct rolls
-* Added Compendium of RollTables for Instinct
-* Added Compendiums for weapons and armor
+* Fixed Group Initiative die type
+    * Thanks to Discord user BWebby for pointing this out
+* Separated Foci into their own tab
+* Party sheet (small button in the actors pane, below Create Actor) now functions again
+    * This now shows useful information but needs more formatting work
+* Added support for Specialist and similar Foci in the Tweaks menu
+    * Characters created before update will need to open and close the Tweaks menu once before Skill Rolls function correctly
+* Compendium now includes all Arts and Spells from the Free Version
+    * Thanks to reddit user Studbeastank for doing a lot of the legwork on this. I removed the Arts/Spells from the Deluxe edition but left the artwork edits he made to support those should users wish to manually add them in their games.
+    * I have done my best to catch any changes/additions from the newest Beta version (0.19) of WWN but please point out anything I've missed.
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage
 * Manual entry of all movement modes
-* Monster sheet improvements
-* Compendium?
+* Auto-add highest Dex mod when using Group Initiative
 ## Installation
 To install, copy the following URL and paste it into the Install System dialog in Foundry VTT:
 https://gitlab.com/sobran/foundryvtt-wwn/-/raw/master/system.json
@@ -35,7 +41,7 @@ It will be available through Foundry itself at a future date.
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
 This third party product is not affiliated with or approved by Sine Nomine Publishing. \
-Old-School Essentials is a trademark of Sine Nomine Publishing.\
+Worlds Without Number is a trademark of Sine Nomine Publishing. \
 
 ## Artwork
 Weapon quality icons, and the Treasure chest (and now some others) are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).

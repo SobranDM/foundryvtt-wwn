@@ -42,11 +42,12 @@
   "WWN.roll.details.save": "Roll 1d20 >= {save} for success",
   "WWN.roll.attribute": "{attribute} check",
   "WWN.roll.details.attribute": "Roll 1d20 <= {score} for success",
-  "WWN.roll.skills": "{skills} test",
+  "WWN.roll.skills": "{skills} Test",
   "WWN.roll.details.skills": "Roll 1d6 <= {expl} for success",
   "WWN.roll.reaction": "Reaction roll",
   "WWN.roll.initiative": "Group {group} rolls for Initiative!",
   "WWN.roll.individualInit": "{name} rolls for Initiative!",
+  "WWN.roll.loyalty": "Loyalty Check",
 
   "WWN.table.treasure.roll": "Roll Treasure",
 
@@ -156,7 +157,7 @@
   "WWN.category.saves": "Saves",
   "WWN.category.attributes": "Attributes",
   "WWN.category.inventory": "Inventory",
-  "WWN.category.skills": "Skills/Foci",
+  "WWN.category.skills": "Skills",
   "WWN.category.spells": "Spells",
   "WWN.category.notes": "Notes",
   "WWN.category.languages": "Languages",

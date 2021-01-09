@@ -10,7 +10,7 @@ export class WwnCombat {
 
     // Roll init
     Object.keys(groups).forEach((group) => {
-      let roll = new Roll("1d6").roll();
+      let roll = new Roll("1d8").roll();
       roll.toMessage({
         flavor: game.i18n.format('WWN.roll.initiative', { group: CONFIG["WWN"].colors[group] }),
       });

@@ -29,9 +29,6 @@ export class WwnPartySheet extends FormApplication {
    * @return {Object}
    */
   getData() {
-    const settings = {
-      ascending: game.settings.get('wwn', 'ascendingAC')
-    };
     let data = {
       data: this.object,
       config: CONFIG.WWN,

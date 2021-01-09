@@ -115,67 +115,88 @@
       "character": true,
       "skills": {
         "administer": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "connect": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "convince": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "craft": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "exert": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "heal": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "know": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "lead": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "magic": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "notice": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "perform": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "pray": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "punch": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "ride": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "sail": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "shoot": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "sneak": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "stab": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "survive": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "trade": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "work": {
-          "value": -1
+          "value": -1,
+          "dice": "2d6"
         },
         "unspent:": 0
       },
