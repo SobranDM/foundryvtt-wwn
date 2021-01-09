@@ -18,7 +18,9 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 ## Recent Changes
 * Fixed Group Initiative (thanks to Discord user BWebby)
 * Separated Foci into their own tab
-* Added Compendiums for weapons and armor
+* Party sheet (small button in the actors pane, below Create Actor) now functions again
+    * This now shows useful information but needs more formatting work
+    
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage
