@@ -39,22 +39,19 @@
           </div>
         </div>
         <div class="flexrow field-row">
-          <div class="field-short" title="{{localize 'WWN.Thac0'}}">
+          <div class="field-short" title="{{localize 'WWN.AB'}}">
             <i class="fas fa-crosshairs"></i>
-            {{#unless settings.ascendingAC}}
-            {{e.data.data.thac0.value}}
-            {{else}}
+            <!-- {{e.data.data.thac0.value}} -->
             {{e.data.data.thac0.bba}}
-            {{/unless}}
           </div>
           {{#if (eq e.data.type 'character')}}
           <div class="field-short" title="{{localize 'WWN.Melee'}}">
             <i class="fas fa-fist-raised"></i>
-            {{add e.data.data.scores.str.mod e.data.data.thac0.mod.melee}}
+            {{add e.data.data.scores.str.mod e.data.data.thac0.bba}}
           </div>
           <div class="field-short" title="{{localize 'WWN.Missile'}}">
             <i class="fas fa-bullseye"></i>
-            {{add e.data.data.scores.dex.mod e.data.data.thac0.mod.missile}}
+            {{add e.data.data.scores.dex.mod e.data.data.thac0.bba}}
           </div>
           {{/if}}
           <div class="field-short flex2">
@@ -62,20 +59,12 @@
             <span title="{{localize 'WWN.movement.encounter.long'}}">{{e.data.data.movement.encounter}}</span> <sub
               title="{{localize 'WWN.movement.exploration.long'}}">{{e.data.data.movement.base}}</sub>
           </div>
-          {{#if (eq e.data.type 'character')}}
-          <div class="field-short flex2">
-            <i class="fas fa-weight-hanging" title="{{localize 'WWN.Encumbrance'}}"></i>
-            {{roundWeight e.data.data.encumbrance.value}}k
-          </div>
-          {{/if}}
         </div>
         <div class="flexrow field-row">
           <div class="field-longer flexrow">
             {{#each e.data.data.saves as |s i|}}
             <span title="{{lookup @root.config.saves i}}">{{lookup @root.config.saves i}} {{s.value}}</span>
             {{/each}}
-            {{#if (eq e.data.type 'character')}}<span><i class="fas fa-magic"
-                title="{{localize 'WWN.saves.magic.long'}}"></i>{{mod e.data.data.scores.wis.mod}}</span>{{/if}}
           </div>
         </div>
       </div>
