@@ -16,15 +16,13 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
 ## Recent Changes
-* Exposed monster initiative and added Instinct rolls
-* Added Compendium of RollTables for Instinct
+* Fixed Group Initiative (thanks to Discord user BWebby)
+* Separated Foci into their own tab
 * Added Compendiums for weapons and armor
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage
 * Manual entry of all movement modes
-* Monster sheet improvements
-* Compendium?
 ## Installation
 To install, copy the following URL and paste it into the Install System dialog in Foundry VTT:
 https://gitlab.com/sobran/foundryvtt-wwn/-/raw/master/system.json
@@ -35,7 +33,7 @@ It will be available through Foundry itself at a future date.
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
 This third party product is not affiliated with or approved by Sine Nomine Publishing. \
-Old-School Essentials is a trademark of Sine Nomine Publishing.\
+Worlds Without Number is a trademark of Sine Nomine Publishing.\
 
 ## Artwork
 Weapon quality icons, and the Treasure chest (and now some others) are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).

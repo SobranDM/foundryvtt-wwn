@@ -338,6 +338,7 @@ export class WwnActor extends Actor {
   }
 
   rollSkills(expl, options = {}) {
+    let selectedStat = this.data.data.score;
     const label = game.i18n.localize(`WWN.skills.${expl}`);
     const rollParts = ["2d6"];
 
@@ -351,7 +352,7 @@ export class WwnActor extends Actor {
         expl: label,
       }),
     };
-    let selectedStat = this.data.data.score;
+
     rollParts.push(this.data.data.skills[expl].value);
     rollParts.push(this.data.data.scores[selectedStat].mod);
 
