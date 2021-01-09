@@ -566,8 +566,8 @@ export class WwnActor extends Actor {
       }
       data.encumbrance.readied.max = maxReadied;
       data.encumbrance.stowed.max = maxStowed;
-      data.encumbrance.readied.value = totalReadied;
-      data.encumbrance.stowed.value = totalStowed;
+      data.encumbrance.readied.value = totalReadied.toFixed(2);
+      data.encumbrance.stowed.value = totalStowed.toFixed(2);
     });
 
     this._calculateMovement();
