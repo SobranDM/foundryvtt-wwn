@@ -368,6 +368,37 @@ export class WwnActor extends Actor {
       title: game.i18n.format("WWN.roll.skills", { skills: label }),
     });
   }
+  
+  rollMonsterSkill(skill, options = {}) {
+    const label = game.i18n.localize(`WWN.skill`);
+    const rollParts = ["2d6"];
+
+    const data = {
+      actor: this.data,
+      roll: {
+        type: "skill",
+        target: this.data.data.details.skill,
+      },
+
+      details: game.i18n.format("WWN.roll.details.attribute", {
+        score: label,
+      }),
+    };
+
+    rollParts.push(this.data.data.details.skill);
+    let skip = options.event && options.event.ctrlKey;
+
+    // Roll and return
+    return WwnDice.Roll({
+      event: options.event,
+      parts: rollParts,
+      data: data,
+      skipDialog: skip,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: game.i18n.format("WWN.roll.attribute", { attribute: label }),
+      title: game.i18n.format("WWN.roll.attribute", { attribute: label }),
+    });
+  }
 
   rollDamage(attData, options = {}) {
     const data = this.data.data;

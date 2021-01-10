@@ -166,6 +166,12 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       let check = $(ev.currentTarget).closest('.check-field').data('check');
       actorObject.rollAppearing({ event: event, check: check });
     });
+
+    html.find(".monster-skill-check a").click((ev) => {
+      let actorObject = this.actor;
+      let check = $(ev.currentTarget).closest('.check-field').data('check');
+      actorObject.rollMonsterSkill({ event: event, check: check });
+    });
     
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
