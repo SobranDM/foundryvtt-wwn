@@ -368,6 +368,37 @@ export class WwnActor extends Actor {
       title: game.i18n.format("WWN.roll.skills", { skills: label }),
     });
   }
+  
+  rollMonsterSkill(skill, options = {}) {
+    const label = game.i18n.localize(`WWN.skill`);
+    const rollParts = ["2d6"];
+
+    const data = {
+      actor: this.data,
+      roll: {
+        type: "skill",
+        target: this.data.data.details.skill,
+      },
+
+      details: game.i18n.format("WWN.roll.details.attribute", {
+        score: label,
+      }),
+    };
+
+    rollParts.push(this.data.data.details.skill);
+    let skip = options.event && options.event.ctrlKey;
+
+    // Roll and return
+    return WwnDice.Roll({
+      event: options.event,
+      parts: rollParts,
+      data: data,
+      skipDialog: skip,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: game.i18n.format("WWN.roll.attribute", { attribute: label }),
+      title: game.i18n.format("WWN.roll.attribute", { attribute: label }),
+    });
+  }
 
   rollDamage(attData, options = {}) {
     const data = this.data.data;
@@ -566,8 +597,8 @@ export class WwnActor extends Actor {
       }
       data.encumbrance.readied.max = maxReadied;
       data.encumbrance.stowed.max = maxStowed;
-      data.encumbrance.readied.value = totalReadied;
-      data.encumbrance.stowed.value = totalStowed;
+      data.encumbrance.readied.value = totalReadied.toFixed(2);
+      data.encumbrance.stowed.value = totalStowed.toFixed(2);
     });
 
     this._calculateMovement();
@@ -655,7 +686,7 @@ export class WwnActor extends Actor {
     let baseAac = 10;
     let AacShield = 0;
     const data = this.data.data;
-    data.aac.naked = baseAac + data.scores.dex.mod;
+    data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (a.data.equipped && a.data.type != "shield") {
@@ -682,27 +713,27 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    data.scores.str.mod = WwnActor._valueFromTable(
+    data.scores.str.mod = data.scores.str.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.str.value
     );
-    data.scores.int.mod = WwnActor._valueFromTable(
+    data.scores.int.mod = data.scores.dex.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.int.value
     );
-    data.scores.dex.mod = WwnActor._valueFromTable(
+    data.scores.dex.mod = data.scores.con.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.dex.value
     );
-    data.scores.cha.mod = WwnActor._valueFromTable(
+    data.scores.cha.mod = data.scores.int.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.cha.value
     );
-    data.scores.wis.mod = WwnActor._valueFromTable(
+    data.scores.wis.mod = data.scores.wis.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.wis.value
     );
-    data.scores.con.mod = WwnActor._valueFromTable(
+    data.scores.con.mod = data.scores.cha.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.con.value
     );
