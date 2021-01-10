@@ -204,32 +204,38 @@
         "str": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         },
         "int": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         },
         "wis": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         },
         "dex": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         },
         "con": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         },
         "cha": {
           "value": 0,
           "bonus": 0,
-          "mod": 0
+          "mod": 0,
+          "tweak": 0
         }
       },
       "encumbrance": {

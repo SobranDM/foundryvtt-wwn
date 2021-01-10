@@ -655,7 +655,7 @@ export class WwnActor extends Actor {
     let baseAac = 10;
     let AacShield = 0;
     const data = this.data.data;
-    data.aac.naked = baseAac + data.scores.dex.mod;
+    data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (a.data.equipped && a.data.type != "shield") {
