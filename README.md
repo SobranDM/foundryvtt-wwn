@@ -16,6 +16,13 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
 ## Recent Changes
+# New in 0.7.1
+* Added Adventuring Gear to Compendium
+* Changed Armor Class Tweak to apply to Naked AC as opposed to final AC
+    * This should better support certain Foci and effects
+* Added Tweaks for Attribute Modifiers to support Developed Attribute and some Origin Foci
+* Added Monster Skill to monster sheet, along with associated roll
+# New in 0.7.0
 * Fixed Group Initiative die type
     * Thanks to Discord user BWebby for pointing this out
 * Separated Foci into their own tab
