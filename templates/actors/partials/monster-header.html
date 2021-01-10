@@ -42,6 +42,13 @@
       <input type="text" name="data.details.xp" value="{{data.details.xp}}" />
       <label>{{localize 'WWN.details.experience.award'}}</label>
     </li>
+    <li class="flexrow check-field">
+      <div>
+        <input type="text" name="data.details.skill" value="{{data.details.skill}}" />
+        <label>{{localize 'WWN.skill'}}</label>  
+      </div>
+      <div class="check skill-check" title="{{localize 'WWN.skill'}}"><a><i class="fas fa-dice"></i></a></div>
+    </li>
     <li class="treasure-table" title="{{localize 'WWN.details.treasureTableHint'}}">
       <div>{{{data.details.treasure.link}}}</div>
       <label>{{localize 'WWN.details.treasure'}}</label>

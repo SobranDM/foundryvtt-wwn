@@ -74,8 +74,6 @@
           data.config.movementAuto}}  data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
     </div>
   </div>
-  {{/if}}
-
   <div class="form-group">
     <label>{{localize 'WWN.scores.str.long'}} {{localize 'WWN.Modifier'}}</label>
     <div class="form-fields">
@@ -118,7 +116,6 @@
         data-dtype="Number" />
     </div>
   </div>
-
   <div class="form-group">
     <label>{{localize 'WWN.skills.administer'}}</label>
     <div class="form-fields">
@@ -329,6 +326,7 @@
       </select>
     </div>
   </div>
+  {{/if}}
   <footer class="sheet-footer">
     <button type="submit">
       <i class="fas fa-save"></i>{{localize "Save Changes"}}
