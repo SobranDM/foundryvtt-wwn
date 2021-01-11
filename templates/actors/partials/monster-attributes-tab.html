@@ -5,7 +5,7 @@
                 <h4 class="attribute-name box-title" title="{{localize 'WWN.Health'}}">{{ localize "WWN.HealthShort" }}
                     <a class="hp-roll"><i class="fas fa-dice"></i></a></h4>
                 <div class="attribute-value flexrow">
-                    <input name="data.hp.value" type="text" value="{{data.hp.value}}" data-dtype="Number"
+                    <input name="data.hp.value" type="number" value="{{data.hp.value}}" data-dtype="Number"
                         placeholder="0" />
                     <span class="sep"> / </span>
                     <input name="data.hp.max" type="text" value="{{data.hp.max}}" data-dtype="Number" placeholder="0" />
@@ -23,7 +23,7 @@
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.InitiativeBonus' }}">
                     {{ localize "WWN.Initiative" }}</h4>
                 <div class="attribute-value">
-                    <input name="data.initiative.mod" type="text" value="{{data.initiative.mod}}" data-dtype="Number"
+                    <input name="data.initiative.mod" type="number" value="{{data.initiative.mod}}" data-dtype="Number"
                         placeholder="1" data-dtype="Number" />
                 </div>
             </li>
@@ -31,7 +31,7 @@
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
                     {{ localize "WWN.AscArmorClassShort" }}</h4>
                 <div class="attribute-value">
-                    <input name="data.aac.value" type="text" value="{{data.aac.value}}" data-dtype="Number"
+                    <input name="data.aac.value" type="number" value="{{data.aac.value}}" data-dtype="Number"
                         placeholder="10" data-dtype="Number" />
                 </div>
             </li>
@@ -39,7 +39,7 @@
                 <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}"><a>{{ localize "WWN.ABShort" }}</a>
                 </h4>
                 <div class="attribute-value">
-                    <input name="data.thac0.bba" type="text" value="{{data.thac0.bba}}" placeholder="0"
+                    <input name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
             </li>
@@ -49,7 +49,7 @@
                     {{ localize "WWN.LoyaltyShort" }}
                 </h4>
                 <div class="attribute-value">
-                    <input name="data.retainer.loyalty" type="text" value="{{data.retainer.loyalty}}" placeholder="0"
+                    <input name="data.retainer.loyalty" type="number" value="{{data.retainer.loyalty}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
             </li>
@@ -59,7 +59,7 @@
                     {{ localize "WWN.movement.short" }}
                 </h4>
                 <div class="attribute-value">
-                    <input name="data.movement.base" type="text" value="{{data.movement.base}}" placeholder="0"
+                    <input name="data.movement.base" type="number" value="{{data.movement.base}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
             </li>
@@ -119,9 +119,9 @@
                             </div>
                             {{#if (eq item.type 'weapon')}}
                             <div class="field-long counter flexrow">
-                                <input name="{{item.data.counter.value}}" type="text" value="{{item.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
+                                <input name="{{item.data.counter.value}}" type="number" value="{{item.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
                                 /
-                                <input type="text" value="{{item.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
+                                <input type="number" value="{{item.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}
@@ -144,7 +144,7 @@
                 <li class="attacks-description">
                     {{#unless isNew}}
                     <label>{{ localize "WWN.movement.details" }}</label>
-                    <input name="data.movement.value" type="text" value="{{data.movement.value}}" data-dtype="String" />
+                    <input name="data.movement.value" type="number" value="{{data.movement.value}}" data-dtype="String" />
                     {{else}}
                     <button data-action="generate-saves">{{localize "WWN.dialog.generateSaves"}}</button>
                     {{/unless}}

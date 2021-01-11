@@ -30,12 +30,12 @@
       <label>{{localize 'WWN.details.class'}}</label>
     </li>
     <li class="{{#if (gt data.details.xp.value data.details.xp.next)}}notify{{/if}}">
-      <input type="text" name="data.details.level" value="{{data.details.level}}" data-dtype="Number"
+      <input type="number" name="data.details.level" value="{{data.details.level}}" data-dtype="Number"
          />
       <label>{{localize 'WWN.details.level'}}</label>
     </li>
     <li class="flex2">
-      <input type="text" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number"
+      <input type="number" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number"
          />
       <label>{{localize 'WWN.details.experience.base'}}</label>
       {{#if data.details.xp.bonus}}

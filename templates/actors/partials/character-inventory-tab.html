@@ -2,16 +2,16 @@
   <div class="flexrow">
     <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
     <div class="readied">
-      <input name="data.encumbrance.readied.value" type="text" value="{{data.encumbrance.readied.value}}"
+      <input name="data.encumbrance.readied.value" type="number" value="{{data.encumbrance.readied.value}}"
         data-dtype="Number" disabled />/
-      <input name="data.encumbrance.readied.max" type="text" value="{{data.encumbrance.readied.max}}"
+      <input name="data.encumbrance.readied.max" type="number" value="{{data.encumbrance.readied.max}}"
         data-dtype="Number" disabled />
     </div>
     <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
     <div class=readied>
-      <input name="data.encumbrance.stowed.value" type="text" value="{{data.encumbrance.stowed.value}}"
+      <input name="data.encumbrance.stowed.value" type="number" value="{{data.encumbrance.stowed.value}}"
         data-dtype="Number" disabled />/
-      <input name="data.encumbrance.stowed.max" type="text" value="{{data.encumbrance.stowed.max}}" data-dtype="Number"
+      <input name="data.encumbrance.stowed.max" type="number" value="{{data.encumbrance.stowed.max}}" data-dtype="Number"
         disabled />
     </div>
   </div>
@@ -153,7 +153,7 @@
             </a>
           </div>
           <div class="field-short quantity">
-            <input value="{{item.data.quantity.value}}" type="text"
+            <input value="{{item.data.quantity.value}}" type="number"
               placeholder="0" />{{#if item.data.quantity.max}}<span>/{{item.data.quantity.max}}</span>{{/if}}
           </div>
           <div class="field-short">
@@ -207,7 +207,7 @@
           </div>
           <div class="field-long">{{mult item.data.quantity.value item.data.cost}}</div>
           <div class="field-short quantity">
-            <input value="{{item.data.quantity.value}}" type="text"
+            <input value="{{item.data.quantity.value}}" type="number"
               placeholder="0" />{{#if item.data.quantity.max}}<span>/{{item.data.quantity.max}}</span>{{/if}}
           </div>
           <div class="field-short">

@@ -138,10 +138,10 @@
             </a>
           </div>
           <div class="field-long memorize flexrow">
-            <input type="text" value="{{item.data.cast}}" data-dtype="Number" placeholder="0" data-field="cast"
+            <input type="number" value="{{item.data.cast}}" data-dtype="Number" placeholder="0" data-field="cast"
               title="{{localize 'WWN.spells.Cast'}}">
             /
-            <input type="text" value="{{item.data.memorized}}" data-field="memorize" data-dtype="Number" placeholder="0"
+            <input type="number" value="{{item.data.memorized}}" data-field="memorize" data-dtype="Number" placeholder="0"
               title="{{localize 'WWN.spells.Memorized'}}"></div>
           <div class="item-controls">
             {{#if ../../owner}}
