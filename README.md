@@ -19,6 +19,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Fixed bugs with the Attribute Modifier tweaks
 * Fixed a couple Initiative bugs
 * Movement now correctly reflects the WWN system
+* Fixed data type on most number fields (can now change value with mouse wheel)
 ### New in 0.7.1
 * Added Adventuring Gear to Compendium
 * Changed Armor Class Tweak to apply to Naked AC as opposed to final AC
