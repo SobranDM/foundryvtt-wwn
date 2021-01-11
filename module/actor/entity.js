@@ -717,15 +717,15 @@ export class WwnActor extends Actor {
       standard,
       data.scores.str.value
     );
-    data.scores.int.mod = data.scores.dex.tweak + WwnActor._valueFromTable(
+    data.scores.int.mod = data.scores.int.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.int.value
     );
-    data.scores.dex.mod = data.scores.con.tweak + WwnActor._valueFromTable(
+    data.scores.dex.mod = data.scores.dex.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.dex.value
     );
-    data.scores.cha.mod = data.scores.int.tweak + WwnActor._valueFromTable(
+    data.scores.cha.mod = data.scores.cha.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.cha.value
     );
@@ -733,7 +733,7 @@ export class WwnActor extends Actor {
       standard,
       data.scores.wis.value
     );
-    data.scores.con.mod = data.scores.cha.tweak + WwnActor._valueFromTable(
+    data.scores.con.mod = data.scores.con.tweak + WwnActor._valueFromTable(
       standard,
       data.scores.con.value
     );
