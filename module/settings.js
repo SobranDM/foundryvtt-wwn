@@ -45,7 +45,7 @@ export const registerSettings = function () {
   game.settings.register("wwn", "showMovement", {
     name: game.i18n.localize("WWN.Setting.showMovement"),
     hint: game.i18n.localize("WWN.Setting.showMovementHint"),
-    default: true,
+    default: false,
     scope: "world",
     type: Boolean,
     config: true,
