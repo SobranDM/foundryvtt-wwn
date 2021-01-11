@@ -11,11 +11,15 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Visual indicator of health/strain percentage
 * Auto-populate monster saves
 * Automatically calculates movement rates based on Readied/Stowed values
-    * This mostly follows the values from the book, but uses a formula. As a result, you can do things that technically aren't allowed RAW, such as carrying 4 Readied items over your max and still moving at full speed so long as your Stowed value is 8 or more points under maximum.
     * This can be disabled in Tweaks. Currently this only enables manual entering of Exploration Movement Rate, from which the others will still be calculated. This will be changed later.
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
 
 ## Recent Changes
+### New in 0.7.2
+* Fixed bugs with the Attribute Modifier tweaks
+* Fixed a couple Initiative bugs
+* Movement now correctly reflects the WWN system
+* Fixed data type on most number fields (can now change value with mouse wheel)
 ### New in 0.7.1
 * Added Adventuring Gear to Compendium
 * Changed Armor Class Tweak to apply to Naked AC as opposed to final AC

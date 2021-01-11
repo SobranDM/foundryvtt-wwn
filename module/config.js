@@ -1,10 +1,10 @@
 export const WWN = {
   scores: {
     str: "WWN.scores.str.long",
-    int: "WWN.scores.int.long",
-    dex: "WWN.scores.dex.long",
-    wis: "WWN.scores.wis.long",
-    con: "WWN.scores.con.long",
+    int: "WWN.scores.dex.long",
+    dex: "WWN.scores.con.long",
+    wis: "WWN.scores.int.long",
+    con: "WWN.scores.wis.long",
     cha: "WWN.scores.cha.long",
   },
   roll_type: {

@@ -11,14 +11,14 @@
             <label title="{{localize 'WWN.items.Cost'}}"><i class="fas
                 fa-circle"></i></label>
             <div class="form-fields">
-              <input type="text" name="data.cost" value="{{data.cost}}" data-dtype="Number" />
+              <input type="number" name="data.cost" value="{{data.cost}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
             <label title="{{localize 'WWN.items.Weight'}}"><i class="fas
                 fa-weight-hanging"></i></label>
             <div class="form-fields">
-              <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
+              <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
             </div>
           </div>
         </div>
@@ -51,9 +51,9 @@
         <div class="form-group block-input">
           <label>{{localize 'WWN.items.Shock'}}</label>
           <div class="form-fields">
-            <input type="text" name="data.shock.damage" value="{{data.shock.damage}}" data-dtype="String" 
+            <input type="number" name="data.shock.damage" value="{{data.shock.damage}}" data-dtype="String" 
             placeholder="{{localize 'WWN.items.Damage'}}" />
-            <input type="text" name="data.shock.ac" value="{{data.shock.ac}}" data-dtype="String"
+            <input type="number" name="data.shock.ac" value="{{data.shock.ac}}" data-dtype="String"
             placeholder="{{localize 'WWN.items.ArmorAC'}}" />
           </div>
         </div>
@@ -61,7 +61,7 @@
           <label title="{{localize 'WWN.items.AtkBonus'}}">{{localize
             'WWN.items.Bonus'}}</label>
           <div class="form-fields">
-            <input type="text" name="data.bonus" value="{{data.bonus}}" data-dtype="Number" />
+            <input type="number" name="data.bonus" value="{{data.bonus}}" data-dtype="Number" />
           </div>
         </div>
         <div class="form-group attack-type">
@@ -74,9 +74,9 @@
         <div class="form-group block-input">
           <label>{{localize 'WWN.items.Range'}}</label>
           <div class="form-fields range">
-            <input type="text" name="data.range.short" value="{{data.range.short}}" data-dtype="Number" />
+            <input type="number" name="data.range.short" value="{{data.range.short}}" data-dtype="Number" />
             <div class="sep"></div>
-            <input type="text" name="data.range.long" value="{{data.range.long}}" data-dtype="Number" />
+            <input type="number" name="data.range.long" value="{{data.range.long}}" data-dtype="Number" />
           </div>
         </div>
         {{/if}}
