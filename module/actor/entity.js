@@ -748,10 +748,7 @@ export class WwnActor extends Actor {
       16: 1,
       18: 2,
     };
-    data.scores.dex.init = WwnActor._valueFromTable(
-      capped,
-      data.scores.dex.value
-    );
+    data.scores.dex.init = data.scores.dex.mod;
     data.scores.cha.npc = WwnActor._valueFromTable(
       capped,
       data.scores.cha.value
