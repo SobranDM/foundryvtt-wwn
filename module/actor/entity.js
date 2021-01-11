@@ -70,25 +70,29 @@ export class WwnActor extends Actor {
   }
 
   generateSave() {
-    let hd = this.data.data.hp.hd.substring(0, this.data.data.hp.hd.indexOf("d"));
-    let save = Math.ceil((15 - hd / 2));
+    let hd = this.data.data.hp.hd.substring(
+      0,
+      this.data.data.hp.hd.indexOf("d")
+    );
+    let save = Math.ceil(15 - hd / 2);
     return this.update({
       data: {
         saves: {
           evasion: {
-            value: save
+            value: save,
           },
           mental: {
-            value: save
+            value: save,
           },
           physical: {
-            value: save
+            value: save,
           },
           luck: {
-            value: save
-          }
-        }
-      }});
+            value: save,
+          },
+        },
+      },
+    });
   }
 
   /* -------------------------------------------- */
@@ -368,7 +372,7 @@ export class WwnActor extends Actor {
       title: game.i18n.format("WWN.roll.skills", { skills: label }),
     });
   }
-  
+
   rollMonsterSkill(skill, options = {}) {
     const label = game.i18n.localize(`WWN.skill`);
     const rollParts = ["2d6"];
@@ -469,9 +473,7 @@ export class WwnActor extends Actor {
     let skillAttack = attData.item.data.skill;
     let unskilledAttack = -2;
 
-    rollParts.push(
-      data.thac0.bba.toString(),
-    );
+    rollParts.push(data.thac0.bba.toString());
 
     // TODO: Add range selector in dialogue if missile attack.
     /* if (options.type == "missile") {
@@ -480,15 +482,13 @@ export class WwnActor extends Actor {
       );
     } */
     if (data.character) {
-      rollParts.push(
-        this.data.data.scores[statAttack].mod.toString()
-      );
+      rollParts.push(this.data.data.scores[statAttack].mod.toString());
       if (data.skills[skillAttack].value == -1) {
         rollParts.push(unskilledAttack.toString());
       } else {
         rollParts.push(data.skills[skillAttack].value.toString());
       }
-    };
+    }
 
     if (attData.item && attData.item.data.bonus) {
       rollParts.push(attData.item.data.bonus);
@@ -497,9 +497,8 @@ export class WwnActor extends Actor {
 
     //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
     if (data.character) {
-      dmgParts.push(data.scores[statAttack].mod)
-    };
-    
+      dmgParts.push(data.scores[statAttack].mod);
+    }
 
     const rollData = {
       actor: this.data,
@@ -607,36 +606,57 @@ export class WwnActor extends Actor {
   _calculateMovement() {
     const data = this.data.data;
     if (data.config.movementAuto) {
-    let ecumbTotal =
-      data.encumbrance.readied.value * 2 + data.encumbrance.stowed.value;
-    let ecumbLimit = data.encumbrance.stowed.max * 2;
-    if (game.settings.get("wwn", "movementRate") == "movebx") {
-      if (ecumbTotal <= ecumbLimit) {
-        data.movement.base = 120;
-      } else if (ecumbTotal <= ecumbLimit + 4) {
-        data.movement.base = 90;
-      } else if (ecumbTotal <= ecumbLimit + 8) {
-        data.movement.base = 60;
-      } else {
-        data.movement.base = 0;
-      }
-    } else if (game.settings.get("wwn", "movementRate") == "movewwn") {
-      if (ecumbTotal <= ecumbLimit) {
-        data.movement.base = 90;
-      } else if (ecumbTotal <= ecumbLimit + 4) {
-        data.movement.base = 60;
-      } else if (ecumbTotal <= ecumbLimit + 8) {
-        data.movement.base = 45;
-      } else {
-        data.movement.base = 0;
+      if (game.settings.get("wwn", "movementRate") == "movebx") {
+        if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 120;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 90;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          data.movement.base = 90;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          data.movement.base = 60;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +4
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 60;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
+          data.movement.base = 60;
+        } else {
+          data.movement.base = 0;
+        }
+      } else if (game.settings.get("wwn", "movementRate") == "movewwn") {
+        if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 90;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 60;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          data.movement.base = 60;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          data.movement.base = 45;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +4
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
+          data.movement.base = 45;
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
+          data.movement.base = 45;
+        } else {
+          data.movement.base = 0;
+        }
       }
     }
   }
-}
 
   // Compute Effort
   computeEffort() {
-    const data=this.data.data;
+    const data = this.data.data;
     if (this.data.type != "character" || data.spells.enabled != true) {
       return;
     }
@@ -713,30 +733,24 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    data.scores.str.mod = data.scores.str.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.str.value
-    );
-    data.scores.int.mod = data.scores.int.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.int.value
-    );
-    data.scores.dex.mod = data.scores.dex.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.dex.value
-    );
-    data.scores.cha.mod = data.scores.cha.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.cha.value
-    );
-    data.scores.wis.mod = data.scores.wis.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.wis.value
-    );
-    data.scores.con.mod = data.scores.con.tweak + WwnActor._valueFromTable(
-      standard,
-      data.scores.con.value
-    );
+    data.scores.str.mod =
+      data.scores.str.tweak +
+      WwnActor._valueFromTable(standard, data.scores.str.value);
+    data.scores.int.mod =
+      data.scores.int.tweak +
+      WwnActor._valueFromTable(standard, data.scores.int.value);
+    data.scores.dex.mod =
+      data.scores.dex.tweak +
+      WwnActor._valueFromTable(standard, data.scores.dex.value);
+    data.scores.cha.mod =
+      data.scores.cha.tweak +
+      WwnActor._valueFromTable(standard, data.scores.cha.value);
+    data.scores.wis.mod =
+      data.scores.wis.tweak +
+      WwnActor._valueFromTable(standard, data.scores.wis.value);
+    data.scores.con.mod =
+      data.scores.con.tweak +
+      WwnActor._valueFromTable(standard, data.scores.con.value);
 
     const capped = {
       0: -2,
