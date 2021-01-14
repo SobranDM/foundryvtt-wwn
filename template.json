@@ -52,6 +52,13 @@
         },
         "version": 3
       },
+      "currency": {
+        "cp": 0,
+        "sp": 0,
+        "ep": 0,
+        "gp": 0,
+        "pp": 0
+      },
       "spellcaster": {
         "spells": {
           "enabled": false,
@@ -118,13 +125,6 @@
         }
       },
       "character": true,
-      "currency": {
-        "cp": 0,
-        "sp": 0,
-        "ep": 0,
-        "gp": 0,
-        "pp": 0
-      },
       "skills": {
         "administer": {
           "value": -1,

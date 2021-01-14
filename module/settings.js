@@ -88,4 +88,18 @@ export const registerSettings = function () {
     config: true,
     onChange: _ => window.location.reload()
   });
+
+  game.settings.register("wwn", "currencyTypes", {
+    name: game.i18n.localize("WWN.items.Currency"),
+    hint: game.i18n.localize("WWN.items.CurrencyHint"),
+    default: "currencywwn",
+    scope: "world",
+    type: String,
+    config: true,
+    choices: {
+      currencywwn: "WWN.Setting.CurrencyWWN",
+      currencybx: "WWN.Setting.CurrencyBX",
+    },
+    onChange: _ => window.location.reload()
+  });
 };

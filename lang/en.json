@@ -188,6 +188,8 @@
   "WWN.Setting.showMovementHint": "Show Turn and Overland movement rates.",
   "WWN.Setting.SignificantTreasure": "Significant Treasure Weight",
   "WWN.Setting.SignificantTreasureHint": "Weight at which treasure will reduce the movement, only useful for basic encumbrance",
+  "WWN.Setting.CurrencyWWN": "WWN Coins",
+  "WWN.Setting.CurrencyBX": "B/X Coins",
 
   "WWN.items.Equip": "Readied",
   "WWN.items.Unequip": "Unequip",
@@ -223,6 +225,8 @@
   "WWN.items.other": "Other",
   "WWN.items.location.long": "Location",
   "WWN.items.location.short": "L",
+  "WWN.items.Currency": "Currency",
+  "WWN.items.CurrencyHint": "Use WWN coin standards or the full B/X standard.",
 
   "WWN.items.Range": "Range",
   "WWN.items.Range.desc": "Ranged Weapon",
