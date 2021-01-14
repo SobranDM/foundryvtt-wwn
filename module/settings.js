@@ -60,4 +60,32 @@ export const registerSettings = function () {
     type: Boolean,
     config: true,
   });
+
+  game.settings.register("wwn", "languageList", {
+    name: game.i18n.localize("WWN.Languages"),
+    hint: game.i18n.localize("WWN.LanguagesHint"),
+    default: [
+      "Trade Cant",
+      "Ancient Vothian",
+      "Old Vothian",
+      "Modern Vothian",
+      "Ancient Olok",
+      "Brass Speech",
+      "Ancient Lin",
+      "Emedian",
+      "Ancient Osrin",
+      "Thurian",
+      "Ancient Khalan",
+      "Llaigisan",
+      "Anak Speech",
+      "Predecessant",
+      "Abased",
+      "Recurrent",
+      "Deep Speech"
+    ],
+    scope: "world",
+    type: String,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
 };

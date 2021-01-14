@@ -57,7 +57,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
 
   async _chooseLang() {
-    let choices = CONFIG.WWN.languages;
+    let languages = game.settings.get("wwn", "languageList");
+    let choices = languages.split(",");
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
