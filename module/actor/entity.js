@@ -781,16 +781,7 @@ export class WwnActor extends Actor {
       data.scores.int.value
     );
 
-    const spoken = {
-      0: "WWN.NativeBroken",
-      3: "WWN.Native",
-      13: "WWN.NativePlus1",
-      16: "WWN.NativePlus2",
-      18: "WWN.NativePlus3",
-    };
-    data.languages.spoken = WwnActor._valueFromTable(
-      spoken,
-      data.scores.int.value
-    );
+    data.langTotal = data.skills.connect.value + data.skills.know.value + 2;
+    data.languages.spoken = "WWN.NativePlus";
   }
 }
