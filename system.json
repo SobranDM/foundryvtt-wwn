@@ -65,6 +65,14 @@
       "module": "wwn",
       "path": "packs/adventuring-gear.db",
       "entity": "Item"
+    },
+    {
+      "name": "elixirs",
+      "label": "Elixirs",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/elixirs.db",
+      "entity": "Item"
     }
   ],
   "languages": [
