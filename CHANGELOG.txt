@@ -12,6 +12,7 @@
     * Coins are divided by 200 and added to Stowed inventory calculations, as per the book
     * Coins have been removed from the Compendium
 * Items only store a current quantity now instead of current/max
+    * I was too dumb to make a proper migration script, so you will lose current item quantities -- sorry!
 * With the previous two changes, the system should now be compatible with Better RollTables, for loot table goodness
     * The Roll button will output your loot table to the chat window
     * The Generate Loot button will not function for WWN until I or someone else gets around to creating a WWN-specific version of the Loot Sheet NPC module
