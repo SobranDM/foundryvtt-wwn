@@ -573,12 +573,6 @@ export class WwnActor extends Actor {
     let maxReadied = Math.floor(data.scores.str.value / 2);
     let maxStowed = data.scores.str.value;
     Object.values(this.data.items).forEach((item) => {
-      if (isNaN(item.data.quantity)) {
-        console.log('THIS IS WORKING');
-        let itemTransfer = item.data.quantity.value;
-        item.data.quantity = itemTransfer;
-        item.data.version = 3;
-      }
       if (item.type == "item" && !item.data.treasure) {
         hasItems = true;
       }
@@ -600,12 +594,13 @@ export class WwnActor extends Actor {
       if (item.type == "item" && item.data.stowed) {
         totalStowed += item.data.quantity * item.data.weight;
       }
-      data.encumbrance.readied.max = maxReadied;
-      data.encumbrance.stowed.max = maxStowed;
-      data.encumbrance.readied.value = totalReadied.toFixed(2);
-      data.encumbrance.stowed.value = totalStowed.toFixed(2);
     });
-
+    let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 200;
+    totalStowed += coinWeight;
+    data.encumbrance.readied.max = maxReadied;
+    data.encumbrance.stowed.max = maxStowed;
+    data.encumbrance.readied.value = totalReadied.toFixed(2);
+    data.encumbrance.stowed.value = totalStowed.toFixed(2);
     this._calculateMovement();
   }
 

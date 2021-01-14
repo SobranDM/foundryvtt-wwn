@@ -6,6 +6,12 @@
 * The list of languages now reflect those listed in Languages of the Gyre in WWN
     * Preterite is not included, as the text implies you cannot truly learn it as a language
     * Languages can be added or deleted at a system level in system settings
+* Currency as a character attribute and reported at the top of the inventory page
+    * System setting toggles between WWN standard (SP/GP only) and B/X standard (adds CP/EP/PP)
+    * Coins are divided by 200 and added to Stowed inventory calculations, as per the book
+* Items only store a current quantity now instead of current/max
+* With the previous two changes, the system should now be compatible with Better RollTables, for loot table goodness
+* Spellcasting now reflects WWN standards
 ## New in 0.7.2
 * Fixed bugs with the Attribute Modifier tweaks
 * Fixed a couple Initiative bugs
