@@ -316,7 +316,7 @@
       "description": "",
       "quantity": 1,
       "treasure": false,
-      "cost": 0,
+      "price": 0,
       "weight": 0,
       "equipped": false,
       "stowed": false,
@@ -343,7 +343,7 @@
     "slow": false,
     "missile": false,
     "melee": true,
-    "cost": 0,
+    "price": 0,
     "weight": 0,
     "counter": {
       "value": 0,
@@ -355,7 +355,7 @@
     "ac": 9,
     "aac": 10,
     "type": "light",
-    "cost": 0,
+    "price": 0,
     "weight": 0
   },
   "spell": {

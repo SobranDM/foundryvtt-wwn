@@ -162,7 +162,7 @@ export class WwnCharacterCreator extends FormApplication {
       img: "/systems/wwn/assets/gold.png",
       data: {
         treasure: true,
-        cost: 1,
+        price: 1,
         weight: 1,
         quantity: {
           value: gold
