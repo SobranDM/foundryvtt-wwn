@@ -54,6 +54,10 @@
       "spellcaster": {
         "spells": {
           "enabled": false,
+          "perDay": {
+            "value": 0,
+            "max": 0
+          },
           "1": {
             "max": 0
           },

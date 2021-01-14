@@ -266,12 +266,12 @@
   "WWN.spells.Memorized": "Memorized",
   "WWN.spells.Cast": "Cast",
   "WWN.spells.Range": "Range",
-  "WWN.spells.Slots": "Slots",
+  "WWN.spells.Slots": "Spell Slots",
   "WWN.spells.Class": "Class",
   "WWN.spells.Duration": "Duration",
   "WWN.spells.Level": "Level",
   "WWN.spells.Save": "Save",
-  "WWN.spells.ResetSlots": "Reset Spell slots",
+  "WWN.spells.ResetSlots": "Reset Spell Slots",
   "WWN.spells.Arts": "Art",
   "WWN.spells.ArtSource": "Source",
   "WWN.spells.ArtSourceHint": "Source of Art",
@@ -282,6 +282,7 @@
   "WWN.spells.HighMage": "High Mage",
   "WWN.spells.Scene": "Scene",
   "WWN.spells.CasterClass": "Caster Class",
+  "WWN.spells.Resources": "Resources",
 
   "WWN.abilities.Requirements": "Requirements",
 

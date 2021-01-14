@@ -105,17 +105,11 @@ export class WwnActorSheet extends ActorSheet {
   }
 
   async _resetSpells(event) {
-    let spells = $(event.currentTarget)
-      .closest(".inventory.spells")
-      .find(".item");
-    spells.each((_, el) => {
-      let itemId = el.dataset.itemId;
-      const item = this.actor.getOwnedItem(itemId);
-      item.update({
-        _id: item.id,
-        "data.cast": item.data.data.memorized,
-      });
-    });
+    let spellsTotal = this.actor.data.data.spells.perDay.max;
+    this.actor.update({
+      "data.spells.perDay.value": spellsTotal
+      }
+    );
   }
 
   activateListeners(html) {
