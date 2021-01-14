@@ -187,6 +187,65 @@
     </li>
   </div>
 </ul>
+{{#if config.psychicSkills}}
+<div>
+<ul class="attributes-group flexrow">
+  <div class="attributes skills">
+    <li class="attribute flexrow" data-skills="biopsionics">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.biopsionics'}}">
+        <a>{{ localize "WWN.skills.biopsionics" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.biopsionics.value" type="number" value="{{data.skills.biopsionics.value}}"
+          data-dtype="Number" placeholder="-1" />
+      </div>
+    </li>
+    <li class="attribute flexrow" data-skills="metapsionics">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.metapsionics'}}">
+        <a>{{ localize "WWN.skills.metapsionics" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.metapsionics.value" type="number" value="{{data.skills.metapsionics.value}}" data-dtype="Number"
+          placeholder="-1" />
+      </div>
+    </li>
+  </div>
+  <div class="attributes skills">
+    <li class="attribute flexrow" data-skills="precognition">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.precognition'}}">
+        <a>{{ localize "WWN.skills.precognition" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.precognition.value" type="number" value="{{data.skills.precognition.value}}"
+          data-dtype="Number" placeholder="-1" />
+      </div>
+    </li>
+    <li class="attribute flexrow" data-skills="telekinesis">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.telekinesis'}}">
+        <a>{{ localize "WWN.skills.telekinesis" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.telekinesis.value" type="number" value="{{data.skills.telekinesis.value}}" data-dtype="Number"
+          placeholder="-1" />
+      </div>
+    </li>
+  </div>
+  <div class="attributes skills">
+    <li class="attribute flexrow" data-skills="telepathy">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.telepathy'}}">
+        <a>{{ localize "WWN.skills.telepathy" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.telepathy.value" type="number" value="{{data.skills.telepathy.value}}"
+          data-dtype="Number" placeholder="-1" />
+      </div>
+    </li>
+    <li class="attribute flexrow" data-skills="teleportation">
+      <h4 class="attribute-name box-title" title="{{localize 'WWN.skills.desc.teleportation'}}">
+        <a>{{ localize "WWN.skills.teleportation" }}</a></h4>
+      <div class="attribute-value">
+        <input name="data.skills.teleportation.value" type="number" value="{{data.skills.teleportation.value}}" data-dtype="Number"
+          placeholder="-1" />
+      </div>
+    </li>
+  </div>
+</div>
+{{/if}}
 <div class="form-group flexrow">
   <div class="form-fields">
     <label id="unspentPoints"

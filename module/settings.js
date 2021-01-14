@@ -102,4 +102,14 @@ export const registerSettings = function () {
     },
     onChange: _ => window.location.reload()
   });
+  
+  game.settings.register("wwn", "psychicSkills", {
+    name: game.i18n.localize("WWN.Setting.psychicSkills"),
+    hint: game.i18n.localize("WWN.Setting.psychicSkillsHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
 };

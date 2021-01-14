@@ -210,6 +210,30 @@
           "value": -1,
           "dice": "2d6"
         },
+        "biopsionics": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "metapsionics": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "precognition": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "telekinesis": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "telepathy": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "teleportation": {
+          "value": -1,
+          "dice": "2d6"
+        },
         "unspent:": 0
       },
       "scores": {

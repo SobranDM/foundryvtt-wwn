@@ -1,6 +1,7 @@
 ## New in 0.7.3
 * Re-refixed Attribute Modifiers
-* Monster movement now allows text input
+* Monster movement now allows text input better handle multiple movement types
+    * Monsters may now move 30 parsecs per turn, if you so wish
 * Languages spoken now reflect the Know/Connect calculations from WWN
     * Literacy has been left as a holdover from OSE in case any DMs wish to use it; it has no direct corollary in WWN
 * The list of languages now reflect those listed in Languages of the Gyre in WWN
@@ -14,7 +15,7 @@
 * With the previous two changes, the system should now be compatible with Better RollTables, for loot table goodness
     * The Roll button will output your loot table to the chat window
     * The Generate Loot button will not function for WWN until I or someone else gets around to creating a WWN-specific version of the Loot Sheet NPC module
-    
+
 * Spellcasting now reflects WWN standards
 ## New in 0.7.2
 * Fixed bugs with the Attribute Modifier tweaks
