@@ -595,8 +595,14 @@ export class WwnActor extends Actor {
         totalStowed += item.data.quantity * item.data.weight;
       }
     });
-    let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 200;
-    totalStowed += coinWeight;
+    
+    if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
+      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 200;
+      totalStowed += coinWeight;
+    } else {
+      let coinWeight = ( data.currency.sp + data.currency.gp ) / 200;
+      totalStowed += coinWeight;
+    }
     data.encumbrance.readied.max = maxReadied;
     data.encumbrance.stowed.max = maxStowed;
     data.encumbrance.readied.value = totalReadied.toFixed(2);
