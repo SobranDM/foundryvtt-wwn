@@ -9,8 +9,12 @@
 * Currency as a character attribute and reported at the top of the inventory page
     * System setting toggles between WWN standard (SP/GP only) and B/X standard (adds CP/EP/PP)
     * Coins are divided by 200 and added to Stowed inventory calculations, as per the book
+    * Coins have been removed from the Compendium
 * Items only store a current quantity now instead of current/max
 * With the previous two changes, the system should now be compatible with Better RollTables, for loot table goodness
+    * The Roll button will output your loot table to the chat window
+    * The Generate Loot button will not function for WWN until I or someone else gets around to creating a WWN-specific version of the Loot Sheet NPC module
+    
 * Spellcasting now reflects WWN standards
 ## New in 0.7.2
 * Fixed bugs with the Attribute Modifier tweaks
