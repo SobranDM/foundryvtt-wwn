@@ -589,17 +589,24 @@ export class WwnActor extends Actor {
         totalStowed += item.data.weight;
       }
       if (item.type == "item" && item.data.equipped) {
-        totalReadied += item.data.quantity.value * item.data.weight;
+        totalReadied += item.data.quantity * item.data.weight;
       }
       if (item.type == "item" && item.data.stowed) {
-        totalStowed += item.data.quantity.value * item.data.weight;
+        totalStowed += item.data.quantity * item.data.weight;
       }
-      data.encumbrance.readied.max = maxReadied;
-      data.encumbrance.stowed.max = maxStowed;
-      data.encumbrance.readied.value = totalReadied.toFixed(2);
-      data.encumbrance.stowed.value = totalStowed.toFixed(2);
     });
-
+    
+    if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
+      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 200;
+      totalStowed += coinWeight;
+    } else {
+      let coinWeight = ( data.currency.sp + data.currency.gp ) / 200;
+      totalStowed += coinWeight;
+    }
+    data.encumbrance.readied.max = maxReadied;
+    data.encumbrance.stowed.max = maxStowed;
+    data.encumbrance.readied.value = totalReadied.toFixed(2);
+    data.encumbrance.stowed.value = totalStowed.toFixed(2);
     this._calculateMovement();
   }
 
@@ -693,7 +700,7 @@ export class WwnActor extends Actor {
       (i) => i.type == "item" && i.data.treasure
     );
     treasure.forEach((item) => {
-      total += item.data.quantity.value * item.data.cost;
+      total += item.data.quantity * item.data.cost;
     });
     data.treasure = total;
   }
@@ -781,16 +788,7 @@ export class WwnActor extends Actor {
       data.scores.int.value
     );
 
-    const spoken = {
-      0: "WWN.NativeBroken",
-      3: "WWN.Native",
-      13: "WWN.NativePlus1",
-      16: "WWN.NativePlus2",
-      18: "WWN.NativePlus3",
-    };
-    data.languages.spoken = WwnActor._valueFromTable(
-      spoken,
-      data.scores.int.value
-    );
+    data.langTotal = data.skills.connect.value + data.skills.know.value + 2;
+    data.languages.spoken = "WWN.NativePlus";
   }
 }

@@ -150,11 +150,11 @@ export class WwnItem extends Item {
   }
 
   spendSpell() {
-    this.update({
-      data: {
-        cast: this.data.data.cast - 1,
-      },
-    }).then(() => {
+    let spellsLeft = this.actor.data.data.spells.perDay.value;
+    this.actor.update({
+      "data.spells.perDay.value": spellsLeft - 1
+      }
+    ).then(() => {
       this.show({ skipDialog: true });
     });
   }

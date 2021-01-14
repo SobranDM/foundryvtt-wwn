@@ -50,6 +50,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
     data.config.showMovement = game.settings.get("wwn", "showMovement");
+    data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
+    data.config.psychicSkills = game.settings.get("wwn", "psychicSkills");
 
     data.isNew = this.actor.isNew();
     return data;
@@ -57,7 +59,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
 
   async _chooseLang() {
-    let choices = CONFIG.WWN.languages;
+    let languages = game.settings.get("wwn", "languageList");
+    let choices = languages.split(",");
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
@@ -92,8 +95,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   _pushLang(table) {
     const data = this.actor.data.data;
     let update = duplicate(data[table]);
+    let language = game.settings.get("wwn", "languageList");
+    let languages = language.split(",");
     this._chooseLang().then((dialogInput) => {
-      const name = CONFIG.WWN.languages[dialogInput.choice];
+      const name = languages[dialogInput.choice];
       if (update.value) {
         update.value.push(name);
       } else {
@@ -119,7 +124,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.quantity.value": parseInt(event.target.value) });
+    return item.update({ "data.quantity": parseInt(event.target.value) });
   }
 
   async _onEffortChange(event) {

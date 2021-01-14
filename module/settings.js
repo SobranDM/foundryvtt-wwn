@@ -45,7 +45,7 @@ export const registerSettings = function () {
   game.settings.register("wwn", "showMovement", {
     name: game.i18n.localize("WWN.Setting.showMovement"),
     hint: game.i18n.localize("WWN.Setting.showMovementHint"),
-    default: true,
+    default: false,
     scope: "world",
     type: Boolean,
     config: true,
@@ -59,5 +59,57 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
+  });
+
+  game.settings.register("wwn", "languageList", {
+    name: game.i18n.localize("WWN.Languages"),
+    hint: game.i18n.localize("WWN.LanguagesHint"),
+    default: [
+      "Trade Cant",
+      "Ancient Vothian",
+      "Old Vothian",
+      "Modern Vothian",
+      "Ancient Olok",
+      "Brass Speech",
+      "Ancient Lin",
+      "Emedian",
+      "Ancient Osrin",
+      "Thurian",
+      "Ancient Khalan",
+      "Llaigisan",
+      "Anak Speech",
+      "Predecessant",
+      "Abased",
+      "Recurrent",
+      "Deep Speech"
+    ],
+    scope: "world",
+    type: String,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
+
+  game.settings.register("wwn", "currencyTypes", {
+    name: game.i18n.localize("WWN.items.Currency"),
+    hint: game.i18n.localize("WWN.items.CurrencyHint"),
+    default: "currencywwn",
+    scope: "world",
+    type: String,
+    config: true,
+    choices: {
+      currencywwn: "WWN.Setting.CurrencyWWN",
+      currencybx: "WWN.Setting.CurrencyBX",
+    },
+    onChange: _ => window.location.reload()
+  });
+  
+  game.settings.register("wwn", "psychicSkills", {
+    name: game.i18n.localize("WWN.Setting.psychicSkills"),
+    hint: game.i18n.localize("WWN.Setting.psychicSkillsHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    onChange: _ => window.location.reload()
   });
 };

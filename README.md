@@ -13,30 +13,6 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Automatically calculates movement rates based on Readied/Stowed values
     * This can be disabled in Tweaks. Currently this only enables manual entering of Exploration Movement Rate, from which the others will still be calculated. This will be changed later.
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
-
-## Recent Changes
-### New in 0.7.2
-* Fixed bugs with the Attribute Modifier tweaks
-* Fixed a couple Initiative bugs
-* Movement now correctly reflects the WWN system
-* Fixed data type on most number fields (can now change value with mouse wheel)
-### New in 0.7.1
-* Added Adventuring Gear to Compendium
-* Changed Armor Class Tweak to apply to Naked AC as opposed to final AC
-    * This should better support certain Foci and effects
-* Added Tweaks for Attribute Modifiers to support Developed Attribute and some Origin Foci
-* Added Monster Skill to monster sheet, along with associated roll
-### New in 0.7.0
-* Fixed Group Initiative die type
-    * Thanks to Discord user BWebby for pointing this out
-* Separated Foci into their own tab
-* Party sheet (small button in the actors pane, below Create Actor) now functions again
-    * This now shows useful information but needs more formatting work
-* Added support for Specialist and similar Foci in the Tweaks menu
-    * Characters created before update will need to open and close the Tweaks menu once before Skill Rolls function correctly
-* Compendium now includes all Arts and Spells from the Free Version
-    * Thanks to reddit user Studbeastank for doing a lot of the legwork on this. I removed the Arts/Spells from the Deluxe edition but left the artwork edits he made to support those should users wish to manually add them in their games.
-    * I have done my best to catch any changes/additions from the newest Beta version (0.19) of WWN but please point out anything I've missed.
 ## TODO
 * Sorting Arts/Spells by source (class)
 * Toggle to add Skill value to damage

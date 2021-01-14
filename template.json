@@ -49,11 +49,23 @@
         "initiative": {
           "value": 0,
           "mod": 0
-        }
+        },
+        "version": 3
+      },
+      "currency": {
+        "cp": 0,
+        "sp": 0,
+        "ep": 0,
+        "gp": 0,
+        "pp": 0
       },
       "spellcaster": {
         "spells": {
           "enabled": false,
+          "perDay": {
+            "value": 0,
+            "max": 0
+          },
           "1": {
             "max": 0
           },
@@ -198,6 +210,30 @@
           "value": -1,
           "dice": "2d6"
         },
+        "biopsionics": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "metapsionics": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "precognition": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "telekinesis": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "telepathy": {
+          "value": -1,
+          "dice": "2d6"
+        },
+        "teleportation": {
+          "value": -1,
+          "dice": "2d6"
+        },
         "unspent:": 0
       },
       "scores": {
@@ -278,15 +314,13 @@
     "types": ["item", "weapon", "armor", "spell", "art", "focus"],
     "item": {
       "description": "",
-      "quantity": {
-        "value": 1,
-        "max": 0
-      },
+      "quantity": 1,
       "treasure": false,
       "cost": 0,
       "weight": 0,
       "equipped": false,
-      "stowed": false
+      "stowed": false,
+      "version": 3
     },
   "weapon": {
     "range": {

@@ -1,7 +1,7 @@
 <section class="inventory">
   <div>
     <li class="item-titles flexrow">
-      <div class="item-name">{{localize "WWN.spells.Effort"}}</div>
+      <div class="item-name">{{localize "WWN.spells.Resources"}}</div>
       <div class="field-short">{{localize "WWN.spells.Committed"}}</div>
       <div class="field-short">{{localize "WWN.Max"}}</div>
     </li>
@@ -9,7 +9,7 @@
       {{#if data.classes.effort1.name}}
       <li class="item-entry">
         <div class="item flexrow">
-          <div class="item-name flexrow">{{data.classes.effort1.name}}</div>
+          <div class="item-name flexrow">{{data.classes.effort1.name}} {{localize 'WWN.spells.Effort'}}</div>
           <div class="field-short"></div>
           <div class="field-short">
             <input name="data.classes.effort1.value" type="number" value="{{data.classes.effort1.value}}"
@@ -24,7 +24,7 @@
       {{#if data.classes.effort2.name}}
       <li class="item-entry">
         <div class="item flexrow">
-          <div class="item-name flexrow">{{data.classes.effort2.name}}</div>
+          <div class="item-name flexrow">{{data.classes.effort2.name}} {{localize 'WWN.spells.Effort'}}</div>
           <div class="field-short"></div>
           <div class="field-short">
             <input name="data.classes.effort2.value" type="number" value="{{data.classes.effort2.value}}"
@@ -39,7 +39,7 @@
       {{#if data.classes.effort3.name}}
       <li class="item-entry">
         <div class="item flexrow">
-          <div class="item-name flexrow">{{data.classes.effort3.name}}</div>
+          <div class="item-name flexrow">{{data.classes.effort3.name}} {{localize 'WWN.spells.Effort'}}</div>
           <div class="field-short"></div>
           <div class="field-short">
             <input name="data.classes.effort3.value" type="number" value="{{data.classes.effort3.value}}"
@@ -51,6 +51,19 @@
           </div>
       </li>
       {{/if}}
+      <li class="item-entry">
+        <div class="item flexrow">
+          <div class="item-name flexrow">{{localize 'WWN.spells.Slots'}}</div>
+          <div class="field-short"></div>
+          <div class="field-short">
+            <input name="data.spells.perDay.value" type="number" value="{{data.spells.perDay.value}}"
+              data-dtype="Number" />
+          </div>
+          <div class="field-short">
+            <input name="data.spells.perDay.max" type="number" value="{{data.spells.perDay.max}}" 
+            data-dtype="Number" />
+          </div>
+      </li>
   </div>
 
 </section>
@@ -115,11 +128,6 @@
     <li class="item-titles flexrow">
       <div class="item-caret"><i class="fas fa-caret-down"></i> </div>
       <div class="item-name">{{localize "WWN.spells.Level"}} {{id}}</div>
-      <div class="field-short">{{localize 'WWN.spells.Slots'}}</div>
-      <div class="field-long flexrow">
-        <input type="text" value="{{lookup @root.slots.used @key}}" name="data.spells.{{id}}.value" data-dtype="Number"
-          placeholder="0" disabled>/<input type="text" value="{{lookup (lookup ../actor.data.spells @key) 'max'}}"
-          name="data.spells.{{id}}.max" data-dtype="Number" placeholder="0"></div>
       <div class="item-controls">
         <a class="item-control item-create" data-type="spell" data-lvl="{{id}}" title="{{localize 'WWN.Add'}}"><i
             class="fa fa-plus"></i></a>
@@ -137,12 +145,6 @@
               </h4>
             </a>
           </div>
-          <div class="field-long memorize flexrow">
-            <input type="number" value="{{item.data.cast}}" data-dtype="Number" placeholder="0" data-field="cast"
-              title="{{localize 'WWN.spells.Cast'}}">
-            /
-            <input type="number" value="{{item.data.memorized}}" data-field="memorize" data-dtype="Number" placeholder="0"
-              title="{{localize 'WWN.spells.Memorized'}}"></div>
           <div class="item-controls">
             {{#if ../../owner}}
             <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i class="fas fa-eye"></i></a>
