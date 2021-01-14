@@ -93,8 +93,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   _pushLang(table) {
     const data = this.actor.data.data;
     let update = duplicate(data[table]);
+    let language = game.settings.get("wwn", "languageList");
+    let languages = language.split(",");
     this._chooseLang().then((dialogInput) => {
-      const name = CONFIG.WWN.languages[dialogInput.choice];
+      const name = languages[dialogInput.choice];
       if (update.value) {
         update.value.push(name);
       } else {
