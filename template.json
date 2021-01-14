@@ -49,7 +49,8 @@
         "initiative": {
           "value": 0,
           "mod": 0
-        }
+        },
+        "version": 3
       },
       "spellcaster": {
         "spells": {
@@ -282,15 +283,13 @@
     "types": ["item", "weapon", "armor", "spell", "art", "focus"],
     "item": {
       "description": "",
-      "quantity": {
-        "value": 1,
-        "max": 0
-      },
+      "quantity": 1,
       "treasure": false,
       "cost": 0,
       "weight": 0,
       "equipped": false,
-      "stowed": false
+      "stowed": false,
+      "version": 3
     },
   "weapon": {
     "range": {

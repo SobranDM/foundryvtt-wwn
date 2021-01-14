@@ -153,8 +153,8 @@
             </a>
           </div>
           <div class="field-short quantity">
-            <input value="{{item.data.quantity.value}}" type="number"
-              placeholder="0" />{{#if item.data.quantity.max}}<span>/{{item.data.quantity.max}}</span>{{/if}}
+            <input value="{{item.data.quantity}}" type="number"
+              placeholder="0" />
           </div>
           <div class="field-short">
             {{item.data.weight}}
@@ -205,13 +205,13 @@
               </h4>
             </a>
           </div>
-          <div class="field-long">{{mult item.data.quantity.value item.data.cost}}</div>
+          <div class="field-long">{{mult item.data.quantity item.data.cost}}</div>
           <div class="field-short quantity">
-            <input value="{{item.data.quantity.value}}" type="number"
-              placeholder="0" />{{#if item.data.quantity.max}}<span>/{{item.data.quantity.max}}</span>{{/if}}
+            <input value="{{item.data.quantity}}" type="number"
+              placeholder="0" />
           </div>
           <div class="field-short">
-            {{mult item.data.quantity.value item.data.weight}}
+            {{mult item.data.quantity item.data.weight}}
           </div>
           <div class="item-controls">
             {{#if ../owner}}

@@ -122,7 +122,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.quantity.value": parseInt(event.target.value) });
+    return item.update({ "data.quantity": parseInt(event.target.value) });
   }
 
   async _onEffortChange(event) {
