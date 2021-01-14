@@ -15,7 +15,9 @@
 * With the previous two changes, the system should now be compatible with Better RollTables, for loot table goodness
     * The Roll button will output your loot table to the chat window
     * The Generate Loot button will not function for WWN until I or someone else gets around to creating a WWN-specific version of the Loot Sheet NPC module
-
+* Added support for Psychic Skills from Stars Without number
+    * The skills may be enabled through system settings
+    * I suppose I should also make them togglable on a per-character basis but I was feeling lazy
 * Spellcasting now reflects WWN standards
 ## New in 0.7.2
 * Fixed bugs with the Attribute Modifier tweaks
