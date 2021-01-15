@@ -67,12 +67,20 @@
       "entity": "Item"
     },
     {
-      "name": "elixirs",
-      "label": "Elixirs",
+      "name": "magic-items",
+      "label": "Magic Items",
       "system": "wwn",
       "module": "wwn",
-      "path": "packs/elixirs.db",
+      "path": "packs/magic-items.db",
       "entity": "Item"
+    },
+    {
+      "name": "magic-tables",
+      "label": "Magic Item Tables",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/magic-tables.db",
+      "entity": "RollTable"
     }
   ],
   "languages": [
