@@ -1202,6 +1202,10 @@
     flex: 0 0 15px;
     cursor: pointer;
   }
+  .prepared {
+    font-size: 10px;
+    padding-left: 10px;
+  }
   /* ----------------------------------------- */
   /*  Sheet Styles                             */
   /* ----------------------------------------- */
