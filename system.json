@@ -81,6 +81,14 @@
       "module": "wwn",
       "path": "packs/magic-tables.db",
       "entity": "RollTable"
+    },
+    {
+      "name": "magic-item-masters",
+      "label": "Magic Item Masters",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/magic-item-masters.db",
+      "entity": "RollTable"
     }
   ],
   "languages": [
