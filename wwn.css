@@ -1206,6 +1206,9 @@
     font-size: 10px;
     padding-left: 10px;
   }
+  .checkbox_input {
+    display: block;
+  }
   /* ----------------------------------------- */
   /*  Sheet Styles                             */
   /* ----------------------------------------- */
