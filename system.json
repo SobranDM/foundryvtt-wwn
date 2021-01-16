@@ -2,10 +2,10 @@
   "name": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.9",
-  "templateVersion": 3,
+  "templateVersion": 4,
   "author": "SobranDM",
   "esmodules": ["wwn.js"],
   "styles": ["wwn.css"],
@@ -89,6 +89,22 @@
       "module": "wwn",
       "path": "packs/magic-item-masters.db",
       "entity": "RollTable"
+    },
+    {
+      "name": "gm-subtables",
+      "label": "GM Subtables",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/gm-subtables.db",
+      "entity": "RollTable"
+    },
+    {
+      "name": "gm-master-tables",
+      "label": "GM Master Tables",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/gm-master-tables.db",
+      "entity": "RollTable"
     }
   ],
   "languages": [
@@ -101,6 +117,6 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "url": "https://gitlab.com/sobran/foundryvtt-wwn",
-  "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/v0.7.7/system.json",
-  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.7.7/foundryvtt-wwn-v0.7.7.zip"
+  "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/v0.7.8/system.json",
+  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.7.8/foundryvtt-wwn-v0.7.8.zip"
 }

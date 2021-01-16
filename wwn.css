@@ -339,6 +339,9 @@
   .wwn.sheet.actor .sheet-body .inventory .item-controls .item-unstowed {
     color: rgba(0, 0, 0, 0.2);
   }
+  .wwn.sheet.actor .sheet-body .inventory .item-controls .item-unprepared {
+    color: rgba(0, 0, 0, 0.2);
+  }
   .wwn.sheet.actor .sheet-body .inventory .item-controls a:hover {
     color: #44191A;
     text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9, 1px 1px 5px #d8d6c9;
@@ -347,7 +350,7 @@
     line-height: 24px;
   }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-controls {
-    flex-basis: 45px;
+    flex-basis: 65px;
   }
   .wwn.sheet.actor .flexrow .readied-header {
     color: whitesmoke;

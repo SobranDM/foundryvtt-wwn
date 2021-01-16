@@ -264,6 +264,17 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       });
     });
 
+    html.find(".item-prep").click(async (ev) => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.getOwnedItem(li.data("itemId"));
+      await this.actor.updateOwnedItem({
+        _id: li.data("itemId"),
+        data: {
+          prepared: !item.data.data.prepared,
+        },
+      });
+    });
+
     html.find(".stow-toggle").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.getOwnedItem(li.data("itemId"));
