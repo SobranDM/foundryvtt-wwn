@@ -105,9 +105,8 @@ export class WwnActorSheet extends ActorSheet {
   }
 
   async _resetSpells(event) {
-    let spellsTotal = this.actor.data.data.spells.perDay.max;
     this.actor.update({
-      "data.spells.perDay.value": spellsTotal
+      "data.spells.perDay.value": 0
       }
     );
   }
