@@ -1,3 +1,17 @@
+## New in 0.7.7
+* Compendium additions
+    * Complete list of magical armors, weapons, elixers, and devices.
+    * Generators for the above. The Magic Item Masters contain the high level tables, while the Magic Item Tables contains the countless subtables required to make the whole thing work.
+        * Generators should work regardless, but you will have better results (auto-rolls on subtables) if you have the Better RollTables module.
+        * Magic Armors and Weapons will output the correct item to chat. Bonuses are already figured for AC, damage, and Shock. Special Abilities are output to chat but you will have to copy those into the item description yourself. Maybe take this opportunity to give it a cool name instead of Generic Magic Warhammer #47.
+        * Magical devices have no suggested weight in the beta. I have taken the liberty of assigning values that made sense to me. If you disagree, feel free to duplicate the Compendium (or import specific items) and assign values you find more appropriate.
+    * Added Greatclubs, as this was apparently missing before.
+    * Finished fleshing out the Instinct tables.
+* Spells now have a checkbox to denote whether they are prepared. This is purely cosmetic and for the player's benefit. The system does no checks to ensure you prepare the correct number of spells or prevent you from casting a spell that isn't prepared. Use your own brain.
+    * The checkbox is currently a little buggy. Will fix later.
+* Re-refixed monster movement allowing text input. For real this time.
+* Attack Attribute is now automatically added to Shock damage.
+* Inverted the logic on spell slots from slots left to slots used so as to match the logic of Effort tracking and the column header. The numbers going opposite directions, despite being next to each other, was counter-inuitive. Hitting reset will now reset the Committed column of spell slots to zero.
 ## New in 0.7.6
 * Compendium fixes
 * Items Cost -> Price

@@ -145,6 +145,12 @@
               </h4>
             </a>
           </div>
+          <div>
+            <span class="checkbox_input">
+              <label class="prepared" for="memorized">Prepared?</label>
+              <input type="checkbox" id="memorized" name="memorized" value="memorized" {{checked item.data.memorized}}>
+            </span>
+          </div>
           <div class="item-controls">
             {{#if ../../owner}}
             <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i class="fas fa-eye"></i></a>
