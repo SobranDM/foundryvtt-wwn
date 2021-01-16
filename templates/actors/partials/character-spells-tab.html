@@ -145,14 +145,11 @@
               </h4>
             </a>
           </div>
-          <div>
-            <span class="checkbox_input">
-              <label class="prepared" for="memorized">Prepared?</label>
-              <input type="checkbox" id="memorized" name="memorized" value="memorized" {{checked item.data.memorized}}>
-            </span>
-          </div>
           <div class="item-controls">
             {{#if ../../owner}}
+            <a class="item-control item-prep {{#unless item.data.prepared}}item-unprepared{{/unless}}"
+              title='{{localize "WWN.spells.Prepared"}}'>
+              <i class="fas fa-brain"></i></a>
             <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i class="fas fa-eye"></i></a>
             <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
