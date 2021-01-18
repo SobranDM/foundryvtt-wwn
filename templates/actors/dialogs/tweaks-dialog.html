@@ -6,6 +6,7 @@
           data.spells.enabled}} data-dtype="Boolean" />
     </div>
   </div>
+  {{#if (eq this.type 'character')}}
   <div class="form-group">
     <label for="retainer">{{localize "WWN.Retainer"}}</label>
     <div class="form-fields">
@@ -13,6 +14,7 @@
           data.retainer.enabled}}  data-dtype="Boolean"/>
     </div>
   </div>
+  {{/if}}
   <div class="form-group">
     <label>{{localize "WWN.InitiativeBonus"}}</label>
     <div class="form-fields">

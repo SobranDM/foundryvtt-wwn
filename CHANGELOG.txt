@@ -1,3 +1,7 @@
+## New in 0.7.9
+* Enabled Effort tracking for monsters
+* Made default width of monster sheet slightly wider
+* Removed "Retainer" from Tweaks dialog for monsters, as they already have morale and don't need it listed twice
 ## New in 0.7.8
 * Fix for spell preparation blunder that broke sheet updates
 * Some of the early GM tools intended for next update: generators for Nation, Soceity, and Government Construction
