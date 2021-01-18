@@ -144,7 +144,7 @@
                 <li class="attacks-description">
                     {{#unless isNew}}
                     <label>{{ localize "WWN.movement.details" }}</label>
-                    <input name="data.movement.value" type="number" value="{{data.movement.value}}" data-dtype="String" />
+                    <input name="data.movement.value" type="text" value="{{data.movement.value}}" data-dtype="String" />
                     {{else}}
                     <button data-action="generate-saves">{{localize "WWN.dialog.generateSaves"}}</button>
                     {{/unless}}
