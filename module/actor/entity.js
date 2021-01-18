@@ -469,10 +469,13 @@ export class WwnActor extends Actor {
       dmgParts.push(attData.item.data.damage);
     }
 
-    let statAttack = attData.item.data.score;
-    let skillAttack = attData.item.data.skill;
-    let unskilledAttack = -2;
-    attData.item.data.shockTotal = this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
+    if (data.character) {
+      let statAttack = attData.item.data.score;
+      let skillAttack = attData.item.data.skill;
+      let unskilledAttack = -2;
+      attData.item.data.shockTotal =
+        this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
+    }
 
     rollParts.push(data.thac0.bba.toString());
 
