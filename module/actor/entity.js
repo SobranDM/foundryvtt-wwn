@@ -27,7 +27,6 @@ export class WwnActor extends Actor {
     } else {
       data.initiative.value = 0;
     }
-    data.movement.encounter = data.movement.base / 3;
   }
   /* -------------------------------------------- */
   /*  Socket Listeners and Handlers
