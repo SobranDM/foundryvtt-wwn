@@ -50,7 +50,15 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     // Settings
     data.config.morale = game.settings.get("wwn", "morale");
-    data.data.details.treasure.link = TextEditor.enrichHTML(data.data.details.treasure.table);
+    if (!data.data.details.hasOwnProperty('instinctTable')) {
+      data.data.details.instinctTable = {
+        "table": "",
+        "link": ""
+      };
+      data.data.details.instinctTable.link = TextEditor.enrichHTML(data.data.details.instinctTable.table);
+    } else {
+      data.data.details.instinctTable.link = TextEditor.enrichHTML(data.data.details.instinctTable.table);
+    }
     data.isNew = this.actor.isNew();
     return data;
   }
@@ -73,7 +81,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     } else {
       link = `@RollTable[${data.id}]`;
     }
-    this.actor.update({ "data.details.treasure.table": link });
+    this.actor.update({ "data.details.instinctTable.table": link });
   }
 
   /* -------------------------------------------- */

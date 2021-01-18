@@ -303,6 +303,10 @@
         },
         "morale": 0,
         "instinct": 0,
+        "instinctTable": {
+          "table": "",
+          "link": ""
+        },
         "skill": 0
       },
       "attacks": "",
