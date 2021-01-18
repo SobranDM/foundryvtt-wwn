@@ -7,6 +7,7 @@
 * Replaced treasure table on monster sheet with instinct table
 * Characters and monsters now have different default HD, as per the book
 * Instinct and Morale checks now pause to ask about modifiers
+* Styled the Tweaks dialog (monster tweaks looks funny for now)
 ## New in 0.7.8
 * Fix for spell preparation blunder that broke sheet updates
 * Some of the early GM tools intended for next update: generators for Nation, Soceity, and Government Construction
