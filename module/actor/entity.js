@@ -16,6 +16,7 @@ export class WwnActor extends Actor {
     this.computeEncumbrance();
     this.computeTreasure();
     this.computeEffort();
+    this.computeSaves();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -794,5 +795,21 @@ export class WwnActor extends Actor {
 
     data.langTotal = data.skills.connect.value + data.skills.know.value + 2;
     data.languages.spoken = "WWN.NativePlus";
+  }
+
+  computeSaves() {
+    if (this.data.type != "character") {
+      return;
+    }
+    const data = this.data.data;
+    let evasionMod = Math.max(data.scores.int.mod,data.scores.dex.mod);
+    let physicalMod = Math.max(data.scores.con.mod,data.scores.str.mod);
+    let mentalMod = Math.max(data.scores.wis.mod,data.scores.cha.mod);
+    let charLevel = data.details.level;
+
+    data.saves.evasion.value = 16 - evasionMod - charLevel;
+    data.saves.physical.value = 16 - physicalMod - charLevel;
+    data.saves.mental.value = 16 - mentalMod - charLevel;
+    data.saves.luck.value = 16 - charLevel;
   }
 }
