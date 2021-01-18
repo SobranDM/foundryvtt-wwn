@@ -159,7 +159,7 @@ export class WwnActor extends Actor {
       event: options.event,
       parts: rollParts,
       data: data,
-      skipDialog: true,
+      skipDialog: false,
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: game.i18n.localize("WWN.roll.morale"),
       title: game.i18n.localize("WWN.roll.morale"),
