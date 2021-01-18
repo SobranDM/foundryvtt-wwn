@@ -39,7 +39,10 @@
           }
         },
         "movement": {
-          "base": 120
+          "base": 30,
+          "exploration": 90,
+          "overland": 24,
+          "bonus": 0
         },
         "initiative": {
           "value": 0,

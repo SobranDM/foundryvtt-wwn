@@ -161,7 +161,8 @@
                         {{localize 'WWN.movement.encounter.short'}}</h4>
                     <div class="flexrow">
                         <div class="attribute-value">
-                            {{divide data.movement.base 3}}
+                            <input name="data.movement.base" type="number" value="{{data.movement.base}}" placeholder="0"
+                            data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
                         </div>
                     </div>
                 </li>
@@ -170,7 +171,7 @@
                     <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.exploration.long' }}">
                         {{ localize "WWN.movement.exploration.short" }}</h4>
                     <div class="attribute-value flexrow">
-                        <input name="data.movement.base" type="number" value="{{data.movement.base}}" placeholder="0"
+                        <input name="data.movement.exploration" type="number" value="{{data.movement.exploration}}" placeholder="0"
                             data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
                     </div>
                 </li>
@@ -179,7 +180,8 @@
                         {{localize 'WWN.movement.overland.short'}}</h4>
                     <div class="flexrow">
                         <div class="attribute-value">
-                            {{divide data.movement.base 5}}
+                            <input name="data.movement.overland" type="number" value="{{data.movement.overland}}" placeholder="0"
+                            data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
                         </div>
                     </div>
                 </li>
