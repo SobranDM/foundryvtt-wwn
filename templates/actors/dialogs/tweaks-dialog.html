@@ -46,6 +46,7 @@
         data-dtype="Number" />
     </div>
   </div>
+  {{/if}}
   <div class="form-group">
     <label>{{localize 'WWN.spells.CasterClass'}} 1</label>
     <div class="form-fields">
@@ -67,6 +68,7 @@
       placeholder="High Mage" />
     </div>
   </div>
+  {{#if (eq this.type 'character')}}
   <div class="form-group">
     <label for="movementAuto">{{localize "WWN.Setting.MovementAuto"}}</label>
     <div class="form-fields">
