@@ -111,6 +111,27 @@ export class WwnActorSheet extends ActorSheet {
     );
   }
 
+  async _onEffortChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.effort": parseInt(event.target.value) });
+  }
+
+  async _onArtSourceChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.source": event.target.value });
+  }
+
+  async _onArtTimeChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+    return item.update({ "data.time": event.target.value });
+  }
+
   activateListeners(html) {
     super.activateListeners(html);
     
@@ -162,6 +183,21 @@ export class WwnActorSheet extends ActorSheet {
         skipDialog: ev.ctrlKey,
       });
     });
+
+    html
+      .find(".artEffort input")
+      .click((ev) => ev.target.select())
+      .change(this._onEffortChange.bind(this));
+
+     html
+      .find(".artSource input")
+      .click((ev) => ev.target.select())
+      .change(this._onArtSourceChange.bind(this));
+
+    html
+      .find(".artTime input")
+      .click((ev) => ev.target.select())
+      .change(this._onArtTimeChange.bind(this));
     
     html.find(".hit-dice .attribute-name a").click((ev) => {
       let actorObject = this.actor;

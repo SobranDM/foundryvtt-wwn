@@ -127,27 +127,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return item.update({ "data.quantity": parseInt(event.target.value) });
   }
 
-  async _onEffortChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.effort": parseInt(event.target.value) });
-  }
-
-  async _onArtSourceChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.source": event.target.value });
-  }
-
-  async _onArtTimeChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.time": event.target.value });
-  }
-
   _onShowModifiers(event) {
     event.preventDefault();
     new WwnCharacterModifiers(this.actor, {
@@ -290,21 +269,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       .find(".quantity input")
       .click((ev) => ev.target.select())
       .change(this._onQtChange.bind(this));
-
-    html
-      .find(".artEffort input")
-      .click((ev) => ev.target.select())
-      .change(this._onEffortChange.bind(this));
-
-     html
-      .find(".artSource input")
-      .click((ev) => ev.target.select())
-      .change(this._onArtSourceChange.bind(this));
-
-    html
-      .find(".artTime input")
-      .click((ev) => ev.target.select())
-      .change(this._onArtTimeChange.bind(this));
 
     html.find("a[data-action='generate-scores']").click((ev) => {
       this.generateScores(ev);
