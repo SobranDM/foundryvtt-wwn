@@ -3,21 +3,22 @@ Everything you need to play Worlds Without Number in Foundry VTT. This was forke
 
 Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludiques/foundryvtt-ose
 ## Features
-* Calculated Readied/Stowed values
+* Calculated Readied/Stowed values, including dynamic tracking of currency weight
 * Easy tracking of weapon tags
-* Track which Arts have Effort committed
-* Calculated Effort totals from up to three sources
+* Track Effort commitment by Art and have class-specific Effort updated automatically
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 * Visual indicator of health/strain percentage
 * Auto-populate monster saves
 * Automatically calculates movement rates based on Readied/Stowed values
-    * This can be disabled in Tweaks. Currently this only enables manual entering of Exploration Movement Rate, from which the others will still be calculated. This will be changed later.
+    * Can be switched to manual entry
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
+* Automatically adds relevant attribute to Shock damage
 ## TODO
-* Toggle to add Skill value to damage
+* Toggle to add Skill value to damage/Shock
 * Auto-add highest Dex mod when using Group Initiative
 * Auto-calculate monster saves instead of using button
 * Add save adjustments to Tweaks menu
+* Add Tweak to disable currency weight
 ## License
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
