@@ -471,8 +471,6 @@ export class WwnActor extends Actor {
 
     if (data.character) {
       let statAttack = attData.item.data.score;
-      let skillAttack = attData.item.data.skill;
-      let unskilledAttack = -2;
       attData.item.data.shockTotal =
         this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
     }
@@ -486,6 +484,9 @@ export class WwnActor extends Actor {
       );
     } */
     if (data.character) {
+      let statAttack = attData.item.data.score;
+      let skillAttack = attData.item.data.skill;
+      let unskilledAttack = -2;
       rollParts.push(this.data.data.scores[statAttack].mod.toString());
       if (data.skills[skillAttack].value == -1) {
         rollParts.push(unskilledAttack.toString());
@@ -501,6 +502,7 @@ export class WwnActor extends Actor {
 
     //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
     if (data.character) {
+      let statAttack = attData.item.data.score;
       dmgParts.push(data.scores[statAttack].mod);
     }
 
