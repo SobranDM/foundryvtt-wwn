@@ -678,7 +678,7 @@ export class WwnActor extends Actor {
   // Compute Effort
   computeEffort() {
     const data = this.data.data;
-    if (this.data.type != "character" || data.spells.enabled != true) {
+    if (data.spells.enabled != true) {
       return;
     }
     let effortOne = 0;
