@@ -17,7 +17,7 @@ export const registerSettings = function () {
   game.settings.register("wwn", "rerollInitiative", {
     name: game.i18n.localize("WWN.Setting.RerollInitiative"),
     hint: game.i18n.localize("WWN.Setting.RerollInitiativeHint"),
-    default: "reset",
+    default: "keep",
     scope: "world",
     type: String,
     config: true,

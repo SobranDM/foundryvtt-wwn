@@ -8,11 +8,6 @@
           "morale": 0,
           "wage": ""
         },
-        "hp": {
-          "hd": "1d6",
-          "value": 4,
-          "max": 4
-        },
         "ac": {
           "value": 0,
           "mod": 0
@@ -44,20 +39,22 @@
           }
         },
         "movement": {
-          "base": 120
+          "base": 30,
+          "exploration": 90,
+          "overland": 24,
+          "bonus": 0
         },
         "initiative": {
           "value": 0,
           "mod": 0
         },
-        "version": 3
-      },
-      "currency": {
-        "cp": 0,
-        "sp": 0,
-        "ep": 0,
-        "gp": 0,
-        "pp": 0
+        "currency": {
+          "cp": 0,
+          "sp": 0,
+          "ep": 0,
+          "gp": 0,
+          "pp": 0
+      }
       },
       "spellcaster": {
         "spells": {
@@ -125,6 +122,11 @@
         }
       },
       "character": true,
+      "hp": {
+        "hd": "1d6",
+        "value": 4,
+        "max": 4
+      },
       "skills": {
         "administer": {
           "value": -1,
@@ -304,10 +306,19 @@
         },
         "morale": 0,
         "instinct": 0,
+        "instinctTable": {
+          "table": "",
+          "link": ""
+        },
         "skill": 0
       },
       "attacks": "",
-      "character": false
+      "character": false,
+      "hp": {
+        "hd": "1d8",
+        "value": 4,
+        "max": 4
+      }
     }
   },
   "Item": {

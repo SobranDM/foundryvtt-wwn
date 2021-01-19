@@ -22,6 +22,7 @@
   "WWN.dialog.generateSaves": "Generate Saves",
   "WWN.dialog.generateScores": "Generate Scores",
   "WWN.dialog.generateScore": "Rolling {score} ({count})",
+  "WWN.dialog.skillDice": "Skill Dice",
 
   "WWN.Formula": "Formula",
   "WWN.SitMod": "Situational Modifier",
@@ -66,6 +67,7 @@
   "WWN.details.treasureTableHint": "Drop a rollable table here to roll the monster treasure",
   "WWN.details.morale": "Morale",
   "WWN.details.instinct": "Instinct",
+  "WWN.details.instinctTableHint": "Drop a rollable table here to roll an Instinctive Action",
   "WWN.details.reaction": "Reaction",
   "WWN.details.appearing": "NA",
 
@@ -114,6 +116,7 @@
   "WWN.movement.overland.short": "OV",
   "WWN.movement.exploration.short": "EX",
   "WWN.movement.exploration.long": "Exploration Movement Rate (feet per turn)",
+  "WWN.movement.bonus": "Movement Bonus",
 
   "WWN.ArmorClassNaked": "Naked Armor Class",
   "WWN.ArmorClass": "Armor Class",

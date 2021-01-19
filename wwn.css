@@ -1137,7 +1137,7 @@
   
   .wwn.actor.monster {
     min-height: 565px;
-    min-width: 460px;
+    min-width: 480px;
   }
   .wwn.actor.monster .header-details .summary .treasure-table {
     text-align: center;
@@ -1211,6 +1211,23 @@
   }
   .checkbox_input {
     display: block;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  .row.after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .dialog-tweaks .row .column .form-group label {
+    min-width: 140px;
+  }
+  .dialog-tweaks .row .column .header {
+    text-align: center;
+    font: bold;
   }
   /* ----------------------------------------- */
   /*  Sheet Styles                             */

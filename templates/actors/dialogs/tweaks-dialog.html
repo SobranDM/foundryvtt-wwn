@@ -1,335 +1,464 @@
 <form autocomplete="off">
-  <div class="form-group">
-    <label for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
-    <div class="form-fields">
-      <input type="checkbox" name="data.spells.enabled" id="spellcaster" {{checked
-          data.spells.enabled}} data-dtype="Boolean" />
+  <div class="dialog-tweaks">
+  <div class="row">
+    <div class="column">
+      <div class="form-group">
+        <label for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
+        <div class="form-fields">
+          <input
+            type="checkbox"
+            name="data.spells.enabled"
+            id="spellcaster"
+            {{checked
+            data.spells.enabled}}
+            data-dtype="Boolean"
+          />
+        </div>
+      </div>
+      {{#if (eq this.type 'character')}}
+      <div class="form-group">
+        <label for="retainer">{{localize "WWN.Retainer"}}</label>
+        <div class="form-fields">
+          <input
+            type="checkbox"
+            name="data.retainer.enabled"
+            id="retainer"
+            {{checked
+            data.retainer.enabled}}
+            data-dtype="Boolean"
+          />
+        </div>
+      </div>
+      {{/if}}
+      <div class="form-group">
+        <label>{{localize "WWN.InitiativeBonus"}}</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.initiative.mod"
+            id="initiative"
+            value="{{data.initiative.mod}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      {{#if (eq this.type 'character')}}
+      <div class="form-group">
+        <label>{{localize "WWN.details.experience.next"}}</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.details.xp.next"
+            id="experiencenext"
+            value="{{data.details.xp.next}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "WWN.details.experience.bonus"}} (%)</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.details.xp.bonus"
+            id="experience"
+            value="{{data.details.xp.bonus}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "WWN.details.experience.share"}} (%)</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.details.xp.share"
+            id="experience-share"
+            value="{{data.details.xp.share}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "WWN.ArmorClassBonus"}}</label>
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.aac.mod"
+            id="ac"
+            value="{{data.aac.mod}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      {{/if}}
+      <div class="form-group">
+        <label>{{localize 'WWN.spells.CasterClass'}} 1</label>
+        <div class="form-fields">
+          <input
+            type="text"
+            name="data.classes.effort1.name"
+            id="effort1"
+            value="{{data.classes.effort1.name}}"
+            placeholder="High Mage"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.spells.CasterClass'}} 2</label>
+        <div class="form-fields">
+          <input
+            type="text"
+            name="data.classes.effort2.name"
+            id="effort2"
+            value="{{data.classes.effort2.name}}"
+            placeholder="High Mage"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.spells.CasterClass'}} 3</label>
+        <div class="form-fields">
+          <input
+            type="text"
+            name="data.classes.effort3.name"
+            id="effort3"
+            value="{{data.classes.effort3.name}}"
+            placeholder="High Mage"
+          />
+        </div>
+      </div>
+      {{#if (eq this.type 'character')}}
+      <div class="form-group">
+        <label for="movementAuto"
+          >{{localize "WWN.Setting.MovementAuto"}}</label
+        >
+        <div class="form-fields">
+          <input type="checkbox" name="data.config.movementAuto"
+          id="movementAuto" {{checked data.config.movementAuto}}
+          data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.movement.bonus'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.movement.bonus"
+            id="cha"
+            value="{{data.movement.bonus}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.str.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.str.tweak"
+            id="str"
+            value="{{data.scores.str.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.dex.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.dex.tweak"
+            id="dex"
+            value="{{data.scores.dex.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.con.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.con.tweak"
+            id="con"
+            value="{{data.scores.con.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.int.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.int.tweak"
+            id="int"
+            value="{{data.scores.int.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.wis.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.wis.tweak"
+            id="wis"
+            value="{{data.scores.wis.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label
+          >{{localize 'WWN.scores.cha.long'}} {{localize 'WWN.Modifier'}}</label
+        >
+        <div class="form-fields">
+          <input
+            type="number"
+            name="data.scores.cha.tweak"
+            id="cha"
+            value="{{data.scores.cha.tweak}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="header">
+        <h4>{{localize 'WWN.dialog.skillDice'}}</h4>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.administer'}}</label>
+        <div class="form-fields">
+          <select id="administer" name="data.skills.administer.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.connect'}}</label>
+        <div class="form-fields">
+          <select id="connect" name="data.skills.connect.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.convince'}}</label>
+        <div class="form-fields">
+          <select id="convince" name="data.skills.convince.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.craft'}}</label>
+        <div class="form-fields">
+          <select id="craft" name="data.skills.craft.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.exert'}}</label>
+        <div class="form-fields">
+          <select id="exert" name="data.skills.exert.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.heal'}}</label>
+        <div class="form-fields">
+          <select id="heal" name="data.skills.heal.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.know'}}</label>
+        <div class="form-fields">
+          <select id="know" name="data.skills.know.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.lead'}}</label>
+        <div class="form-fields">
+          <select id="lead" name="data.skills.lead.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.magic'}}</label>
+        <div class="form-fields">
+          <select id="magic" name="data.skills.magic.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.notice'}}</label>
+        <div class="form-fields">
+          <select id="notice" name="data.skills.notice.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.perform'}}</label>
+        <div class="form-fields">
+          <select id="perform" name="data.skills.perform.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.pray'}}</label>
+        <div class="form-fields">
+          <select id="pray" name="data.skills.pray.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.punch'}}</label>
+        <div class="form-fields">
+          <select id="punch" name="data.skills.punch.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.ride'}}</label>
+        <div class="form-fields">
+          <select id="ride" name="data.skills.ride.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.sail'}}</label>
+        <div class="form-fields">
+          <select id="sail" name="data.skills.sail.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.shoot'}}</label>
+        <div class="form-fields">
+          <select id="shoot" name="data.skills.shoot.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.sneak'}}</label>
+        <div class="form-fields">
+          <select id="sneak" name="data.skills.sneak.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.stab'}}</label>
+        <div class="form-fields">
+          <select id="stab" name="data.skills.stab.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.survive'}}</label>
+        <div class="form-fields">
+          <select id="survive" name="data.skills.survive.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.trade'}}</label>
+        <div class="form-fields">
+          <select id="trade" name="data.skills.trade.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize 'WWN.skills.work'}}</label>
+        <div class="form-fields">
+          <select id="work" name="data.skills.work.dice">
+            <option value="2d6">2d6</option>
+            <option value="3d6k2">3d6</option>
+            <option value="4d6k2">4d6</option>
+          </select>
+        </div>
+      </div>
+      {{/if}}
     </div>
   </div>
-  <div class="form-group">
-    <label for="retainer">{{localize "WWN.Retainer"}}</label>
-    <div class="form-fields">
-      <input type="checkbox" name="data.retainer.enabled" id="retainer" {{checked
-          data.retainer.enabled}}  data-dtype="Boolean"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize "WWN.InitiativeBonus"}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.initiative.mod" id="initiative" value="{{data.initiative.mod}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  {{#if (eq this.type 'character')}}
-  <div class="form-group">
-    <label>{{localize "WWN.details.experience.next"}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.details.xp.next" id="experiencenext" value="{{data.details.xp.next}}" data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize "WWN.details.experience.bonus"}} (%)</label>
-    <div class="form-fields">
-      <input type="number" name="data.details.xp.bonus" id="experience" value="{{data.details.xp.bonus}}" data-dtype="Number"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize "WWN.details.experience.share"}} (%)</label>
-    <div class="form-fields">
-      <input type="number" name="data.details.xp.share" id="experience-share" value="{{data.details.xp.share}}" data-dtype="Number"/>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize "WWN.ArmorClassBonus"}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.aac.mod" id="ac" value="{{data.aac.mod}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.spells.CasterClass'}} 1</label>
-    <div class="form-fields">
-      <input type="text" name="data.classes.effort1.name" id="effort1" value="{{data.classes.effort1.name}}"
-      placeholder="High Mage" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.spells.CasterClass'}} 2</label>
-    <div class="form-fields">
-      <input type="text" name="data.classes.effort2.name" id="effort2" value="{{data.classes.effort2.name}}"
-      placeholder="High Mage" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.spells.CasterClass'}} 3</label>
-    <div class="form-fields">
-      <input type="text" name="data.classes.effort3.name" id="effort3" value="{{data.classes.effort3.name}}"
-      placeholder="High Mage" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="movementAuto">{{localize "WWN.Setting.MovementAuto"}}</label>
-    <div class="form-fields">
-      <input type="checkbox" name="data.config.movementAuto" id="movementAuto" {{checked
-          data.config.movementAuto}}  data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.str.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.str.tweak" id="str" value="{{data.scores.str.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.dex.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.dex.tweak" id="dex" value="{{data.scores.dex.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.con.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.con.tweak" id="con" value="{{data.scores.con.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.int.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.int.tweak" id="int" value="{{data.scores.int.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.wis.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.wis.tweak" id="wis" value="{{data.scores.wis.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.scores.cha.long'}} {{localize 'WWN.Modifier'}}</label>
-    <div class="form-fields">
-      <input type="number" name="data.scores.cha.tweak" id="cha" value="{{data.scores.cha.tweak}}"
-        data-dtype="Number" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.administer'}}</label>
-    <div class="form-fields">
-      <select id="administer" name="data.skills.administer.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.connect'}}</label>
-    <div class="form-fields">
-      <select id="connect" name="data.skills.connect.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.convince'}}</label>
-    <div class="form-fields">
-      <select id="convince" name="data.skills.convince.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.craft'}}</label>
-    <div class="form-fields">
-      <select id="craft" name="data.skills.craft.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.exert'}}</label>
-    <div class="form-fields">
-      <select id="exert" name="data.skills.exert.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.heal'}}</label>
-    <div class="form-fields">
-      <select id="heal" name="data.skills.heal.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.know'}}</label>
-    <div class="form-fields">
-      <select id="know" name="data.skills.know.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.lead'}}</label>
-    <div class="form-fields">
-      <select id="lead" name="data.skills.lead.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.magic'}}</label>
-    <div class="form-fields">
-      <select id="magic" name="data.skills.magic.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.notice'}}</label>
-    <div class="form-fields">
-      <select id="notice" name="data.skills.notice.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.perform'}}</label>
-    <div class="form-fields">
-      <select id="perform" name="data.skills.perform.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.pray'}}</label>
-    <div class="form-fields">
-      <select id="pray" name="data.skills.pray.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.punch'}}</label>
-    <div class="form-fields">
-      <select id="punch" name="data.skills.punch.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.ride'}}</label>
-    <div class="form-fields">
-      <select id="ride" name="data.skills.ride.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.sail'}}</label>
-    <div class="form-fields">
-      <select id="sail" name="data.skills.sail.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.shoot'}}</label>
-    <div class="form-fields">
-      <select id="shoot" name="data.skills.shoot.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.sneak'}}</label>
-    <div class="form-fields">
-      <select id="sneak" name="data.skills.sneak.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.stab'}}</label>
-    <div class="form-fields">
-      <select id="stab" name="data.skills.stab.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.survive'}}</label>
-    <div class="form-fields">
-      <select id="survive" name="data.skills.survive.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.trade'}}</label>
-    <div class="form-fields">
-      <select id="trade" name="data.skills.trade.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>{{localize 'WWN.skills.work'}}</label>
-    <div class="form-fields">
-      <select id="work" name="data.skills.work.dice">
-        <option value="2d6">2d6</option>
-        <option value="3d6k2">3d6</option>
-        <option value="4d6k2">4d6</option>
-      </select>
-    </div>
-  </div>
-  {{/if}}
   <footer class="sheet-footer">
     <button type="submit">
       <i class="fas fa-save"></i>{{localize "Save Changes"}}
     </button>
   </footer>
+</div>
 </form>

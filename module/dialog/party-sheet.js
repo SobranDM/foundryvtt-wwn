@@ -6,7 +6,7 @@ export class WwnPartySheet extends FormApplication {
     return mergeObject(super.defaultOptions, {
       classes: ["wwn", "dialog", "party-sheet"],
       template: "systems/wwn/templates/apps/party-sheet.html",
-      width: 280,
+      width: 310,
       height: 400,
       resizable: true,
     });

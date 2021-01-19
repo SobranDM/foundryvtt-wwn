@@ -7,7 +7,7 @@ export class WwnEntityTweaks extends FormApplication {
     options.id = 'sheet-tweaks';
     options.template =
       'systems/wwn/templates/actors/dialogs/tweaks-dialog.html';
-    options.width = 380;
+    options.width = 580;
     return options;
   }
 
