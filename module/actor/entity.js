@@ -447,7 +447,7 @@ export class WwnActor extends Actor {
       let statAttack = attData.item.data.score;
       attData.item.data.shockTotal =
         this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
-    }
+    } else { attData.item.data.shockTotal = attData.item.data.shock.damage }
 
     rollParts.push(data.thac0.bba.toString());
 
