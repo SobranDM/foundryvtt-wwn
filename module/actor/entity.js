@@ -69,32 +69,6 @@ export class WwnActor extends Actor {
     }
   }
 
-  generateSave() {
-    let hd = this.data.data.hp.hd.substring(
-      0,
-      this.data.data.hp.hd.indexOf("d")
-    );
-    let save = Math.ceil(15 - hd / 2);
-    return this.update({
-      data: {
-        saves: {
-          evasion: {
-            value: save,
-          },
-          mental: {
-            value: save,
-          },
-          physical: {
-            value: save,
-          },
-          luck: {
-            value: save,
-          },
-        },
-      },
-    });
-  }
-
   /* -------------------------------------------- */
   /*  Rolls                                       */
   /* -------------------------------------------- */
