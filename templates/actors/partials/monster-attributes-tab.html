@@ -142,40 +142,36 @@
         <div class="attribute-group">
             <ul class="attributes">
                 <li class="attacks-description">
-                    {{#unless isNew}}
                     <label>{{ localize "WWN.movement.details" }}</label>
                     <input name="data.movement.value" type="text" value="{{data.movement.value}}" data-dtype="String" />
-                    {{else}}
-                    <button data-action="generate-saves">{{localize "WWN.dialog.generateSaves"}}</button>
-                    {{/unless}}
                 </li>
                 <li class="attribute saving-throw" data-save="evasion">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.evasion" }}</a></h4>
                     <div class="attribute-value">
                         <input name="data.saves.evasion.value" type="number" value="{{data.saves.evasion.value}}"
-                            data-dtype="Number" />
+                            data-dtype="Number" disabled />
                 </li>
                 <li class="attribute saving-throw" data-save="mental">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.mental" }}</a></h4>
                     <div class="attribute-value">
                         <input name="data.saves.mental.value" type="number" value="{{data.saves.mental.value}}"
-                            data-dtype="Number" />
+                            data-dtype="Number" disabled />
                 </li>
                 <li class="attribute saving-throw" data-save="physical">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.physical" }}</a></h4>
                     <div class="attribute-value">
                         <input name="data.saves.physical.value" type="number" value="{{data.saves.physical.value}}"
-                            data-dtype="Number" />
+                            data-dtype="Number" disabled />
                 </li>
                 <li class="attribute saving-throw" data-save="luck">
                     <h4 class="attribute-name box-title">
                         <a>{{ localize "WWN.saves.luck" }}</a></h4>
                     <div class="attribute-value">
                         <input name="data.saves.luck.value" type="number" value="{{data.saves.luck.value}}"
-                            placeholder="0" data-dtype="Number" />
+                            placeholder="0" data-dtype="Number" disabled />
                 </li>
             </ul>
         </div>

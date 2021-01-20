@@ -298,7 +298,7 @@ export class WwnDice {
         content: html,
         buttons: buttons,
         default: "ok",
-        clwwn: () => {
+        close: () => {
           resolve(rolled ? roll : false);
         },
       }).render(true);
@@ -364,7 +364,7 @@ export class WwnDice {
         content: html,
         buttons: buttons,
         default: "ok",
-        clwwn: () => {
+        close: () => {
           resolve(rolled ? roll : false);
         },
       }).render(true);

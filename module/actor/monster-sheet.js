@@ -35,11 +35,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   /**
    * Monster creation helpers
    */
-  
-   async generateSave() {
-    //Create Dialog window
-    this.actor.generateSave();
-  }
 
   /**
    * Prepare data for rendering the Actor sheet
@@ -256,7 +251,5 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         "data.pattern": colors[index]
       })
     });
-
-    html.find('button[data-action="generate-saves"]').click(() => this.generateSave());
   }
 }

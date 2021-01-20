@@ -39,7 +39,7 @@ export class WwnCharacterCreator extends FormApplication {
       int: 0,
       cha: 0,
       con: 0,
-      gold: 0
+      silver: 0
     }
     data.stats = {
       sum: 0,
@@ -85,7 +85,7 @@ export class WwnCharacterCreator extends FormApplication {
     // Increase counter
     this.object.data.counters[score]++;
 
-    const label = score != "gold" ? game.i18n.localize(`WWN.scores.${score}.long`) : "Gold";
+    const label = score != "silver" ? game.i18n.localize(`WWN.scores.${score}.long`) : "Silver";
     const rollParts = ["3d6"];
     const data = {
       roll: {
@@ -104,8 +104,7 @@ export class WwnCharacterCreator extends FormApplication {
     });
   }
 
-  async clwwn() {
-    super.clwwn();
+  async close(options) {
     // Gather scores
     let scores = {};
     $(this.form.children).find(".score-roll").each((_, d) => {
@@ -113,20 +112,21 @@ export class WwnCharacterCreator extends FormApplication {
       let val = gr.find(".score-value").val();
       scores[gr.data("score")] = val;
     })
-    const gold = $(this.form.children).find('.gold-value').val();
+    const silver = $(this.form.children).find('.silver-value').val();
     const speaker = ChatMessage.getSpeaker({ actor: this });
     const templateData = {
       config: CONFIG.WWN,
       scores: scores,
       title: game.i18n.localize("WWN.dialog.generator"),
       stats: this.object.data.stats,
-      gold: gold
+      silver: silver
     }
     const content = await renderTemplate("/systems/wwn/templates/chat/roll-creation.html", templateData)
     ChatMessage.create({
       content: content,
       speaker,
     });
+    return super.close(options);
   }
 
   /** @override */
@@ -140,10 +140,10 @@ export class WwnCharacterCreator extends FormApplication {
       });
     });
 
-    html.find('a.gold-roll').click((ev) => {
+    html.find('a.silver-roll').click((ev) => {
       let el = ev.currentTarget.parentElement.parentElement.parentElement;
-      this.rollScore("gold", { event: ev }).then(r => {
-        $(el).find('.gold-value').val(r.total * 10);
+      this.rollScore("silver", { event: ev }).then(r => {
+        $(el).find('.silver-value').val(r.total * 10);
       });
     });
 
@@ -152,24 +152,12 @@ export class WwnCharacterCreator extends FormApplication {
     })
   }
 
-  async _onSubmit(event, { updateData = null, preventClwwn = false, preventRender = false } = {}) {
-    super._onSubmit(event, { updateData: updateData, preventClwwn: preventClwwn, preventRender: preventRender });
-    // Generate gold
-    let gold = event.target.elements.namedItem('gold').value;
-    const itemData = {
-      name: "GP",
-      type: "item",
-      img: "/systems/wwn/assets/gold.png",
-      data: {
-        treasure: true,
-        price: 1,
-        weight: 1,
-        quantity: {
-          value: gold
-        }
-      }
-    };
-    this.object.createOwnedItem(itemData);
+  async _onSubmit(event, { updateData = null, preventClose = false, preventRender = false } = {}) {
+    super._onSubmit(event, { updateData: updateData, preventClose: preventClose, preventRender: preventRender });
+    // Generate silver
+    let silver = event.target.elements.namedItem('silver').value;
+    this.object.update({"data.currency.sp": silver});
+    console.log(this.object.data.data.currency.sp);
   }
   /**
    * This method is called upon form submission after form data is validated

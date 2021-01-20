@@ -69,32 +69,6 @@ export class WwnActor extends Actor {
     }
   }
 
-  generateSave() {
-    let hd = this.data.data.hp.hd.substring(
-      0,
-      this.data.data.hp.hd.indexOf("d")
-    );
-    let save = Math.ceil(15 - hd / 2);
-    return this.update({
-      data: {
-        saves: {
-          evasion: {
-            value: save,
-          },
-          mental: {
-            value: save,
-          },
-          physical: {
-            value: save,
-          },
-          luck: {
-            value: save,
-          },
-        },
-      },
-    });
-  }
-
   /* -------------------------------------------- */
   /*  Rolls                                       */
   /* -------------------------------------------- */
@@ -807,18 +781,36 @@ export class WwnActor extends Actor {
   }
 
   computeSaves() {
-    if (this.data.type != "character") {
-      return;
-    }
     const data = this.data.data;
+    if (!data.saves.evasion.mod) {
+      data.saves.evasion.mod = 0;
+    }
+    if (!data.saves.physical.mod) {
+      data.saves.physical.mod = 0;
+    }
+    if (!data.saves.mental.mod) {
+      data.saves.mental.mod = 0;
+    }
+    if (!data.saves.luck.mod) {
+      data.saves.luck.mod = 0;
+    }
+    
+    if (this.data.type != "character") {
+      let monsterHD = data.hp.hd.toLowerCase().split('d');
+      data.saves.evasion.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.evasion.mod;
+      data.saves.physical.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.physical.mod;
+      data.saves.mental.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.mental.mod;
+      data.saves.luck.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.luck.mod;
+    } else {
     let evasionMod = Math.max(data.scores.int.mod,data.scores.dex.mod);
     let physicalMod = Math.max(data.scores.con.mod,data.scores.str.mod);
     let mentalMod = Math.max(data.scores.wis.mod,data.scores.cha.mod);
     let charLevel = data.details.level;
 
-    data.saves.evasion.value = 16 - evasionMod - charLevel;
-    data.saves.physical.value = 16 - physicalMod - charLevel;
-    data.saves.mental.value = 16 - mentalMod - charLevel;
-    data.saves.luck.value = 16 - charLevel;
+    data.saves.evasion.value = 16 - evasionMod - charLevel + data.saves.evasion.mod;
+    data.saves.physical.value = 16 - physicalMod - charLevel + data.saves.physical.mod;
+    data.saves.mental.value = 16 - mentalMod - charLevel + data.saves.mental.mod;
+    data.saves.luck.value = 16 - charLevel + data.saves.luck.mod;
+    }
   }
 }
