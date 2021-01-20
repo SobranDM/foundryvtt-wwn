@@ -1,3 +1,6 @@
+## New in 0.8.2
+* Rolling for silver on a new character now correctly assigns SP to the character when done.
+    * Fixing this first required breaking the character generation dialog and then fixing it again. If something seems off, let me know.
 ## New in 0.8.1
 * Fix for monster Effort tracking
 ## New in 0.8.0
