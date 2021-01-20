@@ -1,5 +1,8 @@
 ## New in 0.8.3
 * Fixed bug that prevented monsters' Shock damage from displaying
+* Arts, Foci, and Armor are now rollable and will display to chat
+    * This required changing the Art template a bit. It didn't affect that many Arts so I didn't bother adding logic to fix existing Arts. I did update all the Arts in the Compendium though, so you can simply replace any existing Arts on your sheet if you want Arts like Rune of Destruction to display a damage forumla in the chat card.
+
 ## New in 0.8.2
 * Rolling for silver on a new character now correctly assigns SP to the character when done.
     * Fixing this first required breaking the character generation dialog and then fixing it again. If something seems off, let me know.
