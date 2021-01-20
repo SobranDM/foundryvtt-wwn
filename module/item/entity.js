@@ -270,11 +270,7 @@ export class WwnItem extends Item {
         this.spendSpell();
         break;
       case "art":
-        if (this.data.data.roll) {
-          this.rollFormula();
-        } else {
-          this.show();
-        }
+        this.show();
         break;
       case "item":
       case "armor":
