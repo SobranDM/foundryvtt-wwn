@@ -8,7 +8,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Track Effort commitment by Art and have class-specific Effort updated automatically
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 * Visual indicator of health/strain percentage
-* Auto-populate monster saves
+* Auto-calculate saves for PCs and NPCs
 * Automatically calculates movement rates based on Readied/Stowed values
     * Can be switched to manual entry
 * Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
