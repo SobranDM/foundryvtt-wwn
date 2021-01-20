@@ -216,6 +216,12 @@ export class WwnActorSheet extends ActorSheet {
     html.find(".spells .item-reset").click((ev) => {
       this._resetSpells(ev);
     });
+
+    /** Attempt to copy input focus */
+    if ( this.isEditable ) {
+      const inputs = html.find("input");
+      inputs.focus(ev => ev.currentTarget.select());
+    }
   }
 
   // Override to set resizable initial size
