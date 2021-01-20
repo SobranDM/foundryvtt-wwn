@@ -26,16 +26,20 @@
         },
         "saves": {
           "evasion": {
-            "value": 0
+            "value": 0,
+            "mod": 0
           },
           "mental": {
-            "value": 0
+            "value": 0,
+            "mod": 0
           },
           "physical": {
-            "value": 0
+            "value": 0,
+            "mod": 0
           },
           "luck": {
-            "value": 0
+            "value": 0,
+            "mod": 0
           }
         },
         "movement": {
