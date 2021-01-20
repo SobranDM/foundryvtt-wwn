@@ -808,8 +808,13 @@ export class WwnActor extends Actor {
 
   computeSaves() {
     if (this.data.type != "character") {
-      return;
-    }
+      const data = this.data.data;
+      let monsterHD = data.hp.hd.toLowerCase().split('d');
+      data.saves.evasion.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2);
+      data.saves.physical.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2);
+      data.saves.mental.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2);
+      data.saves.luck.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2);
+    } else {
     const data = this.data.data;
     let evasionMod = Math.max(data.scores.int.mod,data.scores.dex.mod);
     let physicalMod = Math.max(data.scores.con.mod,data.scores.str.mod);
@@ -820,5 +825,6 @@ export class WwnActor extends Actor {
     data.saves.physical.value = 16 - physicalMod - charLevel;
     data.saves.mental.value = 16 - mentalMod - charLevel;
     data.saves.luck.value = 16 - charLevel;
+    }
   }
 }
