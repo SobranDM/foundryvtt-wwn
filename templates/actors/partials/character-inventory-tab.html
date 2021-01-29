@@ -22,8 +22,12 @@
     <input class="readied" name="data.currency.pp" type="number" value="{{data.currency.pp}}" data-dtype="Number" placeholder="0" />
     {{/if}}
   </div>
+  <div class="flexrow">
+    <label class="readied-header" title={{localize "WWN.items.bank.long" }}>{{localize 'WWN.items.bank.short'}}</label>
+    <input class="readied" name="data.currency.bank" type="number" value="{{data.currency.bank}}" data-dtype="Number" placeholder="0" />
+  </div>
 </section>
-<section class="resizable inventory">
+<section class="inventory">
   <div class="flexrow">
     <div class="item-titles flexrow">
       <label>{{localize 'WWN.Encumbrance'}}</label>

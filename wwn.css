@@ -196,6 +196,7 @@
     font-size: 13px;
     background: url("/systems/wwn/assets/back.png");
     color: white;
+    margin-top: 7px;
   }
   .wwn.sheet.actor .sheet-body .inventory .item-titles .item-name {
     text-align: left;
@@ -355,13 +356,14 @@
   .wwn.sheet.actor .flexrow .readied-header {
     color: whitesmoke;
     padding: 2px;
-    padding-top: 0px;
-    margin: 10px;
-    margin-top: 4px;
+    padding-bottom: 0px;
+    margin: 2px;
+    margin-bottom: 0px;
     margin-right: 0;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
+    vertical-align: middle;
   }
   .wwn.sheet.actor .flexrow .readied {
     position: relative;
@@ -369,10 +371,11 @@
     padding-bottom: 2px;
     border: 1px solid #000000;
     box-shadow: 0 0 2px #7a7971;
-    margin-top: 4px;
-    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-bottom: 0px;
     display: flex;
     width: 10px;
+    vertical-align: middle;
   }
   .wwn.sheet.actor .flexrow .unspentPoints {
     display: flex;
@@ -964,19 +967,6 @@
     color: #EEE;
     text-shadow: 0 0 5px #000;
   }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-breakpoint {
-    display: block;
-    position: absolute;
-  }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-breakpoint.encumbrance-25 {
-    left: 25%;
-  }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-breakpoint.encumbrance-50 {
-    left: 50%;
-  }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-breakpoint.encumbrance-75 {
-    left: 75%;
-  }
   .wwn.sheet.actor.character .encumbrance .arrow-up {
     bottom: 0;
     width: 0;
@@ -1020,6 +1010,12 @@
     margin: 0;
   }
   .wwn .window-content input:not([type=checkbox]) {
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: none;
+  }
+  .wwn .window-content .header-details input:not([type=checkbox]) {
     background: none;
     border: none;
     border-radius: 0;
