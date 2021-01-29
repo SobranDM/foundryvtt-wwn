@@ -5,7 +5,7 @@
   "version": "0.8.3",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.9",
-  "templateVersion": 5.4,
+  "templateVersion": 5.5,
   "author": "SobranDM",
   "esmodules": ["wwn.js"],
   "styles": ["wwn.css"],

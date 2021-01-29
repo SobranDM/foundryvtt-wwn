@@ -125,6 +125,11 @@
         "strain": {
           "value": 0,
           "max": 10
+        },
+        "renown": {
+          "value": 0,
+          "spent": 0,
+          "total": 0
         }
       },
       "character": true,
