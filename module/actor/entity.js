@@ -656,7 +656,7 @@ export class WwnActor extends Actor {
     if (this.data.type != "character") {
       return;
     } else {
-      data.currency.total = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank;
+      data.currency.total = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
     }
 
   }
