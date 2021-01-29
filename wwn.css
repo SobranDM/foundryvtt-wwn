@@ -170,6 +170,7 @@
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-name {
     line-height: 16px;
     width: 80px;
+    padding-top: 8px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-value {
     line-height: 29px;
@@ -356,7 +357,7 @@
   .wwn.sheet.actor .flexrow .readied-header {
     color: whitesmoke;
     padding: 2px;
-    padding-bottom: 0px;
+    padding-top: 4px;
     margin: 2px;
     margin-bottom: 0px;
     margin-right: 0;

@@ -17,6 +17,7 @@ export class WwnActor extends Actor {
     this.computeTreasure();
     this.computeEffort();
     this.computeSaves();
+    this.computeTotalSP();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -647,6 +648,17 @@ export class WwnActor extends Actor {
         data.movement.overland = data.movement.base;
       }
     }
+  }
+
+  // Compute Total Wealth
+  computeTotalSP() {
+    const data = this.data.data;
+    if (this.data.type != "character") {
+      return;
+    } else {
+      data.currency.total = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank;
+    }
+
   }
 
   // Compute Effort
