@@ -6,6 +6,7 @@
 * Fixed armor type for Plate Armor and its magic derivatives.
 * Added a Bank field under currency for SP stored somewhere. Doesn't count against Encumbrance.
 * Added a Total field that calculates your total SP value from coin and bank values. Also adds the value of any inventory item marked as "treasure", such as gems and jewelry.
+* Added Renown field to character sheet header.
 ## New in 0.8.2
 * Rolling for silver on a new character now correctly assigns SP to the character when done.
     * Fixing this first required breaking the character generation dialog and then fixing it again. If something seems off, let me know.
