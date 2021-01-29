@@ -114,7 +114,7 @@ export class WwnActor extends Actor {
       skipDialog: skip,
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: game.i18n.format("WWN.roll.save", { save: label }),
-      title: game.i18n.format("WWN.roll.save", { save: label }),
+      title: game.i18n.format("WWN.roll.save", { save: this.name + " - " +  label }),
     });
   }
 
