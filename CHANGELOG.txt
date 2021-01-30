@@ -11,6 +11,7 @@
 * Saving Throw dialogs now include the character making the saving throw, to better support the GM rolling saves for multiple tokens at once.
 * Expanded the GM Tables to include History Construction, Historical Events,
 * Fixed tooltips on the Inventory page because I'm a dummy dumb-dumb
+* Changed the editor size on items to better reflect the size of the actual window. This should make editing descriptions for items, foci, arts, and spells much easier.
 ## New in 0.8.2
 * Rolling for silver on a new character now correctly assigns SP to the character when done.
     * Fixing this first required breaking the character generation dialog and then fixing it again. If something seems off, let me know.
