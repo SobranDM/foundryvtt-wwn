@@ -12,6 +12,10 @@
 * Expanded the GM Tables to include History Construction, Historical Events,
 * Fixed tooltips on the Inventory page because I'm a dummy dumb-dumb
 * Changed the editor size on items to better reflect the size of the actual window. This should make editing descriptions for items, foci, arts, and spells much easier.
+* Added Class Abilities to Focus Compendium. Renamed Compendium and Header in Foci Tab to "Foci and Abilities" (though not the tab because that would be a really long tab name).
+    * I went back and forth about making a separate section for miscellaneous abilities. Eventually I settled on lumping them all together. You'll never have many Foci and even fewer miscellanous/class abilities, so I couldn't justify a separate section. Regular Foci, Origin Foci, and Class Abilities are all separate colors, so you can easily tell them apart.
+    * Class Abilities don't note whether they are for Full or Partial Experts/Warriors. You'll have to use the book (which you should be doing anyway).
+* Added "Full Warrior" toggle in Tweaks. If True, Killing Blow damage will be automatically added to both rolled damage and Shock.
 ## New in 0.8.2
 * Rolling for silver on a new character now correctly assigns SP to the character when done.
     * Fixing this first required breaking the character generation dialog and then fixing it again. If something seems off, let me know.
