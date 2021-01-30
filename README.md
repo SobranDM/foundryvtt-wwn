@@ -1,5 +1,5 @@
 # Worlds Without Number for Foundry VTT (Unofficial)
-Everything you need to play Worlds Without Number in Foundry VTT. This was forked from v1.1.2 of the Old School Essentials project developed by U~man. I have managed to mangle his beautiful project into something that sort of works for Worlds Without Number. All praise should be directed toward him. Any bugs or mistakes are undoubtedly my own.
+Everything you need to play Worlds Without Number in Foundry VTT. This was forked from v1.1.2 of the Old School Essentials project developed by U~man. I have managed to mangle his beautiful project into something that works for Worlds Without Number. All praise should be directed toward him. Any bugs or mistakes are undoubtedly my own.
 
 Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludiques/foundryvtt-ose
 ## Features
