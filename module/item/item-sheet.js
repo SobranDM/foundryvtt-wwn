@@ -75,6 +75,11 @@ export class WwnItemSheet extends ItemSheet {
       this.object.update({data: {missile: !this.object.data.data.missile}});
     });
 
+    if ( this.isEditable ) {
+      const inputs = html.find("input");
+      inputs.focus(ev => ev.currentTarget.select());
+    }
+
     super.activateListeners(html);
   }
 }

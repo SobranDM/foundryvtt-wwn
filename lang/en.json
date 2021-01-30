@@ -69,6 +69,7 @@
   "WWN.details.instinctTableHint": "Drop a rollable table here to roll an Instinctive Action",
   "WWN.details.reaction": "Reaction",
   "WWN.details.appearing": "NA",
+  "WWN.details.renown.short": "Renown",
 
   "WWN.Attack": "Attack",
   "WWN.Encumbrance": "Encumbrance",
@@ -138,6 +139,7 @@
   "WWN.AttacksShort": "ATT",
   "WWN.Damage": "Damage",
   "WWN.Spellcaster": "Spellcaster",
+  "WWN.Warrior": "Full Warrior",
   "WWN.Committed": "Committed",
   "WWN.Max": "Max",
 
@@ -167,6 +169,7 @@
   "WWN.category.equipment": "Equipment",
   "WWN.category.abilities": "Abilities",
   "WWN.category.foci": "Foci",
+  "WWN.category.fociTitle": "Foci and Abilities",
 
   "WWN.Setting.Initiative": "Initiative",
   "WWN.Setting.InitiativeHint": "Grouped or individual initiative.",
@@ -200,6 +203,7 @@
   "WWN.items.Misc": "Misc",
   "WWN.items.Weapons": "Weapons",
   "WWN.items.Treasure": "Treasure",
+  "WWN.items.TreasureSP": "Treasure (SP)",
   "WWN.items.Armors": "Armors",
   "WWN.items.Weight": "Weight",
   "WWN.items.Qualities": "Qualities",
@@ -241,6 +245,10 @@
   "WWN.items.GP.long": "Gold Pieces",
   "WWN.items.PP.short": "PP",
   "WWN.items.PP.long": "Platinum Pieces",
+  "WWN.items.bank.short": "Bank (SP)",
+  "WWN.items.bank.long": "Bank (Silver)",
+  "WWN.items.total.short": "Total (SP)",
+  "WWN.items.total.long": "Total Silver Value",
 
   "WWN.items.Range": "Range",
   "WWN.items.Range.desc": "Ranged Weapon",

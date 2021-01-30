@@ -17,6 +17,7 @@ export class WwnActor extends Actor {
     this.computeTreasure();
     this.computeEffort();
     this.computeSaves();
+    this.computeTotalSP();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -113,7 +114,7 @@ export class WwnActor extends Actor {
       skipDialog: skip,
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: game.i18n.format("WWN.roll.save", { save: label }),
-      title: game.i18n.format("WWN.roll.save", { save: label }),
+      title: game.i18n.format("WWN.roll.save", { save: this.name + " - " +  label }),
     });
   }
 
@@ -445,8 +446,19 @@ export class WwnActor extends Actor {
 
     if (data.character) {
       let statAttack = attData.item.data.score;
-      attData.item.data.shockTotal =
-        this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
+      if (data.warrior) {
+        let levelRoundedUp = Math.ceil(this.data.data.details.level / 2);
+        attData.item.data.shockTotal =
+          this.data.data.scores[statAttack].mod +
+          attData.item.data.shock.damage +
+          levelRoundedUp;
+      } else {
+        attData.item.data.shockTotal =
+          this.data.data.scores[statAttack].mod +
+          attData.item.data.shock.damage;
+      }
+    } else {
+      attData.item.data.shockTotal = attData.item.data.shock.damage;
     }
 
     rollParts.push(data.thac0.bba.toString());
@@ -478,6 +490,10 @@ export class WwnActor extends Actor {
     if (data.character) {
       let statAttack = attData.item.data.score;
       dmgParts.push(data.scores[statAttack].mod);
+      if (data.warrior) {
+        let levelRoundedUp = Math.ceil(data.details.level / 2);
+        dmgParts.push(levelRoundedUp);
+      }
     }
 
     const rollData = {
@@ -647,6 +663,17 @@ export class WwnActor extends Actor {
         data.movement.overland = data.movement.base;
       }
     }
+  }
+
+  // Compute Total Wealth
+  computeTotalSP() {
+    const data = this.data.data;
+    if (this.data.type != "character") {
+      return;
+    } else {
+      data.currency.total = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
+    }
+
   }
 
   // Compute Effort

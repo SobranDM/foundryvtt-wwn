@@ -2,6 +2,21 @@
   <div class="dialog-tweaks">
   <div class="row">
     <div class="column">
+      {{#if (eq this.type 'character')}}
+      <div class="form-group">
+        <label for="fullWarrior">{{localize "WWN.Warrior"}}</label>
+        <div class="form-fields">
+          <input
+            type="checkbox"
+            name="data.warrior"
+            id="fullWarrior"
+            {{checked
+            data.warrior}}
+            data-dtype="Boolean"
+          />
+        </div>
+      </div>
+      {{/if}}
       <div class="form-group">
         <label for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
         <div class="form-fields">
