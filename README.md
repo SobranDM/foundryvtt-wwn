@@ -24,7 +24,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Link Instinct tables from the Compendium to each NPC sheet, so the appropriate table is only a click away
 ## TODO
 * Toggle to add Skill value to damage/Shock
-* Auto-add highest Dex mod when using Group Initiative
+* Add highest Dex mod when using Group Initiative
 * Add tab for tracking Projects and the expenditure of Renown
 ## License
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
