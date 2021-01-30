@@ -9,7 +9,7 @@
 * Added a Total field that calculates your total SP value from coin and bank values, as well as the value of any inventory item marked as treasure.
 * Added Renown field to character sheet header.
 * Saving Throw dialogs now include the character making the saving throw, to better support the GM rolling saves for multiple tokens at once.
-* Expanded the GM Tables to include History Construction, Historical Events,
+* Expanded the GM Tables to include History Construction and Historical Events.
 * Fixed tooltips on the Inventory page because I'm a dummy dumb-dumb
 * Changed the editor size on items to better reflect the size of the actual window. This should make editing descriptions for items, foci, arts, and spells much easier.
 * Added Class Abilities to Focus Compendium. Renamed Compendium and Header in Foci Tab to "Foci and Abilities" (though not the tab because that would be a really long tab name).
