@@ -5,7 +5,8 @@
 * Extended input field focus implementation to item sheets.
 * Fixed armor type for Plate Armor and its magic derivatives.
 * Added a Bank field under currency for SP stored somewhere. Doesn't count against Encumbrance.
-* Added a Total field that calculates your total SP value from coin and bank values. Also adds the value of any inventory item marked as "treasure", such as gems and jewelry.
+* Added a Treasure field that expresses the total value of any inventory items marked as "Treasure". This is intended to be gems or jewelry that can easily be exchanged at a given value but you could use it for just about any valuable commodity.
+* Added a Total field that calculates your total SP value from coin and bank values, as well as the value of any inventory item marked as treasure.
 * Added Renown field to character sheet header.
 * Saving Throw dialogs now include the character making the saving throw, to better support the GM rolling saves for multiple tokens at once.
 * Expanded the GM Tables to include History Construction, Historical Events,
