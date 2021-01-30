@@ -15,6 +15,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Can calculate movement rates for standard WWN rates or B/X movement rates
 * Adds attribute bonuses to hit chance, damage, and Shock
 * Shock and damage account for attribute bonuses and the Killing Blow warrior ability
+    * Click Full Warrior in Tweaks menu to activate Killing Blow
 * Support for Specialist and other Foci that allow rolling 3d6/4d6 on skill checks
 * Distribute XP through the party sheet
     * Assign percentage shares to henchmen, to support silver-as-XP (and custom XP values) for B/X-style play
