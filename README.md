@@ -9,13 +9,19 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Track Effort commitment by Art and have class-specific Effort updated automatically
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 * Visual indicator of health/strain percentage
-* Auto-calculate saves for PCs and NPCs
+* Auto-calculate saves for PCs and NPCs alike
 * Automatically calculates movement rates based on Readied/Stowed values
     * Can be switched to manual entry
+    * Auto-calculate movement rates for standard WWN rates or B/X movement rates
 * Automatically calculates attribute bonuses to hit chance, damage, and Shock
+* Support for Specialist and other Foci that allow rolling 3d6/4d6 on skill checks
+* Distribute XP through the party sheet
+    * Assign percentage shares to henchmen, to support silver-as-XP (and custom XP values) for B/X-style play
 * GM can easily roll saving throws for multiple tokens by selecting them and clicking the save in an Art or Spell's chat card
 * GM Tools: quickly generate things from the GM Tables in WWN
     * Currently supports Nation, Government, Society, and History Construction. More will be added in the future.
+* Roll Morale and Instinct checks with two clicks
+    * Link Instinct tables from the Compendium to each NPC sheet, so the appropriate table is only a click away
 ## TODO
 * Toggle to add Skill value to damage/Shock
 * Auto-add highest Dex mod when using Group Initiative
