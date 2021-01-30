@@ -3,7 +3,7 @@
 * Arts, Foci, Items, and Armor are now rollable and will display to chat
     * This required changing the Art template a bit. It didn't affect that many Arts so I didn't bother adding logic to fix existing Arts. I did update all the Arts in the Compendium though, so you can simply replace any existing Arts on your sheet if you want Arts like Rune of Destruction to display a damage forumla in the chat card.
 * Extended input field focus implementation to item sheets.
-* Fixed armor type for Plate Armor and its magic derivatives.
+* Fixed armor type for Plate Armor and its magic derivatives. Fixed weight and cost of Crossbows.
 * Added a Bank field under currency for SP stored somewhere. Doesn't count against Encumbrance.
 * Added a Treasure field that expresses the total value of any inventory items marked as "Treasure". This is intended to be gems or jewelry that can easily be exchanged at a given value but you could use it for just about any valuable commodity.
 * Added a Total field that calculates your total SP value from coin and bank values, as well as the value of any inventory item marked as treasure.

@@ -4,6 +4,7 @@ Everything you need to play Worlds Without Number in Foundry VTT. This was forke
 Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludiques/foundryvtt-ose
 ## Features
 * Calculated Readied/Stowed values, including dynamic tracking of currency weight
+* Calculates total wealth from coin, bank (stored coin not calculated against encumbrance), and treaure items
 * Track weapon tags
 * Track Effort commitment by Art and have class-specific Effort updated automatically
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
@@ -11,12 +12,14 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Auto-calculate saves for PCs and NPCs
 * Automatically calculates movement rates based on Readied/Stowed values
     * Can be switched to manual entry
-* Adds Attribute/Skill bonuses to hit rolls and Attribute bonus to damage rolls
-* Automatically adds relevant attribute to Shock damage
+* Automatically calculates attribute bonuses to hit chance, damage, and Shock
+* GM can easily roll saving throws for multiple tokens by selecting them and clicking the save in an Art or Spell's chat card
+* GM Tools: quickly generate things from the GM Tables in WWN
+    * Currently supports Nation, Government, Society, and History Construction. More will be added in the future.
 ## TODO
 * Toggle to add Skill value to damage/Shock
 * Auto-add highest Dex mod when using Group Initiative
-* Add Tweak to disable currency weight
+* Add tab for tracking Projects and the expenditure of Renown
 ## License
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
