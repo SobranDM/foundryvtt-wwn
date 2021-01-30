@@ -10,14 +10,15 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 * Visual indicator of health/strain percentage
 * Auto-calculate saves for PCs and NPCs alike
-* Automatically calculates movement rates based on Readied/Stowed values
+* Calculates movement rates based on Readied/Stowed values
     * Can be switched to manual entry
-    * Auto-calculate movement rates for standard WWN rates or B/X movement rates
-* Automatically calculates attribute bonuses to hit chance, damage, and Shock
+    * Can calculate movement rates for standard WWN rates or B/X movement rates
+* Adds attribute bonuses to hit chance, damage, and Shock
+* Shock and damage account for attribute bonuses and the Killing Blow warrior ability
 * Support for Specialist and other Foci that allow rolling 3d6/4d6 on skill checks
 * Distribute XP through the party sheet
     * Assign percentage shares to henchmen, to support silver-as-XP (and custom XP values) for B/X-style play
-* GM can easily roll saving throws for multiple tokens by selecting them and clicking the save in an Art or Spell's chat card
+* GM can easily roll multiple saving throws or apply damage by selecting the appropriate token(s) and clicking the save or damage in an Art, Spell, or weapon's chat card
 * GM Tools: quickly generate things from the GM Tables in WWN
     * Currently supports Nation, Government, Society, and History Construction. More will be added in the future.
 * Roll Morale and Instinct checks with two clicks

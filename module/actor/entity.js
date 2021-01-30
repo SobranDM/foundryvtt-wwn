@@ -446,9 +446,20 @@ export class WwnActor extends Actor {
 
     if (data.character) {
       let statAttack = attData.item.data.score;
-      attData.item.data.shockTotal =
-        this.data.data.scores[statAttack].mod + attData.item.data.shock.damage;
-    } else { attData.item.data.shockTotal = attData.item.data.shock.damage }
+      if (data.warrior) {
+        let levelRoundedUp = Math.ceil(this.data.data.details.level / 2);
+        attData.item.data.shockTotal =
+          this.data.data.scores[statAttack].mod +
+          attData.item.data.shock.damage +
+          levelRoundedUp;
+      } else {
+        attData.item.data.shockTotal =
+          this.data.data.scores[statAttack].mod +
+          attData.item.data.shock.damage;
+      }
+    } else {
+      attData.item.data.shockTotal = attData.item.data.shock.damage;
+    }
 
     rollParts.push(data.thac0.bba.toString());
 
@@ -479,6 +490,10 @@ export class WwnActor extends Actor {
     if (data.character) {
       let statAttack = attData.item.data.score;
       dmgParts.push(data.scores[statAttack].mod);
+      if (data.warrior) {
+        let levelRoundedUp = Math.ceil(data.details.level / 2);
+        dmgParts.push(levelRoundedUp);
+      }
     }
 
     const rollData = {

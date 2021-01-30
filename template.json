@@ -133,6 +133,7 @@
         }
       },
       "character": true,
+      "warrior": false,
       "hp": {
         "hd": "1d6",
         "value": 4,
