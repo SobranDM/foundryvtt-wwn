@@ -5,7 +5,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 ## Features
 * Calculated Readied/Stowed values, including dynamic tracking of currency weight
 * Calculates total wealth from coin, bank (stored coin not calculated against encumbrance), and treaure items
-* Track weapon tags
+* Track weapon tags; hovering over the tag icon or name displays the full tag description
 * Track Effort commitment by Art and have class-specific Effort updated automatically
     * Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 * Visual indicator of health/strain percentage
@@ -14,8 +14,9 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Can be switched to manual entry
     * Can calculate movement rates for standard WWN rates or B/X movement rates
 * Adds attribute bonuses to hit chance, damage, and Shock
-* Shock and damage account for attribute bonuses and the Killing Blow warrior ability
+* Shock and damage account for attribute bonuses, the Killing Blow warrior ability, and Foci that add skill levels to damage
     * Click Full Warrior in Tweaks menu to activate Killing Blow
+    * Skill damage is activated on a per-item basis, due to the variable nature of Foci
 * Support for Specialist and other Foci that allow rolling 3d6/4d6 on skill checks
 * Distribute XP through the party sheet
     * Assign percentage shares to henchmen, to support silver-as-XP (and custom XP values) for B/X-style play
@@ -25,7 +26,6 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 * Roll Morale and Instinct checks with two clicks
     * Link Instinct tables from the Compendium to each NPC sheet, so the appropriate table is only a click away
 ## TODO
-* Toggle to add Skill value to damage/Shock
 * Add highest Dex mod when using Group Initiative
 * Add tab for tracking Projects and the expenditure of Renown
 ## License
