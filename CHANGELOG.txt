@@ -1,6 +1,6 @@
 ## New in 0.8.4
 * Updated Compendium to v0.20 of the Beta PDF
-
+* Leaving the Shock AC field of a weapon blank will cause the weapon attack to simply note its Shock damage with no reference to AC. Useful for Foci like Shocking Assault that apply Shock irrespective of the opponent's AC.
 ## New in 0.8.3
 * Fixed bug that prevented monsters' Shock damage from displaying
 * Arts, Foci, Items, and Armor are now rollable and will display to chat

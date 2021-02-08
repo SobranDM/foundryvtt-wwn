@@ -27,6 +27,7 @@
             </div>
             <div class="damage-roll">{{{rollDamage}}}</div>
             {{#if data.item.data.shock.damage}}
+            {{#if data.item.data.shock.ac}}
             <div class="chat-details">
                 <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
                     {{data.item.data.shockTotal}}
@@ -34,6 +35,15 @@
                     {{localize 'WWN.messages.applyShock3'}}</b>
                 </div>
             </div>
+            {{/if}}
+            {{#unless data.item.data.shock.ac}}
+            <div class="chat-details">
+                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
+                    {{data.item.data.shockTotal}}
+                    {{localize 'WWN.messages.applyShockAlt'}}</b>
+                </div>
+            </div>
+            {{/unless}}
             {{/if}}
             {{#if data.roll.save}}
             <div class="card-buttons">
