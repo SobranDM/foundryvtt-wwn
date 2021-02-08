@@ -446,6 +446,7 @@ export class WwnActor extends Actor {
 
     if (data.character) {
       let statAttack = attData.item.data.score;
+      let skillAttack = attData.item.data.skill;
       if (data.warrior) {
         let levelRoundedUp = Math.ceil(this.data.data.details.level / 2);
         attData.item.data.shockTotal =
@@ -456,6 +457,9 @@ export class WwnActor extends Actor {
         attData.item.data.shockTotal =
           this.data.data.scores[statAttack].mod +
           attData.item.data.shock.damage;
+      }
+      if (attData.item.data.skillDamage) {
+        attData.item.data.shockTotal = attData.item.data.shockTotal + this.data.data.skills[skillAttack].value;
       }
     } else {
       attData.item.data.shockTotal = attData.item.data.shock.damage;
@@ -486,13 +490,16 @@ export class WwnActor extends Actor {
     }
     let thac0 = data.thac0.value;
 
-    //TODO: Check if 'addSkill' property is checked; if so, add skill to damage.
     if (data.character) {
       let statAttack = attData.item.data.score;
+      let skillAttack = attData.item.data.skill;
       dmgParts.push(data.scores[statAttack].mod);
       if (data.warrior) {
         let levelRoundedUp = Math.ceil(data.details.level / 2);
         dmgParts.push(levelRoundedUp);
+      }
+      if (attData.item.data.skillDamage) {
+        dmgParts.push(this.data.data.skills[skillAttack].value);
       }
     }
 

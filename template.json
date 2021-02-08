@@ -356,9 +356,10 @@
     "description": "",
     "damage": "1d6",
     "bonus": 0,
+    "skillDamage": false,
     "shock": {
       "damage": "1",
-      "ac": "20"
+      "ac": "15"
     },
     "skill": "",
     "score": "",

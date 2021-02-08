@@ -25,7 +25,7 @@
       </div>
       <ol class="tag-list">
         {{#each data.tags as |tag|}}
-        <li class="tag" title="{{tag.title}}" data-tag="{{tag.value}}">
+        <li class="tag" title="{{getTagDesc tag.value}}" data-tag="{{tag.value}}">
           <span>{{tag.value}}</span>
           <a class="tag-delete"><i class="fas fa-times"></i></a>
         </li>
@@ -52,9 +52,9 @@
           <label>{{localize 'WWN.items.Shock'}}</label>
           <div class="form-fields">
             <input type="number" name="data.shock.damage" value="{{data.shock.damage}}" data-dtype="String" 
-            placeholder="{{localize 'WWN.items.Damage'}}" />
+            placeholder="{{localize 'WWN.items.Damage'}}" title="{{localize 'WWN.items.ShockDamage'}}" />
             <input type="number" name="data.shock.ac" value="{{data.shock.ac}}" data-dtype="String"
-            placeholder="{{localize 'WWN.items.ArmorAC'}}" />
+            placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
           </div>
         </div>
         <div class="form-group">
@@ -104,7 +104,12 @@
               </select>
             </div>
           </div>
-          
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.skillDamage" value="{{data.skillDamage}}" {{checked data.skillDamage}}  data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
+          </div>
           <div class="form-group block-input">
             <label title={{localize 'WWN.spells.Save'}}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>

@@ -43,6 +43,11 @@ export const registerHelpers = async function () {
     return CONFIG.WWN.tag_images[idx];
   });
 
+  Handlebars.registerHelper("getTagDesc", function (tag) {
+    let idd = Object.keys(CONFIG.WWN.tags).find(k => (CONFIG.WWN.tags[k] == tag));
+    return game.i18n.localize(CONFIG.WWN.tag_desc[idd]);
+  });
+
   Handlebars.registerHelper("counter", function (status, value, max) {
     return status
       ? Math.clamped((100.0 * value) / max, 0, 100)
