@@ -25,7 +25,7 @@
       </div>
       <ol class="tag-list">
         {{#each data.tags as |tag|}}
-        <li class="tag" title="{{tag.title}}" data-tag="{{tag.value}}">
+        <li class="tag" title="{{getTagDesc tag.value}}" data-tag="{{tag.value}}">
           <span>{{tag.value}}</span>
           <a class="tag-delete"><i class="fas fa-times"></i></a>
         </li>

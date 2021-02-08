@@ -119,6 +119,22 @@ export const WWN = {
     SS: "/systems/wwn/assets/single_shot.png",
     T: "/systems/wwn/assets/throwable.png",
   },
+  tag_desc: {
+    melee: "WWN.items.desc.Melee",
+    missile: "WWN.items.desc.Missile",
+    SR: "WWN.items.desc.SR",
+    TH: "WWN.items.desc.2H",
+    AP: "WWN.items.desc.AP",
+    FX: "WWN.items.desc.FX",
+    L: "WWN.items.desc.L",
+    R: "WWN.items.desc.R",
+    LL: "WWN.items.desc.LL",
+    N: "WWN.items.desc.N",
+    PM: "WWN.items.desc.PM",
+    S: "WWN.items.desc.S",
+    SS: "WWN.items.desc.SS",
+    T: "WWN.items.desc.T"
+  },
   monster_saves: {
     0: {
       label: "Normal Human",
