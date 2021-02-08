@@ -104,7 +104,12 @@
               </select>
             </div>
           </div>
-          
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.skillDamage" value="{{data.skillDamage}}" {{checked data.skillDamage}}  data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
+          </div>
           <div class="form-group block-input">
             <label title={{localize 'WWN.spells.Save'}}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>
