@@ -1,5 +1,5 @@
 ## New in 0.8.4
-* Updated Compendium to v0.20 of the Beta PDF
+* Updated Compendium to v0.20 of the Beta PDF. Affects Compendium weapons, spells, and armor (added Grand Plate).
 * Leaving the Shock AC field of a weapon blank will cause the weapon attack to simply note its Shock damage with no reference to AC. Useful for Foci like Shocking Assault that apply Shock irrespective of the opponent's AC.
 * Added checkbox in weapon sheet to add skill level to weapon damage and Shock.
 * Hovering over a weapon tag now displays the tag's full name and description. Spend less time looking up what Precisely Murderous does! This should function on both the inventory screen, by hovering over the tag icon, and in the item sheet itself, when hovering over the tag abbreviation.
