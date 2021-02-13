@@ -319,6 +319,7 @@ export class WwnActor extends Actor {
   rollSkills(expl, options = {}) {
     let selectedStat = this.data.data.score;
     const label = game.i18n.localize(`WWN.skills.${expl}`);
+    const statLabel = game.i18n.localize(`WWN.scores.${selectedStat}.long`);
 
     const data = {
       actor: this.data,
@@ -343,8 +344,8 @@ export class WwnActor extends Actor {
       data: data,
       skipDialog: skip,
       speaker: ChatMessage.getSpeaker({ actor: this }),
-      flavor: game.i18n.format("WWN.roll.skills", { skills: label }),
-      title: game.i18n.format("WWN.roll.skills", { skills: label }),
+      flavor: game.i18n.format("WWN.roll.skills", { skills: statLabel + " / " + label }),
+      title: game.i18n.format("WWN.roll.skills", { skills: statLabel + " / " + label }),
     });
   }
 

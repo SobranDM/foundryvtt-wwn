@@ -77,7 +77,7 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 340px;
+    top: 365px;
     right: -179px;
     width: 340px;
     border-top: none;
@@ -85,7 +85,7 @@
     z-index: -1;
   }
   .wwn.sheet.actor .sheet-tabs .item {
-    padding: 1px 10px 0;
+    padding: 1px 10px 3px;
     margin-left: -5px;
     text-indent: 4px;
     line-height: 16px;

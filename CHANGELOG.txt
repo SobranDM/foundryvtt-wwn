@@ -1,3 +1,8 @@
+## New in 0.8.5
+* Fixed bug affecting Shock damage on some Compendium weapons
+* Fixed description of Connect
+* Skill checks now show the attribute used in the roll
+* Gave the tab labels a little breathing room
 ## New in 0.8.4
 * Updated Compendium to v0.20 of the Beta PDF. Affects Compendium weapons, spells, and armor (added Grand Plate).
 * Leaving the Shock AC field of a weapon blank will cause the weapon attack to simply note its Shock damage with no reference to AC. Useful for Foci like Shocking Assault that apply Shock irrespective of the opponent's AC.
