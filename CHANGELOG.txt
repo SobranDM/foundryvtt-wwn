@@ -1,3 +1,9 @@
+## New in 0.8.6
+* Added generic creatures and summoned creatures into a new compendium, Creatures of the Latter Earth
+    * Thanks to Studbeastank for the help on this one
+    * Links to summoned creatures have been included in relevant spells and magic items like the Flask of Devils. If you see any I missed, please contact me so I can get it fixed.
+    * I'll be adding the more complex creatures, such as animals (Judas Goat!), undead, and so on once they are in a more complete state. Some of those creatures don't have stats yet, so that section is still in a state of flux. I'd rather not have to enter them twice.
+
 ## New in 0.8.5
 * Fixed bug affecting Shock damage on some Compendium weapons
 * Fixed description of Connect

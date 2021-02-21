@@ -2,7 +2,7 @@
   "name": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 5.7,
@@ -105,6 +105,14 @@
       "module": "wwn",
       "path": "packs/gm-master-tables.db",
       "entity": "RollTable"
+    },
+    {
+      "name": "creatures-of-the-latter-earth",
+      "label": "Creatures of the Latter Earth",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/creatures-of-the-latter-earth.db",
+      "entity": "Actor"
     }
   ],
   "languages": [
@@ -117,6 +125,6 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "url": "https://gitlab.com/sobran/foundryvtt-wwn",
-  "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/v0.8.5/system.json",
-  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.8.5/foundryvtt-wwn-v0.8.5.zip"
+  "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/v0.8.6/system.json",
+  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.8.6/foundryvtt-wwn-v0.8.6.zip"
 }
