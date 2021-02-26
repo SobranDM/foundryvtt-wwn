@@ -1,9 +1,16 @@
 ## New in 0.8.6
+* Updated Compendiums to Release Candidate 1.
+    * This affects some Foci, Spells, and Arts. Also minor change to the description of shields and the Shock immunity of Grand Plate.
+* Added various defensive Arts, such as Pavis of Elements and Cold Flesh to Armor Compendium. You will have to manually adjust these as you level or to account for Pavis taking you over its maximum AC of 18.
+* Added Unarmed Might to Weapons Compendium.
+* Added some Arts to the Compendium that I had previously missed:
+    * Keeper of the Gate (Necromancer)
+    * Mob Justice (Vowed)
+    * If you see any others that are missing, please let me know!
 * Added generic creatures and summoned creatures into a new compendium, Creatures of the Latter Earth
     * Thanks to Studbeastank for the help on this one
     * Links to summoned creatures have been included in relevant spells and magic items like the Flask of Devils. If you see any I missed, please contact me so I can get it fixed.
     * I'll be adding the more complex creatures, such as animals (Judas Goat!), undead, and so on once they are in a more complete state. Some of those creatures don't have stats yet, so that section is still in a state of flux. I'd rather not have to enter them twice.
-
 ## New in 0.8.5
 * Fixed bug affecting Shock damage on some Compendium weapons
 * Fixed description of Connect

@@ -107,12 +107,28 @@
       "entity": "RollTable"
     },
     {
-      "name": "creatures-of-the-latter-earth",
-      "label": "Creatures of the Latter Earth",
+      "name": "creatures-of-a-far-age",
+      "label": "Creatures of a Far Age",
       "system": "wwn",
       "module": "wwn",
-      "path": "packs/creatures-of-the-latter-earth.db",
+      "path": "packs/creatures-of-a-far-age.db",
       "entity": "Actor"
+    },
+    {
+      "name": "ose-monsters",
+      "label": "OSE Monsters",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/ose-monsters.db",
+      "entity": "Actor"
+    },
+    {
+      "name": "ose-spells",
+      "label": "OSE Spells",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/ose-spells.db",
+      "entity": "Item"
     }
   ],
   "languages": [
