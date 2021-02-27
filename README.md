@@ -25,14 +25,17 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Currently supports Nation, Government, Society, and History Construction. More will be added in the future.
 * Roll Morale and Instinct checks with two clicks
     * Link Instinct tables from the Compendium to each NPC sheet, so the appropriate table is only a click away
+* Compendium includes weapons, armor, adventuring gear, arts, spells, and foci. Deluxe edition content is not included.
+    * Thanks to Gavin over at Necrotic Gnome, the Compendium now includes OSE spells and monsters.
 ## TODO
 * Add highest Dex mod when using Group Initiative
-* Add tab for tracking Projects and the expenditure of Renown
 ## License
 This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
 
-This third party product is not affiliated with or approved by Sine Nomine Publishing. \
-Worlds Without Number is a trademark of Sine Nomine Publishing. \
+This third party product is not affiliated with or approved by Sine Nomine Publishing.
+Worlds Without Number is a trademark of Sine Nomine Publishing.
+
+Old School Essentials spells and monsters used with permission under Open Game License, originally adapted from the greatest role playing game in the world.
 
 ## Artwork
 Icons are from [Rexxard](https://assetstore.unity.com/packages/2d/gui/icons/flat-skills-icons-82713).
