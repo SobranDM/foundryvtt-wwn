@@ -1,4 +1,4 @@
-## New in 0.8.6
+## New in 0.8.6 - The One With All the Compendiums
 * Updated Compendiums to Release Candidate 1.
     * This affects some Foci, Spells, and Arts. Also minor change to the description of shields and the Shock immunity of Grand Plate.
 * Added various defensive Arts, such as Pavis of Elements and Cold Flesh to Armor Compendium. You will have to manually adjust these as you level or to account for Pavis taking you over its maximum AC of 18.
@@ -11,6 +11,12 @@
     * Thanks to Studbeastank for the help on this one!
     * Links to summoned creatures have been included in relevant spells and magic items like the Flask of Devils. If you see any I missed, please contact me so I can get it fixed.
     * This includes all creatures, from the generic table as well as animals all the way to undead.
+* Gavin over at Necrotic Gnome has graciously allowed me to use the OSE SRD as a reference to convert over OD&D monsters and spells. This is covered under the OGL, of course, but I thought I should reach out to be sure. What does this mean for you? More monsters! Also, spells.
+    * You'll find two new Compendiums: OSE Spells and OSE Monsters.
+    * All Magic-User and Cleric spells have been converted. Note that conversion involved converting saves to something appropriate and converting conjured monsters and the like to be compatible with WWN. What I have NOT done is make these suitable for players. These are intended purely for use by B/X monsters. You can convert them to be suitable for players yourself by following the guidelines on page 89 of the Worlds Without Number book. Be careful about what spells you allow for your players.
+    * I have begun converting over the monsters. Certain things, such as Instinct, require judgment calls. If you disagree with my choices on a particular monster, you can import a copy and change it to suit your campaign.
+    * So far I have made it as far as Dragon, working alphabetically. Also, skeletons and zombies are in there because what level 1 adventure would be complete without skeletons and zombies? More will be added in future updates.
+    * If you have the DND5e system installed, the monsters MIGHT use the Forgotten Adventures tokens from that system. I have no idea whether this will work. I guess we'll find out together. If not, I guess that'll save me time on the other monsters...
 ## New in 0.8.5
 * Fixed bug affecting Shock damage on some Compendium weapons
 * Fixed description of Connect
