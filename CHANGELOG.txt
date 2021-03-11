@@ -1,6 +1,5 @@
 ## New in 0.8.7
 * Fixed bug that prevented Shock damage from displaying when token is targeted.
-* I *think* I fixed a bug that was causing item images to sometimes disappear. This won't affect existing items but will hopefully fix items created in the future. Compendium items have been updated. This is purely a cosmetic fix.
 * Added generic "ability" to describe monster abilities that are not weapons or spells.
     * Like Arts, these are rollable which sends the description to chat.
     * Also like Arts, they are equipped with "save" and "roll" fields, which can be rolled from the chat card.    
@@ -12,6 +11,7 @@
     * Many OSE monsters have had information moved from the notes section to abilities to reduce tab-flipping. In general, special abilities or skills have been transferred to abilities while purely behavior information is still in the notes tab.
     * Compendium monsters have been updated to use the Damage Bonus, so manually checking shock values should no longer be necessary. Particularly useful for the Creatures of a Far Age Compendium.
     * Various other revisions to OSE monsters were made as I caught errors or second-guessed a conversion.
+    * Added a couple more OSE monsters.
 ## New in 0.8.6 - The One With All the Compendiums
 * Updated Compendiums to Release Candidate 1.
     * This affects some Foci, Spells, and Arts. Also minor change to the description of shields and the Shock immunity of Grand Plate.
