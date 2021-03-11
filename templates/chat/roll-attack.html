@@ -26,6 +26,7 @@
                 <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>
             </div>
             <div class="damage-roll">{{{rollDamage}}}</div>
+            {{/if}}
             {{#if data.item.data.shock.damage}}
             {{#if data.item.data.shock.ac}}
             <div class="chat-details">
@@ -51,7 +52,6 @@
                     {{lookup config.saves data.roll.save}} - {{localize "WWN.spells.Save"}}
                 </button>
             </div>
-            {{/if}}
             {{/if}}
         </div>
     </div>

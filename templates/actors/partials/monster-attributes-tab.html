@@ -35,11 +35,19 @@
                         placeholder="10" data-dtype="Number" />
                 </div>
             </li>
-            <li class="attribute attack">
-                <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}"><a>{{ localize "WWN.ABShort" }}</a>
+            <li class="attribute">
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}">{{ localize "WWN.ABShort" }}
                 </h4>
                 <div class="attribute-value">
                     <input name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0"
+                        data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute">
+                <h4 class="attribute-name box-title" title="{{localize 'WWN.DB'}}">{{ localize "WWN.DBShort" }}
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.damageBonus" type="number" value="{{data.damageBonus}}" placeholder="0"
                         data-dtype="Number" />
                 </div>
             </li>
@@ -76,7 +84,7 @@
                         <a class="item-control item-reset" title='{{localize "WWN.items.resetAttacks"}}'><i
                                 class="fas fa-sync"></i></a>
                         <a class="item-control item-create" title='{{localize "WWN.Add"}}' data-type="choice"
-                            data-choices="weapon,armor,item"><i class="fas fa-plus"></i></a>
+                            data-choices="weapon,armor,item,ability"><i class="fas fa-plus"></i></a>
                         {{/if}}
                     </div>
                 </li>

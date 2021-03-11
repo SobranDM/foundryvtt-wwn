@@ -56,7 +56,7 @@ export class WwnPartySheet extends FormApplication {
   }
 
   async _selectActors(ev) {
-    const template = "/systems/wwn/templates/apps/party-select.html";
+    const template = "systems/wwn/templates/apps/party-select.html";
     const templateData = {
       actors: this.object.entities
     }

@@ -81,7 +81,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
   /* -------------------------------------------- */
 
-  async _chooseItemType(choices = ["weapon", "armor", "shield", "gear"]) {
+  async _chooseItemType(choices = ["weapon", "armor", "shield", "item", "ability"]) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
         "systems/wwn/templates/items/entity-create.html",

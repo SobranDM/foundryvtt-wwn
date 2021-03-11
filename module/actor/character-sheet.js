@@ -64,7 +64,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     let templateData = { choices: choices },
       dlg = await renderTemplate(
-        "/systems/wwn/templates/actors/dialogs/lang-create.html",
+        "systems/wwn/templates/actors/dialogs/lang-create.html",
         templateData
       );
     //Create Dialog window

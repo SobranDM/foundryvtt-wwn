@@ -325,6 +325,7 @@
         "skill": 0
       },
       "attacks": "",
+      "damageBonus": 0,
       "character": false,
       "hp": {
         "hd": "1d8",
@@ -334,7 +335,7 @@
     }
   },
   "Item": {
-    "types": ["item", "weapon", "armor", "spell", "art", "focus"],
+    "types": ["item", "weapon", "armor", "spell", "art", "focus", "ability"],
     "item": {
       "description": "",
       "quantity": 1,
@@ -409,6 +410,14 @@
   "focus": {
     "description": "",
     "ownedLevel": 1
+  },
+  "ability": {
+    "description": "",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "save": ""
   }
 }
 }
