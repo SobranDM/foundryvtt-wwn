@@ -15,22 +15,25 @@ export class WwnItem extends Item {
     let img = CONST.DEFAULT_TOKEN;
     switch (this.data.type) {
       case "spell":
-        img = "/systems/wwn/assets/default/spell.png";
+        img = "systems/wwn/assets/default/spell.png";
         break;
       case "art":
-        img = "/systems/wwn/assets/default/art.png";
+        img = "systems/wwn/assets/default/art.png";
         break;
       case "armor":
-        img = "/systems/wwn/assets/default/armor.png";
+        img = "systems/wwn/assets/default/armor.png";
         break;
       case "weapon":
-        img = "/systems/wwn/assets/default/weapon.png";
+        img = "systems/wwn/assets/default/weapon.png";
         break;
       case "item":
-        img = "/systems/wwn/assets/default/item.png";
+        img = "systems/wwn/assets/default/item.png";
         break;
       case "focus":
-        img = "/systems/wwn/assets/default/focus.png";
+        img = "systems/wwn/assets/default/focus.png";
+        break;
+      case "ability":
+        img = "systems/wwn/assets/new/ability.png";
         break;
     }
     if (!this.data.img) this.data.img = img;
@@ -193,6 +196,8 @@ export class WwnItem extends Item {
         return "";
       case "focus":
         return "";
+      case "ability":
+        return "";
       case "spell":
         let sTags = `${formatTag(data.class)}${formatTag(
           data.range
@@ -275,6 +280,8 @@ export class WwnItem extends Item {
       case "item":
       case "armor":
       case "focus":
+        this.show();
+      case "ability":
         this.show();
     }
   }

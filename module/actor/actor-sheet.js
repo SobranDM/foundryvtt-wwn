@@ -33,7 +33,7 @@ export class WwnActorSheet extends ActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, arts, spells, foci] = data.items.reduce(
+    let [items, weapons, armors, arts, spells, foci, ability] = data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -42,9 +42,10 @@ export class WwnActorSheet extends ActorSheet {
         else if (item.type === "art") arr[3].push(item);
         else if (item.type === "spell") arr[4].push(item);
         else if (item.type === "focus") arr[5].push(item);
+        else if (item.type === "ability") arr[6].push(item);
         return arr;
       },
-      [[], [], [], [], [], []]
+      [[], [], [], [], [], [], []]
     );
 
     // Sort spells by level
@@ -66,7 +67,8 @@ export class WwnActorSheet extends ActorSheet {
       weapons: weapons,
       armors: armors,
       arts: arts,
-      foci: foci
+      foci: foci,
+      ability: ability
     };
     data.spells = sortedSpells;
   }
@@ -158,6 +160,10 @@ export class WwnActorSheet extends ActorSheet {
       const item = this.actor.getOwnedItem(li.data("itemId"));
       if (item.type == "weapon") {
         if (this.actor.data.type === "monster") {
+          if (isNaN(this.actor.data.damageBonus)) {
+            this.actor.update({
+              data: { damageBonus: 0 } }
+            )}
           item.update({
             data: { counter: { value: item.data.data.counter.value - 1 } },
           });
