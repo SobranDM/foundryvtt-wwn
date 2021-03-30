@@ -44,7 +44,10 @@ export class WwnPartySheet extends FormApplication {
     let data;
     try {
       data = JSON.parse(event.dataTransfer.getData("text/plain"));
-      if (data.type !== "Item") return;
+      if (data.type === "Actor") {
+        const actor = game.actors.find((actor) => actor.id === data.id);
+        actor.setFlag('wwn', 'party', true);
+      }
     } catch (err) {
       return false;
     }
@@ -95,6 +98,8 @@ export class WwnPartySheet extends FormApplication {
     html.find(".field-img button[data-action='open-sheet']").click((ev) => {
       let actorId = ev.currentTarget.parentElement.parentElement.parentElement.dataset.actorId;
       game.actors.get(actorId).sheet.render(true);
-    })
+    });
+
+    html.on('drop', (ev) => { this._onDrop(ev.originalEvent); });
   }
 }
