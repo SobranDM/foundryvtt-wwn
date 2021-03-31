@@ -1,3 +1,6 @@
+## New in 0.8.8
+* IMPORTANT: This release fixes a bug that prevented the system from correctly recognizing updates. You will have to uninstall the system and reinstall to get things working correctly but it should update properly in the future.
+* Copper now shows up on the sheet, whether or not B/X currency is selected.
 ## New in 0.8.7
 * Fixed bug that prevented Shock damage from displaying when token is targeted.
 * Added generic "ability" to describe monster abilities that are not weapons or spells.
