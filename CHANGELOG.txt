@@ -1,4 +1,4 @@
-## New in 0.8.8
+## New in 0.8.8 - WWN Release Edition
 * IMPORTANT: This release fixes a bug that prevented the system from correctly recognizing updates. You will have to uninstall the system and reinstall to get things working correctly but it should update properly in the future.
 * Copper now shows up on the sheet, whether or not B/X currency is selected.
 * Updated compendiums to final release version.
