@@ -5,10 +5,8 @@
     </div>
   </div>
   <div class="flexrow">
-    {{#if (eq config.currencyTypes "currencybx")}}
     <label class="readied-header" title="{{localize "WWN.items.CP.long" }}">{{localize 'WWN.items.CP.short'}}</label>
     <input class="readied" name="data.currency.cp" type="number" value="{{data.currency.cp}}" data-dtype="Number" placeholder="0" />
-    {{/if}}
     <label class="readied-header" title="{{localize "WWN.items.SP.long" }}">{{localize 'WWN.items.SP.short'}}</label>
     <input class="readied" name="data.currency.sp" type="number" value="{{data.currency.sp}}" data-dtype="Number" placeholder="0" />
     {{#if (eq config.currencyTypes "currencybx")}}
