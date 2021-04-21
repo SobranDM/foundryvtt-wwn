@@ -40,8 +40,8 @@ Hooks.once("init", async function () {
   // Register custom system settings
   registerSettings();
 
-  CONFIG.Actor.entityClass = WwnActor;
-  CONFIG.Item.entityClass = WwnItem;
+  CONFIG.Actor.documentClass = WwnActor;
+  CONFIG.Item.documentClass = WwnItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
