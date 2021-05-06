@@ -48,13 +48,18 @@ Hooks.once("init", async function () {
   Actors.registerSheet("wwn", WwnActorSheetCharacter, {
     types: ["character"],
     makeDefault: true,
+    label: "WWN.SheetClassCharacter"
   });
   Actors.registerSheet("wwn", WwnActorSheetMonster, {
     types: ["monster"],
     makeDefault: true,
+    label: "WWN.SheetClassMonster"
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("wwn", WwnItemSheet, { makeDefault: true });
+  Items.registerSheet("wwn", WwnItemSheet, {
+    makeDefault: true,
+    label: "WWN.SheetClassItem"
+  });
 
   await preloadHandlebarsTemplates();
 });
@@ -112,7 +117,7 @@ Hooks.on("preCreateCombatant", (combat, data, options, id) => {
   }
 });
 
-Hooks.on("preUpdateCombatant", WwnCombat.updateCombatant);
+Hooks.on("updateCombatant", WwnCombat.updateCombatant);
 Hooks.on("renderCombatTracker", WwnCombat.format);
 Hooks.on("preUpdateCombat", WwnCombat.preUpdateCombat);
 Hooks.on("getCombatTrackerEntryContext", WwnCombat.addContextEntry);

@@ -16,7 +16,7 @@ export class WwnItemSheet extends ItemSheet {
    * @returns {Object}
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "item"],
       width: 550,
       height: 510,
@@ -44,7 +44,8 @@ export class WwnItemSheet extends ItemSheet {
    * The prepared data object contains both the actor data as well as additional sheet options
    */
   getData() {
-    const data = super.getData();
+    const data = super.getData().data;
+    data.editable = this.document.sheet.isEditable;
     data.config = CONFIG.WWN;
     return data;
   }

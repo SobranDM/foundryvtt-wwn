@@ -4,40 +4,32 @@ import { WwnDice } from "../dice.js";
  * Override and extend the basic :class:`Item` implementation
  */
 export class WwnItem extends Item {
-  /* -------------------------------------------- */
-  /*	Data Preparation														*/
-  /* -------------------------------------------- */
-  /**
-   * Augment the basic Item data model with additional dynamic data.
-   */
-  prepareData() {
-    // Set default image
-    let img = CONST.DEFAULT_TOKEN;
-    switch (this.data.type) {
+// Replacing default image
+  async _preCreate(data, options, user) {
+    super._preCreate(data, options, user);
+    switch (data.type) {
       case "spell":
-        img = "systems/wwn/assets/default/spell.png";
+        data.img = "systems/wwn/assets/default/spell.png";
         break;
       case "art":
-        img = "systems/wwn/assets/default/art.png";
+        data.img = "systems/wwn/assets/default/art.png";
         break;
       case "armor":
-        img = "systems/wwn/assets/default/armor.png";
+        data.img = "systems/wwn/assets/default/armor.png";
         break;
       case "weapon":
-        img = "systems/wwn/assets/default/weapon.png";
+        data.img = "systems/wwn/assets/default/weapon.png";
         break;
       case "item":
-        img = "systems/wwn/assets/default/item.png";
+        data.img = "systems/wwn/assets/default/item.png";
         break;
       case "focus":
-        img = "systems/wwn/assets/default/focus.png";
+        data.img = "systems/wwn/assets/default/focus.png";
         break;
       case "ability":
-        img = "systems/wwn/assets/new/ability.png";
+        data.img = "systems/wwn/assets/new/ability.png";
         break;
     }
-    if (!this.data.img) this.data.img = img;
-    super.prepareData();
   }
 
   static chatListeners(html) {
@@ -295,8 +287,8 @@ export class WwnItem extends Item {
     const token = this.actor.token;
     const templateData = {
       actor: this.actor,
-      tokenId: token ? `${token.scene._id}.${token.id}` : null,
-      item: this.data,
+      tokenId: token ? `${token.parent.id}.${token.id}` : null,
+      item: foundry.utils.duplicate(this.data),
       data: this.getChatData(),
       labels: this.labels,
       isHealing: this.isHealing,
@@ -312,11 +304,11 @@ export class WwnItem extends Item {
 
     // Basic chat message data
     const chatData = {
-      user: game.user._id,
+      user: game.user.id,
       type: CONST.CHAT_MESSAGE_TYPES.OTHER,
       content: html,
       speaker: {
-        actor: this.actor._id,
+        actor: this.actor.id,
         token: this.actor.token,
         alias: this.actor.name,
       },
@@ -326,7 +318,7 @@ export class WwnItem extends Item {
     let rollMode = game.settings.get("core", "rollMode");
     if (["gmroll", "blindroll"].includes(rollMode))
       chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-    if (rollMode === "selfroll") chatData["whisper"] = [game.user._id];
+    if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
     if (rollMode === "blindroll") chatData["blind"] = true;
 
     // Create the chat message
@@ -370,7 +362,7 @@ export class WwnItem extends Item {
     if (!actor) return;
 
     // Get the Item
-    const item = actor.getOwnedItem(card.dataset.itemId);
+    const item = actor.items.get(card.dataset.itemId);
     if (!item) {
       return ui.notifications.error(
         `The requested item ${card.dataset.itemId} no longer exists on Actor ${actor.name}`
@@ -410,7 +402,7 @@ export class WwnItem extends Item {
       const [sceneId, tokenId] = tokenKey.split(".");
       const scene = game.scenes.get(sceneId);
       if (!scene) return null;
-      const tokenData = scene.getEmbeddedEntity("Token", tokenId);
+      const tokenData = scene.getEmbeddedDocument("Token", tokenId);
       if (!tokenData) return null;
       const token = new Token(tokenData);
       return token.actor;

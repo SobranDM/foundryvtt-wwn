@@ -1,7 +1,7 @@
 export class WwnPartyXP extends FormApplication {
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["wwn", "dialog", "party-xp"],
             template: "systems/wwn/templates/apps/party-xp.html",
             width: 280,
@@ -75,7 +75,9 @@ export class WwnPartyXP extends FormApplication {
             const value = qRow.find('input').val();
             const id = qRow.data('actorId');
             const actor = this.object.entities.find(e => e.id === id);
-            actor.getExperience(Math.floor(parseInt(value)))
+            if (value) {
+                actor.getExperience(Math.floor(parseInt(value)));
+            }
         })
     }
 

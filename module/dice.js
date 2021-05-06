@@ -55,11 +55,11 @@ export class WwnDice {
     const template = "systems/wwn/templates/chat/roll-result.html";
 
     let chatData = {
-      user: game.user._id,
+      user: game.user.id,
       speaker: speaker,
     };
 
-    let templateData = {
+    const templateData = {
       title: title,
       flavor: flavor,
       data: data,
@@ -70,7 +70,7 @@ export class WwnDice {
       parts.push(form.bonus.value);
     }
 
-    const roll = new Roll(parts.join("+"), data).roll();
+    const roll = new Roll(parts.join("+"), data).roll({async: false});
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -83,7 +83,7 @@ export class WwnDice {
 
     if (["gmroll", "blindroll"].includes(rollMode))
       chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-    if (rollMode === "selfroll") chatData["whisper"] = [game.user._id];
+    if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
     if (rollMode === "blindroll") {
       chatData["blind"] = true;
       data.roll.blindroll = true;
@@ -161,7 +161,7 @@ export class WwnDice {
     const template = "systems/wwn/templates/chat/roll-attack.html";
 
     let chatData = {
-      user: game.user._id,
+      user: game.user.id,
       speaker: speaker,
     };
 
@@ -175,8 +175,8 @@ export class WwnDice {
     // Optionally include a situational bonus
     if (form !== null && form.bonus.value) parts.push(form.bonus.value);
 
-    const roll = new Roll(parts.join("+"), data).roll();
-    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).roll();
+    const roll = new Roll(parts.join("+"), data).roll({async: false});
+    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).roll({async: false});
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -189,7 +189,7 @@ export class WwnDice {
 
     if (["gmroll", "blindroll"].includes(rollMode))
       chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-    if (rollMode === "selfroll") chatData["whisper"] = [game.user._id];
+    if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
     if (rollMode === "blindroll") {
       chatData["blind"] = true;
       data.roll.blindroll = true;

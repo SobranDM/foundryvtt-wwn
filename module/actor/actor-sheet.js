@@ -8,75 +8,28 @@ export class WwnActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   getData() {
-    const data = super.getData();
+    const data = foundry.utils.deepClone(super.getData().data);
+    data.owner = this.actor.isOwner;
+    data.editable = this.actor.sheet.isEditable;
 
     data.config = CONFIG.WWN;
-    // Settings
-
-    // Prepare owned items
-    this._prepareItems(data);
+    data.isNew = this.actor.isNew();
 
     return data;
   }
 
-  activateEditor(target, editorOptions, initialContent) {
+  activateEditor(name, options, initialContent) {
     // remove some controls to the editor as the space is lacking
-    if (target == "data.details.description") {
-      editorOptions.toolbar = "styleselect bullist hr table removeFormat save";
-    }
-    super.activateEditor(target, editorOptions, initialContent);
-  }
-
-  /**
-   * Organize and classify Owned Items for Character sheets
-   * @private
-   */
-  _prepareItems(data) {
-    // Partition items by category
-    let [items, weapons, armors, arts, spells, foci, ability] = data.items.reduce(
-      (arr, item) => {
-        // Classify items into types
-        if (item.type === "item") arr[0].push(item);
-        else if (item.type === "weapon") arr[1].push(item);
-        else if (item.type === "armor") arr[2].push(item);
-        else if (item.type === "art") arr[3].push(item);
-        else if (item.type === "spell") arr[4].push(item);
-        else if (item.type === "focus") arr[5].push(item);
-        else if (item.type === "ability") arr[6].push(item);
-        return arr;
-      },
-      [[], [], [], [], [], [], []]
-    );
-
-    // Sort spells by level
-    var sortedSpells = {};
-    var slots = {};
-    for (var i = 0; i < spells.length; i++) {
-      let lvl = spells[i].data.lvl;
-      if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
-      if (!slots[lvl]) slots[lvl] = 0;
-      slots[lvl] += spells[i].data.memorized;
-      sortedSpells[lvl].push(spells[i]);
-    }
-    data.slots = {
-      used: slots,
-    };
-    // Assign and return
-    data.owned = {
-      items: items,
-      weapons: weapons,
-      armors: armors,
-      arts: arts,
-      foci: foci,
-      ability: ability
-    };
-    data.spells = sortedSpells;
+    if (name == "data.details.description") {
+      options.toolbar = "styleselect bullist hr table removeFormat save";
+    } 
+    super.activateEditor(name, options, initialContent);
   }
 
   _onItemSummary(event) {
     event.preventDefault();
     let li = $(event.currentTarget).parents(".item"),
-      item = this.actor.getOwnedItem(li.data("item-id")),
+      item = this.actor.items.get(li.data("item-id")),
       description = TextEditor.enrichHTML(item.data.data.description);
     // Toggle summary
     if (li.hasClass("expanded")) {
@@ -96,7 +49,7 @@ export class WwnActorSheet extends ActorSheet {
   async _onSpellChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     if (event.target.dataset.field == "cast") {
       return item.update({ "data.cast": parseInt(event.target.value) });
     } else if (event.target.dataset.field == "memorize") {
@@ -116,21 +69,21 @@ export class WwnActorSheet extends ActorSheet {
   async _onEffortChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     return item.update({ "data.effort": parseInt(event.target.value) });
   }
 
   async _onArtSourceChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     return item.update({ "data.source": event.target.value });
   }
 
   async _onArtTimeChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     return item.update({ "data.time": event.target.value });
   }
 
@@ -144,20 +97,20 @@ export class WwnActorSheet extends ActorSheet {
 
     html.find(".item .item-controls .item-show").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       item.show();
     });
 
     html.find(".saving-throw .attribute-name a").click((ev) => {
       let actorObject = this.actor;
-      let element = event.currentTarget;
+      let element = ev.currentTarget;
       let save = element.parentElement.parentElement.dataset.save;
-      actorObject.rollSave(save, { event: event });
+      actorObject.rollSave(save, { event: ev });
     });
 
     html.find(".item .item-rollable .item-image").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       if (item.type == "weapon") {
         if (this.actor.data.type === "monster") {
           if (isNaN(this.actor.data.damageBonus)) {
@@ -195,7 +148,7 @@ export class WwnActorSheet extends ActorSheet {
       .click((ev) => ev.target.select())
       .change(this._onEffortChange.bind(this));
 
-     html
+    html
       .find(".artSource input")
       .click((ev) => ev.target.select())
       .change(this._onArtSourceChange.bind(this));

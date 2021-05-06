@@ -18,7 +18,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    * @returns {Object}
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
       width: 470,
@@ -33,6 +33,50 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       ],
     });
   }
+
+  /**
+   * Organize and classify Owned Items for Character sheets
+   * @private
+   */
+   _prepareItems(data) {
+    // Partition items by category
+    let [items, weapons, armors, abilities, spells, arts] = this.actor.data.items.reduce(
+      (arr, item) => {
+        // Classify items into types
+        if (item.type === "item") arr[0].push(item);
+        else if (item.type === "weapon") arr[1].push(item);
+        else if (item.type === "armor") arr[2].push(item);
+        else if (item.type === "ability") arr[3].push(item);
+        else if (item.type === "spell") arr[4].push(item);
+        else if (item.type === "art") arr[5].push(item);
+        return arr;
+      },
+      [[], [], [], [], [], []]
+    );
+
+    // Sort spells by level
+    var sortedSpells = {};
+    var slots = {};
+    for (var i = 0; i < spells.length; i++) {
+      const lvl = spells[i].data.data.lvl;
+      if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
+      if (!slots[lvl]) slots[lvl] = 0;
+      slots[lvl] += spells[i].data.data.memorized;
+      sortedSpells[lvl].push(spells[i]);
+    }
+    data.slots = {
+      used: slots,
+    };
+    // Assign and return
+    data.owned = {
+      items: items,
+      armors: armors,
+      weapons: weapons,
+      arts: arts
+    };
+    data.spells = sortedSpells;
+  }
+
 
   generateScores() {
     new WwnCharacterCreator(this.actor, {
@@ -53,7 +97,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
     data.config.psychicSkills = game.settings.get("wwn", "psychicSkills");
 
-    data.isNew = this.actor.isNew();
+    this._prepareItems(data);
     return data;
   }
 
@@ -123,8 +167,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   async _onQtChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
-    return item.update({ "data.quantity": parseInt(event.target.value) });
+    const item = this.actor.items.get(itemId);
+    return item.update({ "data.quantity.value": parseInt(event.target.value) });
   }
 
   _onShowModifiers(event) {
@@ -144,7 +188,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     html.find(".ability-score .attribute-name a").click((ev) => {
       let actorObject = this.actor;
-      let element = event.currentTarget;
+      let element = ev.currentTarget;
       let score = element.parentElement.parentElement.dataset.score;
       let stat = element.parentElement.parentElement.dataset.stat;
       if (!score) {
@@ -158,22 +202,22 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     html.find(".skills .attribute-name a").click((ev) => {
       let actorObject = this.actor;
-      let element = event.currentTarget;
+      let element = ev.currentTarget;
       let expl = element.parentElement.parentElement.dataset.skills;
       actorObject.rollSkills(expl, { event: event });
     });
 
     html.find(".inventory .item-titles .item-caret").click((ev) => {
-      let items = $(event.currentTarget.parentElement.parentElement).children(
+      let items = $(ev.currentTarget.parentElement.parentElement).children(
         ".item-list"
       );
       if (items.css("display") == "none") {
-        let el = $(event.currentTarget).find(".fas.fa-caret-right");
+        let el = $(ev.currentTarget).find(".fas.fa-caret-right");
         el.removeClass("fa-caret-right");
         el.addClass("fa-caret-down");
         items.slideDown(200);
       } else {
-        let el = $(event.currentTarget).find(".fas.fa-caret-down");
+        let el = $(ev.currentTarget).find(".fas.fa-caret-down");
         el.removeClass("fa-caret-down");
         el.addClass("fa-caret-right");
         items.slideUp(200);
@@ -190,31 +234,31 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     // Update Inventory Item
     html.find(".item-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find(".item-delete").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 
     html.find(".item-push").click((ev) => {
-      event.preventDefault();
-      const header = event.currentTarget;
+      ev.preventDefault();
+      const header = ev.currentTarget;
       const table = header.dataset.array;
       this._pushLang(table);
     });
 
     html.find(".item-pop").click((ev) => {
-      event.preventDefault();
-      const header = event.currentTarget;
+      ev.preventDefault();
+      const header = ev.currentTarget;
       const table = header.dataset.array;
       this._popLang(
         table,
-        $(event.currentTarget).closest(".item").data("lang")
+        $(ev.currentTarget).closest(".item").data("lang")
       );
     });
 
@@ -228,15 +272,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         data: duplicate(header.dataset),
       };
       delete itemData.data["type"];
-      return this.actor.createOwnedItem(itemData);
+      return this.actor.createEmbeddedDocuments("Item", [itemData]);
     });
 
     //Toggle Equipment
     html.find(".item-toggle").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
-      await this.actor.updateOwnedItem({
-        _id: li.data("itemId"),
+      const item = this.actor.items.get(li.data("itemId"));
+      await item.update({
         data: {
           equipped: !item.data.data.equipped,
         },
@@ -245,7 +288,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     html.find(".item-prep").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       await this.actor.updateOwnedItem({
         _id: li.data("itemId"),
         data: {
@@ -256,7 +299,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     html.find(".stow-toggle").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       await this.actor.updateOwnedItem({
         _id: li.data("itemId"),
         data: {

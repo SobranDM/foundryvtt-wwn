@@ -75,7 +75,7 @@ export class WwnActor extends Actor {
   /* -------------------------------------------- */
 
   rollHP(options = {}) {
-    let roll = new Roll(this.data.data.hp.hd).roll();
+    let roll = new Roll(this.data.data.hp.hd).roll({async: false});
     return this.update({
       data: {
         hp: {

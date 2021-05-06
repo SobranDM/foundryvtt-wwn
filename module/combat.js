@@ -10,7 +10,7 @@ export class WwnCombat {
 
     // Roll init
     Object.keys(groups).forEach((group) => {
-      let roll = new Roll("1d8").roll();
+      let roll = new Roll("1d8").roll({async: false});
       roll.toMessage({
         flavor: game.i18n.format('WWN.roll.initiative', { group: CONFIG["WWN"].colors[group] }),
       });
@@ -52,23 +52,23 @@ export class WwnCombat {
       if (combat.settings.skipDefeated && c.defeated) {
         value = -790;
       }
-      updates.push({ _id: c._id, initiative: value });
+      updates.push({ _id: c.id, initiative: value });
 
       // Determine the roll mode
       let rollMode = game.settings.get("core", "rollMode");
       if ((c.token.hidden || c.hidden) && (rollMode === "roll")) rollMode = "gmroll";
 
       // Construct chat message data
-      let messageData = mergeObject({
+      let messageData = foundry.utils.mergeObject({
         speaker: {
-          scene: canvas.scene._id,
-          actor: c.actor ? c.actor._id : null,
-          token: c.token._id,
-          alias: c.token.name
+          scene: combat.scene.id,
+          actor: c.actor?.id,
+          token: c.token?.id,
+          alias: c.name
         },
         flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
       }, {});
-      const chatData = roll.toMessage(messageData, { rollMode, create: false });
+      const chatData = roll.toMessage(messageData, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
 
       if (i > 0) chatData.sound = null;   // Only play 1 sound for the whole set
       messages.push(chatData);
@@ -150,7 +150,7 @@ export class WwnCombat {
         if (
           ct.initiative &&
           ct.initiative != "-789.00" &&
-          ct._id != data._id &&
+          ct.id != data.id &&
           ct.flags.wwn.group == combatant.flags.wwn.group
         ) {
           groupInit = ct.initiative;
@@ -239,7 +239,7 @@ export class WwnCombat {
   }
 
   static activateCombatant(li) {
-    const turn = game.combat.turns.findIndex(turn => turn._id === li.data('combatant-id'));
+    const turn = game.combat.turns.findIndex(turn => turn.id === li.data('combatant-id'));
     game.combat.update({turn: turn})
   }
 

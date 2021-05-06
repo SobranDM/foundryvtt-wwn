@@ -91,8 +91,8 @@
                 <ol class="item-list resizable" data-base-size="240">
                     {{#each abilities as |item|}}
                     <li class="item-entry">
-                        <div class="item flexrow" data-item-id="{{item._id}}">
-                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent)"></div>
+                        <div class="item flexrow" data-item-id="{{item.id}}">
+                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.data.pattern}}, transparent)"></div>
                             <div class="item-name item-rollable flexrow">
                                 <div class="item-image" style="background-image: url({{item.img}})"></div>
                                 <h4 title="{{item.name}}">
@@ -115,9 +115,9 @@
                     {{#each owned as |section| }}
                     {{#each section as |item|}}
                     <li class="item-entry">
-                        <div class="item flexrow" data-item-id="{{item._id}}">
+                        <div class="item flexrow" data-item-id="{{item.id}}">
                             {{#if (eq item.type 'weapon')}}
-                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.pattern}}, transparent"></div>
+                            <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.data.pattern}}, transparent"></div>
                             {{/if}}
                             <div class="item-name item-rollable flexrow">
                                 <div class="item-image" style="background-image: url({{item.img}})"></div>
@@ -127,9 +127,9 @@
                             </div>
                             {{#if (eq item.type 'weapon')}}
                             <div class="field-long counter flexrow">
-                                <input name="{{item.data.counter.value}}" type="number" value="{{item.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
+                                <input name="{{item.data.data.counter.value}}" type="number" value="{{item.data.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
                                 /
-                                <input type="number" value="{{item.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
+                                <input type="number" value="{{item.data.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}
