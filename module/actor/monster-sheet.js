@@ -35,10 +35,10 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    * Organize and classify Owned Items for Character sheets
    * @private
    */
-_prepareItems(data) {
+ _prepareItems(data) {
   // Partition items by category
   data.attackPatterns = {};
-  let [items, weapons, armors, arts, spells, foci, ability] = data.items.reduce(
+  let [items, armors, spells, arts, abilities] = data.items.reduce(
     (arr, item) => {
       // Grab attack groups
       if (["weapon", "ability"].includes(item.type)) {
@@ -49,15 +49,13 @@ _prepareItems(data) {
       
       // Classify items into types
       if (item.type === "item") arr[0].push(item);
-        else if (item.type === "weapon") arr[1].push(item);
-        else if (item.type === "armor") arr[2].push(item);
-        else if (item.type === "art") arr[3].push(item);
-        else if (item.type === "spell") arr[4].push(item);
-        else if (item.type === "focus") arr[5].push(item);
-        else if (item.type === "ability") arr[6].push(item);
-        return arr;
-      },
-      [[], [], [], [], [], [], []]
+      else if (item.type === "armor") arr[1].push(item);
+      else if (item.type === "spell") arr[2].push(item);
+      else if (item.type === "art") arr[3].push(item);
+      else if (item.type === "ability") arr[4].push(item);
+      return arr;
+    },
+    [[], [], [], [], []]
   );
   // Sort spells by level
   var sortedSpells = {};
@@ -75,12 +73,9 @@ _prepareItems(data) {
   // Assign and return
   data.owned = {
     items: items,
-    weapons: weapons,
     armors: armors,
     arts: arts,
-    spells: spells,
-    foci: foci,
-    ability: ability
+    abilities: abilities
   };
   data.spells = sortedSpells;
 }

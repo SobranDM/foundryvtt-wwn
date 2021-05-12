@@ -86,7 +86,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{art.id}}">
           <div class="item-name item-rollable flexrow">
-            <div class="item-image" style="background-image: url({{art.img}})"></div>
+            <div class="item-image" style="background-image: url({{img}})"></div>
             <a>
               <h4 title="{{art.name}}">
                 {{art.name~}}
@@ -94,13 +94,13 @@
             </a>
           </div>
           <div class="field-long artSource">
-            <input value="{{art.data.source}}" type="text" placeholder="High Mage" />
+            <input value="{{art.data.data.source}}" type="text" placeholder="High Mage" />
           </div>
           <div class="field-short artEffort">
-            <input value="{{art.data.effort}}" type="number" data-dtype="Number" placeholder=0 />
+            <input value="{{art.data.data.effort}}" type="number" data-dtype="Number" placeholder=0 />
           </div>
           <div class="field-short artTime">
-            <input value="{{art.data.time}}" type="text" placeholder="Scene" />
+            <input value="{{art.data.data.time}}" type="text" placeholder="Scene" />
           </div>
           <div class="item-controls">
             <!-- {{#if ../owner}} -->
