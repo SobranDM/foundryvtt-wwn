@@ -586,23 +586,23 @@ export class WwnActor extends Actor {
       if (item.type == "item" && !item.data.treasure) {
         hasItems = true;
       }
-      if (item.type == "weapon" && item.data.equipped) {
-        totalReadied += item.data.weight;
+      if (item.type == "weapon" && item.data.data.equipped) {
+        totalReadied += item.data.data.weight;
       }
-      if (item.type == "weapon" && item.data.stowed) {
-        totalStowed += item.data.weight;
+      if (item.type == "weapon" && item.data.data.stowed) {
+        totalStowed += item.data.data.weight;
       }
-      if (item.type == "armor" && item.data.equipped) {
-        totalReadied += item.data.weight;
+      if (item.type == "armor" && item.data.data.equipped) {
+        totalReadied += item.data.data.weight;
       }
-      if (item.type == "armor" && item.data.stowed) {
-        totalStowed += item.data.weight;
+      if (item.type == "armor" && item.data.data.stowed) {
+        totalStowed += item.data.data.weight;
       }
-      if (item.type == "item" && item.data.equipped) {
-        totalReadied += item.data.quantity * item.data.weight;
+      if (item.type == "item" && item.data.data.equipped) {
+        totalReadied += item.data.data.quantity * item.data.data.weight;
       }
-      if (item.type == "item" && item.data.stowed) {
-        totalStowed += item.data.quantity * item.data.weight;
+      if (item.type == "item" && item.data.data.stowed) {
+        totalStowed += item.data.data.quantity * item.data.data.weight;
       }
     });
     

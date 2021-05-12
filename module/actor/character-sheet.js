@@ -170,7 +170,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "data.quantity.value": parseInt(event.target.value) });
+    return item.update({ "data.quantity": parseInt(event.target.value) });
   }
 
   _onShowModifiers(event) {
@@ -291,8 +291,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     html.find(".item-prep").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      await this.actor.updateOwnedItem({
-        _id: li.data("itemId"),
+      await item.update({
         data: {
           prepared: !item.data.data.prepared,
         },
@@ -302,8 +301,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     html.find(".stow-toggle").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      await this.actor.updateOwnedItem({
-        _id: li.data("itemId"),
+      await item.update({
         data: {
           stowed: !item.data.data.stowed,
         },
