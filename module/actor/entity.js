@@ -747,14 +747,15 @@ export class WwnActor extends Actor {
     data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
-      if (a.data.equipped && a.data.type != "shield") {
-        baseAac = a.data.aac.value;
-      } else if (a.data.equipped && a.data.type == "shield") {
-        AacShield = a.data.aac.value;
+      if (a.data.data.equipped && a.data.data.type != "shield") {
+        baseAac = a.data.data.aac.value;
+      } else if (a.data.data.equipped && a.data.data.type == "shield") {
+        AacShield = a.data.data.aac.value;
       }
     });
     data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;
     data.aac.shield = AacShield;
+    console.log(data.aac.shield);
   }
 
   computeModifiers() {
