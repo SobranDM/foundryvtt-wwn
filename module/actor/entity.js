@@ -582,27 +582,29 @@ export class WwnActor extends Actor {
     let hasItems = false;
     let maxReadied = Math.floor(data.scores.str.value / 2);
     let maxStowed = data.scores.str.value;
-    Object.values(this.data.items).forEach((item) => {
-      if (item.type == "item" && !item.data.treasure) {
-        hasItems = true;
+    const weapons = this.data.items.filter((w) => w.type == "weapon");
+    const armors = this.data.items.filter((a) => a.type == "armor");
+    const items = this.data.items.filter((i) => i.type == "item");
+    
+    weapons.forEach((w) => {
+      if (w.data.data.equipped) {
+        totalReadied += w.data.data.weight;
+      } else if (w.data.data.stowed) {
+        totalStowed += w.data.data.weight;
       }
-      if (item.type == "weapon" && item.data.data.equipped) {
-        totalReadied += item.data.data.weight;
+    });
+    armors.forEach((a) => {
+      if (a.data.data.equipped) {
+        totalReadied += a.data.data.weight;
+      } else if (a.data.data.stowed) {
+        totalStowed += a.data.data.weight;
       }
-      if (item.type == "weapon" && item.data.data.stowed) {
-        totalStowed += item.data.data.weight;
-      }
-      if (item.type == "armor" && item.data.data.equipped) {
-        totalReadied += item.data.data.weight;
-      }
-      if (item.type == "armor" && item.data.data.stowed) {
-        totalStowed += item.data.data.weight;
-      }
-      if (item.type == "item" && item.data.data.equipped) {
-        totalReadied += item.data.data.quantity * item.data.data.weight;
-      }
-      if (item.type == "item" && item.data.data.stowed) {
-        totalStowed += item.data.data.quantity * item.data.data.weight;
+    });
+    items.forEach((i) => {
+      if (i.data.data.equipped) {
+        totalReadied += i.data.data.weight * i.data.data.quantity;
+      } else if (i.data.data.stowed) {
+        totalStowed += i.data.data.weight * i.data.data.quantity;
       }
     });
     
