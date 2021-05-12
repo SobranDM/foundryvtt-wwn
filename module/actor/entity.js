@@ -704,17 +704,19 @@ export class WwnActor extends Actor {
     let effortType1 = data.classes.effort1.name;
     let effortType2 = data.classes.effort2.name;
     let effortType3 = data.classes.effort3.name;
-    Object.values(this.data.items).forEach((item) => {
-      if (effortType1 == item.source) {
-        effortOne += item.effort;
+    const arts = this.data.items.filter((a) => a.type == "art");
+    arts.forEach((a) => {
+      if (effortType1 == a.data.data.source) {
+        effortOne += a.data.data.effort;
       }
-      if (effortType2 == item.source) {
-        effortTwo += item.effort;
+      if (effortType2 == a.data.data.source) {
+        effortTwo += a.data.data.effort;
       }
-      if (effortType3 == item.source) {
-        effortThree += item.effort;
+      if (effortType3 == a.data.data.source) {
+        effortThree += a.data.data.effort;
       }
     });
+
     data.classes.effort1.value = effortOne;
     data.classes.effort2.value = effortTwo;
     data.classes.effort3.value = effortThree;
