@@ -30,7 +30,7 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
 ## TODO
 * Add highest Dex mod when using Group Initiative
 ## License
-This Foundry VTT system requires the Worlds Wihtout Number rules, available through the Kickstarter or through sale at some point in the future.
+This Foundry VTT system requires the Worlds Without Number rules, available through the Kickstarter or through sale at some point in the future.
 
 This third party product is not affiliated with or approved by Sine Nomine Publishing.
 Worlds Without Number is a trademark of Sine Nomine Publishing.

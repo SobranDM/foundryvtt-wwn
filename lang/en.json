@@ -1,4 +1,13 @@
 {
+  "ACTOR.TypeCharacter": "Character",
+  "ACTOR.TypeMonster": "Monster",
+  "ITEM.TypeAbility": "Ability",
+  "ITEM.TypeArmor": "Armor",
+  "ITEM.TypeArt": "Art",
+  "ITEM.TypeFocus": "Focus",
+  "ITEM.TypeItem": "Item",
+  "ITEM.TypeSpell": "Spell",
+  "ITEM.TypeWeapon": "Weapon",
   "WWN.Edit": "Edit",
   "WWN.Delete": "Delete",
   "WWN.Show": "Show",

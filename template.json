@@ -335,7 +335,7 @@
     }
   },
   "Item": {
-    "types": ["item", "weapon", "armor", "spell", "art", "focus", "ability"],
+    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon"],
     "item": {
       "description": "",
       "quantity": 1,
