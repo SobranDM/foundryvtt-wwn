@@ -11,7 +11,6 @@ export class WwnActor extends Actor {
 
     // Compute modifiers from actor scores
     this.computeModifiers();
-    this._isSlow();
     this.computeAC();
     this.computeEncumbrance();
     this.computeTreasure();
@@ -557,19 +556,6 @@ export class WwnActor extends Actor {
     return output;
   }
 
-  _isSlow() {
-    this.data.data.isSlow = false;
-    if (this.data.type != "character") {
-      return;
-    }
-    this.data.items.forEach((item) => {
-      if (item.type == "weapon" && item.data.slow && item.data.equipped) {
-        this.data.data.isSlow = true;
-        return;
-      }
-    });
-  }
-
   computeEncumbrance() {
     if (this.data.type != "character") {
       return;
@@ -757,7 +743,6 @@ export class WwnActor extends Actor {
     });
     data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;
     data.aac.shield = AacShield;
-    console.log(data.aac.shield);
   }
 
   computeModifiers() {

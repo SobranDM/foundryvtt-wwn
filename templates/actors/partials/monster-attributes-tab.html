@@ -89,7 +89,7 @@
                     </div>
                 </li>
                 <ol class="item-list resizable" data-base-size="240">
-                    {{#each abilities as |item|}}
+                    {{#each owned.abilities as |item|}}
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item.id}}">
                             <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.data.pattern}}, transparent)"></div>
@@ -116,7 +116,7 @@
                     {{#each section as |item|}}
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item.id}}">
-                            {{#if (eq item.type 'weapon')}}
+                            {{#if (eq type "weapon")}}
                             <div class="item-pattern" title="{{localize 'WWN.items.pattern'}}" style="background:linear-gradient(0.25turn, {{item.data.data.pattern}}, transparent"></div>
                             {{/if}}
                             <div class="item-name item-rollable flexrow">
@@ -125,11 +125,11 @@
                                     {{item.name~}}
                                 </h4>
                             </div>
-                            {{#if (eq item.type 'weapon')}}
+                            {{#if (eq type "weapon")}}
                             <div class="field-long counter flexrow">
-                                <input name="{{item.data.data.counter.value}}" type="number" value="{{item.data.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
+                                <input name="{{item.data.counter.value}}" type="number" value="{{item.data.counter.value}}" data-dtype="Number" data-field="value" title="{{localize 'WWN.items.roundAttacks'}}">
                                 /
-                                <input type="number" value="{{item.data.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
+                                <input type="number" value="{{item.data.counter.max}}" data-field="max" data-dtype="Number" title="{{localize 'WWN.items.roundAttacksMax'}}"></div>
                             {{/if}}
                             <div class="item-controls">
                                 {{#if ../../owner}}

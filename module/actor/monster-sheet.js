@@ -38,7 +38,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
  _prepareItems(data) {
   // Partition items by category
   data.attackPatterns = {};
-  let [items, armors, spells, arts, abilities] = data.items.reduce(
+  let [weapons, armors, items, arts, spells, abilities] = this.actor.data.items.reduce(
     (arr, item) => {
       // Grab attack groups
       if (["weapon", "ability"].includes(item.type)) {
@@ -48,14 +48,15 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       }
       
       // Classify items into types
-      if (item.type === "item") arr[0].push(item);
+      if (item.type === "weapon") arr[0].push(item);
       else if (item.type === "armor") arr[1].push(item);
-      else if (item.type === "spell") arr[2].push(item);
+      else if (item.type === "item") arr[2].push(item);
       else if (item.type === "art") arr[3].push(item);
-      else if (item.type === "ability") arr[4].push(item);
+      else if (item.type === "spell") arr[4].push(item);
+      else if (item.type === "ability") arr [5].push(item);
       return arr;
     },
-    [[], [], [], [], []]
+    [[], [], [], [], [], []]
   );
   // Sort spells by level
   var sortedSpells = {};
@@ -72,9 +73,11 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   };
   // Assign and return
   data.owned = {
-    items: items,
+    weapons: weapons,
     armors: armors,
+    items: items,
     arts: arts,
+    spells: spells,
     abilities: abilities
   };
   data.spells = sortedSpells;
@@ -239,7 +242,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     // Delete Inventory Item
     html.find(".item-delete").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteEmbeddedDocuments("item", [li.data("itemId")]);
+      this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 

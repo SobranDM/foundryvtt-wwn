@@ -4,7 +4,8 @@ export class WwnCombat {
     data.combatants = [];
     let groups = {};
     combat.data.combatants.forEach((cbt) => {
-      groups[cbt.flags.wwn.group] = { present: true };
+      const group = cbt.getFlag("wwn", "group");
+      groups[group] = { present: true };
       data.combatants.push(cbt);
     });
 
@@ -22,12 +23,8 @@ export class WwnCombat {
       if (!data.combatants[i].actor) {
         return;
       }
-      if (data.combatants[i].actor.data.data.isSlow) {
-        data.combatants[i].initiative = -789;
-      } else {
-        data.combatants[i].initiative =
-          groups[data.combatants[i].flags.wwn.group].initiative;
-      }
+      const group = data.combatants[i].getFlag("wwn", "group");
+      data.combatants[i].update({initiative: groups[group].initiative});
     }
     combat.setupTurns();
   }
@@ -93,14 +90,11 @@ export class WwnCombat {
     html.find(".combatant").each((_, ct) => {
       // Append spellcast and retreat
       const controls = $(ct).find(".combatant-controls .combatant-control");
-      const cmbtant = object.combat.getCombatant(ct.dataset.combatantId);
-      const moveActive = cmbtant.flags.wwn && cmbtant.flags.wwn.moveInCombat ? "active" : "";
+      const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
+      const moveInCombat = cmbtant.getFlag("wwn", "moveInCombat");
+      const moveActive = moveInCombat ? "active" : "";
       controls.eq(1).after(
         `<a class='combatant-control move-combat ${moveActive}'><i class='fas fa-walking'></i></a>`
-      );
-      const spellActive = cmbtant.flags.wwn && cmbtant.flags.wwn.prepareSpell ? "active" : "";
-      controls.eq(1).after(
-        `<a class='combatant-control prepare-spell ${spellActive}'><i class='fas fa-magic'></i></a>`
       );
     });
     WwnCombat.announceListener(html);
@@ -124,8 +118,8 @@ export class WwnCombat {
       $(ct).find(".roll").remove();
 
       // Get group color
-      const cmbtant = object.combat.getCombatant(ct.dataset.combatantId);
-      let color = cmbtant.flags.wwn.group;
+      const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
+      let color = cmbtant.getFlag("wwn", "group");
 
       // Append colored flag
       let controls = $(ct).find(".combatant-controls");
@@ -139,10 +133,6 @@ export class WwnCombat {
   static updateCombatant(combat, combatant, data) {
     let init = game.settings.get("wwn", "initiative");
     // Why do you reroll ?
-    if (combatant.actor.data.data.isSlow) {
-      data.initiative = -789;
-      return;
-    }
     if (data.initiative && init == "group") {
       let groupInit = data.initiative;
       // Check if there are any members of the group with init
