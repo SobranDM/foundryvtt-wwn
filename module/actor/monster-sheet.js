@@ -16,7 +16,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    * @returns {Object}
    */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "monster", "actor"],
       template: "systems/wwn/templates/actors/monster-sheet.html",
       width: 450,
@@ -31,6 +31,57 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       ],
     });
   }
+/**
+   * Organize and classify Owned Items for Character sheets
+   * @private
+   */
+ _prepareItems(data) {
+  // Partition items by category
+  data.attackPatterns = {};
+  let [weapons, armors, items, arts, spells, abilities] = this.actor.data.items.reduce(
+    (arr, item) => {
+      // Grab attack groups
+      if (["weapon", "ability"].includes(item.type)) {
+        if (data.attackPatterns[item.data.pattern] === undefined) data.attackPatterns[item.data.pattern] = [];
+        data.attackPatterns[item.data.pattern].push(item);
+        return arr;
+      }
+      
+      // Classify items into types
+      if (item.type === "weapon") arr[0].push(item);
+      else if (item.type === "armor") arr[1].push(item);
+      else if (item.type === "item") arr[2].push(item);
+      else if (item.type === "art") arr[3].push(item);
+      else if (item.type === "spell") arr[4].push(item);
+      else if (item.type === "ability") arr [5].push(item);
+      return arr;
+    },
+    [[], [], [], [], [], []]
+  );
+  // Sort spells by level
+  var sortedSpells = {};
+  var slots = {};
+  for (var i = 0; i < spells.length; i++) {
+    let lvl = spells[i].data.lvl;
+    if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
+    if (!slots[lvl]) slots[lvl] = 0;
+    slots[lvl] += spells[i].data.memorized;
+    sortedSpells[lvl].push(spells[i]);
+  }
+  data.slots = {
+    used: slots,
+  };
+  // Assign and return
+  data.owned = {
+    weapons: weapons,
+    armors: armors,
+    items: items,
+    arts: arts,
+    spells: spells,
+    abilities: abilities
+  };
+  data.spells = sortedSpells;
+}
 
   /**
    * Monster creation helpers
@@ -42,6 +93,8 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    */
   getData() {
     const data = super.getData();
+    // Prepare owned items
+    this._prepareItems(data);
 
     // Settings
     data.config.morale = game.settings.get("wwn", "morale");
@@ -71,7 +124,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     let link = "";
     if (data.pack) {
-      let tableData = game.packs.get(data.pack).index.filter(el => el._id === data.id);
+      let tableData = game.packs.get(data.pack).index.filter(el => el.id === data.id);
       link = `@Compendium[${data.pack}.${data.id}]{${tableData[0].name}}`;
     } else {
       link = `@RollTable[${data.id}]`;
@@ -116,11 +169,11 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   async _resetCounters(event) {
     const weapons = this.actor.data.items.filter(i => i.type === 'weapon');
     for (let wp of weapons) {
-      const item = this.actor.getOwnedItem(wp._id);
+      const item = this.actor.items.get(wp.id);
       await item.update({
         data: {
           counter: {
-            value: parseInt(wp.data.counter.max),
+            value: parseInt(wp.data.data.counter.max),
           },
         },
       });
@@ -130,7 +183,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   async _onCountChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     if (event.target.dataset.field == "value") {
       return item.update({
         "data.counter.value": parseInt(event.target.value),
@@ -182,14 +235,14 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     // Update Inventory Item
     html.find(".item-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find(".item-delete").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 
@@ -214,12 +267,12 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         const choices = header.dataset.choices.split(",");
         this._chooseItemType(choices).then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
-          this.actor.createOwnedItem(itemData, {});
+          this.actor.createEmbeddedDocuments("Item", [itemData], {});
         });
         return;
       }
       const itemData = createItem(type);
-      return this.actor.createOwnedItem(itemData, {});
+      return this.actor.createEmbeddedDocuments("Item", [itemData], {});
     });
 
     html.find(".item-reset").click((ev) => {
@@ -238,7 +291,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     html.find(".item-pattern").click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       let currentColor = item.data.data.pattern;
       let colors = Object.keys(CONFIG.WWN.colors);
       let index = colors.indexOf(currentColor);

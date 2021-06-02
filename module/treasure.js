@@ -31,30 +31,31 @@ export const augmentTable = (table, html, data) => {
 };
 
 function drawTreasure(table, data) {
-  const percent = (chance) => {
-    const roll = new Roll("1d100").roll();
+  const percent = async (chance) => {
+    const roll = new Roll("1d100");
+    roll.roll({async: false});
     return roll.total <= chance;
   };
   data.treasure = {};
   if (table.getFlag('wwn', 'treasure')) {
     table.results.forEach((r) => {
       if (percent(r.weight)) {
-        const text = table._getResultChatText(r);
-        data.treasure[r._id] = ({
+        const text = r.getChatText(r);
+        data.treasure[r.id] = ({
           img: r.img,
           text: TextEditor.enrichHTML(text),
         });
         if ((r.type === CONST.TABLE_RESULT_TYPES.ENTITY) && (r.collection === "RollTable")) {
           const embeddedTable = game.tables.get(r.resultId);
-          drawTreasure(embeddedTable, data.treasure[r._id]);
+          drawTreasure(embeddedTable, data.treasure[r.id]);
         }
       }
     });
   } else {
-    const results = table.roll().results;
+    const results = table.roll({async: false}).results;
     results.forEach((s) => { 
       const text = TextEditor.enrichHTML(table._getResultChatText(s));
-      data.treasure[s._id] = {img: s.img, text: text}; 
+      data.treasure[s.id] = {img: s.img, text: text}; 
     });
   }
   return data;
@@ -70,7 +71,7 @@ async function rollTreasure(table, options = {}) {
   
   // Animation
   if (options.event) {
-    let results = $(event.currentTarget.parentElement)
+    let results = $(options.event.currentTarget.parentElement)
       .prev()
       .find(".table-result");
     results.each((_, item) => {
@@ -93,7 +94,7 @@ async function rollTreasure(table, options = {}) {
 
   let rollMode = game.settings.get("core", "rollMode");
   if (["gmroll", "blindroll"].includes(rollMode)) chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-  if (rollMode === "selfroll") chatData["whisper"] = [game.user._id];
+  if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
   if (rollMode === "blindroll") chatData["blind"] = true;
 
   ChatMessage.create(chatData);

@@ -28,8 +28,8 @@ export class WwnEntityTweaks extends FormApplication {
    * @return {Object}
    */
   getData() {
-    let data = this.object.data;
-    if (this.object.data.type === 'character') {
+    const data = foundry.utils.deepClone(this.object.data);
+    if (data.type === 'character') {
       data.isCharacter = true;
     }
     data.user = game.user;

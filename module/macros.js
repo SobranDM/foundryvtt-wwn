@@ -55,6 +55,6 @@ export async function createWwnMacro(data, slot) {
     const item = items[0];
   
     // Trigger the item roll
-    return item.roll();
+    return item.roll({async: false});
   }
   

@@ -11,7 +11,6 @@ export class WwnActor extends Actor {
 
     // Compute modifiers from actor scores
     this.computeModifiers();
-    this._isSlow();
     this.computeAC();
     this.computeEncumbrance();
     this.computeTreasure();
@@ -75,7 +74,7 @@ export class WwnActor extends Actor {
   /* -------------------------------------------- */
 
   rollHP(options = {}) {
-    let roll = new Roll(this.data.data.hp.hd).roll();
+    let roll = new Roll(this.data.data.hp.hd).roll({async: false});
     return this.update({
       data: {
         hp: {
@@ -557,19 +556,6 @@ export class WwnActor extends Actor {
     return output;
   }
 
-  _isSlow() {
-    this.data.data.isSlow = false;
-    if (this.data.type != "character") {
-      return;
-    }
-    this.data.items.forEach((item) => {
-      if (item.type == "weapon" && item.data.slow && item.data.equipped) {
-        this.data.data.isSlow = true;
-        return;
-      }
-    });
-  }
-
   computeEncumbrance() {
     if (this.data.type != "character") {
       return;
@@ -582,27 +568,29 @@ export class WwnActor extends Actor {
     let hasItems = false;
     let maxReadied = Math.floor(data.scores.str.value / 2);
     let maxStowed = data.scores.str.value;
-    Object.values(this.data.items).forEach((item) => {
-      if (item.type == "item" && !item.data.treasure) {
-        hasItems = true;
+    const weapons = this.data.items.filter((w) => w.type == "weapon");
+    const armors = this.data.items.filter((a) => a.type == "armor");
+    const items = this.data.items.filter((i) => i.type == "item");
+    
+    weapons.forEach((w) => {
+      if (w.data.data.equipped) {
+        totalReadied += w.data.data.weight;
+      } else if (w.data.data.stowed) {
+        totalStowed += w.data.data.weight;
       }
-      if (item.type == "weapon" && item.data.equipped) {
-        totalReadied += item.data.weight;
+    });
+    armors.forEach((a) => {
+      if (a.data.data.equipped) {
+        totalReadied += a.data.data.weight;
+      } else if (a.data.data.stowed) {
+        totalStowed += a.data.data.weight;
       }
-      if (item.type == "weapon" && item.data.stowed) {
-        totalStowed += item.data.weight;
-      }
-      if (item.type == "armor" && item.data.equipped) {
-        totalReadied += item.data.weight;
-      }
-      if (item.type == "armor" && item.data.stowed) {
-        totalStowed += item.data.weight;
-      }
-      if (item.type == "item" && item.data.equipped) {
-        totalReadied += item.data.quantity * item.data.weight;
-      }
-      if (item.type == "item" && item.data.stowed) {
-        totalStowed += item.data.quantity * item.data.weight;
+    });
+    items.forEach((i) => {
+      if (i.data.data.equipped) {
+        totalReadied += i.data.data.weight * i.data.data.quantity;
+      } else if (i.data.data.stowed) {
+        totalStowed += i.data.data.weight * i.data.data.quantity;
       }
     });
     
@@ -702,17 +690,19 @@ export class WwnActor extends Actor {
     let effortType1 = data.classes.effort1.name;
     let effortType2 = data.classes.effort2.name;
     let effortType3 = data.classes.effort3.name;
-    Object.values(this.data.items).forEach((item) => {
-      if (effortType1 == item.data.source) {
-        effortOne += item.data.effort;
+    const arts = this.data.items.filter((a) => a.type == "art");
+    arts.forEach((a) => {
+      if (effortType1 == a.data.data.source) {
+        effortOne += a.data.data.effort;
       }
-      if (effortType2 == item.data.source) {
-        effortTwo += item.data.effort;
+      if (effortType2 == a.data.data.source) {
+        effortTwo += a.data.data.effort;
       }
-      if (effortType3 == item.data.source) {
-        effortThree += item.data.effort;
+      if (effortType3 == a.data.data.source) {
+        effortThree += a.data.data.effort;
       }
     });
+
     data.classes.effort1.value = effortOne;
     data.classes.effort2.value = effortTwo;
     data.classes.effort3.value = effortThree;
@@ -745,10 +735,10 @@ export class WwnActor extends Actor {
     data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
-      if (a.data.equipped && a.data.type != "shield") {
-        baseAac = a.data.aac.value;
-      } else if (a.data.equipped && a.data.type == "shield") {
-        AacShield = a.data.aac.value;
+      if (a.data.data.equipped && a.data.data.type != "shield") {
+        baseAac = a.data.data.aac.value;
+      } else if (a.data.data.equipped && a.data.data.type == "shield") {
+        AacShield = a.data.data.aac.value;
       }
     });
     data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;

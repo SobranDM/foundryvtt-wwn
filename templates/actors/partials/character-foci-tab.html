@@ -13,9 +13,9 @@
         <ol class="item-list resizable" data-base-size="260">
             {{#each owned.foci as |focus|}}
             <li class="item-entry">
-                <div class="item flexrow" data-item-id="{{focus._id}}">
+                <div class="item flexrow" data-item-id="{{focus.id}}">
                     <div class="item-name item-rollable flexrow">
-                        <div class="item-image" style="background-image: url({{focus.img}})"></div>
+                        <div class="item-image" style="background-image: url({{img}})"></div>
                         <a>
                             <h4 title="{{focus.name}}">
                                 {{focus.name~}}
@@ -23,7 +23,7 @@
                         </a>
                     </div>
                     <div class="field-short">
-                        <input value="{{data.ownedLevel}}" type="number" data-dtype="Number" disabled />
+                        <input value="{{focus.data.data.ownedLevel}}" type="number" data-dtype="Number" disabled />
                     </div>
                     <div class="item-controls">
                         {{#if ../owner}}
