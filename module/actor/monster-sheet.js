@@ -173,7 +173,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       await item.update({
         data: {
           counter: {
-            value: parseInt(wp.data.counter.max),
+            value: parseInt(wp.data.data.counter.max),
           },
         },
       });
