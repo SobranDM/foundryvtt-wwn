@@ -1,3 +1,8 @@
+## New in 0.8.9 - Initial 0.8.x Release
+* Updated system to function with version 0.8.6 of Foundry. While most things appear to be working correctly, this is an early release. Bugs may abound.
+# Known Issues:
+* Attribute roller does not save results correctly. The rolls happen and they appear to save but the attributes will reset to null upon next server reboot. Please set your attributes manually until I get this fixed.
+* Linking Instinct tables to a monster sheet does not work when dragged from the Compendium. RollTables outside of a Compendium link correctly and pre-existing monsters with tables linked in the Compendium continue to function correctly.
 ## New in 0.8.8 - WWN Release Edition
 * IMPORTANT: This release fixes a bug that prevented the system from correctly recognizing updates. You will have to uninstall the system and reinstall to get things working correctly but it should update properly in the future.
 * Copper now shows up on the sheet, whether or not B/X currency is selected.
