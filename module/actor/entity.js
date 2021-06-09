@@ -1,4 +1,5 @@
 import { WwnDice } from "../dice.js";
+import { WwnItem } from "../item/entity.js";
 
 export class WwnActor extends Actor {
   /**
@@ -28,6 +29,16 @@ export class WwnActor extends Actor {
       data.initiative.value = 0;
     }
   }
+
+  async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
+    data.map((item) => {
+      if (item.img === undefined) {
+        item.img = WwnItem.defaultIcons[item.type];
+      }
+    });
+    return super.createEmbeddedDocuments(embeddedName, data, context);
+  }
+
   /* -------------------------------------------- */
   /*  Socket Listeners and Handlers
     /* -------------------------------------------- */

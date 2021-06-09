@@ -28,6 +28,22 @@ export const registerSettings = function () {
     }
   });
 
+  game.settings.register("wwn", "activateVision", {
+    name: game.i18n.localize("WWN.Setting.ActivateVision"),
+    hint: game.i18n.localize("WWN.Setting.ActivateVisionHint"),
+    default: "linkedVision",
+    scope: "world",
+    type: String,
+    config: true,
+    choices: {
+      linkedVision: "WWN.Setting.LinkedVision",
+      unlinkedVision: "WWN.Setting.UnlinkedVision",
+      bothVision: "WWN.Setting.BothVision",
+      noVision: "WWN.Setting.NoVision"
+    },
+    onChange: _ => window.location.reload()
+  });
+
   game.settings.register("wwn", "movementRate", {
     name: game.i18n.localize("WWN.Setting.MovementRate"),
     hint: game.i18n.localize("WWN.Setting.MovementRateHint"),

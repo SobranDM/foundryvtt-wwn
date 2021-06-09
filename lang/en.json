@@ -197,6 +197,12 @@
   "WWN.Setting.CurrencyBX": "B/X Coins",
   "WWN.Setting.psychicSkills": "Psychic Skills",
   "WWN.Setting.psychicSkillsHint": "Include the psychic skills from Stars Without Number",
+  "WWN.Setting.ActivateVision": "Activate Vision",
+  "WWN.Setting.ActivateVisionHint": "Automatically turn on vision for select tokens when dropped on the canvas.",
+  "WWN.Setting.LinkedVision": "Linked Tokens",
+  "WWN.Setting.UnlinkedVision": "Unlinked Tokens",
+  "WWN.Setting.BothVision": "All Tokens",
+  "WWN.Setting.NoVision": "No Tokens",
 
   "WWN.items.Equip": "Readied",
   "WWN.items.Unequip": "Unequip",
