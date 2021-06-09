@@ -124,7 +124,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     let link = "";
     if (data.pack) {
-      let tableData = game.packs.get(data.pack).index.filter(el => el.id === data.id);
+      let tableData = game.packs.get(data.pack).index.filter(el => el._id === data.id);
       link = `@Compendium[${data.pack}.${data.id}]{${tableData[0].name}}`;
     } else {
       link = `@RollTable[${data.id}]`;
