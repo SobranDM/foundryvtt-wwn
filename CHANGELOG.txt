@@ -4,6 +4,9 @@
 * Item, Weapon, and Armor sheets have been slightly reformatted to more closely resemble one another.
 * Generate Scores button now saves scores correctly. You may now return to quickly generating your attribute scores! Also eliminated an annoying bug with the way SP was being saved.
 * Linking Instinct Tables fixed.
+* Monster Tweaks dialog is *slightly* less goofy looking.
+* Fixed visual bug that caused dropdown menus in the Tweaks menu to not correctly display their values.
+* Polymath automatically sets a minimum skill level when rolling non-combat skills.
 ## New in 0.8.9 - Initial 0.8.x Release
 * Updated system to function with version 0.8.6 of Foundry. While most things appear to be working correctly, this is an early release. Bugs may abound.
 # Known Issues:
