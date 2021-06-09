@@ -143,7 +143,8 @@ export class WwnCharacterCreator extends FormApplication {
     html.find('a.silver-roll').click((ev) => {
       let el = ev.currentTarget.parentElement.parentElement.parentElement;
       this.rollScore("silver", { event: ev }).then(r => {
-        $(el).find('.silver-value').val(r.total * 10);
+        let silver = r.total * 10;
+        $(el).find('.silver-value').val(silver);
       });
     });
 
@@ -155,9 +156,9 @@ export class WwnCharacterCreator extends FormApplication {
   async _onSubmit(event, { updateData = null, preventClose = false, preventRender = false } = {}) {
     super._onSubmit(event, { updateData: updateData, preventClose: preventClose, preventRender: preventRender });
     // Generate silver
-    let silver = event.target.elements.namedItem('silver').value;
-    this.object.update({"data.currency.sp": silver});
-    console.log(this.object.data.data.currency.sp);
+    let silverFinal = Math.floor(event.target.elements.namedItem('silver').value);
+    console.log(silverFinal);
+    this.object.update({"data.currency.sp": silverFinal});
   }
   /**
    * This method is called upon form submission after form data is validated
@@ -168,7 +169,7 @@ export class WwnCharacterCreator extends FormApplication {
   async _updateObject(event, formData) {
     event.preventDefault();
     // Update the actor
-    this.object.update(formData);
+    await this.object.update(formData);
     // Re-draw the updated sheet
     this.object.sheet.render(true);
   }

@@ -2,9 +2,26 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
     <div class="header-col">
-      <h1 class="charname">
-        <input name="name" type="text" value="{{name}}" placeholder="Name" />
-      </h1>
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Price'}}"><i class="fas
+            fa-circle"></i></label>
+            <div class="form-fields">
+              <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></label>
+            <div class="form-fields">
+              <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <section class="sheet-body">
@@ -27,18 +44,6 @@
               {{/each}}
               {{/select}}
             </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Price'}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Weight'}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
           </div>
         </div>
       </div>

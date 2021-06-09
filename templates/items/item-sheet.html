@@ -2,39 +2,43 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
     <div class="header-col">
-      <h1 class="charname">
-        <input name="name" type="text" value="{{name}}" placeholder="Name" />
-      </h1>
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Price'}}"><i class="fas
+              fa-circle"></i></label>
+            <div class="form-fields">
+              <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></label>
+            <div class="form-fields">
+              <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></label>
+            <div class="form-fields">
+              <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Treasure'}}"><i class="fas fa-gem"></i></label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.treasure" value="{{data.treasure}}" {{checked data.treasure}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <section class="sheet-body">
     <div class="flexrow">
-      <div class="stats">
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Quantity'}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Treasure'}}</label>
-          <div class="form-fields">
-            <input type="checkbox" name="data.treasure" value="{{data.treasure}}" {{checked data.treasure}}  data-dtype="Boolean"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Price'}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Weight'}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
-          </div>
-        </div>
-      </div>
       <div class="description weapon-editor">
         {{editor content=data.description target="data.description" button=true
         owner=owner editable=editable}}

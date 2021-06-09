@@ -574,9 +574,9 @@ export class WwnActor extends Actor {
     
     weapons.forEach((w) => {
       if (w.data.data.equipped) {
-        totalReadied += w.data.data.weight;
+        totalReadied += w.data.data.weight * w.data.data.quantity;
       } else if (w.data.data.stowed) {
-        totalStowed += w.data.data.weight;
+        totalStowed += w.data.data.weight * w.data.data.quantity;
       }
     });
     armors.forEach((a) => {
