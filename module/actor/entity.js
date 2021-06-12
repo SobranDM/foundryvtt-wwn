@@ -260,9 +260,9 @@ export class WwnActor extends Actor {
 
   rollHitDice(options = {}) {
     const label = game.i18n.localize(`WWN.roll.hd`);
-    const rollParts = [this.data.data.hp.hd];
+    const rollParts = new Array(this.data.data.details.level || 1).fill(this.data.data.hp.hd);
     if (this.data.type == "character") {
-      rollParts.push(this.data.data.scores.con.mod);
+      rollParts.push(`${this.data.data.scores.con.mod * this.data.data.details.level}[CON]`);
     }
 
     const data = {
