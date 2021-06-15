@@ -28,7 +28,7 @@ export const registerSettings = function () {
     }
   });
 
-  game.settings.register("wwn", "activateVision", {
+  /* game.settings.register("wwn", "activateVision", {
     name: game.i18n.localize("WWN.Setting.ActivateVision"),
     hint: game.i18n.localize("WWN.Setting.ActivateVisionHint"),
     default: "linkedTokens",
@@ -58,7 +58,7 @@ export const registerSettings = function () {
       noTokens: "WWN.Setting.NoTokens"
     },
     onChange: _ => window.location.reload()
-  });
+  }); */
 
   game.settings.register("wwn", "movementRate", {
     name: game.i18n.localize("WWN.Setting.MovementRate"),
