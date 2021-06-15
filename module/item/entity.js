@@ -4,32 +4,24 @@ import { WwnDice } from "../dice.js";
  * Override and extend the basic :class:`Item` implementation
  */
 export class WwnItem extends Item {
-// Replacing default image
-  async _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
-    switch (data.type) {
-      case "spell":
-        data.img = "systems/wwn/assets/default/spell.png";
-        break;
-      case "art":
-        data.img = "systems/wwn/assets/default/art.png";
-        break;
-      case "armor":
-        data.img = "systems/wwn/assets/default/armor.png";
-        break;
-      case "weapon":
-        data.img = "systems/wwn/assets/default/weapon.png";
-        break;
-      case "item":
-        data.img = "systems/wwn/assets/default/item.png";
-        break;
-      case "focus":
-        data.img = "systems/wwn/assets/default/focus.png";
-        break;
-      case "ability":
-        data.img = "systems/wwn/assets/new/ability.png";
-        break;
+  // Replacing default image
+  static get defaultIcons() {
+    return {
+      spell: "/systems/wwn/assets/default/spell.png",
+      ability: "/systems/wwn/assets/default/ability.png",
+      armor: "/systems/wwn/assets/default/armor.png",
+      weapon: "/systems/wwn/assets/default/weapon.png",
+      item: "/systems/wwn/assets/default/item.png",
+      focus: "/systems/wwn/assets/default/focus.png",
+      art: "/systems/wwn/assets/default/art.png",
+    };
+  }
+
+  static async create(data, context = {}) {
+    if (data.img === undefined) {
+      data.img = this.defaultIcons[data.type];
     }
+    return super.create(data, context);
   }
 
   static chatListeners(html) {
@@ -48,7 +40,7 @@ export class WwnItem extends Item {
     const labels = this.labels;
 
     if (this.data.type == "weapon") {
-      data.tags.forEach(t => props.push(t.value));
+      data.tags.forEach((t) => props.push(t.value));
     }
     if (this.data.type == "spell") {
       props.push(`${data.class} ${data.lvl}`, data.range, data.duration);
@@ -73,14 +65,13 @@ export class WwnItem extends Item {
     const targets = 5;
     const data = this.data.data;
     let type = isNPC ? "attack" : "melee";
-    const rollData =
-    {
+    const rollData = {
       item: this.data,
       actor: this.actor.data,
       roll: {
         save: this.data.data.save,
-        target: null
-      }
+        target: null,
+      },
     };
 
     if (data.missile && data.melee && !isNPC) {
@@ -149,12 +140,13 @@ export class WwnItem extends Item {
 
   spendSpell() {
     let spellsLeft = this.actor.data.data.spells.perDay.value;
-    this.actor.update({
-      "data.spells.perDay.value": spellsLeft + 1
-      }
-    ).then(() => {
-      this.show({ skipDialog: true });
-    });
+    this.actor
+      .update({
+        "data.spells.perDay.value": spellsLeft + 1,
+      })
+      .then(() => {
+        this.show({ skipDialog: true });
+      });
   }
 
   getTags() {

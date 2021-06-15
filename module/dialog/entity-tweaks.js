@@ -53,7 +53,7 @@ export class WwnEntityTweaks extends FormApplication {
   async _updateObject(event, formData) {
     event.preventDefault();
     // Update the actor
-    this.object.update(formData);
+    await this.object.update(formData);
     // Re-draw the updated sheet
     this.object.sheet.render(true);
   }

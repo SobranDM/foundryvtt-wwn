@@ -1,4 +1,5 @@
 import { WwnDice } from "../dice.js";
+import { WwnItem } from "../item/entity.js";
 
 export class WwnActor extends Actor {
   /**
@@ -28,6 +29,16 @@ export class WwnActor extends Actor {
       data.initiative.value = 0;
     }
   }
+
+  async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
+    data.map((item) => {
+      if (item.img === undefined) {
+        item.img = WwnItem.defaultIcons[item.type];
+      }
+    });
+    return super.createEmbeddedDocuments(embeddedName, data, context);
+  }
+
   /* -------------------------------------------- */
   /*  Socket Listeners and Handlers
     /* -------------------------------------------- */
@@ -317,6 +328,8 @@ export class WwnActor extends Actor {
 
   rollSkills(expl, options = {}) {
     let selectedStat = this.data.data.score;
+    let combatSkill = false;
+    const poly = this.data.items.filter((p) => p.name == "Polymath");
     const label = game.i18n.localize(`WWN.skills.${expl}`);
     const statLabel = game.i18n.localize(`WWN.scores.${selectedStat}.long`);
 
@@ -330,8 +343,15 @@ export class WwnActor extends Actor {
         expl: label,
       }),
     };
+    if (expl == "shoot" || expl == "stab" || expl == "punch") {
+      combatSkill = true;
+    }
     const rollParts = [this.data.data.skills[expl].dice];
-    rollParts.push(this.data.data.skills[expl].value);
+    if (poly.length > 0 && !combatSkill) {
+      rollParts.push(Math.max(this.data.data.skills[expl].value, poly[0].data.data.ownedLevel -1));
+    } else {
+      rollParts.push(this.data.data.skills[expl].value);
+    }
     rollParts.push(this.data.data.scores[selectedStat].mod);
 
     let skip = options.event && options.event.ctrlKey;
@@ -565,7 +585,6 @@ export class WwnActor extends Actor {
     // Compute encumbrance
     let totalReadied = 0;
     let totalStowed = 0;
-    let hasItems = false;
     let maxReadied = Math.floor(data.scores.str.value / 2);
     let maxStowed = data.scores.str.value;
     const weapons = this.data.items.filter((w) => w.type == "weapon");
@@ -574,9 +593,9 @@ export class WwnActor extends Actor {
     
     weapons.forEach((w) => {
       if (w.data.data.equipped) {
-        totalReadied += w.data.data.weight;
+        totalReadied += w.data.data.weight * w.data.data.quantity;
       } else if (w.data.data.stowed) {
-        totalStowed += w.data.data.weight;
+        totalStowed += w.data.data.weight * w.data.data.quantity;
       }
     });
     armors.forEach((a) => {

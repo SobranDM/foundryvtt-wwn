@@ -58,7 +58,8 @@
       <div class="item-caret"><i class="fas fa-caret-down"></i></div>
       <div class="item-name">{{localize "WWN.items.Weapons"}}</div>
       <div class="icon-row">{{localize "WWN.items.Qualities"}}</div>
-      <div class="field-short">{{localize "WWN.items.Shock"}}</div>
+      <div class="field-short" title="{{localize "WWN.items.Shock"}}"><i class="fas fa-bolt"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
       <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
       <div class="item-controls">
         <a class="item-control item-create" data-type="weapon" title="{{localize 'WWN.Add'}}"><i
@@ -93,8 +94,11 @@
           <div class="field-short">
             {{item.data.data.shock.damage}}
           </div>
+          <div class="field-short quantity">
+            <input value="{{item.data.data.quantity}}" type="number" />
+          </div>
           <div class="field-short">
-            {{item.data.data.weight}}
+            <input value="{{item.data.data.weight}}" type="number" readonly>
           </div>
           <div class="item-controls">
             {{#if ../owner}}
@@ -168,7 +172,7 @@
     <li class="item-titles flexrow">
       <div class="item-caret"><i class="fas fa-caret-down"></i></div>
       <div class="item-name">{{localize "WWN.items.Misc"}}</div>
-      <div class="field-short"><i class="fas fa-hashtag"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
       <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
       <div class="item-controls">
         <a class="item-control item-create" data-type="item" title="{{localize 'WWN.Add'}}"><i
@@ -192,7 +196,7 @@
             <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
           </div>
           <div class="field-short">
-            {{item.data.data.weight}}
+            <input value="{{item.data.data.weight}}" type="number" readonly />
           </div>
           <div class="item-controls">
             {{#if ../owner}}

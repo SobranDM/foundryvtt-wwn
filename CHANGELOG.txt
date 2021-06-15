@@ -1,3 +1,13 @@
+## New in 0.9.0
+* Added quantity field to weapons on both the weapon sheet and on the inventory page, for all your throwing knife needs.
+* Shock column on inventory page now uses a lightning symbol to save space.
+* Item, Weapon, and Armor sheets have been slightly reformatted to more closely resemble one another.
+* Generate Scores button now saves scores correctly. You may now return to quickly generating your attribute scores! Also eliminated an annoying bug with the way SP was being saved.
+* Linking Instinct Tables fixed.
+* Monster Tweaks dialog is *slightly* less goofy looking.
+* Fixed visual bug that caused dropdown menus in the Tweaks menu to not correctly display their values.
+* Polymath automatically sets a minimum skill level when rolling non-combat skills.
+* Monster Spells now sort correctly by level.
 ## New in 0.8.9 - Initial 0.8.x Release
 * Updated system to function with version 0.8.6 of Foundry. While most things appear to be working correctly, this is an early release. Bugs may abound.
 # Known Issues:
