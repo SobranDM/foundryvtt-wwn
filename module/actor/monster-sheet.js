@@ -62,10 +62,10 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   var sortedSpells = {};
   var slots = {};
   for (var i = 0; i < spells.length; i++) {
-    let lvl = spells[i].data.lvl;
+    let lvl = spells[i].data.data.lvl;
     if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
     if (!slots[lvl]) slots[lvl] = 0;
-    slots[lvl] += spells[i].data.memorized;
+    slots[lvl] += spells[i].data.data.memorized;
     sortedSpells[lvl].push(spells[i]);
   }
   data.slots = {
@@ -77,7 +77,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     armors: armors,
     items: items,
     arts: arts,
-    spells: spells,
     abilities: abilities
   };
   data.spells = sortedSpells;
@@ -227,6 +226,16 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       let actorObject = this.actor;
       let check = $(ev.currentTarget).closest('.check-field').data('check');
       actorObject.rollMonsterSkill({ event: event, check: check });
+    });
+
+    html.find(".item-prep").click(async (ev) => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      await item.update({
+        data: {
+          prepared: !item.data.data.prepared,
+        },
+      });
     });
     
     // Everything below here is only needed if the sheet is editable
