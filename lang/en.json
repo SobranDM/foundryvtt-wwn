@@ -205,6 +205,13 @@
   "WWN.Setting.NoTokens": "No Tokens",
   "WWN.Setting.TokenHP": "Assign Token HP",
   "WWN.Setting.TokenHPHint": "Turn on HP on token creation.",
+  "WWN.Setting.xpConfig": "Experience Progression",
+  "WWN.Setting.xpConfigHint": "Set how much experience characters require per level.",
+  "WWN.Setting.xpFast": "Fast",
+  "WWN.Setting.xpSlow": "Slow",
+  "WWN.Setting.xpCustom": "Custom",
+  "WWN.Setting.xpCustomList": "Custom XP Progression",
+  "WWN.Setting.xpCustomListHint": "Enter a list of XP values, separated by commas.",
 
   "WWN.items.Equip": "Readied",
   "WWN.items.Unequip": "Unequip",
