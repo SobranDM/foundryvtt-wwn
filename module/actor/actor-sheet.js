@@ -113,12 +113,9 @@ export class WwnActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       if (item.type == "weapon") {
         if (this.actor.data.type === "monster") {
-          if (isNaN(this.actor.data.damageBonus)) {
-            this.actor.update({
-              data: { damageBonus: 0 } }
-            )}
           item.update({
             data: { counter: { value: item.data.data.counter.value - 1 } },
+            data: { shockTotal: item.data.data.shock.damage + this.actor.data.data.damageBonus }
           });
         }
         item.rollWeapon({ skipDialog: ev.ctrlKey });

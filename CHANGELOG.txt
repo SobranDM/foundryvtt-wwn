@@ -1,6 +1,7 @@
 ## New in 0.9.1
-* Fixed bug with weight display in the treasure section
-* 
+### Bug Fixes
+* Weight display in the treasure section no longer shows way too many decimal places.
+* Monster Shock damage works correctly again. 
 ## New in 0.9.0
 * Added quantity field to weapons on both the weapon sheet and on the inventory page, for all your throwing knife needs.
 * Shock column on inventory page now uses a lightning symbol to save space.

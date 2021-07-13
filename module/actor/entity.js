@@ -481,12 +481,6 @@ export class WwnActor extends Actor {
       if (attData.item.data.skillDamage) {
         attData.item.data.shockTotal = attData.item.data.shockTotal + this.data.data.skills[skillAttack].value;
       }
-    } else {
-      if (!isNaN(this.data.data.damageBonus)) {
-        attData.item.data.shockTotal = attData.item.data.shock.damage + this.data.data.damageBonus;
-      } else{
-        attData.item.data.shockTotal = attData.item.data.shock.damage;
-      }
     }
 
     rollParts.push(data.thac0.bba.toString());
