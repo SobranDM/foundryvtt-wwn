@@ -121,6 +121,45 @@ export const registerSettings = function () {
     onChange: _ => window.location.reload()
   });
 
+  game.settings.register("wwn", "xpConfig", {
+    name: game.i18n.localize("WWN.Setting.xpConfig"),
+    hint: game.i18n.localize("WWN.Setting.xpConfigHint"),
+    default: "xpFast",
+    scope: "world",
+    type: String,
+    config: true,
+    choices: {
+      xpFast: "WWN.Setting.xpFast",
+      xpSlow: "WWN.Setting.xpSlow",
+      xpCustom: "WWN.Setting.xpCustom"
+    },
+    onChange: _ => window.location.reload()
+  });
+
+  game.settings.register("wwn", "xpCustomList", {
+    name: game.i18n.localize("WWN.Setting.xpCustomList"),
+    hint: game.i18n.localize("WWN.Setting.xpCustomListHint"),
+    default: [
+      "2000",
+      "4000",
+      "8000",
+      "16000",
+      "32000",
+      "64000",
+      "120000",
+      "240000",
+      "360000",
+      "480000",
+      "600000",
+      "720000",
+      "840000"
+    ],
+    scope: "world",
+    type: String,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
+
   game.settings.register("wwn", "currencyTypes", {
     name: game.i18n.localize("WWN.items.Currency"),
     hint: game.i18n.localize("WWN.items.CurrencyHint"),

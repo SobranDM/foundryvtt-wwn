@@ -481,12 +481,6 @@ export class WwnActor extends Actor {
       if (attData.item.data.skillDamage) {
         attData.item.data.shockTotal = attData.item.data.shockTotal + this.data.data.skills[skillAttack].value;
       }
-    } else {
-      if (!isNaN(this.data.data.damageBonus)) {
-        attData.item.data.shockTotal = attData.item.data.shock.damage + this.data.data.damageBonus;
-      } else{
-        attData.item.data.shockTotal = attData.item.data.shock.damage;
-      }
     }
 
     rollParts.push(data.thac0.bba.toString());
@@ -614,10 +608,10 @@ export class WwnActor extends Actor {
     });
     
     if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
-      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 200;
+      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
       totalStowed += coinWeight;
     } else {
-      let coinWeight = ( data.currency.sp + data.currency.gp ) / 200;
+      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.gp ) / 100;
       totalStowed += coinWeight;
     }
     data.encumbrance.readied.max = maxReadied;

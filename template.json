@@ -142,111 +142,138 @@
       "skills": {
         "administer": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "connect": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "convince": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "craft": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "exert": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "heal": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "know": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "lead": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "magic": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "notice": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "perform": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "pray": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "punch": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "ride": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "sail": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "shoot": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "sneak": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "stab": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "survive": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "trade": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "work": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "biopsionics": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "metapsionics": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "precognition": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "telekinesis": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "telepathy": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "teleportation": {
           "value": -1,
-          "dice": "2d6"
+          "dice": "2d6",
+          "stat": "str"
         },
         "unspent:": 0
       },
@@ -362,6 +389,7 @@
       "damage": "1",
       "ac": "15"
     },
+    "shockTotal": "0",
     "skill": "",
     "score": "",
     "tags": [],
