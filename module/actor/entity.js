@@ -729,10 +729,10 @@ export class WwnActor extends Actor {
     // Compute treasure
     let total = 0;
     let treasure = this.data.items.filter(
-      (i) => i.type == "item" && i.data.treasure
+      (i) => i.type == "item" && i.data.data.treasure
     );
     treasure.forEach((item) => {
-      total += item.data.quantity * item.data.price;
+      total += item.data.data.quantity * item.data.data.price;
     });
     data.treasure = total;
   }
