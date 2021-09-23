@@ -1,3 +1,6 @@
+## New in 0.9.3
+### Changes
+* The party select button now only shows actors that are currently in the party. The tooltip has been renamed to "Remove Characters" to reflect its new function. Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.
 ## New in 0.9.2
 ### Bug Fixes
 * Total SP now correctly accounts for carried treasure items, such as gems, once again. This was missed when I updated the system to account for Foundry's new data structure.

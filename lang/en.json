@@ -22,7 +22,7 @@
 
   "WWN.dialog.tweaks": "Tweaks",
   "WWN.dialog.partysheet": "Party Overview",
-  "WWN.dialog.selectActors": "Select PCs",
+  "WWN.dialog.selectActors": "Remove Characters",
   "WWN.dialog.createItem": "Create Item",
   "WWN.dialog.itemType": "Item type",
   "WWN.dialog.itemName": "Item name",
@@ -31,6 +31,7 @@
   "WWN.dialog.generateScores": "Generate Scores",
   "WWN.dialog.generateScore": "Rolling {score} ({count})",
   "WWN.dialog.skillDice": "Skill Dice",
+  "WWN.dialog.partySelectHint": "Drag and drop characters to add them to the party.",
 
   "WWN.Formula": "Formula",
   "WWN.SitMod": "Situational Modifier",
