@@ -1,3 +1,8 @@
+## New in 0.9.2
+### Bug Fixes
+* Total SP now correctly accounts for carried treasure items, such as gems, once again. This was missed when I updated the system to account for Foundry's new data structure.
+* Range bands on missile weapons no longer show a mid-range band that doesn't exist in WWN.
+* Spell saves can now be rolled from the item card displayed in chat. (Why did I even have this disabled...?)
 ## New in 0.9.1
 ### Bug Fixes
 * Weight display in the treasure section no longer shows way too many decimal places.

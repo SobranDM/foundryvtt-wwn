@@ -169,7 +169,7 @@ export class WwnItem extends Item {
         wTags += formatTag(CONFIG.WWN.saves[data.save], "fa-skull");
         if (data.missile) {
           wTags += formatTag(
-            data.range.short + "/" + data.range.medium + "/" + data.range.long,
+            data.range.short + "/" + data.range.long,
             "fa-bullseye"
           );
         }

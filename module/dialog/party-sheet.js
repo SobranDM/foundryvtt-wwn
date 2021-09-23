@@ -6,8 +6,8 @@ export class WwnPartySheet extends FormApplication {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "dialog", "party-sheet"],
       template: "systems/wwn/templates/apps/party-sheet.html",
-      width: 310,
-      height: 400,
+      width: 350,
+      height: 450,
       resizable: true,
     });
   }
