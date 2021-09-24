@@ -1,4 +1,9 @@
 ## New in 0.9.3
+### Features
+* Alert Focus: if you possess this focus, the system now...
+    * rolls your initiative twice and takes the higher result if using individual initiative.
+    * adds your initiative to 100 if you possess Alert at level 2, ensuring you always go first and that there is a tiebreaker if this is true of multiple characters.
+    
 ### Changes
 * The party select button now only shows actors that are currently in the party. The tooltip has been renamed to "Remove Characters" to reflect its new function. Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.
 ## New in 0.9.2

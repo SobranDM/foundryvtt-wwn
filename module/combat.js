@@ -41,11 +41,54 @@ export class WwnCombat {
     let updates = [];
     let messages = [];
     combat.data.combatants.forEach((c, i) => {
-      // This comes from foundry.js, had to remove the update turns thing
+      // Initialize variables
+      let alert = c.actor.data.items.filter((a) => a.name == "Alert");
+      let roll = null;
+      let roll2 = null;
+
+      // Reset initative to zero
+      c.actor.data.data.initiative.roll = 0;
+
       // Roll initiative
-      const cf = combat._getInitiativeFormula(c);
-      const roll = combat._getInitiativeRoll(c, cf);
-      let value = roll.total;
+      roll = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
+      roll.toMessage({
+        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+      });
+      if (alert.length > 0) {
+        roll2 = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
+        roll2.toMessage({
+        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+      });
+      }
+
+      // Set initiative
+      if (alert.length > 0) {
+        console.log('ALERT!!');
+        console.log(alert);
+        if (alert[0].data.data.ownedLevel == 2) {
+          updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
+        } else {
+          updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
+        }
+        
+      } else {
+        updates.push({ _id: c.id, initiative: roll.total });
+      }
+      
+
+
+      /* const cf = c._getInitiativeFormula(c);
+      const roll = c.getInitiativeRoll(cf);
+      const roll2 = c.getInitiativeRoll(cf);
+      const alert = c.actor.data.items.filter((a) => a.name == "Alert");
+      console.log(alert);
+      let value = 0;
+      if (alert.length > 0) {
+        console.log("ALERT!!");
+        value = Math.max(roll.total, roll2.total);
+      } else {
+        value = roll.total;
+      }
       if (combat.settings.skipDefeated && c.defeated) {
         value = -790;
       }
@@ -65,10 +108,24 @@ export class WwnCombat {
         },
         flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
       }, {});
+
       const chatData = roll.toMessage(messageData, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
 
       if (i > 0) chatData.sound = null;   // Only play 1 sound for the whole set
       messages.push(chatData);
+      if (alert.length > 0) {
+        let messageData2 = foundry.utils.mergeObject({
+          speaker: {
+            scene: combat.scene.id,
+            actor: c.actor?.id,
+            token: c.token?.id,
+            alias: c.name
+          },
+          flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+        }, {});
+        const chatData2 = roll.toMessage(messageData2, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
+        messages.push(chatData2);
+      } */
     });
     await combat.updateEmbeddedEntity("Combatant", updates);
     await CONFIG.ChatMessage.entityClass.create(messages);
@@ -257,7 +314,7 @@ export class WwnCombat {
     }
     if (init === "group") {
       WwnCombat.rollInitiative(combat, data, diff, id);
-    } else if (init === "individual") {
+    } else {
       WwnCombat.individualInitiative(combat, data, diff, id);
     }
   }

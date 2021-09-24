@@ -50,7 +50,8 @@
         },
         "initiative": {
           "value": 0,
-          "mod": 0
+          "mod": 0,
+          "roll": 0
         },
         "currency": {
           "cp": 0,
