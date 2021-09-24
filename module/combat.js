@@ -74,59 +74,8 @@ export class WwnCombat {
       } else {
         updates.push({ _id: c.id, initiative: roll.total });
       }
-      
-
-
-      /* const cf = c._getInitiativeFormula(c);
-      const roll = c.getInitiativeRoll(cf);
-      const roll2 = c.getInitiativeRoll(cf);
-      const alert = c.actor.data.items.filter((a) => a.name == "Alert");
-      console.log(alert);
-      let value = 0;
-      if (alert.length > 0) {
-        console.log("ALERT!!");
-        value = Math.max(roll.total, roll2.total);
-      } else {
-        value = roll.total;
-      }
-      if (combat.settings.skipDefeated && c.defeated) {
-        value = -790;
-      }
-      updates.push({ _id: c.id, initiative: value });
-
-      // Determine the roll mode
-      let rollMode = game.settings.get("core", "rollMode");
-      if ((c.token.hidden || c.hidden) && (rollMode === "roll")) rollMode = "gmroll";
-
-      // Construct chat message data
-      let messageData = foundry.utils.mergeObject({
-        speaker: {
-          scene: combat.scene.id,
-          actor: c.actor?.id,
-          token: c.token?.id,
-          alias: c.name
-        },
-        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-      }, {});
-
-      const chatData = roll.toMessage(messageData, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
-
-      if (i > 0) chatData.sound = null;   // Only play 1 sound for the whole set
-      messages.push(chatData);
-      if (alert.length > 0) {
-        let messageData2 = foundry.utils.mergeObject({
-          speaker: {
-            scene: combat.scene.id,
-            actor: c.actor?.id,
-            token: c.token?.id,
-            alias: c.name
-          },
-          flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-        }, {});
-        const chatData2 = roll.toMessage(messageData2, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
-        messages.push(chatData2);
-      } */
     });
+
     await combat.updateEmbeddedEntity("Combatant", updates);
     await CONFIG.ChatMessage.entityClass.create(messages);
     data.turn = 0;
@@ -143,18 +92,6 @@ export class WwnCombat {
           ? '<i class="fas fa-dizzy"></i>'
           : span.innerHTML;
     });
-    
-    html.find(".combatant").each((_, ct) => {
-      // Append spellcast and retreat
-      const controls = $(ct).find(".combatant-controls .combatant-control");
-      const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
-      const moveInCombat = cmbtant.getFlag("wwn", "moveInCombat");
-      const moveActive = moveInCombat ? "active" : "";
-      controls.eq(1).after(
-        `<a class='combatant-control move-combat ${moveActive}'><i class='fas fa-walking'></i></a>`
-      );
-    });
-    WwnCombat.announceListener(html);
 
     let init = game.settings.get("wwn", "initiative") === "group";
     if (!init) {
@@ -208,29 +145,6 @@ export class WwnCombat {
     }
   }
 
-  static announceListener(html) {
-    html.find(".combatant-control.prepare-spell").click((ev) => {
-      ev.preventDefault();
-      // Toggle spell announcement
-      let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      let isActive = ev.currentTarget.classList.contains('active');
-      game.combat.updateCombatant({
-        _id: id,
-        flags: { wwn: { prepareSpell: !isActive } },
-      });
-    });
-    html.find(".combatant-control.move-combat").click((ev) => {
-      ev.preventDefault();
-      // Toggle spell announcement
-      let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      let isActive = ev.currentTarget.classList.contains('active');
-      game.combat.updateCombatant({
-        _id: id,
-        flags: { wwn: { moveInCombat: !isActive } },
-      });
-    })
-  }
-
   static addListeners(html) {
     // Cycle through colors
     html.find(".combatant-control.flag").click((ev) => {
@@ -246,7 +160,7 @@ export class WwnCombat {
         index++;
       }
       let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      game.combat.updateCombatant({
+      game.combat.combatant.update({
         _id: id,
         flags: { wwn: { group: colors[index] } },
       });

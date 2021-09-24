@@ -149,6 +149,21 @@ export class WwnItem extends Item {
       });
   }
 
+  spendArt() {
+    if (this.data.data.time) {
+      let currEffort = this.data.data.effort;
+      const itemId = event.currentTarget.closest(".item").dataset.itemId;
+      const item = this.actor.items.get(itemId);
+      return item
+        .update({ "data.effort": currEffort + 1 })
+        .then(() => {
+          this.show({ skipDialog: true });
+        });
+      } else {
+        this.show({ skipDialog: true });
+      }
+  }
+
   getTags() {
     let formatTag = (tag, icon) => {
       if (!tag) return "";
@@ -259,7 +274,7 @@ export class WwnItem extends Item {
         this.spendSpell();
         break;
       case "art":
-        this.show();
+        this.spendArt();
         break;
       case "item":
       case "armor":
