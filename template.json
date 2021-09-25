@@ -409,7 +409,10 @@
   "armor": {
     "description": "",
     "ac": 9,
-    "aac": 10,
+    "aac": {
+      "value": 10,
+      "mod": 0 },
+    "armorBonus": 0,
     "type": "light",
     "price": 0,
     "weight": 0

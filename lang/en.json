@@ -245,6 +245,8 @@
   "WWN.items.ShockAC": "The AC value under which the weapon inflicts Shock damage. Leave blank for Foci that inflict Shock regardless.",
   "WWN.items.ArmorAC": "AC",
   "WWN.items.ArmorAAC": "AC",
+  "WWN.items.ArmorBonus": "Magic",
+  "WWN.items.ArmorBonusHint": "Magical bonus to an armor's base Armor Class.",
   "WWN.items.SkillDamageShort": "Damage?",
   "WWN.items.SkillDamageLong": "Add skill level to weapon damage and Shock.",
   "WWN.items.Bonus": "Bonus",

@@ -743,19 +743,31 @@ export class WwnActor extends Actor {
     }
     // Compute AC
     let baseAac = 10;
-    let AacShield = 0;
+    let AacShieldMod = 0;
+    let AacShieldNaked = 0;
     const data = this.data.data;
     data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (a.data.data.equipped && a.data.data.type != "shield") {
-        baseAac = a.data.data.aac.value;
+        baseAac = a.data.data.aac.value + a.data.data.aac.mod;
       } else if (a.data.data.equipped && a.data.data.type == "shield") {
-        AacShield = a.data.data.aac.value;
+        AacShieldMod = 1 + a.data.data.aac.mod;
+        AacShieldNaked = a.data.data.aac.value + a.data.data.aac.mod;
       }
     });
-    data.aac.value = baseAac + data.scores.dex.mod + AacShield + data.aac.mod;
-    data.aac.shield = AacShield;
+    if (AacShieldMod > 0) {
+      let shieldOnly = AacShieldNaked + data.scores.dex.mod + data.aac.mod;
+      let shieldBonus = baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
+      if (shieldOnly > shieldBonus) {
+        data.aac.value = shieldOnly;
+      } else {
+        data.aac.value = shieldBonus;
+        data.aac.shield = AacShieldMod;
+      }
+    } else {
+      data.aac.value = baseAac + data.scores.dex.mod + data.aac.mod;
+    }
   }
 
   computeModifiers() {

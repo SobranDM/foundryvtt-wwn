@@ -28,9 +28,15 @@
     <div class="flexrow">
       <div class="stats">
         <div class="form-group">
-          <label>{{localize 'WWN.items.ArmorAAC'}}</label>
+          <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.items.ArmorAAC'}}</label>
           <div class="form-fields">
             <input type="number" name="data.aac.value" value="{{data.aac.value}}" data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize 'WWN.items.ArmorBonus'}}</label>
+          <div class="form-fields">
+            <input type="number" name="data.aac.mod" value="{{data.aac.mod}}" data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">

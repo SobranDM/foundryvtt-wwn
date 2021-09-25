@@ -124,6 +124,7 @@
       <div class="item-caret"><i class="fas fa-caret-down"></i></div>
       <div class="item-name">{{localize "WWN.items.Armors"}}</div>
       <div class="field-short">{{localize "WWN.items.ArmorAAC"}}</div>
+      <div class="field-short" title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize "WWN.items.ArmorBonus"}}</div>
       <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
       <div class="item-controls">
         <a class="item-control item-create" data-type="armor" title="{{localize 'WWN.Add'}}"><i
@@ -144,6 +145,9 @@
           </div>
           <div class="field-short">
             {{item.data.data.aac.value}}
+          </div>
+          <div class="field-short">
+            {{item.data.data.aac.mod}}
           </div>
           <div class="field-short">
             {{item.data.data.weight}}

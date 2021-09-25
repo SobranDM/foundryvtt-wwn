@@ -105,9 +105,6 @@ Hooks.on("renderSidebarTab", async (object, html) => {
 
 Hooks.on("preCreateCombatant", (combat, data, options, id) => {
   let init = game.settings.get("wwn", "initiative");
-  if (init == "group") {
-    WwnCombat.addCombatant(combat, data, options, id);
-  }
 });
 
 Hooks.on("updateCombatant", WwnCombat.updateCombatant);
