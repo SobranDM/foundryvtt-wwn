@@ -454,7 +454,10 @@
     "save": ""
   },
   "asset": {
-    "hp": 3,
+    "hp": {
+      "value": 3,
+      "max": 3
+    },
     "cost": 2,
     "attack": "1d6",
     "counter": "1d6",
