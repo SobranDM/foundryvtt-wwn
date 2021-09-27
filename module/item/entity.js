@@ -383,12 +383,11 @@ export class WwnItem extends Item {
     if (isTargetted) {
       targets = this._getChatCardTargets(card);
     }
-
     // Attack and Damage Rolls
     if (action === "damage") await item.rollDamage({ event });
     else if (action === "formula") await item.rollFormula({ event });
     // Saving Throws for card targets
-    else if (action == "save") {
+    else if (action === "save") {
       if (!targets.length) {
         ui.notifications.warn(
           `You must have one or more controlled Tokens in order to use this option.`
