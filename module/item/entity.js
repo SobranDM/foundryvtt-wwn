@@ -211,6 +211,8 @@ export class WwnItem extends Item {
         roll += data.rollTarget ? CONFIG.WWN.roll_type[data.rollType] : "";
         roll += data.rollTarget ? data.rollTarget : "";
         return `${formatTag(data.requirements)}${formatTag(roll)}`;
+      case "asset":
+        return "";
     }
     return "";
   }

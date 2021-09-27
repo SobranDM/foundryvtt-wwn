@@ -135,6 +135,17 @@ export const WWN = {
     SS: "WWN.items.desc.SS",
     T: "WWN.items.desc.T"
   },
+  assetTypes: {
+    cunning: "WWN.asset.cunning",
+    force: "WWN.asset.force",
+    wealth: "WWN.asset.wealth"
+  },
+  assetMagic: {
+    none: "WWN.asset.magicNone",
+    low: "WWN.asset.magicLow",
+    medium: "WWN.asset.magicMedium",
+    high: "WWN.asset.magicHigh",
+  },
   monster_saves: {
     0: {
       label: "Normal Human",

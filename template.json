@@ -364,7 +364,7 @@
     }
   },
   "Item": {
-    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon"],
+    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon", "asset"],
     "item": {
       "description": "",
       "quantity": 1,
@@ -452,6 +452,17 @@
     "rollTarget": 0,
     "blindroll": false,
     "save": ""
+  },
+  "asset": {
+    "hp": 3,
+    "cost": 2,
+    "attack": "1d6",
+    "counter": "1d6",
+    "BOI": false,
+    "magic": "none",
+    "subtle": false,
+    "special": false,
+    "type": "cunning"
   }
 }
 }

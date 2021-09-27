@@ -1,0 +1,46 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+      </div>
+    </div>
+  </header>
+  <section class="sheet-body">
+    <div class="flexrow">
+      <div class="stats">
+        <div class="form-group block-input">
+          <label>{{localize 'WWN.asset.type'}}</label>
+          <div class="form-fields">
+            <select name="data.type">
+              {{#select data.type}}
+              {{#each config.assetTypes as |type a|}}
+              <option value="{{a}}">{{type}}</option>
+              {{/each}}
+              {{/select}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group block-input">
+          <label>{{localize 'WWN.skills.magic'}}</label>
+          <div class="form-fields">
+            <select name="data.magic">
+              {{#select data.magic}}
+              {{#each config.assetMagic as |magic a|}}
+              <option value="{{a}}">{{magic}}</option>
+              {{/each}}
+              {{/select}}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="description resizable-editor">
+        {{editor content=data.description target="data.description" button=true
+        owner=owner editable=editable}}
+      </div>
+    </div>
+  </section>
+</form>
