@@ -12,33 +12,29 @@
   <section class="sheet-body">
     <div class="flexrow">
       <div class="stats">
-        <div class="form-group block-input">
-          <div class="form-group">
-            <label>{{localize 'WWN.HealthShort'}}</i></label>
-            <div class="form-fields">
-              <input type="number" name="data.hp.value" value="{{data.hp.value}}" data-dtype="Number" title="{{localize 'WWN.Health'}}" />
-               / 
-              <input type="number" name="data.hp.max" value="{{data.hp.max}}" data-dtype="Number" title="{{localize 'WWN.HealthMax'}}" />
-            </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.Attack'}}</label>
+          <div class="form-fields">
+            <input type="text" name="data.attack" value="{{data.attack}}" data-dtype="String" />
           </div>
-          <div class="form-group">
-            <label>{{localize 'WWN.asset.cost'}}</i></label>
-            <div class="form-fields">
-              <input type="number" name="data.cost" value="{{data.cost}}" data-dtype="Number" />
-            </div>
+        </div>
+        <div class="form-group">
+          <label title="{{localize 'WWN.HealthLong'}}">{{localize 'WWN.HealthShort'}}</i></label>
+          <div class="form-fields">
+            <input type="number" name="data.hp.value" value="{{data.hp.value}}" data-dtype="Number"
+              title="{{localize 'WWN.Health'}}" />
+            /
+            <input type="number" name="data.hp.max" value="{{data.hp.max}}" data-dtype="Number"
+              title="{{localize 'WWN.HealthMax'}}" />
           </div>
-          <div class="form-group block-input">
-            <label>{{localize 'WWN.Attack'}}</label>
-            <div class="form-fields">
-              <input type="text" name="data.attack" value="{{data.attack}}" data-dtype="String" />
-            </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.asset.cost'}}</i></label>
+          <div class="form-fields">
+            <input type="number" name="data.cost" value="{{data.cost}}" data-dtype="Number" />
           </div>
-          <div class="form-group block-input">
-            <label>{{localize 'WWN.asset.counter'}}</label>
-            <div class="form-fields">
-              <input type="text" name="data.counter" value="{{data.counter}}" data-dtype="String" />
-            </div>
-          </div>
+        </div>
+        <div class="form-group">
           <label>{{localize 'WWN.asset.type'}}</label>
           <div class="form-fields">
             <select name="data.type">
@@ -50,9 +46,9 @@
             </select>
           </div>
         </div>
-        <div class="form-group block-input">
+        <div class="form-group">
           <label>{{localize 'WWN.skills.magic'}}</label>
-          <div class="form-fields">
+          <div class=form-fields>
             <select name="data.magic">
               {{#select data.magic}}
               {{#each config.assetMagic as |magic a|}}
@@ -62,29 +58,50 @@
             </select>
           </div>
         </div>
-        <div class="form-group">
-          <label title="{{localize 'WWN.asset.BoIHint'}}">{{localize 'WWN.asset.BoI'}}</label>
-          <div class="form-fields">
-            <input type="checkbox" name="data.BOI" value="{{data.BOI}}" {{checked data.BOI}}  data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+      </div>
+      <div class="flexrow">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.counter'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.counter" value="{{data.counter}}" data-dtype="String" />
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.asset.subtle'}}</label>
-          <div class="form-fields">
-            <input type="checkbox" name="data.subtle" value="{{data.subtle}}" {{checked data.subtle}}  data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+          <div class="form-group">
+            <label title="{{localize 'WWN.asset.BoIHint'}}">{{localize 'WWN.asset.BoI'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.BOI" value="{{data.BOI}}" {{checked data.BOI}} data-dtype="Boolean"
+                title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.asset.special'}}</label>
-          <div class="form-fields">
-            <input type="checkbox" name="data.special" value="{{data.special}}" {{checked data.special}}  data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.subtle'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.subtle" value="{{data.subtle}}" {{checked data.subtle}}
+                data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.stealthed'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.stealth" value="{{data.stealth}}" {{checked data.stealth}}
+                data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.special'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="data.special" value="{{data.special}}" {{checked data.special}}
+                data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="description resizable-editor">
-        {{editor content=data.description target="data.description" button=true
-        owner=owner editable=editable}}
-      </div>
+    </div>
+    <div class="description resizable-editor">
+      {{editor content=data.description target="data.description" button=true
+      owner=owner editable=editable}}
+    </div>
     </div>
   </section>
 </form>

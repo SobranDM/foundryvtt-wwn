@@ -6,23 +6,22 @@
         <h1 class="charname">
           <input name="name" type="text" value="{{name}}" placeholder="Name" />
         </h1>
+        <div class="details">
+          <div class="form-group">
+            <label title="{{localize 'WWN.details.level'}}"><i class="fas
+              fa-level-up-alt"></i></label>
+            <div class="form-fields">
+              <input type="text" name="data.ownedLevel" value="{{data.ownedLevel}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
   <section class="sheet-body">
-    <div class="flexrow">
-      <div class="stats">
-        <div class="form-group block-input">
-          <label>{{localize 'WWN.details.level'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.ownedLevel" value="{{data.ownedLevel}}" data-dtype="Number" />
-          </div>
-        </div>
-      </div>
       <div class="description resizable-editor">
         {{editor content=data.description target="data.description" button=true
         owner=owner editable=editable}}
       </div>
-    </div>
   </section>
 </form>

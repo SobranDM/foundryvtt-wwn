@@ -1072,8 +1072,8 @@
   }
   .wwn.sheet.item .sheet-body .stats {
     flex: 0 0 80px;
-    border-right: 1px groove rgba(0, 0, 0, 0.2);
-    padding-right: 2px;
+    border: 1px groove rgba(0, 0, 0, 0.2);
+    padding: 2px;
     font-size: 13px;
   }
   .wwn.sheet.item .sheet-body .stats .form-group {
@@ -1083,6 +1083,8 @@
   .wwn.sheet.item .sheet-body .stats .form-group label {
     background: rgba(0, 0, 0, 0.1);
     padding: 0 4px;
+    white-space: nowrap;
+    text-align: center;
   }
   .wwn.sheet.item .sheet-body .stats .form-group input {
     border-bottom: none;
@@ -1093,22 +1095,26 @@
     background: #7a7971;
     margin: 4px 0;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type {
     text-align: center;
     padding: 2px;
+    padding-left: 8px;
     font-size: 15px;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type a {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type a {
     color: #969696;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type a.active, .wwn.sheet.item .sheet-body .stats .form-group.attack-type a :hover {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type a.active, .wwn.sheet.item .sheet-body .stats .form-group.attack-type a :hover {
     color: rgba(0, 0, 0, 0.9);
   }
   .wwn.sheet.item .sheet-body .stats .form-group {
     align-items: inherit;
+    min-width: 250px;
   }
   .wwn.sheet.item .sheet-body .stats .form-group label {
     line-height: 21px;
+    min-width: 145px;
+    display: inline-block;
   }
   .wwn.sheet.item .sheet-body .stats .form-group .form-fields {
     justify-content: space-evenly;
@@ -1116,6 +1122,8 @@
   }
   .wwn.sheet.item .sheet-body .stats .form-group .form-fields select {
     height: 24px;
+    white-space: nowrap;
+    display: inline-block;
   }
   .wwn.sheet.item .sheet-body .stats .block-input {
     display: flex;
@@ -1126,7 +1134,7 @@
     height: 18px;
   }
   .wwn.sheet.item .sheet-body .description .editor {
-    height: 370px;
+    height: 240px;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
     padding: 0 5px;

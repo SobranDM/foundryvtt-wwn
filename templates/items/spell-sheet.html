@@ -9,55 +9,59 @@
   </header>
   <section class="sheet-body">
     <div class="flexrow">
-      <div class="stats narrow">
+      <div class="stats">
         <div class="form-group">
           <label>{{localize 'WWN.spells.Level'}}</label>
           <div class="form-fields">
             <input type="text" name="data.lvl" value="{{data.lvl}}" data-dtype="Number" />
           </div>
         </div>
-        <div class="form-group block-input">
+        <div class="form-group">
           <label>{{localize 'WWN.spells.Class'}}</label>
           <div class="form-fields">
             <input type="text" name="data.class" value="{{data.class}}" data-dtype="String" />
           </div>
         </div>
-        <div class="form-group block-input">
+        <div class="form-group">
           <label>{{localize 'WWN.spells.Duration'}}</label>
           <div class="form-fields">
             <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" />
           </div>
         </div>
-        <div class="form-group block-input">
-          <label>{{localize 'WWN.spells.Range'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" />
+      </div>
+      <div class="flexrow">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Range'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" />
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label>{{localize 'WWN.spells.Save'}}</label>
-          <div class="form-fields">
-            <select name="data.save">
-              {{#select data.save}}
-              <option value=""></option>
-              {{#each config.saves as |save a|}}
-              <option value="{{a}}">{{save}}</option>
-              {{/each}}
-              {{/select}}
-            </select>
+          <div class="form-group">
+            <label>{{localize 'WWN.items.Roll'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
+            </div>
           </div>
-        </div>
-        <div class="form-group block-input">
-          <label>{{localize 'WWN.items.Roll'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Save'}}</label>
+            <div class="form-fields">
+              <select name="data.save">
+                {{#select data.save}}
+                <option value=""></option>
+                {{#each config.saves as |save a|}}
+                <option value="{{a}}">{{save}}</option>
+                {{/each}}
+                {{/select}}
+              </select>
+            </div>
           </div>
         </div>
       </div>
-      <div class="description">
-        {{editor content=data.description target="data.description" button=true
-        owner=owner editable=editable}}
-      </div>
+    </div>
+    <div class="description">
+      {{editor content=data.description target="data.description" button=true
+      owner=owner editable=editable}}
     </div>
   </section>
 </form>

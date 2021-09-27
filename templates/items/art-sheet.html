@@ -12,28 +12,31 @@
   <section class="sheet-body">
     <div class="flexrow">
       <div class="stats">
-        <div class="form-group block-input">
+        <div class="form-group">
           <label>{{localize 'WWN.items.Roll'}}</label>
           <div class="form-fields">
             <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
           </div>
         </div>
-        <div class="form-group block-input">
-          <label title={{localize 'WWN.spells.ArtSourceHint'}}>{{localize 'WWN.spells.ArtSource'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.source" value="{{data.source}}" placeholder="{{localize 'WWN.spells.HighMage'}}" />
-          </div>
-        </div>
         <div class="form-group">
-          <label title="{{localize 'WWN.spells.TimeHint'}}">{{localize
-            'WWN.spells.Time'}}</label>
+          <label title={{localize 'WWN.spells.ArtSourceHint' }}>{{localize 'WWN.spells.ArtSource'}}</label>
           <div class="form-fields">
-            <input type="text" name="data.time" value="{{data.time}}" />
+            <input type="text" name="data.source" value="{{data.source}}"
+              placeholder="{{localize 'WWN.spells.HighMage'}}" />
           </div>
         </div>
-        <div class="form-group block-input">
-          <div class="form-group block-input">
-            <label title={{localize 'WWN.spells.Save'}}>{{localize 'WWN.spells.Save'}}</label>
+      </div>
+      <div class="flexrow">
+        <div class="stats">
+          <div class="form-group">
+            <label title="{{localize 'WWN.spells.TimeHint'}}">{{localize
+              'WWN.spells.Time'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.time" value="{{data.time}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>
               <select name="data.save">
                 {{#select data.save}}
@@ -47,10 +50,10 @@
           </div>
         </div>
       </div>
-      <div class="description weapon-editor">
-        {{editor content=data.description target="data.description" button=true
-        owner=owner editable=editable}}
-      </div>
+    </div>
+    <div class="description weapon-editor">
+      {{editor content=data.description target="data.description" button=true
+      owner=owner editable=editable}}
     </div>
   </section>
 </form>

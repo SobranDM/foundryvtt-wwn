@@ -463,6 +463,7 @@
     "counter": "1d6",
     "BOI": false,
     "magic": "none",
+    "stealth": false,
     "subtle": false,
     "special": false,
     "type": "cunning"
