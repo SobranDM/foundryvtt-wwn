@@ -18,8 +18,11 @@
     * Passive Arts with no Effort expenditure have had their Time field cleared, to be compatible with the Effort spend feature.
     * Arts that function while Effort remains committed have had their Time field updated to "Active" to ensure consistency. Previously the terminology used here varied.
 * All shields and magic armor in the Compendium have been updated to support the new armor format.
+* Redesigned all item sheets (armor, weapons, spells, arts, etc) to make better use of space.
 ### Bug Fixes
 * Fixed saving throws not being rolled from the chat card for items and weapon attacks. (For real this time!)
+* Fixed encounter movement rate not displaying on party sheet.
+* Fixed monster encounter movement rates not calculating.
 ### Known Issues
 * As a result of the armor changes, the shields in the compendium have been changed, as have all magical armors. Magical armor will continue to function without issue--though they will not display anything in the magic field, unless you change them--shields, magical or not, will have to be edited or replaced. Sorry for the inconvenience.
 * Rewrote the individual initiative system to clear some bugs and support the Alert focus. This had the side effect of the PCs no longer being able to roll their initiative individually. Or rather, they can but it will simply be overwritten when combat begins. Sorry about that. If there is a great outcry, I will put in a workaround.

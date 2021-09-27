@@ -572,6 +572,8 @@ export class WwnActor extends Actor {
 
   computeEncumbrance() {
     if (this.data.type != "character") {
+      const data = this.data.data;
+      data.movement.exploration = data.movement.base * 3;
       return;
     }
     const data = this.data.data;
