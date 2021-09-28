@@ -1190,10 +1190,18 @@
     height: 18px;
   }
   .wwn.sheet.item .sheet-body .description .editor {
-    height: 240px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+    min-height: 100%;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
     padding: 0 5px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
   }
   
   .wwn.actor.monster {

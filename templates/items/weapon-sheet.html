@@ -39,6 +39,10 @@
     </div>
   </header>
   <section class="sheet-body">
+    <div class="description weapon-editor">
+      {{editor content=data.description target="data.description" button=true
+      owner=owner editable=editable}}
+    </div>
     <div class="flexrow">
       <div class="stats">
         <div class="form-group">
@@ -134,10 +138,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="description weapon-editor">
-      {{editor content=data.description target="data.description" button=true
-      owner=owner editable=editable}}
     </div>
   </section>
 </form>
