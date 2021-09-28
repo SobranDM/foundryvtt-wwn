@@ -855,7 +855,6 @@
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
     position: relative;
-    width: 100px;
     padding-right: 0px;
     margin-right: 0px;
   }
@@ -878,13 +877,13 @@
     flex: 0 0 15px;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column {
-    margin-left: 0px;
+    margin-left: -30px;
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group {
-    margin: 13px 10px 0 10px;
+    margin: 13px 10px 0 25px;
     padding: 10px 10px 0 10px;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes {
