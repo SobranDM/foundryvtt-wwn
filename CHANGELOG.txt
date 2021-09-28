@@ -12,6 +12,8 @@
     * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 + magic bonus (if any). No more fiddling with shield AC! Yay!
     * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
 ### Changes
+* Overhauled the PC sheet. Now wider and (hopefully) makes better use of space.
+* Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin.
 * Removed the placeholder text for mage classes in the tweaks menu, as it was confusing some users.
 * The party select button now only shows actors that are currently in the party. The tooltip has been renamed to "Remove Characters" to reflect its new function. Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.
 * Arts in the Compendium have been updated:

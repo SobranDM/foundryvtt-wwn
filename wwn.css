@@ -1252,6 +1252,9 @@
     flex-direction: column;
     height: 100%;
   }
+  .wwn.actor.monster .sheet-body .attributes-tab .attribute-group .attributes .attribute.saving-throw .attribute-name {
+    width: 80px;
+  }
   .wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attributes {
     justify-content: space-between;
   }
