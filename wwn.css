@@ -337,11 +337,11 @@
   .wwn.sheet.actor .sheet-body .inventory .field-longer {
     text-indent: 8px;
     text-align: left;
-    flex-basis: 90px;
+    flex-basis: 80px;
     font-size: 12px;
   }
   .wwn.sheet.actor .sheet-body .inventory .field-long {
-    flex-basis: 65px;
+    flex-basis: 80px;
     flex-grow: 0;
     text-align: center;
     font-size: 12px;

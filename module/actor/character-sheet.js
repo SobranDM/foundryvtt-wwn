@@ -21,7 +21,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 720,
+      width: 730,
       height: 560,
       resizable: false,
       tabs: [
