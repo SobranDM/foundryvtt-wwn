@@ -163,6 +163,11 @@ export class WwnActorSheet extends ActorSheet {
       actorObject.rollHitDice({ event: event });
     });
 
+    html.find(".morale-check a").click((ev) => {
+      let actorObject = this.actor;
+      actorObject.rollMorale({ event: event });
+    });
+
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 

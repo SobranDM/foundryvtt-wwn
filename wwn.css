@@ -164,31 +164,38 @@
   }
   .wwn.sheet.actor .sheet-body .attribute-group {
     padding-top: 20px;
-    padding-left: 10px;
+    padding-left: 5px;
+    padding-right: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group {
-    margin-left: -10px;
+    margin-left: 0px;
+    margin-right: 25px;
+    padding-right: 0px;
+    width: 310px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes {
     display: inline-block;
-    padding-left: -20px;
-    margin-left: 0 0 0 0;
+    padding-left: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute {
     display: flex;
     flex-direction: row;
+    margin-bottom: 8px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute {
     display: flex;
     flex-direction: row;
-    margin: 0 0 0 0;
-    padding-left: -20px;
+    padding-left: 0px;
     height: 30px;
     line-height: 25px;
+    width: 170px;
+    margin-bottom: 0px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name {
     width: 40px;
@@ -196,7 +203,7 @@
     line-height: 35px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-name {
-    width: 80px;
+    width: 100px;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     line-height: 25px;
@@ -204,23 +211,13 @@
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name a {
     margin: auto;
   }
-  .wwn.sheet.actor .sheet-body .attribute-group.saving-throws {
-    margin-right: 8px;
-  }
-  .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-name {
-    line-height: 16px;
-    width: 80px;
-    padding-top: 8px;
-  }
-  .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-value {
-    line-height: 29px;
-  }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value {
     width: 45px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-value {
     line-height: 25px;
-    padding: 0 0 0 0;
+    padding: 0 10px 0 10px;
+    width: 40px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value input {
     padding: 0;
@@ -858,7 +855,9 @@
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
     position: relative;
-    max-width: 140px;
+    width: 100px;
+    padding-right: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
     position: absolute;
@@ -870,13 +869,35 @@
     justify-content: space-evenly;
     flex-direction: column;
     padding-top: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .resources .attribute {
-    flex: 0 0 55px;
+    flex: 0 0 15px;
   }
-  .wwn.sheet.actor.character .sheet-body .resources .attribute.attribute-secondaries {
-    flex: 0 0 40px;
+  .wwn.sheet.actor.character .sheet-body .middle-column {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group {
+    margin: 13px 10px 0 10px;
+    padding: 10px 10px 0 10px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute {
     margin-bottom: 5px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute-name.box-title {
+    width: 80px;
+    line-height: 30px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
     margin: 2px;
@@ -1216,9 +1237,6 @@
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
     flex: 0 0 85px;
-  }
-  .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.saving-throw {
-    flex: 0 0 40px;
   }
   .wwn.actor.monster .attributes .attribute.health {
     position: relative;

@@ -4,21 +4,30 @@
     <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
   </h1>
   <ul class="summary flexrow">
-    <li class="flex2">
+    <li class="flex3">
       <input type="text" name="data.details.class" value="{{data.details.class}}" data-dtype="String"
         />
       <label>{{localize 'WWN.details.class'}}</label>
     </li>
-    <li class="flex2">
+    <li class="flex3">
       <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" data-dtype="String"
          />
       <label>{{localize 'WWN.details.alignment'}}</label>
     </li>
+    {{#if data.retainer.enabled}}
+    <li class="check-field flex1" data-stat="lr">
+      <div class="check morale-check" title="{{localize 'WWN.roll.morale'}}"><a><i class="fas fa-dice"></i></a></div>
+      <input name="data.retainer.loyalty" type="number" value="{{data.retainer.loyalty}}" placeholder="0"
+        data-dtype="Number" />
+      <label>{{localize 'WWN.Loyalty'}}</label>
+    </li>
+    {{else}}
     <li class="flex1">
       <input type="number" name="data.details.renown.value" value="{{data.details.renown.value}}" data-dtype="Number"
          />
       <label>{{localize 'WWN.details.renown.short'}}</label>
     </li>
+    {{/if}}
   </ul>
   <ul class="summary flexrow">
     {{#if data.retainer.enabled}}

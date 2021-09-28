@@ -21,8 +21,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 700,
-      height: 500,
+      width: 725,
+      height: 650,
       resizable: true,
       tabs: [
         {
@@ -194,10 +194,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       let score = element.parentElement.parentElement.dataset.score;
       let stat = element.parentElement.parentElement.dataset.stat;
       if (!score) {
-        if (stat == "lr") {
-          actorObject.rollLoyalty(score, { event: event });
-        }
-      } else {
         actorObject.rollCheck(score, { event: event });
       }
     });

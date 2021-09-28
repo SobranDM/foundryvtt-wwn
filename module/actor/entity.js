@@ -327,7 +327,7 @@ export class WwnActor extends Actor {
   }
 
   rollSkills(expl, options = {}) {
-    let selectedStat = this.data.data.score;
+    let selectedStat = this.data.data.skills[expl].stat;
     let combatSkill = false;
     const poly = this.data.items.filter((p) => p.name == "Polymath");
     const label = game.i18n.localize(`WWN.skills.${expl}`);

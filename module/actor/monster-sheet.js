@@ -201,11 +201,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find(".morale-check a").click((ev) => {
-      let actorObject = this.actor;
-      actorObject.rollMorale({ event: event });
-    });
-
     html.find(".instinct-check a").click((ev) => {
       let actorObject = this.actor;
       actorObject.rollInstinct({ event: event });
