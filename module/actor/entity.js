@@ -679,6 +679,9 @@ export class WwnActor extends Actor {
         data.movement.exploration = data.movement.base * 3;
         data.movement.overland = data.movement.base;
       }
+    } else {
+      data.movement.exploration = data.movement.base * 3;
+      data.movement.overland = data.movement.exploration / 5;
     }
   }
 

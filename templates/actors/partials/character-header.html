@@ -4,37 +4,42 @@
     <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
   </h1>
   <ul class="summary flexrow">
+    <li class="flex2">
+      <input type="text" name="data.details.class" value="{{data.details.class}}" data-dtype="String"
+        />
+      <label>{{localize 'WWN.details.class'}}</label>
+    </li>
+    <li class="flex2">
+      <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" data-dtype="String"
+         />
+      <label>{{localize 'WWN.details.alignment'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" name="data.details.renown.value" value="{{data.details.renown.value}}" data-dtype="Number"
+         />
+      <label>{{localize 'WWN.details.renown.short'}}</label>
+    </li>
+  </ul>
+  <ul class="summary flexrow">
     {{#if data.retainer.enabled}}
-    <li>
+    <li class="flex3">
       <input type="text" name="data.retainer.wage" value="{{data.retainer.wage}}" data-dtype="String"
          />
       <label>{{localize 'WWN.RetainerWage'}}</label>
     </li>
     {{else}}
-    <li>
+    <li class="flex2">
       <input type="text" name="data.details.background" value="{{data.details.background}}" data-dtype="String"
          />
       <label>{{localize 'WWN.details.background'}}</label>
     </li>
     {{/if}}
-    <li>
-      <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" data-dtype="String"
-         />
-      <label>{{localize 'WWN.details.alignment'}}</label>
-    </li>
-  </ul>
-  <ul class="summary flexrow">
-    <li class="flex3">
-      <input type="text" name="data.details.class" value="{{data.details.class}}" data-dtype="String"
-        />
-      <label>{{localize 'WWN.details.class'}}</label>
-    </li>
     <li class="{{#if (gt data.details.xp.value data.details.xp.next)}}notify{{/if}}">
       <input type="number" name="data.details.level" value="{{data.details.level}}" data-dtype="Number"
          />
       <label>{{localize 'WWN.details.level'}}</label>
     </li>
-    <li class="flex2">
+    <li>
       <input type="number" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number"
          />
       <label>{{localize 'WWN.details.experience.base'}}</label>
@@ -42,10 +47,16 @@
       <span class="xp-bonus">+{{data.details.xp.bonus}}%</span>
       {{/if}}
     </li>
-    <li class="flex2">
-      <input type="number" name="data.details.renown.value" value="{{data.details.renown.value}}" data-dtype="Number"
-         />
-      <label>{{localize 'WWN.details.renown.short'}}</label>
+    <li>
+      <input type="number" name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0" data-dtype="Number" />
+      <label>{{localize 'WWN.AB'}}</label>
     </li>
+    <li class="check-field">
+      <div>
+        <div class="check hd-roll" title="{{localize 'WWN.HitDice'}}"><a><i class="fas fa-dice"></i></a></div>
+        <input type="text" name="data.hp.hd" value="{{data.hp.hd}}" title="{{localize 'WWN.HitDiceFormula'}}" />
+        <label title="{{localize 'WWN.HitDiceFormula'}}">{{localize 'WWN.HitDiceLong'}}</label>
+      </div>
+  </li>
   </ul>
 </section>

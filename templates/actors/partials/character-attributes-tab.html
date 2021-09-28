@@ -92,6 +92,19 @@
                 </div>
             </li>
             {{/if}}
+            <li class="attribute ability-score" data-stat="mov">
+                <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.long'}}">
+                    <a>{{localize 'WWN.movement.short'}}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.movement.base" title="{{localize 'WWN.movement.round'}}" type="number" value="{{data.movement.base}}" placeholder="30" data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
+                </div>
+                {{#if config.showMovement}}
+                <div class="attribute-value attribute-mod">
+                    <input name="data.movement.exploration" title="{{localize 'WWN.movement.turn'}}" type="number" value="{{data.movement.exploration}}" data-dtype="Number" disabled />
+                </div>
+                {{/if}}
+            </li>
         </ul>
     </div>
     {{!-- Resource Tracking --}}
@@ -113,8 +126,6 @@
                 <div class="strain-empty" style="height:{{reverseCounter false data.details.strain.value data.details.strain.max}}%"></div>
                 <div class="strain-full" style="height:{{reverseCounter true data.details.strain.value data.details.strain.max}}%"></div>
             </div>
-        </div>
-        <div class="flexrow">
             <div class="health armor-class">
                 <div class="health-value health-top" title="{{localize 'WWN.ArmorClass'}}">{{data.aac.value}}</div>
                 <div class="health-value health-bottom" title="{{localize 'WWN.ArmorClassNaked'}}">
@@ -125,7 +136,7 @@
         </div>
         <div class="flexrow">
             <ul class="attributes flexrow">
-                <li class="attribute hit-dice">
+                <!-- <li class="attribute hit-dice">
                     <h4 class="attribute-name box-title" title="{{ localize 'WWN.HitDice' }}">
                         <a>{{ localize "WWN.HitDiceShort" }}</a>
                     </h4>
@@ -133,64 +144,12 @@
                         <input name="data.hp.hd" type="text" value="{{data.hp.hd}}" placeholder=""
                             data-dtype="String" />
                     </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.Initiative' }}">
-                        {{ localize "WWN.InitiativeShort" }}</h4>
-                    <div class="attribute-value"
-                        title="{{localize 'WWN.scores.dex.long'}}({{data.scores.dex.init}}) + {{localize 'WWN.Modifier'}}({{data.initiative.mod}})">
-                        {{add data.scores.dex.init data.initiative.mod}}
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.AB' }}">{{ localize "WWN.ABShort"}}
-                    </h4>
-                    <div class="flexrow">
-                        <div class="attribute-value">
-                            <input name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0"
-                                data-dtype="Number" />
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="flexrow">
-            <ul class="attributes flexrow">
-                <li class="attribute attribute-secondaries">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.movement.encounter.long'}}">
-                        {{localize 'WWN.movement.encounter.short'}}</h4>
-                    <div class="flexrow">
-                        <div class="attribute-value">
-                            <input name="data.movement.base" type="number" value="{{data.movement.base}}" placeholder="0"
-                            data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
-                        </div>
-                    </div>
-                </li>
-                {{#if config.showMovement}}
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.exploration.long' }}">
-                        {{ localize "WWN.movement.exploration.short" }}</h4>
-                    <div class="attribute-value flexrow">
-                        <input name="data.movement.exploration" type="number" value="{{data.movement.exploration}}" placeholder="0"
-                            data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
-                    </div>
-                </li>
-                <li class="attribute attribute-secondaries">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.movement.overland.long'}}">
-                        {{localize 'WWN.movement.overland.short'}}</h4>
-                    <div class="flexrow">
-                        <div class="attribute-value">
-                            <input name="data.movement.overland" type="number" value="{{data.movement.overland}}" placeholder="0"
-                            data-dtype="Number" {{#if data.config.movementAuto}}disabled{{/if}} />
-                        </div>
-                    </div>
-                </li>
-                {{/if}}
+                </li> -->
             </ul>
         </div>
     </div>
     {{!-- Saving throws --}}
-    <div class="attribute-group">
+    <div class="attribute-group saving-throws">
         <ul class="attributes">
             <li class="attribute saving-throw" data-save="evasion">
                 <h4 class="attribute-name box-title">
@@ -219,6 +178,99 @@
                 <div class="attribute-value">
                     <input name="data.saves.luck.value" type="number" value="{{data.saves.luck.value}}"
                         placeholder="0" data-dtype="Number" disabled />
+            </li>
+        </ul>
+    </div>
+    <div class="attribute-group skill-group">
+        <ul class="attributes">
+            <li class="attribute skills" data-skills="administer">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.administer">
+                    <a>{{ localize "WWN.skills.administer" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.administer.value" type="number" value="{{data.skills.administer.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="connect">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.connect">
+                    <a>{{ localize "WWN.skills.connect" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.connect.value" type="number" value="{{data.skills.connect.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="convince">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.convince">
+                    <a>{{ localize "WWN.skills.convince" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.convince.value" type="number" value="{{data.skills.convince.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="craft">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.craft">
+                    <a>{{ localize "WWN.skills.craft" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.craft.value" type="number" value="{{data.skills.craft.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="exert">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.exert">
+                    <a>{{ localize "WWN.skills.exert" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.exert.value" type="number" value="{{data.skills.exert.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="heal">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.heal">
+                    <a>{{ localize "WWN.skills.heal" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.heal.value" type="number" value="{{data.skills.heal.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+            <li class="attribute skills" data-skills="know">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.know">
+                    <a>{{ localize "WWN.skills.know" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.know.value" type="number" value="{{data.skills.know.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div class="attribute-group skill-group">
+        <ul class="attributes">
+            <li class="attribute skills" data-skills="lead">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.lead">
+                    <a>{{ localize "WWN.skills.lead" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.lead.value" type="number" value="{{data.skills.lead.value}}"
+                    data-dtype="Number" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="attribute-group skill-group">
+        <ul class="attributes">
+            <li class="attribute skills" data-skills="sail">
+                <h4 class="attribute-name box-title" title="WWN.skills.desc.sail">
+                    <a>{{ localize "WWN.skills.sail" }}</a>
+                </h4>
+                <div class="attribute-value">
+                    <input name="data.skills.sail.value" type="number" value="{{data.skills.sail.value}}"
+                    data-dtype="Number" />
+                </div>
             </li>
         </ul>
     </div>

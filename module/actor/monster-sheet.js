@@ -21,7 +21,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       template: "systems/wwn/templates/actors/monster-sheet.html",
       width: 450,
       height: 560,
-      resizable: true,
+      resizable: false,
       tabs: [
         {
           navSelector: ".tabs",

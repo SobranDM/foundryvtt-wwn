@@ -158,7 +158,7 @@ export class WwnActorSheet extends ActorSheet {
       .click((ev) => ev.target.select())
       .change(this._onArtTimeChange.bind(this));
     
-    html.find(".hit-dice .attribute-name a").click((ev) => {
+    html.find(".check-field .check.hd-roll").click((ev) => {
       let actorObject = this.actor;
       actorObject.rollHitDice({ event: event });
     });
