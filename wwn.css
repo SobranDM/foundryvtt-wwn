@@ -225,6 +225,9 @@
   .wwn.sheet.actor .sheet-body .inventory {
     overflow: auto;
   }
+  .wwn.sheet.actor .sheet-body .inventory .flexrow.encumbrance {
+  
+  }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
   }
@@ -413,7 +416,7 @@
     display: flex;
     flex-shrink: 0;
   }
-  .wwn.sheet.actor .flexrow .readied-header {
+  .wwn.sheet.actor .flexrow .currency-header {
     color: whitesmoke;
     padding: 2px;
     padding-top: 4px;
@@ -425,7 +428,7 @@
     text-align: center;
     vertical-align: middle;
   }
-  .wwn.sheet.actor .flexrow .readied {
+  .wwn.sheet.actor .flexrow .currency {
     position: relative;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -436,6 +439,37 @@
     display: flex;
     width: 10px;
     vertical-align: middle;
+  }
+  .wwn.sheet.actor .inventory-top.flexrow .flexrow.readied-group {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor .inventory-top.flexrow .flexrow.readied-group .readied-subgroup {
+    flex-direction: row;
+  }
+  .wwn.sheet.actor .flexrow .readied-header {
+    color: whitesmoke;
+    padding: 2px;
+    margin: 2px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    background: url("/systems/wwn/assets/back.png");
+    text-align: center;
+    vertical-align: middle;
+    height: 26px;
+  }
+  .wwn.sheet.actor .flexrow .readied {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 1px solid #000000;
+    box-shadow: 0 0 2px #7a7971;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    display: flex;
+    width: 10px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
   }
   .wwn.sheet.actor .flexrow .unspentPoints {
     display: flex;

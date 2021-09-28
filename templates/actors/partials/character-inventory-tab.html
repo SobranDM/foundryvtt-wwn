@@ -1,54 +1,73 @@
 <section class="inventory">
-  <div class="flexrow">
-    <div class="item-titles flexrow">
-      <label>{{localize 'WWN.items.Currency'}}</label>
+  <div class="inventory-top flexrow">
+    <div class="flex2">
+    <div class="flexrow">
+      <div class="item-titles flexrow">
+        <label>{{localize 'WWN.items.Currency'}}</label>
+      </div>
     </div>
-  </div>
-  <div class="flexrow">
-    <label class="readied-header" title="{{localize "WWN.items.CP.long" }}">{{localize 'WWN.items.CP.short'}}</label>
-    <input class="readied" name="data.currency.cp" type="number" value="{{data.currency.cp}}" data-dtype="Number" placeholder="0" />
-    <label class="readied-header" title="{{localize "WWN.items.SP.long" }}">{{localize 'WWN.items.SP.short'}}</label>
-    <input class="readied" name="data.currency.sp" type="number" value="{{data.currency.sp}}" data-dtype="Number" placeholder="0" />
-    {{#if (eq config.currencyTypes "currencybx")}}
-    <label class="readied-header" title="{{localize "WWN.items.EP.long" }}">{{localize 'WWN.items.EP.short'}}</label>
-    <input class="readied" name="data.currency.ep" type="number" value="{{data.currency.ep}}" data-dtype="Number" placeholder="0" />
-    {{/if}}
-    <label class="readied-header" title="{{localize "WWN.items.GP.long" }}">{{localize 'WWN.items.GP.short'}}</label>
-    <input class="readied" name="data.currency.gp" type="number" value="{{data.currency.gp}}" data-dtype="Number" placeholder="0" />
-    {{#if (eq config.currencyTypes "currencybx")}}
-    <label class="readied-header" title="{{localize "WWN.items.PP.long" }}">{{localize 'WWN.items.PP.short'}}</label>
-    <input class="readied" name="data.currency.pp" type="number" value="{{data.currency.pp}}" data-dtype="Number" placeholder="0" />
-    {{/if}}
-  </div>
-  <div class="flexrow">
-    <label class="readied-header" title="{{localize "WWN.items.bank.long" }}">{{localize 'WWN.items.bank.short'}}</label>
-    <input class="readied" name="data.currency.bank" type="number" value="{{data.currency.bank}}" data-dtype="Number" placeholder="0" />
-    <label class="readied-header" title="{{localize "WWN.items.TreasureSP" }}">{{localize 'WWN.items.Treasure'}}</label>
-    <input class="readied" name="data.treasure" type="number" value="{{data.treasure}}" data-dtype="Number" disabled />
-    <label class="readied-header" title="{{localize "WWN.items.total.long" }}">{{localize 'WWN.items.total.short'}}</label>
-    <input class="readied" name="data.currency.total" type="number" value="{{data.currency.total}}" data-dtype="Number" disabled />
-  </div>
-</section>
-<section class="inventory">
-  <div class="flexrow">
-    <div class="item-titles flexrow">
-      <label>{{localize 'WWN.Encumbrance'}}</label>
+    <div class="flexrow">
+      <label class="currency-header" title="{{localize " WWN.items.CP.long" }}">{{localize 'WWN.items.CP.short'}}</label>
+      <input class="currency" name="data.currency.cp" type="number" value="{{data.currency.cp}}" data-dtype="Number"
+        placeholder="0" />
+      <label class="currency-header" title="{{localize " WWN.items.SP.long" }}">{{localize 'WWN.items.SP.short'}}</label>
+      <input class="currency" name="data.currency.sp" type="number" value="{{data.currency.sp}}" data-dtype="Number"
+        placeholder="0" />
+      {{#if (eq config.currencyTypes "currencybx")}}
+      <label class="currency-header" title="{{localize " WWN.items.EP.long" }}">{{localize 'WWN.items.EP.short'}}</label>
+      <input class="currency" name="data.currency.ep" type="number" value="{{data.currency.ep}}" data-dtype="Number"
+        placeholder="0" />
+      {{/if}}
+      <label class="currency-header" title="{{localize " WWN.items.GP.long" }}">{{localize 'WWN.items.GP.short'}}</label>
+      <input class="currency" name="data.currency.gp" type="number" value="{{data.currency.gp}}" data-dtype="Number"
+        placeholder="0" />
+      {{#if (eq config.currencyTypes "currencybx")}}
+      <label class="currency-header" title="{{localize " WWN.items.PP.long" }}">{{localize 'WWN.items.PP.short'}}</label>
+      <input class="currency" name="data.currency.pp" type="number" value="{{data.currency.pp}}" data-dtype="Number"
+        placeholder="0" />
+      {{/if}}
     </div>
-  </div>
-  <div class="flexrow">
-    <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
-    <div class="readied">
-      <input name="data.encumbrance.readied.value" type="number" value="{{data.encumbrance.readied.value}}"
-        data-dtype="Number" disabled />/
-      <input name="data.encumbrance.readied.max" type="number" value="{{data.encumbrance.readied.max}}"
+    <div class="flexrow">
+      <label class="currency-header" title="{{localize " WWN.items.bank.long" }}">{{localize
+        'WWN.items.bank.short'}}</label>
+      <input class="currency" name="data.currency.bank" type="number" value="{{data.currency.bank}}" data-dtype="Number"
+        placeholder="0" />
+      <label class="currency-header" title="{{localize " WWN.items.TreasureSP" }}">{{localize
+        'WWN.items.Treasure'}}</label>
+      <input class="currency" name="data.treasure" type="number" value="{{data.treasure}}" data-dtype="Number"
+        disabled />
+      <label class="currency-header" title="{{localize " WWN.items.total.long" }}">{{localize
+        'WWN.items.total.short'}}</label>
+      <input class="currency" name="data.currency.total" type="number" value="{{data.currency.total}}"
         data-dtype="Number" disabled />
     </div>
-    <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
-    <div class=readied>
-      <input name="data.encumbrance.stowed.value" type="number" value="{{data.encumbrance.stowed.value}}"
-        data-dtype="Number" disabled />/
-      <input name="data.encumbrance.stowed.max" type="number" value="{{data.encumbrance.stowed.max}}"
-        data-dtype="Number" disabled />
+    </div>
+    <div class="flex1">
+      <div class="flexrow">
+        <div class="item-titles flexrow">
+          <label>{{localize 'WWN.Encumbrance'}}</label>
+        </div>
+      </div>
+      <div class="flexrow readied-group">
+        <div class="flexrow readed-subgroup">
+        <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
+        <div class="readied">
+          <input name="data.encumbrance.readied.value" type="number" value="{{data.encumbrance.readied.value}}"
+            data-dtype="Number" disabled />/
+          <input name="data.encumbrance.readied.max" type="number" value="{{data.encumbrance.readied.max}}"
+            data-dtype="Number" disabled />
+        </div>
+      </div>
+      <div class="flexrow readied-subgroup">
+        <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
+        <div class=readied>
+          <input name="data.encumbrance.stowed.value" type="number" value="{{data.encumbrance.stowed.value}}"
+            data-dtype="Number" disabled />/
+          <input name="data.encumbrance.stowed.max" type="number" value="{{data.encumbrance.stowed.max}}"
+            data-dtype="Number" disabled />
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -58,7 +77,7 @@
       <div class="item-caret"><i class="fas fa-caret-down"></i></div>
       <div class="item-name">{{localize "WWN.items.Weapons"}}</div>
       <div class="icon-row">{{localize "WWN.items.Qualities"}}</div>
-      <div class="field-short" title="{{localize "WWN.items.Shock"}}"><i class="fas fa-bolt"></i></div>
+      <div class="field-short" title="{{localize " WWN.items.Shock"}}"><i class="fas fa-bolt"></i></div>
       <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
       <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
       <div class="item-controls">
