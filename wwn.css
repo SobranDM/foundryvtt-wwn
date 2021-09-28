@@ -389,10 +389,29 @@
     text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9, 1px 1px 5px #d8d6c9;
   }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-titles {
-    line-height: 24px;
-  }
+    line-height: 13px;
+    }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-controls {
     flex-basis: 65px;
+  }
+  .wwn.sheet.actor .inventory.spells .spells-parent .item-list.spells-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry {
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow {
+    flex-basis: 100%;
+    flex-grow: 2;
+    flex-shrink: 1;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow.expanded {
+    display: flex;
+    flex-shrink: 0;
   }
   .wwn.sheet.actor .flexrow .readied-header {
     color: whitesmoke;
