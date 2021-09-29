@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "monster"],
+    "types": ["character", "monster", "faction"],
     "templates": {
       "common": {
         "retainer": {
@@ -360,6 +360,26 @@
         "hd": "1d8",
         "value": 4,
         "max": 4
+      }
+    },
+    "faction": {
+      "templates": [],
+      "hp": {
+        "value": 3,
+        "max": 3
+      },
+      "goal": {
+        "active": "",
+        "progress": ""
+      },
+      "xp": 0,
+      "tags": [],
+      "attributes": {
+        "cunning": 1,
+        "force": 1,
+        "wealth": 1,
+        "magic": "None",
+        "treasure": 0
       }
     }
   },

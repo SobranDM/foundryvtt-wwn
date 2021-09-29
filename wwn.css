@@ -496,21 +496,10 @@
     height: 300px;
     padding: 4px;
   }
-  .wwn.sheet.actor .sheet-body .focus-desc label {
-    color: whitesmoke;
-    background: url("/systems/wwn/assets/back.png");
-    line-height: 12px;
-    height: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 4px;
-    display: flex;
-  }
   .wwn.roll-dialog .roll-details {
     font-weight: bold;
     text-align: center;
   }
-  
   .wwn.dialog.creator .attribute-list .form-fields {
     flex: 0 0 50px;
   }
@@ -985,12 +974,6 @@
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
     flex: 0 0 20px;
-  }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol {
-    height: 100px;
-    overflow: auto;
-    list-style: none;
-    padding: 5px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li {
     margin: 0;

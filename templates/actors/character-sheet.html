@@ -9,12 +9,6 @@
     <a class="item" data-tab="attributes">
       {{localize "WWN.category.attributes"}}
     </a>
-    <!-- <a class="item" data-tab="skills">
-      {{localize "WWN.category.skills"}}
-    </a> -->
-    <a class="item" data-tab="foci">
-      {{localize "WWN.category.foci"}}
-    </a>
     {{#if data.spells.enabled}}
     <a class="item" data-tab="spells">
       {{localize "WWN.category.spells"}}
@@ -32,9 +26,6 @@
     {{! Attributes Tab }}
     <div class="tab" data-group="primary" data-tab="attributes">
       {{> "systems/wwn/templates/actors/partials/character-attributes-tab.html"}}
-    </div>
-    <div class="tab" data-group="primary" data-tab="foci">
-      {{> "systems/wwn/templates/actors/partials/character-foci-tab.html"}}
     </div>
     {{#if data.spells.enabled}}
     <div class="tab" data-group="primary" data-tab="spells">

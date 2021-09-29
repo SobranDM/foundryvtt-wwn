@@ -191,7 +191,7 @@ export class WwnActorSheet extends ActorSheet {
   }
 
   // Override to set resizable initial size
-  async _renderInner(...args) {
+  /* async _renderInner(...args) {
     const html = await super._renderInner(...args);
     this.form = html[0];
 
@@ -200,12 +200,15 @@ export class WwnActorSheet extends ActorSheet {
     if (resizable.length == 0) {
       return;
     }
+    if (character) {
+      return;
+    }
     resizable.each((_, el) => {
       let heightDelta = this.position.height - this.options.height;
       el.style.height = `${heightDelta + parseInt(el.dataset.baseSize)}px`;
     });
     return html;
-  }
+  } */
 
   async _onResize(event) {
     super._onResize(event);
