@@ -18,6 +18,7 @@ export class WwnActor extends Actor {
     this.computeEffort();
     this.computeSaves();
     this.computeTotalSP();
+    this.setXP();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -568,6 +569,31 @@ export class WwnActor extends Actor {
       }
     }
     return output;
+  }
+
+  setXP() {
+    if (this.data.type != "character") {
+      return;
+    }
+    const data = this.data.data;
+    let xpRate = [];
+    let level = data.details.level - 1;
+
+    // Retrieve XP Settings
+    switch (game.settings.get("wwn", "xpConfig")) {
+      case "xpSlow":
+        xpRate = config.xpSlow;
+        break;
+      case "xpFast":
+        xpRate = config.xpFast;
+        break;
+      case "xpCustom":
+        game.settings.get("wwn", "xpCustomList");
+        break;
+    }
+
+    // Set character's XP to level
+    data.xp.next = xpRate[level];
   }
 
   computeEncumbrance() {
