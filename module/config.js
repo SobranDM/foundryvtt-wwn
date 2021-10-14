@@ -146,28 +146,6 @@ export const WWN = {
     medium: "WWN.asset.magicMedium",
     high: "WWN.asset.magicHigh",
   },
-  xpSlow: [
-    6,
-    15,
-    24,
-    36,
-    51,
-    69,
-    87,
-    105,
-    139
-  ],
-  xpFast: [
-    3,
-    6,
-    12,
-    18,
-    27,
-    39,
-    54,
-    72,
-    93
-  ],
   monster_saves: {
     0: {
       label: "Normal Human",

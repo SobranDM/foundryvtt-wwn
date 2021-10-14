@@ -11,6 +11,7 @@
 * All armor now possess separate base AC and magic bonus fields. This accomplishes a couple things:
     * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 + magic bonus (if any). No more fiddling with shield AC! Yay!
     * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
+* Experience to next level is now displayed next to current experience. This amount scales based on what is entered in System Settings. It supports the slow and fast XP tracks from WWN, as well as a custom track. The custom track defaults to the B/X Fighter progression.
 ### Changes
 * Overhauled the PC sheet. Now wider and (hopefully) makes better use of space. Foci/Abilities tab has been moved to the Notes tab, which has been renamed "Details". Skills now located on front page. Each skill has its own attribute selection, making skill use much faster, particularly in games that typically use the same attribute for a given skill each time.
 * Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin.

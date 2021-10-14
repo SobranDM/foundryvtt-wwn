@@ -49,12 +49,15 @@
       <label>{{localize 'WWN.details.level'}}</label>
     </li>
     <li>
-      <input type="number" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number"
-         />
+      <input type="number" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number" />
       <label>{{localize 'WWN.details.experience.base'}}</label>
       {{#if data.details.xp.bonus}}
       <span class="xp-bonus">+{{data.details.xp.bonus}}%</span>
       {{/if}}
+    </li>
+    <li>
+      <input type="number" name="data.details.xp.next" value="{{data.details.xp.next}}" data-dtype="Number" disabled />
+      <label>{{localize 'WWN.details.experience.next'}}</label>
     </li>
     <li>
       <input type="number" name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0" data-dtype="Number" />
