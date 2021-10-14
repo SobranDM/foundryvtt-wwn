@@ -5,7 +5,6 @@
       "common": {
         "retainer": {
           "enabled": false,
-          "morale": 0,
           "wage": ""
         },
         "ac": {
@@ -116,6 +115,7 @@
         "class": "",
         "background": "",
         "alignment": "",
+        "morale": 0,
         "level": 1,
         "xp": {
           "share": 100,
