@@ -90,7 +90,7 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 365px;
+    top: 442px;
     right: -179px;
     width: 340px;
     border-top: none;
@@ -172,11 +172,13 @@
     margin-left: 0px;
     margin-right: 25px;
     padding-right: 0px;
+    margin-bottom: 0px;
     width: 310px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes {
     display: inline-block;
     flex-direction: column;
+    margin-bottom: -10px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes {
     display: inline-block;
@@ -186,16 +188,26 @@
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute {
     display: flex;
     flex-direction: row;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute {
     display: flex;
     flex-direction: row;
     padding-left: 0px;
     height: 30px;
-    line-height: 25px;
+    line-height: 30px;
     width: 170px;
     margin-bottom: 0px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills {
+    height: 32px;
+    margin-bottom: 4px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills .attribute-value.unspent {
+    padding-left: 23px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills select {
+    height: 30px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name {
     width: 40px;
@@ -224,6 +236,8 @@
   }
   .wwn.sheet.actor .sheet-body .inventory {
     overflow: auto;
+    padding: 20 10 0 10;
+    padding-top: 10px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
@@ -464,6 +478,9 @@
     width: 10px;
     vertical-align: middle;
     height: 30px;
+  }
+  .wwn.sheet.actor .inventory .inventory-all {
+    padding: 10px;
   }
   .wwn.sheet.actor .inventory .inventory-all .inventory-right .item-titles {
     flex-grow: 0;
@@ -882,7 +899,8 @@
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab {
     justify-content: space-between;
-    height: 100%;
+    height: 95%;
+    padding-top: 10px;
   }
   #selectAttribute {
     padding: 0px;
@@ -915,6 +933,7 @@
     position: relative;
     padding-right: 0px;
     margin-right: 0px;
+    padding-bottom: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
     position: absolute;
@@ -940,8 +959,14 @@
     padding-right: 0px;
     padding-left: 0px;
   }
+  .wwn.sheet.actor.character .sheet-body .middle-column .resources .health-bottom {
+    margin-top: 20px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .resources .health.armor-class {
+    margin-top: 20px;
+  }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group {
-    margin: 13px 10px 0 25px;
+    margin: 5px 10px 0 25px;
     padding: 10px 10px 0 10px;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes {
@@ -950,11 +975,19 @@
     flex-direction: column;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute {
-    margin-bottom: 5px;
+    margin-bottom: 14px;
   }
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute-name.box-title {
     width: 80px;
-    line-height: 30px;
+    line-height: 35px;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab {
+    padding: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory {
+    padding: 10px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
     margin: 2px;
@@ -989,16 +1022,31 @@
     margin: 2px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
-    height: 110px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 90px;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
+    min-height:120px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor .tox .tox-tbtn {
     height: 24px;
   }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory.notes {
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes {
     margin: 2px;
   }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory.notes .editor {
-    height: 150px;
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor-content {
+    min-height:120px;
   }
   .wwn.sheet.actor.character .sheet-body .health {
     height: 70px;
@@ -1297,6 +1345,7 @@
     justify-content: space-around;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 0px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attribute-group .attributes .attribute.saving-throw .attribute-name {
     width: 80px;

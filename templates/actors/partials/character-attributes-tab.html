@@ -9,7 +9,7 @@
                     class="fas fa-dice blinking"></i></a>
             {{/unless}}
         </div>
-        <ul class="attributes">
+        <ul class="attributes flexrow">
             <li class="attribute ability-score" data-score="str">
                 <h4 class="attribute-name box-title" title="{{ localize 'WWN.scores.str.long' }}">
                     <a>{{ localize "WWN.scores.str.short" }}</a>
@@ -569,7 +569,7 @@
                 <h4 class="attribute-name box-title" title="WWN.skills.unspentPointsHint">
                     <a>{{ localize "WWN.skills.unspentPoints" }}</a>
                 </h4>
-                <div class="attribute-value">
+                <div class="attribute-value unspent">
                     <input name="data.skills.unspent" type="number" value="{{data.skills.unspent}}"
                         data-dtype="Number" />
                 </div>
