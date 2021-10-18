@@ -460,12 +460,14 @@ export class WwnActor extends Actor {
     if (!attData.item) {
       dmgParts.push("1d6");
     } else {
-      if (attData.item.data.equipped) {
-        readyState = game.i18n.format("WWN.items.readied");
-      } else if (attData.item.data.stowed) {
-        readyState = game.i18n.format("WWN.items.stowed");
-      } else {
-        readyState = game.i18n.format("WWN.items.notCarried");
+      if (data.character) {
+        if (attData.item.data.equipped) {
+          readyState = game.i18n.format("WWN.roll.readied");
+        } else if (attData.item.data.stowed) {
+          readyState = game.i18n.format("WWN.roll.stowed");
+        } else {
+          readyState = game.i18n.format("WWN.roll.notCarried");
+        }
       }
       label = game.i18n.format("WWN.roll.attacksWith", {
         name: attData.item.name,
