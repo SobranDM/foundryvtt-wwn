@@ -453,14 +453,23 @@ export class WwnActor extends Actor {
     const data = this.data.data;
     const rollParts = ["1d20"];
     const dmgParts = [];
+    let readyState = "";
     let label = game.i18n.format("WWN.roll.attacks", {
       name: this.data.name,
     });
     if (!attData.item) {
       dmgParts.push("1d6");
     } else {
+      if (attData.item.data.equipped) {
+        readyState = game.i18n.format("WWN.items.readied");
+      } else if (attData.item.data.stowed) {
+        readyState = game.i18n.format("WWN.items.stowed");
+      } else {
+        readyState = game.i18n.format("WWN.items.notCarried");
+      }
       label = game.i18n.format("WWN.roll.attacksWith", {
         name: attData.item.name,
+        readyState: readyState
       });
       dmgParts.push(attData.item.data.damage);
     }

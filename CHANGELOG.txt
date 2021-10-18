@@ -11,17 +11,17 @@
 * All armor now possess separate base AC and magic bonus fields. This accomplishes a couple things:
     * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 + magic bonus (if any). No more fiddling with shield AC! Yay!
     * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
-* Experience to next level is now displayed next to current experience. This amount scales based on what is entered in System Settings. It supports the slow and fast XP tracks from WWN, as well as a custom track. The custom track defaults to the B/X Fighter progression.
+* Experience to next level is now calculated displayed next to current experience in the PC header. This amount scales based on what is entered in System Settings. It supports the slow and fast XP tracks from WWN, as well as a custom track. The custom track defaults to the B/X Fighter progression.
+* Weapon attacks now note in the chat card if the weapon is readied, stowed, or not carried at all.
 ### Changes
 * Overhauled the PC sheet. Now wider and (hopefully) makes better use of space. Foci/Abilities tab has been moved to the Notes tab, which has been renamed "Details". Skills now located on front page. Each skill has its own attribute selection, making skill use much faster, particularly in games that typically use the same attribute for a given skill each time.
-* Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin.
+* Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin. They make a little better use of space now.
 * Removed the placeholder text for mage classes in the tweaks menu, as it was confusing some users.
 * The party select button now only shows actors that are currently in the party. The tooltip has been renamed to "Remove Characters" to reflect its new function. Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.
 * Arts in the Compendium have been updated:
     * Passive Arts with no Effort expenditure have had their Time field cleared, to be compatible with the Effort spend feature.
     * Arts that function while Effort remains committed have had their Time field updated to "Active" to ensure consistency. Previously the terminology used here varied.
 * All shields and magic armor in the Compendium have been updated to support the new armor format.
-* Redesigned all item sheets (armor, weapons, spells, arts, etc) to make better use of space.
 * Casters now support up to four Effort sources, to better support Legates and Heroic classes.
 ### Bug Fixes
 * Fixed saving throws not being rolled from the chat card for items and weapon attacks. (For real this time!)
