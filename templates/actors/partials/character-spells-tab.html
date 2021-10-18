@@ -98,6 +98,21 @@
             </div>
         </li>
         {{/if}}
+        {{#if data.classes.effort4.name}}
+        <li class="item-entry">
+          <div class="item flexrow">
+            <div class="item-name flexrow">{{data.classes.effort4.name}} {{localize 'WWN.spells.Effort'}}</div>
+            <div class="field-short"></div>
+            <div class="field-short">
+              <input name="data.classes.effort4.value" type="number" value="{{data.classes.effort4.value}}"
+                data-dtype="Number" disabled />
+            </div>
+            <div class="field-short">
+              <input name="data.classes.effort4.max" type="number" value="{{data.classes.effort4.max}}"
+                data-dtype="Number" />
+            </div>
+        </li>
+        {{/if}}
         <li class="item-entry">
           <div class="item flexrow">
             <div class="item-name flexrow">{{localize 'WWN.spells.Slots'}}</div>

@@ -751,9 +751,11 @@ export class WwnActor extends Actor {
     let effortOne = 0;
     let effortTwo = 0;
     let effortThree = 0;
+    let effortFour = 0;
     let effortType1 = data.classes.effort1.name;
     let effortType2 = data.classes.effort2.name;
     let effortType3 = data.classes.effort3.name;
+    let effortType4 = data.classes.effort4.name;
     const arts = this.data.items.filter((a) => a.type == "art");
     arts.forEach((a) => {
       if (effortType1 == a.data.data.source) {
@@ -765,11 +767,15 @@ export class WwnActor extends Actor {
       if (effortType3 == a.data.data.source) {
         effortThree += a.data.data.effort;
       }
+      if (effortType4 == a.data.data.source) {
+        effortFour += a.data.data.effort;
+      }
     });
 
     data.classes.effort1.value = effortOne;
     data.classes.effort2.value = effortTwo;
     data.classes.effort3.value = effortThree;
+    data.classes.effort4.value = effortFour;
   }
 
   computeTreasure() {

@@ -22,6 +22,7 @@
     * Arts that function while Effort remains committed have had their Time field updated to "Active" to ensure consistency. Previously the terminology used here varied.
 * All shields and magic armor in the Compendium have been updated to support the new armor format.
 * Redesigned all item sheets (armor, weapons, spells, arts, etc) to make better use of space.
+* Casters now support up to four Effort sources, to better support Legates and Heroic classes.
 ### Bug Fixes
 * Fixed saving throws not being rolled from the chat card for items and weapon attacks. (For real this time!)
 * Fixed encounter movement rate not displaying on party sheet.
