@@ -97,6 +97,9 @@
     height: 18px;
     z-index: -1;
   }
+  .wwn.sheet.actor.monster .sheet-tabs {
+    top: 417px;
+  }
   .wwn.sheet.actor .sheet-tabs .item {
     padding: 1px 10px 3px;
     margin-left: -5px;
@@ -239,6 +242,9 @@
     padding: 20 10 0 10;
     padding-top: 10px;
   }
+  .wwn.sheet.actor.monster .sheet-body .inventory {
+    padding-top: 0px;
+  }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
   }
@@ -252,6 +258,9 @@
     background: url("/systems/wwn/assets/back.png");
     color: white;
     margin-top: 7px;
+  }
+  .wwn.sheet.actor.monster .inventory .item-titles {
+    margin-top: 0px;
   }
   .wwn.sheet.actor .sheet-body .inventory .item-titles .item-name {
     text-align: left;
@@ -1376,9 +1385,10 @@
     color: white;
   }
   .wwn.actor.monster .attribute-group .attacks-description {
-    margin: 2px;
+    margin: 2px 0 25px;
     padding: 0;
     text-align: center;
+    border-bottom: 1px solid #7a7971;
   }
   .wwn.actor.monster .attribute-group .attacks-description label {
     color: #7a7971;

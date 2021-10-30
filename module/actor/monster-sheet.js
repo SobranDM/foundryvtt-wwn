@@ -20,7 +20,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       classes: ["wwn", "sheet", "monster", "actor"],
       template: "systems/wwn/templates/actors/monster-sheet.html",
       width: 490,
-      height: 560,
+      height: 600,
       resizable: false,
       tabs: [
         {
