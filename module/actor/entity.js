@@ -862,6 +862,7 @@ export class WwnActor extends Actor {
       return;
     }
     const data = this.data.data;
+    const scores = data.scores;
 
     const standard = {
       0: -2,
@@ -871,24 +872,9 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    data.scores.str.mod =
-      data.scores.str.tweak +
-      WwnActor._valueFromTable(standard, data.scores.str.value);
-    data.scores.int.mod =
-      data.scores.int.tweak +
-      WwnActor._valueFromTable(standard, data.scores.int.value);
-    data.scores.dex.mod =
-      data.scores.dex.tweak +
-      WwnActor._valueFromTable(standard, data.scores.dex.value);
-    data.scores.cha.mod =
-      data.scores.cha.tweak +
-      WwnActor._valueFromTable(standard, data.scores.cha.value);
-    data.scores.wis.mod =
-      data.scores.wis.tweak +
-      WwnActor._valueFromTable(standard, data.scores.wis.value);
-    data.scores.con.mod =
-      data.scores.con.tweak +
-      WwnActor._valueFromTable(standard, data.scores.con.value);
+    Object.keys(scores).forEach( (s) => {
+      scores[s].mod = scores[s].tweak + WwnActor._valueFromTable(standard, scores[s].value);
+    });
 
     const capped = {
       0: -2,
