@@ -11,6 +11,7 @@
 * All armor now possess separate base AC and magic bonus fields. This accomplishes a couple things:
     * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 + magic bonus (if any). No more fiddling with shield AC! Yay!
     * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
+* Exert and Sneak checks now automatically apply armor encumbrance as a penalty, dependent on armor type (light/medium/heavy).
 * Experience to next level is now calculated displayed next to current experience in the PC header. This amount scales based on what is entered in System Settings. It supports the slow and fast XP tracks from WWN, as well as a custom track. The custom track defaults to the B/X Fighter progression.
 * Weapon attacks now note in the chat card if the weapon is readied, stowed, or not carried at all.
 ### Changes

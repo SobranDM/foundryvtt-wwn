@@ -330,6 +330,7 @@ export class WwnActor extends Actor {
   rollSkills(expl, options = {}) {
     let selectedStat = this.data.data.skills[expl].stat;
     let combatSkill = false;
+    let skillPenalty = 0;
     const poly = this.data.items.filter((p) => p.name == "Polymath");
     const label = game.i18n.localize(`WWN.skills.${expl}`);
     const statLabel = game.i18n.localize(`WWN.scores.${selectedStat}.long`);
@@ -346,6 +347,10 @@ export class WwnActor extends Actor {
     };
     if (expl == "shoot" || expl == "stab" || expl == "punch") {
       combatSkill = true;
+    } else if (expl == "exert" && this.data.data.skills.exert.penalty > 0) {
+      skillPenalty = this.data.data.skills.exert.penalty;
+    } else if (expl == "sneak" && this.data.data.skills.sneak.penalty > 0) {
+      skillPenalty = this.data.data.skills.sneak.penalty;
     }
     const rollParts = [this.data.data.skills[expl].dice];
     if (poly.length > 0 && !combatSkill) {
@@ -354,6 +359,9 @@ export class WwnActor extends Actor {
       rollParts.push(this.data.data.skills[expl].value);
     }
     rollParts.push(this.data.data.scores[selectedStat].mod);
+    if (skillPenalty > 0) {
+      rollParts.push(-skillPenalty);
+    }
 
     let skip = options.event && options.event.ctrlKey;
 
@@ -819,6 +827,17 @@ export class WwnActor extends Actor {
     armors.forEach((a) => {
       if (a.data.data.equipped && a.data.data.type != "shield") {
         baseAac = a.data.data.aac.value + a.data.data.aac.mod;
+        // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
+        if (a.data.data.type === "medium") {
+          data.skills.sneak.penalty = a.data.data.weight;
+          data.skills.exert.penalty = 0;
+        } else if (a.data.data.type === "heavy") {
+          data.skills.sneak.penalty = a.data.data.weight;
+          data.skills.exert.penalty = a.data.data.weight;
+        } else {
+          data.skills.sneak.penalty = 0;
+          data.skills.exert.penalty = 0;
+        }
       } else if (a.data.data.equipped && a.data.data.type == "shield") {
         AacShieldMod = 1 + a.data.data.aac.mod;
         AacShieldNaked = a.data.data.aac.value + a.data.data.aac.mod;

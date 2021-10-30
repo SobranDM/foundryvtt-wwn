@@ -170,7 +170,8 @@
         "exert": {
           "value": -1,
           "dice": "2d6",
-          "stat": "str"
+          "stat": "str",
+          "penalty": 0
         },
         "heal": {
           "value": -1,
@@ -230,7 +231,8 @@
         "sneak": {
           "value": -1,
           "dice": "2d6",
-          "stat": "str"
+          "stat": "str",
+          "penalty": 0
         },
         "stab": {
           "value": -1,
