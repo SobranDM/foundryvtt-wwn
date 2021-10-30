@@ -28,38 +28,6 @@ export const registerSettings = function () {
     }
   });
 
-  /* game.settings.register("wwn", "activateVision", {
-    name: game.i18n.localize("WWN.Setting.ActivateVision"),
-    hint: game.i18n.localize("WWN.Setting.ActivateVisionHint"),
-    default: "linkedTokens",
-    scope: "world",
-    type: String,
-    config: true,
-    choices: {
-      linkedTokens: "WWN.Setting.LinkedTokens",
-      unlinkedTokens: "WWN.Setting.UnlinkedTokens",
-      allTokens: "WWN.Setting.AllTokens",
-      noTokens: "WWN.Setting.NoTokens"
-    },
-    onChange: _ => window.location.reload()
-  });
-
-  game.settings.register("wwn", "tokenHP", {
-    name: game.i18n.localize("WWN.Setting.TokenHP"),
-    hint: game.i18n.localize("WWN.Setting.TokenHPHint"),
-    default: "unlinkedTokens",
-    scope: "world",
-    type: String,
-    config: true,
-    choices: {
-      linkedTokens: "WWN.Setting.LinkedTokens",
-      unlinkedTokens: "WWN.Setting.UnlinkedTokens",
-      allTokens: "WWN.Setting.AllTokens",
-      noTokens: "WWN.Setting.NoTokens"
-    },
-    onChange: _ => window.location.reload()
-  }); */
-
   game.settings.register("wwn", "movementRate", {
     name: game.i18n.localize("WWN.Setting.MovementRate"),
     hint: game.i18n.localize("WWN.Setting.MovementRateHint"),
