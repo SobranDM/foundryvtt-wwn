@@ -244,6 +244,8 @@
   "WWN.Setting.xpCustom": "Custom",
   "WWN.Setting.xpCustomList": "Custom XP Progression",
   "WWN.Setting.xpCustomListHint": "Enter a list of XP values, separated by commas.",
+  "WWN.Setting.hideInstinct": "Hide Instinct Results",
+  "WWN.Setting.hideInstinctHint": "If selected, automatic rolls on the Instinct table will be hidden from players.",
 
   "WWN.items.Equip": "Readied",
   "WWN.items.Unequip": "Unequip",

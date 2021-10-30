@@ -61,6 +61,15 @@ export const registerSettings = function () {
     config: true,
   });
 
+  game.settings.register("wwn", "hideInstinct", {
+    name: game.i18n.localize("WWN.Setting.hideInstinct"),
+    hint: game.i18n.localize("WWN.Setting.hideInstinctHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true
+  });
+
   game.settings.register("wwn", "languageList", {
     name: game.i18n.localize("WWN.Languages"),
     hint: game.i18n.localize("WWN.LanguagesHint"),

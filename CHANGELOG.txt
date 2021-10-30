@@ -15,6 +15,7 @@
 * Experience to next level is now calculated displayed next to current experience in the PC header. This amount scales based on what is entered in System Settings. It supports the slow and fast XP tracks from WWN, as well as a custom track. The custom track defaults to the B/X Fighter progression.
 * Weapon attacks now note in the chat card if the weapon is readied, stowed, or not carried at all.
 * A failed Instinct check automatically rolls on a monster's linked Instinct table. This supports custom Instinct tables, provided those tables are linked from a Compendium.
+    * New System Setting: If true, hides the results of automatic Instinct table rolls (but not the check itself) from players. If false, follows Public/GM/Blind/Self as normal. Defaults to false.
 ### Changes
 * Overhauled the PC sheet. Now wider and (hopefully) makes better use of space. Foci/Abilities tab has been moved to the Notes tab, which has been renamed "Details". Skills now located on front page. Each skill has its own attribute selection, making skill use much faster, particularly in games that typically use the same attribute for a given skill each time.
 * Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin. They make a little better use of space now.
