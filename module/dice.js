@@ -40,6 +40,24 @@ export class WwnDice {
         }
       }
       result.details = output;
+    } else if (data.roll.type == "instinct") {
+      // SAVING THROWS
+      if (roll.total >= result.target) {
+        result.isSuccess = true;
+      } else {
+        result.isFailure = true;
+        // Pull result from linked instinct table
+        const iL = data.actor.data.details.instinctTable.table;
+        const iA = iL.split(".");
+        const pack = game.packs.get(iA[0].split("[")[1] + "." + iA[1]);
+        console.log(pack);
+        const instinctType = iA[2].substring(
+          0,
+          iA[2].lastIndexOf("]")
+        );
+        console.log(instinctType);
+        pack.getDocument(instinctType).then(table => table.draw());
+      }
     }
     return result;
   }

@@ -158,7 +158,7 @@ export class WwnActor extends Actor {
     const data = {
       actor: this.data,
       roll: {
-        type: "above",
+        type: "instinct",
         target: this.data.data.details.instinct,
       },
     };
