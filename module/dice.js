@@ -48,7 +48,8 @@ export class WwnDice {
         result.isFailure = true;
         // Pull result from linked instinct table
         const iL = data.actor.data.details.instinctTable.table;
-        let pattern = /\[(.+)\.([\w]+)\]/;
+        // RegEx expression to chop up iL into the chunks needed
+        const pattern = /\[(.+)\.([\w]+)\]/;
         const iA = iL.match(pattern);
         const pack = game.packs.get(iA[1]);
         pack.getDocument(iA[2]).then(table => table.draw());
