@@ -252,7 +252,7 @@
   "WWN.items.Misc": "Misc",
   "WWN.items.Weapons": "Weapons",
   "WWN.items.Treasure": "Treasure",
-  "WWN.items.TreasureSP": "Treasure (SP)",
+  "WWN.items.TreasureSP": "Treasure, in silver pieces.",
   "WWN.items.Armors": "Armors",
   "WWN.items.Weight": "Weight",
   "WWN.items.Qualities": "Qualities",
@@ -303,7 +303,7 @@
   "WWN.items.bank.short": "Bank (SP)",
   "WWN.items.bank.long": "Bank (Silver)",
   "WWN.items.total.short": "Total Silver",
-  "WWN.items.total.long": "Total Silver Value, including all coins and treasure items.",
+  "WWN.items.total.long": "Total Silver Value, including all coin and treasure items.",
 
   "WWN.items.Range": "Range",
   "WWN.items.desc.Range": "Ranged Weapon",
