@@ -925,25 +925,18 @@ export class WwnActor extends Actor {
 
   computeSaves() {
     const data = this.data.data;
-    if (!data.saves.evasion.mod) {
-      data.saves.evasion.mod = 0;
-    }
-    if (!data.saves.physical.mod) {
-      data.saves.physical.mod = 0;
-    }
-    if (!data.saves.mental.mod) {
-      data.saves.mental.mod = 0;
-    }
-    if (!data.saves.luck.mod) {
-      data.saves.luck.mod = 0;
-    }
+    const saves = data.saves;
+    Object.keys(saves).forEach( (s) => {
+      if (!saves[s].mod) {
+        saves[s].mod = 0;
+      }
+    });
     
     if (this.data.type != "character") {
-      let monsterHD = data.hp.hd.toLowerCase().split('d');
-      data.saves.evasion.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.evasion.mod;
-      data.saves.physical.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.physical.mod;
-      data.saves.mental.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.mental.mod;
-      data.saves.luck.value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + data.saves.luck.mod;
+      const monsterHD = data.hp.hd.toLowerCase().split('d');
+      Object.keys(saves).forEach ( (s) => {
+        saves[s].value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + saves[s].mod;
+      });
     } else {
     let evasionMod = Math.max(data.scores.int.mod,data.scores.dex.mod);
     let physicalMod = Math.max(data.scores.con.mod,data.scores.str.mod);
