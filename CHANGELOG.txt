@@ -28,6 +28,7 @@
 * Fixed encounter movement rate not displaying on party sheet.
 * Fixed monster encounter movement rates not calculating.
 * Fixed style error that was preventing retainer morale from rolling correctly. This does mean the previous value was lost and will have to be re-entered. Apologies for the inconvenience.
+* Fixed monster attack counters.
 ### Known Issues
 * As a result of the armor changes, the shields in the compendium have been changed, as have all magical armors. Magical armor will continue to function without issue--though they will not display anything in the magic field, unless you change them--shields, magical or not, will have to be edited or replaced. Sorry for the inconvenience.
 * Rewrote the individual initiative system to clear some bugs and support the Alert focus. This had the side effect of the PCs no longer being able to roll their initiative individually. Or rather, they can but it will simply be overwritten when combat begins. Sorry about that. If there is a great outcry, I will put in a workaround.

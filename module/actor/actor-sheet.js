@@ -109,15 +109,16 @@ export class WwnActorSheet extends ActorSheet {
     });
 
     html.find(".item .item-rollable .item-image").click(async (ev) => {
-      const itemId = event.currentTarget.closest(".item").dataset.itemId;
-      const item = this.actor.items.get(itemId);
+      const itemId = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(itemId.data("itemId"));
       if (item.type == "weapon") {
         if (this.actor.data.type === "monster") {
-          let counterDecr = item.data.data.counter.value - 1;
-          console.log(item.data.data.counter.value);
+          console.log("Counter: " + item.data.data.counter.value);
           item.update({
-            "data.counter.value": counterDecr,
             data: { shockTotal: item.data.data.shock.damage + this.actor.data.data.damageBonus }
+          });
+          item.update({
+            data: { counter: { value: item.data.data.counter.value - 1 } }
           });
         }
         item.rollWeapon({ skipDialog: ev.ctrlKey });
