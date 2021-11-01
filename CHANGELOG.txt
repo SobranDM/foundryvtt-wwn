@@ -10,6 +10,7 @@
 * Rolling an Art now automatically spends Effort in addition to sending the Art to chat. If the "Time" field of the Art is blank, Effort will not be spent. As a result, Arts in the Compendium have been updated:
     * Passive Arts with no Effort expenditure have had their Time field cleared, to be compatible with the Effort spend feature.
     * Arts that function while Effort remains committed have had their Time field updated to "Active" to ensure consistency. Previously the terminology used here varied.
+* Spellcasters now have a "spells prepared" value. The maximum is user-editable, while the current value is automatically calculated based on memorized spells (the brain icon in the spell inventory).
 * All armor now possess separate base AC and magic bonus fields. This accomplishes a couple things:
     * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 (the standard shield bonus) + magic bonus (if any). No more fiddling with shield AC! Yay! Note that standard WWN does not support shields with magical enhancements to AC but I wished to support it for the sake of unique items in old-school adventure modules.
     * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
