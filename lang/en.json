@@ -345,6 +345,7 @@
 
   "WWN.spells.spend": "{speaker} is casting {name}!",
   "WWN.spells.Prepared": "Prepared",
+  "WWN.spells.TotalPrepared": "Spells Prepared",
   "WWN.spells.Cast": "Cast",
   "WWN.spells.Range": "Range",
   "WWN.spells.Slots": "Spell Slots",
@@ -360,6 +361,7 @@
   "WWN.spells.TimeHint": "Length of time effort is committed",
   "WWN.spells.Effort": "Effort",
   "WWN.spells.Committed": "Committed",
+  "WWN.spells.Current": "Current",
   "WWN.spells.HighMage": "High Mage",
   "WWN.spells.Scene": "Scene",
   "WWN.spells.CasterClass": "Caster Class",

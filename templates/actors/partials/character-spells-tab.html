@@ -49,7 +49,7 @@
     <div>
       <li class="item-titles flexrow">
         <div class="item-name">{{localize "WWN.spells.Resources"}}</div>
-        <div class="field-short">{{localize "WWN.spells.Committed"}}</div>
+        <div class="field-short">{{localize "WWN.spells.Current"}}</div>
         <div class="field-short">{{localize "WWN.Max"}}</div>
       </li>
       <ol class="item-list">
@@ -113,6 +113,19 @@
             </div>
         </li>
         {{/if}}
+        <li class="item-entry">
+          <div class="item flexrow">
+            <div class="item-name flexrow">{{localize 'WWN.spells.TotalPrepared'}}</div>
+            <div class="field-short"></div>
+            <div class="field-short">
+              <input name="data.spells.prepared.value" type="number" value="{{data.spells.prepared.value}}"
+                data-dtype="Number" disabled />
+            </div>
+            <div class="field-short">
+              <input name="data.spells.prepared.max" type="number" value="{{data.spells.prepared.max}}"
+                data-dtype="Number" />
+            </div>
+        </li>
         <li class="item-entry">
           <div class="item flexrow">
             <div class="item-name flexrow">{{localize 'WWN.spells.Slots'}}</div>

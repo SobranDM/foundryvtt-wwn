@@ -19,6 +19,7 @@ export class WwnActor extends Actor {
     this.computeSaves();
     this.computeTotalSP();
     this.setXP();
+    this.computePrepared();
 
     // Determine Initiative
     if (game.settings.get("wwn", "initiative") != "group") {
@@ -633,6 +634,24 @@ export class WwnActor extends Actor {
 
   // Set character's XP to level
     data.details.xp.next = xpRate[level];
+  }
+
+  computePrepared () {
+    if (!this.data.data.spells.enabled) {
+      return;
+    }
+
+    // Initialize data and variables
+    const data = this.data.data;
+    const spells = this.data.items.filter((s) => s.type == "spell");
+    let spellsPrepared = 0;
+
+    spells.forEach((s) => {
+      if (s.data.data.prepared) {
+        spellsPrepared++;
+      }
+    });
+    data.spells.prepared.value = spellsPrepared;
   }
 
   computeEncumbrance() {
