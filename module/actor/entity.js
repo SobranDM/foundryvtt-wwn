@@ -302,7 +302,7 @@ export class WwnActor extends Actor {
     let label = "";
     if (options.check == "wilderness") {
       rollParts.push(this.data.data.details.appearing.w);
-      label = "(lair/wilderness)";
+      label = "(wilderness)";
     } else {
       rollParts.push(this.data.data.details.appearing.d);
       label = "(dungeon)";

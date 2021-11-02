@@ -98,7 +98,10 @@
   "WWN.details.instinct": "Instinct",
   "WWN.details.instinctTableHint": "Drop a rollable table here to roll an Instinctive Action",
   "WWN.details.reaction": "Reaction",
-  "WWN.details.appearing": "NA",
+  "WWN.details.appearingA": "Number",
+  "WWN.details.appearingB": "Appearing",
+  "WWN.details.dungeonAppearing": "#Appearing (Dungeon)",
+  "WWN.details.wildernessAppearing": "#Appearing (Wilderness or Lair)",
   "WWN.details.renown.short": "Renown",
 
   "WWN.Attack": "Attack",

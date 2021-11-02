@@ -19,8 +19,8 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "monster", "actor"],
       template: "systems/wwn/templates/actors/monster-sheet.html",
-      width: 490,
-      height: 600,
+      width: 730,
+      height: 625,
       resizable: false,
       tabs: [
         {

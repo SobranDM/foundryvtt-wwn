@@ -97,9 +97,6 @@
     height: 18px;
     z-index: -1;
   }
-  .wwn.sheet.actor.monster .sheet-tabs {
-    top: 417px;
-  }
   .wwn.sheet.actor .sheet-tabs .item {
     padding: 1px 10px 3px;
     margin-left: -5px;
@@ -170,6 +167,19 @@
     padding-left: 5px;
     padding-right: 0px;
     margin-right: 0px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab section.flexrow {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab {
+    flex-direction: row;
+    flex-grow: 0;
+  }
+  .wwn.sheet.actor .sheet-body .attributes.saves {
+    margin-top: 8px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab .attribute-value.flexrow {
+    flex-direction: row;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group {
     margin-left: 0px;
@@ -244,6 +254,8 @@
   }
   .wwn.sheet.actor.monster .sheet-body .inventory {
     padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 16px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
@@ -1347,7 +1359,7 @@
     color: rgba(0, 0, 0, 0.9);
   }
   .wwn.actor.monster .sheet-body .editor {
-    height: 300px;
+    height: 400px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab {
     display: flex;
@@ -1367,6 +1379,9 @@
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
     flex: 0 0 60px;
+    max-width: 80px;
+    margin: 0px 5px 5px 5px;
+    max-height: 55px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
     flex: 0 0 85px;

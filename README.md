@@ -27,8 +27,6 @@ Find the original OSE project by U~man here: https://gitlab.com/mesfoliesludique
     * Link Instinct tables from the Compendium to each NPC sheet, so the appropriate table is only a click away
 * Compendium includes weapons, armor, adventuring gear, arts, spells, and foci. Deluxe edition content is not included.
     * Thanks to Gavin over at Necrotic Gnome, the Compendium now includes OSE spells and monsters.
-## TODO
-* Add highest Dex mod when using Group Initiative
 ## License
 This Foundry VTT system requires the Worlds Without Number rules, available through the Kickstarter or through sale at some point in the future.
 
