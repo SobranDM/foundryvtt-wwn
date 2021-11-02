@@ -119,6 +119,7 @@
   }
   .wwn.sheet.actor .sheet-body {
     height: calc(100% - 140px);
+    padding: 30px 10px 0px 10px;
   }
   .wwn.sheet.actor .sheet-body .tab {
     height: 100%;
@@ -163,7 +164,6 @@
     line-height: 24px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group {
-    padding-top: 20px;
     padding-left: 5px;
     padding-right: 0px;
     margin-right: 0px;
@@ -248,14 +248,12 @@
     padding: 0;
   }
   .wwn.sheet.actor .sheet-body .inventory {
-    overflow: auto;
-    padding: 20 10 0 10;
-    padding-top: 10px;
+    
   }
   .wwn.sheet.actor.monster .sheet-body .inventory {
     padding-top: 0px;
     margin-top: 0px;
-    margin-bottom: 16px;
+    max-height: 380px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
@@ -270,6 +268,9 @@
     background: url("/systems/wwn/assets/back.png");
     color: white;
     margin-top: 7px;
+  }
+  .wwn.sheet.actor .sheet-body .inventory .spell-resources {
+    margin-left: 4px;
   }
   .wwn.sheet.actor.monster .inventory .item-titles {
     margin-top: 0px;
@@ -452,9 +453,7 @@
     color: whitesmoke;
     padding: 2px;
     padding-top: 4px;
-    margin: 2px;
-    margin-bottom: 0px;
-    margin-right: 0;
+    margin: 2px 0px 0px 4px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
@@ -479,9 +478,7 @@
     padding: 2px;
     padding-top: 4px;
     padding-bottom: 0px;
-    margin: 2px;
-    margin-bottom: 0px;
-    margin-right: 0;
+    margin: 2px 0px 0px 4px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
@@ -499,9 +496,6 @@
     width: 10px;
     vertical-align: middle;
     height: 30px;
-  }
-  .wwn.sheet.actor .inventory .inventory-all {
-    padding: 10px;
   }
   .wwn.sheet.actor .inventory .inventory-all .inventory-right .item-titles {
     flex-grow: 0;
@@ -921,7 +915,6 @@
   .wwn.sheet.actor.character .sheet-body .attributes-tab {
     justify-content: space-between;
     height: 95%;
-    padding-top: 10px;
   }
   #selectAttribute {
     padding: 0px;
@@ -965,7 +958,6 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    padding-top: 20px;
     padding-right: 0px;
     padding-left: 0px;
     margin-left: 0px;
@@ -1001,14 +993,6 @@
   .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute-name.box-title {
     width: 80px;
     line-height: 35px;
-  }
-  .wwn.sheet.actor.character .sheet-body .notes-tab {
-    padding: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory {
-    padding: 10px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
     margin: 2px;
@@ -1359,7 +1343,7 @@
     color: rgba(0, 0, 0, 0.9);
   }
   .wwn.actor.monster .sheet-body .editor {
-    height: 400px;
+    height: 380px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab {
     display: flex;

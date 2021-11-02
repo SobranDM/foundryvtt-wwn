@@ -4,12 +4,29 @@
     <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" />
   </h1>
   <ul class="summary flexrow">
-    <li class="flex2 flexrow check-field">
+    <li class="flexrow check-field">
       <div>
-        <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" />
-        <label>{{localize 'WWN.details.alignment'}}</label>
+        <input type="text" name="data.hp.hd" value="{{data.hp.hd}}" />
+        <label>{{localize 'WWN.HitDiceLong'}}</label>
       </div>
-      <div class="check reaction-check" title="{{localize 'WWN.roll.reaction'}}"><a><i class="fas fa-dice"></i></a></div>
+    </li>
+    <li class="flexrow check-field">
+      <div>
+        <input type="number" name="data.initiative.mod" value="{{data.initiative.mod}}" />
+        <label>{{localize 'WWN.Initiative'}}</label>
+      </div>
+    </li>
+    <li class="flexrow check-field">
+      <div>
+        <input type="number" name="data.thac0.bba" value="{{data.thac0.bba}}" />
+        <label title="{{localize 'WWN.AB'}}">{{localize 'WWN.ABShort'}}</label>
+      </div>
+    </li>
+    <li class="flexrow check-field">
+      <div>
+        <input type="number" name="data.damageBonus" value="{{data.damageBonus}}" />
+        <label title="{{localize 'WWN.DB'}}">{{localize 'WWN.DBShort'}}</label>
+      </div>
     </li>
     <li class="flexrow check-field" data-check="dungeon">
       <div>
@@ -26,6 +43,15 @@
     <li>
       <input type="number" name="data.details.xp" value="{{data.details.xp}}" />
       <label>{{localize 'WWN.details.experience.award'}}</label>
+    </li>
+  </ul>
+  <ul class="summary flexrow">
+    <li class="flexrow check-field">
+      <div>
+        <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" />
+        <label>{{localize 'WWN.details.alignment'}}</label>
+      </div>
+      <div class="check reaction-check" title="{{localize 'WWN.roll.reaction'}}"><a><i class="fas fa-dice"></i></a></div>
     </li>
     <li class="treasure-table" title="{{localize 'WWN.details.instinctTableHint'}}">
       <div>{{{data.details.instinctTable.link}}}</div>

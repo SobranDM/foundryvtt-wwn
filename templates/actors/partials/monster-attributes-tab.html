@@ -16,62 +16,10 @@
                     </div>
                 </li>
                 <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.InitiativeBonus' }}">
-                        {{ localize "WWN.Initiative" }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.initiative.mod" type="number" value="{{data.initiative.mod}}"
-                            data-dtype="Number" placeholder="1" data-dtype="Number" />
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.AB'}}">{{ localize "WWN.ABShort" }}
-                    </h4>
-                    <div class="attribute-value">
-                        <input name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-                <li class="attribute">
                     <h4 class="attribute-name box-title">{{ localize "WWN.details.morale" }}
                     </h4>
                     <div class="attribute-value">
                         <input name="data.details.morale" type="number" value="{{data.details.morale}}" placeholder="0"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.movement.base'}}">
-                        {{ localize "WWN.movement.short" }}
-                    </h4>
-                    <div class="attribute-value flexrow">
-                        <input name="data.movement.base" type="text" value="{{data.movement.base}}" placeholder="0"
-                            data-dtype="text" />
-                        <input name="data.movement.value" title="{{ localize "WWN.movement.details" }}" type="text" value="{{data.movement.value}}" data-dtype="String" />
-                    </div>
-                </li>
-            </ul>
-            <ul class="attributes">
-                <li class="attribute hit-dice">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.HitDice'}}">
-                        <a>{{ localize "WWN.HitDiceShort" }}</a>
-                    </h4>
-                    <div class="attribute-value">
-                        <input name="data.hp.hd" type="text" value="{{data.hp.hd}}" data-dtype="String" />
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
-                        {{ localize "WWN.AscArmorClassShort" }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.aac.value" type="number" value="{{data.aac.value}}" data-dtype="Number"
-                            placeholder="10" data-dtype="Number" />
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title" title="{{localize 'WWN.DB'}}">{{ localize "WWN.DBShort" }}
-                    </h4>
-                    <div class="attribute-value">
-                        <input name="data.damageBonus" type="number" value="{{data.damageBonus}}" placeholder="0"
                             data-dtype="Number" />
                     </div>
                 </li>
@@ -83,12 +31,31 @@
                             placeholder="0" data-dtype="Number" />
                     </div>
                 </li>
+            </ul>
+            <ul class="attributes">
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
+                        {{ localize "WWN.AscArmorClassShort" }}</h4>
+                    <div class="attribute-value">
+                        <input name="data.aac.value" type="number" value="{{data.aac.value}}" data-dtype="Number"
+                            placeholder="10" data-dtype="Number" />
+                    </div>
+                </li>
                 <li class="attribute">
                     <h4 class="attribute-name box-title">{{ localize "WWN.skill" }}
                     </h4>
                     <div class="attribute-value">
                         <input name="data.details.skill" type="number" value="{{data.details.skill}}" placeholder="0"
                             data-dtype="Number" />
+                    </div>
+                </li>
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{localize 'WWN.movement.base'}}">
+                        {{ localize "WWN.movement.monsterShort" }}
+                    </h4>
+                    <div class="attribute-value flexrow">
+                        <input name="data.movement.base" type="text" value="{{data.movement.base}}" placeholder="0"
+                            data-dtype="text" />
                     </div>
                 </li>
             </ul>

@@ -47,7 +47,7 @@
       </ol>
     </div>
     <div>
-      <li class="item-titles flexrow">
+      <li class="item-titles flexrow spell-resources">
         <div class="item-name">{{localize "WWN.spells.Resources"}}</div>
         <div class="field-short">{{localize "WWN.spells.Current"}}</div>
         <div class="field-short">{{localize "WWN.Max"}}</div>
@@ -56,7 +56,7 @@
         {{#if data.classes.effort1.name}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{data.classes.effort1.name}} {{localize 'WWN.spells.Effort'}}</div>
+            <div class="item-name flexrow spell-resources">{{data.classes.effort1.name}} {{localize 'WWN.spells.Effort'}}</div>
             <div class="field-short"></div>
             <div class="field-short">
               <input name="data.classes.effort1.value" type="number" value="{{data.classes.effort1.value}}"
