@@ -254,6 +254,7 @@
     padding-top: 0px;
     margin-top: 0px;
     max-height: 380px;
+    width: 420px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
@@ -1364,8 +1365,8 @@
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
     flex: 0 0 60px;
     max-width: 80px;
-    margin: 0px 5px 5px 5px;
     max-height: 55px;
+    margin: 0px 10px 10px 10px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
     flex: 0 0 85px;
