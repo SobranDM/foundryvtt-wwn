@@ -247,13 +247,12 @@
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value input {
     padding: 0;
   }
-  .wwn.sheet.actor .sheet-body .inventory {
-    
-  }
   .wwn.sheet.actor.monster .sheet-body .inventory {
     padding-top: 0px;
     margin-top: 0px;
     max-height: 380px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab .inventory {
     width: 420px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
