@@ -376,6 +376,9 @@
         "wealth": 1,
         "magic": "None",
         "treasure": 0
+      },
+      "initiative": {
+        "value": 0
       }
     }
   },

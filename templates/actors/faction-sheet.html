@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+        <div class="header-col">
+            <div class="flexrow">
+                <h1 class="charname">
+                    <input name="name" type="text" value="{{name}}" placeholder="Name" />
+                </h1>
+            </div>
+        </div>
+    </header>
+    <section class="attributes-tab">
+        <section class="flexrow">
+            <ul class="attributes flexrow">
+                <li class="attribute">
+                    <h4 class="attribute-name box-title">{{ localize 'WWN.faction.cunning' }}</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.cunning" type="number" value="{{data.attributes.cunning}}" data-dtype="Number" />
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+</form>

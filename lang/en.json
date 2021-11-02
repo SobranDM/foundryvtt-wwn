@@ -1,6 +1,7 @@
 {
   "ACTOR.TypeCharacter": "Character",
   "ACTOR.TypeMonster": "Monster",
+  "ACTOR.TypeFaction": "Faction",
   "ITEM.TypeAbility": "Ability",
   "ITEM.TypeArmor": "Armor",
   "ITEM.TypeArt": "Art",

@@ -637,6 +637,9 @@ export class WwnActor extends Actor {
   }
 
   computePrepared () {
+    if (this.data.type === "faction" || this.data.type === "location") {
+      return;
+    }
     if (!this.data.data.spells.enabled) {
       return;
     }
@@ -655,7 +658,10 @@ export class WwnActor extends Actor {
   }
 
   computeEncumbrance() {
-    if (this.data.type != "character") {
+    if (this.data.type === "faction" || this.data.type === "location") {
+      return;
+    }
+    if (this.data.type === "monster") {
       const data = this.data.data;
       data.movement.exploration = data.movement.base * 3;
       return;
@@ -709,6 +715,9 @@ export class WwnActor extends Actor {
 
   _calculateMovement() {
     const data = this.data.data;
+    if (this.data.type === "faction" || this.data.type === "location") {
+      return;
+    }
     if (data.config.movementAuto) {
       if (isNaN(data.movement.bonus)) { 
         data.movement.bonus = 0;
@@ -782,6 +791,9 @@ export class WwnActor extends Actor {
 
   // Compute Effort
   computeEffort() {
+    if (this.data.type === "faction" || "location") {
+      return;
+    }
     const data = this.data.data;
     if (data.spells.enabled != true) {
       return;
@@ -930,6 +942,9 @@ export class WwnActor extends Actor {
 
   computeSaves() {
     const data = this.data.data;
+    if (this.data.type === "faction" || this.data.type === "location") {
+      return;
+    }
     const saves = data.saves;
     Object.keys(saves).forEach( (s) => {
       if (!saves[s].mod) {
