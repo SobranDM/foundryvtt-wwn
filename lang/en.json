@@ -22,14 +22,15 @@
   "WWN.Success": "Success",
   "WWN.Failure": "Failure",
 
+  "WWN.faction.cunning": "Cunning",
+  "WWN.faction.force": "Force",
+  "WWN.faction.wealth": "Wealth",
+
   "WWN.asset.counter": "Counter",
   "WWN.asset.BoI": "BoI",
   "WWN.asset.BoIHint": "Base of Influence",
   "WWN.asset.asset": "Asset",
   "WWN.asset.type": "Type",
-  "WWN.asset.cunning": "Cunning",
-  "WWN.asset.force": "Force",
-  "WWN.asset.wealth": "Wealth",
   "WWN.asset.cost": "Cost",
   "WWN.asset.subtle": "Subtle",
   "WWN.asset.special": "Special",
