@@ -786,7 +786,7 @@ export class WwnActor extends Actor {
 
   // Compute Effort
   computeEffort() {
-    if (this.data.type === "faction" || "location") {
+    if (this.data.type === "faction" || this.data.type === "location") {
       return;
     }
     const data = this.data.data;
