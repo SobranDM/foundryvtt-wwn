@@ -157,7 +157,6 @@ export class WwnCharacterCreator extends FormApplication {
     super._onSubmit(event, { updateData: updateData, preventClose: preventClose, preventRender: preventRender });
     // Generate silver
     let silverFinal = Math.floor(event.target.elements.namedItem('silver').value);
-    console.log(silverFinal);
     this.object.update({"data.currency.sp": silverFinal});
   }
   /**

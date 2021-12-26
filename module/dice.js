@@ -40,6 +40,24 @@ export class WwnDice {
         }
       }
       result.details = output;
+    } else if (data.roll.type == "instinct") {
+      // SAVING THROWS
+      if (roll.total >= result.target) {
+        result.isSuccess = true;
+      } else {
+        result.isFailure = true;
+        // Pull result from linked instinct table
+        const iL = data.actor.data.details.instinctTable.table;
+        // RegEx expression to chop up iL into the chunks needed
+        const pattern = /\[(.+)\.([\w]+)\]/;
+        const iA = iL.match(pattern);
+        const pack = game.packs.get(iA[1]);
+        if ( game.settings.get("wwn", "hideInstinct") ) {
+          pack.getDocument(iA[2]).then(table => table.draw({rollMode: "gmroll"}));
+        } else {
+          pack.getDocument(iA[2]).then(table => table.draw());
+        }
+      }
     }
     return result;
   }

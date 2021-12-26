@@ -35,13 +35,6 @@
         </div>
         {{#if (eq this.type 'character')}}
         <div class="form-group">
-          <label>{{localize "WWN.details.experience.next"}}</label>
-          <div class="form-fields">
-            <input type="number" name="data.details.xp.next" id="experiencenext" value="{{data.details.xp.next}}"
-              data-dtype="Number" />
-          </div>
-        </div>
-        <div class="form-group">
           <label>{{localize "WWN.details.experience.bonus"}} (%)</label>
           <div class="form-fields">
             <input type="number" name="data.details.xp.bonus" id="experience" value="{{data.details.xp.bonus}}"
@@ -65,22 +58,25 @@
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 1</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort1.name" id="effort1" value="{{data.classes.effort1.name}}"
-              placeholder="High Mage" />
+            <input type="text" name="data.classes.effort1.name" id="effort1" value="{{data.classes.effort1.name}}" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 2</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort2.name" id="effort2" value="{{data.classes.effort2.name}}"
-              placeholder="High Mage" />
+            <input type="text" name="data.classes.effort2.name" id="effort2" value="{{data.classes.effort2.name}}" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 3</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort3.name" id="effort3" value="{{data.classes.effort3.name}}"
-              placeholder="High Mage" />
+            <input type="text" name="data.classes.effort3.name" id="effort3" value="{{data.classes.effort3.name}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.spells.CasterClass'}} 4</label>
+          <div class="form-fields">
+            <input type="text" name="data.classes.effort4.name" id="effort4" value="{{data.classes.effort4.name}}" />
           </div>
         </div>
         {{#if (eq this.type 'character')}}

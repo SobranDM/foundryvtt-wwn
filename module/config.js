@@ -1,11 +1,11 @@
 export const WWN = {
   scores: {
-    str: "WWN.scores.str.long",
-    dex: "WWN.scores.dex.long",
-    con: "WWN.scores.con.long",
-    int: "WWN.scores.int.long",
-    wis: "WWN.scores.wis.long",
-    cha: "WWN.scores.cha.long",
+    str: "WWN.scores.str.short",
+    dex: "WWN.scores.dex.short",
+    con: "WWN.scores.con.short",
+    int: "WWN.scores.int.short",
+    wis: "WWN.scores.wis.short",
+    cha: "WWN.scores.cha.short",
   },
   roll_type: {
     result: "=",
@@ -134,6 +134,17 @@ export const WWN = {
     S: "WWN.items.desc.S",
     SS: "WWN.items.desc.SS",
     T: "WWN.items.desc.T"
+  },
+  assetTypes: {
+    cunning: "WWN.asset.cunning",
+    force: "WWN.asset.force",
+    wealth: "WWN.asset.wealth"
+  },
+  assetMagic: {
+    none: "WWN.asset.magicNone",
+    low: "WWN.asset.magicLow",
+    medium: "WWN.asset.magicMedium",
+    high: "WWN.asset.magicHigh",
   },
   monster_saves: {
     0: {

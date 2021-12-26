@@ -109,19 +109,25 @@ export class WwnActorSheet extends ActorSheet {
     });
 
     html.find(".item .item-rollable .item-image").click(async (ev) => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
+      const itemId = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(itemId.data("itemId"));
       if (item.type == "weapon") {
         if (this.actor.data.type === "monster") {
+          console.log("Counter: " + item.data.data.counter.value);
           item.update({
-            data: { counter: { value: item.data.data.counter.value - 1 } },
             data: { shockTotal: item.data.data.shock.damage + this.actor.data.data.damageBonus }
+          });
+          item.update({
+            data: { counter: { value: item.data.data.counter.value - 1 } }
           });
         }
         item.rollWeapon({ skipDialog: ev.ctrlKey });
       } else if (item.type == "spell") {
         item.spendSpell({ skipDialog: ev.ctrlKey });
-      } else {
+      } else if (item.type == "art") {
+        item.spendArt({ skipDialogue: ev.ctrlKey });
+      }
+      else {
         item.roll({ skipDialog: ev.ctrlKey });
       }
     });
@@ -155,9 +161,14 @@ export class WwnActorSheet extends ActorSheet {
       .click((ev) => ev.target.select())
       .change(this._onArtTimeChange.bind(this));
     
-    html.find(".hit-dice .attribute-name a").click((ev) => {
+    html.find(".check-field .check.hd-roll").click((ev) => {
       let actorObject = this.actor;
       actorObject.rollHitDice({ event: event });
+    });
+
+    html.find(".morale-check a").click((ev) => {
+      let actorObject = this.actor;
+      actorObject.rollMorale({ event: event });
     });
 
     // Everything below here is only needed if the sheet is editable
@@ -181,7 +192,7 @@ export class WwnActorSheet extends ActorSheet {
   }
 
   // Override to set resizable initial size
-  async _renderInner(...args) {
+  /* async _renderInner(...args) {
     const html = await super._renderInner(...args);
     this.form = html[0];
 
@@ -190,12 +201,15 @@ export class WwnActorSheet extends ActorSheet {
     if (resizable.length == 0) {
       return;
     }
+    if (character) {
+      return;
+    }
     resizable.each((_, el) => {
       let heightDelta = this.position.height - this.options.height;
       el.style.height = `${heightDelta + parseInt(el.dataset.baseSize)}px`;
     });
     return html;
-  }
+  } */
 
   async _onResize(event) {
     super._onResize(event);

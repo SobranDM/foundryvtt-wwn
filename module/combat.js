@@ -1,32 +1,86 @@
+import { WwnDice } from "../module/dice.js";
 export class WwnCombat {
   static rollInitiative(combat, data) {
     // Check groups
     data.combatants = [];
     let groups = {};
-    combat.data.combatants.forEach((cbt) => {
-      const group = cbt.getFlag("wwn", "group");
-      groups[group] = { present: true };
-      data.combatants.push(cbt);
-    });
-
-    // Roll init
-    Object.keys(groups).forEach((group) => {
-      let roll = new Roll("1d8").roll({async: false});
-      roll.toMessage({
-        flavor: game.i18n.format('WWN.roll.initiative', { group: CONFIG["WWN"].colors[group] }),
+    let groupMods = {};
+    let alertGroups = {};
+    async function dispositionFlag() {
+      combat.data.combatants.forEach((cbt) => {
+        let currentColor;
+        if (!cbt.getFlag("wwn", "group")) {
+          switch (cbt.token.data.disposition) {
+            case -1:
+              currentColor = "red";
+              break;
+            case 0:
+              currentColor = "yellow";
+              break;
+            case 1:
+              currentColor = "green";
+              break;
+          }
+          cbt.setFlag("wwn", "group", currentColor);
+        }
+        const group = cbt.getFlag("wwn", "group");
+        groups[group] = { present: true };
+        data.combatants.push(cbt);
+        let alert = cbt.actor.data.items.filter((a) => a.name == "Alert");
+        if (alert.length > 0) {
+          alertGroups[group] = true;
+        }
+        if (cbt.actor.data.data.scores) {
+          let dexMod = cbt.actor.data.data.scores.dex.mod;
+          if (groupMods[group]) {
+            groupMods[group] = Math.max(dexMod,groupMods[group]);
+          } else {
+            groupMods[group] = dexMod;
+          }
+        }
       });
-      groups[group].initiative = roll.total;
-    });
-
-    // Set init
-    for (let i = 0; i < data.combatants.length; ++i) {
-      if (!data.combatants[i].actor) {
-        return;
-      }
-      const group = data.combatants[i].getFlag("wwn", "group");
-      data.combatants[i].update({initiative: groups[group].initiative});
+      return true;
     }
-    combat.setupTurns();
+
+    let groupRoll = function() {
+      // Roll init
+      Object.keys(groups).forEach((group) => {
+        let rollParts = [];
+        rollParts.push("1d8");
+        if (alertGroups[group]) {
+          rollParts.push(1);
+        }
+        if (groupMods[group]) {
+          rollParts.push(groupMods[group]);
+        }
+
+        let roll = new Roll(rollParts.join("+")).roll({ async: false });
+        roll.toMessage({
+          flavor: game.i18n.format("WWN.roll.initiative", {
+            group: CONFIG["WWN"].colors[group],
+          }),
+        });
+        groups[group].initiative = roll.total;
+      });
+
+      // Set init
+      for (let i = 0; i < data.combatants.length; ++i) {
+        if (!data.combatants[i].actor) {
+          return;
+        }
+        const group = data.combatants[i].getFlag("wwn", "group");
+        let alert = data.combatants[i].actor.data.items.filter((a) => a.name == "Alert");
+        data.combatants[i].update({ initiative: groups[group].initiative });
+        if (alert.length > 0) {
+          if (alert[0].data.data.ownedLevel == 2) {
+            data.combatants[i].update({ initiative: groups[group].initiative + 100 });
+        }}
+      }
+      combat.setupTurns();
+    };
+    dispositionFlag().then(
+      function(value) { groupRoll(value); }
+    );
   }
 
   static async resetInitiative(combat, data) {
@@ -41,37 +95,41 @@ export class WwnCombat {
     let updates = [];
     let messages = [];
     combat.data.combatants.forEach((c, i) => {
-      // This comes from foundry.js, had to remove the update turns thing
+      // Initialize variables
+      let alert = c.actor.data.items.filter((a) => a.name == "Alert");
+      let roll = null;
+      let roll2 = null;
+
+      // Reset initative to zero
+      c.actor.data.data.initiative.roll = 0;
+
       // Roll initiative
-      const cf = combat._getInitiativeFormula(c);
-      const roll = combat._getInitiativeRoll(c, cf);
-      let value = roll.total;
-      if (combat.settings.skipDefeated && c.defeated) {
-        value = -790;
-      }
-      updates.push({ _id: c.id, initiative: value });
-
-      // Determine the roll mode
-      let rollMode = game.settings.get("core", "rollMode");
-      if ((c.token.hidden || c.hidden) && (rollMode === "roll")) rollMode = "gmroll";
-
-      // Construct chat message data
-      let messageData = foundry.utils.mergeObject({
-        speaker: {
-          scene: combat.scene.id,
-          actor: c.actor?.id,
-          token: c.token?.id,
-          alias: c.name
-        },
+      roll = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
+      roll.toMessage({
         flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-      }, {});
-      const chatData = roll.toMessage(messageData, { rollMode: c.hidden && (rollMode === "roll") ? "gmroll" : rollMode, create: false });
+      });
+      if (alert.length > 0) {
+        roll2 = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
+        roll2.toMessage({
+        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+      });
+      }
 
-      if (i > 0) chatData.sound = null;   // Only play 1 sound for the whole set
-      messages.push(chatData);
+      // Set initiative
+      if (alert.length > 0) {
+        if (alert[0].data.data.ownedLevel == 2) {
+          updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
+        } else {
+          updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
+        }
+        
+      } else {
+        updates.push({ _id: c.id, initiative: roll.total });
+      }
     });
-    await combat.updateEmbeddedEntity("Combatant", updates);
-    await CONFIG.ChatMessage.entityClass.create(messages);
+
+    await combat.updateEmbeddedDocuments("Combatant", updates);
+    await CONFIG.ChatMessage.documentClass.create(messages);
     data.turn = 0;
   }
 
@@ -86,18 +144,6 @@ export class WwnCombat {
           ? '<i class="fas fa-dizzy"></i>'
           : span.innerHTML;
     });
-    
-    html.find(".combatant").each((_, ct) => {
-      // Append spellcast and retreat
-      const controls = $(ct).find(".combatant-controls .combatant-control");
-      const cmbtant = object.viewed.combatants.get(ct.dataset.combatantId);
-      const moveInCombat = cmbtant.getFlag("wwn", "moveInCombat");
-      const moveActive = moveInCombat ? "active" : "";
-      controls.eq(1).after(
-        `<a class='combatant-control move-combat ${moveActive}'><i class='fas fa-walking'></i></a>`
-      );
-    });
-    WwnCombat.announceListener(html);
 
     let init = game.settings.get("wwn", "initiative") === "group";
     if (!init) {
@@ -151,29 +197,6 @@ export class WwnCombat {
     }
   }
 
-  static announceListener(html) {
-    html.find(".combatant-control.prepare-spell").click((ev) => {
-      ev.preventDefault();
-      // Toggle spell announcement
-      let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      let isActive = ev.currentTarget.classList.contains('active');
-      game.combat.updateCombatant({
-        _id: id,
-        flags: { wwn: { prepareSpell: !isActive } },
-      });
-    });
-    html.find(".combatant-control.move-combat").click((ev) => {
-      ev.preventDefault();
-      // Toggle spell announcement
-      let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      let isActive = ev.currentTarget.classList.contains('active');
-      game.combat.updateCombatant({
-        _id: id,
-        flags: { wwn: { moveInCombat: !isActive } },
-      });
-    })
-  }
-
   static addListeners(html) {
     // Cycle through colors
     html.find(".combatant-control.flag").click((ev) => {
@@ -189,10 +212,8 @@ export class WwnCombat {
         index++;
       }
       let id = $(ev.currentTarget).closest(".combatant")[0].dataset.combatantId;
-      game.combat.updateCombatant({
-        _id: id,
-        flags: { wwn: { group: colors[index] } },
-      });
+      const combatant = game.combat.combatants.get(id);
+      combatant.setFlag('wwn', 'group', colors[index]);
     });
 
     html.find('.combat-control[data-control="reroll"]').click((ev) => {
@@ -201,31 +222,10 @@ export class WwnCombat {
       }
       let data = {};
       WwnCombat.rollInitiative(game.combat, data);
-      game.combat.update({ data: data }).then(() => {
+      /* game.combat.update({ data: data }).then(() => {
         game.combat.setupTurns();
-      });
+      }); */
     });
-  }
-
-  static addCombatant(combat, data, options, id) {
-    let token = canvas.tokens.get(data.tokenId);
-    let color = "black";
-    switch (token.data.disposition) {
-      case -1:
-        color = "red";
-        break;
-      case 0:
-        color = "yellow";
-        break;
-      case 1:
-        color = "green";
-        break;
-    }
-    data.flags = {
-      wwn: {
-        group: color,
-      },
-    };
   }
 
   static activateCombatant(li) {
@@ -257,7 +257,7 @@ export class WwnCombat {
     }
     if (init === "group") {
       WwnCombat.rollInitiative(combat, data, diff, id);
-    } else if (init === "individual") {
+    } else {
       WwnCombat.individualInitiative(combat, data, diff, id);
     }
   }

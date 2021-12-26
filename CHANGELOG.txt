@@ -1,3 +1,52 @@
+
+## New in 0.9.3
+### Features
+* Alert Focus: if you possess this focus and...
+    * your game is using individual initiative...
+        * rolls your initiative twice and takes the higher result.
+        * adds your initiative to 100 if you possess Alert at level 2, ensuring you always go first and that there is a tiebreaker if this is true of multiple characters.
+    * your game is using group initiative...
+        * adds one to your side's initiative.
+        * adds 100 to your initiative if you possess Alert at level 2, ensuring you always go first and that there is a tiebreaker if this is true of both PCs and monsters.
+* Rolling an Art now automatically spends Effort in addition to sending the Art to chat. If the "Time" field of the Art is blank, Effort will not be spent. As a result, Arts in the Compendium have been updated:
+    * Passive Arts with no Effort expenditure have had their Time field cleared, to be compatible with the Effort spend feature.
+    * Arts that function while Effort remains committed have had their Time field updated to "Active" to ensure consistency. Previously the terminology used here varied.
+* Spellcasters now have a "spells prepared" value. The maximum is user-editable, while the current value is automatically calculated based on memorized spells (the brain icon in the spell inventory).
+* All armor now possess separate base AC and magic bonus fields. This accomplishes a couple things:
+    * Shields can now calculate whether your AC would be higher with only the shield plus its magic bonus (if any) or with your armor + 1 (the standard shield bonus) + magic bonus (if any). No more fiddling with shield AC! Yay! Note that standard WWN does not support shields with magical enhancements to AC but I wished to support it for the sake of unique items in old-school adventure modules.
+    * The Armor section of the inventory now has a Magic heading, letting you see at a glance what items have a magic bonus without having to put "+1" in the name.
+    * All shields and magic armor in the Compendium have been updated to support the new armor format.
+* Exert and Sneak checks now automatically apply armor encumbrance as a penalty, dependent on armor type (light/medium/heavy).
+* Experience to next level is now calculated displayed next to current experience in the PC header.
+    * New System Setting:  Set XP requirements. The slow and fast XP tracks from WWN core, as well as a custom track. The custom track defaults to the B/X Fighter progression but any progression may be entered as a comma-separated list.
+* Weapon attacks now note in the chat card if the weapon is readied, stowed, or not carried at all. It won't stop the attack from happening but this should enable the GM to catch if a player is being sneaky or simply misunderstanding the encumbrance rules.
+    * A future update may allow more granularity here, so that the system is aware of appropriate foci that support stowed drawing and only create this note in the card if something unusual happens.
+* A failed Instinct check automatically rolls on a monster's linked Instinct table. This supports custom Instinct tables, provided those tables are linked from a Compendium.
+    * New System Setting: If true, hides the results of automatic Instinct table rolls (but not the check itself) from players. If false, follows Public/GM/Blind/Self as normal. Defaults to false.
+### Changes
+* Overhauled the PC sheet. Now wider and (hopefully) makes better use of space:
+    * Foci/Abilities tab has been moved to the Notes tab, which has been renamed "Details".
+    * Skills now located on front page; each skill has its own attribute selection, making skill use much faster, particularly in games that typically use the same attribute for a given skill each time.
+* Overhauled item sheets, giving them a sort of 'notecard' appearance, to quote Hawkin. They make a little better use of space now.
+* Removed the placeholder text for mage classes in the tweaks menu, as it was confusing some users.
+* The "Party Select" button has been renamed to "Remove Characters":
+    * As the name suggests, this button now only allows you to remove characters from the party.
+    * Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.
+* Casters now support up to four Effort sources, to better support Legates and Heroic classes.
+### Bug Fixes
+* Fixed saving throws not being rolled from the chat card for items and weapon attacks. (For real this time!)
+* Fixed encounter movement rate not displaying on party sheet. This currently looks silly if you turn off per-turn movement rates, sorry. I'm too lazy to fix it just now.
+* Monster movement fields have been folded into a single field.
+* Style error that was preventing retainer morale from rolling correctly. This does mean the previous value was lost and will have to be re-entered. Apologies for the inconvenience.
+* Monster attack counters.
+* Some tooltip errors.
+* A few V9 compatibility isues.
+### Known Issues
+* As a result of the armor changes, the shields in the compendium have been changed, as have all magical armors. Magical armor will continue to function without issue--though they will not display anything in the magic field, unless you change them--shields, magical or not, will have to be edited or replaced. Sorry for the inconvenience.
+* Rewrote the individual initiative system to clear some bugs and support the Alert focus. This had the side effect of the PCs no longer being able to roll their initiative individually. Or rather, they can but it will simply be overwritten when combat begins. Sorry about that. If there is a great outcry, I will put in a workaround.
+* Group Initiative still doesn't maintain flags based on disposition (Friendly/Neutral/Hostile). I'm still trying to fix this. There are currently two workarounds, though neither is ideal:
+    * If you begin combat, it WILL correctly set sides, but AFTER initiative is rolled. You can then reroll initiative and it will sort itself out.
+    * If you manually set colored flags for each combatant, it works correctly the first time.
 ## New in 0.9.2
 ### Bug Fixes
 * The party select button now only shows actors that are currently in the party. The tooltip has been renamed to "Remove Characters" to reflect its new function. Paired with the drag-and-drop functionality Stas added a few versions ago, that should make adding and removing party members much more manageable. An instruction about drag and drop functionality, only visible to GMs, has been added to the party sheet.

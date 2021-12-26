@@ -5,7 +5,6 @@
       "common": {
         "retainer": {
           "enabled": false,
-          "morale": 0,
           "wage": ""
         },
         "ac": {
@@ -50,7 +49,8 @@
         },
         "initiative": {
           "value": 0,
-          "mod": 0
+          "mod": 0,
+          "roll": 0
         },
         "currency": {
           "cp": 0,
@@ -69,20 +69,9 @@
             "value": 0,
             "max": 0
           },
-          "1": {
-            "max": 0
-          },
-          "2": {
-            "max": 0
-          },
-          "3": {
-            "max": 0
-          },
-          "4": {
-            "max": 0
-          },
-          "5": {
-            "max": 0
+          "prepared": {
+            "value": 0,
+            "max": 3
           }
         },
         "classes": {
@@ -97,6 +86,11 @@
             "max": 1
           },
           "effort3": {
+            "name": "",
+            "value": 1,
+            "max": 1
+          },
+          "effort4": {
             "name": "",
             "value": 1,
             "max": 1
@@ -115,6 +109,7 @@
         "class": "",
         "background": "",
         "alignment": "",
+        "morale": 0,
         "level": 1,
         "xp": {
           "share": 100,
@@ -164,7 +159,8 @@
         "exert": {
           "value": -1,
           "dice": "2d6",
-          "stat": "str"
+          "stat": "str",
+          "penalty": 0
         },
         "heal": {
           "value": -1,
@@ -224,7 +220,8 @@
         "sneak": {
           "value": -1,
           "dice": "2d6",
-          "stat": "str"
+          "stat": "str",
+          "penalty": 0
         },
         "stab": {
           "value": -1,
@@ -360,10 +357,33 @@
         "value": 4,
         "max": 4
       }
+    },
+    "faction": {
+      "templates": [],
+      "hp": {
+        "value": 3,
+        "max": 3
+      },
+      "goal": {
+        "active": "",
+        "progress": ""
+      },
+      "xp": 0,
+      "tags": [],
+      "attributes": {
+        "cunning": 1,
+        "force": 1,
+        "wealth": 1,
+        "magic": "None",
+        "treasure": 0
+      },
+      "initiative": {
+        "value": 0
+      }
     }
   },
   "Item": {
-    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon"],
+    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon", "asset"],
     "item": {
       "description": "",
       "quantity": 1,
@@ -408,7 +428,10 @@
   "armor": {
     "description": "",
     "ac": 9,
-    "aac": 10,
+    "aac": {
+      "value": 10,
+      "mod": 0 },
+    "armorBonus": 0,
     "type": "light",
     "price": 0,
     "weight": 0
@@ -420,7 +443,7 @@
     "range": "",
     "roll": "",
     "description": "",
-    "prepared": true,
+    "prepared": false,
     "cast": 0,
     "save": ""
   },
@@ -448,6 +471,21 @@
     "rollTarget": 0,
     "blindroll": false,
     "save": ""
+  },
+  "asset": {
+    "hp": {
+      "value": 3,
+      "max": 3
+    },
+    "cost": 2,
+    "attack": "1d6",
+    "counter": "1d6",
+    "BOI": false,
+    "magic": "none",
+    "stealth": false,
+    "subtle": false,
+    "special": false,
+    "type": "cunning"
   }
 }
 }

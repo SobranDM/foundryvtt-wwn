@@ -2,6 +2,7 @@
 import { WwnItemSheet } from "./module/item/item-sheet.js";
 import { WwnActorSheetCharacter } from "./module/actor/character-sheet.js";
 import { WwnActorSheetMonster } from "./module/actor/monster-sheet.js";
+// import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
 import { preloadHandlebarsTemplates } from "./module/preloadTemplates.js";
 import { WwnActor } from "./module/actor/entity.js";
 import { WwnItem } from "./module/item/entity.js";
@@ -55,6 +56,15 @@ Hooks.once("init", async function () {
     makeDefault: true,
     label: "WWN.SheetClassMonster"
   });
+  
+  // Remove Faction sheet for 0.9.3 release
+  /* 
+  Actors.registerSheet("wwn", WwnActorSheetFaction, {
+    types: ["faction"],
+    makeDefault: true,
+    label: "WWN.SheetClassFaction"
+  });
+  */
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("wwn", WwnItemSheet, {
     makeDefault: true,
@@ -69,7 +79,7 @@ Hooks.once("init", async function () {
  */
 Hooks.once("setup", function () {
   // Localize CONFIG objects once up-front
-  const toLocalize = ["saves", "scores", "armor", "colors", "tags", "skills", "attackSkills", "encumbLocation"];
+  const toLocalize = ["saves", "scores", "armor", "colors", "tags", "skills", "attackSkills", "encumbLocation", "assetTypes", "assetMagic"];
   for (let o of toLocalize) {
     CONFIG.WWN[o] = Object.entries(CONFIG.WWN[o]).reduce((obj, e) => {
       obj[e[0]] = game.i18n.localize(e[1]);
@@ -105,9 +115,6 @@ Hooks.on("renderSidebarTab", async (object, html) => {
 
 Hooks.on("preCreateCombatant", (combat, data, options, id) => {
   let init = game.settings.get("wwn", "initiative");
-  if (init == "group") {
-    WwnCombat.addCombatant(combat, data, options, id);
-  }
 });
 
 Hooks.on("updateCombatant", WwnCombat.updateCombatant);

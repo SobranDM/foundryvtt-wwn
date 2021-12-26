@@ -40,6 +40,19 @@
   .wwn.sheet.actor .header-details h1 input {
     margin: 0 0 10px 0;
   }
+  .wwn.sheet.actor .header-details .summary .check-field:hover .check {
+    display: block;
+  }
+  .wwn.sheet.actor .header-details .summary .check-field .check {
+    display: none;
+    line-height: 35px;
+    flex: 0 0 20px;
+    position: absolute;
+    font-size: 12px;
+  }
+  .wwn.sheet.actor .header-details .summary .check-field .check:hover {
+    color: rgba(0, 0, 0, 0.9);
+  }
   .wwn.sheet.actor .profile-img {
     border: 0;
     flex: 0 0 145px;
@@ -77,7 +90,7 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 365px;
+    top: 442px;
     right: -179px;
     width: 340px;
     border-top: none;
@@ -85,7 +98,7 @@
     z-index: -1;
   }
   .wwn.sheet.actor .sheet-tabs .item {
-    padding: 1px 10px 3px;
+    padding: 1px 20px 3px;
     margin-left: -5px;
     text-indent: 4px;
     line-height: 16px;
@@ -106,6 +119,7 @@
   }
   .wwn.sheet.actor .sheet-body {
     height: calc(100% - 140px);
+    padding: 30px 10px 0px 10px;
   }
   .wwn.sheet.actor .sheet-body .tab {
     height: 100%;
@@ -134,6 +148,8 @@
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute.ability-score .attribute-value {
     line-height: 36px;
+    width: auto;
+    min-width: 15px;
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
     text-align: center;
@@ -141,49 +157,103 @@
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-mod {
     border-left: 1px solid #7a7971;
+    padding: 4px;
+    text-align: center;
   }
   .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value .sep {
-    flex: 0 0 5px;
     line-height: 24px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group {
-    flex: 0 0 88px;
+    padding-left: 5px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab section.flexrow {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab {
+    flex-direction: row;
+    flex-grow: 0;
+  }
+  .wwn.sheet.actor .sheet-body .attributes.saves {
+    margin-top: 8px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab .attribute-value.flexrow {
+    flex-direction: row;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group {
+    margin-left: 0px;
+    margin-right: 25px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    width: 310px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
+    margin-bottom: -10px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes {
+    display: inline-block;
+    padding-left: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute {
     display: flex;
     flex-direction: row;
+    margin-bottom: 18px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    height: 30px;
+    line-height: 30px;
+    width: 170px;
+    margin-bottom: 0px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills {
+    height: 32px;
+    margin-bottom: 4px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills .attribute-value.unspent {
+    padding-left: 23px;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills select {
+    height: 30px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name {
     width: 40px;
     margin: 0;
     line-height: 35px;
   }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-name {
+    width: 100px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    line-height: 25px;
+  }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name a {
     margin: auto;
   }
-  .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-name {
-    line-height: 16px;
-    width: 80px;
-    padding-top: 8px;
-  }
-  .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute.saving-throw .attribute-value {
-    line-height: 29px;
-  }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value {
     width: 45px;
-    flex-grow: 0;
+  }
+  .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-value {
+    line-height: 25px;
+    padding: 0 10px 0 10px;
+    width: 40px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value input {
     padding: 0;
   }
-  .wwn.sheet.actor .sheet-body .inventory {
-    overflow: auto;
+  .wwn.sheet.actor.monster .sheet-body .inventory {
+    padding-top: 0px;
+    margin-top: 0px;
+    max-height: 380px;
+  }
+  .wwn.sheet.actor.monster .sheet-body .attributes-tab .inventory {
+    width: 420px;
   }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
@@ -198,6 +268,12 @@
     background: url("/systems/wwn/assets/back.png");
     color: white;
     margin-top: 7px;
+  }
+  .wwn.sheet.actor .sheet-body .inventory .spell-resources {
+    margin-left: 4px;
+  }
+  .wwn.sheet.actor.monster .inventory .item-titles {
+    margin-top: 0px;
   }
   .wwn.sheet.actor .sheet-body .inventory .item-titles .item-name {
     text-align: left;
@@ -297,11 +373,11 @@
   .wwn.sheet.actor .sheet-body .inventory .field-longer {
     text-indent: 8px;
     text-align: left;
-    flex-basis: 90px;
+    flex-basis: 80px;
     font-size: 12px;
   }
   .wwn.sheet.actor .sheet-body .inventory .field-long {
-    flex-basis: 65px;
+    flex-basis: 80px;
     flex-grow: 0;
     text-align: center;
     font-size: 12px;
@@ -349,24 +425,42 @@
     text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9, 1px 1px 5px #d8d6c9;
   }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-titles {
-    line-height: 24px;
-  }
+    line-height: 13px;
+    }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-controls {
     flex-basis: 65px;
   }
-  .wwn.sheet.actor .flexrow .readied-header {
+  .wwn.sheet.actor .inventory.spells .spells-parent .item-list.spells-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry {
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow {
+    flex-basis: 100%;
+    flex-grow: 2;
+    flex-shrink: 1;
+  }
+  .wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow.expanded {
+    display: flex;
+    flex-shrink: 0;
+  }
+  .wwn.sheet.actor .inventory .inventory-right .currency-header {
     color: whitesmoke;
     padding: 2px;
     padding-top: 4px;
-    margin: 2px;
-    margin-bottom: 0px;
-    margin-right: 0;
+    margin: 2px 0px 0px 4px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     background: url("/systems/wwn/assets/back.png");
     text-align: center;
     vertical-align: middle;
+    height: 30px;
   }
-  .wwn.sheet.actor .flexrow .readied {
+  .wwn.sheet.actor .inventory .currency {
     position: relative;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -377,6 +471,53 @@
     display: flex;
     width: 10px;
     vertical-align: middle;
+    height: 30px;
+  }
+  .wwn.sheet.actor .flexrow .readied-header {
+    color: whitesmoke;
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    margin: 2px 0px 0px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    background: url("/systems/wwn/assets/back.png");
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+  }
+  .wwn.sheet.actor .flexrow .readied {
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #000000;
+    box-shadow: 0 0 2px #7a7971;
+    margin-top: 2px;
+    display: flex;
+    width: 10px;
+    vertical-align: middle;
+    height: 30px;
+  }
+  .wwn.sheet.actor .inventory .inventory-all .inventory-right .item-titles {
+    flex-grow: 0;
+    height: 26px;
+    line-height: 21px;
+    width: 98%;
+    margin-left: 4px;
+  }
+  .wwn.sheet.actor .inventory .inventory-right.flexrow {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor .inventory .inventory-right.flexrow .flexrow.readied-group {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group {
+    flex-direction: column;
+  }
+  .wwn.sheet.actor .inventory .inventory-right.flexrow .flexrow.readied-group .flexrow.readied-subgroup {
+    height: 10px;
+  }
+  .wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group .currency-subgroup.currency-buffer {
+    margin-top: 7px;
   }
   .wwn.sheet.actor .flexrow .unspentPoints {
     display: flex;
@@ -387,21 +528,10 @@
     height: 300px;
     padding: 4px;
   }
-  .wwn.sheet.actor .sheet-body .focus-tab .focus-desc label {
-    color: whitesmoke;
-    background: url("/systems/wwn/assets/back.png");
-    line-height: 12px;
-    height: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 4px;
-    display: flex;
-  }
   .wwn.roll-dialog .roll-details {
     font-weight: bold;
     text-align: center;
   }
-  
   .wwn.dialog.creator .attribute-list .form-fields {
     flex: 0 0 50px;
   }
@@ -784,7 +914,7 @@
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab {
     justify-content: space-between;
-    height: 100%;
+    height: 95%;
   }
   #selectAttribute {
     padding: 0px;
@@ -815,36 +945,73 @@
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
     position: relative;
+    padding-right: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
     position: absolute;
     left: 0;
-    top: -8px;
+    top: -23px;
   }
   .wwn.sheet.actor.character .sheet-body .resources {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .wwn.sheet.actor.character .sheet-body .resources .attribute {
-    flex: 0 0 55px;
+    flex: 0 0 15px;
   }
-  .wwn.sheet.actor.character .sheet-body .resources .attribute.attribute-secondaries {
-    flex: 0 0 40px;
-    margin-bottom: 5px;
+  .wwn.sheet.actor.character .sheet-body .middle-column {
+    margin-left: -30px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .resources .health-bottom {
+    margin-top: 20px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .resources .health.armor-class {
+    margin-top: 20px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group {
+    margin: 5px 10px 0 25px;
+    padding: 10px 10px 0 10px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute {
+    margin-bottom: 14px;
+  }
+  .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute-name.box-title {
+    width: 80px;
+    line-height: 35px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
     margin: 2px;
+    margin-top: 0px;
     flex: 0 0 130px;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .details-top {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
     flex: 0 0 20px;
-  }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol {
-    height: 100px;
-    overflow: auto;
-    list-style: none;
-    padding: 5px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li {
     margin: 0;
@@ -860,16 +1027,31 @@
     margin: 2px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
-    height: 110px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 90px;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
+    min-height:120px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor .tox .tox-tbtn {
     height: 24px;
   }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory.notes {
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes {
     margin: 2px;
   }
-  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory.notes .editor {
-    height: 150px;
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor-content {
+    min-height:120px;
   }
   .wwn.sheet.actor.character .sheet-body .health {
     height: 70px;
@@ -931,15 +1113,6 @@
   }
   .wwn.sheet.actor.character .sheet-body .saving-throw .attribute-value.flat {
     line-height: 30px;
-  }
-  .wwn.sheet.actor.character .sheet-body .skills .attribute {
-    margin: 0px;
-  }
-  .wwn.sheet.actor.character .sheet-body .skills .attribute .attribute-name {
-    text-align: center;
-    flex: 1 0 60px;
-    line-height: 25px;
-    font-size: 12px;
   }
   .wwn.sheet.actor.character .encumbrance {
     height: 12px;
@@ -1072,8 +1245,8 @@
   }
   .wwn.sheet.item .sheet-body .stats {
     flex: 0 0 80px;
-    border-right: 1px groove rgba(0, 0, 0, 0.2);
-    padding-right: 2px;
+    border: 1px groove rgba(0, 0, 0, 0.2);
+    padding: 2px;
     font-size: 13px;
   }
   .wwn.sheet.item .sheet-body .stats .form-group {
@@ -1083,6 +1256,8 @@
   .wwn.sheet.item .sheet-body .stats .form-group label {
     background: rgba(0, 0, 0, 0.1);
     padding: 0 4px;
+    white-space: nowrap;
+    text-align: center;
   }
   .wwn.sheet.item .sheet-body .stats .form-group input {
     border-bottom: none;
@@ -1093,22 +1268,26 @@
     background: #7a7971;
     margin: 4px 0;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type {
     text-align: center;
     padding: 2px;
+    padding-left: 8px;
     font-size: 15px;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type a {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type a {
     color: #969696;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group.attack-type a.active, .wwn.sheet.item .sheet-body .stats .form-group.attack-type a :hover {
+  .wwn.sheet.item .sheet-body .stats .form-fields.attack-type a.active, .wwn.sheet.item .sheet-body .stats .form-group.attack-type a :hover {
     color: rgba(0, 0, 0, 0.9);
   }
   .wwn.sheet.item .sheet-body .stats .form-group {
     align-items: inherit;
+    min-width: 250px;
   }
   .wwn.sheet.item .sheet-body .stats .form-group label {
     line-height: 21px;
+    min-width: 145px;
+    display: inline-block;
   }
   .wwn.sheet.item .sheet-body .stats .form-group .form-fields {
     justify-content: space-evenly;
@@ -1116,6 +1295,8 @@
   }
   .wwn.sheet.item .sheet-body .stats .form-group .form-fields select {
     height: 24px;
+    white-space: nowrap;
+    display: inline-block;
   }
   .wwn.sheet.item .sheet-body .stats .block-input {
     display: flex;
@@ -1126,10 +1307,19 @@
     height: 18px;
   }
   .wwn.sheet.item .sheet-body .description .editor {
-    height: 370px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-height: 90px;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
     padding: 0 5px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 90px;
   }
   
   .wwn.actor.monster {
@@ -1153,13 +1343,17 @@
     color: rgba(0, 0, 0, 0.9);
   }
   .wwn.actor.monster .sheet-body .editor {
-    height: 300px;
+    height: 380px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 0px;
+  }
+  .wwn.actor.monster .sheet-body .attributes-tab .attribute-group .attributes .attribute.saving-throw .attribute-name {
+    width: 80px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attributes {
     justify-content: space-between;
@@ -1169,12 +1363,12 @@
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
     flex: 0 0 60px;
+    max-width: 80px;
+    max-height: 55px;
+    margin: 0px 10px 10px 10px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
     flex: 0 0 85px;
-  }
-  .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.saving-throw {
-    flex: 0 0 40px;
   }
   .wwn.actor.monster .attributes .attribute.health {
     position: relative;
@@ -1190,9 +1384,10 @@
     color: white;
   }
   .wwn.actor.monster .attribute-group .attacks-description {
-    margin: 2px;
+    margin: 2px 0 25px;
     padding: 0;
     text-align: center;
+    border-bottom: 1px solid #7a7971;
   }
   .wwn.actor.monster .attribute-group .attacks-description label {
     color: #7a7971;

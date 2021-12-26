@@ -28,38 +28,6 @@ export const registerSettings = function () {
     }
   });
 
-  /* game.settings.register("wwn", "activateVision", {
-    name: game.i18n.localize("WWN.Setting.ActivateVision"),
-    hint: game.i18n.localize("WWN.Setting.ActivateVisionHint"),
-    default: "linkedTokens",
-    scope: "world",
-    type: String,
-    config: true,
-    choices: {
-      linkedTokens: "WWN.Setting.LinkedTokens",
-      unlinkedTokens: "WWN.Setting.UnlinkedTokens",
-      allTokens: "WWN.Setting.AllTokens",
-      noTokens: "WWN.Setting.NoTokens"
-    },
-    onChange: _ => window.location.reload()
-  });
-
-  game.settings.register("wwn", "tokenHP", {
-    name: game.i18n.localize("WWN.Setting.TokenHP"),
-    hint: game.i18n.localize("WWN.Setting.TokenHPHint"),
-    default: "unlinkedTokens",
-    scope: "world",
-    type: String,
-    config: true,
-    choices: {
-      linkedTokens: "WWN.Setting.LinkedTokens",
-      unlinkedTokens: "WWN.Setting.UnlinkedTokens",
-      allTokens: "WWN.Setting.AllTokens",
-      noTokens: "WWN.Setting.NoTokens"
-    },
-    onChange: _ => window.location.reload()
-  }); */
-
   game.settings.register("wwn", "movementRate", {
     name: game.i18n.localize("WWN.Setting.MovementRate"),
     hint: game.i18n.localize("WWN.Setting.MovementRateHint"),
@@ -91,6 +59,15 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
+  });
+
+  game.settings.register("wwn", "hideInstinct", {
+    name: game.i18n.localize("WWN.Setting.hideInstinct"),
+    hint: game.i18n.localize("WWN.Setting.hideInstinctHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true
   });
 
   game.settings.register("wwn", "languageList", {
@@ -140,19 +117,19 @@ export const registerSettings = function () {
     name: game.i18n.localize("WWN.Setting.xpCustomList"),
     hint: game.i18n.localize("WWN.Setting.xpCustomListHint"),
     default: [
-      "2000",
-      "4000",
-      "8000",
-      "16000",
-      "32000",
-      "64000",
-      "120000",
-      "240000",
-      "360000",
-      "480000",
-      "600000",
-      "720000",
-      "840000"
+      2000,
+      4000,
+      8000,
+      16000,
+      32000,
+      64000,
+      120000,
+      240000,
+      360000,
+      480000,
+      600000,
+      720000,
+      840000
     ],
     scope: "world",
     type: String,

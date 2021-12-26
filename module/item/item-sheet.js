@@ -20,7 +20,7 @@ export class WwnItemSheet extends ItemSheet {
       classes: ["wwn", "sheet", "item"],
       width: 550,
       height: 510,
-      resizable: false,
+      resizable: true,
       tabs: [
         {
           navSelector: ".tabs",

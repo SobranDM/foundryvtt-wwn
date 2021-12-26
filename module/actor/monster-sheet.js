@@ -19,9 +19,9 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "monster", "actor"],
       template: "systems/wwn/templates/actors/monster-sheet.html",
-      width: 450,
-      height: 560,
-      resizable: true,
+      width: 730,
+      height: 625,
+      resizable: false,
       tabs: [
         {
           navSelector: ".tabs",
@@ -200,11 +200,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    */
   activateListeners(html) {
     super.activateListeners(html);
-
-    html.find(".morale-check a").click((ev) => {
-      let actorObject = this.actor;
-      actorObject.rollMorale({ event: event });
-    });
 
     html.find(".instinct-check a").click((ev) => {
       let actorObject = this.actor;
