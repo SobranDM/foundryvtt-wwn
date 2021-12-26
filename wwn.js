@@ -2,7 +2,7 @@
 import { WwnItemSheet } from "./module/item/item-sheet.js";
 import { WwnActorSheetCharacter } from "./module/actor/character-sheet.js";
 import { WwnActorSheetMonster } from "./module/actor/monster-sheet.js";
-import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
+// import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
 import { preloadHandlebarsTemplates } from "./module/preloadTemplates.js";
 import { WwnActor } from "./module/actor/entity.js";
 import { WwnItem } from "./module/item/entity.js";
@@ -56,11 +56,15 @@ Hooks.once("init", async function () {
     makeDefault: true,
     label: "WWN.SheetClassMonster"
   });
+  
+  // Remove Faction sheet for 0.9.3 release
+  /* 
   Actors.registerSheet("wwn", WwnActorSheetFaction, {
     types: ["faction"],
     makeDefault: true,
     label: "WWN.SheetClassFaction"
   });
+  */
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("wwn", WwnItemSheet, {
     makeDefault: true,

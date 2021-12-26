@@ -30,8 +30,8 @@ export class WwnCombat {
         if (alert.length > 0) {
           alertGroups[group] = true;
         }
-        if (cbt._actor.data.data.scores) {
-          let dexMod = cbt._actor.data.data.scores.dex.mod;
+        if (cbt.actor.data.data.scores) {
+          let dexMod = cbt.actor.data.data.scores.dex.mod;
           if (groupMods[group]) {
             groupMods[group] = Math.max(dexMod,groupMods[group]);
           } else {
@@ -69,7 +69,7 @@ export class WwnCombat {
           return;
         }
         const group = data.combatants[i].getFlag("wwn", "group");
-        let alert = data.combatants[i]._actor.data.items.filter((a) => a.name == "Alert");
+        let alert = data.combatants[i].actor.data.items.filter((a) => a.name == "Alert");
         data.combatants[i].update({ initiative: groups[group].initiative });
         if (alert.length > 0) {
           if (alert[0].data.data.ownedLevel == 2) {

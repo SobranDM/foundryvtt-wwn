@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "monster", "faction"],
+    "types": ["character", "monster"],
     "templates": {
       "common": {
         "retainer": {
