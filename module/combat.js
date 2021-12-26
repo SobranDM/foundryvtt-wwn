@@ -128,8 +128,8 @@ export class WwnCombat {
       }
     });
 
-    await combat.updateEmbeddedEntity("Combatant", updates);
-    await CONFIG.ChatMessage.entityClass.create(messages);
+    await combat.updateEmbeddedDocuments("Combatant", updates);
+    await CONFIG.ChatMessage.documentClass.create(messages);
     data.turn = 0;
   }
 
