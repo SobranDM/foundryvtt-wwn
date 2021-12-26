@@ -98,7 +98,7 @@
     z-index: -1;
   }
   .wwn.sheet.actor .sheet-tabs .item {
-    padding: 1px 10px 3px;
+    padding: 1px 20px 3px;
     margin-left: -5px;
     text-indent: 4px;
     line-height: 16px;
@@ -952,7 +952,7 @@
   .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
     position: absolute;
     left: 0;
-    top: -8px;
+    top: -23px;
   }
   .wwn.sheet.actor.character .sheet-body .resources {
     display: flex;
