@@ -506,6 +506,10 @@ export class WwnActor extends Actor {
       if (attData.item.data.skillDamage) {
         attData.item.data.shockTotal = attData.item.data.shockTotal + this.data.data.skills[skillAttack].value;
       }
+    } else {
+      console.log(this.data.data.damageBonus)
+      attData.item.data.shockTotal = this.data.data.damageBonus + attData.item.data.shock.damage;
+      console.log(`Shock Total: ${attData.item.data.shockTotal}`)
     }
 
     rollParts.push(data.thac0.bba.toString());
