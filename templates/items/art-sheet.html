@@ -10,27 +10,27 @@
     </div>
   </header>
   <section class="sheet-body">
-    <div class="description weapon-editor">
-      {{editor content=data.description target="data.description" button=true
-      owner=owner editable=editable}}
-    </div>
-    <div class="flexrow">
-      <div class="stats">
-        <div class="form-group">
-          <label>{{localize 'WWN.items.Roll'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label title={{localize 'WWN.spells.ArtSourceHint' }}>{{localize 'WWN.spells.ArtSource'}}</label>
-          <div class="form-fields">
-            <input type="text" name="data.source" value="{{data.source}}"
-              placeholder="{{localize 'WWN.spells.HighMage'}}" />
-          </div>
-        </div>
+    <div class="flexrow card-body">
+      <div class="description weapon-editor">
+        {{editor content=data.description target="data.description" button=true
+        owner=owner editable=editable}}
       </div>
-      <div class="flexrow">
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.items.Roll'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title={{localize 'WWN.spells.ArtSourceHint' }}>{{localize 'WWN.spells.ArtSource'}}</label>
+            <div class="form-fields">
+              <input type="text" name="data.source" value="{{data.source}}"
+                placeholder="{{localize 'WWN.spells.HighMage'}}" />
+            </div>
+          </div>
+        </div>
         <div class="stats">
           <div class="form-group">
             <label title="{{localize 'WWN.spells.TimeHint'}}">{{localize
