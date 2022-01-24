@@ -1051,7 +1051,7 @@
     height: 100%;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor-content {
-    min-height:120px;
+    min-height: 120px;
   }
   .wwn.sheet.actor.character .sheet-body .health {
     height: 70px;
@@ -1310,16 +1310,31 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    flex-shrink: 0;
-    min-height: 90px;
+    flex-shrink: 1;
+    height: auto;
+    min-height: 130px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .wwn.sheet.item .sheet-body .item-footer {
+    justify-content: center;
+    margin-bottom: 15px;
+    justify-self: flex-end;
+  }
+  .wwn.sheet.item .sheet-body .flexrow.card-body {
+    flex-direction: column;
+    justify-content: space-between;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
     padding: 0 5px;
     flex-grow: 1;
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
-    min-height: 90px;
+    height: auto;
+    min-height: 130px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   
   .wwn.actor.monster {

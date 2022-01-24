@@ -8,29 +8,15 @@
         </h1>
         <div class="details">
           <div class="form-group">
-            <label title="{{localize 'WWN.items.Price'}}"
-              ><i class="fas fa-circle"></i
-            ></label>
+            <label title="{{localize 'WWN.items.Price'}}"><i class="fas fa-circle"></i></label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="data.price"
-                value="{{data.price}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.items.Weight'}}"
-              ><i class="fas fa-weight-hanging"></i
-            ></label>
+            <label title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="data.weight"
-                value="{{data.weight}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
             </div>
           </div>
         </div>
@@ -38,40 +24,26 @@
     </div>
   </header>
   <section class="sheet-body">
-    <div class="description">
-      {{editor content=data.description target="data.description" button=true
-      owner=owner editable=editable}}
-    </div>
-    <div class="flexrow">
-      <div class="stats">
-        <div class="form-group">
-          <label title="{{localize 'WWN.ArmorClass'}}"
-            >{{localize 'WWN.items.ArmorAAC'}}</label
-          >
-          <div class="form-fields">
-            <input
-              type="number"
-              name="data.aac.value"
-              value="{{data.aac.value}}"
-              data-dtype="Number"
-            />
-          </div>
-        </div>
-        <div class="form-group">
-          <label title="{{localize 'WWN.items.ArmorBonusHint'}}"
-            >{{localize 'WWN.items.ArmorBonus'}}</label
-          >
-          <div class="form-fields">
-            <input
-              type="number"
-              name="data.aac.mod"
-              value="{{data.aac.mod}}"
-              data-dtype="Number"
-            />
-          </div>
-        </div>
+    <div class="flexrow card-body">
+      <div class="description">
+        {{editor content=data.description target="data.description" button=true
+        owner=owner editable=editable}}
       </div>
-      <div class="flexrow">
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.items.ArmorAAC'}}</label>
+            <div class="form-fields">
+              <input type="number" name="data.aac.value" value="{{data.aac.value}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize 'WWN.items.ArmorBonus'}}</label>
+            <div class="form-fields">
+              <input type="number" name="data.aac.mod" value="{{data.aac.mod}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
         <div class="stats">
           <div class="form-group">
             <label>{{localize 'WWN.armor.type'}}</label>
