@@ -61,7 +61,7 @@ export class WwnPartySheet extends FormApplication {
   async _selectActors(ev) {
     const template = "systems/wwn/templates/apps/party-select.html";
     const templateData = {
-      actors: this.object.entities
+      actors: this.object.documents
     }
     const content = await renderTemplate(template, templateData);
     new Dialog({
@@ -75,7 +75,7 @@ export class WwnPartySheet extends FormApplication {
             let checks = html.find("input[data-action='select-actor']");
             checks.each(async (_, c) => {
               let key = c.getAttribute('name');
-              await this.object.entities[key].setFlag('wwn', 'party', c.checked);
+              await this.object.documents[key].setFlag('wwn', 'party', c.checked);
             });
           },
         },

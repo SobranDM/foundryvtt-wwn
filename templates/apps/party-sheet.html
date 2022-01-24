@@ -16,7 +16,7 @@
     {{/if}}
   </div>
   <ol class="actor-list">
-    {{#each data.entities as |e|}} {{#if e.data.flags.wwn.party}}
+    {{#each data.documents as |e|}} {{#if e.data.flags.wwn.party}}
     <li class="actor flexrow" data-actor-id="{{e.id}}">
       <div class="field-img">
         <img src="{{e.img}}" />
