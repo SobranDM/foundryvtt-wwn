@@ -90,11 +90,10 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 442px;
+    top: 433px;
     right: -179px;
     width: 340px;
     border-top: none;
-    height: 18px;
     z-index: -1;
   }
   .wwn.sheet.actor .sheet-tabs .item {
