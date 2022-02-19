@@ -1028,9 +1028,9 @@
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 0;
     height: 100%;
-    min-height: 90px;
+    min-height: 120px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
     min-height:120px;
@@ -1042,7 +1042,7 @@
     margin: 2px;
   }
   .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor {
-    min-height: 90px;
+    min-height: 120px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

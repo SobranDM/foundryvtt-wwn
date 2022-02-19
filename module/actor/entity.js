@@ -91,7 +91,7 @@ export class WwnActor extends Actor {
   /* -------------------------------------------- */
 
   rollHP(options = {}) {
-    let roll = new Roll(this.data.data.hp.hd).roll({async: false});
+    let roll = new Roll(this.data.data.hp.hd).roll({ async: false });
     return this.update({
       data: {
         hp: {
@@ -130,7 +130,7 @@ export class WwnActor extends Actor {
       skipDialog: skip,
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: game.i18n.format("WWN.roll.save", { save: label }),
-      title: game.i18n.format("WWN.roll.save", { save: this.name + " - " +  label }),
+      title: game.i18n.format("WWN.roll.save", { save: this.name + " - " + label }),
     });
   }
 
@@ -359,7 +359,7 @@ export class WwnActor extends Actor {
     }
     const rollParts = [this.data.data.skills[expl].dice];
     if (poly.length > 0 && !combatSkill) {
-      rollParts.push(Math.max(this.data.data.skills[expl].value, poly[0].data.data.ownedLevel -1));
+      rollParts.push(Math.max(this.data.data.skills[expl].value, poly[0].data.data.ownedLevel - 1));
     } else {
       rollParts.push(this.data.data.skills[expl].value);
     }
@@ -640,11 +640,11 @@ export class WwnActor extends Actor {
         break;
     }
 
-  // Set character's XP to level
+    // Set character's XP to level
     data.details.xp.next = xpRate[level];
   }
 
-  computePrepared () {
+  computePrepared() {
     if (!this.data.data.spells.enabled) {
       return;
     }
@@ -678,7 +678,7 @@ export class WwnActor extends Actor {
     const weapons = this.data.items.filter((w) => w.type == "weapon");
     const armors = this.data.items.filter((a) => a.type == "armor");
     const items = this.data.items.filter((i) => i.type == "item");
-    
+
     weapons.forEach((w) => {
       if (w.data.data.equipped) {
         totalReadied += w.data.data.weight * w.data.data.quantity;
@@ -700,12 +700,12 @@ export class WwnActor extends Actor {
         totalStowed += i.data.data.weight * i.data.data.quantity;
       }
     });
-    
+
     if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
-      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
+      let coinWeight = (data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
       totalStowed += coinWeight;
     } else {
-      let coinWeight = ( data.currency.cp + data.currency.sp + data.currency.gp ) / 100;
+      let coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
       totalStowed += coinWeight;
     }
     data.encumbrance.readied.max = maxReadied;
@@ -718,23 +718,23 @@ export class WwnActor extends Actor {
   _calculateMovement() {
     const data = this.data.data;
     if (data.config.movementAuto) {
-      if (isNaN(data.movement.bonus)) { 
+      if (isNaN(data.movement.bonus)) {
         data.movement.bonus = 0;
       }
       if (game.settings.get("wwn", "movementRate") == "movebx") {
         if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 40 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 30 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
           data.movement.base = 30 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
           data.movement.base = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +4
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
@@ -750,16 +750,16 @@ export class WwnActor extends Actor {
         if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 30 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
           data.movement.base = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max +4) {
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
+          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
           data.movement.base = 15 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max +4
+        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
           data.movement.base = 15 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
@@ -843,19 +843,23 @@ export class WwnActor extends Actor {
     data.treasure = total;
   }
 
-  computeAC() {
+  async computeAC() {
     if (this.data.type != "character") {
       return;
     }
+
+    const data = this.data.data;
+
     // Compute AC
     let baseAac = 10;
     let AacShieldMod = 0;
     let AacShieldNaked = 0;
-    const data = this.data.data;
-    data.aac.naked = baseAac + data.scores.dex.mod + data.aac.mod;
+    let naked = baseAac + data.scores.dex.mod + data.aac.mod;
+
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
-      if (a.data.data.equipped && a.data.data.type != "shield") {
+      if (!a.data.data.equipped) { return; };
+      if (a.data.data.type != "shield") {
         baseAac = a.data.data.aac.value + a.data.data.aac.mod;
         // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
         if (a.data.data.type === "medium") {
@@ -868,7 +872,7 @@ export class WwnActor extends Actor {
           data.skills.sneak.penalty = 0;
           data.skills.exert.penalty = 0;
         }
-      } else if (a.data.data.equipped && a.data.data.type == "shield") {
+      } else if (a.data.data.type == "shield") {
         AacShieldMod = 1 + a.data.data.aac.mod;
         AacShieldNaked = a.data.data.aac.value + a.data.data.aac.mod;
       }
@@ -877,17 +881,16 @@ export class WwnActor extends Actor {
       let shieldOnly = AacShieldNaked + data.scores.dex.mod + data.aac.mod;
       let shieldBonus = baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
       if (shieldOnly > shieldBonus) {
-        data.aac.value = shieldOnly;
+        await this.data.update({ data: { aac: { value: shieldOnly, naked: naked } } });
       } else {
-        data.aac.value = shieldBonus;
-        data.aac.shield = AacShieldMod;
+        await this.data.update({ data: { aac: { value: shieldBonus, shield: AacShieldMod, naked: naked } } });
       }
     } else {
-      data.aac.value = baseAac + data.scores.dex.mod + data.aac.mod;
+      await this.data.update({ data: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked } } });
     }
   }
 
-  computeModifiers() {
+  async computeModifiers() {
     if (this.data.type != "character") {
       return;
     }
@@ -902,9 +905,10 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    Object.keys(scores).forEach( (s) => {
-      scores[s].mod = scores[s].tweak + WwnActor._valueFromTable(standard, scores[s].value);
-    });
+    await Promise.all(Object.keys(scores).map(async (score) => {
+      let newMod = this.data.data.scores[score].tweak + WwnActor._valueFromTable(standard, scores[score].value);
+      await this.data.update({ data: { scores: { [score]: { mod: newMod } } } });
+    }));
 
     const capped = {
       0: -2,
@@ -916,53 +920,42 @@ export class WwnActor extends Actor {
       16: 1,
       18: 2,
     };
-    data.scores.dex.init = data.scores.dex.mod;
-    data.scores.cha.npc = WwnActor._valueFromTable(
-      capped,
-      data.scores.cha.value
-    );
-    data.scores.cha.retain = data.scores.cha.mod + 4;
-    data.scores.cha.loyalty = data.scores.cha.mod + 7;
-
-    const literacy = {
-      0: "",
-      3: "WWN.Illiterate",
-      6: "WWN.LiteracyBasic",
-      9: "WWN.Literate",
-    };
-    data.languages.literacy = WwnActor._valueFromTable(
-      literacy,
-      data.scores.int.value
-    );
 
     data.langTotal = data.skills.connect.value + data.skills.know.value + 2;
     data.languages.spoken = "WWN.NativePlus";
   }
 
-  computeSaves() {
+  async computeSaves() {
     const data = this.data.data;
     const saves = data.saves;
-    Object.keys(saves).forEach( (s) => {
+    Object.keys(saves).forEach((s) => {
       if (!saves[s].mod) {
         saves[s].mod = 0;
       }
     });
-    
+
     if (this.data.type != "character") {
       const monsterHD = data.hp.hd.toLowerCase().split('d');
-      Object.keys(saves).forEach ( (s) => {
-        saves[s].value = Math.max(15 - Math.floor(monsterHD[0] / 2),2) + saves[s].mod;
-      });
+      await Promise.all(Object.keys(saves).map((s) => {
+        this.data.update({ data: { saves: { [s]: { value: Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod } } } })
+      }))
     } else {
-    let evasionMod = Math.max(data.scores.int.mod,data.scores.dex.mod);
-    let physicalMod = Math.max(data.scores.con.mod,data.scores.str.mod);
-    let mentalMod = Math.max(data.scores.wis.mod,data.scores.cha.mod);
-    let charLevel = data.details.level;
+      let charLevel = data.details.level;
+      let evasionVal = 16 - Math.max(data.scores.int.mod, data.scores.dex.mod) - charLevel + data.saves.evasion.mod;
+      let physicalVal = 16 - Math.max(data.scores.con.mod, data.scores.str.mod) - charLevel + data.saves.physical.mod;
+      let mentalVal = 16 - Math.max(data.scores.wis.mod, data.scores.cha.mod) - charLevel + data.saves.mental.mod;
+      let luckVal = 16 - charLevel + data.saves.luck.mod;
 
-    data.saves.evasion.value = 16 - evasionMod - charLevel + data.saves.evasion.mod;
-    data.saves.physical.value = 16 - physicalMod - charLevel + data.saves.physical.mod;
-    data.saves.mental.value = 16 - mentalMod - charLevel + data.saves.mental.mod;
-    data.saves.luck.value = 16 - charLevel + data.saves.luck.mod;
+      await this.data.update({
+        data: {
+          saves: {
+            evasion: { value: evasionVal },
+            physical: { value: physicalVal },
+            mental: { value: mentalVal },
+            luck: { value: luckVal }
+          }
+        }
+      })
     }
   }
 }

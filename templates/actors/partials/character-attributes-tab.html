@@ -2,12 +2,10 @@
     {{!-- Scores --}}
     <div class="attribute-group">
         <div class="modifiers-btn">
-            {{#unless isNew}}
-            <a data-action="modifiers" title="{{localize 'WWN.Modifiers'}}"><i class="fas fa-book"></i></a>
-            {{else}}
+            {{#if isNew}}
             <a data-action="generate-scores" title="{{localize 'WWN.dialog.generateScores'}}"><i
                     class="fas fa-dice blinking"></i></a>
-            {{/unless}}
+            {{/if}}
         </div>
         <ul class="attributes flexrow">
             <li class="attribute ability-score" data-score="str">
