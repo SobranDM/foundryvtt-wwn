@@ -27,7 +27,7 @@ export class WwnPartyXP extends FormApplication {
      * @return {Object}
      */
     getData() {
-        const actors = this.object.entities.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
+        const actors = game.actors.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
         let data = {
             actors: actors,
             data: this.object,
@@ -52,7 +52,7 @@ export class WwnPartyXP extends FormApplication {
     /* -------------------------------------------- */
 
     _calculateShare(ev) {
-        const actors = this.object.entities.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
+        const actors = game.actors.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
         const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
         const html = $(this.form);
         let shares = 0;
@@ -74,7 +74,7 @@ export class WwnPartyXP extends FormApplication {
             const qRow = $(row);
             const value = qRow.find('input').val();
             const id = qRow.data('actorId');
-            const actor = this.object.entities.find(e => e.id === id);
+            const actor = game.actors.find(e => e.id === id);
             if (value) {
                 actor.getExperience(Math.floor(parseInt(value)));
             }

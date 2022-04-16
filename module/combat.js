@@ -33,7 +33,7 @@ export class WwnCombat {
         if (cbt.actor.data.data.scores) {
           let dexMod = cbt.actor.data.data.scores.dex.mod;
           if (groupMods[group]) {
-            groupMods[group] = Math.max(dexMod,groupMods[group]);
+            groupMods[group] = Math.max(dexMod, groupMods[group]);
           } else {
             groupMods[group] = dexMod;
           }
@@ -42,7 +42,7 @@ export class WwnCombat {
       return true;
     }
 
-    let groupRoll = function() {
+    let groupRoll = function () {
       // Roll init
       Object.keys(groups).forEach((group) => {
         let rollParts = [];
@@ -74,12 +74,13 @@ export class WwnCombat {
         if (alert.length > 0) {
           if (alert[0].data.data.ownedLevel == 2) {
             data.combatants[i].update({ initiative: groups[group].initiative + 100 });
-        }}
+          }
+        }
       }
       combat.setupTurns();
     };
     dispositionFlag().then(
-      function(value) { groupRoll(value); }
+      function (value) { groupRoll(value); }
     );
   }
 
@@ -100,31 +101,32 @@ export class WwnCombat {
       let roll = null;
       let roll2 = null;
 
-      // Reset initative to zero
-      c.actor.data.data.initiative.roll = 0;
 
-      // Roll initiative
-      roll = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
-      roll.toMessage({
-        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-      });
-      if (alert.length > 0) {
-        roll2 = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({async: false});
-        roll2.toMessage({
-        flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-      });
-      }
-
-      // Set initiative
-      if (alert.length > 0) {
-        if (alert[0].data.data.ownedLevel == 2) {
-          updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
-        } else {
-          updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
+      // Check if initiative has already been manually rolled
+      if (!c.initiative) {
+        // Roll initiative
+        roll = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({ async: false });
+        roll.toMessage({
+          flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+        });
+        if (alert.length > 0) {
+          roll2 = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({ async: false });
+          roll2.toMessage({
+            flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
+          });
         }
-        
-      } else {
-        updates.push({ _id: c.id, initiative: roll.total });
+
+        // Set initiative
+        if (alert.length > 0) {
+          if (alert[0].data.data.ownedLevel == 2) {
+            updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
+          } else {
+            updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
+          }
+
+        } else {
+          updates.push({ _id: c.id, initiative: roll.total });
+        }
       }
     });
 
@@ -228,17 +230,43 @@ export class WwnCombat {
     });
   }
 
-  static activateCombatant(li) {
-    const turn = game.combat.turns.findIndex(turn => turn.id === li.data('combatant-id'));
-    game.combat.update({turn: turn})
-  }
-
   static addContextEntry(html, options) {
     options.unshift({
       name: "Set Active",
       icon: '<i class="fas fa-star-of-life"></i>',
       callback: WwnCombat.activateCombatant
     });
+  }
+
+  static addCombatant(combat, data, options, id) {
+    let token = canvas.tokens.get(data.tokenId);
+    let color = "black";
+    switch (token.data.disposition) {
+      case -1:
+        color = "red";
+        break;
+      case 0:
+        color = "yellow";
+        break;
+      case 1:
+        color = "green";
+        break;
+    }
+    data.flags = {
+      ose: {
+        group: color,
+      },
+    };
+    combat.data.update({ flags: { wwn: { group: color } } });
+  }
+
+  static activateCombatant(li) {
+    const turn = game.combat.turns.findIndex(
+      (turn) => turn.id === li.data("combatant-id")
+    );
+    if (game.user.isGM) {
+      game.combat.update({ turn: turn });
+    }
   }
 
   static async preUpdateCombat(combat, data, diff, id) {
