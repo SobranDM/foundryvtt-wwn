@@ -18,6 +18,7 @@ export class WwnActor extends Actor {
     this.computeModifiers();
     this.computeAC();
     this.computeEncumbrance();
+    this._calculateMovement();
     this.computeTreasure();
     this.computeEffort();
     this.computeSaves();
@@ -662,10 +663,10 @@ export class WwnActor extends Actor {
     data.spells.prepared.value = spellsPrepared;
   }
 
-  computeEncumbrance() {
+  async computeEncumbrance() {
     if (this.data.type === "monster") {
       const data = this.data.data;
-      data.movement.exploration = data.movement.base * 3;
+      await this.data.update({ data: { movement: { exploration: data.movement.base * 3}}});
       return;
     }
     const data = this.data.data;
@@ -708,82 +709,95 @@ export class WwnActor extends Actor {
       let coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
       totalStowed += coinWeight;
     }
-    data.encumbrance.readied.max = maxReadied;
+    await this.data.update({
+      data: {
+        encumbrance: {
+          readied: { max: maxReadied, value: totalReadied.toFixed(2) },
+          stowed: { max: maxStowed, value: totalStowed.toFixed(2) }
+        }
+      }
+    })
+    /* data.encumbrance.readied.max = maxReadied;
     data.encumbrance.stowed.max = maxStowed;
     data.encumbrance.readied.value = totalReadied.toFixed(2);
-    data.encumbrance.stowed.value = totalStowed.toFixed(2);
-    this._calculateMovement();
+    data.encumbrance.stowed.value = totalStowed.toFixed(2); */
   }
 
-  _calculateMovement() {
+  async _calculateMovement() {
     const data = this.data.data;
     if (data.config.movementAuto) {
       if (isNaN(data.movement.bonus)) {
-        data.movement.bonus = 0;
+        this.data.update({ data: { movement: { bonus: 0 } } });
       }
+      let newBase = data.movement.base;
+
       if (game.settings.get("wwn", "movementRate") == "movebx") {
         if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 40 + data.movement.bonus;
+          newBase = 40 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 30 + data.movement.bonus;
+          newBase = 30 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          data.movement.base = 30 + data.movement.bonus;
+          newBase = 30 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          data.movement.base = 20 + data.movement.bonus;
+          newBase = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 20 + data.movement.bonus;
+          newBase = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
-          data.movement.base = 20 + data.movement.bonus;
+          newBase = 20 + data.movement.bonus;
         } else {
-          data.movement.base = 0;
+          newBase = 0;
         }
-        data.movement.exploration = data.movement.base * 3;
-        data.movement.overland = data.movement.exploration / 5;
+        await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase / 5 } } });
+        /* data.movement.exploration = data.movement.base * 3;
+        data.movement.overland = data.movement.exploration / 5; */
       }
       else if (game.settings.get("wwn", "movementRate") == "movewwn") {
         if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 30 + data.movement.bonus;
+          newBase = 30 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 20 + data.movement.bonus;
+          newBase = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          data.movement.base = 20 + data.movement.bonus;
+          newBase = 20 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          data.movement.base = 15 + data.movement.bonus;
+          newBase = 15 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          data.movement.base = 15 + data.movement.bonus;
+          newBase = 15 + data.movement.bonus;
         } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
           && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
-          data.movement.base = 15 + data.movement.bonus;
+          newBase = 15 + data.movement.bonus;
         } else {
-          data.movement.base = 0;
+          newBase = 0;
         }
-        data.movement.exploration = data.movement.base * 3;
-        data.movement.overland = data.movement.base;
+        await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase } } });
+        /* data.movement.exploration = data.movement.base * 3;
+        data.movement.overland = data.movement.base; */
       }
     } else {
-      data.movement.exploration = data.movement.base * 3;
-      data.movement.overland = data.movement.exploration / 5;
+      await this.data.update({ data: { movement: { exploration: newBase * 3, exploration: newBase / 5 } } });
+      /* data.movement.exploration = data.movement.base * 3;
+      data.movement.overland = data.movement.exploration / 5; */
     }
   }
 
   // Compute Total Wealth
-  computeTotalSP() {
+  async computeTotalSP() {
     const data = this.data.data;
     if (this.data.type != "character") {
       return;
     } else {
-      data.currency.total = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
+      let newTotal = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
+      await this.data.update({ data: { currency: { total: newTotal } }});
     }
 
   }
@@ -827,20 +841,20 @@ export class WwnActor extends Actor {
     data.classes.effort4.value = effortFour;
   }
 
-  computeTreasure() {
+  async computeTreasure() {
     if (this.data.type != "character") {
       return;
     }
     const data = this.data.data;
     // Compute treasure
     let total = 0;
-    let treasure = this.data.items.filter(
-      (i) => i.type == "item" && i.data.data.treasure
+    const treasure = this.data.items.filter(
+      (i) => i.type == "item" && i.data.treasure
     );
     treasure.forEach((item) => {
       total += item.data.data.quantity * item.data.data.price;
     });
-    data.treasure = total;
+    await this.data.update({ data: { treasure: total } });
   }
 
   async computeAC() {

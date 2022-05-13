@@ -1,6 +1,6 @@
 ## New in 0.9.7
 * Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function
-  * This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: https://gitlab.com/sobran/foundryvtt-wwn/-/issues?sort=updated_desc&state=opened
+  * This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: https://github.com/SobranDM/foundryvtt-wwn/issues
 * Removed the book icon on PCs that previously displayed a few modifiers. Most of these are now exposed to the user elsewhere and the rest were wildly out of date.
 * Tweaked the display size of the description and notes fields on the details tab. If both of these exceed 4 lines or so, you will get a scrollbar while on that tab.
 * Group Initiative now assigns flag color correctly based on Token Disposition (Friendly, Neutral, Hostile). Manually set flags allow for more than these three sides in a battle.

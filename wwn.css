@@ -896,7 +896,6 @@
     /* ----------------------------------------- */
     /*  Sheet Body                               */
     /* ----------------------------------------- */
-    /* Encumbrance Bar */
     /* ----------------------------------------- */
     /*  Item Controls                            */
     /* ----------------------------------------- */
@@ -1113,56 +1112,6 @@
   .wwn.sheet.actor.character .sheet-body .saving-throw .attribute-value.flat {
     line-height: 30px;
   }
-  .wwn.sheet.actor.character .encumbrance {
-    height: 12px;
-    background: url("/systems/wwn/assets/back.png");
-    margin: 1px 15px 0 1px;
-    border: 1px solid rgba(0, 0, 0, 0.9);
-    border-radius: 3px;
-    position: relative;
-  }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-bar {
-    position: absolute;
-    background: rgba(255, 0, 0, 0.6);
-    height: 10px;
-    border: 1px solid #777;
-    border-radius: 2px;
-  }
-  .wwn.sheet.actor.character .encumbrance .encumbrance-label {
-    height: 10px;
-    padding: 0 5px;
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 13px;
-    line-height: 12px;
-    text-align: right;
-    color: #EEE;
-    text-shadow: 0 0 5px #000;
-  }
-  .wwn.sheet.actor.character .encumbrance .arrow-up {
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid #d8d6c9;
-  }
-  .wwn.sheet.actor.character .encumbrance .arrow-down {
-    top: 0;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #d8d6c9;
-  }
-  .wwn.sheet.actor.character .encumbrance.encumbered .arrow-up {
-    border-bottom: 4px solid rgba(0, 0, 0, 0.9);
-  }
-  .wwn.sheet.actor.character .encumbrance.encumbered .arrow-down {
-    border-top: 4px solid rgba(0, 0, 0, 0.9);
-  }
-  
   .wwn .window-content .collapsed {
     display: none;
   }
