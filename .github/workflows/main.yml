@@ -1,37 +1,42 @@
-name: Release Creation
+name: Release on Tag
 
-on: [push]
+on:
+  push:
+    tags:
+      - '0.*'
+      - '1.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Get Version                                   # Run the script that returns the version from `module.json`
-      shell: bash
-      id: get-version
-      run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
-    - run: zip -r ./WWN.zip system.json template.json wwn.js wwn.css README.md CHANGELOG.txt 'GPL License.txt' 'Open Game License.txt' assets/ lang/ templates/ packs/
-    - name: Create Release                                # Create an additional release for this version
-      id: create_versioned_release
-      uses: ncipollo/release-action@v1
-      with:
-        allowUpdates: true # set to false if you do not want to allow updates on existing releases
-        name: Release ${{ steps.get-version.outputs.version }} # Use the version in the name
-        draft: false
-        prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './system.json,./WWN.zip'
-        tag: ${{ steps.get-version.outputs.version }} # Use the version as the tag
-    - name: Create Release
-      id: create_latest_release
-      uses: ncipollo/release-action@v1
-      if: endsWith(github.ref, 'master') # Only update the latest release when pushing to the master branch
-      with:
-        allowUpdates: true
-        name: Latest
-        draft: false
-        prerelease: false
-        token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './system.json,./WWN.zip'
-        tag: latest
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.x
+
+      - name: Get Version
+        shell: bash
+        id: get-version
+        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+      - name: Install dependencies and run webpack
+        run: |
+          npm ci
+          npm run build:production
+      - name: Create installable system zip file
+        run: cd dist && zip -r ../wwn.zip *
+
+      - name: Create release
+        id: create_versioned_release
+        uses: ncipollo/release-action@v1
+        with:
+          name: ${{ steps.get-version.outputs.version }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './system/system.json,./wwn.zip'
