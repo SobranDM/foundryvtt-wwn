@@ -717,13 +717,10 @@ export class WwnActor extends Actor {
         }
       }
     })
-    /* data.encumbrance.readied.max = maxReadied;
-    data.encumbrance.stowed.max = maxStowed;
-    data.encumbrance.readied.value = totalReadied.toFixed(2);
-    data.encumbrance.stowed.value = totalStowed.toFixed(2); */
   }
 
   async _calculateMovement() {
+    if (this.data.type != "character") return;
     const data = this.data.data;
     if (data.config.movementAuto) {
       if (isNaN(data.movement.bonus)) {
@@ -754,8 +751,6 @@ export class WwnActor extends Actor {
           newBase = 0;
         }
         await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase / 5 } } });
-        /* data.movement.exploration = data.movement.base * 3;
-        data.movement.overland = data.movement.exploration / 5; */
       }
       else if (game.settings.get("wwn", "movementRate") == "movewwn") {
         if (data.encumbrance.readied.value <= data.encumbrance.readied.max
@@ -780,13 +775,9 @@ export class WwnActor extends Actor {
           newBase = 0;
         }
         await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase } } });
-        /* data.movement.exploration = data.movement.base * 3;
-        data.movement.overland = data.movement.base; */
       }
     } else {
       await this.data.update({ data: { movement: { exploration: newBase * 3, exploration: newBase / 5 } } });
-      /* data.movement.exploration = data.movement.base * 3;
-      data.movement.overland = data.movement.exploration / 5; */
     }
   }
 
@@ -848,12 +839,13 @@ export class WwnActor extends Actor {
     const data = this.data.data;
     // Compute treasure
     let total = 0;
-    const treasure = this.data.items.filter(
-      (i) => i.type == "item" && i.data.treasure
+    const treasures = this.data.items.filter(
+      (i) => i.type == "item" && i.data.data.treasure
     );
-    treasure.forEach((item) => {
+    treasures.forEach((item) => {
       total += item.data.data.quantity * item.data.data.price;
     });
+    console.log(total);
     await this.data.update({ data: { treasure: total } });
   }
 
