@@ -598,7 +598,7 @@ export class WwnActor extends Actor {
     return output;
   }
 
-  setXP() {
+  async setXP() {
     if (this.data.type != "character") {
       return;
     }
@@ -640,10 +640,10 @@ export class WwnActor extends Actor {
     }
 
     // Set character's XP to level
-    data.details.xp.next = xpRate[level];
+    await this.data.update({ data: { details: { xp: { next: xpRate[level] } } } });
   }
 
-  computePrepared() {
+  async computePrepared() {
     if (!this.data.data.spells.enabled) {
       return;
     }
@@ -658,7 +658,7 @@ export class WwnActor extends Actor {
         spellsPrepared++;
       }
     });
-    data.spells.prepared.value = spellsPrepared;
+    await this.data.update({ data: { spells: { prepared: { value: spellsPrepared } } } });
   }
 
   async computeEncumbrance() {
@@ -722,7 +722,7 @@ export class WwnActor extends Actor {
     const data = this.data.data;
     if (data.config.movementAuto) {
       if (isNaN(data.movement.bonus)) {
-        this.data.update({ data: { movement: { bonus: 0 } } });
+        await this.data.update({ data: { movement: { bonus: 0 } } });
       }
       let newBase = data.movement.base;
       const readiedValue = data.encumbrance.readied.value;
