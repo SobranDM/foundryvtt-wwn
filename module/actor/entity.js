@@ -666,7 +666,7 @@ export class WwnActor extends Actor {
   async computeEncumbrance() {
     if (this.data.type === "monster") {
       const data = this.data.data;
-      await this.data.update({ data: { movement: { exploration: data.movement.base * 3}}});
+      await this.data.update({ data: { movement: { exploration: data.movement.base * 3 } } });
       return;
     }
     const data = this.data.data;
@@ -727,57 +727,31 @@ export class WwnActor extends Actor {
         this.data.update({ data: { movement: { bonus: 0 } } });
       }
       let newBase = data.movement.base;
+      const readiedValue = data.encumbrance.readied.value;
+      const readiedMax = data.encumbrance.readied.max;
+      const stowedValue = data.encumbrance.stowed.value;
+      const stowedMax = data.encumbrance.stowed.max;
+      const bonus = data.movement.bonus;
 
-      if (game.settings.get("wwn", "movementRate") == "movebx") {
-        if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 40 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 30 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          newBase = 30 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          newBase = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
-          newBase = 20 + data.movement.bonus;
-        } else {
-          newBase = 0;
-        }
-        await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase / 5 } } });
+      let systemBase = [];
+      game.settings.get("wwn", "movementRate") == "movebx" ? systemBase = [40, 30, 20] : systemBase = [30, 20, 15];
+
+      if (readiedValue <= readiedMax && stowedValue <= stowedMax) {
+        newBase = systemBase[0] + bonus;
+      } else if (readiedValue <= readiedMax + 2 && stowedValue <= stowedMax) {
+        newBase = systemBase[1] + bonus;
+      } else if (readiedValue <= readiedMax && stowedValue <= stowedMax + 4) {
+        newBase = systemBase[1] + bonus;
+      } else if (readiedValue <= readiedMax + 2 && stowedValue <= stowedMax + 4) {
+        newBase = systemBase[2] + bonus;
+      } else if (readiedValue <= readiedMax + 4 && stowedValue <= stowedMax) {
+        newBase = systemBase[2] + bonus;
+      } else if (readiedValue <= readiedMax && stowedValue <= stowedMax + 8) {
+        newBase = systemBase[2] + bonus;
+      } else {
+        newBase = 0;
       }
-      else if (game.settings.get("wwn", "movementRate") == "movewwn") {
-        if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 30 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          newBase = 20 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 2
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 4) {
-          newBase = 15 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max + 4
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max) {
-          newBase = 15 + data.movement.bonus;
-        } else if (data.encumbrance.readied.value <= data.encumbrance.readied.max
-          && data.encumbrance.stowed.value <= data.encumbrance.stowed.max + 8) {
-          newBase = 15 + data.movement.bonus;
-        } else {
-          newBase = 0;
-        }
-        await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase } } });
-      }
-    } else {
-      await this.data.update({ data: { movement: { exploration: newBase * 3, exploration: newBase / 5 } } });
+      await this.data.update({ data: { movement: { base: newBase, exploration: newBase * 3, overland: newBase / 5 } } });
     }
   }
 
@@ -788,7 +762,7 @@ export class WwnActor extends Actor {
       return;
     } else {
       let newTotal = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
-      await this.data.update({ data: { currency: { total: newTotal } }});
+      await this.data.update({ data: { currency: { total: newTotal } } });
     }
 
   }
