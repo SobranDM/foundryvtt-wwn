@@ -140,7 +140,7 @@
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "url": "https://gitlab.com/sobran/foundryvtt-wwn",
-  "manifest": "https://gitlab.com/sobran/foundryvtt-wwn/-/raw/development/system.json",
-  "download": "https://gitlab.com/sobran/foundryvtt-wwn/-/archive/v0.9.6/foundryvtt-wwn-v0.9.6.zip"
+  "url": "https://github.com/SobranDM/foundryvtt-wwn",
+  "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
+  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v0.9.8/wwn.zip"
 }
