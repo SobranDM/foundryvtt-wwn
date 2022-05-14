@@ -1,4 +1,4 @@
-## New in 0.9.7
+## New in 0.9.8
 * Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function
   * This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: https://github.com/SobranDM/foundryvtt-wwn/issues
 * Removed the book icon on PCs that previously displayed a few modifiers. Most of these are now exposed to the user elsewhere and the rest were wildly out of date.
