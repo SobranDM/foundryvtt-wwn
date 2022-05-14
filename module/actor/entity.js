@@ -508,9 +508,7 @@ export class WwnActor extends Actor {
         attData.item.data.shockTotal = attData.item.data.shockTotal + this.data.data.skills[skillAttack].value;
       }
     } else {
-      console.log(this.data.data.damageBonus)
       attData.item.data.shockTotal = this.data.data.damageBonus + attData.item.data.shock.damage;
-      console.log(`Shock Total: ${attData.item.data.shockTotal}`)
     }
 
     rollParts.push(data.thac0.bba.toString());
@@ -768,7 +766,7 @@ export class WwnActor extends Actor {
   }
 
   // Compute Effort
-  computeEffort() {
+  async computeEffort() {
     if (this.data.type === "faction" || this.data.type === "location") {
       return;
     }
@@ -799,11 +797,16 @@ export class WwnActor extends Actor {
         effortFour += a.data.data.effort;
       }
     });
-
-    data.classes.effort1.value = effortOne;
-    data.classes.effort2.value = effortTwo;
-    data.classes.effort3.value = effortThree;
-    data.classes.effort4.value = effortFour;
+    await this.data.update({
+      data: {
+        classes: {
+          effort1: { value: effortOne },
+          effort2: { value: effortTwo },
+          effort3: { value: effortThree },
+          effort4: { value: effortFour }
+        }
+      }
+    });
   }
 
   async computeTreasure() {
@@ -819,7 +822,6 @@ export class WwnActor extends Actor {
     treasures.forEach((item) => {
       total += item.data.data.quantity * item.data.data.price;
     });
-    console.log(total);
     await this.data.update({ data: { treasure: total } });
   }
 
