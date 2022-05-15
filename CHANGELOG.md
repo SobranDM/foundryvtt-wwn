@@ -6,6 +6,9 @@
 * Group Initiative now assigns flag color correctly based on Token Disposition (Friendly, Neutral, Hostile). Manually set flags allow for more than these three sides in a battle.
 * Individual Initiative will no longer reroll a combatant's initiative when combat begins if it was manually rolled in the setup phase.
 * Removed references to 5e token art, as it has been pointed out that this is pretty bad practice and I am forced to agree. I encourage anyone who enjoys that art to go support Forgotten Adventures for their amazing library of token art, which is constantly growing: https://www.patreon.com/forgottenadventures/posts
+* All inventory items and spells are now sorted alphabetically.
+* All monster abilities and equipment are now divided by type and sorted alphabetically.
+* The player notes tab now correctly shows abilities as well as foci. Creating an item in this section will now prompt for type.
 ## New in 0.9.6
 * Padding change to tabs fixes a display error introduced in last Foundry update
 ## New in 0.9.5

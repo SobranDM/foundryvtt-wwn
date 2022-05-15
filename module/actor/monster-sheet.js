@@ -73,11 +73,26 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   };
   // Assign and return
   data.owned = {
-    weapons: weapons,
-    armors: armors,
-    items: items,
-    arts: arts,
-    abilities: abilities
+    weapons: weapons.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    }),
+    armors: armors.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    }),
+    items: items.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    }),
+    arts: arts.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    }),
+    abilities: abilities.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    })
   };
   data.spells = sortedSpells;
 }

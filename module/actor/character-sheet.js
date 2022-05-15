@@ -65,16 +65,41 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       slots[lvl] += spells[i].data.data.memorized;
       sortedSpells[lvl].push(spells[i]);
     }
+    Object.keys(sortedSpells).forEach(level => {
+      sortedSpells[level].sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      })
+    })
     data.slots = {
       used: slots,
     };
     // Assign and return
     data.owned = {
-      items: items,
-      armors: armors,
-      weapons: weapons,
-      arts: arts,
-      foci: foci
+      items: items.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      }),
+      armors: armors.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      }),
+      abilities: abilities.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      }),
+      weapons: weapons.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      }),
+      arts: arts.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      }),
+      foci: foci.sort((a, b) => {
+        const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+        return aName > bName ? 1 : bName > aName ? -1 : 0;
+      })
     };
     data.spells = sortedSpells;
   }
@@ -125,6 +150,38 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
             callback: (html) => {
               resolve({
                 choice: html.find('select[name="choice"]').val(),
+              });
+            },
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: game.i18n.localize("WWN.Cancel"),
+          },
+        },
+        default: "ok",
+      }).render(true);
+    });
+  }
+
+  async _chooseItemType(choices = ["focus", "ability"]) {
+    let templateData = { types: choices },
+      dlg = await renderTemplate(
+        "systems/wwn/templates/items/entity-create.html",
+        templateData
+      );
+    //Create Dialog window
+    return new Promise((resolve) => {
+      new Dialog({
+        title: game.i18n.localize("WWN.dialog.createItem"),
+        content: dlg,
+        buttons: {
+          ok: {
+            label: game.i18n.localize("WWN.Ok"),
+            icon: '<i class="fas fa-check"></i>',
+            callback: (html) => {
+              resolve({
+                type: html.find('select[name="type"]').val(),
+                name: html.find('input[name="name"]').val(),
               });
             },
           },
@@ -264,13 +321,29 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       event.preventDefault();
       const header = event.currentTarget;
       const type = header.dataset.type;
-      const itemData = {
-        name: `New ${type.capitalize()}`,
-        type: type,
-        data: duplicate(header.dataset),
+
+      // item creation helper func
+      let createItem = function (type, name = `New ${type.capitalize()}`) {
+        const itemData = {
+          name: name ? name : `New ${type.capitalize()}`,
+          type: type,
+          data: duplicate(header.dataset),
+        };
+        delete itemData.data["type"];
+        return itemData;
       };
-      delete itemData.data["type"];
-      return this.actor.createEmbeddedDocuments("Item", [itemData]);
+
+      // Getting back to main logic
+      if (type == "choice") {
+        const choices = header.dataset.choices.split(",");
+        this._chooseItemType(choices).then((dialogInput) => {
+          const itemData = createItem(dialogInput.type, dialogInput.name);
+          this.actor.createEmbeddedDocuments("Item", [itemData], {});
+        });
+        return;
+      }
+      const itemData = createItem(type);
+      return this.actor.createEmbeddedDocuments("Item", [itemData], {});
     });
 
     //Toggle Equipment
