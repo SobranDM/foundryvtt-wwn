@@ -37,16 +37,15 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    */
  _prepareItems(data) {
   // Partition items by category
-  data.attackPatterns = {};
+  data.attackPatterns = [];
   let [weapons, armors, items, arts, spells, abilities] = this.actor.data.items.reduce(
     (arr, item) => {
       // Grab attack groups
-      if (["weapon", "ability"].includes(item.type)) {
-        if (data.attackPatterns[item.data.pattern] === undefined) data.attackPatterns[item.data.pattern] = [];
-        data.attackPatterns[item.data.pattern].push(item);
+      if (["weapon"].includes(item.type)) {
+        data.attackPatterns.push(item);
         return arr;
       }
-      
+      console.log(data.attackPatterns);
       // Classify items into types
       if (item.type === "weapon") arr[0].push(item);
       else if (item.type === "armor") arr[1].push(item);
@@ -68,6 +67,12 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     slots[lvl] += spells[i].data.data.memorized;
     sortedSpells[lvl].push(spells[i]);
   }
+
+  data.attackPatterns.sort((a, b) => {
+    const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+    return aName > bName ? 1 : bName > aName ? -1 : 0;
+  });
+  
   data.slots = {
     used: slots,
   };

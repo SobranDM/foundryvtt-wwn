@@ -117,9 +117,7 @@
                 </li>
                 <ol class="item-list resizable" data-base-size="240">
                     {{! Attack pattern group}}
-                    {{#each attackPatterns as |section pattern|}}
-                    <div class="attack-pattern">
-                        {{#each section as |item|}}
+                    {{#each attackPatterns as |item|}}
                         <li class="item-entry">
                             <div class="item flexrow" data-item-id="{{item.id}}">
                                 <div class="item-name item-rollable flexrow">
@@ -153,11 +151,9 @@
                                 </div>
                             </div>
                         </li>
-                        {{/each}}
-                    </div>
                     {{/each}}
                     {{! Other items}}
-                    {{#each owned as |section id| }}
+                    {{#each owned as |section| }}
                     {{#unless (and (eq id "items") @root.data.config.enableInventory)}}
                     {{#each section as |item|}}
                     <li class="item-entry">
