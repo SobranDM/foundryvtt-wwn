@@ -1,14 +1,18 @@
 ## New in 0.9.8
-* Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function
+### Changes
+* Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function.
   * This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: https://github.com/SobranDM/foundryvtt-wwn/issues
 * Removed the book icon on PCs that previously displayed a few modifiers. Most of these are now exposed to the user elsewhere and the rest were wildly out of date.
 * Tweaked the display size of the description and notes fields on the details tab. If both of these exceed 4 lines or so, you will get a scrollbar while on that tab.
-* Group Initiative now assigns flag color correctly based on Token Disposition (Friendly, Neutral, Hostile). Manually set flags allow for more than these three sides in a battle.
-* Individual Initiative will no longer reroll a combatant's initiative when combat begins if it was manually rolled in the setup phase.
 * Removed references to 5e token art, as it has been pointed out that this is pretty bad practice and I am forced to agree. I encourage anyone who enjoys that art to go support Forgotten Adventures for their amazing library of token art, which is constantly growing: https://www.patreon.com/forgottenadventures/posts
 * All inventory items and spells are now sorted alphabetically.
 * All monster abilities and equipment are now divided by type and sorted alphabetically.
+* Various OSE monsters have been added to the compendium. Others have had their stats adjusted after some playtesting.
+### Bug Fixes
+* Group Initiative now assigns flag color correctly based on Token Disposition (Friendly, Neutral, Hostile). Manually set flags allow for more than these three sides in a battle.
+* Individual Initiative will no longer reroll a combatant's initiative when combat begins if it was manually rolled in the setup phase.
 * The player notes tab now correctly shows abilities as well as foci. Creating an item in this section will now prompt for type.
+* Deluge of Hell has been corrected to be a 5th level spell (thanks to Steven on the WWN Discord).
 ## New in 0.9.6
 * Padding change to tabs fixes a display error introduced in last Foundry update
 ## New in 0.9.5
