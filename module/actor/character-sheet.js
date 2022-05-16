@@ -68,7 +68,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     Object.keys(sortedSpells).forEach(level => {
       sortedSpells[level].sort((a, b) => {
         const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-        return aName > bName ? 1 : bName > aName ? -1 : 0;
+        const aSource = a.data.data.class.toLowerCase(), bSource = b.data.data.class.toLowerCase();
+        if (aSource > bSource) {
+          return 1;
+        } else if (bSource > aSource) {
+          return -1;
+        } else {
+          return aName > bName ? 1 : bName > aName ? -1 : 0;
+        }
       })
     })
     data.slots = {
@@ -94,7 +101,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }),
       arts: arts.sort((a, b) => {
         const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-        return aName > bName ? 1 : bName > aName ? -1 : 0;
+        const aSource = a.data.data.source.toLowerCase(), bSource = b.data.data.source.toLowerCase();
+        if (aSource > bSource) {
+          return 1;
+        } else if (bSource > aSource) {
+          return -1;
+        } else {
+          return aName > bName ? 1 : bName > aName ? -1 : 0;
+        }
       }),
       foci: foci.sort((a, b) => {
         const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
