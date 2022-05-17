@@ -7,7 +7,10 @@
 * Removed references to 5e token art, as it has been pointed out that this is pretty bad practice and I am forced to agree. I encourage anyone who enjoys that art to go support Forgotten Adventures for their amazing library of token art, which is constantly growing: https://www.patreon.com/forgottenadventures/posts
 * All inventory items and spells are now sorted alphabetically.
 * All monster abilities and equipment are now divided by type and sorted alphabetically.
-* Various OSE monsters have been added to the compendium. Others have had their stats adjusted after some playtesting.
+* All monster item types are now rollable.
+* Various OSE monsters have been added to the compendium. Others have had their stats adjusted after some playtesting. Additions include but are not limited to:
+  * Dragons, golems, gnolls, various oozes, assorted magical beasts, and some undead.
+  * The full movement entry on some monsters with multiple movement modes cannot be read in their entirety; this will be resolved with an upcoming sheet redesign.
 ### Bug Fixes
 * Group Initiative now assigns flag color correctly based on Token Disposition (Friendly, Neutral, Hostile). Manually set flags allow for more than these three sides in a battle.
 * Individual Initiative will no longer reroll a combatant's initiative when combat begins if it was manually rolled in the setup phase.
