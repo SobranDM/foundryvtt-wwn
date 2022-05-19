@@ -1,3 +1,5 @@
+## New in 0.9.9b
+* Initiative fixes
 ## New in 0.9.9
 ### Changes
 * Reorganized spell resource section to reduce confusion.

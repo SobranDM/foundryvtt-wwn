@@ -1,87 +1,65 @@
 import { WwnDice } from "../module/dice.js";
 export class WwnCombat {
-  static rollInitiative(combat, data) {
+  static async rollInitiative(combat, data) {
     // Check groups
     data.combatants = [];
     let groups = {};
     let groupMods = {};
     let alertGroups = {};
-    async function dispositionFlag() {
-      combat.data.combatants.forEach((cbt) => {
-        let currentColor;
-        if (!cbt.getFlag("wwn", "group")) {
-          switch (cbt.token.data.disposition) {
-            case -1:
-              currentColor = "red";
-              break;
-            case 0:
-              currentColor = "yellow";
-              break;
-            case 1:
-              currentColor = "green";
-              break;
-          }
-          cbt.setFlag("wwn", "group", currentColor);
-        }
-        const group = cbt.getFlag("wwn", "group");
-        groups[group] = { present: true };
-        data.combatants.push(cbt);
-        let alert = cbt.actor.data.items.filter((a) => a.name == "Alert");
-        if (alert.length > 0) {
-          alertGroups[group] = true;
-        }
-        if (cbt.actor.data.data.scores) {
-          let dexMod = cbt.actor.data.data.scores.dex.mod;
-          if (groupMods[group]) {
-            groupMods[group] = Math.max(dexMod, groupMods[group]);
-          } else {
-            groupMods[group] = dexMod;
-          }
-        }
-      });
-      return true;
-    }
 
-    let groupRoll = function () {
-      // Roll init
-      Object.keys(groups).forEach((group) => {
-        let rollParts = [];
-        rollParts.push("1d8");
-        if (alertGroups[group]) {
-          rollParts.push(1);
-        }
+    combat.data.combatants.forEach((cbt) => {
+      const group = cbt.getFlag("wwn", "group");
+      groups[group] = { present: true };
+      data.combatants.push(cbt);
+      let alert = cbt.actor.data.items.filter((a) => a.name == "Alert");
+      if (alert.length > 0) {
+        alertGroups[group] = true;
+      }
+      if (cbt.actor.data.data.scores) {
+        let dexMod = cbt.actor.data.data.scores.dex.mod;
         if (groupMods[group]) {
-          rollParts.push(groupMods[group]);
-        }
-
-        let roll = new Roll(rollParts.join("+")).roll({ async: false });
-        roll.toMessage({
-          flavor: game.i18n.format("WWN.roll.initiative", {
-            group: CONFIG["WWN"].colors[group],
-          }),
-        });
-        groups[group].initiative = roll.total;
-      });
-
-      // Set init
-      for (let i = 0; i < data.combatants.length; ++i) {
-        if (!data.combatants[i].actor) {
-          return;
-        }
-        const group = data.combatants[i].getFlag("wwn", "group");
-        let alert = data.combatants[i].actor.data.items.filter((a) => a.name == "Alert");
-        data.combatants[i].update({ initiative: groups[group].initiative });
-        if (alert.length > 0) {
-          if (alert[0].data.data.ownedLevel == 2) {
-            data.combatants[i].update({ initiative: groups[group].initiative + 100 });
-          }
+          groupMods[group] = Math.max(dexMod, groupMods[group]);
+        } else {
+          groupMods[group] = dexMod;
         }
       }
-      combat.setupTurns();
-    };
-    dispositionFlag().then(
-      function (value) { groupRoll(value); }
-    );
+    });
+
+    // Roll init
+    Object.keys(groups).forEach((group) => {
+      let rollParts = [];
+      rollParts.push("1d8");
+      if (alertGroups[group]) {
+        rollParts.push(1);
+      }
+      if (groupMods[group]) {
+        rollParts.push(groupMods[group]);
+      }
+
+      let roll = new Roll(rollParts.join("+")).roll({ async: false });
+      roll.toMessage({
+        flavor: game.i18n.format("WWN.roll.initiative", {
+          group: CONFIG["WWN"].colors[group],
+        }),
+      });
+      groups[group].initiative = roll.total;
+    });
+
+    // Set init
+    for (let i = 0; i < data.combatants.length; ++i) {
+      if (!data.combatants[i].actor) {
+        return;
+      }
+      const group = data.combatants[i].getFlag("wwn", "group");
+      let alert = data.combatants[i].actor.data.items.filter((a) => a.name == "Alert");
+      data.combatants[i].update({ initiative: groups[group].initiative });
+      if (alert.length > 0) {
+        if (alert[0].data.data.ownedLevel == 2) {
+          data.combatants[i].update({ initiative: groups[group].initiative + 100 });
+        }
+      }
+    }
+    combat.setupTurns();
   }
 
   static async resetInitiative(combat, data) {
@@ -253,7 +231,7 @@ export class WwnCombat {
         break;
     }
     data.flags = {
-      ose: {
+      wwn: {
         group: color,
       },
     };

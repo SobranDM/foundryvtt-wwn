@@ -25,16 +25,7 @@ export class WwnActor extends Actor {
     this.computeTotalSP();
     this.setXP();
     this.computePrepared();
-
-    // Determine Initiative
-    if (game.settings.get("wwn", "initiative") != "group") {
-      data.initiative.value = data.initiative.mod;
-      if (this.data.type == "character") {
-        data.initiative.value += data.scores.dex.mod;
-      }
-    } else {
-      data.initiative.value = 0;
-    }
+    this.computeInit();
   }
 
   async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
@@ -596,6 +587,18 @@ export class WwnActor extends Actor {
       }
     }
     return output;
+  }
+
+  async computeInit() {
+    let initValue = 0;
+    if (game.settings.get("wwn", "initiative") != "group") {
+      if (this.data.type == "character") {
+        initValue = this.data.data.scores.dex.mod + this.data.data.initiative.mod;
+      } else {
+        initValue = this.data.data.initiative.mod;
+      }
+    }
+    await this.data.update({ data: { initiative: { value: initValue }}});
   }
 
   async setXP() {

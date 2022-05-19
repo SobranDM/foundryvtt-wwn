@@ -45,7 +45,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         data.attackPatterns.push(item);
         return arr;
       }
-      console.log(data.attackPatterns);
       // Classify items into types
       if (item.type === "weapon") arr[0].push(item);
       else if (item.type === "armor") arr[1].push(item);
