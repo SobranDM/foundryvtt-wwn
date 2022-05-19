@@ -2,6 +2,8 @@
 ### Changes
 * Reorganized spell resource section to reduce confusion.
 * Effort on all arts can now be reset using a button located both over the class effort section as well as the arts section.
+* Casting a spell or using an art with an associated effort cost now checks that the character has slots or effort remaining and displays an error to the user if no slots/effort remain.
+* Attempting to use an art for which there is no associated caster class now prompts the user to input the class in the Tweaks menu.
 ### Fixes
 * Fixed display of Tweaks menu for players.
 * Corrected Effort duration on Purge Ailment.

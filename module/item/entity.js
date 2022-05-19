@@ -139,7 +139,9 @@ export class WwnItem extends Item {
   }
 
   spendSpell() {
-    let spellsLeft = this.actor.data.data.spells.perDay.value;
+    const spellsLeft = this.actor.data.data.spells.perDay.value;
+    const spellsMax = this.actor.data.data.spells.perDay.max;
+    if (spellsLeft + 1 > spellsMax) return ui.notifications.warn("No spell slots remaining!");
     this.actor
       .update({
         "data.spells.perDay.value": spellsLeft + 1,
@@ -151,7 +153,15 @@ export class WwnItem extends Item {
 
   spendArt() {
     if (this.data.data.time) {
-      let currEffort = this.data.data.effort;
+      const sourceName = Object.keys(this.actor.data.data.classes).find(source => this.actor.data.data.classes[source].name === this.data.data.source);
+      if (sourceName === undefined) return ui.notifications.warn(`Please add ${this.data.data.source} as a caster class in the Tweaks menu.`);
+
+      const currEffort = this.data.data.effort;
+      const sourceVal = this.actor.data.data.classes[sourceName].value;
+      const sourceMax = this.actor.data.data.classes[sourceName].max;
+      
+      if (sourceVal + 1 > sourceMax) return ui.notifications.warn("No Effort remaining!");
+
       this
         .update({ "data.effort": currEffort + 1 })
         .then(() => {
