@@ -1,3 +1,10 @@
+## New in 0.9.9
+### Changes
+* Reorganized spell resource section to reduce confusion.
+* Effort on all arts can now be reset using a button located both over the class effort section as well as the arts section.
+### Fixes
+* Fixed display of Tweaks menu for players.
+* Corrected Effort duration on Purge Ailment.
 ## New in 0.9.8
 ### Changes
 * Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function.

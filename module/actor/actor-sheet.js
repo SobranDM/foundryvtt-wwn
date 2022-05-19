@@ -66,6 +66,15 @@ export class WwnActorSheet extends ActorSheet {
     );
   }
 
+  async _resetEffort(event) {
+    const arts = this.actor.items.filter(item => item.type === "art");
+    await arts.forEach(art => {
+      const itemId = art.id;
+      const item = this.actor.items.get(itemId);
+      item.update({ "data.effort": 0 });
+    });
+  }
+
   async _onEffortChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
@@ -176,8 +185,12 @@ export class WwnActorSheet extends ActorSheet {
       .change(this._onSpellChange.bind(this));
 
 
-    html.find(".spells .item-reset").click((ev) => {
+    html.find(".slot-reset").click((ev) => {
       this._resetSpells(ev);
+    });
+
+    html.find(".effort-reset").click((ev) => {
+      this._resetEffort(ev);
     });
 
     /** Attempt to copy input focus */
