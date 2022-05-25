@@ -598,7 +598,7 @@ export class WwnActor extends Actor {
         initValue = this.data.data.initiative.mod;
       }
     }
-    await this.data.update({ data: { initiative: { value: initValue }}});
+    await this.data.update({ data: { initiative: { value: initValue } } });
   }
 
   async setXP() {
