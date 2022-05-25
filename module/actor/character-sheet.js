@@ -41,7 +41,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, abilities, spells, arts, foci] = this.actor.data.items.reduce(
+    let [items, weapons, armors, abilities, spells, arts, foci, skills] = this.actor.data.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -51,9 +51,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         else if (item.type === "spell") arr[4].push(item);
         else if (item.type === "art") arr[5].push(item);
         else if (item.type === "focus") arr[6].push(item);
+        else if (item.type === "skill") arr[7].push(item);
         return arr;
       },
-      [[], [], [], [], [], [], []]
+      [[], [], [], [], [], [], [], []]
     );
 
     // Sort spells by level
@@ -89,7 +90,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       abilities: insertionSort(abilities, "name"),
       weapons: insertionSort(weapons, "name"),
       arts: arts,
-      foci: insertionSort(foci, "name")
+      foci: insertionSort(foci, "name"),
+      skills: insertionSort(skills, "name")
     };
     data.spells = sortedSpells;
   }

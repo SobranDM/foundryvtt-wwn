@@ -383,7 +383,7 @@
     }
   },
   "Item": {
-    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon", "asset"],
+    "types": ["ability", "armor", "art", "focus", "item", "spell", "weapon", "asset", "skill"],
     "item": {
       "description": "",
       "quantity": 1,
@@ -463,6 +463,13 @@
   "focus": {
     "description": "",
     "ownedLevel": 1
+  },
+  "skill": {
+    "description": "",
+    "ownedLevel": -1,
+    "score": "",
+    "skillDice": "",
+    "secondary": false
   },
   "ability": {
     "description": "",

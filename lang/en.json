@@ -10,6 +10,7 @@
   "ITEM.TypeSpell": "Spell",
   "ITEM.TypeWeapon": "Weapon",
   "ITEM.TypeAsset": "Asset",
+  "ITEM.TypeSkill": "Skill",
   "WWN.Edit": "Edit",
   "WWN.Delete": "Delete",
   "WWN.Show": "Show",
@@ -375,6 +376,8 @@
   "WWN.spells.Resources": "Resources",
 
   "WWN.abilities.Requirements": "Requirements",
+
+  "WWN.skills.secondary": "Secondary",
 
   "WWN.skills.administer": "Admin",
   "WWN.skills.desc.administer": "Keep an organization running smoothly, scribe things well, plan out logistics, identify incompetent or treacherous workers, analyze records or archives, or otherwise do things that an executive or middle-manager would need to do.",

@@ -1163,6 +1163,13 @@
   .wwn.sheet.item .sheet-header .details label {
     flex: 0 0 20px;
   }
+  .wwn.sheet.item .sheet-header .skill-details {
+    flex: 0 0 150px;
+  }
+  .wwn.sheet.item .sheet-header .skill-details label {
+    flex: 0 0 70px;
+  }
+  
   .wwn.sheet.item .sheet-header .profile-img {
     border: none;
     flex: 0 0 84px;
