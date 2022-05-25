@@ -129,6 +129,14 @@
       "module": "wwn",
       "path": "packs/ose-spells.db",
       "entity": "Item"
+    },
+    {
+      "name": "tags",
+      "label": "Tags",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/tags.db",
+      "entity": "JournalEntry"
     }
   ],
   "languages": [

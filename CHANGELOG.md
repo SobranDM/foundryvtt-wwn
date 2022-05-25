@@ -1,3 +1,10 @@
+## New in 1.0.0
+### Changes
+* Added a number of tables to the GM Master Tables compendium, including but not limited to: monster generation, room stocking, hex points of interest, and other features of ruin generation. Also...
+* All tags have been added to the new Tags compendium. If the Compendium Folders module is installed, tags will be sorted by tag type: community, court, ruin, or wilderness. Without Compendium Folders, the compendium will still function but the tags will be lumped together. Each tag category also has a relevant roll table.
+### Fixes
+* Changed the sort method on items to improve performance.
+* Re-enabled direct editing of spell slots.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9
