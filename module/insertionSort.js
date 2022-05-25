@@ -3,7 +3,7 @@ export default function insertionSort(inputArr, property) {
   for (let i = 1; i < n; i++) {
     let current = inputArr[i];
     let j = i - 1;
-    while ((j > -1) && (Object.byString(current, property) < Object.byString(inputArr[j], property))) {
+    while ((j > -1) && (Object.byString(current, property).toLowerCase() < Object.byString(inputArr[j], property).toLowerCase() )) {
       inputArr[j + 1] = inputArr[j];
       j--;
     }

@@ -66,6 +66,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       slots[lvl] += spells[i].data.data.memorized;
       sortedSpells[lvl].push(spells[i]);
     }
+
     // Sort each level
     Object.keys(sortedSpells).forEach(level => {
       let list = insertionSort(sortedSpells[level], "name");
@@ -76,6 +77,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.slots = {
       used: slots,
     };
+
+    // Sort arts by name and then by source
     arts = insertionSort(arts, "name");
     arts = insertionSort(arts, "data.data.source");
 

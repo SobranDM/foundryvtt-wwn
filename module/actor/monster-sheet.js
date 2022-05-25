@@ -1,5 +1,6 @@
 import { WwnActor } from "./entity.js";
 import { WwnActorSheet } from "./actor-sheet.js";
+import insertionSort from "../insertionSort.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -67,6 +68,13 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     sortedSpells[lvl].push(spells[i]);
   }
 
+  // Sort each level
+  Object.keys(sortedSpells).forEach(level => {
+    let list = insertionSort(sortedSpells[level], "name");
+    list = insertionSort(list, "data.data.class");
+    sortedSpells[level] = list;
+  });
+
   data.attackPatterns.sort((a, b) => {
     const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
     return aName > bName ? 1 : bName > aName ? -1 : 0;
@@ -75,28 +83,18 @@ export class WwnActorSheetMonster extends WwnActorSheet {
   data.slots = {
     used: slots,
   };
+
+  // Sort arts by name and then by source
+  arts = insertionSort(arts, "name");
+  arts = insertionSort(arts, "data.data.source");
+
   // Assign and return
   data.owned = {
-    weapons: weapons.sort((a, b) => {
-      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-      return aName > bName ? 1 : bName > aName ? -1 : 0;
-    }),
-    armors: armors.sort((a, b) => {
-      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-      return aName > bName ? 1 : bName > aName ? -1 : 0;
-    }),
-    items: items.sort((a, b) => {
-      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-      return aName > bName ? 1 : bName > aName ? -1 : 0;
-    }),
-    arts: arts.sort((a, b) => {
-      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-      return aName > bName ? 1 : bName > aName ? -1 : 0;
-    }),
-    abilities: abilities.sort((a, b) => {
-      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-      return aName > bName ? 1 : bName > aName ? -1 : 0;
-    })
+    items: insertionSort(items, "name"),
+    armors: insertionSort(armors, "name"),
+    abilities: insertionSort(abilities, "name"),
+    weapons: insertionSort(weapons, "name"),
+    arts: arts
   };
   data.spells = sortedSpells;
 }
