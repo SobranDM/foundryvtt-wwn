@@ -254,6 +254,17 @@
   .wwn.sheet.actor.monster .sheet-body .attributes-tab .inventory {
     width: 420px;
   }
+  .wwn.sheet.actor.character .sheet-body .attributes-tab .inventory .item-list {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .wwn.sheet.actor.character .sheet-body .attributes-tab .inventory .item-name {
+    flex-basis: 20%;
+    flex-shrink: 1;
+  }
+  .wwn.sheet.actor.character .sheet-body .attributes-tab .inventory.skills .item-entry {
+    max-width: 150px;
+  }
   .wwn.sheet.actor .sheet-body .inventory .header-spells {
     line-height: 30px;
   }

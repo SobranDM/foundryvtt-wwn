@@ -2,7 +2,7 @@
   "name": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "0.9.9c",
+  "version": "1.0.0-beta",
   "minimumCoreVersion": "0.8.9",
   "compatibleCoreVersion": "9",
   "templateVersion": 6.5,
@@ -149,6 +149,6 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
-  "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
-  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v0.9.9c/wwn.zip"
+  "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.0.0-alpha/system.json",
+  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.0.0-alpha/wwn.zip"
 }
