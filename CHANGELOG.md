@@ -5,6 +5,7 @@
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
+* Fixed some miscellaneous errors with creature compendiums.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9

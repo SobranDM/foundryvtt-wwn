@@ -1155,7 +1155,7 @@
   }
   
   .wwn.sheet.item .sheet-header h1 input {
-    margin: 6px 2%;
+    margin: 6px 2% 0 20px;
   }
   .wwn.sheet.item .sheet-header .details {
     flex: 0 0 70px;
@@ -1163,13 +1163,20 @@
   .wwn.sheet.item .sheet-header .details label {
     flex: 0 0 20px;
   }
-  .wwn.sheet.item .sheet-header .skill-details {
-    flex: 0 0 150px;
+  .wwn.sheet.item .sheet-body .skill-details {
+    flex-basis: 32%;
+    flex-grow: 0;
   }
-  .wwn.sheet.item .sheet-header .skill-details label {
-    flex: 0 0 70px;
+  .wwn.sheet.item .sheet-body .skill-details label {
+    flex: 0 0 60px;
   }
-  
+  .wwn.sheet.item .sheet-body .skill-details .form-group {
+    justify-content: space-around;
+  }
+  .wwn.sheet.item .sheet-body .skill-details .form-fields {
+    flex-basis: 35%;
+    flex-grow: 0;
+  }
   .wwn.sheet.item .sheet-header .profile-img {
     border: none;
     flex: 0 0 84px;
@@ -1268,8 +1275,8 @@
     flex-shrink: 1;
     height: auto;
     min-height: 130px;
-    margin-top: 20px;
     margin-bottom: 10px;
+    flex-basis: 100%;
   }
   .wwn.sheet.item .sheet-body .item-footer {
     justify-content: center;
@@ -1288,8 +1295,8 @@
     flex-direction: column;
     height: auto;
     min-height: 130px;
-    margin-top: 20px;
     margin-bottom: 10px;
+    flex-basis: 100%;
   }
   
   .wwn.actor.monster {
