@@ -90,7 +90,7 @@
   .wwn.sheet.actor .sheet-tabs {
     position: absolute;
     transform: rotate(90deg);
-    top: 433px;
+    top: 538px;
     right: -179px;
     width: 340px;
     border-top: none;
@@ -208,7 +208,7 @@
     padding-left: 0px;
     height: 30px;
     line-height: 30px;
-    width: 170px;
+    width: 200px;
     margin-bottom: 0px;
   }
   .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills {

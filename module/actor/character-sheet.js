@@ -21,8 +21,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 730,
-      height: 625,
+      width: 800,
+      height: 730,
       resizable: false,
       tabs: [
         {
@@ -38,7 +38,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    * Organize and classify Owned Items for Character sheets
    * @private
    */
-   _prepareItems(data) {
+  _prepareItems(data) {
     // Partition items by category
     let [items, weapons, armors, abilities, spells, arts, foci] = this.actor.data.items.reduce(
       (arr, item) => {
