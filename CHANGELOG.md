@@ -5,7 +5,8 @@
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
-* Fixed some miscellaneous errors with creature compendiums.
+* Miscellaneous errors with creature compendiums.
+* Exert and Sneak are now correctly penalized for armor type.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9

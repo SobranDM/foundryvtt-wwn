@@ -840,6 +840,8 @@ export class WwnActor extends Actor {
     let AacShieldMod = 0;
     let AacShieldNaked = 0;
     let naked = baseAac + data.scores.dex.mod + data.aac.mod;
+    let exertPenalty = 0;
+    let sneakPenalty = 0;
 
     const armors = this.data.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
@@ -847,15 +849,14 @@ export class WwnActor extends Actor {
       if (a.data.data.type != "shield") {
         baseAac = a.data.data.aac.value + a.data.data.aac.mod;
         // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
-        if (a.data.data.type === "medium") {
-          data.skills.sneak.penalty = a.data.data.weight;
-          data.skills.exert.penalty = 0;
-        } else if (a.data.data.type === "heavy") {
-          data.skills.sneak.penalty = a.data.data.weight;
-          data.skills.exert.penalty = a.data.data.weight;
-        } else {
-          data.skills.sneak.penalty = 0;
-          data.skills.exert.penalty = 0;
+        if (a.data.data.type === "medium" && a.data.data.weight > sneakPenalty) {
+          sneakPenalty = a.data.data.weight;
+        }
+        if (a.data.data.type === "heavy" && a.data.data.weight > sneakPenalty) {
+          sneakPenalty = a.data.data.weight;
+        }
+        if (a.data.data.type === "heavy" && a.data.data.weight > exertPenalty) {
+          exertPenalty = a.data.data.weight;
         }
       } else if (a.data.data.type == "shield") {
         AacShieldMod = 1 + a.data.data.aac.mod;
@@ -873,6 +874,7 @@ export class WwnActor extends Actor {
     } else {
       await this.data.update({ data: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked } } });
     }
+    await this.data.update({ data: { skills: { sneak: { penalty: sneakPenalty }, exert: { penalty: exertPenalty }}}});
   }
 
   async computeModifiers() {
