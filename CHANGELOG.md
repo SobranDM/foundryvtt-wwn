@@ -7,6 +7,7 @@
 * Re-enabled direct editing of spell slots.
 * Miscellaneous errors with creature compendiums.
 * Exert and Sneak are now correctly penalized for armor type.
+* Monster inventory should now correctly display a scroll bar when it overflows.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9

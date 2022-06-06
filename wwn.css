@@ -250,6 +250,7 @@
     padding-top: 0px;
     margin-top: 0px;
     max-height: 380px;
+    overflow: auto;
   }
   .wwn.sheet.actor.monster .sheet-body .attributes-tab .inventory {
     width: 420px;
