@@ -289,7 +289,6 @@ export class WwnItem extends Item {
       case "item":
       case "armor":
       case "focus":
-        this.show();
       case "ability":
         this.show();
     }

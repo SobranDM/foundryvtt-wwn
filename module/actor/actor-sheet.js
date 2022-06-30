@@ -131,8 +131,7 @@ export class WwnActorSheet extends ActorSheet {
         item.spendSpell({ skipDialog: ev.ctrlKey });
       } else if (item.type == "art") {
         item.spendArt({ skipDialogue: ev.ctrlKey, itemId: itemId });
-      }
-      else {
+      } else {
         item.roll({ skipDialog: ev.ctrlKey });
       }
     });
