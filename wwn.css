@@ -771,7 +771,10 @@
     bottom: 1px;
     right: 10px;
   }
-  .wwn.chat-block .damage-roll .dice-damage button {
+  .wwn.chat-block .chat-details .dice-damage {
+    display: inline-block;
+  }
+  .wwn.chat-block .dice-damage button {
     padding: 2px 5px;
     width: 22px;
     line-height: 14px;
@@ -781,7 +784,6 @@
   .wwn.chat-block .damage-roll:hover .dice-damage {
     display: block;
   }
-  
   .wwn.chat-card {
     font-style: normal;
     font-size: 12px;

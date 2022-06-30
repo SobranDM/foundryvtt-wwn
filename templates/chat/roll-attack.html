@@ -30,17 +30,16 @@
             {{#if data.item.data.shock.damage}}
             {{#if data.item.data.shock.ac}}
             <div class="chat-details">
-                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    {{data.item.data.shockTotal}}
-                    {{localize 'WWN.messages.applyShock2'}}{{data.item.data.shock.ac}}
-                    {{localize 'WWN.messages.applyShock3'}}</b>
+                <div class="roll-result shock-message"><b>{{localize 'WWN.messages.applyShock1'}}
+                    <span class="dice-total">{{data.item.data.shockTotal}}</span>
+                    {{localize 'WWN.messages.applyShock2'}}{{data.item.data.shock.ac}}</b>
                 </div>
             </div>
             {{/if}}
             {{#unless data.item.data.shock.ac}}
             <div class="chat-details">
-                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    {{data.item.data.shockTotal}}
+                <div class="roll-result shock-message"><b>{{localize 'WWN.messages.applyShock1'}}
+                    <span class="dice-total">{{data.item.data.shockTotal}}</span>
                     {{localize 'WWN.messages.applyShockAlt'}}</b>
                 </div>
             </div>

@@ -45,6 +45,15 @@ export const addChatMessageButtons = function(msg, html, data) {
       applyChatCardDamage(roll, 1);
     })
   }
+
+  const shockMessage = html.find('.shock-message');
+  if (shockMessage.length > 0) {
+    shockMessage.append($(`<div class="dice-damage"><button type="button" data-action="apply-damage"><i class="fas fa-tint"></i></button></div>`))
+    shockMessage.find('button[data-action="apply-damage"]').click((ev) => {
+      ev.preventDefault();
+      applyChatCardDamage(shockMessage, 1);
+    })
+  }
 }
 
 /**

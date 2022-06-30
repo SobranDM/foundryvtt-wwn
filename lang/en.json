@@ -449,8 +449,7 @@
   "WWN.messages.applyDamage": "Apply Damage",
   "WWN.messages.applyHealing": "Apply Healing",
   "WWN.messages.applyShock1": "Inflicts ",
-  "WWN.messages.applyShock2": " Shock damage to AC ",
-  "WWN.messages.applyShock3": " or less!",
+  "WWN.messages.applyShock2": " Shock damage to AC ≤ ",
   "WWN.messages.applyShockAlt": "Shock damage!",
 
   "WWN.colors.green": "Green",
