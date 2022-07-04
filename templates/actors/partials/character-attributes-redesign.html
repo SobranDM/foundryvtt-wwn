@@ -192,13 +192,13 @@
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow">
             <a>
-              <h4 title="item.name">
-                {{skill.name~}}
+              <h4 title="{{skill.data.data.description~}}">
+                {{skill.name}}
               </h4>
             </a>
           </div>
           <div class="field-short">
-            {{skill.data.data.score}}
+            {{lookup @root.config.scores skill.data.data.score}}
           </div>
           <div class="field-short">
             {{skill.data.data.ownedLevel}}
