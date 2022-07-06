@@ -254,16 +254,16 @@ export class WwnCombat {
       return;
     }
     if (data.round !== 1) {
-      combat.data.combatants.forEach(combatant => {
+      for (const combatant of combat.combatants) {
         if (combatant.actor.type === "monster") {
-          combatant.actor.data.items.forEach(itm => {
+          for (const itm of combatant.actor.items) {
             if (itm.data.data.counter) {
               const item = combatant.actor.data.items.get(itm.id);
-              item.data.data.counter.value = item.data.data.counter.max;
+              await item.update({ "data.counter.value": item.data.data.counter.max });
             }
-          });
+          };
         }
-      });
+      };
       if (reroll === "reset") {
         WwnCombat.resetInitiative(combat, data, diff, id);
         return;
