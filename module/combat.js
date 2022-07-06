@@ -277,4 +277,16 @@ export class WwnCombat {
       WwnCombat.individualInitiative(combat, data, diff, id);
     }
   }
+
+  static async preCreateToken(token, data, options, userId) {
+    const scene = token.parent;
+    const actor = game.actors.get(data.actorId);
+    if (!actor || data.actorLink || !game.settings.get("wwn", "randomHP")) {
+      return token.data.update(data);
+    }
+    const roll = new Roll(token.actor.data.data.hp.hd).roll({ async: false });
+    setProperty(data, "actorData.data.hp.value", roll.total);
+    setProperty(data, "actorData.data.hp.max", roll.total);
+    return token.data.update(data);
+  }
 }

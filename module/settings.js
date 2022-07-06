@@ -1,5 +1,15 @@
 export const registerSettings = function () {
 
+  game.settings.register("wwn", "randomHP", {
+    name: game.i18n.localize("WWN.Setting.RandomHP"),
+    hint: game.i18n.localize("WWN.Setting.RandomHPHint"),
+    default: false,
+    scope: "client",
+    type: Boolean,
+    config: true,
+    onChange: _ => window.location.reload()
+  });
+
   game.settings.register("wwn", "initiative", {
     name: game.i18n.localize("WWN.Setting.Initiative"),
     hint: game.i18n.localize("WWN.Setting.InitiativeHint"),
@@ -148,16 +158,6 @@ export const registerSettings = function () {
       currencywwn: "WWN.Setting.CurrencyWWN",
       currencybx: "WWN.Setting.CurrencyBX",
     },
-    onChange: _ => window.location.reload()
-  });
-  
-  game.settings.register("wwn", "psychicSkills", {
-    name: game.i18n.localize("WWN.Setting.psychicSkills"),
-    hint: game.i18n.localize("WWN.Setting.psychicSkillsHint"),
-    default: false,
-    scope: "world",
-    type: Boolean,
-    config: true,
     onChange: _ => window.location.reload()
   });
 };

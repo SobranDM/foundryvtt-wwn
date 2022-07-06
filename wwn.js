@@ -124,6 +124,7 @@ Hooks.on("updateCombatant", WwnCombat.updateCombatant);
 Hooks.on("renderCombatTracker", WwnCombat.format);
 Hooks.on("preUpdateCombat", WwnCombat.preUpdateCombat);
 Hooks.on("getCombatTrackerEntryContext", WwnCombat.addContextEntry);
+Hooks.on("preCreateToken", WwnCombat.preCreateToken);
 
 Hooks.on("renderChatLog", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("getChatLogEntryContext", chat.addChatMessageContextOptions);
