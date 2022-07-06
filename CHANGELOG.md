@@ -7,6 +7,7 @@
 * You can now buy me a coffee on Ko-Fi if you wanted to... for some reason?
 * Added new tag, CB, to denote a crossbow. This tag, if present, will eliminate the unskilled penalty for using it without at least a 0 in the relevant skill. The crossbows in the compendiums have been updated, while any existing crossbows in your game will not be touched. You may manually add the CB tag in the tags field of the weapon, thereby eliminating any futzing about with attack bonuses you may have been using to fudge this.
 * Randomize HP on unlinked tokens by enabling the option in system settings. This is a per-client setting, so the GM enabling it doesn't cause player summons to have random HP and vice-versa.
+* Button in Currency header allows adjusting currencies without doing math because math is hard.
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.

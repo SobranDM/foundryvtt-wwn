@@ -250,7 +250,12 @@
         </div>
       </div>
       <div class="item-titles flexrow">
-        <label>{{localize 'WWN.items.Currency'}}</label>
+        <label>
+          {{localize 'WWN.items.Currency'}}
+          <a data-action="currency-adjust" title="{{localize "WWN.items.adjustCurrency"}}" class="currency-adjust">
+            <i class="fas fa-balance-scale"></i>
+          </a>
+        </label>
       </div>
       <div class="flexrow currency-group">
         <div class="flexrow currency-subgroup">

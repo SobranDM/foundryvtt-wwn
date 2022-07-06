@@ -1,6 +1,7 @@
 import { WwnActor } from "./entity.js";
 import { WwnActorSheet } from "./actor-sheet.js";
 import { WwnCharacterModifiers } from "../dialog/character-modifiers.js";
+import { WwnAdjustCurrency } from "../dialog/adjust-currency.js";
 import { WwnCharacterCreator } from "../dialog/character-creation.js";
 import insertionSort from "../insertionSort.js";
 
@@ -99,6 +100,13 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   generateScores() {
     new WwnCharacterCreator(this.actor, {
+      top: this.position.top + 40,
+      left: this.position.left + (this.position.width - 400) / 2,
+    }).render(true);
+  }
+
+  adjustCurrency() {
+    new WwnAdjustCurrency(this.actor, {
       top: this.position.top + 40,
       left: this.position.left + (this.position.width - 400) / 2,
     }).render(true);
@@ -376,5 +384,9 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     html.find("a[data-action='generate-scores']").click((ev) => {
       this.generateScores(ev);
     });
+
+    html.find("a[data-action='currency-adjust']").click((ev) => {
+      this.adjustCurrency(ev);
+    })
   }
 }

@@ -1,0 +1,38 @@
+<form autocomplete="off">
+  <div class="currency-adjustment">
+    <div class="form-group">
+      <label>{{localize "WWN.items.CP.short"}}</label>
+      <input name="copper" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    <div class="form-group">
+      <label>{{localize "WWN.items.SP.short"}}</label>
+      <input name="silver" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{#if (eq config.currencyTypes "currencybx")}}
+    <div class="form-group">
+      <label>{{localize "WWN.items.EP.short"}}</label>
+      <input name="electrum" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{/if}}
+    <div class="form-group">
+      <label>{{localize "WWN.items.GP.short"}}</label>
+      <input name="gold" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{#if (eq config.currencyTypes "currencybx")}}
+    <div class="form-group">
+      <label>{{localize "WWN.items.PP.short"}}</label>
+      <input name="platinum" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{/if}}
+    <div class="form-group">
+      <label>{{localize "WWN.items.bank.short"}}</label>
+      <input name="bank" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    </ul>
+    <footer class="sheet-footer">
+      <button type="submit" data-action="adjust-currency">
+        <i class="fas fa-balance-scale"></i> {{localize
+        "WWN.items.adjustCurrency"}}
+      </button>
+    </footer>
+</form>

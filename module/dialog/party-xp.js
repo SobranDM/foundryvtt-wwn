@@ -11,7 +11,6 @@ export class WwnPartyXP extends FormApplication {
     }
 
     /* -------------------------------------------- */
-
     /**
      * Add the Entity name into the window title
      * @type {String}
@@ -21,7 +20,6 @@ export class WwnPartyXP extends FormApplication {
     }
 
     /* -------------------------------------------- */
-
     /**
      * Construct and return the data object used to render the HTML template for this form application.
      * @return {Object}

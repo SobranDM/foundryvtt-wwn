@@ -491,6 +491,14 @@
     vertical-align: middle;
     height: 30px;
   }
+  .wwn.actor .inventory .currency-adjust {
+    padding-left: 14px;
+    padding-right: 14px;
+    color: #d8d6c9;
+  }
+  .wwn.actor .inventory .currency-adjust:hover {
+    color: white;
+  }
   .wwn.sheet.actor .flexrow .readied-header {
     color: whitesmoke;
     padding: 2px;
@@ -1418,6 +1426,10 @@
   .dialog-tweaks .row .column .header {
     text-align: center;
     font: bold;
+  }
+  .currency-adjustment {
+    flex-direction: "column";
+    
   }
   /* ----------------------------------------- */
   /*  Sheet Styles                             */
