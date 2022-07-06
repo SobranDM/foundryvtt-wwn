@@ -107,8 +107,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   adjustCurrency() {
     new WwnAdjustCurrency(this.actor, {
-      top: this.position.top + 40,
-      left: this.position.left + (this.position.width - 400) / 2,
+      top: this.position.top + 300,
+      left: this.position.left + (this.position.width - 200) / 2,
     }).render(true);
   }
 
