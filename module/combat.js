@@ -248,12 +248,22 @@ export class WwnCombat {
   }
 
   static async preUpdateCombat(combat, data, diff, id) {
-    let init = game.settings.get("wwn", "initiative");
-    let reroll = game.settings.get("wwn", "rerollInitiative");
+    const init = game.settings.get("wwn", "initiative");
+    const reroll = game.settings.get("wwn", "rerollInitiative");
     if (!data.round) {
       return;
     }
     if (data.round !== 1) {
+      combat.data.combatants.forEach(combatant => {
+        if (combatant.actor.type === "monster") {
+          combatant.actor.data.items.forEach(itm => {
+            if (itm.data.data.counter) {
+              const item = combatant.actor.data.items.get(itm.id);
+              item.data.data.counter.value = item.data.data.counter.max;
+            }
+          });
+        }
+      });
       if (reroll === "reset") {
         WwnCombat.resetInitiative(combat, data, diff, id);
         return;
