@@ -5,6 +5,7 @@
 * Shock damage now displays a button to apply damage to selected tokens.
 * Monster weapon counters now reset at the top of each round.
 * You can now buy me a coffee on Ko-Fi if you wanted to... for some reason?
+* Added new tag, CB, to denote a crossbow. This tag, if present, will eliminate the unskilled penalty for using it without at least a 0 in the relevant skill. The crossbows in the compendiums have been updated, while any existing crossbows in your game will not be touched. You may manually add the CB tag in the tags field of the weapon, thereby eliminating any futzing about with attack bonuses you may have been using to fudge this.
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
@@ -13,6 +14,7 @@
 * Monster inventory should now correctly display a scroll bar when it overflows.
 * Changed a couple tooltips on the spell sheet to correctly reflect their function: to reset Effort.
 * Armors, foci, and items no longer display twice when rolled.
+* Fixed the icons for reload and slow reload, as they were reversed. (Why should the bow be the one with the crossbow icon?). This may require clearing your cache to see.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9

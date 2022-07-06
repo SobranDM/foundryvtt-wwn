@@ -102,6 +102,7 @@ export const WWN = {
     S: "WWN.items.S",
     SS: "WWN.items.SS",
     T: "WWN.items.T",
+    CB: "WWN.items.CB"
   },
   tag_images: {
     melee: "systems/wwn/assets/melee.png",
@@ -118,6 +119,7 @@ export const WWN = {
     S: "systems/wwn/assets/subtle.png",
     SS: "systems/wwn/assets/single_shot.png",
     T: "systems/wwn/assets/throwable.png",
+    CB: "systems/wwn/assets/crossbow.png"
   },
   tag_desc: {
     melee: "WWN.items.desc.Melee",
@@ -133,7 +135,8 @@ export const WWN = {
     PM: "WWN.items.desc.PM",
     S: "WWN.items.desc.S",
     SS: "WWN.items.desc.SS",
-    T: "WWN.items.desc.T"
+    T: "WWN.items.desc.T",
+    CB: "WWN.items.desc.CB"
   },
   assetTypes: {
     cunning: "WWN.asset.cunning",

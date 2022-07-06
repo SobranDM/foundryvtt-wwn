@@ -511,9 +511,9 @@ export class WwnActor extends Actor {
       );
     } */
     if (data.character) {
-      let statAttack = attData.item.data.score;
-      let skillAttack = attData.item.data.skill;
-      let unskilledAttack = -2;
+      const statAttack = attData.item.data.score;
+      const skillAttack = attData.item.data.skill;
+      const unskilledAttack = attData.item.data.tags.find(weapon => weapon.title === "CB" ) ? 0 : -2;
       rollParts.push(this.data.data.scores[statAttack].mod.toString());
       if (data.skills[skillAttack].value == -1) {
         rollParts.push(unskilledAttack.toString());
