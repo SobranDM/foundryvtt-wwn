@@ -4,6 +4,7 @@
 * All tags have been added to the new Tags compendium. If the Compendium Folders module is installed, tags will be sorted by tag type: community, court, ruin, or wilderness. Without Compendium Folders, the compendium will still function but the tags will be lumped together. Each tag category also has a relevant roll table.
 * Shock damage now displays a button to apply damage to selected tokens.
 * Monster weapon counters now reset at the top of each round.
+* You can now buy me a coffee on Ko-Fi if you wanted to... for some reason?
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
