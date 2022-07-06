@@ -48,6 +48,8 @@
   "WWN.dialog.itemType": "Item type",
   "WWN.dialog.itemName": "Item name",
   "WWN.dialog.xp.deal": "Deal XP",
+  "WWN.dialog.currency.deal": "Deal Silver",
+  "WWN.dialog.currency.dealHint": "Distribute silver directly to bank.",
   "WWN.dialog.generator": "Character generator",
   "WWN.dialog.generateScores": "Generate Scores",
   "WWN.dialog.generateScore": "Rolling {score} ({count})",
@@ -306,6 +308,7 @@
   "WWN.items.total.short": "Total Silver",
   "WWN.items.total.long": "Total Silver Value, including all coin and treasure items.",
   "WWN.items.adjustCurrency": "Adjust Currency",
+  "WWN.items.currencyShare": "Currency Share",
 
   "WWN.items.Range": "Range",
   "WWN.items.desc.Range": "Ranged Weapon",
@@ -436,6 +439,7 @@
   "WWN.skills.polymath": "Polymath",
 
   "WWN.messages.GetExperience": "{name} gained {value} experience points!",
+  "WWN.messages.GetCurrency": "{name} deposited {value} silver!",
   "WWN.messages.AttackSuccess": "<b>Hits AC {result}!</b> ({bonus})",
   "WWN.messages.AttackAscendingSuccess": "<b>Hits AC {result}!</b>",
   "WWN.messages.AttackFailure": "<b>Attack fails</b> ({bonus})",

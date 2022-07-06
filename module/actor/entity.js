@@ -61,6 +61,24 @@ export class WwnActor extends Actor {
     });
   }
 
+  getBank(value, options = {}) {
+    if (this.data.type != "character") {
+      return;
+    }
+    return this.update({
+      "data.currency.bank": value + this.data.data.currency.bank,
+    }).then(() => {
+      const speaker = ChatMessage.getSpeaker({ actor: this });
+      ChatMessage.create({
+        content: game.i18n.format("WWN.messages.GetCurrency", {
+          name: this.name,
+          value,
+        }),
+        speaker,
+      });
+    });
+  }
+
   isNew() {
     const data = this.data.data;
     if (this.data.type == "character") {

@@ -1,4 +1,5 @@
 import { WwnPartyXP } from "./party-xp.js";
+import { WwnPartyCurrency } from "./party-coin.js";
 
 export class WwnPartySheet extends FormApplication {
   
@@ -58,6 +59,10 @@ export class WwnPartySheet extends FormApplication {
     new WwnPartyXP(this.object, {}).render(true);
   }
 
+  async _dealCurrency(ev) {
+    new WwnPartyCurrency(this.object, {}).render(true);
+  }
+
   async _selectActors(ev) {
     const template = "systems/wwn/templates/apps/party-select.html";
     const templateData = {
@@ -92,6 +97,7 @@ export class WwnPartySheet extends FormApplication {
       .click(this._selectActors.bind(this));
     
       html.find(".item-controls .item-control .deal-xp").click(this._dealXP.bind(this));
+      html.find(".item-controls .item-control .deal-currency").click(this._dealCurrency.bind(this));
     
     html.find("a.resync").click(() => this.render(true));
 

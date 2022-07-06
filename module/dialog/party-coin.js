@@ -1,9 +1,9 @@
-export class WwnPartyXP extends FormApplication {
+export class WwnPartyCurrency extends FormApplication {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["wwn", "dialog", "party-xp"],
-            template: "systems/wwn/templates/apps/party-xp.html",
+            template: "systems/wwn/templates/apps/party-coin.html",
             width: 280,
             height: 400,
             resizable: false,
@@ -16,7 +16,7 @@ export class WwnPartyXP extends FormApplication {
      * @type {String}
      */
     get title() {
-        return game.i18n.localize("WWN.dialog.xp.deal");
+        return game.i18n.localize("WWN.dialog.currency.deal");
     }
 
     /* -------------------------------------------- */
@@ -55,17 +55,17 @@ export class WwnPartyXP extends FormApplication {
         const html = $(this.form);
         let shares = 0;
         actors.forEach((a) => {
-            shares += a.data.data.details.xp.share;
+            shares += a.data.data.currency.share;
         });
         const value = parseFloat(toDeal) / shares;
         if (value) {
             actors.forEach(a => {
-                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.data.data.details.xp.share * value));
+                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.data.data.currency.share * value));
             })
         }
     }
 
-    _dealXP(ev) {
+    _dealCurrency(ev) {
         const html = $(this.form);
         const rows = html.find('.actor');
         rows.each((_, row) => {
@@ -74,7 +74,7 @@ export class WwnPartyXP extends FormApplication {
             const id = qRow.data('actorId');
             const actor = game.actors.find(e => e.id === id);
             if (value) {
-                actor.getExperience(Math.floor(parseInt(value)));
+                actor.getBank(Math.floor(parseInt(value)));
             }
         })
     }
@@ -86,7 +86,7 @@ export class WwnPartyXP extends FormApplication {
             .find('button[data-action="calculate-share"')
             .click(this._calculateShare.bind(this));
         html
-            .find('button[data-action="deal-xp"')
-            .click(this._dealXP.bind(this));
+            .find('button[data-action="deal-currency"')
+            .click(this._dealCurrency.bind(this));
     }
 }

@@ -582,6 +582,10 @@
     padding: 0;
     overflow-y: auto;
   }
+  .wwn.dialog.party-xp .actors .form-group input {
+    max-width: 100px;
+
+  }
   .wwn.dialog.party-xp .form-group button {
     line-height: 18px;
     flex-grow: 0;
@@ -1150,16 +1154,7 @@
   .wwn .window-content input {
     text-align: center;
   }
-  .wwn .window-content input[type=number] {
-    -moz-appearance: textfield;
-  }
-  .wwn .window-content input[type=number]::-webkit-inner-spin-button,
-  .wwn .window-content input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-  }
+  
   .wwn .window-content input:not([type=checkbox]) {
     background: none;
     border: none;

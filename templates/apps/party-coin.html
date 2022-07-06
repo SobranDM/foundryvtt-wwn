@@ -10,14 +10,14 @@
     <div class="actors">
         {{#each actors as |e|}}
         <div class="actor form-group" data-actor-id="{{e.id}}">
-            <label>{{e.name}} ({{e.data.data.details.xp.share}}%)</label>
+            <label>{{e.name}} ({{e.data.data.currency.share}}%)</label>
             <input name="" placeholder="0" type="number" data-dtype="Number" />
         </div>
         {{/each}}
     </div>
     <div class="dialog-buttons">
-        <button type="button" data-action="deal-xp">
-            {{localize "WWN.dialog.xp.deal"}}
+        <button type="button" data-action="deal-currency" title="{{localize "WWN.dialog.currency.dealHint"}}">
+            {{localize "WWN.dialog.currency.deal"}}
         </button>
     </div>
 </form>
