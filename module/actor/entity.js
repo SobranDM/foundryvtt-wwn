@@ -500,8 +500,8 @@ export class WwnActor extends Actor {
     }
 
     if (data.character) {
-      let statAttack = attData.item.data.score;
-      let skillAttack = attData.item.data.skill;
+      const statAttack = attData.item.data.score;
+      const skillAttack = attData.item.data.skill;
       if (data.warrior) {
         let levelRoundedUp = Math.ceil(this.data.data.details.level / 2);
         attData.item.data.shockTotal =
@@ -520,7 +520,7 @@ export class WwnActor extends Actor {
       attData.item.data.shockTotal = this.data.data.damageBonus + attData.item.data.shock.damage;
     }
 
-    rollParts.push(data.thac0.bba.toString());
+    rollParts.push(data.thac0.bba.toString() + "[AB]");
 
     // TODO: Add range selector in dialogue if missile attack.
     /* if (options.type == "missile") {
@@ -532,32 +532,32 @@ export class WwnActor extends Actor {
       const statAttack = attData.item.data.score;
       const skillAttack = attData.item.data.skill;
       const unskilledAttack = attData.item.data.tags.find(weapon => weapon.title === "CB" ) ? 0 : -2;
-      rollParts.push(this.data.data.scores[statAttack].mod.toString());
+      rollParts.push(this.data.data.scores[statAttack].mod.toString() + `[${statAttack}]`);
       if (data.skills[skillAttack].value == -1) {
-        rollParts.push(unskilledAttack.toString());
+        rollParts.push(unskilledAttack.toString() + "[unskilled]");
       } else {
-        rollParts.push(data.skills[skillAttack].value.toString());
+        rollParts.push(data.skills[skillAttack].value.toString() + `[${skillAttack}]`);
       }
     }
 
     if (attData.item && attData.item.data.bonus) {
-      rollParts.push(attData.item.data.bonus);
+      rollParts.push(attData.item.data.bonus + "[weapon]");
     }
     let thac0 = data.thac0.value;
 
     if (data.character) {
       let statAttack = attData.item.data.score;
       let skillAttack = attData.item.data.skill;
-      dmgParts.push(data.scores[statAttack].mod);
+      dmgParts.push(data.scores[statAttack].mod + `[${statAttack}]`);
       if (data.warrior) {
         let levelRoundedUp = Math.ceil(data.details.level / 2);
         dmgParts.push(levelRoundedUp);
       }
       if (attData.item.data.skillDamage) {
-        dmgParts.push(this.data.data.skills[skillAttack].value);
+        dmgParts.push(this.data.data.skills[skillAttack].value + `[${skillAttack}]`);
       }
     } else {
-      dmgParts.push(this.data.data.damageBonus);
+      dmgParts.push(this.data.data.damageBonus + "[DB]");
     }
 
     const rollData = {
