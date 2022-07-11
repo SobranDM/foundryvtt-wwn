@@ -476,6 +476,8 @@ export class WwnActor extends Actor {
     const data = this.data.data;
     const rollParts = ["1d20"];
     const dmgParts = [];
+    const rollLabels = [];
+    const dmgLabels = [];
     let readyState = "";
     let label = game.i18n.format("WWN.roll.attacks", {
       name: this.data.name,
@@ -520,7 +522,8 @@ export class WwnActor extends Actor {
       attData.item.data.shockTotal = this.data.data.damageBonus + attData.item.data.shock.damage;
     }
 
-    rollParts.push(data.thac0.bba.toString() + "[AB]");
+    rollParts.push(data.thac0.bba.toString());
+    rollLabels.push(`+${data.thac0.bba} (attack bonus)`)
 
     // TODO: Add range selector in dialogue if missile attack.
     /* if (options.type == "missile") {
@@ -532,33 +535,44 @@ export class WwnActor extends Actor {
       const statAttack = attData.item.data.score;
       const skillAttack = attData.item.data.skill;
       const unskilledAttack = attData.item.data.tags.find(weapon => weapon.title === "CB" ) ? 0 : -2;
-      rollParts.push(this.data.data.scores[statAttack].mod.toString() + `[${statAttack}]`);
+      rollParts.push(this.data.data.scores[statAttack].mod.toString());
+      rollLabels.push(`+${this.data.data.scores[statAttack].mod} (${statAttack})`)
       if (data.skills[skillAttack].value == -1) {
-        rollParts.push(unskilledAttack.toString() + "[unskilled]");
+        rollParts.push(unskilledAttack.toString());
+        rollLabels.push(`${unskilledAttack} (unskilled penalty)`)
       } else {
-        rollParts.push(data.skills[skillAttack].value.toString() + `[${skillAttack}]`);
+        rollParts.push(data.skills[skillAttack].value.toString());
+        rollLabels.push(`+${data.skills[skillAttack].value} (${skillAttack})`);
       }
     }
 
     if (attData.item && attData.item.data.bonus) {
-      rollParts.push(attData.item.data.bonus + "[weapon]");
+      rollParts.push(attData.item.data.bonus);
+      rollParts.push(`+${attData.item.data.bonus} (weapon bonus)`);
     }
     let thac0 = data.thac0.value;
 
     if (data.character) {
       let statAttack = attData.item.data.score;
       let skillAttack = attData.item.data.skill;
-      dmgParts.push(data.scores[statAttack].mod + `[${statAttack}]`);
+      dmgParts.push(data.scores[statAttack].mod);
+      dmgLabels.push(`+${data.scores[statAttack].mod.toString()} (${statAttack})`);
       if (data.warrior) {
         let levelRoundedUp = Math.ceil(data.details.level / 2);
         dmgParts.push(levelRoundedUp);
+        dmgLabels.push(`+${levelRoundedUp.toString()} (warrior bonus)`);
       }
       if (attData.item.data.skillDamage) {
-        dmgParts.push(this.data.data.skills[skillAttack].value + `[${skillAttack}]`);
+        dmgParts.push(this.data.data.skills[skillAttack].value);
+        dmgLabels.push(`+${this.data.data.skills[skillAttack].value.toString()} (${skillAttack})`)
       }
     } else {
-      dmgParts.push(this.data.data.damageBonus + "[DB]");
+      dmgParts.push(this.data.data.damageBonus);
+      dmgLabels.push(`+${this.data.data.damageBonus.toString()} (damage bonus)`);
     }
+    
+    const rollTitle = `1d20 ${rollLabels.join(" ")}`;
+    const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
 
     const rollData = {
       actor: this.data,
@@ -581,6 +595,8 @@ export class WwnActor extends Actor {
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: label,
       title: label,
+      rollTitle: rollTitle,
+      dmgTitle: dmgTitle,
     });
   }
 

@@ -69,6 +69,7 @@ export class WwnDice {
     flavor = null,
     speaker = null,
     form = null,
+    rollTitle = null
   } = {}) {
     const template = "systems/wwn/templates/chat/roll-result.html";
 
@@ -81,6 +82,7 @@ export class WwnDice {
       title: title,
       flavor: flavor,
       data: data,
+      rollTitle: rollTitle
     };
 
     // Optionally include a situational bonus
@@ -175,6 +177,8 @@ export class WwnDice {
     flavor = null,
     speaker = null,
     form = null,
+    rollTitle = null,
+    dmgTitle = null
   } = {}) {
     const template = "systems/wwn/templates/chat/roll-attack.html";
 
@@ -188,6 +192,8 @@ export class WwnDice {
       flavor: flavor,
       data: data,
       config: CONFIG.WWN,
+      rollTitle: rollTitle,
+      dmgTitle: dmgTitle
     };
 
     // Optionally include a situational bonus
@@ -330,6 +336,8 @@ export class WwnDice {
     speaker = null,
     flavor = null,
     title = null,
+    rollTitle = null,
+    dmgTitle = null,
   } = {}) {
     let rolled = false;
     const template = "systems/wwn/templates/chat/roll-dialog.html";
@@ -346,6 +354,8 @@ export class WwnDice {
       title: title,
       flavor: flavor,
       speaker: speaker,
+      rollTitle: rollTitle,
+      dmgTitle: dmgTitle
     };
     if (skipDialog) {
       return ["melee", "missile", "attack"].includes(data.roll.type)

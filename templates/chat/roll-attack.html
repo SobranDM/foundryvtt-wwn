@@ -20,12 +20,12 @@
             <div class="chat-details">
                 <div class="roll-result">{{{result.details}}}</div>
             </div>
-            {{#if rollWWN}}<div>{{{rollWWN}}}</div>{{/if}}
+            {{#if rollWWN}}<div title="{{rollTitle}}"">{{{rollWWN}}}</div>{{/if}}
             {{#if result.isSuccess}}
             <div class="chat-details">
                 <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>
             </div>
-            <div class="damage-roll">{{{rollDamage}}}</div>
+            <div class="damage-roll" title="{{dmgTitle}}">{{{rollDamage}}}</div>
             {{/if}}
             {{#if data.item.data.shock.damage}}
             {{#if data.item.data.shock.ac}}

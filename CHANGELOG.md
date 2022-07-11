@@ -9,6 +9,7 @@
 * Randomize HP on unlinked tokens by enabling the option in system settings. This is a per-client setting, so the GM enabling it doesn't cause player summons to have random HP and vice-versa.
 * Button in Currency header allows adjusting currencies without doing math because math is hard.
 * Button in Party sheet distributes silver to everyone in the party, respecting the share setting in tweaks in the same manner as the deal XP function. Note that silver goes to the bank and not to inventory, as this is simply meant to ease the distribution of large amounts of coin at the end of an adventure.
+* Attack and damage rolls now display a tooltip when hovered, showing you the source of any modifiers.
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
