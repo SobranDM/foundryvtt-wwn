@@ -19,6 +19,7 @@
 * Changed a couple tooltips on the spell sheet to correctly reflect their function: to reset Effort.
 * Armors, foci, and items no longer display twice when rolled.
 * Fixed the icons for reload and slow reload, as they were reversed. (Why should the bow be the one with the crossbow icon?). This may require clearing your cache to see.
+* Small change to shock to better deal with low-level Vowed and the Unarmed Combatant focus: if the Shock field of a weapon is set to 0, shock will still be calculated. If the field is blank, shock will be omitted.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9

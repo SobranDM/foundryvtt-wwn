@@ -4,6 +4,10 @@ export const registerHelpers = async function () {
     return a == b;
   });
 
+  Handlebars.registerHelper("nt", function (a, b) {
+    return a != b;
+  });
+
   Handlebars.registerHelper("gt", function (a, b) {
     return a >= b;
   });

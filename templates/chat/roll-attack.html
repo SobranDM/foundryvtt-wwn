@@ -27,7 +27,7 @@
             </div>
             <div class="damage-roll" title="{{dmgTitle}}">{{{rollDamage}}}</div>
             {{/if}}
-            {{#if data.item.data.shock.damage}}
+            {{#if (nt data.item.data.shock.damage null)}}
             {{#if data.item.data.shock.ac}}
             <div class="chat-details">
                 <div class="roll-result shock-message"><b>{{localize 'WWN.messages.applyShock1'}}
