@@ -548,7 +548,7 @@ export class WwnActor extends Actor {
 
     if (attData.item && attData.item.data.bonus) {
       rollParts.push(attData.item.data.bonus);
-      rollParts.push(`+${attData.item.data.bonus} (weapon bonus)`);
+      rollLabels.push(`+${attData.item.data.bonus} (weapon bonus)`);
     }
     let thac0 = data.thac0.value;
 
