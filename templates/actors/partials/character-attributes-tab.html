@@ -191,6 +191,11 @@
           {{#each owned.skills as |skill|}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{skill.id}}">
+              <div class="field-xshort skill-roll">
+                <a>
+                  <i class="fas fa-dice-d20"></i>
+                </a>
+              </div>
               <div class="item-name item-rollable flexrow">
                 <a>
                   <h4 title="{{skill.data.data.description~}}">
@@ -204,7 +209,7 @@
               <div class="field-xshort">
                 {{skill.data.data.ownedLevel}}
               </div>
-              <div class="item-controls field-xshort">
+              <div class="item-controls-short">
                 {{#if ../owner}}
                 <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>

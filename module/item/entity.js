@@ -60,6 +60,10 @@ export class WwnItem extends Item {
     return data;
   }
 
+  rollSkill(options={}) {
+    console.log(`rolling ${this.name}`);
+  }
+
   rollWeapon(options = {}) {
     let isNPC = this.actor.data.type != "character";
     const targets = 5;
@@ -291,6 +295,9 @@ export class WwnItem extends Item {
       case "focus":
       case "ability":
         this.show();
+      case "skill":
+        this.rollSkill();
+        break;
     }
   }
 

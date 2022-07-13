@@ -116,7 +116,13 @@ export class WwnActorSheet extends ActorSheet {
       let save = element.parentElement.parentElement.dataset.save;
       actorObject.rollSave(save, { event: ev });
     });
-
+    html.find(".skill-roll").click(async (ev) => {
+      const itemId = $(ev.currentTarget).parents(".item");
+      const item = this.document.items.get(itemId.data("itemId"));
+      if (item.type == "skill"){
+        item.rollSkill({ skipDialog: ev.ctrlKey });
+      }
+    });
     html.find(".item .item-rollable .item-image").click(async (ev) => {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));
@@ -131,6 +137,8 @@ export class WwnActorSheet extends ActorSheet {
         item.spendSpell({ skipDialog: ev.ctrlKey });
       } else if (item.type == "art") {
         item.spendArt({ skipDialogue: ev.ctrlKey, itemId: itemId });
+      }  else if (item.type == "skill"){
+        item.rollSkill({ skipDialog: ev.ctrlKey });
       } else {
         item.roll({ skipDialog: ev.ctrlKey });
       }

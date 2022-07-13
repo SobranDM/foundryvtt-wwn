@@ -435,6 +435,13 @@
     text-align: right;
     margin-right: 4px;
   }
+  .wwn.sheet.actor .sheet-body .inventory .item-controls-short {
+    font-size: 12px;
+    flex-basis: 30px;
+    flex-grow: 0;
+    text-align: right;
+    margin-right: 4px;
+  }
   .wwn.sheet.actor .sheet-body .inventory .item-controls .item-unequipped {
     color: rgba(0, 0, 0, 0.2);
   }
