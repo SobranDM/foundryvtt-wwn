@@ -410,6 +410,12 @@
     flex-grow: 0;
     text-align: center;
   }
+  .wwn.sheet.actor .sheet-body .inventory .field-xshort {
+    font-size: 12px;
+    flex-basis: 25px;
+    flex-grow: 0;
+    text-align: center;
+  }
   .wwn.sheet.actor .sheet-body .inventory .field-short.quantity {
     display: flex;
   }

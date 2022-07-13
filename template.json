@@ -468,7 +468,7 @@
   "skill": {
     "description": "",
     "ownedLevel": -1,
-    "score": "",
+    "score": "int",
     "skillDice": "",
     "secondary": false
   },

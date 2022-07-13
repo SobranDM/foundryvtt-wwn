@@ -979,4 +979,61 @@ export class WwnActor extends Actor {
       })
     }
   }
+
+  /** @override*/
+  async _onCreate(data, options, user) {
+    await super._onCreate(data, options, user);
+
+    const actorData = this.data;
+    const skillList = [
+      "administer",
+      "connect",
+      "convince",
+      "craft",
+      "exert",
+      "heal",
+      "know",
+      "lead",
+      "magic",
+      "notice",
+      "perform",
+      "pray",
+      "punch",
+      "ride",
+      "sail",
+      "shoot",
+      "sneak",
+      "stab",
+      "survive",
+      "trade",
+      "work",
+      "biopsionics",
+      "metapsionics",
+      "precognition",
+      "telekinesis",
+      "telepathy",
+      "teleportation",
+      "polymath",
+    ];
+    const skills = skillList.map((el) => {
+      const skillKey = `WWN.skills.${el}`;
+      const skillDesc = `WWN.skills.desc.${el}`;
+      return {
+        type: "skill",
+        name: game.i18n.localize(skillKey),
+        data: {
+          ownedLevel: -1,
+          score: "int",
+          description: game.i18n.localize(skillDesc),
+          dice: "2d6",
+          secondary: false,
+        },
+      };
+    });
+
+    if (data.type === "character") {
+      console.log(skills);
+      await this.createEmbeddedDocuments("Item", skills);
+    }
+  }
 }
