@@ -69,6 +69,29 @@ export class WwnItem extends Item {
       rollMode: game.settings.get("core", "rollMode"),
       rollModes: CONFIG.Dice.rollModes,
     };
+    const newData = {
+      actor: this.actor.data,
+      item: this.data,
+      roll: {
+      },
+    };
+    if (options.skipDialog) {
+      const data = this.data.data;
+      let score = this.actor.data.data.scores[data.score];
+      const attrKey = `WWN.scores.${data.score}.short`;
+      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
+      let rollData = {
+        parts: [data.skillDice, data.ownedLevel, score.mod],
+        data: newData,
+        title: rollTitle,
+        flavor: null,
+        speaker: this.actor.name,
+        form: null,
+        rollTitle: rollTitle
+      };
+      return WwnDice.sendRoll(rollData);
+    }
+    
     const html = await renderTemplate(template, dialogData);
     const title = `${game.i18n.localize("WWN.Roll")} ${this.name}`;
     const _doRoll = async(html) => {
@@ -80,14 +103,6 @@ export class WwnItem extends Item {
       }
       const attrKey = `WWN.scores.${form.score.value}.short`;
       const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
-      
-      const newData = {
-        actor: this.actor.data,
-        item: this.data,
-        roll: {
-        },
-      };
-
       let rollData = {
         parts: [form.dicePool.value, this.data.data.ownedLevel, score.mod],
         data: newData,
