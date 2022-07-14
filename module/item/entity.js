@@ -85,7 +85,7 @@ export class WwnItem extends Item {
         data: newData,
         title: rollTitle,
         flavor: null,
-        speaker: this.actor.name,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         form: null,
         rollTitle: rollTitle
       };
@@ -108,7 +108,7 @@ export class WwnItem extends Item {
         data: newData,
         title: rollTitle,
         flavor: null,
-        speaker: this.actor.name,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         form: form,
         rollTitle: rollTitle
       };
