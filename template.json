@@ -469,7 +469,7 @@
     "description": "",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "",
+    "skillDice": "2d6",
     "secondary": false
   },
   "ability": {
