@@ -980,10 +980,9 @@ export class WwnActor extends Actor {
     }
   }
 
-  /** @override*/
-  async _onCreate(data, options, user) {
-    await super._onCreate(data, options, user);
-
+  // Creates a list of skills based on the following list. Was used to generate
+  // the initial skills list to populate a compendium
+  async createSkillsManually(data,options,user) {
     const actorData = this.data;
     const skillList = [
       "administer",
@@ -1018,6 +1017,7 @@ export class WwnActor extends Actor {
     const skills = skillList.map((el) => {
       const skillKey = `WWN.skills.${el}`;
       const skillDesc = `WWN.skills.desc.${el}`;
+      const imagePath = `/systems/wwn/assets/skills/${el}.png`
       return {
         type: "skill",
         name: game.i18n.localize(skillKey),
@@ -1028,12 +1028,24 @@ export class WwnActor extends Actor {
           dice: "2d6",
           secondary: false,
         },
+        img: imagePath,
       };
     });
 
     if (data.type === "character") {
-      console.log(skills);
       await this.createEmbeddedDocuments("Item", skills);
+    }
+  }
+
+  /** @override*/
+  async _onCreate(data, options, user) {
+    await super._onCreate(data, options, user);
+    // Add primary skills from compendium
+    if (data.type === "character") {
+      let skillPack = game.packs.get("wwn.skills");
+      let toAdd = await skillPack.getDocuments();
+      let primarySkills = toAdd.filter((i) => i.data.data.secondary == false).map(item => item.toObject());
+      await this.createEmbeddedDocuments("Item", primarySkills);
     }
   }
 }
