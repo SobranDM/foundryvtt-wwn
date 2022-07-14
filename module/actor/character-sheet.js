@@ -388,5 +388,25 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     html.find("a[data-action='currency-adjust']").click((ev) => {
       this.adjustCurrency(ev);
     })
+
+    html.find(".lock-skills").click((ev) => {
+      ev.preventDefault();
+      const lock = $(ev.currentTarget).data("type") == "lock" ? true : false; 
+      if (lock) {
+        html.find(".lock-skills.unlock").css('display', 'inline-block');
+        html.find(".lock-skills.lock").hide();
+      } else {
+        html.find(".lock-skills.unlock").hide();
+        html.find(".lock-skills.lock").css('display', 'inline-block');
+      }
+      html.find(".skill-del").each(function() {
+        if (lock) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+      
+    });
   }
 }
