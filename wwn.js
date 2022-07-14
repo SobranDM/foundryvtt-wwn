@@ -14,6 +14,8 @@ import * as treasure from "./module/treasure.js";
 import * as macros from "./module/macros.js";
 import * as party from "./module/party.js";
 import { WwnCombat } from "./module/combat.js";
+import * as migrations from "./module/migration.js";
+
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -92,6 +94,19 @@ Hooks.once("ready", async () => {
   Hooks.on("hotbarDrop", (bar, data, slot) =>
     macros.createWwnMacro(data, slot)
   );
+
+  // Check migration
+  if ( !game.user.isGM ) return;
+  const currentVersion = game.settings.get("wwn", "systemMigrationVersion");
+  const NEEDS_MIGRATION_VERSION = "1.0.0";
+  const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
+  if ( !currentVersion && totalDocuments === 0 ) return game.settings.set("wwn", "systemMigrationVersion", game.system.data.version);
+  const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
+
+  if (needsMigration) {
+    migrations.migrateWorld();
+  }
+
 });
 
 // License and KOFI infos

@@ -160,4 +160,11 @@ export const registerSettings = function () {
     },
     onChange: _ => window.location.reload()
   });
+
+  game.settings.register("wwn", "systemMigrationVersion", {
+    config: false,
+    scope: "world",
+    type: String,
+    default: ""
+  });
 };
