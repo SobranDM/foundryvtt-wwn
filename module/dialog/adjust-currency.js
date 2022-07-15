@@ -42,7 +42,7 @@ export class WwnAdjustCurrency extends FormApplication {
     updatedCurrency.bank = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="bank"]').val()) || 0;
     if (game.settings.get("wwn", "currencyTypes") === "currencybx") {
       updatedCurrency.ep = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="electrum"]').val()) || 0;
-      updatedCurrency.pp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="bank"]').val()) || 0;
+      updatedCurrency.pp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="platinum"]').val()) || 0;
     }
     updatedCurrency = {
       cp: updatedCurrency.cp + this.object.data.data.currency.cp,
