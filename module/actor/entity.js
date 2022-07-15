@@ -1025,7 +1025,7 @@ export class WwnActor extends Actor {
           ownedLevel: -1,
           score: "int",
           description: game.i18n.localize(skillDesc),
-          dice: "2d6",
+          skillDice: "2d6",
           secondary: false,
         },
         img: imagePath,
