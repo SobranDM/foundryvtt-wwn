@@ -223,6 +223,20 @@
         </div>
       </li>
       {{/each}}
+      {{#if (lt owned.skills.length 22)}}
+      <li class="item-entry">
+        <div class="item flexrow">
+
+        </div>
+      </li>
+      {{/if}}
+      {{#if (eq owned.skills.length 21)}}
+      <li class="item-entry">
+        <div class="item flexrow">
+          
+        </div>
+      </li>
+      {{/if}}
       <li class="item-entry">
         <div class="item flexrow">
           <div class="item-name-short item-rollable flexrow">
