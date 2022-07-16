@@ -388,5 +388,75 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     html.find("a[data-action='currency-adjust']").click((ev) => {
       this.adjustCurrency(ev);
     })
+
+    // Use unspent skill points to improve the skill
+    html.find(".skill-up").click(async(ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const skill = this.actor.items.get(li.data("itemId"));
+      if (skill.type == "skill") {
+        const rank = skill.data.data.ownedLevel;
+        // Check if char has sufficient level
+        if (rank > 0) {
+          const lvl = this.actor.data.data.details.level;
+          if (rank == 1 && lvl < 3) {
+            ui.notifications?.error(
+              "Must be at least level 3 (edit manually to override)"
+            );
+            return;
+          } else if (rank == 2 && lvl < 6) {
+            ui.notifications?.error(
+              "Must be at least level 6 (edit manually to override)"
+            );
+            return;
+          } else if (rank == 3 && lvl < 9) {
+            ui.notifications?.error(
+              "Must be at least level 9 (edit manually to override)"
+            );
+            return;
+          } else if (rank > 3) {
+            ui.notifications?.error("Cannot auto-level above 4");
+            return;
+          }
+        }
+        // check costs and update if points available
+        const skillCost = rank + 2;
+        const skillPointsAvail = this.actor.data.data.skills.unspent;
+        if (skillCost > skillPointsAvail) {
+          ui.notifications.error(
+            `Not enough skill points. Have: ${skillPointsAvail}, need: ${skillCost}`
+          );
+          return;
+        } else if (isNaN(skillPointsAvail)) {
+          ui.notifications.error(`Unspent skill points not set`);
+          return;
+        }
+        await skill.update({ "data.ownedLevel": rank + 1 });
+        const newSkillPoints = skillPointsAvail - skillCost;
+        await this.actor.update({ "data.skills.unspent": newSkillPoints });
+        ui.notifications.info(`Removed ${skillCost} skill points`);
+      }
+    });
+
+    // Show / hide skill buttons
+    html.find(".lock-skills").click((ev) => {
+      ev.preventDefault();
+      const lock = $(ev.currentTarget).data("type") == "lock" ? true : false; 
+      if (lock) {
+        html.find(".lock-skills.unlock").css('display', 'inline-block');
+        html.find(".lock-skills.lock").hide();
+      } else {
+        html.find(".lock-skills.unlock").hide();
+        html.find(".lock-skills.lock").css('display', 'inline-block');
+      }
+      html.find(".skill-lock").each(function() {
+        if (lock) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+      
+    });
   }
 }

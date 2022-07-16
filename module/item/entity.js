@@ -60,6 +60,87 @@ export class WwnItem extends Item {
     return data;
   }
 
+  async rollSkill(options={}) {
+    const template = "systems/wwn/templates/items/dialogs/roll-skill.html";
+    const dialogData = {
+      defaultScore:  this.data.data.score,
+      dicePool: this.data.data.skillDice,
+      name: this.name,
+      rollMode: game.settings.get("core", "rollMode"),
+      rollModes: CONFIG.Dice.rollModes,
+    };
+    const newData = {
+      actor: this.actor.data,
+      item: this.data,
+      roll: {
+      },
+    };
+    if (options.skipDialog) {
+      const data = this.data.data;
+      let score = this.actor.data.data.scores[data.score];
+      const attrKey = `WWN.scores.${data.score}.short`;
+      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
+      let rollData = {
+        parts: [data.skillDice, data.ownedLevel, score.mod],
+        data: newData,
+        title: rollTitle,
+        flavor: null,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        form: null,
+        rollTitle: rollTitle
+      };
+      return WwnDice.sendRoll(rollData);
+    }
+    
+    const html = await renderTemplate(template, dialogData);
+    const title = `${game.i18n.localize("WWN.Roll")} ${this.name}`;
+    const _doRoll = async(html) => {
+      const form = html[0].querySelector("form");
+      let score = this.actor.data.data.scores[form.score.value];
+      if (!score) {
+        ui.notifications.error("Unable to find score on char.");
+        return;
+      }
+      const attrKey = `WWN.scores.${form.score.value}.short`;
+      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
+      let rollData = {
+        parts: [form.dicePool.value, this.data.data.ownedLevel, score.mod],
+        data: newData,
+        title: rollTitle,
+        flavor: null,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        form: form,
+        rollTitle: rollTitle
+      };
+      WwnDice.sendRoll(rollData);
+    };
+
+    let buttons = {
+      ok: {
+        label: title,
+        icon: '<i class="fas fa-dice-d20"></i>',
+        callback: _doRoll,
+      },
+      cancel: {
+        icon: '<i class="fas fa-times"></i>',
+        label: game.i18n.localize("WWN.Cancel"),
+        callback: (html) => { },
+      },
+    };
+
+    //Create Dialog window
+    return new Promise((resolve) => {
+      new Dialog({
+        title: title,
+        content: html,
+        buttons: buttons,
+        default: "ok",
+        close: () => {
+        },
+      }).render(true);
+    });
+  }
+
   rollWeapon(options = {}) {
     let isNPC = this.actor.data.type != "character";
     const targets = 5;
@@ -291,6 +372,9 @@ export class WwnItem extends Item {
       case "focus":
       case "ability":
         this.show();
+      case "skill":
+        this.rollSkill();
+        break;
     }
   }
 
