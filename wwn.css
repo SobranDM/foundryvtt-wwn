@@ -57,6 +57,7 @@
     border: 0;
     flex: 0 0 145px;
     height: 145px;
+    object-fit: contain;
   }
   .wwn.sheet.actor .summary {
     flex: 0 0 100%;
