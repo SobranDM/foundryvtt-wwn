@@ -372,6 +372,7 @@ export class WwnItem extends Item {
       case "focus":
       case "ability":
         this.show();
+        break;
       case "skill":
         this.rollSkill();
         break;
