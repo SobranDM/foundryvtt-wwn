@@ -136,14 +136,10 @@
   "WWN.scores.score": "Score",
   "WWN.scores.value": "Value",
 
-  "WWN.saves.Evasion": "Evasion Save",
-  "WWN.saves.EvasionShort": "Evasion",
-  "WWN.saves.Mental": "Mental Save",
-  "WWN.saves.MentalShort": "Mental",
-  "WWN.saves.Physical": "Physical Save",
-  "WWN.saves.PhysicalShort": "Physical",
-  "WWN.saves.Luck": "Luck Save",
-  "WWN.saves.LuckShort": "Luck",
+  "WWN.saves.evasion": "Evasion",
+  "WWN.saves.mental": "Mental",
+  "WWN.saves.physical": "Physical",
+  "WWN.saves.luck": "Luck",
 
   "WWN.Health": "Current Hit Points",
   "WWN.HealthMax": "Maximum Hit Points",

@@ -13,10 +13,10 @@ export const WWN = {
     below: "≤"
   },
   saves: {
-    evasion: "WWN.saves.evasion",
-    mental: "WWN.saves.mental",
-    physical: "WWN.saves.physical",
-    luck: "WWN.saves.luck",
+    evasion: "WWN.saves.EvasionShort",
+    mental: "WWN.saves.MentalShort",
+    physical: "WWN.saves.PhysicalShort",
+    luck: "WWN.saves.LuckShort",
   },
   skills: {
     admin: "WWN.skills.administer",

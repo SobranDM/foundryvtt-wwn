@@ -1332,8 +1332,11 @@
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
     flex: 0 0 60px;
     max-width: 80px;
-    max-height: 55px;
+    height: 55px;
     margin: 0px 10px 10px 10px;
+  }
+  .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute .attribute-value {
+    line-height: 15px;
   }
   .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
     flex: 0 0 85px;
