@@ -84,6 +84,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     arts = insertionSort(arts, "name");
     arts = insertionSort(arts, "data.data.source");
 
+    // Divide skills into primary and secondary
+    const primarySkills = insertionSort(skills.filter(skill => !skill.data.data.secondary), "name");
+    const secondarySkills = insertionSort(skills.filter(skill => skill.data.data.secondary), "name");
+
     // Assign and return
     data.owned = {
       items: insertionSort(items, "name"),
@@ -92,7 +96,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       weapons: insertionSort(weapons, "name"),
       arts: arts,
       foci: insertionSort(foci, "name"),
-      skills: insertionSort(skills, "name")
+      skills: [...primarySkills, ...secondarySkills]
     };
     data.spells = sortedSpells;
   }
