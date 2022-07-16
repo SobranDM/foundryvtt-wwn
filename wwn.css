@@ -1129,9 +1129,6 @@
   .wwn .window-content input {
     text-align: center;
   }
-  .wwn.sheet.actor.character .sheet-body .shield {
-    margin: -7px;
-  }
   .wwn .window-content input:not([type=checkbox]) {
     background: none;
     border: none;
