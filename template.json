@@ -274,7 +274,7 @@
           "dice": "2d6",
           "stat": "str"
         },
-        "unspent:": 0
+        "unspent": 0
       },
       "scores": {
         "str": {
@@ -468,8 +468,8 @@
   "skill": {
     "description": "",
     "ownedLevel": -1,
-    "score": "",
-    "skillDice": "",
+    "score": "int",
+    "skillDice": "2d6",
     "secondary": false
   },
   "ability": {

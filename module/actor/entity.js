@@ -979,4 +979,73 @@ export class WwnActor extends Actor {
       })
     }
   }
+
+  // Creates a list of skills based on the following list. Was used to generate
+  // the initial skills list to populate a compendium
+  async createSkillsManually(data,options,user) {
+    const actorData = this.data;
+    const skillList = [
+      "administer",
+      "connect",
+      "convince",
+      "craft",
+      "exert",
+      "heal",
+      "know",
+      "lead",
+      "magic",
+      "notice",
+      "perform",
+      "pray",
+      "punch",
+      "ride",
+      "sail",
+      "shoot",
+      "sneak",
+      "stab",
+      "survive",
+      "trade",
+      "work",
+      "biopsionics",
+      "metapsionics",
+      "precognition",
+      "telekinesis",
+      "telepathy",
+      "teleportation",
+      "polymath",
+    ];
+    const skills = skillList.map((el) => {
+      const skillKey = `WWN.skills.${el}`;
+      const skillDesc = `WWN.skills.desc.${el}`;
+      const imagePath = `/systems/wwn/assets/skills/${el}.png`
+      return {
+        type: "skill",
+        name: game.i18n.localize(skillKey),
+        data: {
+          ownedLevel: -1,
+          score: "int",
+          description: game.i18n.localize(skillDesc),
+          skillDice: "2d6",
+          secondary: false,
+        },
+        img: imagePath,
+      };
+    });
+
+    if (data.type === "character") {
+      await this.createEmbeddedDocuments("Item", skills);
+    }
+  }
+
+  /** @override*/
+  async _onCreate(data, options, user) {
+    await super._onCreate(data, options, user);
+    // Add primary skills from compendium
+    if (data.type === "character") {
+      let skillPack = game.packs.get("wwn.skills");
+      let toAdd = await skillPack.getDocuments();
+      let primarySkills = toAdd.filter((i) => i.data.data.secondary == false).map(item => item.toObject());
+      await this.createEmbeddedDocuments("Item", primarySkills);
+    }
+  }
 }

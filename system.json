@@ -51,6 +51,14 @@
       "entity": "Item"
     },
     {
+      "name": "skills",
+      "label": "Skills",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/skills.db",
+      "entity": "Item"
+    },
+    {
       "name": "spells",
       "label": "Spells",
       "system": "wwn",

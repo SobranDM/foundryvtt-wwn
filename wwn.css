@@ -297,6 +297,11 @@
     text-align: left;
     text-indent: 8px;
   }
+  .wwn.sheet.actor .sheet-body .inventory .item-titles .item-name-short {
+    text-align: left;
+    text-indent: 2px;
+    flex-basis: 25px;
+  }
   .wwn.sheet.actor .sheet-body .inventory .item-titles input {
     color: white;
     margin: auto;
@@ -410,6 +415,12 @@
     flex-grow: 0;
     text-align: center;
   }
+  .wwn.sheet.actor .sheet-body .inventory .field-xshort {
+    font-size: 12px;
+    flex-basis: 16px;
+    flex-grow: 0;
+    text-align: center;
+  }
   .wwn.sheet.actor .sheet-body .inventory .field-short.quantity {
     display: flex;
   }
@@ -429,6 +440,13 @@
     text-align: right;
     margin-right: 4px;
   }
+  .wwn.sheet.actor .sheet-body .inventory .item-controls-short {
+    font-size: 12px;
+    flex-basis: 15px;
+    flex-grow: 0;
+    text-align: right;
+    margin-right: 4px;
+  }
   .wwn.sheet.actor .sheet-body .inventory .item-controls .item-unequipped {
     color: rgba(0, 0, 0, 0.2);
   }
@@ -441,6 +459,9 @@
   .wwn.sheet.actor .sheet-body .inventory .item-controls a:hover {
     color: #44191A;
     text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9, 1px 1px 5px #d8d6c9;
+  }
+  .wwn.sheet.actor .hidden {
+    display: none;
   }
   .wwn.sheet.actor .sheet-body .inventory.spells .item-titles {
     line-height: 13px;
