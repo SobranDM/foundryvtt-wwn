@@ -23,7 +23,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "sheet", "actor", "character"],
       template: "systems/wwn/templates/actors/character-sheet.html",
-      width: 730,
+      width: 755,
       height: 625,
       resizable: false,
       tabs: [
@@ -456,7 +456,13 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
           $(this).show();
         }
       });
-      
+      html.find(".reverse-lock").each(function() {
+        if (!lock) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
     });
   }
 }

@@ -901,12 +901,12 @@ export class WwnActor extends Actor {
       let shieldOnly = AacShieldNaked + data.scores.dex.mod + data.aac.mod;
       let shieldBonus = baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
       if (shieldOnly > shieldBonus) {
-        await this.data.update({ data: { aac: { value: shieldOnly, naked: naked } } });
+        await this.data.update({ data: { aac: { value: shieldOnly, shield: 0, naked: naked } } });
       } else {
         await this.data.update({ data: { aac: { value: shieldBonus, shield: AacShieldMod, naked: naked } } });
       }
     } else {
-      await this.data.update({ data: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked } } });
+      await this.data.update({ data: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked, shield: 0 } } });
     }
     await this.data.update({ data: { skills: { sneak: { penalty: sneakPenalty }, exert: { penalty: exertPenalty }}}});
   }

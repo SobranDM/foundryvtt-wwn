@@ -14,6 +14,7 @@ This update contains significant breaking changes. Please backup existing worlds
 * Button in Currency header allows adjusting currencies without doing math because math is hard.
 * Button in Party sheet distributes silver to everyone in the party, respecting the share setting in tweaks in the same manner as the deal XP function. Note that silver goes to the bank and not to inventory, as this is simply meant to ease the distribution of large amounts of coin at the end of an adventure.
 * Attack and damage rolls now display a tooltip when hovered, showing you the source of any modifiers.
+* Replaced splotchy black headers with solid black, as it was causing accessibility issues for some users.
 ### Fixes
 * Changed the sort method on items to improve performance.
 * Re-enabled direct editing of spell slots.
@@ -26,6 +27,7 @@ This update contains significant breaking changes. Please backup existing worlds
 * Small change to shock to better deal with low-level Vowed and the Unarmed Combatant focus: if the Shock field of a weapon is set to 0, shock will still be calculated. If the field is blank, shock will be omitted.
 * Weapons now correctly have "traits", as per the rules. These were varyingly referred to as "tags" or "qualities", neither of which was correct.
 * Character images are now contained within their area, better accomodating a variety of aspect ratios instead of stretching them.
+* Fixed display error with unequipping shields.
 ## New in 0.9.9b
 * Initiative fixes
 ## New in 0.9.9
