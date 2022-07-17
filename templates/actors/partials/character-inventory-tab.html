@@ -125,6 +125,7 @@
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.items.Misc"}}</div>
+          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
@@ -145,6 +146,11 @@
                   </h4>
                 </a>
               </div>
+              {{#if item.data.data.hasCharges}}
+              <div class="field-short">
+                <input value="{{item.data.data.charges.value}}" type="number" />
+              </div>
+              {{/if}}
               <div class="field-short quantity">
                 <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
               </div>

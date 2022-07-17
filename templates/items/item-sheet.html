@@ -33,6 +33,15 @@
                 data-dtype="Boolean" />
             </div>
           </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></label>
+            <input type="checkbox" name="data.hasCharges" value="data.hasCharges" {{checked data.hasCharges}}
+              data-dtype="Boolean" />
+            {{#if data.hasCharges}}
+            <input type="number" name="data.charges.value" value="{{data.charges.value}}" data-dtype="Number" />
+            <input type="number" name="data.charges.max" value="{{data.charges.max}}" data-dtype="Number" />
+            {{/if}}
+          </div>
         </div>
       </div>
     </div>
