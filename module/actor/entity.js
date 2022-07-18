@@ -342,59 +342,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollSkills(expl, options = {}) {
-    let selectedStat = this.data.data.skills[expl].stat;
-    let combatSkill = false;
-    let skillPenalty = 0;
-    const poly = this.data.items.filter((p) => p.name == "Polymath");
-    const label = game.i18n.localize(`WWN.skills.${expl}`);
-    const statLabel = game.i18n.localize(`WWN.scores.${selectedStat}.long`);
-
-    const data = {
-      actor: this.data,
-      roll: {
-        type: "skill",
-        target: this.data.data.skills[expl].value,
-      },
-      details: game.i18n.format("WWN.roll.details.skills", {
-        expl: label,
-      }),
-    };
-
-    if (expl == "shoot" || expl == "stab" || expl == "punch") {
-      combatSkill = true;
-    } else if (expl == "exert" && this.data.data.skills.exertPenalty > 0) {
-      skillPenalty = this.data.data.skills.exertPenalty;
-    } else if (expl == "sneak" && this.data.data.skills.sneakPenalty > 0) {
-      skillPenalty = this.data.data.skills.sneakPenalty;
-    }
-  
-    const rollParts = [this.data.data.skills[expl].dice];
-    if (poly.length > 0 && !combatSkill) {
-      rollParts.push(Math.max(this.data.data.skills[expl].value, poly[0].data.data.ownedLevel - 1));
-    } else {
-      rollParts.push(this.data.data.skills[expl].value);
-    }
-    rollParts.push(this.data.data.scores[selectedStat].mod);
-    if (skillPenalty > 0) {
-      rollParts.push(-skillPenalty);
-    }
-
-    let skip = options.event && options.event.ctrlKey;
-
-    // Roll and return
-    return WwnDice.Roll({
-      event: options.event,
-      parts: rollParts,
-      data: data,
-      skipDialog: skip,
-      speaker: ChatMessage.getSpeaker({ actor: this }),
-      flavor: game.i18n.format("WWN.roll.skills", { skills: statLabel + " / " + label }),
-      title: game.i18n.format("WWN.roll.skills", { skills: statLabel + " / " + label }),
-    });
-  }
-
-  rollMonsterSkill(skill, options = {}) {
+  rollMonsterSkill(options = {}) {
     const label = game.i18n.localize(`WWN.skill`);
     const rollParts = ["2d6"];
 
