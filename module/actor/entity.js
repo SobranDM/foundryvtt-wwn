@@ -360,13 +360,15 @@ export class WwnActor extends Actor {
         expl: label,
       }),
     };
+
     if (expl == "shoot" || expl == "stab" || expl == "punch") {
       combatSkill = true;
-    } else if (expl == "exert" && this.data.data.skills.exert.penalty > 0) {
-      skillPenalty = this.data.data.skills.exert.penalty;
-    } else if (expl == "sneak" && this.data.data.skills.sneak.penalty > 0) {
-      skillPenalty = this.data.data.skills.sneak.penalty;
+    } else if (expl == "exert" && this.data.data.skills.exertPenalty > 0) {
+      skillPenalty = this.data.data.skills.exertPenalty;
+    } else if (expl == "sneak" && this.data.data.skills.sneakPenalty > 0) {
+      skillPenalty = this.data.data.skills.sneakPenalty;
     }
+  
     const rollParts = [this.data.data.skills[expl].dice];
     if (poly.length > 0 && !combatSkill) {
       rollParts.push(Math.max(this.data.data.skills[expl].value, poly[0].data.data.ownedLevel - 1));
@@ -906,7 +908,7 @@ export class WwnActor extends Actor {
     } else {
       await this.data.update({ data: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked, shield: 0 } } });
     }
-    await this.data.update({ data: { skills: { sneak: { penalty: sneakPenalty }, exert: { penalty: exertPenalty }}}});
+    await this.data.update({ data: { skills: { sneakPenalty: sneakPenalty , exertPenalty: exertPenalty }}});
   }
 
   async computeModifiers() {
@@ -939,9 +941,6 @@ export class WwnActor extends Actor {
       16: 1,
       18: 2,
     };
-
-    data.langTotal = data.skills.connect.value + data.skills.know.value + 2;
-    data.languages.spoken = "WWN.NativePlus";
   }
 
   async computeSaves() {
