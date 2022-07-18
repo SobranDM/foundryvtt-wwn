@@ -805,8 +805,16 @@
   .wwn.chat-block .damage-roll {
     position: relative;
   }
+  .wwn.chat-block .chat-details.shock-message {
+    max-height: 24px;
+  }
+  .wwn.chat-block .shock-message .dice-damage {
+    position: relative;
+    bottom: 20px;
+    right: -234px;
+    max-height: 0px;
+  }
   .wwn.chat-block .damage-roll .dice-damage {
-    display: none;
     position: absolute;
     line-height: 24px;
     text-align: center;
@@ -825,9 +833,6 @@
     line-height: 14px;
     height: 22px;
     cursor: pointer;
-  }
-  .wwn.chat-block .damage-roll:hover .dice-damage {
-    display: block;
   }
   .wwn.chat-card {
     font-style: normal;
