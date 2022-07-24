@@ -1,3 +1,8 @@
+## New in 1.01
+### Changes
+* Right-clicking a damage roll while a token is selected now gives four options: apply damage from the damage roll, apply healing from the damage roll, apply damage from shock, apply healing from shock. This should allow a user to easily reverse damage erroneously applied to the wrong token.
+### Fixes
+* Duplicating an actor no longer doubles all skills.
 ## New in 1.0.0
 ### Warning!
 This update contains significant breaking changes. Please backup existing worlds before updating to avoid the nightmare of data loss or in case you wish to roll back to the previous version.
