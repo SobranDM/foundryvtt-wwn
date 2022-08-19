@@ -60,6 +60,10 @@ export class WwnItem extends Item {
     return data;
   }
 
+  async rollAsset(options = {}) {
+    ui.notifications.info("TODO");
+  }
+
   async rollSkill(options = {}) {
     const template = "systems/wwn/templates/items/dialogs/roll-skill.html";
     const dialogData = {
@@ -402,6 +406,9 @@ export class WwnItem extends Item {
         break;
       case "skill":
         this.rollSkill();
+        break;
+      case "asset":
+        this.rollAsset();
         break;
     }
   }

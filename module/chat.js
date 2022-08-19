@@ -7,20 +7,32 @@
  *
  * @return {Array}              The extended options Array including new context choices
  */
-export const addChatMessageContextOptions = function(html, options) {
+export const addChatMessageContextOptions = function (html, options) {
   let canApply = li => canvas.tokens.controlled.length && li.find(".dice-roll").length;
   options.push(
     {
       name: game.i18n.localize("WWN.messages.applyDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
       condition: canApply,
-      callback: li => applyChatCardDamage(li, 1)
+      callback: li => applyChatCardDamage(li, 1, 1)
+    },
+    {
+      name: game.i18n.localize("WWN.messages.applyShockDamage"),
+      icon: '<i class="fas fa-user-minus"></i>',
+      condition: canApply,
+      callback: li => applyChatCardDamage(li, 1, 2)
     },
     {
       name: game.i18n.localize("WWN.messages.applyHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
       condition: canApply,
-      callback: li => applyChatCardDamage(li, -1)
+      callback: li => applyChatCardDamage(li, -1, 1)
+    },
+    {
+      name: game.i18n.localize("WWN.messages.applyShockHealing"),
+      icon: '<i class="fas fa-user-plus"></i>',
+      condition: canApply,
+      callback: li => applyChatCardDamage(li, -1, 2)
     }
   );
   return options;
@@ -28,7 +40,7 @@ export const addChatMessageContextOptions = function(html, options) {
 
 /* -------------------------------------------- */
 
-export const addChatMessageButtons = function(msg, html, data) {
+export const addChatMessageButtons = function (msg, html, data) {
   // Hide blind rolls
   let blindable = html.find('.blindable');
   if (msg.data.blind && !game.user.isGM && blindable && blindable.data('blind') === true) {
@@ -64,8 +76,8 @@ export const addChatMessageButtons = function(msg, html, data) {
  * @param {Number} multiplier   A damage multiplier to apply to the rolled damage.
  * @return {Promise}
  */
-function applyChatCardDamage(roll, multiplier) {
-  const amount = roll.find('.dice-total').last().text();
+function applyChatCardDamage(roll, multiplier, index) {
+  const amount = Number(roll.find('.dice-total')[index].textContent);
   return Promise.all(canvas.tokens.controlled.map(t => {
     const a = t.actor;
     return a.applyDamage(amount, multiplier);

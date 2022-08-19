@@ -67,4 +67,15 @@ export const registerHelpers = async function () {
       ? Math.clamped(100 - (100.0 * value) / max, 0, 100)
       : Math.clamped((100.0 * value) / max, 0, 100);
   });
+
+  Handlebars.registerHelper("firstLetter", function (obj) {
+    if (!obj) return "";
+    return obj.substring(0, 1).toUpperCase();
+  });
+
+  Handlebars.registerHelper("trim", function (obj, n) {
+    if (!obj) return "";
+    if (obj.length <= n) return obj;
+    return obj.substring(0, n) + "...";
+  });
 };
