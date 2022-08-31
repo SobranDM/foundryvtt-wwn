@@ -54,7 +54,7 @@ export const addChatMessageButtons = function (msg, html, data) {
     roll.append($(`<div class="dice-damage"><button type="button" data-action="apply-damage"><i class="fas fa-tint"></i></button></div>`))
     roll.find('button[data-action="apply-damage"]').click((ev) => {
       ev.preventDefault();
-      applyChatCardDamage(roll, 1);
+      applyChatCardDamage(roll, 1, 0);
     })
   }
 
@@ -63,7 +63,7 @@ export const addChatMessageButtons = function (msg, html, data) {
     shockMessage.append($(`<div class="dice-damage"><button type="button" data-action="apply-damage"><i class="fas fa-tint"></i></button></div>`))
     shockMessage.find('button[data-action="apply-damage"]').click((ev) => {
       ev.preventDefault();
-      applyChatCardDamage(shockMessage, 1);
+      applyChatCardDamage(shockMessage, 1, 0);
     })
   }
 }
