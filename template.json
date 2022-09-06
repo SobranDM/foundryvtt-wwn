@@ -126,6 +126,11 @@
           "value": 0,
           "spent": 0,
           "total": 0
+        },
+        "resources": {
+          "rations": 0,
+          "torches": 0,
+          "oil": 0
         }
       },
       "character": true,
@@ -259,7 +264,8 @@
       "hasCharges": false,
       "charges": {
         "value": 0,
-        "max": 0
+        "max": 0,
+        "consumable": false
       },
       "roll": "",
       "equipped": false,

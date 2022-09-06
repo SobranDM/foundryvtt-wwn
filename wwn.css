@@ -664,6 +664,7 @@
   .wwn.dialog.party-sheet .actor-list .actor .field-img {
     flex: 0 0 50px;
     position: relative;
+    object-fit: contain;
   }
   .wwn.dialog.party-sheet .actor-list .actor .field-img:hover .img-btns button {
     display: block;
@@ -1272,36 +1273,25 @@
     height: 18px;
   }
   .wwn.sheet.item .sheet-body .description .editor {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    height: auto;
-    min-height: 130px;
+    max-height: 20%;
     margin-bottom: 10px;
-    flex-basis: 100%;
   }
   .wwn.sheet.item .sheet-body .item-footer {
     justify-content: center;
     margin-bottom: 15px;
     justify-self: flex-end;
+    bottom: 0;
+    position: sticky;
   }
   .wwn.sheet.item .sheet-body .flexrow.card-body {
     flex-direction: column;
     justify-content: space-between;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
-    padding: 0 5px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 130px;
+    max-height: 20%;
     margin-bottom: 10px;
-    flex-basis: 100%;
   }
-  
+  /* TODO: Fix item description sizing */
   .wwn.actor.monster {
     min-height: 565px;
     min-width: 480px;

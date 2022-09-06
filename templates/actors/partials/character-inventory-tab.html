@@ -118,13 +118,12 @@
           </li>
           {{/each}}
         </ol>
-
       </div>
       <div>
-        {{!-- Misc items --}}
+        {{!-- Consumable items --}}
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.items.Misc"}}</div>
+          <div class="item-name">{{localize "WWN.category.consumables"}}</div>
           <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
@@ -135,7 +134,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#unless item.data.data.treasure}}
+          {{#if item.data.data.hasCharges}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
@@ -146,11 +145,60 @@
                   </h4>
                 </a>
               </div>
-              {{#if item.data.data.hasCharges}}
               <div class="field-short">
                 <input value="{{item.data.data.charges.value}}" type="number" />
               </div>
-              {{/if}}
+              <div class="field-short quantity">
+                <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
+              </div>
+              <div class="field-short">
+                <input value="{{item.data.data.weight}}" type="number" readonly />
+              </div>
+              <div class="item-controls">
+                {{#if ../owner}}
+                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                  title='{{localize "WWN.items.Equip"}}'>
+                  <i class="fas fa-tshirt"></i>
+                </a>
+                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                  title='{{localize "WWN.items.stowed"}}'>
+                  <i class="fas fa-archive"></i>
+                </a>
+                <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
+                {{/if}}
+              </div>
+            </div>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ol>
+      </div>
+      <div>
+        {{!-- Misc items --}}
+        <li class="item-titles flexrow">
+          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
+          <div class="item-name">{{localize "WWN.items.Misc"}}</div>
+          <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
+          <div class="item-controls">
+            <a class="item-control item-create" data-type="item" title="{{localize 'WWN.Add'}}"><i
+                class="fa fa-plus"></i></a>
+          </div>
+        </li>
+        <ol class="item-list">
+          {{#each owned.items as |item|}}
+          {{#unless (evalOr item.data.data.treasure item.data.data.hasCharges) }}
+          <li class="item-entry">
+            <div class="item flexrow" data-item-id="{{item.id}}">
+              <div class="item-name item-rollable flexrow">
+                <div class="item-image" style="background-image: url({{item.img}})"></div>
+                <a>
+                  <h4 title="{{item.name}}">
+                    {{item.name~}}
+                  </h4>
+                </a>
+              </div>
               <div class="field-short quantity">
                 <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
               </div>

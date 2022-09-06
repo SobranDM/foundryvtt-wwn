@@ -6,13 +6,16 @@
     {{#if user.isGM}}
     <div class="item-controls flexrow">
       <div class="item-control">
-        <button type="button" class="deal-xp" title="{{localize 'WWN.dialog.xp.deal'}}"><i class="fas fa-level-up-alt"></i></button>
+        <button type="button" class="deal-xp" title="{{localize 'WWN.dialog.xp.deal'}}"><i
+            class="fas fa-level-up-alt"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="deal-currency" title="{{localize 'WWN.dialog.currency.deal'}}"><i class="fas fa-coins"></i></button>
+        <button type="button" class="deal-currency" title="{{localize 'WWN.dialog.currency.deal'}}"><i
+            class="fas fa-coins"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="select-actors" title="{{localize 'WWN.dialog.selectActors'}}"><i class="fas fa-users"></i></button>
+        <button type="button" class="select-actors" title="{{localize 'WWN.dialog.selectActors'}}"><i
+            class="fas fa-users"></i></button>
       </div>
     </div>
     {{localize 'WWN.dialog.partySelectHint'}}
@@ -41,23 +44,26 @@
             <strong>{{e.data.data.aac.value}}</strong>
             <sub>{{e.data.data.aac.naked}}</sub>
           </div>
+          <div class="field-short" title="{{localize 'WWN.SystemStrainLong'}}">
+            <i class="fas fa-tint"></i>
+            <strong>{{e.data.data.details.strain.value}}</strong>
+            <sub>{{e.data.data.details.strain.max}}</sub>
+          </div>
         </div>
         <div class="flexrow field-row">
           <div class="field-short" title="{{localize 'WWN.AB'}}">
             <i class="fas fa-crosshairs"></i>
-            <!-- {{e.data.data.thac0.value}} -->
             {{e.data.data.thac0.bba}}
           </div>
-          {{#if (eq e.data.type 'character')}}
-          <div class="field-short" title="{{localize 'WWN.Melee'}}">
-            <i class="fas fa-fist-raised"></i>
-            {{add e.data.data.scores.str.mod e.data.data.thac0.bba}}
+          <div class="field-long flex3">
+            <strong>{{localize 'WWN.category.saves'}}</strong>
+            {{localize 'WWN.saves.summary'
+            evasion = e.data.data.saves.evasion.value
+            mental = e.data.data.saves.mental.value
+            physical = e.data.data.saves.physical.value
+            luck = e.data.data.saves.luck.value
+            }}
           </div>
-          <div class="field-short" title="{{localize 'WWN.Missile'}}">
-            <i class="fas fa-bullseye"></i>
-            {{add e.data.data.scores.dex.mod e.data.data.thac0.bba}}
-          </div>
-          {{/if}}
           <div class="field-short flex2">
             <i class="fas fa-shoe-prints" title="{{localize 'WWN.movement.base'}}"></i>
             <strong title="{{localize 'WWN.movement.encounter.long'}}">{{e.data.data.movement.base}}</strong>
@@ -65,10 +71,17 @@
           </div>
         </div>
         <div class="flexrow field-row">
-          <div class="field-longer flexrow">
-            {{#each e.data.data.saves as |s i|}}
-            <span title="{{lookup @root.config.saves i}}">{{lookup @root.config.saves i}} {{s.value}}</span>
-            {{/each}}
+          <div class="field-short flex2">
+            <strong>{{localize 'WWN.resources.rations'}}</strong>
+            {{e.data.data.details.resources.rations}}
+          </div>
+          <div class="field-short flex2">
+            <strong>{{localize 'WWN.resources.torches'}}</strong>
+            {{e.data.data.details.resources.torches}}
+          </div>
+          <div class="field-short flex2">
+            <strong>{{localize 'WWN.resources.torches'}}</strong>
+            {{e.data.data.details.resources.oil}}
           </div>
         </div>
       </div>

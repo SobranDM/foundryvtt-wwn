@@ -16,6 +16,14 @@ export const registerHelpers = async function () {
     return a <= b;
   });
 
+  Handlebars.registerHelper("evalOr", function (a, b) {
+    return a || b;
+  });
+
+  Handlebars.registerHelper("evalAnd", function (a, b) {
+    return a && b;
+  });
+
   Handlebars.registerHelper("mod", function (val) {
     if (val > 0) {
       return `+${val}`;

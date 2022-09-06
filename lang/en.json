@@ -140,6 +140,7 @@
   "WWN.saves.mental": "Mental",
   "WWN.saves.physical": "Physical",
   "WWN.saves.luck": "Luck",
+  "WWN.saves.summary": "E{evasion} M{mental} P{physical} L{luck}",
 
   "WWN.Health": "Current Hit Points",
   "WWN.HealthMax": "Maximum Hit Points",
@@ -206,6 +207,7 @@
   "WWN.category.saves": "Saves",
   "WWN.category.attributes": "Attributes",
   "WWN.category.inventory": "Inventory",
+  "WWN.category.consumables": "Consumables",
   "WWN.category.skills": "Skills",
   "WWN.category.spells": "Spells",
   "WWN.category.notes": "Notes",
@@ -345,6 +347,12 @@
   "WWN.items.desc.T": "Throwable. While the weapon can be used in melee, it may be thrown out to the listed range as well, albeit it does no Shock in that case. Throwing a weapon while a foe is in melee range applies a -4 penalty to the attack roll.",
   "WWN.items.CB": "CB",
   "WWN.items.desc.CB": "Crossbow. Due to the simplicity of their operation, someone without Shoot-0 may use a crossbow at no unskilled penalty.",
+
+  "WWN.resources.rations": "Rations",
+  "WWN.resources.torches": "Torches",
+  "WWN.resources.oil": "Oil",
+  "WWN.resources.consumable": "Consumable",
+  "WWN.resources.consumableHint": "Consumables have no encumbrance at 0 charges. Appropriate for items such as rations, torches, and oil.",
 
   "WWN.armor.type": "Armor Type",
   "WWN.armor.unarmored": "Unarmored",

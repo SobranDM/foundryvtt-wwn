@@ -15,7 +15,7 @@ export class WwnAdjustCurrency extends FormApplication {
    * @type {String}
    */
   get title() {
-    return game.i18n.localize("WWN.dialog.xp.deal");
+    return game.i18n.localize("WWN.items.adjustCurrency");
   }
   /* -------------------------------------------- */
 
