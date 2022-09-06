@@ -145,6 +145,14 @@
       "module": "wwn",
       "path": "packs/tags.db",
       "entity": "JournalEntry"
+    },
+    {
+      "name": "assets",
+      "label": "Assets",
+      "system": "wwn",
+      "module": "wwn",
+      "path": "packs/assets.db",
+      "entity": "Item"
     }
   ],
   "languages": [
