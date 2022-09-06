@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "monster"],
+    "types": ["character", "monster", "faction"],
     "templates": {
       "common": {
         "retainer": {
@@ -230,24 +230,22 @@
       }
     },
     "faction": {
-      "templates": [],
-      "hp": {
-        "value": 3,
-        "max": 3
+      "description": "",
+      "health": {
+        "value": 7,
+        "max": 7
       },
-      "goal": {
-        "active": "",
-        "progress": ""
-      },
+      "forceRating": 1,
+      "cunningRating": 1,
+      "wealthRating": 1,
+      "facCreds": 0,
       "xp": 0,
+      "homeworld": "",
+      "active": true,
+      "factionGoal": "",
+      "factionGoalDesc": "",
       "tags": [],
-      "attributes": {
-        "cunning": 1,
-        "force": 1,
-        "wealth": 1,
-        "magic": "None",
-        "treasure": 0
-      },
+      "log": [],
       "initiative": {
         "value": 0
       }
@@ -358,19 +356,30 @@
     "save": ""
   },
   "asset": {
-    "hp": {
-      "value": 3,
-      "max": 3
+    "desc": "",
+    "health": {
+      "value": 1,
+      "max": 1
     },
-    "cost": 2,
-    "attack": "1d6",
-    "counter": "1d6",
-    "BOI": false,
+    "cost": 1,
+    "rating": 1,
+    "baseOfInfluence": false,
+    "attackTarget": "",
+    "attackSource": "",
+    "attackDamage": "",
+    "counter": "",
+    "note": "",
+    "turnRoll": "",
+    "assetType": "cunning",
+    "location": "",
+    "maintenance": 0,
+    "income": 0,
+    "unusable": false,
+    "stealthed": false,
     "magic": "none",
-    "stealth": false,
     "subtle": false,
     "special": false,
-    "type": "cunning"
+    "locationRoll": ""
   }
 }
 }

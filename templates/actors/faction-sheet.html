@@ -1,50 +1,233 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
-        <div class="header-col">
-            <div class="flexrow">
-                <h1 class="charname">
-                    <input name="name" type="text" value="{{name}}" placeholder="Name" />
-                </h1>
-            </div>
-        </div>
-    </header>
-    <section class="attributes-tab">
-        <section class="flexrow">
-            <ul class="attributes flexrow">
-                <li class="attribute">
-                    <h4 class="attribute-name box-title">{{ localize 'WWN.faction.cunning' }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.cunning" type="number" value="{{data.attributes.cunning}}"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-            </ul>
-            <ul class="attributes flexrow">
-                <li class="attribute">
-                    <h4 class="attribute-name box-title">{{ localize 'WWN.faction.force' }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.force" type="number" value="{{data.attributes.force}}"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-            </ul>
-            <ul class="attributes flexrow">
-                <li class="attribute">
-                    <h4 class="attribute-name box-title">{{ localize 'WWN.faction.wealth' }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.wealth" type="number" value="{{data.attributes.wealth}}"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-                <li class="attribute">
-                    <h4 class="attribute-name box-title">{{ localize 'WWN.items.Treasure' }}</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.treasure" type="number" value="{{data.attributes.treasure}}"
-                            data-dtype="Number" />
-                    </div>
-                </li>
-            </ul>
-        </section>
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <section class="header-details flexrow">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
+      </h1>
+      <ul class="summary flexrow">
+        <li class="flex3">
+          <span>
+            {{localize 'WWN.faction.active'}}:
+            <input type="checkbox" name="data.active" {{checked data.active}}>
+          </span>
+        </li>  
+      </ul>
     </section>
+  </header>
+  {{! Sheet Tab Navigation }}
+
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="attributes">
+      {{localize 'WWN.faction.attributes-tab'}}
+    </a>
+    <a class="item" data-tab="assets">
+      {{localize 'WWN.faction.assets-tab'}}
+    </a>
+    <a class="item" data-tab="tags">
+      {{localize 'WWN.faction.tags-tab'}}
+    </a>
+    <a class="item" data-tab="log">
+      {{localize 'WWN.faction.log-tab'}}
+    </a>
+  </nav>
+  <section class="sheet-body">
+    <div class="attributes-tab tab" data-group="primary" data-tab="attributes">
+      <div class="flex-grow flexrow flex-wrap">
+        <!--HP-->
+        <div class="flex flex-col">
+          <div class="mx-auto">
+            <input class="" type="number" step="1" name="data.health.value"
+              value="{{data.health.value}}" data-dtype="Number" min="0" /><span>/</span>
+            <span class="">{{data.health.max}}</span>
+          </div>
+          <div>{{localize 'WWN.faction.hp'}}</div>
+        </div>
+
+        <!-- force -->
+        <div class="flex-col">
+          <select class="" name="data.forceRating">
+            {{#select data.forceRating}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            {{/select}}
+          </select>
+          <div>{{localize 'WWN.faction.forceRating'}}
+            <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+              <i class="fas fa-level-up-alt"></i>
+            </a>
+          </div>
+        </div>
+        <!-- cunning -->
+        <div class="flex-col">
+          <select class="" name="data.cunningRating">
+            {{#select data.cunningRating}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            {{/select}}
+          </select>
+          <div>{{localize 'WWN.faction.cunningRating'}}
+            <a class="cunning-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+              <i class="fas fa-level-up-alt"></i>
+            </a>
+          </div>
+        </div>
+        <!-- wealth -->
+        <div class="flex-col">
+          <select class="" name="data.wealthRating">
+            {{#select data.wealthRating}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            {{/select}}
+          </select>
+          <div>{{localize 'WWN.faction.wealthRating'}}
+            <a class="wealth-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+              <i class="fas fa-level-up-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flexrow flex-grow">
+        <!-- facCreds -->
+        <div class="flex flex-col">
+          <input class="" type="number" step="1" data-dtype="Number" name="data.facCreds"
+            value="{{data.facCreds}}" />
+          <div>{{localize 'WWN.faction.facCreds'}}</div>
+        </div>
+
+        <!-- xp -->
+        <div class="flex flex-col">
+          <input class="" type="number" step="1" data-dtype="Number" name="data.xp" value="{{data.xp}}" />
+          <div>{{localize 'WWN.faction.xp'}}</div>
+        </div>
+
+        <!-- homeworld -->
+        <div class="flex flex-col">
+          <input class="" name="data.homeworld" value="{{data.homeworld}}" />
+          <div>{{localize 'WWN.faction.homeworld'}}</div>
+        </div>
+      </div>
+      <div class="flex-grow flexrow">
+        <!-- goal -->
+        <div class="flex flex-col">
+          <input class="" name="data.factionGoal" value="{{data.factionGoal}}" />
+          <div>
+            {{localize 'WWN.faction.factionGoal'}}
+            <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
+              <i class="fas fa-exchange-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- goal -->
+        <div class="flex flex3 flex-col">
+          <div class="">
+            {{editor content=data.factionGoalDesc target="data.factionGoalDesc" button=true owner=owner
+            editable=editable
+            }}
+          </div>
+          <div>{{localize 'WWN.faction.factionGoalDesc'}}</div>
+        </div>
+
+        <!--buttons-->
+        <div class="cost flex flex-col">
+          <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
+          {{localize 'WWN.faction.turn'}}
+        </div>
+      </div>
+      <div class="flexrow flex-grow">
+        <div class="flex flex-col">
+          <h2 class="">{{localize 'WWN.category.description'}}</h2>
+          <div class="">
+            {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable
+            }}
+          </div>
+        </div>
+      </div>
+    </div><!--Attributes-->
+    <div class="assets-tab tab" data-group="primary" data-tab="assets">
+      <div class="flexrow flex-grow">
+        {{> "systems/wwn/templates/actors/partials/faction-assets.html"
+        type="asset" assetType="cunning" name="Cunning" assets=data.cunningAssets
+        }}
+      </div>
+
+      <div class="flexrow flex-grow">
+        {{> "systems/wwn/templates/actors/partials/faction-assets.html"
+        type="asset" assetType="wealth" name="Wealth" assets=data.wealthAssets
+        }}
+      </div>
+
+      <div class="flexrow flex-grow">
+        {{> "systems/wwn/templates/actors/partials/faction-assets.html"
+        type="asset" assetType="force" name="Force" assets=data.forceAssets
+        }}
+      </div>
+    </div><!--asset-->
+    <div class="tags-tab tab" data-group="primary" data-tab="tags">
+        <div class="">
+          {{#each data.tags as |tag id|}}
+          <div class="tagdiv" data-idx="{{id}}">
+            <a class="item-control faction-tag-delete hover:transition-colors"
+              title='{{localize 'WWN.faction.remove-tag'}}'><i class="fas fa-trash"></i></a>
+            <b>{{ tag.name}}</b> <br>{{tag.desc}}<br> Effect: {{tag.effect}}<br>
+            <hr>
+          </div>
+          {{/each}}
+
+        </div>
+        <a class="faction-tag-add"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
+          {{localize 'WWN.faction.add-tag'}}</a>
+        <a class="faction-tag-add-custom"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
+          {{localize 'WWN.faction.add-tag-custom'}}</a>
+    </div><!-- tags-->
+    <div class="log-tab tab" data-group="primary" data-tab="log">
+        <div class="">
+          <div class="flex flexrow min-w-full">
+            <div>
+              <a class="faction-log-add"><i class="fas fa-plus  fa-2x faction-log-add"></i>
+                {{localize 'WWN.faction.add-log'}}</a>
+            </div>
+            <div>
+              <a class="faction-log-delete-all"><i class="fas fa-trash  fa-2x faction-log-delete-all"></i>
+                {{localize 'WWN.faction.remove-log-all'}}</a>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="">
+
+          {{#each data.log as |logentry id|}}
+      
+          <div class="logdiv" data-idx="{{id}}">
+            <a class="item-control faction-log-delete hover:transition-colors"
+              title='{{localize 'WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
+            {{{logentry}}}<br>
+            <hr>
+          </div>
+          {{/each}}
+
+        </div>
+  
+    </div><!--log-->
+  </section>
 </form>

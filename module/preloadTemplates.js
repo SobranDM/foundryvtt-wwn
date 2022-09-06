@@ -3,6 +3,7 @@ export const preloadHandlebarsTemplates = async function () {
         //Character Sheets
         'systems/wwn/templates/actors/character-sheet.html',
         'systems/wwn/templates/actors/monster-sheet.html',
+        'systems/wwn/templates/actors/faction-sheet.html',
         //Actor partials
         //Sheet tabs
         'systems/wwn/templates/actors/partials/character-header.html',
@@ -12,7 +13,9 @@ export const preloadHandlebarsTemplates = async function () {
         'systems/wwn/templates/actors/partials/character-notes-tab.html',
 
         'systems/wwn/templates/actors/partials/monster-header.html',
-        'systems/wwn/templates/actors/partials/monster-attributes-tab.html'
+        'systems/wwn/templates/actors/partials/monster-attributes-tab.html',
+
+        'systems/wwn/templates/actors/partials/faction-assets.html'
     ];
     return loadTemplates(templatePaths);
 };

@@ -1,0 +1,44 @@
+<div>
+  <h3 title="">{{ name }}</h3>
+  <h4>{{{ attackDesc }}} </h4>
+
+  <span>{{localize 'WWN.faction.att-roll'}}:</span>
+  <span title="">{{{ hitRoll }}}</span>
+  {{#if attackSpecial}}
+   <i>{{attackSpecial}}</i> <br>
+  {{/if}}
+
+  <span>{{localize 'WWN.faction.def-roll'}}:</span>
+  <span title="">{{{ defRoll }}}</span>
+  {{#if defenseSpecial}}
+   <i>{{defenseSpecial}}</i> <br>
+  {{/if}}
+
+  <span>{{{ attackDesc }}} </span>
+
+  {{#if attackDamage}}
+  <span>{{localize 'WWN.faction.att-damage'}}:</span>
+  <span title="">{{{ attackDamage }}}</span>
+  <span> (If Base of Infl damage to FactionHP also) </span>
+  {{/if}}
+
+  {{#if defDamage}}
+  <span>{{localize 'WWN.faction.def-damage'}}:</span>
+  <span title="">{{{ defDamage }}}</span>
+  {{/if}}
+
+
+  {{#if attackingAssetsWithLocationNotes}}
+  <b>{{localize 'WWN.faction.locationRollTitleAttack'}}</b>:<br>
+    {{#each attackingAssetsWithLocationNotes as |faitems|}}
+    <i>{{faitems.name}}</i> : {{faitems.data.data.locationRoll}}<Br>
+    {{/each}}
+  {{/if}}
+
+  {{#if attackedAssetsWithLocationNotes}}
+  <b>{{localize 'WWN.faction.locationRollTitleCounter'}}</b>:<br>
+    {{#each attackedAssetsWithLocationNotes as |faitems|}}
+    <i>{{faitems.name}}</i> : {{faitems.data.data.locationRoll}}<br>
+    {{/each}}
+  {{/if}}
+</div>
