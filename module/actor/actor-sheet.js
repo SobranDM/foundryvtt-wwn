@@ -20,9 +20,6 @@ export class WwnActorSheet extends ActorSheet {
 
   activateEditor(name, options, initialContent) {
     // remove some controls to the editor as the space is lacking
-    if (name == "data.details.description") {
-      options.toolbar = "styleselect bullist hr table removeFormat save";
-    } 
     super.activateEditor(name, options, initialContent);
   }
 
@@ -30,7 +27,7 @@ export class WwnActorSheet extends ActorSheet {
     event.preventDefault();
     let li = $(event.currentTarget).parents(".item"),
       item = this.actor.items.get(li.data("item-id")),
-      description = TextEditor.enrichHTML(item.data.data.description);
+      description = TextEditor.enrichHTML(item.system.description);
     // Toggle summary
     if (li.hasClass("expanded")) {
       let summary = li.parents(".item-entry").children(".item-summary");
@@ -51,17 +48,17 @@ export class WwnActorSheet extends ActorSheet {
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
     if (event.target.dataset.field == "cast") {
-      return item.update({ "data.cast": parseInt(event.target.value) });
+      return item.update({ "system.cast": parseInt(event.target.value) });
     } else if (event.target.dataset.field == "memorize") {
       return item.update({
-        "data.memorized": parseInt(event.target.value),
+        "system.memorized": parseInt(event.target.value),
       });
     }
   }
 
   async _resetSpells(event) {
     this.actor.update({
-      "data.spells.perDay.value": 0
+      "system.spells.perDay.value": 0
       }
     );
   }
@@ -71,7 +68,7 @@ export class WwnActorSheet extends ActorSheet {
     await arts.forEach(art => {
       const itemId = art.id;
       const item = this.actor.items.get(itemId);
-      item.update({ "data.effort": 0 });
+      item.update({ "system.effort": 0 });
     });
   }
 
@@ -79,21 +76,21 @@ export class WwnActorSheet extends ActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "data.effort": parseInt(event.target.value) });
+    return item.update({ "system.effort": parseInt(event.target.value) });
   }
 
   async _onArtSourceChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "data.source": event.target.value });
+    return item.update({ "system.source": event.target.value });
   }
 
   async _onArtTimeChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "data.time": event.target.value });
+    return item.update({ "system.time": event.target.value });
   }
 
   activateListeners(html) {
@@ -127,9 +124,9 @@ export class WwnActorSheet extends ActorSheet {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));
       if (item.type == "weapon") {
-        if (this.actor.data.type === "monster") {
+        if (this.actor.type === "monster") {
           await item.update({
-            data: { counter: { value: item.data.data.counter.value - 1 } }
+            system: { counter: { value: item.system.counter.value - 1 } }
           })
         }
         item.rollWeapon({ skipDialog: ev.ctrlKey });
@@ -148,8 +145,9 @@ export class WwnActorSheet extends ActorSheet {
       let actorObject = this.actor;
       let element = event.currentTarget;
       let attack = element.parentElement.parentElement.dataset.attack;
+      console.log(this);
       const rollData = {
-        actor: this.data,
+        actor: this,
         roll: {},
       };
       actorObject.targetAttack(rollData, attack, {

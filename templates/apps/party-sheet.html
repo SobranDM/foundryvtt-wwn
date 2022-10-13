@@ -37,51 +37,51 @@
           </div>
           <div class="field-long" title="{{localize 'WWN.Health'}}">
             <i class="fas fa-heart"></i>
-            {{e.data.data.hp.value}}/{{e.data.data.hp.max}}
+            {{e.system.hp.value}}/{{e.system.hp.max}}
           </div>
           <div class="field-short" title="{{localize 'WWN.ArmorClass'}}">
             <i class="fas fa-shield-alt"></i>
-            <strong>{{e.data.data.aac.value}}</strong>
-            <sub>{{e.data.data.aac.naked}}</sub>
+            <strong>{{e.system.aac.value}}</strong>
+            <sub>{{e.system.aac.naked}}</sub>
           </div>
           <div class="field-short" title="{{localize 'WWN.SystemStrainLong'}}">
             <i class="fas fa-tint"></i>
-            <strong>{{e.data.data.details.strain.value}}</strong>
-            <sub>{{e.data.data.details.strain.max}}</sub>
+            <strong>{{e.system.details.strain.value}}</strong>
+            <sub>{{e.system.details.strain.max}}</sub>
           </div>
         </div>
         <div class="flexrow field-row">
           <div class="field-short" title="{{localize 'WWN.AB'}}">
             <i class="fas fa-crosshairs"></i>
-            {{e.data.data.thac0.bba}}
+            {{e.system.thac0.bba}}
           </div>
           <div class="field-long flex3">
             <strong>{{localize 'WWN.category.saves'}}</strong>
             {{localize 'WWN.saves.summary'
-            evasion = e.data.data.saves.evasion.value
-            mental = e.data.data.saves.mental.value
-            physical = e.data.data.saves.physical.value
-            luck = e.data.data.saves.luck.value
+            evasion = e.system.saves.evasion.value
+            mental = e.system.saves.mental.value
+            physical = e.system.saves.physical.value
+            luck = e.system.saves.luck.value
             }}
           </div>
           <div class="field-short flex2">
             <i class="fas fa-shoe-prints" title="{{localize 'WWN.movement.base'}}"></i>
-            <strong title="{{localize 'WWN.movement.encounter.long'}}">{{e.data.data.movement.base}}</strong>
-            <span title="{{localize 'WWN.movement.exploration.long'}}">{{e.data.data.movement.exploration}}</span>
+            <strong title="{{localize 'WWN.movement.encounter.long'}}">{{e.system.movement.base}}</strong>
+            <span title="{{localize 'WWN.movement.exploration.long'}}">{{e.system.movement.exploration}}</span>
           </div>
         </div>
         <div class="flexrow field-row">
           <div class="field-short flex2">
             <strong>{{localize 'WWN.resources.rations'}}</strong>
-            {{e.data.data.details.resources.rations}}
+            {{e.system.details.resources.rations}}
           </div>
           <div class="field-short flex2">
             <strong>{{localize 'WWN.resources.torches'}}</strong>
-            {{e.data.data.details.resources.torches}}
+            {{e.system.details.resources.torches}}
           </div>
           <div class="field-short flex2">
             <strong>{{localize 'WWN.resources.torches'}}</strong>
-            {{e.data.data.details.resources.oil}}
+            {{e.system.details.resources.oil}}
           </div>
         </div>
       </div>

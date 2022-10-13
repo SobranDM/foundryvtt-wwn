@@ -12,7 +12,7 @@
   {{#if assetsWithLocationNotes}}
   <b>{{localize 'WWN.faction.locationRollTitle'}}</b>:<br>
     {{#each assetsWithLocationNotes as |faitems|}}
-    <i>{{faitems.name}}</i>: {{faitems.data.data.locationRoll}}<Br>
+    <i>{{faitems.name}}</i>: {{faitems.system.locationRoll}}<Br>
     {{/each}}
   {{/if}}
 </div>

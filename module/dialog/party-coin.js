@@ -55,12 +55,12 @@ export class WwnPartyCurrency extends FormApplication {
         const html = $(this.form);
         let shares = 0;
         actors.forEach((a) => {
-            shares += a.data.data.currency.share;
+            shares += a.system.currency.share;
         });
         const value = parseFloat(toDeal) / shares;
         if (value) {
             actors.forEach(a => {
-                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.data.data.currency.share * value));
+                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.system.currency.share * value));
             })
         }
     }

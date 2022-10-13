@@ -9,7 +9,7 @@
         <li class="flex3">
           <span>
             {{localize 'WWN.faction.active'}}:
-            <input type="checkbox" name="data.active" {{checked data.active}}>
+            <input type="checkbox" name="system.active" {{checked system.active}}>
           </span>
         </li>  
       </ul>
@@ -37,17 +37,17 @@
         <!--HP-->
         <div class="flex flex-col">
           <div class="mx-auto">
-            <input class="" type="number" step="1" name="data.health.value"
-              value="{{data.health.value}}" data-dtype="Number" min="0" /><span>/</span>
-            <span class="">{{data.health.max}}</span>
+            <input class="" type="number" step="1" name="system.health.value"
+              value="{{system.health.value}}" data-dtype="Number" min="0" /><span>/</span>
+            <span class="">{{system.health.max}}</span>
           </div>
           <div>{{localize 'WWN.faction.hp'}}</div>
         </div>
 
         <!-- force -->
         <div class="flex-col">
-          <select class="" name="data.forceRating">
-            {{#select data.forceRating}}
+          <select class="" name="system.forceRating">
+            {{#select system.forceRating}}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -66,8 +66,8 @@
         </div>
         <!-- cunning -->
         <div class="flex-col">
-          <select class="" name="data.cunningRating">
-            {{#select data.cunningRating}}
+          <select class="" name="system.cunningRating">
+            {{#select system.cunningRating}}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -86,8 +86,8 @@
         </div>
         <!-- wealth -->
         <div class="flex-col">
-          <select class="" name="data.wealthRating">
-            {{#select data.wealthRating}}
+          <select class="" name="system.wealthRating">
+            {{#select system.wealthRating}}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -108,27 +108,27 @@
       <div class="flexrow flex-grow">
         <!-- facCreds -->
         <div class="flex flex-col">
-          <input class="" type="number" step="1" data-dtype="Number" name="data.facCreds"
-            value="{{data.facCreds}}" />
+          <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
+            value="{{system.facCreds}}" />
           <div>{{localize 'WWN.faction.facCreds'}}</div>
         </div>
 
         <!-- xp -->
         <div class="flex flex-col">
-          <input class="" type="number" step="1" data-dtype="Number" name="data.xp" value="{{data.xp}}" />
+          <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
           <div>{{localize 'WWN.faction.xp'}}</div>
         </div>
 
         <!-- homeworld -->
         <div class="flex flex-col">
-          <input class="" name="data.homeworld" value="{{data.homeworld}}" />
+          <input class="" name="system.homeworld" value="{{system.homeworld}}" />
           <div>{{localize 'WWN.faction.homeworld'}}</div>
         </div>
       </div>
       <div class="flex-grow flexrow">
         <!-- goal -->
         <div class="flex flex-col">
-          <input class="" name="data.factionGoal" value="{{data.factionGoal}}" />
+          <input class="" name="system.factionGoal" value="{{system.factionGoal}}" />
           <div>
             {{localize 'WWN.faction.factionGoal'}}
             <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
@@ -140,7 +140,7 @@
         <!-- goal -->
         <div class="flex flex3 flex-col">
           <div class="">
-            {{editor content=data.factionGoalDesc target="data.factionGoalDesc" button=true owner=owner
+            {{editor content=system.factionGoalDesc target="system.factionGoalDesc" button=true owner=owner
             editable=editable
             }}
           </div>
@@ -158,7 +158,7 @@
           <h2 class="">{{localize 'WWN.category.description'}}</h2>
           <div class="">
             {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable
+            {{editor content=system.description target="system.description" button=true owner=owner editable=editable
             }}
           </div>
         </div>
@@ -167,25 +167,25 @@
     <div class="assets-tab tab" data-group="primary" data-tab="assets">
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
-        type="asset" assetType="cunning" name="Cunning" assets=data.cunningAssets
+        type="asset" assetType="cunning" name="Cunning" assets=system.cunningAssets
         }}
       </div>
 
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
-        type="asset" assetType="wealth" name="Wealth" assets=data.wealthAssets
+        type="asset" assetType="wealth" name="Wealth" assets=system.wealthAssets
         }}
       </div>
 
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
-        type="asset" assetType="force" name="Force" assets=data.forceAssets
+        type="asset" assetType="force" name="Force" assets=system.forceAssets
         }}
       </div>
     </div><!--asset-->
     <div class="tags-tab tab" data-group="primary" data-tab="tags">
         <div class="">
-          {{#each data.tags as |tag id|}}
+          {{#each system.tags as |tag id|}}
           <div class="tagdiv" data-idx="{{id}}">
             <a class="item-control faction-tag-delete hover:transition-colors"
               title='{{localize 'WWN.faction.remove-tag'}}'><i class="fas fa-trash"></i></a>
@@ -216,7 +216,7 @@
         </div>
         <div class="">
 
-          {{#each data.log as |logentry id|}}
+          {{#each system.log as |logentry id|}}
       
           <div class="logdiv" data-idx="{{id}}">
             <a class="item-control faction-log-delete hover:transition-colors"

@@ -8,7 +8,7 @@ import { WwnBaseItem } from "./base-item.js";
   popUpDialog;
 
   async getAttackRolls(isOffense) {
-    const data = this.data.data;
+    const data = this.system;
     let hitBonus = 0;
     let damage = isOffense ? data.attackDamage : data.counter;
     if ((damage === "Special" || damage === "None")) {
@@ -33,11 +33,11 @@ import { WwnBaseItem } from "./base-item.js";
     const actor = this.actor;
     if (attackType) {
       if (attackType === "cunning") {
-        hitBonus = actor.data.data.cunningRating;
+        hitBonus = actor.system.cunningRating;
       } else if (attackType === "force") {
-        hitBonus = actor.data.data.forceRating;
+        hitBonus = actor.system.forceRating;
       } else if (attackType === "wealth") {
-        hitBonus = actor.data.data.wealthRating;
+        hitBonus = actor.system.wealthRating;
       }
     }
     const rollData = {
@@ -67,16 +67,16 @@ import { WwnBaseItem } from "./base-item.js";
       : "WWN.faction.counter-roll";
 
       const assetsWithLocationNotes = this.actor.items.filter(i => 
-        i.id != this.id && i.type == "asset" && i.data.data.location === this.data.data.location && i.data.data.locationRoll
+        i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
       );
 
     const dialogData = {
-      desc: this.data.data.description,
+      desc: this.system.description,
       name: `${this.actor?.name} - ${this.name}`,
       hitRoll: await attackRolls[0].render(),
       damageRoll: await attackRolls[1].render(),
       attackKey: game.i18n.localize(attackKey),
-      attackSpecial: this.data.data.attackSpecial,
+      attackSpecial: this.system.attackSpecial,
       assetsWithLocationNotes
     };
     const template = "systems/wwn/templates/chat/asset-attack.html";
@@ -108,7 +108,7 @@ import { WwnBaseItem } from "./base-item.js";
     const otherActiveFactions = game.actors?.filter(
       (i) =>
         i.type === "faction" &&
-        i.data.data.active == true &&
+        i.system.active == true &&
         this.actor?.id != i.id
     );
     if (!otherActiveFactions || otherActiveFactions.length == 0) {
@@ -121,18 +121,18 @@ import { WwnBaseItem } from "./base-item.js";
     const factionIdNames = {};
     for (const fA of otherActiveFactions) {
       if (targetType === "cunning") {
-        if (fA.id && fA.data.data.cunningAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.data.data.cunningAssets];
+        if (fA.id && fA.system.cunningAssets?.length > 0) {
+          targetFactions[fA.id] = [fA, fA.system.cunningAssets];
           factionIdNames[fA.id] = fA.name;
         }
       } else if (targetType === "force") {
-        if (fA.id && fA.data.data.forceAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.data.data.forceAssets];
+        if (fA.id && fA.system.forceAssets?.length > 0) {
+          targetFactions[fA.id] = [fA, fA.system.forceAssets];
           factionIdNames[fA.id] = fA.name;
         }
       } else if (targetType === "wealth") {
-        if (fA.id && fA.data.data.wealthAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.data.data.wealthAssets];
+        if (fA.id && fA.system.wealthAssets?.length > 0) {
+          targetFactions[fA.id] = [fA, fA.system.wealthAssets];
           factionIdNames[fA.id] = fA.name;
         }
       }
@@ -176,10 +176,10 @@ import { WwnBaseItem } from "./base-item.js";
         return;
       }
       const attackedAssetsWithLocationNotes = attackedFaction.items.filter(i => 
-        i.type == "asset" && i.data.data.location === this.data.data.location && i.data.data.locationRoll
+        i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
       );
       const attackingAssetsWithLocationNotes = this.actor.items.filter(i => 
-        i.id != this.id && i.type == "asset" && i.data.data.location === this.data.data.location && i.data.data.locationRoll
+        i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
       );
       const attackRolls = await this.getAttackRolls(true);
       const defenseRolls = await attackedAsset.getAttackRolls(
@@ -218,7 +218,7 @@ import { WwnBaseItem } from "./base-item.js";
       }
       const name = `${this.actor?.name} - ${this.name} attacking ${attackedAsset.name} (${attackedFaction.name})`;
       const dialogData = {
-        desc: this.data.data.description,
+        desc: this.system.description,
         name,
         hitRoll: await hitRoll.render(),
         defRoll: await defRoll.render(),
@@ -226,8 +226,8 @@ import { WwnBaseItem } from "./base-item.js";
         defDamage: defDamage,
         attackDesc: attackDesc,
         attackKey: game.i18n.localize("attackKey"),
-        defenseSpecial: attackedAsset.data.data.attackSpecial,
-        attackSpecial: this.data.data.attackSpecial,
+        defenseSpecial: attackedAsset.system.attackSpecial,
+        attackSpecial: this.system.attackSpecial,
         attackedAssetsWithLocationNotes,
         attackingAssetsWithLocationNotes,
       };
@@ -248,7 +248,7 @@ import { WwnBaseItem } from "./base-item.js";
     this.popUpDialog?.close();
     this.popUpDialog = new Dialog(
       {
-        title: `Select asset to attack for ${this.name} (${this.data.data.location})`,
+        title: `Select asset to attack for ${this.name} (${this.system.location})`,
         content: await html,
         default: "roll",
         buttons: {
@@ -268,8 +268,8 @@ import { WwnBaseItem } from "./base-item.js";
   async _logAction() {
     // Basic template rendering data
     let content = `<h3> ${this.name} </h3>`;
-    if ("description" in this.data.data) {
-      content += `<span class="flavor-text"> ${this.data.data.description}</span>`;
+    if ("description" in this.system) {
+      content += `<span class="flavor-text"> ${this.system.description}</span>`;
     } else {
       content += "<span class='flavor-text'> No Description</span>";
     }
@@ -293,7 +293,7 @@ import { WwnBaseItem } from "./base-item.js";
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async roll(_shiftKey = false) {
-    const data = this.data.data;
+    const data = this.system;
     if (data.unusable) {
       ui.notifications?.error("Asset is unusable");
       return;

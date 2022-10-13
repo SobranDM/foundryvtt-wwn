@@ -42,7 +42,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, abilities, spells, arts, foci, skills] = this.actor.data.items.reduce(
+    let [items, weapons, armors, abilities, spells, arts, foci, skills] = this.actor.items.reduce(
       (arr, item) => {
         // Classify items into types
         if (item.type === "item") arr[0].push(item);
@@ -62,17 +62,17 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     var sortedSpells = {};
     var slots = {};
     for (var i = 0; i < spells.length; i++) {
-      const lvl = spells[i].data.data.lvl;
+      const lvl = spells[i].system.lvl;
       if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
       if (!slots[lvl]) slots[lvl] = 0;
-      slots[lvl] += spells[i].data.data.memorized;
+      slots[lvl] += spells[i].system.memorized;
       sortedSpells[lvl].push(spells[i]);
     }
 
     // Sort each level
     Object.keys(sortedSpells).forEach(level => {
       let list = insertionSort(sortedSpells[level], "name");
-      list = insertionSort(list, "data.data.class");
+      list = insertionSort(list, "system.class");
       sortedSpells[level] = list;
     });
 
@@ -82,11 +82,11 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     // Sort arts by name and then by source
     arts = insertionSort(arts, "name");
-    arts = insertionSort(arts, "data.data.source");
+    arts = insertionSort(arts, "system.source");
 
     // Divide skills into primary and secondary
-    const primarySkills = insertionSort(skills.filter(skill => !skill.data.data.secondary), "name");
-    const secondarySkills = insertionSort(skills.filter(skill => skill.data.data.secondary), "name");
+    const primarySkills = insertionSort(skills.filter(skill => !skill.system.secondary), "name");
+    const secondarySkills = insertionSort(skills.filter(skill => skill.system.secondary), "name");
 
     // Assign and return
     data.owned = {
@@ -199,7 +199,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   }
 
   _pushLang(table) {
-    const data = this.actor.data.data;
+    const data = this.actor.system;
     let update = duplicate(data[table]);
     let language = game.settings.get("wwn", "languageList");
     let languages = language.split(",");
@@ -212,16 +212,16 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }
       let newData = {};
       newData[table] = update;
-      return this.actor.update({ data: newData });
+      return this.actor.update({ system: newData });
     });
   }
 
   _popLang(table, lang) {
-    const data = this.actor.data.data;
+    const data = this.actor.system;
     let update = data[table].value.filter((el) => el != lang);
     let newData = {};
     newData[table] = { value: update };
-    return this.actor.update({ data: newData });
+    return this.actor.update({ system: newData });
   }
 
   /* -------------------------------------------- */
@@ -355,7 +355,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
         data: {
-          equipped: !item.data.data.equipped,
+          equipped: !item.system.equipped,
         },
       });
     });
@@ -365,7 +365,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
         data: {
-          prepared: !item.data.data.prepared,
+          prepared: !item.system.prepared,
         },
       });
     });
@@ -375,7 +375,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
         data: {
-          stowed: !item.data.data.stowed,
+          stowed: !item.system.stowed,
         },
       });
     });
@@ -399,10 +399,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const skill = this.actor.items.get(li.data("itemId"));
       if (skill.type == "skill") {
-        const rank = skill.data.data.ownedLevel;
+        const rank = skill.system.ownedLevel;
         // Check if char has sufficient level
         if (rank > 0) {
-          const lvl = this.actor.data.data.details.level;
+          const lvl = this.actor.system.details.level;
           if (rank == 1 && lvl < 3) {
             ui.notifications?.error(
               "Must be at least level 3 (edit manually to override)"
@@ -425,7 +425,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         }
         // check costs and update if points available
         const skillCost = rank + 2;
-        const skillPointsAvail = this.actor.data.data.skills.unspent;
+        const skillPointsAvail = this.actor.system.skills.unspent;
         if (skillCost > skillPointsAvail) {
           ui.notifications.error(
             `Not enough skill points. Have: ${skillPointsAvail}, need: ${skillCost}`

@@ -27,33 +27,33 @@
                 </a>
               </div>
               <div class="icon-row flexrow">
-                {{#each item.data.data.tags as |tag|}}
+                {{#each item.system.tags as |tag|}}
                 {{#if (getTagIcon tag.value)}}
                 <img title="{{getTagDesc tag.value}}" src="{{getTagIcon tag.value}}" width="24" height="24" />
                 {{/if}}
                 {{/each}}
-                {{#each item.data.data.tags as |tag|}}
+                {{#each item.system.tags as |tag|}}
                 {{#unless (getTagIcon tag.value)}}
                 <span title="{{tag.title}}">{{tag.value}}{{#unless @last}},{{/unless}}</span>
                 {{/unless}}
                 {{/each}}
               </div>
               <div class="field-short">
-                {{item.data.data.shock.damage}}
+                {{item.system.shock.damage}}
               </div>
               <div class="field-short quantity">
-                <input value="{{item.data.data.quantity}}" type="number" />
+                <input value="{{item.system.quantity}}" type="number" />
               </div>
               <div class="field-short">
-                <input value="{{item.data.data.weight}}" type="number" readonly>
+                <input value="{{item.system.weight}}" type="number" readonly>
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
-                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
                 </a>
@@ -92,21 +92,21 @@
                 </a>
               </div>
               <div class="field-short">
-                {{item.data.data.aac.value}}
+                {{item.system.aac.value}}
               </div>
               <div class="field-short">
-                {{item.data.data.aac.mod}}
+                {{item.system.aac.mod}}
               </div>
               <div class="field-short">
-                {{item.data.data.weight}}
+                {{item.system.weight}}
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
-                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
                 </a>
@@ -134,7 +134,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#if item.data.data.hasCharges}}
+          {{#if item.system.hasCharges}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
@@ -146,21 +146,21 @@
                 </a>
               </div>
               <div class="field-short">
-                <input value="{{item.data.data.charges.value}}" type="number" />
+                <input value="{{item.system.charges.value}}" type="number" />
               </div>
               <div class="field-short quantity">
-                <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
+                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
               </div>
               <div class="field-short">
-                <input value="{{item.data.data.weight}}" type="number" readonly />
+                <input value="{{item.system.weight}}" type="number" readonly />
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
-                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
                 </a>
@@ -188,7 +188,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#unless (evalOr item.data.data.treasure item.data.data.hasCharges) }}
+          {{#unless (evalOr item.system.treasure item.system.hasCharges) }}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
@@ -200,18 +200,18 @@
                 </a>
               </div>
               <div class="field-short quantity">
-                <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
+                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
               </div>
               <div class="field-short">
-                <input value="{{item.data.data.weight}}" type="number" readonly />
+                <input value="{{item.system.weight}}" type="number" readonly />
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
-                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
                 </a>
@@ -240,7 +240,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#if item.data.data.treasure}}
+          {{#if item.system.treasure}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
@@ -251,20 +251,20 @@
                   </h4>
                 </a>
               </div>
-              <div class="field-long">{{mult item.data.data.quantity item.data.data.price}}</div>
+              <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
               <div class="field-short quantity">
-                <input value="{{item.data.data.quantity}}" type="number" placeholder="0" />
+                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
               </div>
               <div class="field-short">
-                {{item.data.data.weight}}
+                {{item.system.weight}}
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.data.data.equipped}}item-unequipped{{/unless}}"
+                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
-                <a class="item-control stow-toggle {{#unless item.data.data.stowed}}item-unstowed{{/unless}}"
+                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
                 </a>

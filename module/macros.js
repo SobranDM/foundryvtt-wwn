@@ -13,7 +13,7 @@
 export async function createWwnMacro(data, slot) {
     if ( data.type !== "Item" ) return;
     if (!( "data" in data ) ) return ui.notifications.warn("You can only create macro buttons for owned Items");
-    const item = data.data;
+    const item = system;
   
     // Create the macro command
     const command = `game.wwn.rollItemMacro("${item.name}");`;

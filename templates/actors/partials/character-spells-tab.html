@@ -29,13 +29,13 @@
               </a>
             </div>
             <div class="field-long artSource">
-              <input value="{{art.data.data.source}}" type="text" placeholder="High Mage" />
+              <input value="{{art.system.source}}" type="text" placeholder="High Mage" />
             </div>
             <div class="field-short artEffort">
-              <input value="{{art.data.data.effort}}" type="number" data-dtype="Number" />
+              <input value="{{art.system.effort}}" type="number" data-dtype="Number" />
             </div>
             <div class="field-short artTime">
-              <input value="{{art.data.data.time}}" type="text" />
+              <input value="{{art.system.time}}" type="text" />
             </div>
             <div class="item-controls">
               <!-- {{#if ../owner}} -->
@@ -57,61 +57,61 @@
         </div>
       </div>
       <ol class="item-list">
-        {{#if data.classes.effort1.name}}
+        {{#if system.classes.effort1.name}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{data.classes.effort1.name}}</div>
+            <div class="item-name flexrow">{{system.classes.effort1.name}}</div>
             <div class="field-short">
-              <input name="data.classes.effort1.value" type="number" value="{{data.classes.effort1.value}}"
+              <input name="system.classes.effort1.value" type="number" value="{{system.classes.effort1.value}}"
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="data.classes.effort1.max" type="number" value="{{data.classes.effort1.max}}"
+              <input name="system.classes.effort1.max" type="number" value="{{system.classes.effort1.max}}"
                 data-dtype="Number" />
             </div>
           </div>
         </li>
         {{/if}}
-        {{#if data.classes.effort2.name}}
+        {{#if system.classes.effort2.name}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{data.classes.effort2.name}}</div>
+            <div class="item-name flexrow">{{system.classes.effort2.name}}</div>
             <div class="field-short">
-              <input name="data.classes.effort2.value" type="number" value="{{data.classes.effort2.value}}"
+              <input name="system.classes.effort2.value" type="number" value="{{system.classes.effort2.value}}"
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="data.classes.effort2.max" type="number" value="{{data.classes.effort2.max}}"
+              <input name="system.classes.effort2.max" type="number" value="{{system.classes.effort2.max}}"
                 data-dtype="Number" />
             </div>
           </div>
         </li>
         {{/if}}
-        {{#if data.classes.effort3.name}}
+        {{#if system.classes.effort3.name}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{data.classes.effort3.name}}</div>
+            <div class="item-name flexrow">{{system.classes.effort3.name}}</div>
             <div class="field-short">
-              <input name="data.classes.effort3.value" type="number" value="{{data.classes.effort3.value}}"
+              <input name="system.classes.effort3.value" type="number" value="{{system.classes.effort3.value}}"
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="data.classes.effort3.max" type="number" value="{{data.classes.effort3.max}}"
+              <input name="system.classes.effort3.max" type="number" value="{{system.classes.effort3.max}}"
                 data-dtype="Number" />
             </div>
           </div>
         </li>
         {{/if}}
-        {{#if data.classes.effort4.name}}
+        {{#if system.classes.effort4.name}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{data.classes.effort4.name}}</div>
+            <div class="item-name flexrow">{{system.classes.effort4.name}}</div>
             <div class="field-short">
-              <input name="data.classes.effort4.value" type="number" value="{{data.classes.effort4.value}}"
+              <input name="system.classes.effort4.value" type="number" value="{{system.classes.effort4.value}}"
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="data.classes.effort4.max" type="number" value="{{data.classes.effort4.max}}"
+              <input name="system.classes.effort4.max" type="number" value="{{system.classes.effort4.max}}"
                 data-dtype="Number" />
             </div>
           </div>
@@ -130,11 +130,11 @@
           <div class="item flexrow">
             <div class="item-name flexrow spell-resources">{{localize "WWN.spells.TotalPrepared"}}</div>
             <div class="field-short">
-              <input name="data.spells.prepared.value" type="number" value="{{data.spells.prepared.value}}"
+              <input name="system.spells.prepared.value" type="number" value="{{system.spells.prepared.value}}"
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="data.spells.prepared.max" type="number" value="{{data.spells.prepared.max}}"
+              <input name="system.spells.prepared.max" type="number" value="{{system.spells.prepared.max}}"
                 data-dtype="Number" />
             </div>
         </li>
@@ -142,11 +142,11 @@
           <div class="item flexrow">
             <div class="item-name flexrow spell-resources">{{localize "WWN.spells.Slots"}}</div>
             <div class="field-short">
-              <input name="data.spells.perDay.value" type="number" value="{{data.spells.perDay.value}}"
+              <input name="system.spells.perDay.value" type="number" value="{{system.spells.perDay.value}}"
                 data-dtype="Number" />
             </div> /
             <div class="field-short">
-              <input name="data.spells.perDay.max" type="number" value="{{data.spells.perDay.max}}"
+              <input name="system.spells.perDay.max" type="number" value="{{system.spells.perDay.max}}"
                 data-dtype="Number" />
             </div>
         </li>
@@ -188,7 +188,7 @@
             </div>
             <div class="item-controls">
               {{#if ../../owner}}
-              <a class="item-control item-prep {{#unless item.data.data.prepared}}item-unprepared{{/unless}}"
+              <a class="item-control item-prep {{#unless item.system.prepared}}item-unprepared{{/unless}}"
                 title='{{localize "WWN.spells.Prepared"}}'>
                 <i class="fas fa-brain"></i></a>
               <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i class="fas fa-eye"></i></a>

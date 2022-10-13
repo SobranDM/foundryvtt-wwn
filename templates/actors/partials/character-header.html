@@ -5,63 +5,63 @@
   </h1>
   <ul class="summary flexrow">
     <li class="flex3">
-      <input type="text" name="data.details.class" value="{{data.details.class}}" data-dtype="String" />
+      <input type="text" name="system.details.class" value="{{system.details.class}}" data-dtype="String" />
       <label>{{localize 'WWN.details.class'}}</label>
     </li>
     <li class="flex3">
-      <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" data-dtype="String" />
+      <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" data-dtype="String" />
       <label>{{localize 'WWN.details.alignment'}}</label>
     </li>
-    {{#if data.retainer.enabled}}
+    {{#if system.retainer.enabled}}
     <li class="check-field flex1" data-stat="lr">
       <div class="check morale-check" title="{{localize 'WWN.roll.morale'}}"><a><i class="fas fa-dice"></i></a></div>
-      <input name="data.details.morale" type="number" value="{{data.details.morale}}" placeholder="0"
+      <input name="system.details.morale" type="number" value="{{system.details.morale}}" placeholder="0"
         data-dtype="Number" />
       <label>{{localize 'WWN.Loyalty'}}</label>
     </li>
     {{else}}
     <li class="flex1">
-      <input type="number" name="data.details.renown.value" value="{{data.details.renown.value}}" data-dtype="Number" />
+      <input type="number" name="system.details.renown.value" value="{{system.details.renown.value}}" data-dtype="Number" />
       <label>{{localize 'WWN.details.renown.short'}}</label>
     </li>
     {{/if}}
   </ul>
   <ul class="summary flexrow">
-    {{#if data.retainer.enabled}}
+    {{#if system.retainer.enabled}}
     <li class="flex2">
-      <input type="text" name="data.retainer.wage" value="{{data.retainer.wage}}" data-dtype="String" />
+      <input type="text" name="system.retainer.wage" value="{{system.retainer.wage}}" data-dtype="String" />
       <label>{{localize 'WWN.RetainerWage'}}</label>
     </li>
     {{else}}
     <li class="flex2">
-      <input type="text" name="data.details.background" value="{{data.details.background}}" data-dtype="String" />
+      <input type="text" name="system.details.background" value="{{system.details.background}}" data-dtype="String" />
       <label>{{localize 'WWN.details.background'}}</label>
     </li>
     {{/if}}
-    <li class="{{#if (gt data.details.xp.value data.details.xp.next)}}notify{{/if}}">
-      <input type="number" name="data.details.level" value="{{data.details.level}}" data-dtype="Number" />
+    <li class="{{#if (gt system.details.xp.value system.details.xp.next)}}notify{{/if}}">
+      <input type="number" name="system.details.level" value="{{system.details.level}}" data-dtype="Number" />
       <label>{{localize 'WWN.details.level'}}</label>
     </li>
     <li>
-      <input type="number" name="data.details.xp.value" value="{{data.details.xp.value}}" data-dtype="Number" />
+      <input type="number" name="system.details.xp.value" value="{{system.details.xp.value}}" data-dtype="Number" />
       <label>{{localize 'WWN.details.experience.base'}}</label>
-      {{#if data.details.xp.bonus}}
-      <span class="xp-bonus">+{{data.details.xp.bonus}}%</span>
+      {{#if system.details.xp.bonus}}
+      <span class="xp-bonus">+{{system.details.xp.bonus}}%</span>
       {{/if}}
     </li>
     <li>
-      <input type="number" name="data.details.xp.next" value="{{data.details.xp.next}}" data-dtype="Number" disabled />
+      <input type="number" name="system.details.xp.next" value="{{system.details.xp.next}}" data-dtype="Number" disabled />
       <label>{{localize 'WWN.details.experience.next'}}</label>
     </li>
     <li>
-      <input type="number" name="data.thac0.bba" type="number" value="{{data.thac0.bba}}" placeholder="0"
+      <input type="number" name="system.thac0.bba" type="number" value="{{system.thac0.bba}}" placeholder="0"
         data-dtype="Number" />
       <label>{{localize 'WWN.ABShort'}}</label>
     </li>
     <li class="check-field">
       <div>
         <div class="check hd-roll" title="{{localize 'WWN.HitDice'}}"><a><i class="fas fa-dice"></i></a></div>
-        <input type="text" name="data.hp.hd" value="{{data.hp.hd}}" title="{{localize 'WWN.HitDiceFormula'}}" />
+        <input type="text" name="system.hp.hd" value="{{system.hp.hd}}" title="{{localize 'WWN.HitDiceFormula'}}" />
         <label title="{{localize 'WWN.HitDiceFormula'}}">{{localize 'WWN.HitDiceLong'}}</label>
       </div>
     </li>

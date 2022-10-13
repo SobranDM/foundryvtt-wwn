@@ -33,10 +33,10 @@
           <option value=""></option>
           {{#each this.[1] as |faitems|}}
           <option value="{{faitems.id}}">{{faitems.name}} 
-            {{#if faitems.data.data.location}}
-                ({{faitems.data.data.location}})
+            {{#if faitems.system.location}}
+                ({{faitems.system.location}})
             {{/if}}
-            {{#if faitems.data.data.stealthed}}
+            {{#if faitems.system.stealthed}}
                 [{{localize 'WWN.faction.stealth'}}]
             {{/if}}
           </option>

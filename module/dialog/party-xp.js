@@ -55,12 +55,12 @@ export class WwnPartyXP extends FormApplication {
         const html = $(this.form);
         let shares = 0;
         actors.forEach((a) => {
-            shares += a.data.data.details.xp.share;
+            shares += a.system.details.xp.share;
         });
         const value = parseFloat(toDeal) / shares;
         if (value) {
             actors.forEach(a => {
-                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.data.data.details.xp.share * value));
+                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.system.details.xp.share * value));
             })
         }
     }

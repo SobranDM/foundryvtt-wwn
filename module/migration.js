@@ -6,7 +6,7 @@ export const migrateWorld = async function () {
   ui.notifications.info(`Applying WWN System Migration for version ${game.system.data.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });
 
   for (let actor of game.actors.contents) {
-    const updateData = await migrateActorDataToItemSkills(actor.data);
+    const updateData = await migrateActorDataToItemSkills(actor);
     if (updateData && updateData.length) {
       console.log(`Adding skills to ${actor.name}.`);
       await actor.createEmbeddedDocuments("Item", updateData);
@@ -78,13 +78,13 @@ async function migrateActorDataToItemSkills(actor) {
   if (actor.type != "character") {
     return updateData;
   }
-  let actorData = actor.data;
+  let actorData = actor.system;
   let skills = actor.items.filter((i) => i.type == "skill");
   if (!skills || skills.length == 0) {
     // This character needs skills
     let skillPack = game.packs.get("wwn.skills");
     let toAdd = await skillPack.getDocuments();
-    let primarySkills = toAdd.filter((i) => i.data.data.secondary == false).map(item => item.toObject());
+    let primarySkills = toAdd.filter((i) => i.system.secondary == false).map(item => item.toObject());
     for (let skill of primarySkills) {
       let oldSkill = actorData.skills[skill.name.toLowerCase()]; 
       if (oldSkill) {

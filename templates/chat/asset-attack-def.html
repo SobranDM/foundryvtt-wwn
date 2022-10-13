@@ -31,14 +31,14 @@
   {{#if attackingAssetsWithLocationNotes}}
   <b>{{localize 'WWN.faction.locationRollTitleAttack'}}</b>:<br>
     {{#each attackingAssetsWithLocationNotes as |faitems|}}
-    <i>{{faitems.name}}</i> : {{faitems.data.data.locationRoll}}<Br>
+    <i>{{faitems.name}}</i> : {{faitems.system.locationRoll}}<Br>
     {{/each}}
   {{/if}}
 
   {{#if attackedAssetsWithLocationNotes}}
   <b>{{localize 'WWN.faction.locationRollTitleCounter'}}</b>:<br>
     {{#each attackedAssetsWithLocationNotes as |faitems|}}
-    <i>{{faitems.name}}</i> : {{faitems.data.data.locationRoll}}<br>
+    <i>{{faitems.name}}</i> : {{faitems.system.locationRoll}}<br>
     {{/each}}
   {{/if}}
 </div>

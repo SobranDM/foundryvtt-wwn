@@ -45,12 +45,12 @@ export class WwnAdjustCurrency extends FormApplication {
       updatedCurrency.pp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="platinum"]').val()) || 0;
     }
     updatedCurrency = {
-      cp: updatedCurrency.cp + this.object.data.data.currency.cp,
-      sp: updatedCurrency.sp + this.object.data.data.currency.sp,
-      ep: updatedCurrency.ep + this.object.data.data.currency.ep,
-      gp: updatedCurrency.gp + this.object.data.data.currency.gp,
-      pp: updatedCurrency.pp + this.object.data.data.currency.pp,
-      bank: updatedCurrency.bank + this.object.data.data.currency.bank
+      cp: updatedCurrency.cp + this.object.system.currency.cp,
+      sp: updatedCurrency.sp + this.object.system.currency.sp,
+      ep: updatedCurrency.ep + this.object.system.currency.ep,
+      gp: updatedCurrency.gp + this.object.system.currency.gp,
+      pp: updatedCurrency.pp + this.object.system.currency.pp,
+      bank: updatedCurrency.bank + this.object.system.currency.bank
     }
     const invalidEntries = Object.entries(updatedCurrency).filter(curr => curr[1] < 0)
     if (invalidEntries.length > 0) {

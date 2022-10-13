@@ -8,10 +8,10 @@
                         <a class="hp-roll"><i class="fas fa-dice"></i></a>
                     </h4>
                     <div class="attribute-value flexrow">
-                        <input name="data.hp.value" type="number" value="{{data.hp.value}}" data-dtype="Number"
+                        <input name="system.hp.value" type="number" value="{{system.hp.value}}" data-dtype="Number"
                             placeholder="0" />
                         <span class="sep"> / </span>
-                        <input name="data.hp.max" type="text" value="{{data.hp.max}}" data-dtype="Number"
+                        <input name="system.hp.max" type="text" value="{{system.hp.max}}" data-dtype="Number"
                             placeholder="0" />
                     </div>
                 </li>
@@ -19,7 +19,7 @@
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.details.morale" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.details.morale" type="number" value="{{data.details.morale}}" placeholder="0"
+                        <input name="system.details.morale" type="number" value="{{system.details.morale}}" placeholder="0"
                             data-dtype="Number" />
                     </div>
                 </li>
@@ -27,7 +27,7 @@
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.details.instinct" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.details.instinct" type="number" value="{{data.details.instinct}}"
+                        <input name="system.details.instinct" type="number" value="{{system.details.instinct}}"
                             placeholder="0" data-dtype="Number" />
                     </div>
                 </li>
@@ -37,7 +37,7 @@
                     <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
                         {{ localize "WWN.ArmorClassShort" }}</h4>
                     <div class="attribute-value">
-                        <input name="data.aac.value" type="number" value="{{data.aac.value}}" data-dtype="Number"
+                        <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number"
                             placeholder="10" data-dtype="Number" />
                     </div>
                 </li>
@@ -45,7 +45,7 @@
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.skill" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.details.skill" type="number" value="{{data.details.skill}}" placeholder="0"
+                        <input name="system.details.skill" type="number" value="{{system.details.skill}}" placeholder="0"
                             data-dtype="Number" />
                     </div>
                 </li>
@@ -54,7 +54,7 @@
                         {{ localize "WWN.movement.monsterShort" }}
                     </h4>
                     <div class="attribute-value flexrow">
-                        <input name="data.movement.base" type="text" value="{{data.movement.base}}" placeholder="0"
+                        <input name="system.movement.base" type="text" value="{{system.movement.base}}" placeholder="0"
                             data-dtype="text" />
                     </div>
                 </li>
@@ -67,7 +67,7 @@
                         <a>{{ localize "WWN.saves.evasion" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.saves.evasion.value" type="number" value="{{data.saves.evasion.value}}"
+                        <input name="system.saves.evasion.value" type="number" value="{{system.saves.evasion.value}}"
                             data-dtype="Number" disabled />
                 </li>
                 <li class="attribute saving-throw" data-save="mental">
@@ -75,7 +75,7 @@
                         <a>{{ localize "WWN.saves.mental" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.saves.mental.value" type="number" value="{{data.saves.mental.value}}"
+                        <input name="system.saves.mental.value" type="number" value="{{system.saves.mental.value}}"
                             data-dtype="Number" disabled />
                 </li>
             </ul>
@@ -85,7 +85,7 @@
                         <a>{{ localize "WWN.saves.physical" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.saves.physical.value" type="number" value="{{data.saves.physical.value}}"
+                        <input name="system.saves.physical.value" type="number" value="{{system.saves.physical.value}}"
                             data-dtype="Number" disabled />
                 </li>
                 <li class="attribute saving-throw" data-save="luck">
@@ -93,7 +93,7 @@
                         <a>{{ localize "WWN.saves.luck" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="data.saves.luck.value" type="number" value="{{data.saves.luck.value}}"
+                        <input name="system.saves.luck.value" type="number" value="{{system.saves.luck.value}}"
                             placeholder="0" data-dtype="Number" disabled />
                 </li>
             </ul>
@@ -128,11 +128,11 @@
                                 </div>
                                 {{#if (eq type "weapon")}}
                                 <div class="field-long counter flexrow">
-                                    <input type="text" value="{{item.data.data.counter.value}}" data-dtype="Number"
+                                    <input type="text" value="{{item.system.counter.value}}" data-dtype="Number"
                                         placeholder="0" data-field="value"
                                         title="{{localize 'WWN.items.roundAttacks'}}">
                                     /
-                                    <input type="text" value="{{item.data.data.counter.max}}" data-field="max"
+                                    <input type="text" value="{{item.system.counter.max}}" data-field="max"
                                         data-dtype="Number" placeholder="0"
                                         title="{{localize 'WWN.items.roundAttacksMax'}}">
                                 </div>
@@ -154,7 +154,7 @@
                     {{/each}}
                     {{! Other items}}
                     {{#each owned as |section| }}
-                    {{#unless (and (eq id "items") @root.data.config.enableInventory)}}
+                    {{#unless (and (eq id "items") @root.system.config.enableInventory)}}
                     {{#each section as |item|}}
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item.id}}">

@@ -13,11 +13,11 @@
           {{ localize "WWN.scores.str.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.str.value" type="number" value="{{data.scores.str.value}}" placeholder="0"
+          <input name="system.scores.str.value" type="number" value="{{system.scores.str.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.str.mod" type="number" value="{{data.scores.str.mod}}" data-dtype="Number"
+          <input name="system.scores.str.mod" type="number" value="{{system.scores.str.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -26,11 +26,11 @@
           {{ localize "WWN.scores.dex.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.dex.value" type="number" value="{{data.scores.dex.value}}" placeholder="0"
+          <input name="system.scores.dex.value" type="number" value="{{system.scores.dex.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.dex.mod" type="number" value="{{data.scores.dex.mod}}" data-dtype="Number"
+          <input name="system.scores.dex.mod" type="number" value="{{system.scores.dex.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -39,11 +39,11 @@
           {{ localize "WWN.scores.con.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.con.value" type="number" value="{{data.scores.con.value}}" placeholder="0"
+          <input name="system.scores.con.value" type="number" value="{{system.scores.con.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.con.mod" type="number" value="{{data.scores.con.mod}}" data-dtype="Number"
+          <input name="system.scores.con.mod" type="number" value="{{system.scores.con.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -52,11 +52,11 @@
           {{ localize "WWN.scores.int.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.int.value" type="number" value="{{data.scores.int.value}}" placeholder="0"
+          <input name="system.scores.int.value" type="number" value="{{system.scores.int.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.int.mod" type="number" value="{{data.scores.int.mod}}" data-dtype="Number"
+          <input name="system.scores.int.mod" type="number" value="{{system.scores.int.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -65,11 +65,11 @@
           {{ localize "WWN.scores.wis.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.wis.value" type="number" value="{{data.scores.wis.value}}" placeholder="0"
+          <input name="system.scores.wis.value" type="number" value="{{system.scores.wis.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.wis.mod" type="number" value="{{data.scores.wis.mod}}" data-dtype="Number"
+          <input name="system.scores.wis.mod" type="number" value="{{system.scores.wis.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -78,11 +78,11 @@
           {{ localize "WWN.scores.cha.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.scores.cha.value" type="number" value="{{data.scores.cha.value}}" placeholder="0"
+          <input name="system.scores.cha.value" type="number" value="{{system.scores.cha.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.scores.cha.mod" type="number" value="{{data.scores.cha.mod}}" data-dtype="Number"
+          <input name="system.scores.cha.mod" type="number" value="{{system.scores.cha.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -91,14 +91,14 @@
           {{localize 'WWN.movement.short'}}
         </h4>
         <div class="attribute-value">
-          <input name="data.movement.base" title="{{localize 'WWN.movement.round'}}" type="number"
-            value="{{data.movement.base}}" placeholder="30" data-dtype="Number" {{#if
-            data.config.movementAuto}}disabled{{/if}} />
+          <input name="system.movement.base" title="{{localize 'WWN.movement.round'}}" type="number"
+            value="{{system.movement.base}}" placeholder="30" data-dtype="Number" {{#if
+            system.config.movementAuto}}disabled{{/if}} />
         </div>
         {{#if config.showMovement}}
         <div class="attribute-value attribute-mod">
-          <input name="data.movement.exploration" title="{{localize 'WWN.movement.turn'}}" type="number"
-            value="{{data.movement.exploration}}" data-dtype="Number" disabled />
+          <input name="system.movement.exploration" title="{{localize 'WWN.movement.turn'}}" type="number"
+            value="{{system.movement.exploration}}" data-dtype="Number" disabled />
         </div>
         {{/if}}
       </li>
@@ -112,11 +112,11 @@
           {{ localize "WWN.HealthShort" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.hp.value" type="number" value="{{data.hp.value}}" data-dtype="Number" placeholder=0
+          <input name="system.hp.value" type="number" value="{{system.hp.value}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.Health' }}" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.hp.max" type="number" value="{{data.hp.max}}" data-dtype="Number" placeholder=0
+          <input name="system.hp.max" type="number" value="{{system.hp.max}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.HealthMax' }}" />
         </div>
       </li>
@@ -125,11 +125,11 @@
           {{ localize "WWN.ArmorClassShort" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.aac.value" type="number" value="{{data.aac.value}}" data-dtype="Number" placeholder=0
+          <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.ArmorClass' }}" disabled />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.aac.naked" type="number" value="{{data.aac.naked}}" data-dtype="Number" placeholder=0
+          <input name="system.aac.naked" type="number" value="{{system.aac.naked}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.ArmorClassNaked' }}" disabled />
         </div>
       </li>
@@ -138,11 +138,11 @@
           {{ localize "WWN.SystemStrainShort" }}
         </h4>
         <div class="attribute-value">
-          <input name="data.details.strain.value" type="number" value="{{data.details.strain.value}}"
+          <input name="system.details.strain.value" type="number" value="{{system.details.strain.value}}"
             data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrain' }}" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="data.details.strain.max" type="number" value="{{data.details.strain.max}}" data-dtype="Number"
+          <input name="system.details.strain.max" type="number" value="{{system.details.strain.max}}" data-dtype="Number"
             placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
         </div>
       </li>
@@ -154,7 +154,7 @@
           <a>{{ localize "WWN.saves.evasion" }}</a>
         </h4>
         <div class="attribute-value">
-          <input name="data.saves.evasion.value" type="number" value="{{data.saves.evasion.value}}" placeholder="0"
+          <input name="system.saves.evasion.value" type="number" value="{{system.saves.evasion.value}}" placeholder="0"
             data-dtype="Number" disabled />
       </li>
       <li class="attribute saving-throw" data-save="mental">
@@ -162,7 +162,7 @@
           <a>{{ localize "WWN.saves.mental" }}</a>
         </h4>
         <div class="attribute-value">
-          <input name="data.saves.mental.value" type="number" value="{{data.saves.mental.value}}" placeholder="0"
+          <input name="system.saves.mental.value" type="number" value="{{system.saves.mental.value}}" placeholder="0"
             data-dtype="Number" disabled />
       </li>
       <li class="attribute saving-throw" data-save="physical">
@@ -170,7 +170,7 @@
           <a>{{ localize "WWN.saves.physical" }}</a>
         </h4>
         <div class="attribute-value">
-          <input name="data.saves.physical.value" type="number" value="{{data.saves.physical.value}}" placeholder="0"
+          <input name="system.saves.physical.value" type="number" value="{{system.saves.physical.value}}" placeholder="0"
             data-dtype="Number" disabled />
       </li>
       <li class="attribute saving-throw" data-save="luck">
@@ -178,7 +178,7 @@
           <a>{{ localize "WWN.saves.luck" }}</a>
         </h4>
         <div class="attribute-value">
-          <input name="data.saves.luck.value" type="number" value="{{data.saves.luck.value}}" placeholder="0"
+          <input name="system.saves.luck.value" type="number" value="{{system.saves.luck.value}}" placeholder="0"
             data-dtype="Number" disabled />
       </li>
     </ul>
@@ -201,16 +201,16 @@
         <div class="item flexrow" data-item-id="{{skill.id}}">
           <div class="item-name-short item-rollable flexrow">
             <a class="skill-roll">
-              <h4 title="{{skill.data.data.description~}}">
+              <h4 title="{{skill.system.description~}}">
                 {{skill.name}}
               </h4>
             </a>
           </div>
           <div class="field-xshort unhidden reverse-lock">
-            {{lookup @root.config.scores skill.data.data.score}}
+            {{lookup @root.config.scores skill.system.score}}
           </div>
           <div class="field-xshort unhidden reverse-lock">
-            {{skill.data.data.ownedLevel}}
+            {{skill.system.ownedLevel}}
           </div>
           {{#if ../owner}}
           <div class="item-controls-short hidden skill-lock"><a class="item-control item-edit"
@@ -246,7 +246,7 @@
           </div>
           <div class="field-xshort"></div>
           <div class="field-xshort">
-            <input name="data.skills.unspent" type="number" value="{{data.skills.unspent}}" data-dtype="Number"
+            <input name="system.skills.unspent" type="number" value="{{system.skills.unspent}}" data-dtype="Number"
               style="width:35px;" />
           </div>
         </div>

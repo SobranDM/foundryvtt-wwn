@@ -134,7 +134,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const div = $(event.currentTarget).parents(".logdiv");
     const p = $(event.currentTarget).parents();
     const idx = div.data("idx");
-    const logs = this.actor.data.data.log;
+    const logs = this.actor.system.log;
     const log = logs[idx];
     // if (!tag) {
     //   ui.notifications?.info("Issue deleting tag");
@@ -165,7 +165,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
   async _onDelLogAll(event) {
     event.preventDefault();
     event.stopPropagation();
-    const logs = this.actor.data.data.log;
+    const logs = this.actor.system.log;
     // if (!tag) {
     //   ui.notifications?.info("Issue deleting tag");
     //   return;
@@ -194,7 +194,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const div = $(event.currentTarget).parents(".tagdiv");
     const p = $(event.currentTarget).parents();
     const idx = div.data("idx");
-    const tags = this.actor.data.data.tags;
+    const tags = this.actor.system.tags;
     const tag = tags[idx];
     // if (!tag) {
     //   ui.notifications?.info("Issue deleting tag");
@@ -353,7 +353,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
           const longDesc = a.longDesc != undefined ? a.longDesc : null;
           let rollString  = null;
           if (a.roll) {
-            const roll = new Roll(a.roll, this.actor.data.data);
+            const roll = new Roll(a.roll, this.actor.system);
             rollString = await roll.render();
           }
           this.actor.logMessage(title, msg, longDesc, rollString);
@@ -516,7 +516,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       ui.notifications?.error("Cannot find asset.");
       return;
     }
-    const new_status = !asset?.data.data.unusable;
+    const new_status = !asset?.system.unusable;
     if (asset instanceof Item)
       await asset?.update({
         data: {
@@ -537,7 +537,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       ui.notifications?.error("Cannot find asset.");
       return;
     }
-    const new_status = !asset?.data.data.stealthed;
+    const new_status = !asset?.system.stealthed;
     if (asset instanceof Item)
       await asset?.update({
         data: {

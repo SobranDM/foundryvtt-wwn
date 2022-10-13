@@ -10,7 +10,7 @@
     <div class="actors">
         {{#each actors as |e|}}
         <div class="actor form-group" data-actor-id="{{e.id}}">
-            <label>{{e.name}} ({{e.data.data.details.xp.share}}%)</label>
+            <label>{{e.name}} ({{e.system.details.xp.share}}%)</label>
             <input name="" placeholder="0" type="number" data-dtype="Number" />
         </div>
         {{/each}}

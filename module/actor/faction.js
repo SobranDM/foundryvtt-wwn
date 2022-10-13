@@ -1,26 +1,26 @@
 export class WwnFaction extends Actor {
   prepareData() {
     super.prepareData();
-    const data = this.data.data;
+    const data = this.system;
 
-    if (this.data.type !== "faction") {
+    if (this.type !== "faction") {
       return;
     }
   }
 
   prepareDerivedData() {
-    const data = this.data.data;
+    const data = this.system;
     const assets = (
       this.items.filter((i) => i.type == "asset")
     );
     const cunningAssets = assets.filter(
-      (i) => i.data.data["assetType"] === "cunning"
+      (i) => i.system["assetType"] === "cunning"
     );
     const forceAssets = assets.filter(
-      (i) => i.data.data["assetType"] === "force"
+      (i) => i.system["assetType"] === "force"
     );
     const wealthAssets = assets.filter(
-      (i) => i.data.data["assetType"] === "wealth"
+      (i) => i.system["assetType"] === "wealth"
     );
 
     data.cunningAssets = cunningAssets;
@@ -51,14 +51,14 @@ export class WwnFaction extends Actor {
   }
 
   isNew() {
-    const data = this.data.data;
-    if (this.data.type == "character") {
+    const data = this.system;
+    if (this.type == "character") {
       let ct = 0;
       Object.values(data.scores).forEach((el) => {
         ct += el.value;
       });
       return ct == 0 ? true : false;
-    } else if (this.data.type == "monster") {
+    } else if (this.type == "monster") {
       let ct = 0;
       Object.values(data.saves).forEach((el) => {
         ct += el.value;
@@ -117,7 +117,7 @@ export class WwnFaction extends Actor {
       html.find(".message-header").remove();
       content = html.html().toString();
     }
-    const log = this.data.data.log;
+    const log = this.system.log;
     log.push(content);
     await this.update({
       data: {
@@ -133,7 +133,7 @@ export class WwnFaction extends Actor {
       ui.notifications?.error(`Error unable to find tag ${name}`);
       return;
     }
-    const tags = this.data.data.tags;
+    const tags = this.system.tags;
     tags.push(match[0]);
     await this.update({
       data: {
@@ -147,7 +147,7 @@ export class WwnFaction extends Actor {
     desc,
     effect
   ) {
-    const tags = this.data.data.tags;
+    const tags = this.system.tags;
     const tag = {
       name,
       desc,
@@ -168,20 +168,20 @@ export class WwnFaction extends Actor {
     name,
     imgPath
   ) {
-    if (hp > this.data.data.health.max) {
+    if (hp > this.system.health.max) {
       ui.notifications?.error(
-        `Error HP of new base (${hp}) cannot be greater than faction max HP (${this.data.data.health.max})`
+        `Error HP of new base (${hp}) cannot be greater than faction max HP (${this.system.health.max})`
       );
       return;
     }
-    if (hp > this.data.data.facCreds) {
+    if (hp > this.system.facCreds) {
       ui.notifications?.error(
-        `Error HP of new base (${hp}) cannot be greater than treasure  (${this.data.data.facCreds})`
+        `Error HP of new base (${hp}) cannot be greater than treasure  (${this.system.facCreds})`
       );
       return;
     }
-    const newFacCreds = this.data.data.facCreds - hp;
-    await this.update({ data: { facCreds: newFacCreds } });
+    const newFacCreds = this.system.facCreds - hp;
+    await this.update({ system: { facCreds: newFacCreds } });
     await this.createEmbeddedDocuments(
       "Item",
       [
@@ -223,27 +223,27 @@ export class WwnFaction extends Actor {
     const assets = (
       this.items.filter((i) => i.type === "asset")
     );
-    const wealthIncome = Math.ceil(this.data.data.wealthRating / 2);
-    const cunningIncome = Math.floor(this.data.data.cunningRating / 4);
-    const forceIncome = Math.floor(this.data.data.forceRating / 4);
+    const wealthIncome = Math.ceil(this.system.wealthRating / 2);
+    const cunningIncome = Math.floor(this.system.cunningRating / 4);
+    const forceIncome = Math.floor(this.system.forceRating / 4);
     const assetIncome = assets
-      .map((i) => i.data.data.income)
+      .map((i) => i.system.income)
       .reduce((i, n) => i + n, 0);
-    const assetWithMaint = assets.filter((i) => i.data.data.maintenance);
+    const assetWithMaint = assets.filter((i) => i.system.maintenance);
     const assetMaintTotal = assetWithMaint
-      .map((i) => i.data.data.maintenance)
+      .map((i) => i.system.maintenance)
       .reduce((i, n) => i + n, 0);
 
     const cunningAssetsOverLimit = Math.min(
-      this.data.data.cunningRating - this.data.data.cunningAssets.length,
+      this.system.cunningRating - this.system.cunningAssets.length,
       0
     );
     const forceAssetsOverLimit = Math.min(
-      this.data.data.forceRating - this.data.data.forceAssets.length,
+      this.system.forceRating - this.system.forceAssets.length,
       0
     );
     const wealthAssetsOverLimit = Math.min(
-      this.data.data.wealthRating - this.data.data.wealthAssets.length,
+      this.system.wealthRating - this.system.wealthAssets.length,
       0
     );
     const costFromAssetsOver =
@@ -255,9 +255,9 @@ export class WwnFaction extends Actor {
       assetIncome -
       assetMaintTotal +
       costFromAssetsOver;
-    let new_creds = this.data.data.facCreds + income;
+    let new_creds = this.system.facCreds + income;
 
-    const assetsWithTurn = assets.filter((i) => i.data.data.turnRoll);
+    const assetsWithTurn = assets.filter((i) => i.system.turnRoll);
     let msg = `<b>Income this round: ${income}</b>.<br> From ratings: ${wealthIncome + cunningIncome + forceIncome
       } (W:${wealthIncome} C:${cunningIncome} F:${forceIncome})<br>From assets: ${assetIncome}.<br>Maintenance -${assetMaintTotal}.<br>`;
     if (costFromAssetsOver < 0) {
@@ -271,7 +271,7 @@ export class WwnFaction extends Actor {
       longMsg += "Assets with turn notes/rolls:<br>";
     }
     for (const a of assetsWithTurn) {
-      longMsg += `<i>${a.name}</i>: ${a.data.data.turnRoll} <br><br>`;
+      longMsg += `<i>${a.name}</i>: ${a.system.turnRoll} <br><br>`;
     }
     const aitems = [];
 
@@ -280,7 +280,7 @@ export class WwnFaction extends Actor {
         //Marking all assets unusable would still not bring money above, can mark all w/maint as unusable.
         for (let i = 0; i < assetWithMaint.length; i++) {
           const asset = assetWithMaint[i];
-          const assetCost = asset.data.data.maintenance;
+          const assetCost = asset.system.maintenance;
           new_creds += assetCost; // return the money
           aitems.push({ _id: asset.id, data: { unusable: true } });
         }
@@ -292,8 +292,8 @@ export class WwnFaction extends Actor {
         msg += ` <b>Out of money and unable to pay for all assets</b>, need to make assets unusable. Mark unusable for assets to cover treasure: ${income}<br>`;
       }
     }
-    msg += `<b> Old Treasure: ${this.data.data.facCreds}. New Treasure: ${new_creds}</b><br>`;
-    await this.update({ data: { facCreds: new_creds } });
+    msg += `<b> Old Treasure: ${this.system.facCreds}. New Treasure: ${new_creds}</b><br>`;
+    await this.update({ system: { facCreds: new_creds } });
     const title = `New Turn for ${this.name}`;
     await this.logMessage(title, msg, longMsg);
   }
@@ -320,12 +320,12 @@ export class WwnFaction extends Actor {
       return;
     }
     ui.notifications?.error("TODO create asset base with max health.");
-    await this.update({ data: { homeworld: journal.name } });
+    await this.update({ system: { homeworld: journal.name } });
   }
 
   async ratingUp(type) {
     const ratingName = `${type}Rating`;
-    let ratingLevel = this.data.data[ratingName];
+    let ratingLevel = this.system[ratingName];
     if (ratingLevel == 8) {
       ui.notifications?.info("Rating is already at max");
       return;
@@ -334,7 +334,7 @@ export class WwnFaction extends Actor {
       ratingLevel = 0;
     }
     const targetLevel = parseInt(ratingLevel) + 1;
-    let xp = this.data.data.xp;
+    let xp = this.system.xp;
     if (targetLevel in HEALTH__XP_TABLE) {
       const req_xp = HEALTH__XP_TABLE[targetLevel];
       if (req_xp > xp) {

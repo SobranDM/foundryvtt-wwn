@@ -6,55 +6,55 @@
   <ul class="summary flexrow">
     <li class="flexrow check-field">
       <div>
-        <input type="text" name="data.hp.hd" value="{{data.hp.hd}}" />
+        <input type="text" name="system.hp.hd" value="{{system.hp.hd}}" />
         <label>{{localize 'WWN.HitDiceLong'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="data.initiative.mod" value="{{data.initiative.mod}}" />
+        <input type="number" name="system.initiative.mod" value="{{system.initiative.mod}}" />
         <label>{{localize 'WWN.Initiative'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="data.thac0.bba" value="{{data.thac0.bba}}" />
+        <input type="number" name="system.thac0.bba" value="{{system.thac0.bba}}" />
         <label title="{{localize 'WWN.AB'}}">{{localize 'WWN.ABShort'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="data.damageBonus" value="{{data.damageBonus}}" />
+        <input type="number" name="system.damageBonus" value="{{system.damageBonus}}" />
         <label title="{{localize 'WWN.DB'}}">{{localize 'WWN.DBShort'}}</label>
       </div>
     </li>
     <li class="flexrow check-field" data-check="dungeon">
       <div>
-        <input type="text" name="data.details.appearing.d" value="{{data.details.appearing.d}}" />
+        <input type="text" name="system.details.appearing.d" value="{{system.details.appearing.d}}" />
         <label>{{localize 'WWN.details.appearingA'}}</label>
       </div>
       <div class="check appearing-check" title="{{localize 'WWN.details.dungeonAppearing'}}"><a><i class="fas fa-dice"></i></a></div>
     </li>
     <li class="flexrow check-field" data-check="wilderness">
-        (<div><input type="text" name="data.details.appearing.w" value="{{data.details.appearing.w}}" />
+        (<div><input type="text" name="system.details.appearing.w" value="{{system.details.appearing.w}}" />
           <label>{{localize 'WWN.details.appearingB'}}</label></div>)
       <div class="check appearing-check" title="{{localize 'WWN.details.wildernessAppearing'}}"><a><i class="fas fa-dice"></i></a></div>
     </li>
     <li>
-      <input type="number" name="data.details.xp" value="{{data.details.xp}}" />
+      <input type="number" name="system.details.xp" value="{{system.details.xp}}" />
       <label>{{localize 'WWN.details.experience.award'}}</label>
     </li>
   </ul>
   <ul class="summary flexrow">
     <li class="flexrow check-field">
       <div>
-        <input type="text" name="data.details.alignment" value="{{data.details.alignment}}" />
+        <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" />
         <label>{{localize 'WWN.details.alignment'}}</label>
       </div>
       <div class="check reaction-check" title="{{localize 'WWN.roll.reaction'}}"><a><i class="fas fa-dice"></i></a></div>
     </li>
     <li class="treasure-table" title="{{localize 'WWN.details.instinctTableHint'}}">
-      <div>{{{data.details.instinctTable.link}}}</div>
+      <div>{{{system.details.instinctTable.link}}}</div>
       <label>{{localize 'WWN.details.instinct'}}</label>
     </li>
   </ul>

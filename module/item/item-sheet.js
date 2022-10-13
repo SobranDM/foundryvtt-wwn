@@ -69,11 +69,11 @@ export class WwnItemSheet extends ItemSheet {
       this.object.popTag(value);
     });
     html.find('a.melee-toggle').click(() => {
-      this.object.update({data: {melee: !this.object.data.data.melee}});
+      this.object.update({data: {melee: !this.object.system.melee}});
     });
 
     html.find('a.missile-toggle').click(() => {
-      this.object.update({data: {missile: !this.object.data.data.missile}});
+      this.object.update({data: {missile: !this.object.system.missile}});
     });
 
     if ( this.isEditable ) {

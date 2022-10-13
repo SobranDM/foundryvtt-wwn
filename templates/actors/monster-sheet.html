@@ -9,7 +9,7 @@
     <a class="item" data-tab="attributes">
       {{localize "WWN.category.attributes"}}
     </a>
-    {{#if data.spells.enabled}}
+    {{#if system.spells.enabled}}
     <a class="item" data-tab="spells">
       {{localize "WWN.category.spells"}}
     </a>
@@ -24,7 +24,7 @@
     <div class="tab" data-group="primary" data-tab="attributes">
       {{> "systems/wwn/templates/actors/partials/monster-attributes-tab.html"}}
     </div>
-    {{#if data.spells.enabled}}
+    {{#if system.spells.enabled}}
     <div class="tab" data-group="primary" data-tab="spells">
       {{> "systems/wwn/templates/actors/partials/character-spells-tab.html"}}
     </div>
@@ -33,7 +33,7 @@
       <div class="inventory">
         <div class="item-titles">{{localize "WWN.category.notes"}}</div>
         <div class="resizable-editor" data-editor-size="320">
-          {{editor content=data.details.biography target="data.details.biography"
+          {{editor content=system.details.biography target="system.details.biography"
           button=true owner=owner editable=editable}}
         </div>
       </div>

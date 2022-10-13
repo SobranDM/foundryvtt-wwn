@@ -1,12 +1,20 @@
 {
-  "name": "wwn",
+  "id": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
   "version": "1.01",
-  "minimumCoreVersion": "0.8.9",
-  "compatibleCoreVersion": "9",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10"
+  },
   "templateVersion": 6.9,
-  "author": "SobranDM",
+  "authors": [
+    {
+      "name": "Aaron Lutomski",
+      "email": "sobran@gmail.com",
+      "discord": "Sobran#8580"
+    }
+  ],
   "esmodules": ["wwn.js"],
   "styles": ["wwn.css"],
   "packs": [
@@ -16,7 +24,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/instinct.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "armor",
@@ -24,7 +32,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/armor.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "weapons",
@@ -32,7 +40,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/weapons.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "arts",
@@ -40,7 +48,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/arts.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "foci",
@@ -48,7 +56,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/foci.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "skills",
@@ -56,7 +64,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/skills.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "spells",
@@ -64,7 +72,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/spells.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "adventuring-gear",
@@ -72,7 +80,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/adventuring-gear.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "magic-items",
@@ -80,7 +88,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/magic-items.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "magic-tables",
@@ -88,7 +96,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/magic-tables.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "magic-item-masters",
@@ -96,7 +104,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/magic-item-masters.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "gm-subtables",
@@ -104,7 +112,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/gm-subtables.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "gm-master-tables",
@@ -112,7 +120,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/gm-master-tables.db",
-      "entity": "RollTable"
+      "type": "RollTable"
     },
     {
       "name": "creatures-of-a-far-age",
@@ -120,7 +128,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/creatures-of-a-far-age.db",
-      "entity": "Actor"
+      "type": "Actor"
     },
     {
       "name": "ose-monsters",
@@ -128,7 +136,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/ose-monsters.db",
-      "entity": "Actor"
+      "type": "Actor"
     },
     {
       "name": "ose-spells",
@@ -136,7 +144,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/ose-spells.db",
-      "entity": "Item"
+      "type": "Item"
     },
     {
       "name": "tags",
@@ -144,7 +152,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/tags.db",
-      "entity": "JournalEntry"
+      "type": "JournalEntry"
     },
     {
       "name": "assets",
@@ -152,7 +160,7 @@
       "system": "wwn",
       "module": "wwn",
       "path": "packs/assets.db",
-      "entity": "Item"
+      "type": "Item"
     }
   ],
   "languages": [

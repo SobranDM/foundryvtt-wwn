@@ -11,12 +11,12 @@ export class WwnCombat {
       const group = cbt.getFlag("wwn", "group");
       groups[group] = { present: true };
       data.combatants.push(cbt);
-      let alert = cbt.actor.data.items.filter((a) => a.name == "Alert");
+      let alert = cbt.actor.items.filter((a) => a.name == "Alert");
       if (alert.length > 0) {
         alertGroups[group] = true;
       }
-      if (cbt.actor.data.data.scores) {
-        let dexMod = cbt.actor.data.data.scores.dex.mod;
+      if (cbt.actor.system.scores) {
+        let dexMod = cbt.actor.system.scores.dex.mod;
         if (groupMods[group]) {
           groupMods[group] = Math.max(dexMod, groupMods[group]);
         } else {
@@ -51,10 +51,10 @@ export class WwnCombat {
         return;
       }
       const group = data.combatants[i].getFlag("wwn", "group");
-      let alert = data.combatants[i].actor.data.items.filter((a) => a.name == "Alert");
+      let alert = data.combatants[i].actor.items.filter((a) => a.name == "Alert");
       data.combatants[i].update({ initiative: groups[group].initiative });
       if (alert.length > 0) {
-        if (alert[0].data.data.ownedLevel == 2) {
+        if (alert[0].system.ownedLevel == 2) {
           data.combatants[i].update({ initiative: groups[group].initiative + 100 });
         }
       }
@@ -75,7 +75,7 @@ export class WwnCombat {
     let messages = [];
     combat.data.combatants.forEach((c, i) => {
       // Initialize variables
-      let alert = c.actor.data.items.filter((a) => a.name == "Alert");
+      let alert = c.actor.items.filter((a) => a.name == "Alert");
       let roll = null;
       let roll2 = null;
 
@@ -83,12 +83,12 @@ export class WwnCombat {
       // Check if initiative has already been manually rolled
       if (!c.initiative) {
         // Roll initiative
-        roll = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({ async: false });
+        roll = new Roll("1d8+" + c.actor.system.initiative.value).roll({ async: false });
         roll.toMessage({
           flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
         });
         if (alert.length > 0) {
-          roll2 = new Roll("1d8+" + c.actor.data.data.initiative.value).roll({ async: false });
+          roll2 = new Roll("1d8+" + c.actor.system.initiative.value).roll({ async: false });
           roll2.toMessage({
             flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
           });
@@ -96,7 +96,7 @@ export class WwnCombat {
 
         // Set initiative
         if (alert.length > 0) {
-          if (alert[0].data.data.ownedLevel == 2) {
+          if (alert[0].system.ownedLevel == 2) {
             updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
           } else {
             updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
@@ -202,7 +202,7 @@ export class WwnCombat {
       }
       let data = {};
       WwnCombat.rollInitiative(game.combat, data);
-      /* game.combat.update({ data: data }).then(() => {
+      /* game.combat.update({ system: data }).then(() => {
         game.combat.setupTurns();
       }); */
     });
@@ -257,9 +257,9 @@ export class WwnCombat {
       for (const combatant of combat.combatants) {
         if (combatant.actor.type === "monster") {
           for (const itm of combatant.actor.items) {
-            if (itm.data.data.counter) {
-              const item = combatant.actor.data.items.get(itm.id);
-              await item.update({ "data.counter.value": item.data.data.counter.max });
+            if (itm.system.counter) {
+              const item = combatant.actor.items.get(itm.id);
+              await item.update({ "data.counter.value": item.system.counter.max });
             }
           };
         }
@@ -284,9 +284,9 @@ export class WwnCombat {
     if (!actor || data.actorLink || !game.settings.get("wwn", "randomHP")) {
       return token.data.update(data);
     }
-    const roll = new Roll(token.actor.data.data.hp.hd).roll({ async: false });
-    setProperty(data, "actorData.data.hp.value", roll.total);
-    setProperty(data, "actorData.data.hp.max", roll.total);
+    const roll = new Roll(token.actor.system.hp.hd).roll({ async: false });
+    setProperty(data, "actorsystem.hp.value", roll.total);
+    setProperty(data, "actorsystem.hp.max", roll.total);
     return token.data.update(data);
   }
 }
