@@ -19,8 +19,8 @@
                     <div class="form-fields">
                         <input
                             type="text"
-                            name="data.ownedLevel"
-                            value="{{data.ownedLevel}}"
+                            name="system.ownedLevel"
+                            value="{{system.ownedLevel}}"
                             data-dtype="Number"
                         />
                     </div>
@@ -28,8 +28,8 @@
                 <div class="form-group">
                     <label><b>{{localize 'WWN.attribute'}}</b></label>
                     <div class="form-fields">
-                        <select name="data.score">
-                            {{#select data.score}} {{#each config.scores as
+                        <select name="system.score">
+                            {{#select system.score}} {{#each config.scores as
                             |stat a|}}
                             <option value="{{a}}">{{stat}}</option>
                             {{/each}} {{/select}}
@@ -39,8 +39,8 @@
                 <div class="form-group">
                     <label><b>{{localize 'WWN.dialog.skillDice'}}</b></label>
                     <div class="form-fields">
-                        <select id="skillDice" name="data.skillDice">
-                            {{#select data.skillDice}}
+                        <select id="skillDice" name="system.skillDice">
+                            {{#select system.skillDice}}
                             <option value="2d6">2d6</option>
                             <option value="3d6k2">3d6</option>
                             <option value="4d6k2">4d6</option>
@@ -53,17 +53,17 @@
                     <div class="form-fields">
                         <input
                             type="checkbox"
-                            name="data.secondary"
-                            value="{{data.secondary}}"
+                            name="system.secondary"
+                            value="{{system.secondary}}"
                             {{checked
-                            data.secondary}}
+                            system.secondary}}
                             data-dtype="Boolean"
                         />
                     </div>
                 </div>
             </div>
             <div class="description editor">
-                {{editor content=data.description target="data.description"
+                {{editor content=system.description target="system.description"
                 button=true owner=owner editable=editable}}
             </div>
         </div>

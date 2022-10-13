@@ -6,14 +6,14 @@
         <div class="form-group">
           <label for="fullWarrior">{{localize "WWN.Warrior"}}</label>
           <div class="form-fields">
-            <input type="checkbox" name="data.warrior" id="fullWarrior" {{checked data.warrior}} data-dtype="Boolean" />
+            <input type="checkbox" name="system.warrior" id="fullWarrior" {{checked system.warrior}} data-dtype="Boolean" />
           </div>
         </div>
         {{/if}}
         <div class="form-group">
           <label for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
           <div class="form-fields">
-            <input type="checkbox" name="data.spells.enabled" id="spellcaster" {{checked data.spells.enabled}}
+            <input type="checkbox" name="system.spells.enabled" id="spellcaster" {{checked system.spells.enabled}}
               data-dtype="Boolean" />
           </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="form-group">
           <label for="retainer">{{localize "WWN.Retainer"}}</label>
           <div class="form-fields">
-            <input type="checkbox" name="data.retainer.enabled" id="retainer" {{checked data.retainer.enabled}}
+            <input type="checkbox" name="system.retainer.enabled" id="retainer" {{checked system.retainer.enabled}}
               data-dtype="Boolean" />
           </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="form-group">
           <label>{{localize "WWN.InitiativeBonus"}}</label>
           <div class="form-fields">
-            <input type="number" name="data.initiative.mod" id="initiative" value="{{data.initiative.mod}}"
+            <input type="number" name="system.initiative.mod" id="initiative" value="{{system.initiative.mod}}"
               data-dtype="Number" />
           </div>
         </div>
@@ -37,67 +37,67 @@
         <div class="form-group">
           <label>{{localize "WWN.details.experience.bonus"}} (%)</label>
           <div class="form-fields">
-            <input type="number" name="data.details.xp.bonus" id="experience" value="{{data.details.xp.bonus}}"
+            <input type="number" name="system.details.xp.bonus" id="experience" value="{{system.details.xp.bonus}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize "WWN.details.experience.share"}} (%)</label>
           <div class="form-fields">
-            <input type="number" name="data.details.xp.share" id="experience-share" value="{{data.details.xp.share}}"
+            <input type="number" name="system.details.xp.share" id="experience-share" value="{{system.details.xp.share}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize "WWN.items.currencyShare"}} (%)</label>
           <div class="form-fields">
-            <input type="number" name="data.currency.share" id="currency-share" value="{{data.currency.share}}"
+            <input type="number" name="system.currency.share" id="currency-share" value="{{system.currency.share}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize "WWN.ArmorClassBonus"}}</label>
           <div class="form-fields">
-            <input type="number" name="data.aac.mod" id="ac" value="{{data.aac.mod}}" data-dtype="Number" />
+            <input type="number" name="system.aac.mod" id="ac" value="{{system.aac.mod}}" data-dtype="Number" />
           </div>
         </div>
         {{/if}}
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 1</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort1.name" id="effort1" value="{{data.classes.effort1.name}}" />
+            <input type="text" name="system.classes.effort1.name" id="effort1" value="{{system.classes.effort1.name}}" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 2</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort2.name" id="effort2" value="{{data.classes.effort2.name}}" />
+            <input type="text" name="system.classes.effort2.name" id="effort2" value="{{system.classes.effort2.name}}" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 3</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort3.name" id="effort3" value="{{data.classes.effort3.name}}" />
+            <input type="text" name="system.classes.effort3.name" id="effort3" value="{{system.classes.effort3.name}}" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.spells.CasterClass'}} 4</label>
           <div class="form-fields">
-            <input type="text" name="data.classes.effort4.name" id="effort4" value="{{data.classes.effort4.name}}" />
+            <input type="text" name="system.classes.effort4.name" id="effort4" value="{{system.classes.effort4.name}}" />
           </div>
         </div>
         {{#if (eq this.type 'character')}}
         <div class="form-group">
           <label for="movementAuto">{{localize "WWN.Setting.MovementAuto"}}</label>
           <div class="form-fields">
-            <input type="checkbox" name="data.config.movementAuto" id="movementAuto" {{checked
-              data.config.movementAuto}} data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
+            <input type="checkbox" name="system.config.movementAuto" id="movementAuto" {{checked
+              system.config.movementAuto}} data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.movement.bonus'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.movement.bonus" id="cha" value="{{data.movement.bonus}}"
+            <input type="number" name="system.movement.bonus" id="cha" value="{{system.movement.bonus}}"
               data-dtype="Number" />
           </div>
         </div>
@@ -106,42 +106,42 @@
         <div class="form-group">
           <label>{{localize 'WWN.scores.str.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.str.tweak" id="str" value="{{data.scores.str.tweak}}"
+            <input type="number" name="system.scores.str.tweak" id="str" value="{{system.scores.str.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.scores.dex.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.dex.tweak" id="dex" value="{{data.scores.dex.tweak}}"
+            <input type="number" name="system.scores.dex.tweak" id="dex" value="{{system.scores.dex.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.scores.con.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.con.tweak" id="con" value="{{data.scores.con.tweak}}"
+            <input type="number" name="system.scores.con.tweak" id="con" value="{{system.scores.con.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.scores.int.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.int.tweak" id="int" value="{{data.scores.int.tweak}}"
+            <input type="number" name="system.scores.int.tweak" id="int" value="{{system.scores.int.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.scores.wis.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.wis.tweak" id="wis" value="{{data.scores.wis.tweak}}"
+            <input type="number" name="system.scores.wis.tweak" id="wis" value="{{system.scores.wis.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.scores.cha.long'}} {{localize 'WWN.Modifier'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.scores.cha.tweak" id="cha" value="{{data.scores.cha.tweak}}"
+            <input type="number" name="system.scores.cha.tweak" id="cha" value="{{system.scores.cha.tweak}}"
               data-dtype="Number" />
           </div>
         </div>
@@ -149,28 +149,28 @@
         <div class="form-group">
           <label>{{localize 'WWN.saves.evasion'}} {{localize 'WWN.category.saves'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.saves.evasion.mod" id="cha" value="{{data.saves.evasion.mod}}"
+            <input type="number" name="system.saves.evasion.mod" id="cha" value="{{system.saves.evasion.mod}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.saves.mental'}} {{localize 'WWN.category.saves'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.saves.mental.mod" id="cha" value="{{data.saves.mental.mod}}"
+            <input type="number" name="system.saves.mental.mod" id="cha" value="{{system.saves.mental.mod}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.saves.physical'}} {{localize 'WWN.category.saves'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.saves.physical.mod" id="cha" value="{{data.saves.physical.mod}}"
+            <input type="number" name="system.saves.physical.mod" id="cha" value="{{system.saves.physical.mod}}"
               data-dtype="Number" />
           </div>
         </div>
         <div class="form-group">
           <label>{{localize 'WWN.saves.luck'}} {{localize 'WWN.category.saves'}}</label>
           <div class="form-fields">
-            <input type="number" name="data.saves.luck.mod" id="cha" value="{{data.saves.luck.mod}}"
+            <input type="number" name="system.saves.luck.mod" id="cha" value="{{system.saves.luck.mod}}"
               data-dtype="Number" />
           </div>
         </div>

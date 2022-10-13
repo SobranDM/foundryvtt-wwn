@@ -18,7 +18,6 @@ export const WwnItemProxy = new Proxy(function () {}, {
   //Will intercept calls to the "new" operator
   construct: function (target, args) {
     const [data] = args;
-
     //Handle missing mapping entries
     if (!itemMappings.hasOwnProperty(data.type))
       throw new Error("Unsupported Entity type for create(): " + data.type);
@@ -42,7 +41,7 @@ export const WwnItemProxy = new Proxy(function () {}, {
           if (!itemMappings.hasOwnProperty(data.type))
             throw new Error("Unsupported Entity type for create(): " + data.type);
 
-          return itemMappings[data.type].create(data, options);
+          return itemMappings[system.type].create(data, options);
         };
 
       case Symbol.hasInstance:

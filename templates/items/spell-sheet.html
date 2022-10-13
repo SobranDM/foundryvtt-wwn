@@ -10,7 +10,7 @@
   <section class="sheet-body">
     <div class="flexrow card-body">
       <div class="description">
-        {{editor content=data.description target="data.description" button=true
+        {{editor content=system.description target="system.description" button=true
         owner=owner editable=editable}}
       </div>
       <div class="flexrow item-footer">
@@ -18,19 +18,19 @@
           <div class="form-group">
             <label>{{localize 'WWN.spells.Level'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.lvl" value="{{data.lvl}}" data-dtype="Number" />
+              <input type="text" name="system.lvl" value="{{system.lvl}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.spells.Class'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.class" value="{{data.class}}" data-dtype="String" />
+              <input type="text" name="system.class" value="{{system.class}}" data-dtype="String" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.spells.Duration'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" />
+              <input type="text" name="system.duration" value="{{system.duration}}" data-dtype="String" />
             </div>
           </div>
         </div>
@@ -38,20 +38,20 @@
           <div class="form-group">
             <label>{{localize 'WWN.spells.Range'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" />
+              <input type="text" name="system.range" value="{{system.range}}" data-dtype="String" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.items.Roll'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
+              <input type="text" name="system.roll" value="{{system.roll}}" data-dtype="String" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.spells.Save'}}</label>
             <div class="form-fields">
-              <select name="data.save">
-                {{#select data.save}}
+              <select name="system.save">
+                {{#select system.save}}
                 <option value=""></option>
                 {{#each config.saves as |save a|}}
                 <option value="{{a}}">{{save}}</option>

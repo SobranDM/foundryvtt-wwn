@@ -145,7 +145,7 @@ export class WwnActorSheet extends ActorSheet {
       let actorObject = this.actor;
       let element = event.currentTarget;
       let attack = element.parentElement.parentElement.dataset.attack;
-      console.log(this);
+
       const rollData = {
         actor: this,
         roll: {},

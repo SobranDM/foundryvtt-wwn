@@ -12,7 +12,7 @@
   <section class="sheet-body">
     <div class="flexrow card-body">
       <div class="description weapon-editor">
-        {{editor content=data.description target="data.description" button=true
+        {{editor content=system.description target="system.description" button=true
         owner=owner editable=editable}}
       </div>
       <div class="flexrow item-footer">
@@ -20,13 +20,13 @@
           <div class="form-group">
             <label>{{localize 'WWN.items.Roll'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.roll" value="{{data.roll}}" data-dtype="String" />
+              <input type="text" name="system.roll" value="{{system.roll}}" data-dtype="String" />
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.spells.ArtSourceHint' }}>{{localize 'WWN.spells.ArtSource'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.source" value="{{data.source}}"
+              <input type="text" name="system.source" value="{{system.source}}"
                 placeholder="{{localize 'WWN.spells.HighMage'}}" />
             </div>
           </div>
@@ -36,14 +36,14 @@
             <label title="{{localize 'WWN.spells.TimeHint'}}">{{localize
               'WWN.spells.Time'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.time" value="{{data.time}}" />
+              <input type="text" name="system.time" value="{{system.time}}" />
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>
-              <select name="data.save">
-                {{#select data.save}}
+              <select name="system.save">
+                {{#select system.save}}
                 <option value=""></option>
                 {{#each config.saves as |save a|}}
                 <option value="{{a}}">{{save}}</option>

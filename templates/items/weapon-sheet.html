@@ -11,25 +11,25 @@
             <label title="{{localize 'WWN.items.Price'}}"><i class="fas
                 fa-circle"></i></label>
             <div class="form-fields">
-              <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
+              <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
             <label title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></label>
             <div class="form-fields">
-              <input type="number" name="data.weight" value="{{data.weight}}" data-dtype="Number" />
+              <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
             <label title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></label>
             <div class="form-fields">
-              <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
+              <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
             </div>
           </div>
         </div>
       </div>
       <ol class="tag-list">
-        {{#each data.tags as |tag|}}
+        {{#each system.tags as |tag|}}
         <li class="tag" title="{{getTagDesc tag.value}}" data-tag="{{tag.value}}">
           <span>{{tag.value}}</span>
           <a class="tag-delete"><i class="fas fa-times"></i></a>
@@ -41,7 +41,7 @@
   <section class="sheet-body">
     <div class="flexrow card-body">
       <div class="description">
-        {{editor content=data.description target="data.description" button=true
+        {{editor content=system.description target="system.description" button=true
         owner=owner editable=editable}}
       </div>
       <div class="flexrow item-footer">
@@ -53,16 +53,16 @@
             </div>
             <div class="form-fields attack-type">
               <a title="{{localize 'WWN.items.Melee'}}" class="melee-toggle {{#if
-              data.melee}}active{{/if}}"><i class="fas fa-fist-raised"></i></a>
+              system.melee}}active{{/if}}"><i class="fas fa-fist-raised"></i></a>
               <a title="{{localize 'WWN.items.Missile'}}" class="missile-toggle
-              {{#if data.missile}}active{{/if}}"><i class="fas fa-bullseye"></i></a>
+              {{#if system.missile}}active{{/if}}"><i class="fas fa-bullseye"></i></a>
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.attribute' }}>{{localize 'WWN.attribute'}}</label>
             <div class="form-fields">
-              <select name="data.score">
-                {{#select data.score}}
+              <select name="system.score">
+                {{#select system.score}}
                 {{#each config.scores as |stat a|}}
                 <option value="{{a}}">{{stat}}</option>
                 {{/each}}
@@ -73,8 +73,8 @@
           <div class="form-group">
             <label title={{localize 'WWN.skill' }}>{{localize 'WWN.skill'}}</label>
             <div class="form-fields">
-              <select name="data.skill">
-                {{#select data.skill}}
+              <select name="system.skill">
+                {{#select system.skill}}
                 {{#each config.attackSkills as |stat a|}}
                 <option value="{{a}}">{{stat}}</option>
                 {{/each}}
@@ -85,16 +85,16 @@
           <div class="form-group">
             <label>{{localize 'WWN.items.AtkBonus'}}</label>
             <div class="form-fields">
-              <input type="number" name="data.bonus" value="{{data.bonus}}" data-dtype="Number" />
+              <input type="number" name="system.bonus" value="{{system.bonus}}" data-dtype="Number" />
             </div>
           </div>
-          {{#if data.missile}}
+          {{#if system.missile}}
           <div class="form-group">
             <label>{{localize 'WWN.items.Range'}}</label>
             <div class="form-fields range">
-              <input type="number" name="data.range.short" value="{{data.range.short}}" data-dtype="Number" />
+              <input type="number" name="system.range.short" value="{{system.range.short}}" data-dtype="Number" />
               <div class="sep"></div>
-              <input type="number" name="data.range.long" value="{{data.range.long}}" data-dtype="Number" />
+              <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" />
             </div>
           </div>
           {{/if}}
@@ -103,31 +103,31 @@
           <div class="form-group">
             <label>{{localize 'WWN.items.Damage'}}</label>
             <div class="form-fields">
-              <input type="text" name="data.damage" value="{{data.damage}}" data-dtype="String" />
+              <input type="text" name="system.damage" value="{{system.damage}}" data-dtype="String" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.items.Shock'}}</label>
             <div class="form-fields">
-              <input type="number" name="data.shock.damage" value="{{data.shock.damage}}" data-dtype="String"
+              <input type="number" name="system.shock.damage" value="{{system.shock.damage}}" data-dtype="String"
                 placeholder="{{localize 'WWN.items.Damage'}}" title="{{localize 'WWN.items.ShockDamage'}}" />
               /
-              <input type="number" name="data.shock.ac" value="{{data.shock.ac}}" data-dtype="String"
+              <input type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="String"
                 placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
             </div>
           </div>
           <div class="form-group">
             <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
             <div class="form-fields">
-              <input type="checkbox" name="data.skillDamage" value="{{data.skillDamage}}" {{checked data.skillDamage}}
+              <input type="checkbox" name="system.skillDamage" value="{{system.skillDamage}}" {{checked system.skillDamage}}
                 data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>
-              <select name="data.save">
-                {{#select data.save}}
+              <select name="system.save">
+                {{#select system.save}}
                 <option value=""></option>
                 {{#each config.saves as |save a|}}
                 <option value="{{a}}">{{save}}</option>

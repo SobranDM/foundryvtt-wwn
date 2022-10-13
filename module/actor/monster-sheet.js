@@ -279,7 +279,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
           type: type,
           data: duplicate(header.dataset),
         };
-        delete itemData["type"];
+        delete itemData.data["type"];
         return itemData;
       };
 
