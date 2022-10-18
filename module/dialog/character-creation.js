@@ -29,7 +29,7 @@ export class WwnCharacterCreator extends FormApplication {
    * @return {Object}
    */
   getData() {
-    let data = foundry.utils.deepClone(this.object.data);
+    let data = foundry.utils.deepClone(this.object);
     data.user = game.user;
     data.config = CONFIG.WWN;
     this.counters = {
@@ -74,7 +74,7 @@ export class WwnCharacterCreator extends FormApplication {
       $(ev.currentTarget).closest('form').find('button[type="submit"]').removeAttr('disabled');
     }
 
-    this.object.data.stats = {
+    this.object.stats = {
       sum: sum,
       avg: Math.round(10 * sum / n) / 10,
       std: Math.round(100 * std) / 100
@@ -118,7 +118,7 @@ export class WwnCharacterCreator extends FormApplication {
       config: CONFIG.WWN,
       scores: scores,
       title: game.i18n.localize("WWN.dialog.generator"),
-      stats: this.object.data.stats,
+      stats: this.object.stats,
       silver: silver
     }
     const content = await renderTemplate("systems/wwn/templates/chat/roll-creation.html", templateData)
