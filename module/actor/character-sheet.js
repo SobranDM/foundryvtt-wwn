@@ -230,7 +230,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "data.quantity": parseInt(event.target.value) });
+    return item.update({ "system.quantity": parseInt(event.target.value) });
   }
 
   _onShowModifiers(event) {
@@ -435,9 +435,9 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
           ui.notifications.error(`Unspent skill points not set`);
           return;
         }
-        await skill.update({ "data.ownedLevel": rank + 1 });
+        await skill.update({ "system.ownedLevel": rank + 1 });
         const newSkillPoints = skillPointsAvail - skillCost;
-        await this.actor.update({ "data.skills.unspent": newSkillPoints });
+        await this.actor.update({ "system.skills.unspent": newSkillPoints });
         ui.notifications.info(`Removed ${skillCost} skill points`);
       }
     });

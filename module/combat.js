@@ -259,7 +259,7 @@ export class WwnCombat {
           for (const itm of combatant.actor.items) {
             if (itm.system.counter) {
               const item = combatant.actor.items.get(itm.id);
-              await item.update({ "data.counter.value": item.system.counter.max });
+              await item.update({ "system.counter.value": item.system.counter.max });
             }
           };
         }
