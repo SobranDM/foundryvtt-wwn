@@ -287,18 +287,18 @@
         <div class="flexrow readied-subgroup">
           <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
           <div class="readied">
-          <input name="data.encumbrance.readied.value" type="number" value="{{data.encumbrance.readied.value}}"
+          <input name="system.encumbrance.readied.value" type="number" value="{{system.encumbrance.readied.value}}"
             data-dtype="Number" disabled />/
-          <input name="data.encumbrance.readied.max" type="number" value="{{data.encumbrance.readied.max}}"
+          <input name="system.encumbrance.readied.max" type="number" value="{{system.encumbrance.readied.max}}"
             data-dtype="Number" disabled />
           </div>
         </div>
         <div class="flexrow readied-subgroup">
           <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
           <div class="readied">
-          <input name="data.encumbrance.stowed.value" type="number" value="{{data.encumbrance.stowed.value}}"
+          <input name="system.encumbrance.stowed.value" type="number" value="{{system.encumbrance.stowed.value}}"
             data-dtype="Number" disabled />/
-          <input name="data.encumbrance.stowed.max" type="number" value="{{data.encumbrance.stowed.max}}"
+          <input name="system.encumbrance.stowed.max" type="number" value="{{system.encumbrance.stowed.max}}"
             data-dtype="Number" disabled />
           </div>
         </div>
@@ -315,53 +315,53 @@
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.CP.long" }}">{{localize
             'WWN.items.CP.short'}}</label>
-          <input class="currency" name="data.currency.cp" type="number" value="{{data.currency.cp}}" data-dtype="Number"
+          <input class="currency" name="system.currency.cp" type="number" value="{{system.currency.cp}}" data-dtype="Number"
             placeholder="0" />
         </div>
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.SP.long" }}">{{localize
             'WWN.items.SP.short'}}</label>
-          <input class="currency" name="data.currency.sp" type="number" value="{{data.currency.sp}}" data-dtype="Number"
+          <input class="currency" name="system.currency.sp" type="number" value="{{system.currency.sp}}" data-dtype="Number"
             placeholder="0" />
         </div>
         {{#if (eq config.currencyTypes "currencybx")}}
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.EP.long" }}">{{localize
             'WWN.items.EP.short'}}</label>
-          <input class="currency" name="data.currency.ep" type="number" value="{{data.currency.ep}}" data-dtype="Number"
+          <input class="currency" name="system.currency.ep" type="number" value="{{system.currency.ep}}" data-dtype="Number"
             placeholder="0" />
         </div>
         {{/if}}
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.GP.long" }}">{{localize
             'WWN.items.GP.short'}}</label>
-          <input class="currency" name="data.currency.gp" type="number" value="{{data.currency.gp}}" data-dtype="Number"
+          <input class="currency" name="system.currency.gp" type="number" value="{{system.currency.gp}}" data-dtype="Number"
             placeholder="0" />
         </div>
         {{#if (eq config.currencyTypes "currencybx")}}
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.PP.long" }}">{{localize
             'WWN.items.PP.short'}}</label>
-          <input class="currency" name="data.currency.pp" type="number" value="{{data.currency.pp}}" data-dtype="Number"
+          <input class="currency" name="system.currency.pp" type="number" value="{{system.currency.pp}}" data-dtype="Number"
             placeholder="0" />
         </div>
         {{/if}}
         <div class="flexrow currency-subgroup currency-buffer">
           <label class="currency-header" title="{{localize "WWN.items.bank.long" }}">{{localize
             'WWN.items.bank.short'}}</label>
-          <input class="currency" name="data.currency.bank" type="number" value="{{data.currency.bank}}"
+          <input class="currency" name="system.currency.bank" type="number" value="{{system.currency.bank}}"
             data-dtype="Number" placeholder="0" />
         </div>
         <div class="flexrow currency-subgroup">
           <label class="currency-header" title="{{localize "WWN.items.TreasureSP" }}">{{localize
             'WWN.items.Treasure'}}</label>
-          <input class="currency" name="data.treasure" type="number" value="{{data.treasure}}" data-dtype="Number"
+          <input class="currency" name="system.treasure" type="number" value="{{system.treasure}}" data-dtype="Number"
             disabled />
         </div>
         <div class="flexrow currency-subgroup currency-buffer">
           <label class="currency-header" title="{{localize "WWN.items.total.long" }}">{{localize
             'WWN.items.total.short'}}</label>
-          <input class="currency" name="data.currency.total" type="number" value="{{data.currency.total}}"
+          <input class="currency" name="system.currency.total" type="number" value="{{system.currency.total}}"
             data-dtype="Number" disabled />
         </div>
       </div>

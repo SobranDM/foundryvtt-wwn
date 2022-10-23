@@ -48,7 +48,7 @@ export class WwnActor extends Actor {
       value + (this.system.details.xp.bonus * value) / 100
     );
     return this.update({
-      "data.details.xp.value": modified + this.system.details.xp.value,
+      "system.details.xp.value": modified + this.system.details.xp.value,
     }).then(() => {
       const speaker = ChatMessage.getSpeaker({ actor: this });
       ChatMessage.create({
@@ -66,7 +66,7 @@ export class WwnActor extends Actor {
       return;
     }
     return this.update({
-      "data.currency.bank": value + this.system.currency.bank,
+      "system.currency.bank": value + this.system.currency.bank,
     }).then(() => {
       const speaker = ChatMessage.getSpeaker({ actor: this });
       ChatMessage.create({
@@ -433,7 +433,7 @@ export class WwnActor extends Actor {
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
-      skillValue = this.items.find(item => item.type === "skill" && item.name.toLowerCase() === skillAttack).system.ownedLevel;
+      skillValue = this.items.find(item => item.type === "skill" && item.name.toLowerCase() === skillAttack).ownedLevel;
       statValue = this.system.scores[statAttack].mod;
     }
 

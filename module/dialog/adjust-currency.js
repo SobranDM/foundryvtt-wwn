@@ -56,7 +56,7 @@ export class WwnAdjustCurrency extends FormApplication {
     if (invalidEntries.length > 0) {
       return ui.notifications.warn(`Cannot reduce ${invalidEntries[0][0].toUpperCase()} below 0!`)
     }
-    await this.object.update({ "data.currency": updatedCurrency });
+    await this.object.update({ "system.currency": updatedCurrency });
   }
 
   async _updateObject(event, formData) {

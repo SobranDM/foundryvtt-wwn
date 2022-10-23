@@ -235,7 +235,7 @@ export class WwnCombat {
         group: color,
       },
     };
-    combat.data.update({ flags: { wwn: { group: color } } });
+    combat.updateSource({ flags: { wwn: { group: color } } });
   }
 
   static activateCombatant(li) {
@@ -259,7 +259,7 @@ export class WwnCombat {
           for (const itm of combatant.actor.items) {
             if (itm.system.counter) {
               const item = combatant.actor.items.get(itm.id);
-              await item.update({ "data.counter.value": item.system.counter.max });
+              await item.update({ "system.counter.value": item.system.counter.max });
             }
           };
         }
@@ -282,11 +282,11 @@ export class WwnCombat {
     const scene = token.parent;
     const actor = game.actors.get(data.actorId);
     if (!actor || data.actorLink || !game.settings.get("wwn", "randomHP")) {
-      return token.data.update(data);
+      return token.updateSource(data);
     }
     const roll = new Roll(token.actor.system.hp.hd).roll({ async: false });
     setProperty(data, "actorsystem.hp.value", roll.total);
     setProperty(data, "actorsystem.hp.max", roll.total);
-    return token.data.update(data);
+    return token.updateSource(data);
   }
 }

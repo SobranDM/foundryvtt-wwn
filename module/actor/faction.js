@@ -346,18 +346,18 @@ export class WwnFaction extends Actor {
       xp -= req_xp;
       if (type == "cunning") {
         await this.update({
-          "data.xp": xp,
-          "data.cunningRating": targetLevel,
+          "system.xp": xp,
+          "system.cunningRating": targetLevel,
         });
       } else if (type == "force") {
         await this.update({
-          "data.xp": xp,
-          "data.forceRating": targetLevel,
+          "system.xp": xp,
+          "system.forceRating": targetLevel,
         });
       } else if (type == "wealth") {
         await this.update({
-          "data.xp": xp,
-          "data.wealthRating": targetLevel,
+          "system.xp": xp,
+          "system.wealthRating": targetLevel,
         });
       }
       ui.notifications?.info(
