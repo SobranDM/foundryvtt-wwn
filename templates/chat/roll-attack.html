@@ -27,19 +27,19 @@
             </div>
             <div class="damage-roll" title="{{dmgTitle}}">{{{rollDamage}}}</div>
             {{/if}}
-            {{#if (nt data.item.data.shock.damage null)}}
-            {{#if data.item.data.shock.ac}}
+            {{#if (nt data.item.system.shock.damage null)}}
+            {{#if data.item.system.shock.ac}}
             <div class="chat-details shock-message">
                 <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    <span class="dice-total">{{data.item.data.shockTotal}}</span>
-                    {{localize 'WWN.messages.applyShock2'}}{{data.item.data.shock.ac}}</b>
+                    <span class="dice-total">{{data.item.system.shockTotal}}</span>
+                    {{localize 'WWN.messages.applyShock2'}}{{data.item.system.shock.ac}}</b>
                 </div>
             </div>
             {{/if}}
-            {{#unless data.item.data.shock.ac}}
+            {{#unless data.item.system.shock.ac}}
             <div class="chat-details shock-message">
                 <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    <span class="dice-total">{{data.item.data.shockTotal}}</span>
+                    <span class="dice-total">{{data.item.system.shockTotal}}</span>
                     {{localize 'WWN.messages.applyShockAlt'}}</b>
                 </div>
             </div>

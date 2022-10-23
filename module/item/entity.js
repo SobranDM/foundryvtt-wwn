@@ -81,7 +81,7 @@ export class WwnItem extends Item {
     };
 
     const data = this.system;
-    const skillName = this.data.name;
+    const skillName = this.name;
     let score = this.actor.system.scores[data.score];
 
     // Determine if armor penalty applies
@@ -423,12 +423,12 @@ export class WwnItem extends Item {
     const templateData = {
       actor: this.actor,
       tokenId: token ? `${token.parent.id}.${token.id}` : null,
-      item: foundry.utils.duplicate(this.data),
+      item: foundry.utils.duplicate(this),
       data: this.getChatData(),
       labels: this.labels,
       isHealing: this.isHealing,
       hasDamage: this.hasDamage,
-      isSpell: this.data.type === "spell",
+      isSpell: this.type === "spell",
       hasSave: this.hasSave,
       config: CONFIG.WWN,
     };

@@ -7,6 +7,7 @@ export class WwnActor extends Actor {
    */
 
   prepareData() {
+    if (!game.user.isGM && !this.isOwner) return;
     super.prepareData();
     const data = this.system;
 
@@ -29,6 +30,7 @@ export class WwnActor extends Actor {
   }
 
   async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
+    if (!game.user.isGM && !this.isOwner) return;
     data.map((item) => {
       if (item.img === undefined) {
         item.img = WwnItem.defaultIcons[item.type];
@@ -471,7 +473,7 @@ export class WwnActor extends Actor {
         attData.item.system.shockTotal = attData.item.system.shockTotal + skillValue;
       }
     } else {
-      attData.item.system.shockTotal = this.system.damageBonus + attData.item.system.shock.damage;
+      attData.item.system.shockTotal = Number(this.system.damageBonus) + Number(attData.item.system.shock.damage);
     }
     rollParts.push(data.thac0.bba.toString());
     rollLabels.push(`+${data.thac0.bba} (attack bonus)`)
