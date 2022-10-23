@@ -145,7 +145,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     } else {
       link = `@RollTable[${data.id}]`;
     }
-    this.actor.update({ "data.details.instinctTable.table": link });
+    this.actor.update({ "system.details.instinctTable.table": link });
   }
 
   /* -------------------------------------------- */
@@ -202,11 +202,11 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     const item = this.actor.items.get(itemId);
     if (event.target.dataset.field == "value") {
       return item.update({
-        "data.counter.value": parseInt(event.target.value),
+        "system.counter.value": parseInt(event.target.value),
       });
     } else if (event.target.dataset.field == "max") {
       return item.update({
-        "data.counter.max": parseInt(event.target.value),
+        "system.counter.max": parseInt(event.target.value),
       });
     }
   }
@@ -322,7 +322,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         index++;
       }
       item.update({
-        "data.pattern": colors[index]
+        "system.pattern": colors[index]
       })
     });
   }

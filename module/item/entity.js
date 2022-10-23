@@ -256,7 +256,7 @@ export class WwnItem extends Item {
     if (spellsLeft + 1 > spellsMax) return ui.notifications.warn("No spell slots remaining!");
     this.actor
       .update({
-        "data.spells.perDay.value": spellsLeft + 1,
+        "system.spells.perDay.value": spellsLeft + 1,
       })
       .then(() => {
         this.show({ skipDialog: true });
@@ -275,7 +275,7 @@ export class WwnItem extends Item {
       if (sourceVal + 1 > sourceMax) return ui.notifications.warn("No Effort remaining!");
 
       this
-        .update({ "data.effort": currEffort + 1 })
+        .update({ "system.effort": currEffort + 1 })
         .then(() => {
           this.show({ skipDialog: true });
         });
