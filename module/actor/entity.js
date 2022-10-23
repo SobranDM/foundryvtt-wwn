@@ -648,11 +648,7 @@ export class WwnActor extends Actor {
   }
 
   async computeEncumbrance() {
-    if (this.type === "monster") {
-      const data = this.system;
-      await this.update({ system: { movement: { exploration: data.movement.base * 3 } } });
-      return;
-    }
+    if (this.type === "monster") return;
     const data = this.system;
 
     // Compute encumbrance
