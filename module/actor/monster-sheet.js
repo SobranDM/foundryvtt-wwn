@@ -107,7 +107,8 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    * Prepare data for rendering the Actor sheet
    * The prepared data object contains both the actor data as well as additional sheet options
    */
-  getData() {
+  async getData() {
+    if (!game.user.isGM && !this.isOwner) return;
     const data = super.getData();
     // Prepare owned items
     this._prepareItems(data);
@@ -119,9 +120,9 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         "table": "",
         "link": ""
       };
-      data.system.details.instinctTable.link = TextEditor.enrichHTML(data.system.details.instinctTable.table);
+      data.system.details.instinctTable.link = await TextEditor.enrichHTML(data.system.details.instinctTable.table, { async: true });
     } else {
-      data.system.details.instinctTable.link = TextEditor.enrichHTML(data.system.details.instinctTable.table);
+      data.system.details.instinctTable.link = await TextEditor.enrichHTML(data.system.details.instinctTable.table, { async: true });
     }
     data.isNew = this.actor.isNew();
     return data;
@@ -137,14 +138,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     } catch (err) {
       return false;
     }
-
-    let link = "";
-    if (data.pack) {
-      let tableData = game.packs.get(data.pack).index.filter(el => el._id === data.id);
-      link = `@Compendium[${data.pack}.${data.id}]{${tableData[0].name}}`;
-    } else {
-      link = `@RollTable[${data.id}]`;
-    }
+    let link = `@UUID[${data.uuid}]`;
     this.actor.update({ "system.details.instinctTable.table": link });
   }
 
