@@ -63,6 +63,23 @@ export class WwnActor extends Actor {
     });
   }
 
+  isNew() {
+    const data = this.system;
+    if (this.type == "character") {
+      let ct = 0;
+      Object.values(data.scores).forEach((el) => {
+        ct += el.value;
+      });
+      return ct == 0 ? true : false;
+    } else if (this.type == "monster") {
+      let ct = 0;
+      Object.values(data.saves).forEach((el) => {
+        ct += el.value;
+      });
+      return ct == 0 ? true : false;
+    }
+  }
+
   getBank(value, options = {}) {
     if (this.type != "character") {
       return;
@@ -79,23 +96,6 @@ export class WwnActor extends Actor {
         speaker,
       });
     });
-  }
-
-  isNew() {
-    const data = this.system;
-    if (this.type == "character") {
-      let ct = 0;
-      Object.values(data.scores).forEach((el) => {
-        ct += el.value;
-      });
-      return ct == 0 ? true : false;
-    } else if (this.type == "monster") {
-      let ct = 0;
-      Object.values(data.saves).forEach((el) => {
-        ct += el.value;
-      });
-      return ct == 0 ? true : false;
-    }
   }
 
   /* -------------------------------------------- */
