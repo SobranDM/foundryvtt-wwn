@@ -7,7 +7,7 @@ export class WwnCombat {
     let groupMods = {};
     let alertGroups = {};
 
-    combat.data.combatants.forEach((cbt) => {
+    combat.combatants.forEach((cbt) => {
       const group = cbt.getFlag("wwn", "group");
       groups[group] = { present: true };
       data.combatants.push(cbt);
@@ -219,7 +219,7 @@ export class WwnCombat {
   static addCombatant(combat, data, options, id) {
     let token = canvas.tokens.get(data.tokenId);
     let color = "black";
-    switch (token.data.disposition) {
+    switch (token.document.disposition) {
       case -1:
         color = "red";
         break;
