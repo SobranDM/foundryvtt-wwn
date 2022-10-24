@@ -119,7 +119,7 @@ export class WwnActor extends Actor {
     const rollParts = ["1d20"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "above",
         target: this.system.saves[save].value,
@@ -150,7 +150,7 @@ export class WwnActor extends Actor {
     const rollParts = ["2d6"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "below",
         target: this.system.details.morale,
@@ -173,7 +173,7 @@ export class WwnActor extends Actor {
     const rollParts = ["1d10"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "instinct",
         target: this.system.details.instinct,
@@ -197,7 +197,7 @@ export class WwnActor extends Actor {
     const rollParts = ["2d6"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "below",
         target: this.system.retainer.loyalty,
@@ -220,7 +220,7 @@ export class WwnActor extends Actor {
     const rollParts = ["2d6"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "table",
         table: {
@@ -262,7 +262,7 @@ export class WwnActor extends Actor {
     const rollParts = ["1d20"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "check",
         target: this.system.scores[score].value,
@@ -295,7 +295,7 @@ export class WwnActor extends Actor {
     }
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "hitdice",
       },
@@ -324,7 +324,7 @@ export class WwnActor extends Actor {
       label = "(dungeon)";
     }
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: {
           type: "appearing",
@@ -349,7 +349,7 @@ export class WwnActor extends Actor {
     const rollParts = ["2d6"];
 
     const data = {
-      actor: this.data,
+      actor: this.system,
       roll: {
         type: "skill",
         target: this.system.details.skill,
@@ -379,7 +379,7 @@ export class WwnActor extends Actor {
     const data = this.system;
 
     const rollData = {
-      actor: this.data,
+      actor: this.system,
       item: attData.item,
       roll: {
         type: "damage",
