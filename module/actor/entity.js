@@ -435,7 +435,7 @@ export class WwnActor extends Actor {
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
-      skillValue = this.items.find(item => item.type === "skill" && item.name.toLowerCase() === skillAttack).ownedLevel;
+      skillValue = this.items.find(item => item.type === "skill" && item.name.toLowerCase() === skillAttack).system.ownedLevel;
       statValue = this.system.scores[statAttack].mod;
     }
 
