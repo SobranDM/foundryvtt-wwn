@@ -295,7 +295,7 @@ export class WwnItem extends Item {
     };
 
     const data = this.system;
-    switch (this.data.type) {
+    switch (this.system.type) {
       case "weapon":
         let wTags = formatTag(data.damage, "fa-tint");
         data.tags.forEach((t) => {
