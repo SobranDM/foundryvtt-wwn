@@ -1,6 +1,7 @@
 ## New in 1.01
 ### Changes
 * Right-clicking a damage roll while a token is selected now gives four options: apply damage from the damage roll, apply healing from the damage roll, apply damage from shock, apply healing from shock. This should allow a user to easily reverse damage erroneously applied to the wrong token.
+* Shock on weapon items is now correctly marked as a number, preventing a bug with calculating shock in v10. Existing weapons aren't automatically fixed, but if you see weird shock like "022", simply opening the item and then closing it again should fix it.
 ### Fixes
 * Duplicating an actor no longer doubles all skills.
 * Fixed title of Adjust Currency window.
