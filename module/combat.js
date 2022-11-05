@@ -285,8 +285,9 @@ export class WwnCombat {
       return token.updateSource(data);
     }
     const roll = new Roll(token.actor.system.hp.hd).roll({ async: false });
-    setProperty(data, "actorsystem.hp.value", roll.total);
-    setProperty(data, "actorsystem.hp.max", roll.total);
-    return token.updateSource(data);
+    console.log(data);
+    setProperty(data, "actorData.system.hp.value", roll.total);
+    setProperty(data, "actorData.system.hp.max", roll.total);
+    return token.data.update(data);
   }
 }

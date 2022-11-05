@@ -24,7 +24,7 @@ export class WwnAdjustCurrency extends FormApplication {
    * @return {Object}
    */
   getData() {
-    const data = foundry.utils.deepClone(this.object.data);
+    const data = foundry.utils.deepClone(this.object);
     if (data.type === 'character') {
       data.isCharacter = true;
     }

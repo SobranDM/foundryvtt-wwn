@@ -12,8 +12,9 @@
  */
 export async function createWwnMacro(data, slot) {
     if ( data.type !== "Item" ) return;
-    if (!( "data" in data ) ) return ui.notifications.warn("You can only create macro buttons for owned Items");
-    const item = system;
+    const item = fromUuidSync(data.uuid);
+    if (!( "system" in item ) ) return ui.notifications.warn("You can only create macro buttons for owned Items");
+    // const item = itemFetch.system;
   
     // Create the macro command
     const command = `game.wwn.rollItemMacro("${item.name}");`;
@@ -53,6 +54,7 @@ export async function createWwnMacro(data, slot) {
       return ui.notifications.warn(`Your controlled Actor does not have an item named ${itemName}`);
     }
     const item = items[0];
+    console.log(item);
   
     // Trigger the item roll
     return item.roll({async: false});
