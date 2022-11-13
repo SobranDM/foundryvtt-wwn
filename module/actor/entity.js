@@ -7,13 +7,9 @@ export class WwnActor extends Actor {
    */
 
   prepareData() {
-    if (!game.user.isGM && !this.isOwner) return;
+    if (!game.user.isGM) return;
     super.prepareData();
     const data = this.system;
-
-    if (this.type === "faction") {
-      return;
-    }
 
     // Compute modifiers from actor scores
     this.computeModifiers();
@@ -683,10 +679,10 @@ export class WwnActor extends Actor {
     });
 
     if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
-      let coinWeight = (data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
+      const coinWeight = (data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
       totalStowed += coinWeight;
     } else {
-      let coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
+      const coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
       totalStowed += coinWeight;
     }
     await this.update({

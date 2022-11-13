@@ -1,4 +1,3 @@
-import { WwnActor } from "./entity.js";
 import { WwnActorSheet } from "./actor-sheet.js";
 import { WwnCharacterModifiers } from "../dialog/character-modifiers.js";
 import { WwnAdjustCurrency } from "../dialog/adjust-currency.js";

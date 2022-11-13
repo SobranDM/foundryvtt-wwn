@@ -108,7 +108,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    * The prepared data object contains both the actor data as well as additional sheet options
    */
   async getData() {
-    if (!game.user.isGM && !this.isOwner) return;
     const data = super.getData();
     // Prepare owned items
     this._prepareItems(data);
