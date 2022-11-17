@@ -6,7 +6,6 @@
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.items.Weapons"}}</div>
           <div class="icon-row">{{localize "WWN.items.enterTrait"}}</div>
-          <div class="field-short" title="{{localize "WWN.items.Shock"}}"><i class="fas fa-bolt"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
@@ -37,9 +36,6 @@
                 <span title="{{tag.title}}">{{tag.value}}{{#unless @last}},{{/unless}}</span>
                 {{/unless}}
                 {{/each}}
-              </div>
-              <div class="field-short">
-                {{item.system.shock.damage}}
               </div>
               <div class="field-short quantity">
                 <input value="{{item.system.quantity}}" type="number" />
@@ -124,8 +120,7 @@
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.category.consumables"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+          <div class="field-long" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
             <a class="item-control item-create" data-type="item" title="{{localize 'WWN.Add'}}"><i
@@ -148,8 +143,9 @@
               <div class="field-short">
                 <input value="{{item.system.charges.value}}" type="number" />
               </div>
-              <div class="field-short quantity">
-                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
+              /
+              <div class="field-short">
+                <input value="{{item.system.charges.max}}" type="number" />
               </div>
               <div class="field-short">
                 <input value="{{item.system.weight}}" type="number" readonly />
@@ -287,79 +283,79 @@
         <div class="flexrow readied-subgroup">
           <label class="readied-header">{{localize 'WWN.items.readied'}}</label>
           <div class="readied">
-          <input name="system.encumbrance.readied.value" type="number" value="{{system.encumbrance.readied.value}}"
-            data-dtype="Number" disabled />/
-          <input name="system.encumbrance.readied.max" type="number" value="{{system.encumbrance.readied.max}}"
-            data-dtype="Number" disabled />
+            <input name="system.encumbrance.readied.value" type="number" value="{{system.encumbrance.readied.value}}"
+              data-dtype="Number" disabled />/
+            <input name="system.encumbrance.readied.max" type="number" value="{{system.encumbrance.readied.max}}"
+              data-dtype="Number" disabled />
           </div>
         </div>
         <div class="flexrow readied-subgroup">
           <label class="readied-header">{{localize 'WWN.items.stowed'}}</label>
           <div class="readied">
-          <input name="system.encumbrance.stowed.value" type="number" value="{{system.encumbrance.stowed.value}}"
-            data-dtype="Number" disabled />/
-          <input name="system.encumbrance.stowed.max" type="number" value="{{system.encumbrance.stowed.max}}"
-            data-dtype="Number" disabled />
+            <input name="system.encumbrance.stowed.value" type="number" value="{{system.encumbrance.stowed.value}}"
+              data-dtype="Number" disabled />/
+            <input name="system.encumbrance.stowed.max" type="number" value="{{system.encumbrance.stowed.max}}"
+              data-dtype="Number" disabled />
           </div>
         </div>
       </div>
       <div class="item-titles flexrow">
         <label>
           {{localize 'WWN.items.Currency'}}
-          <a data-action="currency-adjust" title="{{localize "WWN.items.adjustCurrency"}}" class="currency-adjust">
+          <a data-action="currency-adjust" title="{{localize " WWN.items.adjustCurrency"}}" class="currency-adjust">
             <i class="fas fa-balance-scale"></i>
           </a>
         </label>
       </div>
       <div class="flexrow currency-group">
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.CP.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.CP.long" }}">{{localize
             'WWN.items.CP.short'}}</label>
-          <input class="currency" name="system.currency.cp" type="number" value="{{system.currency.cp}}" data-dtype="Number"
-            placeholder="0" />
+          <input class="currency" name="system.currency.cp" type="number" value="{{system.currency.cp}}"
+            data-dtype="Number" placeholder="0" />
         </div>
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.SP.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.SP.long" }}">{{localize
             'WWN.items.SP.short'}}</label>
-          <input class="currency" name="system.currency.sp" type="number" value="{{system.currency.sp}}" data-dtype="Number"
-            placeholder="0" />
+          <input class="currency" name="system.currency.sp" type="number" value="{{system.currency.sp}}"
+            data-dtype="Number" placeholder="0" />
         </div>
         {{#if (eq config.currencyTypes "currencybx")}}
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.EP.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.EP.long" }}">{{localize
             'WWN.items.EP.short'}}</label>
-          <input class="currency" name="system.currency.ep" type="number" value="{{system.currency.ep}}" data-dtype="Number"
-            placeholder="0" />
+          <input class="currency" name="system.currency.ep" type="number" value="{{system.currency.ep}}"
+            data-dtype="Number" placeholder="0" />
         </div>
         {{/if}}
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.GP.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.GP.long" }}">{{localize
             'WWN.items.GP.short'}}</label>
-          <input class="currency" name="system.currency.gp" type="number" value="{{system.currency.gp}}" data-dtype="Number"
-            placeholder="0" />
+          <input class="currency" name="system.currency.gp" type="number" value="{{system.currency.gp}}"
+            data-dtype="Number" placeholder="0" />
         </div>
         {{#if (eq config.currencyTypes "currencybx")}}
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.PP.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.PP.long" }}">{{localize
             'WWN.items.PP.short'}}</label>
-          <input class="currency" name="system.currency.pp" type="number" value="{{system.currency.pp}}" data-dtype="Number"
-            placeholder="0" />
+          <input class="currency" name="system.currency.pp" type="number" value="{{system.currency.pp}}"
+            data-dtype="Number" placeholder="0" />
         </div>
         {{/if}}
         <div class="flexrow currency-subgroup currency-buffer">
-          <label class="currency-header" title="{{localize "WWN.items.bank.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.bank.long" }}">{{localize
             'WWN.items.bank.short'}}</label>
           <input class="currency" name="system.currency.bank" type="number" value="{{system.currency.bank}}"
             data-dtype="Number" placeholder="0" />
         </div>
         <div class="flexrow currency-subgroup">
-          <label class="currency-header" title="{{localize "WWN.items.TreasureSP" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.TreasureSP" }}">{{localize
             'WWN.items.Treasure'}}</label>
           <input class="currency" name="system.treasure" type="number" value="{{system.treasure}}" data-dtype="Number"
             disabled />
         </div>
         <div class="flexrow currency-subgroup currency-buffer">
-          <label class="currency-header" title="{{localize "WWN.items.total.long" }}">{{localize
+          <label class="currency-header" title="{{localize " WWN.items.total.long" }}">{{localize
             'WWN.items.total.short'}}</label>
           <input class="currency" name="system.currency.total" type="number" value="{{system.currency.total}}"
             data-dtype="Number" disabled />

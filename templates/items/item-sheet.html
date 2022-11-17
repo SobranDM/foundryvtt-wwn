@@ -20,12 +20,14 @@
               <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
             </div>
           </div>
+          {{#if (nt system.hasCharges true)}}
           <div class="form-group">
             <label title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></label>
             <div class="form-fields">
               <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
             </div>
           </div>
+          {{/if}}
           <div class="form-group">
             <label title="{{localize 'WWN.items.Treasure'}}"><i class="fas fa-gem"></i></label>
             <div class="form-fields">

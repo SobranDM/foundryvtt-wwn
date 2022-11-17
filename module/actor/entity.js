@@ -9,13 +9,13 @@ export class WwnActor extends Actor {
   prepareData() {
     if (!game.user.isGM) return;
     super.prepareData();
-    const data = this.system;
 
     // Compute modifiers from actor scores
     this.computeModifiers();
     this.computeAC();
     this.computeEncumbrance();
     this._calculateMovement();
+    this.computeResources();
     this.computeTreasure();
     this.computeEffort();
     this.computeSaves();
@@ -119,8 +119,7 @@ export class WwnActor extends Actor {
       roll: {
         type: "above",
         target: this.system.saves[save].value,
-        magic:
-          this.type === "character" ? this.system.scores.wis.mod : 0,
+        magic: this.type === "character" ? this.system.scores.wis.mod : 0,
       },
       details: game.i18n.format("WWN.roll.details.save", { save: label }),
     };
@@ -138,7 +137,9 @@ export class WwnActor extends Actor {
       skipDialog: skip,
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: game.i18n.format("WWN.roll.save", { save: label }),
-      title: game.i18n.format("WWN.roll.save", { save: this.name + " - " + label }),
+      title: game.i18n.format("WWN.roll.save", {
+        save: this.name + " - " + label,
+      }),
     });
   }
 
@@ -285,9 +286,13 @@ export class WwnActor extends Actor {
 
   rollHitDice(options = {}) {
     const label = game.i18n.localize(`WWN.roll.hd`);
-    const rollParts = new Array(this.system.details.level || 1).fill(this.system.hp.hd);
+    const rollParts = new Array(this.system.details.level || 1).fill(
+      this.system.hp.hd
+    );
     if (this.type == "character") {
-      rollParts.push(`${this.system.scores.con.mod * this.system.details.level}[CON]`);
+      rollParts.push(
+        `${this.system.scores.con.mod * this.system.details.level}[CON]`
+      );
     }
 
     const data = {
@@ -420,7 +425,7 @@ export class WwnActor extends Actor {
     }
   }
 
-  rollAttack(attData, options = {}) { 
+  rollAttack(attData, options = {}) {
     const data = this.system;
     const rollParts = ["1d20"];
     const dmgParts = [];
@@ -431,7 +436,10 @@ export class WwnActor extends Actor {
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
-      skillValue = this.items.find(item => item.type === "skill" && item.name.toLowerCase() === skillAttack).system.ownedLevel;
+      skillValue = this.items.find(
+        (item) =>
+          item.type === "skill" && item.name.toLowerCase() === skillAttack
+      ).system.ownedLevel;
       statValue = this.system.scores[statAttack].mod;
     }
 
@@ -453,7 +461,7 @@ export class WwnActor extends Actor {
       }
       label = game.i18n.format("WWN.roll.attacksWith", {
         name: attData.item.name,
-        readyState: readyState
+        readyState: readyState,
       });
       dmgParts.push(attData.item.system.damage);
     }
@@ -461,18 +469,22 @@ export class WwnActor extends Actor {
     if (data.character) {
       if (data.warrior) {
         const levelRoundedUp = Math.ceil(this.system.details.level / 2);
-        attData.item.system.shockTotal = statValue + weaponShock + levelRoundedUp;
+        attData.item.system.shockTotal =
+          statValue + weaponShock + levelRoundedUp;
       } else {
         attData.item.system.shockTotal = statValue + weaponShock;
       }
       if (attData.item.system.skillDamage) {
-        attData.item.system.shockTotal = attData.item.system.shockTotal + skillValue;
+        attData.item.system.shockTotal =
+          attData.item.system.shockTotal + skillValue;
       }
     } else {
-      attData.item.system.shockTotal = Number(this.system.damageBonus) + Number(attData.item.system.shock.damage);
+      attData.item.system.shockTotal =
+        Number(this.system.damageBonus) +
+        Number(attData.item.system.shock.damage);
     }
     rollParts.push(data.thac0.bba.toString());
-    rollLabels.push(`+${data.thac0.bba} (attack bonus)`)
+    rollLabels.push(`+${data.thac0.bba} (attack bonus)`);
 
     // TODO: Add range selector in dialogue if missile attack.
     /* if (options.type == "missile") {
@@ -481,12 +493,16 @@ export class WwnActor extends Actor {
       );
     } */
     if (data.character) {
-      const unskilledAttack = attData.item.system.tags.find(weapon => weapon.title === "CB" ) ? 0 : -2;
+      const unskilledAttack = attData.item.system.tags.find(
+        (weapon) => weapon.title === "CB"
+      )
+        ? 0
+        : -2;
       rollParts.push(statValue);
-      rollLabels.push(`+${statValue} (${statAttack})`)
+      rollLabels.push(`+${statValue} (${statAttack})`);
       if (skillValue == -1) {
         rollParts.push(unskilledAttack);
-        rollLabels.push(`${unskilledAttack} (unskilled penalty)`)
+        rollLabels.push(`${unskilledAttack} (unskilled penalty)`);
       } else {
         rollParts.push(skillValue);
         rollLabels.push(`+${skillValue} (${skillAttack})`);
@@ -515,7 +531,7 @@ export class WwnActor extends Actor {
       dmgParts.push(this.system.damageBonus);
       dmgLabels.push(`+${this.system.damageBonus.toString()} (damage bonus)`);
     }
-    
+
     const rollTitle = `1d20 ${rollLabels.join(" ")}`;
     const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
 
@@ -591,33 +607,13 @@ export class WwnActor extends Actor {
     // Retrieve XP Settings
     switch (game.settings.get("wwn", "xpConfig")) {
       case "xpSlow":
-        xpRate = [
-          6,
-          15,
-          24,
-          36,
-          51,
-          69,
-          87,
-          105,
-          139
-        ];
+        xpRate = [6, 15, 24, 36, 51, 69, 87, 105, 139];
         break;
       case "xpFast":
-        xpRate = [
-          3,
-          6,
-          12,
-          18,
-          27,
-          39,
-          54,
-          72,
-          93
-        ];
+        xpRate = [3, 6, 12, 18, 27, 39, 54, 72, 93];
         break;
       case "xpCustom":
-        xpRate = game.settings.get("wwn", "xpCustomList").split(',');
+        xpRate = game.settings.get("wwn", "xpCustomList").split(",");
         break;
     }
 
@@ -640,7 +636,9 @@ export class WwnActor extends Actor {
         spellsPrepared++;
       }
     });
-    await this.update({ system: { spells: { prepared: { value: spellsPrepared } } } });
+    await this.update({
+      system: { spells: { prepared: { value: spellsPrepared } } },
+    });
   }
 
   async computeEncumbrance() {
@@ -671,28 +669,41 @@ export class WwnActor extends Actor {
       }
     });
     items.forEach((i) => {
+      let itemWeight;
+      if (i.system.hasCharges) {
+        itemWeight = i.system.charges.value / i.system.charges.max * i.system.weight;
+      } else {
+        itemWeight = i.system.weight * i.system.quantity;
+      }
       if (i.system.equipped) {
-        totalReadied += i.system.weight * i.system.quantity;
+        totalReadied += itemWeight;
       } else if (i.system.stowed) {
-        totalStowed += i.system.weight * i.system.quantity;
+        totalStowed += itemWeight;
       }
     });
 
     if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
-      const coinWeight = (data.currency.cp + data.currency.sp + data.currency.ep + data.currency.gp + data.currency.pp) / 100;
+      const coinWeight =
+        (data.currency.cp +
+          data.currency.sp +
+          data.currency.ep +
+          data.currency.gp +
+          data.currency.pp) /
+        100;
       totalStowed += coinWeight;
     } else {
-      const coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
+      const coinWeight =
+        (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
       totalStowed += coinWeight;
     }
     await this.update({
       system: {
         encumbrance: {
           readied: { max: maxReadied, value: totalReadied.toFixed(2) },
-          stowed: { max: maxStowed, value: totalStowed.toFixed(2) }
-        }
-      }
-    })
+          stowed: { max: maxStowed, value: totalStowed.toFixed(2) },
+        },
+      },
+    });
   }
 
   async _calculateMovement() {
@@ -710,7 +721,9 @@ export class WwnActor extends Actor {
       const bonus = data.movement.bonus;
 
       let systemBase = [];
-      game.settings.get("wwn", "movementRate") == "movebx" ? systemBase = [40, 30, 20] : systemBase = [30, 20, 15];
+      game.settings.get("wwn", "movementRate") == "movebx"
+        ? (systemBase = [40, 30, 20])
+        : (systemBase = [30, 20, 15]);
 
       if (readiedValue <= readiedMax && stowedValue <= stowedMax) {
         newBase = systemBase[0] + bonus;
@@ -718,7 +731,10 @@ export class WwnActor extends Actor {
         newBase = systemBase[1] + bonus;
       } else if (readiedValue <= readiedMax && stowedValue <= stowedMax + 4) {
         newBase = systemBase[1] + bonus;
-      } else if (readiedValue <= readiedMax + 2 && stowedValue <= stowedMax + 4) {
+      } else if (
+        readiedValue <= readiedMax + 2 &&
+        stowedValue <= stowedMax + 4
+      ) {
         newBase = systemBase[2] + bonus;
       } else if (readiedValue <= readiedMax + 4 && stowedValue <= stowedMax) {
         newBase = systemBase[2] + bonus;
@@ -727,20 +743,60 @@ export class WwnActor extends Actor {
       } else {
         newBase = 0;
       }
-      await this.update({ system: { movement: { base: newBase, exploration: newBase * 3, overland: newBase / 5 } } });
+      await this.update({
+        system: {
+          movement: {
+            base: newBase,
+            exploration: newBase * 3,
+            overland: newBase / 5,
+          },
+        },
+      });
     }
+  }
+
+  // Calculate Resources
+  async computeResources() {
+    if (this.type != "character") return;
+    let totalOil = 0;
+    let totalTorches = 0;
+    let totalRations = 0;
+
+    // Collect resource arrays
+    const oilArray = this.items.filter(
+      (i) => i.name === "Oil, one pint" || i.name === "Oil"
+    );
+    const torchArray = this.items.filter((i) => i.name === "Torch");
+    const rationsArray = this.items.filter(
+      (i) => i.name === "Rations, one week" || i.name === "Rations"
+    );
+
+    // Calculate resource totals
+    oilArray.forEach((i) => (totalOil += i.system.charges.value));
+    torchArray.forEach((i) => (totalTorches += i.system.charges.value));
+    rationsArray.forEach((i) => (totalRations += i.system.charges.value));
+
+    // Update resources
+    this.system.details.resources = {
+      oil: totalOil,
+      torches: totalTorches,
+      rations: totalRations,
+    };
   }
 
   // Compute Total Wealth
   async computeTotalSP() {
     const data = this.system;
-    if (this.type != "character") {
-      return;
-    } else {
-      let newTotal = data.currency.cp * 0.1 + data.currency.sp + data.currency.gp * 10 + data.currency.pp * 100 + data.currency.ep * 5 + data.currency.bank + data.treasure;
-      await this.update({ system: { currency: { total: newTotal } } });
-    }
-
+    if (this.type != "character") return;
+    let newTotal =
+      data.currency.cp * 0.1 +
+      data.currency.sp +
+      data.currency.gp * 10 +
+      data.currency.pp * 100 +
+      data.currency.ep * 5 +
+      data.currency.bank +
+      data.treasure;
+    this.system.currency.total = newTotal;
   }
 
   // Compute Effort
@@ -781,9 +837,9 @@ export class WwnActor extends Actor {
           effort1: { value: effortOne },
           effort2: { value: effortTwo },
           effort3: { value: effortThree },
-          effort4: { value: effortFour }
-        }
-      }
+          effort4: { value: effortFour },
+        },
+      },
     });
   }
 
@@ -820,7 +876,9 @@ export class WwnActor extends Actor {
 
     const armors = this.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
-      if (!a.system.equipped) { return; };
+      if (!a.system.equipped) {
+        return;
+      }
       if (a.system.type != "shield") {
         baseAac = a.system.aac.value + a.system.aac.mod;
         // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
@@ -840,16 +898,35 @@ export class WwnActor extends Actor {
     });
     if (AacShieldMod > 0) {
       let shieldOnly = AacShieldNaked + data.scores.dex.mod + data.aac.mod;
-      let shieldBonus = baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
+      let shieldBonus =
+        baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
       if (shieldOnly > shieldBonus) {
-        await this.update({ system: { aac: { value: shieldOnly, shield: 0, naked: naked } } });
+        await this.update({
+          system: { aac: { value: shieldOnly, shield: 0, naked: naked } },
+        });
       } else {
-        await this.update({ system: { aac: { value: shieldBonus, shield: AacShieldMod, naked: naked } } });
+        await this.update({
+          system: {
+            aac: { value: shieldBonus, shield: AacShieldMod, naked: naked },
+          },
+        });
       }
     } else {
-      await this.update({ system: { aac: { value: baseAac + data.scores.dex.mod + data.aac.mod, naked: naked, shield: 0 } } });
+      await this.update({
+        system: {
+          aac: {
+            value: baseAac + data.scores.dex.mod + data.aac.mod,
+            naked: naked,
+            shield: 0,
+          },
+        },
+      });
     }
-    await this.update({ system: { skills: { sneakPenalty: sneakPenalty , exertPenalty: exertPenalty }}});
+    await this.update({
+      system: {
+        skills: { sneakPenalty: sneakPenalty, exertPenalty: exertPenalty },
+      },
+    });
   }
 
   async computeModifiers() {
@@ -867,10 +944,14 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    await Promise.all(Object.keys(scores).map(async (score) => {
-      let newMod = this.system.scores[score].tweak + WwnActor._valueFromTable(standard, scores[score].value);
-      await this.update({ system: { scores: { [score]: { mod: newMod } } } });
-    }));
+    await Promise.all(
+      Object.keys(scores).map(async (score) => {
+        let newMod =
+          this.system.scores[score].tweak +
+          WwnActor._valueFromTable(standard, scores[score].value);
+        await this.update({ system: { scores: { [score]: { mod: newMod } } } });
+      })
+    );
 
     const capped = {
       0: -2,
@@ -894,15 +975,39 @@ export class WwnActor extends Actor {
     });
 
     if (this.type != "character") {
-      const monsterHD = data.hp.hd.toLowerCase().split('d');
-      await Promise.all(Object.keys(saves).map((s) => {
-        this.update({ system: { saves: { [s]: { value: Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod } } } })
-      }))
+      const monsterHD = data.hp.hd.toLowerCase().split("d");
+      await Promise.all(
+        Object.keys(saves).map((s) => {
+          this.update({
+            system: {
+              saves: {
+                [s]: {
+                  value:
+                    Math.max(15 - Math.floor(monsterHD[0] / 2), 2) +
+                    saves[s].mod,
+                },
+              },
+            },
+          });
+        })
+      );
     } else {
       let charLevel = data.details.level;
-      let evasionVal = 16 - Math.max(data.scores.int.mod, data.scores.dex.mod) - charLevel + data.saves.evasion.mod;
-      let physicalVal = 16 - Math.max(data.scores.con.mod, data.scores.str.mod) - charLevel + data.saves.physical.mod;
-      let mentalVal = 16 - Math.max(data.scores.wis.mod, data.scores.cha.mod) - charLevel + data.saves.mental.mod;
+      let evasionVal =
+        16 -
+        Math.max(data.scores.int.mod, data.scores.dex.mod) -
+        charLevel +
+        data.saves.evasion.mod;
+      let physicalVal =
+        16 -
+        Math.max(data.scores.con.mod, data.scores.str.mod) -
+        charLevel +
+        data.saves.physical.mod;
+      let mentalVal =
+        16 -
+        Math.max(data.scores.wis.mod, data.scores.cha.mod) -
+        charLevel +
+        data.saves.mental.mod;
       let luckVal = 16 - charLevel + data.saves.luck.mod;
 
       await this.update({
@@ -911,16 +1016,16 @@ export class WwnActor extends Actor {
             evasion: { value: evasionVal },
             physical: { value: physicalVal },
             mental: { value: mentalVal },
-            luck: { value: luckVal }
-          }
-        }
-      })
+            luck: { value: luckVal },
+          },
+        },
+      });
     }
   }
 
   // Creates a list of skills based on the following list. Was used to generate
   // the initial skills list to populate a compendium
-  async createSkillsManually(data,options,user) {
+  async createSkillsManually(data, options, user) {
     const actorData = this.system;
     const skillList = [
       "administer",
@@ -955,7 +1060,7 @@ export class WwnActor extends Actor {
     const skills = skillList.map((el) => {
       const skillKey = `WWN.skills.${el}`;
       const skillDesc = `WWN.skills.desc.${el}`;
-      const imagePath = `/systems/wwn/assets/skills/${el}.png`
+      const imagePath = `/systems/wwn/assets/skills/${el}.png`;
       return {
         type: "skill",
         name: game.i18n.localize(skillKey),
@@ -981,10 +1086,12 @@ export class WwnActor extends Actor {
     // Add primary skills from compendium
     if (data.type === "character") {
       // If there are no skills, add ones from compendium
-      if (!data.items.filter((i)=>i.type=="skill").length) {
+      if (!data.items.filter((i) => i.type == "skill").length) {
         let skillPack = game.packs.get("wwn.skills");
         let toAdd = await skillPack.getDocuments();
-        let primarySkills = toAdd.filter((i) => i.system.secondary == false).map(item => item.toObject());
+        let primarySkills = toAdd
+          .filter((i) => i.system.secondary == false)
+          .map((item) => item.toObject());
         await this.createEmbeddedDocuments("Item", primarySkills);
       }
     }
