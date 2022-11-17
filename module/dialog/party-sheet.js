@@ -46,7 +46,7 @@ export class WwnPartySheet extends FormApplication {
     try {
       data = JSON.parse(event.dataTransfer.getData("text/plain"));
       if (data.type === "Actor") {
-        const actor = game.actors.find((actor) => actor.id === data.id);
+        const actor = fromUuidSync(data.uuid);
         actor.setFlag('wwn', 'party', true);
       }
     } catch (err) {
