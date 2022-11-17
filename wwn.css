@@ -1284,7 +1284,7 @@
     height: 18px;
   }
   .wwn.sheet.item .sheet-body .description .editor {
-    max-height: 20%;
+    min-height: 200px;
     margin-bottom: 10px;
   }
   .wwn.sheet.item .sheet-body .item-footer {
@@ -1299,7 +1299,7 @@
     justify-content: space-between;
   }
   .wwn.sheet.item .sheet-body .description .editor .editor-content {
-    max-height: 20%;
+    min-height: 200px;
     margin-bottom: 10px;
   }
   /* TODO: Fix item description sizing */

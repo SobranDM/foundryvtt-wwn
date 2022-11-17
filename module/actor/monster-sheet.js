@@ -180,7 +180,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     for (let wp of weapons) {
       const item = this.actor.items.get(wp.id);
       await item.update({
-        data: {
+        system: {
           counter: {
             value: parseInt(wp.system.counter.max),
           },

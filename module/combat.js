@@ -59,7 +59,7 @@ export class WwnCombat {
         }
       }
     }
-    combat.setupTurns();
+    await combat.setupTurns();
   }
 
   static async resetInitiative(combat, data) {
@@ -73,7 +73,7 @@ export class WwnCombat {
   static async individualInitiative(combat, data) {
     let updates = [];
     let messages = [];
-    combat.data.combatants.forEach((c, i) => {
+    combat.combatants.forEach((c, i) => {
       // Initialize variables
       let alert = c.actor.items.filter((a) => a.name == "Alert");
       let roll = null;
@@ -107,10 +107,11 @@ export class WwnCombat {
         }
       }
     });
-
-    await combat.updateEmbeddedDocuments("Combatant", updates);
-    await CONFIG.ChatMessage.documentClass.create(messages);
-    data.turn = 0;
+    if (game.user.isGM) {
+      await combat.updateEmbeddedDocuments("Combatant", updates);
+      await CONFIG.ChatMessage.documentClass.create(messages);
+      data.turn = 0;
+    }
   }
 
   static format(object, html, user) {
@@ -250,9 +251,9 @@ export class WwnCombat {
   static async preUpdateCombat(combat, data, diff, id) {
     const init = game.settings.get("wwn", "initiative");
     const reroll = game.settings.get("wwn", "rerollInitiative");
-    if (!data.round) {
+    /*if (!data.round) {
       return;
-    }
+    }*/
     if (data.round !== 1) {
       for (const combatant of combat.combatants) {
         if (combatant.actor.type === "monster") {
@@ -272,9 +273,9 @@ export class WwnCombat {
       }
     }
     if (init === "group") {
-      WwnCombat.rollInitiative(combat, data, diff, id);
+      await WwnCombat.rollInitiative(combat, data, diff, id);
     } else {
-      WwnCombat.individualInitiative(combat, data, diff, id);
+      await WwnCombat.individualInitiative(combat, data, diff, id);
     }
   }
 
@@ -285,9 +286,8 @@ export class WwnCombat {
       return token.updateSource(data);
     }
     const roll = new Roll(token.actor.system.hp.hd).roll({ async: false });
-    console.log(data);
     setProperty(data, "actorData.system.hp.value", roll.total);
     setProperty(data, "actorData.system.hp.max", roll.total);
-    return token.data.update(data);
+    return token.updateSource(data);
   }
 }
