@@ -7,7 +7,6 @@ export class WwnActor extends Actor {
    */
 
   prepareData() {
-    if (!game.user.isGM) return;
     super.prepareData();
 
     // Compute modifiers from actor scores
