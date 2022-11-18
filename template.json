@@ -299,7 +299,12 @@
       "value": 0,
       "max": 0
     },
-    "quantity": 1
+    "quantity": 1,
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "consumable": false
+    }
   },
   "armor": {
     "description": "",

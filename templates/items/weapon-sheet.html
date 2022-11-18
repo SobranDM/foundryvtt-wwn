@@ -26,6 +26,15 @@
               <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
             </div>
           </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></label>
+            <input type="checkbox" name="system.hasCharges" value="system.hasCharges" {{checked system.hasCharges}}
+              data-dtype="Boolean" />
+            {{#if system.hasCharges}}
+            <input type="number" name="system.charges.value" value="{{system.charges.value}}" data-dtype="Number" />
+            <input type="number" name="system.charges.max" value="{{system.charges.max}}" data-dtype="Number" />
+            {{/if}}
+          </div>
         </div>
       </div>
       <ol class="tag-list">
