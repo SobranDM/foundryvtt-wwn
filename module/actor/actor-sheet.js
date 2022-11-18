@@ -18,11 +18,6 @@ export class WwnActorSheet extends ActorSheet {
     return data;
   }
 
-  activateEditor(name, options, initialContent) {
-    // remove some controls to the editor as the space is lacking
-    super.activateEditor(name, options, initialContent);
-  }
-
   _onItemSummary(event) {
     event.preventDefault();
     let li = $(event.currentTarget).parents(".item"),
@@ -204,26 +199,6 @@ export class WwnActorSheet extends ActorSheet {
       inputs.focus(ev => ev.currentTarget.select());
     }
   }
-
-  // Override to set resizable initial size
-  /* async _renderInner(...args) {
-    const html = await super._renderInner(...args);
-    this.form = html[0];
-
-    // Resize resizable classes
-    let resizable = html.find(".resizable");
-    if (resizable.length == 0) {
-      return;
-    }
-    if (character) {
-      return;
-    }
-    resizable.each((_, el) => {
-      let heightDelta = this.position.height - this.options.height;
-      el.style.height = `${heightDelta + parseInt(el.dataset.baseSize)}px`;
-    });
-    return html;
-  } */
 
   async _onResize(event) {
     super._onResize(event);

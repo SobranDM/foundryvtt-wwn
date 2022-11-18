@@ -3,7 +3,8 @@
     <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
     <section class="header-details flexrow">
       <h1 class="charname">
-        <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
+        <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}"
+          data-dtype="String" />
       </h1>
       <ul class="summary flexrow">
         <li class="flex3">
@@ -11,7 +12,7 @@
             {{localize 'WWN.faction.active'}}:
             <input type="checkbox" name="system.active" {{checked system.active}}>
           </span>
-        </li>  
+        </li>
       </ul>
     </section>
   </header>
@@ -37,8 +38,8 @@
         <!--HP-->
         <div class="flex flex-col">
           <div class="mx-auto">
-            <input class="" type="number" step="1" name="system.health.value"
-              value="{{system.health.value}}" data-dtype="Number" min="0" /><span>/</span>
+            <input class="" type="number" step="1" name="system.health.value" value="{{system.health.value}}"
+              data-dtype="Number" min="0" /><span>/</span>
             <span class="">{{system.health.max}}</span>
           </div>
           <div>{{localize 'WWN.faction.hp'}}</div>
@@ -140,9 +141,8 @@
         <!-- goal -->
         <div class="flex flex3 flex-col">
           <div class="">
-            {{editor enrichedBiography system.factionGoalDesc target="system.factionGoalDesc" button=true
-            editable=editable
-            }}
+            {{editor enrichedBiography target="system.factionGoalDesc" button=true
+            editable=editable async=true}}
           </div>
           <div>{{localize 'WWN.faction.factionGoalDesc'}}</div>
         </div>
@@ -158,12 +158,12 @@
           <h2 class="">{{localize 'WWN.category.description'}}</h2>
           <div class="">
             {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
-            {{editor enrichedBiography system.description target="system.description" button=true editable=editable
-            }}
+            {{editor enrichedBiography target="system.description" button=true editable=editable async=true}}
           </div>
         </div>
       </div>
-    </div><!--Attributes-->
+    </div>
+    <!--Attributes-->
     <div class="assets-tab tab" data-group="primary" data-tab="assets">
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
@@ -182,52 +182,54 @@
         type="asset" assetType="force" name="Force" assets=system.forceAssets
         }}
       </div>
-    </div><!--asset-->
+    </div>
+    <!--asset-->
     <div class="tags-tab tab" data-group="primary" data-tab="tags">
-        <div class="">
-          {{#each system.tags as |tag id|}}
-          <div class="tagdiv" data-idx="{{id}}">
-            <a class="item-control faction-tag-delete hover:transition-colors"
-              title='{{localize 'WWN.faction.remove-tag'}}'><i class="fas fa-trash"></i></a>
-            <b>{{ tag.name}}</b> <br>{{tag.desc}}<br> Effect: {{tag.effect}}<br>
-            <hr>
-          </div>
-          {{/each}}
-
-        </div>
-        <a class="faction-tag-add"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
-          {{localize 'WWN.faction.add-tag'}}</a>
-        <a class="faction-tag-add-custom"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
-          {{localize 'WWN.faction.add-tag-custom'}}</a>
-    </div><!-- tags-->
-    <div class="log-tab tab" data-group="primary" data-tab="log">
-        <div class="">
-          <div class="flex flexrow min-w-full">
-            <div>
-              <a class="faction-log-add"><i class="fas fa-plus  fa-2x faction-log-add"></i>
-                {{localize 'WWN.faction.add-log'}}</a>
-            </div>
-            <div>
-              <a class="faction-log-delete-all"><i class="fas fa-trash  fa-2x faction-log-delete-all"></i>
-                {{localize 'WWN.faction.remove-log-all'}}</a>
-            </div>
-          </div>
+      <div class="">
+        {{#each system.tags as |tag id|}}
+        <div class="tagdiv" data-idx="{{id}}">
+          <a class="item-control faction-tag-delete hover:transition-colors" title='{{localize '
+            WWN.faction.remove-tag'}}'><i class="fas fa-trash"></i></a>
+          <b>{{ tag.name}}</b> <br>{{tag.desc}}<br> Effect: {{tag.effect}}<br>
           <hr>
         </div>
-        <div class="">
+        {{/each}}
 
-          {{#each system.log as |logentry id|}}
-      
-          <div class="logdiv" data-idx="{{id}}">
-            <a class="item-control faction-log-delete hover:transition-colors"
-              title='{{localize 'WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
-            {{{logentry}}}<br>
-            <hr>
+      </div>
+      <a class="faction-tag-add"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
+        {{localize 'WWN.faction.add-tag'}}</a>
+      <a class="faction-tag-add-custom"><i class="fas fa-tags  fa-2x faction-tag-add"></i>
+        {{localize 'WWN.faction.add-tag-custom'}}</a>
+    </div><!-- tags-->
+    <div class="log-tab tab" data-group="primary" data-tab="log">
+      <div class="">
+        <div class="flex flexrow min-w-full">
+          <div>
+            <a class="faction-log-add"><i class="fas fa-plus  fa-2x faction-log-add"></i>
+              {{localize 'WWN.faction.add-log'}}</a>
           </div>
-          {{/each}}
-
+          <div>
+            <a class="faction-log-delete-all"><i class="fas fa-trash  fa-2x faction-log-delete-all"></i>
+              {{localize 'WWN.faction.remove-log-all'}}</a>
+          </div>
         </div>
-  
-    </div><!--log-->
+        <hr>
+      </div>
+      <div class="">
+
+        {{#each system.log as |logentry id|}}
+
+        <div class="logdiv" data-idx="{{id}}">
+          <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
+            WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
+          {{{logentry}}}<br>
+          <hr>
+        </div>
+        {{/each}}
+
+      </div>
+
+    </div>
+    <!--log-->
   </section>
 </form>

@@ -26,8 +26,8 @@
   <section class="sheet-body">
     <div class="flexrow card-body">
       <div class="description">
-        {{editor enrichedBiography system.description target="system.description" button=true
-        editable=editable}}
+        {{editor system.enrichedDescription target="system.description" button=true owner=owner editable=editable
+        async=true}}
       </div>
       <div class="flexrow item-footer">
         <div class="stats">

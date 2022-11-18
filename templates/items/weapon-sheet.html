@@ -50,8 +50,8 @@
   <section class="sheet-body">
     <div class="flexrow card-body">
       <div class="description">
-        {{editor enrichedBiography system.description target="system.description" button=true
-        editable=editable}}
+        {{editor system.enrichedDescription target="system.description" button=true owner=owner editable=editable
+        async=true}}
       </div>
       <div class="flexrow item-footer">
         <div class="stats">
@@ -128,8 +128,8 @@
           <div class="form-group">
             <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
             <div class="form-fields">
-              <input type="checkbox" name="system.skillDamage" value="{{system.skillDamage}}" {{checked system.skillDamage}}
-                data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+              <input type="checkbox" name="system.skillDamage" value="{{system.skillDamage}}" {{checked
+                system.skillDamage}} data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
             </div>
           </div>
           <div class="form-group">
