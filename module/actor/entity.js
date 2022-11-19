@@ -940,7 +940,7 @@ export class WwnActor extends Actor {
     };
   }
 
-  async computeSaves() {
+  computeSaves() {
     const data = this.system;
     const saves = data.saves;
     Object.keys(saves).forEach((s) => {
@@ -951,20 +951,10 @@ export class WwnActor extends Actor {
 
     if (this.type != "character") {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
-      await Promise.all(
-        Object.keys(saves).map((s) => {
-          this.update({
-            system: {
-              saves: {
-                [s]: {
-                  value:
-                    Math.max(15 - Math.floor(monsterHD[0] / 2), 2) +
-                    saves[s].mod,
-                },
-              },
-            },
-          });
-        })
+      Object.keys(saves).forEach(
+        (s) =>
+          (saves[s].value =
+            Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
       );
     } else {
       let charLevel = data.details.level;
@@ -984,17 +974,10 @@ export class WwnActor extends Actor {
         charLevel +
         data.saves.mental.mod;
       let luckVal = 16 - charLevel + data.saves.luck.mod;
-
-      await this.update({
-        data: {
-          saves: {
-            evasion: { value: evasionVal },
-            physical: { value: physicalVal },
-            mental: { value: mentalVal },
-            luck: { value: luckVal },
-          },
-        },
-      });
+      this.system.saves.evasion.value = evasionVal;
+      this.system.saves.physical.value = physicalVal;
+      this.system.saves.mental.value = mentalVal;
+      this.system.saves.luck.value = luckVal;
     }
   }
 
