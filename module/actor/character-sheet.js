@@ -239,6 +239,13 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const item = this.actor.items.get(itemId);
     return item.update({ "system.quantity": parseInt(event.target.value) });
   }
+  
+    async _onQtChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    return item.update({ "system.charges.value": parseInt(event.target.value) });
+  }
 
   _onShowModifiers(event) {
     event.preventDefault();
