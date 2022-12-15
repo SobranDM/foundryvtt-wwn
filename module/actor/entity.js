@@ -929,13 +929,12 @@ export class WwnActor extends Actor {
     });
   }
 
-  async computeModifiers() {
-    if (this.type != "character") {
-      return;
-    }
+  computeModifiers() {
+    if (this.type != "character") return;
+ 
     const data = this.system;
     const scores = data.scores;
-
+ 
     const standard = {
       0: -2,
       3: -2,
@@ -944,15 +943,14 @@ export class WwnActor extends Actor {
       14: 1,
       18: 2,
     };
-    await Promise.all(
-      Object.keys(scores).map(async (score) => {
-        let newMod =
-          this.system.scores[score].tweak +
-          WwnActor._valueFromTable(standard, scores[score].value);
-        await this.update({ system: { scores: { [score]: { mod: newMod } } } });
-      })
-    );
-
+ 
+    Object.keys(scores).map((score) => {
+      let newMod =
+        this.system.scores[score].tweak +
+        WwnActor._valueFromTable(standard, scores[score].value);
+      this.system.scores[score].mod = newMod;
+    });
+ 
     const capped = {
       0: -2,
       3: -2,
