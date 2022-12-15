@@ -24,6 +24,20 @@ export class WwnItem extends Item {
     return super.create(data, context);
   }
 
+  prepareData() {
+    super.prepareData();
+  }
+
+  async prepareDerivedData() {
+    const itemData = this?.system;
+
+    // Rich text description
+      itemData.enrichedDescription = await TextEditor.enrichHTML(
+        itemData.description,
+        { async: true }
+      );
+  }
+
   static chatListeners(html) {
     html.on("click", ".card-buttons button", this._onChatCardAction.bind(this));
     html.on("click", ".item-name", this._onChatCardToggleContent.bind(this));
@@ -43,7 +57,11 @@ export class WwnItem extends Item {
       itemData.tags.forEach((t) => props.push(t.value));
     }
     if (this.type == "spell") {
-      props.push(`${itemData.class} ${itemData.lvl}`, itemData.range, itemData.duration);
+      props.push(
+        `${itemData.class} ${itemData.lvl}`,
+        itemData.range,
+        itemData.duration
+      );
     }
     if (itemData.hasOwnProperty("equipped")) {
       props.push(itemData.equipped ? "Equipped" : "Not Equipped");
@@ -76,8 +94,7 @@ export class WwnItem extends Item {
     const newData = {
       actor: this.actor,
       item: this,
-      roll: {
-      },
+      roll: {},
     };
 
     const data = this.system;
@@ -94,8 +111,13 @@ export class WwnItem extends Item {
 
     // Determine skill level, taking into account polymath and unskilled penalties
     let skillLevel;
-    const poly = this.parent.items.find(i => i.name == "Polymath");
-    if (!poly || skillName == "Shoot" || skillName == "Stab" || skillName == "Punch") {
+    const poly = this.parent.items.find((i) => i.name == "Polymath");
+    if (
+      !poly ||
+      skillName == "Shoot" ||
+      skillName == "Stab" ||
+      skillName == "Punch"
+    ) {
       skillLevel = data.ownedLevel;
     } else {
       skillLevel = Math.max(poly.system.ownedLevel - 1, data.ownedLevel);
@@ -109,7 +131,7 @@ export class WwnItem extends Item {
 
     if (options.skipDialog) {
       const attrKey = `WWN.scores.${data.score}.short`;
-      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
+      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`;
 
       let rollData = {
         parts: rollParts,
@@ -118,7 +140,7 @@ export class WwnItem extends Item {
         flavor: null,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         form: null,
-        rollTitle: rollTitle
+        rollTitle: rollTitle,
       };
       return WwnDice.sendRoll(rollData);
     }
@@ -133,7 +155,7 @@ export class WwnItem extends Item {
         return;
       }
       const attrKey = `WWN.scores.${form.score.value}.short`;
-      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`
+      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`;
       let rollData = {
         parts: rollParts,
         data: newData,
@@ -141,7 +163,7 @@ export class WwnItem extends Item {
         flavor: null,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         form: form,
-        rollTitle: rollTitle
+        rollTitle: rollTitle,
       };
       WwnDice.sendRoll(rollData);
     };
@@ -155,7 +177,7 @@ export class WwnItem extends Item {
       cancel: {
         icon: '<i class="fas fa-times"></i>',
         label: game.i18n.localize("WWN.Cancel"),
-        callback: (html) => { },
+        callback: (html) => {},
       },
     };
 
@@ -166,8 +188,7 @@ export class WwnItem extends Item {
         content: html,
         buttons: buttons,
         default: "ok",
-        close: () => {
-        },
+        close: () => {},
       }).render(true);
     });
   }
@@ -253,7 +274,8 @@ export class WwnItem extends Item {
   spendSpell() {
     const spellsLeft = this.actor.system.spells.perDay.value;
     const spellsMax = this.actor.system.spells.perDay.max;
-    if (spellsLeft + 1 > spellsMax) return ui.notifications.warn("No spell slots remaining!");
+    if (spellsLeft + 1 > spellsMax)
+      return ui.notifications.warn("No spell slots remaining!");
     this.actor
       .update({
         "system.spells.perDay.value": spellsLeft + 1,
@@ -265,20 +287,25 @@ export class WwnItem extends Item {
 
   spendArt() {
     if (this.system.time) {
-      const sourceName = Object.keys(this.actor.system.classes).find(source => this.actor.system.classes[source].name === this.system.source);
-      if (sourceName === undefined) return ui.notifications.warn(`Please add ${this.system.source} as a caster class in the Tweaks menu.`);
+      const sourceName = Object.keys(this.actor.system.classes).find(
+        (source) =>
+          this.actor.system.classes[source].name === this.system.source
+      );
+      if (sourceName === undefined)
+        return ui.notifications.warn(
+          `Please add ${this.system.source} as a caster class in the Tweaks menu.`
+        );
 
       const currEffort = this.system.effort;
       const sourceVal = this.actor.system.classes[sourceName].value;
       const sourceMax = this.actor.system.classes[sourceName].max;
 
-      if (sourceVal + 1 > sourceMax) return ui.notifications.warn("No Effort remaining!");
+      if (sourceVal + 1 > sourceMax)
+        return ui.notifications.warn("No Effort remaining!");
 
-      this
-        .update({ "system.effort": currEffort + 1 })
-        .then(() => {
-          this.show({ skipDialog: true });
-        });
+      this.update({ "system.effort": currEffort + 1 }).then(() => {
+        this.show({ skipDialog: true });
+      });
     } else {
       this.show({ skipDialog: true });
     }

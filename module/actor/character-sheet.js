@@ -119,7 +119,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    * Prepare data for rendering the Actor sheet
    * The prepared data object contains both the actor data as well as additional sheet options
    */
-  getData() {
+  async getData() {
     const data = super.getData();
 
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
@@ -127,6 +127,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
 
     this._prepareItems(data);
+    data.enrichedBiography = await TextEditor.enrichHTML(
+      this.object.system.details.biography,
+      { async: true }
+    );
+    data.enrichedNotes = await TextEditor.enrichHTML(
+      this.object.system.details.notes,
+      { async: true }
+    );
     return data;
   }
 

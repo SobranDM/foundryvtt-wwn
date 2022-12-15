@@ -10,9 +10,9 @@
     </div>
   </header>
   <section class="sheet-body">
-    <div class="description resizable-editor">
-      {{editor enrichedBiography system.desc target="system.desc" button=true
-      editable=editable}}
+    <div class="description">
+      {{editor system.enrichedDescription target="system.description" button=true owner=owner editable=editable
+        async=true}}
     </div>
     <div class="flexrow">
       <div class="stats">
@@ -40,7 +40,7 @@
               <option value="7">7</option>
               <option value="8">8</option>
               {{/select}}
-            </select>          
+            </select>
           </div>
         </div>
         <div class="form-group">
@@ -102,7 +102,7 @@
           </div>
         </div>
 
- 
+
         <div class="form-group">
           <label>{{localize 'WWN.faction.turnRoll'}}</i></label>
           <div class="form-fields">
@@ -122,29 +122,29 @@
             <label>{{localize 'WWN.faction.attackSource'}}</label>
             <div class="form-fields">
               <select class="" name="system.attackSource">
-              {{#select system.attackSource}}
-              <option value=""></option>
-              <option value="cunning">Cunning</option>
-              <option value="force">Force</option>
-              <option value="wealth">Wealth</option>
-              {{/select}}
-              </select>            
+                {{#select system.attackSource}}
+                <option value=""></option>
+                <option value="cunning">Cunning</option>
+                <option value="force">Force</option>
+                <option value="wealth">Wealth</option>
+                {{/select}}
+              </select>
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.faction.attackTarget'}}</label>
             <div class="form-fields">
               <select class="" name="system.attackTarget">
-              {{#select system.attackTarget}}
-              <option value=""></option>
-              <option value="cunning">Cunning</option>
-              <option value="force">Force</option>
-              <option value="wealth">Wealth</option>
-              {{/select}}
-              </select>            
+                {{#select system.attackTarget}}
+                <option value=""></option>
+                <option value="cunning">Cunning</option>
+                <option value="force">Force</option>
+                <option value="wealth">Wealth</option>
+                {{/select}}
+              </select>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label>{{localize 'WWN.faction.attackSpecial'}}</i></label>
             <div class="form-fields">
@@ -170,8 +170,8 @@
           <div class="form-group">
             <label>{{localize 'WWN.asset.BoIHint'}}</label>
             <div class="form-fields">
-              <input type="checkbox" name="system.baseOfInfluence" value="{{system.baseOfInfluence}}" {{checked system.baseOfInfluence}} data-dtype="Boolean"
-                title="{{localize 'WWN.items.BoIHint'}}" />
+              <input type="checkbox" name="system.baseOfInfluence" value="{{system.baseOfInfluence}}" {{checked
+                system.baseOfInfluence}} data-dtype="Boolean" title="{{localize 'WWN.items.BoIHint'}}" />
             </div>
           </div>
           <div class="form-group">
@@ -185,14 +185,14 @@
             <label>{{localize 'WWN.asset.stealthed'}}</label>
             <div class="form-fields">
               <input type="checkbox" name="system.stealthed" value="{{system.stealthed}}" {{checked system.stealthed}}
-                data-dtype="Boolean"  />
+                data-dtype="Boolean" />
             </div>
           </div>
           <div class="form-group">
             <label>{{localize 'WWN.asset.special'}}</label>
             <div class="form-fields">
               <input type="checkbox" name="system.special" value="{{system.special}}" {{checked system.special}}
-                data-dtype="Boolean"  />
+                data-dtype="Boolean" />
             </div>
           </div>
 
@@ -200,7 +200,7 @@
             <label>{{localize 'WWN.faction.unusable'}}</label>
             <div class="form-fields">
               <input type="checkbox" name="system.unusable" value="{{system.unusable}}" {{checked system.unusable}}
-                data-dtype="Boolean"  />
+                data-dtype="Boolean" />
             </div>
           </div>
         </div>
