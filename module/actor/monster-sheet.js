@@ -266,35 +266,6 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
-    html.find(".item-create").click((event) => {
-      event.preventDefault();
-      const header = event.currentTarget;
-      const type = header.dataset.type;
-
-      // item creation helper func
-      let createItem = function (type, name = `New ${type.capitalize()}`) {
-        const itemData = {
-          name: name ? name : `New ${type.capitalize()}`,
-          type: type,
-          data: duplicate(header.dataset),
-        };
-        delete itemData.data["type"];
-        return itemData;
-      };
-
-      // Getting back to main logic
-      if (type == "choice") {
-        const choices = header.dataset.choices.split(",");
-        this._chooseItemType(choices).then((dialogInput) => {
-          const itemData = createItem(dialogInput.type, dialogInput.name);
-          this.actor.createEmbeddedDocuments("Item", [itemData], {});
-        });
-        return;
-      }
-      const itemData = createItem(type);
-      return this.actor.createEmbeddedDocuments("Item", [itemData], {});
-    });
-
     html.find(".item-reset").click((ev) => {
       this._resetCounters(ev);
     });
