@@ -8,31 +8,44 @@
  * @return {Array}              The extended options Array including new context choices
  */
 export const addChatMessageContextOptions = function (html, options) {
-  let canApply = li => canvas.tokens.controlled.length && li.find(".dice-roll").length;
+  let canApply = (li) =>
+    canvas.tokens.controlled.length && li.find(".dice-roll").length;
   options.push(
     {
       name: game.i18n.localize("WWN.messages.applyDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
       condition: canApply,
-      callback: li => applyChatCardDamage(li, 1, 1)
-    },
-    {
-      name: game.i18n.localize("WWN.messages.applyShockDamage"),
-      icon: '<i class="fas fa-user-minus"></i>',
-      condition: canApply,
-      callback: li => applyChatCardDamage(li, 1, 2)
+      callback: (li) => applyChatCardDamage(li, 1, 1),
     },
     {
       name: game.i18n.localize("WWN.messages.applyHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
       condition: canApply,
-      callback: li => applyChatCardDamage(li, -1, 1)
+      callback: (li) => applyChatCardDamage(li, -1, 1),
     },
     {
-      name: game.i18n.localize("WWN.messages.applyShockHealing"),
+      name: game.i18n.localize("WWN.messages.applyHalfDamage"),
+      icon: '<i class="fas fa-user-minus"></i>',
+      condition: canApply,
+      callback: (li) => applyChatCardDamage(li, 0.5, 1),
+    },
+    {
+      name: game.i18n.localize("WWN.messages.applyHalfHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
       condition: canApply,
-      callback: li => applyChatCardDamage(li, -1, 2)
+      callback: (li) => applyChatCardDamage(li, -0.5, 1),
+    },
+    {
+      name: game.i18n.localize("WWN.messages.applyDoubleDamage"),
+      icon: '<i class="fas fa-user-minus"></i>',
+      condition: canApply,
+      callback: (li) => applyChatCardDamage(li, 2, 1),
+    },
+    {
+      name: game.i18n.localize("WWN.messages.applyDoubleHealing"),
+      icon: '<i class="fas fa-user-plus"></i>',
+      condition: canApply,
+      callback: (li) => applyChatCardDamage(li, -2, 1),
     }
   );
   return options;
@@ -42,31 +55,50 @@ export const addChatMessageContextOptions = function (html, options) {
 
 export const addChatMessageButtons = function (msg, html, data) {
   // Hide blind rolls
-  let blindable = html.find('.blindable');
-  if (msg.blind && !game.user.isGM && blindable && blindable.data('blind') === true) {
-    blindable.replaceWith("<div class='dice-roll'><div class='dice-result'><div class='dice-formula'>???</div></div></div>");
+  let blindable = html.find(".blindable");
+  if (
+    msg.blind &&
+    !game.user.isGM &&
+    blindable &&
+    blindable.data("blind") === true
+  ) {
+    blindable.replaceWith(
+      "<div class='dice-roll'><div class='dice-result'><div class='dice-formula'>???</div></div></div>"
+    );
   }
   // Buttons
-  let roll = html.find('.damage-roll');
+  let roll = html.find(".damage-roll");
   if (roll.length > 0) {
-    let total = roll.find('.dice-total');
+    let total = roll.find(".dice-total");
     let value = total.text();
-    roll.append($(`<div class="dice-damage"><button type="button" data-action="apply-damage"><i class="fas fa-tint"></i></button></div>`))
+    roll.append(
+      $(
+        `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
+          game.i18n.localize("WWN.messages.applyDamage") +
+          `"><i class="fas fa-tint"></i></button></div>`
+      )
+    );
     roll.find('button[data-action="apply-damage"]').click((ev) => {
       ev.preventDefault();
       applyChatCardDamage(roll, 1, 0);
-    })
+    });
   }
 
-  const shockMessage = html.find('.shock-message');
+  const shockMessage = html.find(".shock-message");
   if (shockMessage.length > 0) {
-    shockMessage.append($(`<div class="dice-damage"><button type="button" data-action="apply-damage"><i class="fas fa-tint"></i></button></div>`))
+    shockMessage.append(
+      $(
+        `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
+          game.i18n.localize("WWN.messages.applyShockDamage") +
+          `"><i class="fas fa-tint"></i></button></div>`
+      )
+    );
     shockMessage.find('button[data-action="apply-damage"]').click((ev) => {
       ev.preventDefault();
       applyChatCardDamage(shockMessage, 1, 0);
-    })
+    });
   }
-}
+};
 
 /**
  * Apply rolled dice damage to the token or tokens which are currently controlled.
@@ -76,12 +108,45 @@ export const addChatMessageButtons = function (msg, html, data) {
  * @param {Number} multiplier   A damage multiplier to apply to the rolled damage.
  * @return {Promise}
  */
-function applyChatCardDamage(roll, multiplier, index) {
-  const amount = Number(roll.find('.dice-total')[index].textContent);
-  return Promise.all(canvas.tokens.controlled.map(t => {
-    const a = t.actor;
-    return a.applyDamage(amount, multiplier);
-  }));
+async function applyChatCardDamage(roll, multiplier, index) {
+  const diceTotals = roll.find(".dice-total");
+  const targets =
+    Array.from(game.user.targets).length > 0
+      ? Array.from(game.user.targets)
+      : canvas.tokens.controlled;
+  const amount =
+    diceTotals.length > 1
+      ? Number(diceTotals[index].textContent)
+      : Number(diceTotals[0].textContent);
+  const title =
+    multiplier > 0
+      ? `Applied ${Math.floor(amount * multiplier)} damage`
+      : `Applied ${Math.floor(amount * multiplier * -1)} healing`;
+  const image = multiplier > 0 ? "icons/svg/blood.svg" : "icons/svg/heal.svg";
+
+  const templateData = {
+    title: title,
+    body: `<ul><li>${targets
+      .map((t) => t.name)
+      .join("</li><li>")}</li></ul>`,
+      image: image
+  };
+
+  const template = "systems/wwn/templates/chat/apply-damage.html";
+  const html = await renderTemplate(template, templateData);
+
+  const chatData = {
+    user: game.user_id,
+    content: html
+  };
+
+  ChatMessage.create(chatData, {});
+  return Promise.all(
+    targets.map((t) => {
+      const a = t.actor;
+      return a.applyDamage(amount, multiplier);
+    })
+  );
 }
 
 /* -------------------------------------------- */

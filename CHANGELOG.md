@@ -1,11 +1,21 @@
 ## New in 1.01
 ### Changes
-* Right-clicking a damage roll while a token is selected now gives four options: apply damage from the damage roll, apply healing from the damage roll, apply damage from shock, apply healing from shock. This should allow a user to easily reverse damage erroneously applied to the wrong token.
+* Right-clicking a roll while one or more tokens are selected now gives several options: apply damage or apply healing at half, full, or double increments. To instead apply shock damage, use the button to the right of the shock message.
+    * If one or more tokens are targeted, this healing or damage will instead applied to targeted tokens rather than the selected token(s).
+    * To prevent any funny business, this now outputs a message to chat for all to see. Super secret DM damage or healing will have to be manually applied.
 * Shock on weapon items is now correctly marked as a number, preventing a bug with calculating shock in v10. Existing weapons aren't automatically fixed, but if you see weird shock like "022", simply opening the item and then closing it again should fix it.
+* Weapons and items now support charges. If an item possesses charges, it will automatically be set to a quantity of 1. If the current or maximum value have strange values, the system will attempt to guess what you mean to do.
+    * If the maximum is 0 or missing, the system will assume each charge is a separate item and count encumbrance accordingly.
+    * If the current charges exceed the maximum, the system will do some math to determine the number of items possessed. For example, an item with 10 / 7 charges will be counted as two items, due to rounding.
+    * Charges do not affect item weight as weapons are not assumed to be consumable.
+* Items with fractional weight are now rounded up before adding to encumbrance.
+    * Rounding is applied per item. One, two, or three torches will all count as 1 encumbrance. Two torches and one oil will count as two encumbrance as separate items are not be bundled together. This should correctly model the intended encumbrance value for bundled items according to the rules.
+    * Currency still shows fractional encumbrance to better enable the user to judge the weight of mixed coin.
 ### Fixes
 * Duplicating an actor no longer doubles all skills.
 * Title of Adjust Currency window.
 * Changing dice pool during skill rolls.
+* Format on skill checks now matches rules standard: "attribute-name/skill-name".
 ## New in 1.0.0
 ### Warning!
 This update contains significant breaking changes. Please backup existing worlds before updating to avoid the nightmare of data loss or in case you wish to roll back to the previous version.

@@ -1240,11 +1240,6 @@
     border-bottom: none;
     margin: auto 0;
   }
-  .wwn.sheet.item .sheet-body .stats .form-group .form-fields.range .sep {
-    flex: 0 0 1px;
-    background: #7a7971;
-    margin: 4px 0;
-  }
   .wwn.sheet.item .sheet-body .stats .form-fields.attack-type {
     text-align: center;
     padding: 2px;

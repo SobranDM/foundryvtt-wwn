@@ -259,11 +259,9 @@
       "treasure": false,
       "price": 0,
       "weight": 0,
-      "hasCharges": false,
       "charges": {
         "value": 0,
-        "max": 0,
-        "consumable": false
+        "max": 0
       },
       "roll": "",
       "equipped": false,
@@ -302,8 +300,7 @@
     "quantity": 1,
     "charges": {
       "value": 0,
-      "max": 0,
-      "consumable": false
+      "max": 0
     }
   },
   "armor": {

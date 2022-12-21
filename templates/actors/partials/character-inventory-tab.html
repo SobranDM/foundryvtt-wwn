@@ -135,7 +135,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#if item.system.hasCharges}}
+          {{#if (evalOr item.system.charges.value item.system.charges.max)}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
@@ -186,7 +186,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#unless (evalOr item.system.treasure item.system.hasCharges) }}
+          {{#unless (evalOr (evalOr item.system.charges.value item.system.charges.max) item.system.treasure) }}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">

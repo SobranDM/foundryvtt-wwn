@@ -131,7 +131,7 @@ export class WwnItem extends Item {
 
     if (options.skipDialog) {
       const attrKey = `WWN.scores.${data.score}.short`;
-      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`;
+      const rollTitle = `${game.i18n.localize(attrKey)}/${this.name}`;
 
       let rollData = {
         parts: rollParts,
@@ -156,7 +156,7 @@ export class WwnItem extends Item {
         return;
       }
       const attrKey = `WWN.scores.${form.score.value}.short`;
-      const rollTitle = `${this.name}/${game.i18n.localize(attrKey)}`;
+      const rollTitle = `${game.i18n.localize(attrKey)}/${this.name}`;
       let rollData = {
         parts: rollParts,
         data: newData,

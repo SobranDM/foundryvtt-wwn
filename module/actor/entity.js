@@ -653,9 +653,9 @@ export class WwnActor extends Actor {
 
     weapons.forEach((w) => {
       if (w.system.equipped) {
-        totalReadied += w.system.weight * w.system.quantity;
+        totalReadied += Math.ceil(w.system.weight * w.system.quantity);
       } else if (w.system.stowed) {
-        totalStowed += w.system.weight * w.system.quantity;
+        totalStowed += Math.ceil(w.system.weight * w.system.quantity);
       }
     });
     armors.forEach((a) => {
@@ -668,19 +668,23 @@ export class WwnActor extends Actor {
     items.forEach((i) => {
       let itemWeight;
       if (
-        i.system.hasCharges &&
-        i.system.charges.value != null &&
-        i.system.charges.max != null
+        i.system.charges.value || i.system.charges.max
       ) {
-        itemWeight =
-          (i.system.charges.value / i.system.charges.max) * i.system.weight;
+        if (i.system.charges.value <= i.system.charges.max || !i.system.charges.value) {
+          itemWeight = i.system.weight;
+        } else if (!i.system.charges.max) {
+          itemWeight = i.system.charges.value * i.system.weight;
+        } else {
+          itemWeight = i.system.charges.value / i.system.charges.max;
+        }
+        
       } else {
         itemWeight = i.system.weight * i.system.quantity;
       }
       if (i.system.equipped) {
-        totalReadied += itemWeight;
+        totalReadied += Math.ceil(itemWeight);
       } else if (i.system.stowed) {
-        totalStowed += itemWeight;
+        totalStowed += Math.ceil(itemWeight);
       }
     });
 
