@@ -41,21 +41,22 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    */
   _prepareItems(data) {
     // Partition items by category
-    let [items, weapons, armors, abilities, spells, arts, foci, skills] = this.actor.items.reduce(
-      (arr, item) => {
-        // Classify items into types
-        if (item.type === "item") arr[0].push(item);
-        else if (item.type === "weapon") arr[1].push(item);
-        else if (item.type === "armor") arr[2].push(item);
-        else if (item.type === "ability") arr[3].push(item);
-        else if (item.type === "spell") arr[4].push(item);
-        else if (item.type === "art") arr[5].push(item);
-        else if (item.type === "focus") arr[6].push(item);
-        else if (item.type === "skill") arr[7].push(item);
-        return arr;
-      },
-      [[], [], [], [], [], [], [], []]
-    );
+    let [items, weapons, armors, abilities, spells, arts, foci, skills] =
+      this.actor.items.reduce(
+        (arr, item) => {
+          // Classify items into types
+          if (item.type === "item") arr[0].push(item);
+          else if (item.type === "weapon") arr[1].push(item);
+          else if (item.type === "armor") arr[2].push(item);
+          else if (item.type === "ability") arr[3].push(item);
+          else if (item.type === "spell") arr[4].push(item);
+          else if (item.type === "art") arr[5].push(item);
+          else if (item.type === "focus") arr[6].push(item);
+          else if (item.type === "skill") arr[7].push(item);
+          return arr;
+        },
+        [[], [], [], [], [], [], [], []]
+      );
 
     // Sort spells by level
     var sortedSpells = {};
@@ -69,7 +70,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     }
 
     // Sort each level
-    Object.keys(sortedSpells).forEach(level => {
+    Object.keys(sortedSpells).forEach((level) => {
       let list = insertionSort(sortedSpells[level], "name");
       list = insertionSort(list, "system.class");
       sortedSpells[level] = list;
@@ -84,8 +85,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     arts = insertionSort(arts, "system.source");
 
     // Divide skills into primary and secondary
-    const primarySkills = insertionSort(skills.filter(skill => !skill.system.secondary), "name");
-    const secondarySkills = insertionSort(skills.filter(skill => skill.system.secondary), "name");
+    const primarySkills = insertionSort(
+      skills.filter((skill) => !skill.system.secondary),
+      "name"
+    );
+    const secondarySkills = insertionSort(
+      skills.filter((skill) => skill.system.secondary),
+      "name"
+    );
 
     // Assign and return
     data.owned = {
@@ -95,11 +102,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       weapons: insertionSort(weapons, "name"),
       arts: arts,
       foci: insertionSort(foci, "name"),
-      skills: [...primarySkills, ...secondarySkills]
+      skills: [...primarySkills, ...secondarySkills],
     };
     data.spells = sortedSpells;
   }
-
 
   generateScores() {
     new WwnCharacterCreator(this.actor, {
@@ -137,7 +143,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     );
     return data;
   }
-
 
   async _chooseLang() {
     const languages = game.settings.get("wwn", "languageList");
@@ -239,8 +244,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const item = this.actor.items.get(itemId);
     return item.update({ "system.quantity": parseInt(event.target.value) });
   }
-  
-    async _onQtChange(event) {
+
+  async _onChargeChange(event) {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
@@ -328,10 +333,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       ev.preventDefault();
       const header = ev.currentTarget;
       const table = header.dataset.array;
-      this._popLang(
-        table,
-        $(ev.currentTarget).closest(".item").data("lang")
-      );
+      this._popLang(table, $(ev.currentTarget).closest(".item").data("lang"));
     });
 
     html.find(".item-create").click((event) => {
@@ -399,16 +401,21 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       .click((ev) => ev.target.select())
       .change(this._onQtChange.bind(this));
 
+    html
+      .find(".charges input")
+      .click((ev) => ev.target.select())
+      .change(this._onChargeChange.bind(this));
+
     html.find("a[data-action='generate-scores']").click((ev) => {
       this.generateScores(ev);
     });
 
     html.find("a[data-action='currency-adjust']").click((ev) => {
       this.adjustCurrency(ev);
-    })
+    });
 
     // Use unspent skill points to improve the skill
-    html.find(".skill-up").click(async(ev) => {
+    html.find(".skill-up").click(async (ev) => {
       ev.preventDefault();
       const li = $(ev.currentTarget).parents(".item");
       const skill = this.actor.items.get(li.data("itemId"));
@@ -459,22 +466,22 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     // Show / hide skill buttons
     html.find(".lock-skills").click((ev) => {
       ev.preventDefault();
-      const lock = $(ev.currentTarget).data("type") == "lock" ? true : false; 
+      const lock = $(ev.currentTarget).data("type") == "lock" ? true : false;
       if (lock) {
-        html.find(".lock-skills.unlock").css('display', 'inline-block');
+        html.find(".lock-skills.unlock").css("display", "inline-block");
         html.find(".lock-skills.lock").hide();
       } else {
         html.find(".lock-skills.unlock").hide();
-        html.find(".lock-skills.lock").css('display', 'inline-block');
+        html.find(".lock-skills.lock").css("display", "inline-block");
       }
-      html.find(".skill-lock").each(function() {
+      html.find(".skill-lock").each(function () {
         if (lock) {
           $(this).hide();
         } else {
           $(this).show();
         }
       });
-      html.find(".reverse-lock").each(function() {
+      html.find(".reverse-lock").each(function () {
         if (!lock) {
           $(this).hide();
         } else {
