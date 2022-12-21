@@ -669,8 +669,8 @@ export class WwnActor extends Actor {
       let itemWeight;
       if (
         i.system.hasCharges &&
-        i.system.charges.value &&
-        i.system.charges.max
+        i.system.charges.value != null &&
+        i.system.charges.max != null
       ) {
         itemWeight =
           (i.system.charges.value / i.system.charges.max) * i.system.weight;
