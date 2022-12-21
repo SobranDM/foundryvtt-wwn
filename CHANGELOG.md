@@ -4,7 +4,8 @@
 * Shock on weapon items is now correctly marked as a number, preventing a bug with calculating shock in v10. Existing weapons aren't automatically fixed, but if you see weird shock like "022", simply opening the item and then closing it again should fix it.
 ### Fixes
 * Duplicating an actor no longer doubles all skills.
-* Fixed title of Adjust Currency window.
+* Title of Adjust Currency window.
+* Changing dice pool during skill rolls.
 ## New in 1.0.0
 ### Warning!
 This update contains significant breaking changes. Please backup existing worlds before updating to avoid the nightmare of data loss or in case you wish to roll back to the previous version.

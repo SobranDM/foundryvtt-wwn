@@ -99,7 +99,7 @@ export class WwnItem extends Item {
 
     const data = this.system;
     const skillName = this.name;
-    let score = this.actor.system.scores[data.score];
+    const score = this.actor.system.scores[data.score];
 
     // Determine if armor penalty applies
     let armorPenalty = 0;
@@ -149,6 +149,7 @@ export class WwnItem extends Item {
     const title = `${game.i18n.localize("WWN.Roll")} ${this.name}`;
     const _doRoll = async (html) => {
       const form = html[0].querySelector("form");
+      rollParts[0] = form.skillDice.value;
       rollParts[1] = this.actor.system.scores[form.score.value].mod;
       if (!score) {
         ui.notifications.error("Unable to find score on char.");
