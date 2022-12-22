@@ -259,14 +259,14 @@
       "treasure": false,
       "price": 0,
       "weight": 0,
+      "weightless": "",
       "charges": {
         "value": 0,
         "max": 0
       },
       "roll": "",
       "equipped": false,
-      "stowed": false,
-      "version": 4
+      "stowed": false
     },
   "weapon": {
     "range": {

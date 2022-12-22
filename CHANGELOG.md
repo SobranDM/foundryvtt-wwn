@@ -11,6 +11,7 @@
 * Items with fractional weight are now rounded up before adding to encumbrance.
     * Rounding is applied per item. One, two, or three torches will all count as 1 encumbrance. Two torches and one oil will count as two encumbrance as separate items are not be bundled together. This should correctly model the intended encumbrance value for bundled items according to the rules.
     * Currency still shows fractional encumbrance to better enable the user to judge the weight of mixed coin.
+* Items of all types may now be weightless only when readied or only when stowed. This is to support items like backpacks, clothing, and elixirs that only cost encumbrance in one state or the other. I believe I've caught all the relevant items in the compendiums but if I missed something, please let me know.
 ### Fixes
 * Duplicating an actor no longer doubles all skills.
 * Title of Adjust Currency window.

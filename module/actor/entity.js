@@ -652,6 +652,11 @@ export class WwnActor extends Actor {
     const items = this.items.filter((i) => i.type == "item");
 
     weapons.forEach((w) => {
+      if (
+        (w.system.weightless === "whenReadied" && w.system.equipped) ||
+        (w.system.weightless === "whenStowed" && w.system.stowed)
+      )
+        return;
       if (w.system.equipped) {
         totalReadied += Math.ceil(w.system.weight * w.system.quantity);
       } else if (w.system.stowed) {
@@ -659,6 +664,11 @@ export class WwnActor extends Actor {
       }
     });
     armors.forEach((a) => {
+      if (
+        (a.system.weightless === "whenReadied" && a.system.equipped) ||
+        (a.system.weightless === "whenStowed" && a.system.stowed)
+      )
+        return;
       if (a.system.equipped) {
         totalReadied += a.system.weight;
       } else if (a.system.stowed) {
@@ -666,18 +676,23 @@ export class WwnActor extends Actor {
       }
     });
     items.forEach((i) => {
-      let itemWeight;
       if (
-        i.system.charges.value || i.system.charges.max
-      ) {
-        if (i.system.charges.value <= i.system.charges.max || !i.system.charges.value) {
+        (i.system.weightless === "whenReadied" && i.system.equipped) ||
+        (i.system.weightless === "whenStowed" && i.system.stowed)
+      )
+        return;
+      let itemWeight;
+      if (i.system.charges.value || i.system.charges.max) {
+        if (
+          i.system.charges.value <= i.system.charges.max ||
+          !i.system.charges.value
+        ) {
           itemWeight = i.system.weight;
         } else if (!i.system.charges.max) {
           itemWeight = i.system.charges.value * i.system.weight;
         } else {
           itemWeight = i.system.charges.value / i.system.charges.max;
         }
-        
       } else {
         itemWeight = i.system.weight * i.system.quantity;
       }
@@ -909,39 +924,39 @@ export class WwnActor extends Actor {
     this.system.skills.exertPenalty = exertPenalty;
   }
 
-computeModifiers() {
-  if (this.type != "character") return;
+  computeModifiers() {
+    if (this.type != "character") return;
 
-  const data = this.system;
-  const scores = data.scores;
+    const data = this.system;
+    const scores = data.scores;
 
-  const standard = {
-    0: -2,
-    3: -2,
-    4: -1,
-    8: 0,
-    14: 1,
-    18: 2,
-  };
+    const standard = {
+      0: -2,
+      3: -2,
+      4: -1,
+      8: 0,
+      14: 1,
+      18: 2,
+    };
 
-  Object.keys(scores).map((score) => {
-    let newMod =
-      this.system.scores[score].tweak +
-      WwnActor._valueFromTable(standard, scores[score].value);
-    this.system.scores[score].mod = newMod;
-  });
+    Object.keys(scores).map((score) => {
+      let newMod =
+        this.system.scores[score].tweak +
+        WwnActor._valueFromTable(standard, scores[score].value);
+      this.system.scores[score].mod = newMod;
+    });
 
-  const capped = {
-    0: -2,
-    3: -2,
-    4: -1,
-    6: -1,
-    9: 0,
-    13: 1,
-    16: 1,
-    18: 2,
-  };
-}
+    const capped = {
+      0: -2,
+      3: -2,
+      4: -1,
+      6: -1,
+      9: 0,
+      13: 1,
+      16: 1,
+      18: 2,
+    };
+  }
 
   computeSaves() {
     const data = this.system;
@@ -956,8 +971,8 @@ computeModifiers() {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
       Object.keys(saves).forEach(
         (s) =>
-          (saves[s].value =
-            Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
+        (saves[s].value =
+          Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
       );
     } else {
       let charLevel = data.details.level;

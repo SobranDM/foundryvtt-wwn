@@ -57,6 +57,18 @@
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <label>{{localize "WWN.items.WeightlessLabel"}}</label>
+            <div class="form-fields">
+              <select name="system.weightless">
+                {{#select system.weightless}}
+                {{#each config.weightless as |wt a|}}
+                <option value="{{a}}">{{wt}}</option>
+                {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>

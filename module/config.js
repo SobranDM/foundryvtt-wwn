@@ -46,6 +46,11 @@ export const WWN = {
     stowed: "WWN.items.stowed",
     other: "WWN.items.other"
   },
+  weightless: {
+    never: "WWN.items.WeightlessNever",
+    whenReadied: "WWN.items.WeightlessReadied",
+    whenStowed: "WWN.items.WeightlessStowed"
+  },
   attackSkills: {
     punch: "WWN.skills.punch",
     shoot: "WWN.skills.shoot",

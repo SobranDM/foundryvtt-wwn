@@ -1258,7 +1258,7 @@
   }
   .wwn.sheet.item .sheet-body .stats .form-group label {
     line-height: 21px;
-    min-width: 145px;
+    min-width: 135px;
     display: inline-block;
   }
   .wwn.sheet.item .sheet-body .stats .form-group .form-fields {
