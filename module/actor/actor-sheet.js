@@ -151,6 +151,77 @@ export class WwnActorSheet extends ActorSheet {
       });
     });
 
+    html.find(".item-search").click(async (event) => {
+      event.preventDefault();
+      const header = event.currentTarget;
+      const itemType = header.dataset.type;
+      const candiateItems = {};
+
+      for (const e of game.packs) {
+        if (
+          e.metadata.private == false &&  e.metadata.type === "Item") {
+          const items = (await e.getDocuments()).filter((i) => i.type == itemType);
+          if (items.length) {
+            for (const ci of items.map((item) => item.toObject())) {
+              candiateItems[ci.name] = ci;
+            }
+          }
+        }
+      }
+
+      if (Object.keys(candiateItems).length) {
+        let itemOptions = "";
+        const keys = Object.keys(candiateItems);
+        const sortedNames = keys.sort();
+        for (const label of sortedNames) {
+          const cand = candiateItems[label];
+          itemOptions += `<option value='${label}'>${cand.name}</option>`;
+        }
+        const dialogTemplate = `
+        <div class="flex flex-col">
+          <h1> Select ${itemType} to add </h1>
+          <div class="flex flexrow">
+            <select id="itemList"
+            class="">
+            ${itemOptions}
+            </select>
+          </div>
+        </div>
+        `;
+        const popUpDialog = new Dialog(
+          {
+            title: `Add ${itemType}`,
+            content: dialogTemplate,
+            buttons: {
+              addItem: {
+                label: `Add ${itemType}`,
+                callback: async (html) => {
+                  const itemNameToAdd = ((
+                    html.find("#itemList")[0])).value;
+                  const toAdd = await candiateItems[itemNameToAdd];
+                  await this.actor.createEmbeddedDocuments("Item", [toAdd], {});
+                },
+              },
+              close: {
+                label: "Close",
+              },
+            },
+            default: "addItem",
+          },
+          {
+            failCallback: () => {
+              return;
+            },
+          }
+        );
+        const s = popUpDialog.render(true);
+        if (s instanceof Promise) await s;
+  
+      } else {
+        ui.notifications?.info("Could not find any items in the compendium");
+      }
+    });
+
     html.find(".item-create").click((event) => {
       event.preventDefault();
       const header = event.currentTarget;
