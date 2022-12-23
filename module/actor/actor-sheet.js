@@ -199,7 +199,7 @@ export class WwnActorSheet extends ActorSheet {
                   const itemNameToAdd = ((
                     html.find("#itemList")[0])).value;
                   const toAdd = await candiateItems[itemNameToAdd];
-                  await this.actor.createEmbeddedDocuments("Item", [toAdd], {});
+                  await this.actor.createEmbeddedDocuments("Item", [{...toAdd}], {});
                 },
               },
               close: {
