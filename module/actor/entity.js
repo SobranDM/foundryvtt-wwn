@@ -1060,7 +1060,7 @@ export class WwnActor extends Actor {
   async _onCreate(data, options, user) {
     await super._onCreate(data, options, user);
     // Add primary skills from compendium
-    if (data.type === "character") {
+    if (data.type === "character" && game.userId == user) {
       // If there are no skills, add ones from compendium
       if (!data.items.filter((i) => i.type == "skill").length) {
         let skillPack = game.packs.get("wwn.skills");
