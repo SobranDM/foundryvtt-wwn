@@ -43,10 +43,16 @@ export class WwnItemSheet extends ItemSheet {
    * Prepare data for rendering the Item sheet
    * The prepared data object contains both the actor data as well as additional sheet options
    */
-  getData() {
+  async getData() {
     const data = super.getData().data;
     data.editable = this.document.sheet.isEditable;
     data.config = CONFIG.WWN;
+
+    data.enrichedDescription = await TextEditor.enrichHTML(
+      this.object.system.description,
+      { async: true }
+    );
+
     return data;
   }
 
