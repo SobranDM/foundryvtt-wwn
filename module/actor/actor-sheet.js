@@ -22,7 +22,7 @@ export class WwnActorSheet extends ActorSheet {
     event.preventDefault();
     let li = $(event.currentTarget).parents(".item"),
       item = this.actor.items.get(li.data("item-id")),
-      description = TextEditor.enrichHTML(item.system.description);
+      description = item.system.enrichedDescription;
     // Toggle summary
     if (li.hasClass("expanded")) {
       let summary = li.parents(".item-entry").children(".item-summary");
