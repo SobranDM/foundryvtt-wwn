@@ -1,7 +1,6 @@
 ## New in 1.01
 ### Changes
 * Right-clicking a roll while one or more tokens are selected now gives several options: apply damage or apply healing at half, full, or double increments. To instead apply shock damage, use the button to the right of the shock message.
-    * If one or more tokens are targeted, this healing or damage will instead applied to targeted tokens rather than the selected token(s).
     * To prevent any funny business, this now outputs a message to chat for all to see. Super secret DM damage or healing will have to be manually applied.
 * Shock on weapon items is now correctly marked as a number, preventing a bug with calculating shock in v10. Existing weapons aren't automatically fixed, but if you see weird shock like "022", simply opening the item and then closing it again should fix it.
 * Weapons and items now support charges. If an item possesses charges, it will automatically be set to a quantity of 1. If the current or maximum value have strange values, the system will attempt to guess what you mean to do.

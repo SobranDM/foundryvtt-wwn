@@ -110,10 +110,7 @@ export const addChatMessageButtons = function (msg, html, data) {
  */
 async function applyChatCardDamage(roll, multiplier, index) {
   const diceTotals = roll.find(".dice-total");
-  const targets =
-    Array.from(game.user.targets).length > 0
-      ? Array.from(game.user.targets)
-      : canvas.tokens.controlled;
+  const targets = canvas.tokens.controlled;
   const amount =
     diceTotals.length > 1
       ? Number(diceTotals[index].textContent)
