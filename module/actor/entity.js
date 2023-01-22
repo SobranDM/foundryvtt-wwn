@@ -779,11 +779,15 @@ export class WwnActor extends Actor {
 
     // Collect resource arrays
     const oilArray = this.items.filter(
-      (i) => i.name === "Oil, one pint" || i.name === "Oil"
+      (i) =>
+        i.name.toLowerCase() === "oil, one pint" ||
+        i.name.toLowerCase() === "oil"
     );
-    const torchArray = this.items.filter((i) => i.name === "Torch");
-    const rationsArray = this.items.filter(
-      (i) => i.name === "Rations, one week" || i.name === "Rations"
+    const torchArray = this.items.filter(
+      (i) => i.name.toLowerCase() === "torch"
+    );
+    const rationsArray = this.items.filter((i) =>
+      i.name.toLowerCase().includes("rations")
     );
 
     // Calculate resource totals
@@ -971,8 +975,8 @@ export class WwnActor extends Actor {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
       Object.keys(saves).forEach(
         (s) =>
-        (saves[s].value =
-          Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
+          (saves[s].value =
+            Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
       );
     } else {
       let charLevel = data.details.level;
