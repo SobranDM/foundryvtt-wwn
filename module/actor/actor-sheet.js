@@ -155,7 +155,7 @@ export class WwnActorSheet extends ActorSheet {
       event.preventDefault();
       const header = event.currentTarget;
       const itemType = header.dataset.type;
-      const candiateItems = {};
+      const candidateItems = {};
 
       for (const e of game.packs) {
         if (
@@ -163,18 +163,18 @@ export class WwnActorSheet extends ActorSheet {
           const items = (await e.getDocuments()).filter((i) => i.type == itemType);
           if (items.length) {
             for (const ci of items.map((item) => item.toObject())) {
-              candiateItems[ci.name] = ci;
+              candidateItems[ci.name] = ci;
             }
           }
         }
       }
 
-      if (Object.keys(candiateItems).length) {
+      if (Object.keys(candidateItems).length) {
         let itemOptions = "";
-        const keys = Object.keys(candiateItems);
+        const keys = Object.keys(candidateItems);
         const sortedNames = keys.sort();
         for (const label of sortedNames) {
-          const cand = candiateItems[label];
+          const cand = candidateItems[label];
           itemOptions += `<option value='${label}'>${cand.name}</option>`;
         }
         const dialogTemplate = `
@@ -198,7 +198,7 @@ export class WwnActorSheet extends ActorSheet {
                 callback: async (html) => {
                   const itemNameToAdd = ((
                     html.find("#itemList")[0])).value;
-                  const toAdd = await candiateItems[itemNameToAdd];
+                  const toAdd = await candidateItems[itemNameToAdd];
                   await this.actor.createEmbeddedDocuments("Item", [{...toAdd}], {});
                 },
               },
