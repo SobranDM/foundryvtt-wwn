@@ -6,16 +6,25 @@
 * Weapons and items now support charges. If an item possesses charges, it will automatically be set to a quantity of 1. If the current or maximum value have strange values, the system will attempt to guess what you mean to do.
     * If the maximum is 0 or missing, the system will assume each charge is a separate item and count encumbrance accordingly.
     * If the current charges exceed the maximum, the system will do some math to determine the number of items possessed. For example, an item with 10 / 7 charges will be counted as two items, due to rounding.
-    * Charges do not affect item weight as weapons are not assumed to be consumable.
+    * Charges do not affect weapon weight as weapons are not assumed to be consumable.
+    * Torches, oil, rations, and arrows are all now items with charges instead of varying quantity.
 * Items with fractional weight are now rounded up before adding to encumbrance.
     * Rounding is applied per item. One, two, or three torches will all count as 1 encumbrance. Two torches and one oil will count as two encumbrance as separate items are not be bundled together. This should correctly model the intended encumbrance value for bundled items according to the rules.
     * Currency still shows fractional encumbrance to better enable the user to judge the weight of mixed coin.
 * Items of all types may now be weightless only when readied or only when stowed. This is to support items like backpacks, clothing, and elixirs that only cost encumbrance in one state or the other. I believe I've caught all the relevant items in the compendiums but if I missed something, please let me know.
+* The Party Overview now shows how many rations, torches, and oil each character is carrying. I was finding it difficult to ensure my players were correctly tracking such things.
+* Faction sheets, sort of, but see below. Shoutout to Wintersleep for porting the functionality over from SWN!
+* Actors may now add items from compendiums by clicking a magnifying glass icon on the sheet, which will search compendiums for items of the appropriate type. For PCs, there in the weapons title bar, as well as one for armor and one for miscellaneous items. The monster item search is restricted to weapons for now, as well as arts and spells if the spellcasting sheet is active.
+    * The monster sheet item search will eventually be expanded to include abilities once I get around to creating a compendium of monster abilities from the WWN samples.
+* Probably other stuff I've forgotten? This has been a really long process.
 ### Fixes
 * Duplicating an actor no longer doubles all skills.
 * Title of Adjust Currency window.
 * Changing dice pool during skill rolls.
 * Format on skill checks now matches rules standard: "attribute-name/skill-name".
+### Known Issues
+* Faction sheets are a mess. I haven't gotten around to formatting this, as fixing everything broken in v10 took precedence.
+* Dragging a weapon or other rollable item to the macro bar will still create a macro to directly roll this item (so long as a token with such an item is selected). However, this behavior has been overridden by a new v10 feature that creates a macro to display an item sheet. For now, you can delete the "Display Great Hammer" (for example) macro and find the "Great Hammer" macro WWN creates in the directory and drag that to your bar. This is just a workaround until I figure out how to override this new default Foundry behavior.
 ## New in 1.0.0
 ### Warning!
 This update contains significant breaking changes. Please backup existing worlds before updating to avoid the nightmare of data loss or in case you wish to roll back to the previous version.
