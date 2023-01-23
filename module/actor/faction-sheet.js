@@ -1,16 +1,21 @@
 import { WwnActor } from "./entity.js";
 import { WwnActorSheet } from "./actor-sheet.js";
-import { FACTION_TAGS, FACTION_GOALS, FACTION_ACTIONS, HEALTH__XP_TABLE } from "./faction.js";
+import {
+  FACTION_TAGS,
+  FACTION_GOALS,
+  FACTION_ACTIONS,
+  HEALTH__XP_TABLE,
+} from "./faction.js";
 
 /**
  *  Extend the basic ActorSheet
  */
 export class WwnActorSheetFaction extends WwnActorSheet {
-    constructor(...args) {
-        super(...args);
-    }
+  constructor(...args) {
+    super(...args);
+  }
 
-    /* -------------------------------------------- */
+  /* -------------------------------------------- */
 
   /**
    * Extend and override the default options used by the 5e Actor Sheet
@@ -33,15 +38,23 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     });
   }
 
-    /**
+  /**
    * Prepare data for rendering the Actor sheet
    * The prepared data object contains both the actor data as well as additional sheet options
    */
-     getData() {
-      const data = super.getData();
-      return data;
-    }
- 
+  async getData() {
+    const data = super.getData();
+    data.enrichedDescription = await TextEditor.enrichHTML(
+      this.object.system.description,
+      { async: true }
+    );
+    data.enrichedGoal = await TextEditor.enrichHTML(
+      this.object.system.factionGoalDesc,
+      { async: true }
+    );
+    return data;
+  }
+
   get actor() {
     if (super.actor.type !== "faction") throw Error;
     return super.actor;
@@ -72,7 +85,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     }
   }
 
-  getAssetImage(itemType)  {
+  getAssetImage(itemType) {
     const icon_path = "systems/wwn/assets/";
     const imgMap = {
       cunning: "cunning.png",
@@ -107,9 +120,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
             label: `Add Manual Log Entry`,
             callback: async (html) => {
               const form = html[0].querySelector("form");
-              const log = ((
-                form.querySelector('[name="inputField"]')
-              ))?.value;
+              const log = form.querySelector('[name="inputField"]')?.value;
               if (log) {
                 this.actor.logMessage("Manual Faction Log", log);
               }
@@ -252,7 +263,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
           addTag: {
             label: "Add Tag",
             callback: async (html) => {
-              const tag = (html.find("#tag")[0]).value;
+              const tag = html.find("#tag")[0].value;
               this.actor.addTag(tag);
             },
           },
@@ -307,10 +318,9 @@ export class WwnActorSheetFaction extends WwnActorSheet {
           addTag: {
             label: "Add Custom Tag",
             callback: async (html) => {
-              const name = (html.find("#tagname")[0]).value;
-              const desc = (html.find("#tagdesc")[0]).value;
-              const effect = (html.find("#tageffect")[0])
-                .value;
+              const name = html.find("#tagname")[0].value;
+              const desc = html.find("#tagdesc")[0].value;
+              const effect = html.find("#tageffect")[0].value;
               this.actor.addCustomTag(name, desc, effect);
             },
           },
@@ -331,7 +341,6 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     if (s instanceof Promise) await s;
   }
 
-
   async _onStartTurn(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -344,14 +353,13 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const html = renderTemplate(template, dialogData);
     const _form = async (html) => {
       const form = html[0].querySelector("form");
-      const action = (form.querySelector('[name="action"]'))
-        .value;
+      const action = form.querySelector('[name="action"]').value;
       for (const a of FACTION_ACTIONS) {
         if (action == a.name) {
           const title = `Faction ${this.actor.name} action: ${action}`;
           const msg = `${a.desc}`;
           const longDesc = a.longDesc != undefined ? a.longDesc : null;
-          let rollString  = null;
+          let rollString = null;
           if (a.roll) {
             const roll = new Roll(a.roll, this.actor.system);
             rollString = await roll.render();
@@ -393,11 +401,8 @@ export class WwnActorSheetFaction extends WwnActorSheet {
 
     const _goalForm = async (html) => {
       const form = html[0].querySelector("form");
-      const goal = (form.querySelector('[name="goal"]'))
-        .value;
-      const goalType = ((
-        form.querySelector('[name="goalType"]')
-      )).value;
+      const goal = form.querySelector('[name="goal"]').value;
+      const goalType = form.querySelector('[name="goalType"]').value;
 
       if (goal && goal.length == 0 && goalType != "abandon") {
         ui.notifications?.info("No goal selected. Ignoring");
@@ -484,8 +489,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       default: "yes",
       close: (html) => {
         const form = html[0].querySelector("form");
-        const hp = (form.querySelector('[name="inputField"]'))
-          ?.value;
+        const hp = form.querySelector('[name="inputField"]')?.value;
         if (hp && hp != "") {
           const nHp = Number(hp);
           if (nHp) {
@@ -659,18 +663,15 @@ Hooks.on("dropActorSheetData", (actor, actorSheetSheet, data) => {
 });
 
 // A button to show long descriptions
-Hooks.on(
-  "renderChatMessage",
-  (message, html, _user) => {
-    const longDesc = html.find(".longShowDesc");
-    if (longDesc) {
-      const bind = function (event) {
-        event.preventDefault();
-        const hiddenDesc = html.find(".hiddenLong");
-        hiddenDesc.show();
-        longDesc.hide();
-      };
-      longDesc.one("click", bind);
-    }
+Hooks.on("renderChatMessage", (message, html, _user) => {
+  const longDesc = html.find(".longShowDesc");
+  if (longDesc) {
+    const bind = function (event) {
+      event.preventDefault();
+      const hiddenDesc = html.find(".hiddenLong");
+      hiddenDesc.show();
+      longDesc.hide();
+    };
+    longDesc.one("click", bind);
   }
-);
+});

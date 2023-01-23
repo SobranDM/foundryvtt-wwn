@@ -141,7 +141,7 @@
         <!-- goal -->
         <div class="flex flex3 flex-col">
           <div class="">
-            {{editor enrichedBiography target="system.factionGoalDesc" button=true
+            {{editor enrichedGoal target="system.factionGoalDesc" button=true
             editable=editable async=true}}
           </div>
           <div>{{localize 'WWN.faction.factionGoalDesc'}}</div>
@@ -158,7 +158,7 @@
           <h2 class="">{{localize 'WWN.category.description'}}</h2>
           <div class="">
             {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
-            {{editor enrichedBiography target="system.description" button=true editable=editable async=true}}
+            {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
           </div>
         </div>
       </div>
