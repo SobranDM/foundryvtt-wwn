@@ -1,3 +1,6 @@
+## New in 1.1.1
+### Fixes
+* Item macros.
 ## New in 1.1.0
 ### Changes
 * Right-clicking a roll while one or more tokens are selected now gives several options: apply damage or apply healing at half, full, or double increments. To instead apply shock damage, use the button to the right of the shock message.
