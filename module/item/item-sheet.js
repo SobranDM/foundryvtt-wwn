@@ -47,7 +47,7 @@ export class WwnItemSheet extends ItemSheet {
     const data = super.getData().data;
     data.editable = this.document.sheet.isEditable;
     data.config = CONFIG.WWN;
-
+    data.actor = this.actor;
     data.enrichedDescription = await TextEditor.enrichHTML(
       this.object.system.description,
       { async: true }

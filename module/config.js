@@ -51,12 +51,6 @@ export const WWN = {
     whenReadied: "WWN.items.WeightlessReadied",
     whenStowed: "WWN.items.WeightlessStowed"
   },
-  attackSkills: {
-    punch: "WWN.skills.punch",
-    shoot: "WWN.skills.shoot",
-    stab: "WWN.skills.stab",
-    magic: "WWN.skills.magic"
-  },
   armor : {
     unarmored: "WWN.armor.unarmored",
     light: "WWN.armor.light",

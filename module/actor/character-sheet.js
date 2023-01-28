@@ -94,6 +94,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       "name"
     );
 
+    // Sort skills into combat skills and not
+    const filteredSkills = skills.filter((skill) => skill.system.combatSkill);
+    this.actor.system.skills.combatSkills = filteredSkills.map(skill => skill.name.toLowerCase());
+
     // Assign and return
     data.owned = {
       items: insertionSort(items, "name"),
