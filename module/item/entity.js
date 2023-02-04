@@ -32,10 +32,10 @@ export class WwnItem extends Item {
     const itemData = this?.system;
 
     // Rich text description
-      itemData.enrichedDescription = await TextEditor.enrichHTML(
-        itemData.description,
-        { async: true }
-      );
+    itemData.enrichedDescription = await TextEditor.enrichHTML(
+      itemData.description,
+      { async: true }
+    );
   }
 
   static chatListeners(html) {
@@ -44,7 +44,7 @@ export class WwnItem extends Item {
   }
 
   getChatData(htmlOptions) {
-    const itemData = this.system;
+    const itemData = { ...this.system };
 
     // Rich text description
     // data.description = TextEditor.enrichHTML(data.description, htmlOptions);
@@ -71,6 +71,14 @@ export class WwnItem extends Item {
     }
     if (itemData.hasOwnProperty("prepared")) {
       props.push(itemData.prepared ? "Prepared" : "Not Prepared");
+    }
+
+    if (!!itemData.roll) {
+      const unevaluatedRoll = new Roll(itemData.roll, {
+        ...(this.actor?._getRollData() || {}),
+        actor: this.actor,
+      });
+      itemData.roll = unevaluatedRoll.formula;
     }
 
     // Filter properties and return
@@ -200,6 +208,7 @@ export class WwnItem extends Item {
     const data = this.system;
     let type = isNPC ? "attack" : "melee";
     const rollData = {
+      ...(this.actor?._getRollData() || {}),
       item: this,
       actor: this.actor,
       roll: {
@@ -251,6 +260,7 @@ export class WwnItem extends Item {
     let type = data.rollType;
 
     const newData = {
+      ...(this.actor._getRollData() || {}),
       actor: this.actor,
       item: this,
       roll: {
