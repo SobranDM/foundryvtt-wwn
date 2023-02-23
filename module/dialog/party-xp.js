@@ -25,7 +25,7 @@ export class WwnPartyXP extends FormApplication {
      * @return {Object}
      */
     getData() {
-        const actors = game.actors.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
+        const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
         let data = {
             actors: actors,
             data: this.object,
@@ -50,7 +50,7 @@ export class WwnPartyXP extends FormApplication {
     /* -------------------------------------------- */
 
     _calculateShare(ev) {
-        const actors = game.actors.filter(e => e.data.type === "character" && e.data.flags.wwn && e.data.flags.wwn.party === true);
+        const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
         const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
         const html = $(this.form);
         let shares = 0;
