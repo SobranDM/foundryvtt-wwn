@@ -535,6 +535,7 @@ export class WwnActor extends Actor {
     const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
 
     const rollData = {
+      ...(this._getRollData() || {}),
       actor: this,
       item: attData.item,
       roll: {
@@ -1003,6 +1004,45 @@ export class WwnActor extends Actor {
     }
   }
 
+  _getRollData() {
+    if (this.type === "faction") {
+      // for now, no roll data for factions
+      // but something to look at in the future maybe?
+      return {};
+    }
+
+    const data = {};
+    data.atk = this.system.thac0?.bba;
+
+    if (this.type === "monster") {
+      // no skills to use, but let's set @level to be = hd total.
+
+      // just in case the hit dice field is wonky, default to 1
+      data.level = 1;
+
+      // parse out the first digit via a regex. might be hacky.
+      const diceRegex = this.system.hp.hd.match(/([0-9]+)d[0-9]+/);
+      if (!!diceRegex) {
+        data.level = parseInt(diceRegex[1]);
+      }
+    } else {
+      const skillMods = this.items
+        .filter((i) => i.type === "skill")
+        .map((s) => ({ name: toCamelCase(s.name), mod: s.system.ownedLevel }));
+
+      skillMods.forEach((sm) => (data[sm.name] = sm.mod));
+
+      data.level = this.system.details.level;
+      data.str = this.system.scores.str.mod + this.system.scores.str.tweak;
+      data.dex = this.system.scores.dex.mod + this.system.scores.dex.tweak;
+      data.con = this.system.scores.con.mod + this.system.scores.con.tweak;
+      data.wis = this.system.scores.wis.mod + this.system.scores.wis.tweak;
+      data.int = this.system.scores.int.mod + this.system.scores.int.tweak;
+      data.cha = this.system.scores.cha.mod + this.system.scores.cha.tweak;
+    }
+    return data;
+  }
+
   // Creates a list of skills based on the following list. Was used to generate
   // the initial skills list to populate a compendium
   async createSkillsManually(data, options, user) {
@@ -1076,4 +1116,10 @@ export class WwnActor extends Actor {
       }
     }
   }
+}
+
+function toCamelCase(text) {
+  const split = text.split(" ").map((t) => t.titleCase());
+  split[0] = split[0].toLowerCase();
+  return split.join();
 }
