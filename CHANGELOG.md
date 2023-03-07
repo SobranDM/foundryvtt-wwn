@@ -5,6 +5,7 @@
 * Compendium Spells and Arts have been updated to use these variables where appropriate.
 * Added dynamic combat skills. Shoutout to CupofCoffee for getting the framework ready for this. A new checkbox in a skill's sheet allows a user to designate a particular skill as a combat skill.
     * Existing actors should have their Punch, Shoot, and Stab skills automatically set to combat skills. Additional skills may be designated as needed, to support using Magic to attack with certain arts or enabling custom combat skills.
+* Made spell sheet dynamic. Rather than have to adjust casting classes in the Tweaks menu, simply drag a spell and/or art from one of the compendiums to get started. The spell sheet now dynamically shows only arts or only spells, so you only see the sections you need.
 ### Fixes
 * Bugs with AC and Movement fields in the Tweaks menu.
 ## New in 1.1.1
