@@ -623,13 +623,10 @@ export class WwnActor extends Actor {
   }
 
   computePrepared() {
-    if (!this.system.spells.enabled) {
-      return;
-    }
+    const spells = this.items.filter((i) => i.type == "spell");
+    if (spells.length === 0) return;
 
     // Initialize data and variables
-    const data = this.system;
-    const spells = this.items.filter((s) => s.type == "spell");
     let spellsPrepared = 0;
 
     spells.forEach((s) => {
@@ -821,12 +818,12 @@ export class WwnActor extends Actor {
 
   // Compute Effort
   computeEffort() {
-    if (this.type === "faction") return;
+    const arts = this.items.filter((a) => a.type == "art");
+    if (arts.length === 0) return;
 
+    // Initialize data
     const data = this.system;
-    if (data.spells.enabled != true) {
-      return;
-    }
+    
     let effortOne = 0;
     let effortTwo = 0;
     let effortThree = 0;
@@ -835,7 +832,7 @@ export class WwnActor extends Actor {
     let effortType2 = data.classes.effort2.name;
     let effortType3 = data.classes.effort3.name;
     let effortType4 = data.classes.effort4.name;
-    const arts = this.items.filter((a) => a.type == "art");
+
     arts.forEach((a) => {
       if (effortType1 == a.system.source) {
         effortOne += a.system.effort;

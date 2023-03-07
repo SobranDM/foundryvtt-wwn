@@ -64,7 +64,6 @@ export function rollItemMacro(itemName) {
     );
   }
   const item = items[0];
-  console.log(item);
 
   // Trigger the item roll
   return item.roll({ async: false });

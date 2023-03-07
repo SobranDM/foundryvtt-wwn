@@ -80,9 +80,19 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       used: slots,
     };
 
-    // Sort arts by name and then by source
-    arts = insertionSort(arts, "name");
-    arts = insertionSort(arts, "system.source");
+     // Sort arts by class
+  let sortedArts = {};
+  for (var i = 0; i < arts.length; i++) {
+    let source = arts[i].system.source;
+    if (!sortedArts[source]) sortedArts[source] = [];
+    sortedArts[source].push(arts[i]);
+  }
+
+  // Sort each class
+  Object.keys(sortedArts).forEach(source => {
+    let list = insertionSort(sortedArts[source], "name");
+    sortedArts[source] = list;
+  });
 
     // Divide skills into primary and secondary
     const primarySkills = insertionSort(
@@ -100,11 +110,18 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       armors: insertionSort(armors, "name"),
       abilities: insertionSort(abilities, "name"),
       weapons: insertionSort(weapons, "name"),
-      arts: arts,
+      arts: sortedArts,
       foci: insertionSort(foci, "name"),
       skills: [...primarySkills, ...secondarySkills],
+      spells: sortedSpells
     };
-    data.spells = sortedSpells;
+
+    console.log(sortedArts);
+
+    // Enable spell sheet and relevant sections
+    arts.length > 0 || spells.length > 0 ? this.actor.update({ "system.spells.enabled": true }) : this.actor.update({ "system.spells.enabled": false });
+    arts.length > 0 ? this.actor.update({ "system.spells.artsEnabled": true }) : this.actor.update({ "system.spells.artsEnabled": false });
+    spells.length > 0 ? this.actor.update({ "system.spells.spellsEnabled": true }) : this.actor.update({ "system.spells.spellsEnabled": false });
   }
 
   generateScores() {
@@ -249,7 +266,9 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     event.preventDefault();
     const itemId = event.currentTarget.closest(".item").dataset.itemId;
     const item = this.actor.items.get(itemId);
-    return item.update({ "system.charges.value": parseInt(event.target.value) });
+    return item.update({
+      "system.charges.value": parseInt(event.target.value),
+    });
   }
 
   _onShowModifiers(event) {

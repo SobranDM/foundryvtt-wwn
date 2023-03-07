@@ -66,6 +66,8 @@
       "spellcaster": {
         "spells": {
           "enabled": false,
+          "artsEnabled": false,
+          "spellsEnabled": false,
           "perDay": {
             "value": 0,
             "max": 0

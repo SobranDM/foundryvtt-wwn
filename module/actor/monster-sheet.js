@@ -36,7 +36,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
    * Organize and classify Owned Items for Character sheets
    * @private
    */
- _prepareItems(data) {
+_prepareItems(data) {
   // Partition items by category
   data.attackPatterns = [];
   let [weapons, armors, items, arts, spells, abilities] = this.actor.items.reduce(
@@ -58,8 +58,8 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     [[], [], [], [], [], []]
   );
   // Sort spells by level
-  var sortedSpells = {};
-  var slots = {};
+  let sortedSpells = {};
+  let slots = {};
   for (var i = 0; i < spells.length; i++) {
     let lvl = spells[i].system.lvl;
     if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
@@ -75,6 +75,20 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     sortedSpells[level] = list;
   });
 
+  // Sort arts by class
+  let sortedArts = {};
+  for (var i = 0; i < arts.length; i++) {
+    let source = arts[i].system.source;
+    if (!sortedArts[source]) sortedArts[source] = [];
+    sortedArts[source].push(arts[i]);
+  }
+
+  // Sort each class
+  Object.keys(sortedArts).forEach(source => {
+    let list = insertionSort(sortedArts[source], "name");
+    sortedArts[source] = list;
+  });
+
   data.attackPatterns.sort((a, b) => {
     const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
     return aName > bName ? 1 : bName > aName ? -1 : 0;
@@ -84,19 +98,20 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     used: slots,
   };
 
-  // Sort arts by name and then by source
-  arts = insertionSort(arts, "name");
-  arts = insertionSort(arts, "system.source");
-
   // Assign and return
   data.owned = {
     items: insertionSort(items, "name"),
     armors: insertionSort(armors, "name"),
     abilities: insertionSort(abilities, "name"),
     weapons: insertionSort(weapons, "name"),
-    arts: arts
+    arts: sortedArts,
+    spells: sortedSpells
   };
-  data.spells = sortedSpells;
+
+  // Enable spell sheet and relevant sections
+  arts.length > 0 || spells.length > 0 ? this.actor.update({ "system.spells.enabled": true }) : this.actor.update({ "system.spells.enabled": false });
+  arts.length > 0 ? this.actor.update({ "system.spells.artsEnabled": true }) : this.actor.update({ "system.spells.artsEnabled": false });
+  spells.length > 0 ? this.actor.update({ "system.spells.spellsEnabled": true }) : this.actor.update({ "system.spells.spellsEnabled": false });
 }
 
   /**

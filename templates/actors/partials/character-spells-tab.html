@@ -18,8 +18,9 @@
               class="fa fa-plus"></i></a>
         </div>
       </li>
+      {{#each owned.arts as |artGroup id|}}
       <ol class="item-list">
-        {{#each owned.arts as |art|}}
+        {{#each artGroup as |art|}}
         <li class="item-entry">
           <div class="item flexrow" data-item-id="{{art.id}}">
             <div class="item-name item-rollable flexrow">
@@ -40,15 +41,14 @@
               <input value="{{art.system.time}}" type="text" />
             </div>
             <div class="item-controls">
-              <!-- {{#if ../owner}} -->
               <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
               <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
-              <!-- {{/if}} -->
             </div>
           </div>
         </li>
         {{/each}}
       </ol>
+      {{/each}}
     </div>
     <div>
       <div class="item-titles flexrow spell-resources">
@@ -59,21 +59,21 @@
         </div>
       </div>
       <ol class="item-list">
-        {{#if system.classes.effort1.name}}
+        {{#each owned.arts as |artGroup id|}}
         <li class="item-entry">
           <div class="item flexrow">
-            <div class="item-name flexrow">{{system.classes.effort1.name}}</div>
+            <div class="item-name flexrow">{{id}}</div>
             <div class="field-short">
-              <input name="system.classes.effort1.value" type="number" value="{{system.classes.effort1.value}}"
+              <input name="{{system.classes[artGroup[0].source].value}}" type="number" value={{`system.classes[artGroup[0].source].value`}}
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="system.classes.effort1.max" type="number" value="{{system.classes.effort1.max}}"
+              <input name="{{system.classes[artGroup[0].source].max}}" type="number" value={{`system.classes[artGroup[0].source].max`}}
                 data-dtype="Number" />
             </div>
           </div>
         </li>
-        {{/if}}
+        {{/each}}
         {{#if system.classes.effort2.name}}
         <li class="item-entry">
           <div class="item flexrow">
@@ -120,6 +120,7 @@
         </li>
         {{/if}}
       </ol>
+      {{#if system.spells.spellsEnabled}}
       <div class="item-titles flexrow spell-resources">
         <div class="item-name">{{localize "WWN.category.spells"}}</div>
         <div class="item-controls">
@@ -153,9 +154,11 @@
             </div>
         </li>
       </ol>
+      {{/if}}
     </div>
   </div>
 </section>
+{{#if system.spells.spellsEnabled}}
 <section class="inventory spells" data-base-size="320">
   <div class="item-titles flexrow" style="line-height:15px">
     <div class="item-name">{{localize "WWN.category.spells"}}</div>
@@ -168,7 +171,7 @@
     </div>
   </div>
   <div class="spells">
-    {{#each spells as |spellGroup id|}}
+    {{#each owned.spells as |spellGroup id|}}
     <div class="spells-parent">
       <li class="item-titles flexrow">
         <div class="item-caret"><i class="fas fa-caret-down"></i> </div>
@@ -208,3 +211,4 @@
     {{/each}}
   </div>
 </section>
+{{/if}}
