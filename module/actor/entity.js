@@ -16,6 +16,7 @@ export class WwnActor extends Actor {
     this._calculateMovement();
     this.computeResources();
     this.computeTreasure();
+    this.enableSpellcasting();
     this.computeEffort();
     this.computeSaves();
     this.computeTotalSP();
@@ -437,8 +438,7 @@ export class WwnActor extends Actor {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
       skillValue = this.items.find(
-        (item) =>
-          item.type === "skill" && item.name === skillAttack
+        (item) => item.type === "skill" && item.name === skillAttack
       ).system.ownedLevel;
       statValue = this.system.scores[statAttack].mod;
     }
@@ -763,7 +763,7 @@ export class WwnActor extends Actor {
         base: newBase,
         exploration: newBase * 3,
         overland: newBase / 5,
-        bonus
+        bonus,
       };
     }
   }
@@ -801,6 +801,21 @@ export class WwnActor extends Actor {
     };
   }
 
+  // Enable spell sheet and relevant sections
+  enableSpellcasting() {
+    const arts = this.items.filter(i => i.type === "art");
+    const spells = this.items.filter(i => i.type === "spell");
+    arts.length > 0 || spells.length > 0
+      ? this.system.spells.enabled = true
+      : this.system.spells.enabled = false;
+    arts.length > 0
+      ? this.system.spells.artsEnabled = true
+      : this.system.spells.artsEnabled = false;
+    spells.length > 0
+      ? this.system.spells.spellsEnabled = true
+      : this.system.spells.spellsEnabled = false;
+  }
+
   // Compute Total Wealth
   computeTotalSP() {
     const data = this.system;
@@ -819,38 +834,25 @@ export class WwnActor extends Actor {
   // Compute Effort
   computeEffort() {
     const arts = this.items.filter((a) => a.type == "art");
-    if (arts.length === 0) return;
+    if (arts.length === 0) {
+      this.system.classes = {}
+      return;
+    };
 
     // Initialize data
     const data = this.system;
-    
-    let effortOne = 0;
-    let effortTwo = 0;
-    let effortThree = 0;
-    let effortFour = 0;
-    let effortType1 = data.classes.effort1.name;
-    let effortType2 = data.classes.effort2.name;
-    let effortType3 = data.classes.effort3.name;
-    let effortType4 = data.classes.effort4.name;
+
+    const classPools = {}
 
     arts.forEach((a) => {
-      if (effortType1 == a.system.source) {
-        effortOne += a.system.effort;
-      }
-      if (effortType2 == a.system.source) {
-        effortTwo += a.system.effort;
-      }
-      if (effortType3 == a.system.source) {
-        effortThree += a.system.effort;
-      }
-      if (effortType4 == a.system.source) {
-        effortFour += a.system.effort;
+      if (!classPools[a.system.source]) {
+        classPools[a.system.source] = { value: a.system.effort, max: data.classes[a.system.source]?.max || 1 };
+      } else {
+        classPools[a.system.source].value += a.system.effort;
       }
     });
-    this.system.classes.effort1.value = effortOne;
-    this.system.classes.effort2.value = effortTwo;
-    this.system.classes.effort3.value = effortThree;
-    this.system.classes.effort4.value = effortFour;
+
+    this.system.classes = classPools;
   }
 
   computeTreasure() {
@@ -911,16 +913,26 @@ export class WwnActor extends Actor {
       let shieldBonus =
         baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
       if (shieldOnly > shieldBonus) {
-        this.system.aac = { value: shieldOnly, shield: 0, naked, mod: data.aac.mod };
+        this.system.aac = {
+          value: shieldOnly,
+          shield: 0,
+          naked,
+          mod: data.aac.mod,
+        };
       } else {
-        this.system.aac = { value: shieldBonus, shield: AacShieldMod, naked, mod: data.aac.mod };
+        this.system.aac = {
+          value: shieldBonus,
+          shield: AacShieldMod,
+          naked,
+          mod: data.aac.mod,
+        };
       }
     } else {
       this.system.aac = {
         value: baseAac + data.scores.dex.mod + data.aac.mod,
         naked,
         shield: 0,
-        mod: data.aac.mod
+        mod: data.aac.mod,
       };
     }
     this.system.skills.sneakPenalty = sneakPenalty;
@@ -1007,8 +1019,10 @@ export class WwnActor extends Actor {
     if (this.type != "character") {
       return;
     }
-    const filteredSkills = this.items.filter((skill) => skill.system.combatSkill);
-    data.skills.combatSkills = filteredSkills.map(skill => skill.name);
+    const filteredSkills = this.items.filter(
+      (skill) => skill.system.combatSkill
+    );
+    data.skills.combatSkills = filteredSkills.map((skill) => skill.name);
   }
 
   _getRollData() {
@@ -1082,7 +1096,6 @@ export class WwnActor extends Actor {
       "telekinesis",
       "telepathy",
       "teleportation",
-      "polymath",
     ];
     const skills = skillList.map((el) => {
       const skillKey = `WWN.skills.${el}`;

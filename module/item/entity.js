@@ -298,13 +298,10 @@ export class WwnItem extends Item {
 
   spendArt() {
     if (this.system.time) {
-      const sourceName = Object.keys(this.actor.system.classes).find(
-        (source) =>
-          this.actor.system.classes[source].name === this.system.source
-      );
+      const sourceName = this.system.source;
       if (sourceName === undefined)
         return ui.notifications.warn(
-          `Please add ${this.system.source} as a caster class in the Tweaks menu.`
+          `Please add class name to the Source field.`
         );
 
       const currEffort = this.system.effort;

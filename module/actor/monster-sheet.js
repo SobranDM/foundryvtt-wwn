@@ -89,6 +89,8 @@ _prepareItems(data) {
     sortedArts[source] = list;
   });
 
+  console.log(sortedArts);
+
   data.attackPatterns.sort((a, b) => {
     const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
     return aName > bName ? 1 : bName > aName ? -1 : 0;
@@ -107,11 +109,6 @@ _prepareItems(data) {
     arts: sortedArts,
     spells: sortedSpells
   };
-
-  // Enable spell sheet and relevant sections
-  arts.length > 0 || spells.length > 0 ? this.actor.update({ "system.spells.enabled": true }) : this.actor.update({ "system.spells.enabled": false });
-  arts.length > 0 ? this.actor.update({ "system.spells.artsEnabled": true }) : this.actor.update({ "system.spells.artsEnabled": false });
-  spells.length > 0 ? this.actor.update({ "system.spells.spellsEnabled": true }) : this.actor.update({ "system.spells.spellsEnabled": false });
 }
 
   /**

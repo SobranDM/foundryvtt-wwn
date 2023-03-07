@@ -77,28 +77,7 @@
             "max": 3
           }
         },
-        "classes": {
-          "effort1": {
-            "name": "",
-            "value": 1,
-            "max": 1
-          },
-          "effort2": {
-            "name": "",
-            "value": 1,
-            "max": 1
-          },
-          "effort3": {
-            "name": "",
-            "value": 1,
-            "max": 1
-          },
-          "effort4": {
-            "name": "",
-            "value": 1,
-            "max": 1
-          }
-      }
+        "classes": {}
       }
     },
     "character": {

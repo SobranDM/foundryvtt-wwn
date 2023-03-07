@@ -18,7 +18,7 @@
               class="fa fa-plus"></i></a>
         </div>
       </li>
-      {{#each owned.arts as |artGroup id|}}
+      {{#each owned.arts as |artGroup|}}
       <ol class="item-list">
         {{#each artGroup as |art|}}
         <li class="item-entry">
@@ -59,66 +59,21 @@
         </div>
       </div>
       <ol class="item-list">
-        {{#each owned.arts as |artGroup id|}}
+        {{#each system.classes as |artGroup id|}}
         <li class="item-entry">
           <div class="item flexrow">
             <div class="item-name flexrow">{{id}}</div>
             <div class="field-short">
-              <input name="{{system.classes[artGroup[0].source].value}}" type="number" value={{`system.classes[artGroup[0].source].value`}}
+              <input name="{{artGroup.value}}" type="number" value={{artGroup.value}}
                 data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="{{system.classes[artGroup[0].source].max}}" type="number" value={{`system.classes[artGroup[0].source].max`}}
+              <input name="system.classes.{{id}}.max" type="number" value={{artGroup.max}}
                 data-dtype="Number" />
             </div>
           </div>
         </li>
         {{/each}}
-        {{#if system.classes.effort2.name}}
-        <li class="item-entry">
-          <div class="item flexrow">
-            <div class="item-name flexrow">{{system.classes.effort2.name}}</div>
-            <div class="field-short">
-              <input name="system.classes.effort2.value" type="number" value="{{system.classes.effort2.value}}"
-                data-dtype="Number" disabled />
-            </div> /
-            <div class="field-short">
-              <input name="system.classes.effort2.max" type="number" value="{{system.classes.effort2.max}}"
-                data-dtype="Number" />
-            </div>
-          </div>
-        </li>
-        {{/if}}
-        {{#if system.classes.effort3.name}}
-        <li class="item-entry">
-          <div class="item flexrow">
-            <div class="item-name flexrow">{{system.classes.effort3.name}}</div>
-            <div class="field-short">
-              <input name="system.classes.effort3.value" type="number" value="{{system.classes.effort3.value}}"
-                data-dtype="Number" disabled />
-            </div> /
-            <div class="field-short">
-              <input name="system.classes.effort3.max" type="number" value="{{system.classes.effort3.max}}"
-                data-dtype="Number" />
-            </div>
-          </div>
-        </li>
-        {{/if}}
-        {{#if system.classes.effort4.name}}
-        <li class="item-entry">
-          <div class="item flexrow">
-            <div class="item-name flexrow">{{system.classes.effort4.name}}</div>
-            <div class="field-short">
-              <input name="system.classes.effort4.value" type="number" value="{{system.classes.effort4.value}}"
-                data-dtype="Number" disabled />
-            </div> /
-            <div class="field-short">
-              <input name="system.classes.effort4.max" type="number" value="{{system.classes.effort4.max}}"
-                data-dtype="Number" />
-            </div>
-          </div>
-        </li>
-        {{/if}}
       </ol>
       {{#if system.spells.spellsEnabled}}
       <div class="item-titles flexrow spell-resources">

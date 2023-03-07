@@ -115,13 +115,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       skills: [...primarySkills, ...secondarySkills],
       spells: sortedSpells
     };
-
-    console.log(sortedArts);
-
-    // Enable spell sheet and relevant sections
-    arts.length > 0 || spells.length > 0 ? this.actor.update({ "system.spells.enabled": true }) : this.actor.update({ "system.spells.enabled": false });
-    arts.length > 0 ? this.actor.update({ "system.spells.artsEnabled": true }) : this.actor.update({ "system.spells.artsEnabled": false });
-    spells.length > 0 ? this.actor.update({ "system.spells.spellsEnabled": true }) : this.actor.update({ "system.spells.spellsEnabled": false });
   }
 
   generateScores() {
