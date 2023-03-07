@@ -19,6 +19,7 @@ export class WwnActor extends Actor {
     this.computeEffort();
     this.computeSaves();
     this.computeTotalSP();
+    this.populateCombatSkills();
     this.setXP();
     this.computePrepared();
     this.computeInit();
@@ -437,7 +438,7 @@ export class WwnActor extends Actor {
       skillAttack = attData.item.system.skill;
       skillValue = this.items.find(
         (item) =>
-          item.type === "skill" && item.name.toLowerCase() === skillAttack
+          item.type === "skill" && item.name === skillAttack
       ).system.ownedLevel;
       statValue = this.system.scores[statAttack].mod;
     }
@@ -731,8 +732,6 @@ export class WwnActor extends Actor {
     const data = this.system;
 
     if (data.config.movementAuto) {
-      this.system.movement.bonus = 0;
-
       let newBase = data.movement.base;
       const readiedValue = data.encumbrance.readied.value;
       const readiedMax = data.encumbrance.readied.max;
@@ -767,6 +766,7 @@ export class WwnActor extends Actor {
         base: newBase,
         exploration: newBase * 3,
         overland: newBase / 5,
+        bonus
       };
     }
   }
@@ -914,15 +914,16 @@ export class WwnActor extends Actor {
       let shieldBonus =
         baseAac + data.scores.dex.mod + data.aac.mod + AacShieldMod;
       if (shieldOnly > shieldBonus) {
-        this.system.aac = { value: shieldOnly, shield: 0, naked };
+        this.system.aac = { value: shieldOnly, shield: 0, naked, mod: data.aac.mod };
       } else {
-        this.system.aac = { value: shieldBonus, shield: AacShieldMod, naked };
+        this.system.aac = { value: shieldBonus, shield: AacShieldMod, naked, mod: data.aac.mod };
       }
     } else {
       this.system.aac = {
         value: baseAac + data.scores.dex.mod + data.aac.mod,
         naked,
         shield: 0,
+        mod: data.aac.mod
       };
     }
     this.system.skills.sneakPenalty = sneakPenalty;
@@ -1002,6 +1003,15 @@ export class WwnActor extends Actor {
       this.system.saves.mental.value = mentalVal;
       this.system.saves.luck.value = luckVal;
     }
+  }
+
+  async populateCombatSkills() {
+    const data = this.system;
+    if (this.type != "character") {
+      return;
+    }
+    const filteredSkills = this.items.filter((skill) => skill.system.combatSkill);
+    data.skills.combatSkills = filteredSkills.map(skill => skill.name);
   }
 
   _getRollData() {

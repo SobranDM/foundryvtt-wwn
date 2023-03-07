@@ -6,10 +6,15 @@ export const migrateWorld = async function () {
   ui.notifications.info(`Applying WWN System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });
 
   for (let actor of game.actors.contents) {
-    const updateData = await migrateActorDataToItemSkills(actor);
+    let updateData = await migrateActorDataToItemSkills(actor);
     if (updateData && updateData.length) {
       console.log(`Adding skills to ${actor.name}.`);
       await actor.createEmbeddedDocuments("Item", updateData);
+    }
+    updateData = await migrateDynamicCombatSkills(actor);
+    if (updateData && updateData.length) {
+      console.log(`Updating dynamic combat skills for ${actor.name}`);
+      await actor.updateEmbeddedDocuments("Item", updateData);
     }
     // If another actor migration is used to change the actor it should follow something like 
     // const updateData = await migrateActorDataToItemSkills(actor.data);
@@ -19,7 +24,7 @@ export const migrateWorld = async function () {
 
   for (let scene of game.scenes.contents) {
     let sceneUpdate = migrateSceneData(scene);
-    if (!foundry.utils.isObjectEmpty(sceneUpdate)) {
+    if (!foundry.utils.isEmpty(sceneUpdate)) {
       console.log(`Migrating Scene ${scene.name}.`);
       await scene.update(sceneUpdate);
     }
@@ -48,6 +53,11 @@ export const migrateWorld = async function () {
           updateData = await migrateActorDataToItemSkills(document.data);
           await document.createEmbeddedDocuments("Item", updateData);
           updateData = {}
+          updateData = await migrateDynamicCombatSkills(document.data);
+          if (updateData && updateData.length) {
+            await document.updateEmbeddedDocuments("Item", updateData);
+          }
+          updateData = {};
           break;
         case "Scene":
           updateData = migrateSceneData(document.data);
@@ -101,6 +111,23 @@ async function migrateActorDataToItemSkills(actor) {
   return updateData;
 }
 
+async function migrateDynamicCombatSkills(actor) {
+  let updateData = [];
+  if (actor.type != "character") {
+    return updateData;
+  }
+  const defaultCombatSkills = [ "punch", "stab", "shoot" ];
+  const combatSkills = await foundry.utils.deepClone(actor.items.filter((i) => i.type == "skill" && defaultCombatSkills.includes(i.name.toLowerCase())));
+  if (!combatSkills || combatSkills.length === 0) {
+    return updateData;
+  }
+  for (let skill of combatSkills) {
+    await skill.update({ "system.combatSkill": true });
+  }
+  console.log(combatSkills);
+  updateData = combatSkills;
+  return updateData;
+}
 
 async function migrateSceneData(scene) {
   const tokens = scene.tokens.map(async token => {

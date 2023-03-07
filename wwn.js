@@ -95,7 +95,7 @@ Hooks.once("ready", async () => {
   // Check migration
   if ( !game.user.isGM ) return;
   const currentVersion = game.settings.get("wwn", "systemMigrationVersion");
-  const NEEDS_MIGRATION_VERSION = "1.0.0";
+  const NEEDS_MIGRATION_VERSION = "1.1.2";
   const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
   if ( !currentVersion && totalDocuments === 0 ) return game.settings.set("wwn", "systemMigrationVersion", game.system.version);
   const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);

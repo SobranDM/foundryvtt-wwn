@@ -1,3 +1,12 @@
+## New in 1.1.2
+### Changes
+* Attack bonus and damage fields now support linking to character information. Shoutout to Stas for adding this valuable feature.
+    * @atk = attack bonus, @level, @str, @con, @magic, @stab, etc.
+* Compendium Spells and Arts have been updated to use these variables where appropriate.
+* Added dynamic combat skills. Shoutout to CupofCoffee for getting the framework ready for this. A new checkbox in a skill's sheet allows a user to designate a particular skill as a combat skill.
+    * Existing actors should have their Punch, Shoot, and Stab skills automatically set to combat skills. Additional skills may be designated as needed, to support using Magic to attack with certain arts or enabling custom combat skills.
+### Fixes
+* Bugs with AC and Movement fields in the Tweaks menu.
 ## New in 1.1.1
 ### Fixes
 * Item macros.
