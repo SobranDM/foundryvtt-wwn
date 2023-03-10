@@ -1,6 +1,6 @@
 ## New in 1.1.3
 ### Changes
-
+* Enabled foci on monster sheets.
 ### Fixes
 * New items could fail to roll following migration unless they were opened and then closed again.
 ## New in 1.1.2

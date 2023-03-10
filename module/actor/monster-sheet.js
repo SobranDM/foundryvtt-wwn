@@ -39,7 +39,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 _prepareItems(data) {
   // Partition items by category
   data.attackPatterns = [];
-  let [weapons, armors, items, arts, spells, abilities] = this.actor.items.reduce(
+  let [weapons, armors, items, arts, spells, abilities, foci] = this.actor.items.reduce(
     (arr, item) => {
       // Grab attack groups
       if (["weapon"].includes(item.type)) {
@@ -52,10 +52,11 @@ _prepareItems(data) {
       else if (item.type === "item") arr[2].push(item);
       else if (item.type === "art") arr[3].push(item);
       else if (item.type === "spell") arr[4].push(item);
-      else if (item.type === "ability") arr [5].push(item);
+      else if (item.type === "ability") arr[5].push(item);
+      else if (item.type === "focus") arr[6].push(item);
       return arr;
     },
-    [[], [], [], [], [], []]
+    [[], [], [], [], [], [], []]
   );
   // Sort spells by level
   let sortedSpells = {};
@@ -107,7 +108,8 @@ _prepareItems(data) {
     abilities: insertionSort(abilities, "name"),
     weapons: insertionSort(weapons, "name"),
     arts: sortedArts,
-    spells: sortedSpells
+    spells: sortedSpells,
+    foci: insertionSort(foci, "name")
   };
 }
 
