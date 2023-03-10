@@ -1,3 +1,8 @@
+## New in 1.1.3
+### Changes
+
+### Fixes
+* New items could fail to roll following migration unless they were opened and then closed again.
 ## New in 1.1.2
 ### Changes
 * Attack bonus and damage fields now support linking to character information. Shoutout to Stas for adding this valuable feature.
