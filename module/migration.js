@@ -124,7 +124,6 @@ function migrateDynamicCombatSkills(actor) {
   for (let skill of combatSkills) {
     skill.system.combatSkill = true;
   }
-  console.log(combatSkills);
   updateData = combatSkills;
   return updateData;
 }
