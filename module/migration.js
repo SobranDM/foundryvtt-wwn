@@ -111,20 +111,19 @@ async function migrateActorDataToItemSkills(actor) {
   return updateData;
 }
 
-async function migrateDynamicCombatSkills(actor) {
+function migrateDynamicCombatSkills(actor) {
   let updateData = [];
   if (actor.type != "character") {
     return updateData;
   }
   const defaultCombatSkills = [ "punch", "stab", "shoot" ];
-  const combatSkills = await foundry.utils.deepClone(actor.items.filter((i) => i.type == "skill" && defaultCombatSkills.includes(i.name.toLowerCase())));
+  const combatSkills = foundry.utils.deepClone(actor.items.filter((i) => i.type == "skill" && defaultCombatSkills.includes(i.name.toLowerCase())));
   if (!combatSkills || combatSkills.length === 0) {
     return updateData;
   }
   for (let skill of combatSkills) {
-    await skill.update({ "system.combatSkill": true });
+    skill.system.combatSkill = true;
   }
-  console.log(combatSkills);
   updateData = combatSkills;
   return updateData;
 }
