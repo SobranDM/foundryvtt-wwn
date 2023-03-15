@@ -155,8 +155,8 @@
                         </li>
                     {{/each}}
                     {{! Other items}}
-                    {{#each owned as |section| }}
-                    {{#unless (and (eq id "items") @root.system.config.enableInventory)}}
+                    {{#each owned as |section id|}}
+                    {{#unless (or (eq id "spells") (eq id "arts"))}}
                     {{#each section as |item|}}
                     <li class="item-entry">
                         <div class="item flexrow" data-item-id="{{item.id}}">

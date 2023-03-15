@@ -1,3 +1,7 @@
+## New in 1.1.4
+### Fixes
+* Adding arts or spells to monster sheet resulted in blank item that could be neither interacted with nor deleted.
+* Consumables could sometimes incorrectly calculate correct weight, counting each charge as 1 Encumbrance.
 ## New in 1.1.3
 ### Changes
 * Enabled foci on monster sheets.

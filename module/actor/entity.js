@@ -691,7 +691,7 @@ export class WwnActor extends Actor {
         } else if (!i.system.charges.max) {
           itemWeight = i.system.charges.value * i.system.weight;
         } else {
-          itemWeight = i.system.charges.value / i.system.charges.max;
+          itemWeight = i.system.charges.value / i.system.charges.max * i.system.weight;
         }
       } else {
         itemWeight = i.system.weight * i.system.quantity;
