@@ -824,9 +824,9 @@ export class WwnActor extends Actor {
     let newTotal =
       data.currency.cp * 0.1 +
       data.currency.sp +
-      data.currency.gp * 10 +
-      data.currency.pp * 100 +
-      data.currency.ep * 5 +
+      data.currency.gp * 100 +
+      data.currency.pp * 1000 +
+      data.currency.ep * 10 +
       data.currency.bank +
       data.treasure;
     this.system.currency.total = newTotal;
