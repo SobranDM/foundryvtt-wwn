@@ -434,14 +434,18 @@ export class WwnActor extends Actor {
     const rollLabels = [];
     const dmgLabels = [];
     const weaponShock = attData.item.system.shock.damage;
-    let statAttack, skillAttack, statValue, skillValue;
+    let statAttack, skillAttack, statValue, skillValue, artAttack, artValue;
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
+      artAttack = attData.item.system.art || "none";
       console.log(skillAttack);
       skillValue = this.items.find(
         (item) => item.type === "skill" && item.name.toLowerCase() === skillAttack.toLowerCase()
       ).system.ownedLevel;
+      artValue = this.items.find(
+        (item) => item.type === "art" && item.name.toLowerCase() === artAttack.toLowerCase()
+      )
       statValue = this.system.scores[statAttack].mod;
     }
 
@@ -549,6 +553,10 @@ export class WwnActor extends Actor {
         target: attData.roll.target,
       },
     };
+
+    if ( artValue ) {
+      artValue.spendArt({ skipDialog: true });
+    }
 
     // Roll and return
     return WwnDice.Roll({
