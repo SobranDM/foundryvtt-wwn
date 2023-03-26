@@ -21,6 +21,7 @@ export class WwnActor extends Actor {
     this.computeSaves();
     this.computeTotalSP();
     this.populateCombatSkills();
+    this.populateArts();
     this.setXP();
     this.computePrepared();
     this.computeInit();
@@ -1024,6 +1025,17 @@ export class WwnActor extends Actor {
       (skill) => skill.system.combatSkill
     );
     data.skills.combatSkills = filteredSkills.map((skill) => skill.name);
+  }
+
+  async populateArts() {
+    const data = this.system;
+    if (this.type != "character") {
+      return;
+    }
+    const filteredArts = this.items.filter(
+      (item) => item.type === "art"
+    );
+    data.arts = filteredArts.map((art) => art.name);
   }
 
   _getRollData() {

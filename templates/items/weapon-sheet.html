@@ -160,6 +160,18 @@
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <label>Art</label>
+            <div class="form-fields">
+              <select name="system.art">
+                {{#select system.art}}
+                {{#each actor.system.arts as |art|}}
+                <option value="{{art}}">{{art}}</option>
+                {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
