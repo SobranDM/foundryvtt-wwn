@@ -165,6 +165,7 @@
             <div class="form-fields">
               <select name="system.art">
                 {{#select system.art}}
+                <option value="none">None</option>
                 {{#each actor.system.arts as |art|}}
                 <option value="{{art}}">{{art}}</option>
                 {{/each}}
