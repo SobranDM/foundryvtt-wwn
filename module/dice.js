@@ -188,7 +188,8 @@ export class WwnDice {
     speaker = null,
     form = null,
     rollTitle = null,
-    dmgTitle = null
+    dmgTitle = null,
+    afterRolling = () => {},
   } = {}) {
     const template = "systems/wwn/templates/chat/roll-attack.html";
 
@@ -273,6 +274,7 @@ export class WwnDice {
               ChatMessage.create(chatData);
               resolve(roll);
             }
+            afterRolling();
           });
         });
       });
@@ -348,6 +350,7 @@ export class WwnDice {
     title = null,
     rollTitle = null,
     dmgTitle = null,
+    afterRolling = () => {}
   } = {}) {
     let rolled = false;
     const template = "systems/wwn/templates/chat/roll-dialog.html";
@@ -365,7 +368,8 @@ export class WwnDice {
       flavor: flavor,
       speaker: speaker,
       rollTitle: rollTitle,
-      dmgTitle: dmgTitle
+      dmgTitle: dmgTitle,
+      afterRolling: afterRolling,
     };
     if (skipDialog) {
       return ["melee", "missile", "attack"].includes(data.roll.type)

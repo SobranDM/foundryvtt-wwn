@@ -554,10 +554,6 @@ export class WwnActor extends Actor {
       },
     };
 
-    if ( artValue ) {
-      artValue.spendArt({ skipDialog: true });
-    }
-
     // Roll and return
     return WwnDice.Roll({
       event: options.event,
@@ -569,6 +565,7 @@ export class WwnActor extends Actor {
       title: label,
       rollTitle: rollTitle,
       dmgTitle: dmgTitle,
+      afterRolling: () => { if (artValue) artValue.spendArt({ skipDialog: true }); },
     });
   }
 
