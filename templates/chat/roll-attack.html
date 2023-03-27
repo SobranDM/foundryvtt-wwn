@@ -21,6 +21,12 @@
                 <div class="roll-result">{{{result.details}}}</div>
             </div>
             {{#if rollWWN}}<div title="{{rollTitle}}">{{{rollWWN}}}</div>{{/if}}
+            {{#if result.isCritical}}
+            <div title="critical">CRITICAL!!!</div>
+            {{/if}}
+            {{#if result.isFumble}}
+            <div title="critical">FUMBLE!!!</div>
+            {{/if}}
             {{#if result.isSuccess}}
             <div class="chat-details">
                 <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>

@@ -10,7 +10,11 @@ export class WwnDice {
     let die = roll.terms[0].total;
     if (data.roll.type == "above") {
       // SAVING THROWS
-      if (roll.total >= result.target) {
+      if (die === 20) {
+        result.isSuccess = true;
+      } else if (die === 1) {
+        result.isFailure = true;
+      } else if (roll.total >= result.target) {
         result.isSuccess = true;
       } else {
         result.isFailure = true;
@@ -41,7 +45,7 @@ export class WwnDice {
       }
       result.details = output;
     } else if (data.roll.type == "instinct") {
-      // SAVING THROWS
+      // INSTINCT CHECKS
       if (roll.total >= result.target) {
         result.isSuccess = true;
       } else {
@@ -154,6 +158,8 @@ export class WwnDice {
     let result = {
       isSuccess: false,
       isFailure: false,
+      isCritical: false,
+      isFumble: false,
       target: "",
       total: roll.total,
     };
@@ -163,19 +169,34 @@ export class WwnDice {
       : 0;
     result.victim = data.roll.target ? data.roll.target.data.name : null;
 
-    if (roll.total < targetAac) {
+    let die = roll.terms[0].total;
+
+    if (die === 20) {
+      result.isCritical = true;
+      result.isSuccess = true;
+    } else if (die === 1) {
+      result.isFumble = true;
+      result.isFailure = true;
+    } else if (targetAac > 0 && roll.total < targetAac) {
+      result.isFailure = true;
+    } else {
+      result.isSuccess = true;
+    }
+
+    if (result.isSuccess) {
       result.details = game.i18n.format(
         "WWN.messages.AttackAscendingFailure",
         {
           bonus: result.target,
         }
       );
-      return result;
-      }
+    }
+    
+    if (result.isFailure) {
       result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
         result: roll.total,
       });
-      result.isSuccess = true;
+    }
 
     return result;
   }
