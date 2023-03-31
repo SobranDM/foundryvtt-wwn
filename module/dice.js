@@ -51,11 +51,21 @@ export class WwnDice {
         // RegEx expression to chop up iL into the chunks needed
         const pattern = /\[(.+)\.([\w]+)\]/;
         const iA = iL.match(pattern);
-        const pack = game.packs.get(iA[1]);
-        if ( game.settings.get("wwn", "hideInstinct") ) {
-          pack.getDocument(iA[2]).then(table => table.draw({rollMode: "gmroll"}));
+        const type = iA[1];
+        const id = iA[2];
+        let tablePromise;
+        if ( type === "RollTable" ) {
+          tablePromise = Promise.resolve(game.tables.get(id))
+        } else if ( type === "Compendium.wwn.instinct") {
+          const pack = game.packs.get('wwn.instinct');
+          tablePromise = pack.getDocument(id);
         } else {
-          pack.getDocument(iA[2]).then(table => table.draw());
+          tablePromise = Promise.reject("not an instinct table")
+        }
+        if ( game.settings.get("wwn", "hideInstinct") ) {
+          tablePromise.then(table => table.draw({rollMode: "gmroll"}));
+        } else {
+          tablePromise.then(table => table.draw());
         }
       }
     }
