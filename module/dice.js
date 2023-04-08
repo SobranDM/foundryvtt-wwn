@@ -187,6 +187,7 @@ export class WwnDice {
       result.details = game.i18n.format(
         "WWN.messages.AttackAscendingSuccess",
         {
+          result: roll.total,
           bonus: result.target,
         }
       );
