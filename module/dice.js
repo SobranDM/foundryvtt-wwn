@@ -185,7 +185,7 @@ export class WwnDice {
 
     if (result.isSuccess) {
       result.details = game.i18n.format(
-        "WWN.messages.AttackAscendingFailure",
+        "WWN.messages.AttackAscendingSuccess",
         {
           bonus: result.target,
         }
@@ -193,7 +193,7 @@ export class WwnDice {
     }
     
     if (result.isFailure) {
-      result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
+      result.details = game.i18n.format("WWN.messages.AttackAscendingFailure", {
         result: roll.total,
       });
     }
