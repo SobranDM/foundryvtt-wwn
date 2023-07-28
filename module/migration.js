@@ -11,11 +11,6 @@ export const migrateWorld = async function () {
       console.log(`Adding skills to ${actor.name}.`);
       await actor.createEmbeddedDocuments("Item", updateData);
     }
-    updateData = await migrateDynamicCombatSkills(actor);
-    if (updateData && updateData.length) {
-      console.log(`Updating dynamic combat skills for ${actor.name}`);
-      await actor.updateEmbeddedDocuments("Item", updateData);
-    }
     // If another actor migration is used to change the actor it should follow something like 
     // const updateData = await migrateActorDataToItemSkills(actor.data);
     // if (!foundry.utils.isObjectEmpty(updateData)) {
@@ -52,11 +47,6 @@ export const migrateWorld = async function () {
         case "Actor":
           updateData = await migrateActorDataToItemSkills(document.data);
           await document.createEmbeddedDocuments("Item", updateData);
-          updateData = {}
-          updateData = await migrateDynamicCombatSkills(document.data);
-          if (updateData && updateData.length) {
-            await document.updateEmbeddedDocuments("Item", updateData);
-          }
           updateData = {};
           break;
         case "Scene":
@@ -108,23 +98,6 @@ async function migrateActorDataToItemSkills(actor) {
     // if delete, likely need to return a tuple
     updateData = primarySkills;
   }
-  return updateData;
-}
-
-function migrateDynamicCombatSkills(actor) {
-  let updateData = [];
-  if (actor.type != "character") {
-    return updateData;
-  }
-  const defaultCombatSkills = [ "punch", "stab", "shoot" ];
-  const combatSkills = foundry.utils.deepClone(actor.items.filter((i) => i.type == "skill" && defaultCombatSkills.includes(i.name.toLowerCase())));
-  if (!combatSkills || combatSkills.length === 0) {
-    return updateData;
-  }
-  for (let skill of combatSkills) {
-    skill.system.combatSkill = true;
-  }
-  updateData = combatSkills;
   return updateData;
 }
 

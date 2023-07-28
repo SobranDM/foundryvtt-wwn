@@ -79,7 +79,7 @@
             <div class="form-fields">
               <select name="system.skill">
                 {{#select system.skill}}
-                {{#each actor.system.skills.combatSkills as |skill|}}
+                {{#each actor.system.skillNames as |skill|}}
                 <option value="{{skill}}">{{skill}}</option>
                 {{/each}}
                 {{/select}}

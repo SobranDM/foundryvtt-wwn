@@ -16,7 +16,7 @@
   <form class="">
     <div class="flex flex-col gap-2">
       <div>
-        {{localize 'ACTOR.TypeFaction'}} {{localize 'WWN.items.RollTarget'}}:
+        {{localize 'TYPES.Actor.faction'}} {{localize 'WWN.items.RollTarget'}}:
         <select id="targetFaction" name="targetFaction"
           class="">
           <option value=""></option>
@@ -27,7 +27,7 @@
       </div>
       {{#each targets}}
       <div class="sel {{@key}}">
-        {{localize 'ACTOR.TypeFaction'}} {{ this.[0].name }} {{localize 'WWN.items.RollTarget'}}s:
+        {{localize 'TYPES.Actor.faction'}} {{ this.[0].name }} {{localize 'WWN.items.RollTarget'}}s:
         <select name="asset-{{@key}}"
           class="">
           <option value=""></option>

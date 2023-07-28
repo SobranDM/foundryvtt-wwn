@@ -10,6 +10,13 @@
           </div>
         </div>
         {{/if}}
+        <div class="form-group">
+          <label for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
+          <div class="form-fields">
+            <input type="checkbox" name="system.spells.enabled" id="spellcaster" {{checked system.spells.enabled}}
+              data-dtype="Boolean" />
+          </div>
+        </div>
         {{#if (eq this.type 'character')}}
         <div class="form-group">
           <label for="retainer">{{localize "WWN.Retainer"}}</label>

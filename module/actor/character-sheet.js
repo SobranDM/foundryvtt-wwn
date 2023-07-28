@@ -115,6 +115,9 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       skills: [...primarySkills, ...secondarySkills],
       spells: sortedSpells
     };
+
+    // Store skill names for retrieval by weapons
+    this.actor.system.skillNames = data.owned.skills.map(skill => skill.name);
   }
 
   generateScores() {

@@ -90,8 +90,6 @@ _prepareItems(data) {
     sortedArts[source] = list;
   });
 
-  console.log(sortedArts);
-
   data.attackPatterns.sort((a, b) => {
     const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
     return aName > bName ? 1 : bName > aName ? -1 : 0;

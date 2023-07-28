@@ -1,0 +1,8 @@
+2023/07/28-13:09:51.851 2fc4 Recovering log #236
+2023/07/28-13:09:51.859 2fc4 Delete type=0 #236
+2023/07/28-13:09:51.859 2fc4 Delete type=3 #234
+2023/07/28-13:10:14.288 df4 Level-0 table #241: started
+2023/07/28-13:10:14.288 df4 Level-0 table #241: 0 bytes OK
+2023/07/28-13:10:14.289 df4 Delete type=0 #239
+2023/07/28-13:10:14.294 df4 Manual compaction at level-0 from '!tables!4iUOhYpQ2IWYYQbL' @ 72057594037927935 : 1 .. '!tables.results!scGwW7STysk3CzcV.H6HCJKgRJ1MYCDxk' @ 0 : 0; will stop at (end)
+2023/07/28-13:10:14.294 df4 Manual compaction at level-1 from '!tables!4iUOhYpQ2IWYYQbL' @ 72057594037927935 : 1 .. '!tables.results!scGwW7STysk3CzcV.H6HCJKgRJ1MYCDxk' @ 0 : 0; will stop at (end)

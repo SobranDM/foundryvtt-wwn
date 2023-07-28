@@ -1,4 +1,5 @@
 import { WwnActor } from "./entity.js";
+import { WwnFaction } from "./faction.js";
 import { WwnActorSheet } from "./actor-sheet.js";
 import {
   FACTION_TAGS,

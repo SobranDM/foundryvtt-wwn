@@ -132,8 +132,7 @@
       "skills": {
         "exertPenalty": 0,
         "sneakPenalty": 0,
-        "unspent": 0,
-        "combatSkills": []
+        "unspent": 0
       },
       "scores": {
         "str": {
@@ -350,7 +349,6 @@
       "ownedLevel": -1,
       "score": "int",
       "skillDice": "2d6",
-      "combatSkill": false,
       "secondary": false
     },
     "ability": {

@@ -1,3 +1,17 @@
+## New in 1.2.0
+### Feature
+* Updated for Foundry v11. However, this did break the already barely functional faction sheet. See Known Issues.
+### Changes
+* Weapons now allow any skill to be selected. The previous method of selecting combat skills was causing issues. While it could have been fixed, it was also too fiddly.
+    * Weapons should default to something sane but the first time you edit a weapon it will default to your first skill (usually Administer) and will have to be changed.
+* Spellcaster sheet can now be enabled either through Tweaks (as before) or by dragging arts or spells onto the sheet. Using one method or the other always confused SOMEONE, so now you can do either.
+* Added Wilderness Encounter tables to the GM Master Tables compendium. Shoutout to Nephthys for pointing this out and sending me the tables.
+* Other stuff probably?
+### Known Issues
+* Something fundamental to the faction sheet was breaking all unlinked actors in v11. For the time being, I've simply disabled that something. You can still open faction sheets but don't expect them to work correctly.
+### Important Notes
+* As always, back up your data! This is ironically a bit less important with this release, as v11 creates whole new DB files, meaning you can roll back to v10 with very little (or no?) issues. You will lose any changes made while you were running v11 however.
+* This will be the last notable release on this system, barring game-breaking bug fixes. I created this while first learning to program and it has a host of issues, both from my own ignorance while getting started, as well as leftover baggage from porting this from Old-School Essentials. I am working on a new system to replace this one, built from the ground up to be awesome. I have no ETA on this. It'll be done when it's done.
 ## New in 1.1.4
 ### Fixes
 * Adding arts or spells to monster sheet resulted in blank item that could be neither interacted with nor deleted.
