@@ -1,3 +1,8 @@
-2023/07/28-13:49:58.624 2e3c Recovering log #243
-2023/07/28-13:49:58.630 2e3c Delete type=0 #243
-2023/07/28-13:49:58.630 2e3c Delete type=3 #242
+2023/07/28-13:59:54.304 404c Recovering log #258
+2023/07/28-13:59:54.310 404c Delete type=0 #258
+2023/07/28-13:59:54.310 404c Delete type=3 #256
+2023/07/28-14:03:11.612 25c4 Level-0 table #263: started
+2023/07/28-14:03:11.612 25c4 Level-0 table #263: 0 bytes OK
+2023/07/28-14:03:11.615 25c4 Delete type=0 #261
+2023/07/28-14:03:11.615 25c4 Manual compaction at level-0 from '!items!02iugdk4kvmvylww' @ 72057594037927935 : 1 .. '!items!y6gs4kky8lar51pl' @ 0 : 0; will stop at (end)
+2023/07/28-14:03:11.615 25c4 Manual compaction at level-1 from '!items!02iugdk4kvmvylww' @ 72057594037927935 : 1 .. '!items!y6gs4kky8lar51pl' @ 0 : 0; will stop at (end)

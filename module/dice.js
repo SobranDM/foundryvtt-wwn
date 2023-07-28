@@ -56,7 +56,7 @@ export class WwnDice {
         let tablePromise;
         if ( type === "RollTable" ) {
           tablePromise = Promise.resolve(game.tables.get(id))
-        } else if ( type === "Compendium.wwn.instinct") {
+        } else if ( type === "Compendium.wwn.instinct.RollTable") {
           const pack = game.packs.get('wwn.instinct');
           tablePromise = pack.getDocument(id);
         } else {

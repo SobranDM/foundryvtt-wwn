@@ -7,6 +7,8 @@
 * Spellcaster sheet can now be enabled either through Tweaks (as before) or by dragging arts or spells onto the sheet. Using one method or the other always confused SOMEONE, so now you can do either.
 * Added Wilderness Encounter tables to the GM Master Tables compendium. Shoutout to Nephthys for pointing this out and sending me the tables.
 * Other stuff probably?
+### Fixes
+* Fixed instinct table roll on failed instinct check.
 ### Known Issues
 * Something fundamental to the faction sheet was breaking all unlinked actors in v11. For the time being, I've simply disabled that something. You can still open faction sheets but don't expect them to work correctly.
 ### Important Notes
