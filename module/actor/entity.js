@@ -1109,23 +1109,6 @@ export class WwnActor extends Actor {
       await this.createEmbeddedDocuments("Item", skills);
     }
   }
-
-  /** @override*/
-  async _onCreate(data, options, user) {
-    await super._onCreate(data, options, user);
-    // Add primary skills from compendium
-    if (data.type === "character" && game.userId == user) {
-      // If there are no skills, add ones from compendium
-      if (!data.items.filter((i) => i.type == "skill").length) {
-        let skillPack = game.packs.get("wwn.skills");
-        let toAdd = await skillPack.getDocuments();
-        let primarySkills = toAdd
-          .filter((i) => i.system.secondary == false)
-          .map((item) => item.toObject());
-        await this.createEmbeddedDocuments("Item", primarySkills);
-      }
-    }
-  }
 }
 
 function toCamelCase(text) {

@@ -1,3 +1,8 @@
+## New in 1.2.1
+### Fixes
+* Fixed adding skills to new actors. This now requires a manual button press rather than happening automatically.
+* Removed reroll and reset options from initiative. These were hopelessly broken and I see no point in fixing them when this system will eventually be replaced.
+* Fixed randomized HP on monsters.
 ## New in 1.2.0
 ### Feature
 * Updated for Foundry v11. However, this did break the already barely functional faction sheet. See Known Issues.

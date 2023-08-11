@@ -196,6 +196,15 @@
       </div>
     </li>
     <ol class="item-list flexrow">
+      {{#if (eq owned.skills.length 0)}}
+      <a class="add-skills">
+        <li class="item-entry">
+          <div class="item-name-short flexrow">
+            <h4>Add Skills</h4>
+          </div>
+        </li>
+      </a>
+      {{/if}}
       {{#each owned.skills as |skill|}}
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{skill.id}}">

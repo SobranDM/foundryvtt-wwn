@@ -115,6 +115,15 @@ export class WwnActorSheet extends ActorSheet {
         item.rollSkill({ skipDialog: ev.ctrlKey });
       }
     });
+    html.find(".add-skills").click(async () => {
+      // Add primary skills from compendium
+      let skillPack = game.packs.get("wwn.skills");
+      let toAdd = await skillPack.getDocuments();
+      let primarySkills = toAdd
+        .filter((i) => i.system.secondary == false)
+        .map((item) => item.toObject());
+      await Item.createDocuments(primarySkills, {parent: this.actor});
+    });
     html.find(".item .item-rollable .item-image").click(async (ev) => {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));

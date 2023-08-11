@@ -33,8 +33,6 @@ export const registerSettings = function () {
     config: true,
     choices: {
       keep: "WWN.Setting.InitiativeKeep",
-      reset: "WWN.Setting.InitiativeReset",
-      reroll: "WWN.Setting.InitiativeReroll",
     }
   });
 
