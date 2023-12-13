@@ -1373,6 +1373,11 @@
     flex: 0 0 15px;
     cursor: pointer;
   }
+
+  .greyrow {
+    color: #777777;
+  }
+
   .prepared {
     font-size: 10px;
     padding-left: 10px;

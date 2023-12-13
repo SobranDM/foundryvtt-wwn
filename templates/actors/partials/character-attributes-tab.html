@@ -207,11 +207,16 @@
       {{/if}}
       {{#each owned.skills as |skill|}}
       <li class="item-entry">
-        <div class="item flexrow" data-item-id="{{skill.id}}">
+        <div class="item flexrow
+            {{#if (eq skill.system.ownedLevel -1)}}
+            greyrow
+            {{/if}}
+
+          " data-item-id="{{skill.id}}">
           <div class="item-name-short item-rollable flexrow">
             <a class="skill-roll">
               <h4 title="{{skill.system.description~}}">
-                {{skill.name}}
+                {{skill.name}}           
               </h4>
             </a>
           </div>
