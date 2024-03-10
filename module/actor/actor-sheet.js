@@ -165,15 +165,18 @@ export class WwnActorSheet extends ActorSheet {
       const header = event.currentTarget;
       const itemType = header.dataset.type;
       const candidateItems = {};
+      const gameGen = game?.release?.generation;
 
       for (const e of game.packs) {
-        if (
-          e.metadata.private == false &&  e.metadata.type === "Item") {
-          const items = (await e.getDocuments()).filter((i) => i.type == itemType);
-          if (items.length) {
-            for (const ci of items.map((item) => item.toObject())) {
-              candidateItems[ci.name] = ci;
-            }
+        if (gameGen <= 10 && e.metadata.private == true) {
+          continue;
+        } else if (gameGen > 10 && e.metadata.ownership.PLAYER == "NONE") {
+          continue;
+        }
+        const items = (await e.getDocuments()).filter((i) => i.type == itemType);
+        if (items.length) {
+          for (const ci of items.map((item) => item.toObject())) {
+            candidateItems[ci.name] = ci;
           }
         }
       }
