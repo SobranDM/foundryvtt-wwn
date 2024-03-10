@@ -1,3 +1,16 @@
+## New in 1.2.2
+### Features
+* Active Effects
+    * Exist on both actors and (most) items
+    * I added a version of Developed Attribute for Strength that shows how it would work. I haven't updated all the other various foci, arts, and anything else to use AE as I haven't had that kind of time. I just remembered I had AE working in a branch somewhere and figured I'd throw it in so power users could use it at least.
+* Charge checkbox on attacks
+    * Applies active effect to alter AC and attack bonus
+    * Requires Times Up module to automatically remove the AE after 1 round (otherwise you're stuck removing it yourself)
+### Changes
+* Unskilled skills (-1) are now darker grey to more easily differentiate from trained skills (wintersleep)
+* Show weapon damage in inventory tab (wintersleep)
+### Fixes
+* Fixed item search on actors (wintersleep)
 ## New in 1.2.1
 ### Fixes
 * Fixed adding skills to new actors. This now requires a manual button press rather than happening automatically.

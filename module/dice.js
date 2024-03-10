@@ -54,16 +54,16 @@ export class WwnDice {
         const type = iA[1];
         const id = iA[2];
         let tablePromise;
-        if ( type === "RollTable" ) {
+        if (type === "RollTable") {
           tablePromise = Promise.resolve(game.tables.get(id))
-        } else if ( type === "Compendium.wwn.instinct.RollTable") {
+        } else if (type === "Compendium.wwn.instinct.RollTable") {
           const pack = game.packs.get('wwn.instinct');
           tablePromise = pack.getDocument(id);
         } else {
           tablePromise = Promise.reject("not an instinct table")
         }
-        if ( game.settings.get("wwn", "hideInstinct") ) {
-          tablePromise.then(table => table.draw({rollMode: "gmroll"}));
+        if (game.settings.get("wwn", "hideInstinct")) {
+          tablePromise.then(table => table.draw({ rollMode: "gmroll" }));
         } else {
           tablePromise.then(table => table.draw());
         }
@@ -100,7 +100,7 @@ export class WwnDice {
       parts.push(form.bonus.value);
     }
 
-    const roll = new Roll(parts.join("+"), data).roll({async: false});
+    const roll = new Roll(parts.join("+"), data).roll({ async: false });
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -171,11 +171,11 @@ export class WwnDice {
         }
       );
       return result;
-      }
-      result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
-        result: roll.total,
-      });
-      result.isSuccess = true;
+    }
+    result.details = game.i18n.format("WWN.messages.AttackAscendingSuccess", {
+      result: roll.total,
+    });
+    result.isSuccess = true;
 
     return result;
   }
@@ -197,6 +197,42 @@ export class WwnDice {
       speaker: speaker,
     };
 
+    // Include charge bonus
+    if (form !== null && form.charge.checked) {
+      parts.push("2");
+      rollTitle += " +2 (charge)";
+
+      const actor = game.actors.get(speaker.actor);
+      const token = game.canvas.tokens.get(speaker.token).document.delta;
+      const linked = game.canvas.tokens.get(speaker.token).document.actorLink;
+      const effectTarget = linked ? actor : token;
+      const acTarget = actor.type === "character" ? "system.aac.mod" : "system.aac.value";
+
+      effectTarget.createEmbeddedDocuments("ActiveEffect", [
+        {
+          name: "Charge",
+          icon: "icons/environment/people/charge.webp",
+          origin: `Actor.${speaker.actor}`,
+          "duration.rounds": 1,
+          "changes": [
+            {
+              key: acTarget,
+              mode: 2,
+              value: "-2"
+            },
+            {
+              key: "system.thac0.bba",
+              mode: 2,
+              value: 2
+            }
+          ]
+        }
+      ])
+    }
+
+    // Optionally include a situational bonus
+    if (form !== null && form.bonus.value) parts.push(form.bonus.value);
+
     let templateData = {
       title: title,
       flavor: flavor,
@@ -206,11 +242,8 @@ export class WwnDice {
       dmgTitle: dmgTitle
     };
 
-    // Optionally include a situational bonus
-    if (form !== null && form.bonus.value) parts.push(form.bonus.value);
-
-    const roll = new Roll(parts.join("+"), data).roll({async: false});
-    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).roll({async: false});
+    const roll = new Roll(parts.join("+"), data).roll({ async: false });
+    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).roll({ async: false });
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");

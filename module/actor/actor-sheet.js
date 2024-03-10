@@ -1,4 +1,8 @@
 import { WwnActor } from "./entity.js";
+import {
+  onManageActiveEffect,
+  prepareActiveEffectCategories,
+} from "../effects.mjs";
 import { WwnEntityTweaks } from "../dialog/entity-tweaks.js";
 
 export class WwnActorSheet extends ActorSheet {
@@ -14,6 +18,11 @@ export class WwnActorSheet extends ActorSheet {
 
     data.config = CONFIG.WWN;
     data.isNew = this.actor.isNew();
+
+    if (this.actor.type != "faction") {
+      // Prepare active effects
+      data.effects = prepareActiveEffectCategories(this.actor.effects);
+    }
 
     return data;
   }
@@ -54,7 +63,7 @@ export class WwnActorSheet extends ActorSheet {
   async _resetSpells(event) {
     this.actor.update({
       "system.spells.perDay.value": 0
-      }
+    }
     );
   }
 
@@ -90,7 +99,12 @@ export class WwnActorSheet extends ActorSheet {
 
   activateListeners(html) {
     super.activateListeners(html);
-    
+
+    // Active Effect management
+    html
+      .find(".effect-control")
+      .click((ev) => onManageActiveEffect(ev, this.actor));
+
     // Item summaries
     html
       .find(".item .item-name h4")
@@ -111,7 +125,7 @@ export class WwnActorSheet extends ActorSheet {
     html.find(".skill-roll").click(async (ev) => {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));
-      if (item.type == "skill"){
+      if (item.type == "skill") {
         item.rollSkill({ skipDialog: ev.ctrlKey });
       }
     });
@@ -122,7 +136,7 @@ export class WwnActorSheet extends ActorSheet {
       let primarySkills = toAdd
         .filter((i) => i.system.secondary == false)
         .map((item) => item.toObject());
-      await Item.createDocuments(primarySkills, {parent: this.actor});
+      await Item.createDocuments(primarySkills, { parent: this.actor });
     });
     html.find(".item .item-rollable .item-image").click(async (ev) => {
       const itemId = $(ev.currentTarget).parents(".item");
@@ -138,7 +152,7 @@ export class WwnActorSheet extends ActorSheet {
         item.spendSpell({ skipDialog: ev.ctrlKey });
       } else if (item.type == "art") {
         item.spendArt({ skipDialogue: ev.ctrlKey, itemId: itemId });
-      }  else if (item.type == "skill"){
+      } else if (item.type == "skill") {
         item.rollSkill({ skipDialog: ev.ctrlKey });
       } else {
         item.roll({ skipDialog: ev.ctrlKey });
@@ -211,7 +225,7 @@ export class WwnActorSheet extends ActorSheet {
                   const itemNameToAdd = ((
                     html.find("#itemList")[0])).value;
                   const toAdd = await candidateItems[itemNameToAdd];
-                  await this.actor.createEmbeddedDocuments("Item", [{...toAdd}], {});
+                  await this.actor.createEmbeddedDocuments("Item", [{ ...toAdd }], {});
                 },
               },
               close: {
@@ -228,7 +242,7 @@ export class WwnActorSheet extends ActorSheet {
         );
         const s = popUpDialog.render(true);
         if (s instanceof Promise) await s;
-  
+
       } else {
         ui.notifications?.info("Could not find any items in the compendium");
       }
@@ -277,7 +291,7 @@ export class WwnActorSheet extends ActorSheet {
       .find(".artTime input")
       .click((ev) => ev.target.select())
       .change(this._onArtTimeChange.bind(this));
-    
+
     html.find(".check-field .check.hd-roll").click((ev) => {
       let actorObject = this.actor;
       actorObject.rollHitDice({ event: event });
@@ -306,7 +320,7 @@ export class WwnActorSheet extends ActorSheet {
     });
 
     /** Attempt to copy input focus */
-    if ( this.isEditable ) {
+    if (this.isEditable) {
       const inputs = html.find("input");
       inputs.focus(ev => ev.currentTarget.select());
     }
@@ -331,8 +345,7 @@ export class WwnActorSheet extends ActorSheet {
       let container = editor.closest(".resizable-editor");
       if (container) {
         let heightDelta = this.position.height - this.options.height;
-        editor.style.height = `${
-          heightDelta + parseInt(container.dataset.editorSize)
+        editor.style.height = `${heightDelta + parseInt(container.dataset.editorSize)
           }px`;
       }
     });

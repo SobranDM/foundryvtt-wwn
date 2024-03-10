@@ -1,6 +1,10 @@
 /**
  * Extend the basic ItemSheet with some very simple modifications
  */
+
+// Import helper/utility classes and constants.
+import { onManageActiveEffect, prepareActiveEffectCategories } from "../effects.mjs";
+
 export class WwnItemSheet extends ItemSheet {
   constructor(...args) {
     super(...args);
@@ -53,6 +57,9 @@ export class WwnItemSheet extends ItemSheet {
       { async: true }
     );
 
+    // Prepare active effects.
+    data.effects = prepareActiveEffectCategories(this.item.effects);
+
     return data;
   }
 
@@ -63,6 +70,11 @@ export class WwnItemSheet extends ItemSheet {
    * @param html {HTML}   The prepared HTML object ready to be rendered into the DOM
    */
   activateListeners(html) {
+    super.activateListeners(html);
+    
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
+
     html.find('input[data-action="add-tag"]').keypress((ev) => {
       if (event.which == 13) {
         let value = $(ev.currentTarget).val();
@@ -75,18 +87,16 @@ export class WwnItemSheet extends ItemSheet {
       this.object.popTag(value);
     });
     html.find('a.melee-toggle').click(() => {
-      this.object.update({data: {melee: !this.object.system.melee}});
+      this.object.update({ data: { melee: !this.object.system.melee } });
     });
 
     html.find('a.missile-toggle').click(() => {
-      this.object.update({data: {missile: !this.object.system.missile}});
+      this.object.update({ data: { missile: !this.object.system.missile } });
     });
 
-    if ( this.isEditable ) {
+    if (this.isEditable) {
       const inputs = html.find("input");
       inputs.focus(ev => ev.currentTarget.select());
     }
-
-    super.activateListeners(html);
   }
 }

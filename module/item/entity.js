@@ -14,6 +14,7 @@ export class WwnItem extends Item {
       item: "/systems/wwn/assets/default/item.png",
       focus: "/systems/wwn/assets/default/focus.png",
       art: "/systems/wwn/assets/default/art.png",
+      effect: ""
     };
   }
 

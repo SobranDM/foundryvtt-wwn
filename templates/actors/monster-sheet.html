@@ -10,13 +10,10 @@
       {{localize "WWN.category.attributes"}}
     </a>
     {{#if system.spells.enabled}}
-    <a class="item" data-tab="spells">
-      {{localize "WWN.category.spells"}}
-    </a>
+    <a class="item" data-tab="spells"> {{localize "WWN.category.spells"}} </a>
     {{/if}}
-    <a class="item" data-tab="notes">
-      {{localize "WWN.category.notes"}}
-    </a>
+    <a class="item" data-tab="notes"> {{localize "WWN.category.notes"}} </a>
+    <a class="item" data-tab="effects"> {{localize "WWN.Effects"}} </a>
   </nav>
   {{! Sheet Body }}
   <section class="sheet-body">
@@ -33,9 +30,14 @@
       <div class="inventory">
         <div class="item-titles">{{localize "WWN.category.notes"}}</div>
         <div class="resizable-editor" data-editor-size="320">
-          {{editor enrichedBiography target="system.details.biography" button=true editable=editable async=true}}
+          {{editor enrichedBiography target="system.details.biography"
+          button=true editable=editable async=true}}
         </div>
       </div>
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/actors/partials/actor-effects.html"}}
     </div>
   </section>
 </form>

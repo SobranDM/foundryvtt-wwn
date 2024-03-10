@@ -42,8 +42,15 @@
       </ol>
     </div>
   </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+      <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+      <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="flexrow card-body">
+    <div class="flexrow card-body tab" data-group="primary" data-tab="description">
       <div class="description">
         {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
         async=true}}
@@ -162,6 +169,10 @@
           </div>
         </div>
       </div>
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+        {{> "systems/wwn/templates/items/partials/item-effects.html"}}
     </div>
   </section>
 </form>

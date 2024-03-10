@@ -267,7 +267,11 @@
       },
       "roll": "",
       "equipped": false,
-      "stowed": false
+      "stowed": false,
+      "effects": {
+        "active": false,
+        "list": []
+      }
     },
     "weapon": {
       "range": {

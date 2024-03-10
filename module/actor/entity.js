@@ -893,7 +893,7 @@ export class WwnActor extends Actor {
         return;
       }
       if (a.system.type != "shield") {
-        baseAac = a.system.aac.value + a.system.aac.mod;
+        baseAac = Number(a.system.aac.value) + a.system.aac.mod;
         // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
         if (a.system.type === "medium" && a.system.weight > sneakPenalty) {
           sneakPenalty = a.system.weight;
@@ -906,7 +906,7 @@ export class WwnActor extends Actor {
         }
       } else if (a.system.type == "shield") {
         AacShieldMod = 1 + a.system.aac.mod;
-        AacShieldNaked = a.system.aac.value + a.system.aac.mod;
+        AacShieldNaked = Number(a.system.aac.value) + a.system.aac.mod;
       }
     });
     if (AacShieldMod > 0) {
