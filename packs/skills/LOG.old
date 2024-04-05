@@ -1,7 +1,0 @@
-2024/03/10-15:46:13.834 530c Recovering log #587
-2024/03/10-15:46:13.840 530c Delete type=0 #587
-2024/03/10-15:46:13.840 530c Delete type=3 #585
-2024/03/10-15:52:39.003 1230 Level-0 table #592: started
-2024/03/10-15:52:39.003 1230 Level-0 table #592: 0 bytes OK
-2024/03/10-15:52:39.005 1230 Delete type=0 #590
-2024/03/10-15:52:39.010 1230 Manual compaction at level-0 from '!items!0LE1PIHxFkGCpB00' @ 72057594037927935 : 1 .. '!items!yznCBs2bdRJJDiUh' @ 0 : 0; will stop at (end)

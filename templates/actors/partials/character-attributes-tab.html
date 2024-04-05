@@ -127,7 +127,7 @@
   {{!-- Resource Tracking --}}
   <div class="attribute-group">
     <ul class="attributes flexrow saves">
-        <li class="attribute saving-throw" data-save="luck">
+        <li class="attribute wound-throw" data-save="wounds">
             <h4 class="attribute-name box-title">
                 <a>{{ localize "WWN.WoundsShort" }}</a>
             </h4>
@@ -173,14 +173,6 @@
           <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.ArmorClass' }}" disabled />
         </div>
-      </li>
-      <li class="attribute saving-throw" data-save="mental">
-        <h4 class="attribute-name box-title">
-          <a>{{ localize "WWN.saves.mental" }}</a>
-        </h4>
-        <div class="attribute-value">
-          <input name="system.saves.mental.value" type="number" value="{{system.saves.mental.value}}" placeholder="0"
-            data-dtype="Number" disabled />
       </li>
       <li class="attribute saving-throw" data-stat="mov">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.long'}}">

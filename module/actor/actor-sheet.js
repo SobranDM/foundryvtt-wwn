@@ -115,7 +115,10 @@ export class WwnActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       item.show();
     });
-
+    html.find(".wound-throw .attribute-name a").click((ev) => {
+      let actorObject = this.actor;
+      actorObject.rollWoundSave({ event: ev });
+    });
     html.find(".saving-throw .attribute-name a").click((ev) => {
       let actorObject = this.actor;
       let element = ev.currentTarget;

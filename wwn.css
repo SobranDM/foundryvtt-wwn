@@ -1188,6 +1188,13 @@
   .attribute-group
   .attributes.saves
   .attribute.saving-throw
+  .attribute-name,
+.wwn.actor.character
+  .sheet-body
+  .attributes-tab
+  .attribute-group
+  .attributes.saves
+  .attribute.wound-throw
   .attribute-name {
   width: 85px;
 }

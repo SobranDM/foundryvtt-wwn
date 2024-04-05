@@ -125,8 +125,11 @@
       "warrior": false,
       "hp": {
         "hd": "1d6",
-        "value": 4,
-        "max": 4
+        "value": 0,
+        "max": 0
+      },
+      "wounds": {
+        "value": 0
       },
       "treasure": 0,
       "skills": {

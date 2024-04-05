@@ -110,6 +110,26 @@ export class WwnActor extends Actor {
     });
   }
 
+  rollWoundSave (options = {}) {
+      console.log("Roll a wound save");
+      const label = game.i18n.localize("WWN.WoundsShort");
+      const rollMethod = WwnDice.RollSave;
+      const data = {
+          actor: this,
+          roll: {},
+
+      }
+      return rollMethod({
+          event: options.event,
+          parts: ["1d20"],
+          data: data,
+          speaker: ChatMessage.getSpeaker({ actor: this}),
+          flavor: game.i18n.format("WWN.roll.save", {save: label}),
+          title: game.i18n.format("WWN.roll.save", {
+              save: this.name + " - " + label,
+          }),
+      });
+  }
   rollSave(save, options = {}) {
     const label = game.i18n.localize(`WWN.saves.${save}`);
     const rollParts = ["1d20"];
