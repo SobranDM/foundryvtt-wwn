@@ -145,20 +145,19 @@
   text-align: center;
 }
 .wwn.sheet.actor .sheet-body .attributes .attribute {
-  height: 40px;
+  height: 30px;
 }
 .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
-  line-height: 36px;
   width: auto;
   min-width: 15px;
 }
 .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
   text-align: center;
-  padding: 4px;
+  padding: 2px;
 }
 .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-mod {
   border-left: 1px solid #7a7971;
-  padding: 4px;
+  padding: 2px;
   text-align: center;
 }
 .wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value .sep {
@@ -198,6 +197,7 @@
   display: inline-block;
   flex-direction: column;
   margin-bottom: -10px;
+  margin-top: 10px;
 }
 .wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes {
   display: inline-block;
@@ -207,7 +207,7 @@
 .wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute {
   display: flex;
   flex-direction: row;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 .wwn.sheet.actor
   .sheet-body
@@ -249,7 +249,7 @@
   .attribute-name {
   width: 40px;
   margin: 0;
-  line-height: 35px;
+  line-height: 23px;
 }
 .wwn.sheet.actor
   .sheet-body
@@ -1190,7 +1190,6 @@
   .attribute.saving-throw
   .attribute-name {
   width: 85px;
-  height: 38px;
 }
 .wwn.actor.character
   .sheet-body
