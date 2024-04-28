@@ -254,27 +254,99 @@ export class WwnActorSheet extends ActorSheet {
       const type = header.dataset.type;
 
       // item creation helper func
-      let createItem = function (type, name = `New ${type.capitalize()}`) {
+      let createItem = function (type, name = `New ${type.capitalize()}`, weight = 0, price = 0, quantity = 1) {
+        //let data = foundry.utils.deepClone(header.dataset);
+        let data = {
+          weight: weight,
+          price: price,
+          quantity: quantity,
+        };
         const itemData = {
           name: name ? name : `New ${type.capitalize()}`,
           type: type,
-          data: foundry.utils.deepClone(header.dataset),
+          data,
         };
         delete itemData.data["type"];
         return itemData;
       };
 
-      // Getting back to main logic
-      if (type == "choice") {
-        const choices = header.dataset.choices.split(",");
-        this._chooseItemType(choices).then((dialogInput) => {
-          const itemData = createItem(dialogInput.type, dialogInput.name);
-          this.actor.createEmbeddedDocuments("Item", [itemData]);
-        });
-        return;
+      let extraFields = "";
+      if (type == "armor") {
+        extraFields = `
+        <div class="flex flexrow form-fields">
+          Armor Type: <select id="armorType">
+            <option value="light">Light</option>
+            <option value="medium">Medium</option>
+            <option value="heavy">Heavy</option>
+            <option value="shield">Shield</option>
+          </select>
+        </div>
+        <div class="flex flexrow form-fields">
+          Armor Class: <input id="aac" value="0" data-dtype="number">
+        </div>
+        `;
       }
-      const itemData = createItem(type);
-      this.actor.createEmbeddedDocuments("Item", [itemData]);
+      const dialogTemplate = `
+      <div class="flex flex-col">
+        <h1> New ${type}</h1>
+        <div class="flex flexrow form-fields">
+          Name: <input id="name"  value="New ${type.capitalize()}">
+        </div>
+        <div class="flex flexrow form-fields">
+          Encumbrance: <input id="encumbrance" value="1" data-dtype="number">
+        </div>
+        <div class="flex flexrow form-fields">
+          Price: <input id="price" value="0" data-dtype="number"><br>
+        </div>
+        <div class="flex flexrow form-fields">
+          Quantity: <input id="quantity" value="1" data-dtype="number"><br>
+        </div>
+        ${extraFields}
+      </div>
+      `;
+      const popUpDialog = new Dialog(
+        {
+          title: `Add ${type}`,
+          content: dialogTemplate,
+          buttons: {
+            addItem: {
+              label: `Add ${type}`,
+              callback: async (html) => {
+                const itemNameToAdd = html.find("#name").val();
+                const enc = html.find("#encumbrance").val();
+                const price = html.find("#price").val();
+                const qty = html.find("#quantity").val();
+                //await this.actor.createEmbeddedDocuments("Item", [{ ...toAdd }], {});
+
+                // Getting back to main logic
+                if (type == "choice") {
+                  const choices = header.dataset.choices.split(",");
+                  this._chooseItemType(choices).then((dialogInput) => {
+                    const itemData = createItem(dialogInput.type, dialogInput.name);
+                    this.actor.createEmbeddedDocuments("Item", [itemData]);
+                  });
+                  return;
+                }
+                const itemData = createItem(type, itemNameToAdd, enc, price, qty);
+                this.actor.createEmbeddedDocuments("Item", [itemData]);
+              },
+            },
+            close: {
+              label: "Cancel",
+            },
+          },
+          default: "addItem",
+        },
+        {
+          failCallback: () => {
+            return;
+          },
+        }
+      );
+      const s = popUpDialog.render(true);
+
+
+
     });
 
     html
