@@ -273,7 +273,7 @@ export class WwnActorSheet extends ActorSheet {
       let extraFields = "";
       if (type == "armor") {
         extraFields = `
-        <div class="flex flexrow form-fields">
+        <div class="flex flexrow form-group">
           Armor Type: <select id="armorType">
             <option value="light">Light</option>
             <option value="medium">Medium</option>
@@ -281,28 +281,68 @@ export class WwnActorSheet extends ActorSheet {
             <option value="shield">Shield</option>
           </select>
         </div>
-        <div class="flex flexrow form-fields">
-          Armor Class: <input id="aac" value="0" data-dtype="number">
+        <div class="flex flexrow form-group">
+          Armor Class: <input id="aac" type="text" value="0" data-dtype="number">
         </div>
         `;
+      } else if (type == "weapon") {
+        extraFields = `
+        <div class="flex flexrow form-group">
+          Weapon Type: <select id="weaponType">
+            <option value="melee">Melee</option>
+            <option value="ranged">Ranged</option>
+          </select>
+        </div>
+        <div class="flex flexrow form-group">
+          Damage: <input id="damage" type="text" value="1d6">
+        </div>
+        <div class="flex flexrow form-group">
+          Shock Damage: <input id="shock-dmg" type="text" value="1">
+        </div>
+        <div class="flex flexrow form-group">
+          Shock AC: <input id="shock-ac" type="text" value="15">
+        </div>
+        `;
+      } else if (type == "item") {
+        if ("consumable" in header.dataset) {
+          extraFields = `
+          <div class="flex flexrow form-group">
+            Charges Value: <input id="charges-val" type="text" value="1" data-dtype="number">
+          </div>  
+          <div class="flex flexrow form-group">
+            Charges Max: <input id="charges-max" type="text" value="1" data-dtype="number">
+          </div>  
+          `;
+        } else if ("treasure" in header.dataset) {
+          console.log("Treasure item");
+        }
       }
       const dialogTemplate = `
+      <form class="wwn roll-dialog">
       <div class="flex flex-col">
         <h1> New ${type}</h1>
-        <div class="flex flexrow form-fields">
-          Name: <input id="name"  value="New ${type.capitalize()}">
+        <div class="flex flexrow form-group">
+          Name: <input id="name" type="text" value="New ${type.capitalize()}">
         </div>
-        <div class="flex flexrow form-fields">
-          Encumbrance: <input id="encumbrance" value="1" data-dtype="number">
+        <div class="flex flexrow form-group">
+          Encumbrance: <input id="encumbrance" type="text" value="1" data-dtype="number">
         </div>
-        <div class="flex flexrow form-fields">
-          Price: <input id="price" value="0" data-dtype="number"><br>
+        <div class="flex flexrow form-group">
+          Price: <input id="price" type="text" value="0" data-dtype="number"><br>
         </div>
-        <div class="flex flexrow form-fields">
-          Quantity: <input id="quantity" value="1" data-dtype="number"><br>
+        <div class="flex flexrow form-group">
+          Quantity: <input id="quantity" type="text" value="1" data-dtype="number"><br>
         </div>
+        <div class="flex flexrow form-group">
+        Location: <select id="location">
+          <option value="stowed">Stowed</option>
+          <option value="equipped">Equipped</option>
+          <option value="neither">Neither</option>
+        </select>
+      </div>
         ${extraFields}
       </div>
+      </form>
       `;
       const popUpDialog = new Dialog(
         {
