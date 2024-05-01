@@ -495,9 +495,9 @@
   "WWN.reaction.Indifferent": "{name} is more friendly and benign than you'd expect them to be, given the circumstances.",
   "WWN.reaction.Friendly": "{name} is as friendly and helpful as their nature and the situation permits them to be.",
   "WWN.faction": {
-    "forceRating": "Force Rating",
-    "cunningRating": "Cunning Rating",
-    "wealthRating": "Wealth Rating",
+    "forceRating": "Force",
+    "cunningRating": "Cunning",
+    "wealthRating": "Wealth",
     "facCreds": "Treasure",
     "xp": "XP",
     "homeworld": "Headquarters",
