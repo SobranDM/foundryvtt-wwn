@@ -268,7 +268,7 @@
         {{#each system.log as |logentry id|}}
 
         <div class="logdiv" data-idx="{{id}}">
-          <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
+          <b>Log Entry {{@index}}</b> <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
             WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
           {{{logentry}}}<br>
           <hr>
