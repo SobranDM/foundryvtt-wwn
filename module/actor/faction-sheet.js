@@ -339,9 +339,6 @@ export class WwnActorSheetFaction extends WwnActorSheet {
   async _onStartTurn(event) {
     event.preventDefault();
     event.stopPropagation();
-    const actor = new WwnFaction(this.actor);
-    console.log(this.actor);
-    console.log(Object.prototype.toString.call(actor));
     this.startTurn();
     // Now ask about action
     const dialogData = {
@@ -781,9 +778,9 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const assets = (
       this.actor.items.filter((i) => i.type === "asset")
     );
-    const wealthIncome = Math.ceil(this.actor.system.wealthRating / 2);
-    const cunningIncome = Math.floor(this.actor.system.cunningRating / 4);
-    const forceIncome = Math.floor(this.actor.system.forceRating / 4);
+    const wealthCunningForceIncome = 
+      Math.ceil((this.actor.system.wealthRating / 2) + 
+      ((this.actor.system.cunningRating + this.actor.system.forceRating) / 4));
     const assetIncome = assets
       .map((i) => i.system.income)
       .reduce((i, n) => i + n, 0);
@@ -807,17 +804,15 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const costFromAssetsOver =
       cunningAssetsOverLimit + forceAssetsOverLimit + wealthAssetsOverLimit;
     const income =
-      wealthIncome +
-      cunningIncome +
-      forceIncome +
+      wealthCunningForceIncome +
       assetIncome -
       assetMaintTotal +
       costFromAssetsOver;
     let new_creds = this.actor.system.facCreds + income;
 
     const assetsWithTurn = assets.filter((i) => i.system.turnRoll);
-    let msg = `<b>Income this round: ${income}</b>.<br> From ratings: ${wealthIncome + cunningIncome + forceIncome
-      } (W:${wealthIncome} C:${cunningIncome} F:${forceIncome})<br>From assets: ${assetIncome}.<br>Maintenance -${assetMaintTotal}.<br>`;
+    let msg = `<b>Income this round: ${income}</b>.<br> From ratings: ${wealthCunningForceIncome}
+       (0.5 * W + 0.25 * (C+F))<br>From assets: ${assetIncome}.<br>Maintenance -${assetMaintTotal}.<br>`;
     if (costFromAssetsOver < 0) {
       msg += `Cost from # of assets over rating: ${costFromAssetsOver}.<br>`;
     }
