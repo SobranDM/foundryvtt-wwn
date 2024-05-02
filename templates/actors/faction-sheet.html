@@ -20,7 +20,7 @@
         </li>
         <li class="flex3">
             <!--buttons-->
-            <div class="cost flex flex-col">
+            <div class="cost flex flex-col" style="padding-left:20px;">
               <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
               {{localize 'WWN.faction.turn'}}
             </div>
@@ -172,23 +172,26 @@
           {{localize 'WWN.faction.factionGoal'}}
         </div>
         <!-- goal -->
-        <div class="flex flex-col">
-          <input class="" name="system.factionGoal" value="{{system.factionGoal}}" />
-          <div>
-            {{localize 'WWN.faction.factionGoal'}}
-            <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
-              <i class="fas fa-exchange-alt"></i>
-            </a>
-          </div>
+        <div class="flex flex-col header-details">
+          <ul class="summary flexrow">
+            <li class="flex3">
+              <!-- goal -->
+              <input class="" name="system.factionGoal" value="{{system.factionGoal}}" />
+              <label>{{localize 'WWN.faction.factionGoal'}}
+                <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
+                  <i class="fas fa-exchange-alt"></i>
+                </a></label>
+            </li>
+          </ul>
         </div>
 
         <!-- goal -->
         <div class="flex flex3 flex-col">
-          <div class="">
+          <div style="height:100px">
             {{editor enrichedGoal target="system.factionGoalDesc" button=true
             editable=editable async=true}}
           </div>
-          <div>{{localize 'WWN.faction.factionGoalDesc'}}</div>
+          <!-- <div>{{localize 'WWN.faction.factionGoalDesc'}}</div> -->
         </div>
 
 
@@ -198,7 +201,7 @@
 
         <div class="flexrow flex-grow">
           <div class="flex flex-col">
-            <div class="">
+            <div class="" style="height:150px">
               {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
               {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
             </div>
