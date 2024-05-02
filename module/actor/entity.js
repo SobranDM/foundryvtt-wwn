@@ -1144,7 +1144,31 @@ export class WwnActor extends Actor {
       await this.createEmbeddedDocuments("Item", skills);
     }
   }
+
+  // ----------------------------
+  // FACTION METHODS
+  // ----------------------------
+  getHealth(level) {
+    if (level in HEALTH__XP_TABLE) {
+      return HEALTH__XP_TABLE[level];
+    } else {
+      return 0;
+    }
+  }
+
 }
+
+export const HEALTH__XP_TABLE = {
+  1: 1,
+  2: 2,
+  3: 4,
+  4: 6,
+  5: 9,
+  6: 12,
+  7: 16,
+  8: 20,
+};
+
 
 function toCamelCase(text) {
   const split = text.split(" ").map((t) => t.titleCase());

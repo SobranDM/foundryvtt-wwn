@@ -1,148 +1,60 @@
 export class WwnFaction extends Actor {
   prepareData() {
     super.prepareData();
-    const data = this.system;
+    const data = this.actor.system;
 
     if (this.type !== "faction") {
       return;
     }
   }
 
+  prepareDerivedData() {
 
-  getHealth(level) {
-    if (level in HEALTH__XP_TABLE) {
-      return HEALTH__XP_TABLE[level];
-    } else {
-      return 0;
-    }
   }
 
-  async logMessage(
-    title,
-    content,
-    longContent = null,
-    logRollString = null
-  ) {
-    const gm_ids = ChatMessage.getWhisperRecipients("GM")
-      .filter((i) => i)
-      .map((i) => i.id)
-      .filter((i) => i !== null);
-
-    if (game.modules?.get("foundryvtt-simple-calendar")?.active) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      const c = SimpleCalendar.api.getCurrentCalendar();
-      content = `(${c.currentDate.year}-${c.currentDate.month + 1}-${c.currentDate.day + 1
-        }) ${content}`;
-    }
-    const cardData = {
-      title,
-      content,
-      longContent,
-      logRollString,
-    };
-    const template = "systems/wwn/templates/chat/faction-log.html";
-
-    const chatData = {
-      speaker: ChatMessage.getSpeaker({ actor: this }),
-      content: await renderTemplate(template, cardData),
-      type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
-      whisper: gm_ids,
-    };
-    const msg = await ChatMessage.create(chatData);
-    if (msg) {
-      // Old way but rolls are ugly
-      //const chatString = msg.export();
-      //content = chatString.split("]", 2)[1];
-      const html = await msg.getHTML();
-      html.find(".message-header").remove();
-      content = html.html().toString();
-    }
-    const log = this.system.log;
-    log.push(content);
-    await this.update({
-      data: {
-        log: log,
-      },
+  async _onCreate() {
+    await this.actor.update({
+      "token.actorLink": true,
+      "img" : "systems/wwn/assets/default/faction.png"
     });
   }
 
-
-  async addTag(name) {
-    const match = FACTION_TAGS.filter((i) => i.name == name);
-    if (!match) {
-      ui.notifications?.error(`Error unable to find tag ${name}`);
-      return;
-    }
-    const tags = this.system.tags;
-    tags.push(match[0]);
-    await this.update({
-      data: {
-        tags: tags,
-      },
+  async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
+    data.map((item) => {
+      if (item.img === undefined) {
+        item.img = WwnItem.defaultIcons[item.type];
+      }
     });
+    super.createEmbeddedDocuments(embeddedName, data, context);
   }
 
-  async addCustomTag(
-    name,
-    desc,
-    effect
-  ) {
-    const tags = this.system.tags;
-    const tag = {
-      name,
-      desc,
-      effect,
-    };
-    tags.push(tag);
-    await this.update({
-      data: {
-        tags: tags,
-      },
-    });
-  }
-
-
-  async addBase(
-    hp,
-    assetType,
-    name,
-    imgPath
-  ) {
-    if (hp > this.system.health.max) {
-      ui.notifications?.error(
-        `Error HP of new base (${hp}) cannot be greater than faction max HP (${this.system.health.max})`
-      );
-      return;
+  isNew() {
+    const data = this.actor.system;
+    if (this.type == "character") {
+      let ct = 0;
+      Object.values(data.scores).forEach((el) => {
+        ct += el.value;
+      });
+      return ct == 0 ? true : false;
+    } else if (this.type == "monster") {
+      let ct = 0;
+      Object.values(data.saves).forEach((el) => {
+        ct += el.value;
+      });
+      return ct == 0 ? true : false;
     }
-    if (hp > this.system.facCreds) {
-      ui.notifications?.error(
-        `Error HP of new base (${hp}) cannot be greater than treasure  (${this.system.facCreds})`
-      );
-      return;
-    }
-    const newFacCreds = this.system.facCreds - hp;
-    await this.update({ system: { facCreds: newFacCreds } });
-    await this.createEmbeddedDocuments(
-      "Item",
-      [
-        {
-          name: name,
-          type: "asset",
-          img: imgPath,
-          data: {
-            assetType: assetType,
-            health: {
-              value: hp,
-              max: hp,
-            },
-            baseOfInfluence: true,
-          },
-        },
-      ],
-      {}
-    );
+    return false;
   }
+
+
+
+
+
+
+ 
+
+
+
 
   async startTurn() {
     /*
@@ -164,9 +76,9 @@ export class WwnFaction extends Actor {
     const assets = (
       this.items.filter((i) => i.type === "asset")
     );
-    const wealthIncome = Math.ceil(this.system.wealthRating / 2);
-    const cunningIncome = Math.floor(this.system.cunningRating / 4);
-    const forceIncome = Math.floor(this.system.forceRating / 4);
+    const wealthIncome = Math.ceil(this.actor.system.wealthRating / 2);
+    const cunningIncome = Math.floor(this.actor.system.cunningRating / 4);
+    const forceIncome = Math.floor(this.actor.system.forceRating / 4);
     const assetIncome = assets
       .map((i) => i.system.income)
       .reduce((i, n) => i + n, 0);
@@ -176,15 +88,15 @@ export class WwnFaction extends Actor {
       .reduce((i, n) => i + n, 0);
 
     const cunningAssetsOverLimit = Math.min(
-      this.system.cunningRating - this.system.cunningAssets.length,
+      this.actor.system.cunningRating - this.actor.system.cunningAssets.length,
       0
     );
     const forceAssetsOverLimit = Math.min(
-      this.system.forceRating - this.system.forceAssets.length,
+      this.actor.system.forceRating - this.actor.system.forceAssets.length,
       0
     );
     const wealthAssetsOverLimit = Math.min(
-      this.system.wealthRating - this.system.wealthAssets.length,
+      this.actor.system.wealthRating - this.actor.system.wealthAssets.length,
       0
     );
     const costFromAssetsOver =
@@ -196,7 +108,7 @@ export class WwnFaction extends Actor {
       assetIncome -
       assetMaintTotal +
       costFromAssetsOver;
-    let new_creds = this.system.facCreds + income;
+    let new_creds = this.actor.system.facCreds + income;
 
     const assetsWithTurn = assets.filter((i) => i.system.turnRoll);
     let msg = `<b>Income this round: ${income}</b>.<br> From ratings: ${wealthIncome + cunningIncome + forceIncome
@@ -223,18 +135,18 @@ export class WwnFaction extends Actor {
           const asset = assetWithMaint[i];
           const assetCost = asset.system.maintenance;
           new_creds += assetCost; // return the money
-          aitems.push({ _id: asset.id, data: { unusable: true } });
+          aitems.push({ _id: asset.id, system: { unusable: true } });
         }
         if (aitems.length > 0) {
-          await this.updateEmbeddedDocuments("Item", aitems);
+          await this.actor.updateEmbeddedDocuments("Item", aitems);
         }
         msg += ` <b>Out of money and unable to pay for all assets</b>, marking all assets with maintenance as unusable<br>`;
       } else {
         msg += ` <b>Out of money and unable to pay for all assets</b>, need to make assets unusable. Mark unusable for assets to cover treasure: ${income}<br>`;
       }
     }
-    msg += `<b> Old Treasure: ${this.system.facCreds}. New Treasure: ${new_creds}</b><br>`;
-    await this.update({ system: { facCreds: new_creds } });
+    msg += `<b> Old Treasure: ${this.actor.system.facCreds}. New Treasure: ${new_creds}</b><br>`;
+    await this.actor.update({ system: { facCreds: new_creds } });
     const title = `New Turn for ${this.name}`;
     await this.logMessage(title, msg, longMsg);
   }
@@ -261,51 +173,10 @@ export class WwnFaction extends Actor {
       return;
     }
     ui.notifications?.error("TODO create asset base with max health.");
-    await this.update({ system: { homeworld: journal.name } });
+    await this.actor.update({ system: { homeworld: journal.name } });
   }
 
-  async ratingUp(type) {
-    const ratingName = `${type}Rating`;
-    let ratingLevel = this.system[ratingName];
-    if (ratingLevel == 8) {
-      ui.notifications?.info("Rating is already at max");
-      return;
-    }
-    if (!ratingLevel) {
-      ratingLevel = 0;
-    }
-    const targetLevel = parseInt(ratingLevel) + 1;
-    let xp = this.system.xp;
-    if (targetLevel in HEALTH__XP_TABLE) {
-      const req_xp = HEALTH__XP_TABLE[targetLevel];
-      if (req_xp > xp) {
-        ui.notifications?.error(
-          `Not enough XP to raise rating. Have ${xp} Need ${req_xp}`
-        );
-        return;
-      }
-      xp -= req_xp;
-      if (type == "cunning") {
-        await this.update({
-          "system.xp": xp,
-          "system.cunningRating": targetLevel,
-        });
-      } else if (type == "force") {
-        await this.update({
-          "system.xp": xp,
-          "system.forceRating": targetLevel,
-        });
-      } else if (type == "wealth") {
-        await this.update({
-          "system.xp": xp,
-          "system.wealthRating": targetLevel,
-        });
-      }
-      ui.notifications?.info(
-        `Raised ${type} rating to ${targetLevel} using ${xp} xp`
-      );
-    }
-  }
+
 
 }
 
