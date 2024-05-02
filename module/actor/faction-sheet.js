@@ -345,7 +345,10 @@ export class WwnActorSheetFaction extends WwnActorSheet {
   async _onStartTurn(event) {
     event.preventDefault();
     event.stopPropagation();
-    this.actor.startTurn();
+    const actor = new WwnFaction(this.actor);
+    console.log(this.actor);
+    console.log(Object.prototype.toString.call(actor));
+    actor.startTurn();
     // Now ask about action
     const dialogData = {
       actions: FACTION_ACTIONS,

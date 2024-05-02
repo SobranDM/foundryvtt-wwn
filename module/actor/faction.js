@@ -8,65 +8,6 @@ export class WwnFaction extends Actor {
     }
   }
 
-  prepareDerivedData() {
-    const data = this.system;
-    const assets = (
-      this.items.filter((i) => i.type == "asset")
-    );
-    const cunningAssets = assets.filter(
-      (i) => i.system["assetType"] === "cunning"
-    );
-    const forceAssets = assets.filter(
-      (i) => i.system["assetType"] === "force"
-    );
-    const wealthAssets = assets.filter(
-      (i) => i.system["assetType"] === "wealth"
-    );
-
-    data.cunningAssets = cunningAssets;
-    data.forceAssets = forceAssets;
-    data.wealthAssets = wealthAssets;
-
-    data.health.max =
-      4 +
-      this.getHealth(data.wealthRating) +
-      this.getHealth(data.forceRating) +
-      this.getHealth(data.cunningRating);
-  }
-
-  async _onCreate() {
-    await this.update({
-      "token.actorLink": true,
-      "img" : "systems/wwn/assets/default/faction.png"
-    });
-  }
-
-  async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
-    data.map((item) => {
-      if (item.img === undefined) {
-        item.img = WwnItem.defaultIcons[item.type];
-      }
-    });
-    super.createEmbeddedDocuments(embeddedName, data, context);
-  }
-
-  isNew() {
-    const data = this.system;
-    if (this.type == "character") {
-      let ct = 0;
-      Object.values(data.scores).forEach((el) => {
-        ct += el.value;
-      });
-      return ct == 0 ? true : false;
-    } else if (this.type == "monster") {
-      let ct = 0;
-      Object.values(data.saves).forEach((el) => {
-        ct += el.value;
-      });
-      return ct == 0 ? true : false;
-    }
-    return false;
-  }
 
   getHealth(level) {
     if (level in HEALTH__XP_TABLE) {

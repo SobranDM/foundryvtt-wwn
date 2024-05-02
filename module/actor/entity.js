@@ -9,20 +9,46 @@ export class WwnActor extends Actor {
   prepareData() {
     super.prepareData();
 
-    // Compute modifiers from actor scores
-    this.computeModifiers();
-    this.computeAC();
-    this.computeEncumbrance();
-    this._calculateMovement();
-    this.computeResources();
-    this.computeTreasure();
-    this.enableSpellcasting();
-    this.computeEffort();
-    this.computeSaves();
-    this.computeTotalSP();
-    this.setXP();
-    this.computePrepared();
-    this.computeInit();
+    if (this.type === "faction") {
+      const data = this.system;
+      const assets = (
+        this.items.filter((i) => i.type == "asset")
+      );
+      const cunningAssets = assets.filter(
+        (i) => i.system["assetType"] === "cunning"
+      );
+      const forceAssets = assets.filter(
+        (i) => i.system["assetType"] === "force"
+      );
+      const wealthAssets = assets.filter(
+        (i) => i.system["assetType"] === "wealth"
+      );
+  
+      data.cunningAssets = cunningAssets;
+      data.forceAssets = forceAssets;
+      data.wealthAssets = wealthAssets;
+  
+      data.health.max =
+        4 +
+        this.getHealth(data.wealthRating) +
+        this.getHealth(data.forceRating) +
+        this.getHealth(data.cunningRating);
+    } else {
+      // Compute modifiers from actor scores
+      this.computeModifiers();
+      this.computeAC();
+      this.computeEncumbrance();
+      this._calculateMovement();
+      this.computeResources();
+      this.computeTreasure();
+      this.enableSpellcasting();
+      this.computeEffort();
+      this.computeSaves();
+      this.computeTotalSP();
+      this.setXP();
+      this.computePrepared();
+      this.computeInit();
+    }
   }
 
   async createEmbeddedDocuments(embeddedName, data = [], context = {}) {
@@ -33,6 +59,15 @@ export class WwnActor extends Actor {
       }
     });
     super.createEmbeddedDocuments(embeddedName, data, context);
+  }
+
+  async _onCreate() {
+    if (this.type === "faction") {
+      await this.update({
+        "token.actorLink": true,
+        "img" : "systems/wwn/assets/default/faction.png"
+      });
+    }
   }
 
   /* -------------------------------------------- */
