@@ -61,7 +61,7 @@
             <select name="system.type">
               {{#select system.type}}
               {{#each config.assetTypes as |type a|}}
-              <option value="{{a}}">{{localize type}}</option>
+              <option value="{{a}}">{{type}}</option>
               {{/each}}
               {{/select}}
             </select>

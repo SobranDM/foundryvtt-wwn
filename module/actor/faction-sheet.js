@@ -342,7 +342,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const actor = new WwnFaction(this.actor);
     console.log(this.actor);
     console.log(Object.prototype.toString.call(actor));
-    actor.startTurn();
+    this.startTurn();
     // Now ask about action
     const dialogData = {
       actions: FACTION_ACTIONS,
@@ -761,7 +761,100 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     );
   }
 
+  async startTurn() {
+    /*
+    At the beginning of each turn, a faction gains Fac-
+    Creds equal to half their Wealth rating rounded up plus
+    one-quarter of their total Force and Cunning ratings,
+    rounded down. Any maintenance costs must be paid
+    at the beginning of each turn. Assets that cannot be
+    maintained are unusable; an asset that goes without
+    maintenance for two consecutive rounds is lost. A fac-
+    tion cannot voluntarily choose not to pay maintenance.
+    If a faction has no goal at the start of a turn, they
+    may pick a new one. If they wish to abandon a prior
+    goal, they may do so, but the demoralization and con-
+    fusion costs them that turn`s FacCred income and they
+    may perform no other action that turn.
+    */
 
+    const assets = (
+      this.actor.items.filter((i) => i.type === "asset")
+    );
+    const wealthIncome = Math.ceil(this.actor.system.wealthRating / 2);
+    const cunningIncome = Math.floor(this.actor.system.cunningRating / 4);
+    const forceIncome = Math.floor(this.actor.system.forceRating / 4);
+    const assetIncome = assets
+      .map((i) => i.system.income)
+      .reduce((i, n) => i + n, 0);
+    const assetWithMaint = assets.filter((i) => i.system.maintenance);
+    const assetMaintTotal = assetWithMaint
+      .map((i) => i.system.maintenance)
+      .reduce((i, n) => i + n, 0);
+
+    const cunningAssetsOverLimit = Math.min(
+      this.actor.system.cunningRating - this.actor.system.cunningAssets.length,
+      0
+    );
+    const forceAssetsOverLimit = Math.min(
+      this.actor.system.forceRating - this.actor.system.forceAssets.length,
+      0
+    );
+    const wealthAssetsOverLimit = Math.min(
+      this.actor.system.wealthRating - this.actor.system.wealthAssets.length,
+      0
+    );
+    const costFromAssetsOver =
+      cunningAssetsOverLimit + forceAssetsOverLimit + wealthAssetsOverLimit;
+    const income =
+      wealthIncome +
+      cunningIncome +
+      forceIncome +
+      assetIncome -
+      assetMaintTotal +
+      costFromAssetsOver;
+    let new_creds = this.actor.system.facCreds + income;
+
+    const assetsWithTurn = assets.filter((i) => i.system.turnRoll);
+    let msg = `<b>Income this round: ${income}</b>.<br> From ratings: ${wealthIncome + cunningIncome + forceIncome
+      } (W:${wealthIncome} C:${cunningIncome} F:${forceIncome})<br>From assets: ${assetIncome}.<br>Maintenance -${assetMaintTotal}.<br>`;
+    if (costFromAssetsOver < 0) {
+      msg += `Cost from # of assets over rating: ${costFromAssetsOver}.<br>`;
+    }
+    if (income < 0) {
+      msg += ` <b>Loosing Treasure this turn.</b><br>`;
+    }
+    let longMsg = "";
+    if (assetsWithTurn.length > 0) {
+      longMsg += "Assets with turn notes/rolls:<br>";
+    }
+    for (const a of assetsWithTurn) {
+      longMsg += `<i>${a.name}</i>: ${a.system.turnRoll} <br><br>`;
+    }
+    const aitems = [];
+
+    if (new_creds < 0) {
+      if (assetMaintTotal + new_creds < 0) {
+        //Marking all assets unusable would still not bring money above, can mark all w/maint as unusable.
+        for (let i = 0; i < assetWithMaint.length; i++) {
+          const asset = assetWithMaint[i];
+          const assetCost = asset.system.maintenance;
+          new_creds += assetCost; // return the money
+          aitems.push({ _id: asset.id, system: { unusable: true } });
+        }
+        if (aitems.length > 0) {
+          await this.actor.updateEmbeddedDocuments("Item", aitems);
+        }
+        msg += ` <b>Out of money and unable to pay for all assets</b>, marking all assets with maintenance as unusable<br>`;
+      } else {
+        msg += ` <b>Out of money and unable to pay for all assets</b>, need to make assets unusable. Mark unusable for assets to cover treasure: ${income}<br>`;
+      }
+    }
+    msg += `<b> Old Treasure: ${this.actor.system.facCreds}. New Treasure: ${new_creds}</b><br>`;
+    await this.actor.update({ system: { facCreds: new_creds } });
+    const title = `New Turn for ${this.name}`;
+    await this.logMessage(title, msg, longMsg);
+  }
 
   activateListeners(html) {
     super.activateListeners(html);
@@ -814,17 +907,17 @@ export class WwnActorSheetFaction extends WwnActorSheet {
   }
 }
 
-Hooks.on("dropActorSheetData", (actor, actorSheetSheet, data) => {
-  if (data.type == "JournalEntry") {
-    if (actor.type == "faction") {
-      if (!data["id"] || typeof data["id"] !== "string") {
-        ui.notifications?.error("Error with getting journal id");
-        return;
-      }
-      actor.setHomeWorld(data["id"]);
-    }
-  }
-});
+// Hooks.on("dropActorSheetData", (actor, actorSheetSheet, data) => {
+//   if (data.type == "JournalEntry") {
+//     if (actor.type == "faction") {
+//       if (!data["id"] || typeof data["id"] !== "string") {
+//         ui.notifications?.error("Error with getting journal id");
+//         return;
+//       }
+//       actor.setHomeWorld(data["id"]);
+//     }
+//   }
+// });
 
 // A button to show long descriptions
 Hooks.on("renderChatMessage", (message, html, _user) => {
