@@ -58,10 +58,10 @@
         <div class="form-group">
           <label>{{localize 'WWN.asset.type'}}</label>
           <div class="form-fields">
-            <select name="system.type">
-              {{#select system.type}}
+            <select name="system.assetType">
+              {{#select system.assetType}}
               {{#each config.assetTypes as |type a|}}
-              <option value="{{a}}">{{type}}</option>
+              <option value="{{a}}">{{a}}</option>
               {{/each}}
               {{/select}}
             </select>
