@@ -13,6 +13,18 @@
             <input type="checkbox" name="system.active" {{checked system.active}}>
           </span>
         </li>
+        <li class="flex3">
+          <!-- homeworld -->
+          <input type="text" name="system.homeworld" value="{{system.homeworld}}" data-dtype="String">
+          <label>{{localize 'WWN.faction.homeworld'}}</label>
+        </li>
+        <li class="flex3">
+            <!--buttons-->
+            <div class="cost flex flex-col" style="padding-left:20px;">
+              <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
+              {{localize 'WWN.faction.turn'}}
+            </div>
+        </li>
       </ul>
     </section>
   </header>
@@ -33,135 +45,171 @@
     </a>
   </nav>
   <section class="sheet-body">
-    <div class="attributes-tab tab" data-group="primary" data-tab="attributes">
-      <div class="flex-grow flexrow flex-wrap">
-        <!--HP-->
-        <div class="flex flex-col">
-          <div class="mx-auto">
-            <input class="" type="number" step="1" name="system.health.value" value="{{system.health.value}}"
-              data-dtype="Number" min="0" /><span>/</span>
-            <span class="">{{system.health.max}}</span>
-          </div>
-          <div>{{localize 'WWN.faction.hp'}}</div>
-        </div>
+    <div class="attributes-tab tab flexrow" data-group="primary" data-tab="attributes">
 
-        <!-- force -->
-        <div class="flex-col">
-          <select class="" name="system.forceRating">
-            {{#select system.forceRating}}
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            {{/select}}
-          </select>
-          <div>{{localize 'WWN.faction.forceRating'}}
-            <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-              <i class="fas fa-level-up-alt"></i>
-            </a>
-          </div>
-        </div>
-        <!-- cunning -->
-        <div class="flex-col">
-          <select class="" name="system.cunningRating">
-            {{#select system.cunningRating}}
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            {{/select}}
-          </select>
-          <div>{{localize 'WWN.faction.cunningRating'}}
-            <a class="cunning-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-              <i class="fas fa-level-up-alt"></i>
-            </a>
-          </div>
-        </div>
-        <!-- wealth -->
-        <div class="flex-col">
-          <select class="" name="system.wealthRating">
-            {{#select system.wealthRating}}
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            {{/select}}
-          </select>
-          <div>{{localize 'WWN.faction.wealthRating'}}
-            <a class="wealth-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-              <i class="fas fa-level-up-alt"></i>
-            </a>
-          </div>
-        </div>
+      <div class="attribute-group">
+        <ul class="attributes flexrow">
+          <!--HP-->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title" title="Hit Points">
+              {{localize 'WWN.faction.hp'}}
+            </h4>
+            <div class="attribute-value">
+              <input class="" type="number" step="1" name="system.health.value" value="{{system.health.value}}"
+                data-dtype="Number" min="0" />
+            </div>
+            <div class="attribute-value attribute-mod">
+              <span class="">{{system.health.max}}</span>
+            </div>
+          </li>
+        </ul>
+        <ul class="attributes flexrow">
+          <!--treasure/credits-->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="Treasure">
+              {{localize 'WWN.faction.facCreds'}}
+            </h4>
+            <div class="attribute-value">
+               <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
+                value="{{system.facCreds}}" />
+            </div>
+          </li>
+        </ul>
+        <ul class="attributes flexrow">
+          <!--xp]-->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="xp">
+              {{localize 'WWN.faction.xp'}}
+            </h4>
+            <div class="attribute-value">
+                <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
+            </div>
+          </li>
+        </ul>
+
+        <ul class="attributes flexrow">
+          <!-- force -->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="">
+              {{localize 'WWN.faction.forceRating'}}
+                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                  <i class="fas fa-level-up-alt"></i>
+                </a>
+            </h4>
+            <div class="attribute-value">
+              <select class="" name="system.forceRating">
+                {{#select system.forceRating}}
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                {{/select}}
+              </select>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="attributes flexrow">
+          <!-- cunning -->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="">
+              {{localize 'WWN.faction.cunningRating'}}
+                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                  <i class="fas fa-level-up-alt"></i>
+                </a>
+            </h4>
+            <div class="attribute-value">
+              <select class="" name="system.cunningRating">
+                {{#select system.cunningRating}}
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                {{/select}}
+              </select>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="attributes flexrow">
+          <!-- wealth -->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="">
+              {{localize 'WWN.faction.wealthRating'}}
+                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                  <i class="fas fa-level-up-alt"></i>
+                </a>
+            </h4>
+            <div class="attribute-value">
+              <select class="" name="system.wealthRating">
+                {{#select system.wealthRating}}
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                {{/select}}
+              </select>
+            </div>
+          </li>
+        </ul>
+
       </div>
-      <div class="flexrow flex-grow">
-        <!-- facCreds -->
-        <div class="flex flex-col">
-          <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
-            value="{{system.facCreds}}" />
-          <div>{{localize 'WWN.faction.facCreds'}}</div>
-        </div>
 
-        <!-- xp -->
-        <div class="flex flex-col">
-          <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
-          <div>{{localize 'WWN.faction.xp'}}</div>
+      <div class="inventory flex2">
+        <div class="item-titles">
+          {{localize 'WWN.faction.factionGoal'}}
         </div>
-
-        <!-- homeworld -->
-        <div class="flex flex-col">
-          <input class="" name="system.homeworld" value="{{system.homeworld}}" />
-          <div>{{localize 'WWN.faction.homeworld'}}</div>
-        </div>
-      </div>
-      <div class="flex-grow flexrow">
         <!-- goal -->
-        <div class="flex flex-col">
-          <input class="" name="system.factionGoal" value="{{system.factionGoal}}" />
-          <div>
-            {{localize 'WWN.faction.factionGoal'}}
-            <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
-              <i class="fas fa-exchange-alt"></i>
-            </a>
-          </div>
+        <div class="flex flex-col header-details">
+          <ul class="summary flexrow">
+            <li class="flex3">
+              <!-- goal -->
+              <input class="" name="system.factionGoal" value="{{system.factionGoal}}" />
+              <label>{{localize 'WWN.faction.factionGoal'}}
+                <a class="set-goal hover:transition-colors" title="{{localize 'WWN.faction.setGoal'}}">
+                  <i class="fas fa-exchange-alt"></i>
+                </a></label>
+            </li>
+          </ul>
         </div>
 
         <!-- goal -->
         <div class="flex flex3 flex-col">
-          <div class="">
+          <div style="height:100px">
             {{editor enrichedGoal target="system.factionGoalDesc" button=true
             editable=editable async=true}}
           </div>
-          <div>{{localize 'WWN.faction.factionGoalDesc'}}</div>
+          <!-- <div>{{localize 'WWN.faction.factionGoalDesc'}}</div> -->
         </div>
 
-        <!--buttons-->
-        <div class="cost flex flex-col">
-          <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
-          {{localize 'WWN.faction.turn'}}
+
+        <div class="item-titles">
+          {{localize 'WWN.category.description'}}
         </div>
-      </div>
-      <div class="flexrow flex-grow">
-        <div class="flex flex-col">
-          <h2 class="">{{localize 'WWN.category.description'}}</h2>
-          <div class="">
-            {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
-            {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+
+        <div class="flexrow flex-grow">
+          <div class="flex flex-col">
+            <div class="" style="height:150px">
+              {{!-- TODO: fix is for wrapping around text, because this is a little fixed --}}
+              {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+            </div>
           </div>
         </div>
       </div>
+      
+
     </div>
     <!--Attributes-->
     <div class="assets-tab tab" data-group="primary" data-tab="assets">
@@ -220,7 +268,7 @@
         {{#each system.log as |logentry id|}}
 
         <div class="logdiv" data-idx="{{id}}">
-          <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
+          <b>Log Entry {{@index}}</b> <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
             WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
           {{{logentry}}}<br>
           <hr>

@@ -84,7 +84,7 @@ import { WwnBaseItem } from "./base-item.js";
 
     if (this.actor?.type == "faction") {
       const actor = this.actor;
-      actor.logMessage("Attack Roll", chatContent, null, null);
+      //actor.logMessage("Attack Roll", chatContent, null, null);
     } else {
       const chatData = {
         roll: JSON.stringify(diceData),
@@ -234,8 +234,6 @@ import { WwnBaseItem } from "./base-item.js";
       const template = "systems/wwn/templates/chat/asset-attack-def.html";
       const chatContent = await renderTemplate(template, dialogData);
       if (this.actor?.type == "faction") {
-        this.actor.logMessage(name, chatContent);
-      } else {
         const chatData = {
           content: chatContent,
           type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
@@ -259,7 +257,7 @@ import { WwnBaseItem } from "./base-item.js";
         },
       },
       {
-        classes: ["swnr"],
+        classes: ["wwn"],
       }
     );
     this.popUpDialog.render(true);
@@ -275,8 +273,6 @@ import { WwnBaseItem } from "./base-item.js";
     }
     if (this.actor?.type == "faction") {
       const actor = this.actor;
-      actor.logMessage("Attack Roll", content);
-    } else {
       const gm_ids = ChatMessage.getWhisperRecipients("GM")
         .filter((i) => i)
         .map((i) => i.id)
