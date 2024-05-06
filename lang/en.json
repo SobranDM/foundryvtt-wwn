@@ -42,6 +42,9 @@
   "WWN.asset.magicMedium": "Medium",
   "WWN.asset.magicHigh": "High",
   "WWN.asset.stealthed": "Stealth",
+  "WWW.asset.cunning" : "Cunning",
+  "WWW.asset.force" : "Force",
+  "WWW.asset.wealth" : "Wealth",
 
   "WWN.dialog.tweaks": "Tweaks",
   "WWN.dialog.partysheet": "Party Overview",
@@ -497,9 +500,9 @@
   "WWN.reaction.Indifferent": "{name} is more friendly and benign than you'd expect them to be, given the circumstances.",
   "WWN.reaction.Friendly": "{name} is as friendly and helpful as their nature and the situation permits them to be.",
   "WWN.faction": {
-    "forceRating": "Force Rating",
-    "cunningRating": "Cunning Rating",
-    "wealthRating": "Wealth Rating",
+    "forceRating": "Force",
+    "cunningRating": "Cunning",
+    "wealthRating": "Wealth",
     "facCreds": "Treasure",
     "xp": "XP",
     "homeworld": "Headquarters",

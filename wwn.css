@@ -1198,6 +1198,11 @@
   .attribute-name {
   width: 85px;
 }
+
+.wide-attribute {
+  width: 85px !important;
+}
+
 .wwn.actor.character
   .sheet-body
   .attributes-tab

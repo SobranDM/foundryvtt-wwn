@@ -1,3 +1,10 @@
+## New in 1.3.0
+### Features
+* Creating new items of certain types on an actor will now create a popup to enter certain basic details ahead of time.
+### Fixes
+* Faction sheet now works and is properly styled.
+### Contributions
+* All thanks for this update go to @wintersleepAI (unless you count me answering one minor CSS question as "helping")
 ## New in 1.2.2
 ### Features
 * Active Effects
