@@ -70,10 +70,8 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     }
 
     // Sort each level
-    Object.keys(sortedSpells).forEach(level => {
-      let list = insertionSort(sortedSpells[level], "name");
-      list = insertionSort(list, "system.class");
-      sortedSpells[level] = list;
+    Object.keys(sortedSpells).forEach((level) => {
+      sortedSpells[level].sort((a, b) => a.name > b.name ? 1 : -1);
     });
 
     // Sort arts by class
@@ -86,8 +84,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     // Sort each class
     Object.keys(sortedArts).forEach(source => {
-      let list = insertionSort(sortedArts[source], "name");
-      sortedArts[source] = list;
+      sortedArts[source].sort((a, b) => a.name > b.name ? 1 : -1);
     });
 
     data.attackPatterns.sort((a, b) => {
@@ -101,13 +98,13 @@ export class WwnActorSheetMonster extends WwnActorSheet {
 
     // Assign and return
     data.owned = {
-      items: insertionSort(items, "name"),
-      armors: insertionSort(armors, "name"),
-      abilities: insertionSort(abilities, "name"),
-      weapons: insertionSort(weapons, "name"),
+      items: items.sort((a, b) => a.name > b.name ? 1 : -1),
+      armors: armors.sort((a, b) => a.name > b.name ? 1 : -1),
+      abilities: abilities.sort((a, b) => a.name > b.name ? 1 : -1),
+      weapons: weapons.sort((a, b) => a.name > b.name ? 1 : -1),
       arts: sortedArts,
       spells: sortedSpells,
-      foci: insertionSort(foci, "name")
+      foci: foci.sort((a, b) => a.name > b.name ? 1 : -1)
     };
   }
 

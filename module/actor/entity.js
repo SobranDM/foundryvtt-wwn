@@ -479,7 +479,7 @@ export class WwnActor extends Actor {
 
     const isNPC = attData.actor.type !== "character";
     const ammo = attData.item.system.ammo;
-    const ammoItem = ammo.length ? attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null) : undefined;
+    const ammoItem = ammo ? attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null) : undefined;
     if (!isNPC && ammo && (ammoItem === undefined || ammoItem.system.charges.value === 0)) {
       return ui.notifications.error(`No ${ammo} remaining.`);
     }

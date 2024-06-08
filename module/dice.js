@@ -181,8 +181,8 @@ export class WwnDice {
 
   static spendAmmo(attData) {
     const isNPC = attData.actor.type !== "character";
-    if (isNPC) return;
     const ammo = attData.item.system.ammo;
+    if (isNPC || !ammo) return;
     const ammoItem = attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null);
     ammoItem.update({ "system.charges.value": ammoItem.system.charges.value - 1 });
   }

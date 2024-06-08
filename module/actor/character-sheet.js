@@ -71,9 +71,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     // Sort each level
     Object.keys(sortedSpells).forEach((level) => {
-      let list = insertionSort(sortedSpells[level], "name");
-      list = insertionSort(list, "system.class");
-      sortedSpells[level] = list;
+      sortedSpells[level].sort((a, b) => a.name > b.name ? 1 : -1);
     });
 
     data.slots = {
@@ -90,34 +88,26 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     // Sort each class
     Object.keys(sortedArts).forEach(source => {
-      let list = insertionSort(sortedArts[source], "name");
-      sortedArts[source] = list;
+      sortedArts[source].sort((a, b) => a.name > b.name ? 1 : -1);
     });
 
     // Divide skills into primary and secondary
-    const primarySkills = insertionSort(
-      skills.filter((skill) => !skill.system.secondary),
-      "name"
-    );
-    const secondarySkills = insertionSort(
-      skills.filter((skill) => skill.system.secondary),
-      "name"
-    );
+    const primarySkills = skills.filter((skill) => !skill.system.secondary)
+      .sort((a, b) => a.name > b.name ? 1 : -1);
+    const secondarySkills = skills.filter((skill) => skill.system.secondary)
+      .sort((a, b) => a.name > b.name ? 1 : -1);
 
     // Assign and return
     data.owned = {
-      items: insertionSort(items, "name"),
-      armors: insertionSort(armors, "name"),
-      abilities: insertionSort(abilities, "name"),
-      weapons: insertionSort(weapons, "name"),
+      items: items.sort((a, b) => a.name > b.name ? 1 : -1),
+      armors: armors.sort((a, b) => a.name > b.name ? 1 : -1),
+      abilities: abilities.sort((a, b) => a.name > b.name ? 1 : -1),
+      weapons: weapons.sort((a, b) => a.name > b.name ? 1 : -1),
       arts: sortedArts,
-      foci: insertionSort(foci, "name"),
+      foci: foci.sort((a, b) => a.name > b.name ? 1 : -1),
       skills: [...primarySkills, ...secondarySkills],
       spells: sortedSpells
     };
-
-    // Store skill names for retrieval by weapons
-    this.actor.system.skillNames = data.owned.skills.map(skill => skill.name);
   }
 
   generateScores() {
@@ -140,12 +130,13 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    */
   async getData() {
     const data = super.getData();
+    // Prepare owned items
+    this._prepareItems(data);
 
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
     data.config.showMovement = game.settings.get("wwn", "showMovement");
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
 
-    this._prepareItems(data);
     data.enrichedBiography = await TextEditor.enrichHTML(
       this.object.system.details.biography,
       { async: true }
