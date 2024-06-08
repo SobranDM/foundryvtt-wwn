@@ -194,8 +194,10 @@
       "flags": {}
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
   "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
   "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.4.1/wwn.zip"
