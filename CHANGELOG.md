@@ -1,5 +1,13 @@
 # Changelog
 
+## New in 1.4.1
+
+### Fixes
+
+- Resolved attacks failing without visible error while a foe was targeted.
+- Fixed group initiative.
+- Fixed issue with individual initiative that would prevent initiative rolled automatically at the start of combat from being properly registered.
+
 ## New in 1.4.0
 
 ### Features

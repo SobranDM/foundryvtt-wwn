@@ -1,64 +1,48 @@
-import { WwnDice } from "../module/dice.js";
 export class WwnCombat {
+  debounce(callback, wait) {
+    let timeoutId = null;
+    return (...args) => {
+      window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        callback.apply(null, args);
+      }, wait);
+    };
+  }
+
   static async rollInitiative(combat, data) {
     // Check groups
-    data.combatants = [];
-    let groups = {};
-    let groupMods = {};
-    let alertGroups = {};
-
-    combat.combatants.forEach((cbt) => {
+    const groups = {};
+    const combatants = combat?.combatants;
+    combatants.forEach((cbt) => {
       const group = cbt.getFlag("wwn", "group");
       groups[group] = { present: true };
-      data.combatants.push(cbt);
-      let alert = cbt.actor.items.filter((a) => a.name == "Alert");
-      if (alert.length > 0) {
-        alertGroups[group] = true;
-      }
-      if (cbt.actor.system.scores) {
-        let dexMod = cbt.actor.system.scores.dex.mod;
-        if (groupMods[group]) {
-          groupMods[group] = Math.max(dexMod, groupMods[group]);
-        } else {
-          groupMods[group] = dexMod;
-        }
-      }
     });
-
     // Roll init
-    Object.keys(groups).forEach(async (group) => {
-      let rollParts = [];
-      rollParts.push("1d8");
-      if (alertGroups[group]) {
-        rollParts.push(1);
-      }
-      if (groupMods[group]) {
-        rollParts.push(groupMods[group]);
-      }
-
-      let roll = await new Roll(rollParts.join("+")).roll();
-      roll.toMessage({
-        flavor: game.i18n.format("WWN.roll.initiative", {
-          group: CONFIG["WWN"].colors[group],
-        }),
+    for (const group in groups) {
+      const modArray = [0];
+      let alertGroup = false;
+      const groupCbts = combatants.filter((cbt) => cbt.getFlag("wwn", "group") === group);
+      groupCbts.forEach((cbt) => {
+        if (cbt.actor.type !== "character") return;
+        const alert = cbt.actor.items.find((a) => a.name === "Alert");
+        if (alert) alertGroup = true;
+        const dexMod = cbt.actor.system.scores.dex.mod;
+        modArray.push(dexMod);
       });
-      groups[group].initiative = roll.total;
-    });
-
-    // Set init
-    for (let i = 0; i < data.combatants.length; ++i) {
-      if (!data.combatants[i].actor) {
-        return;
-      }
-      const group = data.combatants[i].getFlag("wwn", "group");
-      let alert = data.combatants[i].actor.items.filter((a) => a.name == "Alert");
-      data.combatants[i].update({ initiative: groups[group].initiative });
-      if (alert.length > 0) {
-        if (alert[0].system.ownedLevel == 2) {
-          data.combatants[i].update({ initiative: groups[group].initiative + 100 });
-        }
-      }
+      const finalMod = alertGroup ? Math.max(...modArray) + 1 : Math.max(...modArray);
+      const roll = Math.floor((Math.random() * 8) + 1) + finalMod;
+      groups[group].initiative = roll;
     }
+    // Set init
+    let updates = [];
+    combatants.forEach((c) => {
+      if (game.user.isGM) {
+        if (!c.actor) return;
+        const group = c.getFlag("wwn", "group");
+        updates.push({ _id: c.id, initiative: groups[group].initiative });
+      };
+    });
+    await combat.updateEmbeddedDocuments("Combatant", updates);
     await combat.setupTurns();
   }
 
@@ -83,34 +67,28 @@ export class WwnCombat {
       // Check if initiative has already been manually rolled
       if (!c.initiative) {
         // Roll initiative
-        roll = await new Roll("1d8+" + c.actor.system.initiative.value).roll();
-        roll.toMessage({
-          flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-        });
+        roll = Math.floor((Math.random() * 8) + 1) + c.actor.system.initiative.value;
         if (alert.length > 0) {
-          roll2 = await new Roll("1d8+" + c.actor.system.initiative.value).roll();
-          roll2.toMessage({
-            flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
-          });
+          roll2 = Math.floor((Math.random() * 8) + 1) + c.actor.system.initiative.value;
         }
 
         // Set initiative
         if (alert.length > 0) {
           if (alert[0].system.ownedLevel == 2) {
-            updates.push({ _id: c.id, initiative: 100 + Math.max(roll.total, roll2.total) });
+            updates.push({ _id: c.id, initiative: 100 + Math.max(roll, roll2) });
           } else {
-            updates.push({ _id: c.id, initiative: Math.max(roll.total, roll2.total) });
+            updates.push({ _id: c.id, initiative: Math.max(roll, roll2) });
           }
 
         } else {
-          updates.push({ _id: c.id, initiative: roll.total });
+          updates.push({ _id: c.id, initiative: roll });
         }
       }
     });
     if (game.user.isGM) {
       await combat.updateEmbeddedDocuments("Combatant", updates);
       await CONFIG.ChatMessage.documentClass.create(messages);
-      data.turn = 0;
+      await combat.setupTurns();
     }
   }
 
@@ -166,7 +144,6 @@ export class WwnCombat {
       combat.combatants.forEach((ct) => {
         if (
           ct.initiative &&
-          ct.initiative != "-789.00" &&
           ct.id != data.id &&
           ct.flags.wwn.group == combatant.flags.wwn.group
         ) {
@@ -251,9 +228,9 @@ export class WwnCombat {
   static async preUpdateCombat(combat, data, diff, id) {
     const init = game.settings.get("wwn", "initiative");
     const reroll = game.settings.get("wwn", "rerollInitiative");
-    /*if (!data.round) {
+    if (!data.round) {
       return;
-    }*/
+    }
     if (data.round !== 1) {
       for (const combatant of combat.combatants) {
         if (combatant.actor.type === "monster") {

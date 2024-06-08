@@ -160,7 +160,7 @@ export class WwnDice {
     const targetAac = data.roll.target
       ? data.roll.target.actor.system.aac.value
       : 0;
-    result.victim = data.roll.target ? data.roll.target.data.name : null;
+    result.victim = data.roll.target ? data.roll.target.name : null;
 
     if (roll.total < targetAac) {
       result.details = game.i18n.format(
