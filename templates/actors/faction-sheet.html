@@ -19,11 +19,11 @@
           <label>{{localize 'WWN.faction.homeworld'}}</label>
         </li>
         <li class="flex3">
-            <!--buttons-->
-            <div class="cost flex flex-col" style="padding-left:20px;">
-              <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
-              {{localize 'WWN.faction.turn'}}
-            </div>
+          <!--buttons-->
+          <div class="cost flex flex-col" style="padding-left:20px;">
+            <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
+            {{localize 'WWN.faction.turn'}}
+          </div>
         </li>
       </ul>
     </section>
@@ -70,7 +70,7 @@
               {{localize 'WWN.faction.facCreds'}}
             </h4>
             <div class="attribute-value">
-               <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
+              <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
                 value="{{system.facCreds}}" />
             </div>
           </li>
@@ -82,7 +82,7 @@
               {{localize 'WWN.faction.xp'}}
             </h4>
             <div class="attribute-value">
-                <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
+              <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
             </div>
           </li>
         </ul>
@@ -92,23 +92,13 @@
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
               {{localize 'WWN.faction.forceRating'}}
-                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-                  <i class="fas fa-level-up-alt"></i>
-                </a>
+              <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
             </h4>
             <div class="attribute-value">
-              <select class="" name="system.forceRating">
-                {{#select system.forceRating}}
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                {{/select}}
-              </select>
+              <input name="system.forceRating" value="{{system.forceRating}}" type="number" data-dtype="Number" min="1"
+                max="8" />
             </div>
           </li>
         </ul>
@@ -118,23 +108,13 @@
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
               {{localize 'WWN.faction.cunningRating'}}
-                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-                  <i class="fas fa-level-up-alt"></i>
-                </a>
+              <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
             </h4>
             <div class="attribute-value">
-              <select class="" name="system.cunningRating">
-                {{#select system.cunningRating}}
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                {{/select}}
-              </select>
+              <input name="system.cunningRating" value="{{system.cunningRating}}" type="number" data-dtype="Number"
+                min="1" max="8" />
             </div>
           </li>
         </ul>
@@ -144,23 +124,13 @@
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
               {{localize 'WWN.faction.wealthRating'}}
-                <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-                  <i class="fas fa-level-up-alt"></i>
-                </a>
+              <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
             </h4>
             <div class="attribute-value">
-              <select class="" name="system.wealthRating">
-                {{#select system.wealthRating}}
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                {{/select}}
-              </select>
+              <input name="system.wealthRating" value="{{system.wealthRating}}" type="number" data-dtype="Number"
+                min="1" max="8" />
             </div>
           </li>
         </ul>
@@ -208,7 +178,7 @@
           </div>
         </div>
       </div>
-      
+
 
     </div>
     <!--Attributes-->
@@ -268,8 +238,8 @@
         {{#each system.log as |logentry id|}}
 
         <div class="logdiv" data-idx="{{id}}">
-          <b>Log Entry {{@index}}</b> <a class="item-control faction-log-delete hover:transition-colors" title='{{localize '
-            WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
+          <b>Log Entry {{@index}}</b> <a class="item-control faction-log-delete hover:transition-colors"
+            title='{{localize ' WWN.faction.remove-log'}}'><i class="fas fa-trash"></i></a>
           {{{logentry}}}<br>
           <hr>
         </div>

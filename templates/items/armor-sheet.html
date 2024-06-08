@@ -8,29 +8,15 @@
         </h1>
         <div class="details">
           <div class="form-group">
-            <label title="{{localize 'WWN.items.Price'}}"
-              ><i class="fas fa-circle"></i
-            ></label>
+            <label title="{{localize 'WWN.items.Price'}}"><i class="fas fa-circle"></i></label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="system.price"
-                value="{{system.price}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.items.Weight'}}"
-              ><i class="fas fa-weight-hanging"></i
-            ></label>
+            <label title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="system.weight"
-                value="{{system.weight}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
             </div>
           </div>
         </div>
@@ -40,18 +26,12 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description"
-      >{{localize "WWN.category.description"}}</a
-    >
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
     <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
   </nav>
 
   <section class="sheet-body">
-    <div
-      class="flexrow card-body tab"
-      data-group="primary"
-      data-tab="description"
-    >
+    <div class="flexrow card-body tab" data-group="primary" data-tab="description">
       <div class="description">
         {{editor enrichedDescription target="system.description" button=true
         owner=owner editable=editable async=true}}
@@ -59,29 +39,15 @@
       <div class="flexrow item-footer">
         <div class="stats">
           <div class="form-group">
-            <label title="{{localize 'WWN.ArmorClass'}}"
-              >{{localize 'WWN.items.ArmorAAC'}}</label
-            >
+            <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.items.ArmorAAC'}}</label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="system.aac.value"
-                value="{{system.aac.value}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="system.aac.value" value="{{system.aac.value}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.items.ArmorBonusHint'}}"
-              >{{localize 'WWN.items.ArmorBonus'}}</label
-            >
+            <label title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize 'WWN.items.ArmorBonus'}}</label>
             <div class="form-fields">
-              <input
-                type="number"
-                name="system.aac.mod"
-                value="{{system.aac.mod}}"
-                data-dtype="Number"
-              />
+              <input type="number" name="system.aac.mod" value="{{system.aac.mod}}" data-dtype="Number" />
             </div>
           </div>
         </div>
@@ -90,11 +56,7 @@
             <label>{{localize 'WWN.armor.type'}}</label>
             <div class="form-fields">
               <select name="system.type">
-                {{#select system.type}}
-                <option value=""></option>
-                {{#each config.armor as |armor a|}}
-                <option value="{{a}}">{{armor}}</option>
-                {{/each}} {{/select}}
+                {{selectOptions config.armor selected=system.type localize=true}}
               </select>
             </div>
           </div>
@@ -102,10 +64,7 @@
             <label>{{localize "WWN.items.WeightlessLabel"}}</label>
             <div class="form-fields">
               <select name="system.weightless">
-                {{#select system.weightless}} {{#each config.weightless as |wt
-                a|}}
-                <option value="{{a}}">{{wt}}</option>
-                {{/each}} {{/select}}
+                {{selectOptions config.weightless selected=system.weightless localize=true}}
               </select>
             </div>
           </div>

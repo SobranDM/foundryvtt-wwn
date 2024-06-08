@@ -255,7 +255,7 @@ export class WwnActorSheet extends ActorSheet {
 
       // item creation helper func
       let createItem = function (type, name = `New ${type.capitalize()}`, data = {}) {
-        
+
         const itemData = {
           name: name ? name : `New ${type.capitalize()}`,
           type: type,
@@ -267,8 +267,7 @@ export class WwnActorSheet extends ActorSheet {
 
       // Getting back to main logic
       if (type == "choice") {
-        const choices = header.dataset.choices.split(",");
-        this._chooseItemType(choices).then((dialogInput) => {
+        this._chooseItemType().then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
           this.actor.createEmbeddedDocuments("Item", [itemData]);
         });
@@ -283,7 +282,7 @@ export class WwnActorSheet extends ActorSheet {
         consumable: false,
         treasure: false,
         item: false,
-      }; 
+      };
       let extraFields = "";
       if (type == "armor") {
         dialogData.armor = true;
@@ -299,8 +298,8 @@ export class WwnActorSheet extends ActorSheet {
           dialogData.treasure = true;
         }
       }
-      const dialogTemplate  = "systems/wwn/templates/items/dialogs/new-item.html";
-      const dialogContent =  await renderTemplate(dialogTemplate, dialogData);
+      const dialogTemplate = "systems/wwn/templates/items/dialogs/new-item.html";
+      const dialogContent = await renderTemplate(dialogTemplate, dialogData);
       const popUpDialog = new Dialog(
         {
           title: `Add ${type}`,
@@ -338,7 +337,7 @@ export class WwnActorSheet extends ActorSheet {
                   data.shock.ac = shockAc;
                   if (weaponType == "melee" || weaponType == "both") {
                     data.melee = true;
-                  } else if ( weaponType == "ranged" || weaponType == "both") {
+                  } else if (weaponType == "ranged" || weaponType == "both") {
                     data.missile = true;
                   }
                 } else if (type == "armor") {

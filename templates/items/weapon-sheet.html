@@ -24,7 +24,8 @@
             <label title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></label>
             <div class="form-fields">
               {{#if (evalOr system.charges.value system.charges.max)}}
-              <input type="number" name="system.quantity" value=1 data-dtype="Number" title="{{localize 'WWN.items.ChargeQuantity'}}" disabled />
+              <input type="number" name="system.quantity" value=1 data-dtype="Number"
+                title="{{localize 'WWN.items.ChargeQuantity'}}" disabled />
               {{else}}
               <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
               {{/if}}
@@ -45,8 +46,8 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
-      <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
   </nav>
 
   <section class="sheet-body">
@@ -73,36 +74,22 @@
             <label title={{localize 'WWN.attribute' }}>{{localize 'WWN.attribute'}}</label>
             <div class="form-fields">
               <select name="system.score">
-                {{#select system.score}}
-                {{#each config.scores as |stat a|}}
-                <option value="{{a}}">{{stat}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.scores selected=system.score}}
               </select>
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.skill' }}>{{localize 'WWN.skill'}}</label>
             <div class="form-fields">
-              <select name="system.skill">
-                {{#select system.skill}}
-                {{#each actor.system.skillNames as |skill|}}
-                <option value="{{skill}}">{{skill}}</option>
-                {{/each}}
-                {{/select}}
-              </select>
+              <input name="system.skill" type="text" placeholder="Skill" value="{{system.skill}}" data-dtype="text" />
             </div>
           </div>
           <div class="form-group">
             <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
             <div class="form-fields">
               <select name="system.save">
-                {{#select system.save}}
                 <option value=""></option>
-                {{#each config.saves as |save a|}}
-                <option value="{{a}}">{{save}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.saves selected=system.save}}
               </select>
             </div>
           </div>
@@ -159,20 +146,24 @@
             <label>{{localize "WWN.items.WeightlessLabel"}}</label>
             <div class="form-fields">
               <select name="system.weightless">
-                {{#select system.weightless}}
-                {{#each config.weightless as |wt a|}}
-                <option value="{{a}}">{{wt}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.weightless selected=system.weightless}}
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <label>Ammo</label>
+            <div class="form-fields">
+              <input type="text" name="system.ammo" value="{{system.ammo}}" data-dtype="String"
+                title="Name of the item used as ammo for this weapon." />
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
     {{!-- Active Effects Tab --}}
     <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-        {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
     </div>
   </section>
 </form>

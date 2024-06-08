@@ -3,7 +3,7 @@ import { WwnBaseItem } from "./base-item.js";
 /**
  * Override and extend the basic :class:`Item` implementation
  */
- export class WwnAsset  extends WwnBaseItem {
+export class WwnAsset extends WwnBaseItem {
 
   popUpDialog;
 
@@ -44,13 +44,11 @@ import { WwnBaseItem } from "./base-item.js";
       hitBonus,
     };
     const hitRollStr = "1d10 + @hitBonus";
-    const hitRoll = await new Roll(hitRollStr, rollData).roll({ async: true });
+    const hitRoll = await new Roll(hitRollStr, rollData).roll();
     if (!damage || damage === "None" || damage === "Special") {
       damage = "0";
     }
-    const damageRoll = await new Roll(damage, rollData).roll({
-      async: true,
-    });
+    const damageRoll = await new Roll(damage, rollData).roll();
     return [hitRoll, damageRoll];
   }
 
@@ -66,9 +64,9 @@ import { WwnBaseItem } from "./base-item.js";
       ? "WWN.faction.attack-roll"
       : "WWN.faction.counter-roll";
 
-      const assetsWithLocationNotes = this.actor.items.filter(i => 
-        i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
-      );
+    const assetsWithLocationNotes = this.actor.items.filter(i =>
+      i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
+    );
 
     const dialogData = {
       desc: this.system.description,
@@ -89,7 +87,7 @@ import { WwnBaseItem } from "./base-item.js";
       const chatData = {
         roll: JSON.stringify(diceData),
         content: chatContent,
-        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+        type: CONST.CHAT_MESSAGE_STYLES.ROLL,
       };
       getDocumentClass("ChatMessage").applyRollMode(chatData, "gmroll");
       getDocumentClass("ChatMessage").create(chatData);
@@ -175,10 +173,10 @@ import { WwnBaseItem } from "./base-item.js";
         ui.notifications?.info("Attacked asset not selected or not found");
         return;
       }
-      const attackedAssetsWithLocationNotes = attackedFaction.items.filter(i => 
+      const attackedAssetsWithLocationNotes = attackedFaction.items.filter(i =>
         i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
       );
-      const attackingAssetsWithLocationNotes = this.actor.items.filter(i => 
+      const attackingAssetsWithLocationNotes = this.actor.items.filter(i =>
         i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
       );
       const attackRolls = await this.getAttackRolls(true);
@@ -236,7 +234,7 @@ import { WwnBaseItem } from "./base-item.js";
       if (this.actor?.type == "faction") {
         const chatData = {
           content: chatContent,
-          type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
+          type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
         };
         getDocumentClass("ChatMessage").applyRollMode(chatData, "gmroll");
         getDocumentClass("ChatMessage").create(chatData);
@@ -281,7 +279,7 @@ import { WwnBaseItem } from "./base-item.js";
       ChatMessage.create({
         speaker: ChatMessage.getSpeaker(),
         content: content, //${item.data.description}
-        type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
+        type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
         whisper: gm_ids,
       });
     }

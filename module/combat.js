@@ -26,7 +26,7 @@ export class WwnCombat {
     });
 
     // Roll init
-    Object.keys(groups).forEach((group) => {
+    Object.keys(groups).forEach(async (group) => {
       let rollParts = [];
       rollParts.push("1d8");
       if (alertGroups[group]) {
@@ -36,7 +36,7 @@ export class WwnCombat {
         rollParts.push(groupMods[group]);
       }
 
-      let roll = new Roll(rollParts.join("+")).roll({ async: false });
+      let roll = await new Roll(rollParts.join("+")).roll();
       roll.toMessage({
         flavor: game.i18n.format("WWN.roll.initiative", {
           group: CONFIG["WWN"].colors[group],
@@ -73,7 +73,7 @@ export class WwnCombat {
   static async individualInitiative(combat, data) {
     let updates = [];
     let messages = [];
-    combat.combatants.forEach((c, i) => {
+    combat.combatants.forEach(async (c, i) => {
       // Initialize variables
       let alert = c.actor.items.filter((a) => a.name == "Alert");
       let roll = null;
@@ -83,12 +83,12 @@ export class WwnCombat {
       // Check if initiative has already been manually rolled
       if (!c.initiative) {
         // Roll initiative
-        roll = new Roll("1d8+" + c.actor.system.initiative.value).roll({ async: false });
+        roll = await new Roll("1d8+" + c.actor.system.initiative.value).roll();
         roll.toMessage({
           flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
         });
         if (alert.length > 0) {
-          roll2 = new Roll("1d8+" + c.actor.system.initiative.value).roll({ async: false });
+          roll2 = await new Roll("1d8+" + c.actor.system.initiative.value).roll();
           roll2.toMessage({
             flavor: game.i18n.format('WWN.roll.individualInit', { name: c.token.name })
           });
@@ -280,14 +280,24 @@ export class WwnCombat {
   }
 
   static async preCreateToken(token, data, options, userId) {
-    const scene = token.parent;
     const actor = game.actors.get(data.actorId);
+    const newData = {};
+
     if (!actor || data.actorLink || !game.settings.get("wwn", "randomHP")) {
-      return token.updateSource(data);
+      return token.updateSource(newData);
     }
-    const roll = new Roll(token.actor.system.hp.hd).roll({ async: false });
-    setProperty(data, "delta.system.hp.value", roll.total);
-    setProperty(data, "delta.system.hp.max", roll.total);
-    return token.updateSource(data);
+
+    let newTotal = 0;
+    const modSplit = token.actor.system.hp.hd.split("+");
+    const dieSize = modSplit[0].split("d")[1];
+    const dieCount = modSplit[0].split("d")[0];
+    for (let i = 0; i < dieCount; i++) {
+      newTotal += Math.floor(Math.random() * dieSize + 1);
+    }
+
+    foundry.utils.setProperty(newData, "delta.system.hp.value", newTotal);
+    foundry.utils.setProperty(newData, "delta.system.hp.max", newTotal);
+
+    return token.updateSource(newData);
   }
 }

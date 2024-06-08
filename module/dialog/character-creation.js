@@ -81,7 +81,7 @@ export class WwnCharacterCreator extends FormApplication {
     }
   }
 
-  rollScore(score, options = {}) {
+  async rollScore(score, options = {}) {
     // Increase counter
     this.counters[score]++;
 
@@ -93,7 +93,7 @@ export class WwnCharacterCreator extends FormApplication {
       }
     };
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -157,7 +157,7 @@ export class WwnCharacterCreator extends FormApplication {
     super._onSubmit(event, { updateData: updateData, preventClose: preventClose, preventRender: preventRender });
     // Generate silver
     let silverFinal = Math.floor(event.target.elements.namedItem('silver').value);
-    this.object.update({"system.currency.sp": silverFinal});
+    this.object.update({ "system.currency.sp": silverFinal });
   }
   /**
    * This method is called upon form submission after form data is validated

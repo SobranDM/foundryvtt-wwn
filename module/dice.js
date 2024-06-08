@@ -1,12 +1,11 @@
 export class WwnDice {
-  static digestResult(data, roll) {
+  static async digestResult(data, roll) {
     let result = {
       isSuccess: false,
       isFailure: false,
       target: data.roll.target,
       total: roll.total,
     };
-
     let die = roll.terms[0].total;
     if (data.roll.type == "above") {
       // SAVING THROWS
@@ -100,7 +99,7 @@ export class WwnDice {
       parts.push(form.bonus.value);
     }
 
-    const roll = new Roll(parts.join("+"), data).roll({ async: false });
+    const roll = await new Roll(parts.join("+"), data).roll();
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -119,7 +118,7 @@ export class WwnDice {
       data.roll.blindroll = true;
     }
 
-    templateData.result = WwnDice.digestResult(data, roll);
+    templateData.result = await WwnDice.digestResult(data, roll);
 
     return new Promise((resolve) => {
       roll.render().then((r) => {
@@ -178,6 +177,14 @@ export class WwnDice {
     result.isSuccess = true;
 
     return result;
+  }
+
+  static spendAmmo(attData) {
+    const isNPC = attData.actor.type !== "character";
+    if (isNPC) return;
+    const ammo = attData.item.system.ammo;
+    const ammoItem = attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null);
+    ammoItem.update({ "system.charges.value": ammoItem.system.charges.value - 1 });
   }
 
   static async sendAttackRoll({
@@ -242,8 +249,8 @@ export class WwnDice {
       dmgTitle: dmgTitle
     };
 
-    const roll = new Roll(parts.join("+"), data).roll({ async: false });
-    const dmgRoll = new Roll(data.roll.dmg.join("+"), data).roll({ async: false });
+    const roll = await new Roll(parts.join("+"), data).roll();
+    const dmgRoll = await new Roll(data.roll.dmg.join("+"), data).roll();
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
@@ -306,6 +313,7 @@ export class WwnDice {
               ChatMessage.create(chatData);
               resolve(roll);
             }
+            this.spendAmmo(data);
           });
         });
       });

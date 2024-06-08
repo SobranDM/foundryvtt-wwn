@@ -12,7 +12,7 @@
   <section class="sheet-body">
     <div class="description">
       {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
-        async=true}}
+      async=true}}
     </div>
     <div class="flexrow">
       <div class="stats">
@@ -29,18 +29,7 @@
         <div class="form-group">
           <label>{{localize 'WWN.faction.rating'}}</i></label>
           <div class="form-fields">
-            <select class="" name="system.rating">
-              {{#select system.rating}}
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              {{/select}}
-            </select>
+            <input type="number" name="system.rating" value="{{system.rating}}" data-dtype="Number" min="1" max="8" />
           </div>
         </div>
         <div class="form-group">
@@ -59,11 +48,7 @@
           <label>{{localize 'WWN.asset.type'}}</label>
           <div class="form-fields">
             <select name="system.assetType">
-              {{#select system.assetType}}
-              {{#each config.assetTypes as |type a|}}
-              <option value="{{a}}">{{a}}</option>
-              {{/each}}
-              {{/select}}
+              {{selectOptions config.assetTypes selected=system.assetType localize=true}}
             </select>
           </div>
         </div>
@@ -71,11 +56,7 @@
           <label>{{localize 'WWN.skills.magic'}}</label>
           <div class=form-fields>
             <select name="system.magic">
-              {{#select system.magic}}
-              {{#each config.assetMagic as |magic a|}}
-              <option value="{{a}}">{{magic}}</option>
-              {{/each}}
-              {{/select}}
+              {{selectOptions config.assetMagic selected=system.magic localize=true}}
             </select>
           </div>
         </div>
@@ -122,12 +103,7 @@
             <label>{{localize 'WWN.faction.attackSource'}}</label>
             <div class="form-fields">
               <select class="" name="system.attackSource">
-                {{#select system.attackSource}}
-                <option value=""></option>
-                <option value="cunning">Cunning</option>
-                <option value="force">Force</option>
-                <option value="wealth">Wealth</option>
-                {{/select}}
+                {{selectOptions config.assetTypes selected=system.attackSource localize=true}}
               </select>
             </div>
           </div>
@@ -135,12 +111,7 @@
             <label>{{localize 'WWN.faction.attackTarget'}}</label>
             <div class="form-fields">
               <select class="" name="system.attackTarget">
-                {{#select system.attackTarget}}
-                <option value=""></option>
-                <option value="cunning">Cunning</option>
-                <option value="force">Force</option>
-                <option value="wealth">Wealth</option>
-                {{/select}}
+                {{selectOptions config.assetTypes selected=system.attackTarget localize=true}}
               </select>
             </div>
           </div>

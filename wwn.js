@@ -93,12 +93,12 @@ Hooks.once("ready", async () => {
   );
 
   // Check migration
-  if ( !game.user.isGM ) return;
+  if (!game.user.isGM) return;
   const currentVersion = game.settings.get("wwn", "systemMigrationVersion");
   const NEEDS_MIGRATION_VERSION = "1.1.2";
   const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
-  if ( !currentVersion && totalDocuments === 0 ) return game.settings.set("wwn", "systemMigrationVersion", game.system.version);
-  const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
+  if (!currentVersion && totalDocuments === 0) return game.settings.set("wwn", "systemMigrationVersion", game.system.version);
+  const needsMigration = foundry.utils.isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
 
   if (needsMigration) {
     migrations.migrateWorld();
@@ -121,13 +121,13 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     const template = "systems/wwn/templates/chat/license.html";
     const rendered = await renderTemplate(template);
     gamesystem.find(".system").append(rendered);
-    
+
   }
 });
 
 Hooks.on("preCreateCombatant", (combat, data, options, id) => {
   let init = game.settings.get("wwn", "initiative");
-  if(init === "group") {
+  if (init === "group") {
     WwnCombat.addCombatant(combat, data, options, id);
   }
 });

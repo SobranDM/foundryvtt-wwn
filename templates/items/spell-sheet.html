@@ -51,12 +51,8 @@
             <label>{{localize 'WWN.spells.Save'}}</label>
             <div class="form-fields">
               <select name="system.save">
-                {{#select system.save}}
                 <option value=""></option>
-                {{#each config.saves as |save a|}}
-                <option value="{{a}}">{{save}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.saves selected=system.save localize=true}}
               </select>
             </div>
           </div>

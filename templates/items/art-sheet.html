@@ -12,8 +12,8 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-      <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
-      <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
   </nav>
 
   <section class="sheet-body">
@@ -50,12 +50,7 @@
             <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
             <div class=form-fields>
               <select name="system.save">
-                {{#select system.save}}
-                <option value=""></option>
-                {{#each config.saves as |save a|}}
-                <option value="{{a}}">{{save}}</option>
-                {{/each}}
-                {{/select}}
+                {{selectOptions config.saves selected=system.save localize=true}}
               </select>
             </div>
           </div>
@@ -64,7 +59,7 @@
     </div>
     {{!-- Active Effects Tab --}}
     <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-        {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
     </div>
   </section>
 </form>

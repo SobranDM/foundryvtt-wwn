@@ -80,19 +80,19 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       used: slots,
     };
 
-     // Sort arts by class
-  let sortedArts = {};
-  for (var i = 0; i < arts.length; i++) {
-    let source = arts[i].system.source;
-    if (!sortedArts[source]) sortedArts[source] = [];
-    sortedArts[source].push(arts[i]);
-  }
+    // Sort arts by class
+    let sortedArts = {};
+    for (var i = 0; i < arts.length; i++) {
+      let source = arts[i].system.source;
+      if (!sortedArts[source]) sortedArts[source] = [];
+      sortedArts[source].push(arts[i]);
+    }
 
-  // Sort each class
-  Object.keys(sortedArts).forEach(source => {
-    let list = insertionSort(sortedArts[source], "name");
-    sortedArts[source] = list;
-  });
+    // Sort each class
+    Object.keys(sortedArts).forEach(source => {
+      let list = insertionSort(sortedArts[source], "name");
+      sortedArts[source] = list;
+    });
 
     // Divide skills into primary and secondary
     const primarySkills = insertionSort(
@@ -191,7 +191,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     });
   }
 
-  async _chooseItemType(choices = ["focus", "ability"]) {
+  async _chooseItemType(choices = { focus: "focus", ability: "ability" }) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
         "systems/wwn/templates/items/entity-create.html",
@@ -356,7 +356,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
-        data: {
+        system: {
           equipped: !item.system.equipped,
         },
       });
@@ -366,7 +366,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
-        data: {
+        system: {
           prepared: !item.system.prepared,
         },
       });
@@ -376,7 +376,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       await item.update({
-        data: {
+        system: {
           stowed: !item.system.stowed,
         },
       });

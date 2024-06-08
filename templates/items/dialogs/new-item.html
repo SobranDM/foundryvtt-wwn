@@ -1,65 +1,74 @@
 <form class="wwn roll-dialog">
-    <div class="flex flex-col">
-        <h1> {{name}}</h1>
-        <div class="flex flexrow form-group">
-            Name: <input id="name" type="text" value="{{name}}">
-        </div>
-        {{#if item}}
-        <div class="flex flexrow form-group">
-            Encumbrance: <input id="encumbrance" type="text" value="1" data-dtype="number">
-        </div>
-        <div class="flex flexrow form-group">
-            Price: <input id="price" type="text" value="0" data-dtype="number"><br>
-        </div>
-        <div class="flex flexrow form-group">
-            Quantity: <input id="quantity" type="text" value="1" data-dtype="number"><br>
-        </div>
-        <div class="flex flexrow form-group">
-            Location: <select id="location">
-                <option value="stowed">Stowed</option>
-                <option value="equipped">Equipped</option>
-                <option value="neither">Neither</option>
-            </select>
-        </div>
-        {{/if}}
-        {{#if weapon}}
-        <div class="flex flexrow form-group">
-            Weapon Type: <select id="weaponType">
-                <option value="melee">Melee</option>
-                <option value="ranged">Ranged</option>
-                <option value="both">Both</option>
-            </select>
-        </div>
-        <div class="flex flexrow form-group">
-            Damage: <input id="damage" type="text" value="1d6">
-        </div>
-        <div class="flex flexrow form-group">
-            Shock Damage: <input id="shock-dmg" type="text" value="1">
-        </div>
-        <div class="flex flexrow form-group">
-            Shock AC: <input id="shock-ac" type="text" value="15">
-        </div>
-        {{/if}}
-        {{#if armor}}
-        <div class="flex flexrow form-group">
-            Armor Type: <select id="armorType">
-                <option value="light">Light</option>
-                <option value="medium">Medium</option>
-                <option value="heavy">Heavy</option>
-                <option value="shield">Shield</option>
-            </select>
-        </div>
-        <div class="flex flexrow form-group">
-            Armor Class: <input id="aac" type="text" value="0" data-dtype="number">
-        </div>
-        {{/if}}
-        {{#if consumable}}
-        <div class="flex flexrow form-group">
-            Charges Value: <input id="charges-val" type="text" value="1" data-dtype="number">
-        </div>
-        <div class="flex flexrow form-group">
-            Charges Max: <input id="charges-max" type="text" value="1" data-dtype="number">
-        </div>
-        {{/if}}
+  <div class="flex flex-col">
+    <h1> {{name}}</h1>
+    <div class="flex flexrow form-group">
+      <label for="name">Name:</label>
+      <input id="name" type="text" value="{{name}}">
     </div>
+    {{#if item}}
+    <div class="flex flexrow form-group">
+      <label for="encumbrance">Encumbrance:</label><input id="encumbrance" type="text" value="1" data-dtype="number">
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="price">Price:</label>
+      <input id="price" type="text" value="0" data-dtype="number"><br>
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" type="text" value="1" data-dtype="number"><br>
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="location">Location:</label>
+      <select id="location">
+        <option value="stowed">Stowed</option>
+        <option value="equipped">Equipped</option>
+        <option value="neither">Neither</option>
+      </select>
+    </div>
+    {{/if}}
+    {{#if weapon}}
+    <div class="flex flexrow form-group">
+      <label for="weaponType">Weapon Type:</label><select id="weaponType">
+        <option value="melee">Melee</option>
+        <option value="ranged">Ranged</option>
+        <option value="both">Both</option>
+      </select>
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="damage">Damage:</label>
+      <input id="damage" type="text" value="1d6">
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="shock-dmg">Shock Damage:</label><input id="shock-dmg" type="text" value="1">
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="shock-ac">Shock AC:</label>
+      <input id="shock-ac" type="text" value="15">
+    </div>
+    {{/if}}
+    {{#if armor}}
+    <div class="flex flexrow form-group">
+      <label for="armorType">Armor Type:</label><select id="armorType">
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="heavy">Heavy</option>
+        <option value="shield">Shield</option>
+      </select>
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="aac">Armor Class:</label>
+      <input id="aac" type="text" value="0" data-dtype="number">
+    </div>
+    {{/if}}
+    {{#if consumable}}
+    <div class="flex flexrow form-group">
+      <label for="charges-val">Charges Value:</label>
+      <input id="charges-val" type="text" value="1" data-dtype="number">
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="charges-max">Charges Max:</label>
+      <input id="charges-max" type="text" value="1" data-dtype="number">
+    </div>
+    {{/if}}
+  </div>
 </form>

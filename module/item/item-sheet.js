@@ -71,7 +71,7 @@ export class WwnItemSheet extends ItemSheet {
    */
   activateListeners(html) {
     super.activateListeners(html);
-    
+
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.item));
 
@@ -87,11 +87,11 @@ export class WwnItemSheet extends ItemSheet {
       this.object.popTag(value);
     });
     html.find('a.melee-toggle').click(() => {
-      this.object.update({ data: { melee: !this.object.system.melee } });
+      this.object.update({ system: { melee: !this.object.system.melee } });
     });
 
     html.find('a.missile-toggle').click(() => {
-      this.object.update({ data: { missile: !this.object.system.missile } });
+      this.object.update({ system: { missile: !this.object.system.missile } });
     });
 
     if (this.isEditable) {

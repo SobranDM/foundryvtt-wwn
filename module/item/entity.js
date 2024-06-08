@@ -94,6 +94,20 @@ export class WwnItem extends Item {
   async rollSkill(options = {}) {
     const template = "systems/wwn/templates/items/dialogs/roll-skill.html";
     const dialogData = {
+      choices: {
+        "str": "WWN.scores.str.short",
+        "dex": "WWN.scores.dex.short",
+        "con": "WWN.scores.con.short",
+        "int": "WWN.scores.int.short",
+        "wis": "WWN.scores.wis.short",
+        "cha": "WWN.scores.cha.short"
+      },
+      diceChoices: {
+        "2d6": "2d6",
+        "3d6kh2": "3d6",
+        "4d6kh2": "4d6",
+        "1d6": "1d6"
+      },
       defaultScore: this.system.score,
       dicePool: this.system.skillDice,
       name: this.name,
@@ -108,7 +122,8 @@ export class WwnItem extends Item {
 
     const data = this.system;
     const skillName = this.name;
-    const score = this.actor.system.scores[data.score];
+    const score = data.score.length ? this.actor.system.scores[data.score] : null;
+    const scoreMod = score ? score.mod : 0;
 
     // Determine if armor penalty applies
     let armorPenalty = 0;
@@ -133,14 +148,14 @@ export class WwnItem extends Item {
     }
 
     // Assemble dice pool
-    const rollParts = [data.skillDice, score.mod, skillLevel];
+    const rollParts = [data.skillDice, scoreMod, skillLevel];
     if (armorPenalty < 0) {
       rollParts.push(armorPenalty);
     }
 
     if (options.skipDialog) {
-      const attrKey = `WWN.scores.${data.score}.short`;
-      const rollTitle = `${game.i18n.localize(attrKey)}/${this.name}`;
+      const attrKey = score ? `WWN.scores.${data.score}.short` : null;
+      const rollTitle = score ? `${game.i18n.localize(attrKey)}/${this.name}` : this.name;
 
       let rollData = {
         parts: rollParts,
@@ -159,13 +174,9 @@ export class WwnItem extends Item {
     const _doRoll = async (html) => {
       const form = html[0].querySelector("form");
       rollParts[0] = form.skillDice.value;
-      rollParts[1] = this.actor.system.scores[form.score.value].mod;
-      if (!score) {
-        ui.notifications.error("Unable to find score on char.");
-        return;
-      }
-      const attrKey = `WWN.scores.${form.score.value}.short`;
-      const rollTitle = `${game.i18n.localize(attrKey)}/${this.name}`;
+      rollParts[1] = score ? this.actor.system.scores[form.score.value].mod : 0;
+      const attrKey = score ? `WWN.scores.${form.score.value}.short` : null;
+      const rollTitle = score ? `${game.i18n.localize(attrKey)}/${this.name}` : this.name;
       let rollData = {
         parts: rollParts,
         data: newData,
@@ -187,7 +198,7 @@ export class WwnItem extends Item {
       cancel: {
         icon: '<i class="fas fa-times"></i>',
         label: game.i18n.localize("WWN.Cancel"),
-        callback: (html) => {},
+        callback: (html) => { },
       },
     };
 
@@ -198,16 +209,16 @@ export class WwnItem extends Item {
         content: html,
         buttons: buttons,
         default: "ok",
-        close: () => {},
+        close: () => { },
       }).render(true);
     });
   }
 
   rollWeapon(options = {}) {
     let isNPC = this.actor.type != "character";
-    const targets = 5;
     const data = this.system;
     let type = isNPC ? "attack" : "melee";
+
     const rollData = {
       ...(this.actor?._getRollData() || {}),
       item: this,
@@ -272,7 +283,7 @@ export class WwnItem extends Item {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: newData,
@@ -476,7 +487,7 @@ export class WwnItem extends Item {
     // Basic chat message data
     const chatData = {
       user: game.user.id,
-      type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+      type: CONST.CHAT_MESSAGE_STYLES.OTHER,
       content: html,
       speaker: {
         actor: this.actor.id,

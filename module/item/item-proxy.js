@@ -14,7 +14,7 @@ const itemMappings = {
   skill: WwnItem,
 };
 
-export const WwnItemProxy = new Proxy(function () {}, {
+export const WwnItemProxy = new Proxy(function () { }, {
   //Will intercept calls to the "new" operator
   construct: function (target, args) {
     const [data] = args;

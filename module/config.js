@@ -41,6 +41,12 @@ export const WWN = {
     trade: "WWN.skills.trade",
     work: "WWN.skills.work"
   },
+  skillDice: {
+    "2d6": "2d6",
+    "3d6kh2": "3d6",
+    "4d6kh2": "4d6",
+    "1d6": "1d6"
+  },
   encumbLocation: {
     readied: "WWN.items.readied",
     stowed: "WWN.items.stowed",
@@ -51,7 +57,7 @@ export const WWN = {
     whenReadied: "WWN.items.WeightlessReadied",
     whenStowed: "WWN.items.WeightlessStowed"
   },
-  armor : {
+  armor: {
     unarmored: "WWN.armor.unarmored",
     light: "WWN.armor.light",
     medium: "WWN.armor.medium",

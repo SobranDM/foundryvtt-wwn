@@ -32,84 +32,84 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       ],
     });
   }
-/**
-   * Organize and classify Owned Items for Character sheets
-   * @private
-   */
-_prepareItems(data) {
-  // Partition items by category
-  data.attackPatterns = [];
-  let [weapons, armors, items, arts, spells, abilities, foci] = this.actor.items.reduce(
-    (arr, item) => {
-      // Grab attack groups
-      if (["weapon"].includes(item.type)) {
-        data.attackPatterns.push(item);
+  /**
+     * Organize and classify Owned Items for Character sheets
+     * @private
+     */
+  _prepareItems(data) {
+    // Partition items by category
+    data.attackPatterns = [];
+    let [weapons, armors, items, arts, spells, abilities, foci] = this.actor.items.reduce(
+      (arr, item) => {
+        // Grab attack groups
+        if (["weapon"].includes(item.type)) {
+          data.attackPatterns.push(item);
+          return arr;
+        }
+        // Classify items into types
+        if (item.type === "weapon") arr[0].push(item);
+        else if (item.type === "armor") arr[1].push(item);
+        else if (item.type === "item") arr[2].push(item);
+        else if (item.type === "art") arr[3].push(item);
+        else if (item.type === "spell") arr[4].push(item);
+        else if (item.type === "ability") arr[5].push(item);
+        else if (item.type === "focus") arr[6].push(item);
         return arr;
-      }
-      // Classify items into types
-      if (item.type === "weapon") arr[0].push(item);
-      else if (item.type === "armor") arr[1].push(item);
-      else if (item.type === "item") arr[2].push(item);
-      else if (item.type === "art") arr[3].push(item);
-      else if (item.type === "spell") arr[4].push(item);
-      else if (item.type === "ability") arr[5].push(item);
-      else if (item.type === "focus") arr[6].push(item);
-      return arr;
-    },
-    [[], [], [], [], [], [], []]
-  );
-  // Sort spells by level
-  let sortedSpells = {};
-  let slots = {};
-  for (var i = 0; i < spells.length; i++) {
-    let lvl = spells[i].system.lvl;
-    if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
-    if (!slots[lvl]) slots[lvl] = 0;
-    slots[lvl] += spells[i].system.memorized;
-    sortedSpells[lvl].push(spells[i]);
+      },
+      [[], [], [], [], [], [], []]
+    );
+    // Sort spells by level
+    let sortedSpells = {};
+    let slots = {};
+    for (var i = 0; i < spells.length; i++) {
+      let lvl = spells[i].system.lvl;
+      if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
+      if (!slots[lvl]) slots[lvl] = 0;
+      slots[lvl] += spells[i].system.memorized;
+      sortedSpells[lvl].push(spells[i]);
+    }
+
+    // Sort each level
+    Object.keys(sortedSpells).forEach(level => {
+      let list = insertionSort(sortedSpells[level], "name");
+      list = insertionSort(list, "system.class");
+      sortedSpells[level] = list;
+    });
+
+    // Sort arts by class
+    let sortedArts = {};
+    for (var i = 0; i < arts.length; i++) {
+      let source = arts[i].system.source;
+      if (!sortedArts[source]) sortedArts[source] = [];
+      sortedArts[source].push(arts[i]);
+    }
+
+    // Sort each class
+    Object.keys(sortedArts).forEach(source => {
+      let list = insertionSort(sortedArts[source], "name");
+      sortedArts[source] = list;
+    });
+
+    data.attackPatterns.sort((a, b) => {
+      const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
+      return aName > bName ? 1 : bName > aName ? -1 : 0;
+    });
+
+    data.slots = {
+      used: slots,
+    };
+
+    // Assign and return
+    data.owned = {
+      items: insertionSort(items, "name"),
+      armors: insertionSort(armors, "name"),
+      abilities: insertionSort(abilities, "name"),
+      weapons: insertionSort(weapons, "name"),
+      arts: sortedArts,
+      spells: sortedSpells,
+      foci: insertionSort(foci, "name")
+    };
   }
-
-  // Sort each level
-  Object.keys(sortedSpells).forEach(level => {
-    let list = insertionSort(sortedSpells[level], "name");
-    list = insertionSort(list, "system.class");
-    sortedSpells[level] = list;
-  });
-
-  // Sort arts by class
-  let sortedArts = {};
-  for (var i = 0; i < arts.length; i++) {
-    let source = arts[i].system.source;
-    if (!sortedArts[source]) sortedArts[source] = [];
-    sortedArts[source].push(arts[i]);
-  }
-
-  // Sort each class
-  Object.keys(sortedArts).forEach(source => {
-    let list = insertionSort(sortedArts[source], "name");
-    sortedArts[source] = list;
-  });
-
-  data.attackPatterns.sort((a, b) => {
-    const aName = a.name.toLowerCase(), bName = b.name.toLowerCase();
-    return aName > bName ? 1 : bName > aName ? -1 : 0;
-  });
-  
-  data.slots = {
-    used: slots,
-  };
-
-  // Assign and return
-  data.owned = {
-    items: insertionSort(items, "name"),
-    armors: insertionSort(armors, "name"),
-    abilities: insertionSort(abilities, "name"),
-    weapons: insertionSort(weapons, "name"),
-    arts: sortedArts,
-    spells: sortedSpells,
-    foci: insertionSort(foci, "name")
-  };
-}
 
   /**
    * Monster creation helpers
@@ -141,7 +141,7 @@ _prepareItems(data) {
       this.object.system.details.biography,
       { async: true }
     );
-    
+
     return data;
   }
 
@@ -161,7 +161,13 @@ _prepareItems(data) {
 
   /* -------------------------------------------- */
 
-  async _chooseItemType(choices = ["weapon", "armor", "shield", "item", "ability"]) {
+  async _chooseItemType(choices = {
+    weapon: "weapon",
+    armor: "armor",
+    shield: "shield",
+    item: "item",
+    ability: "ability"
+  }) {
     let templateData = { types: choices },
       dlg = await renderTemplate(
         "systems/wwn/templates/items/entity-create.html",
@@ -260,7 +266,7 @@ _prepareItems(data) {
         },
       });
     });
-    
+
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 

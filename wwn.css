@@ -6,8 +6,7 @@
     text-shadow: none;
   }
   to {
-    text-shadow: -1px -1px 4px #4b4a44, 1px -1px 4px #4b4a44,
-      -1px 1px 4px #4b4a44, 1px 1px 4px #4b4a44;
+    text-shadow: -1px -1px 4px #4b4a44, 1px -1px 4px #4b4a44, -1px 1px 4px #4b4a44, 1px 1px 4px #4b4a44;
   }
 }
 .wwn.sheet.actor .blinking {
@@ -92,7 +91,7 @@
 .wwn.sheet.actor .sheet-tabs {
   position: absolute;
   transform: rotate(90deg);
-  top: 410px;
+  bottom: 216px;
   right: -179px;
   width: 340px;
   border-top: none;
@@ -209,11 +208,7 @@
   flex-direction: row;
   margin-bottom: 18px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group.skill-group
-  .attributes
-  .attribute {
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute {
   display: flex;
   flex-direction: row;
   padding-left: 0px;
@@ -225,77 +220,35 @@
 .wwn.actor.character .sheet-body .inventory.skills {
   padding-left: 5px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group.skill-group
-  .attributes
-  .attribute.skills
-  .attribute-value.unspent {
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills .attribute-value.unspent {
   padding-left: 23px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group.skill-group
-  .attributes
-  .attribute.skills
-  select {
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills select {
   height: 30px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group
-  .attributes
-  .attribute
-  .attribute-name {
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name {
   width: 40px;
   margin: 0;
   line-height: 35px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group.skill-group
-  .attributes
-  .attribute
-  .attribute-name {
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-name {
   width: 100px;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   line-height: 25px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group
-  .attributes
-  .attribute
-  .attribute-name
-  a {
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name a {
   margin: auto;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group
-  .attributes
-  .attribute
-  .attribute-value {
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value {
   width: 45px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group.skill-group
-  .attributes
-  .attribute
-  .attribute-value {
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-value {
   line-height: 25px;
   padding: 0 10px 0 10px;
   width: 40px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .attribute-group
-  .attributes
-  .attribute
-  .attribute-value
-  input {
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value input {
   padding: 0;
 }
 .wwn.sheet.actor.monster .sheet-body .inventory {
@@ -321,11 +274,7 @@
   flex-shrink: 1;
   margin: 0;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .attributes-tab
-  .inventory.skills
-  .item-entry {
+.wwn.sheet.actor.character .sheet-body .attributes-tab .inventory.skills .item-entry {
   max-width: 250px;
   flex-grow: 0;
 }
@@ -382,13 +331,7 @@
   list-style: none;
   display: flex;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .inventory
-  .item-list
-  .item-summary
-  .tag-list
-  .tag {
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-summary .tag-list .tag {
   margin: 1px 2px;
   border: 1px solid #d8d6c9;
   font-size: 11px;
@@ -403,12 +346,7 @@
   padding: 0px;
   margin-bottom: 0px;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .inventory
-  .item-list
-  .item-entry:nth-child(even)
-  .item {
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-entry:nth-child(even) .item {
   background: rgba(0, 0, 0, 0.1);
 }
 .wwn.sheet.actor .sheet-body .inventory .item-list .item {
@@ -420,21 +358,11 @@
   grid-area: item-equipped;
   justify-self: center;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .inventory
-  .item-list
-  .item-rollable:hover
-  .item-image {
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-rollable:hover .item-image {
   background-image: url("/icons/svg/d20-grey.svg") !important;
   cursor: pointer;
 }
-.wwn.sheet.actor
-  .sheet-body
-  .inventory
-  .item-list
-  .item-rollable
-  .item-image:hover {
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-rollable .item-image:hover {
   background-image: url("/icons/svg/d20-black.svg") !important;
 }
 .wwn.sheet.actor .sheet-body .inventory .item-list .item-name {
@@ -546,8 +474,7 @@
 }
 .wwn.sheet.actor .sheet-body .inventory .item-controls a:hover {
   color: #44191a;
-  text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9,
-    1px 1px 5px #d8d6c9;
+  text-shadow: 0 0 5px #d8d6c9, 1px 0 5px #d8d6c9, 0 1px 5px #d8d6c9, 1px 1px 5px #d8d6c9;
 }
 .wwn.sheet.actor .hidden {
   display: none;
@@ -573,11 +500,7 @@
   flex-grow: 2;
   flex-shrink: 1;
 }
-.wwn.sheet.actor
-  .inventory.spells
-  .item-list
-  .item-entry
-  .item.flexrow.expanded {
+.wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow.expanded {
   display: flex;
   flex-shrink: 0;
 }
@@ -653,18 +576,10 @@
 .wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group {
   flex-direction: column;
 }
-.wwn.sheet.actor
-  .inventory
-  .inventory-right.flexrow
-  .flexrow.readied-group
-  .flexrow.readied-subgroup {
+.wwn.sheet.actor .inventory .inventory-right.flexrow .flexrow.readied-group .flexrow.readied-subgroup {
   height: 10px;
 }
-.wwn.sheet.actor
-  .inventory
-  .inventory-right
-  .flexrow.currency-group
-  .currency-subgroup.currency-buffer {
+.wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group .currency-subgroup.currency-buffer {
   margin-top: 7px;
 }
 .wwn.sheet.actor .flexrow .unspentPoints {
@@ -1108,11 +1023,7 @@
   margin-right: 0px;
   padding-bottom: 0px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .attributes-tab
-  .attribute-group
-  .modifiers-btn {
+.wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
   position: absolute;
   left: 0;
   top: -23px;
@@ -1135,47 +1046,25 @@
   padding-right: 0px;
   padding-left: 0px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .middle-column
-  .resources
-  .health-bottom {
+.wwn.sheet.actor.character .sheet-body .middle-column .resources .health-bottom {
   margin-top: 20px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .middle-column
-  .resources
-  .health.armor-class {
+.wwn.sheet.actor.character .sheet-body .middle-column .resources .health.armor-class {
   margin-top: 20px;
 }
 .wwn.sheet.actor.character .sheet-body .middle-column .attribute-group {
   margin: 5px 10px 0 25px;
   padding: 10px 10px 0 10px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .middle-column
-  .attribute-group
-  .attributes {
+.wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes {
   width: 110px;
   display: flex;
   flex-direction: column;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .middle-column
-  .attribute-group
-  .attributes
-  .attribute {
+.wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute {
   margin-bottom: 14px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .middle-column
-  .attribute-group
-  .attributes
-  .attribute-name.box-title {
+.wwn.sheet.actor.character .sheet-body .middle-column .attribute-group .attributes .attribute-name.box-title {
   width: 80px;
   line-height: 35px;
 }
@@ -1197,12 +1086,7 @@
   width: 85px !important;
 }
 
-.wwn.actor.character
-  .sheet-body
-  .attributes-tab
-  .attribute-group
-  .attributes.saves
-  .attribute-value {
+.wwn.actor.character .sheet-body .attributes-tab .attribute-group .attributes.saves .attribute-value {
   padding-bottom: 0px;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
@@ -1221,70 +1105,33 @@
   flex-shrink: 1;
   flex-grow: 1;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .languages
-  .item-titles
-  .item-controls {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
   flex: 0 0 20px;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li {
   margin: 0;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .languages
-  ol
-  li:hover
-  .item-controls {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li:hover .item-controls {
   display: flex;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .languages
-  ol
-  li
-  .item-controls {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li .item-controls {
   flex: 0 0 20px;
   display: none;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description {
   margin: 2px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .description
-  .editor {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   height: 100%;
   min-height: 120px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .description
-  .editor-content {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
   min-height: 120px;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .description
-  .editor
-  .tox
-  .tox-tbtn {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor .tox .tox-tbtn {
   height: 24px;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes {
@@ -1298,12 +1145,7 @@
   flex-shrink: 0;
   height: 100%;
 }
-.wwn.sheet.actor.character
-  .sheet-body
-  .notes-tab
-  .inventory
-  .notes
-  .editor-content {
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .notes .editor-content {
   min-height: 120px;
 }
 .wwn .window-content .collapsed {
@@ -1511,12 +1353,7 @@
   height: 55px;
   margin: 0px 10px 10px 10px;
 }
-.wwn.actor.monster
-  .sheet-body
-  .attributes-tab
-  .attributes
-  .attribute
-  .attribute-value {
+.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute .attribute-value {
   line-height: 15px;
 }
 .wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
@@ -1532,11 +1369,7 @@
   top: 5px;
   color: #d8d6c9;
 }
-.wwn.actor.monster
-  .attributes
-  .attribute.health
-  .attribute-name
-  .hp-roll:hover {
+.wwn.actor.monster .attributes .attribute.health .attribute-name .hp-roll:hover {
   color: white;
 }
 .wwn.actor.monster .attribute-group .attacks-description {

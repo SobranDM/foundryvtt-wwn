@@ -1,14 +1,10 @@
 <form class="wwn dialog">
-    <div class="form-group">
-        <label>{{localize 'WWN.Language'}}</label>
-        <div class="form-fields">
-            <select name="choice">
-                {{#select choices}}
-                {{#each choices as |label mode|}}
-                <option value="{{mode}}">{{label}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-        </div>
+  <div class="form-group">
+    <label>{{localize 'WWN.Language'}}</label>
+    <div class="form-fields">
+      <select name="choice">
+        {{selectOptions choices}}
+      </select>
     </div>
-</div>
+  </div>
+  </div>

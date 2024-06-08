@@ -46,7 +46,7 @@ export function createWwnMacro(data, slot) {
  * @param {string} itemName
  * @return {Promise}
  */
-export function rollItemMacro(itemName) {
+export async function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker();
   let actor;
   if (speaker.token) actor = game.actors.tokens[speaker.token];
@@ -66,5 +66,5 @@ export function rollItemMacro(itemName) {
   const item = items[0];
 
   // Trigger the item roll
-  return item.roll({ async: false });
+  return await item.roll();
 }

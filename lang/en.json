@@ -28,7 +28,6 @@
   "WWN.Up": "Improve",
   "WWN.Break": "Break",
   "WWN.Fix": "Fix",
-
   "WWN.asset.counter": "Counter",
   "WWN.asset.BoI": "BoI",
   "WWN.asset.BoIHint": "Base of Influence",
@@ -42,10 +41,9 @@
   "WWN.asset.magicMedium": "Medium",
   "WWN.asset.magicHigh": "High",
   "WWN.asset.stealthed": "Stealth",
-  "WWW.asset.cunning" : "Cunning",
-  "WWW.asset.force" : "Force",
-  "WWW.asset.wealth" : "Wealth",
-
+  "WWN.asset.cunning": "Cunning",
+  "WWN.asset.force": "Force",
+  "WWN.asset.wealth": "Wealth",
   "WWN.dialog.tweaks": "Tweaks",
   "WWN.dialog.partysheet": "Party Overview",
   "WWN.dialog.selectActors": "Remove Characters",
@@ -60,20 +58,17 @@
   "WWN.dialog.generateScore": "Rolling {score} ({count})",
   "WWN.dialog.skillDice": "Skill Dice",
   "WWN.dialog.partySelectHint": "Drag and drop characters to add them to the party.",
-
   "WWN.Effects": "Effects",
   "WWN.EffectCreate": "Create Effect",
   "WWN.EffectToggle": "Toggle Effect",
   "WWN.EffectEdit": "Edit Effect",
   "WWN.EffectDelete": "Delete Effect",
-
   "WWN.Formula": "Formula",
   "WWN.SitMod": "Situational Modifier",
   "WWN.Modifier": "Modifier",
   "WWN.Modifiers": "Modifiers",
   "WWN.RollMode": "Roll Mode",
   "WWN.RollExample": "e.g. +1d4",
-
   "WWN.roll.formula": "{label} roll",
   "WWN.roll.appearing": "#Appearing {type}",
   "WWN.roll.morale": "Morale check",
@@ -94,9 +89,7 @@
   "WWN.roll.initiative": "Group {group} rolls for Initiative!",
   "WWN.roll.individualInit": "{name} rolls for Initiative!",
   "WWN.roll.loyalty": "Loyalty Check",
-
   "WWN.table.treasure.roll": "Roll Treasure",
-
   "WWN.details.name": "Name",
   "WWN.details.class": "Class",
   "WWN.details.background": "Background",
@@ -119,16 +112,13 @@
   "WWN.details.dungeonAppearing": "#Appearing (Dungeon)",
   "WWN.details.wildernessAppearing": "#Appearing (Wilderness or Lair)",
   "WWN.details.renown.short": "Renown",
-
   "WWN.Attack": "Attack",
   "WWN.Encumbrance": "Encumbrance",
-
   "WWN.Retainer": "Retainer",
   "WWN.RetainerWage": "Wage",
   "WWN.RetainerUpkeep": "Upkeep",
   "WWN.Loyalty": "Morale",
   "WWN.LoyaltyShort": "ML",
-
   "WWN.scores.str.long": "Strength",
   "WWN.scores.str.short": "STR",
   "WWN.scores.wis.long": "Wisdom",
@@ -144,13 +134,11 @@
   "WWN.attribute": "Attribute",
   "WWN.scores.score": "Score",
   "WWN.scores.value": "Value",
-
   "WWN.saves.evasion": "Evasion",
   "WWN.saves.mental": "Mental",
   "WWN.saves.physical": "Physical",
   "WWN.saves.luck": "Luck",
   "WWN.saves.summary": "E{evasion} M{mental} P{physical} L{luck}",
-
   "WWN.Health": "Current Hit Points",
   "WWN.HealthMax": "Maximum Hit Points",
   "WWN.HealthShort": "HP",
@@ -163,7 +151,6 @@
   "WWN.SystemStrainLong": "System Strain",
   "WWN.SystemStrain": "Current System Strain",
   "WWN.SystemStrainMax": "Maximum System Strain",
-
   "WWN.movement.base": "Movement Rate",
   "WWN.movement.short": "MOV",
   "WWN.movement.monsterShort": "Move",
@@ -172,7 +159,6 @@
   "WWN.movement.turn": "Movement per turn",
   "WWN.movement.round": "Movement per round",
   "WWN.movement.bonus": "Movement Bonus",
-
   "WWN.ArmorClassNaked": "Naked Armor Class",
   "WWN.ArmorClass": "Armor Class",
   "WWN.ArmorClassShort": "AC",
@@ -197,7 +183,6 @@
   "WWN.Warrior": "Full Warrior",
   "WWN.Committed": "Committed",
   "WWN.Max": "Max",
-
   "WWN.Language": "Language",
   "WWN.Languages": "Languages",
   "WWN.LanguagesHint": "Enter a list of languages, separated by commas.",
@@ -209,10 +194,8 @@
   "WWN.NativeBroken": "Native (Broken)",
   "WWN.Native": "Native",
   "WWN.NativePlus": "Native + ",
-
   "WWN.NPCReaction": "NPC Reaction",
   "WWN.RetainersMax": "#Retainers",
-
   "WWN.category.saves": "Saves",
   "WWN.category.attributes": "Attributes",
   "WWN.category.inventory": "Inventory",
@@ -227,7 +210,6 @@
   "WWN.category.abilities": "Abilities",
   "WWN.category.foci": "Foci",
   "WWN.category.fociTitle": "Foci and Abilities",
-
   "WWN.Setting.Initiative": "Initiative",
   "WWN.Setting.InitiativeHint": "Grouped or individual initiative.",
   "WWN.Setting.InitiativeIndividual": "Individual initiative",
@@ -263,7 +245,6 @@
   "WWN.Setting.xpCustomListHint": "Enter a list of XP values, separated by commas.",
   "WWN.Setting.hideInstinct": "Hide Instinct Results",
   "WWN.Setting.hideInstinctHint": "If selected, automatic rolls on the Instinct table will be hidden from players.",
-
   "WWN.items.Equip": "Readied",
   "WWN.items.Unequip": "Unequip",
   "WWN.items.Misc": "Misc",
@@ -330,7 +311,6 @@
   "WWN.items.total.long": "Total Silver Value, including all coin and treasure items.",
   "WWN.items.adjustCurrency": "Adjust Currency",
   "WWN.items.currencyShare": "Currency Share",
-
   "WWN.items.Range": "Range",
   "WWN.items.desc.Range": "Ranged Weapon",
   "WWN.items.Melee": "Melee",
@@ -363,19 +343,16 @@
   "WWN.items.desc.T": "Throwable. While the weapon can be used in melee, it may be thrown out to the listed range as well, albeit it does no Shock in that case. Throwing a weapon while a foe is in melee range applies a -4 penalty to the attack roll.",
   "WWN.items.CB": "CB",
   "WWN.items.desc.CB": "Crossbow. Due to the simplicity of their operation, someone without Shoot-0 may use a crossbow at no unskilled penalty.",
-
   "WWN.resources.rations": "Rations",
   "WWN.resources.torches": "Torches",
   "WWN.resources.oil": "Oil",
   "WWN.resources.consumable": "Consumable",
-
   "WWN.armor.type": "Armor Type",
   "WWN.armor.unarmored": "Unarmored",
   "WWN.armor.light": "Light",
   "WWN.armor.medium": "Medium",
   "WWN.armor.heavy": "Heavy",
   "WWN.armor.shield": "Shield",
-
   "WWN.spells.spend": "{speaker} is casting {name}!",
   "WWN.spells.Prepared": "Prepared",
   "WWN.spells.TotalPrepared": "Prepared",
@@ -400,11 +377,8 @@
   "WWN.spells.Scene": "Scene",
   "WWN.spells.CasterClass": "Caster Class",
   "WWN.spells.Resources": "Resources",
-
   "WWN.abilities.Requirements": "Requirements",
-
   "WWN.skills.secondary": "Secondary",
-
   "WWN.skills.administer": "Admin",
   "WWN.skills.desc.administer": "Keep an organization running smoothly, scribe things well, plan out logistics, identify incompetent or treacherous workers, analyze records or archives, or otherwise do things that an executive or middle-manager would need to do.",
   "WWN.skills.connect": "Connect",
@@ -464,7 +438,6 @@
   "WWN.skills.desc.teleportation": "Master the arts of physical translocation of yourself and allies.",
   "WWN.skills.polymath": "Polymath",
   "WWN.skills.desc.polymath": "Polymath Desc",
-
   "WWN.messages.GetExperience": "{name} gained {value} experience points!",
   "WWN.messages.GetCurrency": "{name} deposited {value} silver!",
   "WWN.messages.AttackSuccess": "<b>Hits AC {result}!</b> ({bonus})",
@@ -482,7 +455,6 @@
   "WWN.messages.applyShock1": "Inflicts ",
   "WWN.messages.applyShock2": " Shock damage to AC ≤ ",
   "WWN.messages.applyShockAlt": "Shock damage!",
-
   "WWN.colors.green": "Green",
   "WWN.colors.red": "Red",
   "WWN.colors.yellow": "Yellow",
@@ -490,7 +462,6 @@
   "WWN.colors.blue": "Blue",
   "WWN.colors.orange": "Orange",
   "WWN.colors.white": "White",
-
   "WWN.reaction.check": "Reaction Check",
   "WWN.reaction.Hostile": "{name} is as aggressively hostile as the situation allows.",
   "WWN.reaction.Unfriendly": "{name} is more unfriendly and hostile than they'd be expected to be in the given situation.",

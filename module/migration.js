@@ -86,7 +86,7 @@ async function migrateActorDataToItemSkills(actor) {
     let toAdd = await skillPack.getDocuments();
     let primarySkills = toAdd.filter((i) => i.system.secondary == false).map(item => item.toObject());
     for (let skill of primarySkills) {
-      let oldSkill = actorData.skills[skill.name.toLowerCase()]; 
+      let oldSkill = actorData.skills[skill.name.toLowerCase()];
       if (oldSkill) {
         //Actor has old skill.
         skill.data.skillDice = oldSkill.dice;
@@ -106,7 +106,7 @@ async function migrateSceneData(scene) {
     const t = token.toJSON();
 
     if (!t.actorLink) {
-      const actor = duplicate(t.actorData);
+      const actor = foundry.utils.duplicate(t);
       actor.type = t.actor?.type;
       const updateData = migrateActorDataToItemSkills(actor);
       if (updateData && updateData.length) {

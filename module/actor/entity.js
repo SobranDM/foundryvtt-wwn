@@ -23,11 +23,11 @@ export class WwnActor extends Actor {
       const wealthAssets = assets.filter(
         (i) => i.system["assetType"] === "wealth"
       );
-  
+
       data.cunningAssets = cunningAssets;
       data.forceAssets = forceAssets;
       data.wealthAssets = wealthAssets;
-  
+
       data.health.max =
         4 +
         this.getHealth(data.wealthRating) +
@@ -65,7 +65,7 @@ export class WwnActor extends Actor {
     if (this.type === "faction") {
       await this.update({
         "token.actorLink": true,
-        "img" : "systems/wwn/assets/default/faction.png"
+        "img": "systems/wwn/assets/default/faction.png"
       });
     }
   }
@@ -133,10 +133,10 @@ export class WwnActor extends Actor {
   /*  Rolls                                       */
   /* -------------------------------------------- */
 
-  rollHP(options = {}) {
-    const roll = new Roll(this.system.hp.hd).roll({ async: false });
+  async rollHP(options = {}) {
+    const roll = await new Roll(this.system.hp.hd).roll();
     return this.update({
-      data: {
+      system: {
         hp: {
           max: roll.total,
           value: roll.total,
@@ -178,7 +178,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollMorale(options = {}) {
+  async rollMorale(options = {}) {
     const rollParts = ["2d6"];
 
     const data = {
@@ -190,7 +190,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -201,7 +201,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollInstinct(options = {}) {
+  async rollInstinct(options = {}) {
     const rollParts = ["1d10"];
 
     const data = {
@@ -213,7 +213,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -224,7 +224,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollLoyalty(options = {}) {
+  async rollLoyalty(options = {}) {
     const label = game.i18n.localize(`WWN.roll.loyalty`);
     const rollParts = ["2d6"];
 
@@ -237,7 +237,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -248,7 +248,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollReaction(options = {}) {
+  async rollReaction(options = {}) {
     const rollParts = ["2d6"];
 
     const data = {
@@ -278,7 +278,7 @@ export class WwnActor extends Actor {
     let skip = options.event && options.event.ctrlKey;
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -289,7 +289,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollCheck(score, options = {}) {
+  async rollCheck(score, options = {}) {
     const label = game.i18n.localize(`WWN.scores.${score}.long`);
     const rollParts = ["1d20"];
 
@@ -308,7 +308,7 @@ export class WwnActor extends Actor {
     let skip = options.event && options.event.ctrlKey;
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -319,7 +319,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollHitDice(options = {}) {
+  async rollHitDice(options = {}) {
     const label = game.i18n.localize(`WWN.roll.hd`);
     const rollParts = new Array(this.system.details.level || 1).fill(
       this.system.hp.hd
@@ -338,7 +338,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -349,7 +349,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollAppearing(options = {}) {
+  async rollAppearing(options = {}) {
     const rollParts = [];
     let label = "";
     if (options.check == "wilderness") {
@@ -369,7 +369,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -380,7 +380,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollMonsterSkill(options = {}) {
+  async rollMonsterSkill(options = {}) {
     const label = game.i18n.localize(`WWN.skill`);
     const rollParts = ["2d6"];
 
@@ -400,7 +400,7 @@ export class WwnActor extends Actor {
     let skip = options.event && options.event.ctrlKey;
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: data,
@@ -411,7 +411,7 @@ export class WwnActor extends Actor {
     });
   }
 
-  rollDamage(attData, options = {}) {
+  async rollDamage(attData, options = {}) {
     const data = this.system;
 
     const rollData = {
@@ -435,7 +435,7 @@ export class WwnActor extends Actor {
     }
 
     // Damage roll
-    WwnDice.Roll({
+    await WwnDice.Roll({
       event: options.event,
       parts: dmgParts,
       data: rollData,
@@ -460,7 +460,7 @@ export class WwnActor extends Actor {
     }
   }
 
-  rollAttack(attData, options = {}) {
+  async rollAttack(attData, options = {}) {
     const data = this.system;
     const rollParts = ["1d20"];
     const dmgParts = [];
@@ -471,11 +471,17 @@ export class WwnActor extends Actor {
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
-      console.log(skillAttack);
       skillValue = this.items.find(
         (item) => item.type === "skill" && item.name.toLowerCase() === skillAttack.toLowerCase()
       ).system.ownedLevel;
       statValue = this.system.scores[statAttack].mod;
+    }
+
+    const isNPC = attData.actor.type !== "character";
+    const ammo = attData.item.system.ammo;
+    const ammoItem = ammo.length ? attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null) : undefined;
+    if (!isNPC && ammo && (ammoItem === undefined || ammoItem.system.charges.value === 0)) {
+      return ui.notifications.error(`No ${ammo} remaining.`);
     }
 
     let readyState = "";
@@ -584,7 +590,7 @@ export class WwnActor extends Actor {
     };
 
     // Roll and return
-    return WwnDice.Roll({
+    return await WwnDice.Roll({
       event: options.event,
       parts: rollParts,
       data: rollData,
@@ -1023,8 +1029,8 @@ export class WwnActor extends Actor {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
       Object.keys(saves).forEach(
         (s) =>
-          (saves[s].value =
-            Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
+        (saves[s].value =
+          Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
       );
     } else {
       let charLevel = data.details.level;
@@ -1129,7 +1135,7 @@ export class WwnActor extends Actor {
       return {
         type: "skill",
         name: game.i18n.localize(skillKey),
-        data: {
+        system: {
           ownedLevel: -1,
           score: "int",
           description: game.i18n.localize(skillDesc),
@@ -1140,7 +1146,7 @@ export class WwnActor extends Actor {
       };
     });
 
-    if (data.type === "character") {
+    if (type === "character") {
       await this.createEmbeddedDocuments("Item", skills);
     }
   }

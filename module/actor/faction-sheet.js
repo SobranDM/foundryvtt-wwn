@@ -70,7 +70,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
             name: itemName,
             type: "asset",
             img: imgPath,
-            data: {
+            system: {
               assetType: assetType,
             },
           },
@@ -160,7 +160,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
         //actor.removeCrew(li.data("crewId"));
         logs.splice(idx, 1);
         await this.actor.update({
-          data: {
+          system: {
             log: logs,
           },
         });
@@ -220,7 +220,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
         //actor.removeCrew(li.data("crewId"));
         tags.splice(idx, 1);
         await this.actor.update({
-          data: {
+          system: {
             tags: tags,
           },
         });
@@ -405,7 +405,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
         for (const g of FACTION_GOALS) {
           if (g.name == goal) {
             await this.actor.update({
-              data: {
+              system: {
                 factionGoal: g.name,
                 factionGoalDesc: g.desc,
               },
@@ -518,7 +518,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const new_status = !asset?.system.unusable;
     if (asset instanceof Item)
       await asset?.update({
-        data: {
+        system: {
           unusable: new_status,
         },
       });
@@ -539,7 +539,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const new_status = !asset?.system.stealthed;
     if (asset instanceof Item)
       await asset?.update({
-        data: {
+        system: {
           stealthed: new_status,
         },
       });
@@ -662,7 +662,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: this }),
       content: await renderTemplate(template, cardData),
-      type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
+      type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
       whisper: gm_ids,
     };
     const msg = await ChatMessage.create(chatData);
@@ -744,7 +744,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
           name: name,
           type: "asset",
           img: imgPath,
-          data: {
+          system: {
             assetType: assetType,
             health: {
               value: hp,
@@ -778,9 +778,9 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     const assets = (
       this.actor.items.filter((i) => i.type === "asset")
     );
-    const wealthCunningForceIncome = 
-      Math.ceil((this.actor.system.wealthRating / 2) + 
-      ((this.actor.system.cunningRating + this.actor.system.forceRating) / 4));
+    const wealthCunningForceIncome =
+      Math.ceil((this.actor.system.wealthRating / 2) +
+        ((this.actor.system.cunningRating + this.actor.system.forceRating) / 4));
     const assetIncome = assets
       .map((i) => i.system.income)
       .reduce((i, n) => i + n, 0);
