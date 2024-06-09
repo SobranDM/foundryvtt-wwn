@@ -271,6 +271,7 @@ export class WwnCombat {
     for (let i = 0; i < dieCount; i++) {
       newTotal += Math.floor(Math.random() * dieSize + 1);
     }
+    newTotal += parseInt(modSplit[1]) || 0;
 
     foundry.utils.setProperty(newData, "delta.system.hp.value", newTotal);
     foundry.utils.setProperty(newData, "delta.system.hp.max", newTotal);

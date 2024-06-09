@@ -1050,6 +1050,7 @@ export class WwnActor extends Actor {
         charLevel +
         data.saves.mental.mod;
       let luckVal = 16 - charLevel + data.saves.luck.mod;
+
       this.system.saves.evasion.value = evasionVal;
       this.system.saves.physical.value = physicalVal;
       this.system.saves.mental.value = mentalVal;
@@ -1069,7 +1070,6 @@ export class WwnActor extends Actor {
 
     if (this.type === "monster") {
       // no skills to use, but let's set @level to be = hd total.
-
       // just in case the hit dice field is wonky, default to 1
       data.level = 1;
 
@@ -1086,12 +1086,12 @@ export class WwnActor extends Actor {
       skillMods.forEach((sm) => (data[sm.name] = sm.mod));
 
       data.level = this.system.details.level;
-      data.str = this.system.scores.str.mod + this.system.scores.str.tweak;
-      data.dex = this.system.scores.dex.mod + this.system.scores.dex.tweak;
-      data.con = this.system.scores.con.mod + this.system.scores.con.tweak;
-      data.wis = this.system.scores.wis.mod + this.system.scores.wis.tweak;
-      data.int = this.system.scores.int.mod + this.system.scores.int.tweak;
-      data.cha = this.system.scores.cha.mod + this.system.scores.cha.tweak;
+      data.str = this.system.scores.str.mod;
+      data.dex = this.system.scores.dex.mod;
+      data.con = this.system.scores.con.mod;
+      data.wis = this.system.scores.wis.mod;
+      data.int = this.system.scores.int.mod;
+      data.cha = this.system.scores.cha.mod;
     }
     return data;
   }

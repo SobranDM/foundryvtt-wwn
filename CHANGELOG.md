@@ -1,5 +1,12 @@
 # Changelog
 
+## New in 1.4.2
+
+### Fixes
+
+- HD modifier wasn't being used when rolling random HP for unlinked tokens.
+- Mod tweaks were being counted twice when referencing attribute mods via @int, etc.
+
 ## New in 1.4.1
 
 ### Fixes
