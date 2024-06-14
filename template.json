@@ -176,6 +176,7 @@
         "wounds": 0
       },
       "treasure": 0,
+      "personalTreasure": 0,
       "skills": {
         "exertPenalty": 0,
         "sneakPenalty": 0,
@@ -305,6 +306,7 @@
       "description": "",
       "quantity": 1,
       "treasure": false,
+      "personal": true,
       "price": 0,
       "weight": 0,
       "weightless": "",

@@ -140,6 +140,16 @@ export const registerSettings = function () {
     requiresReload: true
   });
 
+  game.settings.register("wwn", "useGoldStandard", {
+    name: "Gold Standard",
+    hint: "Use a gold standard for currency, rather than a silver standard.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: false
+  });
+
   game.settings.register("wwn", "attributeModType", {
     name: "Attribute Modifiers",
     hint: "Whether attribute modifiers should be calculated using the WWN or B/X method.",
@@ -151,7 +161,7 @@ export const registerSettings = function () {
       wwn: "WWN",
       bx: "B/X",
     },
-    requiresReload: true
+    requiresReload: false
   });
 
   game.settings.register("wwn", "removeLevelSave", {
@@ -161,7 +171,7 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
-    requiresReload: true
+    requiresReload: false
   });
 
   game.settings.register("wwn", "replaceStrainWithWounds", {
@@ -171,7 +181,7 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
-    requiresReload: true
+    requiresReload: false
   });
 
   game.settings.register("wwn", "systemMigrationVersion", {

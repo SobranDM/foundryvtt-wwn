@@ -41,6 +41,7 @@ export class WwnActor extends Actor {
       this._calculateMovement();
       this.computeResources();
       this.computeTreasure();
+      this.computePersonalTreasure();
       this.enableSpellcasting();
       this.computeEffort();
       if (this.system.spells.leveledSlots) this.computeSlots();
@@ -1022,14 +1023,27 @@ export class WwnActor extends Actor {
   computeTotalSP() {
     const data = this.system;
     if (this.type != "character") return;
-    let newTotal =
-      data.currency.cp * 0.1 +
-      data.currency.sp +
-      data.currency.gp * 10 +
-      data.currency.pp * 100 +
-      data.currency.ep * 5 +
-      data.currency.bank +
-      data.treasure;
+    let newTotal = 0;
+    if (game.settings.get("wwn", "useGoldStandard")) {
+      newTotal =
+        data.currency.cp * 0.01 +
+        data.currency.sp * 0.1 +
+        data.currency.gp * 1 +
+        data.currency.pp * 5 +
+        data.currency.ep * 0.5 +
+        data.currency.bank +
+        data.personalTreasure;
+    } else {
+      newTotal =
+        data.currency.cp * 0.1 +
+        data.currency.sp +
+        data.currency.gp * 10 +
+        data.currency.pp * 50 +
+        data.currency.ep * 5 +
+        data.currency.bank +
+        data.personalTreasure;
+    }
+
     this.system.currency.total = newTotal;
   }
 
@@ -1079,13 +1093,30 @@ export class WwnActor extends Actor {
     // Compute treasure
     let total = 0;
     const treasures = this.items.filter(
-      (i) => i.type == "item" && i.system.treasure
+      (i) => i.type == "item" && i.system.treasure && !i.system.personal
     );
     treasures.forEach((item) => {
       total += item.system.quantity * item.system.price;
     });
     this.system.treasure = total;
   }
+
+  computePersonalTreasure() {
+    if (this.type != "character") {
+      return;
+    }
+    const data = this.system;
+    // Compute treasure
+    let total = 0;
+    const treasures = this.items.filter(
+      (i) => i.type == "item" && i.system.personal
+    );
+    treasures.forEach((item) => {
+      total += item.system.quantity * item.system.price;
+    });
+    this.system.personalTreasure = total;
+  }
+
 
   computeAC() {
     if (this.type != "character") {

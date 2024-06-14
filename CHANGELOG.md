@@ -1,5 +1,11 @@
 # Changelog
 
+## New in 1.4.4
+
+### Changes
+
+- Added option for gold standard.
+
 ## New in 1.4.3
 
 ### Fixes
