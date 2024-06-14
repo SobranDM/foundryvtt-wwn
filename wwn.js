@@ -15,8 +15,6 @@ import * as macros from "./module/macros.js";
 import * as party from "./module/party.js";
 import { WwnCombat } from "./module/combat.js";
 import * as migrations from "./module/migration.js";
-import { WwnItemProxy } from "./module/item/item-proxy.js";
-// import { WwnActorProxy } from "./module/actor/actor-proxy.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -45,7 +43,7 @@ Hooks.once("init", async function () {
   registerSettings();
 
   CONFIG.Actor.documentClass = WwnActor;
-  CONFIG.Item.documentClass = WwnItemProxy;
+  CONFIG.Item.documentClass = WwnItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

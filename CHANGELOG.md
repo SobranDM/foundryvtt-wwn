@@ -2,11 +2,19 @@
 
 ## New in 1.4.3
 
+### Fixes
+
+- Importing an item compendium was importing multiple copies of a single item rather than one copy of each item.
+
 ### Changes
 
 - Added Base Save in Tweaks and config option to remove character level from saving throw calculations. This should make it easier to use a custom saving throw formula, albeit without much automation.
 - Added config option to switch attribute modifier breakpoints to B/X standards instead of WWN.
 - Added support for a house rule to replace System Strain with the Injuries/Wounds system from the Goblin Punch blog. If active, the strain entry on the sheet is replaced with a tracker for Injuries and Wounds. Injuries rolls are also automated if the option is active, though there is no automation of effects.
+
+### Possible Issues
+
+- The compendium fix required removing an item proxy that was supplying faction assets with information. My work to ensure assets still works was quick and dirty. My casual checking shows it working normally, but I wouldn't be surprised if I missed particular behaviors.
 
 ## New in 1.4.2
 
