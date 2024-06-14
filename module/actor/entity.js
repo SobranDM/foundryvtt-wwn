@@ -43,6 +43,7 @@ export class WwnActor extends Actor {
       this.computeTreasure();
       this.enableSpellcasting();
       this.computeEffort();
+      if (this.system.spells.leveledSlots) this.computeSlots();
       this.computeSaves();
       this.computeTotalSP();
       this.setXP();
@@ -606,14 +607,173 @@ export class WwnActor extends Actor {
   async applyDamage(amount = 0, multiplier = 1) {
     amount = Math.floor(parseInt(amount) * multiplier);
     const hp = this.system.hp;
+    const excessDamage =
+      hp.value - amount < 0 ? Math.abs(hp.value - amount) : 0;
 
     // Remaining goes to health
-    const dh = Math.clamped(hp.value - amount, 0, hp.max);
+    const dh = Math.clamp(hp.value - amount, 0, hp.max);
+
+    if (game.settings.get("wwn", "replaceStrainWithWounds") && this.type === "character" && excessDamage > 0) {
+      this.applyWounds(excessDamage);
+    }
 
     // Update the Actor
     return this.update({
       "system.hp.value": dh,
     });
+  }
+
+  async applyWounds(excess) {
+    const locations = {
+      1: [
+        "Left Arm",
+        "Disabled",
+        "Your arm becomes unusable. It cannot hold things and any held item is dropped.",
+        "<b>Mangled.</b> Make a Physical save. On a failure, a limb is permanently disabled or hacked off. On a success, you merely lose a finger or toe.",
+      ],
+      2: [
+        "Right Arm",
+        "Disabled",
+        "Your arm becomes unusable. It cannot hold things and any held item is dropped.",
+        "<b>Mangled.</b> Make a Physical save. On a failure, a limb is permanently disabled or hacked off. On a success, you merely lose a finger or toe.",
+      ],
+      3: [
+        "Left Leg",
+        "Disabled",
+        "Your leg becomes unusable. It cannot support your weight and you fall prone. Movement cut in half.",
+        "<b>Mangled.</b> Make a Physical save. On a failure, a limb is permanently disabled or hacked off. On a success, you merely lose a finger or toe.",
+      ],
+      4: [
+        "Right Leg",
+        "Disabled",
+        "Your leg becomes unusable. It cannot support your weight and you fall prone. Movement cut in half.",
+        "<b>Mangled.</b> Make a Physical save. On a failure, a limb is permanently disabled or hacked off. On a success, you merely lose a finger or toe.",
+      ],
+      5: [
+        "Torso",
+        "Blood Loss",
+        "Your maximum HP is reduced by 1 per HD you possess.",
+        "<b>Crushed.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Strength.<br />2) Permanently lose 1 Dexterity.<br />3) Permanently lose 1 Constitution.<br />4) Crushed throat. You cannot speak louder than a whisper.<br />5) Crushed ribs. Treat Constitution as 4 when holding your breath.<br />6) Your spine is broken and you are paralyzed from the neck down. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      6: [
+        "Torso",
+        "Blood Loss",
+        "Your maximum HP is reduced by 1 per HD you possess.",
+        "<b>Crushed.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Strength.<br />2) Permanently lose 1 Dexterity.<br />3) Permanently lose 1 Constitution.<br />4) Crushed throat. You cannot speak louder than a whisper.<br />5) Crushed ribs. Treat Constitution as 4 when holding your breath.<br />6) Your spine is broken and you are paralyzed from the neck down. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      7: [
+        "Torso",
+        "Blood Loss",
+        "Your maximum HP is reduced by 1 per HD you possess.",
+        "<b>Crushed.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Strength.<br />2) Permanently lose 1 Dexterity.<br />3) Permanently lose 1 Constitution.<br />4) Crushed throat. You cannot speak louder than a whisper.<br />5) Crushed ribs. Treat Constitution as 4 when holding your breath.<br />6) Your spine is broken and you are paralyzed from the neck down. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      8: [
+        "Torso",
+        "Blood Loss",
+        "Your maximum HP is reduced by 1 per HD you possess.",
+        "<b>Crushed.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Strength.<br />2) Permanently lose 1 Dexterity.<br />3) Permanently lose 1 Constitution.<br />4) Crushed throat. You cannot speak louder than a whisper.<br />5) Crushed ribs. Treat Constitution as 4 when holding your breath.<br />6) Your spine is broken and you are paralyzed from the neck down. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      9: [
+        "Head",
+        "Concussed",
+        "Always act last in combat. Make an Int check (DC 12) when you cast a spell to avoid it fizzling.",
+        "<b>Skullcracked.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Intelligence.<br />2) Permanently lose 1 Wisdom.<br />3) Permanently lose 1 Charisma.<br />4) Lose your left eye. -1 to Ranged Attacks.<br />5) Lose your right eye. -1 to Ranged Attacks.<br />6) Slip into a coma. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      10: [
+        "Head",
+        "Concussed",
+        "Always act last in combat. Make an Int check (DC 12) when you cast a spell to avoid it fizzling.",
+        "<b>Skullcracked.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Intelligence.<br />2) Permanently lose 1 Wisdom.<br />3) Permanently lose 1 Charisma.<br />4) Lose your left eye. -1 to Ranged Attacks.<br />5) Lose your right eye. -1 to Ranged Attacks.<br />6) Slip into a coma. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      11: [
+        "Head",
+        "Concussed",
+        "Always act last in combat. Make an Int check (DC 12) when you cast a spell to avoid it fizzling.",
+        "<b>Skullcracked.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Intelligence.<br />2) Permanently lose 1 Wisdom.<br />3) Permanently lose 1 Charisma.<br />4) Lose your left eye. -1 to Ranged Attacks.<br />5) Lose your right eye. -1 to Ranged Attacks.<br />6) Slip into a coma. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+      12: [
+        "Head",
+        "Concussed",
+        "Always act last in combat. Make an Int check (DC 12) when you cast a spell to avoid it fizzling.",
+        "<b>Skullcracked.</b> Make a Physical save. On a success, you gain a cool scar. On a failure, roll [[/r 1d6]]:<br />1) Permanently lose 1 Intelligence.<br />2) Permanently lose 1 Wisdom.<br />3) Permanently lose 1 Charisma.<br />4) Lose your left eye. -1 to Ranged Attacks.<br />5) Lose your right eye. -1 to Ranged Attacks.<br />6) Slip into a coma. You can attempt recovery twice: by making a Con Check after [[1d6]] days and again after [[1d6]] weeks. If you fail both, it is permanent.",
+      ],
+    };
+
+    const locationRoll = await new Roll("1d12").evaluate();
+    const hitLocation = locations[locationRoll.total];
+    const currInjuries = this.system.hp.injuries || 0;
+    const currWounds = this.system.hp.wounds || 0;
+    const woundRoll = await new Roll(
+      `1d12 + ${currInjuries} + ${excess}`
+    ).evaluate();
+    const woundMessage = woundRoll.result;
+    const woundResult = woundRoll.total;
+    const template = "systems/wwn/templates/chat/apply-damage.html";
+    let newInjuries = 0;
+    let newWounds = 0;
+
+    let content = `<p><b>Location: ${hitLocation[0]}.</b></p><p><b>Severity: ${woundResult}</b> (${woundMessage})</p><p><b>${hitLocation[1]} for ${woundResult} days.</b> ${hitLocation[2]}*</p>`;
+
+    if (woundResult >= 16) {
+      newWounds += woundResult - 15;
+    }
+    if (woundResult >= 11) {
+      content += `<p>${hitLocation[3]}*</p><p><b>You are unconscious.</b></p>`;
+      newInjuries++;
+      newWounds++;
+    }
+    newInjuries++;
+
+    content +=
+      "<p><b>* Fire/Acid/Lightning/Arcane:</b> Consult rules for alternate injuries.</p>";
+
+    await this.update({
+      "system.hp": {
+        wounds: currWounds + newWounds,
+        injuries: currInjuries + newInjuries,
+      },
+    });
+
+    content += `
+      <table>
+        <thead>
+          <tr>
+            <td />
+            <td><b>Prev</b></td>
+            <td><b>New</b></td>
+            <td><b>Total</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Injuries</b></td>
+            <td>${currInjuries}</td>
+            <td>${newInjuries}</td>
+            <td>${this.system.hp.injuries}</td>
+          </tr>
+          <tr>
+            <td><b>Wounds</b></td>
+            <td>${currWounds}</td>
+            <td>${newWounds}</td>
+            <td>${this.system.hp.wounds}</td>
+          </tr>
+        </tbody>
+      </table>`;
+
+    const templateData = {
+      title: `${this.name}: ${hitLocation[0]} Wounded!`,
+      body: content,
+      image: "icons/svg/blood.svg"
+    };
+
+    const html = await renderTemplate(template, templateData);
+
+    const chatData = {
+      user: game.user_id,
+      content: html,
+    };
+
+    ChatMessage.create(chatData, {});
   }
 
   static _valueFromTable(table, val) {
@@ -897,6 +1057,20 @@ export class WwnActor extends Actor {
     this.system.classes = classPools;
   }
 
+  // Compute Spell Slots
+  async computeSlots() {
+    const spells = this.items.filter((spell) => spell.type === "spell");
+    const slots = this.system.spells.slots;
+    Object.keys(slots).forEach(
+      (level) => (this.system.spells.slots[level].used = 0)
+    );
+    spells.forEach((spell) => {
+      const spellLvl = spell.system.lvl;
+      // const currUsed = this.system.spells.slots[spellLvl].used;
+      slots[spellLvl].used += spell.system.memorized;
+    });
+  }
+
   computeTreasure() {
     if (this.type != "character") {
       return;
@@ -996,29 +1170,31 @@ export class WwnActor extends Actor {
       18: 2,
     };
 
-    Object.keys(scores).map((score) => {
-      let newMod =
-        this.system.scores[score].tweak +
-        WwnActor._valueFromTable(standard, scores[score].value);
-      this.system.scores[score].mod = newMod;
-    });
-
-    const capped = {
-      0: -2,
-      3: -2,
-      4: -1,
+    const bx = {
+      0: -3,
+      4: -2,
       6: -1,
       9: 0,
       13: 1,
-      16: 1,
-      18: 2,
+      16: 2,
+      18: 3
     };
+
+    const table = game.settings.get("wwn", "attributeModType") === "bx" ? bx : standard;
+
+    Object.keys(scores).map((score) => {
+      let newMod =
+        this.system.scores[score].tweak +
+        WwnActor._valueFromTable(table, scores[score].value);
+      this.system.scores[score].mod = newMod;
+    });
   }
 
   computeSaves() {
     if (this.type === "faction") return;
     const data = this.system;
     const saves = data.saves;
+    const baseSave = data.saves.baseSave.value;
     Object.keys(saves).forEach((s) => {
       if (!saves[s].mod) {
         saves[s].mod = 0;
@@ -1030,31 +1206,30 @@ export class WwnActor extends Actor {
       Object.keys(saves).forEach(
         (s) =>
         (saves[s].value =
-          Math.max(15 - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
+          Math.max(baseSave - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
       );
     } else {
-      let charLevel = data.details.level;
-      let evasionVal =
-        16 -
-        Math.max(data.scores.int.mod, data.scores.dex.mod) -
-        charLevel +
-        data.saves.evasion.mod;
-      let physicalVal =
-        16 -
-        Math.max(data.scores.con.mod, data.scores.str.mod) -
-        charLevel +
-        data.saves.physical.mod;
-      let mentalVal =
-        16 -
-        Math.max(data.scores.wis.mod, data.scores.cha.mod) -
-        charLevel +
-        data.saves.mental.mod;
-      let luckVal = 16 - charLevel + data.saves.luck.mod;
+      const charLevel = data.details.level;
+      const newSaves = {
+        evasionVal: baseSave,
+        physicalVal: baseSave,
+        mentalVal: baseSave,
+        luckVal: baseSave
+      }
+      newSaves.evasionVal -= Math.max(data.scores.int.mod, data.scores.dex.mod) - data.saves.evasion.mod;
+      newSaves.physicalVal -= Math.max(data.scores.con.mod, data.scores.str.mod) - data.saves.physical.mod;
+      newSaves.mentalVal -= Math.max(data.scores.wis.mod, data.scores.cha.mod) - data.saves.mental.mod;
+      newSaves.luckVal += data.saves.luck.mod;
 
-      this.system.saves.evasion.value = evasionVal;
-      this.system.saves.physical.value = physicalVal;
-      this.system.saves.mental.value = mentalVal;
-      this.system.saves.luck.value = luckVal;
+      const removeLevelSave = game.settings.get("wwn", "removeLevelSave");
+      Object.keys(newSaves).forEach((save) => {
+        if (!removeLevelSave) newSaves[save] -= charLevel;
+      });
+
+      this.system.saves.evasion.value = newSaves.evasionVal;
+      this.system.saves.physical.value = newSaves.physicalVal;
+      this.system.saves.mental.value = newSaves.mentalVal;
+      this.system.saves.luck.value = newSaves.luckVal;
     }
   }
 

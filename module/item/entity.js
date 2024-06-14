@@ -294,18 +294,36 @@ export class WwnItem extends Item {
     });
   }
 
-  spendSpell() {
-    const spellsLeft = this.actor.system.spells.perDay.value;
-    const spellsMax = this.actor.system.spells.perDay.max;
-    if (spellsLeft + 1 > spellsMax)
-      return ui.notifications.warn("No spell slots remaining!");
-    this.actor
-      .update({
-        "system.spells.perDay.value": spellsLeft + 1,
-      })
-      .then(() => {
-        this.show({ skipDialog: true });
+  async spendSpell() {
+    if (this.actor.system.spells.leveledSlots) {
+      if (this.type !== "spell")
+        throw new Error(
+          "Trying to spend a spell on an item that is not a spell."
+        );
+
+      const itemData = this.system;
+      if (itemData.cast <= 0) {
+        return ui.notifications.error("No slots remaining!");
+      }
+      await this.update({
+        system: {
+          cast: itemData.cast - 1,
+        },
       });
+      await this.show({ skipDialog: true });
+    } else {
+      const spellsLeft = this.actor.system.spells.perDay.value;
+      const spellsMax = this.actor.system.spells.perDay.max;
+      if (spellsLeft + 1 > spellsMax)
+        return ui.notifications.warn("No spell slots remaining!");
+      this.actor
+        .update({
+          "system.spells.perDay.value": spellsLeft + 1,
+        })
+        .then(() => {
+          this.show({ skipDialog: true });
+        });
+    }
   }
 
   spendArt() {

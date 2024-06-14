@@ -136,6 +136,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
     data.config.showMovement = game.settings.get("wwn", "showMovement");
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
+    data.config.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
 
     data.enrichedBiography = await TextEditor.enrichHTML(
       this.object.system.details.biography,

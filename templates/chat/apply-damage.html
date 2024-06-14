@@ -1,11 +1,13 @@
 <section class="wwn chat-message">
-    <div class="wwn chat-block">
-        <div class="flexrow chat-header">
-            <div class="chat-title">
-                <h2>{{title}}</h2>
-            </div>
-            <div class="chat-img" style="background-image:url({{image}})"></div>
-        </div>
-        <div class="chat-details">{{{body}}}</div>
+  <div class="wwn chat-block">
+    <div class="flexrow chat-header">
+      <div class="chat-title">
+        <h2>{{title}}</h2>
+      </div>
+      {{#if (nt image.length 0)}}
+      <div class="chat-img" style="background-image:url({{image}})"></div>
+      {{/if}}
     </div>
+    <div class="chat-details">{{{body}}}</div>
+  </div>
 </section>

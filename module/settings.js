@@ -140,6 +140,40 @@ export const registerSettings = function () {
     requiresReload: true
   });
 
+  game.settings.register("wwn", "attributeModType", {
+    name: "Attribute Modifiers",
+    hint: "Whether attribute modifiers should be calculated using the WWN or B/X method.",
+    default: "wwn",
+    scope: "world",
+    type: String,
+    config: true,
+    choices: {
+      wwn: "WWN",
+      bx: "B/X",
+    },
+    requiresReload: true
+  });
+
+  game.settings.register("wwn", "removeLevelSave", {
+    name: "Remove Level Save Bonus",
+    hint: "Remove a character's level from the calculation used to determine saves. This can be useful if you want to configure a manual value using only Base Save in Tweaks and attribute modifiers.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+  });
+
+  game.settings.register("wwn", "replaceStrainWithWounds", {
+    name: "Replace Strain with Wounds",
+    hint: "Removes System Strain from the sheet and replaces it with a tracker for Injuries and Wounds from the Death and Dismemberment rules published by Goblin Punch. Additionally, this enables automatic calculation of such injuries, should damage reduce a character's HP below 0.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+  });
+
   game.settings.register("wwn", "systemMigrationVersion", {
     config: false,
     scope: "world",

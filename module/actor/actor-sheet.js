@@ -61,11 +61,19 @@ export class WwnActorSheet extends ActorSheet {
   }
 
   async _resetSpells(event) {
-    this.actor.update({
-      "system.spells.perDay.value": 0
+    if (this.actor.system.spells.leveledSlots) {
+      const spells = this.actor.items.filter(item => item.type === "spell");
+      await spells.forEach(spell => {
+        spell.update({
+          "system.cast": spell.system.memorized
+        });
+      });
+    } else {
+      this.actor.update({
+        "system.spells.perDay.value": 0
+      });
     }
-    );
-  }
+  };
 
   async _resetEffort(event) {
     const arts = this.actor.items.filter(item => item.type === "art");

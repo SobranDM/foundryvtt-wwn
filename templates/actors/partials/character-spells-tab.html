@@ -64,18 +64,16 @@
           <div class="item flexrow">
             <div class="item-name flexrow">{{id}}</div>
             <div class="field-short">
-              <input name="{{artGroup.value}}" type="number" value={{artGroup.value}}
-                data-dtype="Number" disabled />
+              <input name="{{artGroup.value}}" type="number" value={{artGroup.value}} data-dtype="Number" disabled />
             </div> /
             <div class="field-short">
-              <input name="system.classes.{{id}}.max" type="number" value={{artGroup.max}}
-                data-dtype="Number" />
+              <input name="system.classes.{{id}}.max" type="number" value={{artGroup.max}} data-dtype="Number" />
             </div>
           </div>
         </li>
         {{/each}}
       </ol>
-      {{#if system.spells.spellsEnabled}}
+      {{#if (evalAnd system.spells.spellsEnabled (nt system.spells.leveledSlots true))}}
       <div class="item-titles flexrow spell-resources">
         <div class="item-name">{{localize "WWN.category.spells"}}</div>
         <div class="item-controls">
@@ -131,6 +129,17 @@
       <li class="item-titles flexrow">
         <div class="item-caret"><i class="fas fa-caret-down"></i> </div>
         <div class="item-name">{{localize "WWN.spells.Level"}} {{id}}</div>
+
+        {{#if ../system.spells.leveledSlots}}
+        <div class="field-long flexrow spellSlots">
+          <input type="text" value="{{lookup (lookup @root.system.spells.slots @key) 'used'}}"
+            name="system.spells.{{id}}.value" data-dtype="Number" placeholder="0" readonly
+            title="Memorized Spells" />/<input type="text"
+            value="{{lookup (lookup @root.system.spells.slots @key) 'max'}}" name="system.spells.slots.{{id}}.max"
+            data-dtype="Number" placeholder="0" title="Available Slots" />
+        </div>
+        {{/if}}
+
         <div class="item-controls">
           <a class="item-control item-create" data-type="spell" data-lvl="{{id}}" title="{{localize 'WWN.Add'}}"><i
               class="fa fa-plus"></i></a>
@@ -148,11 +157,24 @@
                 </h4>
               </a>
             </div>
+
+            {{#if actor.system.spells.leveledSlots}}
+            <div class="field-long memorize flexrow">
+              <input type="number" value="{{system.cast}}" data-dtype="Number" placeholder="0" data-field="cast"
+                title="Cast" />
+              /
+              <input type="number" value="{{system.memorized}}" data-field="memorize" data-dtype="Number"
+                placeholder="0" title="Memorized" />
+            </div>
+            {{/if}}
+
             <div class="item-controls">
               {{#if ../../owner}}
+              {{#unless actor.system.spells.leveledSlots}}
               <a class="item-control item-prep {{#unless item.system.prepared}}item-unprepared{{/unless}}"
                 title='{{localize "WWN.spells.Prepared"}}'>
                 <i class="fas fa-brain"></i></a>
+              {{/unless}}
               <a class="item-control item-show" title='{{localize "WWN.Show"}}'><i class="fas fa-eye"></i></a>
               <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
               <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
@@ -168,5 +190,6 @@
 </section>
 {{/if}}
 {{#if (evalNor system.spells.artsEnabled system.spells.spellsEnabled)}}
-  <h4 style="font-size: 18px; padding-top: 30px; text-align: center;">Drag arts or spells from the compendium to get started.</h4>
+<h4 style="font-size: 18px; padding-top: 30px; text-align: center;">Drag arts or spells from the compendium to get
+  started.</h4>
 {{/if}}

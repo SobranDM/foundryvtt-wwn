@@ -43,6 +43,10 @@
           "luck": {
             "value": 0,
             "mod": 0
+          },
+          "baseSave": {
+            "value": 16,
+            "mod": 0
           }
         },
         "movement": {
@@ -72,9 +76,48 @@
           "enabled": false,
           "artsEnabled": false,
           "spellsEnabled": false,
+          "leveledSlots": false,
           "perDay": {
             "value": 0,
             "max": 0
+          },
+          "slots": {
+            "1": {
+              "used": 0,
+              "max": 0
+            },
+            "2": {
+              "used": 0,
+              "max": 0
+            },
+            "3": {
+              "used": 0,
+              "max": 0
+            },
+            "4": {
+              "used": 0,
+              "max": 0
+            },
+            "5": {
+              "used": 0,
+              "max": 0
+            },
+            "6": {
+              "used": 0,
+              "max": 0
+            },
+            "7": {
+              "used": 0,
+              "max": 0
+            },
+            "8": {
+              "used": 0,
+              "max": 0
+            },
+            "9": {
+              "used": 0,
+              "max": 0
+            }
           },
           "prepared": {
             "value": 0,
@@ -128,7 +171,9 @@
       "hp": {
         "hd": "1d6",
         "value": 4,
-        "max": 4
+        "max": 4,
+        "injuries": 0,
+        "wounds": 0
       },
       "treasure": 0,
       "skills": {
@@ -329,10 +374,11 @@
       "duration": "",
       "range": "",
       "roll": "",
-      "containerId": "",
       "description": "",
       "prepared": false,
+      "containerId": "",
       "cast": 0,
+      "memorized": 0,
       "save": ""
     },
     "art": {

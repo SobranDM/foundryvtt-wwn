@@ -281,6 +281,9 @@
 .wwn.sheet.actor .sheet-body .inventory .header-spells {
   line-height: 30px;
 }
+.wwn.sheet.actor .sheet-body .inventory div.spells div.spells-parent li.item-titles div.field-long input[type="text"] {
+  height: auto;
+}
 .wwn.sheet.actor .sheet-body .inventory .item-titles {
   text-align: center;
   padding: 4px 0;

@@ -133,6 +133,24 @@
             title="{{ localize 'WWN.ArmorClassNaked' }}" disabled />
         </div>
       </li>
+
+      {{#if config.replaceStrainWithWounds}}
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title"
+          data-tooltip="Injuries and Fatal Wounds. Hover over each to see their effects.">
+          I/W
+        </h4>
+        <div class="attribute-value">
+          <input name="system.hp.injuries" type="number" value="{{system.hp.injuries}}" data-dtype="Number"
+            placeholder=0
+            data-tooltip="Injuries. Damage in excess of your HP, along with your current injuries, are added to a die roll to determine the severity of your next injury." />
+        </div>
+        <div class="attribute-value attribute-mod">
+          <input name="system.hp.wounds" type="number" value="{{system.hp.wounds}}" data-dtype="Number" placeholder=0
+            data-tooltip="Fatal Wounds. You have 3 rounds in which to remove all of your fatal wounds or perish." />
+        </div>
+      </li>
+      {{else}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.SystemStrainLong' }}">
           {{ localize "WWN.SystemStrainShort" }}
@@ -142,10 +160,12 @@
             data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrain' }}" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.details.strain.max" type="number" value="{{system.details.strain.max}}" data-dtype="Number"
-            placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
+          <input name="system.details.strain.max" type="number" value="{{system.details.strain.max}}"
+            data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
         </div>
       </li>
+      {{/if}}
+
     </ul>
     {{!-- Saving throws --}}
     <ul class="attributes flexrow saves">
@@ -170,8 +190,8 @@
           <a>{{ localize "WWN.saves.physical" }}</a>
         </h4>
         <div class="attribute-value">
-          <input name="system.saves.physical.value" type="number" value="{{system.saves.physical.value}}" placeholder="0"
-            data-dtype="Number" disabled />
+          <input name="system.saves.physical.value" type="number" value="{{system.saves.physical.value}}"
+            placeholder="0" data-dtype="Number" disabled />
       </li>
       <li class="attribute saving-throw" data-save="luck">
         <h4 class="attribute-name box-title">
@@ -216,7 +236,7 @@
           <div class="item-name-short item-rollable flexrow">
             <a class="skill-roll">
               <h4 title="{{skill.system.description~}}">
-                {{skill.name}}           
+                {{skill.name}}
               </h4>
             </a>
           </div>
@@ -247,7 +267,7 @@
       {{#if (eq owned.skills.length 21)}}
       <li class="item-entry">
         <div class="item flexrow">
-          
+
         </div>
       </li>
       {{/if}}

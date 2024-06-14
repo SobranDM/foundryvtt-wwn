@@ -70,14 +70,14 @@ export const registerHelpers = async function () {
 
   Handlebars.registerHelper("counter", function (status, value, max) {
     return status
-      ? Math.clamped((100.0 * value) / max, 0, 100)
-      : Math.clamped(100 - (100.0 * value) / max, 0, 100);
+      ? Math.clamp((100.0 * value) / max, 0, 100)
+      : Math.clamp(100 - (100.0 * value) / max, 0, 100);
   });
 
   Handlebars.registerHelper("reverseCounter", function (status, value, max) {
     return status
-      ? Math.clamped(100 - (100.0 * value) / max, 0, 100)
-      : Math.clamped((100.0 * value) / max, 0, 100);
+      ? Math.clamp(100 - (100.0 * value) / max, 0, 100)
+      : Math.clamp((100.0 * value) / max, 0, 100);
   });
 
   Handlebars.registerHelper("firstLetter", function (obj) {
