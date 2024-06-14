@@ -759,6 +759,8 @@
 
 #settings .wwn.game-license {
   font-size: 12px;
+  padding: 10px;
+  flex-basis: 100%;
 }
 #settings .wwn.game-license .button {
   text-align: center;
