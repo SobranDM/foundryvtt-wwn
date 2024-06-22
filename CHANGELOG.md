@@ -10,7 +10,7 @@
 - Make encumbrance rounding (always up) on individual items optional. With this enabled (the default), encumbrance will most closely match the WWN standard. With this disabled, decimal places will be used for fractional weights for all items instead of only for coin.
 - Option for medium range box on weapons.
 
-## Fixes
+### Fixes
 
 - Restored option to have no save on Arts.
 - Added warning if no skill set on weapon so it doesn't fail silently.
