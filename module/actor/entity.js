@@ -473,6 +473,9 @@ export class WwnActor extends Actor {
     if (data.character) {
       statAttack = attData.item.system.score;
       skillAttack = attData.item.system.skill;
+      if (!skillAttack) {
+        return ui.notifications.error("No skill set for this weapon. Please edit weapon and enter a skill.");
+      }
       skillValue = this.items.find(
         (item) => item.type === "skill" && item.name.toLowerCase() === skillAttack.toLowerCase()
       ).system.ownedLevel;
@@ -821,7 +824,9 @@ export class WwnActor extends Actor {
     }
 
     // Set character's XP to level
-    this.system.details.xp.next = xpRate[level];
+    if (!game.settings.get("wwn", "xpPerChar")) {
+      this.system.details.xp.next = xpRate[level];
+    }
   }
 
   computePrepared() {
@@ -853,15 +858,23 @@ export class WwnActor extends Actor {
     const items = this.items.filter((i) => i.type == "item");
 
     weapons.forEach((w) => {
-      if (
-        (w.system.weightless === "whenReadied" && w.system.equipped) ||
-        (w.system.weightless === "whenStowed" && w.system.stowed)
-      )
+      if ((w.system.weightless === "whenReadied" && w.system.equipped) ||
+        (w.system.weightless === "whenStowed" && w.system.stowed)) {
         return;
-      if (w.system.equipped) {
-        totalReadied += Math.ceil(w.system.weight * w.system.quantity);
-      } else if (w.system.stowed) {
-        totalStowed += Math.ceil(w.system.weight * w.system.quantity);
+      }
+
+      if (game.settings.get("wwn", "roundWeight")) {
+        if (w.system.equipped) {
+          totalReadied += Math.ceil(w.system.weight * w.system.quantity);
+        } else if (w.system.stowed) {
+          totalStowed += Math.ceil(w.system.weight * w.system.quantity);
+        }
+      } else {
+        if (w.system.equipped) {
+          totalReadied += (w.system.weight * w.system.quantity);
+        } else if (w.system.stowed) {
+          totalStowed += (w.system.weight * w.system.quantity);
+        }
       }
     });
     armors.forEach((a) => {
@@ -897,11 +910,20 @@ export class WwnActor extends Actor {
       } else {
         itemWeight = i.system.weight * i.system.quantity;
       }
-      if (i.system.equipped) {
-        totalReadied += Math.ceil(itemWeight);
-      } else if (i.system.stowed) {
-        totalStowed += Math.ceil(itemWeight);
+      if (!game.settings.get("wwn", "roundWeight")) {
+        if (i.system.equipped) {
+          totalReadied += itemWeight;
+        } else if (i.system.stowed) {
+          totalStowed += itemWeight;
+        }
+      } else {
+        if (i.system.equipped) {
+          totalReadied += Math.ceil(itemWeight);
+        } else if (i.system.stowed) {
+          totalStowed += Math.ceil(itemWeight);
+        }
       }
+
     });
 
     if (game.settings.get("wwn", "currencyTypes") == "currencybx") {

@@ -126,6 +126,16 @@ export const registerSettings = function () {
     requiresReload: true
   });
 
+  game.settings.register("wwn", "xpPerChar", {
+    name: "Per-Character XP",
+    hint: "Enable manually setting XP for each character, rather than using a global value.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+  });
+
   game.settings.register("wwn", "currencyTypes", {
     name: game.i18n.localize("WWN.items.Currency"),
     hint: game.i18n.localize("WWN.items.CurrencyHint"),
@@ -182,6 +192,47 @@ export const registerSettings = function () {
     type: Boolean,
     config: true,
     requiresReload: false
+  });
+
+  game.settings.register("wwn", "roundWeight", {
+    name: "Round Weight Up",
+    hint: "Round weight up to the nearest whole number, to most closely match WWN rules. If disabled, weight is not rounded.",
+    default: true,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+  });
+
+  game.settings.register("wwn", "flatSkillCost", {
+    name: "Flat Skill Cost",
+    hint: "Skills cost a flat 1 point to purchase, rather than scaling with level.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: false
+  });
+
+  game.settings.register("wwn", "noSkillLevelReq", {
+    name: "No Skill Level Requirement",
+    hint: "Remove the level requirement for purchasing skills.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: false
+  });
+
+  game.settings.register("wwn", "medRange", {
+    name: "Medium Range",
+    hint: "Add a box for medium range to weapons.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+
   });
 
   game.settings.register("wwn", "systemMigrationVersion", {

@@ -136,6 +136,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.showMovement = game.settings.get("wwn", "showMovement");
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
     data.config.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
+    data.config.xpPerChar = game.settings.get("wwn", "xpPerChar");
+    data.config.medRange = game.settings.get("wwn", "medRange");
 
     data.enrichedBiography = await TextEditor.enrichHTML(
       this.object.system.details.biography,
@@ -401,28 +403,31 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         // Check if char has sufficient level
         if (rank > 0) {
           const lvl = this.actor.system.details.level;
-          if (rank == 1 && lvl < 3) {
-            ui.notifications?.error(
-              "Must be at least level 3 (edit manually to override)"
-            );
-            return;
-          } else if (rank == 2 && lvl < 6) {
-            ui.notifications?.error(
-              "Must be at least level 6 (edit manually to override)"
-            );
-            return;
-          } else if (rank == 3 && lvl < 9) {
-            ui.notifications?.error(
-              "Must be at least level 9 (edit manually to override)"
-            );
-            return;
-          } else if (rank > 3) {
-            ui.notifications?.error("Cannot auto-level above 4");
-            return;
+          if (!game.settings.get("wwn", "noSkillLevelReq")) {
+            if (rank == 1 && lvl < 3) {
+              ui.notifications?.error(
+                "Must be at least level 3 (edit manually to override)"
+              );
+              return;
+            } else if (rank == 2 && lvl < 6) {
+              ui.notifications?.error(
+                "Must be at least level 6 (edit manually to override)"
+              );
+              return;
+            } else if (rank == 3 && lvl < 9) {
+              ui.notifications?.error(
+                "Must be at least level 9 (edit manually to override)"
+              );
+              return;
+            } else if (rank > 3) {
+              ui.notifications?.error("Cannot auto-level above 4");
+              return;
+            }
           }
         }
         // check costs and update if points available
-        const skillCost = rank + 2;
+        const flatCost = game.settings.get("wwn", "flatSkillCost");
+        const skillCost = flatCost ? 1 : rank + 2;
         const skillPointsAvail = this.actor.system.skills.unspent;
         if (skillCost > skillPointsAvail) {
           ui.notifications.error(

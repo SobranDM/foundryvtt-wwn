@@ -51,8 +51,12 @@
       {{/if}}
     </li>
     <li>
+      {{#if config.xpPerChar}}
+      <input type="number" name="system.details.xp.next" value="{{system.details.xp.next}}" data-dtype="Number" />
+      {{else}}
       <input type="number" name="system.details.xp.next" value="{{system.details.xp.next}}" data-dtype="Number"
         disabled />
+      {{/if}}
       <label>{{localize 'WWN.details.experience.next'}}</label>
     </li>
     <li>

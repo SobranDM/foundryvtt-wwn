@@ -104,6 +104,9 @@
             <label>{{localize 'WWN.items.Range'}}</label>
             <div class="form-fields">
               <input type="number" name="system.range.short" value="{{system.range.short}}" data-dtype="Number" />
+              {{#if config.medRange}}
+              <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" />
+              {{/if}}
               <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" />
             </div>
           </div>

@@ -1,5 +1,20 @@
 # Changelog
 
+## New in 1.4.5
+
+### Changes
+
+- Option to ignore level requirements for skills.
+- Option for flat 1 point per level for skills.
+- Option to manually set XP requirements on each character rather than relying on a global setting.
+- Make encumbrance rounding (always up) on individual items optional. With this enabled (the default), encumbrance will most closely match the WWN standard. With this disabled, decimal places will be used for fractional weights for all items instead of only for coin.
+- Option for medium range box on weapons.
+
+## Fixes
+
+- Restored option to have no save on Arts.
+- Added warning if no skill set on weapon so it doesn't fail silently.
+
 ## New in 1.4.4
 
 ### Changes
