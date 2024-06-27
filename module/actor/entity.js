@@ -1254,14 +1254,13 @@ export class WwnActor extends Actor {
       }
     });
 
-    if (this.type != "character") {
+    if (this.type === "monster") {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
-      Object.keys(saves).forEach(
-        (s) =>
-        (saves[s].value =
-          Math.max(baseSave - Math.floor(monsterHD[0] / 2), 2) + saves[s].mod)
-      );
-    } else {
+      ["evasion", "physical", "mental", "luck"].forEach((save) => {
+        data.saves[save].value = Math.max(baseSave - Math.floor(monsterHD[0] / 2), 2) + data.saves[save].mod;
+      });
+    }
+    if (this.type === "character") {
       const charLevel = data.details.level;
       const newSaves = {
         evasionVal: baseSave,

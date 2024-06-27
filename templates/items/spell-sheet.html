@@ -7,12 +7,15 @@
       </h1>
     </div>
   </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="info">Statistics</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="flexrow card-body">
-      <div class="description">
-        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
-        async=true}}
-      </div>
+    <div class="flexrow card-body tab" data-group="primary" data-tab="info">
       <div class="flexrow item-footer">
         <div class="stats">
           <div class="form-group">
@@ -59,5 +62,11 @@
         </div>
       </div>
     </div>
+
+    {{!-- Description Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="description">
+      {{> "systems/wwn/templates/items/partials/description.html"}}
+    </div>
+
   </section>
 </form>

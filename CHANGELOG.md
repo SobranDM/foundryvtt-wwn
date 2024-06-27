@@ -1,5 +1,12 @@
 # Changelog
 
+## New in 1.4.6
+
+- Correction to XP share calculations. I previously misunderstood when this works when I "fixed" it.
+- Fixed self-referential base save calculation on monsters that resulted in saves decreasing every time their Tweaks were saved.
+- Moved item statistics into their own tab to avoid overlap with the description. Fixed description size.
+  - At some point, I'll develop something more nuanced for item types that only have a few fields, not worth their own tab.
+
 ## New in 1.4.5
 
 ### Changes

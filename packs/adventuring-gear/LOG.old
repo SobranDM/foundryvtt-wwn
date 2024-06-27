@@ -1,7 +1,7 @@
-2024/06/21-21:52:46.823 77c Recovering log #1981
-2024/06/21-21:52:46.829 77c Delete type=0 #1981
-2024/06/21-21:52:46.829 77c Delete type=3 #1980
-2024/06/21-22:03:40.478 14fc Level-0 table #1985: started
-2024/06/21-22:03:40.478 14fc Level-0 table #1985: 0 bytes OK
-2024/06/21-22:03:40.479 14fc Delete type=0 #1983
-2024/06/21-22:03:40.485 14fc Manual compaction at level-0 from '!items!8D2oc5cv0oVqKJSN' @ 72057594037927935 : 1 .. '!items!zBd4INtbBae9gvJo' @ 0 : 0; will stop at (end)
+2024/06/26-19:53:33.846 3380 Recovering log #2000
+2024/06/26-19:53:33.852 3380 Delete type=0 #2000
+2024/06/26-19:53:33.852 3380 Delete type=3 #1998
+2024/06/26-19:55:43.217 1238 Level-0 table #2005: started
+2024/06/26-19:55:43.217 1238 Level-0 table #2005: 0 bytes OK
+2024/06/26-19:55:43.220 1238 Delete type=0 #2003
+2024/06/26-19:55:43.228 1238 Manual compaction at level-0 from '!items!8D2oc5cv0oVqKJSN' @ 72057594037927935 : 1 .. '!items!zBd4INtbBae9gvJo' @ 0 : 0; will stop at (end)

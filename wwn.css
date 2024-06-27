@@ -1297,8 +1297,8 @@
   height: 18px;
 }
 .wwn.sheet.item .sheet-body .description .editor {
-  min-height: 200px;
-  margin-bottom: 10px;
+  min-height: 300px;
+  margin-bottom: 0;
 }
 .wwn.sheet.item .sheet-body .item-footer {
   justify-content: center;
@@ -1312,8 +1312,8 @@
   justify-content: space-between;
 }
 .wwn.sheet.item .sheet-body .description .editor .editor-content {
-  min-height: 200px;
-  margin-bottom: 10px;
+  min-height: 320px;
+  margin-bottom: 0;
 }
 /* TODO: Fix item description sizing */
 .wwn.actor.monster {

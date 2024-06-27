@@ -2,7 +2,7 @@
   "id": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "compatibility": {
     "minimum": "12",
     "verified": "12",
@@ -200,5 +200,5 @@
   },
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
   "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
-  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.4.5/wwn.zip"
+  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.4.6/wwn.zip"
 }
