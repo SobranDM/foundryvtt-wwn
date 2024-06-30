@@ -306,7 +306,7 @@
       "description": "",
       "quantity": 1,
       "treasure": false,
-      "personal": true,
+      "personal": false,
       "price": 0,
       "weight": 0,
       "weightless": "",
