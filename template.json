@@ -58,7 +58,8 @@
         "initiative": {
           "value": 0,
           "mod": 0,
-          "roll": 0
+          "roll": "1d8",
+          "alertTwo": false
         },
         "currency": {
           "cp": 0,

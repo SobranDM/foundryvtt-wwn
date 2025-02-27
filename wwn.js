@@ -13,8 +13,13 @@ import * as chat from "./module/chat.js";
 import * as treasure from "./module/treasure.js";
 import * as macros from "./module/macros.js";
 import * as party from "./module/party.js";
-import { WwnCombat } from "./module/combat.js";
 import * as migrations from "./module/migration.js";
+// Combat
+import { WWNGroupCombat } from "./module/combat/combat-group.js";
+import { WWNGroupCombatant } from "./module/combat/combatant-group.js";
+import { WWNCombat } from "./module/combat/combat.js";
+import { WWNCombatant } from "./module/combat/combatant.js";
+import { WWNCombatTab } from "./module/combat/sidebar.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -26,7 +31,7 @@ Hooks.once("init", async function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d8 + @initiative.value",
+    formula: "@initiativeRoll + @init",
     decimals: 2,
   };
 
@@ -41,6 +46,18 @@ Hooks.once("init", async function () {
 
   // Register custom system settings
   registerSettings();
+  const isGroupInitiative = game.settings.get(game.system.id, "initiative") === "group";
+  if (isGroupInitiative) {
+    CONFIG.Combat.documentClass = WWNGroupCombat;
+    CONFIG.Combatant.documentClass = WWNGroupCombatant;
+    CONFIG.Combat.initiative = { decimals: 2, formula: "@initiativeRoll + @init" }
+  } else {
+    CONFIG.Combat.documentClass = WWNCombat;
+    CONFIG.Combatant.documentClass = WWNCombatant;
+    CONFIG.Combat.initiative = { decimals: 2, formula: "@initiativeRoll + @init" }
+  }
+
+  CONFIG.ui.combat = WWNCombatTab;
 
   CONFIG.Actor.documentClass = WwnActor;
   CONFIG.Item.documentClass = WwnItem;
@@ -123,19 +140,7 @@ Hooks.on("renderSidebarTab", async (object, html) => {
   }
 });
 
-Hooks.on("preCreateCombatant", (combat, data, options, id) => {
-  let init = game.settings.get("wwn", "initiative");
-  if (init === "group") {
-    WwnCombat.addCombatant(combat, data, options, id);
-  }
-});
-
-Hooks.on("updateCombatant", WwnCombat.updateCombatant);
-Hooks.on("renderCombatTracker", WwnCombat.format);
-Hooks.on("preUpdateCombat", WwnCombat.preUpdateCombat);
-Hooks.on("getCombatTrackerEntryContext", WwnCombat.addContextEntry);
-Hooks.on("preCreateToken", WwnCombat.preCreateToken);
-
+Hooks.on("preCreateToken", WWNCombat.preCreateToken);
 Hooks.on("renderChatLog", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("getChatLogEntryContext", chat.addChatMessageContextOptions);
 Hooks.on("renderChatMessage", chat.addChatMessageButtons);

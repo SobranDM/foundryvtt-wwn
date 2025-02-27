@@ -714,8 +714,10 @@
 
 #sidebar #actors .directory-header .header-search .wwn-party-sheet {
   width: 32px;
+  height: 25px;
   text-align: center;
-  line-height: 20px;
+  line-height: 23px;
+  margin: 4px;
 }
 #sidebar #actors .directory-header .header-search input {
   width: calc(100% - 45px);
@@ -1461,6 +1463,112 @@
 .effects-list ol.item-list > li:nth-child(odd) {
   background-color: #bebcb1;
 }
+
+/* ----------------------------------------- */
+/*  Combat Styles                            */
+/* ----------------------------------------- */
+.combat-set-groups {
+  container-name: combat-set-groups;
+  container-type: inline-size;
+  --grid: 1fr;
+}
+@container combat-set-groups (min-width: 80ch) {
+  .combat-set-groups ol {
+    --grid: repeat(2, 1fr);
+  }
+}
+@container combat-set-groups (min-width: 160ch) {
+  .combat-set-groups ol {
+    --grid: repeat(3, 1fr);
+  }
+}
+@container combat-set-groups (min-width: 240ch) {
+  .combat-set-groups ol {
+    --grid: repeat(4, 1fr);
+  }
+}
+.combat-set-groups .window-content {
+  overflow-y: scroll;
+  max-height: 700px;
+}
+.combat-set-groups ol {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: var(--grid);
+  gap: 0.75em 2em;
+  margin: 0;
+  padding: 0;
+}
+.combat-set-groups__combatant {
+  display: grid;
+  grid-template-columns: 1fr fit-content;
+  align-items: center;
+  gap: 0.25em;
+  font-size: var(--font-size-16);
+}
+.combat-set-groups__combatant__header {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.combat-set-groups__combatant__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.combat-set-groups__combatant img {
+  max-width: 32px;
+  height: auto;
+}
+.combat-set-groups__combatant__group-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em 1em;
+}
+.combat-set-groups__combatant__group-options label.checkbox {
+  align-items: baseline;
+  opacity: 0.5;
+  display: block;
+  padding: 0.25em;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--combat-set-option-bg);
+  color: var(--combat-set-option-font-color, white);
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1.5em;
+}
+.combat-set-groups__combatant__group-options label.checkbox input {
+  display: none;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input:checked) {
+  opacity: 1;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="green"]) {
+  --combat-set-option-bg: green;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="red"]) {
+  --combat-set-option-bg: red;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="yellow"]) {
+  --combat-set-option-bg: yellow;
+  --combat-set-option-font-color: black;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="purple"]) {
+  --combat-set-option-bg: purple;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="blue"]) {
+  --combat-set-option-bg: blue;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="orange"]) {
+  --combat-set-option-bg: orange;
+  --combat-set-option-font-color: black;
+}
+.combat-set-groups__combatant__group-options label.checkbox:has(input[value="white"]) {
+  --combat-set-option-bg: #92bbc9;
+  --combat-set-option-font-color: black;
+}
+
 /* ----------------------------------------- */
 /*  Sheet Styles                             */
 /* ----------------------------------------- */

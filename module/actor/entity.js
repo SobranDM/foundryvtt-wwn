@@ -29,7 +29,6 @@ export class WwnActor extends Actor {
       data.wealthAssets = wealthAssets;
 
       data.health.max =
-        4 +
         this.getHealth(data.wealthRating) +
         this.getHealth(data.forceRating) +
         this.getHealth(data.cunningRating);
@@ -516,13 +515,13 @@ export class WwnActor extends Actor {
       if (data.warrior) {
         const levelRoundedUp = Math.ceil(this.system.details.level / 2);
         attData.item.system.shockTotal =
-          statValue + weaponShock + levelRoundedUp;
+          statValue + weaponShock + levelRoundedUp + Number(this.system.damageBonus);
       } else {
-        attData.item.system.shockTotal = statValue + weaponShock;
+        attData.item.system.shockTotal = statValue + weaponShock + Number(this.system.damageBonus);
       }
       if (attData.item.system.skillDamage) {
         attData.item.system.shockTotal =
-          attData.item.system.shockTotal + skillValue;
+          attData.item.system.shockTotal + skillValue + Number(this.system.damageBonus);
       }
     } else {
       attData.item.system.shockTotal =
@@ -573,10 +572,10 @@ export class WwnActor extends Actor {
         dmgParts.push(skillValue);
         dmgLabels.push(`+${skillValue} (${skillAttack})`);
       }
-    } else {
-      dmgParts.push(this.system.damageBonus);
-      dmgLabels.push(`+${this.system.damageBonus.toString()} (damage bonus)`);
     }
+
+    dmgParts.push(this.system.damageBonus);
+    dmgLabels.push(`+${this.system.damageBonus.toString()} (damage bonus)`);
 
     const rollTitle = `1d20 ${rollLabels.join(" ")}`;
     const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
@@ -792,14 +791,29 @@ export class WwnActor extends Actor {
 
   computeInit() {
     let initValue = 0;
-    if (game.settings.get("wwn", "initiative") != "group") {
-      if (this.type == "character") {
-        initValue = this.system.scores.dex.mod + this.system.initiative.mod;
+    let initRoll = "1d8";
+    const isGroupInit = game.settings.get("wwn", "initiative") === "group";
+    if (this.type == "character") {
+      const alert = this.items.find((i) => i.name === "Alert")?.system.ownedLevel || 0;
+      let alertBonus = alert === 2 ? 100 : alert;
+
+      if (isGroupInit) {
+        initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
+        this.system.initiative.alertTwo = alert === 2 ? true : false;
       } else {
-        initValue = this.system.initiative.mod;
+        if (alert === 1) {
+          initRoll = "2d8kh";
+          initValue = this.system.scores.dex.mod + this.system.initiative.mod;
+        } else {
+          initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
+        }
       }
+    } else {
+      initValue = this.system.initiative.mod;
     }
+
     this.system.initiative.value = initValue;
+    this.system.initiative.roll = initRoll;
   }
 
   setXP() {
@@ -1319,6 +1333,8 @@ export class WwnActor extends Actor {
       data.wis = this.system.scores.wis.mod;
       data.int = this.system.scores.int.mod;
       data.cha = this.system.scores.cha.mod;
+      data.init = this.system.initiative.value;
+      data.initiativeRoll = this.system.initiative.roll;
     }
     return data;
   }

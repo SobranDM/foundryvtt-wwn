@@ -423,9 +423,6 @@ export class WwnItem extends Item {
           case CONFIG.WWN.tags.melee:
             newData.melee = true;
             break;
-          case CONFIG.WWN.tags.slow:
-            newData.slow = true;
-            break;
           case CONFIG.WWN.tags.missile:
             newData.missile = true;
             break;

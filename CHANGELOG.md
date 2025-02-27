@@ -1,5 +1,11 @@
 # Changelog
 
+## New in 1.5.0-beta1
+
+- Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.
+- Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project.
+-
+
 ## New in 1.4.6
 
 - Correction to XP share calculations. I previously misunderstood how this works when I "fixed" it.

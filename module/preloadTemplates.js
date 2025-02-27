@@ -19,7 +19,13 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/wwn/templates/items/partials/item-effects.html',
     'systems/wwn/templates/items/partials/description.html',
 
-    'systems/wwn/templates/actors/partials/faction-assets.html'
+    'systems/wwn/templates/actors/partials/faction-assets.html',
+
+    // Combat Tab
+    'systems/wwn/templates/sidebar/combat-tracker.hbs',
+    'systems/wwn/templates/sidebar/combat-tracker-combatant-individual.hbs',
+    'systems/wwn/templates/sidebar/combat-tracker-combatant-group.hbs',
+    'systems/wwn/templates/apps/combat-set-groups.hbs',
   ];
   return loadTemplates(templatePaths);
 };

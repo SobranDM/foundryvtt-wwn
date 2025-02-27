@@ -90,4 +90,9 @@ export const registerHelpers = async function () {
     if (obj.length <= n) return obj;
     return obj.substring(0, n) + "...";
   });
+
+  Handlebars.registerHelper(
+    'partial',
+    (path) => `systems/wwn/templates/${path}`
+  );
 };

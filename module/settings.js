@@ -17,6 +17,7 @@ export const registerSettings = function () {
     scope: "world",
     type: String,
     config: true,
+    reload: true,
     choices: {
       individual: "WWN.Setting.InitiativeIndividual",
       group: "WWN.Setting.InitiativeGroup",
@@ -31,8 +32,11 @@ export const registerSettings = function () {
     scope: "world",
     type: String,
     config: true,
+    reload: true,
     choices: {
       keep: "WWN.Setting.InitiativeKeep",
+      reroll: "WWN.Setting.InitiativeReroll",
+      reset: "WWN.Setting.InitiativeReset",
     }
   });
 
