@@ -1,5 +1,27 @@
 # Changelog
 
+## New in 1.5.0-beta2
+
+- Reorganized compendiums.
+  - Compendiums now use folders in a sane manner for better organization. As a result, some compendiums have been combined.
+    - Arts + Spells + Foci and Abilities = Abilities
+    - Adventuring Gear + Weapons + Armor = Gear
+  - Corrected a few errors I noticed or that had been reported to me while I was at it.
+    - Corrected the level of one High Mage spell.
+    - Removed a Vowed art that was present in playtest materials but was removed from final WWN release.
+  - Most gear have icons now.
+    - A few bits of adventuring gear didn't have anything suitable in Foundry's icon collection.
+    - The shields share a single icon, as do two pieces of mail armor, due to limited selection in said collection.
+    - Apologies to anyone who has their rolltables broken as a result.
+- Faction tweaks.
+  - Added descriptions to faction assets.
+  - Made a small style tweak to asset tab on faction sheet.
+  - Fixed broken localization on button tooltips on the asset tab.
+  - Added missing Magic field.
+  - Fixed stat level ups always trying to level Force instead of desired stat. Seriously factions, calm down with the violence!
+- Fixed weapon charges not displaying on inventory tab.
+- Possible fix for an Item Piles interaction.
+
 ## New in 1.5.0-beta1
 
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.

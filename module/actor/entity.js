@@ -59,7 +59,7 @@ export class WwnActor extends Actor {
         item.img = WwnItem.defaultIcons[item.type];
       }
     });
-    super.createEmbeddedDocuments(embeddedName, data, context);
+    return super.createEmbeddedDocuments(embeddedName, data, context);
   }
 
   async _onCreate() {

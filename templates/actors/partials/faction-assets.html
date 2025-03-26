@@ -3,20 +3,20 @@
   <div class="item-titles flex-table header flexrow" role="rowgroup">
     <div class="item-caret"><i class="fas fa-caret-down"></i></div>
     <div class="item-name flexrow" role="columnheader">{{ name }} Assets </div>
-    <div class="field-short flexrow" role="columnheader"> {{ localize 'WWN.faction.rating' }} </div>
-    <div class="field-short flexrow" role="columnheader"> {{ localize 'WWN.faction.hp' }} </div>
-    <div class="field-long flexrow " role="columnheader"> {{ localize 'WWN.faction.location' }} </div>
-    <div class="field-long flexrow " role="columnheader"> {{ localize 'WWN.faction.attackDamage' }} </div>
-    <div class="field-short flexrow " role="columnheader"> {{ localize 'WWN.faction.counter' }} </div>
+    <div class="faction-field flexrow" role="columnheader"> {{ localize 'WWN.faction.rating' }} </div>
+    <div class="faction-field flexrow" role="columnheader"> {{ localize 'WWN.faction.hp' }} </div>
+    <div class="faction-field-wide flexrow" role="columnheader"> {{ localize 'WWN.faction.location' }} </div>
+    <div class="faction-field-wide damage flexrow" role="columnheader"> {{ localize 'WWN.faction.attackDamage' }} </div>
+    <div class="faction-field counter flexrow" role="columnheader"> {{ localize 'WWN.faction.counter' }} </div>
     <!-- <div class="field-short flexrow " role="columnheader"> {{ localize 'WWN.faction.note' }} </div> -->
 
     <div class="item-controls med-cell flexrow flex-shrink text-right" role="columnheader">
       <a class="item-control add-base text-gray-100 hover:text-green-400 transition-colors"
-        title="{{localize 'wwn.add-item'}}" data-asset-type="{{ assetType }}" data-asset-name="{{ name }}">
+        title="{{localize 'WWN.Add'}}" data-asset-type="{{ assetType }}" data-asset-name="{{ name }}">
         <i class="fas fa-home"></i>
       </a>
       <a class="item-control asset-create text-gray-100 hover:text-green-400 transition-colors"
-        title="{{localize 'wwn.add-item'}}" data-asset-type="{{ assetType }}" data-asset-name="{{ name }}">
+        title="{{localize 'WWN.Add'}}" data-asset-type="{{ assetType }}" data-asset-name="{{ name }}">
         <i class="fas fa-plus"></i>
       </a>
     </div>
@@ -25,57 +25,52 @@
     {{#each assets as |item id|}}
     <li class="item-entry">
       <div class="item flexrow" role="rowgroup" data-item-id="{{item.id}}">
-        <div class="item-name item-click item-rollable flexrow"><!---->
+        <div class="item-name item-click item-rollable flexrow faction-name"><!---->
           <div class="item-image" style="background-image: url({{item.img}})"></div>
           <a>
             <h4 title="{{item.system.description}}">
               {{item.name~}}
               {{#if item.system.baseOfInfluence}}
-                  <i class="fas fa-home" style="color: rgba(0, 0, 0, 0.2);"></i>
+              <i class="fas fa-home" style="color: rgba(0, 0, 0, 0.2);"></i>
               {{/if}}
             </h4>
           </a>
         </div>
-        <div class="field-short" role="cell">
+        <div class="faction-field" role="cell">
           {{ item.system.rating }}
         </div>
-        <div class=" field-short" role="cell">
+        <div class="faction-field" role="cell">
           {{ item.system.health.value }}/{{ item.system.health.max }}
-
         </div>
-        <div class="field-long" role="cell">
+        <div class="faction-field-wide" role="cell">
           {{ item.system.location }}
         </div>
-        <div class="field-long" role="cell">
+        <div class="faction-field-wide damage" role="cell">
           {{#if item.system.attackDamage}}
           {{firstLetter item.system.attackSource }} vs {{firstLetter item.system.attackTarget }} /
           {{ item.system.attackDamage }}
           {{/if}}
         </div>
-        <div class=" field-short" role="cell">
+        <div class="faction-field counter" role="cell">
           {{ item.system.counter }}
         </div>
-        <!-- <div class=" field-short" role="cell">
-          {{ item.system.note }}
-        </div> -->
-        <div class="item-controls  med-cell pr-1 text-right flex-shrink flexrow" role="cell">
+        <div class="item-controls med-cell pr-1 text-right flex-shrink flexrow" role="cell">
           {{!-- <a class="item-control item-fix text-gray-600 hover:text-purple-800 transition-colors"
-            title='{{localize ' WWN.Fix'}}'>
+            title='{{localize "WWN.Fix"}}'>
             <i class="fas fa-tools"></i></a> --}}
           <a class="item-control asset-toggle-unusable  {{#unless item.system.unusable}}item-off{{/unless}}"
-            title='{{localize ' WWN.Break'}}'>
+            title='{{localize "WWN.Break"}}'>
             <i class="fas fa-heart-broken {{#unless item.system.unusable}}item-off{{/unless}}"></i>
           </a>
           <a class="item-control asset-toggle-stealthed  {{#unless item.system.stealthed}}item-off{{/unless}}"
-            title='{{localize ' WWN.faction.stealthed'}}'>
+            title='{{localize "WWN.faction.stealthed"}}'>
             <i class="fas fa-user-ninja {{#unless item.system.stealthed}}item-off{{/unless}}"></i>
           </a>
-
-          <a class="item-control item-edit text-gray-600 hover:text-purple-800 transition-colors" title='{{localize '
-            WWN.Edit'}}'>
+          <a class="item-control item-edit text-gray-600 hover:text-purple-800 transition-colors"
+            title='{{localize "WWN.Edit"}}'>
             <i class="fas fa-edit"></i></a>
-          <a class="item-control item-delete text-gray-600 hover:text-red-600 transition-colors" title='{{localize '
-            WWN.Delete'}}'>
+          <a class="item-control item-delete text-gray-600 hover:text-red-600 transition-colors"
+            title='{{localize "WWN.Delete"}}'>
             <i class="fas fa-trash"></i></a>
         </div>
       </div>

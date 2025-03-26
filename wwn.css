@@ -1570,5 +1570,123 @@
 }
 
 /* ----------------------------------------- */
+/*  Combat Styles                            */
+/* ----------------------------------------- */
+.wwn .faction-field {
+  flex: 0 0 50px;
+  font-size: 12px;
+  text-align: center;
+  padding-left: 8px;
+}
+
+.wwn .faction-field-wide {
+  flex: 0 0 90px;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* Override for attack damage column to be wider and left-aligned */
+.wwn .faction-field-wide.damage {
+  flex: 0 0 110px;
+  text-align: left;
+}
+
+/* Override for counter to be left-aligned */
+.wwn .faction-field.counter {
+  text-align: left;
+}
+
+/* Center align the header cells for Rating and HP */
+.wwn .item-titles .faction-field {
+  text-align: center;
+  justify-content: center;
+}
+
+/* Override the item-name width specifically for faction assets */
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-name.faction-name {
+  flex-basis: 65px;
+}
+
+/* Adjust the controls section */
+.wwn.sheet.actor .sheet-body .inventory .item-controls {
+  flex: 0 0 80px;
+  padding: 0 4px;
+  margin-right: 2px;
+}
+
+/* Ensure consistent spacing between icons */
+.wwn.sheet.actor .sheet-body .inventory .item-controls a {
+  margin-right: 0 2px;
+}
+
+/* ----------------------------------------- */
 /*  Sheet Styles                             */
 /* ----------------------------------------- */
+
+/* ----------------------------------------- */
+/*  Faction Header Styles                    */
+/* ----------------------------------------- */
+.wwn.sheet.actor .faction-header {
+  /* Add any specific header styles */
+}
+
+.wwn.sheet.actor .faction-header-img {
+  flex: 0 0 100px;
+  height: 100px;
+}
+
+.wwn.sheet.actor .faction-header-summary {
+  align-items: center;
+}
+
+.wwn.sheet.actor .faction-header-active {
+  flex: 2;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.wwn.sheet.actor .faction-header-turn {
+  flex: 2;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.wwn.sheet.actor .faction-header-turn .cost {
+  display: flex;
+  align-items: center;
+}
+
+.wwn.sheet.actor .faction-header-turn span {
+  padding-left: 5px;
+}
+
+.wwn.sheet.actor .faction-header-homeworld {
+  flex: 3;
+  line-height: normal;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.wwn.sheet.actor .faction-header-magic {
+  flex: 2;
+  line-height: normal;
+  text-align: center;
+}
+
+.wwn.sheet.actor .faction-header-homeworld label,
+.wwn.sheet.actor .faction-header-magic label {
+  position: auto;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  margin: 0;
+  right: 0;
+  padding-right: 12px;
+}

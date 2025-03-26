@@ -124,10 +124,10 @@
             "value": 0,
             "max": 3
           },
-          "spellList": {},
-          "artsList": {}
+          "spellList": { },
+          "artsList": { }
         },
-        "classes": {}
+        "classes": { }
       }
     },
     "character": {
@@ -232,7 +232,7 @@
         }
       },
       "languages": {
-        "value": []
+        "value": [ ]
       }
     },
     "monster": {
@@ -278,14 +278,15 @@
       "forceRating": 1,
       "cunningRating": 1,
       "wealthRating": 1,
+      "magicRating": "None",
       "facCreds": 0,
       "xp": 0,
       "homeworld": "",
       "active": true,
       "factionGoal": "",
       "factionGoalDesc": "",
-      "tags": [],
-      "log": [],
+      "tags": [ ],
+      "log": [ ],
       "initiative": {
         "value": 0
       }
@@ -320,7 +321,7 @@
       "stowed": false,
       "effects": {
         "active": false,
-        "list": []
+        "list": [ ]
       }
     },
     "weapon": {
@@ -343,7 +344,7 @@
       "shockTotal": 0,
       "skill": "stab",
       "score": "str",
-      "tags": [],
+      "tags": [ ],
       "slow": false,
       "missile": false,
       "melee": true,

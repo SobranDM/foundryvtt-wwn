@@ -1,29 +1,33 @@
 <form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header flexrow">
-    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+  <header class="sheet-header flexrow faction-header">
+    <img class="profile-img faction-header-img" src="{{img}}" data-edit="img" title="{{name}}" />
     <section class="header-details flexrow">
       <h1 class="charname">
         <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}"
           data-dtype="String" />
       </h1>
-      <ul class="summary flexrow">
-        <li class="flex3">
+      <ul class="summary flexrow faction-header-summary">
+        <li class="faction-header-active">
           <span>
             {{localize 'WWN.faction.active'}}:
             <input type="checkbox" name="system.active" {{checked system.active}}>
           </span>
         </li>
-        <li class="flex3">
-          <!-- homeworld -->
+        <li class="faction-header-turn">
+          <div class="cost flex">
+            <a><i class="fas fa-hourglass-start fa-lg faction-turn"></i></a>
+            <span>{{localize 'WWN.faction.turn'}}</span>
+          </div>
+        </li>
+        <li class="faction-header-homeworld">
           <input type="text" name="system.homeworld" value="{{system.homeworld}}" data-dtype="String">
           <label>{{localize 'WWN.faction.homeworld'}}</label>
         </li>
-        <li class="flex3">
-          <!--buttons-->
-          <div class="cost flex flex-col" style="padding-left:20px;">
-            <a><i class="fas fa-hourglass-start  fa-2x faction-turn"></i></a>
-            {{localize 'WWN.faction.turn'}}
-          </div>
+        <li class="faction-header-magic">
+          <select name="system.magicRating" data-dtype="String">
+            {{selectOptions config.assetMagic selected=system.magicRating}}
+          </select>
+          <label>{{localize 'WWN.faction.magicRating'}}</label>
         </li>
       </ul>
     </section>
@@ -108,7 +112,7 @@
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
               {{localize 'WWN.faction.cunningRating'}}
-              <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+              <a class="cunning-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
                 <i class="fas fa-level-up-alt"></i>
               </a>
             </h4>
@@ -124,7 +128,7 @@
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
               {{localize 'WWN.faction.wealthRating'}}
-              <a class="force-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+              <a class="wealth-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
                 <i class="fas fa-level-up-alt"></i>
               </a>
             </h4>

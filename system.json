@@ -2,7 +2,7 @@
   "id": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "1.5.0-beta1",
+  "version": "1.5.0-beta2",
   "compatibility": {
     "minimum": "12",
     "verified": "12",
@@ -33,37 +33,10 @@
       "flags": { }
     },
     {
-      "name": "armor",
-      "label": "Armor",
-      "system": "wwn",
-      "path": "packs/armor.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "weapons",
-      "label": "Weapons",
-      "system": "wwn",
-      "path": "packs/weapons.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
       "name": "arts",
-      "label": "Arts",
+      "label": "Abilities",
       "system": "wwn",
       "path": "packs/arts.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "foci",
-      "label": "Foci and Abilities",
-      "system": "wwn",
-      "path": "packs/foci.db",
       "type": "Item",
       "private": false,
       "flags": { }
@@ -78,17 +51,8 @@
       "flags": { }
     },
     {
-      "name": "spells",
-      "label": "Spells",
-      "system": "wwn",
-      "path": "packs/spells.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
       "name": "adventuring-gear",
-      "label": "Adventuring Gear",
+      "label": "Gear",
       "system": "wwn",
       "path": "packs/adventuring-gear.db",
       "type": "Item",
@@ -200,5 +164,5 @@
   },
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
   "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
-  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.5.0-beta1/wwn.zip"
+  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.5.0-beta2/wwn.zip"
 }
