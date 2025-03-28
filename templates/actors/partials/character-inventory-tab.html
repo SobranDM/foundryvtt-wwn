@@ -183,6 +183,7 @@
           {{/each}}
         </ol>
       </div>
+
       <div>
         {{!-- Misc items --}}
         <li class="item-titles flexrow">
@@ -279,6 +280,7 @@
           {{/each}}
         </ol>
       </div>
+
       <div>
         {{!-- Personal Treasure --}}
         <li class="item-titles flexrow">
@@ -301,6 +303,12 @@
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
                 <div class="item-image" style="background-image: url({{item.img}})"></div>
+                {{#if item.system.container.isContainer}}
+                <div class="container-arrow">
+                  <i class="fas {{#if item.system.container.isOpen}}fa-caret-down{{else}}fa-caret-right{{/if}}"
+                    title="Toggle Contents"></i>
+                </div>
+                {{/if}}
                 <a>
                   <h4 data-tooltip="{{item.name}}">
                     {{item.name~}}
@@ -374,6 +382,7 @@
           {{/each}}
         </ol>
       </div>
+
       <div>
         {{!-- Treasure items --}}
         <li class="item-titles flexrow">
@@ -395,6 +404,12 @@
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
                 <div class="item-image" style="background-image: url({{item.img}})"></div>
+                {{#if item.system.container.isContainer}}
+                <div class="container-arrow">
+                  <i class="fas {{#if item.system.container.isOpen}}fa-caret-down{{else}}fa-caret-right{{/if}}"
+                    title="Toggle Contents"></i>
+                </div>
+                {{/if}}
                 <a>
                   <h4 title="{{item.name}}">
                     {{item.name~}}
