@@ -67,26 +67,19 @@
             </div>
           </li>
         </ul>
+
         <ul class="attributes flexrow">
-          <!--treasure/credits-->
+          <!-- cunning -->
           <li class="attribute ability-score">
-            <h4 class="attribute-name box-title wide-attribute styke" title="Treasure">
-              {{localize 'WWN.faction.facCreds'}}
+            <h4 class="attribute-name box-title wide-attribute styke" title="">
+              {{localize 'WWN.faction.cunningRating'}}
+              <a class="cunning-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
             </h4>
             <div class="attribute-value">
-              <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
-                value="{{system.facCreds}}" />
-            </div>
-          </li>
-        </ul>
-        <ul class="attributes flexrow">
-          <!--xp]-->
-          <li class="attribute ability-score">
-            <h4 class="attribute-name box-title wide-attribute styke" title="xp">
-              {{localize 'WWN.faction.xp'}}
-            </h4>
-            <div class="attribute-value">
-              <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
+              <input name="system.cunningRating" value="{{system.cunningRating}}" type="number" data-dtype="Number"
+                min="1" max="8" />
             </div>
           </li>
         </ul>
@@ -108,22 +101,6 @@
         </ul>
 
         <ul class="attributes flexrow">
-          <!-- cunning -->
-          <li class="attribute ability-score">
-            <h4 class="attribute-name box-title wide-attribute styke" title="">
-              {{localize 'WWN.faction.cunningRating'}}
-              <a class="cunning-up hover:transition-colors" title="{{localize 'WWN.level-up'}}">
-                <i class="fas fa-level-up-alt"></i>
-              </a>
-            </h4>
-            <div class="attribute-value">
-              <input name="system.cunningRating" value="{{system.cunningRating}}" type="number" data-dtype="Number"
-                min="1" max="8" />
-            </div>
-          </li>
-        </ul>
-
-        <ul class="attributes flexrow">
           <!-- wealth -->
           <li class="attribute ability-score">
             <h4 class="attribute-name box-title wide-attribute styke" title="">
@@ -135,6 +112,30 @@
             <div class="attribute-value">
               <input name="system.wealthRating" value="{{system.wealthRating}}" type="number" data-dtype="Number"
                 min="1" max="8" />
+            </div>
+          </li>
+        </ul>
+
+        <ul class="attributes flexrow">
+          <!--treasure/credits-->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="Treasure">
+              {{localize 'WWN.faction.facCreds'}}
+            </h4>
+            <div class="attribute-value">
+              <input class="" type="number" step="1" data-dtype="Number" name="system.facCreds"
+                value="{{system.facCreds}}" />
+            </div>
+          </li>
+        </ul>
+        <ul class="attributes flexrow">
+          <!--xp]-->
+          <li class="attribute ability-score">
+            <h4 class="attribute-name box-title wide-attribute styke" title="xp">
+              {{localize 'WWN.faction.xp'}}
+            </h4>
+            <div class="attribute-value">
+              <input class="" type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
             </div>
           </li>
         </ul>
@@ -195,13 +196,13 @@
 
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
-        type="asset" assetType="wealth" name="Wealth" assets=system.wealthAssets
+        type="asset" assetType="force" name="Force" assets=system.forceAssets
         }}
       </div>
 
       <div class="flexrow flex-grow">
         {{> "systems/wwn/templates/actors/partials/faction-assets.html"
-        type="asset" assetType="force" name="Force" assets=system.forceAssets
+        type="asset" assetType="wealth" name="Wealth" assets=system.wealthAssets
         }}
       </div>
     </div>

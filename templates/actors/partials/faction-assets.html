@@ -43,7 +43,7 @@
           {{ item.system.health.value }}/{{ item.system.health.max }}
         </div>
         <div class="faction-field-wide" role="cell">
-          {{ item.system.location }}
+          <input type="text" value="{{ item.system.location }}" />
         </div>
         <div class="faction-field-wide damage" role="cell">
           {{#if item.system.attackDamage}}

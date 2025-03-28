@@ -95,4 +95,8 @@ export const registerHelpers = async function () {
     'partial',
     (path) => `systems/wwn/templates/${path}`
   );
+
+  Handlebars.registerHelper("log", function (obj) {
+    return console.log(obj);
+  });
 };

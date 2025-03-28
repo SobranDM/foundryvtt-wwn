@@ -70,14 +70,12 @@ export class WWNGroupCombat extends WWNCombat {
   }
 
   async #prepareGroupInitiativeDice(rollPerGroup) {
-    console.log(rollPerGroup);
     const pool = foundry.dice.terms.PoolTerm.fromRolls(Object.values(rollPerGroup));
     const evaluatedRolls = await Roll.fromTerms([pool]).roll();
     const rollValues = evaluatedRolls.dice.map(d => d.total);
     if (this.availableGroups.includes("black")) {
       rollValues.splice(this.availableGroups.indexOf('black'), 0, 0)
     }
-    console.log(this.availableGroups);
 
     return this.availableGroups.reduce((prev, curr, i) => ({
       ...prev,
@@ -89,7 +87,6 @@ export class WWNGroupCombat extends WWNCombat {
   }
 
   async #rollInitiativeUIFeedback(groups = []) {
-    console.log(groups);
     const content = [
       Object.keys(groups).map(
         (k) => this.#constructInitiativeOutputForGroup(k, groups[k].roll)

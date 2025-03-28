@@ -24,9 +24,15 @@ export class WwnActor extends Actor {
         (i) => i.system["assetType"] === "wealth"
       );
 
-      data.cunningAssets = cunningAssets;
-      data.forceAssets = forceAssets;
-      data.wealthAssets = wealthAssets;
+      function sortAssets(a, b) {
+        if (a.system.baseOfInfluence && !b.system.baseOfInfluence) return -1;
+        if (!a.system.baseOfInfluence && b.system.baseOfInfluence) return 1;
+        return a.name > b.name ? 1 : -1;
+      }
+
+      data.cunningAssets = cunningAssets.sort(sortAssets);
+      data.forceAssets = forceAssets.sort(sortAssets);
+      data.wealthAssets = wealthAssets.sort(sortAssets);
 
       data.health.max =
         this.getHealth(data.wealthRating) +
@@ -1261,7 +1267,8 @@ export class WwnActor extends Actor {
     if (this.type === "faction") return;
     const data = this.system;
     const saves = data.saves;
-    const baseSave = data.saves.baseSave.value;
+    const baseSave = this.type === "monster" ? 15 : 16;
+    console.log(baseSave);
     Object.keys(saves).forEach((s) => {
       if (!saves[s].mod) {
         saves[s].mod = 0;
@@ -1271,21 +1278,20 @@ export class WwnActor extends Actor {
     if (this.type === "monster") {
       const monsterHD = data.hp.hd.toLowerCase().split("d");
       ["evasion", "physical", "mental", "luck"].forEach((save) => {
-        data.saves[save].value = Math.max(baseSave - Math.floor(monsterHD[0] / 2), 2) + data.saves[save].mod;
+        data.saves[save].value = Math.max(baseSave - Math.floor(monsterHD[0] / 2), 2) + data.saves[save].mod + data.saves.baseSave.mod;
       });
     }
     if (this.type === "character") {
       const charLevel = data.details.level;
       const newSaves = {
-        evasionVal: baseSave,
-        physicalVal: baseSave,
-        mentalVal: baseSave,
-        luckVal: baseSave
+        evasionVal: baseSave + data.saves.baseSave.mod + data.saves.evasion.mod,
+        physicalVal: baseSave + data.saves.baseSave.mod + data.saves.physical.mod,
+        mentalVal: baseSave + data.saves.baseSave.mod + data.saves.mental.mod,
+        luckVal: baseSave + data.saves.baseSave.mod + data.saves.luck.mod
       }
-      newSaves.evasionVal -= Math.max(data.scores.int.mod, data.scores.dex.mod) - data.saves.evasion.mod;
-      newSaves.physicalVal -= Math.max(data.scores.con.mod, data.scores.str.mod) - data.saves.physical.mod;
-      newSaves.mentalVal -= Math.max(data.scores.wis.mod, data.scores.cha.mod) - data.saves.mental.mod;
-      newSaves.luckVal += data.saves.luck.mod;
+      newSaves.evasionVal -= Math.max(data.scores.int.mod, data.scores.dex.mod);
+      newSaves.physicalVal -= Math.max(data.scores.con.mod, data.scores.str.mod);
+      newSaves.mentalVal -= Math.max(data.scores.wis.mod, data.scores.cha.mod);
 
       const removeLevelSave = game.settings.get("wwn", "removeLevelSave");
       Object.keys(newSaves).forEach((save) => {

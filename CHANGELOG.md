@@ -1,5 +1,24 @@
 # Changelog
 
+## New in 1.5.0-beta3
+
+- Fixed some more compendium errors.
+  - Great Armor AC.
+  - War Shirt cost.
+  - Plate Armor cost.
+  - Purge Ailment had a beta description. Updated to final.
+  - Hurlant Bolt weight.
+  - Backpack, boots, all clothing: weight (with weightless when worn).
+  - Great Club cost.
+  - Firewood weight.
+- Faction sheet changes.
+  - Changed order of attributes to match book: Cunning, Forces, Wealth.
+  - Changed order of assets to match book: Cunning, Forces, Wealth.
+  - Assets are sorted alphabetically, with bases of influence at the top.
+  - Allow asset location to be edited from the asset tab of faction sheet.
+- Fixed an error with monster saves.
+  - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
+
 ## New in 1.5.0-beta2
 
 - Reorganized compendiums.

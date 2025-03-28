@@ -39,6 +39,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
    */
   async getData() {
     const data = super.getData();
+
     data.enrichedDescription = await TextEditor.enrichHTML(
       this.object.system.description,
       { async: true }
@@ -851,6 +852,15 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     await this.logMessage(title, msg, longMsg);
   }
 
+  async _onLocationChange(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    return item.update({
+      "system.location": event.target.value
+    });
+  }
+
   activateListeners(html) {
     super.activateListeners(html);
     html.find(".asset-create").on("click", this._onAssetCreate.bind(this));
@@ -879,9 +889,9 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       .find(".asset-toggle-stealthed")
       .on("click", this._onAssetStealthed.bind(this));
     html.find(".add-base").on("click", this._onBaseAdd.bind(this));
-    // html.find(".item-click").on("click", this._onItemClick.bind(this));
     html.find(".item-edit").on("click", this._onItemEdit.bind(this));
     html.find(".item-delete").on("click", this._onItemDelete.bind(this));
+    html.find(".faction-field-wide input").change(this._onLocationChange.bind(this));
     html.find(".inventory .item-titles .item-caret").click((ev) => {
       let items = $(ev.currentTarget.parentElement.parentElement).children(
         ".item-list"
@@ -898,7 +908,6 @@ export class WwnActorSheetFaction extends WwnActorSheet {
         items.slideUp(200);
       }
     });
-    // html.find(".").on("click", this._on.bind(this));
   }
 }
 
