@@ -42,26 +42,21 @@ export class WWNGroupCombat extends WWNCombat {
     }), {});
     const results = await this.#prepareGroupInitiativeDice(rollPerGroup);
 
-    // Rewrite to make new roll for each black group combatant, using similar logic to what
-    // is done in rollPerGroup / #prepareGroupInitiativeDice
-
     const alertCombatants = this.combatants.filter(c => c.group === "black");
-    const alertResults = {};
+    this.alertResults = {};
     for (const combatant of alertCombatants) {
       const combatantData = combatant.token.delta.syntheticActor.system;
       const roll = new Roll(`${combatantData.initiative.roll}+${combatantData.initiative.value}`);
       const evaluatedRoll = await roll.evaluate();
-      alertResults[combatant.id] = {
+      this.alertResults[combatant.id] = {
         initiative: evaluatedRoll.total,
         roll: evaluatedRoll
       };
     }
 
     const updates = this.combatants.map(
-      (c) => ({ _id: c.id, initiative: c.group === "black" ? alertResults[c.id].initiative : results[c.group].initiative })
+      (c) => ({ _id: c.id, initiative: c.group === "black" ? this.alertResults[c.id].initiative : results[c.group].initiative })
     )
-
-
 
     await this.updateEmbeddedDocuments("Combatant", updates);
     await this.#rollInitiativeUIFeedback(results);
@@ -73,15 +68,18 @@ export class WWNGroupCombat extends WWNCombat {
     const pool = foundry.dice.terms.PoolTerm.fromRolls(Object.values(rollPerGroup));
     const evaluatedRolls = await Roll.fromTerms([pool]).roll();
     const rollValues = evaluatedRolls.dice.map(d => d.total);
+    const diceArray = [...evaluatedRolls.dice];
+
     if (this.availableGroups.includes("black")) {
-      rollValues.splice(this.availableGroups.indexOf('black'), 0, 0)
+      rollValues.splice(this.availableGroups.indexOf('black'), 0, 0);
+      diceArray.splice(this.availableGroups.indexOf('black'), 0, null);
     }
 
     return this.availableGroups.reduce((prev, curr, i) => ({
       ...prev,
-      [[curr]]: {
+      [curr]: {
         initiative: rollValues[i],
-        roll: evaluatedRolls.dice[i]
+        roll: diceArray[i]
       }
     }), {});
   }
@@ -104,9 +102,33 @@ export class WWNGroupCombat extends WWNCombat {
 
   #constructInitiativeOutputForGroup(group, roll) {
     if (group === "black") {
-      // TODO: Display individual initiative rolls for black group combatants
+      const alertCombatants = this.combatants.filter(c => c.group === "black");
+      return alertCombatants.map(combatant => {
+        const alertResult = this.alertResults[combatant.id];
+        if (!alertResult) return '';
+
+        return `
+        <p>${game.i18n.format("WWN.roll.initiative", { group: combatant.name })}
+        <div class="dice-roll">   
+          <div class="dice-result">
+            <div class="dice-formula">${alertResult.roll.formula}</div>
+              <div class="dice-tooltip">
+                    <section class="tooltip-part">
+                      <div class="dice">
+                          <header class="part-header flexrow">
+                              <span class="part-formula">${alertResult.roll.formula}</span>
+                              <span class="part-total">${alertResult.roll.total}</span>
+                          </header>
+                      </div>
+                    </section>
+              </div>
+            <h4 class="dice-total">${alertResult.roll.total}</h4>
+          </div>
+        </div>
+      `;
+      }).join("\n");
     } else {
-      return `    
+      return `
       <p>${game.i18n.format("WWN.roll.initiative", { group })}
       <div class="dice-roll">   
         <div class="dice-result">

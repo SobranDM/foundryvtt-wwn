@@ -41,7 +41,7 @@ export class WwnActorSheet extends ActorSheet {
       let div = $(
         `<div class="item-summary"><ol class="tag-list">${item.getTags()}</ol><div>${description}</div></div>`
       );
-      li.parents(".item-entry").append(div.hide());
+      li.parent(".item-entry").append(div.hide());
       div.slideDown(200);
     }
     li.toggleClass("expanded");

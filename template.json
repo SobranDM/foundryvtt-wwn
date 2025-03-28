@@ -309,6 +309,11 @@
       "quantity": 1,
       "treasure": false,
       "personal": false,
+      "container": {
+        "isContainer": false,
+        "isOpen": false
+      },
+      "containerId": "",
       "price": 0,
       "weight": 0,
       "weightless": "",
@@ -370,7 +375,8 @@
       "armorBonus": 0,
       "type": "light",
       "price": 0,
-      "weight": 0
+      "weight": 0,
+      "containerId": ""
     },
     "spell": {
       "lvl": 1,

@@ -1690,3 +1690,30 @@
   right: 0;
   padding-right: 12px;
 }
+
+/* Container toggle arrow */
+.container-arrow {
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+}
+
+.container-arrow i {
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.container-arrow i:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.container-spacer {
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

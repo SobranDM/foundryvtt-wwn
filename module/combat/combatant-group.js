@@ -10,8 +10,10 @@ export class WWNGroupCombatant extends WWNCombatant {
     if (assignedGroup)
       return assignedGroup;
 
-    if (canvas.tokens) {
+    if (canvas.tokens && this.token) {
       const token = canvas.tokens.get(this.token.id);
+      if (!token) return 'white';
+
       const disposition = token.document.disposition;
       const alertTwo = token.document.delta.syntheticActor.system.initiative.alertTwo;
       if (alertTwo) return "black";

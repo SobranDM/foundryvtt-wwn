@@ -77,8 +77,50 @@ export class WWNCombat extends Combat {
 
     const updates = this.combatants.map((c) => ({ _id: c.id, initiative: results[c.id].initiative }));
     await this.updateEmbeddedDocuments("Combatant", updates);
+    await this.#rollInitiativeUIFeedback(results);
     await this.activateCombatant(0);
     return this;
+  }
+
+  async #rollInitiativeUIFeedback(results = {}) {
+    const content = [
+      Object.entries(results).map(
+        ([id, result]) => this.#constructInitiativeOutputForIndividual(id, result.roll)
+      ).join("\n")
+    ];
+    const chatData = content.map(c => {
+      return {
+        speaker: { alias: game.i18n.localize("WWN.Initiative") },
+        sound: CONFIG.sounds.dice,
+        content: c
+      };
+    });
+    ChatMessage.implementation.createDocuments(chatData);
+  }
+
+  #constructInitiativeOutputForIndividual(id, roll) {
+    const combatant = this.combatants.get(id);
+    if (!combatant) return '';
+
+    return `
+    <p>${game.i18n.format("WWN.roll.initiative", { group: combatant.name })}
+    <div class="dice-roll">   
+      <div class="dice-result">
+        <div class="dice-formula">${roll.formula}</div>
+          <div class="dice-tooltip">
+                <section class="tooltip-part">
+                  <div class="dice">
+                      <header class="part-header flexrow">
+                          <span class="part-formula">${roll.formula}</span>
+                          <span class="part-total">${roll.total}</span>
+                      </header>
+                  </div>
+                </section>
+          </div>
+        <h4 class="dice-total">${roll.total}</h4>
+      </div>
+    </div>
+  `;
   }
 
   // ===========================================================================

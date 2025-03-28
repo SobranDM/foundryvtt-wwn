@@ -1,5 +1,19 @@
 # Changelog
 
+## New in 1.5.0-beta4
+
+- Further sorted Assets compendium into required rating folders.
+- Fixed up the chat display of initiative rolls for both individual and group initiative.
+- Fixed issue where combat would hang if multiple combatants were deleted from the canvas mid-combat, if initiative type was set to group.
+- Added container items.
+  - If a container is equipped or stowed, all items inside are considered stowed.
+  - If a container is neither equipped or stowed, all items inside are neither equipped nor stowed.
+  - This should easily allow for things like dropping backpacks to move more quickly, track things stowed at a home base, and so on.
+  - Only ordinary items may be containers, but they may be of treasure or personal type if desired.
+    - There is no logic checking to see if a treasure bag contains only treasure items, so if you throw an item in a treasure bag and your treasure value doesn't go up... that's probably why.
+  - Ordinary items, weapons, and armor may all be placed in bags. Things like foci and spells shouldn't allow that, though I'm not sure how you would even make that happen.
+  - Drag an item to somewhere else on the sheet (even another non-bag item) to remove it from the container.
+
 ## New in 1.5.0-beta3
 
 - Fixed some more compendium errors.

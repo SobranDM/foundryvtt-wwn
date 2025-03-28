@@ -1268,7 +1268,7 @@ export class WwnActor extends Actor {
     const data = this.system;
     const saves = data.saves;
     const baseSave = this.type === "monster" ? 15 : 16;
-    console.log(baseSave);
+
     Object.keys(saves).forEach((s) => {
       if (!saves[s].mod) {
         saves[s].mod = 0;

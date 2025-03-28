@@ -57,6 +57,26 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         [[], [], [], [], [], [], [], []]
       );
 
+    // Validate and clean up container relationships
+    const containers = items.filter(item => item.system.container.isContainer);
+    const containerIds = new Set(containers.map(item => item.id));
+
+    // Check all items for invalid containerIds
+    const itemsToUpdate = [];
+    for (const item of this.actor.items) {
+      if (item.system.containerId && !containerIds.has(item.system.containerId)) {
+        itemsToUpdate.push({
+          _id: item.id,
+          "system.containerId": ""
+        });
+      }
+    }
+
+    // Update items with invalid containerIds
+    if (itemsToUpdate.length > 0) {
+      this.actor.updateEmbeddedDocuments("Item", itemsToUpdate);
+    }
+
     // Sort spells by level
     var sortedSpells = {};
     var slots = {};
@@ -216,6 +236,95 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     });
   }
 
+  _onDropItem(event, dragData) {
+
+    // If the drag originated from outside our sheet, let Foundry handle it
+    if (!event.target.closest('.wwn.sheet.actor')) {
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    // Get the dragged item from the UUID
+    const draggedItem = fromUuidSync(dragData.uuid);
+    if (!draggedItem) return;
+
+    // Find the target item under the drop point
+    const targetElement = event.target.closest('.item');
+    if (!targetElement) {
+      // If dropped on empty space, remove from container if it was in one
+      if (draggedItem.system?.containerId) {
+        draggedItem.update({
+          "system.containerId": "",
+          "system.equipped": false,
+          "system.stowed": true,
+        });
+      }
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    const targetItemId = targetElement.dataset.itemId;
+    if (!targetItemId) {
+      // If dropped on something that isn't an item, remove from container if it was in one
+      if (draggedItem.system?.containerId) {
+        draggedItem.update({
+          "system.containerId": "",
+          "system.equipped": false,
+          "system.stowed": true,
+        });
+      }
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    // Get the target item
+    const targetItem = this.actor.items.get(targetItemId);
+    if (!targetItem || !targetItem.system.container.isContainer) {
+      // If dropped on a non-container item, remove from container if it was in one
+      if (draggedItem.system?.containerId) {
+        draggedItem.update({
+          "system.containerId": "",
+          "system.equipped": false,
+          "system.stowed": true
+        });
+      }
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    // Only allow certain item types to be added to containers
+    const allowedTypes = ['item', 'weapon', 'armor'];
+    if (!allowedTypes.includes(draggedItem.type)) {
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    // Update the dragged item's containerId
+    draggedItem.system && draggedItem.update({
+      "system.containerId": targetItemId,
+      "system.equipped": false,
+      "system.stowed": targetItem.system.equipped || targetItem.system.stowed,
+    });
+
+    super._onDropItem(event, dragData);
+  }
+
+  async _onContainerItemAdd(item, target) {
+    const alreadyExistsInActor = target.parent.items.find((i) => i.id === item.id);
+    let latestItem = item;
+    if (!alreadyExistsInActor) {
+      const newItem = await this._onDropItemCreate([item.toObject()]);
+      latestItem = newItem.pop();
+    }
+
+    const alreadyExistsInContainer = target.system.itemIds.find((i) => i.id === latestItem.id);
+    if (!alreadyExistsInContainer) {
+      const newList = [...target.system.itemIds, latestItem.id];
+      await target.update({ system: { itemIds: newList } });
+      await latestItem.update({ system: { containerId: target.id } });
+    }
+  }
+
   _pushLang(table) {
     const data = this.actor.system;
     let update = duplicate(data[table]);
@@ -309,6 +418,31 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }
     });
 
+    // Container toggle listener
+    html.find(".inventory .container-arrow").click(async (ev) => {
+      const container = $(ev.currentTarget).closest('.item-entry');
+      const itemId = container.find('.item').data('itemId');
+      const item = this.actor.items.get(itemId);
+      const items = container.find('.container-items');
+
+      if (item && item.system.container.isContainer) {
+        const isCurrentlyOpen = item.system.container.isOpen;
+        const icon = $(ev.currentTarget).find('i');
+
+        // Animate the container
+        if (!isCurrentlyOpen) {
+          items.slideDown(200);
+        } else {
+          items.slideUp(200);
+        }
+
+        // Update the item state
+        await item.update({
+          "system.container.isOpen": !isCurrentlyOpen
+        });
+      }
+    });
+
     html.find("a[data-action='modifiers']").click((ev) => {
       this._onShowModifiers(ev);
     });
@@ -351,8 +485,40 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       await item.update({
         system: {
           equipped: !item.system.equipped,
+          stowed: item.system.equipped ? item.system.stowed : false,
         },
       });
+
+      // Update contained items
+      if (item.system.container.isContainer) {
+        const containedItems = item.actor.items.filter((i) => i.system.containerId === item.id);
+        item.actor.updateEmbeddedDocuments("Item", containedItems.map((i) => ({
+          _id: i.id,
+          "system.equipped": false,
+          "system.stowed": item.system.equipped || item.system.stowed,
+        })));
+      }
+    });
+
+    html.find(".stow-toggle").click(async (ev) => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      await item.update({
+        system: {
+          equipped: item.system.stowed ? item.system.equipped : false,
+          stowed: !item.system.stowed,
+        },
+      });
+
+      // Update contained items
+      if (item.system.container.isContainer) {
+        const containedItems = item.actor.items.filter((i) => i.system.containerId === item.id);
+        item.actor.updateEmbeddedDocuments("Item", containedItems.map((i) => ({
+          _id: i.id,
+          "system.equipped": false,
+          "system.stowed": item.system.equipped || item.system.stowed,
+        })));
+      }
     });
 
     html.find(".item-prep").click(async (ev) => {
@@ -361,16 +527,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       await item.update({
         system: {
           prepared: !item.system.prepared,
-        },
-      });
-    });
-
-    html.find(".stow-toggle").click(async (ev) => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      await item.update({
-        system: {
-          stowed: !item.system.stowed,
         },
       });
     });
