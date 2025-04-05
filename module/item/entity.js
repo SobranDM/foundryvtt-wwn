@@ -730,21 +730,12 @@ export class WwnItem extends Item {
     // id -> name
     const factionIdNames = {};
     for (const fA of otherActiveFactions) {
-      if (targetType === "cunning") {
-        if (fA.id && fA.system.cunningAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.system.cunningAssets];
-          factionIdNames[fA.id] = fA.name;
-        }
-      } else if (targetType === "force") {
-        if (fA.id && fA.system.forceAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.system.forceAssets];
-          factionIdNames[fA.id] = fA.name;
-        }
-      } else if (targetType === "wealth") {
-        if (fA.id && fA.system.wealthAssets?.length > 0) {
-          targetFactions[fA.id] = [fA, fA.system.wealthAssets];
-          factionIdNames[fA.id] = fA.name;
-        }
+      console.log(fA.system.cunningAssets, fA.system.forceAssets, fA.system.wealthAssets);
+      console.log(fA);
+      const totalAssets = [...fA.system.cunningAssets, ...fA.system.forceAssets, ...fA.system.wealthAssets];
+      if (fA.id && totalAssets.length > 0) {
+        targetFactions[fA.id] = [fA, totalAssets];
+        factionIdNames[fA.id] = fA.name;
       }
     }
     if (Object.keys(targetFactions).length == 0) {

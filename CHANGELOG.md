@@ -1,65 +1,43 @@
 # Changelog
 
-## New in 1.5.0-beta4
+## New in 1.5.0
 
-- Further sorted Assets compendium into required rating folders.
-- Fixed up the chat display of initiative rolls for both individual and group initiative.
-- Fixed issue where combat would hang if multiple combatants were deleted from the canvas mid-combat, if initiative type was set to group.
 - Added container items.
   - If a container is equipped or stowed, all items inside are considered stowed.
   - If a container is neither equipped or stowed, all items inside are neither equipped nor stowed.
   - This should easily allow for things like dropping backpacks to move more quickly, track things stowed at a home base, and so on.
   - Only ordinary items may be containers, but they may be of treasure or personal type if desired.
-    - There is no logic checking to see if a treasure bag contains only treasure items, so if you throw an item in a treasure bag and your treasure value doesn't go up... that's probably why.
+  - There is no logic checking to see if a treasure bag contains only treasure items, so if you throw an item in a treasure bag and your treasure value doesn't go up... that's probably why.
   - Ordinary items, weapons, and armor may all be placed in bags. Things like foci and spells shouldn't allow that, though I'm not sure how you would even make that happen.
   - Drag an item to somewhere else on the sheet (even another non-bag item) to remove it from the container.
-
-## New in 1.5.0-beta3
-
-- Fixed some more compendium errors.
-  - Great Armor AC.
-  - War Shirt cost.
-  - Plate Armor cost.
-  - Purge Ailment had a beta description. Updated to final.
-  - Hurlant Bolt weight.
-  - Backpack, boots, all clothing: weight (with weightless when worn).
-  - Great Club cost.
-  - Firewood weight.
-- Faction sheet changes.
-  - Changed order of attributes to match book: Cunning, Forces, Wealth.
-  - Changed order of assets to match book: Cunning, Forces, Wealth.
-  - Assets are sorted alphabetically, with bases of influence at the top.
-  - Allow asset location to be edited from the asset tab of faction sheet.
-- Fixed an error with monster saves.
-  - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
-
-## New in 1.5.0-beta2
-
-- Reorganized compendiums.
-  - Compendiums now use folders in a sane manner for better organization. As a result, some compendiums have been combined.
-    - Arts + Spells + Foci and Abilities = Abilities
-    - Adventuring Gear + Weapons + Armor = Gear
-  - Corrected a few errors I noticed or that had been reported to me while I was at it.
-    - Corrected the level of one High Mage spell.
-    - Removed a Vowed art that was present in playtest materials but was removed from final WWN release.
-  - Most gear have icons now.
+- Compendium improvements.
+  - Reorganized compendiums to use folders for better organization.
+    - Combined Arts + Spells + Foci and Abilities into a single Abilities compendium.
+    - Combined Adventuring Gear + Weapons + Armor into a single Gear compendium.
+    - Fixed various errors and inconsistencies. If you spot any I missed, please report them.
+  - Added icons to most gear items.
     - A few bits of adventuring gear didn't have anything suitable in Foundry's icon collection.
     - The shields share a single icon, as do two pieces of mail armor, due to limited selection in said collection.
     - Apologies to anyone who has their rolltables broken as a result.
-- Faction tweaks.
-  - Added descriptions to faction assets.
-  - Made a small style tweak to asset tab on faction sheet.
-  - Fixed broken localization on button tooltips on the asset tab.
-  - Added missing Magic field.
-  - Fixed stat level ups always trying to level Force instead of desired stat. Seriously factions, calm down with the violence!
+  - Faction sheet improvements.
+    - Changed order of attributes to match book: Cunning, Forces, Wealth.
+    - Changed order of assets to match book: Cunning, Forces, Wealth.
+    - Assets are sorted alphabetically, with bases of influence at the top.
+    - Allow asset location to be edited from the asset tab of faction sheet.
+    - Added descriptions to faction assets in compendium.
+    - Made some style tweaks to asset tab on faction sheet.
+    - Fixed broken localization on button tooltips on the asset tab.
+    - Added missing Magic field.
+    - Fixed stat level ups always trying to level Force instead of desired stat.
+      - Seriously factions, calm down with the violence!
+    - Fixed faction initiative (provided you use individual--full fix incoming).
+    - Fixed faction attacks.
+- Fixed an error with monster saves.
+  - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
 - Fixed weapon charges not displaying on inventory tab.
 - Possible fix for an Item Piles interaction.
-
-## New in 1.5.0-beta1
-
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.
-- Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project.
--
+- Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project!
 
 ## New in 1.4.6
 
@@ -432,7 +410,7 @@ This update contains significant breaking changes. Please backup existing worlds
 ### Known Issues
 
 - As a result of the armor changes, the shields in the compendium have been changed, as have all magical armors. Magical armor will continue to function without issue--though they will not display anything in the magic field, unless you change them--shields, magical or not, will have to be edited or replaced. Sorry for the inconvenience.
-- Rewrote the individual initiative system to clear some bugs and support the Alert focus. This had the side effect of the PCs no longer being able to roll their initiative individually. Or rather, they can but it will simply be overwritten when combat begins. Sorry about that. If there is a great outcry, I will put in a workaround.
+- Rewritten the individual initiative system to clear some bugs and support the Alert focus. This had the side effect of the PCs no longer being able to roll their initiative individually. Or rather, they can but it will simply be overwritten when combat begins. Sorry about that. If there is a great outcry, I will put in a workaround.
 - Group Initiative still doesn't maintain flags based on disposition (Friendly/Neutral/Hostile). I'm still trying to fix this. There are currently two workarounds, though neither is ideal:
   - If you begin combat, it WILL correctly set sides, but AFTER initiative is rolled. You can then reroll initiative and it will sort itself out.
   - If you manually set colored flags for each combatant, it works correctly the first time.

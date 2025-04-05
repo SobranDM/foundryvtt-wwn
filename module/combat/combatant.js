@@ -8,7 +8,7 @@ export class WWNCombatant extends Combatant {
     if (this.defeated)
       return true;
 
-    return !this.defeated && (this.actor.system.hp.value === 0)
+    return !this.defeated && (this.actor.system.hp?.value === 0 || this.actor.system.health?.value === 0)
   }
 
   // ===========================================================================

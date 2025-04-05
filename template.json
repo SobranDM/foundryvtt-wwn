@@ -288,6 +288,7 @@
       "tags": [ ],
       "log": [ ],
       "initiative": {
+        "roll": "1d8",
         "value": 0
       }
     }
