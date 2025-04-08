@@ -619,7 +619,7 @@ export class WwnItem extends Item {
   /**
    * Asset Methods
    */
-  async getAssetAttackRolls(isOffense) {
+  async getAssetAttackRolls(isOffense, attackTarget = null) {
     const data = this.system;
     let hitBonus = 0;
     let damage = isOffense ? data.attackDamage : data.counter;
@@ -633,7 +633,7 @@ export class WwnItem extends Item {
       ui.notifications?.info("No damage to roll for asset");
       return null;
     }
-    const attackType = isOffense ? data.attackSource : data.assetType;
+    const attackType = isOffense ? data.attackSource : attackTarget;
     if (!this.actor) {
       ui.notifications?.error("Asset must be associated with a faction");
       return null;
@@ -730,8 +730,6 @@ export class WwnItem extends Item {
     // id -> name
     const factionIdNames = {};
     for (const fA of otherActiveFactions) {
-      console.log(fA.system.cunningAssets, fA.system.forceAssets, fA.system.wealthAssets);
-      console.log(fA);
       const totalAssets = [...fA.system.cunningAssets, ...fA.system.forceAssets, ...fA.system.wealthAssets];
       if (fA.id && totalAssets.length > 0) {
         targetFactions[fA.id] = [fA, totalAssets];
@@ -784,7 +782,7 @@ export class WwnItem extends Item {
       );
       const attackRolls = await this.getAssetAttackRolls(true);
       const defenseRolls = await attackedAsset.getAssetAttackRolls(
-        false
+        false, this.system.attackTarget
       );
       if (!attackRolls || !defenseRolls) {
         ui.notifications?.error("Unable to roll for asset");

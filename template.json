@@ -169,6 +169,7 @@
       },
       "character": true,
       "warrior": false,
+      "damageBonus": 0,
       "hp": {
         "hd": "1d6",
         "value": 4,

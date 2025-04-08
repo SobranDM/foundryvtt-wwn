@@ -16,7 +16,7 @@ export class WWNGroupCombatant extends WWNCombatant {
 
       const disposition = token.document.disposition;
       const alertTwo = token.document.delta.syntheticActor.system.initiative.alertTwo;
-      if (alertTwo) return "black";
+      if (alertTwo || token.document.delta.syntheticActor.type === "faction") return "black";
       switch (disposition) {
         case -1:
           return "red";

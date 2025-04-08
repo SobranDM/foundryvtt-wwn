@@ -65,10 +65,11 @@ export class WWNGroupCombat extends WWNCombat {
   }
 
   async #prepareGroupInitiativeDice(rollPerGroup) {
+    const groupLength = Object.keys(rollPerGroup).length;
     const pool = foundry.dice.terms.PoolTerm.fromRolls(Object.values(rollPerGroup));
-    const evaluatedRolls = await Roll.fromTerms([pool]).roll();
-    const rollValues = evaluatedRolls.dice.map(d => d.total);
-    const diceArray = [...evaluatedRolls.dice];
+    const evaluatedRolls = groupLength && await Roll.fromTerms([pool]).roll();
+    const rollValues = groupLength && evaluatedRolls.dice.map(d => d.total);
+    const diceArray = [...(evaluatedRolls?.dice || [])];
 
     if (this.availableGroups.includes("black")) {
       rollValues.splice(this.availableGroups.indexOf('black'), 0, 0);
