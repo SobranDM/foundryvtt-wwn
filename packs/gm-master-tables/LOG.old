@@ -1,7 +1,7 @@
-2025/04/08-13:09:05.459 22e4 Recovering log #2529
-2025/04/08-13:09:05.465 22e4 Delete type=0 #2529
-2025/04/08-13:09:05.466 22e4 Delete type=3 #2528
-2025/04/08-13:23:02.636 4b98 Level-0 table #2533: started
-2025/04/08-13:23:02.637 4b98 Level-0 table #2533: 0 bytes OK
-2025/04/08-13:23:02.638 4b98 Delete type=0 #2531
-2025/04/08-13:23:02.642 4b98 Manual compaction at level-0 from '!tables!0aHNowVvpqcOitxG' @ 72057594037927935 : 1 .. '!tables.results!sz7YZ7j6O0eGuv1i.yeglgwHaI3qvQZnT' @ 0 : 0; will stop at (end)
+2025/04/08-13:23:08.398 22e4 Recovering log #2532
+2025/04/08-13:23:08.403 22e4 Delete type=0 #2532
+2025/04/08-13:23:08.404 22e4 Delete type=3 #2530
+2025/04/08-13:23:41.900 4b98 Level-0 table #2537: started
+2025/04/08-13:23:41.900 4b98 Level-0 table #2537: 0 bytes OK
+2025/04/08-13:23:41.902 4b98 Delete type=0 #2535
+2025/04/08-13:23:41.905 4b98 Manual compaction at level-0 from '!tables!0aHNowVvpqcOitxG' @ 72057594037927935 : 1 .. '!tables.results!sz7YZ7j6O0eGuv1i.yeglgwHaI3qvQZnT' @ 0 : 0; will stop at (end)

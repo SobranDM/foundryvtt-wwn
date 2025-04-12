@@ -279,7 +279,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     // Get the target item
     const targetItem = this.actor.items.get(targetItemId);
-    if (!targetItem || !targetItem.system.container.isContainer) {
+    if (!targetItem || !targetItem.system.container?.isContainer) {
       // If dropped on a non-container item, remove from container if it was in one
       if (draggedItem.system?.containerId) {
         draggedItem.update({

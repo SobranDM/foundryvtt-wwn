@@ -40,6 +40,7 @@ export class WWNGroupCombat extends WWNCombat {
       ...prev,
       [curr]: new Roll(`1d8+${groupInitiatives[groupsToRollFor.indexOf(curr)]}`)
     }), {});
+
     const results = await this.#prepareGroupInitiativeDice(rollPerGroup);
 
     const alertCombatants = this.combatants.filter(c => c.group === "black");
@@ -66,21 +67,20 @@ export class WWNGroupCombat extends WWNCombat {
 
   async #prepareGroupInitiativeDice(rollPerGroup) {
     const groupLength = Object.keys(rollPerGroup).length;
-    const pool = foundry.dice.terms.PoolTerm.fromRolls(Object.values(rollPerGroup));
-    const evaluatedRolls = groupLength && await Roll.fromTerms([pool]).roll();
-    const rollValues = groupLength && evaluatedRolls.dice.map(d => d.total);
-    const diceArray = [...(evaluatedRolls?.dice || [])];
+    const groupRolls = {};
+    for (const group in rollPerGroup) {
+      groupRolls[group] = await new Roll(rollPerGroup[group].formula).evaluate();
+    }
 
     if (this.availableGroups.includes("black")) {
-      rollValues.splice(this.availableGroups.indexOf('black'), 0, 0);
-      diceArray.splice(this.availableGroups.indexOf('black'), 0, null);
+      groupRolls.black = { initiative: 0, roll: null };
     }
 
     return this.availableGroups.reduce((prev, curr, i) => ({
       ...prev,
       [curr]: {
-        initiative: rollValues[i],
-        roll: diceArray[i]
+        initiative: groupRolls[curr].total,
+        roll: groupRolls[curr]
       }
     }), {});
   }
@@ -102,6 +102,7 @@ export class WWNGroupCombat extends WWNCombat {
   }
 
   #constructInitiativeOutputForGroup(group, roll) {
+    console.log(group, roll);
     if (group === "black") {
       const alertCombatants = this.combatants.filter(c => c.group === "black");
       return alertCombatants.map(combatant => {
@@ -138,7 +139,7 @@ export class WWNGroupCombat extends WWNCombat {
                   <section class="tooltip-part">
                     <div class="dice">
                         <header class="part-header flexrow">
-                            <span class="part-formula">${roll.formula}</span>
+                            <span class="part-formula">${roll.terms.map(t => t.total).join(" ")}</span>
                             <span class="part-total">${roll.total}</span>
                         </header>
                     </div>
