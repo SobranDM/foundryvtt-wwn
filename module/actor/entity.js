@@ -483,7 +483,7 @@ export class WwnActor extends Actor {
       }
       skillValue = this.items.find(
         (item) => item.type === "skill" && item.name.toLowerCase() === skillAttack.toLowerCase()
-      )?.system?.ownedLevel || -2;
+      )?.system?.ownedLevel || 0;
       statValue = this.system.scores[statAttack].mod;
     }
 
