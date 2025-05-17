@@ -804,8 +804,12 @@ export class WwnActor extends Actor {
       let alertBonus = alert === 2 ? 100 : alert;
 
       if (isGroupInit) {
-        initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
-        this.system.initiative.alertTwo = alert === 2 ? true : false;
+        if (alert !== 1) {
+          initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
+          this.system.initiative.alertTwo = alert === 2 ? true : false;
+        } else {
+          initValue = this.system.scores.dex.mod + this.system.initiative.mod;
+        }
       } else {
         if (alert === 1) {
           initRoll = "2d8kh";

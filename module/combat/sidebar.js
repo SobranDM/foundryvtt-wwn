@@ -8,10 +8,6 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
   // ===========================================================================
 
   /** @inheritdoc */
-  // static PARTS = {
-  //   // ...super.PARTS,
-  //   tracker: { template: 'systems/wwn/templates/sidebar/combat-tracker.hbs', }
-  // }
 
   static GROUP_CONFIG_APP = new WWNCombatGroupSelector();
 
@@ -31,6 +27,7 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
       return turn;
     });
 
+    // Group combatants by their group and sort by initiative
     const groups = turns.reduce((arr, turn) => {
       const idx = arr.findIndex(r => r.group === turn.group);
 
@@ -45,7 +42,7 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
         initiative: turn.initiative,
         turns: [turn]
       }];
-    }, []);
+    }, []).sort((a, b) => b.initiative - a.initiative); // Sort groups by initiative, highest first
 
     return foundry.utils.mergeObject(context, {
       turns,
@@ -71,6 +68,38 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
     html.find('.combat-button[data-control="set-groups"]').click((ev) => {
       WWNCombatTab.GROUP_CONFIG_APP.render(true, { focus: true });
     });
+  }
+
+  /**
+   * Handle updating initiative for a Combatant within the Combat encounter
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  async _onUpdateInitiative(event) {
+
+    // Let Foundry handle the base initiative update
+    await super._onUpdateInitiative(event);
+
+    // If not in group initiative mode, use default behavior
+    if (game.settings.get(game.system.id, "initiative") !== "group") {
+      return;
+    }
+
+    // Get the combatant that was just updated
+    const { combatantId } = event.target.closest("[data-combatant-id]")?.dataset ?? {};
+    const combatant = this.viewed.combatants.get(combatantId);
+    if (!combatant) return;
+
+    // Update all other combatants in the same group to match
+    const groupCombatants = this.viewed.combatants.filter(c => c.group === combatant.group && c.id !== combatant.id);
+    if (groupCombatants.length === 0) return;
+
+    const updates = groupCombatants.map(c => ({
+      _id: c.id,
+      initiative: combatant.initiative
+    }));
+
+    await this.viewed.updateEmbeddedDocuments("Combatant", updates);
   }
 
   async #toggleFlag(combatant, flag) {

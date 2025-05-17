@@ -32,7 +32,6 @@ export class WWNCombatTracker {
 
     // Apply group colors to token names
     const tokenNames = html.querySelectorAll("#combat > ol > li > div.token-name");
-    console.log("Found token names:", tokenNames.length); // Debug log
 
     for (const tokenName of tokenNames) {
       const combatant = tokenName.closest(".combatant");
@@ -44,7 +43,6 @@ export class WWNCombatTracker {
 
       // Apply color gradient based on group
       const group = combatantObj.group;
-      console.log(group);
       const color = groupColors[group] || groupColors.white;
       tokenName.style.background = `linear-gradient(90deg, ${color}33, transparent)`;
       tokenName.style.borderRadius = "4px";

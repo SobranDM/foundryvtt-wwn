@@ -2,6 +2,12 @@
 
 ## New in 1.5.0
 
+### Note: Updated for v13. No attempt was made to maintain compatibility with v12.
+
+- All testing efforts were done in v13's Dark mode. The sheet was never designed with v13's theming in mind and it turned out to be pretty difficult to attempt to add it this late in the game. Light mode will _probably_ work fine but don't be surprised if there are small visual issues here and there.
+
+### Changes
+
 - Added container items.
   - If a container is equipped or stowed, all items inside are considered stowed.
   - If a container is neither equipped or stowed, all items inside are neither equipped nor stowed.
@@ -31,13 +37,16 @@
     - Fixed stat level ups always trying to level Force instead of desired stat.
       - Seriously factions, calm down with the violence!
     - Fixed faction initiative (provided you use individual--full fix incoming).
-    - Fixed faction attacks.
+    - Fixed faction attacks forcing attacks to be against certain asset types.
 - Fixed an error with monster saves.
   - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
 - Fixed weapon charges not displaying on inventory tab.
 - Possible fix for an Item Piles interaction.
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.
-- Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project!
+- Initiative updates.
+  - Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project!
+  - Fixed Alert 1 not providing a group bonus when Alert combatant's initiative is not the highest within the group.
+  - Updating the initiative of one member of a group should update the initiative of all members.
 
 ## New in 1.4.6
 

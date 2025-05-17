@@ -31,11 +31,13 @@ export class WWNGroupCombat extends WWNCombat {
   async rollInitiative() {
     const groupsToRollFor = this.availableGroups.filter(g => g !== "black");
     const groupInitiatives = groupsToRollFor.map(group => {
-      const initValues = game.combat.combatants
-        .filter(c => c.group === group)
-        .map(c => c.token.delta.syntheticActor.system.initiative.value);
+      const groupCombatants = game.combat.combatants.filter(c => c.group === group);
+      const alertOneCombatants = groupCombatants.find(c => c.token.delta.syntheticActor.items.find(i => i.name === "Alert" && i.system.ownedLevel === 1));
+      const initValues = groupCombatants
+        .map(c => alertOneCombatants ? c.token.delta.syntheticActor.system.initiative.value + 1 : c.token.delta.syntheticActor.system.initiative.value);
       return Math.max(...initValues);
     });
+
     const rollPerGroup = groupsToRollFor.reduce((prev, curr) => ({
       ...prev,
       [curr]: new Roll(`1d8+${groupInitiatives[groupsToRollFor.indexOf(curr)]}`)
@@ -180,5 +182,116 @@ export class WWNGroupCombat extends WWNCombat {
     }
 
     return initiativeMap;
+  }
+
+  /**
+   * Override nextTurn to handle group initiative
+   * @returns {Promise<this>}
+   */
+  async nextTurn() {
+    if (this.round === 0) return this.nextRound();
+
+    // Get current combatant and its group
+    const currentCombatant = this.combatants.get(this.current.combatantId);
+    if (!currentCombatant) return this.nextRound();
+
+    // Get all groups sorted by initiative
+    const groups = [...new Set(this.combatants.map(c => c.group))]
+      .map(group => {
+        const combatants = this.combatants.filter(c => c.group === group);
+        const initiative = Math.max(...combatants.map(c => c.initiative));
+        return { group, initiative };
+      })
+      .sort((a, b) => b.initiative - a.initiative); // Sort by initiative, highest first
+
+    const currentGroupIndex = groups.findIndex(g => g.group === currentCombatant.group);
+
+    // If we're on the last group, move to next round
+    if (currentGroupIndex === groups.length - 1) {
+      return this.nextRound();
+    }
+
+    // Move to first combatant of next group
+    const nextGroup = groups[currentGroupIndex + 1].group;
+    const nextCombatant = this.combatants.find(c => c.group === nextGroup);
+    if (!nextCombatant) return this.nextRound();
+
+    const turnIndex = this.turns.findIndex(t => t.id === nextCombatant.id);
+    const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, turnIndex);
+
+    // Update the document, passing data through a hook first
+    const updateData = { round: this.round, turn: turnIndex };
+    const updateOptions = { direction: 1, worldTime: { delta: advanceTime } };
+    Hooks.callAll("combatTurn", this, updateData, updateOptions);
+    await this.update(updateData, updateOptions);
+    return this;
+  }
+
+  /**
+   * Override previousTurn to handle group initiative
+   * @returns {Promise<this>}
+   */
+  async previousTurn() {
+    if (this.round === 0) return this;
+
+    // Get current combatant and its group
+    const currentCombatant = this.combatants.get(this.current.combatantId);
+    if (!currentCombatant) return this.previousRound();
+
+    // Get all groups sorted by initiative
+    const groups = [...new Set(this.combatants.map(c => c.group))]
+      .map(group => {
+        const combatants = this.combatants.filter(c => c.group === group);
+        const initiative = Math.max(...combatants.map(c => c.initiative));
+        return { group, initiative };
+      })
+      .sort((a, b) => b.initiative - a.initiative); // Sort by initiative, highest first
+
+    const currentGroupIndex = groups.findIndex(g => g.group === currentCombatant.group);
+
+    // If we're on the first group, move to previous round
+    if (currentGroupIndex === 0) {
+      return this.previousRound();
+    }
+
+    // Move to first combatant of previous group
+    const prevGroup = groups[currentGroupIndex - 1].group;
+    const prevCombatant = this.combatants.find(c => c.group === prevGroup);
+    if (!prevCombatant) return this.previousRound();
+
+    const turnIndex = this.turns.findIndex(t => t.id === prevCombatant.id);
+    const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, turnIndex);
+
+    // Update the document, passing data through a hook first
+    const updateData = { round: this.round, turn: turnIndex };
+    const updateOptions = { direction: -1, worldTime: { delta: advanceTime } };
+    Hooks.callAll("combatTurn", this, updateData, updateOptions);
+    await this.update(updateData, updateOptions);
+    return this;
+  }
+
+  /**
+   * Override setInitiative to update all combatants in the same group
+   * @param {string} id         The combatant ID for which to set initiative
+   * @param {number} value      A specific initiative value to set
+   */
+  async setInitiative(id, value) {
+    console.log("HERE");
+    const combatant = this.combatants.get(id, { strict: true });
+    if (!combatant) return;
+
+    // Get all combatants in the same group
+    const groupCombatants = this.combatants.filter(c => c.group === combatant.group);
+    console.log(groupCombatants);
+    console.log(combatant);
+    console.log(combatant.group);
+
+    // Update all combatants in the group
+    const updates = groupCombatants.map(c => ({
+      _id: c.id,
+      initiative: value
+    }));
+
+    await this.updateEmbeddedDocuments("Combatant", updates);
   }
 }
