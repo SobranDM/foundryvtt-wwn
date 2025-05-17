@@ -8,10 +8,10 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
   // ===========================================================================
 
   /** @inheritdoc */
-  static PARTS = {
-    ...super.PARTS,
-    tracker: { template: 'systems/wwn/templates/sidebar/combat-tracker.hbs', }
-  }
+  // static PARTS = {
+  //   // ...super.PARTS,
+  //   tracker: { template: 'systems/wwn/templates/sidebar/combat-tracker.hbs', }
+  // }
 
   static GROUP_CONFIG_APP = new WWNCombatGroupSelector();
 

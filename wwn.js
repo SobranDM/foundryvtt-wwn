@@ -20,6 +20,7 @@ import { WWNGroupCombatant } from "./module/combat/combatant-group.js";
 import { WWNCombat } from "./module/combat/combat.js";
 import { WWNCombatant } from "./module/combat/combatant.js";
 import { WWNCombatTab } from "./module/combat/sidebar.js";
+import { WWNCombatTracker } from "./module/combat/combat-tracker.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -85,6 +86,9 @@ Hooks.once("init", async function () {
     makeDefault: true,
     label: "WWN.SheetClassItem"
   });
+
+  // Initialize combat tracker modifications
+  WWNCombatTracker.init();
 
   await preloadHandlebarsTemplates();
 });
