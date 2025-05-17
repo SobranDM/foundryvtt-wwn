@@ -2,7 +2,7 @@ import { WwnPartyXP } from "./party-xp.js";
 import { WwnPartyCurrency } from "./party-coin.js";
 
 export class WwnPartySheet extends FormApplication {
-  
+
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "dialog", "party-sheet"],
@@ -85,8 +85,8 @@ export class WwnPartySheet extends FormApplication {
           },
         },
       },
-    }, {height: "auto", width: 220})
-    .render(true);
+    }, { height: "auto", width: 220 })
+      .render(true);
   }
 
   /** @override */
@@ -95,10 +95,10 @@ export class WwnPartySheet extends FormApplication {
     html
       .find(".item-controls .item-control .select-actors")
       .click(this._selectActors.bind(this));
-    
-      html.find(".item-controls .item-control .deal-xp").click(this._dealXP.bind(this));
-      html.find(".item-controls .item-control .deal-currency").click(this._dealCurrency.bind(this));
-    
+
+    html.find(".item-controls .item-control .deal-xp").click(this._dealXP.bind(this));
+    html.find(".item-controls .item-control .deal-currency").click(this._dealCurrency.bind(this));
+
     html.find("a.resync").click(() => this.render(true));
 
     html.find(".field-img button[data-action='open-sheet']").click((ev) => {
@@ -106,6 +106,6 @@ export class WwnPartySheet extends FormApplication {
       game.actors.get(actorId).sheet.render(true);
     });
 
-    html.on('drop', (ev) => { this._onDrop(ev.originalEvent); });
+    addEventListener(html, 'drop', (ev) => { this._onDrop(ev.originalEvent); });
   }
 }

@@ -786,11 +786,13 @@
   box-shadow: 0 0 2px #fff inset;
 }
 .wwn.chat-block .chat-header .chat-title {
+  color: #ebe8da;
   margin: 4px 0;
   height: 30px;
   overflow: hidden;
 }
 .wwn.chat-block .chat-header .chat-title h2 {
+  color: #ebe8da;
   border: none;
   line-height: 34px;
   margin: 0;
@@ -843,6 +845,10 @@
   bottom: 1px;
   right: 10px;
 }
+.wwn.chat-block .damage-roll .dice-damage button {
+  position: relative;
+  top: -2px;
+}
 .wwn.chat-block .chat-details .dice-damage {
   display: inline-block;
 }
@@ -850,7 +856,9 @@
   padding: 2px 5px;
   width: 22px;
   line-height: 14px;
-  height: 22px;
+  height: 22px !important;
+  max-height: 22px !important;
+  min-height: 22px !important;
   cursor: pointer;
 }
 .wwn.chat-card {

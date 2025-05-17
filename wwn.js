@@ -47,6 +47,7 @@ Hooks.once("init", async function () {
   // Register custom system settings
   registerSettings();
   const isGroupInitiative = game.settings.get(game.system.id, "initiative") === "group";
+
   if (isGroupInitiative) {
     CONFIG.Combat.documentClass = WWNGroupCombat;
     CONFIG.Combatant.documentClass = WWNGroupCombatant;

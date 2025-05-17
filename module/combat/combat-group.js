@@ -102,7 +102,6 @@ export class WWNGroupCombat extends WWNCombat {
   }
 
   #constructInitiativeOutputForGroup(group, roll) {
-    console.log(group, roll);
     if (group === "black") {
       const alertCombatants = this.combatants.filter(c => c.group === "black");
       return alertCombatants.map(combatant => {

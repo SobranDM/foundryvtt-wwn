@@ -2,16 +2,15 @@ import { WWN } from "../config.js";
 import { WWNGroupCombat } from "./combat-group.js";
 import WWNCombatGroupSelector from "./combat-set-groups.js";
 
-export class WWNCombatTab extends CombatTracker {
+export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracker {
   // ===========================================================================
   // APPLICATION SETUP
   // ===========================================================================
 
   /** @inheritdoc */
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      template: 'systems/wwn/templates/sidebar/combat-tracker.hbs',
-    });
+  static PARTS = {
+    ...super.PARTS,
+    tracker: { template: 'systems/wwn/templates/sidebar/combat-tracker.hbs', }
   }
 
   static GROUP_CONFIG_APP = new WWNCombatGroupSelector();
@@ -88,10 +87,8 @@ export class WWNCombatTab extends CombatTracker {
     event.preventDefault();
     event.stopPropagation();
     const btn = event.currentTarget;
-    const li = btn.closest(".combatant");
-    const combat = this.viewed;
-    const c = combat.combatants.get(li.dataset.combatantId);
-
+    const li = btn.closest.combatant;
+    this.viewed;
     return super._onCombatantControl(event);
   }
 
@@ -106,7 +103,7 @@ export class WWNCombatTab extends CombatTracker {
         name: game.i18n.localize("WWN.combat.SetCombatantAsActive"),
         icon: '<i class="fas fa-star-of-life"></i>',
         callback: (li) => {
-          const combatantId = li.data('combatant-id')
+          const combatantId = li.dataset.combatantId;
           const turnToActivate = this.viewed.turns.findIndex(t => t.id === combatantId);
           this.viewed.activateCombatant(turnToActivate);
         }

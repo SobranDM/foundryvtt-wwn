@@ -1,57 +1,57 @@
-<div class="wwn chat-card item-card" data-actor-id="{{data.actor._id}}" data-item-id="{{data.item._id}}"
-    {{#if tokenId}}data-token-id="{{tokenId}}" {{/if}}>
-    <div class="wwn chat-block">
-        <div class="flexrow chat-header">
-            <div class="chat-title">
-                <h2>{{title}}</h2>
-            </div>
-            {{#if data.item}}
-            <div class="chat-img" style="background-image:url('{{data.item.img}}')"></div>
-            {{else}}
-            <div class="chat-img" style="background-image:url('{{data.actor.img}}')"></div>
-            {{/if}}
-        </div>
-        {{#if result.victim}}
-        <div class="chat-target">
-            vs {{result.victim}}
-        </div>
-        {{/if}}
-        <div class="blindable" data-blind="{{data.roll.blindroll}}">
-            <div class="chat-details">
-                <div class="roll-result">{{{result.details}}}</div>
-            </div>
-            {{#if rollWWN}}<div title="{{rollTitle}}">{{{rollWWN}}}</div>{{/if}}
-            {{#if result.isSuccess}}
-            <div class="chat-details">
-                <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>
-            </div>
-            <div class="damage-roll" title="{{dmgTitle}}">{{{rollDamage}}}</div>
-            {{/if}}
-            {{#if (nt data.item.system.shock.damage null)}}
-            {{#if data.item.system.shock.ac}}
-            <div class="chat-details shock-message">
-                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    <span class="dice-total">{{data.item.system.shockTotal}}</span>
-                    {{localize 'WWN.messages.applyShock2'}}{{data.item.system.shock.ac}}</b>
-                </div>
-            </div>
-            {{/if}}
-            {{#unless data.item.system.shock.ac}}
-            <div class="chat-details shock-message">
-                <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
-                    <span class="dice-total">{{data.item.system.shockTotal}}</span>
-                    {{localize 'WWN.messages.applyShockAlt'}}</b>
-                </div>
-            </div>
-            {{/unless}}
-            {{/if}}
-            {{#if data.roll.save}}
-            <div class="card-buttons">
-                <button data-action="save" data-save="{{data.roll.save}}">
-                    {{lookup config.saves data.roll.save}} - {{localize "WWN.spells.Save"}}
-                </button>
-            </div>
-            {{/if}}
-        </div>
+<div class="wwn chat-card item-card" data-actor-id="{{data.actor._id}}" data-item-id="{{data.item._id}}" {{#if
+  tokenId}}data-token-id="{{tokenId}}" {{/if}}>
+  <div class="wwn chat-block">
+    <div class="flexrow chat-header">
+      <div class="chat-title">
+        <h2>{{title}}</h2>
+      </div>
+      {{#if data.item}}
+      <div class="chat-img" style="background-image:url('{{data.item.img}}')"></div>
+      {{else}}
+      <div class="chat-img" style="background-image:url('{{data.actor.img}}')"></div>
+      {{/if}}
     </div>
+    {{#if result.victim}}
+    <div class="chat-target">
+      vs {{result.victim}}
+    </div>
+    {{/if}}
+    <div class="blindable" data-blind="{{data.roll.blindroll}}">
+      <div class="chat-details">
+        <div class="roll-result">{{{result.details}}}</div>
+      </div>
+      {{#if rollWWN}}<div title="{{rollTitle}}">{{{rollWWN}}}</div>{{/if}}
+      {{#if result.isSuccess}}
+      <div class="chat-details">
+        <div class="roll-result"><b>{{localize 'WWN.messages.InflictsDamage'}}</b></div>
+      </div>
+      <div class="damage-roll" title="{{dmgTitle}}">{{{rollDamage}}}</div>
+      {{/if}}
+      {{#if (nt data.item.system.shock.damage null)}}
+      {{#if data.item.system.shock.ac}}
+      <div class="chat-details shock-message">
+        <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
+            <span class="dice-total">{{data.item.system.shockTotal}}</span>
+            {{localize 'WWN.messages.applyShock2'}}{{data.item.system.shock.ac}}</b>
+        </div>
+      </div>
+      {{/if}}
+      {{#unless data.item.system.shock.ac}}
+      <div class="chat-details shock-message">
+        <div class="roll-result"><b>{{localize 'WWN.messages.applyShock1'}}
+            <span class="dice-total">{{data.item.system.shockTotal}}</span>
+            {{localize 'WWN.messages.applyShockAlt'}}</b>
+        </div>
+      </div>
+      {{/unless}}
+      {{/if}}
+      {{#if data.roll.save}}
+      <div class="card-buttons">
+        <button data-action="save" data-save="{{data.roll.save}}">
+          {{lookup config.saves data.roll.save}} - {{localize "WWN.spells.Save"}}
+        </button>
+      </div>
+      {{/if}}
+    </div>
+  </div>
 </div>

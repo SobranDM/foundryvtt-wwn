@@ -604,28 +604,30 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     // Show / hide skill buttons
     html.find(".lock-skills").click((ev) => {
       ev.preventDefault();
-      const lock = $(ev.currentTarget).data("type") == "lock" ? true : false;
+      const lock = ev.currentTarget.dataset.type === "lock";
+
+      // Get all relevant elements
+      const elements = {
+        lockBtn: html[0].querySelector(".lock-skills.lock"),
+        unlockBtn: html[0].querySelector(".lock-skills.unlock"),
+        skillLocks: Array.from(html[0].querySelectorAll(".skill-lock")),
+        reverseLocks: Array.from(html[0].querySelectorAll(".reverse-lock"))
+      };
+
+      // Toggle visibility using Foundry's UI methods
       if (lock) {
-        html.find(".lock-skills.unlock").css("display", "inline-block");
-        html.find(".lock-skills.lock").hide();
+        // When locking: hide skill controls, show reverse controls
+        elements.lockBtn.classList.add("hidden");
+        elements.unlockBtn.classList.remove("hidden");
+        elements.skillLocks.forEach(el => el.classList.add("hidden"));
+        elements.reverseLocks.forEach(el => el.classList.remove("hidden"));
       } else {
-        html.find(".lock-skills.unlock").hide();
-        html.find(".lock-skills.lock").css("display", "inline-block");
+        // When unlocking: show skill controls, hide reverse controls
+        elements.lockBtn.classList.remove("hidden");
+        elements.unlockBtn.classList.add("hidden");
+        elements.skillLocks.forEach(el => el.classList.remove("hidden"));
+        elements.reverseLocks.forEach(el => el.classList.add("hidden"));
       }
-      html.find(".skill-lock").each(function () {
-        if (lock) {
-          $(this).hide();
-        } else {
-          $(this).show();
-        }
-      });
-      html.find(".reverse-lock").each(function () {
-        if (!lock) {
-          $(this).hide();
-        } else {
-          $(this).show();
-        }
-      });
     });
   }
 }

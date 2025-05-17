@@ -1,3 +1,7 @@
-2025/04/12-10:09:40.484 4cfc Recovering log #2533
-2025/04/12-10:09:40.490 4cfc Delete type=0 #2533
-2025/04/12-10:09:40.490 4cfc Delete type=3 #2531
+2025/05/16-21:25:38.588 2768 Recovering log #2546
+2025/05/16-21:25:38.593 2768 Delete type=0 #2546
+2025/05/16-21:25:38.594 2768 Delete type=3 #2544
+2025/05/16-21:27:38.531 6df4 Level-0 table #2551: started
+2025/05/16-21:27:38.531 6df4 Level-0 table #2551: 0 bytes OK
+2025/05/16-21:27:38.533 6df4 Delete type=0 #2549
+2025/05/16-21:27:38.535 6df4 Manual compaction at level-0 from '!actors!10U4LXXp9gppkdBa' @ 72057594037927935 : 1 .. '!actors.items!zTOCQJdPXWIJEDCY.S0yd6HpyVQzIz5kN' @ 0 : 0; will stop at (end)

@@ -7,6 +7,7 @@ export class WWNGroupCombatant extends WWNCombatant {
 
   get groupRaw() {
     const assignedGroup = this.getFlag(game.system.id, "group");
+
     if (assignedGroup)
       return assignedGroup;
 
@@ -17,6 +18,7 @@ export class WWNGroupCombatant extends WWNCombatant {
       const disposition = token.document.disposition;
       const alertTwo = token.document.delta.syntheticActor.system.initiative.alertTwo;
       if (alertTwo || token.document.delta.syntheticActor.type === "faction") return "black";
+
       switch (disposition) {
         case -1:
           return "red";
@@ -31,6 +33,8 @@ export class WWNGroupCombatant extends WWNCombatant {
   }
 
   set group(value) {
-    this.setFlag(game.system.id, 'group', value || 'black');
+    if (value !== undefined && value !== null) {
+      this.setFlag(game.system.id, 'group', value);
+    }
   }
 }
