@@ -99,4 +99,12 @@ export const registerHelpers = async function () {
   Handlebars.registerHelper("log", function (obj) {
     return console.log(obj);
   });
+
+  Handlebars.registerHelper("hasSuccessfulSaves", function (results) {
+    return results.some(result => result.isSuccess);
+  });
+
+  Handlebars.registerHelper("hasFailedSaves", function (results) {
+    return results.some(result => !result.isSuccess);
+  });
 };

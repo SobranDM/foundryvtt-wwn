@@ -6,6 +6,11 @@
 
 - All testing efforts were done in v13's Dark mode. The sheet was never designed with v13's theming in mind and it turned out to be pretty difficult to attempt to add it this late in the game. Light mode will _probably_ work fine but don't be surprised if there are small visual issues here and there.
 
+### Known Issue
+
+- Rerolling an individual rerolls all combatants.
+- If two groups ends up with the same initiative value, all combatants will display with decimals. This is a janky workaround to prevent groups with identical initiatives from ending up mixed in the tracker. Doing it the "right" way proved more trouble than it was worth.
+
 ### Changes
 
 - Added container items.
@@ -21,6 +26,7 @@
     - Combined Arts + Spells + Foci and Abilities into a single Abilities compendium.
     - Combined Adventuring Gear + Weapons + Armor into a single Gear compendium.
     - Fixed various errors and inconsistencies. If you spot any I missed, please report them.
+    - Added SRD content, including Deluxe and Atlas classes. Shoutout to pandaniel and Zi-SH on the Discord for their help doing data entry on this one.
   - Added icons to most gear items.
     - A few bits of adventuring gear didn't have anything suitable in Foundry's icon collection.
     - The shields share a single icon, as do two pieces of mail armor, due to limited selection in said collection.
@@ -40,13 +46,16 @@
     - Fixed faction attacks forcing attacks to be against certain asset types.
 - Fixed an error with monster saves.
   - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
+- Clicking a save button on a chat card has been vastly improved.
+  - Now opens a dialog asking for a universal modifier and has individual modifier overrides for each selected token.
+  - Rolls all saves at once and outputs a single chat card containing the results.
 - Fixed weapon charges not displaying on inventory tab.
 - Possible fix for an Item Piles interaction.
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.
-- Initiative updates.
-  - Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project!
-  - Fixed Alert 1 not providing a group bonus when Alert combatant's initiative is not the highest within the group.
-  - Updating the initiative of one member of a group should update the initiative of all members.
+- Completely reworked initiative, fixing group initiative and a handful of other issues such as reroll and reset. Shoutout to wyrmisis who gave me permission to use their solution from the OSE project!
+- Fixed Alert 1 not providing a group bonus when Alert combatant's initiative is not the highest within the group.
+- Updating the initiative of one member of a group should update the initiative of all members.
+- Initiative rolls are now grouped into a single chat card instead of spamming the chat.
 
 ## New in 1.4.6
 

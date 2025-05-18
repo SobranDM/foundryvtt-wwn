@@ -8,46 +8,103 @@
  * @return {Array}              The extended options Array including new context choices
  */
 export const addChatMessageContextOptions = function (html, options) {
-  let canApply = (li) =>
-    canvas.tokens.controlled.length && li.find(".dice-roll").length;
-  options.push(
+  /**
+   * Determines if damage can be applied from this message
+   * @param {HTMLElement} li    The chat message element
+   * @return {boolean}          Whether damage can be applied
+   */
+  const canApply = (li) => {
+    const message = game.messages.get(li.dataset.messageId);
+    if (!canvas.tokens.controlled.length) return false;
+
+    // Check for v13 style rolls
+    if (message.rolls?.length) return true;
+
+    // Check for legacy style rolls in content
+    if (message.content) {
+      return message.content.includes("damage-roll") ||
+        message.content.includes("dice-roll");
+    }
+
+    return false;
+  };
+
+  /**
+   * Extracts the damage amount from a chat message
+   * @param {ChatMessage} message    The chat message to extract from
+   * @return {number|null}           The damage amount, or null if not found
+   */
+  const getDamageAmount = (message) => {
+    // Case 1: Message has rolls (v13)
+    if (message.rolls?.length) {
+      return message.rolls[0].total;
+    }
+
+    // Case 2: Legacy damage roll in content
+    if (message.content) {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = message.content;
+
+      // Try both damage-roll and dice-roll elements
+      const damageRoll = tempDiv.querySelector('.damage-roll .part-total, .dice-roll .dice-total');
+      if (damageRoll) {
+        return Number(damageRoll.textContent);
+      }
+    }
+
+    return null;
+  };
+
+  // Define the damage application options
+  const damageOptions = [
     {
       name: game.i18n.localize("WWN.messages.applyDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, 1, 1),
+      multiplier: 1
     },
     {
       name: game.i18n.localize("WWN.messages.applyHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, -1, 1),
+      multiplier: -1
     },
     {
       name: game.i18n.localize("WWN.messages.applyHalfDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, 0.5, 1),
+      multiplier: 0.5
     },
     {
       name: game.i18n.localize("WWN.messages.applyHalfHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, -0.5, 1),
+      multiplier: -0.5
     },
     {
       name: game.i18n.localize("WWN.messages.applyDoubleDamage"),
       icon: '<i class="fas fa-user-minus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, 2, 1),
+      multiplier: 2
     },
     {
       name: game.i18n.localize("WWN.messages.applyDoubleHealing"),
       icon: '<i class="fas fa-user-plus"></i>',
-      condition: canApply,
-      callback: (li) => applyChatCardDamage(li, -2, 1),
+      multiplier: -2
     }
-  );
+  ];
+
+  // Add each damage option to the context menu
+  damageOptions.forEach(opt => {
+    options.push({
+      name: opt.name,
+      icon: opt.icon,
+      condition: canApply,
+      callback: (li) => {
+        const message = game.messages.get(li.dataset.messageId);
+        const damage = getDamageAmount(message);
+        if (damage !== null) {
+          applyChatCardDamage(damage, opt.multiplier);
+        }
+      }
+    });
+  });
+
   return options;
 };
 
@@ -69,19 +126,13 @@ export const addChatMessageButtons = function (msg, html, data) {
   // Buttons
   let roll = html.find(".damage-roll");
   if (roll.length > 0) {
-    let total = roll.find(".dice-total");
-    let value = total.text();
     roll.append(
       $(
         `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
-          game.i18n.localize("WWN.messages.applyDamage") +
-          `"><i class="fas fa-tint"></i></button></div>`
+        game.i18n.localize("WWN.messages.applyDamage") +
+        `"><i class="fas fa-tint"></i></button></div>`
       )
     );
-    roll.find('button[data-action="apply-damage"]').click((ev) => {
-      ev.preventDefault();
-      applyChatCardDamage(roll, 1, 0);
-    });
   }
 
   const shockMessage = html.find(".shock-message");
@@ -89,14 +140,10 @@ export const addChatMessageButtons = function (msg, html, data) {
     shockMessage.append(
       $(
         `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
-          game.i18n.localize("WWN.messages.applyShockDamage") +
-          `"><i class="fas fa-tint"></i></button></div>`
+        game.i18n.localize("WWN.messages.applyShockDamage") +
+        `"><i class="fas fa-tint"></i></button></div>`
       )
     );
-    shockMessage.find('button[data-action="apply-damage"]').click((ev) => {
-      ev.preventDefault();
-      applyChatCardDamage(shockMessage, 1, 0);
-    });
   }
 };
 
@@ -104,17 +151,13 @@ export const addChatMessageButtons = function (msg, html, data) {
  * Apply rolled dice damage to the token or tokens which are currently controlled.
  * This allows for damage to be scaled by a multiplier to account for healing, critical hits, or resistance
  *
- * @param {HTMLElement} roll    The chat entry which contains the roll data
- * @param {Number} multiplier   A damage multiplier to apply to the rolled damage.
+ * @param {Number} amount        The base damage amount to apply
+ * @param {Number} multiplier    A damage multiplier to apply to the rolled damage.
  * @return {Promise}
  */
-async function applyChatCardDamage(roll, multiplier, index) {
-  const diceTotals = roll.find(".dice-total");
+export async function applyChatCardDamage(amount, multiplier) {
   const targets = canvas.tokens.controlled;
-  const amount =
-    diceTotals.length > 1
-      ? Number(diceTotals[index].textContent)
-      : Number(diceTotals[0].textContent);
+
   const title =
     multiplier > 0
       ? `Applied ${Math.floor(amount * multiplier)} damage`
@@ -126,14 +169,14 @@ async function applyChatCardDamage(roll, multiplier, index) {
     body: `<ul><li>${targets
       .map((t) => t.name)
       .join("</li><li>")}</li></ul>`,
-      image: image
+    image: image
   };
 
   const template = "systems/wwn/templates/chat/apply-damage.html";
   const html = await renderTemplate(template, templateData);
 
   const chatData = {
-    user: game.user_id,
+    user: game.user.id,
     content: html
   };
 

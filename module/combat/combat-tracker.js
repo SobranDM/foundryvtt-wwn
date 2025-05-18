@@ -44,7 +44,7 @@ export class WWNCombatTracker {
       // Apply color gradient based on group
       const group = combatantObj.group;
       const color = groupColors[group] || groupColors.white;
-      tokenName.style.background = `linear-gradient(90deg, ${color}33, transparent)`;
+      tokenName.style.background = `linear-gradient(90deg, ${color}66, transparent)`;
       tokenName.style.borderRadius = "4px";
       tokenName.style.padding = "2px";
 

@@ -76,7 +76,6 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
    * @private
    */
   async _onUpdateInitiative(event) {
-
     // Let Foundry handle the base initiative update
     await super._onUpdateInitiative(event);
 
@@ -100,6 +99,42 @@ export class WWNCombatTab extends foundry.applications.sidebar.tabs.CombatTracke
     }));
 
     await this.viewed.updateEmbeddedDocuments("Combatant", updates);
+
+    // Check for ties after updating initiative
+    const groups = [...new Set(this.viewed.combatants.map(c => c.group))]
+      .map(group => {
+        const combatants = this.viewed.combatants.filter(c => c.group === group);
+        const initiative = Math.max(...combatants.map(c => c.initiative));
+        return { group, initiative };
+      });
+
+    // Find groups with the same initiative
+    const initiativeValues = new Map();
+    for (const { group, initiative } of groups) {
+      if (group === "black") continue; // Skip black group
+      if (!initiativeValues.has(initiative)) {
+        initiativeValues.set(initiative, []);
+      }
+      initiativeValues.get(initiative).push(group);
+    }
+
+    // For each tie, randomly select one group to get a small bonus
+    const tieUpdates = [];
+    for (const [value, tiedGroups] of initiativeValues.entries()) {
+      if (tiedGroups.length > 1) {
+        // Randomly select one group to get the bonus
+        const selectedGroup = tiedGroups[Math.floor(Math.random() * tiedGroups.length)];
+        const groupCombatants = this.viewed.combatants.filter(c => c.group === selectedGroup);
+        tieUpdates.push(...groupCombatants.map(c => ({
+          _id: c.id,
+          initiative: value + 0.001
+        })));
+      }
+    }
+
+    if (tieUpdates.length > 0) {
+      await this.viewed.updateEmbeddedDocuments("Combatant", tieUpdates);
+    }
   }
 
   async #toggleFlag(combatant, flag) {

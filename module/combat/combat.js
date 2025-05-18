@@ -83,44 +83,50 @@ export class WWNCombat extends Combat {
   }
 
   async #rollInitiativeUIFeedback(results = {}) {
-    const content = [
-      Object.entries(results).map(
-        ([id, result]) => this.#constructInitiativeOutputForIndividual(id, result.roll)
-      ).join("\n")
-    ];
-    const chatData = content.map(c => {
-      return {
-        speaker: { alias: game.i18n.localize("WWN.Initiative") },
-        sound: CONFIG.sounds.dice,
-        content: c
-      };
-    });
-    ChatMessage.implementation.createDocuments(chatData);
-  }
+    // Collect all roll results
+    const rollResults = [];
 
-  #constructInitiativeOutputForIndividual(id, roll) {
-    const combatant = this.combatants.get(id);
-    if (!combatant) return '';
+    // Process each combatant's roll
+    for (const [id, result] of Object.entries(results)) {
+      const combatant = this.combatants.get(id);
+      if (!combatant) continue;
 
-    return `
-    <p>${game.i18n.format("WWN.roll.initiative", { group: combatant.name })}
-    <div class="dice-roll">   
-      <div class="dice-result">
-        <div class="dice-formula">${roll.formula}</div>
-          <div class="dice-tooltip">
-                <section class="tooltip-part">
-                  <div class="dice">
-                      <header class="part-header flexrow">
-                          <span class="part-formula">${roll.formula}</span>
-                          <span class="part-total">${roll.total}</span>
-                      </header>
-                  </div>
-                </section>
-          </div>
-        <h4 class="dice-total">${roll.total}</h4>
-      </div>
-    </div>
-  `;
+      const rollWWN = await result.roll.render();
+      rollResults.push({
+        group: combatant.name,
+        rollWWN,
+        roll: result.roll
+      });
+    }
+
+    // Sort results by initiative (highest first)
+    rollResults.sort((a, b) => b.roll.total - a.roll.total);
+
+    // Create a single chat message with all rolls
+    const content = `
+      <div class="initiative-header">Individual Initiative</div>
+      ${rollResults.map(result => `
+        <div class="initiative-roll">
+          <div class="roll-header">${result.group}</div>
+          ${result.rollWWN}
+        </div>
+      `).join('')}
+    `;
+
+    const chatData = {
+      speaker: { alias: game.i18n.localize("WWN.Initiative") },
+      sound: CONFIG.sounds.dice,
+      content: `<div class="wwn chat-message"><div class="wwn chat-block">${content}</div></div>`
+    };
+
+    // Handle Dice So Nice for all rolls
+    if (game.dice3d) {
+      for (const result of rollResults) {
+        await game.dice3d.showForRoll(result.roll, game.user, true);
+      }
+    }
+
+    await ChatMessage.create(chatData);
   }
 
   // ===========================================================================
