@@ -30,11 +30,16 @@ export class WwnPartySheet extends FormApplication {
    * @return {Object}
    */
   getData() {
+    // Get all actors that are marked as party members
+    const partyActors = game.actors.filter(e => e.type === "character" && e.flags.wwn?.party === true);
+
     let data = {
-      data: this.object,
+      data: {
+        documents: partyActors  // Match the template's expected structure
+      },
       config: CONFIG.WWN,
       user: game.user,
-      settings: settings
+      settings: game.settings
     };
     return data;
   }
@@ -106,6 +111,6 @@ export class WwnPartySheet extends FormApplication {
       game.actors.get(actorId).sheet.render(true);
     });
 
-    addEventListener(html, 'drop', (ev) => { this._onDrop(ev.originalEvent); });
+    html.on('drop', (ev) => this._onDrop(ev.originalEvent));
   }
 }

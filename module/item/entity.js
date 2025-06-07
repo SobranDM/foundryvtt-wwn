@@ -141,7 +141,6 @@ export class WwnItem extends Item {
         // Apply the damage multiplier
         const multiplier = parseFloat(button.dataset.damageMultiplier) || 1;
         const finalAmount = Math.floor(amount * multiplier);
-        console.log(`Applying damage: ${amount} × ${multiplier} = ${finalAmount}`);
         applyChatCardDamage(finalAmount, 1);
         return;
       } else {

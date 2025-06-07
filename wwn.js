@@ -127,10 +127,11 @@ Hooks.once("ready", async () => {
 });
 
 // License and KOFI infos
+Hooks.on("renderActorDirectory", async (app, html, data) => {
+  party.addControl(app, html);
+});
+
 Hooks.on("renderSidebarTab", async (object, html) => {
-  if (object instanceof ActorDirectory) {
-    party.addControl(object, html);
-  }
   if (object instanceof Settings) {
     let gamesystem = html.find("#game-details");
     // SRD Link
@@ -141,13 +142,12 @@ Hooks.on("renderSidebarTab", async (object, html) => {
     const template = "systems/wwn/templates/chat/license.html";
     const rendered = await renderTemplate(template);
     gamesystem.find(".system").append(rendered);
-
   }
 });
 
 Hooks.on("preCreateToken", WWNCombat.preCreateToken);
 Hooks.on("renderChatLog", (app, html, data) => WwnItem.chatListeners(html));
-Hooks.on("renderChatMessage", (app, html, data) => WwnItem.chatListeners(html));
+Hooks.on("renderChatMessageHTML", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
 Hooks.on("renderRollTableConfig", treasure.augmentTable);
 Hooks.on("updateActor", party.update);
