@@ -108,45 +108,6 @@ export const addChatMessageContextOptions = function (html, options) {
   return options;
 };
 
-/* -------------------------------------------- */
-
-export const addChatMessageButtons = function (msg, html, data) {
-  // Hide blind rolls
-  let blindable = html.find(".blindable");
-  if (
-    msg.blind &&
-    !game.user.isGM &&
-    blindable &&
-    blindable.data("blind") === true
-  ) {
-    blindable.replaceWith(
-      "<div class='dice-roll'><div class='dice-result'><div class='dice-formula'>???</div></div></div>"
-    );
-  }
-  // Buttons
-  let roll = html.find(".damage-roll");
-  if (roll.length > 0) {
-    roll.append(
-      $(
-        `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
-        game.i18n.localize("WWN.messages.applyDamage") +
-        `"><i class="fas fa-tint"></i></button></div>`
-      )
-    );
-  }
-
-  const shockMessage = html.find(".shock-message");
-  if (shockMessage.length > 0) {
-    shockMessage.append(
-      $(
-        `<div class="dice-damage"><button type="button" data-action="apply-damage" title="` +
-        game.i18n.localize("WWN.messages.applyShockDamage") +
-        `"><i class="fas fa-tint"></i></button></div>`
-      )
-    );
-  }
-};
-
 /**
  * Apply rolled dice damage to the token or tokens which are currently controlled.
  * This allows for damage to be scaled by a multiplier to account for healing, critical hits, or resistance

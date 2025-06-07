@@ -1,7 +1,3 @@
-2025/05/17-17:10:56.405 5adc Recovering log #2580
-2025/05/17-17:10:56.413 5adc Delete type=0 #2580
-2025/05/17-17:10:56.413 5adc Delete type=3 #2578
-2025/05/17-17:28:03.551 8b0 Level-0 table #2585: started
-2025/05/17-17:28:03.551 8b0 Level-0 table #2585: 0 bytes OK
-2025/05/17-17:28:03.553 8b0 Delete type=0 #2583
-2025/05/17-17:28:03.559 8b0 Manual compaction at level-0 from '!actors!00UAmjX4P9e6jdWy' @ 72057594037927935 : 1 .. '!actors.items!zJMnx1wRAIOqef5J.zXVsvgBihUeTTvFa' @ 0 : 0; will stop at (end)
+2025/05/17-17:28:07.302 5524 Recovering log #2584
+2025/05/17-17:28:07.308 5524 Delete type=0 #2584
+2025/05/17-17:28:07.309 5524 Delete type=3 #2582

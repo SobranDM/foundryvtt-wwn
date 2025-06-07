@@ -112,55 +112,40 @@ export class WwnItem extends Item {
     if (!messageObj) return;
 
     // Handle damage buttons (both types)
-    if (button.dataset.action === 'damage' || button.dataset.action === 'apply-damage') {
-      // Get the card that contains this button
-      const card = button.closest('.wwn.chat-card, .chat-card, .message-content');
-      if (!card) {
-        console.warn("Could not find chat card for damage button");
+    const action = button.dataset.action;
+
+    if (action === 'apply-damage' || action === 'apply-shock') {
+      // Check for selected tokens
+      const targets = this._getChatCardTargets(card);
+      if (!targets.length) {
+        ui.notifications.warn("You must have one or more tokens selected to apply damage.");
         return;
       }
 
-      // Check if this is a shock damage button
-      const isShockDamage = button.closest('.shock-message') !== null;
-
       let amount;
-      if (isShockDamage) {
-        // For shock damage, get the value from the shock message
-        const shockMessage = button.closest('.shock-message');
-        const shockTotal = shockMessage.querySelector('.dice-total');
-        if (!shockTotal) {
-          console.warn("Could not find shock damage total");
-          return;
-        }
-        amount = parseInt(shockTotal.textContent);
+
+      if (action === 'apply-shock') {
+        // For shock damage, we can parse the number directly
+        amount = parseInt(button.dataset.damage);
       } else {
-        // For regular damage, get the value from the damage roll
-        const damageSection = card.querySelector('.damage-roll, .dice-roll');
-        if (!damageSection) {
-          console.warn("Could not find damage section in card:", card.innerHTML);
-          return;
+        // For regular damage, we need to parse the HTML string
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = button.dataset.damage;
+        const diceTotal = tempDiv.querySelector('.dice-total');
+        if (diceTotal) {
+          amount = parseInt(diceTotal.textContent);
         }
-
-        const damageRoll = damageSection.querySelector('.dice-roll, .part-total');
-        if (!damageRoll) {
-          console.warn("Could not find damage roll in damage section");
-          return;
-        }
-
-        const total = damageRoll.querySelector('.dice-total, .part-total');
-        if (!total) {
-          console.warn("Could not find damage total");
-          return;
-        }
-
-        amount = parseInt(total.textContent);
       }
 
       if (!isNaN(amount)) {
-        applyChatCardDamage(amount, 1);
+        // Apply the damage multiplier
+        const multiplier = parseFloat(button.dataset.damageMultiplier) || 1;
+        const finalAmount = Math.floor(amount * multiplier);
+        console.log(`Applying damage: ${amount} × ${multiplier} = ${finalAmount}`);
+        applyChatCardDamage(finalAmount, 1);
         return;
       } else {
-        console.warn("Failed to parse damage amount");
+        console.warn("Failed to parse damage amount:", button.dataset.damage);
       }
     }
 

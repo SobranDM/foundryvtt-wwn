@@ -26,7 +26,7 @@
     - Combined Arts + Spells + Foci and Abilities into a single Abilities compendium.
     - Combined Adventuring Gear + Weapons + Armor into a single Gear compendium.
     - Fixed various errors and inconsistencies. If you spot any I missed, please report them.
-    - Added SRD content, including Deluxe and Atlas classes. Shoutout to pandaniel and Zi-SH on the Discord for their help doing data entry on this one.
+    - Added SRD class content, including Deluxe and Atlas classes. Shoutout to pandaniel and Zi-SH on the Discord for their help doing data entry on this one.
   - Added icons to most gear items.
     - A few bits of adventuring gear didn't have anything suitable in Foundry's icon collection.
     - The shields share a single icon, as do two pieces of mail armor, due to limited selection in said collection.

@@ -149,6 +149,5 @@ Hooks.on("preCreateToken", WWNCombat.preCreateToken);
 Hooks.on("renderChatLog", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("renderChatMessage", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
-Hooks.on("renderChatMessage", chat.addChatMessageButtons);
 Hooks.on("renderRollTableConfig", treasure.augmentTable);
 Hooks.on("updateActor", party.update);

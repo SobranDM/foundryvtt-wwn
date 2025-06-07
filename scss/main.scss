@@ -1188,9 +1188,17 @@
 
       button {
         font-size: 12px;
-        height: 24px;
-        line-height: 20px;
+        height: 14px;
         margin: 2px 0;
+        width: 100%;
+
+        &.middle {
+          margin: 4px 4px;
+        }
+
+        &.double-width {
+          flex-grow: 2;
+        }
       }
     }
 
