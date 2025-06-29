@@ -70,8 +70,10 @@ export class WwnPartySheet extends FormApplication {
 
   async _selectActors(ev) {
     const template = "systems/wwn/templates/apps/party-select.html";
+    // Get all character actors, not just party members
+    const allCharacterActors = game.actors.filter(e => e.type === "character");
     const templateData = {
-      actors: this.object.documents
+      actors: allCharacterActors
     }
     const content = await renderTemplate(template, templateData);
     new Dialog({
@@ -85,8 +87,10 @@ export class WwnPartySheet extends FormApplication {
             let checks = html.find("input[data-action='select-actor']");
             checks.each(async (_, c) => {
               let key = c.getAttribute('name');
-              await this.object.documents[key].setFlag('wwn', 'party', c.checked);
+              await allCharacterActors[key].setFlag('wwn', 'party', c.checked);
             });
+            // Force a rerender of the party sheet after updating actors
+            this.render(true);
           },
         },
       },
