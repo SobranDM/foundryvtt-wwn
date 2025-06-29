@@ -50,6 +50,14 @@
   - Now opens a dialog asking for a universal modifier and has individual modifier overrides for each selected token.
   - Rolls all saves at once and outputs a single chat card containing the results.
 - Added support for Godbound damage.
+  - This is activated in system settings.
+  - When on, the damage buttons are changed to only the following:
+    - Apply Damage <-- this is normal damage
+    - Apply Healing
+    - Straight Damage <-- applies the damage straight
+    - Straight Healing
+  - The actual die rolls don't display in the normal Foundry way, so be away of that. You still see the values.
+  - Because the "normal damage" values are passed through a table and your attribute bonus dynamically applied to whichever would be most beneficial, the normal damage and straight damage values won't match exactly. This is to be expected. I'm not sure how to better communicate this to the user.
 - Fixed weapon charges not displaying on inventory tab.
 - Possible fix for an Item Piles interaction.
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.
