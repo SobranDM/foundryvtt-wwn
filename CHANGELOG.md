@@ -49,6 +49,7 @@
 - Clicking a save button on a chat card has been vastly improved.
   - Now opens a dialog asking for a universal modifier and has individual modifier overrides for each selected token.
   - Rolls all saves at once and outputs a single chat card containing the results.
+- Added support for Godbound damage.
 - Fixed weapon charges not displaying on inventory tab.
 - Possible fix for an Item Piles interaction.
 - Moved party sheet button so it is no longer hidden by Foundry's search button in the actors tab.

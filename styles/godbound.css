@@ -1,0 +1,30 @@
+.godbound-conversion {
+  padding: 4px 8px;
+  margin: 4px 0;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.godbound-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.godbound-label {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
+.godbound-values {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.1em;
+  color: #333;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 auto;
+}

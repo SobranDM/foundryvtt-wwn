@@ -236,7 +236,16 @@ export const registerSettings = function () {
     type: Boolean,
     config: true,
     requiresReload: true
+  });
 
+  game.settings.register("wwn", "godboundDamage", {
+    name: "Godbound Damage",
+    hint: "Use Godbound-style damage calculation for attacks.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: false
   });
 
   game.settings.register("wwn", "systemMigrationVersion", {

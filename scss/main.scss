@@ -1243,6 +1243,45 @@
 }
 
 /* ----------------------------------------- */
+/*  Godbound Styles                          */
+/* ----------------------------------------- */
+
+.godbound-conversion {
+  padding: 4px 8px;
+  margin: 4px auto;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.godbound-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+}
+
+.godbound-label {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.godbound-values {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9em;
+  color: #333;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* ----------------------------------------- */
 /*  Sheet Styles                             */
 /* ----------------------------------------- */
 /* ----------------------------------------- */

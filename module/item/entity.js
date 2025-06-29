@@ -55,13 +55,21 @@ export class WwnItem extends Item {
     // Handle both jQuery objects and raw HTML strings
     let cards;
     if (html instanceof jQuery) {
-      // Look for both chat cards and save results within chat messages
+      // Old renderChatLog hook - html is a jQuery object
       cards = html.find('.chat-card, .chat-message .save-results, .chat-message .save-header');
       // Convert jQuery object to array for consistent handling
       cards = Array.from(cards);
-    } else {
+    } else if (typeof html === 'string') {
+      // New renderChatMessageHTML hook - html is a string
       const container = document.createElement('div');
       container.innerHTML = html;
+      cards = Array.from(container.querySelectorAll('.chat-card, .chat-message .save-results, .chat-message .save-header'));
+    } else {
+      // Handle other cases (like HTMLElement)
+      const container = html instanceof HTMLElement ? html : document.createElement('div');
+      if (!(html instanceof HTMLElement)) {
+        container.innerHTML = html;
+      }
       cards = Array.from(container.querySelectorAll('.chat-card, .chat-message .save-results, .chat-message .save-header'));
     }
 
@@ -128,12 +136,46 @@ export class WwnItem extends Item {
         // For shock damage, we can parse the number directly
         amount = parseInt(button.dataset.damage);
       } else {
-        // For regular damage, we need to parse the HTML string
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = button.dataset.damage;
-        const diceTotal = tempDiv.querySelector('.dice-total');
-        if (diceTotal) {
-          amount = parseInt(diceTotal.textContent);
+        // Check if Godbound damage is enabled
+        if (game.settings.get("wwn", "godboundDamage")) {
+          // GODBOUND DAMAGE HANDLING
+          // First, try to parse as a direct number (for straight damage buttons)
+          amount = parseInt(button.dataset.damage);
+
+          // If that fails, it's HTML content that needs parsing
+          if (isNaN(amount)) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = button.dataset.damage;
+
+            // Look for the Godbound damage total in the conversion display
+            const godboundValues = tempDiv.querySelectorAll('.godbound-values');
+            if (godboundValues.length >= 1) {
+              // The first godbound-values element contains "Normal Damage" which is actually Godbound damage
+              const normalDamageText = godboundValues[0].textContent;
+              // Extract the total from the end of the string (after the = sign)
+              const match = normalDamageText.match(/= (\d+)$/);
+              if (match) {
+                amount = parseInt(match[1]);
+              }
+            }
+
+            // If we couldn't find Godbound damage, fall back to normal parsing
+            if (isNaN(amount)) {
+              const diceTotal = tempDiv.querySelector('.dice-total');
+              if (diceTotal) {
+                amount = parseInt(diceTotal.textContent);
+              }
+            }
+          }
+        } else {
+          // NORMAL DAMAGE HANDLING (existing code)
+          // For regular damage, we need to parse the HTML string
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = button.dataset.damage;
+          const diceTotal = tempDiv.querySelector('.dice-total');
+          if (diceTotal) {
+            amount = parseInt(diceTotal.textContent);
+          }
         }
       }
 
@@ -141,7 +183,7 @@ export class WwnItem extends Item {
         // Apply the damage multiplier
         const multiplier = parseFloat(button.dataset.damageMultiplier) || 1;
         const finalAmount = Math.floor(amount * multiplier);
-        applyChatCardDamage(finalAmount, 1);
+        applyChatCardDamage(amount, multiplier);
         return;
       } else {
         console.warn("Failed to parse damage amount:", button.dataset.damage);
@@ -1398,3 +1440,6 @@ export class WwnItem extends Item {
     }
   }
 }
+
+
+
