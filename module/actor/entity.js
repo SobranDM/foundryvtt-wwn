@@ -1262,6 +1262,7 @@ export class WwnActor extends Actor {
     Object.keys(scores).map((score) => {
       let newMod =
         this.system.scores[score].tweak +
+        this.system.scores[score].bonus +
         WwnActor._valueFromTable(table, scores[score].value);
       this.system.scores[score].mod = newMod;
     });

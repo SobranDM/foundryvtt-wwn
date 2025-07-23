@@ -10,9 +10,12 @@
 
 - Rerolling an individual rerolls all combatants.
 - If two groups ends up with the same initiative value, all combatants will display with decimals. This is a janky workaround to prevent groups with identical initiatives from ending up mixed in the tracker. Doing it the "right" way proved more trouble than it was worth.
+- There are a few broken links in amongst the items, though most should be fixed.
 
 ### Changes
 
+- Added `bonus` as a target for Active Effects to adjust attribute mods without using Tweaks.
+  - Example: `system.scores.str.bonus`
 - Added container items.
   - If a container is equipped or stowed, all items inside are considered stowed.
   - If a container is neither equipped or stowed, all items inside are neither equipped nor stowed.
@@ -46,7 +49,7 @@
     - Fixed faction attacks forcing attacks to be against certain asset types.
 - Fixed an error with monster saves.
   - This was caused by an ill-advised "optimization" that had ramifications I didn't foresee. To ensure that all monsters in compendiums are fixed, this is a breaking change. Namely, if you had any characters or monsters that used the "Base Save" in Tweaks to modify their saving throws, you will have to redo the change using the "Universal Save Mod", also located in Tweaks.
-- Clicking a save button on a chat card has been vastly improved.
+- Clicking a saving throw button on a chat card has been vastly improved.
   - Now opens a dialog asking for a universal modifier and has individual modifier overrides for each selected token.
   - Rolls all saves at once and outputs a single chat card containing the results.
 - Added support for Godbound damage.
