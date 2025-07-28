@@ -3,7 +3,7 @@ import { WwnItemSheet } from "./module/item/item-sheet.js";
 import { WwnActorSheetCharacter } from "./module/actor/character-sheet.js";
 import { WwnActorSheetMonster } from "./module/actor/monster-sheet.js";
 import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
-import { preloadHandlebarsTemplates } from "./module/preloadTemplates.js";
+import preloadHandlebarsTemplates from "./module/preloadTemplates.js";
 import { WwnActor } from "./module/actor/entity.js";
 import { WwnItem } from "./module/item/entity.js";
 import { WWN } from "./module/config.js";
@@ -15,12 +15,9 @@ import * as macros from "./module/macros.js";
 import * as party from "./module/party.js";
 import * as migrations from "./module/migration.js";
 // Combat
-import { WWNGroupCombat } from "./module/combat/combat-group.js";
-import { WWNGroupCombatant } from "./module/combat/combatant-group.js";
 import { WWNCombat } from "./module/combat/combat.js";
+import WWNCombatTracker from "./module/combat/combat-tracker.js";
 import { WWNCombatant } from "./module/combat/combatant.js";
-import { WWNCombatTab } from "./module/combat/sidebar.js";
-import { WWNCombatTracker } from "./module/combat/combat-tracker.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -47,19 +44,15 @@ Hooks.once("init", async function () {
 
   // Register custom system settings
   registerSettings();
-  const isGroupInitiative = game.settings.get(game.system.id, "initiative") === "group";
 
-  if (isGroupInitiative) {
-    CONFIG.Combat.documentClass = WWNGroupCombat;
-    CONFIG.Combatant.documentClass = WWNGroupCombatant;
-    CONFIG.Combat.initiative = { decimals: 2, formula: "@initiativeRoll + @init" }
-  } else {
-    CONFIG.Combat.documentClass = WWNCombat;
-    CONFIG.Combatant.documentClass = WWNCombatant;
-    CONFIG.Combat.initiative = { decimals: 2, formula: "@initiativeRoll + @init" }
-  }
+  CONFIG.Combat.documentClass = WWNCombat;
+  CONFIG.Combatant.documentClass = WWNCombatant;
+  CONFIG.Combat.initiative = {
+    decimals: 2,
+    formula: WWNCombat.FORMULA,
+  };
 
-  CONFIG.ui.combat = WWNCombatTab;
+  CONFIG.ui.combat = WWNCombatTracker;
 
   CONFIG.Actor.documentClass = WwnActor;
   CONFIG.Item.documentClass = WwnItem;
@@ -86,9 +79,6 @@ Hooks.once("init", async function () {
     makeDefault: true,
     label: "WWN.SheetClassItem"
   });
-
-  // Initialize combat tracker modifications
-  WWNCombatTracker.init();
 
   await preloadHandlebarsTemplates();
 });
@@ -124,6 +114,16 @@ Hooks.once("ready", async () => {
     migrations.migrateWorld();
   }
 
+  game.socket.on("system.wwn", async ({ action, data }) => {
+    if (!game.user.isGM) return;
+
+    if (action === "updateGroupInitiative") {
+      const { combatantGroupUpdates, combatantUpdates } = data;
+
+      await game.combat.updateEmbeddedDocuments("CombatantGroup", combatantGroupUpdates);
+      await game.combat.updateEmbeddedDocuments("Combatant", combatantUpdates);
+    }
+  });
 });
 
 // License and KOFI infos
@@ -151,3 +151,33 @@ Hooks.on("renderChatMessageHTML", (app, html, data) => WwnItem.chatListeners(htm
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
 Hooks.on("renderRollTableConfig", treasure.augmentTable);
 Hooks.on("updateActor", party.update);
+
+/**
+ * @param {WWNCombatTracker} app - The combat tracker application
+ * @param {HTMLElement} html - The HTML element of the combat tracker
+ */
+Hooks.on("renderCombatTracker", (app, html) =>
+  app.renderGroups(html instanceof HTMLElement ? html : html[0])
+);
+/** @param {WWNCombatant} combatant */
+Hooks.on("createCombatant", (combatant) => {
+  if (game.settings.get(game.system.id, "initiative") !== "group") return;
+  combatant.assignGroup();
+});
+/** 
+ * @param {WWNCombatant} combatant
+ * @param {?Object[]} updates 
+ * */
+Hooks.on("updateCombatant", (combatant, updates) => {
+  if (!foundry.utils.hasProperty(updates, "initiative")) return;
+  if (game.settings.get(game.system.id, "initiative") !== "group") return;
+  combatant.updateGroup();
+});
+/** 
+ * @param {WWNCombatant} combatant
+ * @param {?Object[]} updates 
+ * */
+Hooks.on("updateCombatantGroup", async (combatant, updates) => {
+  if (!foundry.utils.hasProperty(updates, "initiative")) return;
+  if (ui.combat) await ui.combat.render(true);
+});

@@ -800,22 +800,14 @@ export class WwnActor extends Actor {
     let initRoll = "1d8";
     const isGroupInit = game.settings.get("wwn", "initiative") === "group";
     if (this.type == "character") {
-      const alert = this.items.find((i) => i.name === "Alert")?.system.ownedLevel || 0;
-      let alertBonus = alert === 2 ? 100 : alert;
+      initValue = this.system.scores.dex.mod + this.system.initiative.mod;
 
-      if (isGroupInit) {
-        if (alert !== 1) {
-          initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
-          this.system.initiative.alertTwo = alert === 2 ? true : false;
-        } else {
-          initValue = this.system.scores.dex.mod + this.system.initiative.mod;
-        }
-      } else {
-        if (alert === 1) {
-          initRoll = "2d8kh";
-          initValue = this.system.scores.dex.mod + this.system.initiative.mod;
-        } else {
-          initValue = this.system.scores.dex.mod + this.system.initiative.mod + alertBonus;
+      const alert = this.items.find((i) => i.name === "Alert")?.system.ownedLevel || 0;
+
+      if (!isGroupInit) {
+        if (alert >= 1) initRoll = "2d8kh";
+        if (alert === 2) {
+          initValue = this.system.scores.dex.mod + this.system.initiative.mod + 100;
         }
       }
     } else {

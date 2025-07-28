@@ -1,4 +1,4 @@
-export const preloadHandlebarsTemplates = async function () {
+const preloadHandlebarsTemplates = async function () {
   const templatePaths = [
     //Character Sheets
     'systems/wwn/templates/actors/character-sheet.html',
@@ -24,5 +24,7 @@ export const preloadHandlebarsTemplates = async function () {
     // Combat Tab
     'systems/wwn/templates/apps/combat-set-groups.hbs',
   ];
-  return loadTemplates(templatePaths);
+  return foundry.applications.handlebars.loadTemplates(templatePaths);
 };
+
+export default preloadHandlebarsTemplates;

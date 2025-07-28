@@ -180,6 +180,7 @@
   "WWN.combat.SetCombatantAsActive": "Set as Active Combatant",
   "WWN.combat.SetCombatantGroups": "Set Combatant Groups",
   "WWN.combat.Reroll": "Reroll Initiative",
+  "WWN.combat.modifyInitiative": "Group {group} modified their Initiative! ({oldInit} → {newInit})",
   "WWN.combat.SelectGroup": "Select Group",
   "WWN.combat.Group.green": "Green Group",
   "WWN.combat.Group.red": "Red Group",
