@@ -173,7 +173,7 @@ export class WWNCombat extends foundry.documents.Combat {
 
     for (const group of this.groups) {
       const baseName = group.name?.replace(/\*$/, "");
-      const youngerSiblingExists = this.groups.some(g => g.name === baseName && g !== group);
+      const youngerSiblingExists = this.groups.some(g => g.name === baseName && g !== group && g.members.size > 0);
       if (youngerSiblingExists) continue;
 
       const olderSiblingGroup = this.groups.find(g => g.name === group.name + "*");
