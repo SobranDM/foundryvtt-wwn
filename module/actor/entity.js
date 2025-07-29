@@ -806,7 +806,9 @@ export class WwnActor extends Actor {
     if (!isGroupInit) {
       const alert = this.items.find((i) => i.name === "Alert")?.system.ownedLevel || 0;
       if (alert >= 1) initRoll = "2d8kh";
-      if (alert === 2) {
+
+      const hasVigilant = this.items.some(i => i.name === "Vigilant");
+      if (alert === 2 || hasVigilant) {
         initValue += 100;
       }
     }
