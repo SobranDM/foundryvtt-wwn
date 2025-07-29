@@ -1,14 +1,8 @@
-import { colorGroups } from "./combat-group.js";
+import { WWN } from "../config.js"
 
-const {
-  HandlebarsApplicationMixin,
-  ApplicationV2
-} = foundry.applications.api;
+const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api
 
 export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(ApplicationV2) {
-  _highlighted;
-
-
   // ===========================================================================
   // APPLICATION SETUP
   // ===========================================================================
@@ -20,7 +14,7 @@ export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(A
       frame: true,
       positioned: true,
       title: "WWN.combat.SetCombatantGroups",
-      icon: "fa-flag",
+      icon: "fa-solid fa-flag",
       controls: [],
       minimizable: false,
       resizable: true,
@@ -44,18 +38,19 @@ export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(A
     }
   }
 
-
   // ===========================================================================
   // RENDER SETUP
   // ===========================================================================
 
-  async _prepareContext(_options) {
+  /** @inheritDoc */
+  async _prepareContext(options) {
     return {
-      groups: colorGroups,
-      combatants: game.combat.combatants,
+      groups: WWN.colors,
+      combatants: game.combat?.combatants || []
     }
   }
 
+  /** @inheritDoc */
   _onRender(context, options) {
     super._onRender(context, options);
     for (const li of this.element.querySelectorAll("[data-combatant-id]")) {
@@ -65,36 +60,46 @@ export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(A
     this.element.addEventListener("change", this._updateObject);
   }
 
-
   // ===========================================================================
   // UPDATING
   // ===========================================================================
 
+  /** @inheritDoc */
   async _updateObject(event) {
-    const combatant = game.combat.combatants.get(event.target.name);
-    await combatant.setFlag(game.system.id, "group", event.target.value)
+    event.preventDefault()
+    event.stopPropagation()
+    const input = event.target
+    if (!input?.name || !input?.value) return
+    const combatant = game.combat?.combatants.get(input.name)
+    if (!combatant) return
+    await combatant.assignGroup(input.value)
   }
-
 
   // ===========================================================================
   // UI EVENTS
   // ===========================================================================
 
   #onCombatantHoverIn(event) {
-    event.preventDefault();
-    if (!canvas.ready) return;
-    const li = event.currentTarget;
-    const combatant = game.combat.combatants.get(li.dataset.combatantId);
-    const token = combatant.token?.object;
+    event.preventDefault()
+    if (!canvas.ready) return
+    const li = event.currentTarget
+    const { combatantId } = li.dataset
+    if (!combatantId) return
+    const combatant = game.combat?.combatants.get(combatantId)
+    const token = combatant.token?.object
     if (token?.isVisible) {
-      if (!token.controlled) token._onHoverIn(event, { hoverOutOthers: true });
-      this._highlighted = token;
+      if (!token.controlled) {
+        token._onHoverIn(event, { hoverOutOthers: true })
+      }
+      this._highlighted = token
     }
   }
 
   #onCombatantHoverOut(event) {
-    event.preventDefault();
-    if (this._highlighted) this._highlighted._onHoverOut(event);
-    this._highlighted = null;
+    event.preventDefault()
+    if (this._highlighted) {
+      this._highlighted._onHoverOut(event)
+    }
+    this._highlighted = null
   }
 }

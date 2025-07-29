@@ -1,57 +1,85 @@
-import { WWNGroupCombatant } from "./combatant-group.js";
-import { colorGroups } from "./combat-group.js";
-
-// Map of group keys to vibrant but readable hex colors
-const groupColors = {
-  green: "#2d8a4d",    // Vibrant forest green
-  red: "#c43c3c",      // Rich red
-  yellow: "#d4b82e",   // Bright gold
-  purple: "#8c3d8c",   // Rich purple
-  blue: "#3d5d9c",     // Deep blue
-  orange: "#d47c2e",   // Rich orange
-  white: "#7aa8c9",    // Slightly more saturated blue-gray
-  black: "#3d3d3d"     // Slightly lighter dark gray
-};
-
 /**
  * Applies custom styling and controls to the combat tracker
  */
-export class WWNCombatTracker {
-  static init() {
-    Hooks.on("renderCombatTracker", this._onRenderCombatTracker.bind(this));
+export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
+  .CombatTracker {
+  static DEFAULT_OPTIONS = {
+    ...foundry.applications.sidebar.tabs.CombatTracker.DEFAULT_OPTIONS,
+    actions: {
+      ...foundry.applications.sidebar.tabs.CombatTracker.DEFAULT_OPTIONS
+        .actions
+    }
+  }
+
+  /** @inheritDoc */
+  async _prepareTrackerContext(context, options) {
+    await super._prepareTrackerContext(context, options)
+    context.turns?.forEach(turn => {
+      const combatant = game.combat.combatants.get(turn.id)
+      turn.isOwnedByUser = !!combatant.actor?.isOwner
+      turn.group = combatant.group
+    })
+    return context
+  }
+
+  /** @inheritDoc */
+  async _onCombatantControl(event, target) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    return super._onCombatantControl(event, target)
+  }
+
+  /** @inheritDoc */
+  _getEntryContextOptions() {
+    const options = super._getEntryContextOptions()
+
+    if (game.user.isGM) {
+      options.unshift({
+        name: game.i18n.localize("WWN.combat.SetCombatantAsActive"),
+        icon: '<i class="fas fa-star-of-life"></i>',
+        callback: li => {
+          const { combatantId } = li.dataset;
+          const turnToActivate = this.viewed.turns.findIndex(
+            t => t.id === combatantId
+          );
+          this.viewed.activateCombatant(turnToActivate);
+        }
+      });
+    }
+
+    return options;
   }
 
   /**
    * Handle rendering of the combat tracker
-   * @param {CombatTracker} app - The combat tracker application
    * @param {HTMLElement} html - The HTML element
    */
-  static async _onRenderCombatTracker(app, html) {
+  async renderGroups(html) {
     // Only proceed if group initiative is enabled
-    if (game.settings.get(game.system.id, "initiative") !== "group") return;
+    if (!this.viewed || game.settings.get(game.system.id, "initiative") !== "group") return;
 
     // Apply group colors to token names
-    const tokenNames = html.querySelectorAll("#combat > ol > li > div.token-name");
-
+    const tokenNames = html.querySelectorAll(".combatant > div.token-name");
     for (const tokenName of tokenNames) {
-      const combatant = tokenName.closest(".combatant");
-      if (!combatant) continue;
+      const combatantElement = tokenName.closest(".combatant");
+      if (!combatantElement) continue;
 
-      const combatantId = combatant.dataset.combatantId;
-      const combatantObj = game.combat.combatants.get(combatantId);
-      if (!combatantObj) continue;
+      const combatantId = combatantElement.dataset.combatantId;
+      const combatant = game.combat.combatants.get(combatantId);
+      if (!combatant || !combatant?.group) continue;
+
+      const label = (combatant.group?.name ?? "").replace(/\*$/, "");
 
       // Apply color gradient based on group
-      const group = combatantObj.group;
-      const color = groupColors[group] || groupColors.white;
-      tokenName.style.background = `linear-gradient(90deg, ${color}66, transparent)`;
+      tokenName.style.background = `linear-gradient(90deg, var(--wwn-group-color-${label}, ${label}), transparent)`;
       tokenName.style.borderRadius = "4px";
       tokenName.style.padding = "2px";
 
       // Add group control button if user is GM
       if (game.user.isGM) {
-        const controls = combatant.querySelector(".combatant-controls");
-        if (controls) {
+        const controls = combatantElement.querySelector(".combatant-controls");
+        if (controls && !controls.querySelector('[data-control="set-group"]')) {
           const groupButton = document.createElement("a");
           groupButton.className = "combatant-control";
           groupButton.setAttribute("role", "button");
@@ -67,11 +95,10 @@ export class WWNCombatTracker {
             event.preventDefault();
             event.stopPropagation();
 
-            // Create a simple dialog to select group
-            const groups = Object.entries(colorGroups).map(([key]) => ({
+            const groups = Object.keys(CONFIG.WWN.colors).map(key => ({
               key,
-              color: groupColors[key],
-              label: game.i18n.localize(`WWN.combat.Group.${key}`)
+              color: `var(--wwn-group-color-${key})`,
+              label: game.i18n.localize(CONFIG.WWN.colors[key])
             }));
 
             // Create dialog content
@@ -92,7 +119,7 @@ export class WWNCombatTracker {
 
             new Dialog({
               title: game.i18n.localize("WWN.combat.SetCombatantGroups"),
-              content: content,
+              content,
               buttons: {
                 set: {
                   icon: '<i class="fas fa-check"></i>',
@@ -100,8 +127,7 @@ export class WWNCombatTracker {
                   callback: async (html) => {
                     const formData = new FormData(html[0].querySelector("form"));
                     const group = formData.get("group");
-                    await combatantObj.setFlag(game.system.id, "group", group);
-                    app.render();
+                    await combatant.assignGroup(group)
                   }
                 },
                 cancel: {
@@ -114,6 +140,13 @@ export class WWNCombatTracker {
           });
         }
       }
+
+      if (!game.user.isGM) {
+        const isOwned = !!combatant.actor?.isOwner;
+        if (!isOwned) continue
+        const input = combatantElement.querySelector("input.initiative-input");
+        if (input) input.removeAttribute("readonly");
+      }
     }
   }
-} 
+}
