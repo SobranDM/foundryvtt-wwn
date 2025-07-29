@@ -426,19 +426,17 @@ export class WwnActor extends Actor {
       item: attData.item,
       roll: {
         type: "damage",
+        dmg: [],
       },
     };
 
     let dmgParts = [];
     if (!attData.roll.dmg) {
       dmgParts.push("1d6");
+      rollData.roll.dmg = ["1d6"];
     } else {
       dmgParts.push(attData.roll.dmg);
-    }
-
-    // Add Str to damage
-    if (attData.roll.type == "melee") {
-      dmgParts.push(data.scores.str.mod);
+      rollData.roll.dmg = [attData.roll.dmg];
     }
 
     // Damage roll

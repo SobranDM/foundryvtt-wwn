@@ -121,31 +121,124 @@ export class WwnDice {
 
     templateData.result = await WwnDice.digestResult(data, roll);
 
+    // Handle godbound damage if enabled
+    let godboundRoll = null;
+    if (game.settings.get("wwn", "godboundDamage")) {
+      // If there's no dmg data but we have roll parts, treat the roll as damage
+      if (!data.roll.dmg && parts.length > 0) {
+        data.roll.dmg = parts;
+      }
+
+      if (data.roll.dmg) {
+        const godboundResult = await WwnDice.rollGodboundDamage(data);
+        // Create a synthetic roll object for the godbound damage to maintain compatibility
+        godboundRoll = {
+          total: godboundResult.straight.total,
+          straightTotal: godboundResult.godbound.total,
+          isGodbound: true,
+          godboundData: godboundResult,
+          terms: godboundResult.straight.roll.terms,
+          dice: godboundResult.straight.roll.dice,
+          render: async () => {
+            const inputString = godboundResult.godbound.input.join(' + ');
+            const outputString = godboundResult.godbound.output.join(' + ');
+
+            // Get all terms including modifiers
+            const normalTerms = godboundResult.straight.roll.terms.map(term => {
+              if (term instanceof DiceTerm) {
+                return term.results.map(r => r.result).join(' + ');
+              }
+              return term.total.toString();
+            }).filter(term => {
+              // Filter out zero terms, empty strings, and operator strings
+              return term !== '0' && term !== '' && term !== ' + ' && term !== '+' && term !== ' - ' && term !== '-';
+            });
+
+            const normalInput = normalTerms.join(' + ');
+            return `<div class="dice-roll">
+            <div class="dice-result">
+              <h4 class="dice-total">${godboundResult.godbound.total}</h4>
+              <div class="dice-formula">${godboundResult.godbound.formula}</div>
+              <div class="dice-tooltip">
+                <div class="dice">
+                  <ol class="dice-rolls">
+                    <li class="roll godbound-conversion">
+                      <div class="godbound-details">
+                        <div class="godbound-label">Normal Damage</div>
+                        <div class="godbound-values">${inputString} → ${outputString} = ${godboundResult.godbound.total}</div>
+                      </div>
+                    </li>
+                    <li class="roll godbound-conversion">
+                      <div class="godbound-details">
+                        <div class="godbound-label">Straight Damage</div>
+                        <div class="godbound-values">${normalInput} = ${godboundResult.straight.total}</div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>`;
+          }
+        };
+      }
+    }
+
     return new Promise((resolve) => {
       roll.render().then((r) => {
         templateData.rollWWN = r;
-        renderTemplate(template, templateData).then((content) => {
-          chatData.content = content;
-          // Dice So Nice
-          if (game.dice3d) {
-            game.dice3d
-              .showForRoll(
-                roll,
-                game.user,
-                true,
-                chatData.whisper,
-                chatData.blind
-              )
-              .then((displayed) => {
+        if (godboundRoll) {
+          godboundRoll.render().then((gr) => {
+            templateData.rollWWN = gr;
+            templateData.straightDamage = godboundRoll.total;
+            templateData.rollDamage = godboundRoll.straightTotal;
+            renderTemplate(template, templateData).then((content) => {
+              chatData.content = content;
+              // Dice So Nice
+              if (game.dice3d) {
+                game.dice3d
+                  .showForRoll(
+                    roll,
+                    game.user,
+                    true,
+                    chatData.whisper,
+                    chatData.blind
+                  )
+                  .then((displayed) => {
+                    ChatMessage.create(chatData);
+                    resolve(roll);
+                  });
+              } else {
+                chatData.sound = CONFIG.sounds.dice;
                 ChatMessage.create(chatData);
                 resolve(roll);
-              });
-          } else {
-            chatData.sound = CONFIG.sounds.dice;
-            ChatMessage.create(chatData);
-            resolve(roll);
-          }
-        });
+              }
+            });
+          });
+        } else {
+          renderTemplate(template, templateData).then((content) => {
+            chatData.content = content;
+            // Dice So Nice
+            if (game.dice3d) {
+              game.dice3d
+                .showForRoll(
+                  roll,
+                  game.user,
+                  true,
+                  chatData.whisper,
+                  chatData.blind
+                )
+                .then((displayed) => {
+                  ChatMessage.create(chatData);
+                  resolve(roll);
+                });
+            } else {
+              chatData.sound = CONFIG.sounds.dice;
+              ChatMessage.create(chatData);
+              resolve(roll);
+            }
+          });
+        }
       });
     });
   }
@@ -213,7 +306,7 @@ export class WwnDice {
       return { index, delta };
     }
 
-    const rollFormula = new Roll(data.roll.dmg.join("+"));
+    const rollFormula = new Roll(data.roll.dmg.join("+"), data);
     const roll = await rollFormula.evaluate();
     const inputArray = [];
     const outputArray = [];

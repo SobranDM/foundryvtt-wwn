@@ -17,6 +17,23 @@
       {{#if result.isSuccess}}<div class='roll-result roll-success'><b>{{localize 'WWN.Success'}}</b>
         ({{result.target}})</div>{{/if}}
       {{#if rollWWN}}<div>{{{rollWWN}}}</div>{{/if}}
+      {{#if straightDamage}}
+      <!-- GODBOUND DAMAGE BUTTONS -->
+      <div class="card-buttons">
+        <div class="flexrow">
+          <button data-action="apply-damage" data-damage="{{rollDamage}}" data-damage-multiplier="1"
+            class="double-width">Apply Damage</button>
+          <button data-action="apply-damage" data-damage="{{straightDamage}}" data-damage-multiplier="1"
+            class="double-width">Straight Damage</button>
+        </div>
+        <div class="flexrow">
+          <button data-action="apply-damage" data-damage="{{rollDamage}}" data-damage-multiplier="-1"
+            class="double-width">Apply Healing</button>
+          <button data-action="apply-damage" data-damage="{{straightDamage}}" data-damage-multiplier="-1"
+            class="double-width">Straight Healing</button>
+        </div>
+      </div>
+      {{/if}}
     </div>
   </div>
 </section>
