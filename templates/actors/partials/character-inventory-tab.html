@@ -6,13 +6,19 @@
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.items.Weapons"}}</div>
           <div class="icon-row">{{localize "WWN.items.enterTrait"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
+          {{#if config.useTrauma}}
+          <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">{{localize
+            "WWN.items.TraumaDie"}}
+          </div>
+          {{/if}}
+          <div class="field-short" data-tooltip="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
+          <div class="field-short" data-tooltip="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+          <div class="field-short" data-tooltip="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i>
+          </div>
           <div class="item-controls">
-            <a class="item-control item-search" data-type="weapon" title="{{localize 'WWN.Search'}}"><i
+            <a class="item-control item-search" data-type="weapon" data-tooltip="{{localize 'WWN.Search'}}"><i
                 class="fa fa-search"></i></a>
-            <a class="item-control item-create" data-type="weapon" title="{{localize 'WWN.Add'}}"><i
+            <a class="item-control item-create" data-type="weapon" data-tooltip="{{localize 'WWN.Add'}}"><i
                 class="fa fa-plus"></i></a>
           </div>
         </li>
@@ -44,6 +50,13 @@
                 {{/unless}}
                 {{/each}}
               </div>
+              {{#if ../config.useTrauma}}
+              <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">
+                {{#if item.system.trauma.die}}
+                {{item.system.trauma.die}}/x{{item.system.trauma.rating}}
+                {{/if}}
+              </div>
+              {{/if}}
               <div class="field-short charges">
                 <input value="{{item.system.charges.value}}" type="number" />
               </div>
@@ -80,6 +93,11 @@
           <div class="field-short">{{localize "WWN.items.ArmorAAC"}}</div>
           <div class="field-short" title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize "WWN.items.ArmorBonus"}}
           </div>
+          {{#if config.useTrauma}}
+          <div class="field-short" title="{{localize 'WWN.items.TraumaModHint'}}">
+            {{localize "WWN.items.TraumaMod"}}
+          </div>
+          {{/if}}
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
             <a class="item-control item-search" data-type="armor" title="{{localize 'WWN.Search'}}"><i
@@ -107,6 +125,11 @@
               <div class="field-short">
                 {{item.system.aac.mod}}
               </div>
+              {{#if ../config.useTrauma}}
+              <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">
+                {{item.system.traumaMod}}
+              </div>
+              {{/if}}
               <div class="field-short">
                 {{item.system.weight}}
               </div>

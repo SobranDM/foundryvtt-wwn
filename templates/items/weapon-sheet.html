@@ -126,6 +126,19 @@
                 placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
             </div>
           </div>
+          {{#if config.useTrauma}}
+          <div class="form-group">
+            <label data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">{{localize
+              'WWN.items.TraumaDieWeapon'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.trauma.die" value="{{system.trauma.die}}" data-dtype="String"
+                placeholder="1d6" title="{{localize 'WWN.items.TraumaDieHint'}}" />
+              /
+              <input type="number" name="system.trauma.rating" value="{{system.trauma.rating}}" data-dtype="Number"
+                placeholder="2" title="{{localize 'WWN.items.TraumaRatingHint'}}" />
+            </div>
+          </div>
+          {{/if}}
           <div class="form-group">
             <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
             <div class="form-fields">

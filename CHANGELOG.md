@@ -1,5 +1,26 @@
 # Changelog
 
+## New in 1.6.0
+
+### Changes
+
+- Added Trauma system from Cities/Ashes Without Number. This is gated behind a system-level setting.
+  - Note that this does note include the split Ranged/Melee AC from CWN.
+  - If active, trauma is rolled, and compared to the target token's trauma target.
+  - Trauma damage always displays if there is no target, but only if the trauma roll succeeds otherwise.
+  - Separate damage buttons for applying trauma damage.
+  - Monster trauma target is entered directly, while characters are calculated.
+  - New Active Effect target: "system.trauma.bonus" adds to actor's trauma target beyond what armor applies. Example: Hard to Kill Edge.
+  - New Active Effect target: "system.trauma.targetBonus" adds to actor's trauma die roll granted by weapon. Example: Killing Blow Edge.
+  - Trauma ratings were added to weapons and armor in the compendium. In the case of weapons, it is a judgment call based on some loose guidelines, so your interpration may differ from mine. The rating on the blackjack is particularly likely to make someone scoff.
+- Added a setting to use the Ashes Without Number flat skill penalty for heavy armor.
+  - If active, the weight class of armor will not affect Sneak or Exert penalties, nor will it appear on the armor sheet. Instead a Heavy checkbox will dictate whether that armor inflicts a -1 penalty.
+
+### Fixes
+
+- There was an issue where a container could be dragged into itself, thereby rupturing the space-time continuum and eating all of your items. Existing containers should be restored and duct tape has been applied to the space-time continuum to prevent such behavior in the future.
+- Monsters weren't restoring attack counter on next round.
+
 ## New in 1.5.1
 
 ### Changes

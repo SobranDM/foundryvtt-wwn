@@ -257,6 +257,12 @@ export class WWNCombat extends foundry.documents.Combat {
           break
       }
     }
+
+    const npcs = this.combatants.filter(c => c.actor.type === "monster");
+    npcs.forEach(npc => {
+      const weapons = npc.token?.delta?.syntheticActor?.items.filter(i => i.type === "weapon");
+      weapons.forEach(weapon => weapon.update({ "system.counter.value": weapon.system.counter.max }));
+    });
   }
 
   /** @inheritDoc */

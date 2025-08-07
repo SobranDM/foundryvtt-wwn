@@ -47,8 +47,25 @@
               <input type="number" name="system.aac.mod" value="{{system.aac.mod}}" data-dtype="Number" />
             </div>
           </div>
+          {{#if config.useTrauma}}
+          <div class="form-group">
+            <label data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">{{localize 'WWN.items.TraumaModArmor'}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.traumaMod" value="{{system.traumaMod}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{/if}}
         </div>
         <div class="stats">
+          {{#if config.useFlatArmorPenalty}}
+          <div class="form-group">
+            <label>{{localize 'WWN.armor.heavy'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.ashesHeavy" value="{{system.ashesHeavy}}" {{checked
+                system.ashesHeavy}} data-dtype="Boolean" />
+            </div>
+          </div>
+          {{else}}
           <div class="form-group">
             <label>{{localize 'WWN.armor.type'}}</label>
             <div class="form-fields">
@@ -57,6 +74,7 @@
               </select>
             </div>
           </div>
+          {{/if}}
           <div class="form-group">
             <label>{{localize "WWN.items.WeightlessLabel"}}</label>
             <div class="form-fields">

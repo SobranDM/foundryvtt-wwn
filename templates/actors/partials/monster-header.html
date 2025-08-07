@@ -33,12 +33,15 @@
         <input type="text" name="system.details.appearing.d" value="{{system.details.appearing.d}}" />
         <label>{{localize 'WWN.details.appearingA'}}</label>
       </div>
-      <div class="check appearing-check" title="{{localize 'WWN.details.dungeonAppearing'}}"><a><i class="fas fa-dice"></i></a></div>
+      <div class="check appearing-check" title="{{localize 'WWN.details.dungeonAppearing'}}"><a><i
+            class="fas fa-dice"></i></a></div>
     </li>
     <li class="flexrow check-field" data-check="wilderness">
-        (<div><input type="text" name="system.details.appearing.w" value="{{system.details.appearing.w}}" />
-          <label>{{localize 'WWN.details.appearingB'}}</label></div>)
-      <div class="check appearing-check" title="{{localize 'WWN.details.wildernessAppearing'}}"><a><i class="fas fa-dice"></i></a></div>
+      (<div><input type="text" name="system.details.appearing.w" value="{{system.details.appearing.w}}" />
+        <label>{{localize 'WWN.details.appearingB'}}</label>
+      </div>)
+      <div class="check appearing-check" title="{{localize 'WWN.details.wildernessAppearing'}}"><a><i
+            class="fas fa-dice"></i></a></div>
     </li>
     <li>
       <input type="number" name="system.details.xp" value="{{system.details.xp}}" />
@@ -51,8 +54,18 @@
         <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" />
         <label>{{localize 'WWN.details.alignment'}}</label>
       </div>
-      <div class="check reaction-check" title="{{localize 'WWN.roll.reaction'}}"><a><i class="fas fa-dice"></i></a></div>
+      <div class="check reaction-check" title="{{localize 'WWN.roll.reaction'}}"><a><i class="fas fa-dice"></i></a>
+      </div>
     </li>
+    {{#if config.useTrauma}}
+    <li class="flexrow check-field">
+      <div>
+        <input type="number" name="system.trauma.value" value="{{system.trauma.value}}" data-dtype="Number"
+          placeholder="6" data-tooltip="{{localize 'WWN.TraumaTargetLong'}}" />
+        <label>{{localize 'WWN.TraumaTargetMedium'}}</label>
+      </div>
+    </li>
+    {{/if}}
     <li class="treasure-table" title="{{localize 'WWN.details.instinctTableHint'}}">
       <div>{{{system.details.instinctTable.link}}}</div>
       <label>{{localize 'WWN.details.instinct'}}</label>

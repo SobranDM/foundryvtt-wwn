@@ -27,6 +27,11 @@
             "melee": 0
           }
         },
+        "trauma": {
+          "value": 6,
+          "bonus": 0,
+          "targetBonus": 0
+        },
         "saves": {
           "evasion": {
             "value": 0,
@@ -348,6 +353,10 @@
         "damage": "1",
         "ac": "15"
       },
+      "trauma": {
+        "die": "1d6",
+        "rating": 2
+      },
       "shockTotal": 0,
       "skill": "stab",
       "score": "str",
@@ -374,10 +383,12 @@
         "value": 10,
         "mod": 0
       },
+      "traumaMod": 0,
       "armorBonus": 0,
       "type": "light",
       "price": 0,
       "weight": 0,
+      "ashesHeavy": false,
       "containerId": ""
     },
     "spell": {

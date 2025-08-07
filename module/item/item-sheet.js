@@ -51,6 +51,8 @@ export class WwnItemSheet extends ItemSheet {
     const data = super.getData().data;
     data.editable = this.document.sheet.isEditable;
     data.config = CONFIG.WWN;
+    data.config.useTrauma = game.settings.get("wwn", "useTrauma");
+    data.config.useFlatArmorPenalty = game.settings.get("wwn", "useFlatArmorPenalty");
     data.actor = this.actor;
     data.enrichedDescription = await TextEditor.enrichHTML(
       this.object.system.description,

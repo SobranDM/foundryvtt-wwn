@@ -61,10 +61,18 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const containers = items.filter(item => item.system.container.isContainer);
     const containerIds = new Set(containers.map(item => item.id));
 
-    // Check all items for invalid containerIds
+    // Check all items for invalid containerIds and clear containerId from containers
     const itemsToUpdate = [];
     for (const item of this.actor.items) {
+      // Clear containerId if the container doesn't exist
       if (item.system.containerId && !containerIds.has(item.system.containerId)) {
+        itemsToUpdate.push({
+          _id: item.id,
+          "system.containerId": ""
+        });
+      }
+      // Clear containerId from items that are themselves containers
+      if (item.system.container?.isContainer && item.system.containerId) {
         itemsToUpdate.push({
           _id: item.id,
           "system.containerId": ""
@@ -158,6 +166,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
     data.config.xpPerChar = game.settings.get("wwn", "xpPerChar");
     data.config.medRange = game.settings.get("wwn", "medRange");
+    data.config.useTrauma = game.settings.get("wwn", "useTrauma");
 
     data.enrichedBiography = await TextEditor.enrichHTML(
       this.object.system.details.biography,
@@ -295,6 +304,12 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     // Only allow certain item types to be added to containers
     const allowedTypes = ['item', 'weapon', 'armor'];
     if (!allowedTypes.includes(draggedItem.type)) {
+      super._onDropItem(event, dragData);
+      return;
+    }
+
+    // Prevent containers from being placed in other containers
+    if (draggedItem.system?.container?.isContainer) {
       super._onDropItem(event, dragData);
       return;
     }
@@ -490,7 +505,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       });
 
       // Update contained items
-      if (item.system.container.isContainer) {
+      if (item.type === "item" && item.system.container.isContainer) {
         const containedItems = item.actor.items.filter((i) => i.system.containerId === item.id);
         item.actor.updateEmbeddedDocuments("Item", containedItems.map((i) => ({
           _id: i.id,

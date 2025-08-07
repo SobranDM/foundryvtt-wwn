@@ -182,14 +182,17 @@ export class WwnItem extends Item {
           const diceTotal = tempDiv.querySelector('.dice-total');
           if (diceTotal) {
             amount = parseInt(diceTotal.textContent);
+          } else {
+            amount = parseInt(button.dataset.damage);
           }
         }
       }
-
+      console.log(amount);
+      console.log(typeof amount);
       if (!isNaN(amount)) {
         // Apply the damage multiplier
         const multiplier = parseFloat(button.dataset.damageMultiplier) || 1;
-        const finalAmount = Math.floor(amount * multiplier);
+
         applyChatCardDamage(amount, multiplier);
         return;
       } else {

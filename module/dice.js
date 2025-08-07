@@ -402,7 +402,8 @@ export class WwnDice {
       data: data,
       config: CONFIG.WWN,
       rollTitle: rollTitle,
-      dmgTitle: dmgTitle
+      dmgTitle: dmgTitle,
+      traumaResult: null
     };
 
     const roll = await new Roll(parts.join("+"), data).roll();
@@ -463,6 +464,37 @@ export class WwnDice {
       dmgRoll = await new Roll(data.roll.dmg.join("+"), data).roll();
     }
 
+    // Handle trauma roll if trauma system is enabled and weapon has trauma data
+    let traumaRoll = null;
+    let traumaResult = null;
+    let traumaTarget = null;
+
+    if (game.settings.get("wwn", "useTrauma") &&
+      data.item &&
+      data.item.system.trauma &&
+      data.item.system.trauma.die &&
+      data.item.system.trauma.rating) {
+
+      // Get target actor if specified
+      if (data.roll.target) {
+        traumaTarget = data.roll.target.actor.system.trauma.value;
+      }
+      // Roll trauma die
+      const traumaDie = data.actor.system.trauma.targetBonus ?
+        data.item.system.trauma.die + " + " + data.actor.system.trauma.targetBonus : data.item.system.trauma.die;
+      traumaRoll = await new Roll(traumaDie, data).roll();
+
+      // Calculate trauma damage
+      const traumaDamage = Math.floor(dmgRoll.total * data.item.system.trauma.rating);
+
+      traumaResult = {
+        roll: traumaRoll,
+        damage: traumaDamage,
+        target: traumaTarget,
+        isTraumatic: traumaTarget ? traumaRoll.total >= traumaTarget : true
+      };
+    }
+
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
     rollMode = form ? form.rollMode.value : rollMode;
@@ -481,6 +513,17 @@ export class WwnDice {
     }
 
     templateData.result = WwnDice.digestAttackResult(data, roll);
+    templateData.traumaResult = traumaResult;
+
+    // Render trauma roll if it exists
+    if (traumaResult && traumaResult.roll) {
+      templateData.traumaRollWWN = await traumaResult.roll.render();
+    }
+
+    // Ensure trauma damage is a number for the template
+    if (traumaResult && traumaResult.damage !== undefined) {
+      templateData.traumaResult.damage = Number(traumaResult.damage);
+    }
 
     return new Promise((resolve) => {
       roll.render().then((r) => {

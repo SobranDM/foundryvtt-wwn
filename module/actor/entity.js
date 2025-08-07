@@ -1168,22 +1168,44 @@ export class WwnActor extends Actor {
     let exertPenalty = 0;
     let sneakPenalty = 0;
 
+    // Compute Trauma Target if trauma system is enabled
+    let traumaTarget = 6; // Base trauma target
+    if (game.settings.get("wwn", "useTrauma")) {
+      traumaTarget += data.trauma.bonus || 0;
+    }
+
     const armors = this.items.filter((i) => i.type == "armor");
     armors.forEach((a) => {
       if (!a.system.equipped) {
         return;
       }
+
+      // Add trauma mod from equipped armor
+      if (game.settings.get("wwn", "useTrauma")) {
+        traumaTarget += a.system.traumaMod || 0;
+      }
+
       if (a.system.type != "shield") {
         baseAac = Number(a.system.aac.value) + a.system.aac.mod;
-        // Check if armor is medium or heavy and apply appropriate Sneak/Exert penalty
-        if (a.system.type === "medium" && a.system.weight > sneakPenalty) {
-          sneakPenalty = a.system.weight;
-        }
-        if (a.system.type === "heavy" && a.system.weight > sneakPenalty) {
-          sneakPenalty = a.system.weight;
-        }
-        if (a.system.type === "heavy" && a.system.weight > exertPenalty) {
-          exertPenalty = a.system.weight;
+
+        // Check if flat armor penalty setting is enabled
+        if (game.settings.get("wwn", "useFlatArmorPenalty")) {
+          // If flat armor penalty is enabled, only check for ashesHeavy boolean
+          if (a.system.ashesHeavy) {
+            sneakPenalty = Math.max(sneakPenalty, 1);
+            exertPenalty = Math.max(exertPenalty, 1);
+          }
+        } else {
+          // Apply normal armor type penalties based on system.type and weight
+          if (a.system.type === "medium" && a.system.weight > sneakPenalty) {
+            sneakPenalty = a.system.weight;
+          }
+          if (a.system.type === "heavy" && a.system.weight > sneakPenalty) {
+            sneakPenalty = a.system.weight;
+          }
+          if (a.system.type === "heavy" && a.system.weight > exertPenalty) {
+            exertPenalty = a.system.weight;
+          }
         }
       } else if (a.system.type == "shield") {
         AacShieldMod = 1 + a.system.aac.mod;
@@ -1219,6 +1241,11 @@ export class WwnActor extends Actor {
     }
     this.system.skills.sneakPenalty = sneakPenalty;
     this.system.skills.exertPenalty = exertPenalty;
+
+    // Set trauma target if trauma system is enabled
+    if (game.settings.get("wwn", "useTrauma")) {
+      this.system.trauma.value = traumaTarget;
+    }
   }
 
   computeModifiers() {

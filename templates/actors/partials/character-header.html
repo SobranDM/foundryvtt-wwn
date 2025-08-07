@@ -12,6 +12,13 @@
       <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" data-dtype="String" />
       <label>{{localize 'WWN.details.alignment'}}</label>
     </li>
+    {{#if config.useTrauma}}
+    <li class="flex1">
+      <input type="number" name="system.trauma.value" value="{{system.trauma.value}}" data-dtype="Number"
+        placeholder="6" disabled data-tooltip="{{localize 'WWN.TraumaTargetLong'}}" />
+      <label>{{localize 'WWN.TraumaTargetMedium'}}</label>
+    </li>
+    {{/if}}
     {{#if system.retainer.enabled}}
     <li class="check-field flex1" data-stat="lr">
       <div class="check morale-check" title="{{localize 'WWN.roll.morale'}}"><a><i class="fas fa-dice"></i></a></div>
