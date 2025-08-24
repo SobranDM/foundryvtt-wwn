@@ -147,12 +147,28 @@
             </div>
           </div>
           <div class="form-group">
+            <label title="{{localize 'WWN.items.BurstLong'}}">{{localize 'WWN.items.BurstShort'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.burst" value="{{system.burst}}" {{checked system.burst}}
+                data-dtype="Boolean" title="{{localize 'WWN.items.BurstLong'}}" />
+            </div>
+          </div>
+          <div class="form-group">
             <label title={{localize 'WWN.items.Charges' }}>{{localize 'WWN.items.Charges'}}</label>
             <div class="form-fields">
               <input type="number" name="system.charges.value" value="{{system.charges.value}}" data-dtype="Number"
                 title="{{localize 'WWN.items.CurrCharges'}}" />
               <input type="number" name="system.charges.max" value="{{system.charges.max}}" data-dtype="Number"
                 title="{{localize 'WWN.items.MaxCharges'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.DecrementOnAttackHint'}}">{{localize
+              'WWN.items.DecrementOnAttack'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.charges.decrementOnAttack"
+                value="{{system.charges.decrementOnAttack}}" {{checked system.charges.decrementOnAttack}}
+                data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.DecrementOnAttackHint'}}" />
             </div>
           </div>
           <div class="form-group">

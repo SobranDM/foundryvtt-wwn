@@ -59,6 +59,13 @@
         <div class="stats">
           {{#if config.useFlatArmorPenalty}}
           <div class="form-group">
+            <label>{{localize 'WWN.armor.shield'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.isShield" value="{{system.isShield}}" {{checked system.isShield}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
             <label>{{localize 'WWN.armor.heavy'}}</label>
             <div class="form-fields">
               <input type="checkbox" name="system.ashesHeavy" value="{{system.ashesHeavy}}" {{checked
@@ -75,14 +82,6 @@
             </div>
           </div>
           {{/if}}
-          <div class="form-group">
-            <label>{{localize "WWN.items.WeightlessLabel"}}</label>
-            <div class="form-fields">
-              <select name="system.weightless">
-                {{selectOptions config.weightless selected=system.weightless localize=true}}
-              </select>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -167,6 +167,20 @@ export class WwnActorSheet extends ActorSheet {
       }
     });
 
+    // Reload weapon functionality
+    html.find(".item-reload").click(async (ev) => {
+      ev.preventDefault();
+      const itemId = ev.currentTarget.dataset.itemId;
+      const item = this.actor.items.get(itemId);
+      if (item && (item.type === "weapon" || (item.type === "item" && item.system.charges?.decrementOnAttack))) {
+        if (item.type === "weapon") {
+          await this._reloadWeapon(item);
+        } else {
+          await this._reloadConsumable(item);
+        }
+      }
+    });
+
     html.find(".attack a").click((ev) => {
       let actorObject = this.actor;
       let element = event.currentTarget;
@@ -488,5 +502,108 @@ export class WwnActorSheet extends ActorSheet {
       ].concat(buttons);
     }
     return buttons;
+  }
+
+  /**
+   * Reload a weapon with ammo
+   * @param {Item} weapon - The weapon to reload
+   */
+  async _reloadWeapon(weapon) {
+    // Check if weapon has ammo field set
+    if (!weapon.system.ammo) {
+      ui.notifications.error(`No ammo type specified for ${weapon.name}. Please edit the weapon and set an ammo type.`);
+      return;
+    }
+
+    // Find the ammo item
+    const ammoItem = this.actor.items.find(item =>
+      item.name.toLowerCase().includes(weapon.system.ammo.toLowerCase()) &&
+      item.system.charges.value != null
+    );
+
+    if (!ammoItem) {
+      ui.notifications.error(`No ${weapon.system.ammo} found in inventory.`);
+      return;
+    }
+
+    if (ammoItem.system.charges.value <= 0) {
+      ui.notifications.error(`No ${weapon.system.ammo} remaining.`);
+      return;
+    }
+
+    // Calculate how many charges we need to reload
+    const currentCharges = weapon.system.charges.value || 0;
+    const maxCharges = weapon.system.charges.max || 0;
+    const neededCharges = maxCharges - currentCharges;
+
+    if (neededCharges <= 0) {
+      ui.notifications.info(`${weapon.name} is already fully loaded.`);
+      return;
+    }
+
+    // Check if we have enough ammo charges
+    const availableCharges = ammoItem.system.charges.value;
+    let chargesToTransfer = Math.min(neededCharges, availableCharges);
+    let newWeaponCharges = currentCharges + chargesToTransfer;
+    let newAmmoCharges = availableCharges - chargesToTransfer;
+
+    // Update the weapon charges
+    await weapon.update({
+      "system.charges.value": newWeaponCharges
+    });
+
+    // Update the ammo charges
+    await ammoItem.update({
+      "system.charges.value": newAmmoCharges
+    });
+
+    // Send chat message
+    const reloadMessage = chargesToTransfer === neededCharges
+      ? `${this.actor.name} reloaded ${weapon.name}.`
+      : `${this.actor.name} partially reloaded ${weapon.name} (${newWeaponCharges}/${maxCharges}).`;
+
+    const chatData = {
+      user: game.user.id,
+      content: reloadMessage,
+      speaker: ChatMessage.getSpeaker({ actor: this.actor })
+    };
+
+    ChatMessage.create(chatData);
+  }
+
+  /**
+   * Reload a consumable item
+   * @param {Item} consumable - The consumable item to reload
+   */
+  async _reloadConsumable(consumable) {
+    // Check if consumable has max charges
+    if (!consumable.system.charges.max || consumable.system.charges.max <= 0) {
+      ui.notifications.error(`${consumable.name} doesn't have a maximum charge limit set.`);
+      return;
+    }
+
+    // Check if we need to reload
+    const currentCharges = consumable.system.charges.value || 0;
+    const maxCharges = consumable.system.charges.max;
+
+    if (currentCharges >= maxCharges) {
+      ui.notifications.info(`${consumable.name} is already fully charged.`);
+      return;
+    }
+
+    // For consumables, we'll just refill to max charges
+    // In a more complex system, you might want to consume other items or resources
+    await consumable.update({
+      "system.charges.value": maxCharges
+    });
+
+    // Send chat message
+    const chatData = {
+      user: game.user.id,
+      content: `${this.actor.name} reloaded ${consumable.name} to full charges (${maxCharges}).`,
+      speaker: ChatMessage.getSpeaker({ actor: this.actor })
+    };
+
+    ChatMessage.create(chatData);
   }
 }

@@ -486,11 +486,6 @@ export class WwnActor extends Actor {
     }
 
     const isNPC = attData.actor.type !== "character";
-    const ammo = attData.item.system.ammo;
-    const ammoItem = ammo ? attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null) : undefined;
-    if (!isNPC && ammo && (ammoItem === undefined || ammoItem.system.charges.value === 0)) {
-      return ui.notifications.error(`No ${ammo} remaining.`);
-    }
 
     let readyState = "";
     let label = game.i18n.format("WWN.roll.attacks", {
@@ -1185,7 +1180,11 @@ export class WwnActor extends Actor {
         traumaTarget += a.system.traumaMod || 0;
       }
 
-      if (a.system.type != "shield") {
+      // Determine if this is a shield based on either system.type or isShield boolean
+      const isShield = a.system.type == "shield" || (game.settings.get("wwn", "useFlatArmorPenalty") && a.system.isShield);
+
+      if (!isShield) {
+        // Regular armor (not shield) - apply appropriate penalties based on setting
         baseAac = Number(a.system.aac.value) + a.system.aac.mod;
 
         // Check if flat armor penalty setting is enabled
@@ -1207,11 +1206,13 @@ export class WwnActor extends Actor {
             exertPenalty = a.system.weight;
           }
         }
-      } else if (a.system.type == "shield") {
+      } else {
+        // Shield logic - always applies regardless of armor penalty setting
         AacShieldMod = 1 + a.system.aac.mod;
         AacShieldNaked = Number(a.system.aac.value) + a.system.aac.mod;
       }
     });
+
     if (AacShieldMod > 0) {
       let shieldOnly = AacShieldNaked + data.scores.dex.mod + data.aac.mod;
       let shieldBonus =

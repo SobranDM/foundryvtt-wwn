@@ -96,6 +96,18 @@ export class WwnItemSheet extends ItemSheet {
       this.object.update({ system: { missile: !this.object.system.missile } });
     });
 
+    // Handle isShield checkbox for flat armor penalty setting
+    html.find('input[name="system.isShield"]').change((ev) => {
+      const isShield = ev.currentTarget.checked;
+      const newType = isShield ? 'shield' : 'light';
+      this.object.update({
+        system: {
+          type: newType,
+          isShield: isShield
+        }
+      });
+    });
+
     if (this.isEditable) {
       const inputs = html.find("input");
       inputs.focus(ev => ev.currentTarget.select());

@@ -364,6 +364,7 @@
       "slow": false,
       "missile": false,
       "melee": true,
+      "burst": false,
       "price": 0,
       "weight": 0,
       "counter": {
@@ -373,7 +374,8 @@
       "quantity": 1,
       "charges": {
         "value": 0,
-        "max": 0
+        "max": 0,
+        "decrementOnAttack": false
       }
     },
     "armor": {
@@ -389,6 +391,7 @@
       "price": 0,
       "weight": 0,
       "ashesHeavy": false,
+      "isShield": false,
       "containerId": ""
     },
     "spell": {

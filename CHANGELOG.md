@@ -1,5 +1,17 @@
 # Changelog
 
+## New in 1.6.1
+
+### Changes
+
+- Added burst fire option to weapons.
+- Added option for weapons to decrement charges when used, to simulate ammo. Charges will be used instead of the ammo item (but see below).
+- Added reload mechanic when above option is set for a weapon, replenishing charges at the expense of named ammo item. Reload button appears when charges are hovered over in the inventory tab.
+
+### Fixes
+
+- Fixed shield logic when using flat armor penalty from AWN.
+
 ## New in 1.6.0
 
 ### Changes

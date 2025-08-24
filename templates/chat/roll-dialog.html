@@ -15,6 +15,12 @@
     <label>Charge</label>
     <input type="checkbox" name="charge" data-dtype="Boolean" value="charge" {{checked data.charge}} />
   </div>
+  {{#if data.item.system.burst}}
+  <div class="form-group">
+    <label>Burst</label>
+    <input type="checkbox" name="burst" data-dtype="Boolean" value="burst" checked />
+  </div>
+  {{/if}}
   {{/if}}
   <div class="form-group">
     <label>{{localize "WWN.RollMode"}}</label>

@@ -273,12 +273,57 @@ export class WwnDice {
     return result;
   }
 
+  static checkCharges(attData) {
+    const isNPC = attData.actor.type !== "character";
+
+    // Check weapon charges if decrementOnAttack is true
+    if (attData.item.system.charges && attData.item.system.charges.decrementOnAttack) {
+      let requiredCharges = 1;
+      if (attData.form && attData.form.burst && attData.form.burst.checked) {
+        requiredCharges = 3;
+      }
+
+      if (attData.item.system.charges.value < requiredCharges) {
+        const burstText = requiredCharges > 1 ? " (burst fire)" : "";
+        throw new Error(`Not enough charges remaining. Need ${requiredCharges} charge${requiredCharges > 1 ? 's' : ''}${burstText}, but only ${attData.item.system.charges.value} available.`);
+      }
+    }
+
+    // Check ammo if not using weapon charges
+    const ammo = attData.item.system.ammo;
+    if (ammo && !attData.item.system.charges?.decrementOnAttack) {
+      const ammoItem = attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null);
+      if (!ammoItem || ammoItem.system.charges.value === 0) {
+        throw new Error(`No ${ammo} remaining.`);
+      }
+    }
+  }
+
   static spendAmmo(attData) {
     const isNPC = attData.actor.type !== "character";
+
+    // Handle ammo consumption (only if not using weapon charges)
     const ammo = attData.item.system.ammo;
-    if (isNPC || !ammo) return;
-    const ammoItem = attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null);
-    ammoItem.update({ "system.charges.value": ammoItem.system.charges.value - 1 });
+    if (ammo && !attData.item.system.charges?.decrementOnAttack) {
+      const ammoItem = attData.actor.items.find(item => item.name.toLowerCase().includes(ammo.toLowerCase()) && item.system.charges.value != null);
+      if (ammoItem) {
+        ammoItem.update({ "system.charges.value": ammoItem.system.charges.value - 1 });
+      }
+    }
+
+    // Handle weapon charge consumption when decrementOnAttack is true
+    if (attData.item.system.charges && attData.item.system.charges.decrementOnAttack && attData.item.system.charges.value > 0) {
+      // Check if burst fire is being used in the attack dialog
+      let chargeDecrement = 1;
+      if (attData.form && attData.form.burst && attData.form.burst.checked) {
+        chargeDecrement = 3;
+      }
+
+      // Decrement weapon charges
+      attData.item.update({
+        "system.charges.value": Math.max(0, attData.item.system.charges.value - chargeDecrement)
+      });
+    }
   }
 
   static async rollGodboundDamage(data) {
@@ -393,8 +438,32 @@ export class WwnDice {
       ])
     }
 
+    // Include burst bonus
+    if (form !== null && form.burst && form.burst.checked) {
+      parts.push("2");
+      rollTitle += " +2 (burst)";
+
+      // Add burst bonus to damage roll
+      if (data.roll && data.roll.dmg) {
+        data.roll.dmg.push("2");
+      }
+
+      // Update damage title to show burst bonus
+      if (dmgTitle) {
+        dmgTitle += " +2 (burst)";
+      }
+    }
+
     // Optionally include a situational bonus
     if (form !== null && form.bonus.value) parts.push(form.bonus.value);
+
+    // Check if we have enough charges/ammo before proceeding
+    try {
+      WwnDice.checkCharges({ ...data, form: form });
+    } catch (error) {
+      ui.notifications.error(error.message);
+      return;
+    }
 
     let templateData = {
       title: title,
@@ -569,7 +638,7 @@ export class WwnDice {
                 ChatMessage.create(chatData);
                 resolve(roll);
               }
-              this.spendAmmo(data);
+              this.spendAmmo({ ...data, form: form });
             });
           });
         } else {
@@ -612,7 +681,7 @@ export class WwnDice {
                 ChatMessage.create(chatData);
                 resolve(roll);
               }
-              this.spendAmmo(data);
+              this.spendAmmo({ ...data, form: form });
             });
           });
         }

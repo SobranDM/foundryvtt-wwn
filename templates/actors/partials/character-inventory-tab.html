@@ -58,7 +58,17 @@
               </div>
               {{/if}}
               <div class="field-short charges">
+                {{#if item.system.charges.decrementOnAttack}}
+                <input value="{{item.system.charges.value}}" type="number" disabled class="charges-input" />
+                <div class="charges-reload-overlay">
+                  <a class="item-control item-reload" data-item-id="{{item.id}}"
+                    title="{{localize 'WWN.items.ReloadWeapon'}}">
+                    <i class="fas fa-sync-alt"></i>
+                  </a>
+                </div>
+                {{else}}
                 <input value="{{item.system.charges.value}}" type="number" />
+                {{/if}}
               </div>
               <div class="field-short quantity">
                 <input value="{{item.system.quantity}}" type="number" />
@@ -180,7 +190,17 @@
                 </a>
               </div>
               <div class="field-short charges">
+                {{#if item.system.charges.decrementOnAttack}}
+                <input value="{{item.system.charges.value}}" type="number" disabled class="charges-input" />
+                <div class="charges-reload-overlay">
+                  <a class="item-control item-reload" data-item-id="{{item.id}}"
+                    title="{{localize 'WWN.items.ReloadWeapon'}}">
+                    <i class="fas fa-sync-alt"></i>
+                  </a>
+                </div>
+                {{else}}
                 <input value="{{item.system.charges.value}}" type="number" />
+                {{/if}}
               </div>
               <div class="field-short">
                 <input value="{{item.system.weight}}" type="number" readonly />
