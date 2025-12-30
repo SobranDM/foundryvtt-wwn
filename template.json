@@ -299,7 +299,7 @@
         "value": 0
       }
     }, 
-        "ship": {
+    "ship": {
       "templates": [
         "common"
       ],
@@ -347,16 +347,6 @@
       "weapons": {
         "max": 1,
         "value": 0
-      },
-      "encumbrance": {
-        "readied": {
-          "max": 5,
-          "value": 0
-        },
-        "stowed": {
-          "max": 10,
-          "value": 0
-        }
       }
     }
   },

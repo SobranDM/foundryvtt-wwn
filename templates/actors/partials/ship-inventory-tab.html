@@ -5,8 +5,8 @@
          {{!-- Ship weapon items --}}
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.details.weapon.ship"}}</div>
-          <div class="field-short" title="{{localize 'WWN.details.crew.current'}}"><i class="fas fa-solid fa-person"></i></div>
+          <div class="item-name">{{localize "WWN.items.weapon.ship"}}</div>
+          <div class="field-short" title="{{localize 'WWN.items.crew.current'}}"><i class="fas fa-solid fa-person"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
@@ -51,8 +51,8 @@
         {{!-- Cargo items --}}
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.details.cargo.general"}}</div>
-          <div class="field-short" title="{{localize 'WWN.charges'}}"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <div class="item-name">{{localize "WWN.items.cargo.general"}}</div>
+          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fa-solid fa-boxes-stacked"></i></div>
           <div class="field-long" title="{{localize 'WWN.items.Price'}}"><i class="fa-solid fa-circle"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
@@ -77,8 +77,10 @@
               <div class="field-short charges">
                 <input value="{{item.system.charges.value}}" type="number" />
               </div>
-              {{/if}}
+              <div class="field-long">{{item.system.price}}</div>
+              {{else}}
               <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
+              {{/if}}
               <div class="field-short quantity">
                 <!-- <input value="{{item.system.quantity}}" type="number" placeholder="0" /> -->
                 {{#if (evalOr system.charges.value system.charges.max)}}
@@ -445,18 +447,18 @@
     </div>
     <div class="inventory-right">
       <div class="item-titles flexrow">
-        <label>{{localize 'WWN.details.cargo.general'}}</label>
+        <label>{{localize 'WWN.items.cargo.general'}}</label>
       </div>
       <div class="readied-group">
         <div class="flexrow readied-subgroup">
-          <label class="readied-header">{{localize 'WWN.details.cargo.valueShort'}}</label>
+          <label class="readied-header">{{localize 'WWN.items.cargo.valueShort'}}</label>
           <div class="readied">
             <input name="system.cargo.value" type="number" value="{{system.cargo.value}}" data-dtype="Number" disabled />/
             <input type="number" name="donotoverridethecargomax" value="{{system.cargo.max}}" data-dtype="Number" disabled/>
           </div>
         </div>
         <div class="flexrow readied-subgroup">
-          <label class="readied-header">{{localize 'WWN.details.weapon.weapon'}}</label>
+          <label class="readied-header">{{localize 'WWN.items.weapon.weapon'}}</label>
           <div class="readied">
             <input name="system.weapons.value" type="number" value="{{system.weapons.value}}" data-dtype="Number" disabled />/
             <input type="number" name="donotoverridethecargomax" value="{{system.weapons.max}}" data-dtype="Number" disabled/>

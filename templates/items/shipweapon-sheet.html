@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.details.cargo.general'}}"><i class="fas fa-weight-hanging"></i></label>
+            <label title="{{localize 'WWN.items.cargo.general'}}"><i class="fas fa-weight-hanging"></i></label>
             <div class="form-fields">
               <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
             </div>
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label>{{localize 'WWN.details.weapon.range'}}</label>
+            <label>{{localize 'WWN.items.weapon.range'}}</label>
             <div class="form-fields">
               <select name="system.range">
                 {{selectOptions config.ranges selected=system.range localize=true}}
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label>{{localize 'WWN.details.weapon.size'}}</label>
+            <label>{{localize 'WWN.items.weapon.size'}}</label>
             <div class="form-fields">
               <select name="system.size">
                 {{selectOptions config.sizes selected=system.size localize=true}}
@@ -84,14 +84,14 @@
             </div>
           </div>
           <div class="form-group">
-            <label>{{localize 'WWN.details.weapon.ship'}}</label>
+            <label>{{localize 'WWN.items.weapon.ship'}}</label>
             <div class="form-fields">
-              <input type="checkbox" title="{{localize 'WWN.details.weapon.shiptooltip' }}" name="system.ship" value="{{system.ship}}" {{checked system.ship}}
+              <input type="checkbox" title="{{localize 'WWN.items.weapon.shiptooltip' }}" name="system.ship" value="{{system.ship}}" {{checked system.ship}}
                 data-dtype="Boolean" />
             </div>
           </div>
           <div class="form-group">
-            <label>{{localize 'WWN.details.crew.current'}}</label>
+            <label>{{localize 'WWN.items.crew.current'}}</label>
             <div class="form-fields">
               <input type="text" name="system.crew" value="{{system.crew}}" data-dtype="String" />
             </div>

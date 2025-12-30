@@ -15,17 +15,13 @@
       <label>{{localize 'WWN.details.size'}}</label>
     </li>
     <li class="flex1">
-      <input type="number" name="system.details.crew.min" value="{{system.details.crew.min}}" data-dtype="Number" />
-      <label>{{localize 'WWN.details.crew.min'}}</label>
+      <input type="number" name="system.items.crew.min" value="{{system.items.crew.min}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.min'}}</label>
     </li>
     <li class="flex1">
-      <input type="number" name="system.details.crew.max" value="{{system.details.crew.max}}" data-dtype="Number" />
-      <label>{{localize 'WWN.details.crew.max'}}</label>
+      <input type="number" name="system.items.crew.max" value="{{system.items.crew.max}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.max'}}</label>
     </li>
-<!--    <li>
-      <span class="xp-bonus">{{system.details.crew.min}}/{{system.details.crew.max}}</span>
-      <label>{{localize 'WWN.details.crew.capacity'}}</label>
-    </li> -->
   </ul>
   {{!-- Row 2 --}}
   <ul class="summary flexrow">
@@ -34,16 +30,16 @@
       <label>{{localize 'WWN.details.cost'}}</label>
     </li>
     <li class="flex1">
-      <input type="number" data-tooltip="{{localize 'WWN.details.weapon.weapon'}}" name="system.weapons.max" value="{{system.weapons.max}}" data-dtype="Number"/>
-      <label>{{localize 'WWN.details.weapon.weapon'}}</label>
+      <input type="number" data-tooltip="{{localize 'WWN.items.weapon.weapon'}}" name="system.weapons.max" value="{{system.weapons.max}}" data-dtype="Number"/>
+      <label>{{localize 'WWN.items.weapon.weapon'}}</label>
     </li>
     <li class="flex1">
       <input type="number" name="system.cargo.max" value="{{system.cargo.max}}" data-dtype="Number"/>
-      <label>{{localize 'WWN.details.cargo.max'}}</label>
+      <label>{{localize 'WWN.items.cargo.max'}}</label>
     </li>
     <li class="flex1">
-      <input type="number" name="system.details.crew.rowers" value="{{system.details.crew.rowers}}" data-dtype="Number" />
-      <label>{{localize 'WWN.details.crew.rowers'}}</label>
+      <input type="number" name="system.items.crew.rowers" value="{{system.items.crew.rowers}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.rowers'}}</label>
     </li>
     <li class="flex1">
       <input type="checkbox" name="system.details.flight" value="{{system.details.flight}}" {{checked system.details.flight}} data-dtype="Boolean" />

@@ -16,9 +16,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.details.cargo.general'}}"><i class="fas fa-weight-hanging"></i></label>
+            <label title="{{localize 'WWN.items.cargo.general'}}"><i class="fas fa-weight-hanging"></i></label>
             <div class="form-fields">
-              <input type="number" name="system.weight" value="{{system.weight}}" data-tooltip="{{localize 'WWN.details.cargo.unitsLong' }}" data-dtype="Number" />
+              <input type="number" name="system.weight" value="{{system.weight}}" data-tooltip="{{localize 'WWN.items.cargo.unitsLong' }}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
@@ -53,10 +53,10 @@
       <div class="flexrow item-footer">
         <div class="stats">
           <div class="form-group">
-            <label>{{localize 'WWN.treasure'}}</label>
+            <label>{{localize 'WWN.items.Treasure'}}</label>
             <div class="form-fields">
-              <input type="checkbox" title="{{localize 'WWN.treasure' }}" name="system.ship" value="{{system.cargo}}" {{checked system.ship}}
-                data-dtype="Boolean" />
+              <input type="checkbox" value="{{system.cargo}}" {{checked system.ship}}
+                data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.cargoTreasure'}}"/>
             </div>
           </div>
           <div class="form-group">

@@ -58,10 +58,10 @@ export const WWN = {
     whenStowed: "WWN.items.WeightlessStowed"
   },
   ranges: {
-    abreast: "WWN.details.weapon.abreast",
-    near: "WWN.details.weapon.near",
-    far: "WWN.details.weapon.far",
-    sighted: "WWN.details.weapon.sighted"
+    abreast: "WWN.items.weapon.abreast",
+    near: "WWN.items.weapon.near",
+    far: "WWN.items.weapon.far",
+    sighted: "WWN.items.weapon.sighted"
   },
   sizes: {
     small: "WWN.ships.size.small",

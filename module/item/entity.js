@@ -16,7 +16,12 @@ export class WwnItem extends Item {
       item: "/systems/wwn/assets/default/item.png",
       focus: "/systems/wwn/assets/default/focus.png",
       art: "/systems/wwn/assets/default/art.png",
-      effect: ""
+      effect: "", 
+      crewmember: "icons/sundries/gaming/chess-pawn-white-glass.webp",
+      fitting: "icons/commodities/wood/lumber-stack.webp", 
+      shipweapon: "icons/weapons/artillery/cannon-engraved-gold.webp",
+      cargo: "icons/consumables/grains/sacks-grain-white.webp"
+
     };
   }
 
