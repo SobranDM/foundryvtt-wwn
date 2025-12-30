@@ -1,0 +1,52 @@
+<section class="attributes-tab flexrow">
+  {{!-- HP, AC, Movement --}}
+  <div class="attribute-group">
+    <ul class="attributes flexrow">
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.HealthLong' }}">
+          {{ localize "WWN.HealthShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.hp.value" type="number" value="{{system.hp.value}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.Health' }}" />
+        </div>
+        <div class="attribute-value attribute-mod">
+          <input name="system.hp.max" type="number" value="{{system.hp.max}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.HealthMax' }}" />
+        </div>
+      </li>
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
+          {{ localize "WWN.ArmorClassShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.ArmorClass' }}" />
+        </div>
+      </li>
+      <li class="attribute ability-score" data-stat="mov">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.details.grace.value'}}">
+          {{localize 'WWN.details.grace.short'}}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.details.grace.value" title="{{localize 'WWN.details.grace.value'}}" type="number"
+            value="{{system.details.grace.value}}" placeholder="0" data-dtype="Number" />
+        </div>
+      </li>
+      <li class="attribute ability-score" data-stat="mov">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.movement.shipLong'}}">
+          {{localize 'WWN.movement.shipShort'}}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.movement.base" title="{{localize 'WWN.movement.shipLong'}}" type="number"
+            value="{{system.movement.base}}" placeholder="60" data-dtype="Number" />
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+{{!-- Crew inventory --}}
+<!-- although it's not elegant, just smashing the code in here like this works!-->
+  {{> "systems/wwn/templates/actors/partials/ship-crew-list.html"}}
+</section>

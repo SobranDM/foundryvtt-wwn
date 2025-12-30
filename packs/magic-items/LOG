@@ -1,7 +1,0 @@
-2025/08/24-13:49:29.111 3dbc Recovering log #2941
-2025/08/24-13:49:29.116 3dbc Delete type=0 #2941
-2025/08/24-13:49:29.117 3dbc Delete type=3 #2939
-2025/08/24-15:07:51.411 3ea8 Level-0 table #2946: started
-2025/08/24-15:07:51.412 3ea8 Level-0 table #2946: 0 bytes OK
-2025/08/24-15:07:51.413 3ea8 Delete type=0 #2944
-2025/08/24-15:07:51.420 3ea8 Manual compaction at level-0 from '!items!00K5m6EBITgjRywF' @ 72057594037927935 : 1 .. '!items!z6F5WaIAo6er8VAG' @ 0 : 0; will stop at (end)
