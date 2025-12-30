@@ -1,0 +1,107 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Price'}}"><i class="fas
+                fa-circle"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.details.cargo.general'}}"><i class="fas fa-weight-hanging"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="tag-list">
+        {{#each system.tags as |tag|}}
+        <li class="tag" title="{{getTagDesc tag.value}}" data-tag="{{tag.value}}">
+          <span>{{tag.value}}</span>
+          <a class="tag-delete"><i class="fas fa-times"></i></a>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="flexrow card-body tab" data-group="primary" data-tab="description">
+      <div class="description">
+        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
+        async=true}}
+      </div>
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.items.AtkBonus'}}</label>
+            <div class="form-fields">
+              <input type="string" name="system.bonus" value="{{system.bonus}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.details.weapon.range'}}</label>
+            <div class="form-fields">
+              <select name="system.range">
+                {{selectOptions config.ranges selected=system.range localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.details.weapon.size'}}</label>
+            <div class="form-fields">
+              <select name="system.size">
+                {{selectOptions config.sizes selected=system.size localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.items.Damage'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.damage" value="{{system.damage}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.details.weapon.ship'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" title="{{localize 'WWN.details.weapon.shiptooltip' }}" name="system.ship" value="{{system.ship}}" {{checked system.ship}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.details.crew.current'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.crew" value="{{system.crew}}" data-dtype="String" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+    </div>
+  </section>
+</form>

@@ -1,0 +1,70 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.crew.cost'}}"><i class="fas
+              fa-circle"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.crew.strengthIndividual'}}"><i class="fa-solid fa-dumbbell"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.strength" value="{{system.strength}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.crew.quantity'}}"><i class="fas fa-hashtag"></i></label>
+            <div class="form-fields">
+              <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="flexrow card-body tab" data-group="primary" data-tab="description">
+      <div class="description">
+        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
+        async=true}}
+      </div>
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.crew.ispc'}}">{{localize 'WWN.items.crew.ispc'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.ispc" value="{{system.ispc}}" {{checked system.ispc}}
+                data-dtype="Boolean" />
+            </div>
+            <label title="{{localize 'WWN.items.crew.ispc'}}">{{localize 'WWN.items.crew.isrower'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.isrower" value="{{system.isrower}}" {{checked system.isrower}}
+                data-dtype="Boolean" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/wwnships/templates/items/partials/item-effects.html"}}
+    </div>
+  </section>
+</form>

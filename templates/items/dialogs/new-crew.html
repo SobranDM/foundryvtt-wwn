@@ -1,0 +1,32 @@
+<form class="wwn roll-dialog">
+  <div class="flex flex-col">
+    <h1> {{name}}</h1>
+    <div class="flex flexrow form-group">
+      <label for="name">Crew type:</label>
+      <input id="name" type="text" value="{{name}}">
+    </div>
+    {{#if item}}
+    <div class="flex flexrow form-group">
+      <label for="price">Cost/Month:</label>
+      <input id="price" type="text" value="0" data-dtype="number"><br>
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" type="text" value="1" data-dtype="number"><br>
+    </div>
+    {{/if}}
+    {{#if crewmember}}
+    <div class="flex flexrow form-group">
+      <label for="crew-strength">Charges Value:</label>
+      <input id="crew-strength" type="text" value="1" data-dtype="number">
+    </div>
+    <div class="flex flexrow form-group">
+      <label for="crew-strength">Is PC?:</label>
+      <input id="crew-strength" type="checkbox" value="false" data-dtype="boolean">
+      <label for="crew-row">Is Rower?:</label>
+      <input id="crew-row" type="checkbox" value="false" data-dtype="boolean">
+    </div>
+
+    {{/if}}
+  </div>
+</form>
