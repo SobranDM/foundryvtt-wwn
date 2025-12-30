@@ -52,7 +52,7 @@
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.details.cargo.general"}}</div>
-          <div class="field-long" title="{{localize 'WWN.freight'}}"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <div class="field-short" title="{{localize 'WWN.charges'}}"><i class="fa-solid fa-boxes-stacked"></i></div>
           <div class="field-long" title="{{localize 'WWN.items.Price'}}"><i class="fa-solid fa-circle"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
@@ -73,14 +73,20 @@
                   </h4>
                 </a>
               </div>
-              {{#if system.freight}}
-              <div class="field-long">               
-                {{localize 'WWN.freight'}}
+              {{#if (evalOr item.system.charges.value item.system.charges.max)}}
+              <div class="field-short charges">
+                <input value="{{item.system.charges.value}}" type="number" />
               </div>
               {{/if}}
               <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
               <div class="field-short quantity">
-                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
+                <!-- <input value="{{item.system.quantity}}" type="number" placeholder="0" /> -->
+                {{#if (evalOr system.charges.value system.charges.max)}}
+                <input type="number" name="system.quantity" value=1 data-dtype="Number"
+                  title="{{localize 'WWN.items.ChargeQuantity'}}" disabled />
+                {{else}}
+                <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+                {{/if}}
               </div>
               <div class="field-short">
                 <input value="{{item.system.weight}}" type="number" disabled />
@@ -138,7 +144,7 @@
                 {{/unless}}
                 {{/each}}
               </div>
-              {{#if item.system.hasCharges}}
+             {{#if (evalOr item.system.charges.value item.system.charges.max)}}
               <div class="field-short charges">
                 <input value="{{item.system.charges.value}}" type="number" />
               </div>
@@ -507,7 +513,7 @@
             data-dtype="Number" disabled />
         </div>
         <div class="flexrow currency-subgroup currency-buffer">
-          <label class="currency-header" title="Cargo value in sp, excluding freight">Cargo Value</label>
+          <label class="currency-header" title="Cargo value in sp">Cargo Value</label>
           <input class="currency" name="system.cargo.monetaryvalue" type="number" value="{{system.cargo.monetaryvalue}}"
             data-dtype="Number" disabled />
         </div>

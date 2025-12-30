@@ -565,18 +565,13 @@
     "cargo": {
       "description": "",
       "quantity": 1,
-      "treasure": false,
+      "treasure": true,
       "personal": false,
       "cargo": true, 
       "price": 0,
       "weight": 1,
-      "freight": false,
-      "destination": "Altanidem", 
       "roll": "",
-      "marketpenetration": "Simple",
       "quality": "average",
-      "purchaselocation": "Altanidem", 
-      "purchasepercentage": 100, 
       "effects": {
         "active": false,
         "list": []

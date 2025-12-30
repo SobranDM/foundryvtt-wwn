@@ -57,6 +57,17 @@ export const WWN = {
     whenReadied: "WWN.items.WeightlessReadied",
     whenStowed: "WWN.items.WeightlessStowed"
   },
+  ranges: {
+    abreast: "WWN.details.weapon.abreast",
+    near: "WWN.details.weapon.near",
+    far: "WWN.details.weapon.far",
+    sighted: "WWN.details.weapon.sighted"
+  },
+  sizes: {
+    small: "WWN.ships.size.small",
+    medium: "WWN.ships.size.medium", 
+    large: "WWN.ships.size.large"
+  }, 
   armor: {
     unarmored: "WWN.armor.unarmored",
     light: "WWN.armor.light",

@@ -1253,9 +1253,7 @@ export class WwnActor extends Actor {
     const cargos = this.items.filter((c) => c.type == "cargo");
 
     cargos.forEach((c) => {
-        if (!(c.system.freight)) {
-          newTotal += c.system.price * c.system.quantity; 
-        }
+      newTotal += c.system.price * c.system.quantity; 
     }); 
 
     this.system.cargo.monetaryvalue = newTotal;
