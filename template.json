@@ -3,7 +3,8 @@
     "types": [
       "character",
       "monster",
-      "faction"
+      "faction",
+      "ship"
     ],
     "templates": {
       "common": {

@@ -1,0 +1,51 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label>{{localize 'WWN.details.fittings.cost'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.cost" value="{{system.cost}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.details.fittings.cargo'}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.cargo" value="{{system.cargo}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description"
+      >{{localize "WWN.category.description"}}</a
+    >
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div
+      class="flexrow card-body tab"
+      data-group="primary"
+      data-tab="description"
+    >
+      <div class="description resizable-editor">
+        {{editor enrichedDescription target="system.description" button=true
+        owner=owner editable=editable async=true}}
+      </div>
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+    </div>
+  </section>
+</form>

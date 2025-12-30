@@ -38,6 +38,17 @@ export class WwnActor extends Actor {
         this.getHealth(data.wealthRating) +
         this.getHealth(data.forceRating) +
         this.getHealth(data.cunningRating);
+    } else if (this.type === "ship"){
+      this.computeEncumbranceShip();
+      this._calculateMovement();
+      this.computeResources();
+      this.computeTreasure();
+      this.computePersonalTreasure();
+      this.computeTotalSP();
+      this.computeTotalCargoValue();
+      this.computeInit();
+      this.computeCrewStrength();
+      this.computeCrewCost(); 
     } else {
       // Compute modifiers from actor scores
       this.computeModifiers();
@@ -74,6 +85,11 @@ export class WwnActor extends Actor {
         "token.actorLink": true,
         "img": "systems/wwn/assets/default/faction.png"
       });
+    } else if (this.type === "ship"){
+      await this.update({
+        "token.actorLink": true,
+        "img": "icons/skills/trades/profession-sailing-ship.webp"
+      }); 
     }
   }
 
@@ -452,6 +468,7 @@ export class WwnActor extends Actor {
   }
 
   async targetAttack(data, type, options) {
+    // this is the place to start editing the ship attacks when that inevitably comes
     if (game.user.targets.size > 0) {
       for (let t of game.user.targets.values()) {
         data.roll.target = t;
@@ -955,6 +972,155 @@ export class WwnActor extends Actor {
     };
   }
 
+  // compute Encumbrance, in units of Cargo/tons, for ships
+  computeEncumbranceShip() {
+    if (this.type != "ship") return;
+    const data = this.system;
+    // if something in the inventory is not a piece of cargo,
+    // use the item-to-cargo ratio to determine how much it should weight
+    // default is 10
+    const ratio = Number(game.settings.get("wwn", "itemToCargoRatio")); 
+
+    // Compute cargo and weapon occupancy for the ships
+    let totalCargo = 0; 
+    let totalWeapons = 0; 
+    const weapons = this.items.filter((w) => w.type == "weapon");
+    const armors = this.items.filter((a) => a.type == "armor");
+    const items = this.items.filter((i) => i.type == "item");
+    const fittings = this.items.filter((f) => f.type == "fitting"); 
+    const shipweapons = this.items.filter((s) => s.type == "shipweapon");
+    const cargos = this.items.filter((c) => c.type == "cargo");
+
+    weapons.forEach((w) => {
+      let weaponWeight;
+      if (game.settings.get("wwn", "roundWeight")) {
+        // totalCargo += Math.ceil(w.system.weight * w.system.quantity);
+        weaponWeight = Math.ceil(w.system.weight * w.system.quantity);
+      } else {
+        // totalCargo += (w.system.weight * w.system.quantity);
+        weaponWeight = (w.system.weight * w.system.quantity);
+      }
+      
+      if (!w.system.ship){
+        weaponWeight = (weaponWeight / ratio);
+      }
+
+      totalCargo += weaponWeight; 
+
+      // only add a weapon to the weapon cargo if it's a ship weapon
+      if (w.system.ship){
+        totalWeapons += weaponWeight; 
+      }
+
+    }); 
+
+    // add weapon weight to the weapon stock
+    this.system.weapons.value = totalWeapons;
+
+    armors.forEach((a) => {
+        totalCargo += (a.system.weight / ratio);
+    });
+    items.forEach((i) => {
+      let itemWeight;
+      if (i.system.charges.value || i.system.charges.max) {
+        if (
+          i.system.charges.value <= i.system.charges.max ||
+          !i.system.charges.value
+        ) {
+          itemWeight = i.system.weight;
+        } else if (!i.system.charges.max) {
+          itemWeight = i.system.charges.value * i.system.weight;
+        } else {
+          itemWeight = i.system.charges.value / i.system.charges.max * i.system.weight;
+        }
+      } else {
+        itemWeight = i.system.weight * i.system.quantity;
+      }
+
+      // there is a setting to adjust the item-to-cargo ratio
+      if (!i.system.cargo){
+        itemWeight = itemWeight / ratio
+      }
+
+      if (!game.settings.get("wwn", "roundWeight")) {
+          totalCargo += itemWeight; 
+      } else {
+        totalCargo += Math.ceil(itemWeight); 
+      }
+
+    });
+
+    // count the cargo of the fittings in the occupied cargo
+    fittings.forEach((f) => {
+        totalCargo += f.system.cargo; 
+    });      
+
+    shipweapons.forEach((s) => {
+        totalCargo += s.system.weight * s.system.quantity; 
+        totalWeapons += s.system.weight * s.system.quantity; 
+    });      
+
+    cargos.forEach((c) => {
+        totalCargo += c.system.weight * c.system.quantity; 
+    }); 
+
+    if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
+      const coinWeight =
+        (data.currency.cp +
+          data.currency.sp +
+          data.currency.ep +
+          data.currency.gp +
+          data.currency.pp) /
+        1000;
+      totalCargo += coinWeight;
+    } else {
+      const coinWeight =
+        (data.currency.cp + data.currency.sp + data.currency.gp) / 1000;
+      totalCargo += coinWeight;
+    }
+
+    // also compute the cargo value
+    this.system.cargo.value = totalCargo;
+    this.system.weapons.value = totalWeapons; 
+
+  }
+
+  // calculate crew strength
+  computeCrewStrength() {
+    if (this.type != "ship") return;
+    const data = this.system;
+
+    // Compute total strength
+    let totalStrength = 0;
+    let pcStrength = 0;
+    const crew = this.items.filter((c) => c.type == "crewmember");
+
+    crew.forEach((c) => {
+      totalStrength += c.system.strength*c.system.quantity
+      if (c.system.ispc){
+        pcStrength += c.system.strength*c.system.quantity
+      }
+    }); 
+
+    this.system.details.crew.totalstrength = totalStrength;
+    this.system.details.crew.pcstrength = pcStrength; 
+  }
+
+  computeCrewCost() {
+    if (this.type != "ship") return;
+    const data = this.system;
+
+    // Compute total cost
+    let totalCost = 0;
+    const crew = this.items.filter((c) => c.type == "crewmember");
+
+    crew.forEach((c) => {
+      totalCost += c.system.cost*c.system.quantity
+    }); 
+
+    this.system.details.crew.totalcost = totalCost; 
+  }
+
   _calculateMovement() {
     if (this.type != "character") return;
 
@@ -1075,6 +1241,24 @@ export class WwnActor extends Actor {
     }
 
     this.system.currency.total = newTotal;
+  }
+
+  // Compute total value of cargo
+  computeTotalCargoValue() {
+    const data = this.system;
+    const permissible = ["ship"]
+    if (!(permissible.includes(this.type))) return;
+    let newTotal = 0;
+
+    const cargos = this.items.filter((c) => c.type == "cargo");
+
+    cargos.forEach((c) => {
+        if (!(c.system.freight)) {
+          newTotal += c.system.price * c.system.quantity; 
+        }
+    }); 
+
+    this.system.cargo.monetaryvalue = newTotal;
   }
 
   // Compute Effort
@@ -1328,8 +1512,8 @@ export class WwnActor extends Actor {
   }
 
   _getRollData() {
-    if (this.type === "faction") {
-      // for now, no roll data for factions
+    if (this.type === "faction" || this.type === "ship") {
+      // for now, no roll data for factions or ships
       // but something to look at in the future maybe?
       return {};
     }
