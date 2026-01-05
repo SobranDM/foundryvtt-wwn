@@ -277,7 +277,7 @@ export const registerSettings = function () {
 
   game.settings.register("wwn", "itemToCargoRatio", {
     name: "Item to Cargo Ratio",
-    hint: "The number of ordinary items that can fit into 1 ton of a ship's cargo.",
+    hint: "The number of Encumbrance that can fit into 1 ton of a ship's cargo.",
     type: String,
     config: true,
     scope: "world",
