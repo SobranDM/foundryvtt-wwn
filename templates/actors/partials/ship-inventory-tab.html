@@ -105,17 +105,16 @@
         </ol>
       </div>
       <div>
-        {{!-- Weapons --}}
+        {{!-- Misc items --}}
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.items.Weapons"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
+          <div class="item-name">{{localize "WWN.items.Small"}}</div>
           <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
           <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
           <div class="item-controls">
-            <a class="item-control item-search" data-type="weapon" title="{{localize 'WWN.Search'}}"><i
+            <a class="item-control item-search" data-type="item" title="{{localize 'WWN.Search'}}"><i
                 class="fa fa-search"></i></a>
-            <a class="item-control item-create" data-type="weapon" title="{{localize 'WWN.Add'}}"><i
+            <a class="item-control item-create" data-type="item" title="{{localize 'WWN.Add'}}"><i
                 class="fa fa-plus"></i></a>
           </div>
         </li>
@@ -134,23 +133,9 @@
                   </h4>
                 </a>
               </div>
-              <div class="icon-row flexrow">
-                {{#each item.system.tags as |tag|}}
-                {{#if (getTagIcon tag.value)}}
-                <img title="{{getTagDesc tag.value}}" src="{{getTagIcon tag.value}}" width="24" height="24" />
-                {{/if}}
-                {{/each}}
-                {{#each item.system.tags as |tag|}}
-                {{#unless (getTagIcon tag.value)}}
-                <span title="{{tag.title}}">{{tag.value}}{{#unless @last}},{{/unless}}</span>
-                {{/unless}}
-                {{/each}}
-              </div>
-             {{#if (evalOr item.system.charges.value item.system.charges.max)}}
-              <div class="field-short charges">
-                <input value="{{item.system.charges.value}}" type="number" />
-              </div>
-              {{/if}}
+              <!-- <div class="field-short charges">
+                <input value="{{item.system.crew}}" type="number" />
+              </div> -->
               <div class="field-short quantity">
                 <input value="{{item.system.quantity}}" type="number" />
               </div>
@@ -158,41 +143,12 @@
                 <input value="{{item.system.weight}}" type="number" readonly>
               </div>
               <div class="item-controls">
-                {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
-                  title='{{localize "WWN.items.Equip"}}'>
-                  <i class="fas fa-tshirt"></i>
-                </a>
-                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
-                  title='{{localize "WWN.items.stowed"}}'>
-                  <i class="fas fa-archive"></i>
-                </a>
                 <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
-                {{/if}}
               </div>
             </div>
           </li>
           {{/each}}
-        </ol>
-      </div>
-      <div>
-        {{!-- Armors --}}
-        <li class="item-titles flexrow">
-          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.items.Armors"}}</div>
-          <div class="field-short">{{localize "WWN.items.ArmorAAC"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize "WWN.items.ArmorBonus"}}
-          </div>
-          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
-          <div class="item-controls">
-            <a class="item-control item-search" data-type="armor" title="{{localize 'WWN.Search'}}"><i
-                class="fa fa-search"></i></a>
-            <a class="item-control item-create" data-type="armor" title="{{localize 'WWN.Add'}}"><i
-                class="fa fa-plus"></i></a>
-          </div>
-        </li>
-        <ol class="item-list">
           {{#each owned.armors as |item|}}
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
@@ -204,100 +160,29 @@
                   </h4>
                 </a>
               </div>
-              <div class="field-short">
-                {{item.system.aac.value}}
-              </div>
-              <div class="field-short">
-                {{item.system.aac.mod}}
-              </div>
-              <div class="field-short">
-                {{item.system.weight}}
-              </div>
-              <div class="item-controls">
-                {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
-                  title='{{localize "WWN.items.Equip"}}'>
-                  <i class="fas fa-tshirt"></i>
-                </a>
-                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
-                  title='{{localize "WWN.items.stowed"}}'>
-                  <i class="fas fa-archive"></i>
-                </a>
-                <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
-                {{/if}}
-              </div>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-      <div>
-        {{!-- Consumable items --}}
-        <li class="item-titles flexrow">
-          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.category.consumables"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
-          <div class="item-controls">
-            <a class="item-control item-create" data-type="item" data-consumable="true"
-              title="{{localize 'WWN.Add'}}"><i class="fa fa-plus"></i></a>
-          </div>
-        </li>
-        <ol class="item-list">
-          {{#each owned.items as |item|}}
-          {{#if (evalOr item.system.charges.value item.system.charges.max)}}
-          <li class="item-entry">
-            <div class="item flexrow" data-item-id="{{item.id}}">
-              <div class="item-name item-rollable flexrow">
-                <div class="item-image" style="background-image: url({{item.img}})"></div>
-                <a>
-                  <h4 title="{{item.name}}">
-                    {{item.name~}}
-                  </h4>
-                </a>
-              </div>
-              <div class="field-short charges">
-                <input value="{{item.system.charges.value}}" type="number" />
+              <div class="field-short quantity">
+                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
               </div>
               <div class="field-short">
                 <input value="{{item.system.weight}}" type="number" readonly />
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
+                <!-- <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
                   title='{{localize "WWN.items.Equip"}}'>
                   <i class="fas fa-tshirt"></i>
                 </a>
                 <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
                   title='{{localize "WWN.items.stowed"}}'>
                   <i class="fas fa-archive"></i>
-                </a>
+                </a> -->
                 <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
                 {{/if}}
               </div>
             </div>
           </li>
-          {{/if}}
           {{/each}}
-        </ol>
-      </div>
-      <div>
-        {{!-- Misc items --}}
-        <li class="item-titles flexrow">
-          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.items.Misc"}}</div>
-          <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
-          <div class="item-controls">
-            <a class="item-control item-search" data-type="item" title="{{localize 'WWN.Search'}}"><i
-                class="fa fa-search"></i></a>
-            <a class="item-control item-create" data-type="item" title="{{localize 'WWN.Add'}}"><i
-                class="fa fa-plus"></i></a>
-          </div>
-        </li>
-        <ol class="item-list">
           {{#each owned.items as |item|}}
           <!-- {{#unless (evalOr (evalOr item.system.charges.value item.system.personal) item.system.treasure) }} -->
           <li class="item-entry">
@@ -318,130 +203,13 @@
               </div>
               <div class="item-controls">
                 {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
-                  title='{{localize "WWN.items.Equip"}}'>
-                  <i class="fas fa-tshirt"></i>
-                </a>
-                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
-                  title='{{localize "WWN.items.stowed"}}'>
-                  <i class="fas fa-archive"></i>
-                </a>
                 <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
                 {{/if}}
               </div>
             </div>
           </li>
-          {{/unless}}
-          {{/each}}
-        </ol>
-      </div>
-      <div>
-        {{!-- Personal Treasure --}}
-        <li class="item-titles flexrow">
-          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">Personal Treasure</div>
-          <div class="field-long">{{data.treasure}} <i class="fas fa-circle"></i></div>
-          <div class="field-short"><i class="fas fa-hashtag"></i></div>
-          <div class="field-short" data-tooltip="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i>
-          </div>
-          <div class="item-controls">
-            <a class="item-control item-create" data-type="item" data-treasure="true"
-              data-tooltip="{{localize 'WWN.Add'}}"><i class="fa fa-plus"></i></a>
-          </div>
-        </li>
-        <ol class="item-list">
-          {{#each owned.items as |item|}}
-          {{#if item.system.personal}}
-          <li class="item-entry">
-            <div class="item flexrow" data-item-id="{{item.id}}">
-              <div class="item-name item-rollable flexrow">
-                <div class="item-image" style="background-image: url({{item.img}})"></div>
-                <a>
-                  <h4 data-tooltip="{{item.name}}">
-                    {{item.name~}}
-                  </h4>
-                </a>
-              </div>
-              <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
-              <div class="field-short quantity">
-                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
-              </div>
-              <div class="field-short">
-                {{item.system.weight}}
-              </div>
-              <div class="item-controls">
-                {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
-                  data-tooltip='>{{localize "WWN.items.Equip"}}'>
-                  <i class="fas fa-tshirt"></i>
-                </a>
-                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
-                  data-tooltip='>{{localize "WWN.items.stowed"}}'>
-                  <i class="fas fa-archive"></i>
-                </a>
-                <a class="item-control item-edit" data-tooltip='>{{localize "WWN.Edit"}}'><i
-                    class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" data-tooltip='>{{localize "WWN.Delete"}}'><i
-                    class="fas fa-trash"></i></a>
-                {{/if}}
-              </div>
-            </div>
-          </li>
-          {{/if}}
-          {{/each}}
-        </ol>
-      </div>
-      <div>
-        {{!-- Treasure items --}}
-        <li class="item-titles flexrow">
-          <div class="item-caret"><i class="fas fa-caret-down"></i></div>
-          <div class="item-name">{{localize "WWN.items.Treasure"}}</div>
-          <div class="field-long">{{data.treasure}} <i class="fas fa-circle"></i></div>
-          <div class="field-short"><i class="fas fa-hashtag"></i></div>
-          <div class="field-short" title="{{localize 'WWN.items.Weight' }}"><i class="fas fa-weight-hanging"></i></div>
-          <div class="item-controls">
-            <a class="item-control item-create" data-type="item" data-treasure="true" title="{{localize 'WWN.Add'}}"><i
-                class="fa fa-plus"></i></a>
-          </div>
-        </li>
-        <ol class="item-list">
-          {{#each owned.items as |item|}}
-          {{#if (evalAnd item.system.treasure (nt item.system.personal true))}}
-          <li class="item-entry">
-            <div class="item flexrow" data-item-id="{{item.id}}">
-              <div class="item-name item-rollable flexrow">
-                <div class="item-image" style="background-image: url({{item.img}})"></div>
-                <a>
-                  <h4 title="{{item.name}}">
-                    {{item.name~}}
-                  </h4>
-                </a>
-              </div>
-              <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
-              <div class="field-short quantity">
-                <input value="{{item.system.quantity}}" type="number" placeholder="0" />
-              </div>
-              <div class="field-short">
-                {{item.system.weight}}
-              </div>
-              <div class="item-controls">
-                {{#if ../owner}}
-                <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}"
-                  title='{{localize "WWN.items.Equip"}}'>
-                  <i class="fas fa-tshirt"></i>
-                </a>
-                <a class="item-control stow-toggle {{#unless item.system.stowed}}item-unstowed{{/unless}}"
-                  title='{{localize "WWN.items.stowed"}}'>
-                  <i class="fas fa-archive"></i>
-                </a>
-                <a class="item-control item-edit" title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a>
-                {{/if}}
-              </div>
-            </div>
-          </li>
-          {{/if}}
+          <!-- {{/unless}} -->
           {{/each}}
         </ol>
       </div>

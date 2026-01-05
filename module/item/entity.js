@@ -930,6 +930,8 @@ export class WwnItem extends Item {
         break;
       case "crewmember": 
         this.show(); 
+      case "fitting":
+        this.show();
     }
   }
 
