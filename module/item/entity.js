@@ -928,6 +928,8 @@ export class WwnItem extends Item {
       case "asset":
         this.rollAsset();
         break;
+      case "crewmember": 
+        this.show(); 
     }
   }
 

@@ -177,6 +177,7 @@
         </ol>
       </div>
       <div>
+        {{!-- Armors --}}
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.items.Armors"}}</div>
@@ -298,7 +299,7 @@
         </li>
         <ol class="item-list">
           {{#each owned.items as |item|}}
-          {{#unless (evalOr (evalOr item.system.charges.value item.system.personal) item.system.treasure) }}
+          <!-- {{#unless (evalOr (evalOr item.system.charges.value item.system.personal) item.system.treasure) }} -->
           <li class="item-entry">
             <div class="item flexrow" data-item-id="{{item.id}}">
               <div class="item-name item-rollable flexrow">
