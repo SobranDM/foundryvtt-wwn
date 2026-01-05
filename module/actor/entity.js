@@ -1218,7 +1218,7 @@ export class WwnActor extends Actor {
   // Compute Total Wealth
   computeTotalSP() {
     const data = this.system;
-    if (this.type != "character") return;
+    if (this.type != "character" && this.type != "ship") return;
     let newTotal = 0;
     if (game.settings.get("wwn", "useGoldStandard")) {
       newTotal =

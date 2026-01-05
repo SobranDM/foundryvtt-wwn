@@ -131,6 +131,149 @@ export class WwnActorSheetShip extends WwnActorSheet {
     }).render(true);
   }
 
+  // toSilver(currency) {
+  //   // takes a system.currency object and returns equivalent values in whole silver pieces
+  //   let silver = currency
+  //   // console.log(this)
+  //   silver.cp = math.floor(currency.cp / 10)
+  //   silver.ep = currency.ep * 5
+  //   silver.gp = currency.gp * 10
+  //   silver.pp = currency.pp * 100
+  //   return silver; 
+  // }
+
+  payCrew() {
+    // ELEPHANT
+
+    if (this.actor.type != "ship"){
+      return; 
+    }
+
+    let ship = this.actor.system
+    console.log("ship currency:")
+    console.log(ship.currency)
+    let silver = ship.currency
+
+    silver.cp = Math.floor(ship.currency.cp / 10)
+    silver.ep = ship.currency.ep * 5
+    silver.gp = ship.currency.gp * 10 
+    silver.pp = ship.currency.pp * 100
+
+    console.log("ship currency in silver:")
+    console.log(silver)
+
+    // return; 
+    let cost = ship.details.crew.totalcost;
+    let coin = ship.currency.total;
+    let content = ` Previous total ship coin was ${coin}. </br>New total ship coin is `;
+
+    // Check if the ship has enough coin to pay the crew
+    if (cost > coin){
+      return ui.notifications.error("This ship does not have sufficient coin to pay all crew.");
+    } else if (cost === 0){
+      return ui.notifications.warn("The crew pay is zero.")
+    } else if (!(Number.isInteger(cost))) {
+      return ui.notifications.error("This button only handles integer monthly crew pay calculations.")
+    } else{ 
+      
+      let remaining_cost = cost
+
+      for (let key in silver){
+        if (silver.hasOwnProperty(key)) {
+          if (!(key === "total" || key === "share" || key === "bank")){
+            let value = silver[key];
+            console.log(key, value);
+            remaining_cost = remaining_cost - value
+            console.log("Remaining cost: " + remaining_cost)
+
+            if (remaining_cost <= 0 ){
+              // the cost is paid off
+              // refund any money that was overpaid
+              silver[key] = Math.abs(remaining_cost)
+              break; 
+            } else {
+              silver[key] = 0
+            }
+          }
+        }
+      }
+
+      console.log("ship currency in silver:")
+      console.log(silver)
+
+      ship.currency.cp = silver.cp * 10 + (ship.currency.cp % 10)
+      ship.currency.ep = Math.floor(silver.ep / 5)
+      ship.currency.gp = Math.floor(silver.gp / 10)
+      ship.currency.pp = Math.floor(silver.pp / 100) 
+
+      // chuck any remainders into the silver. Ugly but functional
+      ship.currency.sp = ship.currency.sp + (silver.ep % 5) + ( silver.gp % 10 ) + (silver.pp % 100)
+
+      console.log("ship currency:")
+      console.log(ship.currency)
+
+      // let remaining_cost = cost
+
+      // // first translate all ship coinage to sp
+      // let copper_sp = Math.floor(ship.currency.cp / 10);
+      // let electrum_sp = ship.currency.ep * 5; // I think? 
+      // let gold_sp = ship.currency.gp * 10;
+      // let plat_sp = ship.currency.pp * 100; 
+
+      // let currencylist = [copper_sp, ship.currency.sp, electrum_sp, gold_sp, plat_sp]
+      // let varlist = [ship.currency.cp, ship.currency.sp, ship.currency.ep, ship.currency.gp, ship.currency.pp]
+
+      // console.log("currencylist: " + currencylist)
+      // console.log("varlist: " + varlist)
+      // // then start paying crew, using smallest currency first
+      // for (const currency of currencylist) {
+
+      //   console.log("Currency in sp before transaction: " + currency)
+      //   remaining_cost = cost - currency
+
+      //   console.log("remaining cost: " + remaining_cost)
+
+      //   // deal with copper separately
+      //   // if (currency === copper_sp) {
+      //   //   console.log("copper stage")
+      //   //   remainder = ship.currency.cp % 10
+      //   // }        
+      
+      //     // if we didn't end up paying off our debt, we can set the current currency 
+      //     // to zero
+      //     if (currencylist.indexOf(currency) === 0){ 
+      //       // handle copper separately because we don't use single coppers
+      //       ship.currency.cp += -(copper_sp*10)
+      //     } else {
+      //       // this is failing because it's finding an earlier index with this value, somehow. 
+      //       console.log("quantity getting set to zero: " + varlist[currencylist.indexOf(currency)])
+      //       varlist[currencylist.indexOf(currency)] = 0
+      //     }
+
+      //     console.log("Currency status after transaction: " + varlist[currencylist.indexOf(currency)])
+
+      //   if (remaining_cost <= 0) {
+      //     // if we end up with a negative number, need to refund something
+      //     // remaining_cost is always in silver pieces, so let's assume we're allowed to give change
+      //     ship.currency.sp += -(remaining_cost)
+      //     break
+      //   }
+      //     cost = remaining_cost
+      //     console.log("cost for next currency: " + cost)
+
+      // }
+
+      // report crew payments in chat 
+      const speaker = ChatMessage.getSpeaker({ actor: this });
+      ChatMessage.create({
+        title: game.i18n.format("WWN.messages.crew.paid"),
+        content: content, 
+        speaker: speaker
+      });
+    }
+  }
+
+
   /**
    * Prepare data for rendering the Actor sheet
    * The prepared data object contains both the actor data as well as additional sheet options
@@ -399,6 +542,10 @@ export class WwnActorSheetShip extends WwnActorSheet {
 
     html.find("a[data-action='currency-adjust']").click((ev) => {
       this.adjustCurrency(ev);
+    });
+
+    html.find("a[data-action='pay-crew']").click((ev) => {
+      this.payCrew(ev);
     });
 
     // Use unspent skill points to improve the skill
