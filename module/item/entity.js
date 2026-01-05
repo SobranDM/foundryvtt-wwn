@@ -642,6 +642,10 @@ export class WwnItem extends Item {
     const data = this.system;
     let type = isNPC ? "attack" : "melee";
 
+    if (this.actor.type == "ship") {
+      return ui.notifications.error("Normal weapon in a ship inventory. Please roll normal weapons from character sheets.");
+    }
+
     const rollData = {
       ...(this.actor?._getRollData() || {}),
       item: this,
@@ -679,6 +683,33 @@ export class WwnItem extends Item {
     } else if (data.missile && !isNPC) {
       type = "missile";
     }
+    this.actor.targetAttack(rollData, type, options);
+    return true;
+  }
+
+  rollShipWeapon(options = {}) {
+
+    if (this.actor.type != "ship") {
+      return ui.notifications.error("Put ship weapons on ships!");
+    }
+    // need weapon attack type
+    // ships can only melee with their ram
+    // but nothing does shock, so it is not worth differentiating
+    let type = "missile"
+
+    const data = this.system;
+    let grace = this.actor.system.details.grace; 
+
+    const rollData = {
+      ...(this.actor?._getRollData() || {}),
+      item: this,
+      actor: this.actor,
+      roll: {
+        save: this.system.save,
+        target: null,
+      },
+    };
+
     this.actor.targetAttack(rollData, type, options);
     return true;
   }

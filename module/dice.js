@@ -406,36 +406,39 @@ export class WwnDice {
     };
 
     // Include charge bonus
-    if (form !== null && form.charge.checked) {
-      parts.push("2");
-      rollTitle += " +2 (charge)";
+    // add logic to prevent charge shenanigans from interfering with ships
+    if (game.actors.get(speaker.actor).type !== "ship"){
+      if (form !== null && form.charge.checked) {
+        parts.push("2");
+        rollTitle += " +2 (charge)";
 
-      const actor = game.actors.get(speaker.actor);
-      const token = game.canvas.tokens.get(speaker.token).document.delta;
-      const linked = game.canvas.tokens.get(speaker.token).document.actorLink;
-      const effectTarget = linked ? actor : token;
-      const acTarget = actor.type === "character" ? "system.aac.mod" : "system.aac.value";
+        const actor = game.actors.get(speaker.actor);
+        const token = game.canvas.tokens.get(speaker.token).document.delta;
+        const linked = game.canvas.tokens.get(speaker.token).document.actorLink;
+        const effectTarget = linked ? actor : token;
+        const acTarget = actor.type === "character" ? "system.aac.mod" : "system.aac.value";
 
-      effectTarget.createEmbeddedDocuments("ActiveEffect", [
-        {
-          name: "Charge",
-          icon: "icons/environment/people/charge.webp",
-          origin: `Actor.${speaker.actor}`,
-          "duration.rounds": 1,
-          "changes": [
-            {
-              key: acTarget,
-              mode: 2,
-              value: "-2"
-            },
-            {
-              key: "system.thac0.bba",
-              mode: 2,
-              value: 2
-            }
-          ]
-        }
-      ])
+        effectTarget.createEmbeddedDocuments("ActiveEffect", [
+          {
+            name: "Charge",
+            icon: "icons/environment/people/charge.webp",
+            origin: `Actor.${speaker.actor}`,
+            "duration.rounds": 1,
+            "changes": [
+              {
+                key: acTarget,
+                mode: 2,
+                value: "-2"
+              },
+              {
+                key: "system.thac0.bba",
+                mode: 2,
+                value: 2
+              }
+            ]
+          }
+        ])
+      }
     }
 
     // Include burst bonus

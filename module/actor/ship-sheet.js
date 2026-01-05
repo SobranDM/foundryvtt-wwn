@@ -131,20 +131,10 @@ export class WwnActorSheetShip extends WwnActorSheet {
     }).render(true);
   }
 
-  // toSilver(currency) {
-  //   // takes a system.currency object and returns equivalent values in whole silver pieces
-  //   let silver = currency
-  //   // console.log(this)
-  //   silver.cp = math.floor(currency.cp / 10)
-  //   silver.ep = currency.ep * 5
-  //   silver.gp = currency.gp * 10
-  //   silver.pp = currency.pp * 100
-  //   return silver; 
-  // }
-
   payCrew() {
-    // ELEPHANT
-
+    // currently disabled 
+    // todo: gold standard
+    
     if (this.actor.type != "ship"){
       return; 
     }
@@ -152,8 +142,9 @@ export class WwnActorSheetShip extends WwnActorSheet {
     let ship = this.actor.system
     console.log("ship currency:")
     console.log(ship.currency)
-    let silver = ship.currency
 
+    // convert all coinage to silver since the total cost is in silver
+    let silver = ship.currency
     silver.cp = Math.floor(ship.currency.cp / 10)
     silver.ep = ship.currency.ep * 5
     silver.gp = ship.currency.gp * 10 
@@ -162,7 +153,7 @@ export class WwnActorSheetShip extends WwnActorSheet {
     console.log("ship currency in silver:")
     console.log(silver)
 
-    // return; 
+    // prepare total cost, total available coinage
     let cost = ship.details.crew.totalcost;
     let coin = ship.currency.total;
     let content = ` Previous total ship coin was ${coin}. </br>New total ship coin is `;
@@ -211,57 +202,6 @@ export class WwnActorSheetShip extends WwnActorSheet {
 
       console.log("ship currency:")
       console.log(ship.currency)
-
-      // let remaining_cost = cost
-
-      // // first translate all ship coinage to sp
-      // let copper_sp = Math.floor(ship.currency.cp / 10);
-      // let electrum_sp = ship.currency.ep * 5; // I think? 
-      // let gold_sp = ship.currency.gp * 10;
-      // let plat_sp = ship.currency.pp * 100; 
-
-      // let currencylist = [copper_sp, ship.currency.sp, electrum_sp, gold_sp, plat_sp]
-      // let varlist = [ship.currency.cp, ship.currency.sp, ship.currency.ep, ship.currency.gp, ship.currency.pp]
-
-      // console.log("currencylist: " + currencylist)
-      // console.log("varlist: " + varlist)
-      // // then start paying crew, using smallest currency first
-      // for (const currency of currencylist) {
-
-      //   console.log("Currency in sp before transaction: " + currency)
-      //   remaining_cost = cost - currency
-
-      //   console.log("remaining cost: " + remaining_cost)
-
-      //   // deal with copper separately
-      //   // if (currency === copper_sp) {
-      //   //   console.log("copper stage")
-      //   //   remainder = ship.currency.cp % 10
-      //   // }        
-      
-      //     // if we didn't end up paying off our debt, we can set the current currency 
-      //     // to zero
-      //     if (currencylist.indexOf(currency) === 0){ 
-      //       // handle copper separately because we don't use single coppers
-      //       ship.currency.cp += -(copper_sp*10)
-      //     } else {
-      //       // this is failing because it's finding an earlier index with this value, somehow. 
-      //       console.log("quantity getting set to zero: " + varlist[currencylist.indexOf(currency)])
-      //       varlist[currencylist.indexOf(currency)] = 0
-      //     }
-
-      //     console.log("Currency status after transaction: " + varlist[currencylist.indexOf(currency)])
-
-      //   if (remaining_cost <= 0) {
-      //     // if we end up with a negative number, need to refund something
-      //     // remaining_cost is always in silver pieces, so let's assume we're allowed to give change
-      //     ship.currency.sp += -(remaining_cost)
-      //     break
-      //   }
-      //     cost = remaining_cost
-      //     console.log("cost for next currency: " + cost)
-
-      // }
 
       // report crew payments in chat 
       const speaker = ChatMessage.getSpeaker({ actor: this });
@@ -544,6 +484,8 @@ export class WwnActorSheetShip extends WwnActorSheet {
       this.adjustCurrency(ev);
     });
 
+    // pay the crewmembers from ship silver
+    // currently disabled
     html.find("a[data-action='pay-crew']").click((ev) => {
       this.payCrew(ev);
     });

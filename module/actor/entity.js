@@ -468,17 +468,24 @@ export class WwnActor extends Actor {
   }
 
   async targetAttack(data, type, options) {
-    // this is the place to start editing the ship attacks when that inevitably comes
     if (game.user.targets.size > 0) {
       for (let t of game.user.targets.values()) {
         data.roll.target = t;
-        await this.rollAttack(data, {
-          type: type,
-          skipDialog: options.skipDialog,
-        });
+        if (this.type !== "ship"){
+          await this.rollAttack(data, {
+            type: type,
+            skipDialog: options.skipDialog,
+          });
+        } else {
+          this.rollShipAttack(data, {type: type, skipDialog: options.skipDialog});
+        }
       }
     } else {
-      this.rollAttack(data, { type: type, skipDialog: options.skipDialog });
+      if (this.type !== "ship") {
+        this.rollAttack(data, { type: type, skipDialog: options.skipDialog });
+      } else {
+        this.rollShipAttack(data, { type: type, skipDialog: options.skipDialog}); 
+      }
     }
   }
 
@@ -592,6 +599,70 @@ export class WwnActor extends Actor {
 
     dmgParts.push(this.system.damageBonus);
     dmgLabels.push(`+${this.system.damageBonus.toString()} (damage bonus)`);
+
+    const rollTitle = `1d20 ${rollLabels.join(" ")}`;
+    const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
+
+    const rollData = {
+      ...(this._getRollData() || {}),
+      actor: this,
+      item: attData.item,
+      roll: {
+        type: options.type,
+        thac0: thac0,
+        dmg: dmgParts,
+        save: attData.roll.save,
+        target: attData.roll.target,
+      },
+    };
+
+    // Roll and return
+    return await WwnDice.Roll({
+      event: options.event,
+      parts: rollParts,
+      data: rollData,
+      skipDialog: options.skipDialog,
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: label,
+      title: label,
+      rollTitle: rollTitle,
+      dmgTitle: dmgTitle,
+    });
+  }
+
+  async rollShipAttack(attData, options = {}) {
+    const data = this.system;
+    const rollParts = ["1d20"];
+    const dmgParts = [];
+    const rollLabels = [];
+    const dmgLabels = [];
+
+    let label = game.i18n.format("WWN.roll.attacks", {
+      name: this.name,
+    });
+    if (!attData.item) {
+      dmgParts.push("1d6");
+    } else {
+      dmgParts.push(attData.item.system.damage);
+    }
+
+    attData.item.system.shockTotal = Number(this.system.damageBonus)
+
+    rollParts.push(data.thac0.bba.toString());
+    rollLabels.push(`+${data.thac0.bba} (attack bonus)`);
+
+    // TODO: Add range selector in dialogue if missile attack.
+    // if (options.type == "missile") {
+    //   rollParts.push(
+        
+    //   );
+    // }
+
+    if (attData.item && attData.item.system.bonus) {
+      rollParts.push(attData.item.system.bonus);
+      rollLabels.push(`+${attData.item.system.bonus} (weapon bonus)`);
+    }
+    let thac0 = data.thac0.value;
 
     const rollTitle = `1d20 ${rollLabels.join(" ")}`;
     const dmgTitle = `${dmgParts[0]} ${dmgLabels.join(" ")}`;
@@ -1201,7 +1272,7 @@ export class WwnActor extends Actor {
 
   // Enable spell sheet and relevant sections
   enableSpellcasting() {
-    if (this.type === "faction") return;
+    if (this.type === "faction" || this.type === "ship") return;
     const arts = this.items.filter(i => i.type === "art");
     const spells = this.items.filter(i => i.type === "spell");
     if (arts.length > 0 || spells.length > 0) {
@@ -1468,7 +1539,7 @@ export class WwnActor extends Actor {
   }
 
   computeSaves() {
-    if (this.type === "faction") return;
+    if (this.type === "faction" || this.type === "ship") return;
     const data = this.system;
     const saves = data.saves;
     const baseSave = this.type === "monster" ? 15 : 16;

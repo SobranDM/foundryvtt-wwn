@@ -155,7 +155,13 @@ export class WwnActorSheet extends ActorSheet {
             system: { counter: { value: item.system.counter.value - 1 } }
           })
         }
-        item.rollWeapon({ skipDialog: ev.ctrlKey });
+        if (item.system.ship){
+          item.rollShipWeapon({ skipDialog: ev.ctrlKey}); 
+        } else { 
+          item.rollWeapon({ skipDialog: ev.ctrlKey });
+        }
+      } else if (item.type == "shipweapon"){
+        item.rollShipWeapon({ skipDialog: ev.ctrlKey}); 
       } else if (item.type == "spell") {
         item.spendSpell({ skipDialog: ev.ctrlKey });
       } else if (item.type == "art") {
