@@ -1369,7 +1369,7 @@ export class WwnActor extends Actor {
   }
 
   computeTreasure() {
-    if (this.type != "character") {
+    if (this.type != "character" && this.type != "ship") {
       return;
     }
     const data = this.system;
@@ -1381,7 +1381,20 @@ export class WwnActor extends Actor {
     treasures.forEach((item) => {
       total += item.system.quantity * item.system.price;
     });
-    this.system.treasure = total;
+
+    let cargoTotal = 0;
+        
+    const cargos = this.items.filter(
+      (i) => i.type == "cargo" && i.system.treasure
+    );
+
+    cargos.forEach((c) => {
+      if (c.system.treasure){
+        cargoTotal += c.system.price * c.system.quantity; 
+      }
+    }); 
+    
+    this.system.treasure = total + cargoTotal; 
   }
 
   computePersonalTreasure() {
