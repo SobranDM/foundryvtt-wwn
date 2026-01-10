@@ -423,40 +423,17 @@ export class WwnActorSheet extends ActorSheet {
         return itemData;
       };
 
-      // Getting back to main logic
-      if (type == "choice") {
-        this._chooseItemType().then((dialogInput) => {
-          const itemData = createItem(dialogInput.type, dialogInput.name);
-          this.actor.createEmbeddedDocuments("Item", [itemData]);
-        });
-        return;
-      }
-
       let dialogData = {
         name: `New ${type.capitalize()}`,
         type: type,
-        armor: false,
-        weapon: false,
-        consumable: false,
-        treasure: false,
-        item: false
+        price: false,
+        quantity: false,
+        strength: false,
+        pc: false,
+        row: false,
       };
-      let extraFields = "";
-      if (type == "armor") {
-        dialogData.armor = true;
-        dialogData.item = true;
-      } else if (type == "weapon") {
-        dialogData.weapon = true;
-        dialogData.item = true;
-      } else if (type == "item") {
-        dialogData.item = true;
-        if ("consumable" in header.dataset) {
-          dialogData.consumable = true;
-        } else if ("treasure" in header.dataset) {
-          dialogData.treasure = true;
-        }
-      }
-      const dialogTemplate = "systems/wwn/templates/items/dialogs/new-item.html";
+
+      const dialogTemplate = "systems/wwn/templates/items/dialogs/new-crew.html";
       const dialogContent = await renderTemplate(dialogTemplate, dialogData);
       const popUpDialog = new Dialog(
         {
@@ -467,53 +444,16 @@ export class WwnActorSheet extends ActorSheet {
               label: `Add ${type}`,
               callback: async (html) => {
                 const itemNameToAdd = html.find("#name")?.val();
-                const enc = html.find("#encumbrance")?.val();
+                const str = html.find("#strength")?.val();
                 const price = html.find("#price")?.val();
                 const qty = html.find("#quantity")?.val();
-                const location = html.find("#location")?.val();
+                // const location = html.find("#location")?.val();
                 //let data = foundry.utils.deepClone(header.dataset);
                 let data = {
-                  weight: Number(enc),
+                  strength: Number(str),
                   price: Number(price),
                   quantity: Number(qty),
                 };
-                if (location) {
-                  if (location == "stowed") {
-                    data.stowed = true;
-                  } else if (location == "equipped") {
-                    data.equipped = true;
-                  }
-                }
-                if (type == "weapon") {
-                  const dmg = html.find("#damage")?.val();
-                  const shockDmg = html.find("#shock-dgm")?.val();
-                  const shockAc = html.find("#shock-ac")?.val();
-                  const weaponType = html.find("#weaponType")?.val();
-                  data.damage = dmg;
-                  data.shock = {};
-                  data.shock.damage = shockDmg;
-                  data.shock.ac = shockAc;
-                  if (weaponType == "melee" || weaponType == "both") {
-                    data.melee = true;
-                  } else if (weaponType == "ranged" || weaponType == "both") {
-                    data.missile = true;
-                  }
-                } else if (type == "armor") {
-                  const aac = Number(html.find("#aac")?.val());
-                  const armorType = html.find("#armorType")?.val();
-                  data.aac = { value: aac, mod: 0 };
-                  data.type = armorType
-                } else if (type == "item") {
-                  if (dialogData.consumable) {
-                    data.charges = {};
-                    const uses = html.find("#charges-val")?.val();
-                    const usesMax = html.find("#charges-max")?.val();
-                    data.charges.value = Number(uses);
-                    data.charges.max = Number(usesMax);
-                  } else if (dialogData.treasure) {
-                    data.treasure = true;
-                  }
-                }
                 const itemData = createItem(type, itemNameToAdd, data);
                 this.actor.createEmbeddedDocuments("Item", [itemData]);
               },
@@ -531,8 +471,6 @@ export class WwnActorSheet extends ActorSheet {
         }
       );
       const s = popUpDialog.render(true);
-
-
 
     });
 

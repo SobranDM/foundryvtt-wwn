@@ -555,7 +555,7 @@
     "cargo": {
       "description": "",
       "quantity": 1,
-      "treasure": true,
+      "treasure": false,
       "personal": false,
       "cargo": true, 
       "price": 0,

@@ -55,7 +55,9 @@
           <div class="form-group">
             <label>{{localize 'WWN.items.Treasure'}}</label>
             <div class="form-fields">
-              <input type="checkbox" value="{{system.cargo}}" {{checked system.ship}}
+              <!-- <input type="checkbox" value="{{system.cargo}}" {{checked system.ship}}
+                data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.cargoTreasure'}}"/> -->
+              <input type="checkbox" name="system.treasure" value="{{system.treasure}}" {{checked system.treasure}}
                 data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.cargoTreasure'}}"/>
             </div>
           </div>
