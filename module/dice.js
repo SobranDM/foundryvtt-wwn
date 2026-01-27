@@ -41,7 +41,7 @@ export class WwnDice {
       result.details = output;
     } else if (data.roll.type == "instinct") {
       // SAVING THROWS
-      if (roll.total >= result.target) {
+      if (roll.total > result.target) {
         result.isSuccess = true;
       } else {
         result.isFailure = true;
@@ -104,7 +104,13 @@ export class WwnDice {
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
-    rollMode = form ? form.rollMode.value : rollMode;
+    rollMode = form?.rollMode?.value || rollMode;
+
+    await roll.toMessage(
+       { speaker, flavor: title ?? flavor },
+       { rollMode }
+      );
+      return roll;
 
     // Force blind roll (art formulas)
     if (data.roll.blindroll) {
@@ -566,7 +572,13 @@ export class WwnDice {
 
     // Convert the roll to a chat message and return the roll
     let rollMode = game.settings.get("core", "rollMode");
-    rollMode = form ? form.rollMode.value : rollMode;
+    rollMode = form?.rollMode?.value || rollMode;
+
+    await roll.toMessage(
+       { speaker, flavor: title ?? flavor },
+       { rollMode }
+      );
+      return roll;
 
     // Force blind roll (art formulas)
     if (data.roll.blindroll) {
