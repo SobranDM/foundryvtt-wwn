@@ -16,7 +16,12 @@ export class WwnItem extends Item {
       item: "/systems/wwn/assets/default/item.png",
       focus: "/systems/wwn/assets/default/focus.png",
       art: "/systems/wwn/assets/default/art.png",
-      effect: ""
+      effect: "", 
+      crewmember: "icons/sundries/gaming/chess-pawn-white-glass.webp",
+      fitting: "icons/commodities/wood/lumber-stack.webp", 
+      shipweapon: "icons/weapons/artillery/cannon-engraved-gold.webp",
+      cargo: "icons/consumables/grains/sacks-grain-white.webp"
+
     };
   }
 
@@ -637,6 +642,10 @@ export class WwnItem extends Item {
     const data = this.system;
     let type = isNPC ? "attack" : "melee";
 
+    if (this.actor.type == "ship") {
+      return ui.notifications.error("Normal weapon in a ship inventory. Please roll normal weapons from character sheets.");
+    }
+
     const rollData = {
       ...(this.actor?._getRollData() || {}),
       item: this,
@@ -674,6 +683,33 @@ export class WwnItem extends Item {
     } else if (data.missile && !isNPC) {
       type = "missile";
     }
+    this.actor.targetAttack(rollData, type, options);
+    return true;
+  }
+
+  rollShipWeapon(options = {}) {
+
+    if (this.actor.type != "ship") {
+      return ui.notifications.error("Put ship weapons on ships!");
+    }
+    // need weapon attack type
+    // ships can only melee with their ram
+    // but nothing does shock, so it is not worth differentiating
+    let type = "missile"
+
+    const data = this.system;
+    let grace = this.actor.system.details.grace; 
+
+    const rollData = {
+      ...(this.actor?._getRollData() || {}),
+      item: this,
+      actor: this.actor,
+      roll: {
+        save: this.system.save,
+        target: null,
+      },
+    };
+
     this.actor.targetAttack(rollData, type, options);
     return true;
   }
@@ -892,6 +928,10 @@ export class WwnItem extends Item {
       case "asset":
         this.rollAsset();
         break;
+      case "crewmember": 
+        this.show(); 
+      case "fitting":
+        this.show();
     }
   }
 

@@ -155,7 +155,13 @@ export class WwnActorSheet extends ActorSheet {
             system: { counter: { value: item.system.counter.value - 1 } }
           })
         }
-        item.rollWeapon({ skipDialog: ev.ctrlKey });
+        if (item.system.ship){
+          item.rollShipWeapon({ skipDialog: ev.ctrlKey}); 
+        } else { 
+          item.rollWeapon({ skipDialog: ev.ctrlKey });
+        }
+      } else if (item.type == "shipweapon"){
+        item.rollShipWeapon({ skipDialog: ev.ctrlKey}); 
       } else if (item.type == "spell") {
         item.spendSpell({ skipDialog: ev.ctrlKey });
       } else if (item.type == "art") {
@@ -399,6 +405,75 @@ export class WwnActorSheet extends ActorSheet {
 
 
     });
+
+    html.find(".crew-create").click(async (event) => {
+      event.preventDefault();
+      const header = event.currentTarget;
+      const type = header.dataset.type;
+
+      // item creation helper func
+      let createItem = function (type, name = `New ${type.capitalize()}`, data = {}) {
+
+        const itemData = {
+          name: name ? name : `New ${type.capitalize()}`,
+          type: type,
+          data,
+        };
+        delete itemData.data["type"];
+        return itemData;
+      };
+
+      let dialogData = {
+        name: `New ${type.capitalize()}`,
+        type: type,
+        price: false,
+        quantity: false,
+        strength: false,
+        pc: false,
+        row: false,
+      };
+
+      const dialogTemplate = "systems/wwn/templates/items/dialogs/new-crew.html";
+      const dialogContent = await renderTemplate(dialogTemplate, dialogData);
+      const popUpDialog = new Dialog(
+        {
+          title: `Add ${type}`,
+          content: dialogContent,
+          buttons: {
+            addItem: {
+              label: `Add ${type}`,
+              callback: async (html) => {
+                const itemNameToAdd = html.find("#name")?.val();
+                const str = html.find("#strength")?.val();
+                const price = html.find("#price")?.val();
+                const qty = html.find("#quantity")?.val();
+                // const location = html.find("#location")?.val();
+                //let data = foundry.utils.deepClone(header.dataset);
+                let data = {
+                  strength: Number(str),
+                  price: Number(price),
+                  quantity: Number(qty),
+                };
+                const itemData = createItem(type, itemNameToAdd, data);
+                this.actor.createEmbeddedDocuments("Item", [itemData]);
+              },
+            },
+            close: {
+              label: "Cancel",
+            },
+          },
+          default: "addItem",
+        },
+        {
+          failCallback: () => {
+            return;
+          },
+        }
+      );
+      const s = popUpDialog.render(true);
+
+    });
+
 
     html
       .find(".artEffort input")

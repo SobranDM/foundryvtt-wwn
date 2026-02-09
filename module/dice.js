@@ -7,68 +7,57 @@ export class WwnDice {
       total: roll.total,
     };
     let die = roll.terms[0].total;
-    if (data.roll.type == "above") {
-      // SAVING THROWS
-      if (roll.total >= result.target) {
-        result.isSuccess = true;
-      } else {
-        result.isFailure = true;
-      }
-    } else if (data.roll.type == "below") {
-      // MORALE, EXPLORATION
-      if (roll.total <= result.target) {
-        result.isSuccess = true;
-      } else {
-        result.isFailure = true;
-      }
-    } else if (data.roll.type == "check") {
-      // SCORE CHECKS (1s and 20s)
-      if (die == 1 || (roll.total <= result.target && die < 20)) {
-        result.isSuccess = true;
-      } else {
-        result.isFailure = true;
-      }
-    } else if (data.roll.type == "skill") {
-    } else if (data.roll.type == "table") {
-      // Reaction
-      let table = data.roll.table;
-      let output = "";
-      for (let i = 0; i <= roll.total; i++) {
-        if (table[i]) {
-          output = table[i];
-        }
-      }
-      result.details = output;
-    } else if (data.roll.type == "instinct") {
-      // SAVING THROWS
-      if (roll.total >= result.target) {
-        result.isSuccess = true;
-      } else {
-        result.isFailure = true;
-        // Pull result from linked instinct table
-        const iL = data.actor.system.details.instinctTable.table;
-        // RegEx expression to chop up iL into the chunks needed
-        const pattern = /\[(.+)\.([\w]+)\]/;
-        const iA = iL.match(pattern);
-        const type = iA[1];
-        const id = iA[2];
-        let tablePromise;
 
-        if (type === "RollTable") {
-          tablePromise = Promise.resolve(game.tables.get(id))
-        } else if (type === "wwn.instinct") {
-          const pack = game.packs.get('wwn.instinct');
-          tablePromise = pack.getDocument(id);
-        } else {
-          tablePromise = Promise.reject("not an instinct table")
+    switch (data.roll.type) {
+      case "above":
+        roll.total >= result.target ? result.isSuccess = true : result.isFailure = true;
+        break;
+      case "below":
+        roll.total <= result.target ? result.isSuccess = true : result.isFailure = true;
+        break;
+      case "check":
+        die == 1 || (roll.total <= result.target && die < 20) ? result.isSuccess = true : result.isFailure = true;
+        break;
+      case "skill":
+        break;
+      case "table":
+        let table = data.roll.table;
+        let output = "";
+        for (let i = 0; i <= roll.total; i++) {
+          if (table[i]) {
+            output = table[i];
+          }
         }
-        if (game.settings.get("wwn", "hideInstinct")) {
-          tablePromise.then(table => table.draw({ rollMode: "gmroll" }));
-        } else {
-          tablePromise.then(table => table.draw());
+        result.details = output;
+        break;
+      case "instinct":
+        result.isSuccess = roll.total > result.target;
+        result.isFailure = roll.total <= result.target;
+        if (result.isFailure) {
+          const iL = data.actor.system.details.instinctTable.table;
+          const pattern = /\[(.+)\.([\w]+)\]/;
+          const iA = iL.match(pattern);
+          const type = iA[1];
+          const id = iA[2];
+          let tablePromise;
+
+          if (type === "RollTable") {
+            tablePromise = Promise.resolve(game.tables.get(id))
+          } else if (type === "wwn.instinct") {
+            const pack = game.packs.get('wwn.instinct');
+            tablePromise = pack.getDocument(id);
+          } else {
+            tablePromise = Promise.reject("not an instinct table")
+          }
+          if (game.settings.get("wwn", "hideInstinct")) {
+            tablePromise.then(table => table.draw({ rollMode: "gmroll" }));
+          } else {
+            tablePromise.then(table => table.draw());
+          }
         }
-      }
+        break;
     }
+
     return result;
   }
 
@@ -405,8 +394,8 @@ export class WwnDice {
       speaker: speaker,
     };
 
-    // Include charge bonus
-    if (form !== null && form.charge.checked) {
+    // Include charge bonus if not a ship and charge is checked
+    if (game.actors.get(speaker.actor).type !== "ship" && form !== null && form.charge.checked) {
       parts.push("2");
       rollTitle += " +2 (charge)";
 
@@ -418,7 +407,7 @@ export class WwnDice {
 
       effectTarget.createEmbeddedDocuments("ActiveEffect", [
         {
-          name: "Charge",
+          name: "Charge Attack",
           icon: "icons/environment/people/charge.webp",
           origin: `Actor.${speaker.actor}`,
           "duration.rounds": 1,

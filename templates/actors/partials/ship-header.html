@@ -1,0 +1,49 @@
+<img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+  {{!-- Name header --}}
+<section class="header-details flexrow">
+  <h1 class="charname">
+    <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
+  </h1>
+  {{!-- Row 1 --}}
+  <ul class="summary flexrow">
+    <li class="flex2">
+      <input type="text" name="system.details.type" value="{{system.details.type}}" data-dtype="String" />
+      <label>{{localize 'WWN.details.type'}}</label>
+    </li>
+    <li class="flex2">
+      <input type="text" name="system.details.size" value="{{system.details.size}}" data-dtype="String" />
+      <label>{{localize 'WWN.details.size'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" name="system.items.crew.min" value="{{system.items.crew.min}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.min'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" name="system.items.crew.max" value="{{system.items.crew.max}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.max'}}</label>
+    </li>
+  </ul>
+  {{!-- Row 2 --}}
+  <ul class="summary flexrow">
+    <li class="flex2">
+      <input type="number" name="system.details.cost" value="{{system.details.cost}}" data-dtype="number" />
+      <label>{{localize 'WWN.details.cost'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" data-tooltip="{{localize 'WWN.items.weapon.weapon'}}" name="system.weapons.max" value="{{system.weapons.max}}" data-dtype="Number"/>
+      <label>{{localize 'WWN.items.weapon.weapon'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" name="system.cargo.max" value="{{system.cargo.max}}" data-dtype="Number"/>
+      <label>{{localize 'WWN.items.cargo.max'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="number" name="system.items.crew.rowers" value="{{system.items.crew.rowers}}" data-dtype="Number" />
+      <label>{{localize 'WWN.items.crew.rowers'}}</label>
+    </li>
+    <li class="flex1">
+      <input type="checkbox" name="system.details.flight" value="{{system.details.flight}}" {{checked system.details.flight}} data-dtype="Boolean" />
+      <label>{{localize 'WWN.details.flight'}}</label>
+    </li>
+  </ul>
+</section>

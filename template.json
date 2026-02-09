@@ -3,7 +3,8 @@
     "types": [
       "character",
       "monster",
-      "faction"
+      "faction",
+      "ship"
     ],
     "templates": {
       "common": {
@@ -297,6 +298,56 @@
         "roll": "1d8",
         "value": 0
       }
+    }, 
+    "ship": {
+      "templates": [
+        "common"
+      ],
+      "config": {
+        "movementAuto": true
+      },
+      "details": {
+        "biography": "",
+        "notes": "",
+        "size": "",
+        "cost": "",
+        "type": "",
+        "morale": 0,
+        "flight": false,
+        "grace": {
+          "value": 1,
+          "tweak": 0
+        },
+        "crew": {
+          "current": 0,
+          "min": 1,
+          "max": 10,
+          "rowers": 0,
+          "totalstrength": 0, 
+          "pcstrength": 0,
+          "totalcost": 0
+        }
+      },
+      "character": true,
+      "warrior": false,
+      "hp": {
+        "hd": "1d6",
+        "value": 4,
+        "max": 4,
+        "injuries": 0,
+        "wounds": 0
+      },
+      "treasure": 0,
+      "personalTreasure": 0,
+      "cargo": {
+        "max": 10,
+        "value": 0, 
+        "monetaryvalue": 0
+      },
+      "weapons": {
+        "max": 1,
+        "value": 0
+      }
     }
   },
   "Item": {
@@ -309,7 +360,12 @@
       "spell",
       "weapon",
       "asset",
-      "skill"
+      "skill",
+      "crewmember",
+      "fitting", 
+      "shipweapon",
+      "cargo"
+
     ],
     "item": {
       "description": "",
@@ -465,6 +521,51 @@
       "subtle": false,
       "special": false,
       "locationRoll": ""
+    },
+    "crewmember": {
+      "cost": 0, 
+      "description": "",
+      "quantity": 0, 
+      "strength": 0, 
+      "ispc": false, 
+      "isrower": false
+    },
+    "fitting": {
+      "description": "",
+      "cost": "1%",
+      "cargo": 0,
+      "effect": ""
+    },
+    "shipweapon": {
+      "range": "Near",
+      "save": "",
+      "ship": true, 
+      "pattern": "transparent",
+      "description": "",
+      "damage": "1d6",
+      "bonus": 0,
+      "containerId": "",
+      "skillDamage": false,
+      "size": "small",
+      "price": 0,
+      "weight": 0,
+      "quantity": 1,
+      "crew": 0
+    }, 
+    "cargo": {
+      "description": "",
+      "quantity": 1,
+      "treasure": false,
+      "personal": false,
+      "cargo": true, 
+      "price": 0,
+      "weight": 1,
+      "roll": "",
+      "quality": "average",
+      "effects": {
+        "active": false,
+        "list": []
+      }
     }
   }
 }

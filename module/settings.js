@@ -274,4 +274,14 @@ export const registerSettings = function () {
     type: String,
     default: ""
   });
+
+  game.settings.register("wwn", "itemToCargoRatio", {
+    name: "Item to Cargo Ratio",
+    hint: "The number of Encumbrance that can fit into 1 ton of a ship's cargo.",
+    type: String,
+    config: true,
+    scope: "world",
+    default: "10",
+    requiresReload: true
+  });
 };

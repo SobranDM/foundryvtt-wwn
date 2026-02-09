@@ -1,0 +1,44 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{! Sheet Header }}
+  <header class="sheet-header flexrow">
+    {{> "systems/wwn/templates/actors/partials/ship-header.html"}}
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="attributes">
+      {{localize "WWN.category.attributes"}}
+    </a>
+    {{#if system.spells.enabled}}
+    <a class="item" data-tab="spells"> {{localize "WWN.category.spells"}} </a>
+    {{/if}}
+    <a class="item" data-tab="inventory">
+      {{localize "WWN.category.inventory"}}
+    </a>
+    <a class="item" data-tab="notes"> {{localize "WWN.category.details"}} </a>
+    <a class="item" data-tab="effects"> {{localize "WWN.Effects"}} </a>
+  </nav>
+  {{! Sheet Body }}
+  <section class="sheet-body">
+    {{! Attributes Tab }}
+    <div class="tab" data-group="primary" data-tab="attributes">
+      {{>
+      "systems/wwn/templates/actors/partials/ship-attributes-tab.html"}}
+    </div>
+    {{#if system.spells.enabled}}
+    <div class="tab" data-group="primary" data-tab="spells">
+      {{> "systems/wwn/templates/actors/partials/character-spells-tab.html"}}
+    </div>
+    {{/if}}
+    <div class="tab" data-group="primary" data-tab="inventory">
+      {{> "systems/wwn/templates/actors/partials/ship-inventory-tab.html"}}
+    </div>
+    <div class="tab" data-group="primary" data-tab="notes">
+      {{> "systems/wwn/templates/actors/partials/ship-notes-tab.html"}}
+    </div>
+    {{!-- Active Effects Tab --}}
+    <div class="tab" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/actors/partials/actor-effects.html"}}
+    </div>
+  </section>
+</form>

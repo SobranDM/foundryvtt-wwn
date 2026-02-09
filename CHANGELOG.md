@@ -1,5 +1,18 @@
 # Changelog
 
+## New in 1.7.0
+
+### Changes
+
+- Added ship sheets.
+  - I did a little cleanup but these are largely due to Tirhan. Thanks for the feature!
+  - Only did some cursory testing. All appears to be well, but if you spot any problems, log a Github Issue or give me a shout on Discord.
+- Did some cleanup on roll logic.
+
+### Fixes
+
+- Instinct check threshold. Thanks to SpaceHammer16 for pointing this out.
+
 ## New in 1.6.1
 
 ### Changes

@@ -52,8 +52,10 @@
           {{lookup config.saves data.roll.save}} - {{localize "WWN.spells.Save"}}
         </button>
         {{/if}}
+        {{#if (nt data.item.system.shock.damage null)}}
         <button data-action="apply-shock" data-damage="{{data.item.system.shockTotal}}" data-damage-multiplier="1">Apply
           Shock</button>
+        {{/if}}
 
         {{#if straightDamage}}
         <!-- GODBOUND DAMAGE BUTTONS -->
