@@ -14,13 +14,14 @@
 ### Changes
 
 - Improved attack roll speed, particularly when using trauma and Dice So Nice.
-  - For best results, turn on "display chat card" option in Dice So Nice settings.
+  - For best results, activate "display chat message immediately" option in Dice So Nice settings.
 - Made Times Up a required module. Without this, some of you were likely having the charge attack active effect stuck on some actors.
   - If this module is abandoned in the future, I will bake the required functionality for disabling the active effect into the system.
 - New setting: disable coin weight. Applies to both characters and vehicles.
 - Attack counter for monsters now increments from 0 instead of decrementing. Displays error if combat is active and counter is at max.
 - Added default token settings for various actor types.
 - Edit lock state now persists instead of resetting on character update, making leveling up much less frustrating.
+- Party sheet received a long-overdue overhaul. It looks much nicer and now refreshes automaticaly instead of requiring a button press.
 
 ### Fixes
 

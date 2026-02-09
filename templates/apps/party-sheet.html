@@ -1,8 +1,5 @@
 <form autocomplete="off">
   <div class="actor header flexrow">
-    <div>
-      <a class="item-control resync"><i class="fas fa-sync"></i></a>
-    </div>
     {{#if user.isGM}}
     <div class="item-controls flexrow">
       <div class="item-control">
@@ -10,7 +7,8 @@
             class="fas fa-level-up-alt"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="deal-currency" title="{{#if useGoldStandard}}{{localize 'WWN.dialog.currency.dealGold'}}{{else}}{{localize 'WWN.dialog.currency.deal'}}{{/if}}"><i
+        <button type="button" class="deal-currency"
+          title="{{#if useGoldStandard}}{{localize 'WWN.dialog.currency.dealGold'}}{{else}}{{localize 'WWN.dialog.currency.deal'}}{{/if}}"><i
             class="fas fa-coins"></i></button>
       </div>
       <div class="item-control">
@@ -21,72 +19,52 @@
     {{localize 'WWN.dialog.partySelectHint'}}
     {{/if}}
   </div>
+  <div class="party-table-header flexrow">
+    <div class="header-spacer"></div>
+    <div class="col-name">{{localize 'WWN.details.name'}}</div>
+    <div class="col-hp" title="{{localize 'WWN.Health'}}">{{localize 'WWN.HealthShort'}}</div>
+    <div class="col-ac" title="{{localize 'WWN.ArmorClass'}}">AC</div>
+    <div class="col-strain" title="{{localize 'WWN.SystemStrainLong'}}">{{localize 'WWN.SystemStrainShort'}}</div>
+    <div class="col-saves">{{localize 'WWN.category.saves'}}</div>
+    <div class="col-move" title="{{localize 'WWN.movement.base'}}">{{localize 'WWN.movement.short'}}</div>
+  </div>
   <ol class="actor-list">
-    {{#each data.documents as |e|}} {{#if e.flags.wwn.party}}
+    {{#each data.documents as |e|}}
+    {{#if e.flags.wwn.party}}
     <li class="actor flexrow" data-actor-id="{{e.id}}">
       <div class="field-img">
-        <img src="{{e.img}}" />
+        <img src="{{e.img}}" alt="" />
         <div class="img-btns flexrow">
-          <button type="button" data-action="open-sheet"><i class="fas fa-user"></i></button>
+          <button type="button" data-action="open-sheet" title="{{localize 'WWN.Edit'}}"><i
+              class="fas fa-user"></i></button>
         </div>
       </div>
-      <div class="fields">
-        <div class="flexrow field-row">
-          <div class="field-name flex2">
-            <strong>{{e.name}}</strong>
-          </div>
-          <div class="field-long" title="{{localize 'WWN.Health'}}">
-            <i class="fas fa-heart"></i>
-            {{e.system.hp.value}}/{{e.system.hp.max}}
-          </div>
-          <div class="field-short" title="{{localize 'WWN.ArmorClass'}}">
-            <i class="fas fa-shield-alt"></i>
-            <strong>{{e.system.aac.value}}</strong>
-            <sub>{{e.system.aac.naked}}</sub>
-          </div>
-          <div class="field-short" title="{{localize 'WWN.SystemStrainLong'}}">
-            <i class="fas fa-tint"></i>
-            <strong>{{e.system.details.strain.value}}</strong>
-            <sub>{{e.system.details.strain.max}}</sub>
-          </div>
+      <div class="party-fields flexrow">
+        <div class="col-name field-name">
+          <strong>{{e.name}}</strong>
         </div>
-        <div class="flexrow field-row">
-          <div class="field-short" title="{{localize 'WWN.AB'}}">
-            <i class="fas fa-crosshairs"></i>
-            {{e.system.thac0.bba}}
-          </div>
-          <div class="field-long flex3">
-            <strong>{{localize 'WWN.category.saves'}}</strong>
-            {{localize 'WWN.saves.summary'
-            evasion = e.system.saves.evasion.value
-            mental = e.system.saves.mental.value
-            physical = e.system.saves.physical.value
-            luck = e.system.saves.luck.value
-            }}
-          </div>
-          <div class="field-short flex2">
-            <i class="fas fa-shoe-prints" title="{{localize 'WWN.movement.base'}}"></i>
-            <strong title="{{localize 'WWN.movement.encounter.long'}}">{{e.system.movement.base}}</strong>
-            <span title="{{localize 'WWN.movement.exploration.long'}}">{{e.system.movement.exploration}}</span>
-          </div>
+        <div class="col-hp" title="{{localize 'WWN.Health'}}">
+          {{e.system.hp.value}}/{{e.system.hp.max}}
         </div>
-        <div class="flexrow field-row">
-          <div class="field-short flex2">
-            <strong>{{localize 'WWN.resources.rations'}}</strong>
-            {{e.system.details.resources.rations}}
-          </div>
-          <div class="field-short flex2">
-            <strong>{{localize 'WWN.resources.torches'}}</strong>
-            {{e.system.details.resources.torches}}
-          </div>
-          <div class="field-short flex2">
-            <strong>{{localize 'WWN.resources.oil'}}</strong>
-            {{e.system.details.resources.oil}}
-          </div>
+        <div class="col-ac" title="{{localize 'WWN.ArmorClass'}}">
+          {{e.system.aac.value}}
+        </div>
+        <div class="col-strain" title="{{localize 'WWN.SystemStrainLong'}}">
+          {{e.system.details.strain.value}}/{{e.system.details.strain.max}}
+        </div>
+        <div class="col-saves" title="{{localize 'WWN.category.saves'}}">
+          <span class="save-val"><b>E</b>{{e.system.saves.evasion.value}}</span>
+          <span class="save-val"><b>M</b>{{e.system.saves.mental.value}}</span>
+          <span class="save-val"><b>P</b>{{e.system.saves.physical.value}}</span>
+          <span class="save-val"><b>L</b>{{e.system.saves.luck.value}}</span>
+        </div>
+        <div class="col-move" title="{{localize 'WWN.movement.long'}}">
+          {{e.system.movement.base}}<span class="move-explore">/{{e.system.movement.exploration}}</span>
         </div>
       </div>
     </li>
-    {{/if}} {{/each}}
+    {{/if}}
+    {{/each}}
   </ol>
   <footer>
     <div class=""></div>

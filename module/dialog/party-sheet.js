@@ -3,12 +3,15 @@ import { WwnPartyCurrency } from "./party-coin.js";
 
 export class WwnPartySheet extends FormApplication {
 
+  /** @type {Set<WwnPartySheet>} Track open instances for auto-refresh when party actors update */
+  static _openSheets = new Set();
+
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wwn", "dialog", "party-sheet"],
       template: "systems/wwn/templates/apps/party-sheet.html",
-      width: 350,
-      height: 450,
+      width: 600,
+      height: 480,
       resizable: true,
     });
   }
@@ -29,6 +32,19 @@ export class WwnPartySheet extends FormApplication {
    * Construct and return the data object used to render the HTML template for this form application.
    * @return {Object}
    */
+  /** @override */
+  render(force = false, options = {}) {
+    const out = super.render(force, options);
+    WwnPartySheet._openSheets.add(this);
+    return out;
+  }
+
+  /** @override */
+  close(options = {}) {
+    WwnPartySheet._openSheets.delete(this);
+    return super.close(options);
+  }
+
   getData() {
     // Get all actors that are marked as party members
     const partyActors = game.actors.filter(e => e.type === "character" && e.flags.wwn?.party === true);
@@ -90,8 +106,7 @@ export class WwnPartySheet extends FormApplication {
               let key = c.getAttribute('name');
               await allCharacterActors[key].setFlag('wwn', 'party', c.checked);
             });
-            // Force a rerender of the party sheet after updating actors
-            this.render(true);
+            // Party sheet auto-refreshes via updateActor hook when flags change
           },
         },
       },
@@ -108,8 +123,6 @@ export class WwnPartySheet extends FormApplication {
 
     html.find(".item-controls .item-control .deal-xp").click(this._dealXP.bind(this));
     html.find(".item-controls .item-control .deal-currency").click(this._dealCurrency.bind(this));
-
-    html.find("a.resync").click(() => this.render(true));
 
     html.find(".field-img button[data-action='open-sheet']").click((ev) => {
       let actorId = ev.currentTarget.parentElement.parentElement.parentElement.dataset.actorId;

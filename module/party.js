@@ -22,18 +22,21 @@ export const addControl = (object, html) => {
 
 export const showPartySheet = (object) => {
   event.preventDefault();
+  const width = 600;
+  const height = 480;
   new WwnPartySheet(object, {
-    top: window.screen.height / 2 - 180,
-    left: window.screen.width / 2 - 140,
+    top: window.screen.height / 2 - height / 2,
+    left: window.screen.width / 2 - width / 2,
   }).render(true);
 }
 
+/**
+ * Called when an actor is updated. If the actor is a party member, refresh any open party sheets
+ * so the overview stays in sync without needing the refresh button.
+ */
 export const update = (actor, data) => {
-  if (actor.getFlag('wwn', 'party')) {
-    Object.values(ui.windows).forEach(w => {
-      if (w instanceof WwnPartySheet) {
-        w.render(true);
-      }
-    })
-  }
+  if (!actor.getFlag("wwn", "party")) return;
+  WwnPartySheet._openSheets.forEach((sheet) => {
+    if (sheet.rendered) sheet.render(true);
+  });
 }
