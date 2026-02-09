@@ -16,9 +16,9 @@ export class WwnItem extends Item {
       item: "/systems/wwn/assets/default/item.png",
       focus: "/systems/wwn/assets/default/focus.png",
       art: "/systems/wwn/assets/default/art.png",
-      effect: "", 
+      effect: "",
       crewmember: "icons/sundries/gaming/chess-pawn-white-glass.webp",
-      fitting: "icons/commodities/wood/lumber-stack.webp", 
+      fitting: "icons/commodities/wood/lumber-stack.webp",
       shipweapon: "icons/weapons/artillery/cannon-engraved-gold.webp",
       cargo: "icons/consumables/grains/sacks-grain-white.webp"
 
@@ -330,6 +330,9 @@ export class WwnItem extends Item {
           return;
         }
 
+        // Inherit blind roll from the attack message (no template changes needed)
+        const blindRoll = !!messageObj.blind;
+
         // Create dialog data with token information
         const dialogData = {
           tokens: targets.map(t => ({
@@ -425,7 +428,8 @@ export class WwnItem extends Item {
                   saveType: game.i18n.localize(`WWN.saves.${button.dataset.save}`),
                   results: saveResults,
                   hasSuccessfulSaves: successfulSaves.length > 0,
-                  hasFailedSaves: failedSaves.length > 0
+                  hasFailedSaves: failedSaves.length > 0,
+                  blindroll: blindRoll
                 };
 
                 const content = await renderTemplate("systems/wwn/templates/chat/save-results.html", templateData);
@@ -434,9 +438,15 @@ export class WwnItem extends Item {
                   speaker: { alias: game.i18n.localize("WWN.spells.Save") },
                   sound: CONFIG.sounds.dice,
                   content: content,
-                  type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+                  type: blindRoll ? (CONST.CHAT_MESSAGE_TYPES?.ROLL ?? CONST.CHAT_MESSAGE_STYLES.OTHER) : CONST.CHAT_MESSAGE_STYLES.OTHER,
                   user: game.user.id
                 };
+
+                if (blindRoll) {
+                  chatData.whisper = ChatMessage.getWhisperRecipients("GM");
+                  chatData.blind = true;
+                  chatData.rolls = saveResults.map(r => r.roll);
+                }
 
                 // Handle Dice So Nice for all rolls
                 if (game.dice3d) {
@@ -698,7 +708,7 @@ export class WwnItem extends Item {
     let type = "missile"
 
     const data = this.system;
-    let grace = this.actor.system.details.grace; 
+    let grace = this.actor.system.details.grace;
 
     const rollData = {
       ...(this.actor?._getRollData() || {}),
@@ -928,8 +938,8 @@ export class WwnItem extends Item {
       case "asset":
         this.rollAsset();
         break;
-      case "crewmember": 
-        this.show(); 
+      case "crewmember":
+        this.show();
       case "fitting":
         this.show();
     }

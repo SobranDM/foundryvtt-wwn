@@ -48,7 +48,7 @@
 
       <div class="card-buttons">
         {{#if data.roll.save}}
-        <button data-action="save" data-save="{{data.roll.save}}">
+        <button data-action="save" data-save="{{data.roll.save}}" data-blind-roll="{{data.roll.blindroll}}">
           {{lookup config.saves data.roll.save}} - {{localize "WWN.spells.Save"}}
         </button>
         {{/if}}

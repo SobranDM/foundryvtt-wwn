@@ -95,6 +95,9 @@ export class WwnDice {
     let rollMode = game.settings.get("core", "rollMode");
     rollMode = form ? form.rollMode.value : rollMode;
 
+    // Ensure data.roll exists (skill rolls pass roll: {} initially)
+    if (!data.roll) data.roll = {};
+
     // Force blind roll (art formulas)
     if (data.roll.blindroll) {
       rollMode = game.user.isGM ? "selfroll" : "blindroll";
@@ -183,6 +186,9 @@ export class WwnDice {
             templateData.rollDamage = godboundRoll.straightTotal;
             renderTemplate(template, templateData).then((content) => {
               chatData.content = content;
+              // So Foundry treats this as a roll message and applies blindable content visibility
+              chatData.type = CONST.CHAT_MESSAGE_TYPES?.ROLL ?? CONST.CHAT_MESSAGE_STYLES?.OTHER;
+              chatData.rolls = [roll];
               // Dice So Nice
               if (game.dice3d) {
                 game.dice3d
@@ -207,6 +213,9 @@ export class WwnDice {
         } else {
           renderTemplate(template, templateData).then((content) => {
             chatData.content = content;
+            // So Foundry treats this as a roll message and applies blindable content visibility
+            chatData.type = CONST.CHAT_MESSAGE_TYPES?.ROLL ?? CONST.CHAT_MESSAGE_STYLES?.OTHER;
+            chatData.rolls = [roll];
             // Dice So Nice
             if (game.dice3d) {
               game.dice3d
@@ -601,27 +610,26 @@ export class WwnDice {
                     true,
                     chatData.whisper,
                     chatData.blind
-                  )
-                  .then(() => {
-                    if (templateData.result.isSuccess) {
-                      templateData.result.dmg = dmgRoll.total;
-                      game.dice3d
-                        .showForRoll(
-                          dmgRoll,
-                          game.user,
-                          true,
-                          chatData.whisper,
-                          chatData.blind
-                        )
-                        .then(() => {
-                          ChatMessage.create(chatData);
-                          resolve(roll);
-                        });
-                    } else {
+                  );
+                if (templateData.result.isSuccess) {
+                  templateData.result.dmg = dmgRoll.total;
+                  game.dice3d
+                    .showForRoll(
+                      dmgRoll,
+                      game.user,
+                      true,
+                      chatData.whisper,
+                      chatData.blind
+                    )
+                    .then(() => {
                       ChatMessage.create(chatData);
                       resolve(roll);
-                    }
-                  });
+                    });
+                } else {
+                  ChatMessage.create(chatData);
+                  resolve(roll);
+                }
+
               } else {
                 chatData.sound = CONFIG.sounds.dice;
                 ChatMessage.create(chatData);
@@ -644,27 +652,26 @@ export class WwnDice {
                     true,
                     chatData.whisper,
                     chatData.blind
-                  )
-                  .then(() => {
-                    if (templateData.result.isSuccess) {
-                      templateData.result.dmg = dmgRoll.total;
-                      game.dice3d
-                        .showForRoll(
-                          dmgRoll,
-                          game.user,
-                          true,
-                          chatData.whisper,
-                          chatData.blind
-                        )
-                        .then(() => {
-                          ChatMessage.create(chatData);
-                          resolve(roll);
-                        });
-                    } else {
+                  );
+                if (templateData.result.isSuccess) {
+                  templateData.result.dmg = dmgRoll.total;
+                  game.dice3d
+                    .showForRoll(
+                      dmgRoll,
+                      game.user,
+                      true,
+                      chatData.whisper,
+                      chatData.blind
+                    )
+                    .then(() => {
                       ChatMessage.create(chatData);
                       resolve(roll);
-                    }
-                  });
+                    });
+                } else {
+                  ChatMessage.create(chatData);
+                  resolve(roll);
+                }
+
               } else {
                 chatData.sound = CONFIG.sounds.dice;
                 ChatMessage.create(chatData);

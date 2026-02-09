@@ -7,11 +7,15 @@
 - Added ship sheets.
   - I did a little cleanup but these are largely due to Tirhan. Thanks for the feature!
   - Only did some cursory testing. All appears to be well, but if you spot any problems, log a Github Issue or give me a shout on Discord.
-- Did some cleanup on roll logic.
+- Improved attack roll speed, particularly when using trauma and Dice So Nice.
+  - For best results, turn on "display chat card" option in Dice So Nice settings.
 
 ### Fixes
 
 - Instinct check threshold. Thanks to SpaceHammer16 for pointing this out.
+- Saving throws and skill checks ignoring blind roll rules.
+  - This wasn't working for the stupidest reason imaginable.
+  - It's possible this has broken something I didn't find in my testing. Please let me know if you have any issues applying damage or healing, or any other chat card interactions.
 
 ## New in 1.6.1
 
