@@ -39,7 +39,8 @@ export class WwnPartySheet extends FormApplication {
       },
       config: CONFIG.WWN,
       user: game.user,
-      settings: game.settings
+      settings: game.settings,
+      useGoldStandard: game.settings.get("wwn", "useGoldStandard")
     };
     return data;
   }

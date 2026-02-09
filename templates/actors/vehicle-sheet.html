@@ -1,0 +1,19 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header flexrow">
+    {{> "systems/wwn/templates/actors/partials/vehicle-header.html"}}
+  </header>
+
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="inventory">{{localize "WWN.category.inventory"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab" data-group="primary" data-tab="inventory">
+      {{> "systems/wwn/templates/actors/partials/vehicle-inventory-tab.html"}}
+    </div>
+    <div class="tab" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/actors/partials/actor-effects.html"}}
+    </div>
+  </section>
+</form>

@@ -3,7 +3,8 @@ import { WwnItemSheet } from "./module/item/item-sheet.js";
 import { WwnActorSheetCharacter } from "./module/actor/character-sheet.js";
 import { WwnActorSheetMonster } from "./module/actor/monster-sheet.js";
 import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
-import { WwnActorSheetShip } from "./module/actor/ship-sheet.js"; 
+import { WwnActorSheetShip } from "./module/actor/ship-sheet.js";
+import { WwnActorSheetVehicle } from "./module/actor/vehicle-sheet.js";
 import preloadHandlebarsTemplates from "./module/preloadTemplates.js";
 import { WwnActor } from "./module/actor/entity.js";
 import { WwnItem } from "./module/item/entity.js";
@@ -79,6 +80,11 @@ Hooks.once("init", async function () {
     types: ["ship"],
     makeDefault: true,
     label: "WWN.SheetClassShip"
+  });
+  Actors.registerSheet("wwn", WwnActorSheetVehicle, {
+    types: ["vehicle"],
+    makeDefault: true,
+    label: "WWN.SheetClassVehicle"
   });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("wwn", WwnItemSheet, {

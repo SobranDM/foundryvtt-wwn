@@ -149,10 +149,18 @@ export class WwnActorSheet extends ActorSheet {
     html.find(".item .item-rollable .item-image").click(async (ev) => {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));
+      if (this.actor.type === "vehicle") return;
       if (item.type == "weapon") {
         if (this.actor.type === "monster") {
+          const max = item.system.counter?.max ?? 0;
+          const value = item.system.counter?.value ?? 0;
+          const inCombat = !!game.combat;
+          if (inCombat && max > 0 && value >= max) {
+            ui.notifications.warn(game.i18n.format("WWN.items.roundAttacksAtMax", { name: item.name }));
+            return;
+          }
           await item.update({
-            system: { counter: { value: item.system.counter.value - 1 } }
+            system: { counter: { value: value + 1 } }
           })
         }
         if (item.system.ship){

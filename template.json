@@ -4,7 +4,8 @@
       "character",
       "monster",
       "faction",
-      "ship"
+      "ship",
+      "vehicle"
     ],
     "templates": {
       "common": {
@@ -240,6 +241,9 @@
       },
       "languages": {
         "value": [ ]
+      },
+      "prototypeToken": {
+        "actorLink": true
       }
     },
     "monster": {
@@ -277,6 +281,10 @@
       }
     },
     "faction": {
+      "img": "systems/wwn/assets/default/faction.png",
+      "prototypeToken": {
+        "actorLink": true
+      },
       "description": "",
       "health": {
         "value": 7,
@@ -300,6 +308,10 @@
       }
     }, 
     "ship": {
+      "img": "icons/skills/trades/profession-sailing-ship.webp",
+      "prototypeToken": {
+        "actorLink": true
+      },
       "templates": [
         "common"
       ],
@@ -348,6 +360,27 @@
         "max": 1,
         "value": 0
       }
+    },
+    "vehicle": {
+      "img": "icons/environment/creatures/horse-tan.webp",
+      "prototypeToken": {
+        "actorLink": true
+      },
+      "details": {},
+      "encumbranceMax": null,
+      "encumbrance": {
+        "value": 0,
+        "max": null
+      },
+      "currency": {
+        "cp": 0,
+        "sp": 0,
+        "ep": 0,
+        "gp": 0,
+        "pp": 0,
+        "bank": 0
+      },
+      "treasure": 0
     }
   },
   "Item": {

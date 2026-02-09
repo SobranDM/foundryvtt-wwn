@@ -16,7 +16,9 @@ export class WwnPartyCurrency extends FormApplication {
      * @type {String}
      */
     get title() {
-        return game.i18n.localize("WWN.dialog.currency.deal");
+        return game.settings.get("wwn", "useGoldStandard")
+            ? game.i18n.localize("WWN.dialog.currency.dealGold")
+            : game.i18n.localize("WWN.dialog.currency.deal");
     }
 
     /* -------------------------------------------- */
@@ -31,7 +33,8 @@ export class WwnPartyCurrency extends FormApplication {
             data: this.object,
             config: CONFIG.WWN,
             user: game.user,
-            settings: settings
+            settings: game.settings,
+            useGoldStandard: game.settings.get("wwn", "useGoldStandard")
         };
         return data;
     }

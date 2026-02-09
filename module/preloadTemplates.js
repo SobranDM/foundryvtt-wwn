@@ -4,7 +4,8 @@ const preloadHandlebarsTemplates = async function () {
     'systems/wwn/templates/actors/character-sheet.html',
     'systems/wwn/templates/actors/monster-sheet.html',
     'systems/wwn/templates/actors/faction-sheet.html',
-    'systems/wwn/templates/actors/ship-sheet.html', 
+    'systems/wwn/templates/actors/ship-sheet.html',
+    'systems/wwn/templates/actors/vehicle-sheet.html',
     //Actor partials
     //Sheet tabs
     'systems/wwn/templates/actors/partials/character-header.html',
@@ -27,7 +28,10 @@ const preloadHandlebarsTemplates = async function () {
     'systems/wwn/templates/actors/partials/ship-crew-list.html',
     'systems/wwn/templates/actors/partials/ship-attributes-tab.html',
     'systems/wwn/templates/actors/partials/ship-inventory-tab.html',
-    'systems/wwn/templates/actors/partials/ship-notes-tab.html', 
+    'systems/wwn/templates/actors/partials/ship-notes-tab.html',
+
+    'systems/wwn/templates/actors/partials/vehicle-header.html',
+    'systems/wwn/templates/actors/partials/vehicle-inventory-tab.html',
 
     // Combat Tab
     'systems/wwn/templates/apps/combat-set-groups.hbs',

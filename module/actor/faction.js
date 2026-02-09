@@ -12,10 +12,15 @@ export class WwnFaction extends Actor {
 
   }
 
-  async _onCreate() {
-    await this.actor.update({
-      "token.actorLink": true,
-      "img" : "systems/wwn/assets/default/faction.png"
+  _preCreate(data, options, user) {
+    super._preCreate(data, options, user);
+    const dm = CONST.TOKEN_DISPLAY_MODES;
+    this.updateSource({
+      "prototypeToken.actorLink": true,
+      "prototypeToken.displayName": dm.HOVER ?? 3,
+      "prototypeToken.displayBars": dm.OWNER_HOVER ?? 2,
+      "prototypeToken.bar1": { attribute: "system.health" },
+      img: "systems/wwn/assets/default/faction.png"
     });
   }
 

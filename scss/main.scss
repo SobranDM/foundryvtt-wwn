@@ -2206,6 +2206,64 @@
 }
 
 /* ----------------------------------------- */
+/*  Vehicle sheet – coin section             */
+/* ----------------------------------------- */
+.wwn.sheet.actor.vehicle {
+  .sheet-body .inventory .vehicle-currency-section {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.05);
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    .currency-subgroup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      flex: 0 0 auto;
+
+      .currency-header {
+        font-size: 11px;
+        color: #4b4a44;
+        font-weight: 600;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 1.2;
+      }
+
+      input.currency {
+        width: 56px;
+        min-width: 56px;
+        text-align: center;
+        padding: 4px 6px;
+        border: 1px solid #7a7971;
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        font-size: 13px;
+        height: 28px;
+      }
+
+      input.currency:disabled {
+        background: rgba(0, 0, 0, 0.06);
+        cursor: default;
+      }
+    }
+
+    .currency-subgroup.currency-buffer {
+      margin-left: 4px;
+    }
+  }
+}
+
+/* ----------------------------------------- */
 /*  Effect Tab Styles                        */
 /* ----------------------------------------- */
 

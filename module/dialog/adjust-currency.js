@@ -28,6 +28,11 @@ export class WwnAdjustCurrency extends FormApplication {
     if (data.type === 'character') {
       data.isCharacter = true;
     }
+    data.showBank = this.object.type !== 'vehicle';
+    data.useGoldStandard = game.settings.get("wwn", "useGoldStandard");
+    data.bankLabel = data.useGoldStandard
+      ? game.i18n.localize("WWN.items.bank.shortGold")
+      : game.i18n.localize("WWN.items.bank.short");
     data.user = game.user;
     data.config = CONFIG.WWN;
     return data;
@@ -35,23 +40,26 @@ export class WwnAdjustCurrency extends FormApplication {
   /* -------------------------------------------- */
 
   async _adjustCurrency(ev) {
+    const $form = $(ev.currentTarget.parentElement.parentElement);
     let updatedCurrency = { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0, bank: 0 };
-    updatedCurrency.cp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="copper"]').val()) || 0;
-    updatedCurrency.sp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="silver"]').val()) || 0;
-    updatedCurrency.gp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="gold"]').val()) || 0;
-    updatedCurrency.bank = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="bank"]').val()) || 0;
+    updatedCurrency.cp = parseInt($form.find('input[name="copper"]').val()) || 0;
+    updatedCurrency.sp = parseInt($form.find('input[name="silver"]').val()) || 0;
+    updatedCurrency.gp = parseInt($form.find('input[name="gold"]').val()) || 0;
+    if (this.object.type !== 'vehicle') {
+      updatedCurrency.bank = parseInt($form.find('input[name="bank"]').val()) || 0;
+    }
     if (game.settings.get("wwn", "currencyTypes") === "currencybx") {
-      updatedCurrency.ep = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="electrum"]').val()) || 0;
-      updatedCurrency.pp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="platinum"]').val()) || 0;
+      updatedCurrency.ep = parseInt($form.find('input[name="electrum"]').val()) || 0;
+      updatedCurrency.pp = parseInt($form.find('input[name="platinum"]').val()) || 0;
     }
     updatedCurrency = {
-      cp: updatedCurrency.cp + this.object.system.currency.cp,
-      sp: updatedCurrency.sp + this.object.system.currency.sp,
-      ep: updatedCurrency.ep + this.object.system.currency.ep,
-      gp: updatedCurrency.gp + this.object.system.currency.gp,
-      pp: updatedCurrency.pp + this.object.system.currency.pp,
-      bank: updatedCurrency.bank + this.object.system.currency.bank
-    }
+      cp: updatedCurrency.cp + (this.object.system.currency?.cp ?? 0),
+      sp: updatedCurrency.sp + (this.object.system.currency?.sp ?? 0),
+      ep: updatedCurrency.ep + (this.object.system.currency?.ep ?? 0),
+      gp: updatedCurrency.gp + (this.object.system.currency?.gp ?? 0),
+      pp: updatedCurrency.pp + (this.object.system.currency?.pp ?? 0),
+      bank: this.object.type === 'vehicle' ? 0 : (updatedCurrency.bank + (this.object.system.currency?.bank ?? 0))
+    };
     const invalidEntries = Object.entries(updatedCurrency).filter(curr => curr[1] < 0)
     if (invalidEntries.length > 0) {
       return ui.notifications.warn(`Cannot reduce ${invalidEntries[0][0].toUpperCase()} below 0!`)

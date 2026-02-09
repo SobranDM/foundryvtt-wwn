@@ -208,6 +208,16 @@ export const registerSettings = function () {
     requiresReload: true
   });
 
+  game.settings.register("wwn", "disableCoinWeight", {
+    name: "Disable Coin Weight",
+    hint: "If enabled, coin/currency does not count toward encumbrance for characters and vehicles.",
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
+  });
+
   game.settings.register("wwn", "flatSkillCost", {
     name: "Flat Skill Cost",
     hint: "Skills cost a flat 1 point to purchase, rather than scaling with level.",

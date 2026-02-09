@@ -1,0 +1,20 @@
+<img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+<section class="header-details flexrow">
+  <h1 class="charname">
+    <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" />
+  </h1>
+  <ul class="summary flexrow">
+    <li class="flex2">
+      <label>{{localize 'WWN.vehicle.encumbranceMax'}}</label>
+      <input type="number" name="system.encumbranceMax" value="{{system.encumbranceMax}}" data-dtype="Number" placeholder="—" min="" step="1" title="{{localize 'WWN.vehicle.encumbranceMaxHint'}}" />
+    </li>
+    {{#if system.encumbranceMax}}
+    <li class="flex2">
+      <label>{{localize 'WWN.Encumbrance'}}</label>
+      <span class="encumbrance-value" title="{{localize 'WWN.Encumbrance'}}">
+        {{system.encumbrance.value}} / {{system.encumbranceMax}}
+      </span>
+    </li>
+    {{/if}}
+  </ul>
+</section>

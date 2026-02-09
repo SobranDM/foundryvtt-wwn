@@ -16,8 +16,8 @@
         {{/each}}
     </div>
     <div class="dialog-buttons">
-        <button type="button" data-action="deal-currency" title="{{localize "WWN.dialog.currency.dealHint"}}">
-            {{localize "WWN.dialog.currency.deal"}}
+        <button type="button" data-action="deal-currency" title="{{#if useGoldStandard}}{{localize 'WWN.dialog.currency.dealHintGold'}}{{else}}{{localize 'WWN.dialog.currency.dealHint'}}{{/if}}">
+            {{#if useGoldStandard}}{{localize 'WWN.dialog.currency.dealGold'}}{{else}}{{localize 'WWN.dialog.currency.deal'}}{{/if}}
         </button>
     </div>
 </form>

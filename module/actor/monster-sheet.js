@@ -204,7 +204,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
       await item.update({
         system: {
           counter: {
-            value: parseInt(wp.system.counter.max),
+            value: 0,
           },
         },
       });

@@ -22,6 +22,15 @@
   "styles": [
     "styles/main.css"
   ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "times-up",
+        "type": "module",
+        "manifest": "https://gitlab.com/tposney/times-up/raw/master/package/module.json"
+      }
+    ]
+  },
   "packs": [
     {
       "name": "instinct",

@@ -2,13 +2,24 @@
 
 ## New in 1.7.0
 
-### Changes
+### Features
 
 - Added ship sheets.
   - I did a little cleanup but these are largely due to Tirhan. Thanks for the feature!
   - Only did some cursory testing. All appears to be well, but if you spot any problems, log a Github Issue or give me a shout on Discord.
+- Added vehicle/mount sheet. This only tracks currency and inventory.
+  - By default, vehicles do not track encumbrance. Typing any number into the max encumbrance field will cause encumbrance to begin auto-calculating.
+  - There is no movement field, as how various B/X games handle movement speed based on overencumbering a vehicle can vary greatly.
+
+### Changes
+
 - Improved attack roll speed, particularly when using trauma and Dice So Nice.
   - For best results, turn on "display chat card" option in Dice So Nice settings.
+- Made Times Up a required module. Without this, some of you were likely having the charge attack active effect stuck on some actors.
+  - If this module is abandoned in the future, I will bake the required functionality for disabling the active effect into the system.
+- New setting: disable coin weight. Applies to both characters and vehicles.
+- Attack counter for monsters now increments from 0 instead of decrementing. Displays error if combat is active and counter is at max.
+- Added default token settings for various actor types.
 
 ### Fixes
 
@@ -16,6 +27,7 @@
 - Saving throws and skill checks ignoring blind roll rules.
   - This wasn't working for the stupidest reason imaginable.
   - It's possible this has broken something I didn't find in my testing. Please let me know if you have any issues applying damage or healing, or any other chat card interactions.
+- The "Deal Silver" button in the party sheet now correctly reflects whether the world is using the gold standard, both for the dialog button label and for the resulting chat card.
 
 ## New in 1.6.1
 

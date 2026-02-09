@@ -38,6 +38,9 @@ export class WwnActor extends Actor {
         this.getHealth(data.wealthRating) +
         this.getHealth(data.forceRating) +
         this.getHealth(data.cunningRating);
+    } else if (this.type === "vehicle") {
+      this.computeEncumbranceVehicle();
+      this.computeTreasure();
     } else if (this.type === "ship") {
       this.computeEncumbranceShip();
       this._calculateMovement();
@@ -79,23 +82,35 @@ export class WwnActor extends Actor {
     return super.createEmbeddedDocuments(embeddedName, data, context);
   }
 
-  async _onCreate() {
-    if (this.type === "character") {
-      await this.update({
-        "token.actorLink": true,
-      });
-    }
+  /** @inheritdoc */
+  async _preCreate(data, options, user) {
+    const allowed = await super._preCreate(data, options, user);
+    if (allowed === false) return false;
+
+    const updates = {};
+    // Token defaults for all actor types: name on hover for everyone, bar1 = HP on hover for owner
+    const dm = CONST.TOKEN_DISPLAY_MODES;
+    updates["prototypeToken.displayName"] = dm.HOVER ?? 3;
+    updates["prototypeToken.displayBars"] = dm.OWNER_HOVER ?? 2;
+    updates["prototypeToken.bar1"] = { attribute: "hp" };
     if (this.type === "faction") {
-      await this.update({
-        "token.actorLink": true,
-        "img": "systems/wwn/assets/default/faction.png"
-      });
-    } else if (this.type === "ship") {
-      await this.update({
-        "token.actorLink": true,
-        "img": "icons/skills/trades/profession-sailing-ship.webp"
-      });
+      updates["prototypeToken.actorLink"] = true;
+      updates.img = "systems/wwn/assets/default/faction.png";
     }
+    if (this.type === "character") {
+      updates["prototypeToken.actorLink"] = true;
+      updates["prototypeToken.sight.enabled"] = true;
+    }
+    if (this.type === "ship") {
+      updates["prototypeToken.actorLink"] = true;
+      updates.img = "icons/skills/trades/profession-sailing-ship.webp";
+    }
+    if (this.type === "vehicle") {
+      updates["prototypeToken.actorLink"] = true;
+      updates.img = "icons/environment/creatures/horse-tan.webp";
+    }
+
+    this.updateSource(updates);
   }
 
   /* -------------------------------------------- */
@@ -147,10 +162,14 @@ export class WwnActor extends Actor {
       "system.currency.bank": value + this.system.currency.bank,
     }).then(() => {
       const speaker = ChatMessage.getSpeaker({ actor: this });
+      const currency = game.settings.get("wwn", "useGoldStandard")
+        ? game.i18n.localize("WWN.currency.gold")
+        : game.i18n.localize("WWN.currency.silver");
       ChatMessage.create({
         content: game.i18n.format("WWN.messages.GetCurrency", {
           name: this.name,
           value,
+          currency,
         }),
         speaker,
       });
@@ -1018,24 +1037,87 @@ export class WwnActor extends Actor {
 
     });
 
-    if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
-      const coinWeight =
-        (data.currency.cp +
-          data.currency.sp +
-          data.currency.ep +
-          data.currency.gp +
-          data.currency.pp) /
-        100;
-      totalStowed += coinWeight;
-    } else {
-      const coinWeight =
-        (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
-      totalStowed += coinWeight;
+    if (!game.settings.get("wwn", "disableCoinWeight")) {
+      if (game.settings.get("wwn", "currencyTypes") == "currencybx") {
+        const coinWeight =
+          (data.currency.cp +
+            data.currency.sp +
+            data.currency.ep +
+            data.currency.gp +
+            data.currency.pp) /
+          100;
+        totalStowed += coinWeight;
+      } else {
+        const coinWeight =
+          (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
+        totalStowed += coinWeight;
+      }
     }
 
     this.system.encumbrance = {
       readied: { max: maxReadied, value: totalReadied.toFixed(2) },
       stowed: { max: maxStowed, value: totalStowed.toFixed(2) },
+    };
+  }
+
+  computeEncumbranceVehicle() {
+    if (this.type != "vehicle") return;
+    const encMax = this.system.encumbranceMax;
+    if (encMax == null || encMax === "") {
+      this.system.encumbrance = { value: 0, max: null };
+      return;
+    }
+
+    let total = 0;
+    const roundWeight = game.settings.get("wwn", "roundWeight");
+    const weapons = this.items.filter((w) => w.type == "weapon");
+    const armors = this.items.filter((a) => a.type == "armor");
+    const items = this.items.filter((i) => i.type == "item");
+
+    weapons.forEach((w) => {
+      const wgt = w.system.weight * w.system.quantity;
+      total += roundWeight ? Math.ceil(wgt) : wgt;
+    });
+    armors.forEach((a) => {
+      const wgt = a.system.weight;
+      total += roundWeight ? Math.ceil(wgt) : wgt;
+    });
+    items.forEach((i) => {
+      let itemWeight;
+      if (i.system.charges.value || i.system.charges.max) {
+        if (
+          i.system.charges.value <= i.system.charges.max ||
+          !i.system.charges.value
+        ) {
+          itemWeight = i.system.weight;
+        } else if (!i.system.charges.max) {
+          itemWeight = i.system.charges.value * i.system.weight;
+        } else {
+          itemWeight = (i.system.charges.value / i.system.charges.max) * i.system.weight;
+        }
+      } else {
+        itemWeight = i.system.weight * i.system.quantity;
+      }
+      total += roundWeight ? Math.ceil(itemWeight) : itemWeight;
+    });
+
+    const data = this.system;
+    if (data.currency && !game.settings.get("wwn", "disableCoinWeight")) {
+      if (game.settings.get("wwn", "currencyTypes") === "currencybx") {
+        const coinWeight =
+          (data.currency.cp + data.currency.sp + data.currency.ep +
+            data.currency.gp + data.currency.pp) / 100;
+        total += coinWeight;
+      } else {
+        const coinWeight = (data.currency.cp + data.currency.sp + data.currency.gp) / 100;
+        total += coinWeight;
+      }
+    }
+
+    const max = Number(encMax);
+    this.system.encumbrance = {
+      value: Number(total.toFixed(2)),
+      max: isNaN(max) ? null : max,
     };
   }
 
@@ -1365,11 +1447,11 @@ export class WwnActor extends Actor {
   }
 
   computeTreasure() {
-    if (this.type != "character" && this.type != "ship") {
+    if (this.type != "character" && this.type != "ship" && this.type != "vehicle") {
       return;
     }
     const data = this.system;
-    // Compute treasure
+    // Compute treasure from items marked as treasure (and not personal)
     let total = 0;
     const treasures = this.items.filter(
       (i) => i.type == "item" && i.system.treasure && !i.system.personal
@@ -1379,16 +1461,16 @@ export class WwnActor extends Actor {
     });
 
     let cargoTotal = 0;
-
-    const cargos = this.items.filter(
-      (i) => i.type == "cargo" && i.system.treasure
-    );
-
-    cargos.forEach((c) => {
-      if (c.system.treasure) {
-        cargoTotal += c.system.price * c.system.quantity;
-      }
-    });
+    if (this.type === "ship") {
+      const cargos = this.items.filter(
+        (i) => i.type == "cargo" && i.system.treasure
+      );
+      cargos.forEach((c) => {
+        if (c.system.treasure) {
+          cargoTotal += c.system.price * c.system.quantity;
+        }
+      });
+    }
 
     this.system.treasure = total + cargoTotal;
   }

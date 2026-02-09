@@ -24,10 +24,12 @@
       <input name="platinum" placeholder="0" type="number" data-dtype="Number" />
     </div>
     {{/if}}
+    {{#if showBank}}
     <div class="form-group">
-      <label>{{localize "WWN.items.bank.short"}}</label>
+      <label>{{bankLabel}}</label>
       <input name="bank" placeholder="0" type="number" data-dtype="Number" />
     </div>
+    {{/if}}
     </ul>
     <footer class="sheet-footer">
       <button type="submit" data-action="adjust-currency">
