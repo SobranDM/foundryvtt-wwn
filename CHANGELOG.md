@@ -20,6 +20,7 @@
 - New setting: disable coin weight. Applies to both characters and vehicles.
 - Attack counter for monsters now increments from 0 instead of decrementing. Displays error if combat is active and counter is at max.
 - Added default token settings for various actor types.
+- Edit lock state now persists instead of resetting on character update, making leveling up much less frustrating.
 
 ### Fixes
 

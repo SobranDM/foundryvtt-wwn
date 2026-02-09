@@ -207,9 +207,9 @@
     <li class="item-titles flexrow">
       <div class="item-name">{{localize "WWN.category.skills"}}</div>
       <div class="item-controls">
-        <a class="item-control lock-skills lock hidden" data-type="lock" title="{{localize 'WWN.Lock'}}"><i
+        <a class="item-control lock-skills lock {{#unless system.config.skillsEditMode}}hidden{{/unless}}" data-type="lock" title="{{localize 'WWN.Lock'}}"><i
             class="fa fa-unlock" style="padding-right:2px;"></i></a>
-        <a class="item-control lock-skills unlock" data-type="unlock" title="{{localize 'WWN.Lock'}}"><i
+        <a class="item-control lock-skills unlock {{#if system.config.skillsEditMode}}hidden{{/if}}" data-type="unlock" title="{{localize 'WWN.Lock'}}"><i
             class="fa fa-lock" style="padding-right:2px;"></i></a>
         <a class="item-control item-create" data-type="skill" title="{{localize 'WWN.Add'}}"><i
             class="fa fa-plus"></i></a>
@@ -240,18 +240,18 @@
               </h4>
             </a>
           </div>
-          <div class="field-xshort unhidden reverse-lock">
+          <div class="field-xshort unhidden reverse-lock {{#if @root.system.config.skillsEditMode}}hidden{{/if}}">
             {{lookup @root.config.scores skill.system.score}}
           </div>
-          <div class="field-xshort unhidden reverse-lock">
+          <div class="field-xshort unhidden reverse-lock {{#if @root.system.config.skillsEditMode}}hidden{{/if}}">
             {{skill.system.ownedLevel}}
           </div>
           {{#if ../owner}}
-          <div class="item-controls-short hidden skill-lock"><a class="item-control item-edit"
+          <div class="item-controls-short skill-lock {{#unless @root.system.config.skillsEditMode}}hidden{{/unless}}"><a class="item-control item-edit"
               title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a></div>
-          <div class="item-controls-short hidden skill-lock"><a class="item-control item-delete"
+          <div class="item-controls-short skill-lock {{#unless @root.system.config.skillsEditMode}}hidden{{/unless}}"><a class="item-control item-delete"
               title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a></div>
-          <div class="item-controls-short hidden skill-lock"><a class="item-control skill-up"
+          <div class="item-controls-short skill-lock {{#unless @root.system.config.skillsEditMode}}hidden{{/unless}}"><a class="item-control skill-up"
               title='{{localize "WWN.Up"}}'><i class="fas fa-level-up-alt"></i></a></div>
           {{/if}}
         </div>
