@@ -1,3 +1,7 @@
 2026/02/09-14:30:19.175 980c Recovering log #3098
 2026/02/09-14:30:19.180 980c Delete type=0 #3098
 2026/02/09-14:30:19.180 980c Delete type=3 #3096
+2026/02/09-14:50:04.290 97a0 Level-0 table #3103: started
+2026/02/09-14:50:04.290 97a0 Level-0 table #3103: 0 bytes OK
+2026/02/09-14:50:04.292 97a0 Delete type=0 #3101
+2026/02/09-14:50:04.292 97a0 Manual compaction at level-0 from '!items!0TZ2UzncewM9vF29' @ 72057594037927935 : 1 .. '!items!yLZmCS5ImcJyFZOj' @ 0 : 0; will stop at (end)

@@ -2,11 +2,31 @@
   "name": "wwn",
   "version": "1.0.0",
   "description": "Worlds Without Number system for Foundry VTT",
+  "type": "module",
   "scripts": {
     "build:css": "sass scss/:styles/ --style compressed",
-    "watch:css": "sass scss/:styles/ --watch --style compressed"
+    "watch:css": "sass scss/:styles/ --watch --style compressed",
+    "test": "mocha tests/node/**/*.spec.js",
+    "test:coverage": "c8 --reporter=html --reporter=text-summary mocha tests/node/**/*.spec.js"
   },
   "devDependencies": {
+    "c8": "^10.1.2",
+    "chai": "^4.5.0",
+    "handlebars": "^4.7.8",
+    "jsdom": "^25.0.1",
+    "mocha": "^10.8.2",
     "sass": "^1.71.1"
+  },
+  "c8": {
+    "include": [
+      "module/helpers.js",
+      "module/insertionSort.js",
+      "module/config.js",
+      "module/dice.js",
+      "module/utils/listener-funcs.js",
+      "module/effects.mjs"
+    ],
+    "exclude": ["tests/**", "foundry/**"],
+    "reporter": ["html", "text-summary"]
   }
 }

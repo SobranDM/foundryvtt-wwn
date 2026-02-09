@@ -2,7 +2,7 @@
 
 ## New in 1.7.0
 
-### Features
+### New Sheets
 
 - Added ship sheets.
   - I did a little cleanup but these are largely due to Tirhan. Thanks for the feature!

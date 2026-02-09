@@ -5,3 +5,7 @@ wwn.zip
 foundry
 .cursor
 node_modules
+
+# test coverage and Quench snapshots
+coverage/
+__snapshots__/

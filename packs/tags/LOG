@@ -1,3 +1,7 @@
 2026/02/09-14:30:19.186 3954 Recovering log #3098
 2026/02/09-14:30:19.192 3954 Delete type=0 #3098
 2026/02/09-14:30:19.193 3954 Delete type=3 #3096
+2026/02/09-14:50:04.293 97a0 Level-0 table #3103: started
+2026/02/09-14:50:04.293 97a0 Level-0 table #3103: 0 bytes OK
+2026/02/09-14:50:04.295 97a0 Delete type=0 #3101
+2026/02/09-14:50:04.300 97a0 Manual compaction at level-0 from '!journal!04nLY4R9FwqsGjK5' @ 72057594037927935 : 1 .. '!journal.pages!zw2BNbC19cnVBgvY.qyKpf4Uff5ATZ84B' @ 0 : 0; will stop at (end)
