@@ -18,10 +18,9 @@
 - Made Times Up a required module. Without this, some of you were likely having the charge attack active effect stuck on some actors.
   - If this module is abandoned in the future, I will bake the required functionality for disabling the active effect into the system.
 - New setting: disable coin weight. Applies to both characters and vehicles.
-- Attack counter for monsters now increments from 0 instead of decrementing. Displays error if combat is active and counter is at max.
 - Added default token settings for various actor types.
 - Edit lock state now persists instead of resetting on character update, making leveling up much less frustrating.
-- Party sheet received a long-overdue overhaul. It looks much nicer and now refreshes automaticaly instead of requiring a button press.
+- Party sheet received a long-overdue overhaul. It looks much nicer and now refreshes automatically instead of requiring a button press.
 
 ### Fixes
 
@@ -30,6 +29,7 @@
   - This wasn't working for the stupidest reason imaginable.
   - It's possible this has broken something I didn't find in my testing. Please let me know if you have any issues applying damage or healing, or any other chat card interactions.
 - The "Deal Silver" button in the party sheet now correctly reflects whether the world is using the gold standard, both for the dialog button label and for the resulting chat card.
+- Attack counter for monsters now increments from 0 instead of decrementing. Displays error if combat is active and counter is at max. This was always intended to be the case but I reversed the logic at some point.
 
 ## New in 1.6.1
 

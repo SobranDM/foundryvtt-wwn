@@ -1,10 +1,12 @@
 // Import Modules
-import { WwnItemSheet } from "./module/item/item-sheet.js";
-import { WwnActorSheetCharacter } from "./module/actor/character-sheet.js";
-import { WwnActorSheetMonster } from "./module/actor/monster-sheet.js";
-import { WwnActorSheetFaction } from "./module/actor/faction-sheet.js";
-import { WwnActorSheetShip } from "./module/actor/ship-sheet.js";
-import { WwnActorSheetVehicle } from "./module/actor/vehicle-sheet.js";
+import { WwnItemSheetV2 } from "./module/item/item-sheet-v2.js";
+import {
+  WwnActorSheetCharacterV2,
+  WwnActorSheetMonsterV2,
+  WwnActorSheetFactionV2,
+  WwnActorSheetShipV2,
+  WwnActorSheetVehicleV2,
+} from "./module/applications/sheets.js";
 import preloadHandlebarsTemplates from "./module/preloadTemplates.js";
 import { WwnActor } from "./module/actor/entity.js";
 import { WwnItem } from "./module/item/entity.js";
@@ -59,38 +61,81 @@ Hooks.once("init", async function () {
   CONFIG.Actor.documentClass = WwnActor;
   CONFIG.Item.documentClass = WwnItem;
 
-  // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("wwn", WwnActorSheetCharacter, {
+  // Sheet registration uses Foundry's collection classes and core sheet (same as draw-steel)
+  const { Actors, Items } = foundry.documents.collections;
+  const { ItemSheet } = foundry.applications.sheets;
+
+  // Register sheet application classes (draw-steel style: do not unregister core ActorSheet; register per-type with makeDefault)
+  Actors.registerSheet("wwn", WwnActorSheetCharacterV2, {
     types: ["character"],
     makeDefault: true,
     label: "WWN.SheetClassCharacter"
   });
-  Actors.registerSheet("wwn", WwnActorSheetMonster, {
+  Actors.registerSheet("wwn", WwnActorSheetMonsterV2, {
     types: ["monster"],
     makeDefault: true,
     label: "WWN.SheetClassMonster"
   });
-  Actors.registerSheet("wwn", WwnActorSheetFaction, {
+  Actors.registerSheet("wwn", WwnActorSheetFactionV2, {
     types: ["faction"],
     makeDefault: true,
     label: "WWN.SheetClassFaction"
   });
-  Actors.registerSheet("wwn", WwnActorSheetShip, {
+  Actors.registerSheet("wwn", WwnActorSheetShipV2, {
     types: ["ship"],
     makeDefault: true,
     label: "WWN.SheetClassShip"
   });
-  Actors.registerSheet("wwn", WwnActorSheetVehicle, {
+  Actors.registerSheet("wwn", WwnActorSheetVehicleV2, {
     types: ["vehicle"],
     makeDefault: true,
     label: "WWN.SheetClassVehicle"
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("wwn", WwnItemSheet, {
+  Items.registerSheet("wwn", WwnItemSheetV2, {
     makeDefault: true,
     label: "WWN.SheetClassItem"
   });
+
+  // Register TypeDataModels for all actor and item types (v13 modern data model)
+  if (typeof globalThis.foundry?.abstract?.TypeDataModel !== "undefined") {
+    try {
+      if (!CONFIG.Actor.dataModels) CONFIG.Actor.dataModels = {};
+      const actorModels = [
+        ["character", "./module/data/actor/character.mjs", "WwnCharacterDataModel"],
+        ["monster", "./module/data/actor/monster.mjs", "WwnMonsterDataModel"],
+        ["faction", "./module/data/actor/faction.mjs", "WwnFactionDataModel"],
+        ["ship", "./module/data/actor/ship.mjs", "WwnShipDataModel"],
+        ["vehicle", "./module/data/actor/vehicle.mjs", "WwnVehicleDataModel"],
+      ];
+      for (const [type, path, name] of actorModels) {
+        const mod = await import(path);
+        if (mod[name]) CONFIG.Actor.dataModels[type] = mod[name];
+      }
+      if (!CONFIG.Item.dataModels) CONFIG.Item.dataModels = {};
+      const itemModels = [
+        ["item", "./module/data/item/item.mjs", "WwnItemDataModel"],
+        ["weapon", "./module/data/item/weapon.mjs", "WwnWeaponDataModel"],
+        ["armor", "./module/data/item/armor.mjs", "WwnArmorDataModel"],
+        ["spell", "./module/data/item/spell.mjs", "WwnSpellDataModel"],
+        ["art", "./module/data/item/art.mjs", "WwnArtDataModel"],
+        ["focus", "./module/data/item/focus.mjs", "WwnFocusDataModel"],
+        ["skill", "./module/data/item/skill.mjs", "WwnSkillDataModel"],
+        ["ability", "./module/data/item/ability.mjs", "WwnAbilityDataModel"],
+        ["asset", "./module/data/item/asset.mjs", "WwnAssetDataModel"],
+        ["crewmember", "./module/data/item/crewmember.mjs", "WwnCrewmemberDataModel"],
+        ["fitting", "./module/data/item/fitting.mjs", "WwnFittingDataModel"],
+        ["shipweapon", "./module/data/item/shipweapon.mjs", "WwnShipweaponDataModel"],
+        ["cargo", "./module/data/item/cargo.mjs", "WwnCargoDataModel"],
+      ];
+      for (const [type, path, name] of itemModels) {
+        const mod = await import(path);
+        if (mod[name]) CONFIG.Item.dataModels[type] = mod[name];
+      }
+    } catch (_) {
+      // Skip if modules not available (e.g. Node test env)
+    }
+  }
 
   await preloadHandlebarsTemplates();
 });
@@ -145,15 +190,16 @@ Hooks.on("renderActorDirectory", async (app, html, data) => {
 
 Hooks.on("renderSidebarTab", async (object, html) => {
   if (object instanceof Settings) {
-    let gamesystem = html.find("#game-details");
-    // SRD Link
-    let wwn = gamesystem.find('h4').last();
-    wwn.append(` <sub><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php">SRD<a></sub>`);
-
-    // License text
-    const template = "systems/wwn/templates/chat/license.html";
+    const el = html instanceof jQuery ? html[0] : html;
+    const gamesystem = el?.querySelector?.("#game-details");
+    if (!gamesystem) return;
+    const h4s = gamesystem.querySelectorAll("h4");
+    const wwn = h4s.length ? h4s[h4s.length - 1] : null;
+    if (wwn) wwn.insertAdjacentHTML("beforeend", " <sub><a href=\"https://oldschoolessentials.necroticgnome.com/srd/index.php\">SRD</a></sub>");
+    const template = "systems/wwn/templates/chat/license.hbs";
     const rendered = await renderTemplate(template);
-    gamesystem.find(".system").append(rendered);
+    const systemEl = gamesystem.querySelector(".system");
+    if (systemEl && rendered) systemEl.insertAdjacentHTML("beforeend", rendered);
   }
 });
 

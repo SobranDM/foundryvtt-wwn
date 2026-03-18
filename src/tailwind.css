@@ -1,0 +1,1019 @@
+/* WWN/SWN-inspired typography: serif for sheet headers and section titles (must be first) */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Import only theme + utilities from Tailwind v4.
+   We deliberately SKIP preflight to avoid resetting Foundry's global styles
+   (margins, headings, borders, list-styles, img display, font-family, etc.). */
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+/* Tell Tailwind to scan HBS templates for class usage */
+@source "../templates";
+
+/* ----------------------------------------- */
+/*  WWN theme variables — must be in same   */
+/*  file as utilities so they load together */
+/* ----------------------------------------- */
+@layer wwn-fallback {
+  :root {
+    --wwn-d20-filter: none;
+    --wwn-bg: #ebe8da;
+    --wwn-bg-elevated: #d8d6c9;
+    --wwn-border: #7a7971;
+    --wwn-border-strong: rgba(0, 0, 0, 0.9);
+    --wwn-text: #4b4a44;
+    --wwn-text-inverse: #f5f5f5;
+    --wwn-header-bg: #252525;
+    --wwn-panel-title: #f5f5f5;
+    --wwn-accent: #4a5568;
+    --wwn-accent-bright: #5a6598;
+    --wwn-input-bg: transparent;
+    --wwn-tab-bg: #d8d6c9;
+    --wwn-tab-active-bg: #d8d6c9;
+    --wwn-progress-fill: #c53030;
+    --wwn-progress-bg: #742a2a;
+    --wwn-progress-xp-fill: #3182ce;
+    --wwn-progress-xp-bg: #2c5282;
+    --wwn-tag-bg: #4b4a44;
+    --wwn-tag-text: #f5f5f5;
+    --wwn-row-alt: rgba(0, 0, 0, 0.1);
+    --wwn-notify-shadow: #4b4a44;
+    --wwn-text-muted: #969696;
+    --wwn-border-light: #b5b3a4;
+    --wwn-surface: #fff;
+    --wwn-success: #18520b;
+    --wwn-failure: #aa0200;
+  }
+}
+
+body.theme-light,
+body:not([class*="theme-"]) {
+  --wwn-bg: #ebe8da;
+  --wwn-bg-elevated: #d8d6c9;
+  --wwn-border: #7a7971;
+  --wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --wwn-text: #4b4a44;
+  --wwn-text-inverse: #f5f5f5;
+  --wwn-header-bg: #252525;
+  --wwn-panel-title: #f5f5f5;
+  --wwn-accent: #4a5568;
+  --wwn-accent-bright: #5a6598;
+  --wwn-input-bg: transparent;
+  --wwn-tab-bg: #d8d6c9;
+  --wwn-tab-active-bg: #d8d6c9;
+  --wwn-progress-fill: #c53030;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #3182ce;
+  --wwn-progress-xp-bg: #2c5282;
+  --wwn-tag-bg: #4b4a44;
+  --wwn-tag-text: #f5f5f5;
+  --wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --wwn-notify-shadow: #4b4a44;
+  --wwn-text-muted: #969696;
+  --wwn-border-light: #b5b3a4;
+  --wwn-surface: #fff;
+  --wwn-success: #18520b;
+  --wwn-failure: #aa0200;
+  --color-wwn-bg: #ebe8da;
+  --color-wwn-bg-elevated: #d8d6c9;
+  --color-wwn-text: #4b4a44;
+  --color-wwn-text-inverse: #f5f5f5;
+  --color-wwn-text-muted: #969696;
+  --color-wwn-border: #7a7971;
+  --color-wwn-border-light: #b5b3a4;
+  --color-wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --color-wwn-header-bg: #252525;
+  --color-wwn-panel-title: #f5f5f5;
+  --color-wwn-accent: #4a5568;
+  --color-wwn-accent-bright: #5a6598;
+  --color-wwn-tab-bg: #d8d6c9;
+  --color-wwn-tab-active-bg: #d8d6c9;
+  --color-wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --color-wwn-surface: #fff;
+  --color-wwn-success: #18520b;
+  --color-wwn-failure: #aa0200;
+  --color-wwn-progress-bg: #742a2a;
+  --color-wwn-progress-fill: #c53030;
+  --color-wwn-progress-xp-fill: #3182ce;
+  --color-wwn-progress-xp-bg: #2c5282;
+  --color-wwn-tag-bg: #4b4a44;
+  --color-wwn-tag-text: #f5f5f5;
+  --color-wwn-input-bg: transparent;
+}
+
+body.theme-dark {
+  --wwn-d20-filter: invert(0.85);
+  --wwn-bg: #0d1117;
+  --wwn-bg-elevated: #161b22;
+  --wwn-border: #30363d;
+  --wwn-border-strong: #388bfd;
+  --wwn-text: #e6edf3;
+  --wwn-text-inverse: #0d1117;
+  --wwn-header-bg: #21262d;
+  --wwn-panel-title: #e6edf3;
+  --wwn-accent: #388bfd;
+  --wwn-accent-bright: #58a6ff;
+  --wwn-input-bg: rgba(0, 0, 0, 0.3);
+  --wwn-tab-bg: #161b22;
+  --wwn-tab-active-bg: #21262d;
+  --wwn-progress-fill: #e53e3e;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #388bfd;
+  --wwn-progress-xp-bg: #0d419d;
+  --wwn-tag-bg: #30363d;
+  --wwn-tag-text: #e6edf3;
+  --wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --wwn-notify-shadow: #21262d;
+  --wwn-text-muted: #8b949e;
+  --wwn-border-light: #30363d;
+  --wwn-surface: #1c2128;
+  --wwn-success: #3fb950;
+  --wwn-failure: #f85149;
+  --color-wwn-bg: #0d1117;
+  --color-wwn-bg-elevated: #161b22;
+  --color-wwn-text: #e6edf3;
+  --color-wwn-text-inverse: #0d1117;
+  --color-wwn-text-muted: #8b949e;
+  --color-wwn-border: #30363d;
+  --color-wwn-border-light: #30363d;
+  --color-wwn-border-strong: #388bfd;
+  --color-wwn-header-bg: #21262d;
+  --color-wwn-panel-title: #e6edf3;
+  --color-wwn-accent: #388bfd;
+  --color-wwn-accent-bright: #58a6ff;
+  --color-wwn-tab-bg: #161b22;
+  --color-wwn-tab-active-bg: #21262d;
+  --color-wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --color-wwn-surface: #1c2128;
+  --color-wwn-success: #3fb950;
+  --color-wwn-failure: #f85149;
+  --color-wwn-progress-bg: #742a2a;
+  --color-wwn-progress-fill: #e53e3e;
+  --color-wwn-progress-xp-fill: #388bfd;
+  --color-wwn-progress-xp-bg: #0d419d;
+  --color-wwn-tag-bg: #30363d;
+  --color-wwn-tag-text: #e6edf3;
+  --color-wwn-input-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Application/sheet element-level — Foundry uses .application.themed.theme-dark */
+.wwn.themed.theme-light,
+.application.wwn.themed.theme-light {
+  --wwn-bg: #ebe8da;
+  --wwn-bg-elevated: #d8d6c9;
+  --wwn-border: #7a7971;
+  --wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --wwn-text: #4b4a44;
+  --wwn-text-inverse: #f5f5f5;
+  --wwn-header-bg: #252525;
+  --wwn-panel-title: #f5f5f5;
+  --wwn-accent: #4a5568;
+  --wwn-accent-bright: #5a6598;
+  --wwn-input-bg: transparent;
+  --wwn-tab-bg: #d8d6c9;
+  --wwn-tab-active-bg: #d8d6c9;
+  --wwn-progress-fill: #c53030;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #3182ce;
+  --wwn-progress-xp-bg: #2c5282;
+  --wwn-tag-bg: #4b4a44;
+  --wwn-tag-text: #f5f5f5;
+  --wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --wwn-notify-shadow: #4b4a44;
+  --wwn-text-muted: #969696;
+  --wwn-border-light: #b5b3a4;
+  --wwn-surface: #fff;
+  --wwn-success: #18520b;
+  --wwn-failure: #aa0200;
+  --color-wwn-bg: #ebe8da;
+  --color-wwn-bg-elevated: #d8d6c9;
+  --color-wwn-text: #4b4a44;
+  --color-wwn-text-inverse: #f5f5f5;
+  --color-wwn-text-muted: #969696;
+  --color-wwn-border: #7a7971;
+  --color-wwn-border-light: #b5b3a4;
+  --color-wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --color-wwn-header-bg: #252525;
+  --color-wwn-panel-title: #f5f5f5;
+  --color-wwn-accent: #4a5568;
+  --color-wwn-accent-bright: #5a6598;
+  --color-wwn-tab-bg: #d8d6c9;
+  --color-wwn-tab-active-bg: #d8d6c9;
+  --color-wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --color-wwn-surface: #fff;
+  --color-wwn-success: #18520b;
+  --color-wwn-failure: #aa0200;
+  --color-wwn-progress-bg: #742a2a;
+  --color-wwn-progress-fill: #c53030;
+  --color-wwn-progress-xp-fill: #3182ce;
+  --color-wwn-progress-xp-bg: #2c5282;
+  --color-wwn-tag-bg: #4b4a44;
+  --color-wwn-tag-text: #f5f5f5;
+  --color-wwn-input-bg: transparent;
+}
+
+.wwn.themed.theme-dark,
+.application.wwn.themed.theme-dark {
+  --wwn-d20-filter: invert(0.85);
+  --wwn-bg: #0d1117;
+  --wwn-bg-elevated: #161b22;
+  --wwn-border: #30363d;
+  --wwn-border-strong: #388bfd;
+  --wwn-text: #e6edf3;
+  --wwn-text-inverse: #0d1117;
+  --wwn-header-bg: #21262d;
+  --wwn-panel-title: #e6edf3;
+  --wwn-accent: #388bfd;
+  --wwn-accent-bright: #58a6ff;
+  --wwn-input-bg: rgba(0, 0, 0, 0.3);
+  --wwn-tab-bg: #161b22;
+  --wwn-tab-active-bg: #21262d;
+  --wwn-progress-fill: #e53e3e;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #388bfd;
+  --wwn-progress-xp-bg: #0d419d;
+  --wwn-tag-bg: #30363d;
+  --wwn-tag-text: #e6edf3;
+  --wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --wwn-notify-shadow: #21262d;
+  --wwn-text-muted: #8b949e;
+  --wwn-border-light: #30363d;
+  --wwn-surface: #1c2128;
+  --wwn-success: #3fb950;
+  --wwn-failure: #f85149;
+  /* Bypass var(--wwn-*) chain: set Tailwind utilities directly so bg-wwn-* etc resolve */
+  --color-wwn-bg: #0d1117;
+  --color-wwn-bg-elevated: #161b22;
+  --color-wwn-text: #e6edf3;
+  --color-wwn-text-inverse: #0d1117;
+  --color-wwn-text-muted: #8b949e;
+  --color-wwn-border: #30363d;
+  --color-wwn-border-light: #30363d;
+  --color-wwn-border-strong: #388bfd;
+  --color-wwn-header-bg: #21262d;
+  --color-wwn-panel-title: #e6edf3;
+  --color-wwn-accent: #388bfd;
+  --color-wwn-accent-bright: #58a6ff;
+  --color-wwn-tab-bg: #161b22;
+  --color-wwn-tab-active-bg: #21262d;
+  --color-wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --color-wwn-surface: #1c2128;
+  --color-wwn-success: #3fb950;
+  --color-wwn-failure: #f85149;
+  --color-wwn-progress-bg: #742a2a;
+  --color-wwn-progress-fill: #e53e3e;
+  --color-wwn-progress-xp-fill: #388bfd;
+  --color-wwn-progress-xp-bg: #0d419d;
+  --color-wwn-tag-bg: #30363d;
+  --color-wwn-tag-text: #e6edf3;
+  --color-wwn-input-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------------------- */
+/*  Theme: map CSS variables to Tailwind     */
+/* ----------------------------------------- */
+@theme {
+  --color-wwn-bg: var(--wwn-bg);
+  --color-wwn-bg-elevated: var(--wwn-bg-elevated);
+  --color-wwn-text: var(--wwn-text);
+  --color-wwn-text-inverse: var(--wwn-text-inverse);
+  --color-wwn-text-muted: var(--wwn-text-muted);
+  --color-wwn-border: var(--wwn-border);
+  --color-wwn-border-light: var(--wwn-border-light);
+  --color-wwn-border-strong: var(--wwn-border-strong);
+  --color-wwn-header-bg: var(--wwn-header-bg);
+  --color-wwn-panel-title: var(--wwn-panel-title);
+  --color-wwn-accent: var(--wwn-accent);
+  --color-wwn-accent-bright: var(--wwn-accent-bright);
+  --color-wwn-tab-bg: var(--wwn-tab-bg);
+  --color-wwn-tab-active-bg: var(--wwn-tab-active-bg);
+  --color-wwn-row-alt: var(--wwn-row-alt);
+  --color-wwn-surface: var(--wwn-surface);
+  --color-wwn-success: var(--wwn-success);
+  --color-wwn-failure: var(--wwn-failure);
+  --color-wwn-progress-bg: var(--wwn-progress-bg);
+  --color-wwn-progress-fill: var(--wwn-progress-fill);
+  --color-wwn-progress-xp-fill: var(--wwn-progress-xp-fill);
+  --color-wwn-progress-xp-bg: var(--wwn-progress-xp-bg);
+  --color-wwn-tag-bg: var(--wwn-tag-bg);
+  --color-wwn-tag-text: var(--wwn-tag-text);
+  --color-wwn-input-bg: var(--wwn-input-bg);
+}
+
+/* ----------------------------------------- */
+/*  Base: global overrides for Foundry VTT   */
+/* ----------------------------------------- */
+@layer base {
+  /* Apply WWN palette to sheet roots so ApplicationV2 windows use our colors */
+  .wwn.sheet.actor,
+  .wwn.sheet.item {
+    background: var(--wwn-bg);
+    color: var(--wwn-text);
+  }
+
+  .wwn.sheet .window-content,
+  .wwn.sheet .sheet-root,
+  .wwn.sheet form {
+    background: var(--wwn-bg);
+    color: var(--wwn-text);
+  }
+
+  /* Ensure window content and form fill height so sheet-body can flex and tabs don't overflow */
+  .wwn.sheet .window-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .wwn.sheet .window-content form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* Unset Foundry/browser defaults for common elements inside WWN sheets.
+     Use single-class specificity (.wwn) so we override Foundry defaults (which typically
+     use .window-content or similar) while our own Tailwind utilities (margin, padding,
+     etc.) can override these resets via the utilities layer.
+     Exclude padding reset for p so px-*, py-*, etc. utilities can apply. */
+  .wwn p {
+    margin: unset;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  .wwn h1,
+  .wwn h2,
+  .wwn h3,
+  .wwn h4,
+  .wwn h5,
+  .wwn h6,
+  .wwn ul:not(.attributes),
+  .wwn ol,
+  .wwn li,
+  .wwn blockquote,
+  .wwn dl,
+  .wwn dt,
+  .wwn dd {
+    margin: unset;
+    padding: unset;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  .wwn ul:not(.attributes),
+  .wwn ol {
+    list-style: none;
+  }
+
+  /* Global input resets inside WWN sheets — subtle border so inputs are visible */
+  .wwn .window-content input:not([type="checkbox"]) {
+    background: var(--wwn-input-bg);
+    border: 1px solid var(--wwn-border-light);
+    border-radius: 2px;
+    text-align: center;
+    padding: 2px 4px;
+    min-height: 22px;
+  }
+
+  .wwn .window-content input:not([type="checkbox"]):hover:not(:disabled),
+  .wwn .window-content input:not([type="checkbox"]):focus:not(:disabled) {
+    box-shadow: none;
+    border-color: var(--wwn-accent);
+    background: var(--wwn-surface);
+  }
+
+  .wwn .window-content a:hover {
+    text-shadow: none;
+  }
+
+  /* Header inputs get a subtle bottom border */
+  .wwn .window-content .header-details input:not([type="checkbox"]) {
+    border-bottom: 1px solid var(--wwn-border);
+  }
+
+  /* Hide non-active tabs in V2 sheets */
+  .wwn .window-content .tab[data-group]:not(.active),
+  .wwn .sheet-body .tab[data-group]:not(.active) {
+    display: none !important;
+  }
+
+  /* Tab navigation bar styling (Foundry generates nav.sheet-tabs) */
+  .wwn.sheet nav.sheet-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+    padding: 0 4px;
+    background: var(--wwn-bg-elevated);
+    border-bottom: 1px solid var(--wwn-border);
+  }
+
+  .wwn.sheet nav.sheet-tabs .item {
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    color: var(--wwn-text-muted);
+    transition:
+      color 0.15s,
+      border-color 0.15s;
+  }
+
+  .wwn.sheet nav.sheet-tabs .item:hover {
+    color: var(--wwn-text);
+    border-bottom-color: var(--wwn-accent);
+  }
+
+  .wwn.sheet nav.sheet-tabs .item.active {
+    color: var(--wwn-text);
+    border-bottom-color: var(--wwn-accent-bright);
+    font-weight: 600;
+  }
+
+  /* Sheet-body fills remaining height but does NOT scroll itself.
+     Individual tabs handle their own overflow. */
+  .wwn.sheet .sheet-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    padding: 4px 8px;
+  }
+
+  /* Active tabs fill the sheet-body; non-main tabs scroll if needed. */
+  .wwn.sheet .sheet-body > .tab.active {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .wwn.sheet .sheet-body > .tab.active:not(.main-tab) {
+    overflow: hidden;
+  }
+
+  /* Main tab: constrain height so content doesn't overrun; inner sections scroll. */
+  .wwn.sheet .sheet-body > .tab.main-tab.active {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wwn.sheet .attributes-tab.main-tab {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+  }
+
+  /* Attributes column: constrain max height so it never overruns the Main tab */
+  .wwn.sheet .main-tab-abilities {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .wwn.sheet .main-tab-favorites {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Gear tab: tab fills and constrains; inventory column scrolls, sidebar stays visible */
+  .wwn.sheet .sheet-body > .tab[data-tab="gear"].active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .wwn.sheet .sheet-body > .tab[data-tab="gear"].active > .inventory {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wwn.sheet .sheet-body > .tab[data-tab="gear"].active .inventory-all {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .wwn.sheet .inventory-all .inventory-left {
+    min-height: 0;
+    flex: 1;
+    overflow-y: auto;
+    min-width: 0;
+  }
+
+  .wwn.sheet .inventory-all .inventory-right {
+    flex-shrink: 0;
+    max-width: 220px;
+    overflow-y: auto;
+  }
+
+  /* Notes/Details tab: fill height and scroll content */
+  .wwn.sheet .sheet-body > .tab[data-tab="notes"].active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .wwn.sheet .sheet-body > .tab[data-tab="notes"].active > .notes-tab {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wwn.sheet .notes-tab .inventory {
+    display: flex;
+    flex-direction: column;
+    min-height: min-content;
+  }
+
+  .wwn.sheet .notes-tab .details-fields {
+    flex-shrink: 0;
+  }
+
+  .wwn.sheet .notes-tab .details-top {
+    flex-shrink: 0;
+  }
+
+  .wwn.sheet .notes-tab .description {
+    flex-shrink: 0;
+  }
+
+  .wwn.sheet .notes-tab .editor {
+    min-height: 100px;
+  }
+
+  /* Abilities tab: multiple sections, so let the whole tab scroll */
+  .wwn.sheet .sheet-body > .tab[data-tab="abilities"].active {
+    overflow-y: auto;
+  }
+
+  /* Effects tab: fill and scroll; match item-titles styling */
+  .wwn.sheet .sheet-body > .tab[data-tab="effects"].active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .wwn.sheet .sheet-body > .tab[data-tab="effects"].active > ol.effects-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .wwn.sheet .items-header.effects-list + .item-list,
+  .wwn.sheet .effects-list .items-header {
+    box-shadow: 0 0 5px var(--wwn-border-strong);
+  }
+
+  .wwn.sheet .effect-control {
+    margin-left: 4px;
+  }
+
+  /* All non-main tabs: ensure they get flex when active so child can grow */
+  .wwn.sheet .sheet-body > .tab.active:not(.main-tab) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* WWN/SWN-inspired heading font for sheet header and section titles */
+  .wwn.sheet .sheet-header,
+  .wwn.sheet .sheet-header .header-details,
+  .wwn .item-titles {
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  }
+
+  .wwn.sheet .sheet-header input[name="name"] {
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+    font-weight: 700;
+  }
+
+  /* Reusable panel: section headers (item-titles) already use bg-wwn-header-bg; ensure consistency */
+  .wwn .item-titles {
+    box-shadow: 0 0 5px var(--wwn-border-strong);
+  }
+
+  /* Inventory list rows that use <li> as section header: display as block so they don't break layout */
+  .wwn .inventory .item-titles[class*="flex"] {
+    display: flex;
+    list-style: none;
+  }
+
+  /* Consistent item row height and overflow so content doesn't run off */
+  .wwn .item-entry,
+  .wwn .item.effect {
+    min-height: 26px;
+  }
+
+  .wwn .item-entry .item-name,
+  .wwn .item .item-name {
+    min-width: 0;
+  }
+
+  .wwn .item-entry .item-name p,
+  .wwn .item .item-name p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Details/Notes tab: inputs in form groups get consistent width so grid doesn't overflow */
+  .wwn .notes-tab input[type="number"],
+  .wwn .notes-tab input[type="text"] {
+    max-width: 100%;
+  }
+
+  .wwn .notes-tab .details-fields {
+    max-width: 100%;
+  }
+
+  /* Sheet window: constrain so content doesn't blow out width */
+  .wwn.sheet.actor .window-content {
+    min-width: 0;
+  }
+
+  /* Header: prevent stat boxes from shrinking below size */
+  .wwn.sheet .sheet-header .header-details [class*="border"][class*="w-\["] {
+    flex-shrink: 0;
+  }
+
+  /* Gear tab: give item lists a subtle border so sections don't blend */
+  .wwn.sheet .inventory-left .item-list {
+    border: 1px solid var(--wwn-border-light);
+    border-top: none;
+    margin-bottom: 2px;
+  }
+
+  .wwn.sheet .inventory-left .item-titles + .item-list {
+    border-top: none;
+  }
+
+  /* Abilities tab: section headers and lists match gear/main styling */
+  .wwn.sheet .abilities-tab-foci .item-titles,
+  .wwn.sheet .abilities-tab-foci + .inventory .item-titles,
+  .wwn.sheet .inventory.spells .item-titles {
+    box-shadow: 0 0 5px var(--wwn-border-strong);
+  }
+
+  .wwn.sheet .abilities-tab-foci .item-list li,
+  .wwn.sheet .inventory.spells .item-list li {
+    border-bottom: 1px solid var(--wwn-border-light);
+  }
+
+  .wwn.sheet .abilities-tab-foci .item-list li:last-child,
+  .wwn.sheet .inventory.spells .item-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* Input focus ring */
+  .wwn input:focus-visible,
+  .wwn select:focus-visible {
+    outline: 1px solid var(--wwn-accent);
+    outline-offset: -1px;
+  }
+
+  /* Ensure selects inside sheets have consistent height */
+  .wwn select {
+    height: 24px;
+    font-size: 12px;
+    background: var(--wwn-input-bg);
+    border: 1px solid var(--wwn-border-light);
+    border-radius: 2px;
+    color: inherit;
+  }
+
+  /* Foundry editor inside WWN sheets */
+  .wwn .editor {
+    min-height: 120px;
+    flex: 1;
+  }
+
+  /* Reset p inside item rows so it inherits from the row's font-size/line-height */
+  .wwn .item p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+    line-height: inherit;
+  }
+
+  /* Hidden class used by Foundry and our templates */
+  .wwn .hidden {
+    display: none !important;
+  }
+
+  /* Dialog form inputs: right-align, subtle background when not hovered */
+  .wwn.roll-dialog .form-group input[type="text"],
+  .wwn.roll-dialog .form-group input[type="number"],
+  .wwn.roll-dialog .form-group select,
+  .save-dialog .form-group input[type="number"],
+  .save-dialog .form-group input[type="text"] {
+    text-align: right;
+  }
+
+  .wwn.roll-dialog .form-group input[type="text"]:not(:hover):not(:focus),
+  .wwn.roll-dialog .form-group input[type="number"]:not(:hover):not(:focus),
+  .save-dialog .form-group input[type="number"]:not(:hover):not(:focus),
+  .save-dialog .form-group input[type="text"]:not(:hover):not(:focus) {
+    background: var(--wwn-row-alt);
+  }
+
+  .wwn.roll-dialog .form-group input:hover,
+  .wwn.roll-dialog .form-group input:focus,
+  .save-dialog .form-group input:hover,
+  .save-dialog .form-group input:focus {
+    background: var(--wwn-input-bg);
+  }
+
+  /* Skills column striping — simple odd/even works because CSS
+     multi-column layout fills top-to-bottom, so DOM order = visual order. */
+  .wwn .skills-grid > .skill-row:nth-child(even) {
+    background: var(--wwn-row-alt);
+  }
+}
+
+/* ----------------------------------------- */
+/*  Animations                               */
+/* ----------------------------------------- */
+@utility animate-notify {
+  animation: 0.8s ease-in 1s infinite alternate notify;
+}
+
+@utility animate-activated {
+  animation: 0.7s infinite alternate activated;
+}
+
+@keyframes notify {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow:
+      -1px -1px 4px var(--wwn-notify-shadow),
+      1px -1px 4px var(--wwn-notify-shadow),
+      -1px 1px 4px var(--wwn-notify-shadow),
+      1px 1px 4px var(--wwn-notify-shadow);
+  }
+}
+
+@keyframes activated {
+  from {
+    background: none;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ----------------------------------------- */
+/*  Components: things that can't be         */
+/*  expressed as pure Tailwind utilities      */
+/* ----------------------------------------- */
+@layer components {
+  /* Rollable item hover states — parent-child hover + !important override.
+     The filter inverts the dark SVG icons in dark theme. */
+  .wwn .item-rollable:hover .item-image {
+    background-image: url("/icons/svg/d20-grey.svg") !important;
+    filter: var(--wwn-d20-filter, none);
+    cursor: pointer;
+  }
+
+  .wwn .item-rollable .item-image:hover {
+    background-image: url("/icons/svg/d20-black.svg") !important;
+    filter: var(--wwn-d20-filter, none);
+  }
+
+  /* Dice roll result colorations — intentionally global to style WWN rolls
+     in the chat log (which is outside .wwn sheet scope). */
+  .dice-roll .dice-total.success {
+    color: inherit;
+    background: #c7d0c0;
+    border: 1px solid #006c00;
+  }
+
+  .dice-roll .dice-total.failure {
+    color: inherit;
+    background: #ffdddd;
+    border: 1px solid #6e0000;
+  }
+
+  .dice-roll .dice-total.critical {
+    color: green;
+  }
+
+  .dice-roll .dice-total.fumble {
+    color: red;
+  }
+
+  /* Combat set groups: container queries for responsive grid */
+  .combat-set-groups {
+    container-name: combat-set-groups;
+    container-type: inline-size;
+    --grid: 1fr;
+  }
+
+  .combat-set-groups ol {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: var(--grid);
+    gap: 0.75em 2em;
+    margin: 0;
+    padding: 0;
+  }
+
+  @container combat-set-groups (min-width: 80ch) {
+    .combat-set-groups ol {
+      --grid: repeat(2, 1fr);
+    }
+  }
+
+  @container combat-set-groups (min-width: 160ch) {
+    .combat-set-groups ol {
+      --grid: repeat(3, 1fr);
+    }
+  }
+
+  @container combat-set-groups (min-width: 240ch) {
+    .combat-set-groups ol {
+      --grid: repeat(4, 1fr);
+    }
+  }
+
+  /* Combat set group option colors — :has() selectors */
+  .combat-set-groups__combatant__group-options label.checkbox {
+    opacity: 0.5;
+    display: block;
+    padding: 0.25em;
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--combat-set-option-bg);
+    color: var(--combat-set-option-font-color, white);
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1.5em;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox input {
+    display: none;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input:checked) {
+    opacity: 1;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="green"]) {
+    --combat-set-option-bg: green;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="red"]) {
+    --combat-set-option-bg: red;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="yellow"]) {
+    --combat-set-option-bg: yellow;
+    --combat-set-option-font-color: black;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="purple"]) {
+    --combat-set-option-bg: purple;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="blue"]) {
+    --combat-set-option-bg: blue;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="orange"]) {
+    --combat-set-option-bg: orange;
+    --combat-set-option-font-color: black;
+  }
+
+  .combat-set-groups__combatant__group-options label.checkbox:has(input[value="white"]) {
+    --combat-set-option-bg: #92bbc9;
+    --combat-set-option-font-color: black;
+  }
+
+  /* Roll table treasure toggle — targets Foundry roll-table-config */
+  .sheet.roll-table-config .sheet-header .toggle-treasure {
+    flex: 0 0 30px;
+    font-size: 26px;
+    line-height: 25px;
+    color: white;
+    margin: 0 2px 5px 8px;
+    border-radius: 8px;
+    background: url("/systems/wwn/assets/treasure.png") no-repeat center;
+    background-size: cover;
+    padding: 5px 8px;
+    cursor: pointer;
+    filter: grayscale(1) opacity(0.5);
+  }
+
+  .sheet.roll-table-config .sheet-header .toggle-treasure.active,
+  .sheet.roll-table-config .sheet-header .toggle-treasure:hover {
+    filter: none;
+  }
+
+  .sheet.roll-table-config .results .table-result.active {
+    animation: 0.7s infinite alternate activated;
+  }
+
+  /* Game license in settings — targets #settings */
+  #settings .wwn.game-license {
+    font-size: 12px;
+    padding: 10px;
+    flex-basis: 100%;
+  }
+
+  #settings .wwn.game-license .button {
+    text-align: center;
+    margin: 4px;
+  }
+
+  #settings .wwn.game-license .footer {
+    text-align: right;
+  }
+
+  /* Sidebar party sheet button — targets #sidebar */
+  #sidebar #actors .directory-header .header-search .wwn-party-sheet {
+    width: 32px;
+    height: 25px;
+    text-align: center;
+    line-height: 23px;
+    margin: 4px;
+  }
+
+  #sidebar #actors .directory-header .header-search input {
+    width: calc(100% - 45px);
+  }
+
+  /* Godbound conversion display — generated by JS in dice.js */
+  .godbound-conversion {
+    padding: 4px 8px;
+    margin: 4px 0;
+    background: var(--wwn-row-alt);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .godbound-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .godbound-label {
+    font-size: 0.9em;
+    color: var(--wwn-text-muted);
+    font-style: italic;
+  }
+
+  .godbound-values {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.1em;
+    color: var(--wwn-text);
+    padding: 2px 8px;
+    background: var(--wwn-bg-elevated);
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  /* Attack table in chat (rendered by Foundry roll HTML) */
+  .wwn .attack-table th {
+    background: var(--wwn-header-bg);
+    color: var(--wwn-panel-title);
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .wwn .attack-table td {
+    border: 1px solid var(--wwn-border);
+    text-align: center;
+    padding: 2px 4px;
+  }
+
+  /* Entity/content links inside chat blocks — Foundry-generated */
+  .wwn .chat-block .content-link,
+  .wwn .chat-block .entity-link {
+    display: inline;
+    text-indent: 0;
+    cursor: pointer;
+  }
+}

@@ -21,7 +21,7 @@
     "tests/quench/register.js"
   ],
   "styles": [
-    "styles/main.css"
+    { "src": "styles/main.css", "layer": "system" }
   ],
   "relationships": {
     "requires": [

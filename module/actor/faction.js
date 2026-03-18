@@ -1,3 +1,5 @@
+import { WwnDialog } from "../dialog/wwn-dialog.js";
+
 export class WwnFaction extends Actor {
   prepareData() {
     super.prepareData();
@@ -58,18 +60,8 @@ export class WwnFaction extends Actor {
       ui.notifications?.error("Cannot find journal");
       return;
     }
-    const performHome = await new Promise((resolve) => {
-      Dialog.confirm({
-        title: game.i18n.format("WWN.faction.setHomeworld", {
-          name: journal.name,
-        }),
-        yes: () => resolve(true),
-        no: () => resolve(false),
-        content: game.i18n.format("WWN.faction.setHomeworld", {
-          name: journal.name,
-        }),
-      });
-    });
+    const title = game.i18n.format("WWN.faction.setHomeworld", { name: journal.name });
+    const performHome = await WwnDialog.confirm({ title, content: title });
     if (!performHome) {
       return;
     }

@@ -1,0 +1,176 @@
+<form autocomplete="off" class="p-2">
+  <div class="dialog-tweaks">
+    <div class="flex flex-row gap-4">
+      {{#if (eq this.type 'character')}}
+      <div class="flex flex-col flex-1">
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]" for="fullWarrior">{{localize "WWN.Warrior"}}</label>
+          <div class="form-fields flex-1">
+            <input type="checkbox" name="system.warrior" id="fullWarrior" {{checked system.warrior}}
+              data-dtype="Boolean" />
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]" for="spellcaster">{{localize "WWN.Spellcaster"}}</label>
+          <div class="form-fields flex-1">
+            <input type="checkbox" name="system.spells.enabled" id="spellcaster" {{checked system.spells.enabled}}
+              data-dtype="Boolean" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]" for="leveledSlots">Leveled Spell Slots</label>
+          <div class="form-fields flex-1">
+            <input type="checkbox" name="system.spells.leveledSlots" id="leveledSlots" {{checked
+              system.spells.leveledSlots}} data-dtype="Boolean" />
+          </div>
+        </div>
+        {{#if (eq this.type 'character')}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]" for="retainer">{{localize "WWN.Retainer"}}</label>
+          <div class="form-fields flex-1">
+            <input type="checkbox" name="system.retainer.enabled" id="retainer" {{checked system.retainer.enabled}}
+              data-dtype="Boolean" />
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize "WWN.InitiativeBonus"}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.initiative.mod" id="initiative" value="{{system.initiative.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        {{#if (eq this.type 'character')}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize "WWN.details.experience.bonus"}} (%)</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.details.xp.bonus" id="experience" value="{{system.details.xp.bonus}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize "WWN.details.experience.share"}} (%)</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.details.xp.share" id="experience-share"
+              value="{{system.details.xp.share}}" data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize "WWN.items.currencyShare"}} (%)</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.currency.share" id="currency-share" value="{{system.currency.share}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize "WWN.ArmorClassBonus"}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.aac.mod" id="ac" value="{{system.aac.mod}}" data-dtype="Number" />
+          </div>
+        </div>
+        {{/if}}
+        {{#if (eq this.type 'character')}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]" for="movementAuto">{{localize "WWN.Setting.MovementAuto"}}</label>
+          <div class="form-fields flex-1">
+            <input type="checkbox" name="system.config.movementAuto" id="movementAuto" {{checked
+              system.config.movementAuto}} data-dtype="Boolean" {{#unless user.isGM}}disabled{{/unless}} />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.movement.bonus'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.movement.bonus" id="cha" value="{{system.movement.bonus}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.str.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.str.tweak" id="str" value="{{system.scores.str.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.dex.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.dex.tweak" id="dex" value="{{system.scores.dex.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.con.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.con.tweak" id="con" value="{{system.scores.con.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.int.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.int.tweak" id="int" value="{{system.scores.int.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.wis.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.wis.tweak" id="wis" value="{{system.scores.wis.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.scores.cha.long'}} {{localize 'WWN.Modifier'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.scores.cha.tweak" id="cha" value="{{system.scores.cha.tweak}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.saves.evasion'}} {{localize 'WWN.category.saves'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.saves.evasion.mod" id="eva" value="{{system.saves.evasion.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.saves.mental'}} {{localize 'WWN.category.saves'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.saves.mental.mod" id="men" value="{{system.saves.mental.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.saves.physical'}} {{localize 'WWN.category.saves'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.saves.physical.mod" id="phy" value="{{system.saves.physical.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">{{localize 'WWN.saves.luck'}} {{localize 'WWN.category.saves'}}</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.saves.luck.mod" id="lck" value="{{system.saves.luck.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group flex items-center py-[3px]">
+          <label class="flex-[0_0_160px]">Universal Save Mod</label>
+          <div class="form-fields flex-1">
+            <input type="number" name="system.saves.baseSave.mod" id="saveMod" value="{{system.saves.baseSave.mod}}"
+              data-dtype="Number" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="sheet-footer flex justify-center p-2">
+      <button type="submit" class="py-1 px-2">
+        <i class="fas fa-save"></i>{{localize "Save Changes"}}
+      </button>
+    </footer>
+  </div>
+</form>

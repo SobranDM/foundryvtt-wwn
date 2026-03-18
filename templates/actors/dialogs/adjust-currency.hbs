@@ -1,0 +1,40 @@
+<form autocomplete="off" class="p-2">
+  <div class="currency-adjustment flex flex-col gap-1">
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{localize "WWN.items.CP.short"}}</label>
+      <input class="flex-1" name="copper" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{localize "WWN.items.SP.short"}}</label>
+      <input class="flex-1" name="silver" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{#if (eq config.currencyTypes "currencybx")}}
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{localize "WWN.items.EP.short"}}</label>
+      <input class="flex-1" name="electrum" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{/if}}
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{localize "WWN.items.GP.short"}}</label>
+      <input class="flex-1" name="gold" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{#if (eq config.currencyTypes "currencybx")}}
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{localize "WWN.items.PP.short"}}</label>
+      <input class="flex-1" name="platinum" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{/if}}
+    {{#if showBank}}
+    <div class="form-group flex items-center py-[3px]">
+      <label class="flex-[0_0_120px]">{{bankLabel}}</label>
+      <input class="flex-1" name="bank" placeholder="0" type="number" data-dtype="Number" />
+    </div>
+    {{/if}}
+    <footer class="sheet-footer flex justify-center p-2">
+      <button type="submit" class="py-1 px-2" data-action="adjust-currency">
+        <i class="fas fa-balance-scale"></i> {{localize
+        "WWN.items.adjustCurrency"}}
+      </button>
+    </footer>
+  </div>
+</form>

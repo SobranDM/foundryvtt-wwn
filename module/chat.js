@@ -133,7 +133,7 @@ export async function applyChatCardDamage(amount, multiplier) {
     image: image
   };
 
-  const template = "systems/wwn/templates/chat/apply-damage.html";
+  const template = "systems/wwn/templates/chat/apply-damage.hbs";
   const html = await renderTemplate(template, templateData);
 
   const chatData = {

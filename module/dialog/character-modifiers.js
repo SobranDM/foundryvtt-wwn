@@ -1,43 +1,35 @@
-// eslint-disable-next-line no-unused-vars
-import { WwnActor } from '../actor/entity.js';
+import { WwnDialog } from "./wwn-dialog.js";
 
-export class WwnCharacterModifiers extends FormApplication {
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.classes = ["wwn", "dialog", "modifiers"],
-    options.id = 'sheet-modifiers';
-    options.template =
-      'systems/wwn/templates/actors/dialogs/modifiers-dialog.html';
-    options.width = 240;
-    return options;
-  }
+function getModifiersData(actor) {
+  const doc = actor.document ?? actor;
+  const data = foundry.utils.deepClone(doc.data ?? doc);
+  data.user = game.user;
+  return data;
+}
 
-  /* -------------------------------------------- */
+/**
+ * Open the Character Modifiers (display) dialog.
+ * @param {Actor} actor
+ * @param {object} [options]
+ */
+export async function openCharacterModifiers(actor, options = {}) {
+  const data = getModifiersData(actor);
+  const fullHtml = await renderTemplate(
+    "systems/wwn/templates/actors/dialogs/modifiers-dialog.hbs",
+    data
+  );
+  const wrap = document.createElement("div");
+  wrap.innerHTML = fullHtml;
+  const form = wrap.querySelector("form");
+  const inner = form ? form.innerHTML : wrap.innerHTML;
 
-  /**
-   * Add the Entity name into the window title
-   * @type {String}
-   */
-  get title() {
-    return `${this.object.name}: Modifiers`;
-  }
-
-  /* -------------------------------------------- */
-
-  /**
-   * Construct and return the data object used to render the HTML template for this form application.
-   * @return {Object}
-   */
-  getData() {
-    const data = foundry.utils.deepClone(this.object.data);
-    data.user = game.user;
-    return data;
-  }
-
-  /* -------------------------------------------- */
-
-  /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-  }
+  await WwnDialog.wait({
+    classes: ["wwn", "dialog", "modifiers"],
+    title: `${actor.name}: Modifiers`,
+    content: inner,
+    position: { width: 240 },
+    buttons: [
+      { action: "ok", label: "OK", icon: "fa-solid fa-check", default: true },
+    ],
+  });
 }

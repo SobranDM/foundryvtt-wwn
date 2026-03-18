@@ -1,9 +1,9 @@
 <ol>
   {{#each combatants}}
   <li class="combat-set-groups__combatant" data-combatant-id="{{this.id}}">
-    <span class="combat-set-groups__combatant__header">
-      <img src="{{this.img}}" alt="{{this.name}}" />
-      <span class="combat-set-groups__combatant__name">{{this.name}}</span>
+    <span class="combat-set-groups__combatant__header flex flex-row items-center gap-1">
+      <img src="{{this.img}}" alt="{{this.name}}" class="w-8 h-8 shrink-0 rounded" />
+      <span class="combat-set-groups__combatant__name flex-1 truncate">{{this.name}}</span>
     </span>
     <div class="combat-set-groups__combatant__group-options">
       {{radioBoxes this.id ../groups checked=this.groupRaw localize=true}}

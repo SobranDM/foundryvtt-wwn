@@ -184,7 +184,7 @@ describe("module/helpers.js", () => {
 
   describe("partial", () => {
     it("returns systems path", () => {
-      expect(h("partial", "actors/sheet.html")).to.equal("systems/wwn/templates/actors/sheet.html");
+      expect(h("partial", "actors/sheet.hbs")).to.equal("systems/wwn/templates/actors/sheet.hbs");
     });
   });
 

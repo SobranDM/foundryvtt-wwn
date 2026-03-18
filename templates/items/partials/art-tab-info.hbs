@@ -1,0 +1,36 @@
+<section class="flex flex-col gap-2 tab p-2" data-group="primary" data-tab="info">
+  <div class="flex flex-row gap-3">
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize 'WWN.items.Roll'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.roll" value="{{system.roll}}" data-dtype="String" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.spells.ArtSourceHint'}}>{{localize 'WWN.spells.ArtSource'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.source" value="{{system.source}}"
+            placeholder="{{localize 'WWN.spells.HighMage'}}" />
+        </div>
+      </div>
+    </div>
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title="{{localize 'WWN.spells.TimeHint'}}">{{localize 'WWN.spells.Commit'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.time" value="{{system.time}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.spells.Save'}}>{{localize 'WWN.spells.Save'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.save">
+            <option value=""></option>
+            {{selectOptions config.saves selected=system.save localize=true}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section class="flex flex-col gap-2 tab p-2" data-group="primary" data-tab="info">
+  <div class="flex flex-row gap-3">
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs" title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.items.ArmorAAC'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-12 text-center text-xs" type="number" name="system.aac.value" value="{{system.aac.value}}" data-dtype="Number" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs" title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize 'WWN.items.ArmorBonus'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-12 text-center text-xs" type="number" name="system.aac.mod" value="{{system.aac.mod}}" data-dtype="Number" />
+        </div>
+      </div>
+      {{#if config.useTrauma}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs" data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">{{localize 'WWN.items.TraumaModArmor'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-12 text-center text-xs" type="number" name="system.traumaMod" value="{{system.traumaMod}}" data-dtype="Number" />
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      {{#if config.useFlatArmorPenalty}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs">{{localize 'WWN.armor.shield'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.isShield" value="{{system.isShield}}" {{checked system.isShield}}
+            data-dtype="Boolean" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs">{{localize 'WWN.armor.heavy'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.ashesHeavy" value="{{system.ashesHeavy}}" {{checked system.ashesHeavy}}
+            data-dtype="Boolean" />
+        </div>
+      </div>
+      {{else}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[120px] text-xs">{{localize 'WWN.armor.type'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.type">
+            {{selectOptions config.armor selected=system.type localize=true}}
+          </select>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

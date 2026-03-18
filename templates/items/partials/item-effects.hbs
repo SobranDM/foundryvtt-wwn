@@ -1,0 +1,37 @@
+<ol class="items-list effects-list list-none m-0 p-0">
+  {{#each effects as |section sid|}}
+  <li class="items-header flex flex-row items-center bg-wwn-header-bg text-white border border-wwn-border-strong shadow-sm py-1 px-2 mt-2 first:mt-0" data-effect-type="{{section.type}}">
+    <h3 class="item-name effect-name flex-1 text-sm font-semibold m-0">{{localize section.label}}</h3>
+    <div class="effect-source text-center text-xs border-l border-wwn-border-light px-2">Source</div>
+    <div class="effect-source text-center text-xs border-l border-wwn-border-light px-2">Duration</div>
+    <div class="item-controls effect-controls flex flex-row gap-1 text-xs px-2">
+      <a class="effect-control" data-action="create" title="{{localize 'WWN.EffectCreate'}}">
+        <i class="fas fa-plus"></i> {{localize "WWN.Add"}}
+      </a>
+    </div>
+  </li>
+
+  <ol class="item-list list-none m-0 p-0">
+    {{#each section.effects as |effect|}}
+    <li class="item effect flex flex-row items-center leading-[30px] h-[30px] border-b border-wwn-border-light odd:bg-transparent even:bg-wwn-row-alt" data-effect-id="{{effect.id}}">
+      <div class="item-name effect-name flex-1 flex flex-row items-center px-1">
+        <h4 class="m-0 text-xs truncate">{{effect.name}}</h4>
+      </div>
+      <div class="effect-source text-center text-xs border-l border-wwn-border-light px-2">{{effect.sourceName}}</div>
+      <div class="effect-duration text-center text-xs border-l border-wwn-border-light px-2">{{effect.duration.label}}</div>
+      <div class="item-controls effect-controls flex flex-row gap-1 text-xs px-2">
+        <a class="effect-control" data-action="toggle" title="{{localize 'WWN.EffectToggle'}}">
+          <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+        </a>
+        <a class="effect-control" data-action="edit" title="{{localize 'WWN.EffectEdit'}}">
+          <i class="fas fa-edit"></i>
+        </a>
+        <a class="effect-control" data-action="delete" title="{{localize 'WWN.EffectDelete'}}">
+          <i class="fas fa-trash"></i>
+        </a>
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+  {{/each}}
+</ol>

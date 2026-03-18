@@ -1,0 +1,57 @@
+<form autocomplete="off" class="p-2">
+  <div class="attribute-bonuses mb-3">
+    <label class="block font-bold text-wwn-text">{{localize 'WWN.scores.str.long'}}</label>
+    <ol class="ml-4 list-decimal text-sm">
+      <li>
+        {{localize 'WWN.Melee'}} ({{mod system.scores.str.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses mb-3">
+    <label class="block font-bold text-wwn-text">{{localize 'WWN.scores.int.long'}}</label>
+    <ol class="ml-4 list-decimal text-sm">
+      <li>
+        {{localize 'WWN.SpokenLanguages'}} ({{localize system.languages.spoken}} {{system.langTotal}})
+      </li>
+      <li>
+        {{localize 'WWN.Literacy'}} ({{localize system.languages.literacy}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses mb-3">
+    <label class="block font-bold text-wwn-text">{{localize 'WWN.scores.dex.long'}}</label>
+    <ol class="ml-4 list-decimal text-sm">
+      <li>
+        {{localize 'WWN.Missile'}} ({{mod system.scores.dex.mod}})
+      </li>
+      <li>
+        {{localize 'WWN.Initiative'}} ({{mod system.scores.dex.init}})
+      </li>
+      <li>
+        {{localize 'WWN.ArmorClass'}} ({{mod system.scores.dex.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses mb-3">
+    <label class="block font-bold text-wwn-text">{{localize 'WWN.scores.con.long'}}</label>
+    <ol class="ml-4 list-decimal text-sm">
+      <li>
+        {{localize 'WWN.Health'}} ({{mod system.scores.con.mod}})
+      </li>
+    </ol>
+  </div>
+  <div class="attribute-bonuses mb-3">
+    <label class="block font-bold text-wwn-text">{{localize 'WWN.scores.cha.long'}}</label>
+    <ol class="ml-4 list-decimal text-sm">
+      <li>
+        {{localize 'WWN.NPCReaction'}} ({{mod system.scores.cha.npc}})
+      </li>
+      <li>
+        {{localize 'WWN.RetainersMax'}} ({{add system.scores.cha.mod 4}})
+      </li>
+      <li>
+        {{localize 'WWN.Loyalty'}} ({{add system.scores.cha.mod 7}})
+      </li>
+    </ol>
+  </div>
+</form>

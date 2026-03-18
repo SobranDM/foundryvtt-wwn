@@ -1,3 +1,13 @@
+/** System ID for sheet registration and paths. */
+export const WWN_SYSTEM_ID = "wwn";
+
+/**
+ * Resolve a path relative to the system root to a Foundry data path.
+ * @param {string} path - Path relative to systems/wwn/ (e.g. "templates/actors/character/header.hbs").
+ * @returns {string} Full path (e.g. "systems/wwn/templates/actors/character/header.hbs").
+ */
+export const systemPath = (path) => `systems/${WWN_SYSTEM_ID}/${path}`;
+
 export const WWN = {
   scores: {
     str: "WWN.scores.str.short",

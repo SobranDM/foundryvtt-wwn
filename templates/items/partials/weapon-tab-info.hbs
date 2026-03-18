@@ -1,0 +1,133 @@
+<section class="flex flex-col gap-2 tab p-2" data-group="primary" data-tab="info">
+  <div class="flex flex-row gap-3">
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-xs px-1" type="text" data-action="add-tag" title="{{localize 'WWN.items.typeTrait'}}"
+            placeholder="{{localize 'WWN.items.enterTrait'}}" />
+        </div>
+        <div class="form-fields attack-type flex items-center gap-2 px-2 text-[15px]">
+          <a title="{{localize 'WWN.items.Melee'}}" class="melee-toggle {{#if system.melee}}text-wwn-border-strong{{else}}text-wwn-text-muted{{/if}}"><i class="fas fa-fist-raised"></i></a>
+          <a title="{{localize 'WWN.items.Missile'}}" class="missile-toggle {{#if system.missile}}text-wwn-border-strong{{else}}text-wwn-text-muted{{/if}}"><i class="fas fa-bullseye"></i></a>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.attribute'}}>{{localize 'WWN.attribute'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.score">
+            {{selectOptions config.scores selected=system.score}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.skill'}}>{{localize 'WWN.skill'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" name="system.skill" type="text" placeholder="Skill" value="{{system.skill}}" data-dtype="text" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.spells.Save'}}>{{localize 'WWN.spells.Save'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.save">
+            <option value=""></option>
+            {{selectOptions config.saves selected=system.save}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize 'WWN.items.AtkBonus'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="string" name="system.bonus" value="{{system.bonus}}" data-dtype="String" />
+        </div>
+      </div>
+      {{#if system.missile}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize 'WWN.items.Range'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px] gap-1">
+          <input class="w-12 text-center text-xs" type="number" name="system.range.short" value="{{system.range.short}}" data-dtype="Number" />
+          {{#if config.medRange}}
+          <input class="w-12 text-center text-xs" type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" />
+          {{/if}}
+          <input class="w-12 text-center text-xs" type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" />
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize 'WWN.items.Damage'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.damage" value="{{system.damage}}" data-dtype="String" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize 'WWN.items.Shock'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px] gap-1">
+          <input class="w-12 text-center text-xs" type="number" name="system.shock.damage" value="{{system.shock.damage}}" data-dtype="Number"
+            placeholder="{{localize 'WWN.items.Damage'}}" title="{{localize 'WWN.items.ShockDamage'}}" />
+          <span class="leading-[22px]">/</span>
+          <input class="w-12 text-center text-xs" type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="String"
+            placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
+        </div>
+      </div>
+      {{#if config.useTrauma}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">{{localize 'WWN.items.TraumaDieWeapon'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px] gap-1">
+          <input class="w-12 text-center text-xs" type="text" name="system.trauma.die" value="{{system.trauma.die}}" data-dtype="String"
+            placeholder="1d6" title="{{localize 'WWN.items.TraumaDieHint'}}" />
+          <span class="leading-[22px]">/</span>
+          <input class="w-12 text-center text-xs" type="number" name="system.trauma.rating" value="{{system.trauma.rating}}" data-dtype="Number"
+            placeholder="2" title="{{localize 'WWN.items.TraumaRatingHint'}}" />
+        </div>
+      </div>
+      {{/if}}
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize 'WWN.items.SkillDamageShort'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.skillDamage" value="{{system.skillDamage}}" {{checked system.skillDamage}}
+            data-dtype="Boolean" title="{{localize 'WWN.items.SkillDamageLong'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title="{{localize 'WWN.items.BurstLong'}}">{{localize 'WWN.items.BurstShort'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.burst" value="{{system.burst}}" {{checked system.burst}}
+            data-dtype="Boolean" title="{{localize 'WWN.items.BurstLong'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title={{localize 'WWN.items.Charges'}}>{{localize 'WWN.items.Charges'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-10 text-center text-xs" type="number" name="system.charges.value" value="{{system.charges.value}}" data-dtype="Number"
+            title="{{localize 'WWN.items.CurrCharges'}}" />
+          <input class="w-10 text-center text-xs" type="number" name="system.charges.max" value="{{system.charges.max}}" data-dtype="Number"
+            title="{{localize 'WWN.items.MaxCharges'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs" title="{{localize 'WWN.items.DecrementOnAttackHint'}}">{{localize 'WWN.items.DecrementOnAttack'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.charges.decrementOnAttack"
+            value="{{system.charges.decrementOnAttack}}" {{checked system.charges.decrementOnAttack}}
+            data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.DecrementOnAttackHint'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">{{localize "WWN.items.WeightlessLabel"}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.weightless">
+            {{selectOptions config.weightless selected=system.weightless}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[100px] text-xs">Ammo</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.ammo" value="{{system.ammo}}" data-dtype="String"
+            title="Name of the item used as ammo for this weapon." />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

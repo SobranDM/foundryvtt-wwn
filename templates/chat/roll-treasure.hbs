@@ -1,0 +1,40 @@
+<div class="wwn chat-card treasure-card border border-wwn-border px-2 py-1 my-1 bg-wwn-bg-elevated text-wwn-text">
+    <header class="card-header flex flex-row items-center gap-1 mb-2">
+        <img
+            src="systems/wwn/assets/treasure.png"
+            title="{{table.name}}"
+            width="36"
+            height="36"
+            class="w-9 h-9 border border-wwn-border shrink-0"
+        />
+        <h3 class="flex-1 text-sm m-0">{{table.name}}</h3>
+    </header>
+    <div class="card-content text-[13px] leading-[1.4]">
+        <ol class="treasure-list list-none p-0 m-0">
+            {{#each treasure as |t|}}
+            <li class="treasure flex flex-row items-start gap-2 mb-1">
+                {{#if t.img}}<img
+                    src="{{t.img}}"
+                    width="36"
+                    height="36"
+                    class="w-9 h-9 shrink-0"
+                />{{/if}}
+                <div class="flex-1">
+                    <div>{{{t.text}}}</div>
+                    {{#each t.treasure}}
+                    <li class="sub flex flex-row items-start gap-1 ml-2">
+                        {{#if img}}<img
+                            src="{{img}}"
+                            width="28"
+                            height="28"
+                            class="w-7 h-7 shrink-0"
+                        />{{/if}}
+                        <div class="flex-1">{{{text}}}</div>
+                    </li>
+                    {{/each}}
+                </div>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</div>

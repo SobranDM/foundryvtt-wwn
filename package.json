@@ -4,18 +4,19 @@
   "description": "Worlds Without Number system for Foundry VTT",
   "type": "module",
   "scripts": {
-    "build:css": "sass scss/:styles/ --style compressed",
-    "watch:css": "sass scss/:styles/ --watch --style compressed",
+    "build:css": "npx @tailwindcss/cli -i src/tailwind.css -o styles/main.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i src/tailwind.css -o styles/main.css --watch",
     "test": "mocha tests/node/**/*.spec.js",
     "test:coverage": "c8 --reporter=html --reporter=text-summary mocha tests/node/**/*.spec.js"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
     "c8": "^10.1.2",
     "chai": "^4.5.0",
     "handlebars": "^4.7.8",
     "jsdom": "^25.0.1",
     "mocha": "^10.8.2",
-    "sass": "^1.71.1"
+    "tailwindcss": "^4.0.0"
   },
   "c8": {
     "include": [

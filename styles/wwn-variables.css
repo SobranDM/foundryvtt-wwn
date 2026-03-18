@@ -1,0 +1,176 @@
+/**
+ * WWN sheet theme variables for Foundry V2 light/dark mode.
+ *
+ * Foundry V13 applies themes at TWO levels:
+ *   1. body.theme-light / body.theme-dark   — "Applications" color scheme (toggled dynamically)
+ *   2. .themed.theme-light / .themed.theme-dark — element-level (toggled on document sheets)
+ *
+ * :root is in @layer wwn-fallback so it has LOWER priority than our theme rules.
+ * body.theme-* and .wwn.themed.theme-* are unlayered and always win.
+ */
+
+/* --------------------------------------------------------- */
+/*  :root fallback — LAYERED so theme rules override it      */
+/* --------------------------------------------------------- */
+@layer wwn-fallback {
+  :root {
+    --wwn-d20-filter: none;
+    --wwn-bg: #ebe8da;
+    /* --wwn-bg-elevated: #d8d6c9; */
+    --wwn-border: #7a7971;
+    --wwn-border-strong: rgba(0, 0, 0, 0.9);
+    --wwn-text: #4b4a44;
+    --wwn-text-inverse: #f5f5f5;
+    --wwn-header-bg: #252525;
+    --wwn-panel-title: #f5f5f5;
+    --wwn-accent: #4a5568;
+    --wwn-accent-bright: #5a6598;
+    --wwn-input-bg: transparent;
+    --wwn-tab-bg: #d8d6c9;
+    --wwn-tab-active-bg: #d8d6c9;
+    --wwn-progress-fill: #c53030;
+    --wwn-progress-bg: #742a2a;
+    --wwn-progress-xp-fill: #3182ce;
+    --wwn-progress-xp-bg: #2c5282;
+    --wwn-tag-bg: #4b4a44;
+    --wwn-tag-text: #f5f5f5;
+    --wwn-row-alt: rgba(0, 0, 0, 0.1);
+    --wwn-notify-shadow: #4b4a44;
+    --wwn-text-muted: #969696;
+    --wwn-border-light: #b5b3a4;
+    --wwn-surface: #fff;
+    --wwn-success: #18520b;
+    --wwn-failure: #aa0200;
+  }
+}
+
+/* --------------------------------------------------------- */
+/*  Light theme — "Applications" color scheme on <body>      */
+/* --------------------------------------------------------- */
+body.theme-light,
+body:not([class*="theme-"]) {
+  --wwn-bg: #ebe8da;
+  --wwn-bg-elevated: #d8d6c9;
+  --wwn-border: #7a7971;
+  --wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --wwn-text: #4b4a44;
+  --wwn-text-inverse: #f5f5f5;
+  --wwn-header-bg: #252525;
+  --wwn-panel-title: #f5f5f5;
+  --wwn-accent: #4a5568;
+  --wwn-accent-bright: #5a6598;
+  --wwn-input-bg: transparent;
+  --wwn-tab-bg: #d8d6c9;
+  --wwn-tab-active-bg: #d8d6c9;
+  --wwn-progress-fill: #c53030;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #3182ce;
+  --wwn-progress-xp-bg: #2c5282;
+  --wwn-tag-bg: #4b4a44;
+  --wwn-tag-text: #f5f5f5;
+  --wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --wwn-notify-shadow: #4b4a44;
+  --wwn-text-muted: #969696;
+  --wwn-border-light: #b5b3a4;
+  --wwn-surface: #fff;
+  --wwn-success: #18520b;
+  --wwn-failure: #aa0200;
+}
+
+/* --------------------------------------------------------- */
+/*  Light theme — element-level (.themed on sheet element)   */
+/* --------------------------------------------------------- */
+.wwn.themed.theme-light {
+  --wwn-bg: #ebe8da;
+  --wwn-bg-elevated: #d8d6c9;
+  --wwn-border: #7a7971;
+  --wwn-border-strong: rgba(0, 0, 0, 0.9);
+  --wwn-text: #4b4a44;
+  --wwn-text-inverse: #f5f5f5;
+  --wwn-header-bg: #252525;
+  --wwn-panel-title: #f5f5f5;
+  --wwn-accent: #4a5568;
+  --wwn-accent-bright: #5a6598;
+  --wwn-input-bg: transparent;
+  --wwn-tab-bg: #d8d6c9;
+  --wwn-tab-active-bg: #d8d6c9;
+  --wwn-progress-fill: #c53030;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #3182ce;
+  --wwn-progress-xp-bg: #2c5282;
+  --wwn-tag-bg: #4b4a44;
+  --wwn-tag-text: #f5f5f5;
+  --wwn-row-alt: rgba(0, 0, 0, 0.1);
+  --wwn-notify-shadow: #4b4a44;
+  --wwn-text-muted: #969696;
+  --wwn-border-light: #b5b3a4;
+  --wwn-surface: #fff;
+  --wwn-success: #18520b;
+  --wwn-failure: #aa0200;
+}
+
+/* --------------------------------------------------------- */
+/*  Dark theme — "Applications" color scheme on <body>       */
+/* --------------------------------------------------------- */
+body.theme-dark {
+  --wwn-d20-filter: invert(0.85);
+  --wwn-bg: #0d1117;
+  --wwn-bg-elevated: #161b22;
+  --wwn-border: #30363d;
+  --wwn-border-strong: #388bfd;
+  --wwn-text: #e6edf3;
+  --wwn-text-inverse: #0d1117;
+  --wwn-header-bg: #21262d;
+  --wwn-panel-title: #e6edf3;
+  --wwn-accent: #388bfd;
+  --wwn-accent-bright: #58a6ff;
+  --wwn-input-bg: rgba(0, 0, 0, 0.3);
+  --wwn-tab-bg: #161b22;
+  --wwn-tab-active-bg: #21262d;
+  --wwn-progress-fill: #e53e3e;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #388bfd;
+  --wwn-progress-xp-bg: #0d419d;
+  --wwn-tag-bg: #30363d;
+  --wwn-tag-text: #e6edf3;
+  --wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --wwn-notify-shadow: #21262d;
+  --wwn-text-muted: #8b949e;
+  --wwn-border-light: #30363d;
+  --wwn-surface: #1c2128;
+  --wwn-success: #3fb950;
+  --wwn-failure: #f85149;
+}
+
+/* --------------------------------------------------------- */
+/*  Dark theme — element-level (.themed on sheet element)    */
+/* --------------------------------------------------------- */
+.wwn.themed.theme-dark {
+  --wwn-d20-filter: invert(0.85);
+  --wwn-bg: #0d1117;
+  --wwn-bg-elevated: #161b22;
+  --wwn-border: #30363d;
+  --wwn-border-strong: #388bfd;
+  --wwn-text: #e6edf3;
+  --wwn-text-inverse: #0d1117;
+  --wwn-header-bg: #21262d;
+  --wwn-panel-title: #e6edf3;
+  --wwn-accent: #388bfd;
+  --wwn-accent-bright: #58a6ff;
+  --wwn-input-bg: rgba(0, 0, 0, 0.3);
+  --wwn-tab-bg: #161b22;
+  --wwn-tab-active-bg: #21262d;
+  --wwn-progress-fill: #e53e3e;
+  --wwn-progress-bg: #742a2a;
+  --wwn-progress-xp-fill: #388bfd;
+  --wwn-progress-xp-bg: #0d419d;
+  --wwn-tag-bg: #30363d;
+  --wwn-tag-text: #e6edf3;
+  --wwn-row-alt: rgba(56, 139, 253, 0.08);
+  --wwn-notify-shadow: #21262d;
+  --wwn-text-muted: #8b949e;
+  --wwn-border-light: #30363d;
+  --wwn-surface: #1c2128;
+  --wwn-success: #3fb950;
+  --wwn-failure: #f85149;
+}

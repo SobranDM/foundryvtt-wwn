@@ -1,0 +1,39 @@
+<section class="wwn">
+  <div class="wwn chat-block border border-wwn-border px-2 py-1 my-1 bg-wwn-bg-elevated text-wwn-text">
+    <div class="flex flex-row chat-header items-center gap-1 mb-2">
+      <div class="chat-title flex-1">
+        <h2 class="text-sm m-0">{{title}}</h2>
+      </div>
+      {{#if data.item}}
+      <div class="chat-img w-9 h-9 shrink-0 bg-cover bg-center rounded" style="background-image:url('{{data.item.img}}')"></div>
+      {{else}}
+      <div class="chat-img w-9 h-9 shrink-0 bg-cover bg-center rounded" style="background-image:url('{{data.actor.img}}')"></div>
+      {{/if}}
+    </div>
+    <div class="blindable" data-blind="{{data.roll.blindroll}}">
+      {{#if result.details}}<div class="chat-details">{{{result.details}}}</div>{{/if}}
+      {{#if result.isFailure}}<div class="roll-result roll-fail font-bold text-wwn-failure"><b>{{localize 'WWN.Failure'}}</b> ({{result.target}})
+      </div>{{/if}}
+      {{#if result.isSuccess}}<div class="roll-result roll-success font-bold text-wwn-success"><b>{{localize 'WWN.Success'}}</b>
+        ({{result.target}})</div>{{/if}}
+      {{#if rollWWN}}<div>{{{rollWWN}}}</div>{{/if}}
+      {{#if straightDamage}}
+      <!-- GODBOUND DAMAGE BUTTONS -->
+      <div class="card-buttons flex flex-col gap-1 mt-1.5">
+        <div class="flex flex-row gap-1">
+          <button data-action="apply-damage" data-damage="{{rollDamage}}" data-damage-multiplier="1"
+            class="flex-1">Apply Damage</button>
+          <button data-action="apply-damage" data-damage="{{straightDamage}}" data-damage-multiplier="1"
+            class="flex-1">Straight Damage</button>
+        </div>
+        <div class="flex flex-row gap-1">
+          <button data-action="apply-damage" data-damage="{{rollDamage}}" data-damage-multiplier="-1"
+            class="flex-1">Apply Healing</button>
+          <button data-action="apply-damage" data-damage="{{straightDamage}}" data-damage-multiplier="-1"
+            class="flex-1">Straight Healing</button>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

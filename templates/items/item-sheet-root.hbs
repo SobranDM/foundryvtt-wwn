@@ -1,0 +1,15 @@
+<div>
+  <form class="{{cssClass}} bg-wwn-bg text-wwn-text" autocomplete="off">
+    <header data-application-part="header"></header>
+    <nav data-application-part="tabs"></nav>
+    <section class="sheet-body overflow-y-auto p-2">
+      {{#if showMain}}
+      <div data-application-part="main"></div>
+      {{else}}
+      {{#if showInfo}}<div data-application-part="info"></div>{{/if}}
+      <div data-application-part="description"></div>
+      {{#if showEffects}}<div data-application-part="effects"></div>{{/if}}
+      {{/if}}
+    </section>
+  </form>
+</div>

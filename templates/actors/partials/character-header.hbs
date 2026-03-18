@@ -1,0 +1,109 @@
+<div class="flex flex-none items-start justify-center pt-1">
+  <img class="profile-img w-[80px] h-[80px] object-cover border border-wwn-border rounded-sm" src="{{img}}" data-edit="img" title="{{name}}" alt="" />
+</div>
+<section class="header-details flex-1 flex flex-col gap-0.5">
+  {{!-- Row 1: Name, Recovery --}}
+  <div class="flex flex-row items-center gap-3">
+    <div class="flex-1 min-w-0">
+      <input name="name" type="text" value="{{name}}" placeholder="{{localize 'WWN.details.name'}}" data-dtype="String" class="text-base font-bold w-full border-b border-wwn-border" />
+    </div>
+    <div class="flex flex-row items-center gap-1 shrink-0">
+      <label class="text-[11px] text-wwn-text-muted">{{localize 'WWN.Recovery'}}</label>
+      <button type="button" class="inline-flex items-center justify-center w-7 h-7 border border-wwn-border bg-wwn-surface text-wwn-text cursor-pointer rounded-sm hover:bg-wwn-row-alt" data-action="recovery-scene" data-tooltip="{{localize 'WWN.RecoveryScene'}}">
+        <i class="fas fa-hourglass-half"></i>
+      </button>
+      <button type="button" class="inline-flex items-center justify-center w-7 h-7 border border-wwn-border bg-wwn-surface text-wwn-text cursor-pointer rounded-sm hover:bg-wwn-row-alt" data-action="recovery-day" data-tooltip="{{localize 'WWN.RecoveryDay'}}">
+        <i class="fas fa-bed"></i>
+      </button>
+    </div>
+  </div>
+  {{!-- Row 2: Stats, Saves --}}
+  <div class="flex flex-row items-start gap-1.5 flex-wrap">
+    {{!-- HP --}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[76px] h-[56px] justify-center">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide">{{localize 'WWN.HealthShort'}}</label>
+      <div class="flex items-center gap-0.5 text-sm">
+        <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" placeholder="0" title="{{localize 'WWN.Health'}}" class="w-[2.5em] min-w-[2em] text-center" />
+        <span class="text-wwn-text-muted">/</span>
+        <input type="number" name="system.hp.max" value="{{system.hp.max}}" data-dtype="Number" placeholder="0" title="{{localize 'WWN.HealthMax'}}" class="w-[2.5em] min-w-[2em] text-center" />
+      </div>
+      <div class="progress-bar w-full h-1 bg-wwn-progress-bg border border-wwn-border rounded-sm overflow-hidden">
+        <div class="progress-fill h-full bg-wwn-progress-fill transition-[width] duration-200" style="width: {{hpPercent}}%;"></div>
+      </div>
+    </div>
+    {{!-- AC --}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[76px] h-[56px] justify-center">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide">{{localize 'WWN.ArmorClassShort'}}</label>
+      <input type="number" name="system.aac.value" value="{{system.aac.value}}" data-dtype="Number" placeholder="0" title="{{localize 'WWN.ArmorClass'}}" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold" />
+      <div class="text-[9px] text-wwn-text-muted leading-none">{{#if system.aac.shield}}{{localize 'WWN.armor.shield'}}{{else}}{{localize 'WWN.NoShield'}}{{/if}}</div>
+    </div>
+    {{!-- Strain or Wounds --}}
+    {{#if config.replaceStrainWithWounds}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[76px] h-[56px] justify-center">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide" data-tooltip="Injuries and Fatal Wounds">I/W</label>
+      <div class="flex items-center gap-0.5 text-sm">
+        <input type="number" name="system.hp.injuries" value="{{system.hp.injuries}}" data-dtype="Number" placeholder="0" class="w-[2.5em] min-w-[2em] text-center" />
+        <span class="text-wwn-text-muted">/</span>
+        <input type="number" name="system.hp.wounds" value="{{system.hp.wounds}}" data-dtype="Number" placeholder="0" class="w-[2.5em] min-w-[2em] text-center" />
+      </div>
+    </div>
+    {{else}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[76px] h-[56px] justify-center">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide">{{localize 'WWN.SystemStrainShort'}}</label>
+      <div class="flex items-center gap-0.5 text-sm">
+        <input type="number" name="system.details.strain.value" value="{{system.details.strain.value}}" data-dtype="Number" placeholder="0" title="{{localize 'WWN.SystemStrain'}}" class="w-[2.5em] min-w-[2em] text-center" />
+        <span class="text-wwn-text-muted">/</span>
+        <input type="number" name="system.details.strain.max" value="{{system.details.strain.max}}" data-dtype="Number" placeholder="0" title="{{localize 'WWN.SystemStrainMax'}}" class="w-[2.5em] min-w-[2em] text-center" />
+      </div>
+      <div class="progress-bar w-full h-1 bg-wwn-progress-bg border border-wwn-border rounded-sm overflow-hidden">
+        <div class="progress-fill h-full bg-wwn-progress-fill transition-[width] duration-200" style="width: {{strainPercent}}%;"></div>
+      </div>
+    </div>
+    {{/if}}
+    {{!-- Movement --}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm {{#if config.showMovement}}w-[90px]{{else}}w-[76px]{{/if}} h-[56px] justify-center">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide">{{localize 'WWN.movement.short'}}</label>
+      <div class="flex flex-col items-center gap-0 text-sm">
+        {{#if config.showMovement}}
+        <div class="flex items-center gap-0.5" title="{{localize 'WWN.movement.round'}}">
+          <input name="system.movement.base" type="number" value="{{system.movement.base}}" placeholder="30" data-dtype="Number" {{#if system.config.movementAuto}}disabled{{/if}} class="w-[2.5em] min-w-[2em] text-center" />
+          <span class="text-wwn-text-muted text-xs">'</span>
+        </div>
+        <div class="flex items-center gap-0.5 text-[11px] text-wwn-text-muted" title="{{localize 'WWN.movement.exploration'}}">
+          <span>{{system.movement.exploration}}</span>
+          <span class="text-[10px]">'/turn</span>
+        </div>
+        {{else}}
+        <div class="flex items-center gap-0.5">
+          <input name="system.movement.base" type="number" value="{{system.movement.base}}" placeholder="30" data-dtype="Number" title="{{localize 'WWN.movement.round'}}" {{#if system.config.movementAuto}}disabled{{/if}} class="w-[2.5em] min-w-[2em] text-center" />
+          <span class="text-wwn-text-muted text-xs">'</span>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{!-- Initiative --}}
+    <div class="border border-wwn-border bg-wwn-surface px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[56px] h-[56px] justify-center cursor-pointer shrink-0" data-action="modifiers" title="{{localize 'WWN.Initiative'}}">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide pointer-events-none">Init</label>
+      <input name="system.initiative.mod" type="number" value="{{system.initiative.mod}}" data-dtype="Number" placeholder="0" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold pointer-events-none" />
+    </div>
+    {{!-- Divider --}}
+    <div class="w-px self-stretch bg-wwn-border mx-0.5"></div>
+    {{!-- Saves --}}
+    <div class="border border-wwn-border bg-wwn-row-alt px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[56px] h-[56px] justify-center cursor-pointer" data-action="roll-save" data-save="evasion">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide pointer-events-none">{{localize 'WWN.saves.evasion'}}</label>
+      <input name="system.saves.evasion.value" type="number" value="{{system.saves.evasion.value}}" placeholder="0" data-dtype="Number" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold pointer-events-none" />
+    </div>
+    <div class="border border-wwn-border bg-wwn-row-alt px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[56px] h-[56px] justify-center cursor-pointer" data-action="roll-save" data-save="mental">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide pointer-events-none">{{localize 'WWN.saves.mental'}}</label>
+      <input name="system.saves.mental.value" type="number" value="{{system.saves.mental.value}}" placeholder="0" data-dtype="Number" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold pointer-events-none" />
+    </div>
+    <div class="border border-wwn-border bg-wwn-row-alt px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[56px] h-[56px] justify-center cursor-pointer" data-action="roll-save" data-save="physical">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide pointer-events-none">{{localize 'WWN.saves.physical'}}</label>
+      <input name="system.saves.physical.value" type="number" value="{{system.saves.physical.value}}" placeholder="0" data-dtype="Number" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold pointer-events-none" />
+    </div>
+    <div class="border border-wwn-border bg-wwn-row-alt px-1.5 py-1 flex flex-col gap-0.5 items-center rounded-sm w-[56px] h-[56px] justify-center cursor-pointer" data-action="roll-save" data-save="luck">
+      <label class="text-[10px] text-wwn-text-muted text-center uppercase tracking-wide pointer-events-none">{{localize 'WWN.saves.luck'}}</label>
+      <input name="system.saves.luck.value" type="number" value="{{system.saves.luck.value}}" placeholder="0" data-dtype="Number" disabled class="w-[2.5em] min-w-[2em] text-center text-sm font-semibold pointer-events-none" />
+    </div>
+  </div>
+</section>

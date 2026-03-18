@@ -1,0 +1,41 @@
+<div class="wwn chat-card item-card border border-wwn-border px-2 py-1 my-1 bg-wwn-bg-elevated text-wwn-text" data-actor-id="{{actor.id}}" data-item-id="{{item._id}}"
+    {{#if tokenId}}data-token-id="{{tokenId}}" {{/if}}>
+    <header class="card-header flex flex-row items-center gap-1 mb-2">
+        <img src="{{item.img}}" title="{{item.name}}" width="36" height="36" class="w-9 h-9 border border-wwn-border shrink-0" />
+        <h3 class="item-name flex-1 text-sm m-0"><a>{{item.name}}</a></h3>
+    </header>
+
+    <div class="card-content text-[13px] leading-[1.4]">
+        {{{data.description}}}
+    </div>
+
+    <div class="card-buttons flex flex-col gap-1 mt-1.5">
+        {{#if hasAttack}}<button data-action="attack">{{ localize "WWN.Attack" }}</button>{{/if}}
+
+        {{#if hasDamage}}
+        <button data-action="damage">
+            {{#if isHealing}}
+            {{ localize "WWN.Healing" }}
+            {{else}}
+            {{localize "WWN.Damage" }}
+            {{/if}}
+        </button>
+        {{/if}}
+
+        {{#if data.save}}
+        <button data-action="save" data-save="{{data.save}}">
+            {{lookup config.saves data.save}} - {{localize "WWN.spells.Save"}}
+        </button>
+        {{/if}}
+
+        {{#if data.roll}}
+        <button data-action="formula">{{ localize "WWN.Roll"}} {{data.roll}} {{#if data.blindroll}}({{localize 'WWN.items.BlindRoll'}}){{/if}}</button>
+        {{/if}}
+    </div>
+
+    <footer class="card-footer flex flex-wrap gap-1 mt-1.5 pt-1 border-t border-wwn-border-light">
+        {{#each data.properties}}
+        <span class="inline-block px-1.5 py-px text-[11px] bg-wwn-tag-bg text-wwn-tag-text rounded-[3px]">{{this}}</span>
+        {{/each}}
+    </footer>
+</div>

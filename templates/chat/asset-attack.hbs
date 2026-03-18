@@ -1,0 +1,18 @@
+<div class="wwn border border-wwn-border px-2 py-1 my-1 bg-wwn-bg-elevated text-wwn-text">
+  <h3 class="text-sm m-0 mb-1" title="">{{ name }}</h3>
+  {{#if attackSpecial}}
+   <span class="italic">{{attackSpecial}}</span> <br>
+  {{/if}}
+
+  <span class="font-semibold">{{ attackKey }}:</span>
+  <span title="">{{{ hitRoll }}}</span>
+  <span class="font-semibold">{{localize 'WWN.faction.damage'}}:</span>
+  <span title="">{{{ damageRoll }}}</span>
+
+  {{#if assetsWithLocationNotes}}
+  <b class="block mt-1">{{localize 'WWN.faction.locationRollTitle'}}</b>:<br>
+    {{#each assetsWithLocationNotes as |faitems|}}
+    <i>{{faitems.name}}</i>: {{faitems.system.locationRoll}}<br>
+    {{/each}}
+  {{/if}}
+</div>

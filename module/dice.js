@@ -1,3 +1,5 @@
+import { WwnDialog } from "./dialog/wwn-dialog.js";
+
 export class WwnDice {
   static async digestResult(data, roll) {
     let result = {
@@ -70,7 +72,7 @@ export class WwnDice {
     form = null,
     rollTitle = null
   } = {}) {
-    const template = "systems/wwn/templates/chat/roll-result.html";
+    const template = "systems/wwn/templates/chat/roll-result.hbs";
 
     let chatData = {
       user: game.user.id,
@@ -396,7 +398,7 @@ export class WwnDice {
     rollTitle = null,
     dmgTitle = null
   } = {}) {
-    const template = "systems/wwn/templates/chat/roll-attack.html";
+    const template = "systems/wwn/templates/chat/roll-attack.hbs";
 
     let chatData = {
       user: game.user.id,
@@ -693,8 +695,7 @@ export class WwnDice {
     flavor = null,
     title = null,
   } = {}) {
-    let rolled = false;
-    const template = "systems/wwn/templates/chat/roll-dialog.html";
+    const template = "systems/wwn/templates/chat/roll-dialog.hbs";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -709,40 +710,32 @@ export class WwnDice {
       flavor: flavor,
       speaker: speaker,
     };
-    if (skipDialog) { return WwnDice.sendRoll(rollData); }
-
-    let buttons = {
-      ok: {
-        label: game.i18n.localize("WWN.Roll"),
-        icon: '<i class="fas fa-dice-d20"></i>',
-        callback: (html) => {
-          rolled = true;
-          rollData.form = html[0].querySelector("form");
-          roll = WwnDice.sendRoll(rollData);
-        },
-      },
-      cancel: {
-        icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("WWN.Cancel"),
-        callback: (html) => { },
-      },
-    };
+    if (skipDialog) return WwnDice.sendRoll(rollData);
 
     const html = await renderTemplate(template, dialogData);
-    let roll;
 
-    //Create Dialog window
-    return new Promise((resolve) => {
-      new Dialog({
-        title: title,
-        content: html,
-        buttons: buttons,
-        default: "ok",
-        close: () => {
-          resolve(rolled ? roll : false);
+    const result = await WwnDialog.wait({
+      title: title,
+      content: html,
+      buttons: [
+        {
+          action: "ok",
+          label: game.i18n.localize("WWN.Roll"),
+          icon: "fa-solid fa-dice-d20",
+          default: true,
+          callback: async (_ev, _btn, dialog) => {
+            rollData.form = dialog.element?.querySelector?.("form");
+            return WwnDice.sendRoll(rollData);
+          },
         },
-      }).render(true);
+        {
+          action: "cancel",
+          icon: "fa-solid fa-times",
+          label: game.i18n.localize("WWN.Cancel"),
+        },
+      ],
     });
+    return result ?? false;
   }
 
   static async Roll({
@@ -755,8 +748,7 @@ export class WwnDice {
     rollTitle = null,
     dmgTitle = null,
   } = {}) {
-    let rolled = false;
-    const template = "systems/wwn/templates/chat/roll-dialog.html";
+    const template = "systems/wwn/templates/chat/roll-dialog.hbs";
     let dialogData = {
       formula: parts.join(" "),
       data: data,
@@ -779,39 +771,31 @@ export class WwnDice {
         : WwnDice.sendRoll(rollData);
     }
 
-    let buttons = {
-      ok: {
-        label: game.i18n.localize("WWN.Roll"),
-        icon: '<i class="fas fa-dice-d20"></i>',
-        callback: (html) => {
-          rolled = true;
-          rollData.form = html[0].querySelector("form");
-          roll = ["melee", "missile", "attack"].includes(data.roll.type)
-            ? WwnDice.sendAttackRoll(rollData)
-            : WwnDice.sendRoll(rollData);
-        },
-      },
-      cancel: {
-        icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("WWN.Cancel"),
-        callback: (html) => { },
-      },
-    };
-
     const html = await renderTemplate(template, dialogData);
-    let roll;
 
-    //Create Dialog window
-    return new Promise((resolve) => {
-      new Dialog({
-        title: title,
-        content: html,
-        buttons: buttons,
-        default: "ok",
-        close: () => {
-          resolve(rolled ? roll : false);
+    const result = await WwnDialog.wait({
+      title: title,
+      content: html,
+      buttons: [
+        {
+          action: "ok",
+          label: game.i18n.localize("WWN.Roll"),
+          icon: "fa-solid fa-dice-d20",
+          default: true,
+          callback: async (_ev, _btn, dialog) => {
+            rollData.form = dialog.element?.querySelector?.("form");
+            return ["melee", "missile", "attack"].includes(data.roll.type)
+              ? WwnDice.sendAttackRoll(rollData)
+              : WwnDice.sendRoll(rollData);
+          },
         },
-      }).render(true);
+        {
+          action: "cancel",
+          icon: "fa-solid fa-times",
+          label: game.i18n.localize("WWN.Cancel"),
+        },
+      ],
     });
+    return result ?? false;
   }
 }

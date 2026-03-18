@@ -195,7 +195,7 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
-    requiresReload: false
+    requiresReload: true
   });
 
   game.settings.register("wwn", "roundWeight", {

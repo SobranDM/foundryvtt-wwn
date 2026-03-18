@@ -1,60 +1,62 @@
-// eslint-disable-next-line no-unused-vars
-import { WwnActor } from '../actor/entity.js';
+import { WwnDialog } from "./wwn-dialog.js";
 
-export class WwnEntityTweaks extends FormApplication {
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.id = 'sheet-tweaks';
-    options.template =
-      'systems/wwn/templates/actors/dialogs/tweaks-dialog.html';
-    options.width = 580;
-    return options;
+const FormDataExtended = foundry?.applications?.ux?.FormDataExtended ?? null;
+
+function getTweaksData(actor) {
+  const data = foundry.utils.deepClone(actor);
+  if (data.type === "character") data.isCharacter = true;
+  data.user = game.user;
+  data.config = CONFIG.WWN;
+  return data;
+}
+
+function formToObject(form) {
+  if (FormDataExtended) return new FormDataExtended(form).object;
+  const obj = {};
+  for (const el of form.elements) {
+    if (!el.name || el.disabled) continue;
+    if (el.type === "checkbox") obj[el.name] = el.checked;
+    else obj[el.name] = el.value;
   }
+  return obj;
+}
 
-  /* -------------------------------------------- */
+/**
+ * Open the Entity Tweaks dialog for an actor.
+ * @param {Actor} actor
+ * @param {object} [options]
+ */
+export async function openEntityTweaks(actor, options = {}) {
+  const data = getTweaksData(actor);
+  const content = await renderTemplate(
+    "systems/wwn/templates/actors/dialogs/tweaks-dialog.hbs",
+    data
+  );
 
-  /**
-   * Add the Entity name into the window title
-   * @type {String}
-   */
-  get title() {
-    return `${this.object.name}: ${game.i18n.localize('WWN.dialog.tweaks')}`;
-  }
-
-  /* -------------------------------------------- */
-
-  /**
-   * Construct and return the data object used to render the HTML template for this form application.
-   * @return {Object}
-   */
-  getData() {
-    const data = foundry.utils.deepClone(this.object);
-    if (data.type === 'character') {
-      data.isCharacter = true;
-    }
-    data.user = game.user;
-    data.config = CONFIG.WWN;
-    return data;
-  }
-
-  /* -------------------------------------------- */
-
-  /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-  }
-
-  /**
-   * This method is called upon form submission after form data is validated
-   * @param event {Event}       The initial triggering submission event
-   * @param formData {Object}   The object of validated form data with which to update the object
-   * @private
-   */
-  async _updateObject(event, formData) {
-    event.preventDefault();
-    // Update the actor
-    await this.object.update(formData);
-    // Re-draw the updated sheet
-    this.object.sheet.render(true);
-  }
+  await WwnDialog.wait({
+    title: `${actor.name}: ${game.i18n.localize("WWN.dialog.tweaks")}`,
+    content,
+    position: { width: 580 },
+    buttons: [
+      {
+        action: "save",
+        label: game.i18n.localize("Save Changes"),
+        icon: "fa-solid fa-save",
+        callback: async (_event, _button, dialog) => {
+          const form = dialog?.element?.querySelector?.("form");
+          if (!form) return;
+          const formData = formToObject(form);
+          const expanded = foundry.utils.expandObject(formData);
+          await actor.update(expanded);
+          if (actor.sheet?.rendered) actor.sheet.render(true);
+        },
+      },
+      {
+        action: "cancel",
+        label: "Cancel",
+        icon: "fa-solid fa-times",
+        default: true,
+      },
+    ],
+  });
 }

@@ -1,0 +1,145 @@
+<section class="flex flex-col gap-2 tab p-2" data-group="primary" data-tab="info">
+  <div class="flex flex-row gap-3">
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs" title="{{localize 'WWN.HealthLong'}}">{{localize 'WWN.HealthShort'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px] gap-1">
+          <input class="w-10 text-center text-xs" type="number" name="system.health.value" value="{{system.health.value}}" data-dtype="Number" title="{{localize 'WWN.Health'}}" />
+          <span class="leading-[22px]">/</span>
+          <input class="w-10 text-center text-xs" type="number" name="system.health.max" value="{{system.health.max}}" data-dtype="Number" title="{{localize 'WWN.HealthMax'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.rating'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-10 text-center text-xs" type="number" name="system.rating" value="{{system.rating}}" data-dtype="Number" min="1" max="8" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.location'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.location" value="{{system.location}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.cost'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-10 text-center text-xs" type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.type'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.assetType">
+            {{selectOptions config.assetTypes selected=system.assetType localize=true}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.skills.magic'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.magic">
+            {{selectOptions config.assetMagic selected=system.magic localize=true}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.income'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-10 text-center text-xs" type="number" name="system.income" value="{{system.income}}" data-dtype="Number" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.maintenance'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="w-10 text-center text-xs" type="number" name="system.maintenance" value="{{system.maintenance}}" data-dtype="Number" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.note'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.note" value="{{system.note}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.turnRoll'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.turnRoll" value="{{system.turnRoll}}" />
+        </div>
+      </div>
+    </div>
+    <div class="stats flex-1 border border-wwn-border p-0.5 text-[13px]">
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.Attack'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.attackDamage" value="{{system.attackDamage}}" data-dtype="String" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.attackSource'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.attackSource">
+            {{selectOptions config.assetTypes selected=system.attackSource localize=true}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.attackTarget'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <select class="h-6 text-xs" name="system.attackTarget">
+            {{selectOptions config.assetTypes selected=system.attackTarget localize=true}}
+          </select>
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.attackSpecial'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.attackSpecial" value="{{system.attackSpecial}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.locationRoll'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.locationRoll" value="{{system.locationRoll}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.counter'}}</label>
+        <div class="form-fields flex-1 flex justify-evenly h-[22px]">
+          <input class="flex-1 text-center text-xs" type="text" name="system.counter" value="{{system.counter}}" data-dtype="String" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.BoIHint'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.baseOfInfluence" value="{{system.baseOfInfluence}}" {{checked system.baseOfInfluence}}
+            data-dtype="Boolean" title="{{localize 'WWN.items.BoIHint'}}" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.subtle'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.subtle" value="{{system.subtle}}" {{checked system.subtle}} data-dtype="Boolean" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.stealthed'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.stealthed" value="{{system.stealthed}}" {{checked system.stealthed}} data-dtype="Boolean" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.asset.special'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.special" value="{{system.special}}" {{checked system.special}} data-dtype="Boolean" />
+        </div>
+      </div>
+      <div class="form-group flex items-center m-px border border-wwn-border">
+        <label class="bg-wwn-row-alt px-2 whitespace-nowrap text-center leading-[21px] min-w-[110px] text-xs">{{localize 'WWN.faction.unusable'}}</label>
+        <div class="form-fields flex-1 flex justify-center h-[22px]">
+          <input type="checkbox" name="system.unusable" value="{{system.unusable}}" {{checked system.unusable}} data-dtype="Boolean" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
