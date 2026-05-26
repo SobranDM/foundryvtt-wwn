@@ -15,6 +15,20 @@
                             placeholder="0" />
                     </div>
                 </li>
+                {{#if config.enableWoundPoints}}
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{localize 'WWN.WoundPointsLong'}}">
+                        {{ localize "WWN.WoundPointsShort" }}
+                    </h4>
+                    <div class="attribute-value flexrow">
+                        <input name="system.wp.value" type="number" value="{{system.wp.value}}" data-dtype="Number"
+                            placeholder="0" />
+                        <span class="sep"> / </span>
+                        <input name="system.wp.max" type="text" value="{{system.wp.max}}" data-dtype="Number"
+                            placeholder="0" />
+                    </div>
+                </li>
+                {{/if}}
                 <li class="attribute morale-check">
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.details.morale" }}</a>
                     </h4>
@@ -41,6 +55,51 @@
                             placeholder="10" data-dtype="Number" />
                     </div>
                 </li>
+                {{#if config.replaceStrainWithWounds}}
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.CriticalResistance' }}">
+                        {{ localize "WWN.CriticalResistanceShort" }}</h4>
+                    <div class="attribute-value">
+                        <input name="system.critResistance" type="number" value="{{system.critResistance}}"
+                            data-dtype="Number" placeholder="0" />
+                    </div>
+                </li>
+                {{/if}}
+                {{#if config.thresholdInjuries}}
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.InjuryResistance' }}">
+                        {{ localize "WWN.InjuryResistanceShort" }}</h4>
+                    <div class="attribute-value">
+                        <input name="system.injuryResistance" type="number" value="{{system.injuryResistance}}"
+                            data-dtype="Number" placeholder="0" />
+                    </div>
+                </li>
+                {{/if}}
+                {{#if (or config.replaceStrainWithWounds config.thresholdInjuries)}}
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="Injuries / Wounds">I/W</h4>
+                    <div class="attribute-value flexrow">
+                        <input name="system.hp.injuries" type="number" value="{{system.hp.injuries}}"
+                            data-dtype="Number" placeholder="0" />
+                        <span class="sep"> / </span>
+                        <input name="system.hp.wounds" type="number" value="{{system.hp.wounds}}" data-dtype="Number"
+                            placeholder="0" />
+                    </div>
+                </li>
+                {{/if}}
+                {{#if config.replaceStrainWithWounds}}
+                <li class="attribute">
+                    <h4 class="attribute-name box-title" title="{{ localize 'WWN.SystemStrainLong' }}">
+                        {{ localize "WWN.SystemStrainShort" }}</h4>
+                    <div class="attribute-value flexrow">
+                        <input name="system.details.strain.value" type="number" value="{{system.details.strain.value}}"
+                            data-dtype="Number" placeholder="0" />
+                        <span class="sep"> / </span>
+                        <input name="system.details.strain.max" type="number" value="{{system.details.strain.max}}"
+                            data-dtype="Number" placeholder="0" />
+                    </div>
+                </li>
+                {{/if}}
                 <li class="attribute monster-skill-check">
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.skill" }}</a>
                     </h4>

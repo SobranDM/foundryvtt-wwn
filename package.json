@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Worlds Without Number system for Foundry VTT",
   "scripts": {
+    "test": "node --test tests/node/*.test.mjs",
     "build:css": "sass scss/:styles/ --style compressed",
     "watch:css": "sass scss/:styles/ --watch --style compressed"
   },

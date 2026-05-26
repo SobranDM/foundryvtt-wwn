@@ -164,6 +164,8 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.showMovement = game.settings.get("wwn", "showMovement");
     data.config.currencyTypes = game.settings.get("wwn", "currencyTypes");
     data.config.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
+    data.config.enableWoundPoints = game.settings.get("wwn", "enableWoundPoints");
+    data.config.thresholdInjuries = game.settings.get("wwn", "thresholdInjuries");
     data.config.xpPerChar = game.settings.get("wwn", "xpPerChar");
     data.config.medRange = game.settings.get("wwn", "medRange");
     data.config.useTrauma = game.settings.get("wwn", "useTrauma");

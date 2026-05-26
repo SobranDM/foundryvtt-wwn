@@ -175,12 +175,18 @@
       "character": true,
       "warrior": false,
       "damageBonus": 0,
+      "injuryResistance": 0,
+      "critResistance": 0,
       "hp": {
         "hd": "1d6",
         "value": 4,
         "max": 4,
         "injuries": 0,
         "wounds": 0
+      },
+      "wp": {
+        "value": 4,
+        "max": 4
       },
       "treasure": 0,
       "personalTreasure": 0,
@@ -264,13 +270,25 @@
           "table": "",
           "link": ""
         },
+        "strain": {
+          "value": 0,
+          "max": 10
+        },
         "skill": 0
       },
       "attacks": "",
       "damageBonus": 0,
+      "injuryResistance": 0,
+      "critResistance": 0,
       "character": false,
       "hp": {
         "hd": "1d8",
+        "value": 4,
+        "max": 4,
+        "injuries": 0,
+        "wounds": 0
+      },
+      "wp": {
         "value": 4,
         "max": 4
       }

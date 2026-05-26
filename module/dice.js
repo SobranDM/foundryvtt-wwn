@@ -1,4 +1,18 @@
+import {
+  THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
+  THRESHOLD_CONTEXT_FLAG,
+  THRESHOLD_CONTEXT_SCHEMA_VERSION,
+} from "./injury-thresholds.mjs";
+
 export class WwnDice {
+  static naturalD20(roll) {
+    const dieResult = roll?.dice?.[0]?.results?.[0]?.result
+      ?? roll?.terms?.[0]?.results?.[0]?.result
+      ?? roll?.terms?.[0]?.total;
+    const result = Number(dieResult);
+    return Number.isFinite(result) ? result : null;
+  }
+
   static async digestResult(data, roll) {
     let result = {
       isSuccess: false,
@@ -583,6 +597,120 @@ export class WwnDice {
 
     templateData.result = WwnDice.digestAttackResult(data, roll);
     templateData.traumaResult = traumaResult;
+
+    const attackContext = {
+      schemaVersion: THRESHOLD_CONTEXT_SCHEMA_VERSION,
+      createdBy: "wwn.sendAttackRoll",
+      attackTotal: roll.total,
+      naturalD20: WwnDice.naturalD20(roll),
+      sourceActorId: speaker?.actor ?? data.actor?.id,
+      sourceItemId: data.item?.id ?? data.item?._id,
+      sourceItemName: data.item?.name ?? "",
+      sourceItemSnapshot: data.item
+        ? {
+            id: data.item.id ?? data.item._id,
+            name: data.item.name ?? "",
+            type: data.item.type ?? "",
+          }
+        : null,
+      baseWeaponDamageFormula: data.roll?.baseWeaponDamageFormula ?? data.roll?.dmg?.[0] ?? "",
+      rollMode,
+      whisper: chatData.whisper ?? null,
+      blind: !!chatData.blind,
+      actions: {
+        normalDamage: {
+          domAction: "apply-damage",
+          actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
+          damageKind: "normal",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: 1,
+        },
+        normalDamageHalf: {
+          domAction: "apply-damage",
+          actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
+          damageKind: "normal",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: 0.5,
+        },
+        normalDamageDouble: {
+          domAction: "apply-damage",
+          actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
+          damageKind: "normal",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: 2,
+        },
+        straightDamage: {
+          domAction: "apply-damage",
+          actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
+          damageKind: "normal",
+          amount: dmgRoll.total,
+          multiplier: 1,
+        },
+        shock: {
+          domAction: "apply-shock",
+          actionFamily: "shock",
+          damageKind: "shock",
+          amount: Number(data.item?.system?.shockTotal ?? 0),
+          multiplier: 1,
+          thresholdEligible: false,
+        },
+        trauma: {
+          domAction: "apply-damage",
+          actionFamily: "trauma",
+          damageKind: "trauma",
+          amount: traumaResult?.damage,
+          multiplier: 1,
+          thresholdEligible: false,
+        },
+        traumaHalf: {
+          domAction: "apply-damage",
+          actionFamily: "trauma",
+          damageKind: "trauma",
+          amount: traumaResult?.damage,
+          multiplier: 0.5,
+          thresholdEligible: false,
+        },
+        traumaDouble: {
+          domAction: "apply-damage",
+          actionFamily: "trauma",
+          damageKind: "trauma",
+          amount: traumaResult?.damage,
+          multiplier: 2,
+          thresholdEligible: false,
+        },
+        healing: {
+          domAction: "apply-damage",
+          actionFamily: "healing",
+          damageKind: "healing",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: -1,
+          thresholdEligible: false,
+        },
+        healingHalf: {
+          domAction: "apply-damage",
+          actionFamily: "healing",
+          damageKind: "healing",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: -0.5,
+          thresholdEligible: false,
+        },
+        healingDouble: {
+          domAction: "apply-damage",
+          actionFamily: "healing",
+          damageKind: "healing",
+          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          multiplier: -2,
+          thresholdEligible: false,
+        },
+      },
+    };
+    chatData.flags = {
+      ...(chatData.flags ?? {}),
+      wwn: {
+        ...(chatData.flags?.wwn ?? {}),
+        [THRESHOLD_CONTEXT_FLAG]: attackContext,
+      },
+    };
 
     // Render trauma roll if it exists
     if (traumaResult && traumaResult.roll) {

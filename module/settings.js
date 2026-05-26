@@ -61,7 +61,7 @@ export const registerSettings = function () {
     scope: "world",
     type: Boolean,
     config: true,
-    requiresReload: true
+    requiresReload: false
   });
 
   game.settings.register("wwn", "morale", {
@@ -196,6 +196,26 @@ export const registerSettings = function () {
     type: Boolean,
     config: true,
     requiresReload: false
+  });
+
+  game.settings.register("wwn", "enableWoundPoints", {
+    name: game.i18n.localize("WWN.Setting.EnableWoundPoints"),
+    hint: game.i18n.localize("WWN.Setting.EnableWoundPointsHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: false
+  });
+
+  game.settings.register("wwn", "thresholdInjuries", {
+    name: game.i18n.localize("WWN.Setting.ThresholdInjuries"),
+    hint: game.i18n.localize("WWN.Setting.ThresholdInjuriesHint"),
+    default: false,
+    scope: "world",
+    type: Boolean,
+    config: true,
+    requiresReload: true
   });
 
   game.settings.register("wwn", "roundWeight", {

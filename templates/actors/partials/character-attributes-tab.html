@@ -120,6 +120,21 @@
             title="{{ localize 'WWN.HealthMax' }}" />
         </div>
       </li>
+      {{#if config.enableWoundPoints}}
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.WoundPointsLong' }}">
+          {{ localize "WWN.WoundPointsShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.wp.value" type="number" value="{{system.wp.value}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.WoundPoints' }}" />
+        </div>
+        <div class="attribute-value attribute-mod">
+          <input name="system.wp.max" type="number" value="{{system.wp.max}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.WoundPointsMax' }}" />
+        </div>
+      </li>
+      {{/if}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
           {{ localize "WWN.ArmorClassShort" }}
@@ -136,6 +151,29 @@
 
       {{#if config.replaceStrainWithWounds}}
       <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.CriticalResistance' }}">
+          {{ localize "WWN.CriticalResistanceShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.critResistance" type="number" value="{{system.critResistance}}" data-dtype="Number"
+            placeholder=0 title="{{ localize 'WWN.CriticalResistanceHint' }}" />
+        </div>
+      </li>
+      {{/if}}
+      {{#if config.thresholdInjuries}}
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.InjuryResistance' }}">
+          {{ localize "WWN.InjuryResistanceShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.injuryResistance" type="number" value="{{system.injuryResistance}}" data-dtype="Number"
+            placeholder=0 title="{{ localize 'WWN.InjuryResistanceHint' }}" />
+        </div>
+      </li>
+      {{/if}}
+
+      {{#if (or config.replaceStrainWithWounds config.thresholdInjuries)}}
+      <li class="attribute ability-score">
         <h4 class="attribute-name box-title"
           data-tooltip="Injuries and Fatal Wounds. Hover over each to see their effects.">
           I/W
@@ -150,7 +188,8 @@
             data-tooltip="Fatal Wounds. You have 3 rounds in which to remove all of your fatal wounds or perish." />
         </div>
       </li>
-      {{else}}
+      {{/if}}
+      {{#unless config.replaceStrainWithWounds}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.SystemStrainLong' }}">
           {{ localize "WWN.SystemStrainShort" }}
@@ -164,7 +203,7 @@
             data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
         </div>
       </li>
-      {{/if}}
+      {{/unless}}
 
     </ul>
     {{!-- Saving throws --}}

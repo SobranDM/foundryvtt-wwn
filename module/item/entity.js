@@ -1,6 +1,7 @@
 import { WwnDice } from "../dice.js";
 import { addEventListener as addCustomEventListener } from "../utils/listener-funcs.js";
 import { applyChatCardDamage } from "../chat.js";
+import { THRESHOLD_CONTEXT_FLAG } from "../injury-thresholds.mjs";
 
 /**
  * Override and extend the basic :class:`Item` implementation
@@ -130,6 +131,8 @@ export class WwnItem extends Item {
     const action = button.dataset.action;
 
     if (action === 'apply-damage' || action === 'apply-shock') {
+      const messageId = message.dataset.messageId;
+      const messageObj = messageId ? game.messages.get(messageId) : null;
       // Check for selected tokens
       const targets = this._getChatCardTargets(card);
       if (!targets.length) {
@@ -193,7 +196,12 @@ export class WwnItem extends Item {
         // Apply the damage multiplier
         const multiplier = parseFloat(button.dataset.damageMultiplier) || 1;
 
-        applyChatCardDamage(amount, multiplier);
+        applyChatCardDamage(amount, multiplier, {
+          sourceMessageId: messageId,
+          domAction: action,
+          thresholdActionId: button.dataset.thresholdActionId ?? (action === "apply-shock" ? "shock" : null),
+          attackContext: messageObj?.getFlag?.("wwn", THRESHOLD_CONTEXT_FLAG),
+        });
         return;
       } else {
         console.warn("Failed to parse damage amount:", button.dataset.damage);
@@ -1432,6 +1440,5 @@ export class WwnItem extends Item {
     }
   }
 }
-
 
 

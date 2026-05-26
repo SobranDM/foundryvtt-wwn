@@ -116,8 +116,10 @@ export const addChatMessageContextOptions = function (html, options) {
  * @param {Number} multiplier    A damage multiplier to apply to the rolled damage.
  * @return {Promise}
  */
-export async function applyChatCardDamage(amount, multiplier) {
+export async function applyChatCardDamage(amount, multiplier, options = {}) {
   const targets = canvas.tokens.controlled;
+  const sourceMessage = options.sourceMessageId ? game.messages.get(options.sourceMessageId) : null;
+  const attackContext = options.attackContext ?? sourceMessage?.getFlag?.("wwn", "thresholdAttack");
 
   const title =
     multiplier > 0
@@ -142,12 +144,65 @@ export async function applyChatCardDamage(amount, multiplier) {
   };
 
   ChatMessage.create(chatData, {});
-  return Promise.all(
+  const results = await Promise.all(
     targets.map((t) => {
       const a = t.actor;
-      return a.applyDamage(amount, multiplier);
+      return a.applyDamage(amount, multiplier, {
+        targetToken: t,
+        threshold: options.thresholdActionId
+          ? {
+              thresholdActionId: options.thresholdActionId,
+              domAction: options.domAction,
+              sourceMessageId: options.sourceMessageId,
+              messageUuid: sourceMessage?.uuid ?? options.sourceMessageId,
+              attackContext,
+            }
+          : null,
+      });
     })
   );
+  await renderThresholdSkippedNote(results);
+  return results;
+}
+
+async function renderThresholdSkippedNote(results = []) {
+  const skipped = results
+    .map((result) => result?.threshold)
+    .filter((threshold) => threshold?.skipped && threshold?.gmOnly);
+  if (!skipped.length) return;
+
+  const reasonLabels = {
+    "invalid-attack-context": "invalid or stale attack context",
+    "invalid-attack-provenance": "invalid source actor or item provenance",
+    "below-zero-wound-preempted": "below-zero wound path took precedence",
+    "actor-update-permission-denied": "actor update permission denied",
+    "duplicate-threshold-attempt": "duplicate threshold attempt",
+    "attack-margin-below-aac": "attack margin was below current AAC",
+    "missing-attempt-key": "missing idempotency key",
+    "unknown-threshold-action": "unknown threshold action",
+    "threshold-action-dom-mismatch": "trusted action did not match clicked button type",
+    "threshold-action-amount-mismatch": "trusted action did not match clicked damage amount",
+    "threshold-action-multiplier-mismatch": "trusted action did not match clicked damage multiplier",
+  };
+  const counts = skipped.reduce((acc, threshold) => {
+    const key = threshold.reason ?? "unknown";
+    acc[key] = (acc[key] ?? 0) + 1;
+    return acc;
+  }, {});
+  const body = `<ul>${Object.entries(counts).map(([reason, count]) => {
+    const label = reasonLabels[reason] ?? reason;
+    return `<li>${count} target${count === 1 ? "" : "s"} skipped: ${label}</li>`;
+  }).join("")}</ul>`;
+  const html = await renderTemplate("systems/wwn/templates/chat/apply-damage.html", {
+    title: "Threshold Injury Skipped",
+    body,
+    image: "icons/svg/daze.svg",
+  });
+  await ChatMessage.create({
+    user: game.user.id,
+    whisper: ChatMessage.getWhisperRecipients("GM"),
+    content: html,
+  }, {});
 }
 
 /* -------------------------------------------- */

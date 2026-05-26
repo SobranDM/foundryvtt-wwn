@@ -4,3 +4,12 @@ wwn.zip
 .vscode
 foundry
 .cursor
+node_modules/
+*.log
+packs/*/CURRENT
+packs/*/LOCK
+packs/*/LOG*
+packs/*/MANIFEST-*
+packs/*/*.ldb
+packs/*/*.log
+packs/*/lost/
