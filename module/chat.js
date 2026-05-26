@@ -183,6 +183,7 @@ async function renderThresholdSkippedNote(results = []) {
     "threshold-action-dom-mismatch": "trusted action did not match clicked button type",
     "threshold-action-amount-mismatch": "trusted action did not match clicked damage amount",
     "threshold-action-multiplier-mismatch": "trusted action did not match clicked damage multiplier",
+    "threshold-processing-error": "threshold processing failed after HP damage was applied",
   };
   const counts = skipped.reduce((acc, threshold) => {
     const key = threshold.reason ?? "unknown";

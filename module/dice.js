@@ -598,6 +598,7 @@ export class WwnDice {
     templateData.result = WwnDice.digestAttackResult(data, roll);
     templateData.traumaResult = traumaResult;
 
+    const buttonDamageAmount = dmgRoll.total;
     const attackContext = {
       schemaVersion: THRESHOLD_CONTEXT_SCHEMA_VERSION,
       createdBy: "wwn.sendAttackRoll",
@@ -622,21 +623,21 @@ export class WwnDice {
           domAction: "apply-damage",
           actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
           damageKind: "normal",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: 1,
         },
         normalDamageHalf: {
           domAction: "apply-damage",
           actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
           damageKind: "normal",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: 0.5,
         },
         normalDamageDouble: {
           domAction: "apply-damage",
           actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
           damageKind: "normal",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: 2,
         },
         straightDamage: {
@@ -682,7 +683,7 @@ export class WwnDice {
           domAction: "apply-damage",
           actionFamily: "healing",
           damageKind: "healing",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: -1,
           thresholdEligible: false,
         },
@@ -690,7 +691,7 @@ export class WwnDice {
           domAction: "apply-damage",
           actionFamily: "healing",
           damageKind: "healing",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: -0.5,
           thresholdEligible: false,
         },
@@ -698,7 +699,7 @@ export class WwnDice {
           domAction: "apply-damage",
           actionFamily: "healing",
           damageKind: "healing",
-          amount: dmgRoll.isGodbound ? dmgRoll.straightTotal : dmgRoll.total,
+          amount: buttonDamageAmount,
           multiplier: -2,
           thresholdEligible: false,
         },

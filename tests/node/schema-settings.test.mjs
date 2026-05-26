@@ -37,6 +37,13 @@ test("local mechanics are opt-in world settings", () => {
   assert.match(settingsSource, /scope: "world"/);
 });
 
+test("unrelated v1.6.1 settings stay unchanged", () => {
+  assert.match(
+    settingsSource,
+    /game\.settings\.register\("wwn", "showMovement", \{[\s\S]*?requiresReload: true[\s\S]*?\}\);/,
+  );
+});
+
 test("local labels are present", () => {
   assert.equal(lang["WWN.WoundPointsShort"], "WP");
   assert.equal(lang["WWN.CriticalResistanceShort"], "CR");

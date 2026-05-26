@@ -665,14 +665,27 @@ export class WwnActor extends Actor {
     }
 
     const hpUpdate = await this.update(updateData);
-    const threshold = await this._applyThresholdInjuryAfterDamage({
-      rawAmount: damage.rawAmount,
-      multiplier,
-      preDamageHp: damage.preDamageHp,
-      belowZeroWoundPreempted,
-      threshold: options.threshold,
-      targetToken: options.targetToken,
-    });
+    let threshold = null;
+    if (options.threshold) {
+      try {
+        threshold = await this._applyThresholdInjuryAfterDamage({
+          rawAmount: damage.rawAmount,
+          multiplier,
+          preDamageHp: damage.preDamageHp,
+          belowZeroWoundPreempted,
+          threshold: options.threshold,
+          targetToken: options.targetToken,
+        });
+      } catch (error) {
+        console.error("WWN threshold injury processing failed", error);
+        threshold = {
+          skipped: true,
+          gmOnly: true,
+          reason: "threshold-processing-error",
+          message: error?.message ?? String(error),
+        };
+      }
+    }
     return options.threshold ? { hpUpdate, threshold } : hpUpdate;
   }
 
