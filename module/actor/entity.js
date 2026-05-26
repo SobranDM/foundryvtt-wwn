@@ -21,7 +21,6 @@ import {
   buildBelowZeroWoundFormula,
   computeHpDamage,
   computeWoundPointsAfterExcess,
-  normalizeCriticalResistance,
 } from "../local-mechanics.mjs";
 
 export class WwnActor extends Actor {
@@ -942,20 +941,20 @@ export class WwnActor extends Actor {
     const hitLocation = locations[locationRoll.total];
     const currInjuries = Number(this.system.hp?.injuries ?? 0) || 0;
     const currWounds = Number(this.system.hp?.wounds ?? 0) || 0;
-    const critResistance = normalizeCriticalResistance(this.system.critResistance);
+    const injuryResistance = getActorInjuryResistance(this);
     const woundRoll = await new Roll(buildBelowZeroWoundFormula({
       currentInjuries: currInjuries,
       excessDamage: excess,
-      critResistance,
+      injuryResistance,
     })).evaluate();
     const woundMessage = woundRoll.result;
     const woundResult = woundRoll.total;
     const template = "systems/wwn/templates/chat/apply-damage.html";
     let newInjuries = 0;
     let newWounds = 0;
-    const critResistanceText = critResistance > 0 ? ` [CR -${critResistance}]` : "";
+    const injuryResistanceText = injuryResistance > 0 ? ` [IR -${injuryResistance}]` : "";
 
-    let content = `<p><b>Location: ${hitLocation[0]}.</b></p><p><b>Severity: ${woundResult}</b> (${woundMessage})${critResistanceText}</p><p><b>${hitLocation[1]} for ${woundResult} days.</b> ${hitLocation[2]}*</p>`;
+    let content = `<p><b>Location: ${hitLocation[0]}.</b></p><p><b>Severity: ${woundResult}</b> (${woundMessage})${injuryResistanceText}</p><p><b>${hitLocation[1]} for ${woundResult} days.</b> ${hitLocation[2]}*</p>`;
 
     if (woundResult >= 16) {
       newWounds += woundResult - 15;
@@ -1017,7 +1016,7 @@ export class WwnActor extends Actor {
       content: html,
     };
 
-    ChatMessage.create(chatData, {});
+    await ChatMessage.create(chatData, {});
   }
 
   static _valueFromTable(table, val) {

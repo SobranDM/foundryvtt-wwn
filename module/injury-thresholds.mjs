@@ -1,12 +1,8 @@
+import { normalizeInjuryResistance } from "./local-mechanics.mjs";
+
 export const THRESHOLD_CONTEXT_FLAG = "thresholdAttack";
 export const THRESHOLD_CONTEXT_SCHEMA_VERSION = 1;
 export const THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE = "normal-attack-damage";
-
-export function normalizeInjuryResistance(value) {
-  const number = Number(value);
-  if (!Number.isFinite(number) || number < 0) return 0;
-  return Math.floor(number);
-}
 
 export function getActorInjuryResistance(actor) {
   return normalizeInjuryResistance(actor?.system?.injuryResistance);

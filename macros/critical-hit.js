@@ -11,7 +11,7 @@ if (!selected.length) {
           <label>Excess Damage</label>
           <input type="number" name="excess" value="1" min="1" step="1" />
         </div>
-        <p class="notes">Uses the system wound method, including actor injury count and Critical Resistance.</p>
+        <p class="notes">Uses the system wound method, including actor injury count and Injury Resistance.</p>
       </form>
     `,
     buttons: {

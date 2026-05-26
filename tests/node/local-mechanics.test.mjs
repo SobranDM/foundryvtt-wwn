@@ -5,7 +5,7 @@ import {
   buildBelowZeroWoundFormula,
   computeHpDamage,
   computeWoundPointsAfterExcess,
-  normalizeCriticalResistance,
+  normalizeInjuryResistance,
 } from "../../module/local-mechanics.mjs";
 
 test("HP damage computes clamped HP and positive excess", () => {
@@ -41,15 +41,15 @@ test("excess damage reduces wound points without going below zero", () => {
   );
 });
 
-test("critical resistance normalizes invalid values to zero", () => {
-  assert.equal(normalizeCriticalResistance("2.9"), 2);
-  assert.equal(normalizeCriticalResistance("-1"), 0);
-  assert.equal(normalizeCriticalResistance("bad"), 0);
+test("injury resistance normalizes invalid values to zero", () => {
+  assert.equal(normalizeInjuryResistance("2.9"), 2);
+  assert.equal(normalizeInjuryResistance("-1"), 0);
+  assert.equal(normalizeInjuryResistance("bad"), 0);
 });
 
-test("below-zero wound formula subtracts critical resistance", () => {
+test("below-zero wound formula subtracts injury resistance", () => {
   assert.equal(
-    buildBelowZeroWoundFormula({ currentInjuries: 1, excessDamage: 4, critResistance: 2 }),
+    buildBelowZeroWoundFormula({ currentInjuries: 1, excessDamage: 4, injuryResistance: 2 }),
     "1d12 + 1 + 4 - 2",
   );
 });

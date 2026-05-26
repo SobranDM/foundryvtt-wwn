@@ -8,6 +8,9 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(dirname, "../..");
 const template = JSON.parse(fs.readFileSync(path.join(root, "template.json"), "utf8"));
 const settingsSource = fs.readFileSync(path.join(root, "module/settings.js"), "utf8");
+const actorSource = fs.readFileSync(path.join(root, "module/actor/entity.js"), "utf8");
+const characterAttributesTemplate = fs.readFileSync(path.join(root, "templates/actors/partials/character-attributes-tab.html"), "utf8");
+const monsterAttributesTemplate = fs.readFileSync(path.join(root, "templates/actors/partials/monster-attributes-tab.html"), "utf8");
 const lang = JSON.parse(fs.readFileSync(path.join(root, "lang/en.json"), "utf8"));
 
 test("characters and monsters define local mechanic fields", () => {
@@ -33,8 +36,29 @@ test("monster strain defaults exist without removing current 1.6.1 fields", () =
 test("local mechanics are opt-in world settings", () => {
   assert.match(settingsSource, /game\.settings\.register\("wwn", "enableWoundPoints"/);
   assert.match(settingsSource, /game\.settings\.register\("wwn", "thresholdInjuries"/);
+  assert.match(settingsSource, /name: "Use Wounds with Strain"/);
+  assert.doesNotMatch(settingsSource, /Removes System Strain/);
   assert.match(settingsSource, /default: false/);
   assert.match(settingsSource, /scope: "world"/);
+});
+
+test("wound rule sheet fields are additive with system strain", () => {
+  assert.match(characterAttributesTemplate, /name="system\.hp\.injuries"[\s\S]*?name="system\.hp\.wounds"/);
+  assert.match(characterAttributesTemplate, /name="system\.details\.strain\.value"[\s\S]*?name="system\.details\.strain\.max"/);
+  assert.doesNotMatch(
+    characterAttributesTemplate,
+    /\{\{#unless config\.replaceStrainWithWounds\}\}[\s\S]*?system\.details\.strain\.value/,
+  );
+
+  assert.match(monsterAttributesTemplate, /name="system\.hp\.injuries"[\s\S]*?name="system\.hp\.wounds"/);
+  assert.match(
+    monsterAttributesTemplate,
+    /\{\{#if config\.replaceStrainWithWounds\}\}[\s\S]*?system\.details\.strain\.value[\s\S]*?system\.details\.strain\.max[\s\S]*?\{\{\/if\}\}/,
+  );
+});
+
+test("below-zero wound chat is awaited by applyWounds", () => {
+  assert.match(actorSource, /await ChatMessage\.create\(chatData, \{\}\);/);
 });
 
 test("unrelated v1.6.1 settings stay unchanged", () => {
@@ -46,7 +70,7 @@ test("unrelated v1.6.1 settings stay unchanged", () => {
 
 test("local labels are present", () => {
   assert.equal(lang["WWN.WoundPointsShort"], "WP");
-  assert.equal(lang["WWN.CriticalResistanceShort"], "CR");
+  assert.equal(lang["WWN.CriticalResistanceShort"], undefined);
   assert.equal(lang["WWN.InjuryResistanceShort"], "IR");
   assert.equal(lang["WWN.Setting.EnableWoundPoints"], "Enable Wound Points");
 });

@@ -10,7 +10,7 @@ export function clampNumber(value, min, max) {
   return Math.min(Math.max(number, low), high);
 }
 
-export function normalizeCriticalResistance(value) {
+export function normalizeInjuryResistance(value) {
   const number = Math.floor(finiteNumber(value, 0));
   return number > 0 ? number : 0;
 }
@@ -37,6 +37,6 @@ export function computeWoundPointsAfterExcess({ wpValue = 0, wpMax = 0, excessDa
   return clampNumber(finiteNumber(wpValue, 0) - finiteNumber(excessDamage, 0), 0, finiteNumber(wpMax, 0));
 }
 
-export function buildBelowZeroWoundFormula({ currentInjuries = 0, excessDamage = 0, critResistance = 0 } = {}) {
-  return `1d12 + ${Math.max(0, Math.floor(finiteNumber(currentInjuries, 0)))} + ${Math.max(0, Math.floor(finiteNumber(excessDamage, 0)))} - ${normalizeCriticalResistance(critResistance)}`;
+export function buildBelowZeroWoundFormula({ currentInjuries = 0, excessDamage = 0, injuryResistance = 0 } = {}) {
+  return `1d12 + ${Math.max(0, Math.floor(finiteNumber(currentInjuries, 0)))} + ${Math.max(0, Math.floor(finiteNumber(excessDamage, 0)))} - ${normalizeInjuryResistance(injuryResistance)}`;
 }

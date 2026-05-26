@@ -149,18 +149,7 @@
         </div>
       </li>
 
-      {{#if config.replaceStrainWithWounds}}
-      <li class="attribute ability-score">
-        <h4 class="attribute-name box-title" title="{{ localize 'WWN.CriticalResistance' }}">
-          {{ localize "WWN.CriticalResistanceShort" }}
-        </h4>
-        <div class="attribute-value">
-          <input name="system.critResistance" type="number" value="{{system.critResistance}}" data-dtype="Number"
-            placeholder=0 title="{{ localize 'WWN.CriticalResistanceHint' }}" />
-        </div>
-      </li>
-      {{/if}}
-      {{#if config.thresholdInjuries}}
+      {{#if (or config.replaceStrainWithWounds config.thresholdInjuries)}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.InjuryResistance' }}">
           {{ localize "WWN.InjuryResistanceShort" }}
@@ -189,7 +178,6 @@
         </div>
       </li>
       {{/if}}
-      {{#unless config.replaceStrainWithWounds}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.SystemStrainLong' }}">
           {{ localize "WWN.SystemStrainShort" }}
@@ -203,7 +191,6 @@
             data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
         </div>
       </li>
-      {{/unless}}
 
     </ul>
     {{!-- Saving throws --}}
