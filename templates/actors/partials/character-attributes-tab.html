@@ -161,6 +161,18 @@
       </li>
       {{/if}}
 
+      {{#if config.replaceStrainWithWounds}}
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.CriticalResistance' }}">
+          {{ localize "WWN.CriticalResistanceShort" }}
+        </h4>
+        <div class="attribute-value">
+          <input name="system.critResistance" type="number" value="{{system.critResistance}}" data-dtype="Number"
+            placeholder=0 title="{{ localize 'WWN.CriticalResistanceHint' }}" />
+        </div>
+      </li>
+      {{/if}}
+
       {{#if (or config.replaceStrainWithWounds config.thresholdInjuries)}}
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title"

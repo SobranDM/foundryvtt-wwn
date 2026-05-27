@@ -5,6 +5,8 @@ import {
   buildBelowZeroWoundFormula,
   computeHpDamage,
   computeWoundPointsAfterExcess,
+  getActorCriticalResistance,
+  normalizeCriticalResistance,
   normalizeInjuryResistance,
 } from "../../module/local-mechanics.mjs";
 
@@ -47,9 +49,30 @@ test("injury resistance normalizes invalid values to zero", () => {
   assert.equal(normalizeInjuryResistance("bad"), 0);
 });
 
-test("below-zero wound formula subtracts injury resistance", () => {
+test("critical resistance normalizes invalid values to zero", () => {
+  assert.equal(normalizeCriticalResistance("2.9"), 2);
+  assert.equal(normalizeCriticalResistance("-1"), 0);
+  assert.equal(normalizeCriticalResistance("bad"), 0);
+});
+
+test("below-zero wound formula subtracts critical resistance", () => {
   assert.equal(
-    buildBelowZeroWoundFormula({ currentInjuries: 1, excessDamage: 4, injuryResistance: 2 }),
+    buildBelowZeroWoundFormula({ currentInjuries: 1, excessDamage: 4, critResistance: 2 }),
     "1d12 + 1 + 4 - 2",
+  );
+});
+
+test("critical resistance falls back to legacy injury resistance only when CR is missing", () => {
+  assert.equal(
+    getActorCriticalResistance({ system: { injuryResistance: 2 } }),
+    2,
+  );
+  assert.equal(
+    getActorCriticalResistance({ system: { critResistance: 0, injuryResistance: 2 } }),
+    0,
+  );
+  assert.equal(
+    getActorCriticalResistance({ system: { critResistance: 1, injuryResistance: 2 } }),
+    1,
   );
 });

@@ -176,23 +176,34 @@ async function renderThresholdSkippedNote(results = []) {
     "invalid-attack-provenance": "invalid source actor or item provenance",
     "below-zero-wound-preempted": "below-zero wound path took precedence",
     "actor-update-permission-denied": "actor update permission denied",
-    "duplicate-threshold-attempt": "duplicate threshold attempt",
     "attack-margin-below-aac": "attack margin was below current AAC",
-    "missing-attempt-key": "missing idempotency key",
     "unknown-threshold-action": "unknown threshold action",
     "threshold-action-dom-mismatch": "trusted action did not match clicked button type",
     "threshold-action-amount-mismatch": "trusted action did not match clicked damage amount",
     "threshold-action-multiplier-mismatch": "trusted action did not match clicked damage multiplier",
     "threshold-processing-error": "threshold processing failed after HP damage was applied",
+    "lower-half-damage-roll": "damage roll was below the upper-half threshold",
+    "missing-damage-formula": "trusted damage formula was missing",
+    "unsupported-damage-formula": "trusted damage formula range was unsupported",
+    "missing-damage-roll-total": "trusted damage roll total was missing",
   };
   const counts = skipped.reduce((acc, threshold) => {
     const key = threshold.reason ?? "unknown";
-    acc[key] = (acc[key] ?? 0) + 1;
+    acc[key] = acc[key] ?? { count: 0, examples: [] };
+    acc[key].count += 1;
+    if (threshold.damageGate && acc[key].examples.length < 2) {
+      acc[key].examples.push(threshold.damageGate);
+    }
     return acc;
   }, {});
-  const body = `<ul>${Object.entries(counts).map(([reason, count]) => {
+  const body = `<ul>${Object.entries(counts).map(([reason, details]) => {
     const label = reasonLabels[reason] ?? reason;
-    return `<li>${count} target${count === 1 ? "" : "s"} skipped: ${label}</li>`;
+    const examples = details.examples.map((gate) => {
+      const range = gate.range;
+      if (!range?.supported) return "";
+      return ` (${gate.rolledTotal} on ${range.formula}, range ${range.min}..${range.max}, cutoff ${range.upperHalfCutoff})`;
+    }).filter(Boolean).join("");
+    return `<li>${details.count} target${details.count === 1 ? "" : "s"} skipped: ${label}${examples}</li>`;
   }).join("")}</ul>`;
   const html = await renderTemplate("systems/wwn/templates/chat/apply-damage.html", {
     title: "Threshold Injury Skipped",

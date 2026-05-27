@@ -15,6 +15,19 @@ export function normalizeInjuryResistance(value) {
   return number > 0 ? number : 0;
 }
 
+export function normalizeCriticalResistance(value) {
+  const number = Math.floor(finiteNumber(value, 0));
+  return number > 0 ? number : 0;
+}
+
+export function getActorCriticalResistance(actor) {
+  const critResistance = actor?.system?.critResistance;
+  if (critResistance === undefined || critResistance === null || critResistance === "") {
+    return normalizeCriticalResistance(actor?.system?.injuryResistance);
+  }
+  return normalizeCriticalResistance(critResistance);
+}
+
 export function computeHpDamage({ hpValue = 0, hpMax = 0, amount = 0, multiplier = 1 } = {}) {
   const rawAmount = finiteNumber(parseInt(amount), 0);
   const appliedAmount = Math.floor(rawAmount * finiteNumber(multiplier, 1));
@@ -37,6 +50,6 @@ export function computeWoundPointsAfterExcess({ wpValue = 0, wpMax = 0, excessDa
   return clampNumber(finiteNumber(wpValue, 0) - finiteNumber(excessDamage, 0), 0, finiteNumber(wpMax, 0));
 }
 
-export function buildBelowZeroWoundFormula({ currentInjuries = 0, excessDamage = 0, injuryResistance = 0 } = {}) {
-  return `1d12 + ${Math.max(0, Math.floor(finiteNumber(currentInjuries, 0)))} + ${Math.max(0, Math.floor(finiteNumber(excessDamage, 0)))} - ${normalizeInjuryResistance(injuryResistance)}`;
+export function buildBelowZeroWoundFormula({ currentInjuries = 0, excessDamage = 0, critResistance = 0 } = {}) {
+  return `1d12 + ${Math.max(0, Math.floor(finiteNumber(currentInjuries, 0)))} + ${Math.max(0, Math.floor(finiteNumber(excessDamage, 0)))} - ${normalizeCriticalResistance(critResistance)}`;
 }

@@ -3,10 +3,11 @@ import assert from "node:assert/strict";
 
 import {
   THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
-  buildThresholdAttemptKey,
+  computeDamageRange,
   computeEdge,
   computeInjuryTargetNumber,
   evaluateInjuryDie,
+  evaluateUpperHalfDamageGate,
   isPositiveNormalAttackDamage,
   maxWeaponDamage,
 } from "../../module/injury-thresholds.mjs";
@@ -60,18 +61,66 @@ test("only positive normal attack damage is threshold eligible", () => {
   }), false);
 });
 
-test("normal damage family shares one idempotency key", () => {
-  assert.equal(
-    buildThresholdAttemptKey({
-      messageUuid: "ChatMessage.abc",
-      targetUuid: "Scene.x.Token.y",
-      actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
-    }),
-    "ChatMessage%2Eabc|Scene%2Ex%2EToken%2Ey|normal-attack-damage",
-  );
-});
-
 test("weapon pressure parser handles dice and flat modifiers", () => {
   assert.equal(maxWeaponDamage("1d6+2"), 8);
   assert.equal(maxWeaponDamage("2d4 - 1"), 7);
+  assert.equal(maxWeaponDamage("ceil(1d6 / 2)"), null);
+});
+
+test("damage ranges include dice minimums and static modifiers", () => {
+  assert.deepEqual(
+    computeDamageRange("1d8 + 1"),
+    { supported: true, formula: "1d8 + 1", min: 2, max: 9, upperHalfCutoff: 6 },
+  );
+  assert.deepEqual(
+    computeDamageRange("2d6"),
+    { supported: true, formula: "2d6", min: 2, max: 12, upperHalfCutoff: 7 },
+  );
+  assert.deepEqual(
+    computeDamageRange("2d4 - 1"),
+    { supported: true, formula: "2d4 - 1", min: 1, max: 7, upperHalfCutoff: 4 },
+  );
+  assert.deepEqual(
+    computeDamageRange("1d6 + 2 + 1"),
+    { supported: true, formula: "1d6 + 2 + 1", min: 4, max: 9, upperHalfCutoff: 7 },
+  );
+  assert.deepEqual(
+    computeDamageRange("d6 + 1"),
+    { supported: true, formula: "d6 + 1", min: 2, max: 7, upperHalfCutoff: 5 },
+  );
+  assert.deepEqual(
+    computeDamageRange("1d6 + 4"),
+    { supported: true, formula: "1d6 + 4", min: 5, max: 10, upperHalfCutoff: 8 },
+  );
+});
+
+test("upper-half damage gate qualifies inclusive cutoff rolls", () => {
+  const range = computeDamageRange("1d8 + 1");
+  assert.deepEqual(
+    evaluateUpperHalfDamageGate({ rolledTotal: 6, range }),
+    { eligible: true, reason: null, rolledTotal: 6, range },
+  );
+  assert.deepEqual(
+    evaluateUpperHalfDamageGate({ rolledTotal: 5, range }),
+    { eligible: false, reason: "lower-half-damage-roll", rolledTotal: 5, range },
+  );
+
+  const damageWithBonusRange = computeDamageRange("1d6 + 4");
+  assert.deepEqual(
+    evaluateUpperHalfDamageGate({ rolledTotal: 5, range: damageWithBonusRange }),
+    { eligible: false, reason: "lower-half-damage-roll", rolledTotal: 5, range: damageWithBonusRange },
+  );
+  assert.deepEqual(
+    evaluateUpperHalfDamageGate({ rolledTotal: 8, range: damageWithBonusRange }),
+    { eligible: true, reason: null, rolledTotal: 8, range: damageWithBonusRange },
+  );
+});
+
+test("unsupported damage formulas fail closed", () => {
+  const range = computeDamageRange("ceil(1d6 / 2)");
+  assert.equal(range.supported, false);
+  assert.equal(
+    evaluateUpperHalfDamageGate({ rolledTotal: 4, range }).reason,
+    "unsupported-damage-formula",
+  );
 });

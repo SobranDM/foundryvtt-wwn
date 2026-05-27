@@ -9,6 +9,9 @@ const root = path.resolve(dirname, "../..");
 const template = JSON.parse(fs.readFileSync(path.join(root, "template.json"), "utf8"));
 const settingsSource = fs.readFileSync(path.join(root, "module/settings.js"), "utf8");
 const actorSource = fs.readFileSync(path.join(root, "module/actor/entity.js"), "utf8");
+const chatSource = fs.readFileSync(path.join(root, "module/chat.js"), "utf8");
+const diceSource = fs.readFileSync(path.join(root, "module/dice.js"), "utf8");
+const thresholdSource = fs.readFileSync(path.join(root, "module/injury-thresholds.mjs"), "utf8");
 const characterAttributesTemplate = fs.readFileSync(path.join(root, "templates/actors/partials/character-attributes-tab.html"), "utf8");
 const monsterAttributesTemplate = fs.readFileSync(path.join(root, "templates/actors/partials/monster-attributes-tab.html"), "utf8");
 const lang = JSON.parse(fs.readFileSync(path.join(root, "lang/en.json"), "utf8"));
@@ -70,7 +73,39 @@ test("unrelated v1.6.1 settings stay unchanged", () => {
 
 test("local labels are present", () => {
   assert.equal(lang["WWN.WoundPointsShort"], "WP");
-  assert.equal(lang["WWN.CriticalResistanceShort"], undefined);
+  assert.equal(lang["WWN.CriticalResistanceShort"], "CR");
   assert.equal(lang["WWN.InjuryResistanceShort"], "IR");
   assert.equal(lang["WWN.Setting.EnableWoundPoints"], "Enable Wound Points");
+});
+
+test("critical resistance is separate from threshold injury resistance", () => {
+  assert.match(actorSource, /getActorCriticalResistance\(this\)/);
+  assert.match(actorSource, /computeInjuryTargetNumber\(\{ injuryResistance, edge: edge\.edge \}\)/);
+  assert.match(characterAttributesTemplate, /name="system\.critResistance"/);
+  assert.match(monsterAttributesTemplate, /name="system\.critResistance"/);
+});
+
+test("threshold routing uses upper-half damage gate and allows repeated clicks", () => {
+  assert.match(actorSource, /evaluateUpperHalfDamageGate/);
+  assert.match(actorSource, /lower-half-damage-roll|damageGate/);
+  assert.match(actorSource, /_wwnDamageApplicationQueue/);
+  assert.match(actorSource, /_applyDamageNow/);
+  assert.doesNotMatch(actorSource, /thresholdInjuryAttempts/);
+  assert.doesNotMatch(actorSource, /duplicate-threshold-attempt/);
+});
+
+test("trusted damage gate uses the full damage formula while weapon pressure keeps the base formula", () => {
+  assert.match(
+    diceSource,
+    /const normalDamageFormula = data\.roll\?\.dmg\?\.join\(" \+ "\) \?\? data\.roll\?\.baseWeaponDamageFormula \?\? "";/,
+  );
+  assert.match(diceSource, /baseWeaponDamageFormula: data\.roll\?\.baseWeaponDamageFormula \?\? normalDamageFormula/);
+  assert.match(actorSource, /computeWeaponPressure\(attackContext\.baseWeaponDamageFormula\)/);
+  assert.doesNotMatch(diceSource, /passedUpperHalf/);
+});
+
+test("removed threshold idempotency leaves no dead helper or stale skip labels", () => {
+  assert.doesNotMatch(thresholdSource, /buildThresholdAttemptKey/);
+  assert.doesNotMatch(chatSource, /duplicate-threshold-attempt/);
+  assert.doesNotMatch(chatSource, /missing-attempt-key/);
 });

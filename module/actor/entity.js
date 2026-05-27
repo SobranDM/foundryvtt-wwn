@@ -1,12 +1,11 @@
 import { WwnDice } from "../dice.js";
 import { WwnItem } from "../item/entity.js";
 import {
-  THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
-  buildThresholdAttemptKey,
   computeEdge,
   computeExistingInjuryPressure,
   computeHealthPressure,
   computeInjuryTargetNumber,
+  evaluateUpperHalfDamageGate,
   computeSeverityBand,
   computeTotalPressure,
   computeWeaponPressure,
@@ -21,6 +20,7 @@ import {
   buildBelowZeroWoundFormula,
   computeHpDamage,
   computeWoundPointsAfterExcess,
+  getActorCriticalResistance,
 } from "../local-mechanics.mjs";
 
 export class WwnActor extends Actor {
@@ -630,6 +630,14 @@ export class WwnActor extends Actor {
   }
 
   async applyDamage(amount = 0, multiplier = 1, options = {}) {
+    const queuedDamage = (this._wwnDamageApplicationQueue ?? Promise.resolve())
+      .catch(() => {})
+      .then(() => this._applyDamageNow(amount, multiplier, options));
+    this._wwnDamageApplicationQueue = queuedDamage;
+    return queuedDamage;
+  }
+
+  async _applyDamageNow(amount = 0, multiplier = 1, options = {}) {
     const hp = this.system.hp;
     const damage = computeHpDamage({
       hpValue: hp.value,
@@ -731,6 +739,19 @@ export class WwnActor extends Actor {
     }
     if (!isPositiveNormalAttackDamage(damageContext)) return null;
 
+    const damageGate = evaluateUpperHalfDamageGate({
+      rolledTotal: action.damageRange?.rolledTotal ?? action.amount,
+      range: action.damageRange,
+    });
+    if (!damageGate.eligible) {
+      return {
+        skipped: true,
+        gmOnly: true,
+        reason: damageGate.reason,
+        damageGate,
+      };
+    }
+
     const sourceActor = game.actors.get(attackContext.sourceActorId);
     if (!sourceActor?.items?.get?.(attackContext.sourceItemId) && !attackContext.sourceItemSnapshot) {
       return { skipped: true, gmOnly: true, reason: "invalid-attack-provenance" };
@@ -743,26 +764,6 @@ export class WwnActor extends Actor {
     if (!canUpdate) {
       return { skipped: true, gmOnly: true, reason: "actor-update-permission-denied" };
     }
-
-    const targetUuid = targetToken?.document?.uuid ?? targetToken?.actor?.uuid ?? this.uuid;
-    const attemptKey = buildThresholdAttemptKey({
-      messageUuid: threshold.messageUuid,
-      targetUuid,
-      actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
-    });
-    if (!attemptKey) return { skipped: true, gmOnly: true, reason: "missing-attempt-key" };
-
-    const attempts = foundry.utils.deepClone(this.getFlag("wwn", "thresholdInjuryAttempts") ?? {});
-    if (attempts[attemptKey]) {
-      return { skipped: true, gmOnly: true, reason: "duplicate-threshold-attempt" };
-    }
-    attempts[attemptKey] = {
-      messageUuid: threshold.messageUuid,
-      targetUuid,
-      actionFamily: THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
-      attemptedAt: new Date().toISOString(),
-    };
-    await this.setFlag("wwn", "thresholdInjuryAttempts", attempts);
 
     const edge = computeEdge({
       attackTotal: attackContext.attackTotal,
@@ -787,6 +788,7 @@ export class WwnActor extends Actor {
       edge,
       injuryResistance,
       sourceItemName: attackContext.sourceItemName,
+      damageGate,
     };
 
     if (!triggered) return baseResult;
@@ -834,18 +836,25 @@ export class WwnActor extends Actor {
       await this.update({ "system.hp.injuries": currentInjuries + 1 });
     }
 
-    const edgeLabel = thresholdResult.edge?.source === "natural20"
-      ? "Natural 20 Edge 3"
+    const edgeSource = thresholdResult.edge?.source === "natural20"
+      ? "Natural 20"
       : thresholdResult.edge?.margin !== null
-        ? `Margin ${thresholdResult.edge.margin}, Edge ${thresholdResult.edge.edge}`
-        : `Edge ${thresholdResult.edge?.edge ?? 0}`;
+        ? `Margin +${thresholdResult.edge.margin}`
+        : "";
     const persistentText = severity.persistent ? "Persistent injury recorded." : "No persistent injury recorded.";
     const content = `
       <p><b>Source:</b> ${attackContext.sourceItemName || "Attack"}</p>
-      <p><b>Injury die:</b> ${thresholdResult.injuryRoll} vs ${thresholdResult.targetNumber}+ [IR ${thresholdResult.injuryResistance}; ${edgeLabel}]</p>
+      <p><b>Injury die:</b> ${thresholdResult.injuryRoll} vs ${thresholdResult.targetNumber}+</p>
       <p><b>Severity:</b> ${severity.band} (${thresholdResult.severityFormula})</p>
       <p><b>Location:</b> ${hitLocation[0]}.</p>
       <p><b>${hitLocation[1]}.</b> ${hitLocation[2]}</p>
+      <ul style="margin:0.25em 0;padding-left:1.2em;">
+        <li>Edge ${thresholdResult.edge?.edge ?? 0}${edgeSource ? ` (${edgeSource})` : ""}</li>
+        <li>IR ${thresholdResult.injuryResistance}</li>
+        ${thresholdResult.weaponPressure ? `<li>Weapon pressure ${thresholdResult.weaponPressure >= 0 ? "+" : ""}${thresholdResult.weaponPressure}</li>` : ""}
+        ${thresholdResult.healthPressure ? `<li>Health pressure +${thresholdResult.healthPressure}</li>` : ""}
+        ${thresholdResult.injuryPressure ? `<li>Injury pressure +${thresholdResult.injuryPressure}</li>` : ""}
+      </ul>
       <p>${persistentText}</p>`;
 
     const templateData = {
@@ -941,20 +950,20 @@ export class WwnActor extends Actor {
     const hitLocation = locations[locationRoll.total];
     const currInjuries = Number(this.system.hp?.injuries ?? 0) || 0;
     const currWounds = Number(this.system.hp?.wounds ?? 0) || 0;
-    const injuryResistance = getActorInjuryResistance(this);
+    const critResistance = getActorCriticalResistance(this);
     const woundRoll = await new Roll(buildBelowZeroWoundFormula({
       currentInjuries: currInjuries,
       excessDamage: excess,
-      injuryResistance,
+      critResistance,
     })).evaluate();
     const woundMessage = woundRoll.result;
     const woundResult = woundRoll.total;
     const template = "systems/wwn/templates/chat/apply-damage.html";
     let newInjuries = 0;
     let newWounds = 0;
-    const injuryResistanceText = injuryResistance > 0 ? ` [IR -${injuryResistance}]` : "";
+    const critResistanceText = critResistance > 0 ? ` [CR -${critResistance}]` : "";
 
-    let content = `<p><b>Location: ${hitLocation[0]}.</b></p><p><b>Severity: ${woundResult}</b> (${woundMessage})${injuryResistanceText}</p><p><b>${hitLocation[1]} for ${woundResult} days.</b> ${hitLocation[2]}*</p>`;
+    let content = `<p><b>Location: ${hitLocation[0]}.</b></p><p><b>Severity: ${woundResult}</b> (${woundMessage})${critResistanceText}</p><p><b>${hitLocation[1]} for ${woundResult} days.</b> ${hitLocation[2]}*</p>`;
 
     if (woundResult >= 16) {
       newWounds += woundResult - 15;

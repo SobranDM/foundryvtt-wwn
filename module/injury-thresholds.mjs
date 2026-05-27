@@ -67,10 +67,21 @@ export function resolveTrustedThresholdAction({ attackContext, actionId, domActi
 }
 
 export function maxWeaponDamage(formula) {
-  if (typeof formula !== "string" || formula.trim() === "") return null;
+  const range = computeDamageRange(formula);
+  return range.supported ? range.max : null;
+}
+
+export function computeDamageRange(formula) {
+  if (typeof formula !== "string" || formula.trim() === "") {
+    return { supported: false, reason: "missing-damage-formula" };
+  }
+
   const normalized = formula.replace(/\s+/g, "").toLowerCase();
   const terms = normalized.match(/[+-]?[^+-]+/g) ?? [];
-  let total = 0;
+  if (!terms.length) return { supported: false, reason: "unsupported-damage-formula" };
+
+  let min = 0;
+  let max = 0;
   let found = false;
 
   for (const term of terms) {
@@ -80,20 +91,63 @@ export function maxWeaponDamage(formula) {
     if (diceMatch) {
       const count = diceMatch[1] === "" ? 1 : Number(diceMatch[1]);
       const faces = Number(diceMatch[2]);
-      if (Number.isFinite(count) && Number.isFinite(faces)) {
-        total += sign * count * faces;
-        found = true;
+      if (!Number.isInteger(count) || count < 1 || !Number.isInteger(faces) || faces < 1) {
+        return { supported: false, reason: "unsupported-damage-formula", formula };
       }
+      if (sign > 0) {
+        min += count;
+        max += count * faces;
+      } else {
+        min -= count * faces;
+        max -= count;
+      }
+      found = true;
       continue;
     }
+
     const number = Number(body);
-    if (Number.isFinite(number)) {
-      total += sign * number;
-      found = true;
+    if (!Number.isFinite(number)) {
+      return { supported: false, reason: "unsupported-damage-formula", formula };
     }
+    min += sign * number;
+    max += sign * number;
+    found = true;
   }
 
-  return found ? total : null;
+  if (!found) return { supported: false, reason: "unsupported-damage-formula", formula };
+  return {
+    supported: true,
+    formula,
+    min,
+    max,
+    upperHalfCutoff: Math.ceil((min + max) / 2),
+  };
+}
+
+export function evaluateUpperHalfDamageGate({ rolledTotal, range } = {}) {
+  if (!range?.supported) {
+    return {
+      eligible: false,
+      reason: range?.reason ?? "unsupported-damage-range",
+      range,
+    };
+  }
+
+  const total = Number(rolledTotal);
+  if (!Number.isFinite(total)) {
+    return {
+      eligible: false,
+      reason: "missing-damage-roll-total",
+      range,
+    };
+  }
+
+  return {
+    eligible: total >= range.upperHalfCutoff,
+    reason: total >= range.upperHalfCutoff ? null : "lower-half-damage-roll",
+    rolledTotal: total,
+    range,
+  };
 }
 
 export function computeWeaponPressure(formula) {
@@ -126,16 +180,6 @@ export function computeSeverityBand(score) {
   if (value <= 5) return { band: "Moderate", persistent: true };
   if (value <= 7) return { band: "Serious", persistent: true };
   return { band: "Severe", persistent: true };
-}
-
-export function buildThresholdAttemptKey({ messageUuid, targetUuid, actionFamily } = {}) {
-  return [messageUuid, targetUuid, actionFamily]
-    .filter(Boolean)
-    .map((part) => String(part)
-      .replaceAll("%", "%25")
-      .replaceAll(".", "%2E")
-      .replaceAll("|", "%7C"))
-    .join("|");
 }
 
 export function isValidAttackContext(context = {}) {

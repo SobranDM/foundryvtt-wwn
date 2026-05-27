@@ -2,6 +2,7 @@ import {
   THRESHOLD_ACTION_FAMILY_NORMAL_DAMAGE,
   THRESHOLD_CONTEXT_FLAG,
   THRESHOLD_CONTEXT_SCHEMA_VERSION,
+  computeDamageRange,
 } from "./injury-thresholds.mjs";
 
 export class WwnDice {
@@ -599,6 +600,12 @@ export class WwnDice {
     templateData.traumaResult = traumaResult;
 
     const buttonDamageAmount = dmgRoll.total;
+    const normalDamageFormula = data.roll?.dmg?.join(" + ") ?? data.roll?.baseWeaponDamageFormula ?? "";
+    const normalDamageRange = computeDamageRange(normalDamageFormula);
+    const normalDamageGate = {
+      ...normalDamageRange,
+      rolledTotal: buttonDamageAmount,
+    };
     const attackContext = {
       schemaVersion: THRESHOLD_CONTEXT_SCHEMA_VERSION,
       createdBy: "wwn.sendAttackRoll",
@@ -614,7 +621,7 @@ export class WwnDice {
             type: data.item.type ?? "",
           }
         : null,
-      baseWeaponDamageFormula: data.roll?.baseWeaponDamageFormula ?? data.roll?.dmg?.[0] ?? "",
+      baseWeaponDamageFormula: data.roll?.baseWeaponDamageFormula ?? normalDamageFormula,
       rollMode,
       whisper: chatData.whisper ?? null,
       blind: !!chatData.blind,
@@ -625,6 +632,7 @@ export class WwnDice {
           damageKind: "normal",
           amount: buttonDamageAmount,
           multiplier: 1,
+          damageRange: normalDamageGate,
         },
         normalDamageHalf: {
           domAction: "apply-damage",
@@ -632,6 +640,7 @@ export class WwnDice {
           damageKind: "normal",
           amount: buttonDamageAmount,
           multiplier: 0.5,
+          damageRange: normalDamageGate,
         },
         normalDamageDouble: {
           domAction: "apply-damage",
@@ -639,6 +648,7 @@ export class WwnDice {
           damageKind: "normal",
           amount: buttonDamageAmount,
           multiplier: 2,
+          damageRange: normalDamageGate,
         },
         straightDamage: {
           domAction: "apply-damage",
@@ -646,6 +656,7 @@ export class WwnDice {
           damageKind: "normal",
           amount: dmgRoll.total,
           multiplier: 1,
+          damageRange: normalDamageGate,
         },
         shock: {
           domAction: "apply-shock",
