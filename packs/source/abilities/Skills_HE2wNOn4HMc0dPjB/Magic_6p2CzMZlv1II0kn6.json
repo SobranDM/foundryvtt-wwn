@@ -1,0 +1,34 @@
+{
+  "name": "Magic",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/magic.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.uv0RdZb17P0XdmzK"
+    }
+  },
+  "system": {
+    "description": "Cast or analyze magic and know things about famous mages or notable magical events. Classes that can’t cast spells obtain only intellectual and scholarly benefits from this skill.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "combatSkill": true,
+    "secondary": false
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806151109,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6p2CzMZlv1II0kn6",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6p2CzMZlv1II0kn6"
+}

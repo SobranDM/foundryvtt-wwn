@@ -1,0 +1,32 @@
+{
+  "_id": "lz531pz2aiy45n7e",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Lead or Silver",
+  "type": "asset",
+  "_key": "!items!lz531pz2aiy45n7e",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d10",
+    "attackSource": "wealth",
+    "attackSpecial": "If Lead or Silver's Attack reduces an enemy Asset to zero hit points, this Asset's owner may immediately pay half the target's purchase cost to claim it as their own, reviving it with 1 hit point.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "2d8",
+    "desc": "If Lead or Silver's Attack reduces an enemy Asset to zero hit points, this Asset's owner may immediately pay half the target's purchase cost to claim it as their own, reviving it with 1 hit point.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

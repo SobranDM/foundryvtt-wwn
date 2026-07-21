@@ -1,0 +1,73 @@
+{
+  "_id": "s2gO9TMhKzWgDaFD",
+  "name": "Government-Stability",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Stable is the Government?",
+  "results": [
+    {
+      "_id": "2BgrK7OruHdB3PB3",
+      "flags": {},
+      "type": 0,
+      "text": "Precarious, its authority questioned by some",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!s2gO9TMhKzWgDaFD.2BgrK7OruHdB3PB3"
+    },
+    {
+      "_id": "YFfSfQX59DM3MSAq",
+      "flags": {},
+      "type": 0,
+      "text": "It has significant problems, but it functions",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!s2gO9TMhKzWgDaFD.YFfSfQX59DM3MSAq"
+    },
+    {
+      "_id": "8U2aI43aZve17AG1",
+      "flags": {},
+      "type": 0,
+      "text": "Relatively stable, with strong legitimacy",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!s2gO9TMhKzWgDaFD.8U2aI43aZve17AG1"
+    },
+    {
+      "_id": "LRu0TwkZTmD89SiN",
+      "flags": {},
+      "type": 0,
+      "text": "Stable, able to endure even fierce shocks",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!s2gO9TMhKzWgDaFD.LRu0TwkZTmD89SiN"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!s2gO9TMhKzWgDaFD"
+}

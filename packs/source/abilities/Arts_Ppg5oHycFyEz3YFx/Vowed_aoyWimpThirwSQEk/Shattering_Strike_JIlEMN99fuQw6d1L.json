@@ -1,0 +1,32 @@
+{
+  "_id": "JIlEMN99fuQw6d1L",
+  "name": "Shattering Strike",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.JIlEMN99fuQw6d1L"
+    }
+  },
+  "_key": "!items!JIlEMN99fuQw6d1L",
+  "system": {
+    "pattern": "white",
+    "roll": "1d12",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the day and take a full round of motionlessness to prepare. On the next round, as a Main Action, your unarmed attack can shatter a wooden door, wooden wall, or other similar object up to a depth of one foot per level and a width sufficient to allow a man-sized creature to pass through. At fourth level this ability improves to affect even a stone wall and at seventh it can affect even a metal wall or solid iron door. The blow is useless against a target that can move, but against an immobilized creature the attack does 1d12 damage per character level.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

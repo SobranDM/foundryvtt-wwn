@@ -1,0 +1,32 @@
+{
+  "_id": "tzXKaX8WzGrhhLcC",
+  "name": "Revive the Fallen",
+  "type": "art",
+  "img": "systems/wwn/assets/new/healer_art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.tzXKaX8WzGrhhLcC"
+    }
+  },
+  "_key": "!items!tzXKaX8WzGrhhLcC",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Only expert healers are capable of mastering this art, which cannot be learned earlier than 8th level. Commit Effort for the day as a Main Action to revive a recently-slain living creature that you are touching. This ability must be used on a target within one minute per caster level of their death, and will not work on a corpse that has been dismembered, incinerated, or otherwise disjected. The target&rsquo;s System Strain is automatically maximized and they&rsquo;ll be unconscious for twenty-four hours after their restoration before awakening with 1 hit point.</p>",
+    "save": "",
+    "source": "Healer",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

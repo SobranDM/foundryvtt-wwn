@@ -1,0 +1,31 @@
+{
+  "_id": "3w3xuNNmUBS9JxDS",
+  "name": "Mail Hauberk",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.3w3xuNNmUBS9JxDS"
+    }
+  },
+  "system": {
+    "description": "<p>A <em><strong>mail hauberk </strong></em>in the listed style covers not only the wearer&rsquo;s chest, but also their arms, with a long skirt extended to the knee. As with a mail shirt, the padding beneath the armor is sometimes so thick as to qualify as protective gear in its own right</p>\n<p><em><strong>Heavy armor </strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 16,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "heavy",
+    "price": 750,
+    "weight": 2
+  },
+  "_key": "!items!3w3xuNNmUBS9JxDS"
+}

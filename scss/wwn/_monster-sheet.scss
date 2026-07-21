@@ -1,0 +1,56 @@
+@use "../mixins" as *;
+
+/* Monster sheet specific overrides */
+
+.wwn.actor.monster {
+  min-height: 565px;
+  min-width: 480px;
+}
+.wwn.actor.monster .header-details .summary .treasure-table {
+  text-align: center;
+}
+.wwn.actor.monster .header-details .summary {
+  @include wwn-check-field-reveal;
+}
+
+.wwn.actor.monster .sheet-body .editor {
+  height: 350px;
+}
+.wwn.actor.monster .sheet-body .attributes-tab {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 0px;
+}
+.wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attributes {
+  justify-content: space-between;
+}
+.wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attribute-group {
+  margin: 5px;
+}
+.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
+  flex: 0 0 60px;
+  max-width: 80px;
+  height: 55px;
+  margin: 0px 10px 10px 10px;
+}
+.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute .attribute-value {
+  line-height: 15px;
+}
+.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
+  flex: 0 0 85px;
+}
+.wwn.actor.monster .attributes .attribute.health {
+  position: relative;
+}
+.wwn.actor.monster .attributes .attribute.health .attribute-name .hp-roll {
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: var(--wwn-tan);
+}
+.wwn.actor.monster .attributes .attribute.health .attribute-name .hp-roll:hover {
+  color: #fff;
+}

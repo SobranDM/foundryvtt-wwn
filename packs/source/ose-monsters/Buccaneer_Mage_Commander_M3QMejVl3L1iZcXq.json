@@ -1,0 +1,1019 @@
+{
+  "name": "Buccaneer Mage Commander",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.e5KmtNYjbJCL0ECl"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "WnZWCY4hce3fn3qL",
+      "name": "Sword, Long",
+      "type": "weapon",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 100,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.WnZWCY4hce3fn3qL"
+    },
+    {
+      "_id": "JbpoQxbf4D5wlnmU",
+      "name": "Crossbow",
+      "type": "weapon",
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.Z0CwDWTYBn8Nlbw3"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 100,
+          "medium": 0,
+          "long": 300
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "shoot",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          },
+          {
+            "title": "SR",
+            "value": "SR"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": false,
+        "price": 10,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.JbpoQxbf4D5wlnmU"
+    },
+    {
+      "_id": "zybProEobDLuSh5W",
+      "name": "Light (Mage)",
+      "type": "spell",
+      "sort": 500000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.dtoyhLVlgGDeFRPr"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Mage",
+        "duration": "6 turns + 1 / level",
+        "range": "120'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns + 1 per level</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<ol>\n<li><strong>Conjuring light: </strong>In a 15&rsquo; radius. The magical light is sufficient for reading, but is not as bright as daylight. The spell may be cast upon an object, in which case the light moves with the object.</li>\n<li><strong>Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded for the duration. A blind creature cannot attack.</li>\n<li><strong>Cancelling darkness:</strong> Light may cancel a darkness spell (see below).</li>\n</ol>\n<p><strong>Reversed: Darkness</strong></p>\n<p>Creates a 15&rsquo; radius area of magical blackness, preventing normal sight (but not infravision). Like light, it may alternatively be used to blind creatures or to dispel a light spell.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.zybProEobDLuSh5W"
+    },
+    {
+      "_id": "W5Pv5qhYdlORnZR2",
+      "name": "Magic Missile",
+      "type": "spell",
+      "sort": 700000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.iAzg17lzoXtcsHoW"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Mage",
+        "duration": "1 turn",
+        "range": "150'",
+        "roll": "1d6+1",
+        "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 150&rsquo;</strong></p>\n<p>This spell conjures a glowing dart of energy that the caster may choose to shoot at a visible target within range.</p>\n<p><strong>▶ Hit: </strong>The missile hits unerringly (no attack roll or saving throw is required).</p>\n<p><strong>▶ Damage:</strong> The missile inflicts 1d6+1 damage.</p>\n<p><strong>▶ Higher level casters:</strong> May conjure more missiles: two additional missiles are conjured per five experience levels the caster has gained (i.e. three missiles at 6th&ndash;10th level, five missiles at 11th&ndash;15th level, etc.). Multiple missiles may be directed at a single target.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.W5Pv5qhYdlORnZR2"
+    },
+    {
+      "_id": "Ox0KAau6ENAlqbmB",
+      "name": "Shield",
+      "type": "spell",
+      "sort": 900000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.MOc4uIXEhnIcn6l1"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Mage",
+        "duration": "2 turns",
+        "range": "Caster",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>Shield creates an invisible field of force that protects the caster:</p>\n<p><strong>▶ Against missile attacks:</strong> The caster&rsquo;s AC is 17.</p>\n<p><strong>▶ Against other attacks:</strong> The caster&rsquo;s AC is 15.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.Ox0KAau6ENAlqbmB"
+    },
+    {
+      "_id": "YIXjeqMhrPv1ZCxI",
+      "name": "Water Breathing",
+      "type": "spell",
+      "sort": 1000000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.9lJyLR9oOV6tn0zK"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Mage",
+        "duration": "1 day",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 1 day</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The subject can breathe water freely by means of this spell.</p>\n<p><strong>▶ Breathing air: </strong>The spell does not affect the subject&rsquo;s ability to breathe air.</p>\n<p><strong>▶ Swimming:</strong> No additional proficiency at swimming is granted.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.YIXjeqMhrPv1ZCxI"
+    },
+    {
+      "_id": "mS2Bs6CJYTutGAKb",
+      "name": "Invisibility",
+      "type": "spell",
+      "sort": 1200000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.aa3geKDIfpRMK91n"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Mage",
+        "duration": "Permanent",
+        "range": "",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent (but may be broken, </strong><strong>see below)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>The caster or another creature or object within range becomes invisible:</p>\n<p><strong>▶ If cast on a creature:</strong> Any gear the subject is carrying is also rendered invisible (this includes clothing and armour). Items dropped or put down by an invisible creature become visible. If the subject attacks or casts a spell, the invisibility is broken, ending the spell.</p>\n<p><strong>▶ If cast on an object: </strong>The invisibility is permanent.</p>\n<p><strong>▶ Light sources:</strong> If a light source is made invisible (either as part of a creature&rsquo;s gear or as an individual object), the light it casts is unaffected.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.mS2Bs6CJYTutGAKb"
+    },
+    {
+      "_id": "l5W7n0TVsSPc8k9J",
+      "name": "Web",
+      "type": "spell",
+      "sort": 1400000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.jZwEP5HY5ArsRy85"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Mage",
+        "duration": "48 turns (8 hours)",
+        "range": "10'",
+        "roll": "2d4",
+        "description": "<p><strong>Duration: 48 turns</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>Web conjures a many-layered mass of strong, sticky threads, blocking a 10&rsquo; cube area.</p>\n<p><strong>▶ Entanglement:</strong> Creatures caught within a web become entangled among the gluey fibres. Entangled creatures can&rsquo;t move, but can break free depending on their strength (see below).</p>\n<p><strong>▶ Flammable: </strong>The strands of the web are flammable and can be destroyed by fire in two rounds. All creatures caught within flaming webs suffer 1d6 points of damage from the flames.</p>\n<p><strong>Breaking free:</strong> Depends on STR:</p>\n<p><strong>▶ Normal human range: </strong>The creature can break free in 2d4 turns.</p>\n<p><strong>▶ Magically augmented STR above 18: </strong>The creature can break free in 4 rounds.</p>\n<p><strong>▶ Giant strength:</strong> The creature can break free in two rounds.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.l5W7n0TVsSPc8k9J"
+    },
+    {
+      "_id": "ucXqjCngNyO45bx4",
+      "name": "Knock",
+      "type": "spell",
+      "sort": 1600000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.JCBjmkUSFHF0PUqW"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Mage",
+        "duration": "1 round",
+        "range": "60'",
+        "roll": "",
+        "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The knock spell opens stuck, barred, or locked doors, gates, chests, and so forth.</p>\n<p><strong>▶ Magically held doors:</strong> Are affected (e.g. hold portal, wizard lock).</p>\n<p><strong>▶ Secret doors: </strong>May be opened, but they must be known to the caster.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.ucXqjCngNyO45bx4"
+    },
+    {
+      "_id": "MxUPXKp6SvcjAji2",
+      "name": "Protection from Normal Missiles",
+      "type": "spell",
+      "sort": 1700000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.CojlzZl83RF1OCHA"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Mage",
+        "duration": "12 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single subject in range gains complete immunity to small, non-magical missiles (e.g. no protection is granted against hurled boulders or enchanted arrows).</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.MxUPXKp6SvcjAji2"
+    },
+    {
+      "_id": "1ANorGoQUeBL1kUH",
+      "name": "Lightning Bolt",
+      "type": "spell",
+      "sort": 2000000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.dVnStrERgKFCmjzP"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Mage",
+        "duration": "Instant",
+        "range": "180'",
+        "roll": "5d6",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>A powerful stroke of electrical energy, 60&rsquo; long and 5&rsquo; wide, is conjured.</p>\n<p><strong>▶ Damage:</strong> Creatures caught in the lightning bolt suffer 1d6 damage per level of the caster, with a successful Evasion save indicating half damage.</p>\n<p><strong>▶ Bouncing:</strong> If the lightning bolt hits a solid barrier before its full length is reached, it is reflected and travels for any remaining distance of its full length in the direction of the caster.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "evasion"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.1ANorGoQUeBL1kUH"
+    },
+    {
+      "_id": "r0IYXjO56f9Hw7kv",
+      "name": "Hallucinatory Terrain",
+      "type": "spell",
+      "sort": 2200000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.XcDLKrQA2MFkz1Xw"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Mage",
+        "duration": "Until touched",
+        "range": "240'",
+        "roll": "",
+        "description": "<p><strong>Duration: Until touched</strong></p>\n<p><strong>Range: 240</strong>&rsquo;</p>\n<p>Hallucinatory terrain either conjures an illusory terrain feature (e.g. a hill, wood, marsh, etc.) or hides an existing terrain feature.</p>\n<p><strong>▶ Area: </strong>The illusion must fit completely within the spell&rsquo;s range.</p>\n<p><strong>▶ Touching: </strong>If the illusion is touched by an intelligent being, the spell is negated.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.r0IYXjO56f9Hw7kv"
+    },
+    {
+      "_id": "UTruX7DRHRswRKDt",
+      "name": "Dimension Door",
+      "type": "spell",
+      "sort": 2300000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.Zgl2RGQmxw5zOqjQ"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Mage",
+        "duration": "1 round",
+        "range": "10'",
+        "roll": "",
+        "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster or a single creature is instantly transferred to another location up to 360&rsquo; distant. The destination may be selected in two ways:</p>\n<p><strong>1. Known location:</strong> A location, within 360&rsquo;, known to the caster.</p>\n<p><strong>2. An unknown location:</strong> Specified by a series of offsets (e.g. 120&rsquo; north, 160&rsquo; east, 80&rsquo; up) totalling not more than 360&rsquo;.</p>\n<p><strong>Stipulations:</strong> The following apply:</p>\n<p><strong>▶ If the destination is occupied: </strong>By a solid body, the spell fails.</p>\n<p><strong>▶ If the target is unwilling: </strong>It may make a Mental save&nbsp;to resist the teleportation.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.UTruX7DRHRswRKDt"
+    },
+    {
+      "_id": "nVagfm2FgVzGVFIt",
+      "name": "Polymorph Self",
+      "type": "spell",
+      "sort": 2400000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.hlYKfOpnyvi5twUX"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Mage",
+        "duration": "6 turns + 1 / level",
+        "range": "Caster",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns +1 per level</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>The caster transforms themselves into another being:</p>\n<p><strong>▶ HD: </strong>The new form may not have higher Hit Dice than the caster&rsquo;s level.</p>\n<p><strong>▶ Stats:</strong> The caster retains their own intelligence, hit points, saving throws, and attack probabilities.</p>\n<p><strong>▶ Physical capabilities: </strong>Of the new form (e.g. strength, physical attack forms, modes of movement) are acquired.</p>\n<p><strong>▶ Non-physical special abilities: </strong>(e.g. immunities, breath weapons, spell casting) are not acquired.</p>\n<p><strong>▶ Casting spells: </strong>While polymorphed, the caster is unable to cast spells.</p>\n<p><strong>▶ Specific individuals:</strong> The spell cannot be used to duplicate a specific individual.</p>\n<p><strong>▶ Reversion:</strong> If the caster dies while polymorphed, they return to their original form.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.nVagfm2FgVzGVFIt"
+    },
+    {
+      "_id": "O030yl7yi8tArR6c",
+      "name": "Polymorph Others",
+      "type": "spell",
+      "sort": 2500000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.KdzGGkrKR6wwYRj3"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Mage",
+        "duration": "Permanent",
+        "range": "60'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>A living subject is changed into another type of creature, as chosen by the caster:</p>\n<p><strong>▶ HD: </strong>The spell fails if the new form&rsquo;s HD is more than twice the subject&rsquo;s HD.</p>\n<p><strong>▶ Hit points:</strong> The subject retains the same number of hit points.</p>\n<p><strong>▶ Abilities: </strong>The subject truly becomes the new form: all special abilities are acquired, along with behavioural patterns, tendencies, and intelligence.</p>\n<p><strong>▶ Specific individuals: </strong>The spell cannot be used to duplicate a specific individual.</p>\n<p><strong>▶ Reversion:</strong> If the subject dies, it returns to its original form.</p>\n<p><strong>▶ An unwilling subject:</strong> May make a Mental save to negate the effect.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.O030yl7yi8tArR6c"
+    },
+    {
+      "_id": "ljPLfS9qnKaR7d1s",
+      "name": "Wall of Ice",
+      "type": "spell",
+      "sort": 2600000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.i1J5xdcTqKycg8v5"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Mage",
+        "duration": "12 turns",
+        "range": "120'",
+        "roll": "1d6",
+        "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>An immobile, translucent, wall of ice springs into existence.</p>\n<p><strong>▶ Size: </strong>The wall can be any size, and may be shaped in any manner and to any dimensions the caster desires, up to 1,200 sq. ft. For example, it may be a straight wall or curved into a protective circle.</p>\n<p><strong>▶ Location: </strong>The wall must rest upon a solid surface and may not be evoked so that it appears where objects are.</p>\n<p><strong>▶ Monsters with fewer than 4 HD: </strong>Cannot pass the wall of ice.</p>\n<p><strong>▶ Monsters with 4 or more HD:</strong> Can break through the wall, but suffer 1d6 hit points of damage when doing so. The wall deals double damage to creatures that use fire or are accustomed to fire.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.ljPLfS9qnKaR7d1s"
+    },
+    {
+      "_id": "6iR65ODiW4IfQuM3",
+      "name": "Teleport",
+      "type": "spell",
+      "sort": 2700000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.gH1vB9gTSmv2iFBo"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Mage",
+        "duration": "Instant",
+        "range": "10'",
+        "roll": "",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster or a chosen creature vanishes and reappears at a location of the caster&rsquo;s choosing.</p>\n<p><strong>▶ Gear:</strong> The subject is teleported with all its gear, up to its maximum load.</p>\n<p><strong>▶ Unwilling subjects:</strong> May make a Mental save to prevent the teleportation.</p>\n<p><strong>▶ Destination:</strong> May be at any distance, but must be known to the caster. The destination must be an open space at ground level. (It is not possible to intentionally teleport the subject into mid-air or into solid matter.)</p>\n<p><strong>▶ Risk: </strong>There is a risk, when teleporting, of accidentally arriving above or below ground level. The chance of a successful teleportation depends on the caster&rsquo;s knowledge of the destination (see right). Roll d% and consult the table below.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<h3><strong>Knowledge of Destination</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Ground Level</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Too High</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Too Low</strong></h3>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Scant</p>\n</td>\n<td style=\"text-align: center;\">01-50</td>\n<td style=\"text-align: center;\">51-75</td>\n<td style=\"text-align: center;\">76-100</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Moderate</p>\n</td>\n<td style=\"text-align: center;\">01-80</td>\n<td style=\"text-align: center;\">81-90</td>\n<td style=\"text-align: center;\">91-100</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Exact</p>\n</td>\n<td style=\"text-align: center;\">01-95</td>\n<td style=\"text-align: center;\">96-99</td>\n<td style=\"text-align: center;\">100</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Ground level: </strong>The subject appears at the desired destination.</p>\n<p><strong>Too high: </strong>The subject appears 1d10&times;10&rsquo; above the intended destination. Should this location already be occupied by solid matter, the subject is instantly killed. Otherwise, the subject falls from a height.</p>\n<p><strong>Too low:</strong> The subject appears in the ground and is killed instantly.</p>\n<p><strong>Knowledge of destination: </strong>The caster&rsquo;s knowledge of the destination is rated as follows:</p>\n<p><strong>▶ Scant:</strong> A location that the caster has visited once or twice, has seen by magical scrying, or has heard of from descriptions.</p>\n<p><strong>▶ Moderate:</strong> A location that the caster has visited often or has studied via scrying for several weeks.</p>\n<p><strong>▶ Exact:</strong> A location that the caster has made a detailed study of, in person.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.6iR65ODiW4IfQuM3"
+    },
+    {
+      "_id": "KOORlF9XoMhTCnz9",
+      "name": "Conjure Elemental",
+      "type": "spell",
+      "sort": 3000000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.TS9MmoBRuKnnrWgh"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Mage",
+        "duration": "Permanent",
+        "range": "240'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent (until dismissed </strong><strong>or slain)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A 16 Hit Dice elemental&mdash;a being formed of pure elemental matter&mdash;is summoned from an elemental plane of the caster&rsquo;s choice (air, earth, fire, water) to do the caster&rsquo;s bidding.</p>\n<p><strong>▶ Materials: </strong>The summons requires a large volume of the appropriate element.</p>\n<p><strong>▶ Concentration:</strong> Is required to command an elemental.</p>\n<p><strong>▶ Dismissing:</strong> While control over the elemental is maintained, the caster may dismiss it at any time, sending it back to its plane of origin.</p>\n<p><strong>▶ Disruption:</strong> If the caster moves at more than half speed or their concentration is disturbed, the command over the elemental ends. It is, henceforth, a freewilled entity and will immediately try to kill the caster and any who get in its way.</p>\n<p><strong>▶ Dispelling:</strong> A conjured elemental may be dispelled by dispel magic or dispel evil.</p>\n<p><strong>Restrictions: </strong>The caster may summon at most one elemental from each plane in a single day.</p>\n<p>&nbsp;</p>\n<h3><strong>Air Elemental</strong></h3>\n<p>Huge vortexes of whirling air.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD</strong> 16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>360&rsquo; (120&rsquo;) flying, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 32&rsquo; tall, 8&rsquo; across.</p>\n<p><strong>▶ Whirlwind: </strong>Creatures with less than 2HD swept aside (save versus death).</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm flying creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Earth Elemental</strong></h3>\n<p>Huge humanoid figures of earth or stone.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>60&rsquo; (20&rsquo;), <strong>SV</strong> 7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own height.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures on the ground:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Fire Elemental</strong></h3>\n<p>Whirling columns of fire.</p>\n<hr />\n<p><strong>AC </strong>&ndash;21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>120&rsquo; (40&rsquo;),</p>\n<p><strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall, 16&rsquo; across.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own diameter.</p>\n<p><strong>▶ Mundane damage immunity: </strong>Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm cold-based creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Water Elemental</strong></h3>\n<p>Huge waves of water.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus</strong> +11, <strong>MV </strong>60&rsquo; (20&rsquo;) / 180&rsquo; (60&rsquo;) swimming, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 8&rsquo; tall, 32&rsquo; across.</p>\n<p><strong>▶ Water-bound:</strong> Must remain within 60&rsquo; of water.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures in water:</strong> Inflict extra 1d8 damage.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.KOORlF9XoMhTCnz9"
+    },
+    {
+      "_id": "Mp2SHbWUoNzYfvIR",
+      "name": "Cloudkill",
+      "type": "spell",
+      "sort": 3300000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.0TZ2UzncewM9vF29"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Mage",
+        "duration": "6 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A poisonous fog streams from the caster&rsquo;s fingertips, filling a 30&rsquo; diameter area.</p>\n<p><strong>▶ Movement:</strong> The fog moves at 60&rsquo; per turn (20&rsquo; per round), driven by the wind (or away from the caster, in still conditions).</p>\n<p><strong>▶ Sinking: </strong>Because the fog is heavier than air, it sinks to the lowest level of the land, even pouring down den or sinkhole openings.</p>\n<p><strong>▶ Damage: </strong>All creatures in contact with the vapours suffer 1 hit point of damage per round of contact.</p>\n<p><strong>▶ Creatures with less than 5 Hit Dice: </strong>Must also make a physical save (once per round of contact) or die.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "physical"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!M3QMejVl3L1iZcXq.Mp2SHbWUoNzYfvIR"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 12,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 9,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 10,
+        "mod": 0
+      },
+      "mental": {
+        "value": 10,
+        "mod": 0
+      },
+      "physical": {
+        "value": 10,
+        "mod": 0
+      },
+      "luck": {
+        "value": 10,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Sailors who make a living by raiding coastal settlements and robbing other ships. Typically ply rivers, lakes, and coastal waters; occasionally oceans.</p>\n<ul>\n<li><strong>Ships and crew:&nbsp;</strong>Depends where encountered. Rivers or lakes: 1d8 river boats (1d2 &times; 10 buccaneers each); coastal waters: 1d6 small galleys (1d3+1 &times; 10 buccaneers each); any: 1d4 longships (1d3+2 &times; 10 buccaneers each); ocean: 1d3 small warships (1d5+3 &times; 10 buccaneers each). (See the Advanced Fantasy Player&rsquo;s Tome or use Worlds Without Number equivalents for ships.)</li>\n<li><strong>Arms:&nbsp;</strong>60% of group have: leather armour, sword; 30% have: leather armour, sword, crossbow; 10% have: chainmail, sword, crossbow.</li>\n<li><strong>Leaders and captains:&nbsp;</strong>For every 30 buccaneers, there is a 4th level fighter. Each ship has a captain (7th level fighter).</li>\n<li><strong>Fleet commander:</strong>&nbsp;9th level fighter. 30% chance of a magic-user (level 1d2 + 9); 25% chance of a cleric (8th level).</li>\n<li><strong>Treasure:&nbsp;</strong>Divided between vessels. Instead of carrying aboard, may have a map to where it is buried.</li>\n<li><strong>Havens:</strong>&nbsp;Lawless, fortified, coastal towns may act as a haven for buccaneers and pirates.</li>\n</ul>",
+      "alignment": "Neutral",
+      "xp": 900,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "varies"
+      },
+      "morale": 6,
+      "instinct": 0,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.kRkyVb4oBeJNH4xk]{Sorcerers or Other Spellcasters}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": null,
+    "character": false,
+    "hp": {
+      "hd": "10d8-10",
+      "value": 35,
+      "max": 35
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "about-face": {
+        "indicatorDisabled": false
+      }
+    },
+    "name": "Buccaneer Mage",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331332,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "M3QMejVl3L1iZcXq",
+  "_key": "!actors!M3QMejVl3L1iZcXq"
+}

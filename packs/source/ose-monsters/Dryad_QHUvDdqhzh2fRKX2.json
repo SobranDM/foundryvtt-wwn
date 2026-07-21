@@ -1,0 +1,390 @@
+{
+  "name": "Dryad",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "CgC5mKCPvCgcQTBd",
+      "name": "Charm",
+      "type": "ability",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "description": "<p>Victim compelled to approach the tree, vanishes inside it (Mental save with a &ndash;2 penalty). If not immediately rescued, the victim is lost forever.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "mental"
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!QHUvDdqhzh2fRKX2.CgC5mKCPvCgcQTBd"
+    },
+    {
+      "_id": "etXMG3Cm2Ep0gkVG",
+      "name": "Bound With Tree",
+      "type": "ability",
+      "sort": 200000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "description": "<p>Spiritually connected with a single tree. Dryad dies if the tree dies, or if separated by more than 240&rsquo;.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!QHUvDdqhzh2fRKX2.etXMG3Cm2Ep0gkVG"
+    },
+    {
+      "_id": "wvrqxALiB3qXM7a8",
+      "name": "Meld With Tree",
+      "type": "ability",
+      "sort": 300000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "description": "<p>Can disappear by joining with her tree.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!QHUvDdqhzh2fRKX2.wvrqxALiB3qXM7a8"
+    },
+    {
+      "_id": "hHHMPOQJoEVcnFcJ",
+      "name": "Defensive",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Distrustful of strangers. Attempt to charm anyone who approaches or follows.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!QHUvDdqhzh2fRKX2.hHHMPOQJoEVcnFcJ"
+    },
+    {
+      "_id": "97XuAQ60Va6TCxqq",
+      "name": "Treasure",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Hidden in roots of the tree.</p>\n<p><em>Treasure Type D from OSE.</em></p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!QHUvDdqhzh2fRKX2.97XuAQ60Va6TCxqq"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.gDb3OV0O1Fn6SzwK"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 14,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 1,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 120,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Shy, peaceful, yet wary tree spirits that can manifest as beautiful female humanoids. Live in deep forests.</p>",
+      "alignment": "Neutral",
+      "xp": 25,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "1d6"
+      },
+      "morale": 6,
+      "instinct": 5,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.xq6rwhNERi8vSReO]{Non-Combatant Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "2d8",
+      "value": 9,
+      "max": 9
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "image-hover": {
+        "hideArt": false
+      }
+    },
+    "name": "Dryad",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "alpha": 1,
+    "light": {
+      "alpha": 1,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331386,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "QHUvDdqhzh2fRKX2",
+  "_key": "!actors!QHUvDdqhzh2fRKX2"
+}

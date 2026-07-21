@@ -1,0 +1,32 @@
+{
+  "_id": "hxaichdumbcsvncs",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Guerrilla Populace",
+  "type": "asset",
+  "_key": "!items!hxaichdumbcsvncs",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d4+1",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "None",
+    "desc": "The locals have the assistance of trained guerrilla warfare leaders who can aid them in sabotaging and attacking unwary hostiles.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

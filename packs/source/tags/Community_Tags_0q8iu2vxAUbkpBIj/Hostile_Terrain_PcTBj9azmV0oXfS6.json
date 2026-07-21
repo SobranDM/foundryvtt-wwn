@@ -1,0 +1,17 @@
+{
+  "_id": "PcTBj9azmV0oXfS6",
+  "name": "Hostile Terrain",
+  "content": "<h1>Hostile Terrain</h1><div>\n<p>The community is surrounded by dangerous terrain: miasmatic swamps, perilous crevasses, radioactive badlands, a pocket of arratu, or some other harmful topography. The community might prefer the defensive potential of the terrain here, or have found a precious resource worth the danger. The terrain might have formed at some time since the founding, with the citizens struggling to make terms with the new danger.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Bandit chief hiding in the terrain, Monstrous leader in the badlands, Local who’s made a secret deal with the terrain’s vile inhabitants</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Canny badland guide, Innocent researcher eager to explore, Grizzled chief engineer of the community’s anti-terrain measures</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The terrain is growing somehow, The terrain offers some special profit as well as danger, The community is being crushed by the terrain</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Treasure lost within the terrain, Device that generates or protects against the terrain, Precious resource found within the terrain</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Edge of the community overtaken by the environment, Building fortified against the terrain, Tavern favored by terrain guides and explorers</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 4200000
+    }
+  },
+  "_key": "!journal!PcTBj9azmV0oXfS6",
+  "ownership": {
+    "default": 0
+  }
+}

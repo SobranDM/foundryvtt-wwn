@@ -1,0 +1,174 @@
+{
+  "_id": "f9Ej9D62dBkn95id",
+  "name": "Ruin-Residential",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Isolated rural estate of nobility",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "j18bboastlb8hm5q",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.j18bboastlb8hm5q"
+    },
+    {
+      "type": 0,
+      "text": "Massive tenement or slum tower",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "m4rkblg34xbob2ym",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.m4rkblg34xbob2ym"
+    },
+    {
+      "type": 0,
+      "text": "Compact fortified village",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "8p106694mzbr927p",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.8p106694mzbr927p"
+    },
+    {
+      "type": 0,
+      "text": "Mazey urban residential block",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "v3obor8ljsmt1nam",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.v3obor8ljsmt1nam"
+    },
+    {
+      "type": 0,
+      "text": "Ancient arcology or fragment of it",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "y2pff6r8ucj22qbm",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.y2pff6r8ucj22qbm"
+    },
+    {
+      "type": 0,
+      "text": "Sprawling slum of shanties and huts",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "0rtklq3gn6zdfzfn",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.0rtklq3gn6zdfzfn"
+    },
+    {
+      "type": 0,
+      "text": "Townhouse of minor gentry",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "x3jzo3400yizwawu",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.x3jzo3400yizwawu"
+    },
+    {
+      "type": 0,
+      "text": "Rural grange with outbuildings",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "utvnoogmp2a1b2r6",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.utvnoogmp2a1b2r6"
+    },
+    {
+      "type": 0,
+      "text": "Hidden shelter against calamity",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "nvy8nnfgiyegwuk3",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.nvy8nnfgiyegwuk3"
+    },
+    {
+      "type": 0,
+      "text": "Rubble-wrought makeshift village",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "agv7759pqk3v3tkf",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.agv7759pqk3v3tkf"
+    },
+    {
+      "type": 0,
+      "text": "Outpost of refugees or recluses",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "gs89g6dyyhvizrm9",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.gs89g6dyyhvizrm9"
+    },
+    {
+      "type": 0,
+      "text": "Inhabited natural feature or cave",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "deo3mv9zq6kri0gt",
+      "flags": {},
+      "_key": "!tables.results!f9Ej9D62dBkn95id.deo3mv9zq6kri0gt"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!f9Ej9D62dBkn95id"
+}

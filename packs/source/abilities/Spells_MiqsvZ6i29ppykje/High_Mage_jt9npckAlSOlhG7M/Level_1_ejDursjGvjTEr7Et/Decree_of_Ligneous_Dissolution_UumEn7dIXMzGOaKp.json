@@ -1,0 +1,41 @@
+{
+  "_id": "UumEn7dIXMzGOaKp",
+  "name": "Decree of Ligneous Dissolution",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "ejDursjGvjTEr7Et",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.UumEn7dIXMzGOaKp"
+    }
+  },
+  "system": {
+    "lvl": 1,
+    "class": "High Mage",
+    "duration": "",
+    "range": "100 ft. per level",
+    "roll": "(@level)d10",
+    "description": "<p>Wood, linen, cotton, rope, and other plant- or fungus-derived matter is annihilated by a wave of entropic force that washes through an area near the caster. The mage targets a point within one hundred feet per caster level and designates a number of contiguous 10-foot cubes within that area equal to or less than their caster level. All non-magical plant matter within that area immediately erodes away to dust. Enchanted objects of plant matter cannot be affected, but ordinary plant-based clothing, bows, or wooden-hafted weapons will be destroyed. If used against plant-based monsters, the spell does 1d10 damage per caster level, with a Physical save for half.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.UumEn7dIXMzGOaKp",
+    "duplicateSource": null
+  },
+  "_key": "!items!UumEn7dIXMzGOaKp"
+}

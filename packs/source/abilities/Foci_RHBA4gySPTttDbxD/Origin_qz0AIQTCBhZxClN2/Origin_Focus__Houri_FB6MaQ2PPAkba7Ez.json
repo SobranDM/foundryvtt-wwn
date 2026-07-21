@@ -1,0 +1,18 @@
+{
+  "_id": "FB6MaQ2PPAkba7Ez",
+  "name": "Origin Focus: Houri",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You&rsquo;ve taught yourself to resist the lure of enforced happiness and seek other forms of satisfaction or personal integrity. While you gain an emotional rush from cooperating with commands, you don&rsquo;t let it control your decisions.</p>\n<p><strong>Level 1: </strong>Gain Convince and Perform as bonus skills. Your Charisma modifier increases by +1, up to a maximum of +2. Your innate nature makes you susceptible to mental influence, however, inflicting a -2 penalty on Mental saving throws.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!FB6MaQ2PPAkba7Ez",
+  "folder": "qz0AIQTCBhZxClN2"
+}

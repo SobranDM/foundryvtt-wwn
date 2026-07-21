@@ -1,0 +1,177 @@
+{
+  "_id": "lVSyfLFtJB2R3Jnu",
+  "name": "Terrain-Antagonists",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Antagonists are Common There?",
+  "results": [
+    {
+      "_id": "bQPACEgz9biBDcDz",
+      "flags": {},
+      "type": 0,
+      "text": "Violent secessionist rebels",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.bQPACEgz9biBDcDz"
+    },
+    {
+      "_id": "4Ybb0iIlysr6s1qP",
+      "flags": {},
+      "type": 0,
+      "text": "Angry cultists of a local faith",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.4Ybb0iIlysr6s1qP"
+    },
+    {
+      "_id": "pCQEchhkfXPAbsxp",
+      "flags": {},
+      "type": 0,
+      "text": "Locals who resent interloping outsiders",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.pCQEchhkfXPAbsxp"
+    },
+    {
+      "_id": "U29Aoy3XSsoa7ZMm",
+      "flags": {},
+      "type": 0,
+      "text": "A type of cunning, dangerous beast",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.U29Aoy3XSsoa7ZMm"
+    },
+    {
+      "_id": "jhYCbemIhqBJ23C4",
+      "flags": {},
+      "type": 0,
+      "text": "Relic-creatures of ancient settlements",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.jhYCbemIhqBJ23C4"
+    },
+    {
+      "_id": "TXiVFk2oT7D3g061",
+      "flags": {},
+      "type": 0,
+      "text": "Elemental emanations of the disordered land",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.TXiVFk2oT7D3g061"
+    },
+    {
+      "_id": "5qDayIMKwvr8EbTw",
+      "flags": {},
+      "type": 0,
+      "text": "A hostile sentient monster civilization",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.5qDayIMKwvr8EbTw"
+    },
+    {
+      "_id": "9qf5bSTrYWcjsqtN",
+      "flags": {},
+      "type": 0,
+      "text": "Brutal envoys of the central government",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.9qf5bSTrYWcjsqtN"
+    },
+    {
+      "_id": "jEaCg5FLz2fsEqTv",
+      "flags": {},
+      "type": 0,
+      "text": "Raiders and bandits driven into the areaL:",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.jEaCg5FLz2fsEqTv"
+    },
+    {
+      "_id": "9vMpIaEOEqb6ddnO",
+      "flags": {},
+      "type": 0,
+      "text": "Rapacious local lords and gang bosses",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.9vMpIaEOEqb6ddnO"
+    },
+    {
+      "_id": "118yy6BfEIGDGefG",
+      "flags": {},
+      "type": 0,
+      "text": "Remnants of a furious native population",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.118yy6BfEIGDGefG"
+    },
+    {
+      "_id": "RkZleAZHFIuxkWgO",
+      "flags": {},
+      "type": 0,
+      "text": "Outsider remnants with a bitter grudge",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!lVSyfLFtJB2R3Jnu.RkZleAZHFIuxkWgO"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!lVSyfLFtJB2R3Jnu"
+}

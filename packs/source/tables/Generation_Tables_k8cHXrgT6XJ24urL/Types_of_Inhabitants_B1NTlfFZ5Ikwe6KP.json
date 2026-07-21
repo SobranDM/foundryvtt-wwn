@@ -1,0 +1,189 @@
+{
+  "_id": "B1NTlfFZ5Ikwe6KP",
+  "name": "Types of Inhabitants",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "The types of inhabitants rolled or chosen here reflect the major figures in a site, but they shouldn’t be taken as the only creatures to inhabit the area. Some portion of a ruin or wilderness site’s inhabitants should be taken from exotic beasts, unaffiliated sentients, or other figures of happenstance. Such variety helps keep foes fresh.",
+  "results": [
+    {
+      "_id": "5KqItv40A5p1tqlE",
+      "type": 0,
+      "text": "<b>Ancient Sorcerer-King Ruin</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.5KqItv40A5p1tqlE"
+    },
+    {
+      "_id": "bWkdjgfIjnjjyUvV",
+      "type": 2,
+      "text": "Inhab-Ancient",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ypsDSboKIlu0mfxF",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.bWkdjgfIjnjjyUvV"
+    },
+    {
+      "_id": "lLWUliWBisMgteSe",
+      "type": 0,
+      "text": "<b>Alien <i>Arratu</i></b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.lLWUliWBisMgteSe"
+    },
+    {
+      "_id": "IoJUxIWWNkctrY58",
+      "type": 2,
+      "text": "Inhab-Arratu",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "H2ZU19ZHt0xV88kH",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.IoJUxIWWNkctrY58"
+    },
+    {
+      "_id": "hjdadjTxYjBEhaJM",
+      "type": 0,
+      "text": "<b>Subterranean Deep</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.hjdadjTxYjBEhaJM"
+    },
+    {
+      "_id": "KJU8Oyznma20x8fZ",
+      "type": 2,
+      "text": "Inhab-Deep",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "fhbfYxLtgLoVlZp5",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.KJU8Oyznma20x8fZ"
+    },
+    {
+      "_id": "XmksRSmWb6vPtKhe",
+      "type": 0,
+      "text": "<b>Modern Ruin Site</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.XmksRSmWb6vPtKhe"
+    },
+    {
+      "_id": "ju6HfZFBgoocvPLm",
+      "type": 2,
+      "text": "Inhab-Modern",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "vRgM3LCZL4IBvlEx",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.ju6HfZFBgoocvPLm"
+    },
+    {
+      "_id": "C9w9LHbTRFPAmyv2",
+      "type": 0,
+      "text": "<b>Trackless Wilderness</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.C9w9LHbTRFPAmyv2"
+    },
+    {
+      "_id": "9GBpCrYz5Xtr55wv",
+      "type": 2,
+      "text": "Inhab-Wilderness",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "AEt6C19UFsL8EnU1",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!B1NTlfFZ5Ikwe6KP.9GBpCrYz5Xtr55wv"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!B1NTlfFZ5Ikwe6KP"
+}

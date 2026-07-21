@@ -1,0 +1,125 @@
+{
+  "_id": "Mgb2XFoJPZgidaEE",
+  "name": "Government-Problems",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Problems do their Ministers Have?",
+  "results": [
+    {
+      "_id": "P1ftx0DU7HPmnTAM",
+      "flags": {},
+      "type": 0,
+      "text": "Their chief schemes too much against rivals",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.P1ftx0DU7HPmnTAM"
+    },
+    {
+      "_id": "7aHKw6NxnTVc8Sim",
+      "flags": {},
+      "type": 0,
+      "text": "They’re out of touch or lazy in their work",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.7aHKw6NxnTVc8Sim"
+    },
+    {
+      "_id": "WEZPYDOUoI9Shsee",
+      "flags": {},
+      "type": 0,
+      "text": "They recently suffered a bloody purge",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.WEZPYDOUoI9Shsee"
+    },
+    {
+      "_id": "kmkghU47Fze7S6JZ",
+      "flags": {},
+      "type": 0,
+      "text": "Enemy forces have allies among them",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.kmkghU47Fze7S6JZ"
+    },
+    {
+      "_id": "2sKr0L1VXcmmKXZB",
+      "flags": {},
+      "type": 0,
+      "text": "They’re distracted by factional infighting",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.2sKr0L1VXcmmKXZB"
+    },
+    {
+      "_id": "6XZdhuDaFUa3wzmK",
+      "flags": {},
+      "type": 0,
+      "text": "The leadership tends to ignore their advice",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.6XZdhuDaFUa3wzmK"
+    },
+    {
+      "_id": "NIjvYAJsFi5ZeWrh",
+      "flags": {},
+      "type": 0,
+      "text": "They tacitly usurp power from the ruler",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.NIjvYAJsFi5ZeWrh"
+    },
+    {
+      "_id": "SGa0WpzoeqUYqO1G",
+      "flags": {},
+      "type": 0,
+      "text": "They’re committed to a very bad idea",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mgb2XFoJPZgidaEE.SGa0WpzoeqUYqO1G"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Mgb2XFoJPZgidaEE"
+}

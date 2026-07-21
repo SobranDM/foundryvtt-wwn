@@ -1,0 +1,73 @@
+{
+  "_id": "O68XOXXDKgxnLjUZ",
+  "name": "Society-Physical-Build",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What's the Typical Build of the People?",
+  "results": [
+    {
+      "_id": "58uVz77Z8rH5IeYY",
+      "flags": {},
+      "type": 0,
+      "text": "Smaller and slighter than their neighbors",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!O68XOXXDKgxnLjUZ.58uVz77Z8rH5IeYY"
+    },
+    {
+      "_id": "DUAmv1CKa0ahhEtI",
+      "flags": {},
+      "type": 0,
+      "text": "Same height and weight as the neighbors",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!O68XOXXDKgxnLjUZ.DUAmv1CKa0ahhEtI"
+    },
+    {
+      "_id": "CfY8dp9arQZkhArd",
+      "flags": {},
+      "type": 0,
+      "text": "Either short and stocky or tall and slender",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!O68XOXXDKgxnLjUZ.CfY8dp9arQZkhArd"
+    },
+    {
+      "_id": "4E9UQqXxAiAw5FJs",
+      "flags": {},
+      "type": 0,
+      "text": "Much bigger and bulkier than neighbors",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!O68XOXXDKgxnLjUZ.4E9UQqXxAiAw5FJs"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!O68XOXXDKgxnLjUZ"
+}

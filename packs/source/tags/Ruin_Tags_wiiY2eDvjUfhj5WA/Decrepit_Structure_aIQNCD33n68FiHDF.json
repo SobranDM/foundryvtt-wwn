@@ -1,0 +1,17 @@
+{
+  "_id": "aIQNCD33n68FiHDF",
+  "name": "Decrepit Structure",
+  "content": "<h1>Decrepit Structure</h1><div>\n<p>The ruin is falling apart, and is actively dangerous to its inhabitants. Navigating between areas may require careful progress, extensive rope and piton work, or avoidance of certain obvious-but-hazardous routes. Native inhabitants may have adapted to the hazards or they might be newcomers who are learning the hard way. Some areas in the ruin might provoke a general collapse if they are significantly damaged.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Outside plunderer with no care for the consequences, Outsider actively trying to destroy the place, Berserk native trying to repair things</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Refugee forced to live there, Native dweller seeking help to fix things, Architectural researcher</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Valuable materials can be looted by those indifferent to the increasing instability, The collapse would reveal or unleash a terrible thing, Many places in it can only be visited once</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Resources that can repair the damage, Precious loot that will destabilize the place if taken, Treasure revealed by a structural collapse</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Creaking bridge or gantry, Room with numerous holes in the floor, Tower leaning at a drunken angle</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1600000
+    }
+  },
+  "_key": "!journal!aIQNCD33n68FiHDF",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "_id": "FuyfiMka4zyytBE7",
+  "name": "Society-Physical-Quirk",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Optional Physical Quirks or Traits",
+  "results": [
+    {
+      "_id": "jD2WPGsdPgLMZKgf",
+      "flags": {},
+      "type": 0,
+      "text": "They possess an extra eye somewhere",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.jD2WPGsdPgLMZKgf"
+    },
+    {
+      "_id": "dV29d932ed35WGmd",
+      "flags": {},
+      "type": 0,
+      "text": "An additional set of limbs or extremities",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.dV29d932ed35WGmd"
+    },
+    {
+      "_id": "NSyGu8ekJbYPObaU",
+      "flags": {},
+      "type": 0,
+      "text": "Extremely pronounced sexual dimorphism",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.NSyGu8ekJbYPObaU"
+    },
+    {
+      "_id": "3TbWq4xntuZzQ6au",
+      "flags": {},
+      "type": 0,
+      "text": "Patches of feathers, scales, fur, or the like",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.3TbWq4xntuZzQ6au"
+    },
+    {
+      "_id": "ucwHnAHpGX629AbZ",
+      "flags": {},
+      "type": 0,
+      "text": "They have a tail of some sort",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.ucwHnAHpGX629AbZ"
+    },
+    {
+      "_id": "BqDBBBYFSCQq3hK3",
+      "flags": {},
+      "type": 0,
+      "text": "They possess wings, whether useful or not",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.BqDBBBYFSCQq3hK3"
+    },
+    {
+      "_id": "IXbu0W5qDojWPbMA",
+      "flags": {},
+      "type": 0,
+      "text": "Their skin is an unusual texture",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.IXbu0W5qDojWPbMA"
+    },
+    {
+      "_id": "4iDNZJ3KL4ENl5cV",
+      "flags": {},
+      "type": 0,
+      "text": "Sigil-marked by their creator in some way",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.4iDNZJ3KL4ENl5cV"
+    },
+    {
+      "_id": "ANri9vt9TBiSTkF9",
+      "flags": {},
+      "type": 0,
+      "text": "The sexes look very similar to outsiders",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.ANri9vt9TBiSTkF9"
+    },
+    {
+      "_id": "Xc8saJ8Mz7o0Z3RN",
+      "flags": {},
+      "type": 0,
+      "text": "They have a particular scent to them",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.Xc8saJ8Mz7o0Z3RN"
+    },
+    {
+      "_id": "gQmlmYMGZ6N7uVk5",
+      "flags": {},
+      "type": 0,
+      "text": "Their voices are peculiar in some way",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.gQmlmYMGZ6N7uVk5"
+    },
+    {
+      "_id": "KQNeXAFrYOGPnXKF",
+      "flags": {},
+      "type": 0,
+      "text": "Additional or too few fingers or toes",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.KQNeXAFrYOGPnXKF"
+    },
+    {
+      "_id": "N4yAgDmYdzquHwgi",
+      "flags": {},
+      "type": 0,
+      "text": "They have animalistic features in some way",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.N4yAgDmYdzquHwgi"
+    },
+    {
+      "_id": "ZpyL96QGX2jHXDs8",
+      "flags": {},
+      "type": 0,
+      "text": "Have one or more manipulatory tentacles",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.ZpyL96QGX2jHXDs8"
+    },
+    {
+      "_id": "iUi0rUaHngXlaB13",
+      "flags": {},
+      "type": 0,
+      "text": "They have light-emitting organs or skin",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.iUi0rUaHngXlaB13"
+    },
+    {
+      "_id": "72YVJWI6khPxNaIh",
+      "flags": {},
+      "type": 0,
+      "text": "Their mouths are fanged or tusked",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.72YVJWI6khPxNaIh"
+    },
+    {
+      "_id": "3flNDTrjpRyFC3Ed",
+      "flags": {},
+      "type": 0,
+      "text": "They have alien Outsider features somehow",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.3flNDTrjpRyFC3Ed"
+    },
+    {
+      "_id": "VY5WcGVbNUgzgBUT",
+      "flags": {},
+      "type": 0,
+      "text": "Their proportions are distinctly strange",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.VY5WcGVbNUgzgBUT"
+    },
+    {
+      "_id": "ZWqdx9FD1ApLV4R4",
+      "flags": {},
+      "type": 0,
+      "text": "They don’t show age the way others do",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.ZWqdx9FD1ApLV4R4"
+    },
+    {
+      "_id": "Bhhj1dofiSCuqJ0l",
+      "flags": {},
+      "type": 0,
+      "text": "Roll twice and blend the results",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.Bhhj1dofiSCuqJ0l"
+    },
+    {
+      "_id": "9q0sduf3nJbJabBw",
+      "flags": {},
+      "type": 2,
+      "text": "Society-Physical-Quirk",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "FuyfiMka4zyytBE7",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.9q0sduf3nJbJabBw"
+    },
+    {
+      "_id": "EtN2bGASczDVf0WI",
+      "flags": {},
+      "type": 2,
+      "text": "Society-Physical-Quirk",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "FuyfiMka4zyytBE7",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FuyfiMka4zyytBE7.EtN2bGASczDVf0WI"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!FuyfiMka4zyytBE7"
+}

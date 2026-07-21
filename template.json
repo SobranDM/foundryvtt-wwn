@@ -187,7 +187,8 @@
       "skills": {
         "exertPenalty": 0,
         "sneakPenalty": 0,
-        "unspent": 0
+        "unspent": 0,
+        "locked": true
       },
       "scores": {
         "str": {

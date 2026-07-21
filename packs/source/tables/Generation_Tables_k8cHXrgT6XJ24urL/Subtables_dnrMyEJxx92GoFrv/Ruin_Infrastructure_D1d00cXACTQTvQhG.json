@@ -1,0 +1,174 @@
+{
+  "_id": "D1d00cXACTQTvQhG",
+  "name": "Ruin-Infrastructure",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Psychic or tech communications site",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "h2tsu69biqs9xhdt",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.h2tsu69biqs9xhdt"
+    },
+    {
+      "type": 0,
+      "text": "Canal or aqueduct control center",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "25935ri8eiq9sxa3",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.25935ri8eiq9sxa3"
+    },
+    {
+      "type": 0,
+      "text": "Reality-stabilizing Working ruin",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "upex4mtr3vl6d9w2",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.upex4mtr3vl6d9w2"
+    },
+    {
+      "type": 0,
+      "text": "Massive bridge or tunnel",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "0bcd67rmsrdm13x0",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.0bcd67rmsrdm13x0"
+    },
+    {
+      "type": 0,
+      "text": "Ancient power production center",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "1zh2a90pl83k6auy",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.1zh2a90pl83k6auy"
+    },
+    {
+      "type": 0,
+      "text": "Semi-ruined teleportation node",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "czddxyv9kivqvr81",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.czddxyv9kivqvr81"
+    },
+    {
+      "type": 0,
+      "text": "Subterranean transit tunnels",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "751btvuf0n5pyzsl",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.751btvuf0n5pyzsl"
+    },
+    {
+      "type": 0,
+      "text": "Weather-control Working ruin",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "fqdxolrucvvx9rzo",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.fqdxolrucvvx9rzo"
+    },
+    {
+      "type": 0,
+      "text": "Ancient road through an obstacle",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "j8yrjbjupumv0bfp",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.j8yrjbjupumv0bfp"
+    },
+    {
+      "type": 0,
+      "text": "Huge ancient dam",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "8iwnwar3tirwihab",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.8iwnwar3tirwihab"
+    },
+    {
+      "type": 0,
+      "text": "Outsider xenoforming engine",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "l5x7zfxtvsddrhue",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.l5x7zfxtvsddrhue"
+    },
+    {
+      "type": 0,
+      "text": "Now-incomprehensible wreckage",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "0cv2reln7t6f82eh",
+      "flags": {},
+      "_key": "!tables.results!D1d00cXACTQTvQhG.0cv2reln7t6f82eh"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!D1d00cXACTQTvQhG"
+}

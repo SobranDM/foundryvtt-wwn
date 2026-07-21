@@ -1,0 +1,80 @@
+# Builds and attaches release artifacts when a GitHub Release is published.
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build:css
+
+      - name: Build Compendium Packs
+        run: npm run build:packs
+
+      - name: Get Version
+        id: get_version
+        uses: dhkatz/get-version-action@v3.0.0
+
+      - name: Substitute Manifest Download Links For Versioned Ones
+        uses: TomaszKandula/variable-substitution@v1.0.1
+        with:
+          files: "system.json"
+        env:
+          version: ${{ steps.get_version.outputs.version-without-v }}
+          download: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/wwn.zip
+
+      - name: Zip
+        run: |
+          zip -r wwn.zip \
+            system.json \
+            template.json \
+            wwn.js \
+            README.md \
+            CHANGELOG.md \
+            LICENSE.GPL \
+            Open.Game.License.txt \
+            assets \
+            lang \
+            module \
+            styles/main.css \
+            templates
+          for pack_dir in packs/*/; do
+            name=$(basename "$pack_dir")
+            if [[ "$name" == "source" ]]; then
+              continue
+            fi
+            zip -r wwn.zip "packs/$name"
+          done
+
+      - name: Update Release with Artifacts
+        uses: ncipollo/release-action@v1.13.0
+        with:
+          allowUpdates: true
+          name: ${{ github.event.release.name }}
+          tag: ${{ github.event.release.tag_name }}
+          body: ${{ github.event.release.body }}
+          artifacts: "./wwn.zip, ./system.json"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+defaults:
+  run:
+    shell: bash

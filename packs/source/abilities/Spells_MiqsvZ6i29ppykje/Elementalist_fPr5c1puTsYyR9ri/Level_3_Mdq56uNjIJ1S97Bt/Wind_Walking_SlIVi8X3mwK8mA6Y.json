@@ -1,0 +1,41 @@
+{
+  "_id": "SlIVi8X3mwK8mA6Y",
+  "name": "Wind Walking",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "effects": [],
+  "folder": "Mdq56uNjIJ1S97Bt",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.SlIVi8X3mwK8mA6Y"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "Elementalist",
+    "duration": "",
+    "range": "Visible",
+    "roll": "",
+    "description": "<p>A visible target creature and their possesions are briefly transformed into a misty, insubstantial cloud. Only sources of harm that could conceivably disrupt a cloud of mist can harm them, and until the spell&rsquo;s end they may pass freely into any area that a vapor could reach. They may move freely in all three dimensions at their normal movment rate, though they cannot physically manipulate objects. The spell lasts until the end of the scene or until the target or the caster choose to end it.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!SlIVi8X3mwK8mA6Y"
+}

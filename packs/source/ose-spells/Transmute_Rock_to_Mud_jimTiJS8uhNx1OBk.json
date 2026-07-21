@@ -1,0 +1,26 @@
+{
+  "_id": "jimTiJS8uhNx1OBk",
+  "name": "Transmute Rock to Mud",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "3d6 days",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: [[3d6 days]] / </strong><strong>Permanent (transmute mud to rock)</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell turns up to 3,000 square feet of rock into 10&rsquo; deep mud.</p>\n<p><strong>▶ Movement:</strong> Any creatures passing through the mud have their movement rate reduced by 90%.</p>\n<p><strong>Reversed: Transmute Mud to Rock</strong></p>\n<p>Changes an area of mud&mdash;up to 3,000 square feet and up to 10&rsquo; deep&mdash;into rock. This alteration is permanent.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!jimTiJS8uhNx1OBk"
+}

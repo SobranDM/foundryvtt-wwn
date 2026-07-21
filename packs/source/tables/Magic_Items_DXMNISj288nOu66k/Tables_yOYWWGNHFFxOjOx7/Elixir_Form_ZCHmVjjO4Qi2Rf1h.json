@@ -1,0 +1,168 @@
+{
+  "_id": "ZCHmVjjO4Qi2Rf1h",
+  "name": "Elixir Form",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "GZ3xdA1DONQGlXBT",
+      "flags": {},
+      "type": 0,
+      "text": "Bottled vapor",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.GZ3xdA1DONQGlXBT"
+    },
+    {
+      "_id": "61UtD1gXa05gsqyG",
+      "flags": {},
+      "type": 0,
+      "text": "Breakable token",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.61UtD1gXa05gsqyG"
+    },
+    {
+      "_id": "yJQFxzLHj4JPoPCv",
+      "flags": {},
+      "type": 0,
+      "text": "Incense stick",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.yJQFxzLHj4JPoPCv"
+    },
+    {
+      "_id": "13GaFHvk825ggPs0",
+      "flags": {},
+      "type": 0,
+      "text": "Inhaler",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.13GaFHvk825ggPs0"
+    },
+    {
+      "_id": "vEApwd4K7sZFy0YF",
+      "flags": {},
+      "type": 0,
+      "text": "Injector",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.vEApwd4K7sZFy0YF"
+    },
+    {
+      "_id": "zvYOIwrta8cLehka",
+      "flags": {},
+      "type": 0,
+      "text": "Inked charm",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.zvYOIwrta8cLehka"
+    },
+    {
+      "_id": "HqnuX6CKZDg2z8D0",
+      "flags": {},
+      "type": 0,
+      "text": "Jarred salve",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.HqnuX6CKZDg2z8D0"
+    },
+    {
+      "_id": "ZETDkft6YAcE3w7V",
+      "flags": {},
+      "type": 0,
+      "text": "Liquid potion",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.ZETDkft6YAcE3w7V"
+    },
+    {
+      "_id": "G1zrTA3gSoWMR7yu",
+      "flags": {},
+      "type": 0,
+      "text": "Pill",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.G1zrTA3gSoWMR7yu"
+    },
+    {
+      "_id": "GKq99mOoxpmBF24L",
+      "flags": {},
+      "type": 0,
+      "text": "Preserved edible",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZCHmVjjO4Qi2Rf1h.GKq99mOoxpmBF24L"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!ZCHmVjjO4Qi2Rf1h",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

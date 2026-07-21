@@ -1,0 +1,32 @@
+{
+  "_id": "8l40365x7loihogq",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Smuggling Fleet",
+  "type": "asset",
+  "_key": "!items!8l40365x7loihogq",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d6",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "None",
+    "desc": "Once per turn, as a free action, they may move themselves and any one Asset at their current location to any other water-accessible location within one move. Any Asset they move with them gains the Subtle quality until they take some action at the destination.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "Once per turn, as a free action, they may move themselves and any one Asset at their current location to any other water-accessible location within one move. Any Asset they move with them gains the Subtle quality until they take some action at the destination.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

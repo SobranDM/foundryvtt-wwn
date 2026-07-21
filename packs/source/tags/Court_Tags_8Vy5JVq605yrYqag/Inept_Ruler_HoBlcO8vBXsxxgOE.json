@@ -1,0 +1,17 @@
+{
+  "_id": "HoBlcO8vBXsxxgOE",
+  "name": "Inept Ruler",
+  "content": "<h1>Inept Ruler</h1><div>\n<p>The court’s ruler is incompetent or debilitated, but there’s no practical way to remove them from power. The alternative might be utterly unacceptable, or the ruler’s bungling might be very much to the benefit of a powerful faction in the court. Rivals are doubtless making plans to take advantage of the situation, and internal factions may well be willing to take acceptable losses in order to profit by the chaos.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Insane ruler, Sincere but utterly unsuitable leader, Sinister manipulator influencing the puppet ruler</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Competent but unsupported alternative ruler, Victim of the ruler’s bungling, Faction leader being crushed by the ruler’s ineptitude</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The ruler seems like an idiot but is actually trying to achieve a secret goal with their actions, Rival courts are vigorously backing the leader, The leader’s deposition would result in a ruinous state of chaos for the court</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Token that would legitimize a change of rule, Object that would cure the ruler’s incapacity, Wealth that was lost by the leader’s bungling</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Damaged or decrepit structure owing to the ruler’s neglect, Chaotic and confused court hall, Building erected as a folly by the ruler</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "8Vy5JVq605yrYqag",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5000000
+    }
+  },
+  "_key": "!journal!HoBlcO8vBXsxxgOE",
+  "ownership": {
+    "default": 0
+  }
+}

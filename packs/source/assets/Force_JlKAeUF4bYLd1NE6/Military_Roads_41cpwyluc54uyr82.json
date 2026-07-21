@@ -1,0 +1,31 @@
+{
+  "_id": "41cpwyluc54uyr82",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Military Roads",
+  "type": "asset",
+  "_key": "!items!41cpwyluc54uyr82",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "None",
+    "desc": "The faction has established a network of roads with a logistical stockpile at this Asset's location. As a consequence, once per faction turn, the faction can move any one Asset from any location within its reach to any other location within its reach at a cost of 1 Treasure.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per faction turn, the faction can move any one Asset from any location within its reach to any other location within its reach at a cost of 1 Treasure.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

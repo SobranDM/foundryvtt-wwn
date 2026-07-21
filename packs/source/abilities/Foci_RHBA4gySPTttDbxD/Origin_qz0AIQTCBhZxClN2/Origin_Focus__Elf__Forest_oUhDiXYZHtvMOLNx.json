@@ -1,0 +1,18 @@
+{
+  "_id": "oUhDiXYZHtvMOLNx",
+  "name": "Origin Focus: Elf, Forest",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>This interpretation of elvishness is for those kinds given to nature-reverence, archery, and nimbleness.</p>\n<p><strong>Level 1: </strong>Gain Shoot and Survive as bonus skills. Your Dexterity modifier increases by +1 and your Constitution modifier decreases by -1. You can see clearly in any light level above complete darkness.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!oUhDiXYZHtvMOLNx",
+  "folder": "qz0AIQTCBhZxClN2"
+}

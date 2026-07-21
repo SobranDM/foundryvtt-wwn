@@ -1,0 +1,26 @@
+{
+  "_id": "uoNIShDOwADYNaW6",
+  "name": "Dispel Magic",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "Instant",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>Dispel magic ends spells of non-instantaneous duration within a 20&rsquo; cube area.</p>\n<p><strong>▶ Caster levels: </strong>If the level of the caster of the effect to be dispelled is higher than the level of the caster of dispel magic, there is a 5% chance per level difference that the attempt to dispel will fail.</p>\n<p><strong>▶ Magic items: </strong>Are unaffected.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!uoNIShDOwADYNaW6"
+}

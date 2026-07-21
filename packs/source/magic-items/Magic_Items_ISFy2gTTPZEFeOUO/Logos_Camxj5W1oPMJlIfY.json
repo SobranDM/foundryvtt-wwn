@@ -1,0 +1,29 @@
+{
+  "_id": "Camxj5W1oPMJlIfY",
+  "name": "Logos",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>A logos usually takes the form of a fist-sized sphere of luminous crystalline matter, a constellation of tiny lights glowing within. They radiate a sense of endless possibility; no sentient can look on a logos and not recognize it as an object of tremendous power. Only archmages know the full truth of their utility, but persistent rumor speaks of them as critical ingredients in certain rituals of apotheosis, immortality, and reality-shaping. Even the dullest mage can expend a logos as a substitute for 100,000 silver pieces worth of ingredients for creating Workings or magic items. If used to fuel a magic item&rsquo;s creation, no further special ingredients are required.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.Camxj5W1oPMJlIfY"
+    }
+  },
+  "_key": "!items!Camxj5W1oPMJlIfY"
+}

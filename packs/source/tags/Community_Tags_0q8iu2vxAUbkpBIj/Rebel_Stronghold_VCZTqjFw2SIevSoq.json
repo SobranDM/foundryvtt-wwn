@@ -1,0 +1,17 @@
+{
+  "_id": "VCZTqjFw2SIevSoq",
+  "name": "Rebel Stronghold",
+  "content": "<h1>Rebel Stronghold</h1><div>\n<p>The community is in tacit or open revolt against their supposed overlord. If it’s distant from their suzerain’s power centers or exceptionally well-fortified, they might be an open nest of rebels and provide overt support to their ruler’s enemies. More vulnerable communities will provide shelter, secret support, and a base of supply for hidden bands of insurgents. Loyalist locals must keep their sympathies hidden or suffer the consequences.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Psychopathic but charismatic rebel leader, Savage rebel-suppressing general, Traitor leading the rebels to their doom</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Idealistic young rebel, Frightened local just trying to survive, Sympathetic outside mediator</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>One side of the dispute is correct but profoundly unsympathetic, A rebel victory would ultimately be catastrophic, The lord can’t afford the disruption that violent suppression would create</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Cache of valuable rebel supplies, Tax money stolen by the rebels, Secret rebel identities and plans</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Rebel base hidden outside the community, Tavern full of sympathizers, Burnt house of a loyalist</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7400000
+    }
+  },
+  "_key": "!journal!VCZTqjFw2SIevSoq",
+  "ownership": {
+    "default": 0
+  }
+}

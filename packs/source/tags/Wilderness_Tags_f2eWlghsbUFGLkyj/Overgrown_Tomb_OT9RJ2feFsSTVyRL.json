@@ -1,0 +1,17 @@
+{
+  "_id": "OT9RJ2feFsSTVyRL",
+  "name": "Overgrown Tomb",
+  "content": "<h1>Overgrown Tomb</h1><div>\n<p>A once-honored tomb lies here, forgotten or lost to the depredations of enemies. The structure is likely elaborate enough to be a building in its own right, or an excavation beneath some surface monument. The tomb may house a single glorious hero or be the resting place of an associated group, such as a particular noble lineage, the slain of a great battle, a lost city’s municipal ossuary, or some like grave.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Long-trapped undead king, Monstrous beast fat on old corpses, Necromancer jealous of his prizes</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Ancestral guardian of the tomb, Curious archaeologist, Last heir of the one entombed</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It was originally a different structure turned into a mass grave due to emergency need, It’s actually just a mass casualty incident in a structure, Someone’s mining the dead for their remains</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Precious funerary offerings, Regalia buried with a dead ruler, Text containing secrets lost to the present day</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Crumbling monument to the dead, Fallen-in gravesite, Forest of gravestones</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6400000
+    }
+  },
+  "_key": "!journal!OT9RJ2feFsSTVyRL",
+  "ownership": {
+    "default": 0
+  }
+}

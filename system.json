@@ -2,18 +2,18 @@
   "id": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "1.6.1",
+  "version": "2.0.0",
   "compatibility": {
-    "minimum": "13",
-    "verified": "13",
-    "maximum": "13"
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
   },
   "authors": [
     {
       "name": "SobranDM",
       "url": "https://github.com/SobranDM",
       "discord": "Sobran#8580",
-      "flags": { }
+      "flags": {}
     }
   ],
   "esmodules": [
@@ -22,132 +22,88 @@
   "styles": [
     "styles/main.css"
   ],
+  "primaryTokenAttribute": "hp",
   "packs": [
     {
-      "name": "instinct",
-      "label": "Instinct",
-      "system": "wwn",
-      "path": "packs/instinct.db",
-      "type": "RollTable",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "arts",
+      "name": "abilities",
       "label": "Abilities",
       "system": "wwn",
-      "path": "packs/arts.db",
+      "path": "packs/abilities",
       "type": "Item",
       "private": false,
-      "flags": { }
+      "flags": {}
     },
     {
-      "name": "skills",
-      "label": "Skills",
-      "system": "wwn",
-      "path": "packs/skills.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "adventuring-gear",
+      "name": "gear",
       "label": "Gear",
       "system": "wwn",
-      "path": "packs/adventuring-gear.db",
+      "path": "packs/gear",
       "type": "Item",
       "private": false,
-      "flags": { }
+      "flags": {}
     },
     {
       "name": "magic-items",
       "label": "Magic Items",
       "system": "wwn",
-      "path": "packs/magic-items.db",
+      "path": "packs/magic-items",
       "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "magic-tables",
-      "label": "Magic Item Tables",
-      "system": "wwn",
-      "path": "packs/magic-tables.db",
-      "type": "RollTable",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "magic-item-masters",
-      "label": "Magic Item Masters",
-      "system": "wwn",
-      "path": "packs/magic-item-masters.db",
-      "type": "RollTable",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "gm-subtables",
-      "label": "GM Subtables",
-      "system": "wwn",
-      "path": "packs/gm-subtables.db",
-      "type": "RollTable",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "gm-master-tables",
-      "label": "GM Master Tables",
-      "system": "wwn",
-      "path": "packs/gm-master-tables.db",
-      "type": "RollTable",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "creatures-of-a-far-age",
-      "label": "Creatures of a Far Age",
-      "system": "wwn",
-      "path": "packs/creatures-of-a-far-age.db",
-      "type": "Actor",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "ose-monsters",
-      "label": "OSE Monsters",
-      "system": "wwn",
-      "path": "packs/ose-monsters.db",
-      "type": "Actor",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "ose-spells",
-      "label": "OSE Spells",
-      "system": "wwn",
-      "path": "packs/ose-spells.db",
-      "type": "Item",
-      "private": false,
-      "flags": { }
-    },
-    {
-      "name": "tags",
-      "label": "Tags",
-      "system": "wwn",
-      "path": "packs/tags.db",
-      "type": "JournalEntry",
-      "private": false,
-      "flags": { }
+      "private": true,
+      "flags": {}
     },
     {
       "name": "assets",
       "label": "Assets",
       "system": "wwn",
-      "path": "packs/assets.db",
+      "path": "packs/assets",
       "type": "Item",
       "private": false,
-      "flags": { }
+      "flags": {}
+    },
+    {
+      "name": "tables",
+      "label": "Tables",
+      "system": "wwn",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "tags",
+      "label": "Tags",
+      "system": "wwn",
+      "path": "packs/tags",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "creatures-of-a-far-age",
+      "label": "Creatures of a Far Age",
+      "system": "wwn",
+      "path": "packs/creatures-of-a-far-age",
+      "type": "Actor",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "ose-monsters",
+      "label": "OSE Monsters",
+      "system": "wwn",
+      "path": "packs/ose-monsters",
+      "type": "Actor",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "ose-spells",
+      "label": "OSE Spells",
+      "system": "wwn",
+      "path": "packs/ose-spells",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "languages": [
@@ -155,7 +111,7 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json",
-      "flags": { }
+      "flags": {}
     }
   ],
   "grid": {
@@ -164,5 +120,32 @@
   },
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
   "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
-  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/download/v1.6.1/wwn.zip"
+  "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/wwn.zip",
+  "packFolders": [
+    {
+      "name": "Worlds Without Number",
+      "sorting": "m",
+      "color": "#4b4a44",
+      "packs": [
+        "abilities",
+        "gear",
+        "magic-items",
+        "assets",
+        "tables",
+        "tags",
+        "creatures-of-a-far-age"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Old School Essentials",
+      "sorting": "m",
+      "color": "#7a7971",
+      "packs": [
+        "ose-monsters",
+        "ose-spells"
+      ],
+      "folders": []
+    }
+  ]
 }

@@ -75,7 +75,7 @@ export class WwnPartySheet extends FormApplication {
     const templateData = {
       actors: allCharacterActors
     }
-    const content = await renderTemplate(template, templateData);
+    const content = await foundry.applications.handlebars.renderTemplate(template, templateData);
     new Dialog({
       title: "Select Party Characters",
       content: content,

@@ -1,0 +1,29 @@
+{
+  "_id": "gq677lMuOSMitAlt",
+  "name": "Implacable Fist",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>Appearing as a glove, gauntlet, or set of matching rings, an Implacable Fist grants its user an inhuman grip strength to the hand that wears it. With a full round to build up its force, it can crush or destroy any mundane material it grips. Magical materials force a Str/Exert skill check against a difficulty of 8 or more to be vulnerable to the fist&rsquo;s effects. The time necessary to focus the strength makes it impractical to use as a weapon in combat or grappling, but if the wearer somehow can get a hand on a helpless or completely restrained target, the grip will destroy any limb it grasps or kill a target whose head or viscera are crushed. The Fist can be used at will, but any object carried in that hand has a 1 in 6 chance of being destroyed accidentally by the wearer&rsquo;s reaction to combat or other sudden stress.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 0,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.gq677lMuOSMitAlt"
+    }
+  },
+  "_key": "!items!gq677lMuOSMitAlt"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "igFljHJJKzVfJ9JP",
+  "name": "Bandit Lair",
+  "content": "<h1>Bandit Lair</h1><div>\n<p>Bandits lair in this hex, which is presumably close enough to civilized lands to serve as a base for their operations. Not every bandit lair is a hidden cave; some operate out of subverted or cowed villages, others hide among remote monasteries, and some just camp in convenient glades long enough to rest, refit, and trade with black marketeers. It might be a seasonal lair as well, with local peasants turning bandit at certain profitable times of the year.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Ruthlessly pragmatic bandit chief, Wealthy grandee wielding the bandits against rivals, Heartless slaver gathering stock</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Hapless missionary of a kinder way, Local taken as a slave, Runaway bandit who repents</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>They have a traditional prey and don’t usually rob others, They’re the degenerate remnants of a once-noble cause, They’re a confederacy of thieving groups that often quarrel</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Loot taken from a recent success, Priceless heirloom owned by a noble-turned-bandit, Precious relic the bandits don’t realize is so valuable</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Raucous glade full of drink and debauchery, Repurposed estate, Makeshift palisaded camp</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1000000
+    }
+  },
+  "_key": "!journal!igFljHJJKzVfJ9JP",
+  "ownership": {
+    "default": 0
+  }
+}

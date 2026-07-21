@@ -1,0 +1,32 @@
+{
+  "_id": "hbk9aric3c68s2mw",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Blackmail",
+  "type": "asset",
+  "_key": "!items!hbk9aric3c68s2mw",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "1d4",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "None",
+    "desc": "When a Blackmail asset is in a location, hostile factions can't roll more than one die during Attacks made by or against them there, even if they have tags or Assets that usually grant bonus dice.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": "When a Blackmail asset is in a location, hostile factions can't roll more than one die during Attacks made by or against them there, even if they have tags or Assets that usually grant bonus dice."
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

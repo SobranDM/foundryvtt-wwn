@@ -1,0 +1,89 @@
+{
+  "_id": "XnG3k3VB5azXC5ZY",
+  "name": "Magical Armor Bonus, Great",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "ql5AKeM5o95ihvOx",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor +1",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Ys9iNc9yg6sRHEif",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!XnG3k3VB5azXC5ZY.ql5AKeM5o95ihvOx"
+    },
+    {
+      "_id": "gyMNmqVKdQLEC48f",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor +2",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "hyMSzrFzVObqBWF4",
+      "weight": 1,
+      "range": [
+        2,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!XnG3k3VB5azXC5ZY.gyMNmqVKdQLEC48f"
+    },
+    {
+      "_id": "g3tTmHV8qWddICuE",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor +3",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ryiuboUa1OyZH1K5",
+      "weight": 1,
+      "range": [
+        5,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!XnG3k3VB5azXC5ZY.g3tTmHV8qWddICuE"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!XnG3k3VB5azXC5ZY",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

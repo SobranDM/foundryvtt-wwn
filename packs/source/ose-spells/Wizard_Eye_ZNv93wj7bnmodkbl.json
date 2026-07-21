@@ -1,0 +1,26 @@
+{
+  "_id": "ZNv93wj7bnmodkbl",
+  "name": "Wizard Eye",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An invisible, magical eye is conjured that allows the caster to see at a distance.</p>\n<p><strong>▶ Movement: </strong>The eye can be directed to move within range at up to 120&rsquo; per turn.</p>\n<p><strong>▶ Seeing through the eye:</strong> By concentrating, the caster can see through the eye.</p>\n<p><strong>▶ Types of vision: </strong>The magical eye grants both normal vision and infravision.</p>\n<p><strong>▶ Barriers:</strong> Solid barriers block its passage, but it can pass through a hole or space as small as 1 inch in diameter.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!ZNv93wj7bnmodkbl"
+}

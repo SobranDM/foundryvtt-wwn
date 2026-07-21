@@ -15,7 +15,7 @@ export function onManageActiveEffect(event, owner) {
             return owner.createEmbeddedDocuments("ActiveEffect", [
                 {
                     name: "New Effect",
-                    icon: "icons/svg/aura.svg",
+                    img: "icons/svg/aura.svg",
                     origin: owner.uuid,
                     "duration.rounds":
                         li.dataset.effectType === "temporary" ? 1 : undefined,
@@ -58,7 +58,6 @@ export function prepareActiveEffectCategories(effects) {
 
     // Iterate over active effects, classifying them into categories
     for (let e of effects) {
-        e.SourceName; // Trigger a lookup for the source name
         if (e.disabled) categories.inactive.effects.push(e);
         else if (e.isTemporary) categories.temporary.effects.push(e);
         else categories.passive.effects.push(e);

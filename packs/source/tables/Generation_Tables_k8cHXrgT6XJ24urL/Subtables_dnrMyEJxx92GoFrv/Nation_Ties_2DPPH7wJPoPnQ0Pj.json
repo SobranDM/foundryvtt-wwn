@@ -1,0 +1,281 @@
+{
+  "_id": "2DPPH7wJPoPnQ0Pj",
+  "name": "Nation-Ties",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Positive Ties With a Neighboring State",
+  "results": [
+    {
+      "_id": "p11NMIrWj7toBOgq",
+      "flags": {},
+      "type": 0,
+      "text": "The ruling classes are related in some way",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.p11NMIrWj7toBOgq"
+    },
+    {
+      "_id": "nXmAY4SfAju19tXz",
+      "flags": {},
+      "type": 0,
+      "text": "An important faith crosses the border",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.nXmAY4SfAju19tXz"
+    },
+    {
+      "_id": "6susznMOqZLk6mNc",
+      "flags": {},
+      "type": 0,
+      "text": "They fought by our side sometime in the past",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.6susznMOqZLk6mNc"
+    },
+    {
+      "_id": "YbTyOKEPt1shPxk8",
+      "flags": {},
+      "type": 0,
+      "text": "Their culture is widely admired here",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.YbTyOKEPt1shPxk8"
+    },
+    {
+      "_id": "4R4Dm2nr8OV7Imig",
+      "flags": {},
+      "type": 0,
+      "text": "They helped to overcome an eldritch peril",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.4R4Dm2nr8OV7Imig"
+    },
+    {
+      "_id": "PgHN2cpBgrK91Z44",
+      "flags": {},
+      "type": 0,
+      "text": "They held back an enemy from our border",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.PgHN2cpBgrK91Z44"
+    },
+    {
+      "_id": "MHWoAp5sYv9TyJxn",
+      "flags": {},
+      "type": 0,
+      "text": "They are co-ethnics of the same origins",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.MHWoAp5sYv9TyJxn"
+    },
+    {
+      "_id": "67pnAqlAtyJSRnXS",
+      "flags": {},
+      "type": 0,
+      "text": "They provide critical trade relations",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.67pnAqlAtyJSRnXS"
+    },
+    {
+      "_id": "UIqDv5RZ3Fq1kF8y",
+      "flags": {},
+      "type": 0,
+      "text": "Sages and scholars came from there",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.UIqDv5RZ3Fq1kF8y"
+    },
+    {
+      "_id": "UkRCM7wkvNrsmHdx",
+      "flags": {},
+      "type": 0,
+      "text": "They gave critical aid during a disaster",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.UkRCM7wkvNrsmHdx"
+    },
+    {
+      "_id": "iKgXyRqpd3udGsjP",
+      "flags": {},
+      "type": 0,
+      "text": "A hero of this land came originally from there",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.iKgXyRqpd3udGsjP"
+    },
+    {
+      "_id": "N0VRwY7mbimlBfHo",
+      "flags": {},
+      "type": 0,
+      "text": "A past hero-king once ruled both lands",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.N0VRwY7mbimlBfHo"
+    },
+    {
+      "_id": "E7ffbMoApTT60bPk",
+      "flags": {},
+      "type": 0,
+      "text": "They produce some vital commodity",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.E7ffbMoApTT60bPk"
+    },
+    {
+      "_id": "B9T8XhEOcWnazM3K",
+      "flags": {},
+      "type": 0,
+      "text": "They have a shared enemy",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.B9T8XhEOcWnazM3K"
+    },
+    {
+      "_id": "ueiyLx1kgeZmv7xD",
+      "flags": {},
+      "type": 0,
+      "text": "A Working they have is helpful here, too",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.ueiyLx1kgeZmv7xD"
+    },
+    {
+      "_id": "29qzEtalNnJmjsy4",
+      "flags": {},
+      "type": 0,
+      "text": "A long-standing alliance or trade pact exists",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.29qzEtalNnJmjsy4"
+    },
+    {
+      "_id": "NItokvlT63zhA99X",
+      "flags": {},
+      "type": 0,
+      "text": "They recently conceded some disputed land",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.NItokvlT63zhA99X"
+    },
+    {
+      "_id": "CkKdwiN4QG3mn0DX",
+      "flags": {},
+      "type": 0,
+      "text": "They greatly admire elements of this culture",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.CkKdwiN4QG3mn0DX"
+    },
+    {
+      "_id": "0bUC4ZNZuGlEWGki",
+      "flags": {},
+      "type": 0,
+      "text": "They’re considered unusually attractive here",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.0bUC4ZNZuGlEWGki"
+    },
+    {
+      "_id": "dVhIKgRm4BrM5MUN",
+      "flags": {},
+      "type": 0,
+      "text": "They took in refugees from here at one point",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!2DPPH7wJPoPnQ0Pj.dVhIKgRm4BrM5MUN"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!2DPPH7wJPoPnQ0Pj"
+}

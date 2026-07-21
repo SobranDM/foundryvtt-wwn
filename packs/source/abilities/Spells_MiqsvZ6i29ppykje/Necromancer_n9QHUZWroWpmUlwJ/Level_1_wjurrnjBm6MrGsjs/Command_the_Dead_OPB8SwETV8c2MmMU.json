@@ -1,0 +1,41 @@
+{
+  "_id": "OPB8SwETV8c2MmMU",
+  "name": "Command the Dead",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "wjurrnjBm6MrGsjs",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.OPB8SwETV8c2MmMU"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 1,
+    "class": "Necromancer",
+    "duration": "Until released",
+    "range": "100 ft.",
+    "roll": "",
+    "description": "<p>The necromancer exerts their will over a number of hit dice worth of undead equal to twice their character level. These undead must be visible and within one hundred feet of the caster. Undead get a Mental saving throw to resist this binding, at a penalty equal to the caster&rsquo;s Magic skill. Creatures only partially-bewitched by the spell due to their excess hit dice merely stand dazed for a round. Those fully within the hit die cap who are affected become suicidally loyal to the necromancer until they are released by the caster. Regardless of how often the caster uses this spell, they may have no more than twice their level worth of hit dice bound at any one time, with the oldest-enchanted being first released.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "mental"
+  },
+  "_key": "!items!OPB8SwETV8c2MmMU"
+}

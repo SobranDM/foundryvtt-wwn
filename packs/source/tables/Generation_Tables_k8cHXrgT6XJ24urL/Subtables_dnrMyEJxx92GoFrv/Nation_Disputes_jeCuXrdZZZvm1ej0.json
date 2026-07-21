@@ -1,0 +1,301 @@
+{
+  "_id": "jeCuXrdZZZvm1ej0",
+  "name": "Nation-Disputes",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Disputes With a Neighboring State",
+  "results": [
+    {
+      "_id": "8mWx0Gis0emXrQDb",
+      "flags": {},
+      "type": 0,
+      "text": "Raiders are taking refuge in their lands",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.8mWx0Gis0emXrQDb"
+    },
+    {
+      "_id": "A5K8hfXtIOdy3E5K",
+      "flags": {},
+      "type": 0,
+      "text": "Ownership of a resource site is disputed",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.A5K8hfXtIOdy3E5K"
+    },
+    {
+      "_id": "FmBYHarEkk3DgIav",
+      "flags": {},
+      "type": 0,
+      "text": "A usurper or criminal is being sheltered there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.FmBYHarEkk3DgIav"
+    },
+    {
+      "_id": "LgtiAtpnH4jR2MGU",
+      "flags": {},
+      "type": 0,
+      "text": "A troublemaking religion is based there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.LgtiAtpnH4jR2MGU"
+    },
+    {
+      "_id": "ZQvBw6g5ZBPrMTM3",
+      "flags": {},
+      "type": 0,
+      "text": "Their rulers have a political claim on the throne",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.ZQvBw6g5ZBPrMTM3"
+    },
+    {
+      "_id": "P2LQdGYgPRXl7jjc",
+      "flags": {},
+      "type": 0,
+      "text": "A diplomatic marriage is going sour",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.P2LQdGYgPRXl7jjc"
+    },
+    {
+      "_id": "gjF4tUsYfVQARKwX",
+      "flags": {},
+      "type": 0,
+      "text": "A past war’s savagery has left deep scars",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.gjF4tUsYfVQARKwX"
+    },
+    {
+      "_id": "r1Sl5dGbRKQWBei2",
+      "flags": {},
+      "type": 0,
+      "text": "Their culture is supplanting local beliefs",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.r1Sl5dGbRKQWBei2"
+    },
+    {
+      "_id": "gUY0pcjXsWDxecuG",
+      "flags": {},
+      "type": 0,
+      "text": "Their immigrants are gaining great influence",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.gUY0pcjXsWDxecuG"
+    },
+    {
+      "_id": "qP5Ink73SkjvjadF",
+      "flags": {},
+      "type": 0,
+      "text": "They broke off an alliance or important pact",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.qP5Ink73SkjvjadF"
+    },
+    {
+      "_id": "ZrOaqTgehpGF8U42",
+      "flags": {},
+      "type": 0,
+      "text": "They lured away an academy or great temple",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.ZrOaqTgehpGF8U42"
+    },
+    {
+      "_id": "JHUrMpVV8uU87akm",
+      "flags": {},
+      "type": 0,
+      "text": "Border tariffs and taxes are blocking trade",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.JHUrMpVV8uU87akm"
+    },
+    {
+      "_id": "wo9k4YaT417vzCZI",
+      "flags": {},
+      "type": 0,
+      "text": "They drove a terrible beast into this land",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.wo9k4YaT417vzCZI"
+    },
+    {
+      "_id": "swdDSHdQl9a3sih5",
+      "flags": {},
+      "type": 0,
+      "text": "A Working of theirs caused problems here",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.swdDSHdQl9a3sih5"
+    },
+    {
+      "_id": "X0bJwS2WHB1L3qXo",
+      "flags": {},
+      "type": 0,
+      "text": "They woke up a great peril from the past",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.X0bJwS2WHB1L3qXo"
+    },
+    {
+      "_id": "kCFavytZ8NOHskPL",
+      "flags": {},
+      "type": 0,
+      "text": "They’re cooperating with an enemy group",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.kCFavytZ8NOHskPL"
+    },
+    {
+      "_id": "icbv7eDUgBrOGoyR",
+      "flags": {},
+      "type": 0,
+      "text": "They’re suspected of backing assassinations",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.icbv7eDUgBrOGoyR"
+    },
+    {
+      "_id": "sRY3pRrlMty553kP",
+      "flags": {},
+      "type": 0,
+      "text": "A spy ring is suspected or has been found",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.sRY3pRrlMty553kP"
+    },
+    {
+      "_id": "loIqaxoE5BcYRiQc",
+      "flags": {},
+      "type": 0,
+      "text": "They refused to give aid for some current need",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.loIqaxoE5BcYRiQc"
+    },
+    {
+      "_id": "OqbjDzOa5PvCidGo",
+      "flags": {},
+      "type": 0,
+      "text": "They’ve been hostile to an allied group",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jeCuXrdZZZvm1ej0.OqbjDzOa5PvCidGo"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!jeCuXrdZZZvm1ej0"
+}

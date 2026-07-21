@@ -1,0 +1,32 @@
+{
+  "_id": "ulyv74u6vl59on3d",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Temple Fanatics",
+  "type": "asset",
+  "_key": "!items!ulyv74u6vl59on3d",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d6",
+    "attackSource": "force",
+    "attackSpecial": "After every time the Temple Fanatics defend or successfully attack, they take [[1d4]] damage.",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "2d6",
+    "desc": "Fanatical servants of a cult, ideology, or larger religion, these enthusiasts wreak havoc on enemies without a thought for their own lives. After every time the Temple Fanatics defend or successfully attack, they take [[1d4]] damage.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

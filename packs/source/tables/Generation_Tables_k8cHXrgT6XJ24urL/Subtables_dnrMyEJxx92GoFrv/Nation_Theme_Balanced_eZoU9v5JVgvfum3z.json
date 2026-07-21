@@ -1,0 +1,281 @@
+{
+  "_id": "eZoU9v5JVgvfum3z",
+  "name": "Nation-Theme-Balanced",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Thematic Element",
+  "results": [
+    {
+      "_id": "Vh5hCNorLFLke6IM",
+      "flags": {},
+      "type": 0,
+      "text": "Barbarism, with brutal savagery",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.Vh5hCNorLFLke6IM"
+    },
+    {
+      "_id": "n0XCPx6KvNtonVCA",
+      "flags": {},
+      "type": 0,
+      "text": "Decadence, of sins and fadings",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.n0XCPx6KvNtonVCA"
+    },
+    {
+      "_id": "4mxaYi73zmounpy2",
+      "flags": {},
+      "type": 0,
+      "text": "Despair, with good things unlooked-for",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.4mxaYi73zmounpy2"
+    },
+    {
+      "_id": "zy9jhzOKIBM9e5hq",
+      "flags": {},
+      "type": 0,
+      "text": "Exhaustion, with strength spent and lost",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.zy9jhzOKIBM9e5hq"
+    },
+    {
+      "_id": "2WuMxDz3ZsLyjsGl",
+      "flags": {},
+      "type": 0,
+      "text": "Ignorance, of terrors and the unknown",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.2WuMxDz3ZsLyjsGl"
+    },
+    {
+      "_id": "wB9mLeapoqmkOsRo",
+      "flags": {},
+      "type": 0,
+      "text": "Oppression, with rule a crushing weight",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.wB9mLeapoqmkOsRo"
+    },
+    {
+      "_id": "i1DYOLZdi5LkgmK3",
+      "flags": {},
+      "type": 0,
+      "text": "Poverty, where even the rich are poor",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.i1DYOLZdi5LkgmK3"
+    },
+    {
+      "_id": "UGFiIYJMfGR5JPh9",
+      "flags": {},
+      "type": 0,
+      "text": "Precarity, with all goods made fleeting",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.UGFiIYJMfGR5JPh9"
+    },
+    {
+      "_id": "LeAsKgCa9alVPJjq",
+      "flags": {},
+      "type": 0,
+      "text": "Stratification, where classes do not touch",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.LeAsKgCa9alVPJjq"
+    },
+    {
+      "_id": "cIFqQHve1b2ShmVn",
+      "flags": {},
+      "type": 0,
+      "text": "Violence, where life is something cheap",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.cIFqQHve1b2ShmVn"
+    },
+    {
+      "_id": "WGTDiWZIT8Ls0F8h",
+      "flags": {},
+      "type": 0,
+      "text": "Enlightenment, where knowledge is loved",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.WGTDiWZIT8Ls0F8h"
+    },
+    {
+      "_id": "mJlsUz1hX5J2ROdd",
+      "flags": {},
+      "type": 0,
+      "text": "Expansion, where things swell greater",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.mJlsUz1hX5J2ROdd"
+    },
+    {
+      "_id": "1do0HVO2Z1RMrF9O",
+      "flags": {},
+      "type": 0,
+      "text": "Hope, that the future should be better",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.1do0HVO2Z1RMrF9O"
+    },
+    {
+      "_id": "lQIjnt6UDyuMGOTQ",
+      "flags": {},
+      "type": 0,
+      "text": "Justice, where a reckoning is had",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.lQIjnt6UDyuMGOTQ"
+    },
+    {
+      "_id": "VeVHUTsvMEsWbD2y",
+      "flags": {},
+      "type": 0,
+      "text": "Legitimacy, where rulers are by right",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.VeVHUTsvMEsWbD2y"
+    },
+    {
+      "_id": "6bsX9V7QXO2RaAIX",
+      "flags": {},
+      "type": 0,
+      "text": "Pageantry, of splendor and magnificence",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.6bsX9V7QXO2RaAIX"
+    },
+    {
+      "_id": "zgmkvrxGqTTwrZIo",
+      "flags": {},
+      "type": 0,
+      "text": "Prosperity, with wealth easily had",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.zgmkvrxGqTTwrZIo"
+    },
+    {
+      "_id": "fBo7xwFYjIArQ0I1",
+      "flags": {},
+      "type": 0,
+      "text": "Renewal, with things growing brighter",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.fBo7xwFYjIArQ0I1"
+    },
+    {
+      "_id": "p7hRgnW14uYnrC7u",
+      "flags": {},
+      "type": 0,
+      "text": "Triumph, with victory a fresh memory",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.p7hRgnW14uYnrC7u"
+    },
+    {
+      "_id": "792xo2AUoWPuuWLP",
+      "flags": {},
+      "type": 0,
+      "text": "Unity, where purposes are shared",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!eZoU9v5JVgvfum3z.792xo2AUoWPuuWLP"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!eZoU9v5JVgvfum3z"
+}

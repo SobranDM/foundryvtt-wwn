@@ -1,0 +1,234 @@
+{
+  "_id": "LhTGqGzC2EK2ipxI",
+  "name": "Wailer Crane",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "yJSSYYQsdzlxaWbd",
+      "name": "Beak",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "_key": "!actors.items!LhTGqGzC2EK2ipxI.yJSSYYQsdzlxaWbd",
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        }
+      }
+    },
+    {
+      "_id": "xIuBeYiTr33ctHyb",
+      "name": "Wail",
+      "type": "ability",
+      "sort": 300000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "_key": "!actors.items!LhTGqGzC2EK2ipxI.xIuBeYiTr33ctHyb",
+      "system": {
+        "description": "",
+        "roll": "1d4",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "physical"
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!LhTGqGzC2EK2ipxI",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 12,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 2,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": "flight"
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>These man-tall cranes were imbued with song by some ancient civilization, one with a completely incomprehensible musical taste. The ululating wails of these birds are thunderously loud and penetrating. When used as a Main Action attack, creatures within ten feet of the bird must make a Physical save or suffer 1d4 sonic damage. The cranes tend to form choirs of 2d4 birds that will sing for days on end and attack any creature that approaches too closely. They have a great fondness for bright trinkets, and wear them like jewelry. The crane with the most jewelry always leads the choir.</p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "2d4",
+        "w": "2d4"
+      },
+      "morale": 8,
+      "instinct": 6,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "1d8",
+      "value": 4,
+      "max": 4
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Wailer Crane",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "LhTGqGzC2EK2ipxI",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

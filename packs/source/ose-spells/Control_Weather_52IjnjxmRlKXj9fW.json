@@ -1,0 +1,26 @@
+{
+  "_id": "52IjnjxmRlKXj9fW",
+  "name": "Control Weather",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "Concentration",
+    "range": "240 yard radius",
+    "roll": "1d8",
+    "description": "<p><strong>Duration: Concentration</strong></p>\n<p><strong>Range: 240 yards around the caster</strong></p>\n<p>By concentrating (no movement allowed), the caster causes one of the following conditions to manifest around themselves. This spell only functions outdoors.</p>\n<p><strong>▶ Calm:</strong> Clears bad weather (though side-effects&mdash;e.g. mud after rain&mdash;remain.)</p>\n<p><strong>▶ Extreme heat: </strong>Dries up snow or mud (including transmute rock to mud). Creatures in the area move at half normal rate.</p>\n<p><strong>▶ Fog: </strong>Visibility drops to 20&rsquo;. Creatures in the fog move at half their normal rate. At the referee&rsquo;s option, they may also have a chance of getting lost.</p>\n<p><strong>▶ High winds:</strong> Movement rates are halved. Missile fire and flight are impossible. High winds may be used to increase the sailing speed of ships by 50%, if they travel with the wind. In sandy areas, may cause a sandstorm, reducing visibility to 20&rsquo;.</p>\n<p><strong>▶ Rain: </strong>&ndash;2 penalty to missile attacks. Mud forms in 3 turns, halving movement rates.</p>\n<p><strong>▶ Snow:</strong> Visibility drops to 20&rsquo;. Movement rates are halved. Bodies of water may freeze. After the snow thaws, mud remains and still impedes movement.</p>\n<p><strong>▶ Tornado:</strong> The caster can direct the tornado, which moves at 120&rsquo; per round. The tornado can be directed to attack (see stats below). Ships caught in a tornado have a 75% chance of suffering 12 points of hull damage.</p>\n<h3><strong>Tornado</strong></h3>\n<p>A whirling column of air, 24&rsquo; high and 6&rsquo; across, that wreaks havoc for flying creatures and ships.</p>\n<hr />\n<p><strong>AC </strong>19, <strong>HD </strong>12* (54hp), <strong>Att </strong>1 &times; blow (2d8), <strong>Bonus </strong>+9, <strong>MV </strong>360&rsquo; (120&rsquo;) flying, <strong>SV </strong>9, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>1,900</p>\n<hr />\n<p><strong>▶ Whirlwind: </strong>Creatures with less than 2HD swept aside (Physical save to resist).</p>\n<p><strong>▶ Mundane damage immunity: </strong>Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm flying creatures:</strong> Inflict extra 1d8 damage.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "physical"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!52IjnjxmRlKXj9fW"
+}

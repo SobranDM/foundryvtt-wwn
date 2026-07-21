@@ -1,0 +1,18 @@
+{
+  "_id": "AnGN9UgvIlSfpvLh",
+  "name": "Class Ability: Masterful Expertise",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/class%20ability.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Once per scene, the Expert may reroll any non-combat skill check as an Instant action. This allows the Expert to make a roll and then immediately use this ability if the resulting total isn&rsquo;t good enough to succeed. In cases where it matters, the better of the two rolls may be used.</p>",
+    "ownedLevel": null
+  },
+  "_key": "!items!AnGN9UgvIlSfpvLh",
+  "folder": "UR9FVVPeEHoDzXa5"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "aEDgIZUrM5uW3hPM",
+  "name": "Style Weaponry",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.aEDgIZUrM5uW3hPM"
+    }
+  },
+  "_key": "!items!aEDgIZUrM5uW3hPM",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Pick three general classes of weapons, such as &ldquo;swords&rdquo;, &ldquo;bows&rdquo;, &ldquo;axes&rdquo;, &ldquo;daggers&rdquo;, or the like. When using weapons of those classes, you may use Punch for hit rolls instead of Stab or Shoot. Your Punch skill does not add to the damage done by these weapons, however, though the benefits of <em><strong>Martial Style</strong></em> apply to their hit rolls.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

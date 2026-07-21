@@ -1,0 +1,274 @@
+{
+  "name": "Shadow",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "Zi6ZzgqoWPZ5Eg6y",
+      "name": "Touch",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><strong>Life Drain:</strong> Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>",
+        "damage": "1d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!UNpEnOtPeQkszSZk.Zi6ZzgqoWPZ5Eg6y"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.ePk02Ig6fLeG1Ypn"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 12,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 2,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p><strong>Life Drain: </strong>Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>\n<p><strong>Surprise:</strong> Surprises unless opponents make a Wis/Notice check of 11.</p>\n<p><strong>Mundane Damage Immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>Spell Immunity:</strong> Unaffected by&nbsp;<em>charm&nbsp;</em>or&nbsp;<em>sleep</em> spells.</p>",
+      "alignment": "Chaotic",
+      "xp": 35,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d8",
+        "w": "1d12"
+      },
+      "morale": 12,
+      "instinct": 8,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.ODWKbUBbnFxGLvgg]{Undead Creatures}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "2d8+2",
+      "value": 17,
+      "max": 17
+    }
+  },
+  "prototypeToken": {
+    "name": "Shadow",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {},
+    "randomImg": false,
+    "light": {
+      "alpha": 0.25,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331360,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "UNpEnOtPeQkszSZk",
+  "_key": "!actors!UNpEnOtPeQkszSZk"
+}

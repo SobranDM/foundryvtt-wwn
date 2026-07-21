@@ -1,0 +1,410 @@
+{
+  "name": "Mummy",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "Sy3pOu5CYZ24hE48",
+      "name": "Touch",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><strong>Disease: </strong>Anyone hit contracts a horrible rotting disease. Magical healing is ineffective; natural healing is ten times slower. The disease can only be removed by magic.</p>",
+        "damage": "1d12",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        },
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!n3kmh2z45VuwyPKP.Sy3pOu5CYZ24hE48"
+    },
+    {
+      "_id": "iV9CONwnv1lDBwAQ",
+      "name": "Paralyze With Terror",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Anyone seeing a mummy must save or be paralysed with terror. Paralysis is broken if the mummy attacks or goes out of sight.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "mental",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!n3kmh2z45VuwyPKP.iV9CONwnv1lDBwAQ"
+    },
+    {
+      "_id": "vLsFlNAXa8xAp8lk",
+      "name": "Damage Immunity",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Only harmed by fire or magic. All damage reduced by half.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!n3kmh2z45VuwyPKP.vLsFlNAXa8xAp8lk"
+    },
+    {
+      "_id": "8a510E4SPgWcKzgX",
+      "name": "Mummy Rot",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": -100000,
+      "flags": {},
+      "system": {
+        "description": "<p><strong>Disease: </strong>Anyone hit contracts a horrible rotting disease. Magical healing is ineffective; natural healing is ten times slower. The disease can only be removed by magic.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!n3kmh2z45VuwyPKP.8a510E4SPgWcKzgX"
+    },
+    {
+      "_id": "ztLXOCZyeWrtyQDQ",
+      "name": "Undead",
+      "type": "ability",
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 600000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.jF1i1CHAPHZC0XCg"
+        }
+      },
+      "system": {
+        "description": "<p>Make no noise, until they attack. Immune to effects that affect living creatures (e.g. poison). Immune to mind-affecting or mind-reading spells (e.g. charm, hold, sleep).</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!n3kmh2z45VuwyPKP.ztLXOCZyeWrtyQDQ"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.JS6MBEVVMG4sNDco"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 17,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 5,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 13,
+        "mod": 0
+      },
+      "mental": {
+        "value": 13,
+        "mod": 0
+      },
+      "physical": {
+        "value": 13,
+        "mod": 0
+      },
+      "luck": {
+        "value": 13,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20",
+      "exploration": 60,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Undead humanoids wrapped in funerary bandages. Haunt ruins and tombs.</p>",
+      "alignment": "Chaotic",
+      "xp": 400,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d4",
+        "w": "1d12"
+      },
+      "morale": 12,
+      "instinct": 5,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.ODWKbUBbnFxGLvgg]{Undead Creatures}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "5d8+1",
+      "value": 24,
+      "max": 24
+    }
+  },
+  "prototypeToken": {
+    "name": "Mummy",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {
+      "image-hover": {
+        "hideArt": false
+      }
+    },
+    "randomImg": true,
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331036,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "n3kmh2z45VuwyPKP",
+  "_key": "!actors!n3kmh2z45VuwyPKP"
+}

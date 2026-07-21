@@ -1,0 +1,26 @@
+{
+  "name": "Detect Evil (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Cleric",
+    "duration": "6 turns",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>Objects enchanted for evil purposes or living beings with evil intentions are caused to magically glow.</p>\n<p><strong>▶ Intent only:</strong> This spell does not grant the ability to read minds, but only grants a general sense of evil intent.</p>\n<p><strong>▶ Definition of evil: </strong>The referee must decide what is &ldquo;evil&rdquo;. Some things that are potentially harmful, like traps, are not &ldquo;evil.&rdquo;</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "ec7o2qPzMTmk9Urn",
+  "_key": "!items!ec7o2qPzMTmk9Urn"
+}

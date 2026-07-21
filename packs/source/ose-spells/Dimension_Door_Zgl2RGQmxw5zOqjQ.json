@@ -1,0 +1,26 @@
+{
+  "_id": "Zgl2RGQmxw5zOqjQ",
+  "name": "Dimension Door",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "1 round",
+    "range": "10'",
+    "roll": "",
+    "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster or a single creature is instantly transferred to another location up to 360&rsquo; distant. The destination may be selected in two ways:</p>\n<p><strong>1. Known location:</strong> A location, within 360&rsquo;, known to the caster.</p>\n<p><strong>2. An unknown location:</strong> Specified by a series of offsets (e.g. 120&rsquo; north, 160&rsquo; east, 80&rsquo; up) totalling not more than 360&rsquo;.</p>\n<p><strong>Stipulations:</strong> The following apply:</p>\n<p><strong>▶ If the destination is occupied: </strong>By a solid body, the spell fails.</p>\n<p><strong>▶ If the target is unwilling: </strong>It may make a Mental save&nbsp;to resist the teleportation.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!Zgl2RGQmxw5zOqjQ"
+}

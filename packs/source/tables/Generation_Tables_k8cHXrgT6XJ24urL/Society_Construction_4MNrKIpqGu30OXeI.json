@@ -1,0 +1,446 @@
+{
+  "_id": "4MNrKIpqGu30OXeI",
+  "name": "Society Construction",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Society Construction random tables. There is a 50/50 chance of generating two societal values or three.",
+  "results": [
+    {
+      "_id": "wjSO1Hm5KthQzfmz",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What's the Typical Build of the People?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.wjSO1Hm5KthQzfmz"
+    },
+    {
+      "_id": "UnOT5HACAF1nN7gM",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-Build",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "O68XOXXDKgxnLjUZ",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.UnOT5HACAF1nN7gM"
+    },
+    {
+      "_id": "b4We254G6NChb0CD",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Typical Skin Colors in the Populace</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.b4We254G6NChb0CD"
+    },
+    {
+      "_id": "8YxBLVZZACGo49O0",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-Skin",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "QuF42f2R0jP4IOxm",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.8YxBLVZZACGo49O0"
+    },
+    {
+      "_id": "GQfXxpckSmOnmeC2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Hair Color/Texture</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.GQfXxpckSmOnmeC2"
+    },
+    {
+      "_id": "2lhUYUCilwuD6G5j",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-HairColor",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "LQx0CTzYWeFmRKPC",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.2lhUYUCilwuD6G5j"
+    },
+    {
+      "_id": "wkbMIkex5ltIduki",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Eye Coloration</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.wkbMIkex5ltIduki"
+    },
+    {
+      "_id": "0q8DdsT3c9720bxF",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-Eyes",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "izC3MiEmUZVetS4K",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.0q8DdsT3c9720bxF"
+    },
+    {
+      "_id": "OhvJ8ODHhXfQv97p",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Optional Common Forms of Adornment</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.OhvJ8ODHhXfQv97p"
+    },
+    {
+      "_id": "rTTND87QzE176RNK",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-Adornment",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "GSjlxrEQJeqwTZ8x",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.rTTND87QzE176RNK"
+    },
+    {
+      "_id": "vucklZjXFiDTmAmN",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Optional Physical Quirks or Traits</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.vucklZjXFiDTmAmN"
+    },
+    {
+      "_id": "5pn8BFNlu0peNIbW",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Physical-Quirk",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "FuyfiMka4zyytBE7",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.5pn8BFNlu0peNIbW"
+    },
+    {
+      "_id": "qMHjvQjHB7mOKmx1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Major Unit of Social Identity</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.qMHjvQjHB7mOKmx1"
+    },
+    {
+      "_id": "VWeUfiLqIYP56pUl",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Organization",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Egc5cbj4FZf6sRT0",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.VWeUfiLqIYP56pUl"
+    },
+    {
+      "_id": "paC2E8MjLGJDVM1I",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Societal Aesthetics</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.paC2E8MjLGJDVM1I"
+    },
+    {
+      "_id": "MdscPJ3e0gJDhReR",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Aesthetics",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Ze38qkDvPSTzfJVd",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.MdscPJ3e0gJDhReR"
+    },
+    {
+      "_id": "T63nucyip4V49j7I",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Values of the Society</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.T63nucyip4V49j7I"
+    },
+    {
+      "_id": "dTZKn8NninqQXKYz",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Values",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "7nxDYi7V2mtlvqmV",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.dTZKn8NninqQXKYz"
+    },
+    {
+      "_id": "TMjWKTFBBGb65wq7",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Values",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "7nxDYi7V2mtlvqmV",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.TMjWKTFBBGb65wq7"
+    },
+    {
+      "_id": "3DSFgsvESC9yorA2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Society-Values",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "7nxDYi7V2mtlvqmV",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!4MNrKIpqGu30OXeI.3DSFgsvESC9yorA2"
+    }
+  ],
+  "formula": "1d2",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!4MNrKIpqGu30OXeI"
+}

@@ -1,0 +1,125 @@
+{
+  "_id": "b5m1mBU2Uq7TtRFc",
+  "name": "Government-MultipleRulers",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Multiple Rulers",
+  "results": [
+    {
+      "_id": "765EPGlaQPIbMGhf",
+      "flags": {},
+      "type": 0,
+      "text": "Nobly-born peers of the realm",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.765EPGlaQPIbMGhf"
+    },
+    {
+      "_id": "vZji7jqvI5WEtMh2",
+      "flags": {},
+      "type": 0,
+      "text": "Seniormost figures in the ruling class",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.vZji7jqvI5WEtMh2"
+    },
+    {
+      "_id": "thsY3qsqaunEEvwd",
+      "flags": {},
+      "type": 0,
+      "text": "Elect chosen by ruling class electors",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.thsY3qsqaunEEvwd"
+    },
+    {
+      "_id": "8cviNNMYeEeTBVSs",
+      "flags": {},
+      "type": 0,
+      "text": "Hereditary heirs to their positions",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.8cviNNMYeEeTBVSs"
+    },
+    {
+      "_id": "YDibW61bZlmsqVSq",
+      "flags": {},
+      "type": 0,
+      "text": "Warlords with the strongest backing",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.YDibW61bZlmsqVSq"
+    },
+    {
+      "_id": "4X7z37sGKxEn0ano",
+      "flags": {},
+      "type": 0,
+      "text": "Oligarchs of greatest wealth or influence",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.4X7z37sGKxEn0ano"
+    },
+    {
+      "_id": "cYva2Z1PBD91t5dF",
+      "flags": {},
+      "type": 0,
+      "text": "Divinely-chosen representatives of their class",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.cYva2Z1PBD91t5dF"
+    },
+    {
+      "_id": "CaNPa5Cr2ZI6feuv",
+      "flags": {},
+      "type": 0,
+      "text": "Bureaucratically-chosen ministers",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!b5m1mBU2Uq7TtRFc.CaNPa5Cr2ZI6feuv"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!b5m1mBU2Uq7TtRFc"
+}

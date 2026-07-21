@@ -1,0 +1,31 @@
+{
+  "_id": "y6gs4kky8lar51pl",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Underground Roads",
+  "type": "asset",
+  "_key": "!items!y6gs4kky8lar51pl",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 18,
+    "counter": "None",
+    "desc": "A well-established network of secret transit extends far around this Asset. As a free action, the faction may pay 1 Treasure and move any friendly Asset from a location within one round's move of the Underground Roads to a destination also within one round's move of the Roads.",
+    "health": {
+      "max": 15,
+      "value": 15
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "As a free action, the faction may pay 1 Treasure and move any friendly Asset from a location within one round's move of the Underground Roads to a destination also within one round's move of the Roads.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

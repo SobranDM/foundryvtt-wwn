@@ -1,0 +1,42 @@
+{
+  "_id": "IzwD0q0YQIBlFBLL",
+  "name": "Borrowed Flesh",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.IzwD0q0YQIBlFBLL"
+    }
+  },
+  "system": {
+    "description": "<p>When found, these potions fill only half their vials. If several drops of blood are let into the fluid by a willing subject, the subject may transfer up to six of their hit points into the elixir, accepting the damage and healing it normally afterwards. The blood droplets congeal and begin growing into a fleshy slurry once activated. A month later the slurry is digested back into its inert, half-full state, but until that point the brew may be poured on a wounded subject to restore as many hit points as were charged into it. The flesh that mends the wounds is of the same kind and texture as the flesh of the donor, though it will assimilate within a few months afterwards.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!IzwD0q0YQIBlFBLL"
+}

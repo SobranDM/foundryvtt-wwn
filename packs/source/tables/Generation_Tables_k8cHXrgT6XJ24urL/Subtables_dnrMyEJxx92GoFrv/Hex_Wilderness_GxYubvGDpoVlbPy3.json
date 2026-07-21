@@ -1,0 +1,148 @@
+{
+  "_id": "GxYubvGDpoVlbPy3",
+  "name": "Hex-Wilderness",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Cavern or cave complex",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "0s3xw5f9szuxiwps",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.0s3xw5f9szuxiwps"
+    },
+    {
+      "type": 0,
+      "text": "Extreme example of the native terrain",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "ipp48zq4xwv1ef2v",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.ipp48zq4xwv1ef2v"
+    },
+    {
+      "type": 0,
+      "text": "Valuable natural resource site of some kind",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "x4pxz0u8s6dtt5a8",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.x4pxz0u8s6dtt5a8"
+    },
+    {
+      "type": 0,
+      "text": "Lake, spring, or major water source",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "4m5iafncut71w5rt",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.4m5iafncut71w5rt"
+    },
+    {
+      "type": 0,
+      "text": "Crevasse, rift, or broken ground",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "5drc16f7p91az1ot",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.5drc16f7p91az1ot"
+    },
+    {
+      "type": 0,
+      "text": "Megastructure remnants or fragments",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "rdm02xo57eoygyms",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.rdm02xo57eoygyms"
+    },
+    {
+      "type": 0,
+      "text": "Traces of a long-lost road or canal bed",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "xt0qwrec0t30vj5r",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.xt0qwrec0t30vj5r"
+    },
+    {
+      "type": 0,
+      "text": "Mountain, high hill, or commanding height",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "3zqi3j9jua2gxhxe",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.3zqi3j9jua2gxhxe"
+    },
+    {
+      "type": 0,
+      "text": "Treacherous ground suited to the terrain",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "1oraajjsyo3927b9",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.1oraajjsyo3927b9"
+    },
+    {
+      "type": 0,
+      "text": "Pocket of unusual or atypical terrain type",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "o7758ba5yjkl15op",
+      "flags": {},
+      "_key": "!tables.results!GxYubvGDpoVlbPy3.o7758ba5yjkl15op"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!GxYubvGDpoVlbPy3"
+}

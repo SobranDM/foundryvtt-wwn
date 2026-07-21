@@ -1,0 +1,32 @@
+{
+  "_id": "3lKooYiIkQA1YEwI",
+  "name": "Master's Vigor",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.3lKooYiIkQA1YEwI"
+    }
+  },
+  "_key": "!items!3lKooYiIkQA1YEwI",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Your body retains its vigor and youthful vitality to the full normal span of your life. You regain two lost hit points per hour due to your natural restorative powers.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

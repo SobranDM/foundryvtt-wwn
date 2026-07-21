@@ -1,0 +1,32 @@
+{
+  "_id": "0m8piGn1J9dB6mVU",
+  "name": "Refined Restoration",
+  "type": "art",
+  "img": "systems/wwn/assets/new/healer_art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.0m8piGn1J9dB6mVU"
+    }
+  },
+  "_key": "!items!0m8piGn1J9dB6mVU",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>You and up to a dozen allies you tend before they sleep will all lose 2 System Strain from a good night&rsquo;s rest instead of 1.</p>",
+    "save": "",
+    "source": "Healer",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

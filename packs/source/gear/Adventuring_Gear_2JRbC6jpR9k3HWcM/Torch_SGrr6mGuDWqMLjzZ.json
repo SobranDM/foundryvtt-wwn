@@ -1,0 +1,40 @@
+{
+  "_id": "SGrr6mGuDWqMLjzZ",
+  "name": "Torch",
+  "type": "item",
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "system": {
+    "description": "<p>A lantern or torch casts usable light in a thirty-foot radius. Objects outside this range are too indistinct to be made out in the typical stygian gloom of a Deep.</p>\n<p>A torch lasts for 6 turns (1 hour) before burning out.</p>\n<p>This item can be bundled in units of three for the same encumbrance, with a Main Action to break open a bundle to get at the contents.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0.2,
+    "weight": 0.33,
+    "weightless": "never",
+    "charges": {
+      "value": 1,
+      "max": 1,
+      "consumable": false
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3,
+    "hasCharges": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SGrr6mGuDWqMLjzZ"
+}

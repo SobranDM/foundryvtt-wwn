@@ -1,0 +1,29 @@
+{
+  "_id": "sU2EstovRlDOnJfb",
+  "name": "Lyre of Longing",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>While these musical instruments often take the form of lyres, other manifestations have been found. When played by a competent musician for at least five minutes, all listeners within thirty feet must make a Mental saving throw or be seized by a great desire for a particular thing or purpose imagined by the player. This longing will not be enough to make them act wholly out of character, but they will perform all normally-conceivable acts in order to obtain the object of their longing, including quarreling fiercely with their fellows if this object cannot be shared among them. The enchantment lasts for the rest of the scene. The lyre can be used this way only once per day.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.sU2EstovRlDOnJfb"
+    }
+  },
+  "_key": "!items!sU2EstovRlDOnJfb"
+}

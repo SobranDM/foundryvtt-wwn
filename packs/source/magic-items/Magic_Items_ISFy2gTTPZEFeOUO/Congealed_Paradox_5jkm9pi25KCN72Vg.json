@@ -1,0 +1,42 @@
+{
+  "_id": "5jkm9pi25KCN72Vg",
+  "name": "Congealed Paradox",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.5jkm9pi25KCN72Vg"
+    }
+  },
+  "system": {
+    "description": "<p>These thumb-sized black gemstones are mildly painful to touch or look at, as each one contains an impossible duality that has been forcibly reconciled by ancient sorcery. When gripped and broken as a Main Action, the released paradox draws the immediate repression of the Legacy as mundane reality is violently reinforced in the surrounding twenty feet. Within that radius all active magic is immediately dispelled and no further spellcasting, art use, or magical power use can be performed inside it for the rest of the scene. Powerful Workings are suppressed within this zone for the rest of the scene. Creatures reliant on magic for existence take 5d6 damage for each full round they spend inside this radius.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 0.2,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5jkm9pi25KCN72Vg"
+}

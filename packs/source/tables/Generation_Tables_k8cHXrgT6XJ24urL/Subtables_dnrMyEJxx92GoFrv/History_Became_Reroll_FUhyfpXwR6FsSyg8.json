@@ -1,0 +1,184 @@
+{
+  "_id": "FUhyfpXwR6FsSyg8",
+  "name": "History-Became-Reroll",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Became of the Original Inhabitants?",
+  "results": [
+    {
+      "_id": "jOF5zB6Y8jrQAkhu",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "There were no other humans living here",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.jOF5zB6Y8jrQAkhu"
+    },
+    {
+      "_id": "9Dd2dLzuX83HRYIK",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They were wiped out in warfare",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.9Dd2dLzuX83HRYIK"
+    },
+    {
+      "_id": "gqfsdQFYs7EJ0J9u",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They were utterly assimilated",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.gqfsdQFYs7EJ0J9u"
+    },
+    {
+      "_id": "oiwEm2tws0qisyus",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They were driven into exile",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.oiwEm2tws0qisyus"
+    },
+    {
+      "_id": "NuLciHQaw6JdNM1T",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They became the ruling class",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.NuLciHQaw6JdNM1T"
+    },
+    {
+      "_id": "74Qr3P6EcPC4GSyh",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They became an oppressed underclass",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.74Qr3P6EcPC4GSyh"
+    },
+    {
+      "_id": "TLxkhYSYKfqjIknA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They were partially assimilated",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.TLxkhYSYKfqjIknA"
+    },
+    {
+      "_id": "BmIR5mkC2W1xlZqB",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "They retained small areas of self-rule",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FUhyfpXwR6FsSyg8.BmIR5mkC2W1xlZqB"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!FUhyfpXwR6FsSyg8"
+}

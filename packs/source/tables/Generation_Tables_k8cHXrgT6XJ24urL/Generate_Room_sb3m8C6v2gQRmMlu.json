@@ -1,0 +1,55 @@
+{
+  "_id": "sb3m8C6v2gQRmMlu",
+  "name": "Generate Room",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Generate both room contents and exits.",
+  "results": [
+    {
+      "_id": "qmsjMKKTMZj1I3dw",
+      "type": 2,
+      "text": "Stocking Rooms",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "CGBVZvWlHBCJh7Oi",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!sb3m8C6v2gQRmMlu.qmsjMKKTMZj1I3dw"
+    },
+    {
+      "_id": "GR7qvGDvBXI12Zs0",
+      "type": 2,
+      "text": "Room Layout",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "0aHNowVvpqcOitxG",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!sb3m8C6v2gQRmMlu.GR7qvGDvBXI12Zs0"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!sb3m8C6v2gQRmMlu"
+}

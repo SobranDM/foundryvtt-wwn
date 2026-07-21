@@ -1,0 +1,26 @@
+{
+  "_id": "7glyWwmnCqBmrg5Q",
+  "name": "Confusion",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "12 rounds",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 rounds</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell causes [[3d6]] subjects within 60&rsquo; of one another to become confused, making them unable to independently determine what they will do.</p>\n<p><strong>▶ Subjects of 2+1 HD or greater:</strong> May make a Mental save each round to resist the spell&rsquo;s effect, acting with free will that round if they make the save.</p>\n<p><strong>▶ Subjects of 2 HD or lower: </strong>May not make a saving throw.</p>\n<p><strong>▶ Behaviour:</strong> Roll on the following table separately for each affected subject each round to determine how that subject acts that round:</p>\n<p><strong>Confusion: Subject Behaviour</strong></p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<h3><strong>2d6</strong></h3>\n</td>\n<td>\n<h3><strong>Behavior</strong></h3>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">2-5</td>\n<td>Attack caster's group</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6-8</td>\n<td>No action</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">9-12</td>\n<td>Attack subject's group</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!7glyWwmnCqBmrg5Q"
+}

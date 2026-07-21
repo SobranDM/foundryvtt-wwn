@@ -1,0 +1,384 @@
+/* Roll/attack/damage/initiative chat cards */
+
+.wwn.chat-block {
+  margin: 0;
+}
+.wwn.chat-block .chat-header {
+  height: 46px;
+  margin: 4px 0;
+  background: var(--wwn-dark);
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px;
+  box-shadow: 0 0 2px #fff inset;
+}
+.wwn.chat-block .chat-header .chat-title {
+  color: #ebe8da;
+  margin: 4px 0;
+  height: 30px;
+  overflow: hidden;
+}
+.wwn.chat-block .chat-header .chat-title h2 {
+  color: #ebe8da;
+  border: none;
+  line-height: 34px;
+  margin: 0;
+  text-indent: 10px;
+  font-size: 16px;
+  word-break: break-all;
+}
+.wwn.chat-block .chat-header .chat-img {
+  flex: 0 0 42px;
+  background-size: cover;
+}
+.wwn.chat-block .chat-target {
+  text-align: right;
+  font-style: italic;
+  padding: 2px;
+}
+.wwn.chat-block .chat-details {
+  padding: 4px;
+  font-size: 13px;
+}
+.wwn.chat-block .roll-result {
+  font-size: 13px;
+  text-align: center;
+}
+.wwn.chat-block .roll-result.roll-success {
+  color: #18520b;
+}
+.wwn.chat-block .roll-result.roll-fail {
+  color: #aa0200;
+}
+.wwn.chat-block .damage-roll {
+  position: relative;
+}
+.wwn.chat-block .chat-details.shock-message {
+  max-height: 24px;
+}
+.wwn.chat-block .shock-message .dice-damage {
+  position: relative;
+  bottom: 20px;
+  right: -234px;
+  max-height: 0px;
+}
+.wwn.chat-block .damage-roll .dice-damage {
+  position: absolute;
+  line-height: 24px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-shadow: 0 0 2px #fff inset;
+  bottom: 1px;
+  right: 10px;
+}
+.wwn.chat-block .damage-roll .dice-damage button {
+  position: relative;
+  top: -2px;
+}
+.wwn.chat-block .chat-details .dice-damage {
+  display: inline-block;
+}
+.wwn.chat-block .dice-damage button {
+  padding: 2px 5px;
+  width: 22px;
+  line-height: 14px;
+  height: 22px !important;
+  max-height: 22px !important;
+  min-height: 22px !important;
+  cursor: pointer;
+}
+.wwn.chat-card {
+  font-style: normal;
+  font-size: 12px;
+}
+.wwn.chat-card .card-header {
+  padding: 3px 0;
+  border-top: 2px groove #fff;
+  border-bottom: 2px groove #fff;
+}
+.wwn.chat-card .card-header img {
+  flex: 0 0 36px;
+  margin-right: 5px;
+  border: none;
+}
+.wwn.chat-card .card-header h3 {
+  flex: 1;
+  margin: 0;
+  line-height: 36px;
+  color: var(--wwn-dark-alt);
+}
+.wwn.chat-card .card-header h3:hover {
+  color: #111;
+}
+.wwn.chat-card .card-content {
+  margin: 5px 0;
+}
+.wwn.chat-card .card-content .treasure-list {
+  padding: 0;
+  list-style: none;
+}
+.wwn.chat-card .card-content .treasure-list .treasure {
+  line-height: 36px;
+}
+.wwn.chat-card .card-content .treasure-list .treasure img {
+  flex: 0 0 36px;
+  border: none;
+}
+.wwn.chat-card .card-content .treasure-list .treasure div {
+  text-indent: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.wwn.chat-card .card-content .treasure-list .sub {
+  padding-left: 25px;
+  line-height: 28px;
+}
+.wwn.chat-card .card-content .treasure-list .sub img {
+  flex: 0 0 28px;
+  border: none;
+}
+.wwn.chat-card .card-content .treasure-list .sub div {
+  text-indent: 10px;
+  font-size: 14px;
+}
+.wwn.chat-card .card-content h3 {
+  font-size: 12px;
+  margin: 0;
+  font-weight: bold;
+}
+.wwn.chat-card .card-content > * {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.wwn.chat-card .card-buttons {
+  margin: 5px 0;
+}
+.wwn.chat-card .card-buttons span {
+  display: block;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid var(--wwn-border);
+}
+.wwn.chat-card .card-buttons button {
+  font-size: 12px;
+  height: 14px;
+  margin: 2px 0;
+  width: 100%;
+}
+.wwn.chat-card .card-buttons button.middle {
+  margin: 4px 4px;
+}
+.wwn.chat-card .card-buttons button.double-width {
+  flex-grow: 2;
+}
+.wwn.chat-card .card-footer {
+  padding: 3px 0 0;
+  border-top: 2px groove #fff;
+}
+.wwn.chat-card .card-footer span {
+  border-right: 2px groove #fff;
+  padding: 0 5px 0 0;
+  font-size: 10px;
+}
+.wwn.chat-card .card-footer span:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* Godbound damage conversion block, injected into weapon/asset attack chat cards */
+.godbound-conversion {
+  padding: 4px 8px;
+  margin: 4px auto;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.godbound-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+}
+.godbound-label {
+  font-size: 0.9em;
+  color: #666;
+}
+.godbound-values {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9em;
+  color: #333;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Multi-token save roll dialog and its resulting chat card */
+.save-header {
+  background: linear-gradient(to bottom, #2c2c2c, var(--wwn-dark));
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.save-header .save-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+.save-header .save-actions .select-tokens {
+  width: 200px;
+  background: #4a4a4a;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.save-header .save-actions .select-tokens:hover {
+  background: #5a5a5a;
+  border-color: #777;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.save-header .save-actions .select-tokens:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.save-header .save-actions .select-tokens i {
+  font-size: 14px;
+}
+.save-header .save-actions .select-tokens[data-action="select-successful"] {
+  background: #2d5a27;
+  border-color: #3a7233;
+}
+.save-header .save-actions .select-tokens[data-action="select-successful"]:hover {
+  background: #366b2f;
+  border-color: #45803c;
+}
+.save-header .save-actions .select-tokens[data-action="select-failed"] {
+  background: #8b2a2a;
+  border-color: #a83232;
+}
+.save-header .save-actions .select-tokens[data-action="select-failed"]:hover {
+  background: #a83232;
+  border-color: #c43c3c;
+}
+
+.save-group {
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+.save-group .save-group-header {
+  background: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+  padding: 8px 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-size: 14px;
+}
+.save-group .save-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.save-group .save-list .save-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+  transition: background-color 0.2s ease;
+}
+.save-group .save-list .save-item .token-name {
+  font-weight: bold;
+  color: #2c2c2c;
+}
+.save-group .save-list .save-item .roll-details {
+  color: #666;
+  font-size: 0.95em;
+  margin-left: 4px;
+}
+.save-group .save-list .save-item:hover {
+  background-color: #f8f8f8;
+}
+.save-group .save-list .save-item:last-child {
+  border-bottom: none;
+}
+
+.save-dialog {
+  gap: 1em;
+  padding: 0.5em;
+  min-width: 400px;
+}
+.save-dialog .save-dialog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  gap: 0.5em;
+}
+.save-dialog h3 {
+  margin: 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+}
+.save-dialog .save-dialog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.save-dialog .save-dialog-body p {
+  margin: 0;
+  font-style: italic;
+  color: #666;
+}
+.save-dialog .form-group.flexrow {
+  align-items: center;
+  gap: 0.5em;
+}
+.save-dialog .form-group.flexrow label {
+  flex: 0 0 180px;
+  font-weight: bold;
+}
+.save-dialog .form-group.flexrow input[type="number"] {
+  flex: 0 0 80px;
+  text-align: center;
+}
+.save-dialog .form-group.flexcol {
+  gap: 0.5em;
+}
+.save-dialog .token-modifiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}

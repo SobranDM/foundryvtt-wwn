@@ -1,0 +1,17 @@
+{
+  "_id": "zB5chaOEMzRcK8QK",
+  "name": "Military Outpost",
+  "content": "<h1>Military Outpost</h1><div>\n<p>There’s a military post located in this wilderness, one planted by an interested government, community, religion, or mercantile group. It may be guarding a trail through the wilds, monitoring dangerous natives, acting as a tripwire against invasion, or be a punishment post for troublesome officers. The outpost is likely to be reliant on regular shipments of goods. Sufficiently large outposts often form the nucleus of a pioneer settlement.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Brutal martinet commander, Wrathful native leader, Crime boss who’s suborned the isolated post</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Hard-used military scout, Pioneer searching for help, Native leader looking for allies</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The outpost has sparked a dispute with a bordering polity, The post is so isolated it’s effectively independent, The post has been abandoned or cut off by its patron and is in dire need of supply</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Load of vital supplies, Pay for the soldiers, Weapon shipment craved by the natives</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Rough-hewn log fort, Piled stone strongpoint on a naturally-defensible site, Tall wooden tower looking over the countryside</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5400000
+    }
+  },
+  "_key": "!journal!zB5chaOEMzRcK8QK",
+  "ownership": {
+    "default": 0
+  }
+}

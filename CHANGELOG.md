@@ -1,5 +1,27 @@
 # Changelog
 
+## New in 2.0.0
+
+### Note: Updated for v14. No attempt was made to maintain compatibility with v13.
+
+### Changes
+
+- Rewrote the system stylesheet from a single unstructured CSS file into an organized SCSS source tree. Dropped a large amount of dead/duplicate/overridden CSS that had accumulated over time, including a duplicate copy of the Godbound damage styling that existed both as an orphaned, unused `styles/godbound.css` and inside `styles/main.css`.
+- Converted compendium packs from committed NeDB `.db` / LevelDB binaries to JSON source under `packs/source/`, built to LevelDB via `@foundryvtt/foundryvtt-cli` (`npm run build:packs`).
+- Reorganized compendia into foldered packs (Foundry max folder depth 3): player-visible `gear` (adventuring gear / weapons / armor); GM-only `magic-items`; `abilities` (skills / arts / spells / foci); `assets` (cunning / force / wealth); `tags` (community / court / ruin / wilderness); `tables` (generation tables with nested subtables / magic item tables / instinct). If you have journals that link to compendium items, some of these links may now be broken.
+- Default prototype tokens for new characters, factions, and monsters: prepend random adjective, name shown on hover by anyone, HP bar shown on hover by owner. Characters and factions use linked tokens; monsters do not. These can be overridden in Foundry settings.
+- The character sheet's skill list lock/unlock state is now persisted per-actor (`system.skills.locked`) instead of resetting to locked on every re-render, so it no longer re-locks itself after every skill upgrade.
+
+### Fixes
+
+- Fixed several calls to `TextEditor.enrichHTML()` that were missing an `await`, which meant a `Promise` was displayed instead of the enriched text.
+- Fixed the treasure roll table logic drawing treasure without awaiting the async draw, so treasure data was never actually read.
+- Fixed the Character Modifiers dialog reading a nonexistent `Actor#data` property (removed since Foundry v10) instead of `Actor#system`.
+- Fixed Active Effect creation using the legacy `icon` field instead of `img`.
+- Replaced all remaining deprecated global API calls (`renderTemplate`, `TextEditor.enrichHTML`, `duplicate`, `pack.metadata.entity`, `foundry.utils.isObjectEmpty`, `CONST.TABLE_RESULT_TYPES.ENTITY`, and stray leftover `.data` references in the old-world migration path) with their modern Foundry v14 equivalents.
+- Replaced the deprecated `renderChatMessage` hook (Faction sheet "show long description" chat button) with `renderChatMessageHTML`, using plain DOM instead of jQuery.
+- Removed a dead, immediately-overwritten `CONFIG.Combat.initiative` assignment left over in system init.
+
 ## New in 1.6.1
 
 ### Changes

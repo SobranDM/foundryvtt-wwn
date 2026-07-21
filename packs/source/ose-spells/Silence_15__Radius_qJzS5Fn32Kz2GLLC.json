@@ -1,0 +1,26 @@
+{
+  "_id": "qJzS5Fn32Kz2GLLC",
+  "name": "Silence 15' Radius",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Cleric",
+    "duration": "12 turns",
+    "range": "180'",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>A 15&rsquo; radius area is rendered utterly silent.</p>\n<p><strong>▶ Within the area:</strong> All sound is stopped. Conversation and spell casting are impossible.</p>\n<p><strong>▶ Noise from outside the area:</strong> Can be heard by those within it.</p>\n<p><strong>▶ Casting upon a creature: </strong>Silence may be cast upon a creature, which must make a Mental save. If the save fails, the 15&rsquo; radius area of silence moves with the creature. If the save succeeds, the spell&rsquo;s effect remains stationary&mdash;the targeted creature may move out of it.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!qJzS5Fn32Kz2GLLC"
+}

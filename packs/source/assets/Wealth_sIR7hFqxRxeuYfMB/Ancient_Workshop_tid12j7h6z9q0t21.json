@@ -1,0 +1,31 @@
+{
+  "_id": "tid12j7h6z9q0t21",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Ancient Workshop",
+  "type": "asset",
+  "_key": "!items!tid12j7h6z9q0t21",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 25,
+    "counter": "None",
+    "desc": "A workshop has been refitted with ancient magical tools, allowing prodigies of production, albeit not always safely. As a free action, once per turn, the Ancient Workshop takes [[1d6]] damage and the owning faction gains [[1d6]] Treasure.",
+    "health": {
+      "max": 16,
+      "value": 16
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action, once per turn, the Ancient Workshop takes [[1d6]] damage and the owning faction gains [[1d6]] Treasure.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

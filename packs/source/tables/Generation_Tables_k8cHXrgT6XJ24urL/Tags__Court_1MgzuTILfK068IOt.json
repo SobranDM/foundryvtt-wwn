@@ -1,0 +1,918 @@
+{
+  "_id": "1MgzuTILfK068IOt",
+  "name": "Tags, Court",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "pvblYC2DJci5Hzey",
+      "type": 2,
+      "text": "Affliction’s Mark",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "qBL665HPFAUIliQX",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!1MgzuTILfK068IOt.pvblYC2DJci5Hzey"
+    },
+    {
+      "_id": "dl9iWqtXfsMN27t2",
+      "type": 2,
+      "text": "Ancestral Obligation",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "RT7OwJ3UEkuCqWJl",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!1MgzuTILfK068IOt.dl9iWqtXfsMN27t2"
+    },
+    {
+      "_id": "CR6hbERARwI579cD",
+      "type": 2,
+      "text": "Awesome Legitimacy",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "6KSAf2DvyeUTqHd4",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!1MgzuTILfK068IOt.CR6hbERARwI579cD"
+    },
+    {
+      "_id": "9tppbCQJomG0bTKq",
+      "type": 2,
+      "text": "Awkward Birth",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "jalGq9c7wV5wmAKB",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!1MgzuTILfK068IOt.9tppbCQJomG0bTKq"
+    },
+    {
+      "_id": "wK9GM6PiThmV0csA",
+      "type": 2,
+      "text": "Blandished Leadership",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "qVvJmsHSou0DyxK8",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!1MgzuTILfK068IOt.wK9GM6PiThmV0csA"
+    },
+    {
+      "_id": "cQ36TWV7sXvWppBR",
+      "type": 2,
+      "text": "Cadet Branches",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "1jcc4d0js1MGVudO",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!1MgzuTILfK068IOt.cQ36TWV7sXvWppBR"
+    },
+    {
+      "_id": "otiLQ5x9wSQUCliG",
+      "type": 2,
+      "text": "Capricious Orders",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "aa3C8odoNNDIuhjl",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 7,
+      "rangeH": 7,
+      "_key": "!tables.results!1MgzuTILfK068IOt.otiLQ5x9wSQUCliG"
+    },
+    {
+      "_id": "EfhLzQeYVmd7HKHb",
+      "type": 2,
+      "text": "Cultural Insignia",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "ydnToQ7r3sJbjp3U",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 8,
+      "rangeH": 8,
+      "_key": "!tables.results!1MgzuTILfK068IOt.EfhLzQeYVmd7HKHb"
+    },
+    {
+      "_id": "QlRsQkGpmQzb5gTo",
+      "type": 2,
+      "text": "Daring Ambition",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "CGtzW6hxGrwUXJRL",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 9,
+      "rangeH": 9,
+      "_key": "!tables.results!1MgzuTILfK068IOt.QlRsQkGpmQzb5gTo"
+    },
+    {
+      "_id": "veaWjCgtajMBZuxV",
+      "type": 2,
+      "text": "Dark Secret",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "C2nX8LD4BIj48LjP",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 10,
+      "rangeH": 10,
+      "_key": "!tables.results!1MgzuTILfK068IOt.veaWjCgtajMBZuxV"
+    },
+    {
+      "_id": "0KjZSWM25C6BuXHf",
+      "type": 2,
+      "text": "Decadent Court",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "jAIeCGt8aMR00Fst",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 11,
+      "rangeH": 11,
+      "_key": "!tables.results!1MgzuTILfK068IOt.0KjZSWM25C6BuXHf"
+    },
+    {
+      "_id": "RHVNFtLMItJca5C7",
+      "type": 2,
+      "text": "Devil’s Bargain",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "cVLrcFfrpeaffU7r",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 12,
+      "rangeH": 12,
+      "_key": "!tables.results!1MgzuTILfK068IOt.RHVNFtLMItJca5C7"
+    },
+    {
+      "_id": "NNCO3inLXKXnBzv9",
+      "type": 2,
+      "text": "Diplomatic Demands",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "Nsnkbb5DocvBbKxu",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 13,
+      "rangeH": 13,
+      "_key": "!tables.results!1MgzuTILfK068IOt.NNCO3inLXKXnBzv9"
+    },
+    {
+      "_id": "Jd2CxyucPxo3R6eM",
+      "type": 2,
+      "text": "Disputed Inheritance",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "B0FNIov65vrRDSwo",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 14,
+      "rangeH": 14,
+      "_key": "!tables.results!1MgzuTILfK068IOt.Jd2CxyucPxo3R6eM"
+    },
+    {
+      "_id": "AZ1R7R7qhAsluwIF",
+      "type": 2,
+      "text": "Excess Heirs",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "dfQjNW6N9FOF5RSb",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 15,
+      "rangeH": 15,
+      "_key": "!tables.results!1MgzuTILfK068IOt.AZ1R7R7qhAsluwIF"
+    },
+    {
+      "_id": "rUcnxfeWZTUhlo3D",
+      "type": 2,
+      "text": "False Prize",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "7Fd1Dm8DBxx1aS05",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 16,
+      "rangeH": 16,
+      "_key": "!tables.results!1MgzuTILfK068IOt.rUcnxfeWZTUhlo3D"
+    },
+    {
+      "_id": "KYh4FHa7zUWNE6Is",
+      "type": 2,
+      "text": "Fatal Extravagance",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "pRSxSArBlUw0k5Ui",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 17,
+      "rangeH": 17,
+      "_key": "!tables.results!1MgzuTILfK068IOt.KYh4FHa7zUWNE6Is"
+    },
+    {
+      "_id": "QhSaXYZI7BrH279C",
+      "type": 2,
+      "text": "Forbidden Romance",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "rZFO0bibQg1IdWdc",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 18,
+      "rangeH": 18,
+      "_key": "!tables.results!1MgzuTILfK068IOt.QhSaXYZI7BrH279C"
+    },
+    {
+      "_id": "i8LLhr7i3NhWfg0W",
+      "type": 2,
+      "text": "Foreign Ties",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "3IJxlMUy3hMqy6dN",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 19,
+      "rangeH": 19,
+      "_key": "!tables.results!1MgzuTILfK068IOt.i8LLhr7i3NhWfg0W"
+    },
+    {
+      "_id": "ooW0OqcGx7Do8SDA",
+      "type": 2,
+      "text": "Gate Keeper",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "ORFAoS0yG62NMn9h",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 20,
+      "rangeH": 20,
+      "_key": "!tables.results!1MgzuTILfK068IOt.ooW0OqcGx7Do8SDA"
+    },
+    {
+      "_id": "ALE8Y6ahpEjlFzxT",
+      "type": 2,
+      "text": "Hidden Blight",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "URroV5Ycxin6abLb",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 21,
+      "rangeH": 21,
+      "_key": "!tables.results!1MgzuTILfK068IOt.ALE8Y6ahpEjlFzxT"
+    },
+    {
+      "_id": "0Fq9c6vrOv2Uo4qt",
+      "type": 2,
+      "text": "Hopeless Rival",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "TtjkzoandYK3dMBn",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 22,
+      "rangeH": 22,
+      "_key": "!tables.results!1MgzuTILfK068IOt.0Fq9c6vrOv2Uo4qt"
+    },
+    {
+      "_id": "YgcOKGPYwf18t47U",
+      "type": 2,
+      "text": "Impure Blood",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "rnZyIYw5gJ4Bvgij",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 23,
+      "rangeH": 23,
+      "_key": "!tables.results!1MgzuTILfK068IOt.YgcOKGPYwf18t47U"
+    },
+    {
+      "_id": "CE6VmG4ys93HA5pQ",
+      "type": 2,
+      "text": "Inadequate Tools",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "Iy50YafBcPlNc2iM",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 24,
+      "rangeH": 24,
+      "_key": "!tables.results!1MgzuTILfK068IOt.CE6VmG4ys93HA5pQ"
+    },
+    {
+      "_id": "omlPqbfd7GgKXS9s",
+      "type": 2,
+      "text": "Inept Ruler",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "HoBlcO8vBXsxxgOE",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 25,
+      "rangeH": 25,
+      "_key": "!tables.results!1MgzuTILfK068IOt.omlPqbfd7GgKXS9s"
+    },
+    {
+      "_id": "LlPdJk0EiWRsO6pY",
+      "type": 2,
+      "text": "Iron Law",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "D1p1tm0QE3MOKxOQ",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 26,
+      "rangeH": 26,
+      "_key": "!tables.results!1MgzuTILfK068IOt.LlPdJk0EiWRsO6pY"
+    },
+    {
+      "_id": "Yjl6wftuwmeABWZJ",
+      "type": 2,
+      "text": "Lost Purpose",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "Y8oytJUFzqADhImP",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 27,
+      "rangeH": 27,
+      "_key": "!tables.results!1MgzuTILfK068IOt.Yjl6wftuwmeABWZJ"
+    },
+    {
+      "_id": "Y9qhZ88Bzb5wUfld",
+      "type": 2,
+      "text": "Magical Subversion",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "If7hvzgAjAoc046t",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 28,
+      "rangeH": 28,
+      "_key": "!tables.results!1MgzuTILfK068IOt.Y9qhZ88Bzb5wUfld"
+    },
+    {
+      "_id": "IDixb0qCuwNI7UCk",
+      "type": 2,
+      "text": "Ministerial Capture",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "wVKNoqPpTmyTcaWK",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 29,
+      "rangeH": 29,
+      "_key": "!tables.results!1MgzuTILfK068IOt.IDixb0qCuwNI7UCk"
+    },
+    {
+      "_id": "UTmVibJcZMAUBNNh",
+      "type": 2,
+      "text": "New Generation",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "pyhOHItwO36g95Py",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 30,
+      "rangeH": 30,
+      "_key": "!tables.results!1MgzuTILfK068IOt.UTmVibJcZMAUBNNh"
+    },
+    {
+      "_id": "iEeKXCiDW64QkjMI",
+      "type": 2,
+      "text": "New Opportunity",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "O5VESntHHmNe5KZW",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 31,
+      "rangeH": 31,
+      "_key": "!tables.results!1MgzuTILfK068IOt.iEeKXCiDW64QkjMI"
+    },
+    {
+      "_id": "ohtRnrBuWrZ3tgP0",
+      "type": 2,
+      "text": "Outside Debts",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "S5YoyQJIZV3TbSGc",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 32,
+      "rangeH": 32,
+      "_key": "!tables.results!1MgzuTILfK068IOt.ohtRnrBuWrZ3tgP0"
+    },
+    {
+      "_id": "b4UokN250GggCEbB",
+      "type": 2,
+      "text": "Overextended Grasp",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "zBJLAQG2lhfp8sFA",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 33,
+      "rangeH": 33,
+      "_key": "!tables.results!1MgzuTILfK068IOt.b4UokN250GggCEbB"
+    },
+    {
+      "_id": "jkfEYWxouwAu3jsF",
+      "type": 2,
+      "text": "Poisonous Cliques",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "x06qsSJ0boziifPh",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 34,
+      "rangeH": 34,
+      "_key": "!tables.results!1MgzuTILfK068IOt.jkfEYWxouwAu3jsF"
+    },
+    {
+      "_id": "67AXswSC8SPZbCy9",
+      "type": 2,
+      "text": "Priestly Influence",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "SzxOQuxsxElpvvqG",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 35,
+      "rangeH": 35,
+      "_key": "!tables.results!1MgzuTILfK068IOt.67AXswSC8SPZbCy9"
+    },
+    {
+      "_id": "ejS9sc4sFOW4NAhW",
+      "type": 2,
+      "text": "Proxy Speaker",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "vwMM1VFZ54mBbuVW",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 36,
+      "rangeH": 36,
+      "_key": "!tables.results!1MgzuTILfK068IOt.ejS9sc4sFOW4NAhW"
+    },
+    {
+      "_id": "uXTJlX4902ubJICT",
+      "type": 2,
+      "text": "Rampant Corruption",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "1MaH7wZUaDyXWlkD",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 37,
+      "rangeH": 37,
+      "_key": "!tables.results!1MgzuTILfK068IOt.uXTJlX4902ubJICT"
+    },
+    {
+      "_id": "OqGkhRqTLkI8ucrB",
+      "type": 2,
+      "text": "Recent Brutality",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "Y5LNHnloCHpkUBSz",
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 38,
+      "rangeH": 38,
+      "_key": "!tables.results!1MgzuTILfK068IOt.OqGkhRqTLkI8ucrB"
+    },
+    {
+      "_id": "2uoKSLxg5v03VnVD",
+      "type": 2,
+      "text": "Regency Council",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "yRPJXMwbGFsU1XuH",
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 39,
+      "rangeH": 39,
+      "_key": "!tables.results!1MgzuTILfK068IOt.2uoKSLxg5v03VnVD"
+    },
+    {
+      "_id": "JaEMwzCHpaByLOPG",
+      "type": 2,
+      "text": "Restive Lessers",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "pBXj2fRz0oGNG1W8",
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 40,
+      "rangeH": 40,
+      "_key": "!tables.results!1MgzuTILfK068IOt.JaEMwzCHpaByLOPG"
+    },
+    {
+      "_id": "cQIEbPIvK3TzGElf",
+      "type": 2,
+      "text": "Rival Dreams",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "M6iP0VijUCTmrdsW",
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 41,
+      "rangeH": 41,
+      "_key": "!tables.results!1MgzuTILfK068IOt.cQIEbPIvK3TzGElf"
+    },
+    {
+      "_id": "KHMjDyRMipTlxYs6",
+      "type": 2,
+      "text": "Rival Power",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "jamrgCbTb2IGZHSV",
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 42,
+      "rangeH": 42,
+      "_key": "!tables.results!1MgzuTILfK068IOt.KHMjDyRMipTlxYs6"
+    },
+    {
+      "_id": "QwLA4Aa7TJCZMdJF",
+      "type": 2,
+      "text": "Ruling Regalia",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "SlzFiotshxCu5oyw",
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 43,
+      "rangeH": 43,
+      "_key": "!tables.results!1MgzuTILfK068IOt.QwLA4Aa7TJCZMdJF"
+    },
+    {
+      "_id": "PDrr0xsehuI38jLz",
+      "type": 2,
+      "text": "Runaway Rule",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "GBqwQGFndIXzP5DL",
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 44,
+      "rangeH": 44,
+      "_key": "!tables.results!1MgzuTILfK068IOt.PDrr0xsehuI38jLz"
+    },
+    {
+      "_id": "wJdn2LWWHam1WEFt",
+      "type": 2,
+      "text": "Shining Successor",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "TdFN0mpprkzOjLP3",
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 45,
+      "rangeH": 45,
+      "_key": "!tables.results!1MgzuTILfK068IOt.wJdn2LWWHam1WEFt"
+    },
+    {
+      "_id": "cDETHajhu4APpDwf",
+      "type": 2,
+      "text": "Splendid Seat",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "sFerLWrrTfOOrRhJ",
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 46,
+      "rangeH": 46,
+      "_key": "!tables.results!1MgzuTILfK068IOt.cDETHajhu4APpDwf"
+    },
+    {
+      "_id": "SDNflux8hV7gv20B",
+      "type": 2,
+      "text": "Sublime Skill",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "Fn7vCDGWwFV1YF8d",
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 47,
+      "rangeH": 47,
+      "_key": "!tables.results!1MgzuTILfK068IOt.SDNflux8hV7gv20B"
+    },
+    {
+      "_id": "4nu7NwsEjO0lNBnl",
+      "type": 2,
+      "text": "Sudden Strength",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "4F2H4UQ9sC0zGlEp",
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 48,
+      "rangeH": 48,
+      "_key": "!tables.results!1MgzuTILfK068IOt.4nu7NwsEjO0lNBnl"
+    },
+    {
+      "_id": "q4oGPpsWIye55oS9",
+      "type": 2,
+      "text": "Threatened Violence",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "GbvRJHfYge7gzeDo",
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 49,
+      "rangeH": 49,
+      "_key": "!tables.results!1MgzuTILfK068IOt.q4oGPpsWIye55oS9"
+    },
+    {
+      "_id": "idq1M0jztcnWIb5z",
+      "type": 2,
+      "text": "Waning Wealth",
+      "img": "icons/svg/d20-black.svg",
+      "collection": "wwn.tags",
+      "resultId": "jjig8Mk5ZNSLdGUN",
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 50,
+      "rangeH": 50,
+      "_key": "!tables.results!1MgzuTILfK068IOt.idq1M0jztcnWIb5z"
+    }
+  ],
+  "formula": "1d50",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!1MgzuTILfK068IOt"
+}

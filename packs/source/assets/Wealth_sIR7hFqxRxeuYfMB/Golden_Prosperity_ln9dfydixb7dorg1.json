@@ -1,0 +1,31 @@
+{
+  "_id": "ln9dfydixb7dorg1",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Golden Prosperity",
+  "type": "asset",
+  "_key": "!items!ln9dfydixb7dorg1",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 40,
+    "counter": "2d10",
+    "desc": "Each turn, as a free action, the faction gains [[1d6]] Treasure that can be used to fix damaged Assets as if by the Repair Assets action. Any of this Treasure not spent on such purposes is lost.",
+    "health": {
+      "max": 30,
+      "value": 30
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 8,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Each turn, as a free action, the faction gains [[1d6]] Treasure that can be used to fix damaged Assets as if by the Repair Assets action. Any of this Treasure not spent on such purposes is lost.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "SlzFiotshxCu5oyw",
+  "name": "Ruling Regalia",
+  "content": "<h1>Ruling Regalia</h1><div>\n<p>The court’s rulership rests on one or more ancient, powerful relics. Quite aside from any practical use they may have, they symbolize the leader’s right of rule, and any loss of them will throw the court into chaos. It’s not unknown for the court’s leadership to be suddenly changed when a new rival manages to seize them, whether by guile or brute force.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Master thief in the employ of a rival, Strong-arm court member plotting their chance, Outside figure who just wants the relics’ power</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Traditional guardian of the relics, Ruler too weak to reliably safeguard them, Would-be thief trying to get them from an unworthy ruler</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The relics were lost some time ago and are currently forgeries, The power of the relics is objectively necessary for the ruler to function, A bearer will die if the relics are removed for too long</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Device that will destroy or nullify a relic, Perfect forgery of a relic, Another relic perfectly identical in all ways</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Tightly-guarded repository for the relics, Ceremonial procession showing the relics, Court structure or edifice powered by the relics</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "8Vy5JVq605yrYqag",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 8600000
+    }
+  },
+  "_key": "!journal!SlzFiotshxCu5oyw",
+  "ownership": {
+    "default": 0
+  }
+}

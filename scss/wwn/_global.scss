@@ -1,0 +1,157 @@
+@use "../mixins" as *;
+
+/* Shared chrome used by every actor sheet type (character/monster/faction) */
+
+@keyframes notify {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: -1px -1px 4px var(--wwn-dark-alt), 1px -1px 4px var(--wwn-dark-alt),
+      -1px 1px 4px var(--wwn-dark-alt), 1px 1px 4px var(--wwn-dark-alt);
+  }
+}
+
+.wwn.sheet.actor .blinking {
+  font-weight: bold;
+  animation: 0.8s ease-in 1s infinite alternate notify;
+}
+
+.wwn.sheet.actor .panel {
+  border: 1px solid var(--wwn-border-dark);
+}
+.wwn.sheet.actor .panel .panel-title {
+  color: var(--wwn-light);
+  background: var(--wwn-dark);
+  line-height: 12px;
+  height: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 4px;
+  display: flex;
+}
+.wwn.sheet.actor .panel .panel-title h4 {
+  flex: 1;
+}
+.wwn.sheet.actor .panel .panel-title .item-controls {
+  font-size: 12px;
+  flex: 0 0 18px;
+}
+
+.wwn.sheet.actor .header-details h1 input {
+  margin: 0 0 5px 0;
+}
+.wwn.sheet.actor .header-details .summary {
+  @include wwn-check-field-reveal;
+}
+
+.wwn.sheet.actor .profile-img {
+  border: 0;
+  flex: 0 0 145px;
+  height: 145px;
+  object-fit: contain;
+}
+
+.wwn.sheet.actor .summary {
+  flex: 0 0 100%;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: none;
+}
+.wwn.sheet.actor .summary li {
+  height: calc(100% - 6px);
+  float: left;
+  margin: 2px 0;
+  padding: 0;
+  line-height: 30px;
+  color: var(--wwn-dark-alt);
+  position: relative;
+}
+.wwn.sheet.actor .summary li label {
+  line-height: 10px;
+  position: absolute;
+  font-size: 10px;
+  color: var(--wwn-dark-alt);
+  bottom: 0;
+  left: 12px;
+}
+.wwn.sheet.actor .summary li.notify input {
+  font-weight: bold;
+  animation: 0.8s ease-in 1s infinite alternate notify;
+}
+
+.wwn.sheet.actor .sheet-tabs {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 216px;
+  right: -179px;
+  width: 340px;
+  border-top: none;
+  z-index: -1;
+}
+.wwn.sheet.actor .sheet-tabs .item {
+  padding: 1px 20px 3px;
+  margin-left: -5px;
+  text-indent: 4px;
+  line-height: 16px;
+  background: var(--wwn-tan);
+  background-size: cover;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 6px 1px var(--wwn-border-dark);
+  font-size: 12px;
+  filter: brightness(0.9);
+}
+.wwn.sheet.actor .sheet-tabs .item.active {
+  filter: none;
+  z-index: 1;
+  font-weight: bold;
+  text-shadow: none;
+  margin-bottom: -1px;
+  background: var(--wwn-tan);
+  background-size: cover;
+  box-shadow: 0 0 8px 2px var(--wwn-border-dark);
+}
+
+.wwn.sheet.actor .sheet-body .tab {
+  height: 100%;
+}
+.wwn.sheet.actor .sheet-body .editor {
+  height: 300px;
+  padding: 4px;
+}
+
+.wwn.sheet.actor .hidden {
+  display: none;
+}
+
+/* Window content overrides shared by every WWN application (sheets and dialogs alike) */
+.wwn .window-content input {
+  text-align: center;
+}
+.wwn .window-content input:not([type="checkbox"]) {
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: none;
+}
+.wwn .window-content .header-details input:not([type="checkbox"]) {
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--wwn-border);
+}
+.wwn .window-content input:not([type="checkbox"]):hover:not(:disabled),
+.wwn .window-content input:not([type="checkbox"]):focus:not(:disabled) {
+  box-shadow: none;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+.wwn .window-content a:hover {
+  text-shadow: none;
+}
+.wwn .window-content .resizable {
+  overflow: auto;
+}

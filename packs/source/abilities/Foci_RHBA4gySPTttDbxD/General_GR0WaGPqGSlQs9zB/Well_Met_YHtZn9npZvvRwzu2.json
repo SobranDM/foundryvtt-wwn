@@ -1,0 +1,18 @@
+{
+  "_id": "YHtZn9npZvvRwzu2",
+  "name": "Well Met",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You have a striking ability to charm and pacify people and creatures you&rsquo;ve just met. Once they get to know you, however, their opinions are more likely to be based on experience; this Focus works only once on a target.</p>\n<p><strong>Level 1: </strong>Reaction rolls made by those the party meets are given a +1 bonus so long as you are present, whether or not you do the talking. Even hostile encountered beings will usually give the party a round to parley before attacking unless they&rsquo;re in ambush or have a clear reason for immediate violence.</p>\n<p><strong>Level 2: </strong>Once per game session, when a reaction roll is made, cause the subject to be as friendly and helpful to you and your party as it&rsquo;s plausibly possible for them to be. It&rsquo;s up to the GM to decide why the creature becomes so; it might be mistaken about your nature, or find you hilarious, or perhaps want a favor from you and your allies.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!YHtZn9npZvvRwzu2",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "5xdmjHGDxNHKZ8io",
+  "name": "Invisible Stalker",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "One mission",
+    "range": "Caster's presence",
+    "roll": "",
+    "description": "<p><strong>Duration: One mission</strong></p>\n<p><strong>Range: Summoned to caster&rsquo;s presence</strong></p>\n<p>An invisible stalker (see below) is summoned to the caster&rsquo;s presence and magically bound to perform a mission of the caster&rsquo;s choosing.</p>\n<p><strong>▶ Wording:</strong> The caster must be careful with the wording of the mission. Invisible stalkers are treacherous and, unless the assigned mission can be easily and quickly accomplished, will follow the letter of the command while twisting the intent.</p>\n<p><strong>▶ Duration: </strong>The creature is bound to attempt the mission until it succeeds or is destroyed.</p>\n<p><strong>▶ Banishing:</strong> The spell dispel evil will banish an invisible stalker, ending the spell.</p>\n<h3><strong>Invisible Stalker</strong></h3>\n<p>Highly intelligent, magical creatures summoned from another plane of existence to perform tasks for powerful magic-users.</p>\n<hr />\n<p><strong>AC </strong>16, <strong>HD </strong>8* (36hp), <strong>Att </strong>1 &times; blow (4d4), <strong>Bonus </strong>+7, <strong>MV </strong>120&rsquo; (40&rsquo;), <strong>SV </strong>11, <strong>ML </strong>12, <strong>AL </strong>Neutral, <strong>XP </strong>1,200</p>\n<hr />\n<p><strong>▶ Tracking: </strong>Without fault.</p>\n<p><strong>▶ Surprise: </strong>On a 1&ndash;5, unless target can detect invisibility.</p>\n<p><strong>▶ If killed:</strong> Returns to plane of origin.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!5xdmjHGDxNHKZ8io"
+}

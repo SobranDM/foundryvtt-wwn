@@ -1,0 +1,281 @@
+{
+  "_id": "xR9vJU4cLdDuKN1U",
+  "name": "Nation-Problems",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Current National Problems",
+  "results": [
+    {
+      "_id": "9tfZf8wQfLqXhLd9",
+      "flags": {},
+      "type": 0,
+      "text": "Farmland is becoming worn-out and depleted",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.9tfZf8wQfLqXhLd9"
+    },
+    {
+      "_id": "x5hHFQdSLi3pVvpH",
+      "flags": {},
+      "type": 0,
+      "text": "Verminous monsters are swarming",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.x5hHFQdSLi3pVvpH"
+    },
+    {
+      "_id": "gOhgyzE28RCbYV2d",
+      "flags": {},
+      "type": 0,
+      "text": "A rebel front is stirring up trouble",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.gOhgyzE28RCbYV2d"
+    },
+    {
+      "_id": "nrbLy2uyUYMMB7xw",
+      "flags": {},
+      "type": 0,
+      "text": "An outside power is backing internal strife",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.nrbLy2uyUYMMB7xw"
+    },
+    {
+      "_id": "wKoLv9F7hqBLutt7",
+      "flags": {},
+      "type": 0,
+      "text": "The leadership is inept and distracted",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.wKoLv9F7hqBLutt7"
+    },
+    {
+      "_id": "XMg9Ub9rgS9OLqa2",
+      "flags": {},
+      "type": 0,
+      "text": "A religious reformer is breaking old compacts",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.XMg9Ub9rgS9OLqa2"
+    },
+    {
+      "_id": "BINEZHoKvjx5gpg3",
+      "flags": {},
+      "type": 0,
+      "text": "An evil is provoking outraged rioting",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.BINEZHoKvjx5gpg3"
+    },
+    {
+      "_id": "X2OBfv91yeYSS4AV",
+      "flags": {},
+      "type": 0,
+      "text": "Dark cults are attracting the ambitious",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.X2OBfv91yeYSS4AV"
+    },
+    {
+      "_id": "upOPaGOzWJmjZVGA",
+      "flags": {},
+      "type": 0,
+      "text": "A Blighted horde is threatening the borders",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.upOPaGOzWJmjZVGA"
+    },
+    {
+      "_id": "WvrfSkiLT8UMvRez",
+      "flags": {},
+      "type": 0,
+      "text": "An ancient ruin has disgorged some peril",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.WvrfSkiLT8UMvRez"
+    },
+    {
+      "_id": "p2hgwmK9zDyuX7rI",
+      "flags": {},
+      "type": 0,
+      "text": "Malcontents have obtained a potent artifact",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.p2hgwmK9zDyuX7rI"
+    },
+    {
+      "_id": "1E0vepoatNTEoirL",
+      "flags": {},
+      "type": 0,
+      "text": "Luxuriance has left the nation’s coffers bare",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.1E0vepoatNTEoirL"
+    },
+    {
+      "_id": "xIVispSz0q7buZpB",
+      "flags": {},
+      "type": 0,
+      "text": "Local aristocrats are pushing for independence",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.xIVispSz0q7buZpB"
+    },
+    {
+      "_id": "teiqfRGEBwE57FO8",
+      "flags": {},
+      "type": 0,
+      "text": "An important mine has run out or been harmed",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.teiqfRGEBwE57FO8"
+    },
+    {
+      "_id": "QKuem5Yqwjw3vJvn",
+      "flags": {},
+      "type": 0,
+      "text": "A sinister favorite has infatuated the leader",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.QKuem5Yqwjw3vJvn"
+    },
+    {
+      "_id": "MXBGzrEIpxTuvFfa",
+      "flags": {},
+      "type": 0,
+      "text": "A recurring plant plague is causing hunger",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.MXBGzrEIpxTuvFfa"
+    },
+    {
+      "_id": "Bqo8m25ngOedsjPP",
+      "flags": {},
+      "type": 0,
+      "text": "Fearsome monsters are migrating into the land",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.Bqo8m25ngOedsjPP"
+    },
+    {
+      "_id": "nzDcyafBghYwcwXc",
+      "flags": {},
+      "type": 0,
+      "text": "A rival is preparing for war or raiding",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.nzDcyafBghYwcwXc"
+    },
+    {
+      "_id": "4TG8BoU2syq8F3Bi",
+      "flags": {},
+      "type": 0,
+      "text": "A grand national plan is exhausting the people",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.4TG8BoU2syq8F3Bi"
+    },
+    {
+      "_id": "hNh55RkEOZkVtnnD",
+      "flags": {},
+      "type": 0,
+      "text": "A savage grudge has erupted between lords",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xR9vJU4cLdDuKN1U.hNh55RkEOZkVtnnD"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!xR9vJU4cLdDuKN1U"
+}

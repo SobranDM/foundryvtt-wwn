@@ -1,0 +1,42 @@
+{
+  "_id": "QvOaRyzJF60YR2pC",
+  "name": "Sanctified Healing",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.QvOaRyzJF60YR2pC"
+    }
+  },
+  "system": {
+    "description": "<p>This healing unguent comes in dozens of different styles, as the need for it is familiar to many cultures. When applied to a target, it heals 1d6+1 hit points of damage instantly.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QvOaRyzJF60YR2pC"
+}

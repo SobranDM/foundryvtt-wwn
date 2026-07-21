@@ -1,0 +1,32 @@
+{
+  "_id": "H1zSuR9IdajBdqOK",
+  "name": "Unaging",
+  "type": "art",
+  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "effects": [],
+  "folder": "j9usMVq7DEVp0RdZ",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.H1zSuR9IdajBdqOK"
+    }
+  },
+  "_key": "!items!H1zSuR9IdajBdqOK",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>You no longer naturally age, and will remain perfectly hale and vigorous up to your species&rsquo; natural maximum age plus 20% per character level, after which you will collapse into dust and decay. Immortality beyond this point is possible, but generally requires consistent supplies of life energy, occult materials, or other difficult-to-acquire or morally questionable materials. You also become immune to poisons and diseases.</p>",
+    "save": "",
+    "source": "Necromancer",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

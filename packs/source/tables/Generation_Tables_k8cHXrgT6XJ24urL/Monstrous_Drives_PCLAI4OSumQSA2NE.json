@@ -1,0 +1,211 @@
+{
+  "_id": "PCLAI4OSumQSA2NE",
+  "name": "Monstrous Drives",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What makes a creature monstrous is not necessarily what it is, but what it does. Something about the creature’s behavior or wants is anathema to human interests, and its activities bring misery, suffering, and death to the people around it.",
+  "results": [
+    {
+      "type": 0,
+      "text": "<b>Conquest: </b>it needs to destroy all rivals and interlopers within its territory, which must expand with the creature's increasing might. This may be a very literal form of conquest, with the beast seeking to kill any intruder within its realm and probing outward constantly to seek new land. It may also be social or metaphorical, with the creature seeking to become the exclusive power within a social sphere, profession, guild, or skein of relationships.",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "f52xs7je1o9ybxdq",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.f52xs7je1o9ybxdq"
+    },
+    {
+      "type": 0,
+      "text": "<b>Construction:</b> it has to build something that can cause problems for humans. It might be driven to create elaborate nests, forced to foment treacherous schemes against humanity, made to build large civil structures in awkward places, manufacture a particular sort of good beyond all need, generate a toxin or miasma, xenoform terrain to fit its alien creator's home world, or some other act of troublesome creation.",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "kqt31fhnigm6u09u",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.kqt31fhnigm6u09u"
+    },
+    {
+      "type": 0,
+      "text": "<b>Consumption:</b> it needs to eat something that is either difficult to acquire, greatly troublesome to humanity, or magical or metaphorical in nature. It might consume loving relationships, eat youth, dine exclusively on traitors, be impossibly gluttonous, devour magical items, or need special alchemical mixes.",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "awu79ysgqt6fhduh",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.awu79ysgqt6fhduh"
+    },
+    {
+      "type": 0,
+      "text": "<b>Deception:</b> it must feign some harmless or innocent guise, fitting in perfectly as its adopted role. Animals may seem to be some different, more docile creature, while intelligent beings may masquerade as humans or adopt some specific social role. It must kill whatever it would replace, and destroy anything or anyone that might threaten to reveal the truth about it, showing the reality of its nature only when it feeds or enjoys the benefits of the role it has adopted.",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "bgc50j6pjsu8l52a",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.bgc50j6pjsu8l52a"
+    },
+    {
+      "type": 0,
+      "text": "<b>Defilement:</b> it must degrade and destroy those things that give hope or meaning to humanity. Corrupting religions, poisoning food crops, curdling familial love, inducing leaders to become tyrants, and withering bonds of loyalty might all be tools for such creatures. Most of them will have a particular type of good thing that their powers and nature enable them to debauch.",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "258s6qjtkvkjv4xn",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.258s6qjtkvkjv4xn"
+    },
+    {
+      "type": 0,
+      "text": "<b>Destruction:</b> it must destroy something that is useful or necessary to humans. It might blindly slaughter livestock beyond all hunting need, instinctively seek the destruction of man-made edifices, have an inherent compulsion to destroy loving relationships, eat metal tools and weapons, consume the health and luck of its prey, or otherwise take away something that humans need.",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "z802pf6cm7fkh6bm",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.z802pf6cm7fkh6bm"
+    },
+    {
+      "type": 0,
+      "text": "<b>Domination:</b> it needs to win the slavish submission of its chosen prey. Rather than killing them, they must be reduced to helpless obedience to the creature's needs and wishes. Animals may terrorize sentients until worship or tribute is offered, while intelligent beings might use social tools or threats to force compliance. Weaker creatures of its own kind might be treated with similar brutality.",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "6ox2i52yxssftysk",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 7,
+      "rangeH": 7,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.6ox2i52yxssftysk"
+    },
+    {
+      "type": 0,
+      "text": "<b>Parasitization:</b> it has to subvert and suborn humanity or something humans rely upon. This may be a physical act of parasitization on a human host, or it may be a more metaphorical leech, taking advantage of some quality of human society to feed and shelter it. Parasitized hosts may be hollowed-out skinsuits, helplessly enslaved victims, willing but foolish co-conspirators, unwitting cattle, or humans who can provide some special service or quality the creature craves.",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "dq40azx7ivrekovn",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 8,
+      "rangeH": 8,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.dq40azx7ivrekovn"
+    },
+    {
+      "type": 0,
+      "text": "<b>Predation: </b>there's something that it absolutely must hunt or kill, and pursuing them is a need at an instinctive level. This is usually something problematic for humans, such as a compulsion to hunt humans, specific types of people, livestock, particular demihumans, people who have committed a particular type of act, those who trespass on its territory, or some other type of victim.",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "7cjgixica2ys5dwt",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 9,
+      "rangeH": 9,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.7cjgixica2ys5dwt"
+    },
+    {
+      "type": 0,
+      "text": "<b>Reproduction: </b>it has some unique or difficult condition for reproduction that it must satisfy, such as needing large amounts of a particular substance, a properly-built nest, a difficult-to-win mate, a helpless parasitized host, the brutal conquest of its rivals, or even some magical or esoterically metaphorical condition. This condition causes problems for humanity around it.",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "b41a307qb8attyki",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 10,
+      "rangeH": 10,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.b41a307qb8attyki"
+    },
+    {
+      "type": 0,
+      "text": "<b>Sadism:</b> it was created not necessarily to kill its prey, but to torment it. Terrifying taunts, senseless cruelty, and abominably awful methods of harm are employed instinctively by this creature, and it will always prefer to leave its prey alive until every ounce of resistance has been wrung from it. It receives great delight from the suffering of others.",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "fhfcspxxufnjrrmu",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 11,
+      "rangeH": 11,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.fhfcspxxufnjrrmu"
+    },
+    {
+      "type": 0,
+      "text": "<b>Theft:</b> it has a compulsion to steal something that humans need in order to hoard or use it itself. It may compulsively steal and collect gold and other shiny objects, plunder food, carry off large amounts of some socially-necessary good, or have magical means to take away intangible qualities or social relationships. It should often be possible to recover the lost traits if the creature is subdued.",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "6a14z5cnndclw1j4",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 12,
+      "rangeH": 12,
+      "_key": "!tables.results!PCLAI4OSumQSA2NE.6a14z5cnndclw1j4"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!PCLAI4OSumQSA2NE"
+}

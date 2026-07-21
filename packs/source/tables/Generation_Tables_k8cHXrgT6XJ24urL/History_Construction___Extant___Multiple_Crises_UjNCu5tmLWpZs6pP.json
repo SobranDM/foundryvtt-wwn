@@ -1,0 +1,402 @@
+{
+  "_id": "UjNCu5tmLWpZs6pP",
+  "name": "History Construction - Extant - Multiple Crises",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "This generates a history with a 1-3 Crises that the populace overcame.",
+  "results": [
+    {
+      "_id": "eQUWJuAtzTjlPxgQ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Did They Originate?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.eQUWJuAtzTjlPxgQ"
+    },
+    {
+      "_id": "Cs7yobzyCjJsfUUF",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Originate",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "zvmgqmrMPn1uPn3s",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.Cs7yobzyCjJsfUUF"
+    },
+    {
+      "_id": "yKWMM6grji7lFdCT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Became of the Original Inhabitants?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.yKWMM6grji7lFdCT"
+    },
+    {
+      "_id": "s2KpZo3jhCk5M53j",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Became",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ezfbdMP34zjIv8SN",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.s2KpZo3jhCk5M53j"
+    },
+    {
+      "_id": "yWkFTRGaILzBswYV",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>First Historical Crisis</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.yWkFTRGaILzBswYV"
+    },
+    {
+      "_id": "DUZL2GbvjDaWvFzD",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Crises",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "aWN0p6WmxZusXM12",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.DUZL2GbvjDaWvFzD"
+    },
+    {
+      "_id": "zIalJedYHs4RBOR6",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Did They Overcome the First Crisis?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.zIalJedYHs4RBOR6"
+    },
+    {
+      "_id": "WOwLODRc5YWdKxe2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Overcome-Crisis",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "H0VclxkStddyMzu2",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.WOwLODRc5YWdKxe2"
+    },
+    {
+      "_id": "mI8XpPE1sNYl416M",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Was Great About Its Peak?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.mI8XpPE1sNYl416M"
+    },
+    {
+      "_id": "Nj151Xx0ZrsnDMQY",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Peak",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "viCbnbWQusdkEbIM",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.Nj151Xx0ZrsnDMQY"
+    },
+    {
+      "_id": "sHh6xsOyWJ2maeQF",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Second Historical Crisis</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.sHh6xsOyWJ2maeQF"
+    },
+    {
+      "_id": "NQzBNX75KsKq28vA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Crises",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "aWN0p6WmxZusXM12",
+      "weight": 1,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.NQzBNX75KsKq28vA"
+    },
+    {
+      "_id": "d1TDzLhP0jBhhZEn",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Did They Overcome the Second Crisis?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.d1TDzLhP0jBhhZEn"
+    },
+    {
+      "_id": "OFMlH1tK4AT0dfX6",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Overcome-Crisis",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "H0VclxkStddyMzu2",
+      "weight": 1,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.OFMlH1tK4AT0dfX6"
+    },
+    {
+      "_id": "6mdSz0tYRQrvrt1R",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Third Historical Crisis</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.6mdSz0tYRQrvrt1R"
+    },
+    {
+      "_id": "n3tspF0ERUE7hp2l",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Crises",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "aWN0p6WmxZusXM12",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.n3tspF0ERUE7hp2l"
+    },
+    {
+      "_id": "Fw0rAAXvt6F40kOG",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Did They Overcome the Third Crisis?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.Fw0rAAXvt6F40kOG"
+    },
+    {
+      "_id": "6TbCeSlkGgVOE2GF",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "History-Overcome-Crisis",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "H0VclxkStddyMzu2",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!UjNCu5tmLWpZs6pP.6TbCeSlkGgVOE2GF"
+    }
+  ],
+  "formula": "1d3",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!UjNCu5tmLWpZs6pP"
+}

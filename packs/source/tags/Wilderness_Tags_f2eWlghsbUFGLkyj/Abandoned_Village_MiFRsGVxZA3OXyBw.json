@@ -1,0 +1,17 @@
+{
+  "_id": "MiFRsGVxZA3OXyBw",
+  "name": "Abandoned Village",
+  "content": "<h1>Abandoned Village</h1><div>\n<p>Wilderness villages tend to be unstable “gold rush” settlements in the best of times, attracting those who lack any sound place elsewhere. This village failed as rapidly as it was formed. It may have been overrun by marauders, depopulated by disease, hollowed out by a failed harvest, torn apart by civil strife, or just abandoned for better prospects elsewhere.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Bandit chief or sorcerer responsible for the ruin, Crazed village head turned hermit, Monstrous entity nesting in the remains</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Last stubborn holdout, Lord’s bailiff looking for answers, Hapless pioneer who’s arrived to an empty ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It’s now populated by something inhuman, It was built on top of a place abandoned for good reason, The wilderness is reclaiming it in a dangerous way</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Heirloom left behind in the flight, Buried treasure of the villagers, The relic that caused the ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Overgrown village meeting hall, Home with everything left just as it was at that moment, Burnt-out shrine to the local god</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 200000
+    }
+  },
+  "_key": "!journal!MiFRsGVxZA3OXyBw",
+  "ownership": {
+    "default": 0
+  }
+}

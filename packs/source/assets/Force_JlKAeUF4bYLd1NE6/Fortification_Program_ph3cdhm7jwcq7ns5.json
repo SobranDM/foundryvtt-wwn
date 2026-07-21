@@ -1,0 +1,31 @@
+{
+  "_id": "ph3cdhm7jwcq7ns5",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Fortification Program",
+  "type": "asset",
+  "_key": "!items!ph3cdhm7jwcq7ns5",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "2d6",
+    "desc": "A program of organized fortification and supply caching has been undertaken around the Asset's location, hardening allied communities and friendly Assets. Once per turn, when an enemy makes an Attack that targets the faction's Force rating, the faction can use the Fortification Program to defend if the Asset is within a turn's move from the attack.",
+    "health": {
+      "max": 18,
+      "value": 18
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per turn, when an enemy makes an Attack that targets the faction's Force rating, the faction can use the Fortification Program to defend if the Asset is within a turn's move from the attack.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

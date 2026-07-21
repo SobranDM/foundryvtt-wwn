@@ -1,0 +1,42 @@
+{
+  "_id": "0OEKlKmwlyTfghKY",
+  "name": "Inverted Entropy",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.0OEKlKmwlyTfghKY"
+    }
+  },
+  "system": {
+    "description": "<p>This flask contains enough of this fluid to affect one man-sized object. If the target is unliving, it can be restored to full and perfect physical completeness from any degree of damage or destruction, albeit magical qualities are not restored. A living target is restored to their last condition of full physical health, but the neural tissue reset causes them to completely forget everything since that point and maximizes their System Strain. The Inverted Entropy can&rsquo;t revert them more than one week. This reversion does not delete experience points, magical effects, or lingering curses.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0OEKlKmwlyTfghKY"
+}

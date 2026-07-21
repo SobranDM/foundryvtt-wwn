@@ -1,0 +1,32 @@
+{
+  "_id": "xloLa4CHHaqjW0fY",
+  "name": "Elemental Resilience",
+  "type": "art",
+  "img": "systems/wwn/assets/new/elementalist_art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.xloLa4CHHaqjW0fY"
+    }
+  },
+  "_key": "!items!xloLa4CHHaqjW0fY",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>You are unharmed by mundane extremes of cold or by heat less than that of a furnace. You suffer only half damage from magical or extremely intense flame or frost attacks.</p>",
+    "save": "",
+    "source": "Elementalist",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

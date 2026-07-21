@@ -1,0 +1,106 @@
+{
+  "_id": "TE8v9dEbY95Qe2Hq",
+  "name": "Insects and Semi-Mindless Beasts",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "uW6tLJYQRE0ChDV1",
+      "flags": {},
+      "type": 0,
+      "text": "Move to help an ally encircle a target",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.uW6tLJYQRE0ChDV1"
+    },
+    {
+      "_id": "ekSgJSCymTDzCTfR",
+      "flags": {},
+      "type": 0,
+      "text": "Retreat from a foe for a round",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.ekSgJSCymTDzCTfR"
+    },
+    {
+      "_id": "TjRJc1Lq1rf2rqI9",
+      "flags": {},
+      "type": 0,
+      "text": "Skitter and crawl randomly",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.TjRJc1Lq1rf2rqI9"
+    },
+    {
+      "_id": "D0qeyY2q29Cai8le",
+      "flags": {},
+      "type": 0,
+      "text": "Chew on the nearest organic substance",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.D0qeyY2q29Cai8le"
+    },
+    {
+      "_id": "isuCazf3n1P1S8sB",
+      "flags": {},
+      "type": 0,
+      "text": "Charge the nearest prey creature",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.isuCazf3n1P1S8sB"
+    },
+    {
+      "_id": "t74E4KuofGyb3xFZ",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the smallest prey there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!TE8v9dEbY95Qe2Hq.t74E4KuofGyb3xFZ"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "RollTable.B23QTq7mpAN8FeX8"
+    }
+  },
+  "_key": "!tables!TE8v9dEbY95Qe2Hq"
+}

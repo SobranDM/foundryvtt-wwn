@@ -1,0 +1,42 @@
+{
+  "_id": "5MdKYICedy1jJQbD",
+  "name": "Wrathful Detonation",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.5MdKYICedy1jJQbD"
+    }
+  },
+  "system": {
+    "description": "<p>These flasks are always permanently sealed. When intentionally hurled at a location, they detonate to do 2d6 damage to all targets within 15&rsquo;. The magic in the flasks ensures that they always hit the targeted point, provided it&rsquo;s within 60&rsquo;. Accidental breakage or breakage by an object is insufficient to trigger the magic, which requires human volition to catalyze it. Only one flask can be hurled at a time or the first to detonate will ruin the rest.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5MdKYICedy1jJQbD"
+}

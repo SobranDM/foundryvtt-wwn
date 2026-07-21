@@ -1,0 +1,55 @@
+{
+  "_id": "gkwiGmybWGsRKIvI",
+  "name": "Mace +1",
+  "type": "weapon",
+  "img": "systems/wwn/assets/default/weapon.png",
+  "data": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Clubs, staffs,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+    "damage": "1d6+1",
+    "bonus": 1,
+    "skillDamage": false,
+    "shock": {
+      "damage": 2,
+      "ac": 18
+    },
+    "shockTotal": "0",
+    "skill": "punch",
+    "score": "str",
+    "tags": [
+      {
+        "title": "LL",
+        "value": "LL"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 15,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.gkwiGmybWGsRKIvI"
+    }
+  },
+  "_key": "!items!gkwiGmybWGsRKIvI"
+}

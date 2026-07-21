@@ -1,0 +1,278 @@
+{
+  "_id": "m0SIV8ejdxKnElhp",
+  "name": "Room-Hazard",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Tripwire alarm or other alerts",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "aacqg6zouwjh5iws",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.aacqg6zouwjh5iws"
+    },
+    {
+      "type": 0,
+      "text": "Unstable floor that crumbles under weight",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "0yon53h8949mei4q",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.0yon53h8949mei4q"
+    },
+    {
+      "type": 0,
+      "text": "Dangerous fumes or miasma",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "gjsvbe56fwrg9re3",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.gjsvbe56fwrg9re3"
+    },
+    {
+      "type": 0,
+      "text": "Trapped containers or portals",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "u23fhtamj2ja5wxn",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.u23fhtamj2ja5wxn"
+    },
+    {
+      "type": 0,
+      "text": "Explosive dust or gases",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "6vqaulozfhllh50p",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.6vqaulozfhllh50p"
+    },
+    {
+      "type": 0,
+      "text": "An object makes a loud noise if disturbed",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "w9zpdkuvs4f6a3qc",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.w9zpdkuvs4f6a3qc"
+    },
+    {
+      "type": 0,
+      "text": "Damaged supports that give way in combat",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "iufavo66acg02qjd",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.iufavo66acg02qjd"
+    },
+    {
+      "type": 0,
+      "text": "Dangerously high or deep water",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "svoa6iln7eemco1o",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.svoa6iln7eemco1o"
+    },
+    {
+      "type": 0,
+      "text": "Trap set on a path of travel",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "rcesge03amk4va4k",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.rcesge03amk4va4k"
+    },
+    {
+      "type": 0,
+      "text": "Device here is dangerously broken in use",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "n5hxj3op8tv3f4oi",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.n5hxj3op8tv3f4oi"
+    },
+    {
+      "type": 0,
+      "text": "Trap that seals intruders into an area",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "vwra3ct7jeq0hyba",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.vwra3ct7jeq0hyba"
+    },
+    {
+      "type": 0,
+      "text": "Treacherous footing over dangerous terrain",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "6ydbc2jijvs9r51d",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.6ydbc2jijvs9r51d"
+    },
+    {
+      "type": 0,
+      "text": "Uncontrolled flames or dangerous heat",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "3px6n5zimog071uk",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.3px6n5zimog071uk"
+    },
+    {
+      "type": 0,
+      "text": "Torch-extinguishing winds or vapors",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "it49vyjjfziadi1b",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.it49vyjjfziadi1b"
+    },
+    {
+      "type": 0,
+      "text": "Ordinary-seeming object harms handlers",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "i8vgmr5h6aawxdtx",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.i8vgmr5h6aawxdtx"
+    },
+    {
+      "type": 0,
+      "text": "Crushingly heavy object is going to tip over",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "w1tvc7dty2589wxc",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.w1tvc7dty2589wxc"
+    },
+    {
+      "type": 0,
+      "text": "A savage foe can be attracted by accident",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "mw8habkyc6uh7cad",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.mw8habkyc6uh7cad"
+    },
+    {
+      "type": 0,
+      "text": "Something here is cursed by dark powers",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "kz1snxmtfvaz4vs7",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.kz1snxmtfvaz4vs7"
+    },
+    {
+      "type": 0,
+      "text": "Seeming treasure is used as bait for a trap",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "93pj55uxodq8gx0c",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.93pj55uxodq8gx0c"
+    },
+    {
+      "type": 0,
+      "text": "A contagious disease is on something here",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "rgjmxnica1jak9yd",
+      "flags": {},
+      "_key": "!tables.results!m0SIV8ejdxKnElhp.rgjmxnica1jak9yd"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!m0SIV8ejdxKnElhp"
+}

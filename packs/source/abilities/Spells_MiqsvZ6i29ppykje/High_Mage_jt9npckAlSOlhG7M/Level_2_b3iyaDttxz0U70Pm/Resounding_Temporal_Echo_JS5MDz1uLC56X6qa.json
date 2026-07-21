@@ -1,0 +1,41 @@
+{
+  "_id": "JS5MDz1uLC56X6qa",
+  "name": "Resounding Temporal Echo",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 800000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.JS5MDz1uLC56X6qa"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "High Mage",
+    "duration": "1d4+1 rounds",
+    "range": "Visible",
+    "roll": "1d4+1",
+    "description": "<p>The caster imbues one visible ally per caster level with a burst of tremendous speed as their localized time begins to flow more rapidly. For 1d4+1 rounds, all subjects get an extra Main Action during their turn. This Main Action may not be used to cast spells or use Arts. This spell severely taxes those who take advantage of it, adding 1 System Strain for each round in which the recipient takes the bonus action.&nbsp;</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!JS5MDz1uLC56X6qa"
+}

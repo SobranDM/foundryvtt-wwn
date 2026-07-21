@@ -1,0 +1,125 @@
+{
+  "_id": "S5LfTFOCY9w6H9h1",
+  "name": "Government-SingleRuler",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Single Rulers",
+  "results": [
+    {
+      "_id": "BZXXPetqhuhbzBhZ",
+      "flags": {},
+      "type": 0,
+      "text": "King or queen over lesser lords",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.BZXXPetqhuhbzBhZ"
+    },
+    {
+      "_id": "Te9hABZ3H9VjNnpK",
+      "flags": {},
+      "type": 0,
+      "text": "Autocrat with non-noble officials",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.Te9hABZ3H9VjNnpK"
+    },
+    {
+      "_id": "AARVHIQFETaSTXup",
+      "flags": {},
+      "type": 0,
+      "text": "President chosen by certain electors",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.AARVHIQFETaSTXup"
+    },
+    {
+      "_id": "i2OhJeaEvQMyNGLx",
+      "flags": {},
+      "type": 0,
+      "text": "Warlord recognized as the strongest",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.i2OhJeaEvQMyNGLx"
+    },
+    {
+      "_id": "MrsnW8DtSAM8rafc",
+      "flags": {},
+      "type": 0,
+      "text": "Seniormost representative of the ruling class",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.MrsnW8DtSAM8rafc"
+    },
+    {
+      "_id": "occFxOEd27N4CTLA",
+      "flags": {},
+      "type": 0,
+      "text": "Divinely-chosen leader of the land",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.occFxOEd27N4CTLA"
+    },
+    {
+      "_id": "cgojRaRZt5iiZEDK",
+      "flags": {},
+      "type": 0,
+      "text": "Monarch for a fixed term or situation",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.cgojRaRZt5iiZEDK"
+    },
+    {
+      "_id": "tSEHREpeB9MKXrOK",
+      "flags": {},
+      "type": 0,
+      "text": "Wielder of some magical legitimacy",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!S5LfTFOCY9w6H9h1.tSEHREpeB9MKXrOK"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!S5LfTFOCY9w6H9h1"
+}

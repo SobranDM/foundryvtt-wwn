@@ -1,0 +1,125 @@
+{
+  "_id": "zvmgqmrMPn1uPn3s",
+  "name": "History-Originate",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Did They Originate?",
+  "results": [
+    {
+      "_id": "LOvP2JI5XeX3M1XS",
+      "flags": {},
+      "type": 0,
+      "text": "Aboriginal peoples united in the area",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.LOvP2JI5XeX3M1XS"
+    },
+    {
+      "_id": "FHgZ7l3eQm8yR8yZ",
+      "flags": {},
+      "type": 0,
+      "text": "They were refugees from a fallen land",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.FHgZ7l3eQm8yR8yZ"
+    },
+    {
+      "_id": "kxiggZWSYGAo5jG2",
+      "flags": {},
+      "type": 0,
+      "text": "They were exiles or losers of some civil strife",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.kxiggZWSYGAo5jG2"
+    },
+    {
+      "_id": "31ujKXkrQjgK9Xnt",
+      "flags": {},
+      "type": 0,
+      "text": "They were colonists who became independent",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.31ujKXkrQjgK9Xnt"
+    },
+    {
+      "_id": "Vj18G2vxWwNRDnWv",
+      "flags": {},
+      "type": 0,
+      "text": "They were magically created or shaped here",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.Vj18G2vxWwNRDnWv"
+    },
+    {
+      "_id": "knZ5kBKz0mkGnTxy",
+      "flags": {},
+      "type": 0,
+      "text": "They all followed a faith or ideology here",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.knZ5kBKz0mkGnTxy"
+    },
+    {
+      "_id": "oesYgTcQkxkm5skI",
+      "flags": {},
+      "type": 0,
+      "text": "They were a conquering army gone native",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.oesYgTcQkxkm5skI"
+    },
+    {
+      "_id": "vu0j5cl1yYAGlcUU",
+      "flags": {},
+      "type": 0,
+      "text": "They migrated here for profit or plunder",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!zvmgqmrMPn1uPn3s.vu0j5cl1yYAGlcUU"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!zvmgqmrMPn1uPn3s"
+}

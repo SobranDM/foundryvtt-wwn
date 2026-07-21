@@ -1,0 +1,151 @@
+{
+  "_id": "9QtA1c7kZCkt9sXH",
+  "name": "Government-Strength",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "A Strength of the Government",
+  "results": [
+    {
+      "_id": "vd1XDzbwJuYojf5K",
+      "flags": {},
+      "type": 0,
+      "text": "The bureaucracy is extremely efficient",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.vd1XDzbwJuYojf5K"
+    },
+    {
+      "_id": "QElxiinob6dtQZeO",
+      "flags": {},
+      "type": 0,
+      "text": "The military leadership is fiercely loyal",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.QElxiinob6dtQZeO"
+    },
+    {
+      "_id": "7BedclNKgdT9o7Yg",
+      "flags": {},
+      "type": 0,
+      "text": "It has great legitimacy with the populace",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.7BedclNKgdT9o7Yg"
+    },
+    {
+      "_id": "gIacengy5OiSUurQ",
+      "flags": {},
+      "type": 0,
+      "text": "It has firm economic control over the land",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.gIacengy5OiSUurQ"
+    },
+    {
+      "_id": "Rv0AG3wkER55jQmT",
+      "flags": {},
+      "type": 0,
+      "text": "The populace is convinced it will bring good",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.Rv0AG3wkER55jQmT"
+    },
+    {
+      "_id": "gw0QG72bfitgnHfP",
+      "flags": {},
+      "type": 0,
+      "text": "Its diplomats are remarkably cunning",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.gw0QG72bfitgnHfP"
+    },
+    {
+      "_id": "OGinKoHUwQoluB0B",
+      "flags": {},
+      "type": 0,
+      "text": "An expert spymaster serves it well",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.OGinKoHUwQoluB0B"
+    },
+    {
+      "_id": "uQrFGvB620VMKSxt",
+      "flags": {},
+      "type": 0,
+      "text": "It has access to powerful sorceries",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.uQrFGvB620VMKSxt"
+    },
+    {
+      "_id": "8L5xza3cbalBpWpS",
+      "flags": {},
+      "type": 0,
+      "text": "It’s got firm ties with an important faith",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.8L5xza3cbalBpWpS"
+    },
+    {
+      "_id": "14eeQIVEXUyASpC9",
+      "flags": {},
+      "type": 0,
+      "text": "Nobles have magic blessings or gifted blood",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!9QtA1c7kZCkt9sXH.14eeQIVEXUyASpC9"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!9QtA1c7kZCkt9sXH"
+}

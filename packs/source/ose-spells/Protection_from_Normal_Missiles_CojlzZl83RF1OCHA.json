@@ -1,0 +1,26 @@
+{
+  "_id": "CojlzZl83RF1OCHA",
+  "name": "Protection from Normal Missiles",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "12 turns",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single subject in range gains complete immunity to small, non-magical missiles (e.g. no protection is granted against hurled boulders or enchanted arrows).</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!CojlzZl83RF1OCHA"
+}

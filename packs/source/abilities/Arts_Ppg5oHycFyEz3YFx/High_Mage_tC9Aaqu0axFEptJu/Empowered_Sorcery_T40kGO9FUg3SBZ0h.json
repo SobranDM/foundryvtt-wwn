@@ -1,0 +1,32 @@
+{
+  "_id": "T40kGO9FUg3SBZ0h",
+  "name": "Empowered Sorcery",
+  "type": "art",
+  "img": "systems/wwn/assets/default/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.T40kGO9FUg3SBZ0h"
+    }
+  },
+  "_key": "!items!T40kGO9FUg3SBZ0h",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the day as an Instant action to re-roll any variable die roll associated with a spell&rsquo;s effects, such as a damage roll; take the roll you prefer.</p>",
+    "save": "",
+    "source": "High Mage",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "_id": "C1CKmhASvJurRjlL",
+  "name": "Types of Ruin Sites",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "The table below offers suggestions as to what kind of structure the exploration site might be. Some of the listed sites might not make sense in a particular context. While you can always just re-roll or pick something, it can sometimes be interesting to read the result metaphorically, and then put a structure in that matches the essential significance of the rolled result.",
+  "results": [
+    {
+      "_id": "7Ld9UI1z0dMyVXDb",
+      "type": 0,
+      "text": "<b>Residential Site</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.7Ld9UI1z0dMyVXDb"
+    },
+    {
+      "_id": "U4W3kmi7bjcearWT",
+      "type": 2,
+      "text": "Ruin-Residential",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "f9Ej9D62dBkn95id",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.U4W3kmi7bjcearWT"
+    },
+    {
+      "_id": "M7pXF3VG2uZbOLwF",
+      "type": 0,
+      "text": "<b>Military Site</b>",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.M7pXF3VG2uZbOLwF"
+    },
+    {
+      "_id": "9G5C8B8P7OtQKxXb",
+      "type": 2,
+      "text": "Ruin-Military",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "9F3PeDKeKv2aICLU",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.9G5C8B8P7OtQKxXb"
+    },
+    {
+      "_id": "kANP9BCvFQ1Wr8gw",
+      "type": 0,
+      "text": "<b>Production Site</b>",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.kANP9BCvFQ1Wr8gw"
+    },
+    {
+      "_id": "GEJXQ315tKDFoKfn",
+      "type": 2,
+      "text": "Ruin-Production",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "d0JsJbQXJHLwrT6I",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.GEJXQ315tKDFoKfn"
+    },
+    {
+      "_id": "RSiQJym4LMmlKslj",
+      "type": 0,
+      "text": "<b>Religious Site</b>",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.RSiQJym4LMmlKslj"
+    },
+    {
+      "_id": "n1f6H2C4afstiLTR",
+      "type": 2,
+      "text": "Ruin-Religious",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "VT5kUIdkZKXbmgm4",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.n1f6H2C4afstiLTR"
+    },
+    {
+      "_id": "Lg1z7ZXyFdscqnOZ",
+      "type": 0,
+      "text": "<b>Cultural Site</b>",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.Lg1z7ZXyFdscqnOZ"
+    },
+    {
+      "_id": "A99KUEGG9aVzkF42",
+      "type": 2,
+      "text": "Ruin-Cultural",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "2EgsngYETnfsMIXY",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.A99KUEGG9aVzkF42"
+    },
+    {
+      "_id": "2Aq7Pt27EAUOIlCc",
+      "type": 0,
+      "text": "<b>Infrastructure Site</b>",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.2Aq7Pt27EAUOIlCc"
+    },
+    {
+      "_id": "tRBUpzLeDbsMaRtJ",
+      "type": 2,
+      "text": "Ruin-Infrastructure",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "D1d00cXACTQTvQhG",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!C1CKmhASvJurRjlL.tRBUpzLeDbsMaRtJ"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!C1CKmhASvJurRjlL"
+}

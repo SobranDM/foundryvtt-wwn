@@ -1,0 +1,17 @@
+{
+  "_id": "Jh1tjXSyKirkdW1I",
+  "name": "Arratu Land",
+  "content": "<h1>Arratu Land</h1><div>\n<p>There is a large pocket of arratu at the site, even though it may be too small to show up on the hex map. Such a pocket might be the last remnant of a formerly-great swath, or it could just be a localized tumor created by an Outsider device, a malevolent sorcerer, or a magical disaster. Something about the arratu’s placement likely forces the party to go well out of their way to bypass it safely; it might command a narrow pass or be flanked by dangerous terrain on either side.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Outsider beast within the waste, Half-human marauder chief lairing inside, Crazed Outsider wizard who made the wasteland</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Foolish explorer who tried to cross it, Wretched slave taken by raiders, Not-too-homicidal native</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The wasteland is being contained by a potentiallybreakable object here, Locals know how to get through it safely, It’s a very new wasteland and the locals haven’t adjusted to it yet</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Equipment to survive the hostile atmosphere within, Precious Outsider relic, Wealth seized by raiders from the waste</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Blasted village overrun by alien life, Desolate plain with an unearthly sky above, Lakeshore of a pool filled with a noxious chemical</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 800000
+    }
+  },
+  "_key": "!journal!Jh1tjXSyKirkdW1I",
+  "ownership": {
+    "default": 0
+  }
+}

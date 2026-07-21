@@ -1,0 +1,26 @@
+{
+  "_id": "tBv9eBFWVGgNHkh9",
+  "name": "Remove Fear",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Cleric",
+    "duration": "2 turns",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The creature touched is calmed and purged of fear. Magically induced fear may be dispelled, but this requires the subject to make a Mental save. The save is modified by -1 per level of the caster.</p>\n<p><strong>Reversed: Cause Fear</strong></p>\n<p>Will cause a target within 120&rsquo; to flee for the duration unless it saves versus spells.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!tBv9eBFWVGgNHkh9"
+}

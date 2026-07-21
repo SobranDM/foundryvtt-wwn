@@ -1,0 +1,303 @@
+{
+  "name": "Acolyte",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.YIEybc7mfALGSezs"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "TvaLV4XiYEpVRop7",
+      "name": "Mace",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.4jBmE0lnO9VafcT4"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs, staffs,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 18
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [
+          {
+            "title": "LL",
+            "value": "LL"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!dt9oFsajwDSptqY6.TvaLV4XiYEpVRop7"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 17,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 1,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20'",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 0,
+        "max": 2
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 2
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p><span style=\"box-sizing: border-box; user-select: text; color: #191813;\"><span style=\"color: #191813;\">1st level clerics on a quest for their deity.</span></span></p>\n<p><strong style=\"box-sizing: border-box; user-select: text; color: #191813;\">Leader:</strong><span style=\"color: #191813;\">&nbsp;Groups of 4+ are led by a higher level cleric (1d10: 1&ndash;4: 2nd level, 5&ndash;7: 3rd level, 8&ndash;9: 4th level, 10: 5th level). Choose or roll the leader&rsquo;s spells.</span></p>",
+      "alignment": "Any",
+      "xp": 10,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d8",
+        "w": "1d20"
+      },
+      "morale": 7,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "1d8",
+      "value": 6,
+      "max": 6
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "about-face": {
+        "indicatorDisabled": false
+      }
+    },
+    "name": "Acolyte",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331192,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "dt9oFsajwDSptqY6",
+  "_key": "!actors!dt9oFsajwDSptqY6"
+}

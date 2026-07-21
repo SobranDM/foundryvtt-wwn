@@ -1,0 +1,41 @@
+{
+  "_id": "SwJTL8ArcLs09buJ",
+  "name": "Flame Scrying",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "effects": [],
+  "folder": "EKBFwEIj1iHwEq45",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.SwJTL8ArcLs09buJ"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 1,
+    "class": "Elementalist",
+    "duration": "As long as the caster is focused",
+    "range": "30 ft. per level",
+    "roll": "",
+    "description": "<p>The elementalist becomes aware of the approximate locations of all open flames within thirty feet per caster level. They may choose one of those flames as a focus for the scrying, allowing them to see and hear everything around the flame as if they were present. The spell&rsquo;s duration lasts for as long as the elementalist remains motionlessly focused on it; during this duration, they may switch their focus between the various flames in range as they wish.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!SwJTL8ArcLs09buJ"
+}

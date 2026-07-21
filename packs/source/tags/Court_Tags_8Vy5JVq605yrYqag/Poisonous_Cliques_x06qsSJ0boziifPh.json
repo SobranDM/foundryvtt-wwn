@@ -1,0 +1,17 @@
+{
+  "_id": "x06qsSJ0boziifPh",
+  "name": "Poisonous Cliques",
+  "content": "<h1>Poisonous Cliques</h1><div>\n<p>The court is riven by at least two viciously hostile cliques, both of which are determined to ruin or kill the other. Nonaligned members of the court are forced to submit to one or the other lest they be enemies to both and all normal business of the court is paralyzed by their incessant quarreling. This hostility may be open and overt, or it may be veiled behind venomous courtesies and cruelly heartless protocols.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Outside rival who provoked the clique formation, Traitor seeking mutual destruction, Brutal clique leader who will do anything for victory</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Unaligned member trying to stay alive, Outside ally distressed by the infighting, Weak leader unable to rein in the hostilities</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>One clique is sympathetic but just as determined to attain total victory as the other, The cliques are destroying the very prize they fight over, A secret internal faction waits to pick up the pieces</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Treasure the cliques are fighting over, Tool or artifact meant to break the stalemate, Documents showing a traitor within one clique’s leadership</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Well-separated court residences for the cliques, Holding ruined by their infighting, Destroyed former residence of a loser of the fighting</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "8Vy5JVq605yrYqag",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6800000
+    }
+  },
+  "_key": "!journal!x06qsSJ0boziifPh",
+  "ownership": {
+    "default": 0
+  }
+}

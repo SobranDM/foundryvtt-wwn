@@ -1,0 +1,32 @@
+{
+  "_id": "Ufab0olEKb1UjuCE",
+  "name": "Purified Body",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.Ufab0olEKb1UjuCE"
+    }
+  },
+  "_key": "!items!Ufab0olEKb1UjuCE",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>You may Commit Effort for the day as an Instant action to cure any disease or poison currently affecting you, or instead to negate any need for sleep, food, water, or air for the next 24 hours.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

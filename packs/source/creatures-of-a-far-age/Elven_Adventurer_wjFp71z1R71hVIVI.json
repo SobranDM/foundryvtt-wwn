@@ -1,0 +1,201 @@
+{
+  "_id": "wjFp71z1R71hVIVI",
+  "name": "Elven Adventurer",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "8rrm2zXMx9UWi6Pu",
+      "name": "Mail Shirt",
+      "type": "armor",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.y2XpAnL4R2KKOz0T"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "_key": "!actors.items!wjFp71z1R71hVIVI.8rrm2zXMx9UWi6Pu",
+      "system": {
+        "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 14
+        },
+        "type": "medium",
+        "price": 250,
+        "weight": 1
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!wjFp71z1R71hVIVI",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 15,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 5,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": null,
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "0"
+      },
+      "morale": 10,
+      "instinct": 2,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "3d8",
+      "value": 13,
+      "max": 13
+    },
+    "damageBonus": 2
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Elven Villager",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "wjFp71z1R71hVIVI",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

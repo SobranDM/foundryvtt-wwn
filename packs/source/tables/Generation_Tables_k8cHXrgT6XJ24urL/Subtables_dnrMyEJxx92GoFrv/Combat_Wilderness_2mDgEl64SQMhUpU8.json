@@ -1,0 +1,174 @@
+{
+  "_id": "2mDgEl64SQMhUpU8",
+  "name": "Combat-Wilderness",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Hazardous flora make up a natural trap for those ignorant of their perils",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "rtc8tkbtqmsgzhfr",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.rtc8tkbtqmsgzhfr"
+    },
+    {
+      "type": 0,
+      "text": "Numerous deadfalls or covered pits have been placed on side paths here",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "02iaewodcn5y12yr",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.02iaewodcn5y12yr"
+    },
+    {
+      "type": 0,
+      "text": "The lair is positioned somewhere that has an excellent view of most approaches to it",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "j09bwgpc4c271o98",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.j09bwgpc4c271o98"
+    },
+    {
+      "type": 0,
+      "text": "You need to go underwater or through some noxious gas in order to reach the habitable part of the lair",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "wdcowy6tb6a1jacs",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.wdcowy6tb6a1jacs"
+    },
+    {
+      "type": 0,
+      "text": "It’s surrounded by some natural peril, radioactive zone, arratu, or other hazard",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "ldsbpktvdsfhmchj",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.ldsbpktvdsfhmchj"
+    },
+    {
+      "type": 0,
+      "text": "There’s a nest or lair of some dangerous animal obstructing easy entrance, but the occupants know how to deal with them",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "euvxdtldxg76p0ai",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.euvxdtldxg76p0ai"
+    },
+    {
+      "type": 0,
+      "text": "A fearsome local predator has been tamed or pacified and will attack intruders",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ivzhwl4yxodjdr4c",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.ivzhwl4yxodjdr4c"
+    },
+    {
+      "type": 0,
+      "text": "The lair’s built at least partially into some ancient structure or ruin",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "yrow86ox95sinwl4",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.yrow86ox95sinwl4"
+    },
+    {
+      "type": 0,
+      "text": "The lair’s inside the hunting territory of some dreadful creature",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "c7gut8qx8z3pi9b2",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.c7gut8qx8z3pi9b2"
+    },
+    {
+      "type": 0,
+      "text": "It extremely well-concealed amid the terrain",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "m2fn7kr70roaluvb",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.m2fn7kr70roaluvb"
+    },
+    {
+      "type": 0,
+      "text": "Unrelated people are also living in or near it, and disturbing them would be hazardous",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "sjmij5u6vpo09lf4",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.sjmij5u6vpo09lf4"
+    },
+    {
+      "type": 0,
+      "text": "It’s contaminated with soured magical energy, a damaged Working, or some other curse",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "oynhvqzma7pnqo2w",
+      "flags": {},
+      "_key": "!tables.results!2mDgEl64SQMhUpU8.oynhvqzma7pnqo2w"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!2mDgEl64SQMhUpU8"
+}

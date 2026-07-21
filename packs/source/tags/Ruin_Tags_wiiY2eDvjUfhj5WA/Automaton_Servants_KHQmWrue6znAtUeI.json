@@ -1,0 +1,17 @@
+{
+  "_id": "KHQmWrue6znAtUeI",
+  "name": "Automaton Servants",
+  "content": "<h1>Automaton Servants</h1><div>\n<p>The ruin is still staffed by automaton servants or other immortal minions. Aside from obviously robotic servitors, magical golems, bound spirits, undead thralls, uplifted beasts, or other subject species might be found here. Such minions are usually magically bound to their roles, which may be causing them significant problems if their roles can no longer be carried out. It’s possible that some of them have reinterpreted their roles into something they can do, whether or not it’s something they should do.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Cruel immortal artificer, Automaton leader gone mad, Outsider seeking to suborn them to their sinister service</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Helpful automaton minion, Fascinated outside investigator, Local native who fears the minions</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Scrapped automatons are worth a great deal, The automatons are needed to maintain the ruin’s basic physical stability, The automatons have merged with or been altered by some outside power</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Command key for the automatons, Cache of valuable spare parts, Item they desperately need in order to fulfill their function</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Automaton maintenance area, Bank of unmoving figures, Place of endless automaton toil</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 600000
+    }
+  },
+  "_key": "!journal!KHQmWrue6znAtUeI",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "s42dAiKKcLvxz1FU",
+  "name": "Striking",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Cleric",
+    "duration": "1 turn",
+    "range": "30'",
+    "roll": "1d6",
+    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single weapon is enchanted:</p>\n<p><strong>▶ Damage:</strong> It deals an additional 1d6 damage.</p>\n<p><strong>▶ Treated as magical:</strong> It is able to harm monsters which are normally only harmed by magical weapons.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!s42dAiKKcLvxz1FU"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "trQ2hT6bLmfLGsfn",
+  "name": "Move Earth",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Earth (but not stone) within range is rearranged as the caster wishes.</p>\n<p><strong>▶ Movement rate:</strong> The caster can move earth in the area at up to 60&rsquo; per turn.</p>\n<p><strong>▶ Excavations: </strong>The range of the spell also extends downwards, allowing excavations to be made.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!trQ2hT6bLmfLGsfn"
+}

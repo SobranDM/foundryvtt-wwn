@@ -1,0 +1,67 @@
+{
+  "_id": "scGwW7STysk3CzcV",
+  "name": "Magical Armor, Minor",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "H6HCJKgRJ1MYCDxk",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor Bonus, Minor",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "HcrnXlXSfzAmeMG8",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!scGwW7STysk3CzcV.H6HCJKgRJ1MYCDxk"
+    },
+    {
+      "_id": "DZbzx1yPqWYeOZoe",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor SA, Minor",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "qcpzSx8lKpxbonVg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!scGwW7STysk3CzcV.DZbzx1yPqWYeOZoe"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!scGwW7STysk3CzcV",
+  "folder": "lNk7aQ8vhZ8d8QQE"
+}

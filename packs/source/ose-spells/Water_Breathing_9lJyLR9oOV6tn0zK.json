@@ -1,0 +1,26 @@
+{
+  "_id": "9lJyLR9oOV6tn0zK",
+  "name": "Water Breathing",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "1 day",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: 1 day</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The subject can breathe water freely by means of this spell.</p>\n<p><strong>▶ Breathing air: </strong>The spell does not affect the subject&rsquo;s ability to breathe air.</p>\n<p><strong>▶ Swimming:</strong> No additional proficiency at swimming is granted.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!9lJyLR9oOV6tn0zK"
+}

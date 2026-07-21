@@ -1,0 +1,438 @@
+{
+  "name": "Dragon, Blue",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "E0sVZTE3tcfgGJxk",
+      "name": "Claw",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "1d6+1",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 2,
+          "max": 2
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        },
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!DJ47PsZ2qq50sSG1.E0sVZTE3tcfgGJxk"
+    },
+    {
+      "_id": "xuqNPDv0i5lZITIs",
+      "name": "Bite",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "3d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 6,
+          "ac": 18
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        },
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!DJ47PsZ2qq50sSG1.xuqNPDv0i5lZITIs"
+    },
+    {
+      "_id": "ShP8PiMNlzrdFpKt",
+      "name": "Breath Weapon",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>100' long line of lightning.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "evasion",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!DJ47PsZ2qq50sSG1.ShP8PiMNlzrdFpKt"
+    },
+    {
+      "_id": "24uTPACWS2yoroW1",
+      "name": "Language and Spells",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>40%; 4 x 1st level, 4 x 2nd level.</p>",
+        "roll": "1d100",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!DJ47PsZ2qq50sSG1.24uTPACWS2yoroW1"
+    },
+    {
+      "_id": "0mrYeyxqty5AU3L0",
+      "name": "Sleeping",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>20%.</p>",
+        "roll": "1d100",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!DJ47PsZ2qq50sSG1.0mrYeyxqty5AU3L0"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.WIVT4Ov6CjOch69S"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 20,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 8,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 11,
+        "mod": 0
+      },
+      "mental": {
+        "value": 11,
+        "mod": 0
+      },
+      "physical": {
+        "value": 11,
+        "mod": 0
+      },
+      "luck": {
+        "value": 11,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30 / 80 fly",
+      "exploration": null,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 2,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>A proud, ancient race of gigantic, carnivorous, winged reptiles. There are many subspecies of dragon, many of which are distinguished by the colour of their scales. All dragons are egg-layers and hoard treasure in their lairs, far from areas of human civilisation.</p>\n<p>Favour open plains and deserts.</p>\n<ul>\n<li><strong>Behaviour: </strong>Chaotic dragons usually try to eat humans, but may sometimes capture them. Neutral dragons may attack or ignore humans. Lawful dragons may aid parties worthy of the honour.</li>\n<li><strong>Pride:</strong> Dragons are immensely proud <span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">creatures and will always listen to flattery.</span></li>\n<li><strong>Attack pattern:</strong> A dragon always <span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">attacks first with its breath weapon, then </span><span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">either breathes again or makes melee </span><span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">attacks (equal chance of either).</span></li>\n<li><strong>Breath weapon:</strong> Can be used up to three times per day. Unless noted otherwise, all caught in the area suffer damage equal to the dragon&rsquo;s current hit points (Evasion save for half). Shapes:</li>\n<ul>\n<li><strong>Cloud:</strong> 50&rsquo; long, 40&rsquo; wide, 20&rsquo; high.</li>\n<li><strong>Cone:</strong> 2&rsquo; wide at the mouth, 30&rsquo; wide at far end.</li>\n<li><strong>Line:</strong> 5&rsquo; wide along whole length.</li>\n</ul>\n<li><strong>Energy immunity:</strong> Unharmed by their own breath weapon or lesser versions thereof. Automatically save versus similar attack forms. (For example, a red dragon is immune to flaming oil and suffers half damage from fire ball spells.)</li>\n<li><strong>Language and spells:</strong> Some dragons are able to speak (their own tongue plus Common). The chance is listed by subspecies. Those that can speak can also cast randomly selected magic-user spells (the listed number and level of spells).</li>\n<li><strong>Sleeping:</strong> The chance of a dragon being asleep when encountered on the ground is listed by subspecies. A sleeping dragon may be attacked for one round with a +2 bonus to hit. Dragons may sometimes pretend to be asleep!</li>\n<li><strong>Subduing:</strong> Will surrender if reduced to 0hp by non-lethal attacks, admitting that it has been defeated. (Subdual damage does not reduce the damage done by the breath weapon.) A subdued dragon will attempt to escape or attack its captors, if the opportunity presents itself or if given a suicidal command. A subdued dragon may be sold for up to 1,000sp per hp.</li>\n<li><strong>Age:</strong> The following stats describe dragons of average size. Younger dragons may have up to 3 HD less and &frac14; or &frac12; as much treasure. Older dragons may have up to 3 HD more and twice as much treasure.</li>\n<li><strong>Lairs:</strong> A dragon&rsquo;s treasure is always kept in its well-hidden lair and is seldom unguarded.</li>\n</ul>",
+      "alignment": "Neutral",
+      "xp": 2300,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d4",
+        "w": "1d4"
+      },
+      "morale": 9,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.MLYsyBmxy0cDjUst]{Beings of Arrogant Might}",
+        "link": ""
+      },
+      "skill": 4
+    },
+    "attacks": "",
+    "damageBonus": 2,
+    "character": false,
+    "hp": {
+      "hd": "9d8",
+      "value": 40,
+      "max": 40
+    }
+  },
+  "prototypeToken": {
+    "name": "Blue Dragon",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {
+      "image-hover": {
+        "hideArt": false
+      },
+      "wall-height": {
+        "tokenHeight": 0
+      }
+    },
+    "randomImg": true,
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 3,
+      "scaleY": 3,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331168,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "DJ47PsZ2qq50sSG1",
+  "_key": "!actors!DJ47PsZ2qq50sSG1"
+}

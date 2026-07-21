@@ -1,0 +1,17 @@
+{
+  "_id": "55yexSE1tE9SOBJ2",
+  "name": "Raider Lair",
+  "content": "<h1>Raider Lair</h1><div>\n<p>Some ruins are dangerous only to intruders, but this one actively sends out raiding parties to plunder the surroundings. Many such lairs prefer to go relatively far afield to obscure their origins and avoid the hostility of their immediate neighbors. Others have specific grudges to nurse, or particular targets that have incurred their wrath. Hostages might be taken back for ransom, labor, or food, depending on the nature of the inhabitants.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Ambitious bandit chieftain, Embittered exiled lord, Monstrous ruler who hungers for outside wealth</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Relative of a kidnapped victim, Escapee from the raiders, Local reeve trying to cope with the raids</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The raiders are being backed by an outside power hostile to its neighbors, The raiders exact a brutal tribute for their “protection”, The raiders had or have a sympathetic cause</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Priceless relic taken by the raiders, Cache of supplies they need badly, Loot hidden by the plunderers</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Raucous and vile raider camp, Re-purposed room turned into the chief’s lair, Treasure chamber full of looted goods</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7200000
+    }
+  },
+  "_key": "!journal!55yexSE1tE9SOBJ2",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "thqYDlTAyvbQBObR",
+  "name": "Labyrinthine Tangle",
+  "content": "<h1>Labyrinthine Tangle</h1><div>\n<p>The terrain is remarkably tangled and treacherous, such that it’s almost impossible to cross it without a guide or very good map. This tangle may be the result of shifting, boggy ground, wildly overgrown forest, looming cliffs that box in travel, or magical miasmas that baffle and disorient. Some regions might have spatial distortions born of ancient magic, such that only the right keys allow outsiders to pass them.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Sinister master of the labyrinth, Monstrous creature born of the wild, Savage exile hiding in the maze</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Helpful local guide, Hapless soul lost within it, Friendly native of the maze</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Getting lost in it can leave you very far from your entry point, An environmental hazard harms you more the longer you stay in it, Guides sacrifice certain clients to the powers within</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Map of the labyrinth, Treasure lost by a victim within it, Precious object the labyrinth guards</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Trail that looks like all the rest, Trees or cliffs too difficult to scale blocking out any distant view, Ancient megastructure with perfectly identical massive decorative fragments that form a maze</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 4400000
+    }
+  },
+  "_key": "!journal!thqYDlTAyvbQBObR",
+  "ownership": {
+    "default": 0
+  }
+}

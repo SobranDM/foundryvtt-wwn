@@ -1,0 +1,32 @@
+{
+  "_id": "pb4vf62weq7mgaef",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Warshaped",
+  "type": "asset",
+  "_key": "!items!pb4vf62weq7mgaef",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d8+2",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 30,
+    "counter": "2d8",
+    "desc": "The faction has the use of magical creatures designed specifically for warfare, or ordinary humans that have been greatly altered to serve the faction's needs. Such forces are few and elusive enough to evade easy detection.",
+    "health": {
+      "max": 16,
+      "value": 16
+    },
+    "income": 0,
+    "magic": "High",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

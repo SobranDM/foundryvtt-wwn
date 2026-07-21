@@ -1,0 +1,17 @@
+{
+  "_id": "nj9zq4OD3CR4ByFk",
+  "name": "Toxic Ruins",
+  "content": "<h1>Toxic Ruins</h1><div>\n<p>There’s a ruin in the area, but it’s poisonous or diseaseinfested. Such a blight may not be immediately obvious, with the effects slowly taking hold the longer an intruder remains. There’s probably something about the ruin that’s attractive to others, and the toxin isn’t quick enough to make plundering an obviously futile effort. In other cases, the toxin might be fast, but there could be some item or magic to resist it.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Toxin-warped beast within, Sorcerer exploring the toxin’s potential, Cruel plunderer using expendable help to loot the site</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Native who knows a cure for the toxin, Explorer trapped within the ruin, Native life form that’s immune to the toxin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The toxin was a healthful atmosphere to the Outsider builder of the ruin, The toxin is radiation or some other invisible poison, The toxin is exuded by the substance or objects that are most valuable in the ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Cure or protection from the poison, Incredibly toxic weapon or object, Damaged ancient relic that’s causing the toxic effect</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Eerily barren land around the ruin, Camp full of poisoned explorers, A grove of unnatural life amid the toxic stew</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 9000000
+    }
+  },
+  "_key": "!journal!nj9zq4OD3CR4ByFk",
+  "ownership": {
+    "default": 0
+  }
+}

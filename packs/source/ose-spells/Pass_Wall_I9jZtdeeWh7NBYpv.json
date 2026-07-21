@@ -1,0 +1,26 @@
+{
+  "_id": "I9jZtdeeWh7NBYpv",
+  "name": "Pass-Wall",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "3 turns",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A 5&rsquo; diameter hole is temporarily opened in solid rock or stone, forming a passageway up to 10&rsquo; deep.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!I9jZtdeeWh7NBYpv"
+}

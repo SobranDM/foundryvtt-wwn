@@ -1,0 +1,281 @@
+{
+  "_id": "JPhfXfsCtzXNnRvc",
+  "name": "Terrain-Quirk",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Optional Quirk of the Feature",
+  "results": [
+    {
+      "_id": "1ZjgK9BL0T0hWtUR",
+      "flags": {},
+      "type": 0,
+      "text": "It has significant magical structures in it",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.1ZjgK9BL0T0hWtUR"
+    },
+    {
+      "_id": "klBsDw5xKfC21GAC",
+      "flags": {},
+      "type": 0,
+      "text": "It has a place in the national origin legend",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.klBsDw5xKfC21GAC"
+    },
+    {
+      "_id": "ziwkGY4mV8QPFa6H",
+      "flags": {},
+      "type": 0,
+      "text": "It is entirely manmade by ancient arts",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.ziwkGY4mV8QPFa6H"
+    },
+    {
+      "_id": "0JK5keMR7lCrLmu6",
+      "flags": {},
+      "type": 0,
+      "text": "Time and space sometimes slip there",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.0JK5keMR7lCrLmu6"
+    },
+    {
+      "_id": "jx2vgmhr8H932yPb",
+      "flags": {},
+      "type": 0,
+      "text": "The magical power there attracts wizards",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.jx2vgmhr8H932yPb"
+    },
+    {
+      "_id": "Ar57Fcqm39P0h4Q3",
+      "flags": {},
+      "type": 0,
+      "text": "It subtly changes those who live there",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.Ar57Fcqm39P0h4Q3"
+    },
+    {
+      "_id": "qUhowrRwhELGHzE2",
+      "flags": {},
+      "type": 0,
+      "text": "It’s holy land to a particular faith",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.qUhowrRwhELGHzE2"
+    },
+    {
+      "_id": "czBL6QXtOCU1jhG3",
+      "flags": {},
+      "type": 0,
+      "text": "It was formerly a different kind of terrain",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.czBL6QXtOCU1jhG3"
+    },
+    {
+      "_id": "1fwRqguODqxhVkT3",
+      "flags": {},
+      "type": 0,
+      "text": "It has human-worked vistas of beauty",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.1fwRqguODqxhVkT3"
+    },
+    {
+      "_id": "MQiZ09RZnMlv9FC8",
+      "flags": {},
+      "type": 0,
+      "text": "It was formerly an Outsider stronghold",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.MQiZ09RZnMlv9FC8"
+    },
+    {
+      "_id": "3Kxjgekq7FQvuXbV",
+      "flags": {},
+      "type": 0,
+      "text": "A significant part of it is subterranean",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.3Kxjgekq7FQvuXbV"
+    },
+    {
+      "_id": "suvz2KJa0ul2YGV3",
+      "flags": {},
+      "type": 0,
+      "text": "It’d expand were it not for ancient wards",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.suvz2KJa0ul2YGV3"
+    },
+    {
+      "_id": "lR0nTRKVoK7NAnHR",
+      "flags": {},
+      "type": 0,
+      "text": "It was a nature preserve of a megastructure",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.lR0nTRKVoK7NAnHR"
+    },
+    {
+      "_id": "mvLdxPZlhQc5wq0b",
+      "flags": {},
+      "type": 0,
+      "text": "It’s maintained by an ancient artificial mind",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.mvLdxPZlhQc5wq0b"
+    },
+    {
+      "_id": "kHswi82Y6LeKS8PU",
+      "flags": {},
+      "type": 0,
+      "text": "Magic is somehow warped in its area",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.kHswi82Y6LeKS8PU"
+    },
+    {
+      "_id": "yJAYRzrvP57gU4qR",
+      "flags": {},
+      "type": 0,
+      "text": "The flora and fauna are queasily “off”",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.yJAYRzrvP57gU4qR"
+    },
+    {
+      "_id": "BUkPGHMpJDvFAT4D",
+      "flags": {},
+      "type": 0,
+      "text": "The locals once populated it more heavily",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.BUkPGHMpJDvFAT4D"
+    },
+    {
+      "_id": "dZRPJZkVkJj8P3ta",
+      "flags": {},
+      "type": 0,
+      "text": "Rulership of the feature is widely disputed",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.dZRPJZkVkJj8P3ta"
+    },
+    {
+      "_id": "pxGEFgm6yjYVgmAt",
+      "flags": {},
+      "type": 0,
+      "text": "It’s riddled with caves and delvings",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.pxGEFgm6yjYVgmAt"
+    },
+    {
+      "_id": "pabCFcm5pzFFHhVj",
+      "flags": {},
+      "type": 0,
+      "text": "A unique type of sentient lives there",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!JPhfXfsCtzXNnRvc.pabCFcm5pzFFHhVj"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!JPhfXfsCtzXNnRvc"
+}

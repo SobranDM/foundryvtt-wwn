@@ -1,0 +1,32 @@
+{
+  "_id": "1045q4nuxa7j0z5p",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Merchant Prince",
+  "type": "asset",
+  "_key": "!items!1045q4nuxa7j0z5p",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d8",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "1d8",
+    "desc": "A canny master of trade, the Merchant Prince may be triggered as a free action once per turn before buying a new Asset in the same location; the Merchant Prince takes [[1d4]] damage and the purchased Asset costs [[1d8]] Treasure less, down to a minimum of half its normal price.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "A canny master of trade, the Merchant Prince may be triggered as a free action once per turn before buying a new Asset in the same location; the Merchant Prince takes [[/roll 1d4]] damage and the purchased Asset costs [[/roll 1d8]] Treasure less, down to a minimum of half its normal price.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "AntKz8ukH1U6sXUR",
+  "name": "Lower Water",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "10 turns",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: 10 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>This spell reduces the depth of a body of water by half for the duration. An area of up to 10,000 square feet may be affected.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!AntKz8ukH1U6sXUR"
+}

@@ -1,0 +1,100 @@
+/* Character sheet specific overrides */
+
+.wwn.sheet.actor.character {
+  min-width: 450px;
+  min-height: 550px;
+  container-type: inline-size;
+  container-name: character-sheet;
+}
+.wwn.sheet.actor.character .sheet-header .xp-bonus {
+  top: -15px;
+  right: 3px;
+  color: var(--wwn-border);
+  font-size: 10px;
+  position: absolute;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab {
+  justify-content: space-between;
+  height: 95%;
+}
+.has-spells .wwn.sheet.actor.character .sheet-tabs {
+  right: -185px;
+}
+
+.wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
+  position: relative;
+  padding-right: 0px;
+  margin-right: 0px;
+  padding-bottom: 0px;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
+  position: absolute;
+  left: 0;
+  top: -23px;
+}
+
+.wwn.actor.character .sheet-body .attributes-tab .attributes.saves {
+  margin-top: 10px;
+}
+.wwn.actor.character
+  .sheet-body
+  .attributes-tab
+  .attribute-group
+  .attributes.saves
+  .attribute.saving-throw
+  .attribute-name {
+  width: 85px;
+  height: 38px;
+}
+.wide-attribute {
+  width: 85px !important;
+}
+.wwn.actor.character .sheet-body .attributes-tab .attribute-group .attributes.saves .attribute-value {
+  padding-bottom: 0px;
+}
+
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
+  margin: 2px;
+  margin-top: 0px;
+  flex: 0 0 130px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .details-top {
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
+  flex: 0 0 20px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li {
+  margin: 0;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li:hover .item-controls {
+  display: flex;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li .item-controls {
+  flex: 0 0 20px;
+  display: none;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description {
+  margin: 2px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  height: 100%;
+  min-height: 120px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
+  min-height: 120px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor .tox .tox-tbtn {
+  height: 24px;
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "PkkHTxI862fUtjzr",
+  "name": "Limb Restoration",
+  "type": "art",
+  "img": "systems/wwn/assets/new/healer_art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.PkkHTxI862fUtjzr"
+    }
+  },
+  "_key": "!items!PkkHTxI862fUtjzr",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Only expert healers can master this art, which cannot be learned earlier than 8th level. You must Commit all remaining Effort for the day, a minimum of one point, to regenerate a missing limb or organ for a target you are touching, or efface some dramatic scar or other physical debility. The target&rsquo;s System Strain is automatically maximized.&nbsp;</p>",
+    "save": "",
+    "source": "Healer",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

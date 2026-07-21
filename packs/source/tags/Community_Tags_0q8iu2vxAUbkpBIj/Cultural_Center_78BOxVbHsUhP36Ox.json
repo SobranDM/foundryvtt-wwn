@@ -1,0 +1,17 @@
+{
+  "_id": "78BOxVbHsUhP36Ox",
+  "name": "Cultural Center",
+  "content": "<h1>Cultural Center</h1><div>\n<p>The community produces some wonderful cultural artifact or trains famous artists. The product might be some exceptional cloth, or artistic luxury good, or the scholarly fruits of a famous academy. Trained artists might be students of a particular school, or the apprentices of the current masters of a long artistic tradition who dwell here.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Master artist who suffers no rivals, \"Visionary\" who wants to tear down the old art for their own new one, Merchant who is trying to control the production for profit</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Ambitious young artist of profound talent, Wild genius of very difficult temperament, Aged master proud of his tradition</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The art requires resources that are running low, Some other group is cheaply and poorly mimicking the art, Their main market has somehow been cut off</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>A famous and ancient work of art, An art object made of some priceless substance, An art object encoded with a precious secret</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Busy studio or academy hall, Mercantile emporium where the cultural products are traded, Renegade artist's hovel</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1600000
+    }
+  },
+  "_key": "!journal!78BOxVbHsUhP36Ox",
+  "ownership": {
+    "default": 0
+  }
+}

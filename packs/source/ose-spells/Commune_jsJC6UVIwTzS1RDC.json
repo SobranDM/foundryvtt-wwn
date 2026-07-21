@@ -1,0 +1,26 @@
+{
+  "_id": "jsJC6UVIwTzS1RDC",
+  "name": "Commune",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Cleric",
+    "duration": "3 turns",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>The caster calls upon divine powers in order to seek knowledge.</p>\n<p><strong>▶ Questions:</strong> The caster may ask three questions per casting. Once per year, the caster may instead ask six questions.</p>\n<p><strong>▶ Answers:</strong> Each question receives a simple &ldquo;yes&rdquo; or &ldquo;no&rdquo; answer.</p>\n<p><strong>▶ Usage limit: </strong>Commune may only be cast once per week. If the referee feels this spell is being overused, its usage may be limited to once per month.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!jsJC6UVIwTzS1RDC"
+}

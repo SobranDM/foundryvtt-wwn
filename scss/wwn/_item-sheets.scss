@@ -1,0 +1,121 @@
+/* Shared chrome for every item sheet type (weapon/armor/skill/spell/asset/ability/art/item) */
+
+.wwn.sheet.item .sheet-header h1 input {
+  margin: 6px 2% 0 20px;
+}
+.wwn.sheet.item .sheet-header .details {
+  flex: 0 0 90px;
+}
+.wwn.sheet.item .sheet-header .details label {
+  flex: 0 0 20px;
+}
+.wwn.sheet.item .sheet-body .skill-details {
+  flex-basis: 32%;
+  flex-grow: 0;
+}
+.wwn.sheet.item .sheet-body .skill-details label {
+  flex: 0 0 60px;
+}
+.wwn.sheet.item .sheet-body .skill-details .form-group {
+  justify-content: space-around;
+}
+.wwn.sheet.item .sheet-body .skill-details .form-fields {
+  flex-basis: 35%;
+  flex-grow: 0;
+}
+.wwn.sheet.item .sheet-header .profile-img {
+  border: none;
+  flex: 0 0 84px;
+  height: 84px;
+}
+.wwn.sheet.item .sheet-header .tag-list {
+  margin: 0;
+  height: 24px;
+  overflow: auto;
+  list-style: none;
+  padding: 1px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wwn.sheet.item .sheet-header .tag-list .tag {
+  background: var(--wwn-dark-alt);
+  border-radius: 5px;
+  color: var(--wwn-light);
+  padding: 1px 5px;
+  height: 18px;
+  box-shadow: 0 0 3px var(--wwn-tan);
+  margin: 0 2px;
+}
+.wwn.sheet.item .sheet-header .tag-list .tag i {
+  font-size: 8px;
+  vertical-align: top;
+  color: var(--wwn-tan);
+}
+.wwn.sheet.item .sheet-body .stats {
+  flex: 0 0 80px;
+  border: 1px groove rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  font-size: 13px;
+}
+.wwn.sheet.item .sheet-body .stats .form-group {
+  margin: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  align-items: inherit;
+  min-width: 250px;
+}
+.wwn.sheet.item .sheet-body .stats .form-group label {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 4px;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 21px;
+  min-width: 135px;
+  display: inline-block;
+}
+.wwn.sheet.item .sheet-body .stats .form-group input {
+  border-bottom: none;
+  margin: auto 0;
+}
+.wwn.sheet.item .sheet-body .stats .form-fields.attack-type {
+  text-align: center;
+  padding: 2px;
+  padding-left: 8px;
+  font-size: 15px;
+}
+.wwn.sheet.item .sheet-body .stats .form-fields.attack-type a {
+  color: #969696;
+}
+.wwn.sheet.item .sheet-body .stats .form-fields.attack-type a.active {
+  color: var(--wwn-border-dark);
+}
+.wwn.sheet.item .sheet-body .stats .form-group.attack-type a :hover {
+  color: var(--wwn-border-dark);
+}
+.wwn.sheet.item .sheet-body .stats .form-group .form-fields {
+  justify-content: space-evenly;
+  height: 22px;
+}
+.wwn.sheet.item .sheet-body .stats .form-group .form-fields select {
+  height: 24px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.wwn.sheet.item .sheet-body .description .editor {
+  min-height: 300px;
+  margin-bottom: 0;
+}
+.wwn.sheet.item .sheet-body .item-footer {
+  justify-content: center;
+  margin-bottom: 15px;
+  justify-self: flex-end;
+  bottom: 0;
+  position: sticky;
+}
+.wwn.sheet.item .sheet-body .flexrow.card-body {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wwn.sheet.item .sheet-body .description .editor .editor-content {
+  min-height: 320px;
+  margin-bottom: 0;
+}

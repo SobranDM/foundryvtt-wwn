@@ -1,0 +1,55 @@
+{
+  "_id": "mw5Yxp5BpMHOfGHN",
+  "name": "Hammer, Great +1",
+  "type": "weapon",
+  "img": "systems/wwn/assets/default/weapon.png",
+  "data": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Hammers </strong></em>listed here are the fighting variety, narrow-headed and made for penetrating or shocking heavy plates of armor.</p>",
+    "damage": "1d10+1",
+    "bonus": 1,
+    "skillDamage": false,
+    "shock": {
+      "damage": 3,
+      "ac": 18
+    },
+    "shockTotal": "0",
+    "skill": "stab",
+    "score": "str",
+    "tags": [
+      {
+        "title": "2H",
+        "value": "2H"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 50,
+    "weight": 2,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.mw5Yxp5BpMHOfGHN"
+    }
+  },
+  "_key": "!items!mw5Yxp5BpMHOfGHN"
+}

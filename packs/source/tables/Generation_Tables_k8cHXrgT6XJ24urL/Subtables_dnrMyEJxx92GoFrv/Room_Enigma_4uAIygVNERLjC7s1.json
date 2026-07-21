@@ -1,0 +1,278 @@
+{
+  "_id": "4uAIygVNERLjC7s1",
+  "name": "Room-Enigma",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Magical fountain or pool",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "0pzx3mtmeyde24u0",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.0pzx3mtmeyde24u0"
+    },
+    {
+      "type": 0,
+      "text": "Control that opens paths elsewhere",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "tr64j2o83henoth9",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.tr64j2o83henoth9"
+    },
+    {
+      "type": 0,
+      "text": "Spatial warp between locations",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "pnenkx5g2chbh5vs",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.pnenkx5g2chbh5vs"
+    },
+    {
+      "type": 0,
+      "text": "Enchanted statue or art object",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "bxx0qq0l58i0x5av",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.bxx0qq0l58i0x5av"
+    },
+    {
+      "type": 0,
+      "text": "Magically-animated room components",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "yaaoj6l9948huyhc",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.yaaoj6l9948huyhc"
+    },
+    {
+      "type": 0,
+      "text": "Substance with physically impossible traits",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "rmm1pk82g4816nt8",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.rmm1pk82g4816nt8"
+    },
+    {
+      "type": 0,
+      "text": "Altered or augmented gravity",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ze11w1f67dnuu22e",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.ze11w1f67dnuu22e"
+    },
+    {
+      "type": 0,
+      "text": "Zone that empowers foes or magic types",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "29b5j8k785qhnxby",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.29b5j8k785qhnxby"
+    },
+    {
+      "type": 0,
+      "text": "Magical ward or seal on a summoned thing",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "1013cleqqbd1r8uq",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.1013cleqqbd1r8uq"
+    },
+    {
+      "type": 0,
+      "text": "Oracular object or far-scrying device",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "7pm0fv7r0fw4i6lw",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.7pm0fv7r0fw4i6lw"
+    },
+    {
+      "type": 0,
+      "text": "Standing magical effect in the area",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "7mmu9lmb0cjn5f4d",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.7mmu9lmb0cjn5f4d"
+    },
+    {
+      "type": 0,
+      "text": "Temporal distortion or visions of other times",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "kh75sbuu7ed3kzt2",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.kh75sbuu7ed3kzt2"
+    },
+    {
+      "type": 0,
+      "text": "Sounds being shifted over long distances",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "0vlxd1af7lxcu0cb",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.0vlxd1af7lxcu0cb"
+    },
+    {
+      "type": 0,
+      "text": "Zones of darkness or blinding light",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "5lnlntdd6jfkdyy1",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.5lnlntdd6jfkdyy1"
+    },
+    {
+      "type": 0,
+      "text": "Enchanted seals visibly locking up loot",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "rkbz0dtq0utocv1q",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.rkbz0dtq0utocv1q"
+    },
+    {
+      "type": 0,
+      "text": "Magical or elemental force emitting unit",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "h59a2r00qhwfmztw",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.h59a2r00qhwfmztw"
+    },
+    {
+      "type": 0,
+      "text": "Enchantment tailored to the site’s original use",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "atwy0s953xt1yof5",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.atwy0s953xt1yof5"
+    },
+    {
+      "type": 0,
+      "text": "Unnatural heat or chill in an area",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "pjjapbui5ztupwtz",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.pjjapbui5ztupwtz"
+    },
+    {
+      "type": 0,
+      "text": "Magically-altered plant life here",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "ussvihjpiasvlokf",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.ussvihjpiasvlokf"
+    },
+    {
+      "type": 0,
+      "text": "Restorative magical device",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "s0az8c70q1da83op",
+      "flags": {},
+      "_key": "!tables.results!4uAIygVNERLjC7s1.s0az8c70q1da83op"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!4uAIygVNERLjC7s1"
+}

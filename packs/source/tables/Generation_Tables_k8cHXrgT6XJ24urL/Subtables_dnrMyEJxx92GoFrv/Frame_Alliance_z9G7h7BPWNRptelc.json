@@ -1,0 +1,174 @@
+{
+  "_id": "z9G7h7BPWNRptelc",
+  "name": "Frame-Alliance",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "We have a shared enemy",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "47dlaaq7fw3kz0l0",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.47dlaaq7fw3kz0l0"
+    },
+    {
+      "type": 0,
+      "text": "Our leaders are personal friends",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "ip58yrrly4cyr2h3",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.ip58yrrly4cyr2h3"
+    },
+    {
+      "type": 0,
+      "text": "We intermarry or have a blood relation",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ya24cxdzcep1xlmq",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.ya24cxdzcep1xlmq"
+    },
+    {
+      "type": 0,
+      "text": "We each have goods the other needs",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "zkwkjcn8luvy4cs2",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.zkwkjcn8luvy4cs2"
+    },
+    {
+      "type": 0,
+      "text": "Each has skills the other lacks",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "hl62lj72gdllwy3f",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.hl62lj72gdllwy3f"
+    },
+    {
+      "type": 0,
+      "text": "We give protection for a tolerable price",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "etd9r2ygxgc5zir0",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.etd9r2ygxgc5zir0"
+    },
+    {
+      "type": 0,
+      "text": "We share the defense of the territory",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "jfxegmiyt82nfzga",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.jfxegmiyt82nfzga"
+    },
+    {
+      "type": 0,
+      "text": "We share the same religion",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "kxt7odwuq6c51txb",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.kxt7odwuq6c51txb"
+    },
+    {
+      "type": 0,
+      "text": "We overcame a great peril together",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "k6v94lxl78r1qsh3",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.k6v94lxl78r1qsh3"
+    },
+    {
+      "type": 0,
+      "text": "We used to be under the same leader",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "mjn9mu2bagcwsysw",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.mjn9mu2bagcwsysw"
+    },
+    {
+      "type": 0,
+      "text": "We recognize them as our rightful masters",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "hsavshm9jcpquf8o",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.hsavshm9jcpquf8o"
+    },
+    {
+      "type": 0,
+      "text": "We gain a great profit by mutual cooperation",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "xk1c238h9t8pf52g",
+      "flags": {},
+      "_key": "!tables.results!z9G7h7BPWNRptelc.xk1c238h9t8pf52g"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!z9G7h7BPWNRptelc"
+}

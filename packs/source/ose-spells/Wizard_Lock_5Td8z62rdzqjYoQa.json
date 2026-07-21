@@ -1,0 +1,26 @@
+{
+  "_id": "5Td8z62rdzqjYoQa",
+  "name": "Wizard Lock",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Mage",
+    "duration": "Permanent",
+    "range": "10'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>A wizard lock spell magically locks a door, gate, similar portal, or any item that has a lock.</p>\n<p><strong>Bypassing: </strong>The magical lock is permanent but may be bypassed as follows:</p>\n<p><strong>▶ The caster: </strong>Can freely pass their own wizard lock.</p>\n<p><strong>▶ A knock spell:</strong> Allows passage.</p>\n<p><strong>▶ Higher level casters: </strong>Any magic-using character who is at least 3 levels higher than the caster of the wizard lock may pass through unimpeded.</p>\n<p><strong>Temporary:</strong> Bypassing does not destroy a wizard lock.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!5Td8z62rdzqjYoQa"
+}

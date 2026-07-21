@@ -1,0 +1,31 @@
+{
+  "_id": "f7cr5astdwwzlmrd",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Purity Rites",
+  "type": "asset",
+  "_key": "!items!f7cr5astdwwzlmrd",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "This Asset can only defend against attacks that target the faction's Cunning, but it allows the faction to roll an extra die to defend.",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "2d8+2",
+    "desc": "A rigorous program of regular mental inspection and counterintelligence measures has been undertaken by the faction. This Asset can only defend against attacks that target the faction's Cunning, but it allows the faction to roll an extra die to defend.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "Low",
+    "maintenance": 0,
+    "rating": 7,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

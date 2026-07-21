@@ -1,0 +1,63 @@
+{
+  "_id": "mEqHZDCp2hpXngcw",
+  "name": "Unarmed Attack",
+  "type": "weapon",
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "system": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p>The <em><strong>unarmed attack </strong></em>given here is a common punch or kick, unimproved by a Vowed&rsquo;s arts or a Focus. Unarmed attacks add the assailant&rsquo;s Punch skill to the damage roll as well as the attack roll.</p>",
+    "damage": "1d2+@punch",
+    "bonus": "0",
+    "skillDamage": false,
+    "shock": {
+      "damage": "",
+      "ac": null
+    },
+    "shockTotal": 0,
+    "skill": "",
+    "score": "str",
+    "tags": [
+      {
+        "title": "LL",
+        "value": "LL"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 0,
+    "weight": 0,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "quantity": 1,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "weightless": "never"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "X7ZjQRXF78TzM1O2",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mEqHZDCp2hpXngcw"
+}

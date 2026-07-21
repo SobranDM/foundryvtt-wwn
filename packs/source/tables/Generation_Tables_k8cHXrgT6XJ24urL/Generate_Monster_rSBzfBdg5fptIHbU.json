@@ -1,0 +1,73 @@
+{
+  "_id": "rSBzfBdg5fptIHbU",
+  "name": "Generate Monster",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "WARNING: This will output a great deal of text. Consider finalizing your monster using the rules on pages 288-289 to add Uncanny Powers and Abilities.",
+  "results": [
+    {
+      "_id": "sDXZMGhiTGrEKOP8",
+      "type": 2,
+      "text": "Monster Shapes/Appearances",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "VOZouolYFR9psmLz",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!rSBzfBdg5fptIHbU.sDXZMGhiTGrEKOP8"
+    },
+    {
+      "_id": "RWXIeCIFz5Wa8hVS",
+      "type": 2,
+      "text": "Monstrous Drives",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "PCLAI4OSumQSA2NE",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!rSBzfBdg5fptIHbU.RWXIeCIFz5Wa8hVS"
+    },
+    {
+      "_id": "JPebFzNCV1JFANOq",
+      "type": 2,
+      "text": "Monstrous Context",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "hZWVzCZ0nqQpySh6",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!rSBzfBdg5fptIHbU.JPebFzNCV1JFANOq"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!rSBzfBdg5fptIHbU"
+}

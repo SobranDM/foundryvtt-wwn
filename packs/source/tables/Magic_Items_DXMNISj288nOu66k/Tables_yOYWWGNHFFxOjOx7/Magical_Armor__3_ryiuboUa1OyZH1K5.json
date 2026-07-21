@@ -1,0 +1,267 @@
+{
+  "_id": "ryiuboUa1OyZH1K5",
+  "name": "Magical Armor +3",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "loot",
+      "table-currency-string": "",
+      "loot-actor-name": "",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "4SK9Xo5S8toNh392",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "War Shirt +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "7lBUeJhkVvE56cMy",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.4SK9Xo5S8toNh392"
+    },
+    {
+      "_id": "tMiFXiDGQBjrYpsg",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Buff Coat +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "gSbDSQ1M1D9TqEcm",
+      "weight": 1,
+      "range": [
+        2,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.tMiFXiDGQBjrYpsg"
+    },
+    {
+      "_id": "W9IE5dpfm81iighD",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Linothorax +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "1CEqAhe0UD6r9sBe",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.W9IE5dpfm81iighD"
+    },
+    {
+      "_id": "xlURSy1psf66wYBZ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "War Robe +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "CViEGgeBRD1AITXC",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.xlURSy1psf66wYBZ"
+    },
+    {
+      "_id": "i9iG7vG8aUbUWQhg",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Pieced Armor +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "fnx66X409Odw0k9D",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.i9iG7vG8aUbUWQhg"
+    },
+    {
+      "_id": "Ro1LDbEF4widOdXG",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Mail Shirt +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "1bUfVWhTvijORKgG",
+      "weight": 1,
+      "range": [
+        10,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.Ro1LDbEF4widOdXG"
+    },
+    {
+      "_id": "Fzgeji1bvXqYCNg4",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Cuirass and Greaves +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "DEAqIjW7evrGYnBq",
+      "weight": 1,
+      "range": [
+        12,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.Fzgeji1bvXqYCNg4"
+    },
+    {
+      "_id": "1yZhq6prE8sxb3Hj",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Scaled Armor +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "2BvUojuRp4dm5tVj",
+      "weight": 1,
+      "range": [
+        14,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.1yZhq6prE8sxb3Hj"
+    },
+    {
+      "_id": "m0rUwwuK5BJ9lwWu",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Mail Hauberk +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "1dTWvgEsAqcB4AVZ",
+      "weight": 1,
+      "range": [
+        16,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.m0rUwwuK5BJ9lwWu"
+    },
+    {
+      "_id": "eut7xxFWRM8XsfU4",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Plate Armor +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "TonZE07GrTE5QfQS",
+      "weight": 1,
+      "range": [
+        18,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.eut7xxFWRM8XsfU4"
+    },
+    {
+      "_id": "zqtiLSqrLL5mstYd",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Great Armor +3",
+      "img": "systems/wwn/assets/default/armor.png",
+      "collection": "wwn.magic-items",
+      "resultId": "z6F5WaIAo6er8VAG",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ryiuboUa1OyZH1K5.zqtiLSqrLL5mstYd"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!ryiuboUa1OyZH1K5",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

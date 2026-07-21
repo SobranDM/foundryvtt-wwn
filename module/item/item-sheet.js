@@ -54,9 +54,8 @@ export class WwnItemSheet extends ItemSheet {
     data.config.useTrauma = game.settings.get("wwn", "useTrauma");
     data.config.useFlatArmorPenalty = game.settings.get("wwn", "useFlatArmorPenalty");
     data.actor = this.actor;
-    data.enrichedDescription = await TextEditor.enrichHTML(
-      this.object.system.description,
-      { async: true }
+    data.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.description
     );
 
     // Prepare active effects.

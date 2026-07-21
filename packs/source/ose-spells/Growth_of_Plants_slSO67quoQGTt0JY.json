@@ -1,0 +1,26 @@
+{
+  "_id": "slSO67quoQGTt0JY",
+  "name": "Growth of Plants",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "Permanent",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell causes vigorous growth of normal vegetation in an area within range. Plants in the affected area become thick and overgrown, entwining to form a thorny jungle.</p>\n<p><strong>▶ Area:</strong> An area of up to 3,000 square feet&mdash;selected by the caster&mdash;is affected (e.g. 150&rsquo; &times; 20&rsquo;, 100&rsquo; &times; 30&rsquo;, etc.).</p>\n<p><strong>▶ Passage: </strong>Only very large creatures can force their way through.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!slSO67quoQGTt0JY"
+}

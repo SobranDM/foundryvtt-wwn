@@ -1,0 +1,17 @@
+{
+  "_id": "ob0Pej4g5f1OStFs",
+  "name": "Blood Feud",
+  "content": "<h1>Blood Feud</h1><div>\n<p>Two or more groups of citizens within the community hate each other. Their neighbors or the local law have kept things from too-overt violence, but members of the groups will constantly interfere with their rivals and cause whatever misery they can get away with. This hate may spring from recent events, or it may be an inherited spite from old wrongs.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Wholly unsympathetic group leader, Schemer seeking to exploit the feud, Ruler going to brutal excess to tamp it down</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Reluctant participant in the feud, Local digging for the real truth of the quarrel, Merchant who'd profit by a new peace</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The groups were formerly the closest of allies, One group is favored by local rulers, One side is getting completely out of hand</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>A treasure the groups are fighting over, Object of exculpating evidence, Lost symbol of peaceful unity</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Bloody back alleyway, Sabotaged business, Group-dominated tavern</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 600000
+    }
+  },
+  "_key": "!journal!ob0Pej4g5f1OStFs",
+  "ownership": {
+    "default": 0
+  }
+}

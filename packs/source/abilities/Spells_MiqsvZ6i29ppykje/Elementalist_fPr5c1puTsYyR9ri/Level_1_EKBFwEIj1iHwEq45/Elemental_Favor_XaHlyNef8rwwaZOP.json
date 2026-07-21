@@ -1,0 +1,41 @@
+{
+  "_id": "XaHlyNef8rwwaZOP",
+  "name": "Elemental Favor",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "effects": [],
+  "folder": "EKBFwEIj1iHwEq45",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.XaHlyNef8rwwaZOP"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 1,
+    "class": "Elementalist",
+    "duration": "Scene",
+    "range": "",
+    "roll": "",
+    "description": "<p>The elementalist makes a direct appeal to a non-magical mass of earth, stone, water, flame, or air no larger than a ten-foot cube. At the end of the round, the mass will move or reshape itself within that space as the elementalist requests, maintaining its new form until the end of the scene. If its new shape is one that is stable without magical help, it can be told to remain in it after the spell is finished.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!XaHlyNef8rwwaZOP"
+}

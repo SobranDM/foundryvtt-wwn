@@ -1,0 +1,39 @@
+{
+  "_id": "elldowQwT47rl13D",
+  "name": "Revivifying Breath",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.elldowQwT47rl13D"
+    }
+  },
+  "system": {
+    "pattern": "white",
+    "roll": "1d6+@level",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the day as an On Turn action to heal yourself for 1d6 hit points plus your level. This healing does not increase System Strain. This ability may be used on your turn even when you are at zero hit points, but in such a case it Commits all your remaining Effort for the day. This art can be used only once per scene.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!elldowQwT47rl13D"
+}

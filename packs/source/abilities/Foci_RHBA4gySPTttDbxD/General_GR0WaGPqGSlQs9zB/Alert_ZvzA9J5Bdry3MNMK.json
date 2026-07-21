@@ -1,0 +1,18 @@
+{
+  "_id": "ZvzA9J5Bdry3MNMK",
+  "name": "Alert",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are keenly aware of your surroundings and virtually impossible to take unaware.</p>\n<p><strong>Level 1: </strong>Gain Notice as a bonus skill. You cannot be surprised, nor can others use the Execution Attack option on you. If the GM rolls initiative by sides, you can add a +1 bonus to your side&rsquo;s initiative roll, though multiple <em><strong>Alert </strong></em>PCs don&rsquo;t stack this bonus. If you roll initiative individually, you can roll it twice and take the better result.</p>\n<p><strong>Level 2:</strong> You always act first in a combat round unless someone else involved is also this <em><strong>Alert.</strong></em></p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!ZvzA9J5Bdry3MNMK",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

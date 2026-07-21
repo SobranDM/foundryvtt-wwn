@@ -1,0 +1,31 @@
+{
+  "_id": "mlkq1ysu3jkj7s1w",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Farmers",
+  "type": "asset",
+  "_key": "!items!mlkq1ysu3jkj7s1w",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "1d4",
+    "desc": "Farmers, hunters, and simple rural artisans are in service to the faction here. Once per turn, as a free action, the Asset's owner can roll [[1d6]]; on a 5+, they gain 1 Treasure from the Farmers.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per turn, as a free action, the Asset's owner can roll [[1d6]]; on a 5+, they gain 1 Treasure from the Farmers.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

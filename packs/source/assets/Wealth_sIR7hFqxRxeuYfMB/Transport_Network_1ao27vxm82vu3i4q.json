@@ -1,0 +1,32 @@
+{
+  "_id": "1ao27vxm82vu3i4q",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Transport Network",
+  "type": "asset",
+  "_key": "!items!1ao27vxm82vu3i4q",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d12",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 15,
+    "counter": "None",
+    "desc": "A vast array of carters, ships, smugglers, and official caravans are under the faction's control. As a free action the Transport Network can spend 1 Treasure to move any friendly Asset within two moves to any location within one move of either the target or the Transport Network.",
+    "health": {
+      "max": 5,
+      "value": 5
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action the Transport Network can spend 1 Treasure to move any friendly Asset within two moves to any location within one move of either the target or the Transport Network.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

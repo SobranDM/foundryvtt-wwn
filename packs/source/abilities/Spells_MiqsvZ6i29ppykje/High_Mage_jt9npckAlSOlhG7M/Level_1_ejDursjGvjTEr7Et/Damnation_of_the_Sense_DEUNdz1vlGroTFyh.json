@@ -1,0 +1,41 @@
+{
+  "_id": "DEUNdz1vlGroTFyh",
+  "name": "Damnation of the Sense",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "ejDursjGvjTEr7Et",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.DEUNdz1vlGroTFyh"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 1,
+    "class": "High Mage",
+    "duration": "Scene",
+    "range": "200 ft.",
+    "roll": "",
+    "description": "<p>The caster targets a visible creature within two hundred feet. The target gets a Mental saving throw to resist; on a failure, one sense of the caster&rsquo;s choice is entirely under the caster&rsquo;s control for the rest of the scene, while a success leaves them bound only for the next round. Any false impression may be given, or any true one concealed, and a creature may be left effectively blinded or deafened. Distracting tactile sensations can force the victim to make a Physical saving throw in order to act each round. Blinded creatures can&rsquo;t make ranged attacks and roll all melee hit rolls twice, taking the worst result. If a creature thinks itself in mortal peril its excitement allows it to make a Mental save to throw off the spell at the end of each round.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "mental"
+  },
+  "_key": "!items!DEUNdz1vlGroTFyh"
+}

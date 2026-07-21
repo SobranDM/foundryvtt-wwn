@@ -1,0 +1,26 @@
+{
+  "_id": "H6FpdMPJu4axikEs",
+  "name": "Read Languages",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "2 turns",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>For the duration of this spell, the caster may read any language, coded message, map, or other set of written instructions. This spell does not grant any ability to speak unknown languages.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!H6FpdMPJu4axikEs"
+}

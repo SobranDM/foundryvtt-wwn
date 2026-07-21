@@ -1,0 +1,18 @@
+{
+  "_id": "gfmWD7AXLVYte4Eo",
+  "name": "Origin Focus: Orc",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Large, strong, brutish, and comparatively stupid; such is the standard orc of fantasy campaigns. Players who want to play such a PC can use this Focus.</p>\n<p><strong>Level 1: </strong>Gain Survive and Stab or Punch as bonus skills. Your Strength or Constitution modifier increases by +1, but your Intelligence modifier decreases by -1. You can see clearly in the dark out to sixty feet.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!gfmWD7AXLVYte4Eo",
+  "folder": "qz0AIQTCBhZxClN2"
+}

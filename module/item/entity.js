@@ -35,9 +35,8 @@ export class WwnItem extends Item {
     const itemData = this?.system;
 
     // Rich text description
-    itemData.enrichedDescription = await TextEditor.enrichHTML(
-      itemData.description,
-      { async: true }
+    itemData.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      itemData.description
     );
   }
 
@@ -337,7 +336,7 @@ export class WwnItem extends Item {
 
         // Render the save dialog template
         const template = "systems/wwn/templates/chat/save-dialog.html";
-        const html = await renderTemplate(template, dialogData);
+        const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
         // Create and render the dialog
         const d = new Dialog({
@@ -423,7 +422,7 @@ export class WwnItem extends Item {
                   hasFailedSaves: failedSaves.length > 0
                 };
 
-                const content = await renderTemplate("systems/wwn/templates/chat/save-results.html", templateData);
+                const content = await foundry.applications.handlebars.renderTemplate("systems/wwn/templates/chat/save-results.html", templateData);
 
                 const chatData = {
                   speaker: { alias: game.i18n.localize("WWN.spells.Save") },
@@ -587,7 +586,7 @@ export class WwnItem extends Item {
       return WwnDice.sendRoll(rollData);
     }
 
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const title = `${game.i18n.localize("WWN.Roll")} ${this.name}`;
     const _doRoll = async (html) => {
       const form = html[0].querySelector("form");
@@ -826,7 +825,7 @@ export class WwnItem extends Item {
     const data = this.system;
     let update = [];
     if (data.tags) {
-      update = duplicate(data.tags);
+      update = foundry.utils.duplicate(data.tags);
     }
     let newData = {};
     var regExp = /\(([^)]+)\)/;
@@ -917,7 +916,7 @@ export class WwnItem extends Item {
 
     // Render the chat card template
     const template = `systems/wwn/templates/chat/item-card.html`;
-    const html = await renderTemplate(template, templateData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, templateData);
 
     // Basic chat message data
     const chatData = {
@@ -1067,7 +1066,7 @@ export class WwnItem extends Item {
       assetsWithLocationNotes
     };
     const template = "systems/wwn/templates/chat/asset-attack.html";
-    const chatContent = await renderTemplate(template, dialogData);
+    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     if (this.actor?.type == "faction") {
       const actor = this.actor;
@@ -1126,7 +1125,7 @@ export class WwnItem extends Item {
       targets: targetFactions,
     };
     const template = "systems/wwn/templates/items/dialogs/select-asset-target.html";
-    const html = renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _rollAssetForm = async (html) => {
       const form = html[0].querySelector("form");
@@ -1208,7 +1207,7 @@ export class WwnItem extends Item {
         attackingAssetsWithLocationNotes,
       };
       const template = "systems/wwn/templates/chat/asset-attack-def.html";
-      const chatContent = await renderTemplate(template, dialogData);
+      const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
       if (this.actor?.type == "faction") {
         const chatData = {
           content: chatContent,
@@ -1223,7 +1222,7 @@ export class WwnItem extends Item {
     this.popUpDialog = new Dialog(
       {
         title: `Select asset to attack for ${this.name} (${this.system.location})`,
-        content: await html,
+        content: html,
         default: "roll",
         buttons: {
           roll: {

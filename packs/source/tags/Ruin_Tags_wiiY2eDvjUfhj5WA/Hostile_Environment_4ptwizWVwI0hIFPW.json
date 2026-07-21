@@ -1,0 +1,17 @@
+{
+  "_id": "4ptwizWVwI0hIFPW",
+  "name": "Hostile Environment",
+  "content": "<h1>Hostile Environment</h1><div>\n<p>Ruins are seldom comfortable, but this one is actively dangerous to those who enter it. Noxious fumes, radiation, magical miasmas, contagious diseases, poisonous liquids, or some other environmental hazard makes progress very risky. Natives are either immune to the peril or have means of negating it. The extreme defensibility of the site may be the reason they continue to lair there.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Sorcerer researching how to weaponize the hazard, Monstrous entity that emits the peril, Vile creature born of the toxic conditions</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Explorer equipped with survival tools, Friendly native guide, Entrepreneur trying to exploit it</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The hostile environment also produces a valuable resource, Surrounding locals consider it taboo because the hazard is somehow contagious, The hazard is very recent and the natives still don’t know exactly how to handle it</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Protective gear against the hazard, Controls to shut off the hazard in some areas, Loot from hazard-slain intruders or natives</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Mundane location caked in the hazard, Lair of a hazard-mutated beast, Perilous path that snakes through the hazard</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 4800000
+    }
+  },
+  "_key": "!journal!4ptwizWVwI0hIFPW",
+  "ownership": {
+    "default": 0
+  }
+}

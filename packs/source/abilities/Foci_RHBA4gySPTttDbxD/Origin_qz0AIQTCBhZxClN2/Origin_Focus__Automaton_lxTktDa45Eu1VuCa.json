@@ -1,0 +1,18 @@
+{
+  "_id": "lxTktDa45Eu1VuCa",
+  "name": "Origin Focus: Automaton",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are a self-willed automaton, gaining all the usual benefits and limitations of that state. You probably have a humanoid form; at your option, you can be human-like enough that only a close inspection reveals your nature. While you are capable of eating and drinking, it is not necessary for you.</p>\n<p>As with other origin Foci, it&rsquo;s up to the GM to decide whether or not this option fits well with their campaign, and it may be disallowed at their discretion.</p>\n<p><strong>Level 1: </strong>You have an automaton&rsquo;s traits and qualities. You gain System Strain as normal for a living creature when healing or similar effects are applied to you. The long ages or questionable self-repair functions have hindered your functionality; pick one attribute and decrease its modifier by -1, to a minimum of -2.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!lxTktDa45Eu1VuCa",
+  "folder": "qz0AIQTCBhZxClN2"
+}

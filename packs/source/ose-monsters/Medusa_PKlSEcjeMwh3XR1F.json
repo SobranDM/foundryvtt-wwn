@@ -1,0 +1,474 @@
+{
+  "name": "Medusa",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "kZ3yTekP44z0CzKZ",
+      "name": "Snakebites",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "physical",
+        "pattern": "transparent",
+        "description": "<p><strong>Poison: </strong>The snakes' bites are venemous: save or die in 1 turn.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        },
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.kZ3yTekP44z0CzKZ"
+    },
+    {
+      "_id": "MsExPZiAedb5ui27",
+      "name": "Poison",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>The snakes' bites are venemous: save or die in 1 turn.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "physical",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.MsExPZiAedb5ui27"
+    },
+    {
+      "_id": "nlasGScioB0gsofJ",
+      "name": "Disguise",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Use hooded cloaks to lure victims close before revealing their true form.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.nlasGScioB0gsofJ"
+    },
+    {
+      "_id": "xXbwOcc7DB0P2JdU",
+      "name": "Petrification",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Anyone who looks at an undisguised medusa will be turned to stone (save to resist).</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "physical",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.xXbwOcc7DB0P2JdU"
+    },
+    {
+      "_id": "w8tpMlTnNrbqtcXB",
+      "name": "Avert Eyes",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>-4 penalty to attack rolls and the medusa gains +2 bonus on attack rolls.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.w8tpMlTnNrbqtcXB"
+    },
+    {
+      "_id": "Mb1w7LRGkMj47akL",
+      "name": "Mirrors",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>The reflection of a medusa is harmless. If a medusa sees her own reflection, she must save or be petrified.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "physical",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.Mb1w7LRGkMj47akL"
+    },
+    {
+      "_id": "6IwJkDVUseaZoWX0",
+      "name": "Magic Resistance",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>+2 bonus to saves versus magical effects.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!PKlSEcjeMwh3XR1F.6IwJkDVUseaZoWX0"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.y4qRUvXvGlMpg8FK"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 12,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 4,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 13,
+        "mod": 0
+      },
+      "mental": {
+        "value": 13,
+        "mod": 0
+      },
+      "physical": {
+        "value": 13,
+        "mod": 0
+      },
+      "luck": {
+        "value": 13,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30'",
+      "exploration": null,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "",
+      "alignment": "Chaotic",
+      "xp": 175,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d3",
+        "w": "1d4"
+      },
+      "morale": 8,
+      "instinct": 3,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "4d8",
+      "value": 18,
+      "max": 18
+    }
+  },
+  "prototypeToken": {
+    "name": "Medusa",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {
+      "wall-height": {
+        "tokenHeight": 0
+      },
+      "image-hover": {
+        "hideArt": false
+      }
+    },
+    "randomImg": true,
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331662,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "PKlSEcjeMwh3XR1F",
+  "_key": "!actors!PKlSEcjeMwh3XR1F"
+}

@@ -1,0 +1,29 @@
+{
+  "_id": "6U7qhaIq177GvztK",
+  "name": "Vigilant Banner",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>These enchanted banners bear the insignia of long-vanished armies, and are always found permanently attached to collapsible banner-staves that extend out to fifteen feet at most. When the banner staff is gripped in one hand and held upright, the bearer is filled with vigor and vigilant alertness. They can reroll failed Notice checks to spot approaching creatures or ambushes, they ignore normal extremes of heat or chill, they can see clearly even in perfect darkness, and they cannot be made to fall asleep or become oblivious to their surroundings by sorcery or mundane weariness. A watchman with the banner can stand their post indefinitely while gripping the banner, but they cannot lose System Strain, naturally heal hit point damage, refresh Effort, or restore spell slots for 24 hours after using it.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.6U7qhaIq177GvztK"
+    }
+  },
+  "_key": "!items!6U7qhaIq177GvztK"
+}

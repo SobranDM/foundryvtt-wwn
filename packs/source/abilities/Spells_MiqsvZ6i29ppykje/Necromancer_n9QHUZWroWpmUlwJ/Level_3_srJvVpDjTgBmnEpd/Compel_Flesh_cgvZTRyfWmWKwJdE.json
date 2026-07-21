@@ -1,0 +1,41 @@
+{
+  "_id": "cgvZTRyfWmWKwJdE",
+  "name": "Compel Flesh",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "srJvVpDjTgBmnEpd",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.cgvZTRyfWmWKwJdE"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "Necromancer",
+    "duration": "Scene",
+    "range": "100 ft.",
+    "roll": "",
+    "description": "<p>A visible living creature or physically-bodied undead within 100 feet is ensorceled by this spell, their flesh and bones becoming temporarily enthralled to the caster&rsquo;s will. The target becomes paralyzed unless commanded by the caster as an On Turn action; once given a command, their body will dutifully carry it out on their next turn. The user&rsquo;s mind is not affected by this spell, so they cannot be made to cast spells, answer questions, or perform other intellectual tasks, but they will fight, move, and perform other non-suicidal physical acts as normal. The target may make a Physical saving throw at the start of each of their turns to throw off the effect, but they will inevitably suffer one point of damage per caster level with each attempt as their flesh writhes and tears. If not thrown off earlier, the spell lasts until the end of the scene.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "_key": "!items!cgvZTRyfWmWKwJdE"
+}

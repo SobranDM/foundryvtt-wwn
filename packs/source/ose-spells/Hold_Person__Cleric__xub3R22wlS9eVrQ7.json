@@ -1,0 +1,26 @@
+{
+  "name": "Hold Person (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Cleric",
+    "duration": "9 turns",
+    "range": "180'",
+    "roll": "1d4",
+    "description": "<p><strong>Duration: 9 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>This spell causes one or more humans, demihumans, or human-like monsters to be paralysed if they fail a Mental save. It may be cast in two ways:</p>\n<ol>\n<li><strong>Against an individual:</strong> The target&rsquo;s saving throw is penalised by &ndash;2.</li>\n<li><strong>Against a group:</strong> 1d4 individuals in the group are targeted.</li>\n</ol>\n<p><strong>Restrictions:</strong> Human-like monsters of greater than 4+1 HD and undead are not affected.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "xub3R22wlS9eVrQ7",
+  "_key": "!items!xub3R22wlS9eVrQ7"
+}

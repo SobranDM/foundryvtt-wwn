@@ -1,0 +1,41 @@
+{
+  "_id": "NLf0JVGSx8f8unMs",
+  "name": "The Coruscating Coffin",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "ejDursjGvjTEr7Et",
+  "sort": 800000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.NLf0JVGSx8f8unMs"
+    }
+  },
+  "system": {
+    "lvl": 1,
+    "class": "High Mage",
+    "duration": "",
+    "range": "100 ft. per level",
+    "roll": "(@level)d8",
+    "description": "<p>A thaumic discharge is focused on a single visible creature within one hundred feet per caster level, wreathing them in a lethal mantle of crackling energy. The target suffers 1d8 damage per caster level, with a Physical save for half. Targets with only 1 hit die will inevitably be slain regardless of the damage done. The spell cannot be blocked by non-magical intervening barriers, provided the caster can see the target with their unaided vision.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.NLf0JVGSx8f8unMs",
+    "duplicateSource": null
+  },
+  "_key": "!items!NLf0JVGSx8f8unMs"
+}

@@ -1,0 +1,17 @@
+# Ignore npm modules
+node_modules/
+
+# Sass build output (source lives in scss/)
+styles/*.css
+styles/*.css.map
+
+# Built LevelDB packs (JSON source lives in packs/source/)
+/packs/*
+!/packs/source/
+!/packs/source/**
+
+# Legacy NeDB pack files
+/packs/*.db
+
+# Local editor config
+.vscode/

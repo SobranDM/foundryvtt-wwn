@@ -1,0 +1,32 @@
+{
+  "_id": "C0zGLOMtfdJCzO7y",
+  "name": "Arcane Lexicon",
+  "type": "art",
+  "img": "systems/wwn/assets/default/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.C0zGLOMtfdJCzO7y"
+    }
+  },
+  "_key": "!items!C0zGLOMtfdJCzO7y",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the scene. For the rest of the scene, you can read any script that was not intentionally obfuscated or encoded by its writer. Extremely esoteric or nonhuman scripts may not be comprehensible this way; the &ldquo;plain meaning&rdquo; of the text might be utterly foreign to human logic.</p>",
+    "save": "",
+    "source": "High Mage",
+    "effort": 0,
+    "time": "Scene",
+    "range": ""
+  }
+}

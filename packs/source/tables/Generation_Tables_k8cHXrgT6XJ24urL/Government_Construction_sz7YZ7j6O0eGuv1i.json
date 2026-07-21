@@ -1,0 +1,485 @@
+{
+  "_id": "sz7YZ7j6O0eGuv1i",
+  "name": "Government Construction",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "bTSYODAj58n47s99",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>The Ruling Authority </b>- Number of Rulers and Forms of Rulership",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.bTSYODAj58n47s99"
+    },
+    {
+      "_id": "jYKSOH96iFvPlNbU",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Rulers",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "FvNCFUCYTqYZT4C7",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.jYKSOH96iFvPlNbU"
+    },
+    {
+      "_id": "uzADsPsB7ymZd78i",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>The Ruling Class</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.uzADsPsB7ymZd78i"
+    },
+    {
+      "_id": "k2JxgSW2Xn4mtRH1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-RulingClass",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "KAn6F1047vfZhXGn",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.k2JxgSW2Xn4mtRH1"
+    },
+    {
+      "_id": "LJKSVtzTUH4izBXi",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Source of Legitimacy</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.LJKSVtzTUH4izBXi"
+    },
+    {
+      "_id": "13eNLiZJU4H2L2kW",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Legitimacy",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Zr5dQzVTtR2kLcTn",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.13eNLiZJU4H2L2kW"
+    },
+    {
+      "_id": "NovbGvplnAKGiuGh",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Institutions and Agents of Control</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.NovbGvplnAKGiuGh"
+    },
+    {
+      "_id": "G6M0KKRTmxClMuOM",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Servants",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Xw4Q07VlUhuL40FJ",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.G6M0KKRTmxClMuOM"
+    },
+    {
+      "_id": "TiirNgDkcH4On0wv",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Current Struggle Within the Government</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.TiirNgDkcH4On0wv"
+    },
+    {
+      "_id": "yeglgwHaI3qvQZnT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Struggle",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "cRQilgHbQ35bK5Ls",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.yeglgwHaI3qvQZnT"
+    },
+    {
+      "_id": "onjtn0uK7TXXZofm",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Stable is the Government?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.onjtn0uK7TXXZofm"
+    },
+    {
+      "_id": "MPMThPIy2RDFT7c0",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Stability",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "s2gO9TMhKzWgDaFD",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.MPMThPIy2RDFT7c0"
+    },
+    {
+      "_id": "rBgWHGb4AbhlYfhx",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Established is the Current Ruler?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.rBgWHGb4AbhlYfhx"
+    },
+    {
+      "_id": "BGP9tAplo2k22Qo0",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Established",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "EpnCeklE2U2Vwzfd",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.BGP9tAplo2k22Qo0"
+    },
+    {
+      "_id": "OjdAuQxSHOqqa5Y6",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Problems do their Ministers Have?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.OjdAuQxSHOqqa5Y6"
+    },
+    {
+      "_id": "jgmIIM2uctkS2LJ7",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Problems",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Mgb2XFoJPZgidaEE",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.jgmIIM2uctkS2LJ7"
+    },
+    {
+      "_id": "oQy5DDtLOPudQqMC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>A Strength of the Government</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.oQy5DDtLOPudQqMC"
+    },
+    {
+      "_id": "BuqfQShx0FMXLSOs",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Strength",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "9QtA1c7kZCkt9sXH",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.BuqfQShx0FMXLSOs"
+    },
+    {
+      "_id": "U3nxcNvlrcyLx73a",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Officials Recently Causing Problems</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.U3nxcNvlrcyLx73a"
+    },
+    {
+      "_id": "8kpmGusqLdzfbD54",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Officials",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "F3AuhGriYViXEJpu",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.8kpmGusqLdzfbD54"
+    },
+    {
+      "_id": "NmyQuOT3vIhUuojU",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Recent Governmental Event</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.NmyQuOT3vIhUuojU"
+    },
+    {
+      "_id": "IRy7kX5KoNo8oPuD",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Government-Event",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "Mz4YZ0etfiqLAYTe",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sz7YZ7j6O0eGuv1i.IRy7kX5KoNo8oPuD"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!sz7YZ7j6O0eGuv1i"
+}

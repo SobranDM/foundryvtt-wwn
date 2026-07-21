@@ -121,7 +121,7 @@ export class WwnCharacterCreator extends FormApplication {
       stats: this.object.stats,
       silver: silver
     }
-    const content = await renderTemplate("systems/wwn/templates/chat/roll-creation.html", templateData)
+    const content = await foundry.applications.handlebars.renderTemplate("systems/wwn/templates/chat/roll-creation.html", templateData)
     ChatMessage.create({
       content: content,
       speaker,

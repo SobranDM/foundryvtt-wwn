@@ -29,7 +29,7 @@ export class WwnCharacterModifiers extends FormApplication {
    * @return {Object}
    */
   getData() {
-    const data = foundry.utils.deepClone(this.object.data);
+    const data = { system: foundry.utils.deepClone(this.object.system) };
     data.user = game.user;
     return data;
   }

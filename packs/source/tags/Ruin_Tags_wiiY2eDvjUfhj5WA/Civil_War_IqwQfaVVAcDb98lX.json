@@ -1,0 +1,17 @@
+{
+  "_id": "IqwQfaVVAcDb98lX",
+  "name": "Civil War",
+  "content": "<h1>Civil War</h1><div>\n<p>There are at least two organized factions within the ruin that are at war with each other. They all have motives that make simply leaving the place an unappealing prospect, and some of them might be eager to enlist outside help in ousting their rivals. Given the low population of most ruins, the war is likely a restricted one of raids, ambushes, and murders of convenience, and the traps and snares they set might catch more than their foes.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Faction leader with dreams of conquest, Crazed warlord, Treacherous plotter who betrays their hired help</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Faction leader with benevolent aims, Innocent local caught in the crossfire, Would-be peacemaker</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>They both want the same thing but in different ways, Both sides will unite swiftly against invaders, Neither side wants anything that outsiders are going to like much</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>The macguffin they’re fighting over, Weapon to destroy their rivals, Wealth to bribe other helpers</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Site of a vicious ambush, Defaced monument or symbol of a rival faction, Dangerous no-man’s land zone within the ruin</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1200000
+    }
+  },
+  "_key": "!journal!IqwQfaVVAcDb98lX",
+  "ownership": {
+    "default": 0
+  }
+}

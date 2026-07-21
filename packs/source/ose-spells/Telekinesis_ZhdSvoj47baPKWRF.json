@@ -1,0 +1,26 @@
+{
+  "_id": "ZhdSvoj47baPKWRF",
+  "name": "Telekinesis",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "Concentration (up to 6 rounds)",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: Concentration (up to 6 </strong><strong>rounds)</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>By concentrating, the caster is able to move objects or creatures by the power of thought.</p>\n<p><strong>▶ Weight:</strong> Up to 2 encumbrance per level of the caster may be targeted.</p>\n<p><strong>▶ Movement:</strong> The target may be moved up to 20&rsquo; per round, in whatever direction the caster wishes (including vertically).</p>\n<p><strong>▶ Save: </strong>If a creature is targeted, it may make a Physical save&nbsp;to resist the spell.</p>\n<p><strong>▶ Concentration:</strong> If the caster&rsquo;s concentration is broken, the target will fall.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "physical"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!ZhdSvoj47baPKWRF"
+}

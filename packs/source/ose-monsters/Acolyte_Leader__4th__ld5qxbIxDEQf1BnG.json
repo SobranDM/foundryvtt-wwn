@@ -1,0 +1,972 @@
+{
+  "name": "Acolyte Leader (4th)",
+  "type": "monster",
+  "flags": {
+    "gm-notes": {},
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.MMI5XOSUDmnba5xQ"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "TvaLV4XiYEpVRop7",
+      "name": "Mace",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.4jBmE0lnO9VafcT4"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs, staffs,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 18
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [
+          {
+            "title": "LL",
+            "value": "LL"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.TvaLV4XiYEpVRop7"
+    },
+    {
+      "_id": "cz9f5hY80l6HTQM9",
+      "name": "Cure Light Wounds",
+      "type": "spell",
+      "sort": 200000,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.tj3ziCgTR8vjmZ7c"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "",
+        "range": "Touch",
+        "roll": "1d6+1",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Healing a living subject: </strong>Restores 1d6+1 hit points of damage. This cannot grant more hit points than the subject&rsquo;s normal maximum.</li>\n<li><strong>Curing paralysis:</strong> Paralysing effects are negated.</li>\n</ol>\n<p><strong>Reversed: Cause Light Wounds</strong></p>\n<p>Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.cz9f5hY80l6HTQM9"
+    },
+    {
+      "_id": "AQffrxW71vcuBqZE",
+      "name": "Detect Evil",
+      "type": "spell",
+      "sort": 250000,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.oC2NJ644qlrKwmSo"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "120'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>Objects enchanted for evil purposes or living beings with evil intentions are caused to magically glow.</p>\n<p><strong>▶ Intent only:</strong> This spell does not grant the ability to read minds, but only grants a general sense of evil intent.</p>\n<p><strong>▶ Definition of evil: </strong>The referee must decide what is &ldquo;evil&rdquo;. Some things that are potentially harmful, like traps, are not &ldquo;evil.&rdquo;</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.AQffrxW71vcuBqZE"
+    },
+    {
+      "_id": "3mGtS9SgWq8MqSJi",
+      "name": "Detect Magic",
+      "type": "spell",
+      "sort": 275000,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.f9v4QaMOO0G3AAKs"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "60'",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>Enchanted objects, areas, or creatures are caused to glow. Both permanent and temporary enchantments are revealed.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.3mGtS9SgWq8MqSJi"
+    },
+    {
+      "_id": "DUt9Knf73IDSFdih",
+      "name": "Light",
+      "type": "spell",
+      "sort": 287500,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.0NA0PbNHpEaJWcMz"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "12 turns",
+        "range": "120'",
+        "roll": "",
+        "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<ol>\n<li><strong>Conjuring light: </strong>In a 15&rsquo; radius. The magical light is sufficient for reading, but is not as bright as daylight. The spell may be cast upon an object, in which case the light moves with the object.</li>\n<li><strong>Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded for the duration. A blind creature cannot attack.</li>\n<li><strong>Cancelling darkness:</strong> Light may cancel a darkness spell (see below).</li>\n</ol>\n<p><strong>Reversed: Darkness</strong></p>\n<p>Creates a 15&rsquo; radius area of magical blackness, preventing normal sight (but not infravision). Like light, it may alternatively be used to blind creatures or to dispel a light spell.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.DUt9Knf73IDSFdih"
+    },
+    {
+      "_id": "nSV3JlHqBUvBVDQX",
+      "name": "Protection from Evil",
+      "type": "spell",
+      "sort": 293750,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.fQDXLV8L5ov7m71A"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "12 turns",
+        "range": "Caster",
+        "roll": "",
+        "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>This spell wards the caster from attacks by creatures of another alignment, as follows:</p>\n<p><strong>▶ Bonuses:</strong> The caster gains a +1 bonus to saving throws against attacks or special abilities of affected creatures.</p>\n<p><strong>▶ Affected creatures&rsquo; attacks:</strong> Against the caster are penalised by &ndash;1.</p>\n<p><strong>▶ Enchanted, constructed, or summoned </strong><strong>creatures:</strong> The spell additionally prevents such creatures from attacking the caster in melee, though they may still make ranged attacks. If the caster engages such a creature in melee, this protection is broken (the caster still gains the save and attack bonuses mentioned above).</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.nSV3JlHqBUvBVDQX"
+    },
+    {
+      "_id": "T9png7FhFYjg4Dj0",
+      "name": "Purify Food and Water",
+      "type": "spell",
+      "sort": 296875,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.7jOAl1cbhzVhgGdE"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "10'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.T9png7FhFYjg4Dj0"
+    },
+    {
+      "_id": "lawbeNnFROJPDrsh",
+      "name": "Remove Fear",
+      "type": "spell",
+      "sort": 300000,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.h2M2OIpuiuQ9t1pF"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "Caster",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The creature touched is calmed and purged of fear. Magically induced fear may be dispelled, but this requires the subject to make a Mental save. The save is modified by -1 per level of the caster.</p>\n<p><strong>Reversed: Cause Fear</strong></p>\n<p>Will cause a target within 120&rsquo; to flee for the duration unless it saves versus spells.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.lawbeNnFROJPDrsh"
+    },
+    {
+      "_id": "aeY75bAFvg64QiSp",
+      "name": "Resist Cold",
+      "type": "spell",
+      "sort": 600000,
+      "flags": {
+        "cf": {
+          "id": "temp_7lf9jplltcp",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/1st Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.FO6b35gdQzfP6JSi"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>All creatures within range are protected from cold, as follows:</p>\n<p><strong>▶ Normal cold: </strong>Unharmed by non-magical freezing temperatures.</p>\n<p><strong>▶ Save bonus: </strong>Gain a +2 bonus to all saving throws versus cold-based magical or breath attacks.</p>\n<p><strong>▶ Cold-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.aeY75bAFvg64QiSp"
+    },
+    {
+      "_id": "XkdHOnlYISk9pnW3",
+      "name": "Bless",
+      "type": "spell",
+      "sort": 700000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.e9NKOz38G05E4928"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "60'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>May be used in one of two situations:</p>\n<ol>\n<li><strong>Battle:</strong> Allies within a 20&rsquo; square area who are not yet in melee gain a +1 bonus to attack and damage rolls and a +1 bonus to morale.</li>\n<li><strong>Ritual:</strong> Casting bless may also form part of rituals of purification or consecration, at the referee&rsquo;s discretion.</li>\n</ol>\n<p><strong>Reversed: Blight</strong></p>\n<p>Incurs a &ndash;1 penalty to morale checks, attack rolls, and damage rolls of enemies within a 20&rsquo; square area. A save versus spells is allowed to resist the blight.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.XkdHOnlYISk9pnW3"
+    },
+    {
+      "_id": "iQwgZ67OYg4dt4Ij",
+      "name": "Find Traps",
+      "type": "spell",
+      "sort": 800000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.KctRpeAsiaGj7BI1"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>Trapped objects or areas within range of the caster glow with a magical blue light.</p>\n<p><strong>▶ Magical and mechanical traps:</strong> Are both detected.</p>\n<p><strong>▶ No knowledge: </strong>About the nature of the trap or how to deactivate it is granted.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.iQwgZ67OYg4dt4Ij"
+    },
+    {
+      "_id": "wQdEUkpQ9PhgMDzw",
+      "name": "Hold Person",
+      "type": "spell",
+      "sort": 900000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.V4qalow8o5QdKhF4"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "9 turns",
+        "range": "180'",
+        "roll": "1d4",
+        "description": "<p><strong>Duration: 9 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>This spell causes one or more humans, demihumans, or human-like monsters to be paralysed if they fail a Mental save. It may be cast in two ways:</p>\n<ol>\n<li><strong>Against an individual:</strong> The target&rsquo;s saving throw is penalised by &ndash;2.</li>\n<li><strong>Against a group:</strong> 1d4 individuals in the group are targeted.</li>\n</ol>\n<p><strong>Restrictions:</strong> Human-like monsters of greater than 4+1 HD and undead are not affected.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.wQdEUkpQ9PhgMDzw"
+    },
+    {
+      "_id": "j6YGs40mdYvtas0n",
+      "name": "Know Alignment",
+      "type": "spell",
+      "sort": 1000000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.2mI4Cmx9tM0O8j8Q"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "1 round",
+        "range": "10'",
+        "roll": "",
+        "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster gains immediate knowledge of the alignment of one character, monster, object, or location within range. (Most objects or locations do not have an alignment, but magic items or holy places might.)</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.j6YGs40mdYvtas0n"
+    },
+    {
+      "_id": "bMzR7J81f6nQFVky",
+      "name": "Resist Fire",
+      "type": "spell",
+      "sort": 1100000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.cjp1m73KrkiL4zr2"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single creature is bestowed with supernatural resistance to fire, as follows:</p>\n<p><strong>▶ Normal heat:</strong> Unharmed by non-magical heat or fire.</p>\n<p><strong>▶ Save bonus:</strong> Gain a +2 bonus to all saving throws versus fire-based magical or breath attacks.</p>\n<p><strong>▶ Fire-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.bMzR7J81f6nQFVky"
+    },
+    {
+      "_id": "yqFrbuWfwoL7AlqG",
+      "name": "Silence 15' Radius",
+      "type": "spell",
+      "sort": 1200000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.nf6XywwaJNs3yNmh"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "12 turns",
+        "range": "180'",
+        "roll": "",
+        "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>A 15&rsquo; radius area is rendered utterly silent.</p>\n<p><strong>▶ Within the area:</strong> All sound is stopped. Conversation and spell casting are impossible.</p>\n<p><strong>▶ Noise from outside the area:</strong> Can be heard by those within it.</p>\n<p><strong>▶ Casting upon a creature: </strong>Silence may be cast upon a creature, which must make a Mental save. If the save fails, the 15&rsquo; radius area of silence moves with the creature. If the save succeeds, the spell&rsquo;s effect remains stationary&mdash;the targeted creature may move out of it.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.yqFrbuWfwoL7AlqG"
+    },
+    {
+      "_id": "XxOESBAvCkkEHoku",
+      "name": "Snake Charm",
+      "type": "spell",
+      "sort": 1300000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.AOQO0Z9lCdkst5LO"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "1d4+1 rounds/turns",
+        "range": "60'",
+        "roll": "1d4+1",
+        "description": "<p><strong>Duration: 1d4+1 rounds or turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>One or more snakes are rendered non-hostile, rearing up and swaying to and fro but not attacking.</p>\n<p><strong>▶ HD affected: </strong>The spell affects snakes whose total Hit Dice do not exceed the caster&rsquo;s level. For example, a 7th level caster can affect 7 HD of snakes, which can equal seven 1 HD snakes, or two 3 HD snakes and one 1 HD snake, or any other combination.</p>\n<p><strong>▶ Duration:</strong> When cast on snakes that are already attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1 turns.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.XxOESBAvCkkEHoku"
+    },
+    {
+      "_id": "hniAsvtK6ZC4K4A2",
+      "name": "Speak with Animals",
+      "type": "spell",
+      "sort": 1400000,
+      "flags": {
+        "cf": {
+          "id": "temp_j3xczxh8w1r",
+          "path": "OSE Spells#/CF_SEP/Cleric#/CF_SEP/2nd Level",
+          "color": "#000000"
+        },
+        "core": {
+          "sourceId": "Compendium.world.ose-spells.idGGsxKXPXDCwIlw"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster can communicate with one type of animal within range when the spell is cast.</p>\n<p><strong>▶ Type of animal:</strong> Ordinary animals or giant versions of ordinary animals may be targeted.</p>\n<p><strong>▶ Questions: </strong>The caster can ask questions of and receive answers from animals of the chosen kind, although the spell doesn&rsquo;t make animals any more friendly or cooperative than normal (a reaction roll may be required).</p>\n<p><strong>▶ Services: </strong>If an animal is friendly toward the caster, it may perform some favour or service.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ld5qxbIxDEQf1BnG.hniAsvtK6ZC4K4A2"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 17,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 2,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 13,
+        "mod": 0
+      },
+      "mental": {
+        "value": 13,
+        "mod": 0
+      },
+      "physical": {
+        "value": 13,
+        "mod": 0
+      },
+      "luck": {
+        "value": 13,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20'",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 1,
+      "mod": 1,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 3
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 0,
+        "max": 2
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 2
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p><strong style=\"box-sizing: border-box; user-select: text; color: #191813;\">Leader:</strong><span style=\"color: #191813;\">&nbsp;Groups of 4+ are led by a higher level cleric (1d10: 1&ndash;4: 2nd level, 5&ndash;7: 3rd level, 8&ndash;9: 4th level, 10: 5th level). Choose or roll the leader&rsquo;s spells.</span></p>",
+      "alignment": "Any",
+      "xp": 75,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d8",
+        "w": "1d20"
+      },
+      "morale": 7,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 3
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "4d8",
+      "value": 23,
+      "max": 23
+    }
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Acolyte Leader",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331064,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "ld5qxbIxDEQf1BnG",
+  "_key": "!actors!ld5qxbIxDEQf1BnG"
+}

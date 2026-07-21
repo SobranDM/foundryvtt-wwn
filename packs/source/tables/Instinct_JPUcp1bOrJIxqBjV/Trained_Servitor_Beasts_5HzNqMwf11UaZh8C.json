@@ -1,0 +1,106 @@
+{
+  "_id": "5HzNqMwf11UaZh8C",
+  "name": "Trained Servitor Beasts",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "Cq2uL8PaprvYxzpC",
+      "flags": {},
+      "type": 0,
+      "text": "Seek its trainer or handler on the field",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.Cq2uL8PaprvYxzpC"
+    },
+    {
+      "_id": "sA0lQ4Pfzi55wOdT",
+      "flags": {},
+      "type": 0,
+      "text": "Repeat the last action it took, sensible or not",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.sA0lQ4Pfzi55wOdT"
+    },
+    {
+      "_id": "DmTQbR6KJnBl0pPA",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the enemy closest to its handler",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.DmTQbR6KJnBl0pPA"
+    },
+    {
+      "_id": "v1ipUXJ4ZZbWoLTH",
+      "flags": {},
+      "type": 0,
+      "text": "Whine in confusion and disorientation",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.v1ipUXJ4ZZbWoLTH"
+    },
+    {
+      "_id": "R64ieYsWpk5dkrP0",
+      "flags": {},
+      "type": 0,
+      "text": "Perform an inappropriate but trained action",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.R64ieYsWpk5dkrP0"
+    },
+    {
+      "_id": "JQP40zHl7lBbjkCf",
+      "flags": {},
+      "type": 0,
+      "text": "Panic, attacking the nearest friend or foe",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5HzNqMwf11UaZh8C.JQP40zHl7lBbjkCf"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.tables.5HzNqMwf11UaZh8C"
+    }
+  },
+  "_key": "!tables!5HzNqMwf11UaZh8C"
+}

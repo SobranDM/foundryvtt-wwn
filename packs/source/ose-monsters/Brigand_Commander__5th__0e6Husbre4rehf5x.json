@@ -1,0 +1,403 @@
+{
+  "name": "Brigand Commander (5th)",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.XQUzDmiD5BMseWM6"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "aC2sr7d3idwvTaod",
+      "name": "Sword, Long",
+      "type": "weapon",
+      "sort": 800000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 100,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!0e6Husbre4rehf5x.aC2sr7d3idwvTaod"
+    },
+    {
+      "_id": "44CVhzsiYAAn5gHx",
+      "name": "Plate Armor",
+      "type": "armor",
+      "sort": 900000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.HTW8ih7ZUiudz5ls"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "system": {
+        "description": "<p><em><strong>Plate armor</strong></em> is an extremely expensive suit of tailored metal pieces that cover both the vitals and the limbs of the wearer.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 17,
+          "mod": 0
+        },
+        "armorBonus": 0,
+        "type": "heavy",
+        "price": 2000,
+        "weight": 2
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!0e6Husbre4rehf5x.44CVhzsiYAAn5gHx"
+    },
+    {
+      "_id": "38Zs2ILQLA7rFll5",
+      "name": "Spear, Heavy",
+      "type": "weapon",
+      "sort": 1000000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.QIUKOdWt2PQX0UVH"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 10,
+        "weight": 2,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!0e6Husbre4rehf5x.38Zs2ILQLA7rFll5"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 17,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 5,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 13,
+        "mod": 0
+      },
+      "mental": {
+        "value": 13,
+        "mod": 0
+      },
+      "physical": {
+        "value": 13,
+        "mod": 0
+      },
+      "luck": {
+        "value": 13,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": "mounted"
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Outlaws and mercenaries who make a living by raiding settlements and attacking travellers.</p>\n<ul>\n<li><strong>Footmen:</strong>&nbsp;Half the group has: leather armour, shield, sword, shortbow.</li>\n<li><strong>Cavalry:</strong>&nbsp;The other half is mounted on riding horses and has: chainmail, shield, sword.</li>\n<li><strong>Leaders and commanders:&nbsp;</strong>For every 20 brigands, there is a leader (2nd level fighter). For every 40 brigands, there is a commander (4th level fighter). Leaders ride war horses (with barding) and have: plate mail, sword, lance.</li>\n<li><strong>Fortified camps:&nbsp;</strong>Bands commonly combine and live in a camp of 5d6 &times; 10 brigands.</li>\n<li><strong>Camp leaders:</strong>&nbsp;Combined camps are led by a 9th level fighter, plus a 5th level fighter for every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30% chance of a cleric (8th level).</li>\n</ul>",
+      "alignment": "Chaotic",
+      "xp": 10,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "1d4*10"
+      },
+      "morale": 8,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 2,
+    "character": false,
+    "hp": {
+      "hd": "5d8",
+      "value": 17,
+      "max": 17
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "about-face": {
+        "indicatorDisabled": false
+      }
+    },
+    "name": "Brigand Commander",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331179,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "0e6Husbre4rehf5x",
+  "_key": "!actors!0e6Husbre4rehf5x"
+}

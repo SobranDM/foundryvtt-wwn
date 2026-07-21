@@ -1,0 +1,31 @@
+/* Active effects list, shared by actor and item sheets */
+
+.effects-list .item .effect-source,
+.effects-list .item .effect-duration,
+.effects-list .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #4c4c44 !important;
+  border-right: 1px solid #4c4c44 !important;
+  font-size: 12px;
+  padding: 4px 0;
+}
+.effects-list .item .item-name h4 {
+  margin-bottom: 0px !important;
+  padding: 4px 0 4px 4px;
+  border-right: 1px solid #4c4c44 !important;
+}
+.effects-list .item .effect-controls {
+  border: none;
+}
+.effects-list h3.effect-name {
+  margin-right: 18px;
+}
+.effects-list a.effect-control {
+  text-align: center;
+}
+.effects-list .effect-source {
+  text-align: center;
+}
+.effects-list ol.item-list > li:nth-child(odd) {
+  background-color: #bebcb1;
+}

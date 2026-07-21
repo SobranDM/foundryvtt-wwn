@@ -1,0 +1,55 @@
+{
+  "name": "Bow, Small +1",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "data": {
+    "range": {
+      "short": 50,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Bows&nbsp;</strong></em>cover everything from the small self bows of horse archers to the man-tall longbows wielded by foot archers. Larger bows are more cumbersome and impossible to shoot from horseback, but usually have superior strength. An archer with a Readied quiver can load a fresh arrow as a Move action each turn, or as an On Turn action if they have at least Shoot-1 skill.</p>",
+    "damage": "1d6+1",
+    "bonus": 1,
+    "shock": {
+      "damage": 0,
+      "ac": null
+    },
+    "skill": "shoot",
+    "score": "dex",
+    "tags": [
+      {
+        "title": "2H",
+        "value": "2H"
+      },
+      {
+        "title": "R",
+        "value": "R"
+      },
+      {
+        "title": "PM",
+        "value": "PM"
+      }
+    ],
+    "slow": false,
+    "missile": true,
+    "melee": false,
+    "price": 20,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "_id": "JLfYQo2UtUxSUqWU",
+  "_key": "!items!JLfYQo2UtUxSUqWU",
+  "folder": "OIyd6nt6BoF6ZIqn"
+}

@@ -1,0 +1,161 @@
+{
+  "_id": "FmylTEcaxCeuVxjg",
+  "name": "Nation-Theme-Negative",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Thematic Element - Negative Elements",
+  "results": [
+    {
+      "_id": "Vh5hCNorLFLke6IM",
+      "flags": {},
+      "type": 0,
+      "text": "Barbarism, with brutal savagery",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.Vh5hCNorLFLke6IM"
+    },
+    {
+      "_id": "n0XCPx6KvNtonVCA",
+      "flags": {},
+      "type": 0,
+      "text": "Decadence, of sins and fadings",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.n0XCPx6KvNtonVCA"
+    },
+    {
+      "_id": "4mxaYi73zmounpy2",
+      "flags": {},
+      "type": 0,
+      "text": "Despair, with good things unlooked-for",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.4mxaYi73zmounpy2"
+    },
+    {
+      "_id": "zy9jhzOKIBM9e5hq",
+      "flags": {},
+      "type": 0,
+      "text": "Exhaustion, with strength spent and lost",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.zy9jhzOKIBM9e5hq"
+    },
+    {
+      "_id": "2WuMxDz3ZsLyjsGl",
+      "flags": {},
+      "type": 0,
+      "text": "Ignorance, of terrors and the unknown",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.2WuMxDz3ZsLyjsGl"
+    },
+    {
+      "_id": "wB9mLeapoqmkOsRo",
+      "flags": {},
+      "type": 0,
+      "text": "Oppression, with rule a crushing weight",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.wB9mLeapoqmkOsRo"
+    },
+    {
+      "_id": "i1DYOLZdi5LkgmK3",
+      "flags": {},
+      "type": 0,
+      "text": "Poverty, where even the rich are poor",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.i1DYOLZdi5LkgmK3"
+    },
+    {
+      "_id": "UGFiIYJMfGR5JPh9",
+      "flags": {},
+      "type": 0,
+      "text": "Precarity, with all goods made fleeting",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.UGFiIYJMfGR5JPh9"
+    },
+    {
+      "_id": "LeAsKgCa9alVPJjq",
+      "flags": {},
+      "type": 0,
+      "text": "Stratification, where classes do not touch",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.LeAsKgCa9alVPJjq"
+    },
+    {
+      "_id": "cIFqQHve1b2ShmVn",
+      "flags": {},
+      "type": 0,
+      "text": "Violence, where life is something cheap",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FmylTEcaxCeuVxjg.cIFqQHve1b2ShmVn"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!FmylTEcaxCeuVxjg"
+}

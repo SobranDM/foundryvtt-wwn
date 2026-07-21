@@ -1,0 +1,26 @@
+{
+  "name": "Protection from Evil (Mage)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>This spell wards the caster from attacks by creatures of another alignment, as follows:</p>\n<p><strong>▶ Bonuses: </strong>The caster gains a +1 bonus to saving throws against attacks or special abilities of affected creatures.</p>\n<p><strong>▶ Affected creatures&rsquo; attacks:</strong> Against the caster are penalised by &ndash;1.</p>\n<p><strong>▶ Enchanted, constructed, or summoned </strong><strong>creatures:</strong> The spell additionally prevents such creatures from attacking the caster in melee, though they may still make ranged attacks. If the caster engages such a creature in melee, this protection is broken (the caster still gains the save and attack bonuses mentioned above).</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "2xevMuHKqT5JdJru",
+  "_key": "!items!2xevMuHKqT5JdJru"
+}

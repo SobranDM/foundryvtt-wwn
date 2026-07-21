@@ -1,0 +1,17 @@
+{
+  "_id": "XBIDNtnU5CfYWGtE",
+  "name": "Pilgrimage Site",
+  "content": "<h1>Pilgrimage Site</h1><div>\n<p>There is some important monument, place, or structure here that attracts pilgrims from far away. It may be a holy site beloved of a local faith, a mythic originpoint for a nearby culture, an oracle or other provider of widely-desired services, or a font of some special favor or benefit that can reward a pilgrim. The site may be under the control of a local government, or it may be too distant or dangerous to be effectively protected or administered by outsiders.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Raider chieftain plundering the pilgrims, Zealot who has seized control of it for their own sect, Once-benevolent holy entity that has become hostile for some reason</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Desperate pilgrim from afar, Local administrator beset by woes, Young merchant providing for the pilgrims’ needs</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Factions are actively struggling over the site’s control, The site is being ruined by the pilgrim traffic, The site has a strategic value quite aside from its use to pilgrims</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Sacred relic of the site, Offering given by a grateful pilgrim, Token that grants access to the site’s most potent reward</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Ancient temple on a holy site, Monument to a great deed, Perilous cave of an oracle</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6800000
+    }
+  },
+  "_key": "!journal!XBIDNtnU5CfYWGtE",
+  "ownership": {
+    "default": 0
+  }
+}

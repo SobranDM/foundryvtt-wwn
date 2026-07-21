@@ -1,0 +1,32 @@
+{
+  "_id": "AXZXzJhrL76luk7g",
+  "name": "Unobtrusive Step",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.AXZXzJhrL76luk7g"
+    }
+  },
+  "_key": "!items!AXZXzJhrL76luk7g",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>You not only possess a considerable skill for disguise and obfuscation, you can become extremely hard to detect. Once per scene, you may Commit Effort for the day as an Instant action to reroll a failed Sneak skill check or skill check related to impersonating someone else.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

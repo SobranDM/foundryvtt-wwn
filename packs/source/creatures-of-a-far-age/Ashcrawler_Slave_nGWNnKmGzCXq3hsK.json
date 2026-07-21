@@ -1,0 +1,244 @@
+{
+  "_id": "nGWNnKmGzCXq3hsK",
+  "name": "Ashcrawler Slave",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "X9TCL34Zwp3NavDx",
+      "name": "Linothorax",
+      "type": "armor",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.Oa5VYeqSIDFEOXcn"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "_key": "!actors.items!nGWNnKmGzCXq3hsK.X9TCL34Zwp3NavDx",
+      "system": {
+        "description": "<p><em><strong>Linothorax </strong></em>armor is a stiffer armor of glued, layered cloth, often as elaborately decorated as the arts of its maker allow.</p>\n<p><em><strong>Light armor&nbsp;</strong></em>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 13
+        },
+        "type": "light",
+        "price": 20,
+        "weight": 1
+      }
+    },
+    {
+      "_id": "6kjByRRfWZPVTFzc",
+      "name": "Sword, Short",
+      "type": "weapon",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.B5SZwKmkdkAcN7r7"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "_key": "!actors.items!nGWNnKmGzCXq3hsK.6kjByRRfWZPVTFzc",
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 10,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!nGWNnKmGzCXq3hsK",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 2,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>One of the hideous fungal life forms that sometimes emerge from the Ashblight, an ashcrawler resembles a centipede that stands half as tall as a man and is at least ten feet long. The &ldquo;chitin&rdquo; of the crawler is nothing but a hardened fungal shell around the soft, damp interior of the organism. Those bitten by an ashcrawler must make a Physical save or be infected by the fungus. Without magical healing, they&rsquo;ll become wholly enslaved by the parasitical fungus within a week, becoming a &ldquo;crawler slave&rdquo; and using their own intellect and abilities to gather new prey for the creature. The stat line given for them below reflects an average unlucky peasant, but stronger slaves are possible. Crawler slaves can hide most of the infection under concealing clothing, and can only be saved by powerful healing magic at the GM&rsquo;s discretion.</p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "0"
+      },
+      "morale": 12,
+      "instinct": 5,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "1d8",
+      "value": 8,
+      "max": 8
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Ashcrawler Slave",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "nGWNnKmGzCXq3hsK",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

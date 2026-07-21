@@ -1,0 +1,17 @@
+{
+  "_id": "uON5ihbcSMYbzf0t",
+  "name": "Ancient Archives",
+  "content": "<h1>Ancient Archives</h1><div>\n<p>The site once housed archives or information that would be very interesting to certain modern powers. The utility or value of this information should be obvious to the players, even if they’re initially unaware of its existence. Known archival sites might have sealed their lore behind some fearsome guardian or a “puzzle” consisting of access procedures that were self-evident in the age it was constructed in.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Maddened archive keeper, Powerful figure who wants the information kept hidden, Secret-seeker who brooks no rivals</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Helpful ancient archive attendant, Hired investigator, Seeker of some related lore</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The information is conveyed in idioms or forms that are no longer clear, The information is very dangerous to know, The information is buried in seas of irrelevant data that need navigating</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Index to the desired information, Key to decoding the data, Cultural work that elucidates the idioms or medium being used</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Library full of not-book data storage items, Scriptorium or other scribal zone, Chamber related to the topic or field of the data involved</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 200000
+    }
+  },
+  "_key": "!journal!uON5ihbcSMYbzf0t",
+  "ownership": {
+    "default": 0
+  }
+}

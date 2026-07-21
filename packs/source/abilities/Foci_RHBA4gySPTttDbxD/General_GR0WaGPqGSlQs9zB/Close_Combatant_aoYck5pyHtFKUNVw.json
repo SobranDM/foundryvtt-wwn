@@ -1,0 +1,18 @@
+{
+  "_id": "aoYck5pyHtFKUNVw",
+  "name": "Close Combatant",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You&rsquo;ve had all too much practice at close-in fighting and desperate struggles with drawn blades. You&rsquo;re extremely skilled at avoiding injury in melee combat, and at level 2 you can dodge through a melee scrum without fear of being knifed in passing.</p>\n<p><strong>Level 1: </strong>Gain any combat skill as a bonus skill. You can use knife-sized thrown weapons in melee without suffering penalties for the proximity of melee attackers. You ignore Shock damage from melee assailants, even if you&rsquo;re unarmored at the time, but invoking this benefit disrupts any spellcasting you might do that round due to the need for violently active evasion.</p>\n<p><strong>Level 2: </strong>The Shock damage from your melee attacks treats all targets as if they were AC 10. The <strong><em>Fighting Withdrawal</em></strong> combat action is treated as an On Turn action for you and can be performed freely</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!aoYck5pyHtFKUNVw",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

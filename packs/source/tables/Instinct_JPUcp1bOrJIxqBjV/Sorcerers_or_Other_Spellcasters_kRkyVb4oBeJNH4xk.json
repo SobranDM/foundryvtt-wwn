@@ -1,0 +1,106 @@
+{
+  "_id": "kRkyVb4oBeJNH4xk",
+  "name": "Sorcerers or Other Spellcasters",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "Yx7nHncfSWkaHJZ9",
+      "flags": {},
+      "type": 0,
+      "text": "Freeze a round trying to pick which spell to use",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.Yx7nHncfSWkaHJZ9"
+    },
+    {
+      "_id": "m2gCNvPwQ6XsW98p",
+      "flags": {},
+      "type": 0,
+      "text": "Get further away from the nearest enemy",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.m2gCNvPwQ6XsW98p"
+    },
+    {
+      "_id": "N0E7mrRMexF34pgn",
+      "flags": {},
+      "type": 0,
+      "text": "Use magic, but misjudge the aiming somehow",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.N0E7mrRMexF34pgn"
+    },
+    {
+      "_id": "6dmbuHY3EnahUwwI",
+      "flags": {},
+      "type": 0,
+      "text": "Try to hide behind something or get cover",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.6dmbuHY3EnahUwwI"
+    },
+    {
+      "_id": "Gw42WCvc1Djca4hJ",
+      "flags": {},
+      "type": 0,
+      "text": "Attack with punches or physical weapons",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.Gw42WCvc1Djca4hJ"
+    },
+    {
+      "_id": "5lBLWa8loyllwlEq",
+      "flags": {},
+      "type": 0,
+      "text": "Ignore everyone but the nearest threat to them",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kRkyVb4oBeJNH4xk.5lBLWa8loyllwlEq"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.tables.kRkyVb4oBeJNH4xk"
+    }
+  },
+  "_key": "!tables!kRkyVb4oBeJNH4xk"
+}

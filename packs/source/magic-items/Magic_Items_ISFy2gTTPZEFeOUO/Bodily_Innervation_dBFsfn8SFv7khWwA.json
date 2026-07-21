@@ -1,0 +1,42 @@
+{
+  "_id": "dBFsfn8SFv7khWwA",
+  "name": "Bodily Innervation",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.dBFsfn8SFv7khWwA"
+    }
+  },
+  "system": {
+    "description": "<p>This rare elixir reinforces a living user&rsquo;s body, decreasing their current System Strain by three points. It takes three days for the potion&rsquo;s residue to be fully flushed from a user&rsquo;s system, however, and this potion cannot be used again until it is fully purged.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!dBFsfn8SFv7khWwA"
+}

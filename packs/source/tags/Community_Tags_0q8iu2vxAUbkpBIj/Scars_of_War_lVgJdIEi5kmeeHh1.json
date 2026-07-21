@@ -1,0 +1,17 @@
+{
+  "_id": "lVgJdIEi5kmeeHh1",
+  "name": "Scars of War",
+  "content": "<h1>Scars of War</h1><div>\n<p>The community is still bloodied by a recent violent conflict. A crushing bandit raid, a lost siege, getting caught at the periphery of a major battle, or some other calamity has inflicted severe damage on the place. Some communities may suffer a longer-term version of this, their youths lost in a grinding, endless battle against some perpetual threat.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Savage tyrant left over from the fight, Outsider taking advantage of their weakness, Native driven to extremes by their losses</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Bedraggled survivor, Outsider who’s come to help, Relative of someone lost in the battle</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The damage was mostly taken by one group, The losses have thrown the old social order into chaos, The locals are desperate to make the losses “worth it”</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Plunder taken during the fight, Wealth left behind by the dead, A cache of treasure concealed by looters</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Damaged half-occupied house, Burnt-down civil structure, Fields pocked with torched cottages</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7800000
+    }
+  },
+  "_key": "!journal!lVgJdIEi5kmeeHh1",
+  "ownership": {
+    "default": 0
+  }
+}

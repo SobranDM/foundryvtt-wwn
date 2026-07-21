@@ -1,0 +1,32 @@
+{
+  "_id": "ur8grgczmqnfivwg",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Popular Movement",
+  "type": "asset",
+  "_key": "!items!ur8grgczmqnfivwg",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 25,
+    "counter": "1d6",
+    "desc": "Any friendly Asset is allowed movement into the same location as the Popular Movement, even if it would normally be forbidden by its owners and lacks the Subtle quality. If the Popular Movement later moves or is destroyed, such Assets must also leave or suffer the usual consequences of a non-Subtle Asset in a hostile area.",
+    "health": {
+      "max": 16,
+      "value": 16
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 7,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

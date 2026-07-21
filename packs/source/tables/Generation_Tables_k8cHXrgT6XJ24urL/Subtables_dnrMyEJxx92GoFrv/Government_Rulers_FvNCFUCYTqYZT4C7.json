@@ -1,0 +1,109 @@
+{
+  "_id": "FvNCFUCYTqYZT4C7",
+  "name": "Government-Rulers",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Number of Rulers",
+  "results": [
+    {
+      "_id": "Zv50LKpOplxVmrfh",
+      "flags": {},
+      "type": 0,
+      "text": "There is a single nominal monarch",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.Zv50LKpOplxVmrfh"
+    },
+    {
+      "_id": "nnd5hcJ6DUC9NNRJ",
+      "flags": {},
+      "type": 2,
+      "text": "Government-SingleRuler",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "S5LfTFOCY9w6H9h1",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.nnd5hcJ6DUC9NNRJ"
+    },
+    {
+      "_id": "uxrU5hzbMHYYnWUY",
+      "flags": {},
+      "type": 0,
+      "text": "There is a monarch and several under-kings",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.uxrU5hzbMHYYnWUY"
+    },
+    {
+      "_id": "f4Mvebabics7Lhld",
+      "flags": {},
+      "type": 2,
+      "text": "Government-MultipleRulers",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "b5m1mBU2Uq7TtRFc",
+      "weight": 1,
+      "range": [
+        2,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.f4Mvebabics7Lhld"
+    },
+    {
+      "_id": "zcaXvYcauYMrJOdc",
+      "flags": {},
+      "type": 0,
+      "text": "There is a group of approximate equals",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.zcaXvYcauYMrJOdc"
+    },
+    {
+      "_id": "gyPcr0uS8iUbUMKW",
+      "flags": {},
+      "type": 0,
+      "text": "There are a large number of small rulers",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!FvNCFUCYTqYZT4C7.gyPcr0uS8iUbUMKW"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!FvNCFUCYTqYZT4C7"
+}

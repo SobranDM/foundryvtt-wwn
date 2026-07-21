@@ -138,11 +138,11 @@ export class WwnActorSheet extends ActorSheet {
       }
     });
     html.find(".add-skills").click(async () => {
-      // Add primary skills from compendium
-      let skillPack = game.packs.get("wwn.skills");
+      // Add primary skills from the Abilities pack (Skills folder only)
+      let skillPack = game.packs.get("wwn.abilities");
       let toAdd = await skillPack.getDocuments();
       let primarySkills = toAdd
-        .filter((i) => i.system.secondary == false)
+        .filter((i) => i.type === "skill" && i.system.secondary == false)
         .map((item) => item.toObject());
       await Item.createDocuments(primarySkills, { parent: this.actor });
     });
@@ -321,7 +321,7 @@ export class WwnActorSheet extends ActorSheet {
         }
       }
       const dialogTemplate = "systems/wwn/templates/items/dialogs/new-item.html";
-      const dialogContent = await renderTemplate(dialogTemplate, dialogData);
+      const dialogContent = await foundry.applications.handlebars.renderTemplate(dialogTemplate, dialogData);
       const popUpDialog = new Dialog(
         {
           title: `Add ${type}`,

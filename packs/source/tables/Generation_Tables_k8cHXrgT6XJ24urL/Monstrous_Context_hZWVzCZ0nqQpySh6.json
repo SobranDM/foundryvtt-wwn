@@ -1,0 +1,222 @@
+{
+  "_id": "hZWVzCZ0nqQpySh6",
+  "name": "Monstrous Context",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "fMzFfiNgmhoKq2C2",
+      "type": 0,
+      "text": "<b>How Did the Monster Arise?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.fMzFfiNgmhoKq2C2"
+    },
+    {
+      "_id": "hGcdxwQhCg0E5orw",
+      "type": 2,
+      "text": "MonContext-Arise",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "auvkXvLBr7VUuASw",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.hGcdxwQhCg0E5orw"
+    },
+    {
+      "_id": "lvi2WNhpDEiXKnhf",
+      "type": 0,
+      "text": "<b>How Much Local Contact Does It Have?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.lvi2WNhpDEiXKnhf"
+    },
+    {
+      "_id": "tg5CU1BRtf9Hx3Io",
+      "type": 2,
+      "text": "MonContext-Contact",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "gZR5Svdf8ulbUuEI",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.tg5CU1BRtf9Hx3Io"
+    },
+    {
+      "_id": "m9w2hAPBPdMlcNPF",
+      "type": 0,
+      "text": "<b>How Do the Locals React To Its Drive?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.m9w2hAPBPdMlcNPF"
+    },
+    {
+      "_id": "PgWNHONyYnLSbAa5",
+      "type": 2,
+      "text": "MonContext-React",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "K9PxMGuSFYjWLTqu",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.PgWNHONyYnLSbAa5"
+    },
+    {
+      "_id": "EZd3q6NlhXQJCbrM",
+      "type": 0,
+      "text": "<b>What Scars Has It Left Here?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.EZd3q6NlhXQJCbrM"
+    },
+    {
+      "_id": "cqFkNWQQi5hwAYvM",
+      "type": 2,
+      "text": "MonContext-Scars",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "otkjQvQjnq7LbrRR",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.cqFkNWQQi5hwAYvM"
+    },
+    {
+      "_id": "Gb2C7xT8HQEwuifh",
+      "type": 0,
+      "text": "<b>What Is Its Connection With the Past?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.Gb2C7xT8HQEwuifh"
+    },
+    {
+      "_id": "SlqHmssJFhtT7Lm5",
+      "type": 2,
+      "text": "MonContext-Past",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "V6fG3Prqi8W7VZex",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.SlqHmssJFhtT7Lm5"
+    },
+    {
+      "_id": "fuHOvdx9AqvAg5FV",
+      "type": 0,
+      "text": "<b>A Twist To Its Activities</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.fuHOvdx9AqvAg5FV"
+    },
+    {
+      "_id": "n5v3HXHQEWmRx79D",
+      "type": 2,
+      "text": "MonContext-Twist",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "pIksunKKG6P3RsF7",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hZWVzCZ0nqQpySh6.n5v3HXHQEWmRx79D"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!hZWVzCZ0nqQpySh6"
+}

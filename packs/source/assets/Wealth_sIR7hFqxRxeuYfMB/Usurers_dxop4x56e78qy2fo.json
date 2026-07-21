@@ -1,0 +1,32 @@
+{
+  "_id": "dxop4x56e78qy2fo",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Usurers",
+  "type": "asset",
+  "_key": "!items!dxop4x56e78qy2fo",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d10",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "None",
+    "desc": "Moneylenders and other proto-bankers ply their trade for the faction. For each unit of Usurers owned by a faction, the Treasure cost of buying Assets may be decreased by 2 Treasure, to a minimum of half its cost. Each time the Usurers are used for this benefit, they suffer [[1d4]] damage from popular displeasure.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "For each unit of Usurers owned by a faction, the Treasure cost of buying Assets may be decreased by 2 Treasure, to a minimum of half its cost. Each time the Usurers are used for this benefit, they suffer [[/roll 1d4]] damage from popular displeasure.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

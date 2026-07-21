@@ -40,13 +40,11 @@ export class WwnActorSheetFaction extends WwnActorSheet {
   async getData() {
     const data = super.getData();
 
-    data.enrichedDescription = await TextEditor.enrichHTML(
-      this.object.system.description,
-      { async: true }
+    data.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.description
     );
-    data.enrichedGoal = await TextEditor.enrichHTML(
-      this.object.system.factionGoalDesc,
-      { async: true }
+    data.enrichedGoal = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.factionGoalDesc
     );
     return data;
   }
@@ -346,7 +344,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       actions: FACTION_ACTIONS,
     };
     const template = "systems/wwn/templates/actors/dialogs/faction-action.html";
-    const html = renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     const _form = async (html) => {
       const form = html[0].querySelector("form");
       const action = form.querySelector('[name="action"]').value;
@@ -369,7 +367,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     this.popUpDialog = new Dialog(
       {
         title: "Take Action",
-        content: await html,
+        content: html,
         default: "setgoal",
         buttons: {
           setgoal: {
@@ -393,7 +391,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
       goalArray,
     };
     const template = "systems/wwn/templates/actors/dialogs/faction-goal.html";
-    const html = renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
     const _goalForm = async (html) => {
       const form = html[0].querySelector("form");
@@ -431,7 +429,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
     this.popUpDialog = new Dialog(
       {
         title: "Set Goal",
-        content: await html,
+        content: html,
         default: "setgoal",
         buttons: {
           setgoal: {
@@ -662,7 +660,7 @@ export class WwnActorSheetFaction extends WwnActorSheet {
 
     const chatData = {
       speaker: ChatMessage.getSpeaker({ actor: this }),
-      content: await renderTemplate(template, cardData),
+      content: await foundry.applications.handlebars.renderTemplate(template, cardData),
       type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
       whisper: gm_ids,
     };
@@ -924,17 +922,18 @@ export class WwnActorSheetFaction extends WwnActorSheet {
 // });
 
 // A button to show long descriptions
-Hooks.on("renderChatMessage", (message, html, _user) => {
-  const longDesc = html.find(".longShowDesc");
-  if (longDesc) {
-    const bind = function (event) {
+Hooks.on("renderChatMessageHTML", (message, html) => {
+  const longDesc = html.querySelector(".longShowDesc");
+  if (!longDesc) return;
+  longDesc.addEventListener(
+    "click",
+    (event) => {
       event.preventDefault();
-      const hiddenDesc = html.find(".hiddenLong");
-      hiddenDesc.show();
-      longDesc.hide();
-    };
-    longDesc.one("click", bind);
-  }
+      html.querySelector(".hiddenLong")?.style.removeProperty("display");
+      longDesc.style.display = "none";
+    },
+    { once: true }
+  );
 });
 
 export const HEALTH__XP_TABLE = {

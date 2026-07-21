@@ -1,0 +1,73 @@
+{
+  "_id": "ISDRWsin1bQiH0uj",
+  "name": "Terrain-Populated",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Populated is the Feature?",
+  "results": [
+    {
+      "_id": "Yt4ebO00YiUJABI7",
+      "flags": {},
+      "type": 0,
+      "text": "Almost unpopulated for something like it",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ISDRWsin1bQiH0uj.Yt4ebO00YiUJABI7"
+    },
+    {
+      "_id": "ecs2yqVeA4XXQuiu",
+      "flags": {},
+      "type": 0,
+      "text": "Very few settlers or workers there",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ISDRWsin1bQiH0uj.ecs2yqVeA4XXQuiu"
+    },
+    {
+      "_id": "g8OIPKyQlHM01VFg",
+      "flags": {},
+      "type": 0,
+      "text": "Average or more population density",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ISDRWsin1bQiH0uj.g8OIPKyQlHM01VFg"
+    },
+    {
+      "_id": "RHkaZSmAJ8ihqd1X",
+      "flags": {},
+      "type": 0,
+      "text": "A rush of people have gone there",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ISDRWsin1bQiH0uj.RHkaZSmAJ8ihqd1X"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!ISDRWsin1bQiH0uj"
+}

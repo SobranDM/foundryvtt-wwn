@@ -1,0 +1,177 @@
+{
+  "_id": "Zr5dQzVTtR2kLcTn",
+  "name": "Government-Legitimacy",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Source of Legitimacy",
+  "results": [
+    {
+      "_id": "y7sozdgXhjK14Q6C",
+      "flags": {},
+      "type": 0,
+      "text": "They’ve simply always been the rulers",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.y7sozdgXhjK14Q6C"
+    },
+    {
+      "_id": "MOD063ABbmUpL15o",
+      "flags": {},
+      "type": 0,
+      "text": "They’re thought wiser and more virtuous",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.MOD063ABbmUpL15o"
+    },
+    {
+      "_id": "dwWpGFSZ4yrxI7Tf",
+      "flags": {},
+      "type": 0,
+      "text": "Their martial prowess is awe-inspiring",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.dwWpGFSZ4yrxI7Tf"
+    },
+    {
+      "_id": "qbZ47Xai7L1OjcKa",
+      "flags": {},
+      "type": 0,
+      "text": "The gods chose them as the leaders",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.qbZ47Xai7L1OjcKa"
+    },
+    {
+      "_id": "ce7fGdq7B7Ao97GG",
+      "flags": {},
+      "type": 0,
+      "text": "They were chosen by popular will",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.ce7fGdq7B7Ao97GG"
+    },
+    {
+      "_id": "YOdv1hjcqafJigPw",
+      "flags": {},
+      "type": 0,
+      "text": "They’re loved for their benevolence",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.YOdv1hjcqafJigPw"
+    },
+    {
+      "_id": "pQNx0o067tYoiF6l",
+      "flags": {},
+      "type": 0,
+      "text": "They utterly crushed the last batch of rebels",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.pQNx0o067tYoiF6l"
+    },
+    {
+      "_id": "jZjE4Itxch38U4oe",
+      "flags": {},
+      "type": 0,
+      "text": "They brought greater prosperity to the land",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.jZjE4Itxch38U4oe"
+    },
+    {
+      "_id": "N1aQzi6yWUfVsAqD",
+      "flags": {},
+      "type": 0,
+      "text": "They smashed the prior government",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.N1aQzi6yWUfVsAqD"
+    },
+    {
+      "_id": "9RcGpQ4M4ElmaOWt",
+      "flags": {},
+      "type": 0,
+      "text": "They brought order out of bloody chaos",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.9RcGpQ4M4ElmaOWt"
+    },
+    {
+      "_id": "xYn7xHTF3otj6bR1",
+      "flags": {},
+      "type": 0,
+      "text": "They led the nation to greater glory and pride",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.xYn7xHTF3otj6bR1"
+    },
+    {
+      "_id": "VX476DZndv9Ql3ru",
+      "flags": {},
+      "type": 0,
+      "text": "They seem less bad than the alternatives",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Zr5dQzVTtR2kLcTn.VX476DZndv9Ql3ru"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Zr5dQzVTtR2kLcTn"
+}

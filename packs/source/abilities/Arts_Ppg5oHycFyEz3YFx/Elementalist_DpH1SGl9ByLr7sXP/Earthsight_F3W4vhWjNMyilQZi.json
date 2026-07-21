@@ -1,0 +1,39 @@
+{
+  "_id": "F3W4vhWjNMyilQZi",
+  "name": "Earthsight",
+  "type": "art",
+  "img": "systems/wwn/assets/new/elementalist_art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.F3W4vhWjNMyilQZi"
+    }
+  },
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the scene as an On Turn action. For the rest of the scene, you can see the outlines of solid objects even in perfect darkness, and can peer through a number of feet of earth or stone equal to your character level.</p>",
+    "save": "",
+    "source": "Elementalist",
+    "effort": 0,
+    "time": "Scene",
+    "range": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!F3W4vhWjNMyilQZi"
+}

@@ -1,0 +1,29 @@
+{
+  "_id": "mFr1R90SLSYfkXtT",
+  "name": "Censer of Solid Dreams",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>When this small censer is filled with flammable substances and lit as a Main Action, it exhales a thick, opaque white smoke. The bearer of the censer can mold the smoke with mental commands, shaping it into any solid, simple object that can fit in a thirty-foot cube. This object is opaque and requires 5 hit points of damage to punch a human-sized hole directly through it. Creatures caught inside the smoke can tear through it with a Main Action. It&rsquo;s sturdy enough to bear the weight of horses and it lasts for the remainder of the scene. The censer can be lit only once per day.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.mFr1R90SLSYfkXtT"
+    }
+  },
+  "_key": "!items!mFr1R90SLSYfkXtT"
+}

@@ -1,0 +1,174 @@
+{
+  "_id": "V6fG3Prqi8W7VZex",
+  "name": "MonContext-Past",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "It’s a servant of a long-dead religion",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "q177gfuveah96zy2",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.q177gfuveah96zy2"
+    },
+    {
+      "type": 0,
+      "text": "It’s obedient to a long-gone political group",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "gvoudm0ugscl56dy",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.gvoudm0ugscl56dy"
+    },
+    {
+      "type": 0,
+      "text": "It’s meant to target a perhaps-vanished foe",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "6n9zwr64s4xkmgj3",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.6n9zwr64s4xkmgj3"
+    },
+    {
+      "type": 0,
+      "text": "It needs an environment that is now rare",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "h5bzxd430vv496r1",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.h5bzxd430vv496r1"
+    },
+    {
+      "type": 0,
+      "text": "It’s accepted by certain ancient defenses",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "klizr63npmb8del9",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.klizr63npmb8del9"
+    },
+    {
+      "type": 0,
+      "text": "It serves an alien or vanished aesthetic end",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "dy7n20yf64qo07o8",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.dy7n20yf64qo07o8"
+    },
+    {
+      "type": 0,
+      "text": "Its home was a place that is now gone",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "1r980nd5owpcnvsz",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.1r980nd5owpcnvsz"
+    },
+    {
+      "type": 0,
+      "text": "It seeks something that has since been lost",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "oxbn826i22eeaci7",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.oxbn826i22eeaci7"
+    },
+    {
+      "type": 0,
+      "text": "It seeks victory in a struggle that is now over",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "gr4546295ovu45zi",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.gr4546295ovu45zi"
+    },
+    {
+      "type": 0,
+      "text": "It’s only part of something, the rest now gone",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "u5g74jnfzw7ue9fh",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.u5g74jnfzw7ue9fh"
+    },
+    {
+      "type": 0,
+      "text": "It serves an urge that no longer makes sense",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "3221a7f7mjbaq7u1",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.3221a7f7mjbaq7u1"
+    },
+    {
+      "type": 0,
+      "text": "It was sacred to some group that is now lost",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "gpj4pn8uipb1nnpf",
+      "flags": {},
+      "_key": "!tables.results!V6fG3Prqi8W7VZex.gpj4pn8uipb1nnpf"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!V6fG3Prqi8W7VZex"
+}

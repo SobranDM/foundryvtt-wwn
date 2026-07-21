@@ -1,0 +1,484 @@
+{
+  "_id": "jQFwHVqq9zoWVegm",
+  "name": "Magical Weapon +3",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "none",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "JB3vwEPjYHoAUq1M",
+      "flags": {},
+      "type": 0,
+      "text": "Favored primary +3",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        30
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.JB3vwEPjYHoAUq1M"
+    },
+    {
+      "_id": "jGYhT2VR15rRDrMF",
+      "flags": {},
+      "type": 0,
+      "text": "Favored secondary +3",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        31,
+        40
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.jGYhT2VR15rRDrMF"
+    },
+    {
+      "_id": "zAndQ5r2JuUdV7Ce",
+      "flags": {},
+      "type": 0,
+      "text": "Favored ranged +3",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        41,
+        50
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.zAndQ5r2JuUdV7Ce"
+    },
+    {
+      "_id": "QkLOOoCVE71lLhk6",
+      "flags": {},
+      "type": 2,
+      "text": "Axe, Hand +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "ZQJGMctSA2diSUk8",
+      "weight": 1,
+      "range": [
+        51,
+        53
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.QkLOOoCVE71lLhk6"
+    },
+    {
+      "_id": "Acmj12BkcYTIsbok",
+      "flags": {},
+      "type": 2,
+      "text": "Axe, War +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "KvenqGeWGS2Gfna6",
+      "weight": 1,
+      "range": [
+        54,
+        54
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.Acmj12BkcYTIsbok"
+    },
+    {
+      "_id": "JVMoLXR7XmyHoIF3",
+      "flags": {},
+      "type": 2,
+      "text": "Blackjack +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "HJbhfSGlug4B5A6V",
+      "weight": 1,
+      "range": [
+        55,
+        55
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.JVMoLXR7XmyHoIF3"
+    },
+    {
+      "_id": "vpwICCLNOyxQBCLk",
+      "flags": {},
+      "type": 2,
+      "text": "Bow, Large +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "d06k4x1ozeKUSYRu",
+      "weight": 1,
+      "range": [
+        56,
+        58
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.vpwICCLNOyxQBCLk"
+    },
+    {
+      "_id": "v2FD640CHp4RkKmM",
+      "flags": {},
+      "type": 2,
+      "text": "Bow, Small +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "Gz7kETmn7Z92hjG3",
+      "weight": 1,
+      "range": [
+        59,
+        61
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.v2FD640CHp4RkKmM"
+    },
+    {
+      "_id": "6roo5QIYAj4g4s2a",
+      "flags": {},
+      "type": 2,
+      "text": "Claw Blades +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "tymqT82KjtLb97Wc",
+      "weight": 1,
+      "range": [
+        62,
+        62
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.6roo5QIYAj4g4s2a"
+    },
+    {
+      "_id": "QtRsdjJbXGL9qZjh",
+      "flags": {},
+      "type": 2,
+      "text": "Club +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "4eqrCzIkjTFoXwQg",
+      "weight": 1,
+      "range": [
+        63,
+        63
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.QtRsdjJbXGL9qZjh"
+    },
+    {
+      "_id": "UgO3puYaAHxM9DKc",
+      "flags": {},
+      "type": 2,
+      "text": "Club, Great +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "ORkKbWCMWVUf39CA",
+      "weight": 1,
+      "range": [
+        64,
+        64
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.UgO3puYaAHxM9DKc"
+    },
+    {
+      "_id": "VlXtdnTYPsjDx7IK",
+      "flags": {},
+      "type": 2,
+      "text": "Crossbow +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "xMfy3sfrVPWMDYAr",
+      "weight": 1,
+      "range": [
+        65,
+        65
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.VlXtdnTYPsjDx7IK"
+    },
+    {
+      "_id": "voozHb2hRiSSc1mA",
+      "flags": {},
+      "type": 2,
+      "text": "Dagger +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "Byvk4ccNTJdAPir5",
+      "weight": 1,
+      "range": [
+        66,
+        68
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.voozHb2hRiSSc1mA"
+    },
+    {
+      "_id": "W4SRnVDYgNEyt0B4",
+      "flags": {},
+      "type": 2,
+      "text": "Halberd +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "QftW0yX0IJh0hpWw",
+      "weight": 1,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.W4SRnVDYgNEyt0B4"
+    },
+    {
+      "_id": "m5w0NDGd8pF1jt1f",
+      "flags": {},
+      "type": 2,
+      "text": "Hammer, Great +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "OmmTw07LPsquKAZ3",
+      "weight": 1,
+      "range": [
+        71,
+        71
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.m5w0NDGd8pF1jt1f"
+    },
+    {
+      "_id": "Es2lVqAAbQCCD7Ec",
+      "flags": {},
+      "type": 2,
+      "text": "Hammer, War +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "12NfPxwSy8T34PiL",
+      "weight": 1,
+      "range": [
+        72,
+        73
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.Es2lVqAAbQCCD7Ec"
+    },
+    {
+      "_id": "ripbW8v6sDyrWLoq",
+      "flags": {},
+      "type": 2,
+      "text": "Hurlant, Great +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "TY1pehIYbrb9wu3L",
+      "weight": 1,
+      "range": [
+        74,
+        74
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.ripbW8v6sDyrWLoq"
+    },
+    {
+      "_id": "PaZAP3HRDa5GZkXn",
+      "flags": {},
+      "type": 2,
+      "text": "Hurlant, Hand +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "ujpdaoaG46iyiJsU",
+      "weight": 1,
+      "range": [
+        75,
+        75
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.PaZAP3HRDa5GZkXn"
+    },
+    {
+      "_id": "bx3JCneS5bf8saiu",
+      "flags": {},
+      "type": 2,
+      "text": "Hurlant, Long +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "ZqdMDwDFwKz6ty4g",
+      "weight": 1,
+      "range": [
+        76,
+        76
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.bx3JCneS5bf8saiu"
+    },
+    {
+      "_id": "WRs366VbARH6sIKT",
+      "flags": {},
+      "type": 2,
+      "text": "Mace +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "fhBcgQ5xF6Owvt83",
+      "weight": 1,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.WRs366VbARH6sIKT"
+    },
+    {
+      "_id": "4Azjoh5MID0yBoc3",
+      "flags": {},
+      "type": 2,
+      "text": "Pike +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "BlF2EezRtpojGgnx",
+      "weight": 1,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.4Azjoh5MID0yBoc3"
+    },
+    {
+      "_id": "nlqxOSzK7QnHCw5W",
+      "flags": {},
+      "type": 2,
+      "text": "Spear, Heavy +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "R9n77qN8C37boVo0",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.nlqxOSzK7QnHCw5W"
+    },
+    {
+      "_id": "3SjiKUfLznUiqArs",
+      "flags": {},
+      "type": 2,
+      "text": "Spear, Light +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "aLVTNYcAcToPDqsY",
+      "weight": 1,
+      "range": [
+        86,
+        89
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.3SjiKUfLznUiqArs"
+    },
+    {
+      "_id": "NZT4Sar0zEHNpZOo",
+      "flags": {},
+      "type": 2,
+      "text": "Throwing Blade +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "mDuWvI33ZECnVMxV",
+      "weight": 1,
+      "range": [
+        90,
+        90
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.NZT4Sar0zEHNpZOo"
+    },
+    {
+      "_id": "YIswgi2kCVtNMfcb",
+      "flags": {},
+      "type": 2,
+      "text": "Staff +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "DZ7zF79iFYjoBTEB",
+      "weight": 1,
+      "range": [
+        91,
+        91
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.YIswgi2kCVtNMfcb"
+    },
+    {
+      "_id": "QCWIw8zhYEFfxz33",
+      "flags": {},
+      "type": 2,
+      "text": "Stiletto +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "5LpW00BiOU5DIe2j",
+      "weight": 1,
+      "range": [
+        92,
+        92
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.QCWIw8zhYEFfxz33"
+    },
+    {
+      "_id": "cxO1Uq8niDhFnKSY",
+      "flags": {},
+      "type": 2,
+      "text": "Sword, Great +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "SM7Uvs3SgYJW9Oo7",
+      "weight": 1,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.cxO1Uq8niDhFnKSY"
+    },
+    {
+      "_id": "ptTh232KqvUwH6LX",
+      "flags": {},
+      "type": 2,
+      "text": "Sword, Long +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "9M0XzEPixP8VMgol",
+      "weight": 1,
+      "range": [
+        95,
+        97
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.ptTh232KqvUwH6LX"
+    },
+    {
+      "_id": "O2LLMHidcMQyNeDw",
+      "flags": {},
+      "type": 2,
+      "text": "Sword, Short +3",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "collection": "wwn.magic-items",
+      "resultId": "cX0Ffj96EuRfuMUy",
+      "weight": 1,
+      "range": [
+        98,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!jQFwHVqq9zoWVegm.O2LLMHidcMQyNeDw"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!jQFwHVqq9zoWVegm",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

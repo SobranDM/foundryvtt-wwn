@@ -1,0 +1,32 @@
+{
+  "_id": "fwy8t16qiwp40339",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Spymaster",
+  "type": "asset",
+  "_key": "!items!fwy8t16qiwp40339",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "1d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "2d6",
+    "desc": "A veteran operative runs a counterintelligence bureau in the area and formulates offensive schemes for the faction.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

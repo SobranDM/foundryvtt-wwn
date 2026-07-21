@@ -1,0 +1,41 @@
+{
+  "_id": "FSYXazKutn8gKX0G",
+  "name": "Disjunctive Temporal Reversion",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "JclP1CQkdbQ2tqVo",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.FSYXazKutn8gKX0G"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 4,
+    "class": "High Mage",
+    "duration": "",
+    "range": "100 ft.",
+    "roll": "",
+    "description": "<p>The caster may invoke this spell as an Instant action on any single creature within one hundred feet. Time is rolled back slightly, allowing them to replay their current round of action as if it never occurred, though all involved retain a memory of what originally happened. This spell is only useful on targets that are currently taking their round&rsquo;s actions; once they&rsquo;ve finished for the round and another creature has started acting, it is too late to benefit from this spell. If the target is unwilling to roll back their action, they may make a Mental saving throw to resist the spell.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "mental"
+  },
+  "_key": "!items!FSYXazKutn8gKX0G"
+}

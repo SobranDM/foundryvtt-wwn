@@ -1,0 +1,55 @@
+{
+  "_id": "aLVTNYcAcToPDqsY",
+  "name": "Spear, Light +3",
+  "type": "weapon",
+  "img": "systems/wwn/assets/default/weapon.png",
+  "data": {
+    "range": {
+      "short": 30,
+      "medium": 0,
+      "long": 60
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
+    "damage": "1d6+3",
+    "bonus": 3,
+    "skillDamage": false,
+    "shock": {
+      "damage": 5,
+      "ac": 13
+    },
+    "shockTotal": "0",
+    "skill": "stab",
+    "score": "dex",
+    "tags": [
+      {
+        "title": "T",
+        "value": "T"
+      }
+    ],
+    "slow": false,
+    "missile": true,
+    "melee": true,
+    "price": 5,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.aLVTNYcAcToPDqsY"
+    }
+  },
+  "_key": "!items!aLVTNYcAcToPDqsY"
+}

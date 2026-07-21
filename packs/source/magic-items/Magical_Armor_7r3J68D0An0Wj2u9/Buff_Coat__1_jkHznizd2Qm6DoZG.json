@@ -1,0 +1,31 @@
+{
+  "_id": "jkHznizd2Qm6DoZG",
+  "name": "Buff Coat +1",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "data": {
+    "description": "<p><em><strong>Buff coats</strong></em> are long coats of thick, supple hide, sometimes worn to cushion the bite of heavier armor and sometimes sported as ornamented street clothing for the gentry who can afford such luxuries</p>\n<p><strong><em>Light armor</em>&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 12,
+      "mod": 1
+    },
+    "armorBonus": 0,
+    "type": "light",
+    "price": 50,
+    "weight": 0
+  },
+  "effects": [],
+  "folder": "7r3J68D0An0Wj2u9",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.jkHznizd2Qm6DoZG"
+    }
+  },
+  "_key": "!items!jkHznizd2Qm6DoZG"
+}

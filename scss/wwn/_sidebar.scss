@@ -1,0 +1,22 @@
+/* Actor directory party-sheet button and the Settings tab license block */
+
+#sidebar #actors .directory-header search .wwn-party-sheet {
+  width: 32px;
+  height: 25px;
+  text-align: center;
+  line-height: 23px;
+  margin: 4px;
+}
+
+#settings .wwn.game-license {
+  font-size: 12px;
+  padding: 10px;
+  flex-basis: 100%;
+}
+#settings .wwn.game-license .button {
+  text-align: center;
+  margin: 4px;
+}
+#settings .wwn.game-license .footer {
+  text-align: right;
+}

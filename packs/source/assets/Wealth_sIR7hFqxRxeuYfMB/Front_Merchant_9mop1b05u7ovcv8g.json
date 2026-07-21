@@ -1,0 +1,32 @@
+{
+  "_id": "9mop1b05u7ovcv8g",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Front Merchant",
+  "type": "asset",
+  "_key": "!items!9mop1b05u7ovcv8g",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d4",
+    "attackSource": "wealth",
+    "attackSpecial": "Whenever the Front Merchant successfully Attacks an enemy Asset, the target faction loses 1 Treasure, if they have any, and the Front Merchant's owner gains it. Such a loss can occur only once per turn.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "1d4-1",
+    "desc": "Whenever the Front Merchant successfully Attacks an enemy Asset, the target faction loses 1 Treasure, if they have any, and the Front Merchant's owner gains it. Such a loss can occur only once per turn.",
+    "health": {
+      "max": 3,
+      "value": 3
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

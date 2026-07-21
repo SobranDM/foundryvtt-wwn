@@ -1,0 +1,26 @@
+{
+  "_id": "4UIlIitrvpSAWE3z",
+  "name": "Create Food",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Cleric",
+    "duration": "Permanent",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 30'</strong></p>\n<p>Conjures food from thin air.</p>\n<p><strong>▶ Volume: </strong>Food sufficient for twelve humans and twelve mounts for one day is conjured.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, food sufficient for an additional 12 humans and mounts is produced for each level beyond 8th.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!4UIlIitrvpSAWE3z"
+}

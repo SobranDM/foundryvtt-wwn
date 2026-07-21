@@ -1,0 +1,174 @@
+{
+  "_id": "vRgM3LCZL4IBvlEx",
+  "name": "Inhab-Modern",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Local bandits or highwaymen",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "pycog0seldosglh6",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.pycog0seldosglh6"
+    },
+    {
+      "type": 0,
+      "text": "Cult of some unacceptable god",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "uc6h76nbbupzc8k1",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.uc6h76nbbupzc8k1"
+    },
+    {
+      "type": 0,
+      "text": "Deposed noble and their retinue",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "5dvbe5zyufmoba4i",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.5dvbe5zyufmoba4i"
+    },
+    {
+      "type": 0,
+      "text": "Adventurers trying to plunder the place",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "eqxeuyiq37tq25he",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.eqxeuyiq37tq25he"
+    },
+    {
+      "type": 0,
+      "text": "Troops garrisoned there by the local ruler",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "92dfzeg0wk87ts2u",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.92dfzeg0wk87ts2u"
+    },
+    {
+      "type": 0,
+      "text": "Remnants of the original inhabitants",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "wjy4ze4uqtcas0ri",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.wjy4ze4uqtcas0ri"
+    },
+    {
+      "type": 0,
+      "text": "Sorcerer of detestable inclinations",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "tow44h805s8gv5k3",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.tow44h805s8gv5k3"
+    },
+    {
+      "type": 0,
+      "text": "Refugees or runaway peasants",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "8nozz6ajrkhxmsr8",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.8nozz6ajrkhxmsr8"
+    },
+    {
+      "type": 0,
+      "text": "Vicious local monster lairing here",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "e4s38otevvivg9zg",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.e4s38otevvivg9zg"
+    },
+    {
+      "type": 0,
+      "text": "Foreign raiders using it as a base",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "nmsionxwa1aeiejo",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.nmsionxwa1aeiejo"
+    },
+    {
+      "type": 0,
+      "text": "Whatever ruined the place is still here",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "xi0tax29j4l5ez7h",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.xi0tax29j4l5ez7h"
+    },
+    {
+      "type": 0,
+      "text": "Interlopers with some tie to the original place",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "qbj144k5utndcuz0",
+      "flags": {},
+      "_key": "!tables.results!vRgM3LCZL4IBvlEx.qbj144k5utndcuz0"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!vRgM3LCZL4IBvlEx"
+}

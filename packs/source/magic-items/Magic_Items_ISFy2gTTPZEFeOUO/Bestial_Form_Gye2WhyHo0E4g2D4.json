@@ -1,0 +1,42 @@
+{
+  "_id": "Gye2WhyHo0E4g2D4",
+  "name": "Bestial Form",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.Gye2WhyHo0E4g2D4"
+    }
+  },
+  "system": {
+    "description": "<p>The user of this potion transforms into a normal animal of their choice no larger than a horse nor smaller than a rat. Their own attributes and statistics are retained, though they gain the chosen creature&rsquo;s movement modes and speed. Their belongings meld with them on the transformation, still applying their benefits, but they cannot be removed until the change ends. The transformation lasts until the user ends it as an On Turn action, they die, or the next dawn.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Gye2WhyHo0E4g2D4"
+}

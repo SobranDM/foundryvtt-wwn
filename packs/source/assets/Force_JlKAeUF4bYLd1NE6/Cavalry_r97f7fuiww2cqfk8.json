@@ -1,0 +1,32 @@
+{
+  "_id": "r97f7fuiww2cqfk8",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Cavalry",
+  "type": "asset",
+  "_key": "!items!r97f7fuiww2cqfk8",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d6",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d4",
+    "desc": "Mounted troops, chariots, or other mobile soldiers are in service to the faction. While weak on defense, they can harry logistics and mount powerful charges.",
+    "health": {
+      "max": 12,
+      "value": 12
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

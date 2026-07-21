@@ -3,11 +3,41 @@ import { WwnItem } from "../item/entity.js";
 
 export class WwnActor extends Actor {
   /**
+   * Default prototype token settings for new characters, monsters, and factions.
+   * Compendium imports already carry their own prototypeToken data.
+   * @override
+   */
+  static async create(data, options = {}) {
+    data.prototypeToken = data.prototypeToken || {};
+    const linked = data.type === "character" || data.type === "faction";
+    const monster = data.type === "monster";
+    if (linked || monster) {
+      foundry.utils.mergeObject(
+        data.prototypeToken,
+        {
+          actorLink: linked,
+          prependAdjective: true,
+          displayName: CONST.TOKEN_DISPLAY_MODES.HOVER,
+          displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
+          bar1: { attribute: "hp" },
+        },
+        { overwrite: false },
+      );
+    }
+    return super.create(data, options);
+  }
+
+  /**
    * Extends data from base Actor class
    */
 
   prepareData() {
     super.prepareData();
+
+    // Existing characters lack this field until first unlock/lock; treat missing as locked
+    if (this.type === "character") {
+      this.system.skills.locked ??= true;
+    }
 
     if (this.type === "faction") {
       const data = this.system;
@@ -768,7 +798,7 @@ export class WwnActor extends Actor {
       image: "icons/svg/blood.svg"
     };
 
-    const html = await renderTemplate(template, templateData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, templateData);
 
     const chatData = {
       user: game.user_id,

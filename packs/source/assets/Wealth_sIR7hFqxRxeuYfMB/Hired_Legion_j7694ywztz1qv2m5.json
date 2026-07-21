@@ -1,0 +1,31 @@
+{
+  "_id": "j7694ywztz1qv2m5",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Hired Legion",
+  "type": "asset",
+  "_key": "!items!j7694ywztz1qv2m5",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 30,
+    "counter": "2d10",
+    "desc": "As a free action once per turn, the Hired Legion can move. This faction must be paid 2 Treasure at the start of each turn as upkeep, or else they go rogue as the Free Company Asset does. This Asset cannot be voluntarily sold or disbanded.",
+    "health": {
+      "max": 20,
+      "value": 20
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 2,
+    "rating": 8,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action once per turn, the Hired Legion can move. This faction must be paid 2 Treasure at the start of each turn as upkeep, or else they go rogue as the Free Company Asset does.  (already paid in turn start); if this is not paid, roll [[1d6]]. On a 1-3 the Asset is lost, on a 4-6 it goes rogue and will move to Attack the most profitable-looking target. This roll is repeated each turn until back pay is paid or the Asset is lost.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

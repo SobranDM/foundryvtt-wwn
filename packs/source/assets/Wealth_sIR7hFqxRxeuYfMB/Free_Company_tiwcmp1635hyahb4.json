@@ -1,0 +1,32 @@
+{
+  "_id": "tiwcmp1635hyahb4",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Free Company",
+  "type": "asset",
+  "_key": "!items!tiwcmp1635hyahb4",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d4+2",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d6",
+    "desc": "Hired mercenaries and professional soldiers, this Asset can, as a free action once per turn, move itself. At the start of each of its owner's turn, it takes 1 Treasure in upkeep costs; if this is not paid, roll [[1d6]]. On a 1-3 the Asset is lost, on a 4-6 it goes rogue and will move to Attack the most profitable-looking target. This roll is repeated each turn until back pay is paid or the Asset is lost.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 1,
+    "rating": 3,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "Hired mercenaries and professional soldiers, this Asset can, as a free action once per turn, move itself. At the start of each of its owner's turn, it takes 1 Treasure in upkeep costs (already paid in turn start); if this is not paid, roll [[1d6]]. On a 1-3 the Asset is lost, on a 4-6 it goes rogue and will move to Attack the most profitable-looking target. This roll is repeated each turn until back pay is paid or the Asset is lost.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

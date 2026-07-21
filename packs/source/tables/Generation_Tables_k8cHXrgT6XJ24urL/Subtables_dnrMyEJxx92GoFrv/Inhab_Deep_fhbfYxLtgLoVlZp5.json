@@ -1,0 +1,174 @@
+{
+  "_id": "fhbfYxLtgLoVlZp5",
+  "name": "Inhab-Deep",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Cruelly Outsider-warped original humans",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "69b8cp4n4wdgdaox",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.69b8cp4n4wdgdaox"
+    },
+    {
+      "type": 0,
+      "text": "Outsider monster that once ruled here",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "t96ysfmvl1llrvbg",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.t96ysfmvl1llrvbg"
+    },
+    {
+      "type": 0,
+      "text": "Swarm or pack of scavenger-beasts",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ess17epw127ieffk",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.ess17epw127ieffk"
+    },
+    {
+      "type": 0,
+      "text": "Blighted intruders that sacked the Deep",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "2qd9kyji2abqw8cq",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.2qd9kyji2abqw8cq"
+    },
+    {
+      "type": 0,
+      "text": "Outsiders descended from the local lords",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "3wi34blfok8q34c5",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.3wi34blfok8q34c5"
+    },
+    {
+      "type": 0,
+      "text": "Degenerate or crazed native humans",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "mdk0r2vpn2kjwfhk",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.mdk0r2vpn2kjwfhk"
+    },
+    {
+      "type": 0,
+      "text": "Outcast surfacers lairing in the Deep",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "nc16fy6yc64b3f5d",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.nc16fy6yc64b3f5d"
+    },
+    {
+      "type": 0,
+      "text": "Non-human sentients who now live here",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "a44bubl2zzpzd00q",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.a44bubl2zzpzd00q"
+    },
+    {
+      "type": 0,
+      "text": "Undead relics of former inhabitants",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "exzl3yblidw1x2a4",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.exzl3yblidw1x2a4"
+    },
+    {
+      "type": 0,
+      "text": "Still-sane human heirs of the original folk",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "aak83i34dtpve6ur",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.aak83i34dtpve6ur"
+    },
+    {
+      "type": 0,
+      "text": "Surfacer colonists forgotten by their kin",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "og3zq9vfehozc4wt",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.og3zq9vfehozc4wt"
+    },
+    {
+      "type": 0,
+      "text": "Automaton servitors now lacking their lord",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "usifnimzhpm0goi0",
+      "flags": {},
+      "_key": "!tables.results!fhbfYxLtgLoVlZp5.usifnimzhpm0goi0"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!fhbfYxLtgLoVlZp5"
+}

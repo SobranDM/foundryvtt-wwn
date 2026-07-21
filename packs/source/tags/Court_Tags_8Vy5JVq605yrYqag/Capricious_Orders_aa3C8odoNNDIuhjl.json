@@ -1,0 +1,17 @@
+{
+  "_id": "aa3C8odoNNDIuhjl",
+  "name": "Capricious Orders",
+  "content": "<h1>Capricious Orders</h1><div>\n<p>The court is issuing unreasonable orders to those under its authority, demanding excessive tribute, unreasonable obediences, or similar sacrifices. The court leader may be new and over-confident of their power, or the court may be in dire trouble and needs more resources, or rival forces may be goading or manipulating the court into overplaying its hand out of recklessness or ignorance of the true state of affairs.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Arrogant new lord, Mentally unstable or bewitched ruler, Scheming advisor in a rival power’s pay</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Mistreated subject of the court, Frustrated moderate member, Reasonable rival of the current ruler</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The demands are all to fulfill a great secret plan, The demands are punishment for a failed rebellion, The court doesn’t want to make the demands but is somehow forced to do so</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Heavy load of tribute, Stolen treasure that the court demanded be produced, Privately-diverted wealth from the demands</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Angry court reception hall, Public plaza with darkly-grumbling locals, Enterprise closed down due to a failure to deliver on the demands</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "8Vy5JVq605yrYqag",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1400000
+    }
+  },
+  "_key": "!journal!aa3C8odoNNDIuhjl",
+  "ownership": {
+    "default": 0
+  }
+}

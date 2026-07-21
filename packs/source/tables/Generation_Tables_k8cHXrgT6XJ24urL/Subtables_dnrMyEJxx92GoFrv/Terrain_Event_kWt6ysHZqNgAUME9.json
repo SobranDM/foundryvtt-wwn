@@ -1,0 +1,151 @@
+{
+  "_id": "kWt6ysHZqNgAUME9",
+  "name": "Terrain-Event",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Kind of Event Last Happened There?",
+  "results": [
+    {
+      "_id": "rl0rnqBV11Eteysk",
+      "flags": {},
+      "type": 0,
+      "text": "A significant battle was fought there",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.rl0rnqBV11Eteysk"
+    },
+    {
+      "_id": "RFsQMYGcWoxr69VO",
+      "flags": {},
+      "type": 0,
+      "text": "A mad prophet tried to start a faith there",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.RFsQMYGcWoxr69VO"
+    },
+    {
+      "_id": "vY51rSF18RA79owq",
+      "flags": {},
+      "type": 0,
+      "text": "A usurper and supporters fled into it",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.vY51rSF18RA79owq"
+    },
+    {
+      "_id": "I40uUtGJJRUrWZOj",
+      "flags": {},
+      "type": 0,
+      "text": "A resource strike drew numerous people",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.I40uUtGJJRUrWZOj"
+    },
+    {
+      "_id": "cKVeJGg4YxUUsj8q",
+      "flags": {},
+      "type": 0,
+      "text": "A major nest of bandits or raiders formed",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.cKVeJGg4YxUUsj8q"
+    },
+    {
+      "_id": "VnKE4TiAK8aL8q80",
+      "flags": {},
+      "type": 0,
+      "text": "A rich ancient ruin was discovered there",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.VnKE4TiAK8aL8q80"
+    },
+    {
+      "_id": "v1oiqcHhkwMTAy2l",
+      "flags": {},
+      "type": 0,
+      "text": "An uncanny plague erupted in the area",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.v1oiqcHhkwMTAy2l"
+    },
+    {
+      "_id": "dXkmdli8OUrzU4rS",
+      "flags": {},
+      "type": 0,
+      "text": "Some grim and terrible thing was awoken",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.dXkmdli8OUrzU4rS"
+    },
+    {
+      "_id": "VpUfxDkpNL28nnG0",
+      "flags": {},
+      "type": 0,
+      "text": "A community of outcasts or marginals formed",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.VpUfxDkpNL28nnG0"
+    },
+    {
+      "_id": "BtdScUop9WoDhMRF",
+      "flags": {},
+      "type": 0,
+      "text": "A natural or uncanny disaster struck there",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kWt6ysHZqNgAUME9.BtdScUop9WoDhMRF"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!kWt6ysHZqNgAUME9"
+}

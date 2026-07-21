@@ -1,0 +1,26 @@
+{
+  "_id": "uv2VpjhglsQy8062",
+  "name": "Cure Serious Wounds",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Cleric",
+    "duration": "Instant",
+    "range": "Touch",
+    "roll": "2d6+2",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The caster&rsquo;s touch heals 2d6+2 hit points of damage in one living subject. This cannot grant more hit points than the subject&rsquo;s normal maximum.</p>\n<p><strong>Reversed: Cause Serious Wounds</strong></p>\n<p>Inflicts 2d6+2 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!uv2VpjhglsQy8062"
+}

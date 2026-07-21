@@ -1,0 +1,174 @@
+{
+  "_id": "8esBnK7LsZOIMqek",
+  "name": "Combat-Urban",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "An inquisitive neighbor is always watching the place",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "mrxhcepnurelrw7a",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.mrxhcepnurelrw7a"
+    },
+    {
+      "type": 0,
+      "text": "The guards are unusually vigilant and attentive to their duties for some reason",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "icq8nr6dr6sr43b0",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.icq8nr6dr6sr43b0"
+    },
+    {
+      "type": 0,
+      "text": "The target’s living quarters are uncommonly difficult to access",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "bojlxoocjy6pjeo5",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.bojlxoocjy6pjeo5"
+    },
+    {
+      "type": 0,
+      "text": "There’s a dangerous beast guarding the grounds of the place",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "th29884dqsc8ay8g",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.th29884dqsc8ay8g"
+    },
+    {
+      "type": 0,
+      "text": "The dwelling is unusually well-fortified",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "m6c88ykmuy812va5",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.m6c88ykmuy812va5"
+    },
+    {
+      "type": 0,
+      "text": "Servants and minions are thick in the halls",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "d8eyxz23l8ipxsg4",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.d8eyxz23l8ipxsg4"
+    },
+    {
+      "type": 0,
+      "text": "The owner has access to some kind of magical ward or divine blessing",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "yyezoqn9n9bfgvam",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.yyezoqn9n9bfgvam"
+    },
+    {
+      "type": 0,
+      "text": "The place is right next to a very vigilant and dangerous neighbor that will respond to alarms or disorders",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "j4tqp6xg2cpg15kr",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.j4tqp6xg2cpg15kr"
+    },
+    {
+      "type": 0,
+      "text": "The interior is mazey, abnormal, or difficult to navigate for some reason",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "bgpfecl5ppbcagin",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.bgpfecl5ppbcagin"
+    },
+    {
+      "type": 0,
+      "text": "Poor repairs or recent damage makes the place dangerous to unknowing outsiders",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "bqjvbmnmdwuegvzv",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.bqjvbmnmdwuegvzv"
+    },
+    {
+      "type": 0,
+      "text": "There are several traps or alarms there",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "r0kdf3376lhz0flh",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.r0kdf3376lhz0flh"
+    },
+    {
+      "type": 0,
+      "text": "It’s connected to some kind of underground passages or ancient tunnels",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "djc6tqegy923e7xa",
+      "flags": {},
+      "_key": "!tables.results!8esBnK7LsZOIMqek.djc6tqegy923e7xa"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!8esBnK7LsZOIMqek"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "HEHi6CXma8KLuCnm",
+  "name": "Hold Monster",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "6 turns + 1 / level",
+    "range": "120'",
+    "roll": "1d4",
+    "description": "<p><strong>Duration: 6 turns +1 per level</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell causes one or more creatures to be paralysed if they fail a Mental save. It may be cast in two ways:</p>\n<ol>\n<li><strong>Against an individual:</strong> The target&rsquo;s saving throw is penalised by &ndash;2.</li>\n<li><strong>Against a group:</strong> 1d4 individuals in the group are targeted.</li>\n</ol>\n<p><strong>Restrictions: </strong>Undead are not affected.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!HEHi6CXma8KLuCnm"
+}

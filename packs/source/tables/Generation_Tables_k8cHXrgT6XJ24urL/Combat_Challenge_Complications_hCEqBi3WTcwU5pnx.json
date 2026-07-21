@@ -1,0 +1,257 @@
+{
+  "_id": "hCEqBi3WTcwU5pnx",
+  "name": "Combat Challenge Complications",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Six bandits in a Deep chamber might be a combat challenge, but it doesn’t give the GM much to work with when it comes time to make the encounter interesting. The tables on these pages offer complications and twists you can throw into the situation to enliven an otherwise banal brawl. Simply pick the tables that are most relevant to the situation and roll or select options to spice things up.",
+  "results": [
+    {
+      "_id": "vM3W8t6QwNbuLL8z",
+      "type": 0,
+      "text": "<b>What's Going On Right Now?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.vM3W8t6QwNbuLL8z"
+    },
+    {
+      "_id": "UDyrKdhG5yr0VlE6",
+      "type": 2,
+      "text": "Combat-Happening",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ridAamiJNb8FjfYw",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.UDyrKdhG5yr0VlE6"
+    },
+    {
+      "_id": "TaOiloYhGNXa6Nj9",
+      "type": 0,
+      "text": "<b>What Problems Do They Have?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.TaOiloYhGNXa6Nj9"
+    },
+    {
+      "_id": "hhPzJFGQBH32sEui",
+      "type": 2,
+      "text": "Combat-Problems",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ISghrbzq7VJ7wqxA",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.hhPzJFGQBH32sEui"
+    },
+    {
+      "_id": "6RmAiYimx8EvB4c8",
+      "type": 0,
+      "text": "<b>Twists About the Target or their Allies</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.6RmAiYimx8EvB4c8"
+    },
+    {
+      "_id": "sAeOg55zZyhQvHtX",
+      "type": 2,
+      "text": "Combat-Twists",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "5UayvelPuOvIqgnn",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.sAeOg55zZyhQvHtX"
+    },
+    {
+      "_id": "NLT4UwTVdvva9tkW",
+      "type": 0,
+      "text": "<b>What's That Bestial Monster Doing?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.NLT4UwTVdvva9tkW"
+    },
+    {
+      "_id": "zdWaoCf76mYj6Eet",
+      "type": 2,
+      "text": "Combat-Bestial",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "x3mT0GDELCfeMUvT",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.zdWaoCf76mYj6Eet"
+    },
+    {
+      "_id": "HP5bjUjhvwKGaBUD",
+      "type": 0,
+      "text": "<b>Urban Dwelling Complication</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.HP5bjUjhvwKGaBUD"
+    },
+    {
+      "_id": "p8a9rcMzEG3k7N6y",
+      "type": 2,
+      "text": "Combat-Urban",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "8esBnK7LsZOIMqek",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.p8a9rcMzEG3k7N6y"
+    },
+    {
+      "_id": "kyW6OAf7bz7RvLEd",
+      "type": 0,
+      "text": "<b>Wilderness Lair Complication</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.kyW6OAf7bz7RvLEd"
+    },
+    {
+      "_id": "odJ5P4fjonw37kC7",
+      "type": 2,
+      "text": "Combat-Wilderness",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "2mDgEl64SQMhUpU8",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.odJ5P4fjonw37kC7"
+    },
+    {
+      "_id": "J7tAJ8MafkKeVss4",
+      "type": 0,
+      "text": "<b>Deep Chamber Complication</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.J7tAJ8MafkKeVss4"
+    },
+    {
+      "_id": "WKRo8mImvm415366",
+      "type": 2,
+      "text": "Combat-Deep",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "soaAjzm8nsbtHkNq",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!hCEqBi3WTcwU5pnx.WKRo8mImvm415366"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!hCEqBi3WTcwU5pnx"
+}

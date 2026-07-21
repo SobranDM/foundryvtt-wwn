@@ -1,0 +1,38 @@
+{
+  "_id": "iQCEPcgE6EDqh4jr",
+  "name": "Backpack",
+  "type": "item",
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "system": {
+    "description": "<p>This item doesn&rsquo;t count for encumbrance purposes while being worn.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 2,
+    "weight": 1,
+    "weightless": "whenReadied",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iQCEPcgE6EDqh4jr"
+}

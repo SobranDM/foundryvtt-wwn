@@ -1,0 +1,512 @@
+{
+  "name": "Dervish (Leather)",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.3tmnaHO8cVIJBGa8"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "oUctl3iWxSEcuZXQ",
+      "name": "Buff Coat",
+      "type": "armor",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.jzcGHNSgKA3RR0Yo"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "system": {
+        "description": "<p><em><strong>Buff coats</strong></em> are long coats of thick, supple hide, sometimes worn to cushion the bite of heavier armor and sometimes sported as ornamented street clothing for the gentry who can afford such luxuries</p>\n<p><strong><em>Light armor</em>&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 12,
+          "mod": 0
+        },
+        "armorBonus": 0,
+        "type": "light",
+        "price": 50,
+        "weight": 0
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!8z0t8yV1jnfkSICe.oUctl3iWxSEcuZXQ"
+    },
+    {
+      "_id": "6Qm8sIOSXm38OAnJ",
+      "name": "Shield, Large",
+      "type": "armor",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.rvMM5CPehc6caauf"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "system": {
+        "description": "<p><em><strong>Shields</strong></em>&nbsp;come in two general varieties. Small ones,&nbsp;often made of costlier metal, can be strapped to the wearer&rsquo;s&nbsp;arm and allow them to hold and manipulate objects&nbsp;with that hand, albeit not wield a weapon with it. Larger&nbsp;shields are of cheaper wood and require a good grip.</p>\n<p>A&nbsp;<em><strong>small shield</strong></em>&nbsp;user has a base AC of 13, while a<strong>&nbsp;<em>large shield</em></strong>&nbsp;user has a base AC of 14. Unlike other armor,&nbsp;however, if the user is already wearing equal or better&nbsp;armor the shield grants a +1 bonus to their AC. Shields&nbsp;allow the bearer to ignore the first instance of Shock they&nbsp;might otherwise suffer in a round.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 1,
+          "mod": 0
+        },
+        "armorBonus": 0,
+        "type": "shield",
+        "price": 10,
+        "weight": 1
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!8z0t8yV1jnfkSICe.6Qm8sIOSXm38OAnJ"
+    },
+    {
+      "_id": "XA2vwFAniyJYv5hA",
+      "name": "Spear, Light",
+      "type": "weapon",
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.3qp7kpBwEhFIxmRG"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 30,
+          "medium": 0,
+          "long": 60
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "T",
+            "value": "T"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": true,
+        "price": 5,
+        "weight": 1,
+        "counter": {
+          "value": 0,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!8z0t8yV1jnfkSICe.XA2vwFAniyJYv5hA"
+    },
+    {
+      "_id": "vCrh0XZ0mTzRuIZa",
+      "name": "Bow, Small",
+      "type": "weapon",
+      "sort": 400000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.YI0xC9PHP8MdMsZF"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 50,
+          "medium": 0,
+          "long": 300
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Bows&nbsp;</strong></em>cover everything from the small self bows of horse archers to the man-tall longbows wielded by foot archers. Larger bows are more cumbersome and impossible to shoot from horseback, but usually have superior strength. An archer with a Readied quiver can load a fresh arrow as a Move action each turn, or as an On Turn action if they have at least Shoot-1 skill.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "shoot",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          },
+          {
+            "title": "R",
+            "value": "R"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": false,
+        "price": 20,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!8z0t8yV1jnfkSICe.vCrh0XZ0mTzRuIZa"
+    },
+    {
+      "_id": "DNzRkQPSI7mT4fuL",
+      "name": "Sword, Long",
+      "type": "weapon",
+      "sort": 500000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 100,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!8z0t8yV1jnfkSICe.DNzRkQPSI7mT4fuL"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 0,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": "mounted"
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Fanatically religious, nomadic people who wander steppes and desert regions, living in tents.</p>\n<ul>\n<li><strong>Mounted: </strong>On warhorses.</li>\n<li><strong>Arms: </strong>50% of group have: leather armour, shield, lance; 25% have: leather armour, shield, shortbow, sword; 25% have: chainmail, shield, lance.</li>\n<li><strong>Camps:</strong> Groups commonly combine and live in a camp or tribe of up to 300 dervishes, plus women, children, and animals. 25% chance of a wood or brick enclosure.</li>\n<li><strong>Camp leaders: </strong>Led by 10th level cleric.</li>\n<li><strong>Intolerant:</strong> Of other religious views.</li>\n<li><strong>Holy war:</strong> Occasionally wage war against other religious factions. Will slay people of different faith, or take them prisoner. Prisoners must convert; otherwise killed or used as slaves. Characters of Lawful alignment may be asked to join the holy war. Dervishes are highly suspicious of those who refuse (without good reason).</li>\n</ul>",
+      "alignment": "Lawful",
+      "xp": 10,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "(1d6+1) * 10"
+      },
+      "morale": 10,
+      "instinct": 2,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "1d8",
+      "value": 4,
+      "max": 4
+    }
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Dervish",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": false,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "alpha": 1,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "color": null,
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738330793,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "8z0t8yV1jnfkSICe",
+  "_key": "!actors!8z0t8yV1jnfkSICe"
+}

@@ -1,0 +1,586 @@
+{
+  "name": "Golem, Bone",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "SBOCKY1jG3IodjLj",
+      "name": "Axe, War",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.2jjmtIH3lkzvhW2m"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Axes&nbsp;</strong></em>given here are those fashioned for war; lighter&nbsp;and more agile than their working cousins, though still&nbsp;capable of hacking through a door or hewing a cable if&nbsp;needed. War axes are big enough to demand two hands&nbsp;for their use.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 3,
+          "ac": 15
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 50,
+        "weight": 2,
+        "counter": {
+          "value": 2,
+          "max": 2
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.SBOCKY1jG3IodjLj"
+    },
+    {
+      "_id": "3sWduP3Sn0pMPfHu",
+      "name": "Sword, Long",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": 0,
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 100,
+        "weight": 1,
+        "counter": {
+          "value": 4,
+          "max": 4
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.3sWduP3Sn0pMPfHu"
+    },
+    {
+      "_id": "A57ukuTQNetCBRzm",
+      "name": "Mundane Damage Immunity",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.psL7GruKs1WrlzBi"
+        }
+      },
+      "system": {
+        "description": "<p>Can only be harmed by magical attacks.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.A57ukuTQNetCBRzm"
+    },
+    {
+      "_id": "A9IPjaFzj8zOnQHj",
+      "name": "Immunity",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.6XemchOYN2GUV4KG"
+        }
+      },
+      "system": {
+        "description": "<p>Unharmed by gas; unaffected by charm, hold, and sleep spells.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.A9IPjaFzj8zOnQHj"
+    },
+    {
+      "_id": "5gtkO6qrO0g3t8nt",
+      "name": "Weapons",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.SMJ7iSh6KbenDkF5"
+        }
+      },
+      "system": {
+        "description": "<p>4&times;1-handed or 2&times;2-handed.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.5gtkO6qrO0g3t8nt"
+    },
+    {
+      "_id": "VvQxrfQpoN164UXo",
+      "name": "Energy Immunity",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.HluYZTwtTSzQzPRC"
+        }
+      },
+      "system": {
+        "description": "<p>Unharmed by fire, cold, and electricity.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.VvQxrfQpoN164UXo"
+    },
+    {
+      "_id": "V791qCUsmQQSWLrB",
+      "name": "Attack Multiple Opponents",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Up to 2 per round.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "",
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.V791qCUsmQQSWLrB"
+    },
+    {
+      "_id": "bQ1eymtY84ETJW0e",
+      "name": "Fists",
+      "type": "weapon",
+      "img": "/systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p>Any hands not occupied by weapons may make an unarmed attack.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 15
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 4,
+          "max": 4
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        },
+        "choices": "weapon,ability,armor,item"
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!TGlO6eOb131VwAjK.bQ1eymtY84ETJW0e"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Actor.i5LJiPkhuCETUsPA"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 18,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 8,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 11,
+        "mod": 0
+      },
+      "mental": {
+        "value": 11,
+        "mod": 0
+      },
+      "physical": {
+        "value": 11,
+        "mod": 0
+      },
+      "luck": {
+        "value": 11,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 120,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Artificial beings constructed from different materials by mighty clerics or wizards.</p>\n<p>Bone golems are 6&rsquo; tall constructs of human bone, crafted into a humanoid shape. Have four arms, attached at different places on the torso.</p>\n<ul>\n<li><strong>Other materials: </strong>Golems formed of other materials are also possible.</li>\n<li><strong style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\">Constructing:</strong><span style=\"font-family: var(--font-primary); font-size: var(--font-size-14);\"> A very complex, expen</span>sive, and time-consuming process.</li>\n</ul>",
+      "alignment": "Neutral",
+      "xp": 650,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1",
+        "w": "1"
+      },
+      "morale": 12,
+      "instinct": 5,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.eriltzOM4smkhj0R]{Automatons}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "8d8",
+      "value": 36,
+      "max": 36
+    }
+  },
+  "prototypeToken": {
+    "name": "Bone Golem",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {
+      "image-hover": {
+        "hideArt": false
+      }
+    },
+    "randomImg": true,
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1.1,
+      "scaleY": 1.1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331018,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "TGlO6eOb131VwAjK",
+  "_key": "!actors!TGlO6eOb131VwAjK"
+}

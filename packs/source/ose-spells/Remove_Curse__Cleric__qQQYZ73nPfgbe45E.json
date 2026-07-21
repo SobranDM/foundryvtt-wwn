@@ -1,0 +1,26 @@
+{
+  "name": "Remove Curse (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Cleric",
+    "duration": "Permanent",
+    "range": "Touch",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant / Permanent (curse)</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>Remove curse instantaneously removes one curse from a creature. It may allow a character to discard a cursed magic item.</p>\n<p><strong>Reversed: Curse</strong></p>\n<p>Places a deleterious effect upon a creature, if it fails a Mental save.</p>\n<p><strong>▶ Effects: </strong>The exact form and effects of the curse are determined by the caster.</p>\n<p><strong>▶ Maximum possible effects include:</strong> A &ndash;2 penalty to saving throws, a &ndash;4 penalty to hit, reducing an ability score by 50%.</p>\n<p><strong>▶ Multiple curses: </strong>May afflict a creature, as long as each has a different effect.</p>\n<p><strong>▶ Referee judgement:</strong> The referee should judge the effects of this spell and may turn overly powerful curses back onto the caster!</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "qQQYZ73nPfgbe45E",
+  "_key": "!items!qQQYZ73nPfgbe45E"
+}

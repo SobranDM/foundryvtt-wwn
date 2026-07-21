@@ -1,0 +1,67 @@
+{
+  "_id": "ImxXh34XKLm9B4Z9",
+  "name": "Magical Armor, Great",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "H6HCJKgRJ1MYCDxk",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor Bonus, Great",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "XnG3k3VB5azXC5ZY",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ImxXh34XKLm9B4Z9.H6HCJKgRJ1MYCDxk"
+    },
+    {
+      "_id": "DZbzx1yPqWYeOZoe",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor SA, Great",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "rQZeiqnlbhXB9831",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ImxXh34XKLm9B4Z9.DZbzx1yPqWYeOZoe"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!ImxXh34XKLm9B4Z9",
+  "folder": "lNk7aQ8vhZ8d8QQE"
+}

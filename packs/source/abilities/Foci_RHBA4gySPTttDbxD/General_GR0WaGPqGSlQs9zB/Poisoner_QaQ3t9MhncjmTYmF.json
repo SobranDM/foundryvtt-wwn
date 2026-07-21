@@ -1,0 +1,18 @@
+{
+  "_id": "QaQ3t9MhncjmTYmF",
+  "name": "Poisoner",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are a skilled poisoner, capable of compounding toxins out of readily-available flora and minerals. It takes an hour to brew a poison, and you can keep as many doses fresh as you have levels. Blade venoms take a Main Action to apply and last for ten minutes or until a hit or Shock is inflicted, whichever comes first. Detecting poisoned food is a Wis/Notice skill check against 10, or 12 if the diner&rsquo;s not a noble or otherwise normally wary of poison. One dose can poison up to a half-dozen diners.</p>\n<p><strong>Level 1: </strong>Gain Heal as a bonus skill. Gain a reroll on any failed saving throw versus poison. Your toxins inflict 2d6 damage plus your level on a hit or Shock, with a Physical save for half. Your incapacitating or hallucinogenic toxins do the same, but those reduced to zero hit points are simply incapacitated for an hour.</p>\n<p><strong>Level 2:</strong> You are immune to poison and can apply a universal antidote to any poisoned ally as a Main Action. Any attempt to detect or save against your poisons takes a penalty equal to your Heal skill. Your ingested poisons count as an Execution Attack against unsuspecting targets, as per page 44, with Heal used for the Physical saving throw penalty and 1d6 damage per level done on a success. Such poisons can be non-lethal at your discretion.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!QaQ3t9MhncjmTYmF",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

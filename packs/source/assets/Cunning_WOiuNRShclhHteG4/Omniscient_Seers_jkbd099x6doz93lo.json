@@ -1,0 +1,31 @@
+{
+  "_id": "jkbd099x6doz93lo",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Omniscient Seers",
+  "type": "asset",
+  "_key": "!items!jkbd099x6doz93lo",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 30,
+    "counter": "1d8",
+    "desc": "At the start of their turn, each hostile Stealthed asset within one turn's movement of the Omniscient Seers must succeed in a Cunning vs. Cunning check against the owning faction or lose their Stealth. In addition, all Cunning rolls made by the faction for units or events within one turn's movement of the seers gain an extra die.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "High",
+    "maintenance": 0,
+    "rating": 8,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "At the start of their turn, each hostile Stealthed asset within one turn's movement of the Omniscient Seers must succeed in a Cunning vs. Cunning check against the owning faction or lose their Stealth. In addition, all Cunning rolls made by the faction for units or events within one turn's movement of the seers gain an extra die.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

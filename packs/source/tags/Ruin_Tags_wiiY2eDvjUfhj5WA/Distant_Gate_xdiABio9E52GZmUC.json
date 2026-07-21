@@ -1,0 +1,17 @@
+{
+  "_id": "xdiABio9E52GZmUC",
+  "name": "Distant Gate",
+  "content": "<h1>Distant Gate</h1><div>\n<p>The ruin is connected to some interesting distant location, either through a magical gate, a portal of ancient technology, forgotten tube-cars in underground tunnels, or a more mundane hidden passage into an otherwise inaccessible place. The natives may know about and exploit this quality, or the gate may be sealed until some particular procedure or object is used to activate it.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Guardian of the gate, Hostile entity from the other side, Intruder determined to unlock the gate</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Hapless intruder from the other side, Native gate-guide, Explorer seeking a route to the gate’s destination</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The gate was sealed for a very good reason, The gate is one-way, Activating the gate risks destroying the ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Key to activate the gate, Codes to control its destination, Treasure from the far side of it</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Mysterious transit-chamber with symbolism related to the destination, Room with objects or remains related to the destination, Dangerously energetic gate room</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 2200000
+    }
+  },
+  "_key": "!journal!xdiABio9E52GZmUC",
+  "ownership": {
+    "default": 0
+  }
+}

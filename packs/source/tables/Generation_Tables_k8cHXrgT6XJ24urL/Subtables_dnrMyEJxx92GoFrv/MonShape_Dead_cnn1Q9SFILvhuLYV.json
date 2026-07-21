@@ -1,0 +1,97 @@
+{
+  "_id": "cnn1Q9SFILvhuLYV",
+  "name": "MonShape-Dead",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Why Isn't It Dead Yet?",
+  "results": [
+    {
+      "type": 0,
+      "text": "It requires very little food for survival",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "9slr8628b9kptoae",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.9slr8628b9kptoae"
+    },
+    {
+      "type": 0,
+      "text": "It’s poisonous and repels its predators",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "9rane88cz790pg7k",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.9rane88cz790pg7k"
+    },
+    {
+      "type": 0,
+      "text": "It eats something other creatures can’t",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "mnh5s4wr0mma2zac",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.mnh5s4wr0mma2zac"
+    },
+    {
+      "type": 0,
+      "text": "It’s newly introduced in the area",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "hboqs8u5hps5955p",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.hboqs8u5hps5955p"
+    },
+    {
+      "type": 0,
+      "text": "It doesn’t need food in a normal sense",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "o2cir8uz1pu3uh5p",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.o2cir8uz1pu3uh5p"
+    },
+    {
+      "type": 0,
+      "text": "It exists in symbiosis with something else",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "atvdiv2bzdv538qs",
+      "flags": {},
+      "_key": "!tables.results!cnn1Q9SFILvhuLYV.atvdiv2bzdv538qs"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!cnn1Q9SFILvhuLYV"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "ycNo6i3IsinEc29x",
+  "name": "Refugee Camp",
+  "content": "<h1>Refugee Camp</h1><div>\n<p>There’s a refugee camp in the area made up of people who’ve fled some calamity. It may be a bandit raid on their villages, an ethnic purge nearby, a religious schism they lost, the collapse of a functioning community, or some other disaster. The refugees have no better place to go or they’d have gone there by now; they’re probably dying off to local hazards at a greater or lesser rate, or trying to turn the camp into a functional settlement.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Brutal tyrant over the camp, Local marauder exploiting them, Horrible beast that hunts them</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Sympathetic young refugee, Local governmental representative who can’t help much, Earnest religious leader</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The refugees are highly undesirable to the surrounding polities, They’re demihuman or Blighted, The camp’s a hotbed of some not-tooquickly lethal but very contagious disease</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Vital cache of supplies, Precious possessions of the refugees, Relic they stole or rescued in their flight</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Miserable camp of crude shanties, Damp refuge caverns, Ancient ruins made into a camp</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7400000
+    }
+  },
+  "_key": "!journal!ycNo6i3IsinEc29x",
+  "ownership": {
+    "default": 0
+  }
+}

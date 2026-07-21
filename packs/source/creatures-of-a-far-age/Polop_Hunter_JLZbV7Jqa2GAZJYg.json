@@ -1,0 +1,176 @@
+{
+  "_id": "JLZbV7Jqa2GAZJYg",
+  "name": "Polop Hunter",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [],
+  "effects": [],
+  "_key": "!actors!JLZbV7Jqa2GAZJYg",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 10,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 5,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p><span style=\"color: #191813;\"><span style=\"color: #191813;\">For their own equipment, Polop prefer to use living&nbsp;</span><span style=\"color: #191813;\">sea organisms sorceled into suitable weapons and scaly&nbsp;</span><span style=\"color: #191813;\">armor. Their &ldquo;spitters&rdquo; cough bone darts that function as&nbsp;</span><span style=\"color: #191813;\">thrown light spears, and the spears and slave-taking clubs&nbsp;</span><span style=\"color: #191813;\">they use are of a living coral. The weapons of their leaders&nbsp;</span><span style=\"color: #191813;\">sweat a venom that forces a victim that is struck to make&nbsp;</span><span style=\"color: #191813;\">a Physical save or lose their next turn&rsquo;s Main Action. Two&nbsp;</span><span style=\"color: #191813;\">failed saving throws in the same scene means the victim&nbsp;</span><span style=\"color: #191813;\">is paralyzed for the remainder of the scene.</span></span></p>\n<p><span style=\"color: #191813;\">Add 2 to weapon damage and shock values.</span></p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d6+1",
+        "w": "2d20+20"
+      },
+      "morale": 8,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "3d8",
+      "value": 13,
+      "max": 13
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Polop Hunter",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "JLZbV7Jqa2GAZJYg",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

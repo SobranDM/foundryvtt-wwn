@@ -1,0 +1,174 @@
+{
+  "_id": "8B2Lok6AUi0WKhtJ",
+  "name": "MonShape-Avian",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Feathers",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "4g7xqzywhak7z0u8",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.4g7xqzywhak7z0u8"
+    },
+    {
+      "type": 0,
+      "text": "Beak",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "aoi84my4oxfknbql",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.aoi84my4oxfknbql"
+    },
+    {
+      "type": 0,
+      "text": "Talons",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "jgr3nao7mx2if8d5",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.jgr3nao7mx2if8d5"
+    },
+    {
+      "type": 0,
+      "text": "Light body",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "n1gea6bbtztya61b",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.n1gea6bbtztya61b"
+    },
+    {
+      "type": 0,
+      "text": "Songs",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "ht3nx9p5aj9v0npc",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.ht3nx9p5aj9v0npc"
+    },
+    {
+      "type": 0,
+      "text": "Bright colors",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "bhger0kk3luzi3ip",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.bhger0kk3luzi3ip"
+    },
+    {
+      "type": 0,
+      "text": "Sharp eyes",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "w1ye137q04zn4ccn",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.w1ye137q04zn4ccn"
+    },
+    {
+      "type": 0,
+      "text": "Eggs",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "g43b0rejzos2bav0",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.g43b0rejzos2bav0"
+    },
+    {
+      "type": 0,
+      "text": "Diving",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ljeenq2gm08aubgr",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.ljeenq2gm08aubgr"
+    },
+    {
+      "type": 0,
+      "text": "Flocks",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "ngq8njlllhnh805z",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.ngq8njlllhnh805z"
+    },
+    {
+      "type": 0,
+      "text": "Regurgitation",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "bcb75dgiamr8v504",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.bcb75dgiamr8v504"
+    },
+    {
+      "type": 0,
+      "text": "Guano",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "qxuq83ugzgf5n81e",
+      "flags": {},
+      "_key": "!tables.results!8B2Lok6AUi0WKhtJ.qxuq83ugzgf5n81e"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!8B2Lok6AUi0WKhtJ"
+}

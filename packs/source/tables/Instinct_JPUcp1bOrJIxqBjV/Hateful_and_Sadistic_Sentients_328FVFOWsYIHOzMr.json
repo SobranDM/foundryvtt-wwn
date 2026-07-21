@@ -1,0 +1,106 @@
+{
+  "_id": "328FVFOWsYIHOzMr",
+  "name": "Hateful and Sadistic Sentients",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "aXsOtZg5elX41k0c",
+      "flags": {},
+      "type": 0,
+      "text": "Spend a round looking for a good victim",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.aXsOtZg5elX41k0c"
+    },
+    {
+      "_id": "PeALsD2ilGtL3FV6",
+      "flags": {},
+      "type": 0,
+      "text": "Attack to hurt or humiliate, doing half damage",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.PeALsD2ilGtL3FV6"
+    },
+    {
+      "_id": "u6fFc8uxZBWc2o1T",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the weakest-looking foe present",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.u6fFc8uxZBWc2o1T"
+    },
+    {
+      "_id": "UltvTRWVYBfI5tje",
+      "flags": {},
+      "type": 0,
+      "text": "Assault the enemy that most offends it",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.UltvTRWVYBfI5tje"
+    },
+    {
+      "_id": "y02zzXZLBXk4v8Sc",
+      "flags": {},
+      "type": 0,
+      "text": "Slaughter a downed foe or tear a corpse",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.y02zzXZLBXk4v8Sc"
+    },
+    {
+      "_id": "nyz3a6nSr2fNezHl",
+      "flags": {},
+      "type": 0,
+      "text": "Spend a round making threats and vows",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!328FVFOWsYIHOzMr.nyz3a6nSr2fNezHl"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "RollTable.CVZMeX9EQV6oQ0aM"
+    }
+  },
+  "_key": "!tables!328FVFOWsYIHOzMr"
+}

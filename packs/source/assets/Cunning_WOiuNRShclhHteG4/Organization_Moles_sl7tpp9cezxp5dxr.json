@@ -1,0 +1,32 @@
+{
+  "_id": "sl7tpp9cezxp5dxr",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Organization Moles",
+  "type": "asset",
+  "_key": "!items!sl7tpp9cezxp5dxr",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "None",
+    "desc": "Sleeper agents and deep-cover spies burrow into hostile organizations, waiting to disrupt them from within when ordered to do so.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "gGSkuSIXyMEEp02Q",
+  "name": "Calculation of the Evoked Servitor",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.gGSkuSIXyMEEp02Q"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "High Mage",
+    "duration": "Until dawn or dismissed",
+    "range": "",
+    "roll": "",
+    "description": "<p>This spell conjures up an intelligent familiar for the caster, one with one hit point per caster level, an AC of 14, a ground movement rate of 30&rsquo; per action, saving throws the same as the caster, a +0 skill modifier, and no effective attack. The familiar always adopts the same shape for the same caster, though the initial casting can set this to any shape the caster wishes provided it&rsquo;s no larger than a small human. The familiar retains a telepathic connection with its creator and will obey any command it is given, including suicidal ones. It can perform any action that a competent human servant could. If the familiar is slain, it fades away, but can be called forth again by the spell. The familiar retains its memories of what happens while it&rsquo;s summoned, and can develop its own personality in time. The familiar remains in existence until dawn following the spell&rsquo;s casting or until dismissed by the caster.</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.utoptbq8DoUX3Xtf]{Evoked Servitor}</p>\n<p>&nbsp;</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!gGSkuSIXyMEEp02Q"
+}

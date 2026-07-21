@@ -1,0 +1,620 @@
+{
+  "name": "Orc",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "peG31tv7RFGGf3s4",
+      "name": "Bow, Small",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.YI0xC9PHP8MdMsZF"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 50,
+          "medium": 0,
+          "long": 300
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Bows&nbsp;</strong></em>cover everything from the small self bows of horse archers to the man-tall longbows wielded by foot archers. Larger bows are more cumbersome and impossible to shoot from horseback, but usually have superior strength. An archer with a Readied quiver can load a fresh arrow as a Move action each turn, or as an On Turn action if they have at least Shoot-1 skill.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": "0",
+        "skill": "shoot",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          },
+          {
+            "title": "R",
+            "value": "R"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": false,
+        "price": 20,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.peG31tv7RFGGf3s4"
+    },
+    {
+      "_id": "bRajB4t9b7Y7n6xR",
+      "name": "Sword, Long",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 100,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.bRajB4t9b7Y7n6xR"
+    },
+    {
+      "_id": "Rc9fPtlJ9Y1tB8vo",
+      "name": "Axe, War",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.2jjmtIH3lkzvhW2m"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Axes&nbsp;</strong></em>given here are those fashioned for war; lighter&nbsp;and more agile than their working cousins, though still&nbsp;capable of hacking through a door or hewing a cable if&nbsp;needed. War axes are big enough to demand two hands&nbsp;for their use.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 3,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 50,
+        "weight": 2,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.Rc9fPtlJ9Y1tB8vo"
+    },
+    {
+      "_id": "1ZndTxRUn0flXnh2",
+      "name": "Spear, Heavy",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.QIUKOdWt2PQX0UVH"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 10,
+        "weight": 2,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.1ZndTxRUn0flXnh2"
+    },
+    {
+      "_id": "siu7vRs4zdzDo8d4",
+      "name": "Club, Great",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.hzOj37HZvyvQqGV6"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs, staffs,</strong></em> and <em><strong>maces </strong></em>are of much the same genus, though the latter is usually made of metal. While fully capable of killing a man, a careful user can usually avoid inflicting lethal injury.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 50,
+        "weight": 2,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.siu7vRs4zdzDo8d4"
+    },
+    {
+      "_id": "1Xh3Zz8mS7Kqqvip",
+      "name": "Hate the Sun",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>-1 to hit in full daylight.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.1Xh3Zz8mS7Kqqvip"
+    },
+    {
+      "_id": "Uwq9nPq1tqPSdztx",
+      "name": "Craven",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Afraid of larger or stronger-looking creatures, though leaders may force them to fight.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RrnQpG48JbTGZJFZ.Uwq9nPq1tqPSdztx"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.y9QcYrnjisn9YBXE"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 1,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 120,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Ugly, bad-tempered, animalistic humanoids who live underground and are active at night. Sadistic bullies who hate other living creatures and delight in killing.</p>\n<ul>\n<li><strong>Weapons: </strong>Prefer axes, clubs, spears, or swords. Only leaders can use mechanical weapons (e.g. crossbows, catapults).</li>\n<li><strong>Leader:</strong> Groups are led by an orc with 8 hit points. The leader gains a +1 bonus to damage rolls. Leaders have defeated other orcs in combat to gain their position.</li>\n<li><strong>Orc chieftain:</strong> A 4HD (15hp) chieftain rules an orc tribe. The chieftain gains a +2 bonus to damage rolls.</li>\n<li><strong>Giant companions: </strong>For every 20 orcs, there is a 1-in-6 chance of an ogre (see left). accompanying them. There is a 1-in-10 chance of a troll (Troll, p120) living in the lair.</li>\n<li><strong>Tribal:</strong> Orcs of different tribes may fight among themselves, unless their leaders command them not to. Each tribe has its own lair and has as many females as males, and two whelps per two adults.</li>\n<li><strong>Mercenaries: </strong>Orcs may be hired to fight in Chaotic armies. They delight in wanton killing and razing of settlements.</li>\n</ul>",
+      "alignment": "Chaotic",
+      "xp": 10,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "2d4",
+        "w": "1d6 * 10"
+      },
+      "morale": 6,
+      "instinct": 3,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.328FVFOWsYIHOzMr]{Hateful and Sadistic Sentients}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "1d8",
+      "value": 4,
+      "max": 4
+    }
+  },
+  "prototypeToken": {
+    "name": "Orc",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {},
+    "randomImg": true,
+    "light": {
+      "alpha": 0.25,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331684,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "RrnQpG48JbTGZJFZ",
+  "_key": "!actors!RrnQpG48JbTGZJFZ"
+}

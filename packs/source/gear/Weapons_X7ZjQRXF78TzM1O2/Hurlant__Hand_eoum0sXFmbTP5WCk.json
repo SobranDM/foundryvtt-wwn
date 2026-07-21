@@ -1,0 +1,52 @@
+{
+  "_id": "eoum0sXFmbTP5WCk",
+  "name": "Hurlant, Hand",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "system": {
+    "range": {
+      "short": 30,
+      "medium": 0,
+      "long": 60
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Hurlants&nbsp;</strong></em>are a wide range of ancient and modern&nbsp;projectile weapons that launch specially-prepared&nbsp;charges through various means, both sorcerous and&nbsp;semi-scientific. The tremendous accumulation of ancient&nbsp;Legacy manipulations intended to disarm subject populations&nbsp;and restrict advanced weaponry to a given age&rsquo;s&nbsp;ruling caste has made it very difficult to create firearms,&nbsp;as most conventional chemical or magical reactions are&nbsp;specifically disrupted by the Legacy.</p>\n<p><em><strong>Hand hurlants</strong></em>&nbsp;are usually pistol-sized, most often&nbsp;carried by the wealthy as a single-shot opener at the start&nbsp;of hostilities.&nbsp;<em><strong>Long hurlants</strong></em>&nbsp;are rifle-sized weapons favored&nbsp;by elite snipers and assassins who don&rsquo;t expect a&nbsp;need for a second shot.&nbsp;<em><strong>Great hurlants</strong></em>&nbsp;are usually eight&nbsp;feet long and a hundred pounds in weight, and launch&nbsp;tremendous bolts that can transfix even monstrous targets.&nbsp;Those able to afford their use generally mount them&nbsp;on ships, gun carriages, or on important fortifications.</p>\n<p>Hurlants are too expensive and difficult to craft to&nbsp;be practical as widespread military weapons in most regions.&nbsp;In some areas, even hurlants fail to function correctly;&nbsp;a GM who prefers not to include them can simply&nbsp;disallow them in their own campaign region.</p>",
+    "damage": "1d12",
+    "bonus": 0,
+    "shock": {
+      "damage": null,
+      "ac": null
+    },
+    "skill": "shoot",
+    "score": "dex",
+    "tags": [
+      {
+        "title": "SS",
+        "value": "SS"
+      },
+      {
+        "title": "AP",
+        "value": "AP"
+      }
+    ],
+    "slow": false,
+    "missile": true,
+    "melee": false,
+    "price": 1000,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "skillDamage": false
+  },
+  "_key": "!items!eoum0sXFmbTP5WCk",
+  "folder": "X7ZjQRXF78TzM1O2"
+}

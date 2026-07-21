@@ -1,0 +1,17 @@
+{
+  "_id": "cJNVCpaeRWwXs8pd",
+  "name": "Neglectful Ruler",
+  "content": "<h1>Neglectful Ruler</h1><div>\n<p>The community can’t rely on its ostensible suzerain. Whatever lord claims ownership of the place is indifferent to its troubles and pays no attention to its civic disorder. The lord may be incapable of giving help, or convinced their representative can handle it alone, or actively seeking to punish the community for some rebellion or failure of service.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>A viceroy sending back false reports, Local grandee seizing control by violence, Cruel local lord who keeps the ruler pacified with tax money</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Inspector from the suzerain, Local judge seeking justice, Harried representative in need of help</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The ruler has too many problems to care about this place, The ruler would actually make things worse if they paid heed, The ruler’s authority is being hindered by some rival power</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Tax money not yet sent, A “gift” meant to draw the lord’s help, Proof of a plot to seize control of the community</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Deserted courtroom, Street crawling with local vigilante groups, Burnt-out home of a political loser</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6200000
+    }
+  },
+  "_key": "!journal!cJNVCpaeRWwXs8pd",
+  "ownership": {
+    "default": 0
+  }
+}

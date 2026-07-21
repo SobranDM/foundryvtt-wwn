@@ -134,7 +134,7 @@ export async function applyChatCardDamage(amount, multiplier) {
   };
 
   const template = "systems/wwn/templates/chat/apply-damage.html";
-  const html = await renderTemplate(template, templateData);
+  const html = await foundry.applications.handlebars.renderTemplate(template, templateData);
 
   const chatData = {
     user: game.user.id,

@@ -1,0 +1,299 @@
+{
+  "_id": "55aOU9Rip9LYjdnI",
+  "name": "Terrain Feature Details",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "QG5DmcGu93l7F2Ya",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Populated is the Feature?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.QG5DmcGu93l7F2Ya"
+    },
+    {
+      "_id": "w2cfz19EgajbjOmj",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Populated",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ISDRWsin1bQiH0uj",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.w2cfz19EgajbjOmj"
+    },
+    {
+      "_id": "KQFEMXJcEWIBno0s",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>How Dangerous is the Feature?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.KQFEMXJcEWIBno0s"
+    },
+    {
+      "_id": "2XRVYvpbseuFL0YN",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Dangerous",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "kDxLNuNpJywuvx7D",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.2XRVYvpbseuFL0YN"
+    },
+    {
+      "_id": "avPNyIETyiJzOtFp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Use is the Feature?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.avPNyIETyiJzOtFp"
+    },
+    {
+      "_id": "rqujGfLXjzINw6Cd",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Use",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "QOju0I5ESGWgjLZY",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.rqujGfLXjzINw6Cd"
+    },
+    {
+      "_id": "q8ESpk2tAItT9GQO",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Kind of Event Last Happened There?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.q8ESpk2tAItT9GQO"
+    },
+    {
+      "_id": "TovoHQFqmbSiQ7TJ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Event",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "kWt6ysHZqNgAUME9",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.TovoHQFqmbSiQ7TJ"
+    },
+    {
+      "_id": "atkfZ9OmhRkZrzvS",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>What Antagonists are Common There?</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.atkfZ9OmhRkZrzvS"
+    },
+    {
+      "_id": "5tv8pwSytbSOgMXw",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Antagonists",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "lVSyfLFtJB2R3Jnu",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.5tv8pwSytbSOgMXw"
+    },
+    {
+      "_id": "f4uSCEVKnQJi65xE",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Optional Quirk of the Feature</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.f4uSCEVKnQJi65xE"
+    },
+    {
+      "_id": "HP5iUTLaNoid4kZm",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Terrain-Quirk",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "JPhfXfsCtzXNnRvc",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!55aOU9Rip9LYjdnI.HP5iUTLaNoid4kZm"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!55aOU9Rip9LYjdnI"
+}

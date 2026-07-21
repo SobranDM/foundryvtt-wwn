@@ -1,0 +1,26 @@
+{
+  "_id": "jZwEP5HY5ArsRy85",
+  "name": "Web",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Mage",
+    "duration": "48 turns (8 hours)",
+    "range": "10'",
+    "roll": "2d4",
+    "description": "<p><strong>Duration: 48 turns</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>Web conjures a many-layered mass of strong, sticky threads, blocking a 10&rsquo; cube area.</p>\n<p><strong>▶ Entanglement:</strong> Creatures caught within a web become entangled among the gluey fibres. Entangled creatures can&rsquo;t move, but can break free depending on their strength (see below).</p>\n<p><strong>▶ Flammable: </strong>The strands of the web are flammable and can be destroyed by fire in two rounds. All creatures caught within flaming webs suffer 1d6 points of damage from the flames.</p>\n<p><strong>Breaking free:</strong> Depends on STR:</p>\n<p><strong>▶ Normal human range: </strong>The creature can break free in 2d4 turns.</p>\n<p><strong>▶ Magically augmented STR above 18: </strong>The creature can break free in 4 rounds.</p>\n<p><strong>▶ Giant strength:</strong> The creature can break free in two rounds.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!jZwEP5HY5ArsRy85"
+}

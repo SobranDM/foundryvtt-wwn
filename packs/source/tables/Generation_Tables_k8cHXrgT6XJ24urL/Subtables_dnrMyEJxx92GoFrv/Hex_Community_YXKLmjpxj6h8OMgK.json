@@ -1,0 +1,148 @@
+{
+  "_id": "YXKLmjpxj6h8OMgK",
+  "name": "Hex-Community",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Village of aboriginal natives",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "dhqbrikhyivmebgo",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.dhqbrikhyivmebgo"
+    },
+    {
+      "type": 0,
+      "text": "Small colony of a nearby nation",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "glhu4spchmn71y0b",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.glhu4spchmn71y0b"
+    },
+    {
+      "type": 0,
+      "text": "Soldier-farmers dispatched to the wilds",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "06azgxloi03nu0n3",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.06azgxloi03nu0n3"
+    },
+    {
+      "type": 0,
+      "text": "Sectarian village of unorthodox believers",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "rqdw1ykh3hqums4a",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.rqdw1ykh3hqums4a"
+    },
+    {
+      "type": 0,
+      "text": "Demihuman enclave",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "o14f4yrzx897gtnd",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.o14f4yrzx897gtnd"
+    },
+    {
+      "type": 0,
+      "text": "Village of not-always-hostile monsters",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "n7s44piv4ygnrwbc",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.n7s44piv4ygnrwbc"
+    },
+    {
+      "type": 0,
+      "text": "Bandit meeting camp for trade and fun",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "zawtiqspmvnf07kh",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.zawtiqspmvnf07kh"
+    },
+    {
+      "type": 0,
+      "text": "Remnant of a major settlement swallowed up",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "6bjzkl319pllk1eq",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.6bjzkl319pllk1eq"
+    },
+    {
+      "type": 0,
+      "text": "Village of rebels or exiles from a nation",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "30p1lxgw7n5rxqns",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.30p1lxgw7n5rxqns"
+    },
+    {
+      "type": 0,
+      "text": "Oppressed group’s settlement of refuge",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "u6yxgjj8nyk6ngc2",
+      "flags": {},
+      "_key": "!tables.results!YXKLmjpxj6h8OMgK.u6yxgjj8nyk6ngc2"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!YXKLmjpxj6h8OMgK"
+}

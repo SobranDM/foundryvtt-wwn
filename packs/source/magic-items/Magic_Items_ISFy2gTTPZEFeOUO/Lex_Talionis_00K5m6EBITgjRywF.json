@@ -1,0 +1,29 @@
+{
+  "_id": "00K5m6EBITgjRywF",
+  "name": "Lex Talionis",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>These rare magical weapons come in various small, concealable forms, with daggers predominating. They function as ordinary +1 magical weapons in the main, but whenever they cause harm to a target, the victim must make a Physical saving throw. On a failure, both the target and the wielder of the Lex Talionis instantly die, with no chance to stabilize. If the weapon is used as part of an Execution Attack, no saving throw is allowed. The weapon then vanishes; some say that it is destroyed by the magical discharge, while others postulate that it simply appears elsewhere to await a new avenger.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.00K5m6EBITgjRywF"
+    }
+  },
+  "_key": "!items!00K5m6EBITgjRywF"
+}

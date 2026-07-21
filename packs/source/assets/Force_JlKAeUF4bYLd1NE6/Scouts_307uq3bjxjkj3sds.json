@@ -1,0 +1,32 @@
+{
+  "_id": "307uq3bjxjkj3sds",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Scouts",
+  "type": "asset",
+  "_key": "!items!307uq3bjxjkj3sds",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d4",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 5,
+    "counter": "1d4+1",
+    "desc": "Long-range scouts and reconnaissance experts work for the faction, able to venture deep into hostile territory.",
+    "health": {
+      "max": 5,
+      "value": 5
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

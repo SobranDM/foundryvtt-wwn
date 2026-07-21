@@ -1,0 +1,26 @@
+{
+  "_id": "hlYKfOpnyvi5twUX",
+  "name": "Polymorph Self",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "6 turns + 1 / level",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns +1 per level</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>The caster transforms themselves into another being:</p>\n<p><strong>▶ HD: </strong>The new form may not have higher Hit Dice than the caster&rsquo;s level.</p>\n<p><strong>▶ Stats:</strong> The caster retains their own intelligence, hit points, saving throws, and attack probabilities.</p>\n<p><strong>▶ Physical capabilities: </strong>Of the new form (e.g. strength, physical attack forms, modes of movement) are acquired.</p>\n<p><strong>▶ Non-physical special abilities: </strong>(e.g. immunities, breath weapons, spell casting) are not acquired.</p>\n<p><strong>▶ Casting spells: </strong>While polymorphed, the caster is unable to cast spells.</p>\n<p><strong>▶ Specific individuals:</strong> The spell cannot be used to duplicate a specific individual.</p>\n<p><strong>▶ Reversion:</strong> If the caster dies while polymorphed, they return to their original form.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!hlYKfOpnyvi5twUX"
+}

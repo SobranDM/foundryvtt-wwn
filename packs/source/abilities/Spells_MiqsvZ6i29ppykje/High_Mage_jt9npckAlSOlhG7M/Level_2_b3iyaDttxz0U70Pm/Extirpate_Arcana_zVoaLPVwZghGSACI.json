@@ -1,0 +1,41 @@
+{
+  "_id": "zVoaLPVwZghGSACI",
+  "name": "Extirpate Arcana",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 500000,
+  "flags": {
+    "core": {
+      "sourceId": "Item.dtxyTmb3FOkObTcT"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "High Mage",
+    "duration": "1d6 rounds",
+    "range": "20-ft. radius",
+    "roll": "1d6",
+    "description": "<p>The caster sweeps away all unwanted magical effects and enchantments within a twenty-foot radius, centered on any visible point within one hundred feet per level. If the magical effect was cast by a creature with equal or fewer hit dice or levels, the effect is negated automatically. Otherwise, a contested Int/Magic or Cha/Magic skill roll must be made, with higher-leveled caster gaining a +2 bonus on their roll and the dispeller winning any ties. This spell is not strong enough to permanently suppress standing magical effects, and requires the aforementioned contested roll to have any chance to even temporarily suppressing them. If successful, the effect is negated for 1d6 rounds. If cast on a very large enchantment, only the portion within the spell&rsquo;s zone of effect is suppressed.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!zVoaLPVwZghGSACI"
+}

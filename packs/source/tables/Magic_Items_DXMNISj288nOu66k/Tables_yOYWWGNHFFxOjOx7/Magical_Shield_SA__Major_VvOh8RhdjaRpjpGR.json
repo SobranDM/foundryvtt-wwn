@@ -1,0 +1,72 @@
+{
+  "_id": "VvOh8RhdjaRpjpGR",
+  "name": "Magical Shield SA, Major",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "table-currency-string": "",
+      "loot-actor-name": "",
+      "loot-amount-key": ""
+    },
+    "core": {
+      "sourceId": "RollTable.I5XpJocjcsqY7zcS"
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "u9lmxfYTcelSjQ6X",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor and Shield Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "pPZG8CuQQKPynEFb",
+      "weight": 1,
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VvOh8RhdjaRpjpGR.u9lmxfYTcelSjQ6X"
+    },
+    {
+      "_id": "WcnTixeFjzvQfKBR",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor and Shield Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "pPZG8CuQQKPynEFb",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VvOh8RhdjaRpjpGR.WcnTixeFjzvQfKBR"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!VvOh8RhdjaRpjpGR",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

@@ -192,7 +192,7 @@ export class WwnDice {
             templateData.rollWWN = gr;
             templateData.straightDamage = godboundRoll.total;
             templateData.rollDamage = godboundRoll.straightTotal;
-            renderTemplate(template, templateData).then((content) => {
+            foundry.applications.handlebars.renderTemplate(template, templateData).then((content) => {
               chatData.content = content;
               // Dice So Nice
               if (game.dice3d) {
@@ -216,7 +216,7 @@ export class WwnDice {
             });
           });
         } else {
-          renderTemplate(template, templateData).then((content) => {
+          foundry.applications.handlebars.renderTemplate(template, templateData).then((content) => {
             chatData.content = content;
             // Dice So Nice
             if (game.dice3d) {
@@ -601,7 +601,7 @@ export class WwnDice {
           dmgRoll.render().then((dr) => {
             templateData.rollDamage = dr;
             templateData.straightDamage = dmgRoll.total;
-            renderTemplate(template, templateData).then((content) => {
+            foundry.applications.handlebars.renderTemplate(template, templateData).then((content) => {
               chatData.content = content;
               // 2 Step Dice So Nice
               if (game.dice3d) {
@@ -644,7 +644,7 @@ export class WwnDice {
         } else {
           dmgRoll.render().then((dr) => {
             templateData.rollDamage = dr;
-            renderTemplate(template, templateData).then((content) => {
+            foundry.applications.handlebars.renderTemplate(template, templateData).then((content) => {
               chatData.content = content;
               // Dice So Nice
               if (game.dice3d) {
@@ -732,7 +732,7 @@ export class WwnDice {
       },
     };
 
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     let roll;
 
     //Create Dialog window
@@ -802,7 +802,7 @@ export class WwnDice {
       },
     };
 
-    const html = await renderTemplate(template, dialogData);
+    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
     let roll;
 
     //Create Dialog window

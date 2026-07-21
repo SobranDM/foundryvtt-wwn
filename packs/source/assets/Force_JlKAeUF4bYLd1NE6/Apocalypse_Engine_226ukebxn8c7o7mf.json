@@ -1,0 +1,32 @@
+{
+  "_id": "226ukebxn8c7o7mf",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Apocalypse Engine",
+  "type": "asset",
+  "_key": "!items!226ukebxn8c7o7mf",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "3d10+4",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 35,
+    "counter": "None",
+    "desc": "One of a number of hideously powerful ancient super-weapons unearthed from some lost armory, an Apocalypse Engine rains some eldritch horror down on a targeted enemy Asset.",
+    "health": {
+      "max": 20,
+      "value": 20
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 8,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

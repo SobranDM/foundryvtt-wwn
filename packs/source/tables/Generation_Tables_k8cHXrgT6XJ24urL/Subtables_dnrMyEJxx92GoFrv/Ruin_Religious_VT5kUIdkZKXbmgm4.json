@@ -1,0 +1,174 @@
+{
+  "_id": "VT5kUIdkZKXbmgm4",
+  "name": "Ruin-Religious",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Lost pilgrimage destination",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "g7qoo4eu8t2sgd4c",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.g7qoo4eu8t2sgd4c"
+    },
+    {
+      "type": 0,
+      "text": "Tomb of some mighty ancient",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "nysapts18fk7v3ix",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.nysapts18fk7v3ix"
+    },
+    {
+      "type": 0,
+      "text": "Shrine repurposed for a newer god",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "v0l0zrkjo6n1btpj",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.v0l0zrkjo6n1btpj"
+    },
+    {
+      "type": 0,
+      "text": "Inexplicable sacred structure",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "f0e0ip7xbe28e8gy",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.f0e0ip7xbe28e8gy"
+    },
+    {
+      "type": 0,
+      "text": "Outsider fane to an alien god",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "huc8y5ft8etr8est",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.huc8y5ft8etr8est"
+    },
+    {
+      "type": 0,
+      "text": "Pilgrim hospital or waystation",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "frru3bm7a45lcato",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.frru3bm7a45lcato"
+    },
+    {
+      "type": 0,
+      "text": "Fortified frontier monastery",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ci1xo1u815pt7k2t",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.ci1xo1u815pt7k2t"
+    },
+    {
+      "type": 0,
+      "text": "Prison-monastery for heretics",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "fnx1llyh6a51k9z8",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.fnx1llyh6a51k9z8"
+    },
+    {
+      "type": 0,
+      "text": "Fragment of megastructure temple",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "946q5coh60c0fav8",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.946q5coh60c0fav8"
+    },
+    {
+      "type": 0,
+      "text": "Place of some holy trial or test",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "41cty27gkgoyffe7",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.41cty27gkgoyffe7"
+    },
+    {
+      "type": 0,
+      "text": "Prison for a sealed demonic force",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "11on7uhqwy2q20to",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.11on7uhqwy2q20to"
+    },
+    {
+      "type": 0,
+      "text": "Holy archive or relic-fortress",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "8gaz1vzco9mst2vb",
+      "flags": {},
+      "_key": "!tables.results!VT5kUIdkZKXbmgm4.8gaz1vzco9mst2vb"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!VT5kUIdkZKXbmgm4"
+}

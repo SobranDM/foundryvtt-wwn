@@ -1,0 +1,32 @@
+{
+  "_id": "02iugdk4kvmvylww",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Cryptomancers",
+  "type": "asset",
+  "_key": "!items!02iugdk4kvmvylww",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "Special",
+    "attackSource": "cunning",
+    "attackSpecial": "In place of an Attack action, they can make a Cunning vs. Cunning attack on a specific hostile Asset within one move. On a success, the targeted Asset is unable to do anything or be used for anything on its owner's next faction turn. On a failure, no Counterattack damage is taken.",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 14,
+    "counter": "None",
+    "desc": "In place of an Attack action, they can make a Cunning vs. Cunning attack on a specific hostile Asset within one move. On a success, the targeted Asset is unable to do anything or be used for anything on its owner's next faction turn. On a failure, no Counterattack damage is taken.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "Low",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

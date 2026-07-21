@@ -1,0 +1,513 @@
+{
+  "_id": "KPUYSOprUsnX3t7D",
+  "name": "Unending One",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "T0t7VNQ38HQxdMPR",
+      "name": "Averse",
+      "type": "art",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.T0t7VNQ38HQxdMPR",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Certain religious symbols, lines of salt, emblems of natural law, or like icons repel it. When presented with the symbol it must make a Mental save to approach it. The aversion is broken if the icon&rsquo;s bearer or their allies attack it.</p>",
+        "save": "mental",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "09udGeFuNNHQvB9C",
+      "name": "Beguiling",
+      "type": "art",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.09udGeFuNNHQvB9C",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Once per scene it can beguile a creature with its gaze on a failed Mental save. The target becomes its helpless slave until separated from it for a full week. It cannot beguile creatures with more hit dice or levels than it has.</p>",
+        "save": "mental",
+        "source": "Undead",
+        "effort": 0,
+        "time": "Scene",
+        "range": ""
+      }
+    },
+    {
+      "_id": "p83iF2w1ze5FKSJ3",
+      "name": "Desynchrony",
+      "type": "art",
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.p83iF2w1ze5FKSJ3",
+      "system": {
+        "pattern": "white",
+        "roll": "1d4+1",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Foes hit by it must make a Physical save or be paralyzed for 1d4+1 rounds, stunned by its own dislocation from natural law.</p>",
+        "save": "physical",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "VFAHn10J06vw18lg",
+      "name": "Draining",
+      "type": "art",
+      "sort": 400000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.VFAHn10J06vw18lg",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Foes hit by it are enfeebled, taking a cumulative -2 penalty to hit rolls and-1 to damage rolls, Shock, and skill checks for the rest of the scene.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "uDQYzj24cWdplwQE",
+      "name": "Intangible",
+      "type": "art",
+      "sort": 600000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.uDQYzj24cWdplwQE",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>It is a shade or specter, unable to be touched by non-magical objects or energies. It can manipulate objects important to it in life or kill with its icy touch.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "cxMd9qXXu82LMFRM",
+      "name": "Ravenous",
+      "type": "art",
+      "sort": 700000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.cxMd9qXXu82LMFRM",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>If it hits with at least one of its attacks, it gets an immediate bonus attack against the target.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "ecPYZqqWRI6rCYzz",
+      "name": "Red Hunger",
+      "type": "art",
+      "sort": 800000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.ecPYZqqWRI6rCYzz",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>It must eat a pound of human flesh or drink a pint of human blood every week or lose a quarter of its maximum hit points. At zero hit points it dies or goes inert until fresh food comes near.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "xP9tvcgQeputZw3Y",
+      "name": "Sunscorch",
+      "type": "art",
+      "sort": 900000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.xP9tvcgQeputZw3Y",
+      "system": {
+        "pattern": "white",
+        "roll": "1d10",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Exposure to sunlight, running water, or some specific other emblem of natural law inflicts 1d10 damage on it each round.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "InjnyEc52mYhIpBk",
+      "name": "Terrifying",
+      "type": "art",
+      "sort": 925000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.InjnyEc52mYhIpBk",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Enemies must make a Mental save or lose their first turn&rsquo;s Main Action as they summon their nerve. Morale checks it induces are made at -2.</p>",
+        "save": "mental",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "XG5lHmbsFeMWfXI9",
+      "name": "Impure",
+      "type": "art",
+      "sort": 500000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.XG5lHmbsFeMWfXI9",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>Weapons of silver, green wood, or other specific apotropaic material inflict maximum damage to it on a hit and always inflict Shock regardless of AC.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "VbaY3bosGVEK5nDe",
+      "name": "Unending",
+      "type": "art",
+      "sort": 950000,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aJVrW3I2ZWaQ7kam"
+        }
+      },
+      "img": "systems/wwn/assets/default/necromancer_art.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.VbaY3bosGVEK5nDe",
+      "system": {
+        "pattern": "white",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "description": "<p>It cannot die by violence. Only the right act, weapon, object destruction, or ritual can end it.</p>",
+        "save": "",
+        "source": "Undead",
+        "effort": 0,
+        "time": "N/A",
+        "range": ""
+      }
+    },
+    {
+      "_id": "p4jJeiwPfcIIIZiV",
+      "name": "Punch/Claw",
+      "type": "weapon",
+      "sort": 1050000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "_key": "!actors.items!KPUYSOprUsnX3t7D.p4jJeiwPfcIIIZiV",
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "2d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 5,
+          "ac": null
+        },
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 3,
+          "max": 3
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!KPUYSOprUsnX3t7D",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 20,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 20,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 5,
+        "mod": 0
+      },
+      "mental": {
+        "value": 5,
+        "mod": 0
+      },
+      "physical": {
+        "value": 5,
+        "mod": 0
+      },
+      "luck": {
+        "value": 5,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "Necromancer",
+        "value": 0,
+        "max": 5
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Undead spellcasters have the slots of a Necromancer of half their hit dice, and cast at a level equal to their full HD, up to a maximum effective level of 10.</p>\n<p><strong>On the Spells tab (and duplicated on the Attributes tab) are certain special abilities or traits found in certain undead. Others surely exist.</strong></p>\n<p>By default, undead cannot be poisoned, diseased, or be made to sleep or fall unconscious. They need not eat, drink, or breathe, and they are indifferent to normal extremes of heat or cold. Common undead are destroyed at zero hit points; PCs or powerful undead automatically stabilize. They do not continue to decay beyond their initial state, but self-repair at normal healing rates. Conventional healing spells or powers are useless on them unless used by themselves, a Necromancer, or by another person skilled in the maintenance of dead flesh. They accrue and lose System Strain as normal.</p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "0"
+      },
+      "morale": 10,
+      "instinct": 1,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.ODWKbUBbnFxGLvgg]{Undead Creatures}",
+        "link": ""
+      },
+      "skill": 3
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "20d8",
+      "value": 90,
+      "max": 90
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Animated Skeleton",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "KPUYSOprUsnX3t7D",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

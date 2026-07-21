@@ -1,0 +1,17 @@
+{
+  "_id": "jroNg1iVKrhOAIil",
+  "name": "Chokepoint",
+  "content": "<h1>Chokepoint</h1><div>\n<p>There’s a natural choke point in this area: a mountain pass, a land bridge, a dry ridge in a swamp, a narrow strand of untainted arratu land, a gap in a megastructure, or some other slender passage. Such a chokepoint is likely part of a feature that extends outside the hex, and it may be prohibitively difficult to cross this feature anywhere else. Such valuable, defensible areas are rarely left unoccupied.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Bandit lord who “taxes” passersby, Monstrous creature who hunts there, Ancient guardian of a long-dead polity</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Trader in dire need, Explorer seeking a better way, Local currently inhabiting the chokepoint</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It can be opened or blocked by a controller, It’s only recently become abnormally dangerous, It’s known of only by those who want it kept secret</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Map of the passage, Token allowing safe passage, Key to controlling the passage</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Perfect ambush site, Natural fortress, High observation point commanding the pass</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1800000
+    }
+  },
+  "_key": "!journal!jroNg1iVKrhOAIil",
+  "ownership": {
+    "default": 0
+  }
+}

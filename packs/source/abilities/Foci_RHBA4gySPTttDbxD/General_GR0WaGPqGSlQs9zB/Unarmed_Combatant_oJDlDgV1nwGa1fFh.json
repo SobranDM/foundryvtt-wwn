@@ -1,0 +1,18 @@
+{
+  "_id": "oJDlDgV1nwGa1fFh",
+  "name": "Unarmed Combatant",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Your empty hands are more dangerous than swords in the grip of the less gifted. Your unarmed attacks are counted as melee weapons when it comes to binding up opponents wielding bows and similar ranged long arms, though you need at least one hand free to do so.</p>\n<p><strong>Level 1: </strong>Gain Punch as a bonus skill. Your unarmed attacks become more dangerous as your Punch skill increases. At level-0, they do 1d6 damage. At level-1, they do 1d8 damage. At level-2 they do 1d10, level-3 does 1d12, and level-4 does 1d12+1. At Punch-1 or better, they have the Shock quality equal to your Punch skill against AC 15 or less. While you normally add your Punch skill level to any unarmed damage, don&rsquo;t add it twice to this Shock damage.</p>\n<p><strong>Level 2: </strong>Even on a miss with a Punch attack, you do an unmodified 1d6 damage, plus any Shock that the blow might inflict on the target.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!oJDlDgV1nwGa1fFh",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

@@ -1,0 +1,224 @@
+{
+  "_id": "VOZouolYFR9psmLz",
+  "name": "Monster Shapes/Appearances",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "DBJkrzBC4XsRzM9N",
+      "type": 0,
+      "text": "<b>What Kind of Animal Is It Most Like?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.DBJkrzBC4XsRzM9N"
+    },
+    {
+      "_id": "vUkPy64YkcPUNAZA",
+      "type": 2,
+      "text": "MonShape-Animal",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "M2Pq5BOLo2zwJLTu",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.vUkPy64YkcPUNAZA"
+    },
+    {
+      "_id": "TacuhLMjfCjLxK3L",
+      "type": 0,
+      "text": "<b>What Is Its Basic Body Plan?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.TacuhLMjfCjLxK3L"
+    },
+    {
+      "_id": "Vm5Wuz1ucseteMMV",
+      "type": 2,
+      "text": "MonShape-Body",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "bLqSjTCeespavhPy",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.Vm5Wuz1ucseteMMV"
+    },
+    {
+      "_id": "PHyBYFWX6TwFfAbV",
+      "type": 0,
+      "text": "<b>How Does It Usually Hunt?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.PHyBYFWX6TwFfAbV"
+    },
+    {
+      "_id": "onCjBJ602sv7nwOO",
+      "type": 2,
+      "text": "MonShape-Hunt",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "PBB9cEfT2jt7pIj0",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.onCjBJ602sv7nwOO"
+    },
+    {
+      "_id": "gbtcjJPV65zQM8Zx",
+      "type": 0,
+      "text": "<b>Why Isn't It Dead Yet?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.gbtcjJPV65zQM8Zx"
+    },
+    {
+      "_id": "mtDeceWHapAruZ9E",
+      "type": 2,
+      "text": "MonShape-Dead",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "cnn1Q9SFILvhuLYV",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.mtDeceWHapAruZ9E"
+    },
+    {
+      "_id": "JBs54MXCckjW8Sgi",
+      "type": 0,
+      "text": "<b>Characteristic Body Parts or Creature Elements</b> - mix and match as desired",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.JBs54MXCckjW8Sgi"
+    },
+    {
+      "_id": "LnXsDjMXpZzfi11P",
+      "type": 2,
+      "text": "MonShape-BodyParts",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "1NHOPyyNc33qLePs",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!VOZouolYFR9psmLz.LnXsDjMXpZzfi11P"
+    },
+    {
+      "_id": "skCk5wkg7dpGQ5Lw",
+      "type": 2,
+      "text": "MonShape-BodyParts",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "1NHOPyyNc33qLePs",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 2,
+      "_key": "!tables.results!VOZouolYFR9psmLz.skCk5wkg7dpGQ5Lw"
+    },
+    {
+      "_id": "kLgt1mh57rGj3TOj",
+      "type": 2,
+      "text": "MonShape-BodyParts",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "1NHOPyyNc33qLePs",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 3,
+      "_key": "!tables.results!VOZouolYFR9psmLz.kLgt1mh57rGj3TOj"
+    }
+  ],
+  "formula": "1d3",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!VOZouolYFR9psmLz"
+}

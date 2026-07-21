@@ -1,0 +1,42 @@
+{
+  "_id": "J16DXL0OKIMX1PwG",
+  "name": "Deep Sight",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.J16DXL0OKIMX1PwG"
+    }
+  },
+  "system": {
+    "description": "<p>This substance allows an imbiber to briefly subconsciously integrate with a Deep&rsquo;s basic structure, gaining an insight into the general layout of proximate areas. The GM gives the PC a map of the four nearest rooms of interest to the PC and instructions on how to get to them. For places with a detailed map, a radius of 100&rsquo; is discerned. Each room&rsquo;s original purpose is revealed in a few words, though nothing can be discerned of its contents. This elixir will work inside any structure that was intentionally constructed by an intelligent being.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!J16DXL0OKIMX1PwG"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "Pj6Qtrbf7xsjU37k",
+  "name": "Energetic Impermeability",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.Pj6Qtrbf7xsjU37k"
+    }
+  },
+  "system": {
+    "description": "<p>This elixir confers a temporary immunity to the next harmful energy that would otherwise injure the imbiber within the next scene. This immunity is sufficient to protect the user from any mundane source of this energy, and subtracts fifteen points of damage from each hit by a magical source of that power. Energy forms valid for this potion are thermal, electrical, radiation, or caustic; kinetic energy is not valid, nor are purely psychic or spiritual forms of injury. This protection lasts for one scene, and does not change once it is set by the initial harm it deflected.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Pj6Qtrbf7xsjU37k"
+}

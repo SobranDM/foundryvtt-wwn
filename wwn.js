@@ -24,15 +24,6 @@ import { WWNCombatant } from "./module/combat/combatant.js";
 /* -------------------------------------------- */
 
 Hooks.once("init", async function () {
-  /**
-   * Set an initiative formula for the system
-   * @type {String}
-   */
-  CONFIG.Combat.initiative = {
-    formula: "@initiativeRoll + @init",
-    decimals: 2,
-  };
-
   CONFIG.WWN = WWN;
 
   game.wwn = {
@@ -127,29 +118,31 @@ Hooks.once("ready", async () => {
 });
 
 // License and KOFI infos
-Hooks.on("renderActorDirectory", async (app, html, data) => {
+Hooks.on("renderActorDirectory", async (app, html) => {
   party.addControl(app, html);
 });
 
-Hooks.on("renderSidebarTab", async (object, html) => {
-  if (object instanceof Settings) {
-    let gamesystem = html.find("#game-details");
-    // SRD Link
-    let wwn = gamesystem.find('h4').last();
-    wwn.append(` <sub><a href="https://oldschoolessentials.necroticgnome.com/srd/index.php">SRD<a></sub>`);
+Hooks.on("renderSettings", async (app, html) => {
+  const systemInfo = html.querySelector(".info .system");
+  if (!systemInfo) return;
 
-    // License text
-    const template = "systems/wwn/templates/chat/license.html";
-    const rendered = await renderTemplate(template);
-    gamesystem.find(".system").append(rendered);
-  }
+  // SRD Link
+  const srdLink = document.createElement("sub");
+  srdLink.innerHTML = `<a href="https://oldschoolessentials.necroticgnome.com/srd/index.php">SRD</a>`;
+  systemInfo.querySelector(".label")?.append(" ", srdLink);
+
+  // License text
+  const template = "systems/wwn/templates/chat/license.html";
+  const rendered = await foundry.applications.handlebars.renderTemplate(template);
+  html.querySelector(".info")?.insertAdjacentHTML("beforeend", rendered);
 });
 
 Hooks.on("preCreateToken", WWNCombat.preCreateToken);
 Hooks.on("renderChatLog", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("renderChatMessageHTML", (app, html, data) => WwnItem.chatListeners(html));
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
-Hooks.on("renderRollTableConfig", treasure.augmentTable);
+Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);
+Hooks.on("renderRollTableSheet", treasure.augmentTable);
 Hooks.on("updateActor", party.update);
 
 /**

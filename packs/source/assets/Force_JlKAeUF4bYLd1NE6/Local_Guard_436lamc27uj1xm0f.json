@@ -1,0 +1,32 @@
+{
+  "_id": "436lamc27uj1xm0f",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Local Guard",
+  "type": "asset",
+  "_key": "!items!436lamc27uj1xm0f",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d3+1",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 3,
+    "counter": "1d4+1",
+    "desc": "Ordinary citizens are enlisted into night watch patrols and local guard units. They're most effective when defending from behind a fortified position, but they have some idea of how to use their weapons.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

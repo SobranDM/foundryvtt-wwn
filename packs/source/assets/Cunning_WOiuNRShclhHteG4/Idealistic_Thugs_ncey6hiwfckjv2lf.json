@@ -1,0 +1,32 @@
+{
+  "_id": "ncey6hiwfckjv2lf",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Idealistic Thugs",
+  "type": "asset",
+  "_key": "!items!ncey6hiwfckjv2lf",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "1d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d6",
+    "desc": "Easily-manipulated hotheads are enlisted under whatever ideological or religious principle best enthuses them for violence.",
+    "health": {
+      "max": 12,
+      "value": 12
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

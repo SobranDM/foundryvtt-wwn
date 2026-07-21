@@ -1,0 +1,32 @@
+{
+  "_id": "c4n9mldxv435xdwp",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Mad Genius",
+  "type": "asset",
+  "_key": "!items!c4n9mldxv435xdwp",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d6",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "None",
+    "desc": "As a free action, once per turn, the Mad Genius may move. As a free action, once per turn, the Mad Genius may be sacrificed to treat the Magic rating in their location as High for the purpose of buying Assets that require such resources. This boost lasts only until the next Asset is purchased in that location.",
+    "health": {
+      "max": 2,
+      "value": 2
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action, once per turn, the Mad Genius may move. As a free action, once per turn, the Mad Genius may be sacrificed to treat the Magic rating in their location as High for the purpose of buying Assets that require such resources. This boost lasts only until the next Asset is purchased in that location.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

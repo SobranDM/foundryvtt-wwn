@@ -1,0 +1,31 @@
+{
+  "_id": "0j16vb46qp3fsicc",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Just As Planned",
+  "type": "asset",
+  "_key": "!items!0j16vb46qp3fsicc",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 40,
+    "counter": "1d10",
+    "desc": "Some sublimely cunning mastermind ensures that the schemes of this faction are unimaginably subtle and far-seeing. Whenever the faction's Assets make a roll involving Cunning, they may reroll a failed check at the cost of inflicting [[1d6]] damage on Just As Planned. This may be done repeatedly, though it may destroy the Asset. There is no range limit on this benefit.",
+    "health": {
+      "max": 15,
+      "value": 15
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 8,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "Some sublimely cunning mastermind ensures that the schemes of this faction are unimaginably subtle and far-seeing. Whenever the faction's Assets make a roll involving Cunning, they may reroll a failed check at the cost of inflicting [[/roll 1d6]] damage on Just As Planned. This may be done repeatedly, though it may destroy the Asset. There is no range limit on this benefit.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

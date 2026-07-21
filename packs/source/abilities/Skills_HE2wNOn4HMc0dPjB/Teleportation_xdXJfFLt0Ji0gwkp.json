@@ -1,0 +1,34 @@
+{
+  "name": "Teleportation",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/teleportation.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.HYK4luKOqJsjNHhd"
+    }
+  },
+  "system": {
+    "description": "Master the arts of physical translocation of yourself and allies.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "combatSkill": false,
+    "secondary": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806179076,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "xdXJfFLt0Ji0gwkp",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xdXJfFLt0Ji0gwkp"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "jwohmibpynalcxuu",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Monopoly",
+  "type": "asset",
+  "_key": "!items!jwohmibpynalcxuu",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d6",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d6",
+    "desc": "Once per turn, as a free action, the Monopoly Asset can target an Asset in the same location; that Asset's owning faction must either pay the Monopoly's owner 1 Treasure or lose the targeted Asset.",
+    "health": {
+      "max": 12,
+      "value": 12
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per turn, as a free action, the Monopoly Asset can target an Asset in the same location; that Asset's owning faction must either pay the Monopoly's owner 1 Treasure or lose the targeted Asset.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "Vc7A4JDUtyJ5FTQz",
+  "name": "Lost Battlefield",
+  "content": "<h1>Lost Battlefield</h1><div>\n<p>A terrible battle was fought here at some point in the past, perhaps before the wilderness became what it is now. The locals may or may not remember the event, but the battle left some pronounced effect on the area. Undead may be exceptionally common here, or an ancient weapon may have curdled the land, or the automatons that fought here may still be watchful for new enemies.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Looter-archaeologist and his minions, Undying warlord, Relentless ancient automaton</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Curious scholar from afar, Heir to one of the warring sides, Ancestral caretaker of the field</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The battle is reenacted by locals either ritually or in earnest every so often, A priceless item of ruling regalia was lost here, The battlefield’s full of unexploded ancient munitions</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Potent weapon of ancient days, Precious treasure carried here by a slain noble warrior, Bones of a sainted hero revered by the locals</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Hasty and makeshift tomb of a war leader, Land churned up by ancient war magic, Vast burial mound amid a bleak plain</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 4600000
+    }
+  },
+  "_key": "!journal!Vc7A4JDUtyJ5FTQz",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "gr0tm032gozi06um",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Court Patronage",
+  "type": "asset",
+  "_key": "!items!gr0tm032gozi06um",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "1d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d6",
+    "desc": "Powerful nobles or officials are appointing their agents to useful posts of profit. A Court Patronage Asset automatically grants 1 Treasure to its owning faction each turn.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 1,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

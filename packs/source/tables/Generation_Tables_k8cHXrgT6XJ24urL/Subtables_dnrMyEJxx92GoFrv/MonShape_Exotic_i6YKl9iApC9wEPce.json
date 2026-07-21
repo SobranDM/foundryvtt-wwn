@@ -1,0 +1,210 @@
+{
+  "_id": "i6YKl9iApC9wEPce",
+  "name": "MonShape-Exotic",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Tentacles",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "icsjh6di05x3m926",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.icsjh6di05x3m926"
+    },
+    {
+      "type": 0,
+      "text": "Sacs",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "hu99f9an346u56ta",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.hu99f9an346u56ta"
+    },
+    {
+      "type": 0,
+      "text": "Wheels",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "eswwiyu4pm8444q9",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.eswwiyu4pm8444q9"
+    },
+    {
+      "type": 0,
+      "text": "Balloons",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "584ig99ez6dx66gb",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.584ig99ez6dx66gb"
+    },
+    {
+      "type": 0,
+      "text": "Tendrils",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "io3thsql7lrrvrlr",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.io3thsql7lrrvrlr"
+    },
+    {
+      "type": 0,
+      "text": "Launchers",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "4kajtulyqvki61tq",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.4kajtulyqvki61tq"
+    },
+    {
+      "type": 0,
+      "text": "Treads",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "5c1a09kz70hy1uqj",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 7,
+      "rangeH": 7,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.5c1a09kz70hy1uqj"
+    },
+    {
+      "type": 0,
+      "text": "Jets",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "nh0av00kcl8h3x95",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 8,
+      "rangeH": 8,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.nh0av00kcl8h3x95"
+    },
+    {
+      "type": 0,
+      "text": "Secretions",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "coh4y4vyl4f5iwrc",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 9,
+      "rangeH": 9,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.coh4y4vyl4f5iwrc"
+    },
+    {
+      "type": 0,
+      "text": "Translucence",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "s1m5xgcaxbxv67wu",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 10,
+      "rangeH": 10,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.s1m5xgcaxbxv67wu"
+    },
+    {
+      "type": 0,
+      "text": "Alien smells",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "hnn773yddzy1cv1e",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 11,
+      "rangeH": 11,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.hnn773yddzy1cv1e"
+    },
+    {
+      "type": 0,
+      "text": "Unliving matter",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "9g2ogfeoer7bflrs",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 12,
+      "rangeH": 12,
+      "_key": "!tables.results!i6YKl9iApC9wEPce.9g2ogfeoer7bflrs"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!i6YKl9iApC9wEPce"
+}

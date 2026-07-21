@@ -1,0 +1,26 @@
+{
+  "name": "Detect Evil (Mage)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Mage",
+    "duration": "2 turns",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>Objects enchanted for evil purposes or living beings with evil intentions are caused to magically glow.</p>\n<p><strong>▶ Intent only: </strong>This spell does not grant the ability to read minds, but only grants a general sense of evil intent.</p>\n<p><strong>▶ Definition of evil</strong>: The referee must decide what is &ldquo;evil&rdquo;. Some things that are potentially harmful, like traps, are not &ldquo;evil.&rdquo;</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "o4PObWIZyIpfVNkC",
+  "_key": "!items!o4PObWIZyIpfVNkC"
+}

@@ -1,0 +1,174 @@
+{
+  "_id": "JaTMsCK45ghMQeQD",
+  "name": "MonShape-Reptilian",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Poisons",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "u4inb7tmw5akpliv",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.u4inb7tmw5akpliv"
+    },
+    {
+      "type": 0,
+      "text": "Slitted eyes",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "9g7731w5s4n44k0i",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.9g7731w5s4n44k0i"
+    },
+    {
+      "type": 0,
+      "text": "Fangs",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "h1u3gzrpktmetlc6",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.h1u3gzrpktmetlc6"
+    },
+    {
+      "type": 0,
+      "text": "Scaled skin",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "ldtdkgjguehem3nb",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.ldtdkgjguehem3nb"
+    },
+    {
+      "type": 0,
+      "text": "Silence",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "wqcffgei9651e1vq",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.wqcffgei9651e1vq"
+    },
+    {
+      "type": 0,
+      "text": "Draconic wings",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "dflu7u22x96488x7",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.dflu7u22x96488x7"
+    },
+    {
+      "type": 0,
+      "text": "Thick hide",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "t2468z15lc9be1ri",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.t2468z15lc9be1ri"
+    },
+    {
+      "type": 0,
+      "text": "Crawling",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "vy7qe00elijog72m",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.vy7qe00elijog72m"
+    },
+    {
+      "type": 0,
+      "text": "Cold-blooded",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "5georydjowh9gtwc",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.5georydjowh9gtwc"
+    },
+    {
+      "type": 0,
+      "text": "Camouflage",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "plcuqilss0n873fi",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.plcuqilss0n873fi"
+    },
+    {
+      "type": 0,
+      "text": "Crushing jaws",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "7h5krz8k7ae6ldrt",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.7h5krz8k7ae6ldrt"
+    },
+    {
+      "type": 0,
+      "text": "Wall-climbing",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "kawjw4smqfkb2d4w",
+      "flags": {},
+      "_key": "!tables.results!JaTMsCK45ghMQeQD.kawjw4smqfkb2d4w"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!JaTMsCK45ghMQeQD"
+}

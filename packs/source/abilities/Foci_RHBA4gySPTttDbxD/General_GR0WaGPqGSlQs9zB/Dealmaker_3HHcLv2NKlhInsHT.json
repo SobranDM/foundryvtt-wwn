@@ -1,0 +1,18 @@
+{
+  "_id": "3HHcLv2NKlhInsHT",
+  "name": "Dealmaker",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You have an uncanny ability to sniff out traders and find good deals, licit or otherwise. Even those who might not normally be disposed to bargain with you can sometimes be persuaded to pause and negotiate, if you have something they want.</p>\n<p><strong>Level 1: </strong>Gain Trade as a bonus skill. With a half hour of effort you can find a buyer or seller for any good or service that can be traded in the community, legal or otherwise. Finding a marginally possible service, like an assassin willing and able to target a king, or some specific precious ancient artifact, may require an adventure if the GM allows it at all.</p>\n<p><strong>Level 2:</strong> Once per session, target a sentient who is not just then trying to kill you or your allies and make a request of it that it can comprehend. If it&rsquo;s at all plausible for it to make such terms, it will do so for a price or favor it thinks you can grant, though the price for significant favors might be dear.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!3HHcLv2NKlhInsHT",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

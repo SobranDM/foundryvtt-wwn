@@ -1,0 +1,31 @@
+{
+  "_id": "wwah6aew1ti799bx",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Ancient Mechanisms",
+  "type": "asset",
+  "_key": "!items!wwah6aew1ti799bx",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "None",
+    "desc": "Some useful magical mechanism from ages past has been refitted to be useful in local industry. Whenever an Asset in the same location must roll to make a profit, such as Farmers or Manufactory, the faction may roll the die twice and take the better result.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": "Whenever an Asset in the same location must roll to make a profit, such as Farmers or Manufactory, the faction may roll the die twice and take the better result."
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

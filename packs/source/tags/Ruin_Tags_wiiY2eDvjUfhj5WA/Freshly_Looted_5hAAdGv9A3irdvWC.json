@@ -1,0 +1,17 @@
+{
+  "_id": "5hAAdGv9A3irdvWC",
+  "name": "Freshly Looted",
+  "content": "<h1>Freshly Looted</h1><div>\n<p>The site has been recently plundered, either by adventurers, organized invaders, or a specific faction within the site itself. Many creatures are either dead or driven off, and the rewards for exploration are limited. But as the site is newly-emptied, numerous outside groups or warbands are likely in the process of moving in, cleaning out the remnants of surviving inhabitants and setting up their own bases there.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Conquering Blighted warchief, Ruthless banditadventurer who likes the place, Vengeance-mad chief of a rabble of survivors</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Sympathetic native driven out of the site, Frustrated adventurer denied a chance to loot, Local official charged with investigating the place</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The looters missed the most important treasure, A native faction was working with the looters, A group of natives successfully hid from the looters</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Treasure hidden by dead natives, Relic lost by a slain looter, Valuable thing too big and heavy to carry out readily</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Empty treasure vault, Ruler’s lair plundered and defaced, Hall choked with the recent dead</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3800000
+    }
+  },
+  "_key": "!journal!5hAAdGv9A3irdvWC",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "n0wnLcRezRkPJqE8",
+  "name": "Developed Attribute",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Your hero has a remarkable degree of development to one or more of their attributes. This may be derived from an eldritch bloodline, native brilliance, or sheer, stubborn determination. This Focus cannot be taken by heroes with the Mage or Partial Mage classes.</p>\n<p><strong>Level 1: </strong>Choose an attribute; its modifier is increased by +1, up to a maximum of +3. The actual score does not change, but the modifier increases, and may increase again if later advancement improves the attribute enough. You can choose this Focus more than once to improve different attributes.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!n0wnLcRezRkPJqE8",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

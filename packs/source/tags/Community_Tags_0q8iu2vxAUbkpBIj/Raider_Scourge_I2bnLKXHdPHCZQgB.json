@@ -1,0 +1,17 @@
+{
+  "_id": "I2bnLKXHdPHCZQgB",
+  "name": "Raider Scourge",
+  "content": "<h1>Raider Scourge</h1><div>\n<p>Almost every community has some problem with bandits and highwaymen, but this community is seriously plagued with raiders. One or more groups of persistent plunderers are hitting the community repeatedly, and they lack the necessary resources to fend them off or protect all their holdings.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Would-be ruler turned bandit chief, Rival agent backing the bandits, Traitorous native wielding the bandits against their enemies</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Runaway ex-bandit, Embittered victim of their plundering, Merchant desperate for help</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The bandits are cooperating with a local power bloc, The bandits are a direct consequence of some local political decision, Mustering military force would have dire political consequences</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Plunder stolen by the bandits, A shipment of some vital good that was waylaid, Evidence of corroborators or informers</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Scene of gory slaughter on the road, Burnt farmstead outside the community, Makeshift and dirty bandit camp</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7200000
+    }
+  },
+  "_key": "!journal!I2bnLKXHdPHCZQgB",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "ix5ikvyfum1zwusx",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Vanguard Unit",
+  "type": "asset",
+  "_key": "!items!ix5ikvyfum1zwusx",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "1d6",
+    "desc": "This unit is specially trained to build bridges, reduce fortifications, and facilitate a lightning strike into enemy territory. When its faction takes a Relocate Asset turn, it can move the Vanguard Unit and any allied units at the same location to any other location within range, even if the unit type would normally be prohibitive from moving there. Thus, a Force asset could be moved into a foreign nation's territory even against their wishes. The unit may remain at that location afterwards even if the Vanguard Unit leaves.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "When its faction takes a Relocate Asset turn, it can move the Vanguard Unit and any allied units at the same location to any other location within range, even if the unit type would normally be prohibitive from moving there. Thus, a Force asset could be moved into a foreign nation's territory even against their wishes. The unit may remain at that location afterwards even if the Vanguard Unit leaves.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

@@ -1,0 +1,225 @@
+{
+  "_id": "cWN3Q4Z561bjtSrm",
+  "name": "Jikegida City Lord",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "YSaNkHUqX7d2Z87A",
+      "name": "Grand Plate",
+      "type": "armor",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.zAXRbxxSvA4qx6S3"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "_key": "!actors.items!cWN3Q4Z561bjtSrm.YSaNkHUqX7d2Z87A",
+      "system": {
+        "description": "<p><strong><em>Grand plate </em></strong>is so finely-jointed that a weapon must either be very large or very armor-piercing to harm the wearer; they&rsquo;re immune to non-magical melee or thrown weapons unless the weapon is two-handed, has a Shock rating of AC 16 or more, or the wearer is currently grappled by someone as per the rules on page 43. This tight protection comes at the cost of the thick plating found in great armor or conventional plate.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 16
+        },
+        "type": "heavy",
+        "price": 4000,
+        "weight": 3
+      }
+    },
+    {
+      "_id": "b7VSAA9KzaTkmuKX",
+      "name": "Shield, Small",
+      "type": "armor",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.X7sqtJZ2Vj1NNKEW"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "_key": "!actors.items!cWN3Q4Z561bjtSrm.b7VSAA9KzaTkmuKX",
+      "system": {
+        "description": "<p><em><strong>Shields</strong></em> come in two general varieties. Small ones, often made of costlier metal, can be strapped to the wearer&rsquo;s arm and allow them to hold and manipulate objects with that hand, albeit not wield a weapon with it. Larger shields are of cheaper wood and require a good grip.</p>\n<p>A <em><strong>small shield</strong></em> user has a base AC of 13, while a<strong> <em>large shield</em></strong> user has a base AC of 14. Unlike other armor, however, if the user is already wearing equal or better armor the shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the first instance of Shock they might otherwise suffer in a round.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 1
+        },
+        "type": "shield",
+        "price": 20,
+        "weight": 1
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!cWN3Q4Z561bjtSrm",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 20,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 14,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 8,
+        "mod": 0
+      },
+      "mental": {
+        "value": 8,
+        "mod": 0
+      },
+      "physical": {
+        "value": 8,
+        "mod": 0
+      },
+      "luck": {
+        "value": 8,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>A Jikegida wearing a construction exoskeleton gains 20 hit points, a +2 bonus to hit, and a +2 bonus on all damage rolls or Shock. Many exoskeletons incorporate the natural defenses or abilities of the creatures used in their construction, with poison sprays, tremendous mobility, sonic shrieks, or other offensive or defensive abilities.</p>\n<p><span style=\"color: #191813;\">Two attacks per round. Shock ignores AC value.</span></p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "2d4",
+        "w": "2d4"
+      },
+      "morale": 10,
+      "instinct": 3,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "14d8",
+      "value": 63,
+      "max": 63
+    },
+    "damageBonus": 4
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Jikegida Beastborn",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "cWN3Q4Z561bjtSrm",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

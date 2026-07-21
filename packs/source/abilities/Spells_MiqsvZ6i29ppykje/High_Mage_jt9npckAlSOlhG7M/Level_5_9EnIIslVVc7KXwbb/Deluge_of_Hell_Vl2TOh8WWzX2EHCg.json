@@ -1,0 +1,41 @@
+{
+  "name": "Deluge of Hell",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "9EnIIslVVc7KXwbb",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.beNXaAHPCVzwR6j7"
+    }
+  },
+  "_id": "Vl2TOh8WWzX2EHCg",
+  "system": {
+    "lvl": 5,
+    "class": "High Mage",
+    "duration": "",
+    "range": "200' radius per level within 3000'",
+    "roll": "(@level)d8",
+    "description": "<p>The caster unleashes a consuming destruction on a visible point within three thousand feet. A torrent of eldritch ruin rains down from the heavens on everything within up to a two hundred foot radius per caster level, inflicting 1d8 damage per caster level with a Physical save for half damage, and automatically killing all targets with 4 or fewer hit dice. This damage is sufficient to destroy any wooden or lightly-built stone structure and will seriously damage even fortifications. The caster can tighten the radius down to a minimum of 20 feet, but cannot be selective about targets within that area, This spell cannot be cast indoors, and is extremely hazardous to the caster; they must make a Mental saving throw on casting it or suffer a quarter of the damage inflicted, rounded up.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.beNXaAHPCVzwR6j7",
+    "duplicateSource": null
+  },
+  "_key": "!items!Vl2TOh8WWzX2EHCg"
+}

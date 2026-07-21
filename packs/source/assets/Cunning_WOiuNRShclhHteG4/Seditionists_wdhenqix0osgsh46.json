@@ -1,0 +1,31 @@
+{
+  "_id": "wdhenqix0osgsh46",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Seditionists",
+  "type": "asset",
+  "_key": "!items!wdhenqix0osgsh46",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "In place of an Attack action, the Seditionists' owners may spend [[/roll 1d4]] Treasure and attach the Asset to a hostile Asset in the same location. Until the Seditionists are destroyed, infest another Asset, or leave the same location, the rebelling Asset cannot be used for anything and grants no benefits.",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "None",
+    "desc": "In place of an Attack action, the Seditionists' owners may spend [[1d4]] Treasure and attach the Asset to a hostile Asset in the same location. Until the Seditionists are destroyed, infest another Asset, or leave the same location, the rebelling Asset cannot be used for anything and grants no benefits.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

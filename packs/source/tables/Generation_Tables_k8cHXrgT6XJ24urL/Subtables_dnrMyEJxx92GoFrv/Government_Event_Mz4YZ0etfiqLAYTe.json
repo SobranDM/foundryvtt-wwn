@@ -1,0 +1,281 @@
+{
+  "_id": "Mz4YZ0etfiqLAYTe",
+  "name": "Government-Event",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Rercent Governmental Event",
+  "results": [
+    {
+      "_id": "anUHE9V1CWIiY41P",
+      "flags": {},
+      "type": 0,
+      "text": "A major official was executed for treason",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.anUHE9V1CWIiY41P"
+    },
+    {
+      "_id": "hOOimnutX0J9L7ag",
+      "flags": {},
+      "type": 0,
+      "text": "A critically-necessary heir was born",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.hOOimnutX0J9L7ag"
+    },
+    {
+      "_id": "j5IqbL1lQBSOESUZ",
+      "flags": {},
+      "type": 0,
+      "text": "A chief minister fell rapidly from grace",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.j5IqbL1lQBSOESUZ"
+    },
+    {
+      "_id": "SFZGajpACzd8Pyen",
+      "flags": {},
+      "type": 0,
+      "text": "A high noble made rebellious noises",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.SFZGajpACzd8Pyen"
+    },
+    {
+      "_id": "UoKB8DH1hsMHcFbo",
+      "flags": {},
+      "type": 0,
+      "text": "A major faith was offended by the rulers",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.UoKB8DH1hsMHcFbo"
+    },
+    {
+      "_id": "QXRqBoiqu4ZG7YC3",
+      "flags": {},
+      "type": 0,
+      "text": "An allied nation was angered by some act",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.QXRqBoiqu4ZG7YC3"
+    },
+    {
+      "_id": "2CCa3rba2uyh8qka",
+      "flags": {},
+      "type": 0,
+      "text": "An enemy nation’s spy ring was revealed",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.2CCa3rba2uyh8qka"
+    },
+    {
+      "_id": "mO5O11OtAD90OQv3",
+      "flags": {},
+      "type": 0,
+      "text": "A vast governmental project was announced",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.mO5O11OtAD90OQv3"
+    },
+    {
+      "_id": "7bLuGhSmJyaDyGTE",
+      "flags": {},
+      "type": 0,
+      "text": "Corrupt officials plundered a great plan",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.7bLuGhSmJyaDyGTE"
+    },
+    {
+      "_id": "NacH13Ry6R3lp7dn",
+      "flags": {},
+      "type": 0,
+      "text": "A major new bureaucracy was formed",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.NacH13Ry6R3lp7dn"
+    },
+    {
+      "_id": "I7Gi1z0lDeP38QnI",
+      "flags": {},
+      "type": 0,
+      "text": "A heavy tax was levied to deal with an issue",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.I7Gi1z0lDeP38QnI"
+    },
+    {
+      "_id": "3LG81AjDLPTs6eUR",
+      "flags": {},
+      "type": 0,
+      "text": "A general was dismissed for incompetence",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.3LG81AjDLPTs6eUR"
+    },
+    {
+      "_id": "jczXCSvYgMBDsrHD",
+      "flags": {},
+      "type": 0,
+      "text": "A folk hero rose to dangerous popularity",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.jczXCSvYgMBDsrHD"
+    },
+    {
+      "_id": "r02k4b0lr7hOz1zt",
+      "flags": {},
+      "type": 0,
+      "text": "A major infrastructure project was begun",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.r02k4b0lr7hOz1zt"
+    },
+    {
+      "_id": "lF5aPTAelK5qxLlD",
+      "flags": {},
+      "type": 0,
+      "text": "A fief or territory was put in new hands",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.lF5aPTAelK5qxLlD"
+    },
+    {
+      "_id": "inFT4KoJbVmldCIk",
+      "flags": {},
+      "type": 0,
+      "text": "Certain merchants were fined to beggary",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.inFT4KoJbVmldCIk"
+    },
+    {
+      "_id": "zhXaq7eWk6Akgsj0",
+      "flags": {},
+      "type": 0,
+      "text": "A terrorist attack by rebels or external foes",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.zhXaq7eWk6Akgsj0"
+    },
+    {
+      "_id": "8SwUZYFM4KjJ8A4r",
+      "flags": {},
+      "type": 0,
+      "text": "A major faction of officials collapsed",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.8SwUZYFM4KjJ8A4r"
+    },
+    {
+      "_id": "4Sqmo8GkO7a9iJX6",
+      "flags": {},
+      "type": 0,
+      "text": "A large bureaucracy was dissolved",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.4Sqmo8GkO7a9iJX6"
+    },
+    {
+      "_id": "jYnteLJH1N707hh8",
+      "flags": {},
+      "type": 0,
+      "text": "Internal province borders were redrawn",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Mz4YZ0etfiqLAYTe.jYnteLJH1N707hh8"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Mz4YZ0etfiqLAYTe"
+}

@@ -1,0 +1,216 @@
+{
+  "_id": "PvL78JpB3rsFLK0G",
+  "name": "Ashcrawler",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "CDKP4VbiItWny7Q7",
+      "name": "Bite",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "_key": "!actors.items!PvL78JpB3rsFLK0G.CDKP4VbiItWny7Q7",
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 2,
+          "max": 2
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!PvL78JpB3rsFLK0G",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 8,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 12,
+        "mod": 0
+      },
+      "mental": {
+        "value": 12,
+        "mod": 0
+      },
+      "physical": {
+        "value": 12,
+        "mod": 0
+      },
+      "luck": {
+        "value": 12,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "50",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>One of the hideous fungal life forms that sometimes emerge from the Ashblight, an ashcrawler resembles a centipede that stands half as tall as a man and is at least ten feet long. The &ldquo;chitin&rdquo; of the crawler is nothing but a hardened fungal shell around the soft, damp interior of the organism. Those bitten by an ashcrawler must make a Physical save or be infected by the fungus. Without magical healing, they&rsquo;ll become wholly enslaved by the parasitical fungus within a week, becoming a &ldquo;crawler slave&rdquo; and using their own intellect and abilities to gather new prey for the creature. The stat line given for them below reflects an average unlucky peasant, but stronger slaves are possible. Crawler slaves can hide most of the infection under concealing clothing, and can only be saved by powerful healing magic at the GM&rsquo;s discretion.</p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "0"
+      },
+      "morale": 10,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.TE8v9dEbY95Qe2Hq]{Insects and Semi-Mindless Beasts}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "6d8",
+      "value": 23,
+      "max": 23
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Ashcrawler",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "PvL78JpB3rsFLK0G",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

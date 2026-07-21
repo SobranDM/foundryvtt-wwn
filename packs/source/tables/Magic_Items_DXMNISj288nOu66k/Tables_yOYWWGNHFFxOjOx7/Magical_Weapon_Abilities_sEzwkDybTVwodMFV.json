@@ -1,0 +1,770 @@
+{
+  "_id": "sEzwkDybTVwodMFV",
+  "name": "Magical Weapon Abilities",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "26cZGhbfMxJ5FtQe",
+      "flags": {},
+      "type": 0,
+      "text": "Adamantine: The weapon is imperishable and unbreakable by all conventional and most magical means. Edged weapons never lose their keenness, bowstrings never snap, and the weapon can bear a seemingly limitless amount of weight without bending or breaking. The weapon’s damage and hit bonus are both increased by +1, to a maximum of +3.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.26cZGhbfMxJ5FtQe"
+    },
+    {
+      "_id": "DGSLXoo6lLnyp5f3",
+      "flags": {},
+      "type": 0,
+      "text": "Augmented: The weapon’s enchantment hit and damage bonus increase by +1, up to a maximum of +4.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.DGSLXoo6lLnyp5f3"
+    },
+    {
+      "_id": "ynmeCS0Hn7f2OizO",
+      "flags": {},
+      "type": 0,
+      "text": "Baffling: The weapon looks very strange in some way, and its operation is not obvious to onlookers. The first attack the wielder makes during a fight is an automatic hit; after that, the onlookers have seen enough to defend against it normally. The shifting configuration of the weapon allows the same bonus during the next fight, however, even if the foes have seen it in an earlier engagement.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.ynmeCS0Hn7f2OizO"
+    },
+    {
+      "_id": "3e3U9Du8zeat989b",
+      "flags": {},
+      "type": 0,
+      "text": "Barring: As a Move action, the bearer can use the weapon to draw a straight, glowing line up to twenty feet long, provided one part of the line is within five feet of the bearer. Enemies must make a Mental saving throw to cross the line from either direction with their bodies, weapons, or powers; on a failed save, their attempted action is wasted. The effect ends until a new line is draw, the scene ends, or the bearer or their allies cross the line with their own bodies, weapons, or powers.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.3e3U9Du8zeat989b"
+    },
+    {
+      "_id": "B5HpsJI9EcmMVeJA",
+      "flags": {},
+      "type": 0,
+      "text": "Blighted: The weapon was created to slaughter normal human beings. Against baseline humans, it rolls damage twice and takes the better result. It functions without issues even in the hands of a baseline wielder; its creators were as glad to see intercine strife as any other kind.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.B5HpsJI9EcmMVeJA"
+    },
+    {
+      "_id": "LmYJgyxTZvajJ4lX",
+      "flags": {},
+      "type": 0,
+      "text": "Bloodbound: The weapon forms a symbiotic bond with the wielder. So long as they are wielding the weapon, they automatically stabilize from any survivable mortal wound and automatically regenerate one hit point every hour as magical healing. Once per day, a failed Physical or Mental saving throw may be rerolled as the weapon shares the strain on the wielder.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.LmYJgyxTZvajJ4lX"
+    },
+    {
+      "_id": "hco05WRtqgnaBHOE",
+      "flags": {},
+      "type": 0,
+      "text": "Bloodthirsty: When the weapon’s wielder reduces a creature with at least one hit die to zero hit points, they regain 1d8 plus the creature’s hit dice in lost hit points. This healing cannot take them above their usual maximum hit points.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.hco05WRtqgnaBHOE"
+    },
+    {
+      "_id": "riswhvBK3cxdIezl",
+      "flags": {},
+      "type": 0,
+      "text": "Despairing: The weapon drains a victim’s courage and hope. By accepting a point of System Strain as an Instant action when they hit a target, they can force the victim to make an immediate Morale check at a -1 penalty. This effect can be applied to a given target only once per scene.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.riswhvBK3cxdIezl"
+    },
+    {
+      "_id": "J5ICCaX7qhY7RyEk",
+      "flags": {},
+      "type": 0,
+      "text": "Devoted: The weapon bonds with the first possessor to pick it up after the death of their last wielder. Until the wielder dies or intentionally discards it, it remains bound to them. Under no circumstances will it or its projectiles harm its wielder, and it can be teleported back to their hand as an On Turn action. The first time the wielder would be reduced to zero hit points during a day, they may accept a point of System Strain to let the weapon leap up and block the damage, assuming the damage is the sort the weapon could block.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.J5ICCaX7qhY7RyEk"
+    },
+    {
+      "_id": "EzW9TRKWtD4xLpm9",
+      "flags": {},
+      "type": 0,
+      "text": "Devouring: The weapon bites pieces out of a victim’s body or spirit. Damage inflicted by a devouring weapon cannot be healed until the end of the scene, whether by regeneration or other healing abilities. Creatures brought to zero hit points by the weapon are killed immediately and largely dismembered. Every time the weapon kills a living creature, the bearer gains twice their hit dice in points of healing.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.EzW9TRKWtD4xLpm9"
+    },
+    {
+      "_id": "1sGIU8dbkOyESVRi",
+      "flags": {},
+      "type": 0,
+      "text": "Effortless: The weapon is supernaturally handy and easy to use. It has an effective Encumbrance of zero, cannot be unintentionally dropped or disarmed, and will hang suspended in space by the bearer for up to a minute if they should need their weapon hand free for some other purpose during a round. Large Effortless weapons will automatically compact or contort themselves to remain convenient to carry or use in even the most awkward circumstances.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.1sGIU8dbkOyESVRi"
+    },
+    {
+      "_id": "LwQBgPzpRiUXNLnJ",
+      "flags": {},
+      "type": 0,
+      "text": "Energetic: When in use, the weapon or its projectiles are wreathed in flame, lightning, killing frost, or some other form of energy. Minor energetic weapons do +2 damage on a hit, while major or great energetic weapons do 1d6+2 additional damage. This bonus doesn’t add to the weapon’s Shock.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.LwQBgPzpRiUXNLnJ"
+    },
+    {
+      "_id": "cWrGJTk9Y7Nd3Zzu",
+      "flags": {},
+      "type": 0,
+      "text": "Enervating: The weapon drains the vital energy from those it harms. A creature hit by the weapon must make a Physical saving throw or lose their next Move action. This draining effect can’t apply more than once to a creature until their next turn.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.cWrGJTk9Y7Nd3Zzu"
+    },
+    {
+      "_id": "yyiVumHNcJGcLXDp",
+      "flags": {},
+      "type": 0,
+      "text": "Enraging: The weapon ignites a bloodthirsty fury in the bearer. As an On Turn action, the wielder can become enraged. While enraged, they gain a +2 bonus to hit and damage rolls, can reroll any failed Mental saving throws that would stop them from fighting, and can continue fighting for one round after being reduced to zero hit points. Enraged wielders never fail a Morale check. Every round, however, they must either attack someone, seek to get close enough to attack someone, or spend their Main Action to come out of the rage.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.yyiVumHNcJGcLXDp"
+    },
+    {
+      "_id": "Eu2cS8q0aJ35oLuy",
+      "flags": {},
+      "type": 0,
+      "text": "Forfending: The first Screen Ally skill check the bearer attempts each round is an automatic success. While 331 they are using the Screen Ally action, they are immune to Shock damage and gain a +2 bonus to their Armor Class.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.Eu2cS8q0aJ35oLuy"
+    },
+    {
+      "_id": "vrAv3AniZgdGoGim",
+      "flags": {},
+      "type": 0,
+      "text": "Fortifying: The weapon has a supplementary pool of System Strain; up to three points of it can be accumulated by the weapon in place of its bearer when System Strain is incurred. This System Strain decreases by one point per night. A bearer can benefit from only one of these weapons at a time, and its pool is shared among all its potential users.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.vrAv3AniZgdGoGim"
+    },
+    {
+      "_id": "DbOPM2qw7TO64SmG",
+      "flags": {},
+      "type": 0,
+      "text": "Harmonious: As an On Turn action, provided the bearer has not attacked yet this turn, the bearer may target a weapon being held by an enemy; the Harmonious weapon will instantly move to perfectly parry, deflect, or block all attacks that weapon makes against the bearer until the start of their next turn. Conversely, the Harmonious weapon cannot be used to hurt the bearer of the targeted weapon, as it is too perfectly in harmony with their movements.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.DbOPM2qw7TO64SmG"
+    },
+    {
+      "_id": "sYc3mOQxBAib6djR",
+      "flags": {},
+      "type": 0,
+      "text": "Hunting: The weapon was fashioned to slay monstrous beasts. Against non-sentient foes, the weapon rolls any damage it inflicts twice and takes the higher result.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.sYc3mOQxBAib6djR"
+    },
+    {
+      "_id": "c01AHByu9gB3P5S4",
+      "flags": {},
+      "type": 0,
+      "text": "Illuminating: The weapon casts light up to 60’ in radius at the wielder’s mental command. By accepting one point of System Strain, the bearer may make the light visible only to them and their allies; such selective light lasts for an hour.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.c01AHByu9gB3P5S4"
+    },
+    {
+      "_id": "qsGZm2kkwnhAlwvS",
+      "flags": {},
+      "type": 0,
+      "text": "Innervating: A wielder who uses Effort, such as a High Mage or a Vowed, may accept a point of System Strain to gain an additional bonus point of Effort for as long as they carry the weapon. This System Strain cannot be recovered until the weapon is put aside. Only one Innervating weapon can help a bearer at once. If the weapon is dropped or lost for more than an hour, the Effort and any effect it may be supporting are lost.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.qsGZm2kkwnhAlwvS"
+    },
+    {
+      "_id": "KPT1K4cFfNGdHl5o",
+      "flags": {},
+      "type": 0,
+      "text": "Longarm: A ranged weapon’s effective range is doubled. If it’s a melee weapon without the Long quality, it gains it, and if it already has the Long quality, it now extends out to 20 feet.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.KPT1K4cFfNGdHl5o"
+    },
+    {
+      "_id": "glkaa9RLJvV6ZqSc",
+      "flags": {},
+      "type": 0,
+      "text": "Lucky: The weapon confers an unpredictable and unreliable luck on its bearer. As an Instant action, they can call on this luck to reroll an attack roll, damage roll, or skill check made during combat, taking the better of the two rolls. They can use this ability only once per scene, and every time they use it, they must roll 1d6 as well; on a 1, the attempted roll fails or rolls minimum damage instead.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.glkaa9RLJvV6ZqSc"
+    },
+    {
+      "_id": "aFI4p0ToHCprSBi9",
+      "flags": {},
+      "type": 0,
+      "text": "Marking: When the weapon harms or even touches a target, the wielder can choose to gain a point of System Strain and activate its marking power. For the rest of the scene, the weapon can strike the target as if they were adjacent, regardless of their distance or any intervening cover. They are also perfectly aware of the marked target’s location, speech, and physical actions. The mark ends at the end of the scene, when a new target is marked, or when the marked target gets more than five hundred feet away",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.aFI4p0ToHCprSBi9"
+    },
+    {
+      "_id": "bAwBSK8o5SSmb9oB",
+      "flags": {},
+      "type": 0,
+      "text": "Merciful: The weapon never kills any target it reduces to zero hit points; instead, they are immediately stabilized and will awaken an hour later with one hit point. The damage that this weapon inflicts is completely painless and leaves no visible physical marks.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.bAwBSK8o5SSmb9oB"
+    },
+    {
+      "_id": "E2qln0CkegAgA2Er",
+      "flags": {},
+      "type": 0,
+      "text": "Negating: The weapon feeds on the arcane power of spells and magical weapons used against its bearer. When the bearer is targeted by a magical spell, arcane power, or the special powers of a magical weapon, they may accept a point of System Strain as an Instant action and make a Physical saving throw; on a success, they are unaffected. This save may only be attempted once per instance of effect.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.E2qln0CkegAgA2Er"
+    },
+    {
+      "_id": "xNaHFbSdKRVyFoRb",
+      "flags": {},
+      "type": 0,
+      "text": "Nightwalking: The weapon allows the bearer to step through shadows, entering one and appearing in another no more than a hundred feet away as a Move action. Even very small shadows will suffice, and one is generally available in any area not devoid of light or objects to cast them.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.xNaHFbSdKRVyFoRb"
+    },
+    {
+      "_id": "44bpFxrnDnvSmzpD",
+      "flags": {},
+      "type": 0,
+      "text": "Omened: Once per day the weapon can provide a yes, no, or unclear answer to a single question asked by a wielder regarding events that could happen to the wielder within the next hour. The weapon’s answer is the GM’s best estimate of likelihood, and may not be correct if events play out in an unexpected way. Thus, asking “Will I win this hand of cards?” might result in the GM dicing out the result and telling the PC yes or no based on what will happen should they play, but if the PC knifes their gambling partner partway through the draw the weapon’s answer would no longer apply.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.44bpFxrnDnvSmzpD"
+    },
+    {
+      "_id": "dSwl0W5HhBWjBodD",
+      "flags": {},
+      "type": 0,
+      "text": "Penetrating: This weapon ignores non-magical armor, shields, or beast hides for purposes of determining Shock susceptibility.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.dSwl0W5HhBWjBodD"
+    },
+    {
+      "_id": "IJgCpOrNvMmdX8MZ",
+      "flags": {},
+      "type": 0,
+      "text": "Phantom: As an On Turn action, the bearer can turn the weapon invisible and intangible to anyone but themselves, or revert the weapon to visibility. While invisible the weapon can harm only intangible or immaterial foes, but it cannot be detected or touched by others.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.IJgCpOrNvMmdX8MZ"
+    },
+    {
+      "_id": "Yb1o6qvU3IGt4aa0",
+      "flags": {},
+      "type": 0,
+      "text": "Phasing: The weapon can be tuned to pass through solid obstacles, striking only those objects or targets the bearer wills. Causing the weapon to phase is an On Turn action that adds one point of System Strain to the bearer; until the end of the round, the weapon ignores any armor, cover, or barrier that may obstruct it.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.Yb1o6qvU3IGt4aa0"
+    },
+    {
+      "_id": "6qysdHz7SwTdHaL2",
+      "flags": {},
+      "type": 0,
+      "text": "Piercing: This weapon inflicts its Shock damage on everything the wielder attacks with it, even if the target is normally immune to Shock. However, the weapon never inflicts more than its Shock damage, whether or not the attack roll hits. If the weapon doesn’t normally do Shock, it gains a base Shock rating of 2/-.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.6qysdHz7SwTdHaL2"
+    },
+    {
+      "_id": "TErxbRBNQAdmlx1r",
+      "flags": {},
+      "type": 0,
+      "text": "Radioactive: The weapon emits a constant invisible radiance of toxic power. As an On Turn action the bearer can drop or restore the safeguards on the weapon. While unleashed the weapon glows deep blue and everyone within melee range of the bearer, including the bearer, will take 1d10 damage at the end of the bearer’s turn each round unless somehow shielded against radioactivity. Creatures with one hit die automatically die if so poisoned, regardless of the damage roll.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.TErxbRBNQAdmlx1r"
+    },
+    {
+      "_id": "ajGIQxkoeFll8GTS",
+      "flags": {},
+      "type": 0,
+      "text": "Rampaging: Whenever this weapon kills a creature with at least one hit die, its bearer may immediately make another attack on any target within range. If no additional targets are available, the wielder instead gets an instant free Move action.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.ajGIQxkoeFll8GTS"
+    },
+    {
+      "_id": "CV3BRgZnkbfpK86k",
+      "flags": {},
+      "type": 0,
+      "text": "Rectifying: The weapon is exceptionally potent against undead, robots, and other synthetic life forms. All damage done to such creatures is rolled twice, with the better number taken. The weapon can affect even insubstantial or otherwise immune entities of that type, and an undead creature killed by this weapon is permanently put to rest barring tremendous powers of revivification or immortality.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.CV3BRgZnkbfpK86k"
+    },
+    {
+      "_id": "4WwpvajctGBnrLDr",
+      "flags": {},
+      "type": 0,
+      "text": "Returning: If thrown, dropped, or disarmed, the weapon can be called back to the owner’s hand as an On Turn action. A new possessor becomes the owner after carrying it for at least an hour.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.4WwpvajctGBnrLDr"
+    },
+    {
+      "_id": "H7sLw6WGuoVlJlcl",
+      "flags": {},
+      "type": 0,
+      "text": "Sacrificial: The weapon’s violence is fueled by the wielder’s own life force. As an Instant action on a hit, the wielder may accept 1d8 hit points of damage; double this damage is inflicted on the target. This damage may be enough to mortally wound the weapon’s own wielder.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.H7sLw6WGuoVlJlcl"
+    },
+    {
+      "_id": "ylW6Ua8vpIk8ub9f",
+      "flags": {},
+      "type": 0,
+      "text": "Shattering: The weapon can be used to smash inanimate objects and barriers. Once per scene, with one minute of careful preparation, the wielder can break a man-sized hole in a normal exterior wall or up to a foot of stone. If they accept a point of System Strain, they can do so as a Main Action instead, and may do so as often as they have System Strain available. Shattering blows inflict no special damage on animate targets.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.ylW6Ua8vpIk8ub9f"
+    },
+    {
+      "_id": "uxzdNVE8fA1fX3nA",
+      "flags": {},
+      "type": 0,
+      "text": "Shieldbreaking: The weapon ignores all shields, both their Armor Class bonus and their Shock protection. Non-magical shields are destroyed by the weapon’s attack, whether or not the attack hits.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.uxzdNVE8fA1fX3nA"
+    },
+    {
+      "_id": "m178bjEkzKpOJzFr",
+      "flags": {},
+      "type": 0,
+      "text": "Shocking: The weapon’s Shock damage is increased by 2 points. If it has no natural Shock score, it gains a Shock rating of 2/AC 15.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.m178bjEkzKpOJzFr"
+    },
+    {
+      "_id": "kfZREctcIlPJUR1P",
+      "flags": {},
+      "type": 0,
+      "text": "Shrieking: At the wielder’s will, the weapon emits an ear-splitting shriek while in use. The wielder and up to a dozen allies are immune to this effect, but others who are within 60 feet of the wielder are unable to hear themselves speak, and spellcasters must make Wis/Magic skill checks at a difficulty of 7 plus the spell level to successfully cast spells without fumbling the incantations. All Instinct checks made within the area suffer a -2 penalty. The shrieking is completely inaudible outside the sixty-foot radius of effect.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.kfZREctcIlPJUR1P"
+    },
+    {
+      "_id": "a4mVZqvF0QbeSHZP",
+      "flags": {},
+      "type": 0,
+      "text": "Skittering: When the weapon is shot or thrown at a location within sixty feet, the wielder may instantly appear where the weapon was thrown or struck as an On Turn action, provided they do so in the same round. If thrown, they appear with the weapon in their hand. This ability may be used only once per round.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.a4mVZqvF0QbeSHZP"
+    },
+    {
+      "_id": "ogbwEb7JiBqLuknO",
+      "flags": {},
+      "type": 0,
+      "text": "Skytreading: The weapon’s bearer falls gently from any height, becoming immune to falling damage. By accepting one point of System Strain as an On Turn action, they may fly at their full normal movement rate until the end of the round.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.ogbwEb7JiBqLuknO"
+    },
+    {
+      "_id": "3yVrJYQyzNktZGrc",
+      "flags": {},
+      "type": 0,
+      "text": "Slaughtering: The weapon hideously disjects its victims. Any target reduced to zero hit points by the weapon is immediately killed and violently dismembered. Any enemies with a Morale score of less than 12 who are within melee range of the slaughtered victim take the weapon’s Shock damage as emotional trauma and horror, even if they’re normally immune to Shock. Weapons that don’t do Shock damage inflict 2 points of damage to these bystanders instead. This weapon cannot be used for less than lethal attacks.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.3yVrJYQyzNktZGrc"
+    },
+    {
+      "_id": "YTiHU6cssotqKCQd",
+      "flags": {},
+      "type": 0,
+      "text": "Souleating: While this weapon may or may not devour the actual soul of the target, such as it may be, it channels great vital force to the wielder. Every time they kill a sentient creature with the weapon, they lose one accumulated System Strain point. This effect can trigger only once per scene.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.YTiHU6cssotqKCQd"
+    },
+    {
+      "_id": "GwyPbQHEjvEdkt3N",
+      "flags": {},
+      "type": 0,
+      "text": "Spellcleaving: At a cost of a Move action and one System Strain gained by the wielder, the weapon can apply an Extirpate Arcana spell effect to any target point within range of the weapon. The spell is cast as if by a tenth level High Mage with a total Int/ Magic skill bonus of +3. This power can be used only once per scene.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.GwyPbQHEjvEdkt3N"
+    },
+    {
+      "_id": "8rrSxipcjgiA5FGj",
+      "flags": {},
+      "type": 0,
+      "text": "Terrifying: The weapon is wrought with psychic distress, creating an intense burden of fear in those who oppose its wielder. Whenever the wielder does something that provokes a Morale or Instinct check, any targets who can see them must make the check at a -1 penalty. This effect does not stack with multiple weapons, nor does it affect those with Morale 12.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.8rrSxipcjgiA5FGj"
+    },
+    {
+      "_id": "pSfHZ8qcbCqESkMG",
+      "flags": {},
+      "type": 0,
+      "text": "Toxic: The weapon sweats a potent toxin. When it hits a living target, the wielder may accept a point of System Strain to trigger the toxin’s effect; the victim is racked with spasms of torment and cannot speak or cry out while they remain poisoned. Each round they take 1d8 damage at the end of their turn; they can try to throw off the poison’s effects by making a successful Physical saving throw at the end of their round. A creature can only be poisoned once by this weapon at any one time.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.pSfHZ8qcbCqESkMG"
+    },
+    {
+      "_id": "Cih65qFBuCwKUi4E",
+      "flags": {},
+      "type": 0,
+      "text": "Vengeful: The weapon will always succeed at any attack roll made against a foe who has harmed the wielder within the past round, assuming success is physically possible. Such vengeful strikes roll damage twice and take the higher roll.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.Cih65qFBuCwKUi4E"
+    },
+    {
+      "_id": "yO3QqquBn3C9ACGC",
+      "flags": {},
+      "type": 0,
+      "text": "Versatile: The weapon shifts forms to better suit the bearer’s need. As an On Turn action, the wielder can give it one of the following qualities it doesn’t already have: Subtle, Long, or Throwable. If thrown, it returns to the bearer’s hand at the end of the round.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.yO3QqquBn3C9ACGC"
+    },
+    {
+      "_id": "veROxzyAookF8KuF",
+      "flags": {},
+      "type": 0,
+      "text": "Vigilant: The weapon’s bearer cannot be surprised by anyone who is carrying a manufactured weapon. The bearer does not need to sleep, though they do not recover lost hit points or accumulated System Strain without doing so.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "_key": "!tables.results!sEzwkDybTVwodMFV.veROxzyAookF8KuF"
+    }
+  ],
+  "formula": "1d50",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!sEzwkDybTVwodMFV",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

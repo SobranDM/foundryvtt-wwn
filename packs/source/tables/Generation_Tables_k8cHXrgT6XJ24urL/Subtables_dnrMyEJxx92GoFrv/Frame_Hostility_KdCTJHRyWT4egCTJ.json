@@ -1,0 +1,174 @@
+{
+  "_id": "KdCTJHRyWT4egCTJ",
+  "name": "Frame-Hostility",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "They raided us and stole our resources",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "p2qdxjhdgeowdx2m",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.p2qdxjhdgeowdx2m"
+    },
+    {
+      "type": 0,
+      "text": "They’re from a rival religion",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "ppgsk2ybbwokmqou",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.ppgsk2ybbwokmqou"
+    },
+    {
+      "type": 0,
+      "text": "Our kinds naturally hate each other",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "7oo2unbjsr7i6yw0",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.7oo2unbjsr7i6yw0"
+    },
+    {
+      "type": 0,
+      "text": "They took advantage of us in the past",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "q9ozyiaw7iqbgl9s",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.q9ozyiaw7iqbgl9s"
+    },
+    {
+      "type": 0,
+      "text": "They’re weak and ripe for plunder",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "rucu0bt9xxir419r",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.rucu0bt9xxir419r"
+    },
+    {
+      "type": 0,
+      "text": "They broke an alliance in a treacherous way",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "y06h0cjmufidyz6a",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.y06h0cjmufidyz6a"
+    },
+    {
+      "type": 0,
+      "text": "They caused a local disaster or problem",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "2mdy9orlw8hnrq67",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.2mdy9orlw8hnrq67"
+    },
+    {
+      "type": 0,
+      "text": "Our leader has a personal hatred for them",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "a5rqg416zqwencsy",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.a5rqg416zqwencsy"
+    },
+    {
+      "type": 0,
+      "text": "Local resources are insufficient for us both",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "w4ohpej7kfamk3ob",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.w4ohpej7kfamk3ob"
+    },
+    {
+      "type": 0,
+      "text": "They’re crowding into our territory",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "pvnrmpy3yjruhzaa",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.pvnrmpy3yjruhzaa"
+    },
+    {
+      "type": 0,
+      "text": "They tricked us and led us into a disaster",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "yjyl8zen6y0bh7ex",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.yjyl8zen6y0bh7ex"
+    },
+    {
+      "type": 0,
+      "text": "They stole a treasure or an important slave",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "wxy9d1rdxz9pt2ux",
+      "flags": {},
+      "_key": "!tables.results!KdCTJHRyWT4egCTJ.wxy9d1rdxz9pt2ux"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!KdCTJHRyWT4egCTJ"
+}

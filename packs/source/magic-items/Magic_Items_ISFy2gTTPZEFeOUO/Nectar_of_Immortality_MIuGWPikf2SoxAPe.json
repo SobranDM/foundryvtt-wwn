@@ -1,0 +1,42 @@
+{
+  "_id": "MIuGWPikf2SoxAPe",
+  "name": "Nectar of Immortality",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.MIuGWPikf2SoxAPe"
+    }
+  },
+  "system": {
+    "description": "<p>Grandly named, this liquid offers a nominal prolongation of the subject&rsquo;s natural longevity. Sages speculate that it was once a reward given by the Outsiders to pliant human rulers. Each bottle consumed adds an additional 1d6 years to the subject&rsquo;s healthy lifespan and immediately cures all but the most sorcerously-potent diseases or sicknesses. The nectar cannot do more than double the subject&rsquo;s natural lifespan, however, and after each dose a 1d20 must be rolled; on a natural 1, the nectar instead causes the subject to perish in a hideous welter of cancers and rebellious growths.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MIuGWPikf2SoxAPe"
+}

@@ -1,0 +1,174 @@
+{
+  "_id": "ypsDSboKIlu0mfxF",
+  "name": "Inhab-Ancient",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Altered human servitors of the former owner",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "iri8hdizgadmwkik",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.iri8hdizgadmwkik"
+    },
+    {
+      "type": 0,
+      "text": "Magic-forged monstrous beast",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "rw2rik2agocpmlne",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.rw2rik2agocpmlne"
+    },
+    {
+      "type": 0,
+      "text": "Adventurers searching for loot",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "991onux8084ia65r",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.991onux8084ia65r"
+    },
+    {
+      "type": 0,
+      "text": "Heirs of the last human inhabitants",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "7hzg8j7viybxtr2h",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.7hzg8j7viybxtr2h"
+    },
+    {
+      "type": 0,
+      "text": "Cult dedicated to a now-dead faith",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "zalnbn39a6nhz6bo",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.zalnbn39a6nhz6bo"
+    },
+    {
+      "type": 0,
+      "text": "Summoned creature that broke its fetters",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "4ll6jjxkihpt5ao8",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.4ll6jjxkihpt5ao8"
+    },
+    {
+      "type": 0,
+      "text": "Magical automaton servitors of the ruler",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "aosqzyw0om6gwz71",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.aosqzyw0om6gwz71"
+    },
+    {
+      "type": 0,
+      "text": "Decorative magic animals gone feral",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "wvl4lax790my7ccb",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.wvl4lax790my7ccb"
+    },
+    {
+      "type": 0,
+      "text": "Necromancer and their undead servitors",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ggu1umovqfh774iw",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.ggu1umovqfh774iw"
+    },
+    {
+      "type": 0,
+      "text": "Outsider prisoners gone native here",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "eqj8j7uurmjjclgl",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.eqj8j7uurmjjclgl"
+    },
+    {
+      "type": 0,
+      "text": "Restless dead of the inhabitants",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "v6rdm98iarg8pz4v",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.v6rdm98iarg8pz4v"
+    },
+    {
+      "type": 0,
+      "text": "Zealots in service to a long-dead mage",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "448mtque6mg750nk",
+      "flags": {},
+      "_key": "!tables.results!ypsDSboKIlu0mfxF.448mtque6mg750nk"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!ypsDSboKIlu0mfxF"
+}

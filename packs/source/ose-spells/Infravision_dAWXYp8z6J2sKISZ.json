@@ -1,0 +1,26 @@
+{
+  "_id": "dAWXYp8z6J2sKISZ",
+  "name": "Infravision",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "1 day",
+    "range": "Touch",
+    "roll": "",
+    "description": "<p><strong>Duration: 1 day</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The subject is able to see 60&rsquo; in the dark with infravision.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!dAWXYp8z6J2sKISZ"
+}

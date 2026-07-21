@@ -1,0 +1,155 @@
+{
+  "_id": "SzwV9nvNwdFeiDXi",
+  "name": "Hex Point of Interest",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "For a hexcrawl, where a “room” consists of an entire hex of terrain, a point of interest is defined a little differently. First, decide how many hexes in your map should have anything particularly interesting at all. One simple way to do so is to roll one die for every hex in your map; on a roll of 1 or 2, there’s something worth noticing there. Use 1d6 for the die if you want a densely-populated hexcrawl, or 1d8, 1d10, or even 1d12 if you want sparser results.",
+  "results": [
+    {
+      "_id": "W3LaWc7OF75ltvl6",
+      "type": 0,
+      "text": "<b>Ruin</b>",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 2,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.W3LaWc7OF75ltvl6"
+    },
+    {
+      "_id": "PZbqupggNLMniDJ0",
+      "type": 2,
+      "text": "Types of Ruin Sites",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "C1CKmhASvJurRjlL",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 2,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.PZbqupggNLMniDJ0"
+    },
+    {
+      "_id": "3DR6DgjCpZcluxDI",
+      "type": 0,
+      "text": "<b>Community Site</b>",
+      "weight": 1,
+      "range": [
+        3,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 5,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.3DR6DgjCpZcluxDI"
+    },
+    {
+      "_id": "BbnKt87bALrwNwmr",
+      "type": 2,
+      "text": "Hex-Community",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "YXKLmjpxj6h8OMgK",
+      "weight": 1,
+      "range": [
+        3,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 3,
+      "rangeH": 5,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.BbnKt87bALrwNwmr"
+    },
+    {
+      "_id": "c7KlC7XtIcElFpek",
+      "type": 0,
+      "text": "<b>Court Site</b>",
+      "weight": 1,
+      "range": [
+        6,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 7,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.c7KlC7XtIcElFpek"
+    },
+    {
+      "_id": "mlisUSCyk37Z0TI2",
+      "type": 2,
+      "text": "Hex-Court",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "mvOZ7B6mwmD3BFVi",
+      "weight": 1,
+      "range": [
+        6,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 6,
+      "rangeH": 7,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.mlisUSCyk37Z0TI2"
+    },
+    {
+      "_id": "9SAh2q68YRgWUO7V",
+      "type": 0,
+      "text": "<b>Wilderness Site</b>",
+      "weight": 1,
+      "range": [
+        8,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 8,
+      "rangeH": 10,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.9SAh2q68YRgWUO7V"
+    },
+    {
+      "_id": "3BFxnRTiYEr1IDu4",
+      "type": 2,
+      "text": "Hex-Wilderness",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "GxYubvGDpoVlbPy3",
+      "weight": 1,
+      "range": [
+        8,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 8,
+      "rangeH": 10,
+      "_key": "!tables.results!SzwV9nvNwdFeiDXi.3BFxnRTiYEr1IDu4"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!SzwV9nvNwdFeiDXi"
+}

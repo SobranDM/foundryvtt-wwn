@@ -1,0 +1,32 @@
+{
+  "_id": "ca5ydcugjflyovms",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Cooperative Businesses",
+  "type": "asset",
+  "_key": "!items!ca5ydcugjflyovms",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d4-1",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 1,
+    "counter": "None",
+    "desc": "If any other faction attempts to create an Asset in the same location as a Cooperative Business, the cost of doing so increases by 1 Treasure. This penalty stacks.",
+    "health": {
+      "max": 2,
+      "value": 2
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

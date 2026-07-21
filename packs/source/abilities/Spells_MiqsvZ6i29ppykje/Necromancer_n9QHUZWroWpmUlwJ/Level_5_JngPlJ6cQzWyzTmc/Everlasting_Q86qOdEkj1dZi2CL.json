@@ -1,0 +1,41 @@
+{
+  "_id": "Q86qOdEkj1dZi2CL",
+  "name": "Everlasting",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "JngPlJ6cQzWyzTmc",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.Q86qOdEkj1dZi2CL"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 5,
+    "class": "Necromancer",
+    "duration": "5 rounds",
+    "range": "50 ft. radius",
+    "roll": "",
+    "description": "<p>The spell may be triggered as an Instant action by the caster, imparting a burst of unquenchable life force to all allied creatures within 50 feet. For the next five rounds, no affected ally can be reduced below 1 hit point, regardless of the damage inflicted upon them. At the end of the spell&rsquo;s effect, the caster&rsquo;s own life energy is exhausted, leaving them with only 1 hit point. A creature can benefit from this spell no more than once per day.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!Q86qOdEkj1dZi2CL"
+}

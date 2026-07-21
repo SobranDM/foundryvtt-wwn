@@ -1,0 +1,174 @@
+{
+  "_id": "H2ZU19ZHt0xV88kH",
+  "name": "Inhab-Arratu",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Animate and lethal plant life",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "3fshsk4l08kvjf4m",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.3fshsk4l08kvjf4m"
+    },
+    {
+      "type": 0,
+      "text": "Remnants of the Outsiders who made it",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "86qwe402x8djw0oo",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.86qwe402x8djw0oo"
+    },
+    {
+      "type": 0,
+      "text": "Adventurers daring the perilous terrain",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "4brm0rvwp0yntexc",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.4brm0rvwp0yntexc"
+    },
+    {
+      "type": 0,
+      "text": "Human natives trapped here for generations",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "iqau31hn16ff7dz6",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.iqau31hn16ff7dz6"
+    },
+    {
+      "type": 0,
+      "text": "Humanoids adapted to life there",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "fq3vefeuptnt0md4",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.fq3vefeuptnt0md4"
+    },
+    {
+      "type": 0,
+      "text": "Blighted raiders semi-native to the place",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "1k13fn6l3qfwl4wf",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.1k13fn6l3qfwl4wf"
+    },
+    {
+      "type": 0,
+      "text": "Automatons built to serve or fight the arratu",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "vg45hgl3dvormv18",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.vg45hgl3dvormv18"
+    },
+    {
+      "type": 0,
+      "text": "Outsider ruler still controlling a site within",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "qstno95a0fnr3csg",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.qstno95a0fnr3csg"
+    },
+    {
+      "type": 0,
+      "text": "Undead shades of swallowed cities or lands",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "y0t5ngpafgdwf151",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.y0t5ngpafgdwf151"
+    },
+    {
+      "type": 0,
+      "text": "Vicious alien fauna",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "b7amvpbqa5f05mh2",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.b7amvpbqa5f05mh2"
+    },
+    {
+      "type": 0,
+      "text": "Human cultist-servitors of the Outsiders",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "suxhqiurzly3po8c",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.suxhqiurzly3po8c"
+    },
+    {
+      "type": 0,
+      "text": "Explorers searching for a route through",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "bp3zfmstkf1o5l9h",
+      "flags": {},
+      "_key": "!tables.results!H2ZU19ZHt0xV88kH.bp3zfmstkf1o5l9h"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!H2ZU19ZHt0xV88kH"
+}

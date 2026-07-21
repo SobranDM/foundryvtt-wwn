@@ -1,0 +1,26 @@
+{
+  "_id": "gH1vB9gTSmv2iFBo",
+  "name": "Teleport",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "Instant",
+    "range": "10'",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster or a chosen creature vanishes and reappears at a location of the caster&rsquo;s choosing.</p>\n<p><strong>▶ Gear:</strong> The subject is teleported with all its gear, up to its maximum load.</p>\n<p><strong>▶ Unwilling subjects:</strong> May make a Mental save to prevent the teleportation.</p>\n<p><strong>▶ Destination:</strong> May be at any distance, but must be known to the caster. The destination must be an open space at ground level. (It is not possible to intentionally teleport the subject into mid-air or into solid matter.)</p>\n<p><strong>▶ Risk: </strong>There is a risk, when teleporting, of accidentally arriving above or below ground level. The chance of a successful teleportation depends on the caster&rsquo;s knowledge of the destination (see right). Roll d% and consult the table below.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<h3><strong>Knowledge of Destination</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Ground Level</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Too High</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Too Low</strong></h3>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Scant</p>\n</td>\n<td style=\"text-align: center;\">01-50</td>\n<td style=\"text-align: center;\">51-75</td>\n<td style=\"text-align: center;\">76-100</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Moderate</p>\n</td>\n<td style=\"text-align: center;\">01-80</td>\n<td style=\"text-align: center;\">81-90</td>\n<td style=\"text-align: center;\">91-100</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p>Exact</p>\n</td>\n<td style=\"text-align: center;\">01-95</td>\n<td style=\"text-align: center;\">96-99</td>\n<td style=\"text-align: center;\">100</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Ground level: </strong>The subject appears at the desired destination.</p>\n<p><strong>Too high: </strong>The subject appears 1d10&times;10&rsquo; above the intended destination. Should this location already be occupied by solid matter, the subject is instantly killed. Otherwise, the subject falls from a height.</p>\n<p><strong>Too low:</strong> The subject appears in the ground and is killed instantly.</p>\n<p><strong>Knowledge of destination: </strong>The caster&rsquo;s knowledge of the destination is rated as follows:</p>\n<p><strong>▶ Scant:</strong> A location that the caster has visited once or twice, has seen by magical scrying, or has heard of from descriptions.</p>\n<p><strong>▶ Moderate:</strong> A location that the caster has visited often or has studied via scrying for several weeks.</p>\n<p><strong>▶ Exact:</strong> A location that the caster has made a detailed study of, in person.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!gH1vB9gTSmv2iFBo"
+}

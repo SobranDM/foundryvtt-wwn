@@ -1,0 +1,17 @@
+{
+  "_id": "bC761XDyCTXwgdHy",
+  "name": "Broken Infrastructure",
+  "content": "<h1>Broken Infrastructure</h1><div>\n<p>There is a ruin here that once enabled some grand ancient infrastructure. A lost canal lock, irrigation control center, magical gate nexus, weather control station, underground transit station, occult communications center, or some other great function was once performed here. The ruin has been unusable for ages, but remnants of its former function might still be found in the surroundings.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Sorcerer looting the wreckage, Monstrous remnant of the former inhabitants or guardians, Modern parasite-monster come to feed on the scraps</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Curious arcane student, Tribal who lives in the ruin, Wayfarer forced to seek refuge there</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It still works but in a dangerous and unhelpful way, It would cause a tremendous local disaster if it were re-activated, The locals are exploiting it in an unintended fashion</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Control key for the original function, Relic related to the original function that does something magical, Precious component from it</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Long-ruined control nexus, Collapsed service or operational area, Surrounding area scarred by the decayed remnants of its function</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 1600000
+    }
+  },
+  "_key": "!journal!bC761XDyCTXwgdHy",
+  "ownership": {
+    "default": 0
+  }
+}

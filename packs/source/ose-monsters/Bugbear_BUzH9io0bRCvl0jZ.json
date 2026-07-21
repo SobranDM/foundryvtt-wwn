@@ -1,0 +1,524 @@
+{
+  "name": "Bugbear",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "6nIyRy98dFNXLnas",
+      "name": "Punch/Claw",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "2d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 13
+        },
+        "shockTotal": "0",
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!BUzH9io0bRCvl0jZ.6nIyRy98dFNXLnas"
+    },
+    {
+      "_id": "mjqeRWz9xQKFspug",
+      "name": "Club",
+      "type": "weapon",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.LZ2YaUZEkGgkFRYq"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs, staves,</strong></em> and <em><strong>maces </strong></em>are of much the same genus, though the latter is usually made of metal. While fully capable of killing a man, a careful user can usually avoid inflicting lethal injury.</p>",
+        "damage": "1d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [
+          {
+            "title": "T",
+            "value": "T"
+          },
+          {
+            "title": "LL",
+            "value": "LL"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!BUzH9io0bRCvl0jZ.mjqeRWz9xQKFspug"
+    },
+    {
+      "_id": "VmoeIyZzMVBpeTcH",
+      "name": "Mace",
+      "type": "weapon",
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.4jBmE0lnO9VafcT4"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs,&nbsp;</strong></em><em><strong>staves</strong></em><em><strong>,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 18
+        },
+        "shockTotal": "0",
+        "skill": "punch",
+        "score": "str",
+        "tags": [
+          {
+            "title": "LL",
+            "value": "LL"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 15,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!BUzH9io0bRCvl0jZ.VmoeIyZzMVBpeTcH"
+    },
+    {
+      "_id": "eMi4waon6uaAZxVQ",
+      "name": "Sword, Short",
+      "type": "weapon",
+      "sort": 400000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.B5SZwKmkdkAcN7r7"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 10,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!BUzH9io0bRCvl0jZ.eMi4waon6uaAZxVQ"
+    },
+    {
+      "_id": "97Ic4unqFxvkHziV",
+      "name": "Surprise",
+      "type": "ability",
+      "sort": 500000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "folder": null,
+      "system": {
+        "description": "<p>Surprises on a 1-3 on 1d6 if using B/X rules. Otherwise, gains a +1 to Sneak rolls on top of existing skill bonus.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!BUzH9io0bRCvl0jZ.97Ic4unqFxvkHziV"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.atjmgxpfckZOPSCi"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 14,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 4,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "30",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Large, hairy goblins with an ungainly gait. Favour attacking by surprise.</p>",
+      "alignment": "Chaotic",
+      "xp": 50,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "2d4",
+        "w": "5d4"
+      },
+      "morale": 9,
+      "instinct": 2,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": 1,
+    "character": false,
+    "hp": {
+      "hd": "3d8+1",
+      "value": 4,
+      "max": 4
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "about-face": {
+        "indicatorDisabled": false
+      }
+    },
+    "name": "Bugbear",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "randomImg": true,
+    "alpha": 1,
+    "light": {
+      "alpha": 1,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331257,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "BUzH9io0bRCvl0jZ",
+  "_key": "!actors!BUzH9io0bRCvl0jZ"
+}

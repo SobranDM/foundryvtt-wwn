@@ -1,0 +1,17 @@
+{
+  "_id": "oc8CBmrlvgx7BpCm",
+  "name": "Feral Magic",
+  "content": "<h1>Feral Magic</h1><div>\n<p>Some potent Working or other ancient magic has gone berserk or rotten in the ruin, tainting the occupants and making the place dangerous to inhabitants. Whatever the magic once did, it now does it too much, or in the wrong way, or at a grim cost to those within. The natives either cannot escape, or have no place better to go, or are somehow dependent on the twisted magic.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Magically mutated abomination, Native chieftain full of tainted power, Outside sorcerer making reckless use of the magic</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Researcher trying to understand or fix things, Sympathetic magic-plagued native, Outside victim of the site’s magic</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Valuable loot awaits those willing to break the magic further, The magic can be fixed if something dangerous is done, The decay is spreading outside the ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Item to ward off the magic, Valuable sorcerous byproduct, Ancient instructions on how to fix things</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Thrumming power center of the magic, Lair of magic-twisted beasts, Native shrine to the power</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3400000
+    }
+  },
+  "_key": "!journal!oc8CBmrlvgx7BpCm",
+  "ownership": {
+    "default": 0
+  }
+}

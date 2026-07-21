@@ -1,0 +1,177 @@
+{
+  "_id": "iaYRUTFoZYeZFfkP",
+  "name": "History-Why-Fail",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Why Did It Fail at the Final Crisis?",
+  "results": [
+    {
+      "_id": "WAYBupG817lTV4E6",
+      "flags": {},
+      "type": 0,
+      "text": "Its people were too deeply divided",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.WAYBupG817lTV4E6"
+    },
+    {
+      "_id": "nPqbLKEzAi2oGuT8",
+      "flags": {},
+      "type": 0,
+      "text": "Its leadership was hopelessly inept",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.nPqbLKEzAi2oGuT8"
+    },
+    {
+      "_id": "QAtnazJNh6TqFqj0",
+      "flags": {},
+      "type": 0,
+      "text": "The gods cursed it to ruin",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.QAtnazJNh6TqFqj0"
+    },
+    {
+      "_id": "qNeYMHJBSekjzeJe",
+      "flags": {},
+      "type": 0,
+      "text": "Decadence and self-absorption doomed it",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.qNeYMHJBSekjzeJe"
+    },
+    {
+      "_id": "i32DXMamQ3JKfqEF",
+      "flags": {},
+      "type": 0,
+      "text": "It was vastly overconfident in its plans",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.i32DXMamQ3JKfqEF"
+    },
+    {
+      "_id": "43Fa033P1NnJU8l7",
+      "flags": {},
+      "type": 0,
+      "text": "Its neighbors conspired to help ruin it",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.43Fa033P1NnJU8l7"
+    },
+    {
+      "_id": "6zJHIJjZBSh39E21",
+      "flags": {},
+      "type": 0,
+      "text": "It was actually two crises, and it was too much",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.6zJHIJjZBSh39E21"
+    },
+    {
+      "_id": "eS8RC47xO3ea6oZs",
+      "flags": {},
+      "type": 0,
+      "text": "It was culturally exhausted and apathetic",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.eS8RC47xO3ea6oZs"
+    },
+    {
+      "_id": "9na8Cz1TbxMXbxZn",
+      "flags": {},
+      "type": 0,
+      "text": "Some tried to take advantage of the crisis",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.9na8Cz1TbxMXbxZn"
+    },
+    {
+      "_id": "lSMyYyKY16at2t1X",
+      "flags": {},
+      "type": 0,
+      "text": "Its strengths were useless against the problem",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.lSMyYyKY16at2t1X"
+    },
+    {
+      "_id": "kz2FFGeR5w9kAnKb",
+      "flags": {},
+      "type": 0,
+      "text": "The crisis was far too vast and overwhelming",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.kz2FFGeR5w9kAnKb"
+    },
+    {
+      "_id": "m0ALn6VmepoyZjGe",
+      "flags": {},
+      "type": 0,
+      "text": "Some leaders were allied with the crisis",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!iaYRUTFoZYeZFfkP.m0ALn6VmepoyZjGe"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!iaYRUTFoZYeZFfkP"
+}

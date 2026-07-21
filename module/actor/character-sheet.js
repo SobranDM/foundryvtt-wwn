@@ -168,13 +168,11 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.medRange = game.settings.get("wwn", "medRange");
     data.config.useTrauma = game.settings.get("wwn", "useTrauma");
 
-    data.enrichedBiography = await TextEditor.enrichHTML(
-      this.object.system.details.biography,
-      { async: true }
+    data.enrichedBiography = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.details.biography
     );
-    data.enrichedNotes = await TextEditor.enrichHTML(
-      this.object.system.details.notes,
-      { async: true }
+    data.enrichedNotes = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.details.notes
     );
     return data;
   }
@@ -184,7 +182,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     const choices = languages.split(",");
 
     let templateData = { choices: choices },
-      dlg = await renderTemplate(
+      dlg = await foundry.applications.handlebars.renderTemplate(
         "systems/wwn/templates/actors/dialogs/lang-create.html",
         templateData
       );
@@ -215,7 +213,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   async _chooseItemType(choices = { focus: "focus", ability: "ability" }) {
     let templateData = { types: choices },
-      dlg = await renderTemplate(
+      dlg = await foundry.applications.handlebars.renderTemplate(
         "systems/wwn/templates/items/entity-create.html",
         templateData
       );
@@ -342,7 +340,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   _pushLang(table) {
     const data = this.actor.system;
-    let update = duplicate(data[table]);
+    let update = foundry.utils.duplicate(data[table]);
     let language = game.settings.get("wwn", "languageList");
     let languages = language.split(",");
     this._chooseLang().then((dialogInput) => {
@@ -616,33 +614,11 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }
     });
 
-    // Show / hide skill buttons
-    html.find(".lock-skills").click((ev) => {
+    // Show / hide skill buttons, persisting the locked state so it survives re-renders
+    html.find(".lock-skills").click(async (ev) => {
       ev.preventDefault();
       const lock = ev.currentTarget.dataset.type === "lock";
-
-      // Get all relevant elements
-      const elements = {
-        lockBtn: html[0].querySelector(".lock-skills.lock"),
-        unlockBtn: html[0].querySelector(".lock-skills.unlock"),
-        skillLocks: Array.from(html[0].querySelectorAll(".skill-lock")),
-        reverseLocks: Array.from(html[0].querySelectorAll(".reverse-lock"))
-      };
-
-      // Toggle visibility using Foundry's UI methods
-      if (lock) {
-        // When locking: hide skill controls, show reverse controls
-        elements.lockBtn.classList.add("hidden");
-        elements.unlockBtn.classList.remove("hidden");
-        elements.skillLocks.forEach(el => el.classList.add("hidden"));
-        elements.reverseLocks.forEach(el => el.classList.remove("hidden"));
-      } else {
-        // When unlocking: show skill controls, hide reverse controls
-        elements.lockBtn.classList.remove("hidden");
-        elements.unlockBtn.classList.add("hidden");
-        elements.skillLocks.forEach(el => el.classList.remove("hidden"));
-        elements.reverseLocks.forEach(el => el.classList.add("hidden"));
-      }
+      await this.actor.update({ "system.skills.locked": lock });
     });
   }
 }

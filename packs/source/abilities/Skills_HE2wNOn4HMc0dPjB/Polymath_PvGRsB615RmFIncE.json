@@ -1,0 +1,34 @@
+{
+  "name": "Polymath",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/polymath.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.SKYI6UymlNLJgAv4"
+    }
+  },
+  "system": {
+    "description": "<p>You have a passing acquaintance with a vast variety of practical skills and pastimes, and can make a modest attempt at almost any exercise of skill or artisanry. Note that the phantom skill levels granted by this Focus don&rsquo;t stack with normal skill levels or give a skill purchase discount. Only Experts or Partial Experts can take this Focus.</p>\n<p><span dir=\"ltr\" role=\"presentation\"><strong>Level 1</strong>:</span> <span dir=\"ltr\" role=\"presentation\">Gain any one bonus skill. You treat all non-com</span><span dir=\"ltr\" role=\"presentation\">bat skills as if they were at least level-0 for purposes </span><span dir=\"ltr\" role=\"presentation\">of skill checks, even if you lack them entirely.</span></p>\n<p><span dir=\"ltr\" role=\"presentation\"><strong>Level 2</strong>:</span> <span dir=\"ltr\" role=\"presentation\">You treat all non-combat skills as if they were at </span><span dir=\"ltr\" role=\"presentation\">least level-1 for purposes of skill checks.</span></p>",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "combatSkill": false,
+    "secondary": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806155548,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "PvGRsB615RmFIncE",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PvGRsB615RmFIncE"
+}

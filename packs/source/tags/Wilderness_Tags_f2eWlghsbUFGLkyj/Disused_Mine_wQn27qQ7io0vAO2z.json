@@ -1,0 +1,17 @@
+{
+  "_id": "wQn27qQ7io0vAO2z",
+  "name": "Disused Mine",
+  "content": "<h1>Disused Mine</h1><div>\n<p>A mine of some kind once existed here. While shaft mines with tunnels and galleries are the common type for present-day delvings, ancient strip mines here may have peeled off whole mountainsides or exposed some massive megastructure that was stripped for parts in a prior, lost age. The forgotten mines of a prior era might have left tailing piles or trace deposits that are valuable to a more depleted age.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Crazed wildcat miner, Thing from delving too deep, Undead and tireless mine boss</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Eager prospector, Native dwelling in the mines, Ancient friendly mining automaton</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>They were mining a buried civilization rather than ores, Groups are fighting over control of the mine, The mine was partially re-purposed for the needs of a group of natives</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Motherlode of precious materials, Storehouse of refined product, Map to a virgin strike</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Massive pitch-black subterranean gallery, Mound made of centuries worth of tailings, Stillpoisoned land in a processing waste zone</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3400000
+    }
+  },
+  "_key": "!journal!wQn27qQ7io0vAO2z",
+  "ownership": {
+    "default": 0
+  }
+}

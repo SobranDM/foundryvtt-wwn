@@ -1,0 +1,33 @@
+{
+  "_id": "mnzcdlkrb5m4ljy8",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Demonic Slayer",
+  "type": "asset",
+  "_key": "!items!mnzcdlkrb5m4ljy8",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d6+2",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "None",
+    "desc": "Powerful sorcerers have summoned or constructed an inhuman assassin-beast to hunt down and slaughter the faction's enemies. A Demonic Slayer enters play Stealthed.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "High",
+    "maintenance": 0,
+    "rating": 5,
+    "special": true,
+    "subtle": true,
+    "stealthed": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

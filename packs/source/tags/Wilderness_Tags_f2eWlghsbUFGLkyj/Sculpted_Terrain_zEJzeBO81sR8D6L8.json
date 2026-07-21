@@ -1,0 +1,17 @@
+{
+  "_id": "zEJzeBO81sR8D6L8",
+  "name": "Sculpted Terrain",
+  "content": "<h1>Sculpted Terrain</h1><div>\n<p>In a former age some tyrant or artist sculpted an entire landform here into a statue, monument, or artwork that is visible for miles. A carved mountainside, a molded hill, an intricate pattern of waterways, a mesa pierced with music-emitting tunnels, or some other huge artwork is obvious here, and probably can be seen from any point nearby. Such structures likely have some form of defense to prevent their vandalism, and may contain components that are very valuable in the present age.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Priest of a sculpture-worshiping cult, Berserk guardian of the art, Chief of a sculpture-dwelling remnant of the original creators</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Courageous art-seeker, Artist desperately in search of inspiration, Treasure-hunter looking for the art’s loot</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The art is mobile or otherwise active somehow, The art has some very dangerous effect, The art is damaged and now causes an unintended consequence nearby</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Precious fragment of the art, Magical relic used by the art, Regalia of the former keeper of the art</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Viewing-site built for the art, Damaged or defaced area of the art, Pilgrim quarters meant for those coming to see the art</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 8400000
+    }
+  },
+  "_key": "!journal!zEJzeBO81sR8D6L8",
+  "ownership": {
+    "default": 0
+  }
+}

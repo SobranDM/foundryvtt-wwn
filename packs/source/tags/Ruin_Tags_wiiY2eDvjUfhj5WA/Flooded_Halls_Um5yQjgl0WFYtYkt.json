@@ -1,0 +1,17 @@
+{
+  "_id": "Um5yQjgl0WFYtYkt",
+  "name": "Flooded Halls",
+  "content": "<h1>Flooded Halls</h1><div>\n<p>The ruin is largely flooded, perhaps with water and perhaps with some worse substance. Exploring it is difficult, and the heroes constantly risk being trapped by rising waters or flow-shifted obstacles. The natives are either creatures adapted to water or desperate enough to live where few others can pursue them.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Fish-thing with dark hungers, Cult priest of a watery evil, Chief of a piscid humanoid species</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Luckless local boater, Hermit who’s tried to live there, Courageous treasure-diver</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The flooding is cyclical, Water flow can be controlled somehow inside the site, The water is fetid with disease</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Pearls or other water-fashioned valuables, Extremely precious relic that would be ruined by being soaked, Device to grant water-breathing</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Splendid chamber now crusted by slime or coral, Half-filled room with an air bubble, Space full of totally opaque silty water</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3600000
+    }
+  },
+  "_key": "!journal!Um5yQjgl0WFYtYkt",
+  "ownership": {
+    "default": 0
+  }
+}

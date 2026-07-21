@@ -1,0 +1,189 @@
+{
+  "_id": "fpOK3on7vvI7mzHc",
+  "name": "Framework of Inhabitation",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Some sites will have no significant inhabitants: no monsters, no skulking raiders, no wild beasts or abominable flora worth mentioning. Most, however, will have something dwelling in the place.",
+  "results": [
+    {
+      "_id": "mXpY25pT0grpkPyS",
+      "type": 0,
+      "text": "<b>Important Inhabitants</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.mXpY25pT0grpkPyS"
+    },
+    {
+      "_id": "lJpBsBzav2jlBgB1",
+      "type": 2,
+      "text": "Frame-Inhabitants",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "9qD60NfjUfz8tDgt",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.lJpBsBzav2jlBgB1"
+    },
+    {
+      "_id": "wanBRZv6OzxiC6JE",
+      "type": 0,
+      "text": "<b>Possible Causes for Alliances</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.wanBRZv6OzxiC6JE"
+    },
+    {
+      "_id": "7PfF2Wo1LGJB9Igv",
+      "type": 2,
+      "text": "Frame-Alliance",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "z9G7h7BPWNRptelc",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.7PfF2Wo1LGJB9Igv"
+    },
+    {
+      "_id": "2wYQf8oOPxTdlgpS",
+      "type": 0,
+      "text": "<b>Possible Causes for Hostility</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.2wYQf8oOPxTdlgpS"
+    },
+    {
+      "_id": "qKFsGrApmfqvgx4P",
+      "type": 2,
+      "text": "Frame-Hostility",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "KdCTJHRyWT4egCTJ",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.qKFsGrApmfqvgx4P"
+    },
+    {
+      "_id": "a77pKvcDP4DDls3f",
+      "type": 0,
+      "text": "<b>Why Did They Come Here?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.a77pKvcDP4DDls3f"
+    },
+    {
+      "_id": "v10MKmU0kC914ONe",
+      "type": 2,
+      "text": "Frame-Arrive",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "NmnQjz3CKiOtkCFm",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.v10MKmU0kC914ONe"
+    },
+    {
+      "_id": "6zKnA134qjyhSbfG",
+      "type": 0,
+      "text": "<b>Why Are They Staying Here?</b>",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.6zKnA134qjyhSbfG"
+    },
+    {
+      "_id": "wrIm2gaeFVh7ZwIL",
+      "type": 2,
+      "text": "Frame-Stay",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "07slhaavL0Y2GlC8",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!fpOK3on7vvI7mzHc.wrIm2gaeFVh7ZwIL"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!fpOK3on7vvI7mzHc"
+}

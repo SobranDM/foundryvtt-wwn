@@ -1,0 +1,26 @@
+{
+  "_id": "iAzg17lzoXtcsHoW",
+  "name": "Magic Missile",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "1 turn",
+    "range": "150'",
+    "roll": "1d6+1",
+    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 150&rsquo;</strong></p>\n<p>This spell conjures a glowing dart of energy that the caster may choose to shoot at a visible target within range.</p>\n<p><strong>▶ Hit: </strong>The missile hits unerringly (no attack roll or saving throw is required).</p>\n<p><strong>▶ Damage:</strong> The missile inflicts 1d6+1 damage.</p>\n<p><strong>▶ Higher level casters:</strong> May conjure more missiles: two additional missiles are conjured per five experience levels the caster has gained (i.e. three missiles at 6th&ndash;10th level, five missiles at 11th&ndash;15th level, etc.). Multiple missiles may be directed at a single target.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!iAzg17lzoXtcsHoW"
+}

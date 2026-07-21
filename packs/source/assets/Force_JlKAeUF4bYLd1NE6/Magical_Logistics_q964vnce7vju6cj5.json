@@ -1,0 +1,31 @@
+{
+  "_id": "q964vnce7vju6cj5",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Magical Logistics",
+  "type": "asset",
+  "_key": "!items!q964vnce7vju6cj5",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 14,
+    "counter": "None",
+    "desc": "An advanced web of magical Workings, skilled sorcerers, and trained logistical experts are enlisted to streamline the faction's maintenance and sustain damaged units. Once per faction turn, as a free action, the Asset can repair 2 hit points of damage to an allied Force Asset.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 5,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "Once per faction turn, as a free action, the Asset can repair 2 hit points of damage to an allied Force Asset.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

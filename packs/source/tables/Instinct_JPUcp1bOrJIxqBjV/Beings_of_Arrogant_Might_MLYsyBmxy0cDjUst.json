@@ -1,0 +1,131 @@
+{
+  "_id": "MLYsyBmxy0cDjUst",
+  "name": "Beings of Arrogant Might",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "5GjDZt9xMMURAIZI",
+      "flags": {},
+      "type": 0,
+      "text": "Sneer at the pitiful weaklings that oppose it",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.5GjDZt9xMMURAIZI"
+    },
+    {
+      "_id": "CyPW3gXcImttlwaM",
+      "flags": {},
+      "type": 0,
+      "text": "Boast of its inevitable victory",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.CyPW3gXcImttlwaM"
+    },
+    {
+      "_id": "sAR46NO32LY8qqfR",
+      "flags": {},
+      "type": 0,
+      "text": "Gratuitous use of a power in an unhelpful way",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.sAR46NO32LY8qqfR"
+    },
+    {
+      "_id": "L0KnX26s339N3nKO",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the last enemy to offend it somehow",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.L0KnX26s339N3nKO"
+    },
+    {
+      "_id": "LKiKbw96tJqG67PB",
+      "flags": {},
+      "type": 0,
+      "text": "Urge on servitors, or demand surrender",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.LKiKbw96tJqG67PB"
+    },
+    {
+      "_id": "QKIN8XED1mlXAKB3",
+      "flags": {},
+      "type": 0,
+      "text": "Taunt the foe as it takes a <b>Total Defense</b>",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!MLYsyBmxy0cDjUst.QKIN8XED1mlXAKB3"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "RollTable.0jqyqdjz2I1pOLjK"
+    }
+  },
+  "_key": "!tables!MLYsyBmxy0cDjUst"
+}

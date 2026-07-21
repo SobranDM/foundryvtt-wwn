@@ -1,0 +1,41 @@
+{
+  "_id": "uimwHfLFXLk5jJXo",
+  "name": "Foresightful Apprehension",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "FpLCULEmzzpLk08x",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.uimwHfLFXLk5jJXo"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "High Mage",
+    "duration": "",
+    "range": "",
+    "roll": "",
+    "description": "<p>The caster probes the near currents of fate to discern the likely immediate outcome of an action. The caster describes a particular action they or a comrade intend to presently undertake, whereupon the GM tells them what is most likely to happen in consequence within the first five minutes after the action, as the GM thinks it most probable. This spell cannot be used more than once a week on the same general topic.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!uimwHfLFXLk5jJXo"
+}

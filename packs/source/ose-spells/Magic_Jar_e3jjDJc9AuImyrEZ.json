@@ -1,0 +1,26 @@
+{
+  "_id": "e3jjDJc9AuImyrEZ",
+  "name": "Magic Jar",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "Special",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: Special</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>The caster&rsquo;s body enters a comatose trance as their life-force is transferred into a receptacle (any inanimate object within 30&rsquo;), known as a magic jar. From there, the caster may attempt to possess the bodies of other creatures.</p>\n<p><strong>When the caster&rsquo;s life-force is in the </strong><strong>magic jar:</strong></p>\n<p><strong>▶ Possession: </strong>The caster may attempt to possess the body of another creature within 120&rsquo;. The victim may make a Mental save to resist possession. If the save is successful, the caster may not make another attempt to possess that victim for one turn. If the save fails, the caster&rsquo;s lifeforce leaves the magic jar and enters the victim, possessing it.</p>\n<p><strong>▶ Returning: </strong>The caster may choose to return to their own body at any time, ending the spell.</p>\n<p><strong>▶ If the magic jar is destroyed:</strong> The caster dies.</p>\n<p><strong>▶ If the caster&rsquo;s own body is destroyed: </strong>Their life-force is stranded in the magic jar.</p>\n<p><strong>When the caster&rsquo;s life-force is possessing </strong><strong>a victim:</strong></p>\n<p><strong>▶ Control: </strong>The caster gains full control over the victim&rsquo;s body, but is not able to make the victim cast spells.</p>\n<p><strong>▶ If the magic jar is destroyed:</strong> The spell ends and the caster&rsquo;s life-force is trapped in the possessed body.</p>\n<p><strong>▶ If the possessed victim is killed: </strong>The caster&rsquo;s life-force returns to the magic jar.</p>\n<p><strong>▶ Dispelling:</strong> Dispel evil forces the caster&rsquo;s life-force back into the magic jar.</p>\n<p><strong>▶ If the caster&rsquo;s own body is destroyed: </strong>Their life-force is stranded in the body of the creature being possessed.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!e3jjDJc9AuImyrEZ"
+}

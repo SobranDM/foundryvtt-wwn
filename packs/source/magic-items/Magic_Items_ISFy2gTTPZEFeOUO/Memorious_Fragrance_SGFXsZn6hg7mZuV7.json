@@ -1,0 +1,29 @@
+{
+  "_id": "SGFXsZn6hg7mZuV7",
+  "name": "Memorious Fragrance",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>Found as an incense stick that somehow never burns out entirely, lighting the Memorious Fragrance as a Main Action allows the activator to spread a subtle haze of scented mist in a twenty-foot radius. The activator may then describe a particular memory that they wish others to have; all within twenty feet except the activator must then make a Mental saving throw or have the memory implanted in their minds. They may not even realize this memory exists unless something happens that would draw it to mind, or questions are put to them about it. The memory persists until magically dispelled. While the Memorious Fragrance can add memories, it cannot change or erase existing ones.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 0,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.SGFXsZn6hg7mZuV7"
+    }
+  },
+  "_key": "!items!SGFXsZn6hg7mZuV7"
+}

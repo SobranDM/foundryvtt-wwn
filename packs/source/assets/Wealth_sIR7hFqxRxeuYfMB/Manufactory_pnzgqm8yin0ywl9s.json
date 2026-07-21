@@ -1,0 +1,31 @@
+{
+  "_id": "pnzgqm8yin0ywl9s",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Manufactory",
+  "type": "asset",
+  "_key": "!items!pnzgqm8yin0ywl9s",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d4",
+    "desc": "Once per turn, as a free action, the Asset's owner may roll [[/roll 1d6]]; on a 1, one point of Treasure is lost, on a 2-5, one point is gained, and on a 6, two points are gained. If Treasure is lost and none is available to pay it by the end of the turn, this Asset is lost.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per turn, as a free action, the Asset's owner may roll [[/roll 1d6]]; on a 1, one point of Treasure is lost, on a 2-5, one point is gained, and on a 6, two points are gained. If Treasure is lost and none is available to pay it by the end of the turn, this Asset is lost.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

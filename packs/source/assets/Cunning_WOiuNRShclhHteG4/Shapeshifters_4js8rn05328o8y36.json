@@ -1,0 +1,32 @@
+{
+  "_id": "4js8rn05328o8y36",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Shapeshifters",
+  "type": "asset",
+  "_key": "!items!4js8rn05328o8y36",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 14,
+    "counter": "None",
+    "desc": "As a free action once per turn, the faction can spend 1 Treasure and grant the Shapeshifters the Stealth quality.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 5,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "As a free action once per turn, the faction can spend 1 Treasure and grant the Shapeshifters the Stealth quality.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

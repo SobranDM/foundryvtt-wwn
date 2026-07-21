@@ -1,0 +1,41 @@
+{
+  "_id": "bl1yCOI1MUdknIuJ",
+  "name": "Abdictation of Temporal Presence",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "9EnIIslVVc7KXwbb",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.bl1yCOI1MUdknIuJ"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 5,
+    "class": "High Mage",
+    "duration": "1d4+1 rounds",
+    "range": "",
+    "roll": "1d4+1",
+    "description": "<p>The caster and up to one visible ally per caster level briefly step outside of the conventional flow of time, the rest of the world freezing around them. These subjects can take 1d4+1 free rounds of actions, but they cannot physically affect the world or move any object they were not carrying at the time they cast the spell. Any spells the caster or other allies cast can affect only their own group, and not those entities still in the normal flow of time.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!bl1yCOI1MUdknIuJ"
+}

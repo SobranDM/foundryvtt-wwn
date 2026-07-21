@@ -1,0 +1,33 @@
+{
+  "_id": "eblmjeu4o5x7yggc",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Occult Infiltrators",
+  "type": "asset",
+  "_key": "!items!eblmjeu4o5x7yggc",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "None",
+    "desc": "Magically-gifted spies and assassins are enlisted to serve the faction. Occult Infiltrator Assets always begin play with the Stealth quality.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": true,
+    "stealthed": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

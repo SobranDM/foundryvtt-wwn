@@ -1,0 +1,17 @@
+{
+  "_id": "HC2LlWp6VizlCelG",
+  "name": "Treacherous Terrain",
+  "content": "<h1>Treacherous Terrain</h1><div>\n<p>A stretch of this area is naturally treacherous and dangerous in its terrain. It may be prone to sinkholes, mudslides, avalanches, quicksand, explosive flora, magical eruptions, boiling geysers, plunging crevasses, or falling stones. This terrain should block the path toward some interesting site or desired destination, or else the party likely has no reason not to simply turn around or go around it.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Malevolent nature-spirit of the place, Vile outcast who lairs amid the terrain, Monstrous beast native to the dangerous area</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Native guide who knows a way through, Explorer fascinated by the terrain, Traveler forced to find a way through</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The perils manifest on a particular little-known schedule, The perils sometimes uncover lodes of valuable materials, The perils are an accidental legacy of an ancient malfunction</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Map of the safe way through, Device to protect against the peril, Ancient treasure hidden within the peril</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Small safe zone inside the terrain, Ruined road or path amid the peril, Site of a camp destroyed by the peril</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 9200000
+    }
+  },
+  "_key": "!journal!HC2LlWp6VizlCelG",
+  "ownership": {
+    "default": 0
+  }
+}

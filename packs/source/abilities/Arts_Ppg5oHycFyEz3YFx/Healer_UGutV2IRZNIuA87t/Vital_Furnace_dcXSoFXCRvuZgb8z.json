@@ -1,0 +1,32 @@
+{
+  "_id": "dcXSoFXCRvuZgb8z",
+  "name": "Vital Furnace",
+  "type": "art",
+  "img": "systems/wwn/assets/new/healer_art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.dcXSoFXCRvuZgb8z"
+    }
+  },
+  "_key": "!items!dcXSoFXCRvuZgb8z",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Your tremendous life energy can be used to instantly regenerate any non-mortal wound you have received. Commit Effort for the day as an Instant action to negate the damage from an injury you just received that did not reduce you to zero hit points. Aside from this ability, you automatically stabilize if reduced to zero hit points and awaken ten minutes later with 1 hit point. This ability cannot undo damage you intentionally inflict on yourself via some power or magical exchange.</p>",
+    "save": "",
+    "source": "Healer",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

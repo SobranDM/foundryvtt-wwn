@@ -1,0 +1,32 @@
+{
+  "_id": "ltfb8gzrboe3o4mi",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Supply Interruption",
+  "type": "asset",
+  "_key": "!items!ltfb8gzrboe3o4mi",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d6",
+    "attackSource": "cunning",
+    "attackSpecial": "As a free action, once per turn, the Asset can make a Cunning vs. Wealth check against an Asset in the same location. On a success, the owning faction must sacrifice Treasure equal to half the target Asset's purchase cost, or else it is disabled and useless until this price is paid.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "None",
+    "desc": "As a free action, once per turn, the Asset can make a Cunning vs. Wealth check against an Asset in the same location. On a success, the owning faction must sacrifice Treasure equal to half the target Asset's purchase cost, or else it is disabled and useless until this price is paid.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "As a free action, once per turn, the Asset can make a Cunning vs. Wealth check against an Asset in the same location. On a success, the owning faction must sacrifice Treasure equal to half the target Asset's purchase cost, or else it is disabled and useless until this price is paid.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

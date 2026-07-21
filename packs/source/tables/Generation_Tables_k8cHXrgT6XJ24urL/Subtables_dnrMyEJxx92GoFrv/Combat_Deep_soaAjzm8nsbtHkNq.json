@@ -1,0 +1,174 @@
+{
+  "_id": "soaAjzm8nsbtHkNq",
+  "name": "Combat-Deep",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "A dangerous standing magical effect is present in the room",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "871aw1o5otk9l6j4",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.871aw1o5otk9l6j4"
+    },
+    {
+      "type": 0,
+      "text": "Part of the structure is fragile and prone to collapse if damaged",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "06bhqii7i0mxacja",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.06bhqii7i0mxacja"
+    },
+    {
+      "type": 0,
+      "text": "There’s some noxious gas or substance tainting certain areas",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ejtkbkyr00lih4d5",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.ejtkbkyr00lih4d5"
+    },
+    {
+      "type": 0,
+      "text": "A dangerous fall is possible in some part of the room",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "qiwvhqs0j4luede9",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.qiwvhqs0j4luede9"
+    },
+    {
+      "type": 0,
+      "text": "An ancient guardian risks being awakened by disturbances here",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "fobzwsvkpqootval",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.fobzwsvkpqootval"
+    },
+    {
+      "type": 0,
+      "text": "Strange ancient engines churn nearby and can cause dire injury to the careless",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "1uo27rkh11eyg4kl",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.1uo27rkh11eyg4kl"
+    },
+    {
+      "type": 0,
+      "text": "There are secret passages here",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "8cka2qzhkqi7aigo",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.8cka2qzhkqi7aigo"
+    },
+    {
+      "type": 0,
+      "text": "The room is very vertical in its shape",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "y76y9lhcq4l6kq8m",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.y76y9lhcq4l6kq8m"
+    },
+    {
+      "type": 0,
+      "text": "A certain path must be known to safely cross a particularly treacherous surface",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "z1ctl781xfqlplea",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.z1ctl781xfqlplea"
+    },
+    {
+      "type": 0,
+      "text": "It’s somehow prone to flooding or currently a swampy mess",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "roqv2miawsz9k1g6",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.roqv2miawsz9k1g6"
+    },
+    {
+      "type": 0,
+      "text": "A valuable object here is extremely fragile",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "2ysgqdnutcindrow",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.2ysgqdnutcindrow"
+    },
+    {
+      "type": 0,
+      "text": "Some ancient magic or Deep functionality has been repurposed for a purpose convenient to the current occupants",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "rthgzpuof5zj3j7v",
+      "flags": {},
+      "_key": "!tables.results!soaAjzm8nsbtHkNq.rthgzpuof5zj3j7v"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!soaAjzm8nsbtHkNq"
+}

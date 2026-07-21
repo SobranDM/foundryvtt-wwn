@@ -1,0 +1,17 @@
+{
+  "_id": "xwZJGarSFkWiUyjI",
+  "name": "Ancient Monument",
+  "content": "<h1>Ancient Monument</h1><div>\n<p>A grand monument to some ancient polity is found here. While its actual meaning and significance may be inscrutable, it’s probably big enough and dramatic enough to dominate the hex, even if it’s collapsed or been defaced by the ages. The remains of the civilization that raised it might be found at its base, along with whatever heirs to it remain. Some monuments still have active enchantments or guardians to prevent defacement.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Zealous modern cultist of the vanished polity, Last bitter heir of them, Vile monster that nests in the monument</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Eager archaeologist, Weary old hereditary keeper of the place, Friendly creature that’s made the monument a home</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The monument is a powerful Working, The monument served a secular or residential purpose, The bulk of the monument is underground or in an extradimensional pocket Iterum</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Costly decorations or ornaments on the monument, The precious core of the work, Ancient offerings made to it by vanished supplicants</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Before some towering megastructure-monument, Amid the cyclopean wreckage of its fall, Secret passages within the monument</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 600000
+    }
+  },
+  "_key": "!journal!xwZJGarSFkWiUyjI",
+  "ownership": {
+    "default": 0
+  }
+}

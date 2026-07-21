@@ -1,0 +1,41 @@
+{
+  "_id": "OfstQhArMDKdAMKz",
+  "name": "Open the High Road",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "9EnIIslVVc7KXwbb",
+  "sort": 500000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.OfstQhArMDKdAMKz"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 5,
+    "class": "High Mage",
+    "duration": "1 minute/level",
+    "range": "100 miles/level",
+    "roll": "1d100",
+    "description": "<p>The caster carves open a metadimensional gate between their present location and a pre-set target point. Attuning the target point requires an hour of effort, after which this spell will open an opaque portal to it from a distance of up to one hundred miles per caster level. The portal is large enough to admit a cart and wagon and will remain open for up to one minute per caster level, ending when they pass through it. The gate is one-way only, from caster to target. Only living creatures and the vehicles they drive and objects they carry may pass through; atmosphere and other environmentals remain on the far side of the gate. Only one target point may be prepared for this spell at a time, and there is a 1-in-10 chance for every casting that the real destination is 1d100 miles in a random direction, discovered only after the portal is used.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!OfstQhArMDKdAMKz"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "PU94hIYvkeN6xge1",
+  "name": "Remnant Road",
+  "content": "<h1>Remnant Road</h1><div>\n<p>Some long-lost empire laid a road here, along with the waystations that once served to guard it. The surviving remnant may just be a short segment, or it might still lead to whatever destination of significance it once served. Other ruins of this empire are likely positioned along the road, and modern inhabitants might still make use of it as a highway through rough terrain, or have positioned their own settlements along its length.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Ancient creature that guards the road from “bandits”, Bandit chief exploiting a ruined waypost, Local lord who collects cruel tolls</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Merchant making use of the path, Local from a colony-village set up at one end, Remnant survivor from the culture that built it</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The road is magically useful or well-maintained, The road leads through some tremendously dangerous area, The road is built as a high and stepped structure that forms a tall defensive wall on one side</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Magical pass allowing use of the road, Ancient weapon stored in a waypost, Key to unlocking a waypost’s vault</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Ancient watch station, Stretch of unnaturally perfect road, Monument to a forgotten king</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7600000
+    }
+  },
+  "_key": "!journal!PU94hIYvkeN6xge1",
+  "ownership": {
+    "default": 0
+  }
+}

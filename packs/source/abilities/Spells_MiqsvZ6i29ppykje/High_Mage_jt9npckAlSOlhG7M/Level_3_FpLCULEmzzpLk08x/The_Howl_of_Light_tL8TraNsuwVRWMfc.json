@@ -1,0 +1,41 @@
+{
+  "_id": "tL8TraNsuwVRWMfc",
+  "name": "The Howl of Light",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "FpLCULEmzzpLk08x",
+  "sort": 800000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.tL8TraNsuwVRWMfc"
+    }
+  },
+  "system": {
+    "lvl": 3,
+    "class": "High Mage",
+    "duration": "",
+    "range": "25-ft. radius",
+    "roll": "(@level)d8",
+    "description": "<p>A flattened disc of tremendous heat, sound, and shock is triggered at a visible point within fifty feet per caster level, erupting in a twenty-foot radius eight feet in height. Everything within the area suffers 1d8 damage from flame, concussion, and sonic shock per caster level, with an Evasion save for half. If used in a space less than 40 feet in width, the explosion is channeled through adjacent spaces and passages for an additional [[/roll 1d6]] x 10 feet.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "evasion"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.tL8TraNsuwVRWMfc",
+    "duplicateSource": null
+  },
+  "_key": "!items!tL8TraNsuwVRWMfc"
+}

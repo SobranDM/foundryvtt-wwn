@@ -1,0 +1,536 @@
+{
+  "name": "Goblin",
+  "type": "monster",
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "ugex58AVPhTmd7R7",
+      "name": "Sword, Short",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.B5SZwKmkdkAcN7r7"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 10,
+        "weight": 1,
+        "counter": {
+          "value": 0,
+          "max": 0
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!lt9Iz1pA70UAPOLn.ugex58AVPhTmd7R7"
+    },
+    {
+      "_id": "R244WztL4Aj8DF0U",
+      "name": "Bow, Small",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.YI0xC9PHP8MdMsZF"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 50,
+          "medium": 0,
+          "long": 300
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Bows&nbsp;</strong></em>cover everything from the small self bows of horse archers to the man-tall longbows wielded by foot archers. Larger bows are more cumbersome and impossible to shoot from horseback, but usually have superior strength. An archer with a Readied quiver can load a fresh arrow as a Move action each turn, or as an On Turn action if they have at least Shoot-1 skill.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": "0",
+        "skill": "shoot",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          },
+          {
+            "title": "R",
+            "value": "R"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": false,
+        "price": 20,
+        "weight": 1,
+        "counter": {
+          "value": 0,
+          "max": 0
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!lt9Iz1pA70UAPOLn.R244WztL4Aj8DF0U"
+    },
+    {
+      "_id": "9mbzc40Ln9FdOcpl",
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.02IYeKazNf6NSt6w"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 30,
+          "medium": 0,
+          "long": 60
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Daggers </strong></em>come in ten thousand varieties, but the listed kind is a common fighting dirk, big enough to push through light armor while remaining small enough to be discreetly hidden. <em><strong>Stilettos </strong></em>and similar armor-piercing daggers aren&rsquo;t usually effective as thrown weapons.</p>",
+        "damage": "1d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 15
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "S",
+            "value": "S"
+          },
+          {
+            "title": "T",
+            "value": "T"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": true,
+        "price": 3,
+        "weight": 1,
+        "counter": {
+          "value": 0,
+          "max": 0
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!lt9Iz1pA70UAPOLn.9mbzc40Ln9FdOcpl"
+    },
+    {
+      "_id": "ul1jUEfcuYWVCFgY",
+      "name": "Spear, Light",
+      "type": "weapon",
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.3qp7kpBwEhFIxmRG"
+        }
+      },
+      "system": {
+        "range": {
+          "short": 30,
+          "medium": 0,
+          "long": 60
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 2,
+          "ac": 13
+        },
+        "shockTotal": "0",
+        "skill": "stab",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "T",
+            "value": "T"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": true,
+        "price": 5,
+        "weight": 1,
+        "counter": {
+          "value": 0,
+          "max": 0
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!lt9Iz1pA70UAPOLn.ul1jUEfcuYWVCFgY"
+    },
+    {
+      "_id": "X8hBrp4cALDwQ3vi",
+      "name": "Hate Dwarves",
+      "type": "ability",
+      "img": "/systems/wwn/assets/default/ability.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "system": {
+        "description": "<p>Attack on sight.</p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": ""
+      },
+      "ownership": {
+        "default": 0,
+        "mgBwP0sTLP1VFg1m": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!lt9Iz1pA70UAPOLn.X8hBrp4cALDwQ3vi"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Actor.jFRk1k7Z3TDx2Cmc"
+    }
+  },
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 1,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 15,
+        "mod": 0
+      },
+      "mental": {
+        "value": 15,
+        "mod": 0
+      },
+      "physical": {
+        "value": 15,
+        "mod": 0
+      },
+      "luck": {
+        "value": 15,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20",
+      "exploration": 60,
+      "overland": 24,
+      "bonus": 0
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "",
+      "alignment": "Chaotic",
+      "xp": 5,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "2d4",
+        "w": "6d10"
+      },
+      "morale": 7,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "1d8-1",
+      "value": 3,
+      "max": 3
+    }
+  },
+  "prototypeToken": {
+    "name": "Goblin",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": "classes.effort1"
+    },
+    "flags": {
+      "wall-height": {
+        "tokenHeight": 0
+      },
+      "image-hover": {
+        "hideArt": false
+      }
+    },
+    "randomImg": true,
+    "light": {
+      "alpha": 0.25,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "type": null,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331422,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "lt9Iz1pA70UAPOLn",
+  "_key": "!actors!lt9Iz1pA70UAPOLn"
+}

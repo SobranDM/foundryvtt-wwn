@@ -1,0 +1,17 @@
+{
+  "_id": "Nbg69H85xvsb7qvV",
+  "name": "Lethal Treasure",
+  "content": "<h1>Lethal Treasure</h1><div>\n<p>The ruin has or produces a very valuable good, but that good is somehow extremely dangerous to acquire or possess. It may be toxic, or cursed, or the acquisition process may be predictably lethal. This danger may be the result of the creatures who create the good, the guardians that watch over it, or the surrounding locals who kill “smugglers” or “profaners” with zeal.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Monstrous beast that produces the good, Ancient construct guardian, Cruel tyrant who forces victims to make or acquire the good</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Desperate young adventurer, Native goodmaker trying to avoid disaster, Victim of the good’s hazards</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Extended exposure to the good is harmful, The good is useful but somehow morally dubious in its production or nature, The good needs to be specially processed to make it safe</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Large cache of unrefined good, Object to nullify or cure the good’s danger, Loot lost in an unsuccessful attempt to buy the good</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Hellish processing or production area, Tightlyguarded vault of the good, Area made toxic by the good’s effects</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5400000
+    }
+  },
+  "_key": "!journal!Nbg69H85xvsb7qvV",
+  "ownership": {
+    "default": 0
+  }
+}

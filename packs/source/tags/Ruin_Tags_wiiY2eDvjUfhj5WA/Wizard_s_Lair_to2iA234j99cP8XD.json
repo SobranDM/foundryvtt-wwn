@@ -1,0 +1,17 @@
+{
+  "_id": "to2iA234j99cP8XD",
+  "name": "Wizard’s Lair",
+  "content": "<h1>Wizard’s Lair</h1><div>\n<p>Wizards often require an emphatic degree of privacy to ward off importunate help-seekers, witch hunters, rivals in the art, or reckless thieves. This ruin is or once was a lair to one such wizard, who probably isn’t inclined to view visitors kindly. Even the dead ones may have left behind half-finished Workings and unaging automaton servitors to guard their venerable lore and precious magical relics.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Immortal and heartless wizard, Monstrous creation of a dead mage, Modern sorcerer exploiting the lair of a dead archmage</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Well-meaning apprentice, Escapee from one of their experiments, Vengeful mage-hunter</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>They perform some service vital to the locals but at a terrible price, No one’s heard from them for so long that it’s thought they’re dead, It’s actually a lair for a school or cabal of wizards</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Precious sorcerous grimoire, Magical item crafted there, Vast wealth given by petitioners</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Chamber with a half-finished and dangerous Working, Pens for alchemical monstrosities, Living quarters that are physically impossible somehow</td>\n</tr>\n</tbody>\n</table></div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 10000000
+    }
+  },
+  "_key": "!journal!to2iA234j99cP8XD",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "8inevjw1esrdqeub",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Military Transport",
+  "type": "asset",
+  "_key": "!items!8inevjw1esrdqeub",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "None",
+    "desc": "A branch of skilled teamsters, transport ships, road-building crews, or other logistical facilitators is in service to the faction. As a free action once per faction turn, it can bring an allied Asset to its location, provided they're within one turn's movement range, or move an allied Asset from its own location to a target also within a turn's move. Multiple Military Transport assets can chain this movement over long distances.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": false,
+    "turnRoll": ". As a free action once per faction turn, it can bring an allied Asset to its location, provided they're within one turn's movement range, or move an allied Asset from its own location to a target also within a turn's move. Multiple Military Transport assets can chain this movement over long distances.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

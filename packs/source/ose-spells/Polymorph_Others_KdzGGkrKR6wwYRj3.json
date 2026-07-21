@@ -1,0 +1,26 @@
+{
+  "_id": "KdzGGkrKR6wwYRj3",
+  "name": "Polymorph Others",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "Permanent",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>A living subject is changed into another type of creature, as chosen by the caster:</p>\n<p><strong>▶ HD: </strong>The spell fails if the new form&rsquo;s HD is more than twice the subject&rsquo;s HD.</p>\n<p><strong>▶ Hit points:</strong> The subject retains the same number of hit points.</p>\n<p><strong>▶ Abilities: </strong>The subject truly becomes the new form: all special abilities are acquired, along with behavioural patterns, tendencies, and intelligence.</p>\n<p><strong>▶ Specific individuals: </strong>The spell cannot be used to duplicate a specific individual.</p>\n<p><strong>▶ Reversion:</strong> If the subject dies, it returns to its original form.</p>\n<p><strong>▶ An unwilling subject:</strong> May make a Mental save to negate the effect.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!KdzGGkrKR6wwYRj3"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "7ix30hveplHBXINH",
+  "name": "Hammer, War +2",
+  "type": "weapon",
+  "img": "systems/wwn/assets/default/weapon.png",
+  "data": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Hammers&nbsp;</strong></em>listed here are the fighting variety, narrow-headed and made for penetrating or shocking heavy&nbsp;plates of armor.</p>",
+    "damage": "1d8+2",
+    "bonus": 2,
+    "skillDamage": false,
+    "shock": {
+      "damage": 3,
+      "ac": 18
+    },
+    "shockTotal": "0",
+    "skill": "stab",
+    "score": "str",
+    "tags": [],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 30,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "quantity": 1
+  },
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.7ix30hveplHBXINH"
+    }
+  },
+  "_key": "!items!7ix30hveplHBXINH"
+}

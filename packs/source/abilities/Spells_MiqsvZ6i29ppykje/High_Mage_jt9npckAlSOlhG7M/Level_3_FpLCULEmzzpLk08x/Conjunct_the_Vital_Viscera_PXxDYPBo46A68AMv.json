@@ -1,0 +1,41 @@
+{
+  "_id": "PXxDYPBo46A68AMv",
+  "name": "Conjunct the Vital Viscera",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "FpLCULEmzzpLk08x",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.PXxDYPBo46A68AMv"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "High Mage",
+    "duration": "",
+    "range": "",
+    "roll": "",
+    "description": "<p>The caster renders the forms and life energy of up to one willing subject per caster level into something plastic and transferrable. Hit points, poisons, and diseases can be transferred from one creature to another, if both are willing or helplessly bound, healing up to the maximum allowed hit points of the target creature. Body parts can be exchanged or gifted so long as each subject retains at least half of their original corpus. A willing target can even be absorbed into the body of another subject of the spell, disappearing into them until the spell ends or they choose to spring back out, fully-equipped. Assimilated subjects can continue to see and hear what goes on outside their carrier. A given subject can absorb up to five other human-sized targets. The spell lasts until dispelled, released, or one hour per caster level has passed, though transferred hit points or afflictions do not return to their original subject. If a subject is killed while &ldquo;borrowing&rdquo; another&rsquo;s body parts, those parts do not return</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!PXxDYPBo46A68AMv"
+}

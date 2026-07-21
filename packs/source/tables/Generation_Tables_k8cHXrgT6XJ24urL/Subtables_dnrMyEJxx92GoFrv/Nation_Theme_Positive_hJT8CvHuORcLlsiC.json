@@ -1,0 +1,161 @@
+{
+  "_id": "hJT8CvHuORcLlsiC",
+  "name": "Nation-Theme-Positive",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Thematic Element - Positive Elements",
+  "results": [
+    {
+      "_id": "WGTDiWZIT8Ls0F8h",
+      "flags": {},
+      "type": 0,
+      "text": "Enlightenment, where knowledge is loved",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.WGTDiWZIT8Ls0F8h"
+    },
+    {
+      "_id": "mJlsUz1hX5J2ROdd",
+      "flags": {},
+      "type": 0,
+      "text": "Expansion, where things swell greater",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.mJlsUz1hX5J2ROdd"
+    },
+    {
+      "_id": "1do0HVO2Z1RMrF9O",
+      "flags": {},
+      "type": 0,
+      "text": "Hope, that the future should be better",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.1do0HVO2Z1RMrF9O"
+    },
+    {
+      "_id": "lQIjnt6UDyuMGOTQ",
+      "flags": {},
+      "type": 0,
+      "text": "Justice, where a reckoning is had",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.lQIjnt6UDyuMGOTQ"
+    },
+    {
+      "_id": "VeVHUTsvMEsWbD2y",
+      "flags": {},
+      "type": 0,
+      "text": "Legitimacy, where rulers are by right",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.VeVHUTsvMEsWbD2y"
+    },
+    {
+      "_id": "6bsX9V7QXO2RaAIX",
+      "flags": {},
+      "type": 0,
+      "text": "Pageantry, of splendor and magnificence",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.6bsX9V7QXO2RaAIX"
+    },
+    {
+      "_id": "zgmkvrxGqTTwrZIo",
+      "flags": {},
+      "type": 0,
+      "text": "Prosperity, with wealth easily had",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.zgmkvrxGqTTwrZIo"
+    },
+    {
+      "_id": "fBo7xwFYjIArQ0I1",
+      "flags": {},
+      "type": 0,
+      "text": "Renewal, with things growing brighter",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.fBo7xwFYjIArQ0I1"
+    },
+    {
+      "_id": "p7hRgnW14uYnrC7u",
+      "flags": {},
+      "type": 0,
+      "text": "Triumph, with victory a fresh memory",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.p7hRgnW14uYnrC7u"
+    },
+    {
+      "_id": "792xo2AUoWPuuWLP",
+      "flags": {},
+      "type": 0,
+      "text": "Unity, where purposes are shared",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!hJT8CvHuORcLlsiC.792xo2AUoWPuuWLP"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!hJT8CvHuORcLlsiC"
+}

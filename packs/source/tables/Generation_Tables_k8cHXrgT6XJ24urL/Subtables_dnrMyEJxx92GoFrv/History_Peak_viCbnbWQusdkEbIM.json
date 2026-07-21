@@ -1,0 +1,177 @@
+{
+  "_id": "viCbnbWQusdkEbIM",
+  "name": "History-Peak",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Was Great About Its Peak?",
+  "results": [
+    {
+      "_id": "FsTWD6wnCfHY96I7",
+      "flags": {},
+      "type": 0,
+      "text": "A terrible regional evil was driven back",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.FsTWD6wnCfHY96I7"
+    },
+    {
+      "_id": "drNxPaB3jROhdleG",
+      "flags": {},
+      "type": 0,
+      "text": "Academies were built that are still honored",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.drNxPaB3jROhdleG"
+    },
+    {
+      "_id": "TJSorsgF6Gd7mz8x",
+      "flags": {},
+      "type": 0,
+      "text": "Ancient foes were united together",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.TJSorsgF6Gd7mz8x"
+    },
+    {
+      "_id": "ngaaXmz4FLylVwjP",
+      "flags": {},
+      "type": 0,
+      "text": "Grand Workings were sorcerously raised",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.ngaaXmz4FLylVwjP"
+    },
+    {
+      "_id": "ga4oU91wfsjFSXzv",
+      "flags": {},
+      "type": 0,
+      "text": "It controlled the trade of the entire region",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.ga4oU91wfsjFSXzv"
+    },
+    {
+      "_id": "TQ6PretJg5aaZxqK",
+      "flags": {},
+      "type": 0,
+      "text": "It was hegemon over its weaker neighbors",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.TQ6PretJg5aaZxqK"
+    },
+    {
+      "_id": "TXm0aO3KprT0r9Wk",
+      "flags": {},
+      "type": 0,
+      "text": "Its armies were fearsomely mighty",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.TXm0aO3KprT0r9Wk"
+    },
+    {
+      "_id": "7W8mzs9wUFVjZGNo",
+      "flags": {},
+      "type": 0,
+      "text": "Its culture was compelling to its neighbors",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.7W8mzs9wUFVjZGNo"
+    },
+    {
+      "_id": "n7Qozuujx64g5k1w",
+      "flags": {},
+      "type": 0,
+      "text": "Magnificent works of art were created",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.n7Qozuujx64g5k1w"
+    },
+    {
+      "_id": "pW5q1mjwo6OdWwpM",
+      "flags": {},
+      "type": 0,
+      "text": "Numerous legendary heroes arose",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.pW5q1mjwo6OdWwpM"
+    },
+    {
+      "_id": "iInntwMxPgQ1lu1l",
+      "flags": {},
+      "type": 0,
+      "text": "The populace was tremendously prosperous",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.iInntwMxPgQ1lu1l"
+    },
+    {
+      "_id": "ibmaHhJRlIKyBa7T",
+      "flags": {},
+      "type": 0,
+      "text": "Wonderful works of architecture were built",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!viCbnbWQusdkEbIM.ibmaHhJRlIKyBa7T"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!viCbnbWQusdkEbIM"
+}

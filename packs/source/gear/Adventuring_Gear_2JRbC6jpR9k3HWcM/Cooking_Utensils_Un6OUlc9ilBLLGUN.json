@@ -1,0 +1,24 @@
+{
+  "_id": "Un6OUlc9ilBLLGUN",
+  "name": "Cooking Utensils",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "item",
+  "data": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 4,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "_key": "!items!Un6OUlc9ilBLLGUN",
+  "folder": "2JRbC6jpR9k3HWcM"
+}

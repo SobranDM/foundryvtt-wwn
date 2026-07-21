@@ -1,0 +1,17 @@
+{
+  "_id": "ekrIMaVPQlv1gP1D",
+  "name": "Trade Hub",
+  "content": "<h1>Trade Hub</h1><div>\n<p>The site is a major trade hub, connecting several important cities or resource production areas. It’s probably at an important river juncture, ancient crossroads, or occupying the only safe path through some perilous wilderness. Its position may be important enough that it can survive on trade alone, despite being unable to feed itself with the surrounding land. Such hubs are usually heavily garrisoned by the lord who profits from their tariffs and taxes.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Cheating merchant prince, Corrupt judge or trade official, Grasping ruler with heavy taxes</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Confused foreigner with strange ways, Dealer in some vital adventuring good, Exotic stranger in need of help</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The locals trade with Outsiders or other entities normally shunned by humans, The merchants effectively rule the city, There are pockets of exotic cultures found nowhere else in the kingdom</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Precious goods not produced in this land, Map to some fabulous foreign treasure, Gift intended for a local ruler</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Bazaar full of alien speech, Caravansary built in a foreign fashion, Palace of conspicuous opulence</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 9000000
+    }
+  },
+  "_key": "!journal!ekrIMaVPQlv1gP1D",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "name": "Basilisk",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.xCFYAjgql0qef4f9"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "FK2iAnoq0bB5PTkY",
+      "name": "Bite + Petrification",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "physical",
+        "pattern": "transparent",
+        "description": "<p><strong>Petrifying touch: </strong>Anyone touched by a basilisk is turned to stone (Evasion save).</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!91f7JjDvp89PFgrL.FK2iAnoq0bB5PTkY"
+    },
+    {
+      "_id": "taBMuhyXfqCB4eLP",
+      "name": "Petrifying Gaze",
+      "type": "ability",
+      "sort": 300000,
+      "flags": {},
+      "img": "systems/wwn/assets/new/ability.png",
+      "effects": [],
+      "system": {
+        "description": "<p><span style=\"color: #191813;\">Anyone meeting a basilisk&rsquo;s gaze is turned to stone (Evasion save). Unless averting eyes or using a mirror, characters in melee are affected each round.</span></p>\n<p><span style=\"color: #191813;\"><strong style=\"box-sizing: border-box; user-select: text;\">Surprise:</strong>&nbsp;Characters surprised by a basilisk meet its gaze.</span></p>",
+        "roll": "",
+        "rollType": "result",
+        "rollTarget": 0,
+        "blindroll": false,
+        "save": "evasion"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!91f7JjDvp89PFgrL.taBMuhyXfqCB4eLP"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 15,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 6,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 12,
+        "mod": 0
+      },
+      "mental": {
+        "value": 12,
+        "mod": 0
+      },
+      "physical": {
+        "value": 12,
+        "mod": 0
+      },
+      "luck": {
+        "value": 12,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20'",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>10&rsquo; long, serpentine lizards. Unintelligent, but highly magical. Dwell in&nbsp; caverns and twisted brambles.</p>\n<ul>\n<li><strong>Surprise:</strong> Characters surprised by a basilisk meet its gaze.</li>\n<li><strong>Petrifying touch: </strong>Anyone touched by a basilisk is turned to stone (Physical save).</li>\n<li><strong>Petrifying gaze: </strong>Anyone meeting a basilisk&rsquo;s gaze is turned to stone (Evasion save). Unless averting eyes or using a mirror, characters in melee are affected each round.</li>\n<li><strong>Averting eyes:</strong> &ndash;4 penalty to hit; the basilisk gains a +2 bonus to attack.</li>\n<li><strong>Mirrors:</strong> The reflection of a basilisk is harmless. Fighting by looking in a mirror incurs a &ndash;1 penalty to attack. If a basilisk sees its own reflection (2-in-6 chance), it must save or be petrified.</li>\n</ul>",
+      "alignment": "Neutral",
+      "xp": 950,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "1d6",
+        "w": "1d6"
+      },
+      "morale": 9,
+      "instinct": 5,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": 0,
+    "character": false,
+    "hp": {
+      "hd": "6d8+1",
+      "value": 32,
+      "max": 32
+    }
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Basilisk",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331644,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "91f7JjDvp89PFgrL",
+  "_key": "!actors!91f7JjDvp89PFgrL"
+}

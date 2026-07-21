@@ -1,0 +1,26 @@
+{
+  "_id": "M6hrITgy4o8vJ4SM",
+  "name": "Raise Dead",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Cleric",
+    "duration": "Instant",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Restore life: </strong>To a recently deceased human or demihuman. See below.</p>\n<p><strong>2. Destroy undead: </strong>A single undead monster is destroyed, if it fails a Physical save.</p>\n<p><strong>Restoring life: </strong>When used to restore life, the following stipulations apply:</p>\n<p><strong>▶ Time limit: </strong>The caster can raise a person that has been dead for no longer than four days per level of the caster above 7th. For example, a 10th level caster can revive a character that has been dead for twelve days (three levels above 7th &times; four days).</p>\n<p><strong>▶ Weakness: </strong>Returning from death is an ordeal. Until the subject gets two full weeks of bed rest, they are fragile, move at half the normal rate, cannot carry heavy items, and cannot attack, cast spells, or use other class abilities. This period of weakness may not be shortened by any magical healing.</p>\n<p><strong>Reversed: Finger of Death</strong></p>\n<p>Directs a ray of deadly magic at a single target. If the target fails a Physical save, it dies instantly. Casting finger of death is a chaotic act; it will only be used by lawful casters in desperate situations.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "physical"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!M6hrITgy4o8vJ4SM"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "ipvhpje716cywk47",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Occult Countermeasures",
+  "type": "asset",
+  "_key": "!items!ipvhpje716cywk47",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d10",
+    "attackSource": "wealth",
+    "attackSpecial": "This asset can only Attack or inflict Counterattack damage on Assets that require at least a Low Magic rating to purchase.",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "1d10",
+    "desc": "This asset can only Attack or inflict Counterattack damage on Assets that require at least a Low Magic rating to purchase.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "Low",
+    "maintenance": 0,
+    "rating": 4,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

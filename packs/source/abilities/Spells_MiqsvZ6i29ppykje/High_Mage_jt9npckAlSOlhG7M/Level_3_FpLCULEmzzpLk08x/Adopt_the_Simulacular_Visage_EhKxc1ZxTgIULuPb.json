@@ -1,0 +1,41 @@
+{
+  "_id": "EhKxc1ZxTgIULuPb",
+  "name": "Adopt the Simulacular Visage",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "FpLCULEmzzpLk08x",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.EhKxc1ZxTgIULuPb"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "High Mage",
+    "duration": "Until dawn",
+    "range": "",
+    "roll": "",
+    "description": "<p>A brief incantation transforms one visible, willing target per caster level into a perfect simulacrum of any humanoid creature the caster has seen before, whether a specific individual or a general type. No special abilities are granted by this transformation, but the target will perfectly resemble a chosen individual, including in voice and scent. Their non-magical clothing will transform to whatever clothing is appropriate to the target, and they will gain an intuitive ability to speak and understand the target&rsquo;s native tongue. The spell lasts until dawn of the day after casting it, whereupon the targets and any transformed clothing revert back to their original seeming</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!EhKxc1ZxTgIULuPb"
+}

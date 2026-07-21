@@ -1,0 +1,32 @@
+{
+  "_id": "2o2ziolp7182o8ad",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Brilliant General",
+  "type": "asset",
+  "_key": "!items!2o2ziolp7182o8ad",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d8",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 25,
+    "counter": "None",
+    "desc": "A leader for the ages is in service with the faction. Whenever the Brilliant General or any allied Force Asset in the same location Attacks or is made to defend, it can roll an extra die to do so.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 7,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": "Whenever the Brilliant General or any allied Force Asset in the same location Attacks or is made to defend, it can roll an extra die to do so."
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

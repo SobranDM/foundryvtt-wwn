@@ -1,0 +1,26 @@
+{
+  "_id": "x5UeGNld9q1tXvxC",
+  "name": "Snake Charm",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Cleric",
+    "duration": "1d4+1 rounds/turns",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: [[1d4+1]] rounds or turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>One or more snakes are rendered non-hostile, rearing up and swaying to and fro but not attacking.</p>\n<p><strong>▶ HD affected: </strong>The spell affects snakes whose total Hit Dice do not exceed the caster&rsquo;s level. For example, a 7th level caster can affect 7 HD of snakes, which can equal seven 1 HD snakes, or two 3 HD snakes and one 1 HD snake, or any other combination.</p>\n<p><strong>▶ Duration:</strong> When cast on snakes that are already attacking, the spell lasts for 1d4+1 rounds. Otherwise, it lasts for 1d4+1 turns.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!x5UeGNld9q1tXvxC"
+}

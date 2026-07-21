@@ -1,0 +1,17 @@
+{
+  "_id": "XR9d0qQLOw5b760F",
+  "name": "Lingering Curse",
+  "content": "<h1>Lingering Curse</h1><div>\n<p>The ruin is cursed, and everything in it is somehow tainted or troubled by the malediction. There must be a strong reason for the natives to remain, or else the curse itself induces them to stay. The curse may be the result of some ancient crime, a Working gone wrong, a lost war against a magical foe, or a “blessing” in one age that is less appreciated in the modern day. The curse usually takes some time to trigger on intruders, but it may be induced by certain actions.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Vile sorcerer feeding on the energies, Embittered chieftain hating all uncursed, Hapless victim made a monster by the curse</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Native sorcerer trying to lift the curse, Outside researcher investigating it, Sympathetic native struggling with the curse’s effects</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The curse grants a significant advantage as well as a blight, Those cursed need something here to survive, The curse is a mark of native belonging and viewed as proof of loyalty</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Object that can lift the curse, Precious offering to the gods for mercy, Treasure left by a victim of the curse</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Shrine to some protective god, Curse-warped place of twisted mundanity, Chokingly-blighted place where the curse was first invoked</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5800000
+    }
+  },
+  "_key": "!journal!XR9d0qQLOw5b760F",
+  "ownership": {
+    "default": 0
+  }
+}

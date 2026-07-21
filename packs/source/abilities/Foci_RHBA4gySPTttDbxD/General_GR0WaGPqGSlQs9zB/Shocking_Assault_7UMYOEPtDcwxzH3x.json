@@ -1,0 +1,18 @@
+{
+  "_id": "7UMYOEPtDcwxzH3x",
+  "name": "Shocking Assault",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You&rsquo;re extremely dangerous to enemies around you. The ferocity of your melee attacks stresses and distracts enemies even when your blows don&rsquo;t draw blood.</p>\n<p><strong>Level 1:</strong> Gain Punch or Stab as a bonus skill. The Shock damage of your weapon treats all targets as if they were AC 10, assuming your weapon is capable of harming the target in the first place and the target is not immune to Shock.</p>\n<p><strong>Level 2: </strong>In addition, you gain a +2 bonus to the Shock damage rating of all melee weapons and unarmed attacks. As usual, regular hits never do less damage than this Shock would do on a miss.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!7UMYOEPtDcwxzH3x",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

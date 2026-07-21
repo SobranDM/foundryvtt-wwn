@@ -1,0 +1,29 @@
+{
+  "_id": "nSAKxaSGJdEJXQBq",
+  "name": "Enough Rope",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>When found, this appears to be a simple loop of slim silk rope, no more than five feet long. Whenever this rope is actually used, however, it will always be precisely long enough for the immediate task at hand, be that climbing a wall, binding enemies, casting a line over a crevasse, or some other specific use. The rope can bear up to a ton of weight and cannot be cut by non-magical weapons. So long as the owner is touching the rope, they can cause it to untie itself or retract fully back into their grip.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.nSAKxaSGJdEJXQBq"
+    }
+  },
+  "_key": "!items!nSAKxaSGJdEJXQBq"
+}

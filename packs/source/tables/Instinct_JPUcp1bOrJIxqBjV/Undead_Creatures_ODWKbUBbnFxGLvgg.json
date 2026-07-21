@@ -1,0 +1,131 @@
+{
+  "_id": "ODWKbUBbnFxGLvgg",
+  "name": "Undead Creatures",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "rw1nFSl60aGyXzls",
+      "flags": {},
+      "type": 0,
+      "text": "Moan at the torment of their condition",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.rw1nFSl60aGyXzls"
+    },
+    {
+      "_id": "dVlhozgZRtg4fSWj",
+      "flags": {},
+      "type": 0,
+      "text": "Savagely attack the most vital, lively enemy",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.dVlhozgZRtg4fSWj"
+    },
+    {
+      "_id": "JfSWu4a3jzZTh0IB",
+      "flags": {},
+      "type": 0,
+      "text": "Blindly assault a downed foe or corpse",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.JfSWu4a3jzZTh0IB"
+    },
+    {
+      "_id": "5AElUM9vLxo9lc0s",
+      "flags": {},
+      "type": 0,
+      "text": "Seek to terrify a foe rather than directly attack",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.5AElUM9vLxo9lc0s"
+    },
+    {
+      "_id": "d2w0aEAQND2vD4tm",
+      "flags": {},
+      "type": 0,
+      "text": "Target the foe with the weakest life force",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.d2w0aEAQND2vD4tm"
+    },
+    {
+      "_id": "sE4mXb8Mp8ab0FxJ",
+      "flags": {},
+      "type": 0,
+      "text": "Do nothing, instinctively craving an end",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "collection": null,
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!ODWKbUBbnFxGLvgg.sE4mXb8Mp8ab0FxJ"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.tables.ODWKbUBbnFxGLvgg"
+    }
+  },
+  "_key": "!tables!ODWKbUBbnFxGLvgg"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "jKAV2ys6XnoGQ7SO",
+  "name": "Feeblemind",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Mage",
+    "duration": "Permanent",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An arcane spell caster within range must make a Mental save&nbsp;(at a &ndash;4 penalty) or become an imbecile, unable to think clearly or cast spells.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!jKAV2ys6XnoGQ7SO"
+}

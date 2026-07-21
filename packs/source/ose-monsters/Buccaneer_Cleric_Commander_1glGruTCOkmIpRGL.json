@@ -1,0 +1,1138 @@
+{
+  "name": "Buccaneer Cleric Commander",
+  "type": "monster",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.ose-monsters.lSBQDBvJPnEnUNOi"
+    }
+  },
+  "img": "icons/svg/cowled.svg",
+  "items": [
+    {
+      "_id": "JbpoQxbf4D5wlnmU",
+      "name": "Crossbow",
+      "type": "weapon",
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.Z0CwDWTYBn8Nlbw3"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 100,
+          "medium": 0,
+          "long": 300
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
+        "damage": "1d10+4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": null,
+          "ac": null
+        },
+        "shockTotal": 0,
+        "skill": "shoot",
+        "score": "dex",
+        "tags": [
+          {
+            "title": "2H",
+            "value": "2H"
+          },
+          {
+            "title": "SR",
+            "value": "SR"
+          },
+          {
+            "title": "PM",
+            "value": "PM"
+          }
+        ],
+        "slow": false,
+        "missile": true,
+        "melee": false,
+        "price": 10,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.JbpoQxbf4D5wlnmU"
+    },
+    {
+      "_id": "zvIdwhFdbOpSTxH4",
+      "name": "Mail Shirt",
+      "type": "armor",
+      "sort": 400000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.y2XpAnL4R2KKOz0T"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "system": {
+        "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 14,
+          "mod": 0
+        },
+        "armorBonus": 0,
+        "type": "medium",
+        "price": 250,
+        "weight": 1
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.zvIdwhFdbOpSTxH4"
+    },
+    {
+      "_id": "TQItIn1odYyP2EVD",
+      "name": "Mace",
+      "type": "weapon",
+      "sort": 200000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.4jBmE0lnO9VafcT4"
+        }
+      },
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "<p><em><strong>Clubs,&nbsp;</strong></em><em><strong>staves</strong></em><em><strong>,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 1,
+          "ac": 18
+        },
+        "shockTotal": 0,
+        "skill": "punch",
+        "score": "str",
+        "tags": [
+          {
+            "title": "LL",
+            "value": "LL"
+          }
+        ],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 15,
+        "weight": 1,
+        "counter": {
+          "value": 1,
+          "max": 1
+        },
+        "quantity": 1,
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "consumable": false
+        }
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.TQItIn1odYyP2EVD"
+    },
+    {
+      "_id": "gl1TFb1oNTNj9sxs",
+      "name": "Cure Light Wounds",
+      "type": "spell",
+      "sort": 500000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.GdY43f7CPhACRMTH"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "",
+        "range": "Touch",
+        "roll": "1d6+1",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Healing a living subject: </strong>Restores 1d6+1 hit points of damage. This cannot grant more hit points than the subject&rsquo;s normal maximum.</li>\n<li><strong>Curing paralysis:</strong> Paralysing effects are negated.</li>\n</ol>\n<p><strong>Reversed: Cause Light Wounds</strong></p>\n<p>Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.gl1TFb1oNTNj9sxs"
+    },
+    {
+      "_id": "dZnRNNPq4BWHLxa7",
+      "name": "Cure Serious Wounds",
+      "type": "spell",
+      "sort": 600000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.uv2VpjhglsQy8062"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Cleric",
+        "duration": "Instant",
+        "range": "Touch",
+        "roll": "2d6+2",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The caster&rsquo;s touch heals 2d6+2 hit points of damage in one living subject. This cannot grant more hit points than the subject&rsquo;s normal maximum.</p>\n<p><strong>Reversed: Cause Serious Wounds</strong></p>\n<p>Inflicts 2d6+2 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.dZnRNNPq4BWHLxa7"
+    },
+    {
+      "_id": "6sHVbK6Becw6xQWI",
+      "name": "Purify Food and Water",
+      "type": "spell",
+      "sort": 700000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.iVJwd37qJK4jtylC"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "10'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.6sHVbK6Becw6xQWI"
+    },
+    {
+      "_id": "TbQ1ReGz9QskzsIp",
+      "name": "Remove Curse (Cleric)",
+      "type": "spell",
+      "sort": 800000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.qQQYZ73nPfgbe45E"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "Touch",
+        "roll": "",
+        "description": "<p><strong>Duration: Instant / Permanent (curse)</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>Remove curse instantaneously removes one curse from a creature. It may allow a character to discard a cursed magic item.</p>\n<p><strong>Reversed: Curse</strong></p>\n<p>Places a deleterious effect upon a creature, if it fails a Mental save.</p>\n<p><strong>▶ Effects: </strong>The exact form and effects of the curse are determined by the caster.</p>\n<p><strong>▶ Maximum possible effects include:</strong> A &ndash;2 penalty to saving throws, a &ndash;4 penalty to hit, reducing an ability score by 50%.</p>\n<p><strong>▶ Multiple curses: </strong>May afflict a creature, as long as each has a different effect.</p>\n<p><strong>▶ Referee judgement:</strong> The referee should judge the effects of this spell and may turn overly powerful curses back onto the caster!</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.TbQ1ReGz9QskzsIp"
+    },
+    {
+      "_id": "IeBafs65HtgwruwR",
+      "name": "Remove Fear",
+      "type": "spell",
+      "sort": 900000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.tBv9eBFWVGgNHkh9"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "Caster",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The creature touched is calmed and purged of fear. Magically induced fear may be dispelled, but this requires the subject to make a Mental save. The save is modified by -1 per level of the caster.</p>\n<p><strong>Reversed: Cause Fear</strong></p>\n<p>Will cause a target within 120&rsquo; to flee for the duration unless it saves versus spells.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.IeBafs65HtgwruwR"
+    },
+    {
+      "_id": "LZgho7kFtAhXCCR6",
+      "name": "Resist Cold",
+      "type": "spell",
+      "sort": 1000000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.pANau1PNUTF1f1tm"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 1,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>All creatures within range are protected from cold, as follows:</p>\n<p><strong>▶ Normal cold: </strong>Unharmed by non-magical freezing temperatures.</p>\n<p><strong>▶ Save bonus: </strong>Gain a +2 bonus to all saving throws versus cold-based magical or breath attacks.</p>\n<p><strong>▶ Cold-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.LZgho7kFtAhXCCR6"
+    },
+    {
+      "_id": "7BI5GGuLwefGSnsW",
+      "name": "Bless",
+      "type": "spell",
+      "sort": 1100000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.emK6XULeJkvt7Es7"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "60'",
+        "roll": "",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>May be used in one of two situations:</p>\n<ol>\n<li><strong>Battle:</strong> Allies within a 20&rsquo; square area who are not yet in melee gain a +1 bonus to attack and damage rolls and a +1 bonus to morale.</li>\n<li><strong>Ritual:</strong> Casting bless may also form part of rituals of purification or consecration, at the referee&rsquo;s discretion.</li>\n</ol>\n<p><strong>Reversed: Blight</strong></p>\n<p>Incurs a &ndash;1 penalty to morale checks, attack rolls, and damage rolls of enemies within a 20&rsquo; square area. A save versus spells is allowed to resist the blight.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.7BI5GGuLwefGSnsW"
+    },
+    {
+      "_id": "z7qtdOU1gpWGkcR3",
+      "name": "Find Traps",
+      "type": "spell",
+      "sort": 1200000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.Qd7PM9rzAKxIcbQY"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>Trapped objects or areas within range of the caster glow with a magical blue light.</p>\n<p><strong>▶ Magical and mechanical traps:</strong> Are both detected.</p>\n<p><strong>▶ No knowledge: </strong>About the nature of the trap or how to deactivate it is granted.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.z7qtdOU1gpWGkcR3"
+    },
+    {
+      "_id": "qq4UfQFMN1gHqIa2",
+      "name": "Hold Person (Cleric)",
+      "type": "spell",
+      "sort": 1300000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.xub3R22wlS9eVrQ7"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "9 turns",
+        "range": "180'",
+        "roll": "1d4",
+        "description": "<p><strong>Duration: 9 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>This spell causes one or more humans, demihumans, or human-like monsters to be paralysed if they fail a Mental save. It may be cast in two ways:</p>\n<ol>\n<li><strong>Against an individual:</strong> The target&rsquo;s saving throw is penalised by &ndash;2.</li>\n<li><strong>Against a group:</strong> 1d4 individuals in the group are targeted.</li>\n</ol>\n<p><strong>Restrictions:</strong> Human-like monsters of greater than 4+1 HD and undead are not affected.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.qq4UfQFMN1gHqIa2"
+    },
+    {
+      "_id": "HIdJJyDP4U1kFOQO",
+      "name": "Cure Disease",
+      "type": "spell",
+      "sort": 1400000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.Lwb2vrvQ0AL9riIk"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Cleric",
+        "duration": "Instant",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Cure a subject of any disease: </strong>Including those of magical origin.</p>\n<p><strong>2. Kill green slime: </strong>This monster is killed instantly.</p>\n<p><strong>Reversed: Cause Disease</strong></p>\n<p>Inflicts a terrible, withering disease on a victim, if a Physical save is failed. The disease has the following effects:</p>\n<p><strong>▶ Death: </strong>Within [[2d12]] days.</p>\n<p><strong>▶ Attack penalty: </strong>&ndash;2 to attack rolls.</p>\n<p><strong>▶ Natural healing: </strong>Takes twice the usual amount of time.</p>\n<p><strong>▶ Magical healing: </strong>Is utterly ineffective.</p>\n<p><strong>▶ Curing: </strong>This disease can be cured with a casting of cure disease.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "physical"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.HIdJJyDP4U1kFOQO"
+    },
+    {
+      "_id": "QePURLcy4n5gZNXH",
+      "name": "Resist Fire",
+      "type": "spell",
+      "sort": 1500000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.orUQGhIxvP8xovCQ"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 2,
+        "class": "Cleric",
+        "duration": "2 turns",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single creature is bestowed with supernatural resistance to fire, as follows:</p>\n<p><strong>▶ Normal heat:</strong> Unharmed by non-magical heat or fire.</p>\n<p><strong>▶ Save bonus:</strong> Gain a +2 bonus to all saving throws versus fire-based magical or breath attacks.</p>\n<p><strong>▶ Fire-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.QePURLcy4n5gZNXH"
+    },
+    {
+      "_id": "3xS8zdIfGwek9KBQ",
+      "name": "Create Food",
+      "type": "spell",
+      "sort": 1600000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.4UIlIitrvpSAWE3z"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 30'</strong></p>\n<p>Conjures food from thin air.</p>\n<p><strong>▶ Volume: </strong>Food sufficient for twelve humans and twelve mounts for one day is conjured.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, food sufficient for an additional 12 humans and mounts is produced for each level beyond 8th.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.3xS8zdIfGwek9KBQ"
+    },
+    {
+      "_id": "4s5CI1NAex17yLiq",
+      "name": "Create Water",
+      "type": "spell",
+      "sort": 1700000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.iDVF9aArKurz9h38"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "Touch",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: Touch</strong></p>\n<p>This spell causes a magical fount to spring forth from the ground or a wall.</p>\n<p><strong>▶ Volume: </strong>The fount produces approximately 50 gallons of water&mdash;enough to sustain twelve humans and twelve mounts for one day.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, water sufficient for an additional twelve humans and mounts is produced for each level beyond 8th.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.4s5CI1NAex17yLiq"
+    },
+    {
+      "_id": "ld64wiNMCRq8VVS2",
+      "name": "Neutralize Poison",
+      "type": "spell",
+      "sort": 1800000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.QCnRv7sNDtbPMthh"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Cleric",
+        "duration": "Instant",
+        "range": "Touch",
+        "roll": "",
+        "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature or object </strong><strong>touched</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Characters:</strong> Neutralize the effects of poison on a character. A character who has died from poisoning can be revived, if neutralize poison is cast within ten rounds.</p>\n<p><strong>2. Items: </strong>Remove poison from an item.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.ld64wiNMCRq8VVS2"
+    },
+    {
+      "_id": "Vba7Fie1nhsNXGge",
+      "name": "Insect Plague",
+      "type": "spell",
+      "sort": 1900000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.veIMoInZtPm3fioD"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Cleric",
+        "duration": "up to 1 day",
+        "range": "480'",
+        "roll": "",
+        "description": "<p><strong>Duration: Concentration (up to 1 day)</strong></p>\n<p><strong>Range: 480&rsquo;</strong></p>\n<p>Cast above ground, this spell conjures a 60&rsquo; diameter swarm of flying insects with the following properties:</p>\n<p><strong>▶ Movement: </strong>20&rsquo; per round. While the swarm is within range, the caster is able to direct its movements.</p>\n<p><strong>▶ Vision: </strong>Within the area of the swarm is obscured.</p>\n<p><strong>▶ Creatures of 2 HD or less: </strong>Are driven away, if caught within the swarm.</p>\n<p><strong>▶ Concentration:</strong> If the caster moves or loses concentration, the swarm dissipates, ending the spell.</p>\n<p><strong>Restrictions: </strong>The spell has no effect if&nbsp;cast underground.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.Vba7Fie1nhsNXGge"
+    },
+    {
+      "_id": "v5ltDCQo22XKEYyb",
+      "name": "Quest",
+      "type": "spell",
+      "sort": 2000000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.s8WcK2EHXsnz8Nft"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 5,
+        "class": "Cleric",
+        "duration": "Indefinite",
+        "range": "30'",
+        "roll": "",
+        "description": "<p><strong>Duration: Until quest is completed / </strong><strong>Instant (remove quest)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster commands a single subject to perform a specific quest or task.</p>\n<p><strong>▶ Examples:</strong> Rescuing a prisoner, killing a specific monster, bringing a magic item to the caster, or going on a journey to a holy site.</p>\n<p><strong>▶ Suicidal quests:</strong> The prescribed quest must not be obviously suicidal.</p>\n<p><strong>▶ Saving throw: </strong>The subject may make a Mental save, with success indicating that the quest has no effect.</p>\n<p><strong>▶ Refusal:</strong> Otherwise, the subject must undertake the quest or fall under a curse (per the curse spell, with the exact nature of the curse determined by the referee).</p>\n<p><strong>▶ Completion:</strong> Once the task is completed, the spell ends.</p>\n<p><strong>Reversed: Remove Quest</strong></p>\n<p>Can dispel an active quest spell. If the character who cast the quest spell to be nullified is higher level than the character casting remove quest, there is a chance of the spell having no effect. The probability of failure is 5% per level the caster is below the caster of quest.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.v5ltDCQo22XKEYyb"
+    },
+    {
+      "_id": "RyDrAh0TphbLttyh",
+      "name": "Sticks to Snakes",
+      "type": "spell",
+      "sort": 2100000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.OkGGtqfluVRmZtua"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 4,
+        "class": "Cleric",
+        "duration": "6 turns",
+        "range": "120'",
+        "roll": "2d8",
+        "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>2d8 normal sticks are miraculously transformed into snakes that follow the caster&rsquo;s orders.</p>\n<p><strong>▶ Reversion: </strong>When killed or at the end of the spell&rsquo;s duration, the snakes revert back into sticks.</p>\n<hr />\n<p><strong>Conjured Snakes</strong></p>\n<p>AC 6 [13], HD 1 (4hp), Att 1 &times; bite (1d4), THAC0 19 [0], MV 90&rsquo; (30&rsquo;), SV 15, ML 7, AL Neutral, XP 10 (13 if poisonous)</p>\n<hr />\n<p><strong>▶ Poison: </strong>There is a 50% chance of the snakes being poisonous.</p>\n<p><strong>▶ When killed: </strong>Revert back to sticks.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.RyDrAh0TphbLttyh"
+    },
+    {
+      "_id": "AsCHhlF4POAl6CYy",
+      "name": "Continual Light (Cleric)",
+      "type": "spell",
+      "sort": 2200000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.iV7RzEGlyuglmUbP"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Cleric",
+        "duration": "Permanent",
+        "range": "120'",
+        "roll": "",
+        "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<p><strong>1. Conjuring light: </strong>In a 30&rsquo; radius. The magical light is as bright as full daylight (creatures that suffer attack penalties in daylight are affected). The spell may be cast upon an object, in which case, the light moves with the object.</p>\n<p><strong>2. Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded. A blind creature cannot attack.</p>\n<p><strong>3. Cancelling darkness: </strong>Continual light may cancel a continual darkness spell (see below).</p>\n<p><strong>Reversed: Continual Darkness</strong></p>\n<p>Creates a 30&rsquo; radius area of magical blackness, preventing both normal sight and infravision. Light sources brought within the area of darkness do not illuminate it. Like continual light, it may alternatively be used to blind creatures or to dispel a continual light spell.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": "mental"
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.AsCHhlF4POAl6CYy"
+    },
+    {
+      "_id": "gRKeXWnYOBA8Ktjy",
+      "name": "Striking",
+      "type": "spell",
+      "sort": 2300000,
+      "flags": {
+        "cf": null,
+        "core": {
+          "sourceId": "Compendium.wwn.ose-spells.s42dAiKKcLvxz1FU"
+        }
+      },
+      "img": "systems/wwn/assets/default/spell.png",
+      "effects": [],
+      "system": {
+        "lvl": 3,
+        "class": "Cleric",
+        "duration": "1 turn",
+        "range": "30'",
+        "roll": "1d6",
+        "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single weapon is enchanted:</p>\n<p><strong>▶ Damage:</strong> It deals an additional 1d6 damage.</p>\n<p><strong>▶ Treated as magical:</strong> It is able to harm monsters which are normally only harmed by magical weapons.</p>",
+        "prepared": true,
+        "cast": 0,
+        "save": ""
+      },
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!1glGruTCOkmIpRGL.gRKeXWnYOBA8Ktjy"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "wage": "",
+      "morale": 0
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 14,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 7,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 11,
+        "mod": 0
+      },
+      "mental": {
+        "value": 11,
+        "mod": 0
+      },
+      "physical": {
+        "value": 11,
+        "mod": 0
+      },
+      "luck": {
+        "value": 11,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0,
+      "roll": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0,
+      "share": 100
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      },
+      "prepared": {
+        "value": 0,
+        "max": 3
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort4": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p>Sailors who make a living by raiding coastal settlements and robbing other ships. Typically ply rivers, lakes, and coastal waters; occasionally oceans.</p>\n<ul>\n<li><strong>Ships and crew:&nbsp;</strong>Depends where encountered. Rivers or lakes: 1d8 river boats (1d2 &times; 10 buccaneers each); coastal waters: 1d6 small galleys (1d3+1 &times; 10 buccaneers each); any: 1d4 longships (1d3+2 &times; 10 buccaneers each); ocean: 1d3 small warships (1d5+3 &times; 10 buccaneers each). (See the Advanced Fantasy Player&rsquo;s Tome or use Worlds Without Number equivalents for ships.)</li>\n<li><strong>Arms:&nbsp;</strong>60% of group have: leather armour, sword; 30% have: leather armour, sword, crossbow; 10% have: chainmail, sword, crossbow.</li>\n<li><strong>Leaders and captains:&nbsp;</strong>For every 30 buccaneers, there is a 4th level fighter. Each ship has a captain (7th level fighter).</li>\n<li><strong>Fleet commander:</strong>&nbsp;9th level fighter. 30% chance of a magic-user (level 1d2 + 9); 25% chance of a cleric (8th level).</li>\n<li><strong>Treasure:&nbsp;</strong>Divided between vessels. Instead of carrying aboard, may have a map to where it is buried.</li>\n<li><strong>Havens:</strong>&nbsp;Lawless, fortified, coastal towns may act as a haven for buccaneers and pirates.</li>\n</ul>",
+      "alignment": "Neutral",
+      "xp": 75,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "varies"
+      },
+      "morale": 6,
+      "instinct": 0,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "damageBonus": 1,
+    "character": false,
+    "hp": {
+      "hd": "8d8",
+      "value": 36,
+      "max": 36
+    }
+  },
+  "prototypeToken": {
+    "flags": {
+      "about-face": {
+        "indicatorDisabled": false
+      }
+    },
+    "name": "Buccaneer Cleric",
+    "displayName": 30,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "randomImg": true,
+    "light": {
+      "dim": 0,
+      "bright": 0,
+      "angle": 360,
+      "color": null,
+      "alpha": 1,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "coloration": 1,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "texture": {
+      "src": "icons/svg/cowled.svg",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "alpha": 1,
+    "detectionModes": [],
+    "prependAdjective": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1668738331450,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_id": "1glGruTCOkmIpRGL",
+  "_key": "!actors!1glGruTCOkmIpRGL"
+}

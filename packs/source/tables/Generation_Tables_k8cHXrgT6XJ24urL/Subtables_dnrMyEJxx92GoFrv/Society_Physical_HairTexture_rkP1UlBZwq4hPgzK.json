@@ -1,0 +1,125 @@
+{
+  "_id": "rkP1UlBZwq4hPgzK",
+  "name": "Society-Physical-HairTexture",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Hair Texture",
+  "results": [
+    {
+      "_id": "KxuEgRxVh11NtMl5",
+      "flags": {},
+      "type": 0,
+      "text": "Very tightly-curled",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.KxuEgRxVh11NtMl5"
+    },
+    {
+      "_id": "obtKtWjMlTSEu2PZ",
+      "flags": {},
+      "type": 0,
+      "text": "Dense and curled",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.obtKtWjMlTSEu2PZ"
+    },
+    {
+      "_id": "V7q5Kfr9QSFDM0bD",
+      "flags": {},
+      "type": 0,
+      "text": "Slightly wavy",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.V7q5Kfr9QSFDM0bD"
+    },
+    {
+      "_id": "IUFBaAcIeFoolJy2",
+      "flags": {},
+      "type": 0,
+      "text": "Stiff and straight",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.IUFBaAcIeFoolJy2"
+    },
+    {
+      "_id": "loN4hKRTxp6aTD0K",
+      "flags": {},
+      "type": 0,
+      "text": "Thick and wavy",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.loN4hKRTxp6aTD0K"
+    },
+    {
+      "_id": "reqhZIXEr0A5Vada",
+      "flags": {},
+      "type": 0,
+      "text": "Thin and fine",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.reqhZIXEr0A5Vada"
+    },
+    {
+      "_id": "qiUmbcVqw3bzleOG",
+      "flags": {},
+      "type": 0,
+      "text": "Thick and flowing",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.qiUmbcVqw3bzleOG"
+    },
+    {
+      "_id": "H88feTE4clnoijN1",
+      "flags": {},
+      "type": 0,
+      "text": "Scant and delicate",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!rkP1UlBZwq4hPgzK.H88feTE4clnoijN1"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!rkP1UlBZwq4hPgzK"
+}

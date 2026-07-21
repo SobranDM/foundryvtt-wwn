@@ -1,0 +1,26 @@
+{
+  "_id": "POP0z5wwueLpd7Jx",
+  "name": "Charm Person",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "one or more days",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: One or more days (see below)</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>A single human, demihuman, or human- like monster must save versus spells or be charmed, as follows:</p>\n<p><strong>▶ Friendship:</strong> The subject regards the caster as its trusted friend and ally and will come to the caster&rsquo;s defence.</p>\n<p><strong>▶ Commands:</strong> If they share a language, the caster may give the charmed creature commands, which it will obey.</p>\n<p><strong>▶ Subject&rsquo;s nature:</strong> Commands that contradict the charmed creature&rsquo;s habits or alignment may be ignored.</p>\n<p><strong>▶ Suicidal commands: </strong>An affected creature never obeys suicidal or obviously harmful orders.</p>\n<p><strong>Restrictions:</strong> Human-like monsters of greater than 4+1 HD and undead are not affected.</p>\n<p><strong>Duration:</strong> The charm lasts indefinitely, but the subject is allowed to make further Mental saves at intervals, depending on its INT score. If one of these saves succeeds, the spell ends.</p>\n<p><strong>▶ INT 3&ndash;8: </strong>The creature gains a new save once every month.</p>\n<p><strong>▶ INT 9&ndash;12:</strong> The creature gains a new save each week.</p>\n<p><strong>▶ INT 13&ndash;18: </strong>The creature gains a new save once every day.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!POP0z5wwueLpd7Jx"
+}

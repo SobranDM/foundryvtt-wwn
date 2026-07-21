@@ -1,0 +1,17 @@
+{
+  "_id": "vHdIvT6o84WcDGSo",
+  "name": "Failed Intrusion",
+  "content": "<h1>Failed Intrusion</h1><div>\n<p>The ruin recently experienced a serious incursion of outsiders, whether adventurers, bandits, government forces, angry villagers, or other hostiles. These intruders were repulsed, perhaps with significant loss of native life, and the ruin was considerably disrupted by the fighting. Important native leaders might have been killed or wounded, treasures might have been looted, or slaves and hostages might’ve been taken.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Desperate intruder leader still in the ruin, Bloodthirsty native leader craving vengeance, Dead leader’s heir full of terrible ideas</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Sympathetic intruder or native survivor, Escaped slave, Vengeful relative of the dead</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The intruders are too desperate to have entirely given up, The two sides basically ruined each other, Outsiders have entered to take advantage of the chaos</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Useful relic lost by the intruding forces, Stolen treasure of the natives, Tribal treasure now inaccessible due to the chief’s death</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Site of a hideous battle, Larder where the dead intruders are being kept, Local beast lair full of dragged corpses</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 2800000
+    }
+  },
+  "_key": "!journal!vHdIvT6o84WcDGSo",
+  "ownership": {
+    "default": 0
+  }
+}

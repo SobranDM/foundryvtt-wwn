@@ -1,0 +1,12 @@
+/* Treasure mode toggle for RollTableSheet (see module/treasure.js) */
+
+.roll-table-sheet.wwn-treasure-table .window-title::after {
+  content: "\f3a5";
+  font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free";
+  margin-left: 6px;
+  color: var(--wwn-tan);
+}
+
+.roll-table-sheet .form-footer .roll-treasure i {
+  color: var(--wwn-tan);
+}

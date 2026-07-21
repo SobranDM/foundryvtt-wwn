@@ -1,0 +1,106 @@
+{
+  "_id": "pCayfwBEwsfFc4Hn",
+  "name": "Combat-Trained Humanoids",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "fSPfHm5xsiUviFVz",
+      "flags": {},
+      "type": 0,
+      "text": "Freeze in confusion, doing nothing this round",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.fSPfHm5xsiUviFVz"
+    },
+    {
+      "_id": "hHysPrMWnwfzqzVO",
+      "flags": {},
+      "type": 0,
+      "text": "Reposition to get a better place to fight from",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.hHysPrMWnwfzqzVO"
+    },
+    {
+      "_id": "fPp1lYY4egmk28rr",
+      "flags": {},
+      "type": 0,
+      "text": "Duck, taking the <b>Total Defense</b> action",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.fPp1lYY4egmk28rr"
+    },
+    {
+      "_id": "68Q2iFiR0cFlYzxH",
+      "flags": {},
+      "type": 0,
+      "text": "Spend a round looking around the battlefield",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.68Q2iFiR0cFlYzxH"
+    },
+    {
+      "_id": "xvufoZTnVAFDwTI0",
+      "flags": {},
+      "type": 0,
+      "text": "Blindly attack the nearest enemy",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.xvufoZTnVAFDwTI0"
+    },
+    {
+      "_id": "EuZ4iBI67uFC2TMk",
+      "flags": {},
+      "type": 0,
+      "text": "Attack an object, barrier, or downed foe",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pCayfwBEwsfFc4Hn.EuZ4iBI67uFC2TMk"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "RollTable.W6tJYhnBt9g6Nlaj"
+    }
+  },
+  "_key": "!tables!pCayfwBEwsfFc4Hn"
+}

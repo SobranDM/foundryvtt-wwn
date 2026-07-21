@@ -1,0 +1,29 @@
+{
+  "_id": "IzZggO4lo3K1GYbO",
+  "name": "Vothite Icon",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>These small paintings, figurines, or symbolic statuettes were designed to influence the most primitive, basic levels of human cogitation in order to impress a particular complex idea on the beholder. Their effectiveness waned with human changes over the ages, but they still have a powerful ability to influence the unwary. When a human or demihuman first sees a Vothite icon within thirty feet of them, they must make a Mental saving throw; on a failure, they lose their next round of action as they struggle to comprehend the alien imperative the icon is impressing on their thoughts. These ideals are so strange and anachronistic that they are almost always rejected, but it takes the full round to do so. The same icon can&rsquo;t affect the same creature twice. Lifting and presenting an icon requires one hand and a Main Action.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.IzZggO4lo3K1GYbO"
+    }
+  },
+  "_key": "!items!IzZggO4lo3K1GYbO"
+}

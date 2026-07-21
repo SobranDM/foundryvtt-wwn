@@ -1,0 +1,32 @@
+{
+  "_id": "2RT2kIVB880WoCgP",
+  "name": "Mob Justice",
+  "type": "art",
+  "img": "systems/wwn/assets/default/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.2RT2kIVB880WoCgP"
+    }
+  },
+  "_key": "!items!2RT2kIVB880WoCgP",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>As an Instant action, Commit Effort for the day to become impervious to the <em>Make a Swarm Attack</em> maneuver as described on page 44. Your assailants cannot use this maneuver against you for the rest of the scene, and you become immune to Shock as long as you remain in melee with at least two foes. Making use of this benefit disrupts any spellcasting you may attempt, however, due to the violent motion required.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

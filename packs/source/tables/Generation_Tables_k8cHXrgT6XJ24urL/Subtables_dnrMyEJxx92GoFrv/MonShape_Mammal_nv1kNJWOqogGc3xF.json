@@ -1,0 +1,174 @@
+{
+  "_id": "nv1kNJWOqogGc3xF",
+  "name": "MonShape-Mammal",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Thick fur",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "ctfegpwudvt3apv4",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.ctfegpwudvt3apv4"
+    },
+    {
+      "type": 0,
+      "text": "Tail",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "p6bzm1epqhvngx90",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.p6bzm1epqhvngx90"
+    },
+    {
+      "type": 0,
+      "text": "Paws",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "p2wc60sfzk0pgo35",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.p2wc60sfzk0pgo35"
+    },
+    {
+      "type": 0,
+      "text": "Hooves",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "nfltxr1gdnnb86id",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.nfltxr1gdnnb86id"
+    },
+    {
+      "type": 0,
+      "text": "Hands",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "4b0brw8d68u78qis",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.4b0brw8d68u78qis"
+    },
+    {
+      "type": 0,
+      "text": "Fangs",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "8witxjvznfkxq6go",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.8witxjvznfkxq6go"
+    },
+    {
+      "type": 0,
+      "text": "Claws",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "nqx7v8aza48ovvjz",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.nqx7v8aza48ovvjz"
+    },
+    {
+      "type": 0,
+      "text": "Visible ears",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "6674qq8hqza6j2ku",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.6674qq8hqza6j2ku"
+    },
+    {
+      "type": 0,
+      "text": "Stenches",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "8czs0qisohwat7ye",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.8czs0qisohwat7ye"
+    },
+    {
+      "type": 0,
+      "text": "Leathery hide",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "lf2yp7jfc8ift11w",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.lf2yp7jfc8ift11w"
+    },
+    {
+      "type": 0,
+      "text": "Bat wings",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "2w2xxpxopg7n43vn",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.2w2xxpxopg7n43vn"
+    },
+    {
+      "type": 0,
+      "text": "Horns",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "nqro9aza8oaatc75",
+      "flags": {},
+      "_key": "!tables.results!nv1kNJWOqogGc3xF.nqro9aza8oaatc75"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!nv1kNJWOqogGc3xF"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "mez03ubhl0fp3qkf",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Vigilant Agents",
+  "type": "asset",
+  "_key": "!items!mez03ubhl0fp3qkf",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "1d4",
+    "desc": "A constant flow of observations runs back to the faction from these watchful counterintelligence agents. Whenever another faction moves a Stealthed asset into a location within one move's distance from the Vigilant Agents, they may make a Cunning vs. Cunning attack against the owning faction. On a success, the intruding Asset loses its Stealth after it completes the move.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "Whenever another faction moves a Stealthed asset into a location within one move's distance from the Vigilant Agents, they may make a Cunning vs. Cunning attack against the owning faction. On a success, the intruding Asset loses its Stealth after it completes the move.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

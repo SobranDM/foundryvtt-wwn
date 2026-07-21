@@ -1,0 +1,42 @@
+{
+  "_id": "UHPUzEKAxjpbXzE7",
+  "name": "Nepenthe",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.UHPUzEKAxjpbXzE7"
+    }
+  },
+  "system": {
+    "description": "<p>This liquid eases a tormented mind and can cure mental illnesses and temper the pain of past traumas. Madness induced by magical causes forces the subject to make a Mental saving throw; on a failure, the draught cannot break the curse. A subject can benefit from Nepenthe only once in their life.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UHPUzEKAxjpbXzE7"
+}

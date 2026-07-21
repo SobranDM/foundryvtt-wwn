@@ -1,0 +1,175 @@
+{
+  "_id": "M2Pq5BOLo2zwJLTu",
+  "name": "MonShape-Animal",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Kind of Animal Is It Most Like?",
+  "results": [
+    {
+      "type": 0,
+      "text": "Apish: Distorted humanoid outlines",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "uix9b2widecd87t1",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.uix9b2widecd87t1"
+    },
+    {
+      "type": 0,
+      "text": "Arachnid: Webs, many limbs, many eyes",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "24irk5b18g9pkv18",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.24irk5b18g9pkv18"
+    },
+    {
+      "type": 0,
+      "text": "Avian: Feathers, beak, talons, light weight",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "596l245n0cbbbc6r",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.596l245n0cbbbc6r"
+    },
+    {
+      "type": 0,
+      "text": "Beetle-like: Rounded body and armor",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "fpz4x9t08ab9ic3p",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.fpz4x9t08ab9ic3p"
+    },
+    {
+      "type": 0,
+      "text": "Canine: Muzzle, tail, paws",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "0mt7diyicn0lglga",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.0mt7diyicn0lglga"
+    },
+    {
+      "type": 0,
+      "text": "Equine: Hooves, speed, manes",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "gki24nblcwiinkkg",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.gki24nblcwiinkkg"
+    },
+    {
+      "type": 0,
+      "text": "Feline: Fangs, claws, litheness",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ak7sireuxgglnh58",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.ak7sireuxgglnh58"
+    },
+    {
+      "type": 0,
+      "text": "Piscene: Googly eyes, scales, fins",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "6foxgy75ptawwvvn",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.6foxgy75ptawwvvn"
+    },
+    {
+      "type": 0,
+      "text": "Reptilian: Frills, side-slung limbs, scales",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ib403goba3cqutd1",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.ib403goba3cqutd1"
+    },
+    {
+      "type": 0,
+      "text": "Serpentine: Limbless, venomous, slim",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "q71n5jc1akg1wd1n",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.q71n5jc1akg1wd1n"
+    },
+    {
+      "type": 0,
+      "text": "Ursine: Broad body, thick hide, claws",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "caou7syiekt7aua0",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.caou7syiekt7aua0"
+    },
+    {
+      "type": 0,
+      "text": "Wasp-like: Wings, narrow thorax, sting",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "k1d20poiq5iwa5u1",
+      "flags": {},
+      "_key": "!tables.results!M2Pq5BOLo2zwJLTu.k1d20poiq5iwa5u1"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!M2Pq5BOLo2zwJLTu"
+}

@@ -1,0 +1,278 @@
+{
+  "_id": "DM1jZFeude9HBs1i",
+  "name": "Room-Treasure",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Stored in a visible chest or coffer",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "uqzzedeh85aolsrb",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.uqzzedeh85aolsrb"
+    },
+    {
+      "type": 0,
+      "text": "Hidden in a pool of liquid",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "fmhv7rag83pj9met",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.fmhv7rag83pj9met"
+    },
+    {
+      "type": 0,
+      "text": "Behind a stone in the wall",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "gpoqm6thouahffft",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.gpoqm6thouahffft"
+    },
+    {
+      "type": 0,
+      "text": "Underneath a floor tile",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "8fhd7qfqemxsz4cp",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.8fhd7qfqemxsz4cp"
+    },
+    {
+      "type": 0,
+      "text": "Hidden inside a creature’s body",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "2udff1mgi65qn4c1",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.2udff1mgi65qn4c1"
+    },
+    {
+      "type": 0,
+      "text": "Inside an ordinary furniture drawer",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "5cj14wyyurw03eba",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.5cj14wyyurw03eba"
+    },
+    {
+      "type": 0,
+      "text": "Slid beneath a bed or other furnishing",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "fbf3olwa5ejfgpt1",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.fbf3olwa5ejfgpt1"
+    },
+    {
+      "type": 0,
+      "text": "Placed openly on a shelf for display",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "2c87ie8c84zbkemf",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.2c87ie8c84zbkemf"
+    },
+    {
+      "type": 0,
+      "text": "Hidden in a pile of other junk",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "tizrq0ud7id4hqoj",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.tizrq0ud7id4hqoj"
+    },
+    {
+      "type": 0,
+      "text": "Tucked into a secret furniture space",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "euy5oidss4i6yfpi",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.euy5oidss4i6yfpi"
+    },
+    {
+      "type": 0,
+      "text": "Slid behind a tapestry or painting",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "gluxqsyz3npsd60k",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.gluxqsyz3npsd60k"
+    },
+    {
+      "type": 0,
+      "text": "Heavy, protective locked chest or safe",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "zl0or599wz8yuw6o",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.zl0or599wz8yuw6o"
+    },
+    {
+      "type": 0,
+      "text": "Buried under heavy or dangerous debris",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "sl6gxkj3v6rs6xv5",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.sl6gxkj3v6rs6xv5"
+    },
+    {
+      "type": 0,
+      "text": "In the pockets of clothes stored here",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "dsi7fkezvq61hdor",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.dsi7fkezvq61hdor"
+    },
+    {
+      "type": 0,
+      "text": "The treasure’s a creature’s precious body part",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "8qtvv3k86ctvorr9",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.8qtvv3k86ctvorr9"
+    },
+    {
+      "type": 0,
+      "text": "Scattered carelessly on the floor",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "rv9t4qlbj0sy2xz8",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.rv9t4qlbj0sy2xz8"
+    },
+    {
+      "type": 0,
+      "text": "Tucked into a pillow or cushion",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "06qzi9vu95h32vjg",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.06qzi9vu95h32vjg"
+    },
+    {
+      "type": 0,
+      "text": "Hung on a statue or display frame",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "kj5ijoo02nsn195j",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.kj5ijoo02nsn195j"
+    },
+    {
+      "type": 0,
+      "text": "Hidden atop a ceiling beam",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "gp21f26dejbei8fl",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.gp21f26dejbei8fl"
+    },
+    {
+      "type": 0,
+      "text": "Resting atop a desk or table",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "57a4wrp3viggswqu",
+      "flags": {},
+      "_key": "!tables.results!DM1jZFeude9HBs1i.57a4wrp3viggswqu"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!DM1jZFeude9HBs1i"
+}

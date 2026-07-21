@@ -1,0 +1,89 @@
+{
+  "_id": "MSWL5kT3hZRlZsbJ",
+  "name": "Magical Weapon Bonus, Minor",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "i6ivYzmipnKd5JWh",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon +1",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "VHN5qjfTxnLA6GkL",
+      "weight": 1,
+      "range": [
+        1,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!MSWL5kT3hZRlZsbJ.i6ivYzmipnKd5JWh"
+    },
+    {
+      "_id": "wNvg58bfViBgvtyQ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon +2",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "kzzW4WurYXaXOHg0",
+      "weight": 1,
+      "range": [
+        17,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!MSWL5kT3hZRlZsbJ.wNvg58bfViBgvtyQ"
+    },
+    {
+      "_id": "xw1jYiNvMZDFkKMB",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon +3",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "jQFwHVqq9zoWVegm",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!MSWL5kT3hZRlZsbJ.xw1jYiNvMZDFkKMB"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!MSWL5kT3hZRlZsbJ",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

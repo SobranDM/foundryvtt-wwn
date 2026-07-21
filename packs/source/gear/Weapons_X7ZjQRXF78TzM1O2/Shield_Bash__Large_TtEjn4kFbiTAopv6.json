@@ -1,0 +1,48 @@
+{
+  "_id": "TtEjn4kFbiTAopv6",
+  "name": "Shield Bash, Large",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "system": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Shields </strong></em>can be an effective weapon when used to bash or pummel an enemy. If used as a weapon or as part of a dual-wielding attack, a shield grants no AC or Shock protection benefits until the wielder&rsquo;s next turn.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": 1,
+      "ac": 13
+    },
+    "skill": "stab",
+    "score": "str",
+    "tags": [
+      {
+        "title": "LL",
+        "value": "LL"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 0,
+    "weight": 0,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "skillDamage": false
+  },
+  "_key": "!items!TtEjn4kFbiTAopv6",
+  "folder": "X7ZjQRXF78TzM1O2"
+}

@@ -1,0 +1,109 @@
+{
+  "_id": "xq6rwhNERi8vSReO",
+  "name": "Non-Combatant Humanoids",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "TQ54AJwqEo1NnN3b",
+      "flags": {},
+      "type": 0,
+      "text": "Stand immobile in confusion and fear",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.TQ54AJwqEo1NnN3b"
+    },
+    {
+      "_id": "fBDTZaGoXsBZdrsx",
+      "flags": {},
+      "type": 0,
+      "text": "Punch or kick a foe instead of using a weapon",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.fBDTZaGoXsBZdrsx"
+    },
+    {
+      "_id": "0wKHjg8RN6cL6sAX",
+      "flags": {},
+      "type": 0,
+      "text": "Cringe, taking the <b>Total Defense</b> action",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.0wKHjg8RN6cL6sAX"
+    },
+    {
+      "_id": "L9on0iSAcFBwINRD",
+      "flags": {},
+      "type": 0,
+      "text": "Panic and make a Morale check",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.L9on0iSAcFBwINRD"
+    },
+    {
+      "_id": "Rc5tRDJdXDAL8sKw",
+      "flags": {},
+      "type": 0,
+      "text": "Shout threats or pleas, but don't attack",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.Rc5tRDJdXDAL8sKw"
+    },
+    {
+      "_id": "ZHqJzXtZhmkUP95V",
+      "flags": {},
+      "type": 0,
+      "text": "Reposition to get close to the nearest ally",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xq6rwhNERi8vSReO.ZHqJzXtZhmkUP95V"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "wwn": {
+      "treasure": false
+    },
+    "core": {
+      "sourceId": "RollTable.cy1JeOBRMUcWpYPM"
+    }
+  },
+  "_key": "!tables!xq6rwhNERi8vSReO"
+}

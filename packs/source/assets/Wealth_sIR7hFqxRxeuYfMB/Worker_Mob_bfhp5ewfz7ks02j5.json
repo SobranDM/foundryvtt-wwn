@@ -1,0 +1,32 @@
+{
+  "_id": "bfhp5ewfz7ks02j5",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Worker Mob",
+  "type": "asset",
+  "_key": "!items!bfhp5ewfz7ks02j5",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d4+1",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "1d4",
+    "desc": "The roughest, most brutal laborers in service with the faction have been quietly organized to sternly discipline the enemies of the group.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

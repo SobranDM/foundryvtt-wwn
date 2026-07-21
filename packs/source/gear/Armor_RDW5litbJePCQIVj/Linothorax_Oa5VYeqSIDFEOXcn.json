@@ -1,0 +1,31 @@
+{
+  "_id": "Oa5VYeqSIDFEOXcn",
+  "name": "Linothorax",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.Oa5VYeqSIDFEOXcn"
+    }
+  },
+  "system": {
+    "description": "<p><em><strong>Linothorax </strong></em>armor is a stiffer armor of glued, layered cloth, often as elaborately decorated as the arts of its maker allow.</p>\n<p><em><strong>Light armor&nbsp;</strong></em>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "light",
+    "price": 20,
+    "weight": 1
+  },
+  "_key": "!items!Oa5VYeqSIDFEOXcn"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "96s0k5mJgMMmvkn8",
+  "name": "Origin Focus: Undead",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are a sentient undead creature that is capable of masquerading as a normal human, assuming no one inspects you too closely. Optionally, you can perfectly mimic a living person, but you must then choose one debility or vulnerability from the prior list of qualities.</p>\n<p>As with any other origin Focus, it&rsquo;s up to the GM to decide whether to permit this origin in their campaign.</p>\n<p><strong>Level 1:</strong> You have all the qualities of an undead creature. You can teach your allies how to successfully use healing effects on you. The debilitating effects of death have lessened you; pick an attribute and lower its modifier by -1, to a minimum of -2.</p>\n<p><strong>Level 2:</strong> Pick one trait to gain: you can mimic the living with no penalty or drawback, you can turn <em>Intangible </em>as an On Turn action for one round per scene, you can use <em>Desynchrony </em>once per scene as an Instant action, you become immune to Shock, or some similar undead-style power with GM approval. This level of Focus may be taken more than once.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!96s0k5mJgMMmvkn8",
+  "folder": "qz0AIQTCBhZxClN2"
+}

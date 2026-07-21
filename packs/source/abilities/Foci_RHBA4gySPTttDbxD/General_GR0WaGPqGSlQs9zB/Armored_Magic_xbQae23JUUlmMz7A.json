@@ -1,0 +1,18 @@
+{
+  "_id": "xbQae23JUUlmMz7A",
+  "name": "Armored Magic",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Usable only by Mage heroes who would otherwise be prevented from casting spells or using arts while armored, this Focus reflects special training in channeling magic through the obdurate and hindering materials of conventional armor.</p>\n<p><strong>Level 1:</strong> You can cast spells or use arts while wearing armor that has an Encumbrance value of no more than two. You can use a shield while casting, provided your other hand is empty for gesturing.</p>\n<p><strong>Level 2: </strong>You can cast spells while wearing armor of any Encumbrance. You&rsquo;ve also learned to cast spells while both your hands are full, though not bound.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!xbQae23JUUlmMz7A",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

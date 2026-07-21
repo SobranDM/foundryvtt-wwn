@@ -1,0 +1,18 @@
+{
+  "_id": "pZyko2826sPi0QK0",
+  "name": "Origin Focus: Penal Blighted",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Your lineage was cursed by some sadistic sorcerer-king or merciless alien artificer. Perhaps an ancestor offended them, or your people were dominated and made perpetual tools of their conquerors, or your forebears were a fallen ruling caste rendered permanently incapable of threatening the new order. You have been terribly compromised in some physical or mental way.</p>\n<p>Despite this curse, you have somehow managed to avoid complete incapacitation from it and have done your best to compensate for your limitations.</p>\n<p><strong>Level 1: </strong>Choose an attribute; its modifier suffers a permanent -2 penalty, to a maximum of -3. Only one of your attribute scores can be above 13; reduce any others to no more than 13. You may pick two additional Foci to reflect the efforts you&rsquo;ve made to overcome your natural limits. Gain a +2 bonus to all saving throws to reflect your indomitable spirit. You cannot pick the Developed Attribute Focus.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!pZyko2826sPi0QK0",
+  "folder": "qz0AIQTCBhZxClN2"
+}

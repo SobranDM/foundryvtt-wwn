@@ -1,0 +1,106 @@
+{
+  "_id": "AdhcClvUZ5b3p3vH",
+  "name": "Ordinary Predatory Beasts",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "_id": "j9oRCKuLjlMnfEQG",
+      "flags": {},
+      "type": 0,
+      "text": "Snarl and growl, but don't attack anyone",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.j9oRCKuLjlMnfEQG"
+    },
+    {
+      "_id": "16V4vkxCIUbh6LGZ",
+      "flags": {},
+      "type": 0,
+      "text": "Pull back and get away from nearby threats",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.16V4vkxCIUbh6LGZ"
+    },
+    {
+      "_id": "KeUdtaKYI0JinrE7",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the last enemy to have hurt it",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.KeUdtaKYI0JinrE7"
+    },
+    {
+      "_id": "wk0Qg3xzj7ov0csg",
+      "flags": {},
+      "type": 0,
+      "text": "Attack the last enemy it managed to hurt",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.wk0Qg3xzj7ov0csg"
+    },
+    {
+      "_id": "bBLIdrWvilsYHNz7",
+      "flags": {},
+      "type": 0,
+      "text": "Take a bite out of a downed enemy",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.bBLIdrWvilsYHNz7"
+    },
+    {
+      "_id": "TbbpnHCUU1rh4Z8R",
+      "flags": {},
+      "type": 0,
+      "text": "Panic and make a Morale check",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!AdhcClvUZ5b3p3vH.TbbpnHCUU1rh4Z8R"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "JPUcp1bOrJIxqBjV",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.tables.AdhcClvUZ5b3p3vH"
+    }
+  },
+  "_key": "!tables!AdhcClvUZ5b3p3vH"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "vQNBCzAyVjnD9hvF",
+  "name": "Limited Access",
+  "content": "<h1>Limited Access</h1><div>\n<p>The ruin can only be accessed at certain times or with certain special keys. Any natives are cut off from the outside world for long periods, and must either have no need for sustenance or sources within the ruin. The obstacle may be magical in nature, or the only access route to the ruin may be subject to natural cycles that make it impassable at most times.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Ruin tyrant who views all outsiders as enemies, Ruthless adventurer trying to block rivals, Mad power locked away in the ruin</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Eager young scholar, Adventurer with the key to the site, Native yearning to escape</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It’s been so long since the last opening that everyone’s forgotten about it, The access now opens in a very inconvenient place, The access can be forced by some terrible sacrifice</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Key to open the access, Controls that permanently open the site, Loot from the last expedition to enter the site</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Passage that opens on a time lock, Vast magical seal, Coastal portal revealed only during a particular low tide period</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5600000
+    }
+  },
+  "_key": "!journal!vQNBCzAyVjnD9hvF",
+  "ownership": {
+    "default": 0
+  }
+}

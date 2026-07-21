@@ -1,0 +1,32 @@
+{
+  "_id": "36YIcmb5ZtiVQAP2",
+  "name": "Unarmed Might",
+  "type": "art",
+  "img": "systems/wwn/assets/new/vowed_art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.36YIcmb5ZtiVQAP2"
+    }
+  },
+  "_key": "!items!36YIcmb5ZtiVQAP2",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Your unarmed attack damage increases as you gain levels, as noted on the chart. You may add your Punch skill to the damage done by these attacks as usual, but Foci such as Unarmed Combatant that replace or improve your usual Punch damage do not apply to you.</p>",
+    "save": "",
+    "source": "Vowed",
+    "effort": 0,
+    "time": "",
+    "range": ""
+  }
+}

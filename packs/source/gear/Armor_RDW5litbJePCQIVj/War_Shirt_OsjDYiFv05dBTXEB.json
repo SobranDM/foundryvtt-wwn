@@ -1,0 +1,31 @@
+{
+  "_id": "OsjDYiFv05dBTXEB",
+  "name": "War Shirt",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.OsjDYiFv05dBTXEB"
+    }
+  },
+  "system": {
+    "description": "<p><em><strong>War shirts </strong></em>are nothing more than blessed shirts, lucky cloaks, auspicious warpaint, or whatever tokens of martial victory are favored by the poor and humble of a given culture. While they may look like nothing but normal clothing, their war-luck is still sufficient to interfere with a spellcaster&rsquo;s abilities should they try to wear one.</p>\n<p><em><strong>Light armor </strong></em>may be decidedly heavy, but it is loose and flexible enough to offer minimal hindrance to the wearer&rsquo;s actions. Some varieties are also discreet enough to be worn politely in common society.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 11,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "light",
+    "price": 0,
+    "weight": 0
+  },
+  "_key": "!items!OsjDYiFv05dBTXEB"
+}

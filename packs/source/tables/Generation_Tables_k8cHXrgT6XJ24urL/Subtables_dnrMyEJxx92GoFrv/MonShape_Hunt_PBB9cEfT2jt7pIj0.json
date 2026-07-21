@@ -1,0 +1,179 @@
+{
+  "_id": "PBB9cEfT2jt7pIj0",
+  "name": "MonShape-Hunt",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Does It Usually Hunt?",
+  "results": [
+    {
+      "type": 0,
+      "text": "Stealthy stalking and ambush of its prey",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "phdkbqwl8n5nh4xp",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 1,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.phdkbqwl8n5nh4xp"
+    },
+    {
+      "type": 0,
+      "text": "It steals the kills of other creatures",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "tfsosm58ou6c45ep",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 2,
+      "rangeH": 2,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.tfsosm58ou6c45ep"
+    },
+    {
+      "type": 0,
+      "text": "It hunts in packs or family groups",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "eyibo5rkagd24mpo",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.eyibo5rkagd24mpo"
+    },
+    {
+      "type": 0,
+      "text": "It uses some unnatural power to catch prey",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "01it3reb9re9opdk",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.01it3reb9re9opdk"
+    },
+    {
+      "type": 0,
+      "text": "A partnership with another kind of beast",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "ykauatstptnheem2",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 5,
+      "rangeH": 5,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.ykauatstptnheem2"
+    },
+    {
+      "type": 0,
+      "text": "It feeds on carrion and the very weak",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "p7h1izkyzpe8wlv4",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.p7h1izkyzpe8wlv4"
+    },
+    {
+      "type": 0,
+      "text": "It chases down its prey in open pursuit",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "iluelfa8h6hf5zc6",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 7,
+      "rangeH": 7,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.iluelfa8h6hf5zc6"
+    },
+    {
+      "type": 0,
+      "text": "It disguises itself as something harmless",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "05zbxgupw26vblrz",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 8,
+      "rangeH": 8,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.05zbxgupw26vblrz"
+    },
+    {
+      "type": 0,
+      "text": "It blindly eats whatever it encounters",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "qjxb38ti2ctxdgft",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 9,
+      "rangeH": 9,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.qjxb38ti2ctxdgft"
+    },
+    {
+      "type": 0,
+      "text": "It lures in its prey with some kind of bait",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "gw37oz8zx5d9owpz",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 10,
+      "rangeH": 10,
+      "_key": "!tables.results!PBB9cEfT2jt7pIj0.gw37oz8zx5d9owpz"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!PBB9cEfT2jt7pIj0"
+}

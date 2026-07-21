@@ -1,0 +1,174 @@
+{
+  "_id": "NmnQjz3CKiOtkCFm",
+  "name": "Frame-Arrive",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Driven here by a terrible monster",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "1nmvp6p6w5h883j3",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.1nmvp6p6w5h883j3"
+    },
+    {
+      "type": 0,
+      "text": "No one remembers when they first came",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "2aak47mwovau51sg",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.2aak47mwovau51sg"
+    },
+    {
+      "type": 0,
+      "text": "Forced out of their old home by enemies",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "alpm2hfoh0qw9670",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.alpm2hfoh0qw9670"
+    },
+    {
+      "type": 0,
+      "text": "Sent out as a colony from their parent group",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "5nmwrkgppsp3jap8",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.5nmwrkgppsp3jap8"
+    },
+    {
+      "type": 0,
+      "text": "Gathered from scattered exiles and outcasts",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "ccaopzbeyv5qrm7c",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.ccaopzbeyv5qrm7c"
+    },
+    {
+      "type": 0,
+      "text": "Enlisted to come by a powerful leader",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "s01mmg0utzu3q3ia",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.s01mmg0utzu3q3ia"
+    },
+    {
+      "type": 0,
+      "text": "Drawn by the prospect of resources or loot",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ou4x402rmol1h74n",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.ou4x402rmol1h74n"
+    },
+    {
+      "type": 0,
+      "text": "Making a cultural or religious pilgrimage",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "xkl9p45isqzrocnj",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.xkl9p45isqzrocnj"
+    },
+    {
+      "type": 0,
+      "text": "Came to fight an enemy that lairs here",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "lfffxcfb8mbuk8e6",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.lfffxcfb8mbuk8e6"
+    },
+    {
+      "type": 0,
+      "text": "Sent by visions, prophecy, or oracles",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "o06ulfpeiio0k2um",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.o06ulfpeiio0k2um"
+    },
+    {
+      "type": 0,
+      "text": "It’s a refuge from some pursuing foe",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "4rwo6sw0y1pruulo",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.4rwo6sw0y1pruulo"
+    },
+    {
+      "type": 0,
+      "text": "To guard something precious here",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "4zjzex1tq8534909",
+      "flags": {},
+      "_key": "!tables.results!NmnQjz3CKiOtkCFm.4zjzex1tq8534909"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!NmnQjz3CKiOtkCFm"
+}

@@ -1,0 +1,110 @@
+{
+  "_id": "kQnfCoh88pzOKPNe",
+  "name": "Magical Weapon SA, Great",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "XEpAZIf6LdeH6lGs",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "No special abilities.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kQnfCoh88pzOKPNe.XEpAZIf6LdeH6lGs"
+    },
+    {
+      "_id": "T4TjoYKqPGapJrRV",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "sEzwkDybTVwodMFV",
+      "weight": 1,
+      "range": [
+        3,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kQnfCoh88pzOKPNe.T4TjoYKqPGapJrRV"
+    },
+    {
+      "_id": "Hiw3WJ5KGexr0iUw",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "sEzwkDybTVwodMFV",
+      "weight": 1,
+      "range": [
+        5,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kQnfCoh88pzOKPNe.Hiw3WJ5KGexr0iUw"
+    },
+    {
+      "_id": "89KMv01zqUwfeRie",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "sEzwkDybTVwodMFV",
+      "weight": 1,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kQnfCoh88pzOKPNe.89KMv01zqUwfeRie"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!kQnfCoh88pzOKPNe",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Light (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Cleric",
+    "duration": "12 turns",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<ol>\n<li><strong>Conjuring light: </strong>In a 15&rsquo; radius. The magical light is sufficient for reading, but is not as bright as daylight. The spell may be cast upon an object, in which case the light moves with the object.</li>\n<li><strong>Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded for the duration. A blind creature cannot attack.</li>\n<li><strong>Cancelling darkness:</strong> Light may cancel a darkness spell (see below).</li>\n</ol>\n<p><strong>Reversed: Darkness</strong></p>\n<p>Creates a 15&rsquo; radius area of magical blackness, preventing normal sight (but not infravision). Like light, it may alternatively be used to blind creatures or to dispel a light spell.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "884UCRiAWptBhH9e",
+  "_key": "!items!884UCRiAWptBhH9e"
+}

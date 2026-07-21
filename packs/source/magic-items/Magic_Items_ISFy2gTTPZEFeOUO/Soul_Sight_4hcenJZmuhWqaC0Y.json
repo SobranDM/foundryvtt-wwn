@@ -1,0 +1,42 @@
+{
+  "_id": "4hcenJZmuhWqaC0Y",
+  "name": "Soul Sight",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.4hcenJZmuhWqaC0Y"
+    }
+  },
+  "system": {
+    "description": "<p>If applied to a creature&rsquo;s eyes, this potion causes their vision to become hazy and indistinct, too blurry to read text or make out any details more precise than facial features, albeit not so much as to hinder their fighting ability. They are able to see living or animate entities as glowing colored outlines, however, regardless of the ambient light or their invisibility, and can identify specific individuals by the details of the image. The glow tells the user the subject&rsquo;s current mental state as described in one or two words. The sight lasts for six hours or until the user rinses their eyes.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4hcenJZmuhWqaC0Y"
+}

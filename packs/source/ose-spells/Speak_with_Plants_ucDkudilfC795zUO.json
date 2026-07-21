@@ -1,0 +1,26 @@
+{
+  "_id": "ucDkudilfC795zUO",
+  "name": "Speak with Plants",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Cleric",
+    "duration": "3 turns",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Normal plants:</strong> Communication with normal plants. The caster is able to ask questions and receive answers and may ask for simple favours. Plants may comply, if the request is within their ability to understand and perform. For example, densely overgrown plants may clear a passageway through which the caster and party may travel.</li>\n<li><strong>Monstrous plants:</strong> Communication with plant-like or plant-based monsters.</li>\n</ol>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!ucDkudilfC795zUO"
+}

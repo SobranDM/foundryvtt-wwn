@@ -1,0 +1,659 @@
+{
+  "_id": "15l8vsBmHeKyd3cc",
+  "name": "Enchanted Elixirs",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "gId8C0F8tBWO8xTr",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "The Elixir's Form:",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.gId8C0F8tBWO8xTr"
+    },
+    {
+      "_id": "fZvFCrBYitItBBa4",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Elixir Form",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ZCHmVjjO4Qi2Rf1h",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.fZvFCrBYitItBBa4"
+    },
+    {
+      "_id": "rYJLPytXmpoPvgsA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "The Elixir's Quirks of Appearance",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.rYJLPytXmpoPvgsA"
+    },
+    {
+      "_id": "KesZZGLQTNHJEfCf",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Elixir Quirk",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "xG26UX9BribuXuH9",
+      "weight": 1,
+      "range": [
+        1,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.KesZZGLQTNHJEfCf"
+    },
+    {
+      "_id": "zU7wucE5ClayDKSU",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Anchoring Draught",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "xiQ8ywxGkOsI40v4",
+      "weight": 1,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.zU7wucE5ClayDKSU"
+    },
+    {
+      "_id": "UrzaEC2Ll53GDQSh",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Bestial Form",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "Gye2WhyHo0E4g2D4",
+      "weight": 1,
+      "range": [
+        5,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.UrzaEC2Ll53GDQSh"
+    },
+    {
+      "_id": "hfLsORE0JOc0X07D",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Blood of Boiling Rage",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "HNZF3Vbf47ZmHSg6",
+      "weight": 1,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.hfLsORE0JOc0X07D"
+    },
+    {
+      "_id": "yeZVM527Z462DwJB",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Bodily Innervation",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "dBFsfn8SFv7khWwA",
+      "weight": 1,
+      "range": [
+        13,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.yeZVM527Z462DwJB"
+    },
+    {
+      "_id": "7kGpDquIHfCz4cVO",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Borrowed Flesh",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "IzwD0q0YQIBlFBLL",
+      "weight": 1,
+      "range": [
+        16,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.7kGpDquIHfCz4cVO"
+    },
+    {
+      "_id": "XOKPqefwixqDtjhN",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Cold Courage",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "7z36Ig4YwznfKeR5",
+      "weight": 1,
+      "range": [
+        21,
+        24
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.XOKPqefwixqDtjhN"
+    },
+    {
+      "_id": "Ibif2ICK6bJT2UAH",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Congealed Winter",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "gfjkbiGywL2AYlh1",
+      "weight": 1,
+      "range": [
+        25,
+        28
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.Ibif2ICK6bJT2UAH"
+    },
+    {
+      "_id": "ZA9eDJOm4Kslv9Wx",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Deep Sight",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "J16DXL0OKIMX1PwG",
+      "weight": 1,
+      "range": [
+        29,
+        32
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.ZA9eDJOm4Kslv9Wx"
+    },
+    {
+      "_id": "2EcTTorhWMydtNaT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Energetic Impermeability",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "Pj6Qtrbf7xsjU37k",
+      "weight": 1,
+      "range": [
+        33,
+        38
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.2EcTTorhWMydtNaT"
+    },
+    {
+      "_id": "3lG8LjtmA9E1plE1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Inverted Entropy",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "0OEKlKmwlyTfghKY",
+      "weight": 1,
+      "range": [
+        39,
+        42
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.3lG8LjtmA9E1plE1"
+    },
+    {
+      "_id": "KoSZbLpLuziMLckg",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Murderous Anointing",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "6w4hBdWdv6YxrHhQ",
+      "weight": 1,
+      "range": [
+        43,
+        46
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.KoSZbLpLuziMLckg"
+    },
+    {
+      "_id": "8yeWo69nWBAlHYAB",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nectar of Immortality",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "MIuGWPikf2SoxAPe",
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.8yeWo69nWBAlHYAB"
+    },
+    {
+      "_id": "CKVAmPH2MzKEr930",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nepenthe",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "UHPUzEKAxjpbXzE7",
+      "weight": 1,
+      "range": [
+        48,
+        49
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.CKVAmPH2MzKEr930"
+    },
+    {
+      "_id": "imPshe0T76N99q9N",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Omened Visions",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "vGHsZ0Qa2OX4VE5A",
+      "weight": 1,
+      "range": [
+        50,
+        53
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.imPshe0T76N99q9N"
+    },
+    {
+      "_id": "4OCXdv12I3pLhUVk",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Persistent Luminescence",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "43X5QtAdqBX9xJzJ",
+      "weight": 1,
+      "range": [
+        54,
+        58
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.4OCXdv12I3pLhUVk"
+    },
+    {
+      "_id": "cKufaqER8UkfFnOO",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Plasmic Molding",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "NvSLrgJi8iQMbd8u",
+      "weight": 1,
+      "range": [
+        59,
+        62
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.cKufaqER8UkfFnOO"
+    },
+    {
+      "_id": "KcSdrHSPdCrzB6gP",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Quintessence of the Hour",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "6dFKvkJIPU33mzfy",
+      "weight": 1,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.KcSdrHSPdCrzB6gP"
+    },
+    {
+      "_id": "dnGffwnFaFqMrie5",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Sacrificial Strength",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "3obnzkq1h45mZdQb",
+      "weight": 1,
+      "range": [
+        65,
+        68
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.dnGffwnFaFqMrie5"
+    },
+    {
+      "_id": "t5r8dLpMXpczxh3h",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Sanctified Healing",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "QvOaRyzJF60YR2pC",
+      "weight": 1,
+      "range": [
+        69,
+        76
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.t5r8dLpMXpczxh3h"
+    },
+    {
+      "_id": "LEQHB0v6lUwx8Gjx",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Scalding Breath",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "wAG73rYCCTuHMMDI",
+      "weight": 1,
+      "range": [
+        77,
+        79
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.LEQHB0v6lUwx8Gjx"
+    },
+    {
+      "_id": "gAIqh0rbEbS6HAw5",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Soul Sight",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "4hcenJZmuhWqaC0Y",
+      "weight": 1,
+      "range": [
+        80,
+        83
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.gAIqh0rbEbS6HAw5"
+    },
+    {
+      "_id": "14FoVRF6GI2K6h5L",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Thaumic Vitality",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "UBHoTA27Y3a5Caij",
+      "weight": 1,
+      "range": [
+        84,
+        85
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.14FoVRF6GI2K6h5L"
+    },
+    {
+      "_id": "FVc53eZ8juYGvxJ0",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "The Great and the Small",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "2HErh3n4wK7x3PqJ",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.FVc53eZ8juYGvxJ0"
+    },
+    {
+      "_id": "X4ECQ61E0KV4UqqT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Truthspeaking",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "RGma6GCDJphOUbEI",
+      "weight": 1,
+      "range": [
+        91,
+        94
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.X4ECQ61E0KV4UqqT"
+    },
+    {
+      "_id": "3OgSw6RvCwCFTRI1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Wrathful Detonation",
+      "img": "icons/tools/laboratory/vial-orange.webp",
+      "collection": "wwn.magic-items",
+      "resultId": "5MdKYICedy1jJQbD",
+      "weight": 1,
+      "range": [
+        95,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!15l8vsBmHeKyd3cc.3OgSw6RvCwCFTRI1"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!15l8vsBmHeKyd3cc",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

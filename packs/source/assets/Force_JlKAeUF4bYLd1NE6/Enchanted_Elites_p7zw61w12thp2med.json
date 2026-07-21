@@ -1,0 +1,32 @@
+{
+  "_id": "p7zw61w12thp2med",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Enchanted Elites",
+  "type": "asset",
+  "_key": "!items!p7zw61w12thp2med",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d10",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "1d6",
+    "desc": "A carefully-selected group of skilled warriors are given magical armaments and arcane blessings to boost their effectiveness.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 3,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

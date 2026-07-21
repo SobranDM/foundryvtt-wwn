@@ -1,0 +1,110 @@
+{
+  "_id": "VxDbqxNr1shnNqH1",
+  "name": "Magical Weapon, Major",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "G1VRpvmCht0WMM4v",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Origin Intended Users of the Weapon:",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VxDbqxNr1shnNqH1.G1VRpvmCht0WMM4v"
+    },
+    {
+      "_id": "wqw8IVot8eJSbhWC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Origin",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ZgBYyAHe1xdRwZvO",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VxDbqxNr1shnNqH1.wqw8IVot8eJSbhWC"
+    },
+    {
+      "_id": "5LzDrjKqXxwxRTLs",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Bonus, Major",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "782ut4JaKrNlvj9r",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VxDbqxNr1shnNqH1.5LzDrjKqXxwxRTLs"
+    },
+    {
+      "_id": "wCeKLBwlTIaOZGRX",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon SA, Major",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "oi3tnNUSxsklwpDC",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!VxDbqxNr1shnNqH1.wCeKLBwlTIaOZGRX"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!VxDbqxNr1shnNqH1",
+  "folder": "lNk7aQ8vhZ8d8QQE"
+}

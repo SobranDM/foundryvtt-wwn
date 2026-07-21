@@ -1,0 +1,26 @@
+{
+  "_id": "WmZu3zc2pbNQzvyf",
+  "name": "Fire Ball",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "Instant",
+    "range": "240'",
+    "roll": "5d6",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Flame streaks towards a point within range and detonates in a 20&rsquo; radius sphere.</p>\n<p><strong>▶ Damage:</strong> Creatures caught in the fire ball suffer 1d6 damage per level of the caster, with a successful Evasion save indicating half damage</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "evasion"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!WmZu3zc2pbNQzvyf"
+}

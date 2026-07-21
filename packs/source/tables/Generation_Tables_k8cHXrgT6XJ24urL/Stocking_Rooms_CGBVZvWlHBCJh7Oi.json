@@ -1,0 +1,187 @@
+{
+  "_id": "CGBVZvWlHBCJh7Oi",
+  "name": "Stocking Rooms",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Stocking an exploration site’s rooms is the most demanding part of site preparation. A ruin map can be scrawled out in moments, and deciding or randomly generating a room’s purpose can take only a few minutes, but giving each such place a degree of flavor and interest is a much more challenging prospect. Fortunately, a basic system can smooth this creative work.",
+  "results": [
+    {
+      "_id": "Jilu1xbaIhr2oXEF",
+      "type": 0,
+      "text": "<b>Creature</b> - assign an existing creature or generate a new one using the appropriate tables. This room also contains treasure if the following die is a 3 or lower: [[1d6]]",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 2,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.Jilu1xbaIhr2oXEF"
+    },
+    {
+      "_id": "mzOSVcPOKdxmshnp",
+      "type": 0,
+      "text": "<b>Hazard</b> - This room also contains treasure if the following die is a 2 or lower: [[1d6]]",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.mzOSVcPOKdxmshnp"
+    },
+    {
+      "_id": "Y9TT9cr9yqviiULK",
+      "type": 2,
+      "text": "Room-Hazard",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "m0SIV8ejdxKnElhp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.Y9TT9cr9yqviiULK"
+    },
+    {
+      "_id": "uBck6ZYdgi0yJvP1",
+      "type": 0,
+      "text": "<b>Enigma</b> - This room also contains treasure if the following die is a 2 or lower: [[1d6]]",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.uBck6ZYdgi0yJvP1"
+    },
+    {
+      "_id": "BzCM921IWxN1NRcw",
+      "type": 2,
+      "text": "Room-Enigma",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "4uAIygVNERLjC7s1",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 4,
+      "rangeH": 4,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.BzCM921IWxN1NRcw"
+    },
+    {
+      "_id": "PwTVK8tCB0K0TcIY",
+      "type": 0,
+      "text": "<b>Distractor</b> - This room also contains treasure if the following die is a 1 or lower: [[1d6]]",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 5,
+      "rangeH": 6,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.PwTVK8tCB0K0TcIY"
+    },
+    {
+      "_id": "zrRp1NpbC3x0loaH",
+      "type": 2,
+      "text": "Room-Distractor",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "0SVWjpyVal6Ji6Lz",
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 5,
+      "rangeH": 6,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.zrRp1NpbC3x0loaH"
+    },
+    {
+      "_id": "QDlRT6Fy6LjhaOY0",
+      "type": 0,
+      "text": "<b>Empty</b> - This room contains treasure if the following die is a 1: [[1d6]]",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 7,
+      "rangeH": 8,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.QDlRT6Fy6LjhaOY0"
+    },
+    {
+      "_id": "BcL4KTbvGroLmpqu",
+      "type": 0,
+      "text": "<b>Possible Treasure Locations</b>",
+      "weight": 1,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 8,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.BcL4KTbvGroLmpqu"
+    },
+    {
+      "_id": "24oIMHRhVkhz6xqL",
+      "type": 2,
+      "text": "Room-Treasure",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "DM1jZFeude9HBs1i",
+      "weight": 1,
+      "range": [
+        1,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "rangeL": 1,
+      "rangeH": 8,
+      "_key": "!tables.results!CGBVZvWlHBCJh7Oi.24oIMHRhVkhz6xqL"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!CGBVZvWlHBCJh7Oi"
+}

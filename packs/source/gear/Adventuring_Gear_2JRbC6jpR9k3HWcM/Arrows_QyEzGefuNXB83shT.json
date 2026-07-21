@@ -1,0 +1,40 @@
+{
+  "_id": "QyEzGefuNXB83shT",
+  "name": "Arrows",
+  "type": "item",
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 2,
+    "weight": 1,
+    "weightless": "never",
+    "charges": {
+      "value": 20,
+      "max": 20,
+      "consumable": false
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "hasCharges": true,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QyEzGefuNXB83shT"
+}

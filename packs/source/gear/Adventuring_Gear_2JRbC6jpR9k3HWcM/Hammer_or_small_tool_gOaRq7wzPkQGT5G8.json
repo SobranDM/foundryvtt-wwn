@@ -1,0 +1,24 @@
+{
+  "_id": "gOaRq7wzPkQGT5G8",
+  "name": "Hammer or small tool",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "item",
+  "data": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 2,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "_key": "!items!gOaRq7wzPkQGT5G8",
+  "folder": "2JRbC6jpR9k3HWcM"
+}

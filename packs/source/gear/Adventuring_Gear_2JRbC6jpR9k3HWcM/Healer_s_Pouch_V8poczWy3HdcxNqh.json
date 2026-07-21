@@ -1,0 +1,24 @@
+{
+  "_id": "V8poczWy3HdcxNqh",
+  "name": "Healer's Pouch",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "item",
+  "data": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 5,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "_key": "!items!V8poczWy3HdcxNqh",
+  "folder": "2JRbC6jpR9k3HWcM"
+}

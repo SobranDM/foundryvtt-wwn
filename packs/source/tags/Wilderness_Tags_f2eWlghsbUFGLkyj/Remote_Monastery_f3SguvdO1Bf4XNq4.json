@@ -1,0 +1,17 @@
+{
+  "_id": "f3SguvdO1Bf4XNq4",
+  "name": "Remote Monastery",
+  "content": "<h1>Remote Monastery</h1><div>\n<p>There is a largely self-sustaining monastery, temple, hermitage, or other religious site in the area, one inhabited by clergy who have some particular need for isolation. They may be guardians of a holy site, imprisoned heretics, wardens of some refuge for travelers, or a particularly rigorous or heretical sect. They may be willing to provide services for strangers of acceptable character, and might well have problems that their limited resources can’t solve.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Sinister-minded abbot, Demonic entity warring on the clerics, Cleric of a rival faith or sect determined to destroy them and all their allies</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Friendly if unworldly local cleric, Native who trades with the monastery, Cleric who seriously reconsiders their choice to come here</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The monastery has been taken over by zealots or an outside power, The monastery is a cover for sinister occult doings, The place isn’t nearly as self-sufficient as it thought it would be</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Sacred relic of the place, Offering made by a grateful believer, Sacred text specific to their sect</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Well-guarded fields outside the walls, Heavilyfortified monastic building, Hostel for travelers kept outside the monastery itself</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7800000
+    }
+  },
+  "_key": "!journal!f3SguvdO1Bf4XNq4",
+  "ownership": {
+    "default": 0
+  }
+}

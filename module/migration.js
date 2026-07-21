@@ -11,10 +11,10 @@ export const migrateWorld = async function () {
       console.log(`Adding skills to ${actor.name}.`);
       await actor.createEmbeddedDocuments("Item", updateData);
     }
-    // If another actor migration is used to change the actor it should follow something like 
-    // const updateData = await migrateActorDataToItemSkills(actor.data);
-    // if (!foundry.utils.isObjectEmpty(updateData)) {
-    //  await a.update(updateData, {enforceTypes: false});
+    // If another actor migration is used to change the actor it should follow something like
+    // const updateData = await migrateActorDataToItemSkills(actor);
+    // if (!foundry.utils.isEmpty(updateData)) {
+    //  await actor.update(updateData, {enforceTypes: false});
   }
 
   for (let scene of game.scenes.contents) {
@@ -30,7 +30,7 @@ export const migrateWorld = async function () {
       continue;
     }
 
-    const packType = pack.metadata.entity;
+    const packType = pack.metadata.type;
     if (!["Actor", "Scene"].includes(packType)) {
       continue;
     }
@@ -45,15 +45,15 @@ export const migrateWorld = async function () {
       let updateData = {};
       switch (packType) {
         case "Actor":
-          updateData = await migrateActorDataToItemSkills(document.data);
+          updateData = await migrateActorDataToItemSkills(document);
           await document.createEmbeddedDocuments("Item", updateData);
           updateData = {};
           break;
         case "Scene":
-          updateData = migrateSceneData(document.data);
+          updateData = await migrateSceneData(document);
           break;
       }
-      if (foundry.utils.isObjectEmpty(updateData)) {
+      if (foundry.utils.isEmpty(updateData)) {
         continue;
       }
       await document.update(updateData);
@@ -82,16 +82,18 @@ async function migrateActorDataToItemSkills(actor) {
   let skills = actor.items.filter((i) => i.type == "skill");
   if (!skills || skills.length == 0) {
     // This character needs skills
-    let skillPack = game.packs.get("wwn.skills");
+    let skillPack = game.packs.get("wwn.abilities");
     let toAdd = await skillPack.getDocuments();
-    let primarySkills = toAdd.filter((i) => i.system.secondary == false).map(item => item.toObject());
+    let primarySkills = toAdd
+      .filter((i) => i.type === "skill" && i.system.secondary == false)
+      .map((item) => item.toObject());
     for (let skill of primarySkills) {
       let oldSkill = actorData.skills[skill.name.toLowerCase()];
       if (oldSkill) {
         //Actor has old skill.
-        skill.data.skillDice = oldSkill.dice;
-        skill.data.ownedLevel = oldSkill.value;
-        skill.data.score = oldSkill.stat;
+        skill.system.skillDice = oldSkill.dice;
+        skill.system.ownedLevel = oldSkill.value;
+        skill.system.score = oldSkill.stat;
       }
     }
     // want to delete the old skills or leave? 
@@ -102,20 +104,17 @@ async function migrateActorDataToItemSkills(actor) {
 }
 
 async function migrateSceneData(scene) {
-  const tokens = scene.tokens.map(async token => {
+  const tokens = await Promise.all(scene.tokens.map(async token => {
     const t = token.toJSON();
 
-    if (!t.actorLink) {
-      const actor = foundry.utils.duplicate(t);
-      actor.type = t.actor?.type;
-      const updateData = migrateActorDataToItemSkills(actor);
+    if (!t.actorLink && token.actor) {
+      const updateData = await migrateActorDataToItemSkills(token.actor);
       if (updateData && updateData.length) {
-        await t.actor.createEmbeddedDocuments("Item", updateData);
-        //mergeObject(t.actorData, update);
+        await token.actor.createEmbeddedDocuments("Item", updateData);
       }
     }
     return t;
-  });
+  }));
 
   return { tokens };
 }

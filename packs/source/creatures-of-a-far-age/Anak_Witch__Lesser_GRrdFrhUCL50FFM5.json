@@ -1,0 +1,201 @@
+{
+  "_id": "GRrdFrhUCL50FFM5",
+  "name": "Anak Witch, Lesser",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "jhXXbYvq8PDrmir9",
+      "name": "Buff Coat",
+      "type": "armor",
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.wwn.gear.jzcGHNSgKA3RR0Yo"
+        }
+      },
+      "img": "systems/wwn/assets/default/armor.png",
+      "effects": [],
+      "_key": "!actors.items!GRrdFrhUCL50FFM5.jhXXbYvq8PDrmir9",
+      "system": {
+        "description": "<p><em><strong>Buff coats</strong></em> are long coats of thick, supple hide, sometimes worn to cushion the bite of heavier armor and sometimes sported as ornamented street clothing for the gentry who can afford such luxuries</p>\n<p><strong><em>Light armor</em>&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+        "ac": 9,
+        "aac": {
+          "value": 12
+        },
+        "type": "light",
+        "price": 50,
+        "weight": 0
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!GRrdFrhUCL50FFM5",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 12,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 1,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 14,
+        "mod": 0
+      },
+      "mental": {
+        "value": 14,
+        "mod": 0
+      },
+      "physical": {
+        "value": 14,
+        "mod": 0
+      },
+      "luck": {
+        "value": 14,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "20",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": true,
+      "perDay": {
+        "value": 0,
+        "max": 1
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "Witch",
+        "value": 0,
+        "max": 3
+      },
+      "effort2": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 0,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": null,
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "0",
+        "w": "0"
+      },
+      "morale": 8,
+      "instinct": 4,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.kRkyVb4oBeJNH4xk]{Sorcerers or Other Spellcasters}",
+        "link": ""
+      },
+      "skill": 1
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "3d8",
+      "value": 13,
+      "max": 13
+    },
+    "damageBonus": 1
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Anak Warrior, Lesser",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "GRrdFrhUCL50FFM5",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "_id": "aWN0p6WmxZusXM12",
+  "name": "History-Crises",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Historical Crises",
+  "results": [
+    {
+      "_id": "r4klPDjujZvpDxQp",
+      "flags": {},
+      "type": 0,
+      "text": "Barbarian invasion",
+      "weight": 4,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.r4klPDjujZvpDxQp"
+    },
+    {
+      "_id": "Iu7SIlYUTfp7YIFp",
+      "flags": {},
+      "type": 0,
+      "text": "Colonial incursion from a greater power",
+      "weight": 4,
+      "range": [
+        5,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.Iu7SIlYUTfp7YIFp"
+    },
+    {
+      "_id": "6V0Q5WTEWDGFPLUF",
+      "flags": {},
+      "type": 0,
+      "text": "Decadent society or a great social evil",
+      "weight": 4,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.6V0Q5WTEWDGFPLUF"
+    },
+    {
+      "_id": "6cjFPg33lTjo7v2l",
+      "flags": {},
+      "type": 0,
+      "text": "Divine wrath upon them",
+      "weight": 4,
+      "range": [
+        13,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.6cjFPg33lTjo7v2l"
+    },
+    {
+      "_id": "ZgVKoSd5W3AMSvg8",
+      "flags": {},
+      "type": 0,
+      "text": "Domineering neighbor",
+      "weight": 4,
+      "range": [
+        17,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.ZgVKoSd5W3AMSvg8"
+    },
+    {
+      "_id": "fqJvyeaS5dlfOsOu",
+      "flags": {},
+      "type": 0,
+      "text": "Economic collapse",
+      "weight": 4,
+      "range": [
+        21,
+        24
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.fqJvyeaS5dlfOsOu"
+    },
+    {
+      "_id": "9Bifai3EIJGkGpVn",
+      "flags": {},
+      "type": 0,
+      "text": "Failed external war",
+      "weight": 4,
+      "range": [
+        25,
+        28
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.9Bifai3EIJGkGpVn"
+    },
+    {
+      "_id": "0gwpkUII0TiRx9Di",
+      "flags": {},
+      "type": 0,
+      "text": "Ideological divide",
+      "weight": 4,
+      "range": [
+        29,
+        32
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.0gwpkUII0TiRx9Di"
+    },
+    {
+      "_id": "JUlp4rmsSzFeUGdY",
+      "flags": {},
+      "type": 0,
+      "text": "Incompetent governance",
+      "weight": 4,
+      "range": [
+        33,
+        36
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.JUlp4rmsSzFeUGdY"
+    },
+    {
+      "_id": "IOPEdCzttneO2i6I",
+      "flags": {},
+      "type": 0,
+      "text": "Internal refugees from disaster",
+      "weight": 4,
+      "range": [
+        37,
+        40
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.IOPEdCzttneO2i6I"
+    },
+    {
+      "_id": "IyZxZt4OAasieOos",
+      "flags": {},
+      "type": 0,
+      "text": "Loss of cultural confidence",
+      "weight": 4,
+      "range": [
+        41,
+        44
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.IyZxZt4OAasieOos"
+    },
+    {
+      "_id": "sRkhxIj4dLXZ6lie",
+      "flags": {},
+      "type": 0,
+      "text": "Magical calamity",
+      "weight": 4,
+      "range": [
+        45,
+        48
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.sRkhxIj4dLXZ6lie"
+    },
+    {
+      "_id": "f97Y0AUVyIo0Bqcx",
+      "flags": {},
+      "type": 0,
+      "text": "Malevolent religion",
+      "weight": 4,
+      "range": [
+        49,
+        52
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.f97Y0AUVyIo0Bqcx"
+    },
+    {
+      "_id": "vBsSjyWWegpGrIQE",
+      "flags": {},
+      "type": 0,
+      "text": "Miserable poverty",
+      "weight": 4,
+      "range": [
+        53,
+        56
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.vBsSjyWWegpGrIQE"
+    },
+    {
+      "_id": "ehJFuAOiB7GwZ6m1",
+      "flags": {},
+      "type": 0,
+      "text": "Natural disasters",
+      "weight": 4,
+      "range": [
+        57,
+        60
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.ehJFuAOiB7GwZ6m1"
+    },
+    {
+      "_id": "wqCdLFL44afnB1o9",
+      "flags": {},
+      "type": 0,
+      "text": "Noble infighting",
+      "weight": 4,
+      "range": [
+        61,
+        64
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.wqCdLFL44afnB1o9"
+    },
+    {
+      "_id": "kPi0uqPZq7rIooYb",
+      "flags": {},
+      "type": 0,
+      "text": "Religious or ideological excess",
+      "weight": 4,
+      "range": [
+        65,
+        68
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.kPi0uqPZq7rIooYb"
+    },
+    {
+      "_id": "pspbT0GI3rTvVaqm",
+      "flags": {},
+      "type": 0,
+      "text": "Resource exhaustion",
+      "weight": 4,
+      "range": [
+        69,
+        72
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.pspbT0GI3rTvVaqm"
+    },
+    {
+      "_id": "gsjmXl5T0qpmJb4R",
+      "flags": {},
+      "type": 0,
+      "text": "Scheming wizards",
+      "weight": 4,
+      "range": [
+        73,
+        76
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.gsjmXl5T0qpmJb4R"
+    },
+    {
+      "_id": "KHknpnhAqCRNflee",
+      "flags": {},
+      "type": 0,
+      "text": "Some titanic monster",
+      "weight": 4,
+      "range": [
+        77,
+        80
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.KHknpnhAqCRNflee"
+    },
+    {
+      "_id": "Xcx9XMjUBSlAOS7B",
+      "flags": {},
+      "type": 0,
+      "text": "Tyrannical rule",
+      "weight": 4,
+      "range": [
+        81,
+        84
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.Xcx9XMjUBSlAOS7B"
+    },
+    {
+      "_id": "IVkeU4lig6TSRMyW",
+      "flags": {},
+      "type": 0,
+      "text": "Unsuccessful expansion",
+      "weight": 4,
+      "range": [
+        85,
+        88
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.IVkeU4lig6TSRMyW"
+    },
+    {
+      "_id": "VC2ZsqsLBdzn8VPR",
+      "flags": {},
+      "type": 0,
+      "text": "Usurpers seizing control",
+      "weight": 4,
+      "range": [
+        89,
+        92
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.VC2ZsqsLBdzn8VPR"
+    },
+    {
+      "_id": "SQJAF8InxXlIukUq",
+      "flags": {},
+      "type": 0,
+      "text": "Vicious civil warfare",
+      "weight": 4,
+      "range": [
+        93,
+        96
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.SQJAF8InxXlIukUq"
+    },
+    {
+      "_id": "4HFymV1MuJtunIu6",
+      "flags": {},
+      "type": 0,
+      "text": "War with a stronger power",
+      "weight": 4,
+      "range": [
+        97,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!aWN0p6WmxZusXM12.4HFymV1MuJtunIu6"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!aWN0p6WmxZusXM12"
+}

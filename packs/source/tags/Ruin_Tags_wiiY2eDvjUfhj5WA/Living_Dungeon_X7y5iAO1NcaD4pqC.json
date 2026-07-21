@@ -1,0 +1,17 @@
+{
+  "_id": "X7y5iAO1NcaD4pqC",
+  "name": "Living Dungeon",
+  "content": "<h1>Living Dungeon</h1><div>\n<p>The ruin is alive, either in a literal or metaphorical sense. It may be animated by an ancient eidolon that looks through countless sensors, or infused with the spirit of some arcane mind, or made up of the tiny bodies of countless construction-organisms like some vast coral. Physical damage to the ruin usually brings some hostile response, however muted by age and disrepair, and the structure itself may be conscious enough to strike bargains with inhabitants.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Demented ruin spirit, Sorcerer trying to bend the site to their will, Native chieftain who worships the ruin’s genius as a god</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Friendly ruin sub-organism, Native ruin-keeper, Explorer avid to learn of the place</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>It’s a colony creature with different minds in charge, The ruin is trying to grow at all costs, The ruin went berserk after its ruination and is now acting irrationally</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Poison that can kill the ruin, Precious good created by the ruin’s life processes, Indigestible treasures left by prior intruders</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Wetly organic passageway, Chamber with a giant maw for feeding, Room with tethered organic servitor-creatures</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6000000
+    }
+  },
+  "_key": "!journal!X7y5iAO1NcaD4pqC",
+  "ownership": {
+    "default": 0
+  }
+}

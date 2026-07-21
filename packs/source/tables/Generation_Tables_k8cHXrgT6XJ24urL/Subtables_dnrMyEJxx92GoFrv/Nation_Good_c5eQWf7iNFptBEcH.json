@@ -1,0 +1,281 @@
+{
+  "_id": "c5eQWf7iNFptBEcH",
+  "name": "Nation-Good",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Good Things Happening Right Now",
+  "results": [
+    {
+      "_id": "tIJKI8abhvcaoXjB",
+      "flags": {},
+      "type": 0,
+      "text": "A splendid mine or resource has been found",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.tIJKI8abhvcaoXjB"
+    },
+    {
+      "_id": "TTX5wJauUb8poUJR",
+      "flags": {},
+      "type": 0,
+      "text": "A pious saint is strengthening a major faith",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.TTX5wJauUb8poUJR"
+    },
+    {
+      "_id": "7qN5TBc0WV48PwkR",
+      "flags": {},
+      "type": 0,
+      "text": "A noble heir shows signs of heroic greatness",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.7qN5TBc0WV48PwkR"
+    },
+    {
+      "_id": "ChPrjbGofeJpSF7q",
+      "flags": {},
+      "type": 0,
+      "text": "A major rival has recently suffered a calamity",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.ChPrjbGofeJpSF7q"
+    },
+    {
+      "_id": "mdI66Es605O0V8Rs",
+      "flags": {},
+      "type": 0,
+      "text": "New farmland has been opened up recently",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.mdI66Es605O0V8Rs"
+    },
+    {
+      "_id": "lzqPwDbxVIGw9jxp",
+      "flags": {},
+      "type": 0,
+      "text": "A new trade route has been forged",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.lzqPwDbxVIGw9jxp"
+    },
+    {
+      "_id": "97ROQWQVAZAsnkO3",
+      "flags": {},
+      "type": 0,
+      "text": "A horrible monster was slain or driven off",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.97ROQWQVAZAsnkO3"
+    },
+    {
+      "_id": "CtBRRRMGcebIz5og",
+      "flags": {},
+      "type": 0,
+      "text": "Good harvests have enriched the people",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.CtBRRRMGcebIz5og"
+    },
+    {
+      "_id": "KwDSazTEeMDq4qLC",
+      "flags": {},
+      "type": 0,
+      "text": "A wicked minister has been deposed",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.KwDSazTEeMDq4qLC"
+    },
+    {
+      "_id": "ly2SEhyDez90RgiT",
+      "flags": {},
+      "type": 0,
+      "text": "A new academy has recently opened",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.ly2SEhyDez90RgiT"
+    },
+    {
+      "_id": "ASZtV7hyYiKfRA29",
+      "flags": {},
+      "type": 0,
+      "text": "A bandit or rebel uprising has been crushed",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.ASZtV7hyYiKfRA29"
+    },
+    {
+      "_id": "Pw7FE1REYpkhaOe0",
+      "flags": {},
+      "type": 0,
+      "text": "Two rival lords have started to make peace",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.Pw7FE1REYpkhaOe0"
+    },
+    {
+      "_id": "98pSxPIhKH03e774",
+      "flags": {},
+      "type": 0,
+      "text": "An old enemy has agreed to a peace pact",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.98pSxPIhKH03e774"
+    },
+    {
+      "_id": "FNnYCd9IT2Swi7B6",
+      "flags": {},
+      "type": 0,
+      "text": "The military won a recent smashing victory",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.FNnYCd9IT2Swi7B6"
+    },
+    {
+      "_id": "98dawRHg7UJQ7lSt",
+      "flags": {},
+      "type": 0,
+      "text": "A helpful Working has been activated",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.98dawRHg7UJQ7lSt"
+    },
+    {
+      "_id": "axT9N2FxpPqUp2x1",
+      "flags": {},
+      "type": 0,
+      "text": "A powerful artifact is helping the ruler",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.axT9N2FxpPqUp2x1"
+    },
+    {
+      "_id": "T8D5pb4pvi3KCdg4",
+      "flags": {},
+      "type": 0,
+      "text": "An old source of unrest has been calmed",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.T8D5pb4pvi3KCdg4"
+    },
+    {
+      "_id": "CjZC2ATZnOYKcMyX",
+      "flags": {},
+      "type": 0,
+      "text": "A dark cult has been revealed and purged",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.CjZC2ATZnOYKcMyX"
+    },
+    {
+      "_id": "eMK3C7S14yCnJvF0",
+      "flags": {},
+      "type": 0,
+      "text": "New diplomatic ties have been made",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.eMK3C7S14yCnJvF0"
+    },
+    {
+      "_id": "pYPo9JZMWbF7dHYk",
+      "flags": {},
+      "type": 0,
+      "text": "A new lord has risen, loved by his people",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!c5eQWf7iNFptBEcH.pYPo9JZMWbF7dHYk"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!c5eQWf7iNFptBEcH"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "d7z1jjm61dygtbuw",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Mindbenders",
+  "type": "asset",
+  "_key": "!items!d7z1jjm61dygtbuw",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "2d8",
+    "desc": "Once per turn as a free action, the Mindbenders can force a rival faction to reroll a check, Attack, or other die roll they just made and take whichever result the Mindbenders prefer. A faction can only be affected this way once until the start of the Mindbender's faction's next turn.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "Once per turn as a free action, the Mindbenders can force a rival faction to reroll a check, Attack, or other die roll they just made and take whichever result the Mindbenders prefer. A faction can only be affected this way once until the start of the Mindbender's faction's next turn.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

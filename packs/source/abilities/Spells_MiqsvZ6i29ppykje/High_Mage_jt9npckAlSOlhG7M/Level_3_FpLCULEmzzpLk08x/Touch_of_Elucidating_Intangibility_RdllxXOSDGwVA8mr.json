@@ -1,0 +1,41 @@
+{
+  "_id": "RdllxXOSDGwVA8mr",
+  "name": "Touch of Elucidating Intangibility",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "FpLCULEmzzpLk08x",
+  "sort": 1000000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.RdllxXOSDGwVA8mr"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "High Mage",
+    "duration": "1 round per level",
+    "range": "Touch",
+    "roll": "2d10",
+    "description": "<p>The caster touches a solid non-magical barrier when casting this spell. A 10 foot cube of the barrier then becomes perfectly transparent to the caster, allowing them to see and hear whatever lies on the other side as if it were well-lit and visible. Optionally, the caster may make the barrier insubstantial for one round per caster level, allowing anyone to pass or shoot through it from either side. The barrier always appears solid and opaque from the other side, even while the caster is peering through. If someone is caught within the barrier when it becomes solid again, they&rsquo;re spat out on the nearest clear side and suffer 2d10 damage. The spell ends when the caster ceases to touch the barrier or immediately after it has been made insubstantial.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!RdllxXOSDGwVA8mr"
+}

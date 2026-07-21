@@ -1,0 +1,17 @@
+{
+  "_id": "pxE7g2C2GTinhFPm",
+  "name": "Enemy Within",
+  "content": "<h1>Enemy Within</h1><div>\n<p>The locals are convinced that there is some terrible threat against them working from within their society. It may be a matter of dark sorcerers, foreign spies, traitorous neighbors, shapeshifting monsters, or some other hidden evil. This evil may be a recent fear, or it may be an inherited peril they’ve always had to guard against. The danger itself may or may not exist, or if it exists it may not justify the steps being taken.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Local inquisitor targeting his personal enemies, Leader of the sinister evil, Traitorous local in service to the evil</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Unjustly accused victim, Local ruler trying to restrain the mob, Skilled and discerning hunter of the evil</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The evil is real but actually running the inquisition, The hunters are creating the evil whether intentionally or no, The evil really is exactly as bad as the hunters say it is</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Confession naming perpetrators of the evil, Wealth taken from condemned sinners, Resources gathered by the agents of the evil</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Confiscated home of an evildoer, Public execution site for the wicked, Courtroom where the evil is being tried</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 2800000
+    }
+  },
+  "_key": "!journal!pxE7g2C2GTinhFPm",
+  "ownership": {
+    "default": 0
+  }
+}

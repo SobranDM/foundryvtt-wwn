@@ -1,0 +1,41 @@
+{
+  "_id": "uuSI6qE222annuie",
+  "name": "Evert the Inwardness",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "JclP1CQkdbQ2tqVo",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.uuSI6qE222annuie"
+    }
+  },
+  "system": {
+    "lvl": 4,
+    "class": "High Mage",
+    "duration": "",
+    "range": "Visible",
+    "roll": "(@level)d10",
+    "description": "<p>A single visible target is selected, whereupon whatever contents that target may possess are extracted and placed in the caster&rsquo;s hands. If used on a cabinet, backpack, pocket, or other such container it can be no larger than an armoire, and the caster can choose whether or not to receive any particular object from inside it, being instantly appraised of its contents when the spell is cast. If used on a creature, it attempts to tear out the subject&rsquo;s innards; if the subject has equal or fewer hit dice than the caster, it must make a Physical save or die instantly. Whether or not it perishes, it suffers 1d10 damage per caster level, with a Physical save for half.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.uuSI6qE222annuie",
+    "duplicateSource": null
+  },
+  "_key": "!items!uuSI6qE222annuie"
+}

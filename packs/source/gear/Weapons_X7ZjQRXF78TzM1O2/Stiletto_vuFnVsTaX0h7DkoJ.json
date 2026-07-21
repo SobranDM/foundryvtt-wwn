@@ -1,0 +1,52 @@
+{
+  "_id": "vuFnVsTaX0h7DkoJ",
+  "name": "Stiletto",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "system": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Daggers </strong></em>come in ten thousand varieties, but the listed kind is a common fighting dirk, big enough to push through light armor while remaining small enough to be discreetly hidden. <em><strong>Stilettos </strong></em>and similar armor-piercing daggers aren&rsquo;t usually effective as thrown weapons.</p>",
+    "damage": "1d4",
+    "bonus": 0,
+    "shock": {
+      "damage": 1,
+      "ac": 18
+    },
+    "skill": "stab",
+    "score": "dex",
+    "tags": [
+      {
+        "title": "S",
+        "value": "S"
+      },
+      {
+        "title": "PM",
+        "value": "PM"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 10,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "skillDamage": false
+  },
+  "_key": "!items!vuFnVsTaX0h7DkoJ",
+  "folder": "X7ZjQRXF78TzM1O2"
+}

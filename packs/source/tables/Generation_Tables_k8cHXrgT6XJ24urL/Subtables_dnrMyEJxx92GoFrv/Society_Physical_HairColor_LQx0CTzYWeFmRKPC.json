@@ -1,0 +1,149 @@
+{
+  "_id": "LQx0CTzYWeFmRKPC",
+  "name": "Society-Physical-HairColor",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Hair Color",
+  "results": [
+    {
+      "_id": "iUbg8UWB36G3SlHb",
+      "flags": {},
+      "type": 0,
+      "text": "Night-black",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.iUbg8UWB36G3SlHb"
+    },
+    {
+      "_id": "dONy0vhDLj3MLYEl",
+      "flags": {},
+      "type": 0,
+      "text": "Dark browns",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.dONy0vhDLj3MLYEl"
+    },
+    {
+      "_id": "bY5Z3B0mSzafZVwt",
+      "flags": {},
+      "type": 0,
+      "text": "Lighter browns",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.bY5Z3B0mSzafZVwt"
+    },
+    {
+      "_id": "4rDGg92Jkpr36PJ2",
+      "flags": {},
+      "type": 0,
+      "text": "Red shades",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.4rDGg92Jkpr36PJ2"
+    },
+    {
+      "_id": "7pKtCVzN8uPz0b2Z",
+      "flags": {},
+      "type": 0,
+      "text": "Blonds",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.7pKtCVzN8uPz0b2Z"
+    },
+    {
+      "_id": "tmzArAFsVQWeInoc",
+      "flags": {},
+      "type": 0,
+      "text": "White or white-blond",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.tmzArAFsVQWeInoc"
+    },
+    {
+      "_id": "JU1VpKc84bHozgsH",
+      "flags": {},
+      "type": 0,
+      "text": "An unusual palette",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.JU1VpKc84bHozgsH"
+    },
+    {
+      "_id": "iC4yDz550JZzPWBp",
+      "flags": {},
+      "type": 0,
+      "text": "They lack hair",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.iC4yDz550JZzPWBp"
+    },
+    {
+      "_id": "Gsiib8fiHKWM3Os6",
+      "flags": {},
+      "type": 2,
+      "text": "Society-Physical-HairTexture",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "rkP1UlBZwq4hPgzK",
+      "weight": 1,
+      "range": [
+        1,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!LQx0CTzYWeFmRKPC.Gsiib8fiHKWM3Os6"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!LQx0CTzYWeFmRKPC"
+}

@@ -1,0 +1,71 @@
+{
+  "_id": "bLqSjTCeespavhPy",
+  "name": "MonShape-Body",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Is Its Basic Body Plan?",
+  "results": [
+    {
+      "type": 0,
+      "text": "Limbless, amorphous, or a tentacular mass",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "phas6uyt8f6pn1mu",
+      "flags": {},
+      "_key": "!tables.results!bLqSjTCeespavhPy.phas6uyt8f6pn1mu"
+    },
+    {
+      "type": 0,
+      "text": "Bipedal, generally upright",
+      "weight": 2,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "_id": "uisoe7tvjyjfvs8h",
+      "flags": {},
+      "_key": "!tables.results!bLqSjTCeespavhPy.uisoe7tvjyjfvs8h"
+    },
+    {
+      "type": 0,
+      "text": "Quadrupedal, perhaps able to rear up",
+      "weight": 4,
+      "range": [
+        4,
+        7
+      ],
+      "drawn": false,
+      "_id": "l3x8ng9d33t3d26v",
+      "flags": {},
+      "_key": "!tables.results!bLqSjTCeespavhPy.l3x8ng9d33t3d26v"
+    },
+    {
+      "type": 0,
+      "text": "Sexapedal, perhaps with wings and legs",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "rtt4hu2wyr8kotfu",
+      "flags": {},
+      "_key": "!tables.results!bLqSjTCeespavhPy.rtt4hu2wyr8kotfu"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!bLqSjTCeespavhPy"
+}

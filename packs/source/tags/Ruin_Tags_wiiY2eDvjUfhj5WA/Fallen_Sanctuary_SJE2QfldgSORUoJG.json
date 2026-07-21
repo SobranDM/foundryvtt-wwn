@@ -1,0 +1,17 @@
+{
+  "_id": "SJE2QfldgSORUoJG",
+  "name": "Fallen Sanctuary",
+  "content": "<h1>Fallen Sanctuary</h1><div>\n<p>The ruin was a place of security within recent memory, until some event or invasion turned it into its present state. Some of the surrounding locals might have been associated with the site during its heyday and remember interesting facts about it. Others may still nurse dreams of returning it to its former glory once its current inhabitants are slain or driven away.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Dark warlord who overthrew the place, Traitor who arranged its downfall, Terrible creature unleashed in the site’s dying throes</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Idealistic would-be reconstructor, Native trying to make peace with the locals, Aged keeper of the site’s old secrets</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The site is fallen to the locals but a sanctuary now to a completely different group, The site is still dangerous and hostile to the interlopers, The locals desperately need to retake the site soon for some pressing reason</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Treasures hidden by the former owners, The dark tool used to cast the site down, Token of rightful rule seized by the invaders</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Hidden chamber unknown to invaders, Defaced and ruined room dedicated to the site’s original role, Chamber re-purposed for the invaders</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3000000
+    }
+  },
+  "_key": "!journal!SJE2QfldgSORUoJG",
+  "ownership": {
+    "default": 0
+  }
+}

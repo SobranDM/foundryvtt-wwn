@@ -1,0 +1,34 @@
+{
+  "name": "Telekinesis",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/telekinesis.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.klJNwHIAAmJ9FtDR"
+    }
+  },
+  "system": {
+    "description": "Master the remote control of kinetic energy to move objects and fabricate force constructs.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "combatSkill": true,
+    "secondary": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806176707,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "jJiHUrE73WIBi0tj",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jJiHUrE73WIBi0tj"
+}

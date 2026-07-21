@@ -1,0 +1,174 @@
+{
+  "_id": "ridAamiJNb8FjfYw",
+  "name": "Combat-Happening",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "They lost a fight or had an accident, and are tending their wounded",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "v8boznfybbgtr0r7",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.v8boznfybbgtr0r7"
+    },
+    {
+      "type": 0,
+      "text": "They’re absorbed in eating a meal",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "lfa0pshpbdfbytyd",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.lfa0pshpbdfbytyd"
+    },
+    {
+      "type": 0,
+      "text": "They’re arguing over some pertinent matter",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "0r7xcexrmreyooys",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.0r7xcexrmreyooys"
+    },
+    {
+      "type": 0,
+      "text": "They’re busy trying to repair a broken object or structure of importance to them",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "izu82ud261kjkvgj",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.izu82ud261kjkvgj"
+    },
+    {
+      "type": 0,
+      "text": "They’re having some sort of religious ritual",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "tszz0at8dfd2og1f",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.tszz0at8dfd2og1f"
+    },
+    {
+      "type": 0,
+      "text": "They’re resting after hard labor",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "tanynbfg5dgrtql2",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.tanynbfg5dgrtql2"
+    },
+    {
+      "type": 0,
+      "text": "They’re interrogating a prisoner or suspected traitor to the group",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "aeviu9y9q1jdoncw",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.aeviu9y9q1jdoncw"
+    },
+    {
+      "type": 0,
+      "text": "They’re training or practicing their skills",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "ruuxoyjvux8py10t",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.ruuxoyjvux8py10t"
+    },
+    {
+      "type": 0,
+      "text": "They’re drinking or celebrating some win",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "rak2oec9fi9z7ef0",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.rak2oec9fi9z7ef0"
+    },
+    {
+      "type": 0,
+      "text": "There’s a tense leadership showdown",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "hslnu9z1brds9nqe",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.hslnu9z1brds9nqe"
+    },
+    {
+      "type": 0,
+      "text": "They’re lolling around in indolent idleness",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "36pwtca1nmxux7l7",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.36pwtca1nmxux7l7"
+    },
+    {
+      "type": 0,
+      "text": "They’re conducting the business of daily life and other duties of common necessity",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "www90yg3prlkxel7",
+      "flags": {},
+      "_key": "!tables.results!ridAamiJNb8FjfYw.www90yg3prlkxel7"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!ridAamiJNb8FjfYw"
+}

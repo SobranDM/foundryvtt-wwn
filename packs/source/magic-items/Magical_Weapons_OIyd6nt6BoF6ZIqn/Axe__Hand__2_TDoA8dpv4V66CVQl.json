@@ -1,0 +1,47 @@
+{
+  "name": "Axe, Hand +2",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "data": {
+    "range": {
+      "short": 10,
+      "medium": 30,
+      "long": 30
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Axes </strong></em>given here are those fashioned for war; lighter and more agile than their working cousins, though still capable of hacking through a door or hewing a cable if needed. War axes are big enough to demand two hands for their use.</p>",
+    "damage": "1d6+2",
+    "bonus": 2,
+    "shock": {
+      "damage": 3,
+      "ac": 15
+    },
+    "skill": "stab",
+    "score": "str",
+    "tags": [
+      {
+        "title": "T",
+        "value": "T"
+      }
+    ],
+    "slow": false,
+    "missile": true,
+    "melee": true,
+    "price": 10,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "_id": "TDoA8dpv4V66CVQl",
+  "_key": "!items!TDoA8dpv4V66CVQl",
+  "folder": "OIyd6nt6BoF6ZIqn"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "cw05odchc26n8ifh",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Dancing Girls",
+  "type": "asset",
+  "_key": "!items!cw05odchc26n8ifh",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d4",
+    "attackSource": "cunning",
+    "attackSpecial": "Dancing Girls or other charming distractions are immune to Attack or Counterattack damage from Force Assets, but they cannot be used to defend against Attacks from Force Assets.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "None",
+    "desc": "Dancing Girls or other charming distractions are immune to Attack or Counterattack damage from Force Assets, but they cannot be used to defend against Attacks from Force Assets.",
+    "health": {
+      "max": 3,
+      "value": 3
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

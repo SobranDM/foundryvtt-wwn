@@ -1,0 +1,281 @@
+{
+  "_id": "Ze38qkDvPSTzfJVd",
+  "name": "Society-Aesthetics",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Societal Aesthetics",
+  "results": [
+    {
+      "_id": "UzEAhnn7Ys0Asiyu",
+      "flags": {},
+      "type": 0,
+      "text": "Victorian England",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.UzEAhnn7Ys0Asiyu"
+    },
+    {
+      "_id": "ys8MlHUGd8k28EgN",
+      "flags": {},
+      "type": 0,
+      "text": "Standard Medieval Fantasy Land",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.ys8MlHUGd8k28EgN"
+    },
+    {
+      "_id": "W5oQgdpBMXJic2ZD",
+      "flags": {},
+      "type": 0,
+      "text": "Spring and Autumn China",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.W5oQgdpBMXJic2ZD"
+    },
+    {
+      "_id": "CifXS0Rs5jyKEP98",
+      "flags": {},
+      "type": 0,
+      "text": "Pre-Columbian North American Tribes",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.CifXS0Rs5jyKEP98"
+    },
+    {
+      "_id": "9FG7G0ET3M14Tqf1",
+      "flags": {},
+      "type": 0,
+      "text": "Mali Empire",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.9FG7G0ET3M14Tqf1"
+    },
+    {
+      "_id": "aLA0rHeMCdg0muTY",
+      "flags": {},
+      "type": 0,
+      "text": "Unified Dynastic China",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.aLA0rHeMCdg0muTY"
+    },
+    {
+      "_id": "YK24jV0B9UfKefIJ",
+      "flags": {},
+      "type": 0,
+      "text": "Imperial or Republican Rome",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.YK24jV0B9UfKefIJ"
+    },
+    {
+      "_id": "QljawUh8O7eXouvk",
+      "flags": {},
+      "type": 0,
+      "text": "Greek City-States",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.QljawUh8O7eXouvk"
+    },
+    {
+      "_id": "h9UCum0irIFHUXdq",
+      "flags": {},
+      "type": 0,
+      "text": "Mongolian Steppe Nomads",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.h9UCum0irIFHUXdq"
+    },
+    {
+      "_id": "3WjArOaRBsSwfIfn",
+      "flags": {},
+      "type": 0,
+      "text": "Modern-day America",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.3WjArOaRBsSwfIfn"
+    },
+    {
+      "_id": "RuRhBvt1pmBowlnK",
+      "flags": {},
+      "type": 0,
+      "text": "Renaissance Italy",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.RuRhBvt1pmBowlnK"
+    },
+    {
+      "_id": "yptbUyG9FIit90P3",
+      "flags": {},
+      "type": 0,
+      "text": "Imperial Persia",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.yptbUyG9FIit90P3"
+    },
+    {
+      "_id": "VhuGrn3KUBN0XwYo",
+      "flags": {},
+      "type": 0,
+      "text": "Early Medieval Europe",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.VhuGrn3KUBN0XwYo"
+    },
+    {
+      "_id": "yIHVxS5tB7TTrLgI",
+      "flags": {},
+      "type": 0,
+      "text": "Byzantine Empire",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.yIHVxS5tB7TTrLgI"
+    },
+    {
+      "_id": "mgeNXwJSV2eVvmiz",
+      "flags": {},
+      "type": 0,
+      "text": "Incan Empire",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.mgeNXwJSV2eVvmiz"
+    },
+    {
+      "_id": "qGARx4rkSmHqNFOl",
+      "flags": {},
+      "type": 0,
+      "text": "Fantasy Viking Land",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.qGARx4rkSmHqNFOl"
+    },
+    {
+      "_id": "1FjiyJsJuaukzHsN",
+      "flags": {},
+      "type": 0,
+      "text": "Sumerian or Assyrian Empire",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.1FjiyJsJuaukzHsN"
+    },
+    {
+      "_id": "aeowOWNEcjV4VuS5",
+      "flags": {},
+      "type": 0,
+      "text": "Aztec Empire",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.aeowOWNEcjV4VuS5"
+    },
+    {
+      "_id": "5Zf8PIgApG95Xd4o",
+      "flags": {},
+      "type": 0,
+      "text": "Post-Islamic Arabia",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.5Zf8PIgApG95Xd4o"
+    },
+    {
+      "_id": "Oxvi1bEKejmWAGPP",
+      "flags": {},
+      "type": 0,
+      "text": "Polynesian Islanders",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Ze38qkDvPSTzfJVd.Oxvi1bEKejmWAGPP"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Ze38qkDvPSTzfJVd"
+}

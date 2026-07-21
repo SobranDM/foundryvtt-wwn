@@ -1,0 +1,170 @@
+{
+  "_id": "xG26UX9BribuXuH9",
+  "name": "Elixir Quirk",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "ZpU0i3yqENXU3Xch",
+      "flags": {},
+      "type": 0,
+      "text": "Vividly unnatural color",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.ZpU0i3yqENXU3Xch"
+    },
+    {
+      "_id": "4A6bdltKtOQlhkVt",
+      "flags": {},
+      "type": 0,
+      "text": "Pungent or appealing aroma",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.4A6bdltKtOQlhkVt"
+    },
+    {
+      "_id": "LHvupz0RayYTamBf",
+      "flags": {},
+      "type": 0,
+      "text": "Strange texture or consistency",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.LHvupz0RayYTamBf"
+    },
+    {
+      "_id": "KYbHmyBbCOoeaq8W",
+      "flags": {},
+      "type": 0,
+      "text": "Metallic or glowing appearance",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.KYbHmyBbCOoeaq8W"
+    },
+    {
+      "_id": "Tvd96Fifjvuh9luE",
+      "flags": {},
+      "type": 0,
+      "text": "It moves slightly on its own",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.Tvd96Fifjvuh9luE"
+    },
+    {
+      "_id": "jO7krtIN9AOBfZtz",
+      "flags": {},
+      "type": 0,
+      "text": "Unnaturally heavy or light",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.jO7krtIN9AOBfZtz"
+    },
+    {
+      "_id": "DEgyPmM9bgtU2nux",
+      "flags": {},
+      "type": 0,
+      "text": "Makes a very soft sound",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.DEgyPmM9bgtU2nux"
+    },
+    {
+      "_id": "V4axncv8fAu06KzO",
+      "flags": {},
+      "type": 0,
+      "text": "Bears imprinted text",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.V4axncv8fAu06KzO"
+    },
+    {
+      "_id": "CRKSgktyZh5aSVq4",
+      "flags": {},
+      "type": 0,
+      "text": "Abnormally hot or chilled",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.CRKSgktyZh5aSVq4"
+    },
+    {
+      "_id": "OzviC7WxobBymha1",
+      "flags": {},
+      "type": 0,
+      "text": "Changes shape regularly",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!xG26UX9BribuXuH9.OzviC7WxobBymha1"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!xG26UX9BribuXuH9",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

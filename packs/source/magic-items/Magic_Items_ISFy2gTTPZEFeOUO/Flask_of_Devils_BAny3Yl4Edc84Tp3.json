@@ -1,0 +1,29 @@
+{
+  "_id": "BAny3Yl4Edc84Tp3",
+  "name": "Flask of Devils",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>This brass flask is tightly stoppered and covered with sigils of sealing and dominion. If opened, a hideous devil-thing leaps out of the bottle, having statistics equivalent to a creature called by the @Compendium[wwn.abilities.pc8jwXR7JUYG2TNE]{Calculation of the Phantasmal Eidolon} spell on page XX. The devil will demand that its liberator give it a command; that command will be faithfully followed until the scene is over or it is completed. Once finished, the devil will be drawn back into the flask. Each use of the flask adds 1 System Strain to the user; if the devil is killed, an additional 1d3 System Strain is gained by the user and a new devil will be summoned forth the next time the flask is opened. If this System Strain is sufficient to take the user over their maximum, they&rsquo;re dragged into the flask to become its new devil, lost forever without some heroic labor of rescue. The flask can be opened only once per day.</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.MwoUjHFY21ZIZ3Lx]{Phantasmal Eidolon}</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.BAny3Yl4Edc84Tp3"
+    }
+  },
+  "_key": "!items!BAny3Yl4Edc84Tp3"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "UKIZcSuE6bl0DDAc",
+  "name": "War Robe",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.UKIZcSuE6bl0DDAc"
+    }
+  },
+  "system": {
+    "description": "<p>A <em><strong>war robe </strong></em>is a catchall term for various outfits involving layers of reinforced cloth or leather. Bits of metal, layers of thick hide, or weaves of tough cordage might all go into the various layers of the suit, making it a very&nbsp;heavy, if effective, piece of equipment.</p>\n<p><em><strong>Light armor&nbsp;</strong></em>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 14,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "light",
+    "price": 50,
+    "weight": 3
+  },
+  "_key": "!items!UKIZcSuE6bl0DDAc"
+}

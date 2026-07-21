@@ -1,0 +1,146 @@
+{
+  "_id": "mCzku3NSmMSjisOy",
+  "name": "Room-Egress",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "North",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "yivwahrqzupn3s6o",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 2,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.yivwahrqzupn3s6o"
+    },
+    {
+      "type": 0,
+      "text": "Northeast",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "nyc4hydvae3p703y",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 3,
+      "rangeH": 3,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.nyc4hydvae3p703y"
+    },
+    {
+      "type": 0,
+      "text": "East",
+      "weight": 1,
+      "range": [
+        4,
+        5
+      ],
+      "drawn": false,
+      "_id": "a1nofsjfjoowhj3a",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 4,
+      "rangeH": 5,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.a1nofsjfjoowhj3a"
+    },
+    {
+      "type": 0,
+      "text": "Southeast",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "vcv5skoa4e6nyyl9",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 6,
+      "rangeH": 6,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.vcv5skoa4e6nyyl9"
+    },
+    {
+      "type": 0,
+      "text": "South",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_id": "sr0aqz71nos9r925",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 7,
+      "rangeH": 8,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.sr0aqz71nos9r925"
+    },
+    {
+      "type": 0,
+      "text": "Southwest",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "0z1cxewhtq8up62r",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 9,
+      "rangeH": 9,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.0z1cxewhtq8up62r"
+    },
+    {
+      "type": 0,
+      "text": "West",
+      "weight": 1,
+      "range": [
+        10,
+        11
+      ],
+      "drawn": false,
+      "_id": "wl3q064oklabty7i",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 10,
+      "rangeH": 11,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.wl3q064oklabty7i"
+    },
+    {
+      "type": 0,
+      "text": "Northwest",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "t3nq9nqkhwrx4a29",
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 12,
+      "rangeH": 12,
+      "_key": "!tables.results!mCzku3NSmMSjisOy.t3nq9nqkhwrx4a29"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!mCzku3NSmMSjisOy"
+}

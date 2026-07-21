@@ -1,0 +1,17 @@
+{
+  "_id": "xBAVb3eJzjDaPl6Z",
+  "name": "Dueling Lords",
+  "content": "<h1>Dueling Lords</h1><div>\n<p>Two different major powers are fighting over control of the community. Two rival lords, a baron and a merchant-price, the mayor and a local high priest, or some other combination struggle to achieve dominance. They may both have justifiable claim on running the community, or one may be a greedy interloper.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Third party profiting by the strife, Traitor to one of the rivals, Outsider vulture wanting both rivals to fail</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Harried local peacemaker, Impotent judge appointed by a disinterested higher authority. Appealing partisan of one rival</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The rival with the most legitimate claim is the least suitable to rule, A vital civic task is left undone until a ruler is determined, Both rivals have terrible plans</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Token of legitimate rule, Bribe meant for a powerful local, Proof of a rival's malfeasance</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Deadlocked city hall, Site of mob violence between rival groups, Tavern full of well-armed partisans</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 2600000
+    }
+  },
+  "_key": "!journal!xBAVb3eJzjDaPl6Z",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -129,15 +129,14 @@ export class WwnActorSheetMonster extends WwnActorSheet {
         "table": "",
         "link": ""
       };
-      data.system.details.instinctTable.link = await TextEditor.enrichHTML(data.system.details.instinctTable.table, { async: true });
+      data.system.details.instinctTable.link = await foundry.applications.ux.TextEditor.implementation.enrichHTML(data.system.details.instinctTable.table);
     } else {
-      data.system.details.instinctTable.link = await TextEditor.enrichHTML(data.system.details.instinctTable.table, { async: true });
+      data.system.details.instinctTable.link = await foundry.applications.ux.TextEditor.implementation.enrichHTML(data.system.details.instinctTable.table);
     }
     data.isNew = this.actor.isNew();
 
-    data.enrichedBiography = await TextEditor.enrichHTML(
-      this.object.system.details.biography,
-      { async: true }
+    data.enrichedBiography = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.object.system.details.biography
     );
 
     return data;
@@ -167,7 +166,7 @@ export class WwnActorSheetMonster extends WwnActorSheet {
     ability: "ability"
   }) {
     let templateData = { types: choices },
-      dlg = await renderTemplate(
+      dlg = await foundry.applications.handlebars.renderTemplate(
         "systems/wwn/templates/items/entity-create.html",
         templateData
       );

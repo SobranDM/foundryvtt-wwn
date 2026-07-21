@@ -1,0 +1,177 @@
+{
+  "_id": "cRQilgHbQ35bK5Ls",
+  "name": "Government-Struggle",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Current Struggle Within the Government",
+  "results": [
+    {
+      "_id": "WyJQz8C5ckrI2Cgw",
+      "flags": {},
+      "type": 0,
+      "text": "The ruler’s trying to crush a too-powerful lord",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.WyJQz8C5ckrI2Cgw"
+    },
+    {
+      "_id": "rXY6oK6uLHKk5xXF",
+      "flags": {},
+      "type": 0,
+      "text": "Ministers are trying to usurp power",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.rXY6oK6uLHKk5xXF"
+    },
+    {
+      "_id": "9AtuW4dylhsrLLFG",
+      "flags": {},
+      "type": 0,
+      "text": "A grand scheme has gone terribly wrong",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.9AtuW4dylhsrLLFG"
+    },
+    {
+      "_id": "f95HViJqoE4TVioZ",
+      "flags": {},
+      "type": 0,
+      "text": "External diplomacy has bungled something",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.f95HViJqoE4TVioZ"
+    },
+    {
+      "_id": "zzWF5uFVxK0pohxL",
+      "flags": {},
+      "type": 0,
+      "text": "A usurper secretly controls a major power",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.zzWF5uFVxK0pohxL"
+    },
+    {
+      "_id": "dGwobqZN2onCtDno",
+      "flags": {},
+      "type": 0,
+      "text": "Foreign rivals are backing malcontents",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.dGwobqZN2onCtDno"
+    },
+    {
+      "_id": "7seU0RyFw7ggDfjp",
+      "flags": {},
+      "type": 0,
+      "text": "A different class demands a share of rule",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.7seU0RyFw7ggDfjp"
+    },
+    {
+      "_id": "0iFNcAxFLu1ebur6",
+      "flags": {},
+      "type": 0,
+      "text": "The existing ruling class wants more power",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.0iFNcAxFLu1ebur6"
+    },
+    {
+      "_id": "tqGcDsBrCessGsk8",
+      "flags": {},
+      "type": 0,
+      "text": "A disfavored class is being oppressed",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.tqGcDsBrCessGsk8"
+    },
+    {
+      "_id": "l8FeqLnUS7LQzVIE",
+      "flags": {},
+      "type": 0,
+      "text": "Popular discontent is destroying legitimacy",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.l8FeqLnUS7LQzVIE"
+    },
+    {
+      "_id": "bZIT7EeNxaqAkxHP",
+      "flags": {},
+      "type": 0,
+      "text": "The prior ruler’s incompetence still harms it",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.bZIT7EeNxaqAkxHP"
+    },
+    {
+      "_id": "NSdUxZjqTS7TZZqX",
+      "flags": {},
+      "type": 0,
+      "text": "The heir is unacceptable to many",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!cRQilgHbQ35bK5Ls.NSdUxZjqTS7TZZqX"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!cRQilgHbQ35bK5Ls"
+}

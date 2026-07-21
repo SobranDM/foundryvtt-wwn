@@ -1,0 +1,213 @@
+{
+  "_id": "ZgBYyAHe1xdRwZvO",
+  "name": "Magical Weapon Origin",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "QLAWvMe3DKcUgcx1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by a common member of a mass infantry unit that relied on muscle-powered weapons. Favors spears, pole arms, short swords, or daggers.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.QLAWvMe3DKcUgcx1"
+    },
+    {
+      "_id": "Cc0Fhlrrbi1H658A",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by a civilian gentleman or duelist. Favors swords, daggers, hand hurlants, staffs, caneclubs, or concealable weapons",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.Cc0Fhlrrbi1H658A"
+    },
+    {
+      "_id": "k0uKp2nb4ktKa5h1",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by a champion or heroic warrior. Favors complex, exotic, or specialist weapons, twohanded weapons, and hurlants.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.k0uKp2nb4ktKa5h1"
+    },
+    {
+      "_id": "XnTbhV4FaTXJzHnZ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by an assassin or other denied obvious weaponry. Favors daggers, claw blades, and other small concealed weapons; sometimes long hurlants or crossbows.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.XnTbhV4FaTXJzHnZ"
+    },
+    {
+      "_id": "N7g537rFDfSXCfVp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by knightly duelists or other heavy-armor combatants. Favors maces, hammers, twohanded weapons, stilettos, and other weapons with penetrating Shock.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.N7g537rFDfSXCfVp"
+    },
+    {
+      "_id": "bRnp7d6SV5iUERYT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by archers or ranged combatants. Favors bows, crossbows, hurlants, light spears, short swords, or daggers.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.bRnp7d6SV5iUERYT"
+    },
+    {
+      "_id": "BJLXtiZgOUe11GCK",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by individualistic warbands. Favors spears and short swords somewhat, but an individual warrior could use anything.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.BJLXtiZgOUe11GCK"
+    },
+    {
+      "_id": "qDM14ABgH44hmAjS",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Used by a high-tech culture. Roll again, but replace bows and crossbows with hurlants, and melee weapons will have advanced-tech stylings.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.qDM14ABgH44hmAjS"
+    },
+    {
+      "_id": "HwiVsbfKfyglLeAl",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Weapon Origin",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "ZgBYyAHe1xdRwZvO",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!ZgBYyAHe1xdRwZvO.HwiVsbfKfyglLeAl"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!ZgBYyAHe1xdRwZvO",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

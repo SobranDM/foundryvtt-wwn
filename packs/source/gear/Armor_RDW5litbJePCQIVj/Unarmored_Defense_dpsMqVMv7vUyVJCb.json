@@ -1,0 +1,31 @@
+{
+  "_id": "dpsMqVMv7vUyVJCb",
+  "name": "Unarmored Defense",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/vowed_art.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.dpsMqVMv7vUyVJCb"
+    }
+  },
+  "system": {
+    "description": "<p>When not wearing armor or using a shield, your base Armor Class is equal to 13 plus half your character level, rounded down.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "unarmored",
+    "price": 0,
+    "weight": 0
+  },
+  "_key": "!items!dpsMqVMv7vUyVJCb"
+}

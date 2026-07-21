@@ -1,0 +1,278 @@
+{
+  "_id": "5UayvelPuOvIqgnn",
+  "name": "Combat-Twists",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "They are or have access to spellcasters or mages of some kind",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "g189nk6jpqs7cfqj",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.g189nk6jpqs7cfqj"
+    },
+    {
+      "type": 0,
+      "text": "They have a useful magical power uncommon to their kind",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "tbz5u0xy9zan4vhs",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.tbz5u0xy9zan4vhs"
+    },
+    {
+      "type": 0,
+      "text": "An unusually strong ally serves the group’s leader for its own reasons",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "8daf2ct1zk8afw37",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.8daf2ct1zk8afw37"
+    },
+    {
+      "type": 0,
+      "text": "The group is divided into parties or factions that cooperate poorly with each other",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "4zi1tom84zmduj6h",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.4zi1tom84zmduj6h"
+    },
+    {
+      "type": 0,
+      "text": "Killing them would enrage a seemingly unrelated person or group",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "7oulz1ip7xe9fj9q",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.7oulz1ip7xe9fj9q"
+    },
+    {
+      "type": 0,
+      "text": "They have some reason to mistake the PCs for allies or hirelings",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "oelg8jp9l194osl8",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.oelg8jp9l194osl8"
+    },
+    {
+      "type": 0,
+      "text": "One member is a secret traitor in service to some other cause or group",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ug27sb6bwbinmyq4",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.ug27sb6bwbinmyq4"
+    },
+    {
+      "type": 0,
+      "text": "Another group would pay very well or be very pleased at the death of the target",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "beiswc5zkevx4c33",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.beiswc5zkevx4c33"
+    },
+    {
+      "type": 0,
+      "text": "Eliminating this target would somehow release or remove a check on a dire foe",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "hohyjl4bi0w5a23j",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.hohyjl4bi0w5a23j"
+    },
+    {
+      "type": 0,
+      "text": "The target wants to get a member of their group killed in a deniable way, and will try to use the PCs to do it",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "3sx9ljfp12g7fr1d",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.3sx9ljfp12g7fr1d"
+    },
+    {
+      "type": 0,
+      "text": "They’re religious zealots who may or may not have some blessing or affiliation that fits",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "akptl0x5x4jrnzpm",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.akptl0x5x4jrnzpm"
+    },
+    {
+      "type": 0,
+      "text": "They’re searching for something that the PCs may or may not be able to help them find",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "lubu0ju4vg61fjbf",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.lubu0ju4vg61fjbf"
+    },
+    {
+      "type": 0,
+      "text": "The leader is desperately in love with one of their underlings or vice-versa",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "fa3u2uffblw2k2kq",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.fa3u2uffblw2k2kq"
+    },
+    {
+      "type": 0,
+      "text": "They’re tampering with some object or structural feature that’s extremely dangerous",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "rvd1pdcslekrjdna",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.rvd1pdcslekrjdna"
+    },
+    {
+      "type": 0,
+      "text": "They’re foreign to the other examples of their creature type around here, having come from far off for their own reasons",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "wu02jton6mh1by8i",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.wu02jton6mh1by8i"
+    },
+    {
+      "type": 0,
+      "text": "They fight in an effective but abnormal way for their type or nature",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "pv5nyuddqvldk8xu",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.pv5nyuddqvldk8xu"
+    },
+    {
+      "type": 0,
+      "text": "Their leader has ensured that some dire consequence will ensue if they are killed",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "ldtpqk7w6m9ncvf0",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.ldtpqk7w6m9ncvf0"
+    },
+    {
+      "type": 0,
+      "text": "Some portion of the group would really rather not fight but are feeling compelled by their peers or the leader",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "bck3gvz9tsor28sg",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.bck3gvz9tsor28sg"
+    },
+    {
+      "type": 0,
+      "text": "Some other group has a spy or observer who is watching during a potential conflict",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "2kg4bn240xt2i6by",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.2kg4bn240xt2i6by"
+    },
+    {
+      "type": 0,
+      "text": "The leader is an impostor or catspaw of some power that would normally be their enemy, and acts as best they can to serve them",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "10co51y7mzyvqmxf",
+      "flags": {},
+      "_key": "!tables.results!5UayvelPuOvIqgnn.10co51y7mzyvqmxf"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!5UayvelPuOvIqgnn"
+}

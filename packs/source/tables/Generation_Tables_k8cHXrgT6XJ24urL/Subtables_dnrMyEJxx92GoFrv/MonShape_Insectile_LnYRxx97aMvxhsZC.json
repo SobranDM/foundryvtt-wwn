@@ -1,0 +1,174 @@
+{
+  "_id": "LnYRxx97aMvxhsZC",
+  "name": "MonShape-Insectile",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Compound eyes",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "d7n37bwtc7sd2674",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.d7n37bwtc7sd2674"
+    },
+    {
+      "type": 0,
+      "text": "Stings",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "4340nqchvogc4zxx",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.4340nqchvogc4zxx"
+    },
+    {
+      "type": 0,
+      "text": "Mandibles",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "0799y3vlnbquqyp3",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.0799y3vlnbquqyp3"
+    },
+    {
+      "type": 0,
+      "text": "Spinnerets",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "ukaotdptkjj9mrot",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.ukaotdptkjj9mrot"
+    },
+    {
+      "type": 0,
+      "text": "Swarms",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "24a86in5ti99xdfb",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.24a86in5ti99xdfb"
+    },
+    {
+      "type": 0,
+      "text": "Membrane wings",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "ndxcusi59552qb21",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.ndxcusi59552qb21"
+    },
+    {
+      "type": 0,
+      "text": "Egg sacs",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "l236qkq1eflc531v",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.l236qkq1eflc531v"
+    },
+    {
+      "type": 0,
+      "text": "Blood-sucking",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "9zik0n1gaqrbmw8k",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.9zik0n1gaqrbmw8k"
+    },
+    {
+      "type": 0,
+      "text": "Parasitizing",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ee7zl8wibunvemk1",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.ee7zl8wibunvemk1"
+    },
+    {
+      "type": 0,
+      "text": "Larval forms",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "ozd71b60y7n6myk5",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.ozd71b60y7n6myk5"
+    },
+    {
+      "type": 0,
+      "text": "Leaping",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "kmgp38m9kgjbghgb",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.kmgp38m9kgjbghgb"
+    },
+    {
+      "type": 0,
+      "text": "Numerous legs",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "mitv39is3h9bxckm",
+      "flags": {},
+      "_key": "!tables.results!LnYRxx97aMvxhsZC.mitv39is3h9bxckm"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!LnYRxx97aMvxhsZC"
+}

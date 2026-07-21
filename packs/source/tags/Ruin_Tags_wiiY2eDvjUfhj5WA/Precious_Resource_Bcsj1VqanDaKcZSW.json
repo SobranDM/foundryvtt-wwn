@@ -1,0 +1,17 @@
+{
+  "_id": "Bcsj1VqanDaKcZSW",
+  "name": "Precious Resource",
+  "content": "<h1>Precious Resource</h1><div>\n<p>The ruin generates a resource or serves a function that is valuable to those around it. This may be a direct and literal generation, such as a Deep that still automatically extracts and refines silver, or it may be metaphorical, such as a ruin full of undead who are privy to ancient secrets sought by wizards. Completely purging the ruin of perils would probably somehow ruin the process, or else some greedy outsider would likely have cleaned it out by now.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Grasping outsider treasure-hunter, Monster attracted by the resource, Resource-maker using it to gain sinister influence and power</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Earnest prospector, Luckless official charged with gathering the resource, Desperate fortune-hunter</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The resource is cursed or dangerous, The resource can’t be accessed without some kind of agreement with the natives, The resource is sacred to the ruin’s dwellers</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Hidden cache of the resource, Device that extracts it, Ultra-rare refined example of the resource</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Place where the resource is extracted, Fortified zone around the extraction, Vault for the gathered resource</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7000000
+    }
+  },
+  "_key": "!journal!Bcsj1VqanDaKcZSW",
+  "ownership": {
+    "default": 0
+  }
+}

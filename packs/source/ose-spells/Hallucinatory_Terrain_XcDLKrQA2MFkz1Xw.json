@@ -1,0 +1,26 @@
+{
+  "_id": "XcDLKrQA2MFkz1Xw",
+  "name": "Hallucinatory Terrain",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Mage",
+    "duration": "Until touched",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: Until touched</strong></p>\n<p><strong>Range: 240</strong>&rsquo;</p>\n<p>Hallucinatory terrain either conjures an illusory terrain feature (e.g. a hill, wood, marsh, etc.) or hides an existing terrain feature.</p>\n<p><strong>▶ Area: </strong>The illusion must fit completely within the spell&rsquo;s range.</p>\n<p><strong>▶ Touching: </strong>If the illusion is touched by an intelligent being, the spell is negated.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!XcDLKrQA2MFkz1Xw"
+}

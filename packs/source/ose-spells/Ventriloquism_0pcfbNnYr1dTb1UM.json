@@ -1,0 +1,26 @@
+{
+  "_id": "0pcfbNnYr1dTb1UM",
+  "name": "Ventriloquism",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "2 turns",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The caster may make their voice appear to come from any location or source (e.g. a statue or animal) within range.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!0pcfbNnYr1dTb1UM"
+}

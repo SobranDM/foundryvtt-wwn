@@ -1,0 +1,32 @@
+{
+  "_id": "a4ur96akf0da46mn",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Caravan",
+  "type": "asset",
+  "_key": "!items!a4ur96akf0da46mn",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "1d4",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 5,
+    "counter": "None",
+    "desc": "As a free action, once per turn, the Caravan can spend 1 Treasure and move itself and one other Asset in the same place to a new location within one move.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action, once per turn, the Caravan can spend 1 Treasure and move itself and one other Asset in the same place to a new location within one move.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "cqb5uqtcqfhku3xo",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Knights",
+  "type": "asset",
+  "_key": "!items!cqb5uqtcqfhku3xo",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d8",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 18,
+    "counter": "2d6",
+    "desc": "Elite warriors of considerable personal prowess have been trained or enlisted by the faction, either from noble sympathizers, veteran members, or amenable mercenaries.",
+    "health": {
+      "max": 16,
+      "value": 16
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

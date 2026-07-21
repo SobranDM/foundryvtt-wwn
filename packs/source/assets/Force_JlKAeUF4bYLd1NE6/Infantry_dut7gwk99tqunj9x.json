@@ -1,0 +1,32 @@
+{
+  "_id": "dut7gwk99tqunj9x",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Infantry",
+  "type": "asset",
+  "_key": "!items!dut7gwk99tqunj9x",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d8",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "1d6",
+    "desc": "Common foot soldiers have been organized and armed by the faction. While rarely particularly heroic in their capabilities, they have the advantage of numbers.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

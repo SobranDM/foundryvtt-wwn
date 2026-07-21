@@ -1,0 +1,148 @@
+{
+  "_id": "mvOZ7B6mwmD3BFVi",
+  "name": "Hex-Court",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Small group of isolated recluses",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "guhm8f2dpdu0m92x",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.guhm8f2dpdu0m92x"
+    },
+    {
+      "type": 0,
+      "text": "Monastery or hermit retreat",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "dk5ip6wtdwtndaly",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.dk5ip6wtdwtndaly"
+    },
+    {
+      "type": 0,
+      "text": "Degenerates forced out of civilized lands",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "qf80izdf8mmq9fto",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.qf80izdf8mmq9fto"
+    },
+    {
+      "type": 0,
+      "text": "Wizards conducting esoteric business",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "651wm49qpwt5jh9w",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.651wm49qpwt5jh9w"
+    },
+    {
+      "type": 0,
+      "text": "Demihumans of neutral disposition",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "zs0u4o3twld16w4u",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.zs0u4o3twld16w4u"
+    },
+    {
+      "type": 0,
+      "text": "Small tribal clan living in seclusion",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "ijhgphbl6xp51umi",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.ijhgphbl6xp51umi"
+    },
+    {
+      "type": 0,
+      "text": "Monsters not immediately hostile in nature",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "a9bwyg290fgv8p1m",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.a9bwyg290fgv8p1m"
+    },
+    {
+      "type": 0,
+      "text": "Another adventuring or explorer party",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "wjlp953daewai8n3",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.wjlp953daewai8n3"
+    },
+    {
+      "type": 0,
+      "text": "Traders or merchants risking the wilds",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "nnoeusy9k9fgtybz",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.nnoeusy9k9fgtybz"
+    },
+    {
+      "type": 0,
+      "text": "Miners, prospectors, or woodsmen",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "z7zo35upjihz5tn6",
+      "flags": {},
+      "_key": "!tables.results!mvOZ7B6mwmD3BFVi.z7zo35upjihz5tn6"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!mvOZ7B6mwmD3BFVi"
+}

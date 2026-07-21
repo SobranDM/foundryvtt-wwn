@@ -1,0 +1,17 @@
+{
+  "_id": "GhKNFOWgAapObmWZ",
+  "name": "Devil Grove",
+  "content": "<h1>Devil Grove</h1><div>\n<p>While not a full-fledged arratu, there’s a glade or zone within the hex that’s infested with Outsider flora and fauna. Beasts from within prowl the surrounding area, though some circumstance is preventing the glade from growing at a very rapid pace. Some ancient Outsider device may be causing the glade, or it might be the tiny remnant of some ancient wasteland that’s shrunken with time and the constraint of the Legacy.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Hideous Outsider predator, Blighted warchief hiding in the grove, Ancient Outsider maintaining the grove</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Hard-pressed pioneer, Local hunter harried by the beasts, Adventurer seeking the grove’s cause</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>Local rustics sacrifice to the grove to placate its denizens, The grove is valued as a natural defense against a neighboring threat, Exiles and criminals seek refuge there</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Precious byproduct of alien life, Outsider relic in the heart of the grove, Valuable goods on a victim of the beasts</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Glen swollen with uncanny life, Windy vale streaked with plumes of alien air, Shore of a pond full of some noxious chemical</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3200000
+    }
+  },
+  "_key": "!journal!GhKNFOWgAapObmWZ",
+  "ownership": {
+    "default": 0
+  }
+}

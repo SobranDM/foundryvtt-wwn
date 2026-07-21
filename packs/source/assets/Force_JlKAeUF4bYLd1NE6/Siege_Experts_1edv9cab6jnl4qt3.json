@@ -1,0 +1,32 @@
+{
+  "_id": "1edv9cab6jnl4qt3",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Siege Experts",
+  "type": "asset",
+  "_key": "!items!1edv9cab6jnl4qt3",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d6",
+    "attackSource": "force",
+    "attackSpecial": "When they successfully Attack an enemy Asset, the owner loses [[1d4]] points of Treasure from their reserves and this faction gains it.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "1d6",
+    "desc": "These soldiers are trained in trenching, sapping, and razing targeted structures. When they successfully Attack an enemy Asset, the owner loses [[1d4]] points of Treasure from their reserves and this faction gains it. ",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 5,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

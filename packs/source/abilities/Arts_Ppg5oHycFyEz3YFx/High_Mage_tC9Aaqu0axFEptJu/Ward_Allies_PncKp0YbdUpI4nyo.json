@@ -1,0 +1,32 @@
+{
+  "_id": "PncKp0YbdUpI4nyo",
+  "name": "Ward Allies",
+  "type": "art",
+  "img": "systems/wwn/assets/default/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.PncKp0YbdUpI4nyo"
+    }
+  },
+  "_key": "!items!PncKp0YbdUpI4nyo",
+  "system": {
+    "pattern": "white",
+    "roll": "",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the day as an Instant action to omit up to six allies from the effects of an area-effect spell you cast, allowing them to avoid any damage or other negative effect that would be directly produced by the spell. This does not protect them from indirect consequences, however, such as destroying the building they are standing in.</p>",
+    "save": "",
+    "source": "High Mage",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  }
+}

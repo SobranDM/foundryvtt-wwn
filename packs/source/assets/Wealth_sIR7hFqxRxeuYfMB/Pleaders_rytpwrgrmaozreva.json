@@ -1,0 +1,32 @@
+{
+  "_id": "rytpwrgrmaozreva",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Pleaders",
+  "type": "asset",
+  "_key": "!items!rytpwrgrmaozreva",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d4",
+    "attackSource": "cunning",
+    "attackSpecial": "Pleaders can neither Attack nor inflict Counterattack damage on Force Assets.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "1d6",
+    "desc": "Whether lawyers, skalds, lawspeakers, sage elders, or other legal specialists, Pleaders can turn the local society's laws against the enemies of the faction. However, Pleaders can neither Attack nor inflict Counterattack damage on Force Assets.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "kbo8n0stn80p25ax",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Petty Seers",
+  "type": "asset",
+  "_key": "!items!kbo8n0stn80p25ax",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "1d6",
+    "desc": "A cadre of skilled fortune-tellers and minor oracles have been enlisted by the faction to foresee perils and allow swift counterattacks. ",
+    "health": {
+      "max": 2,
+      "value": 2
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

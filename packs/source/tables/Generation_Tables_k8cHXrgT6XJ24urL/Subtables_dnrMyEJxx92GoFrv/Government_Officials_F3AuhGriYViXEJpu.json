@@ -1,0 +1,177 @@
+{
+  "_id": "F3AuhGriYViXEJpu",
+  "name": "Government-Officials",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Officials Recently Causing Problems",
+  "results": [
+    {
+      "_id": "QKIiDeol05ygv61x",
+      "flags": {},
+      "type": 0,
+      "text": "Rapaciously grasping tax-farmers",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.QKIiDeol05ygv61x"
+    },
+    {
+      "_id": "4uv9sMzUSkpwEPWc",
+      "flags": {},
+      "type": 0,
+      "text": "Ill-disciplined and thieving military troops",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.4uv9sMzUSkpwEPWc"
+    },
+    {
+      "_id": "JojaWLhIgseOkJLP",
+      "flags": {},
+      "type": 0,
+      "text": "Bribe-hungry and meddling magistrates",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.JojaWLhIgseOkJLP"
+    },
+    {
+      "_id": "WPXbEJLddRDilipd",
+      "flags": {},
+      "type": 0,
+      "text": "Ever-watchful informers among neighbors",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.WPXbEJLddRDilipd"
+    },
+    {
+      "_id": "iZPDzeLcTY17KPMP",
+      "flags": {},
+      "type": 0,
+      "text": "Tithe-hungry collectors from the state faith",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.iZPDzeLcTY17KPMP"
+    },
+    {
+      "_id": "PtNwTPc3MROi6DdL",
+      "flags": {},
+      "type": 0,
+      "text": "Corrupt and untrustworthy market officials",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.PtNwTPc3MROi6DdL"
+    },
+    {
+      "_id": "dWzL7TABueM0oLZy",
+      "flags": {},
+      "type": 0,
+      "text": "Carelessly superior nobles and their retinues",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.dWzL7TABueM0oLZy"
+    },
+    {
+      "_id": "eNqf0ikulVbnk1tU",
+      "flags": {},
+      "type": 0,
+      "text": "Thuggish constables or city guardsmen",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.eNqf0ikulVbnk1tU"
+    },
+    {
+      "_id": "q7mjvFUqYwyAr75Q",
+      "flags": {},
+      "type": 0,
+      "text": "Pitiless inquisitors hunting out dark magics",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.q7mjvFUqYwyAr75Q"
+    },
+    {
+      "_id": "UI3zTv3jRmMvOL9R",
+      "flags": {},
+      "type": 0,
+      "text": "Law enforcers acting as if they are the law",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.UI3zTv3jRmMvOL9R"
+    },
+    {
+      "_id": "v0vk5Jvde7PFdKEV",
+      "flags": {},
+      "type": 0,
+      "text": "State scholars teaching vile principles",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.v0vk5Jvde7PFdKEV"
+    },
+    {
+      "_id": "pxLnNInfIRYethM1",
+      "flags": {},
+      "type": 0,
+      "text": "Corrupt village headmen acting as tyrants",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!F3AuhGriYViXEJpu.pxLnNInfIRYethM1"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!F3AuhGriYViXEJpu"
+}

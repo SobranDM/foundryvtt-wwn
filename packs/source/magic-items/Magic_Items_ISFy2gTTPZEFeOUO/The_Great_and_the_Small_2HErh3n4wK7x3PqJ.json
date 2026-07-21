@@ -1,0 +1,42 @@
+{
+  "_id": "2HErh3n4wK7x3PqJ",
+  "name": "The Great and the Small",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.2HErh3n4wK7x3PqJ"
+    }
+  },
+  "system": {
+    "description": "<p>This elixir will cause the subject to either shrink or grow as they wish, compacting down to a shape no smaller than three inches or expanding to one no larger than twelve feet in height. Once their size is chosen it remains fixed for the remaining thirty-minute duration of the potion, or until they voluntarily end it. Shrunken characters have an effective Strength of 3 and can&rsquo;t do meaningful combat damage. Their Move rating is also cut by 90%, but they automatically pass all Sneak skill checks unless someone is actively looking for them. Large characters have an effective Strength of 18 and do double damage with melee weapons and Shock, but their large size allows all foes to roll hit rolls twice against them and take the better number. If the character expands in a location not big enough to contain them, they inflict 4d6 damage on whatever they&rsquo;re expanding in; if it&rsquo;s not enough to destroy the constriction, they are crushed to death.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2HErh3n4wK7x3PqJ"
+}

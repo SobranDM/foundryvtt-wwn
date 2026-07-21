@@ -1,0 +1,174 @@
+{
+  "_id": "07slhaavL0Y2GlC8",
+  "name": "Frame-Stay",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "It’s rich in resources useful to them",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "gmms3a6oc9rcdrr1",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.gmms3a6oc9rcdrr1"
+    },
+    {
+      "type": 0,
+      "text": "A foe outside threatens them if they leave",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "eyfiw67u48qn2h2g",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.eyfiw67u48qn2h2g"
+    },
+    {
+      "type": 0,
+      "text": "They’re trying to find something specific here",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "onlu45prledat0sw",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.onlu45prledat0sw"
+    },
+    {
+      "type": 0,
+      "text": "It’s simply always been their home",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "r9l41feszquufceq",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.r9l41feszquufceq"
+    },
+    {
+      "type": 0,
+      "text": "An important member is immobile somehow",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "fx8mek7dkxgoz5dx",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.fx8mek7dkxgoz5dx"
+    },
+    {
+      "type": 0,
+      "text": "Some drug or pleasure here has caught them",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "q6pdoa1kv3zz7ffi",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.q6pdoa1kv3zz7ffi"
+    },
+    {
+      "type": 0,
+      "text": "They’ve been enslaved by a power here",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "hi1g6xs8h6sslmwa",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.hi1g6xs8h6sslmwa"
+    },
+    {
+      "type": 0,
+      "text": "They’re being paid to do so by someone",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "8vorlpzot6jvrbku",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.8vorlpzot6jvrbku"
+    },
+    {
+      "type": 0,
+      "text": "They haven’t anywhere better to go",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "azwfeulqmng6fg6m",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.azwfeulqmng6fg6m"
+    },
+    {
+      "type": 0,
+      "text": "They’re waiting for someone else to arrive",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "yognmo954wkdtlti",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.yognmo954wkdtlti"
+    },
+    {
+      "type": 0,
+      "text": "They’re trapped here by something",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "o4e3eh1l0kaw1myu",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.o4e3eh1l0kaw1myu"
+    },
+    {
+      "type": 0,
+      "text": "Their leader has a personal reason to stay",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "0raigyvllieqkqrv",
+      "flags": {},
+      "_key": "!tables.results!07slhaavL0Y2GlC8.0raigyvllieqkqrv"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!07slhaavL0Y2GlC8"
+}

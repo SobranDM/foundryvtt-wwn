@@ -1,0 +1,216 @@
+{
+  "_id": "ghdUFxU9QpZ00cKs",
+  "name": "Polop Great Devourer",
+  "type": "monster",
+  "sort": 100001,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "vkQboPTiQns0d7RK",
+      "name": "Massive Weapon",
+      "type": "weapon",
+      "sort": 100000,
+      "flags": {},
+      "img": "systems/wwn/assets/default/weapon.png",
+      "effects": [],
+      "_key": "!actors.items!ghdUFxU9QpZ00cKs.vkQboPTiQns0d7RK",
+      "system": {
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "pattern": "transparent",
+        "description": "",
+        "damage": "2d8+5",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": 10,
+          "ac": null
+        },
+        "skill": "punch",
+        "score": "str",
+        "tags": [],
+        "slow": false,
+        "missile": false,
+        "melee": true,
+        "price": 0,
+        "weight": 0,
+        "counter": {
+          "value": 3,
+          "max": 3
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "_key": "!actors!ghdUFxU9QpZ00cKs",
+  "system": {
+    "retainer": {
+      "enabled": false,
+      "morale": 0,
+      "wage": ""
+    },
+    "ac": {
+      "value": 0,
+      "mod": 0
+    },
+    "aac": {
+      "value": 15,
+      "mod": 0
+    },
+    "thac0": {
+      "value": 19,
+      "bba": 20,
+      "mod": {
+        "missile": 0,
+        "melee": 0
+      }
+    },
+    "saves": {
+      "evasion": {
+        "value": 5,
+        "mod": 0
+      },
+      "mental": {
+        "value": 5,
+        "mod": 0
+      },
+      "physical": {
+        "value": 5,
+        "mod": 0
+      },
+      "luck": {
+        "value": 5,
+        "mod": 0
+      }
+    },
+    "movement": {
+      "base": "40",
+      "exploration": 90,
+      "overland": 24,
+      "bonus": 0,
+      "value": ""
+    },
+    "initiative": {
+      "value": 0,
+      "mod": 0
+    },
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0,
+      "bank": 0,
+      "total": 0
+    },
+    "spells": {
+      "1": {
+        "max": 0
+      },
+      "2": {
+        "max": 0
+      },
+      "3": {
+        "max": 0
+      },
+      "4": {
+        "max": 0
+      },
+      "5": {
+        "max": 0
+      },
+      "enabled": false,
+      "perDay": {
+        "value": 0,
+        "max": 0
+      }
+    },
+    "classes": {
+      "effort1": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort2": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      },
+      "effort3": {
+        "name": "",
+        "value": 1,
+        "max": 1
+      }
+    },
+    "details": {
+      "biography": "<p><span style=\"color: #191813;\">While the Polop who invade the land are usually of </span><span style=\"color: #191813;\">the hunter or slaver varieties, legends speak of the living </span><span style=\"color: #191813;\">gods of the Polop, those of them who have eaten so </span><span style=\"color: #191813;\">much and of so many mighty foes that they become the </span><span style=\"color: #191813;\">awe-inspiring patrons of entire Polop cities. These &ldquo;great </span><span style=\"color: #191813;\">devourers&rdquo; are twice the size of ordinary Polop, but lack </span><span style=\"color: #191813;\">nothing of cunning and cruel intellect.</span></p>",
+      "alignment": "",
+      "xp": 0,
+      "treasure": {
+        "table": "",
+        "type": ""
+      },
+      "appearing": {
+        "d": "",
+        "w": ""
+      },
+      "morale": 11,
+      "instinct": 7,
+      "instinctTable": {
+        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
+        "link": ""
+      },
+      "skill": 2
+    },
+    "attacks": "",
+    "character": false,
+    "hp": {
+      "hd": "20d8",
+      "value": 90,
+      "max": 90
+    },
+    "damageBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Polop Hunter",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "ghdUFxU9QpZ00cKs",
+    "actorLink": false,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  }
+}

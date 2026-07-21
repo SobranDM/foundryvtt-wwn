@@ -1,0 +1,41 @@
+{
+  "_id": "DrUicYFqBJHikS71",
+  "name": "Pact of Stone and Sea",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "effects": [],
+  "folder": "oxt9vBGhZn4Rxkg7",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.DrUicYFqBJHikS71"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "Elementalist",
+    "duration": "Scene",
+    "range": "Visible",
+    "roll": "",
+    "description": "<p>The elementalist chooses earth, water, fire, or wind when casting this spell and selects a visible target to be affected. For the rest of the scene, the target is immune to injury caused by mundane manifestations of that substance; stone weapons don&rsquo;t harm them, water doesn&rsquo;t drown them, fire doesn&rsquo;t burn them, and wind doesn&rsquo;t topple them. This affects secondary effects of the material as well; a fire-pacted mage couldn&rsquo;t be boiled in a pot, and an earth-pacted one won&rsquo;t be suffocated if buried alive.&nbsp;</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!DrUicYFqBJHikS71"
+}

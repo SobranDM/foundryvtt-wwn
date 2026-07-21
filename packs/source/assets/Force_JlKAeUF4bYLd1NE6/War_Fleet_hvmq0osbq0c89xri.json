@@ -1,0 +1,32 @@
+{
+  "_id": "hvmq0osbq0c89xri",
+  "img": "systems/wwn/assets/force.png",
+  "name": "War Fleet",
+  "type": "asset",
+  "_key": "!items!hvmq0osbq0c89xri",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d6",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "1d8",
+    "desc": "While a war fleet can only Attack assets and locations within reach of the waterways, once per turn it can freely relocate itself to any coastal area within movement range. The Asset itself must be based out of some landward location to provide for supply and refitting.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "Once per turn it can freely relocate itself to any coastal area within movement range. The Asset itself must be based out of some landward location to provide for supply and refitting",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

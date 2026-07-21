@@ -1,0 +1,31 @@
+{
+  "_id": "X7sqtJZ2Vj1NNKEW",
+  "name": "Shield, Small",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.X7sqtJZ2Vj1NNKEW"
+    }
+  },
+  "system": {
+    "description": "<p><em><strong>Shields</strong></em> come in two general varieties. Small ones, often made of costlier metal, can be strapped to the wearer&rsquo;s arm and allow them to hold and manipulate objects with that hand, albeit not wield a weapon with it. Larger shields are of cheaper wood and require a good grip.</p>\n<p>A <em><strong>small shield</strong></em> user has a base AC of 13, while a<strong> <em>large shield</em></strong> user has a base AC of 14. Unlike other armor, however, if the user is already wearing equal or better armor the shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the first instance of Shock they might otherwise suffer in a round.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 13,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "shield",
+    "price": 20,
+    "weight": 1
+  },
+  "_key": "!items!X7sqtJZ2Vj1NNKEW"
+}

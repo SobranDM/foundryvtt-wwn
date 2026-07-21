@@ -1,0 +1,31 @@
+{
+  "_id": "egvstsf00defm239",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Interrupted Logistics",
+  "type": "asset",
+  "_key": "!items!egvstsf00defm239",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 20,
+    "counter": "None",
+    "desc": "Non-Stealthed hostile units cannot enter the same location as the Interrupted Logistics Asset without paying [[/roll 1d4]] Treasure and waiting one turn to arrive there.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "Non-Stealthed hostile units cannot enter the same location as the Interrupted Logistics Asset without paying [[/roll 1d4]] Treasure and waiting one turn to arrive there.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

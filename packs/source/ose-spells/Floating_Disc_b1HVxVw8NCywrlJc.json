@@ -1,0 +1,26 @@
+{
+  "_id": "b1HVxVw8NCywrlJc",
+  "name": "Floating Disc",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "6'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 6&rsquo;</strong></p>\n<p>The caster conjures a slightly concave, circular disc of magical force that follows them about and carries loads.</p>\n<p><strong>▶ Dimensions: </strong>The disc is 3 feet in diameter and 1 inch deep at its centre.</p>\n<p><strong>▶ Load: </strong>It can hold a maximum load of 5,000 coins (500 pounds).</p>\n<p><strong>▶ Motion: </strong>The disc floats at waist height and remains level, floating along horizontally within spell range.</p>\n<p><strong>▶ End:</strong> When the disc winks out at the end of the spell&rsquo;s duration, anything it was supporting is dropped.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!b1HVxVw8NCywrlJc"
+}

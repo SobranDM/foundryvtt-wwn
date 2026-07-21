@@ -1,0 +1,99 @@
+{
+  "_id": "kDxLNuNpJywuvx7D",
+  "name": "Terrain-Dangerous",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Dangerous is the Feature?",
+  "results": [
+    {
+      "_id": "EzutMHKSYVdJ9DTh",
+      "flags": {},
+      "type": 0,
+      "text": "Safer than usual for someplace like it",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.EzutMHKSYVdJ9DTh"
+    },
+    {
+      "_id": "SnwSdi3KXZdqAvoe",
+      "flags": {},
+      "type": 0,
+      "text": "There’s one notable kind of danger there",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.SnwSdi3KXZdqAvoe"
+    },
+    {
+      "_id": "0IYSl1KujaTi7NWz",
+      "flags": {},
+      "type": 0,
+      "text": "It’s got some site-specific flavors of peril",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.0IYSl1KujaTi7NWz"
+    },
+    {
+      "_id": "2CFqruXMTQaPeOXd",
+      "flags": {},
+      "type": 0,
+      "text": "It’s unusually dangerous in several ways",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.2CFqruXMTQaPeOXd"
+    },
+    {
+      "_id": "pNApxGTZL3LngI7g",
+      "flags": {},
+      "type": 0,
+      "text": "It will quickly kill the unprepared or unwary",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.pNApxGTZL3LngI7g"
+    },
+    {
+      "_id": "5mDqufjOLUwn2Wft",
+      "flags": {},
+      "type": 0,
+      "text": "It’s a death zone for all but the strongest",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!kDxLNuNpJywuvx7D.5mDqufjOLUwn2Wft"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!kDxLNuNpJywuvx7D"
+}

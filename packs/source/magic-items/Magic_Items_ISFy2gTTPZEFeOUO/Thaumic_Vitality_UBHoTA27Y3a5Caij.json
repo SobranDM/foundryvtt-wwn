@@ -1,0 +1,42 @@
+{
+  "_id": "UBHoTA27Y3a5Caij",
+  "name": "Thaumic Vitality",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.UBHoTA27Y3a5Caij"
+    }
+  },
+  "system": {
+    "description": "<p>A rare and precious potion, this elixir allows a mage to cast one prepared spell within the next scene without it counting against their allowed spells for the day. This force exerts a severe cost on their bodily constitution, however, and they gain Systm Strain equal to the spell&rsquo;s level after it is cast. If this cost is more than their Constitution can bear, they fall unconscious and wake up in fifteen minutes with maximized System Strain.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UBHoTA27Y3a5Caij"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "6w4hBdWdv6YxrHhQ",
+  "name": "Murderous Anointing",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.6w4hBdWdv6YxrHhQ"
+    }
+  },
+  "system": {
+    "description": "<p>When this potion is applied to a weapon, it gains a brief semi-sentience dedicated entirely to bloodshed. For the following scene, the wielder can accept a System Strain point to reroll a failed attack roll with the weapon, up to once per failed attack. A weapon affected by this potion cannot be used for less than lethal strikes.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6w4hBdWdv6YxrHhQ"
+}

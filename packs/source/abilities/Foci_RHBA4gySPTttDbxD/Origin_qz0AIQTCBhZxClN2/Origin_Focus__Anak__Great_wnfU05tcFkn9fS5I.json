@@ -1,0 +1,18 @@
+{
+  "_id": "wnfU05tcFkn9fS5I",
+  "name": "Origin Focus: Anak, Great",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Unlike most Anak, you are capable of functioning in human society, either through a weakened sense of Hate or an overwhelming force of will. Unless your appearance is much more human than most, however, you may have an extremely difficult time in human lands.</p>\n<p><strong>Level 1: </strong>Gain Stab and Punch as bonus skills. Your Strength and Constitution modifiers increase by +1, up to a maximum of +2. Your Dexterity and Charisma modifiers decrease by -1, to a minimum of -2.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!wnfU05tcFkn9fS5I",
+  "folder": "qz0AIQTCBhZxClN2"
+}

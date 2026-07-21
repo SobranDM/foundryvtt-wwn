@@ -1,0 +1,617 @@
+{
+  "_id": "Sjmz5VY4hHtcP4GI",
+  "name": "Magical Devices",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "QuhX7EvcrV3uqsip",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Guncloud",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "MhEssNjLfvVdMmTo",
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.QuhX7EvcrV3uqsip"
+    },
+    {
+      "_id": "0D8EahArkt6bBsrc",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Censer of Solid Dreams",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "mFr1R90SLSYfkXtT",
+      "weight": 1,
+      "range": [
+        3,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.0D8EahArkt6bBsrc"
+    },
+    {
+      "_id": "x8KtSjbWsNKz0Fnb",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Congealed Paradox",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "5jkm9pi25KCN72Vg",
+      "weight": 1,
+      "range": [
+        7,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.x8KtSjbWsNKz0Fnb"
+    },
+    {
+      "_id": "5zUVtTsM34LoRyvw",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Enough Rope",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "nSAKxaSGJdEJXQBq",
+      "weight": 1,
+      "range": [
+        13,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.5zUVtTsM34LoRyvw"
+    },
+    {
+      "_id": "6thHBz79wa1WlwCC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Eye of Discerning Humanity",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "K4a0hMEG1E6nzmAW",
+      "weight": 1,
+      "range": [
+        17,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.6thHBz79wa1WlwCC"
+    },
+    {
+      "_id": "rETzo8t7e72QnsrI",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Flask of Devils",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "BAny3Yl4Edc84Tp3",
+      "weight": 1,
+      "range": [
+        20,
+        23
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.rETzo8t7e72QnsrI"
+    },
+    {
+      "_id": "IbJjZtUOGeOgCQly",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Ghost Horse",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "jnPpHEIDpCItCZHJ",
+      "weight": 1,
+      "range": [
+        24,
+        26
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.IbJjZtUOGeOgCQly"
+    },
+    {
+      "_id": "WRcs2LRDyPf7aqkV",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Immanent Beacon Shard",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "Fo0ozVZjyolIOnYe",
+      "weight": 1,
+      "range": [
+        27,
+        31
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.WRcs2LRDyPf7aqkV"
+    },
+    {
+      "_id": "hvNp821P31tvXMS2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Implacable Fist",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "gq677lMuOSMitAlt",
+      "weight": 1,
+      "range": [
+        32,
+        35
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.hvNp821P31tvXMS2"
+    },
+    {
+      "_id": "bqiQGPvf4gcV729P",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Jewel Beyond Price",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "UihR5eEj45d4fxxA",
+      "weight": 1,
+      "range": [
+        36,
+        39
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.bqiQGPvf4gcV729P"
+    },
+    {
+      "_id": "ah0NehEbgWOAzKuL",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Key of the Former House",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "jaXKYF5M94tHv66u",
+      "weight": 1,
+      "range": [
+        40,
+        42
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.ah0NehEbgWOAzKuL"
+    },
+    {
+      "_id": "8rgJtHPobieDj6NA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Lens of the Polychrome Lord",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "WE3PpLVpZrhxK1GR",
+      "weight": 1,
+      "range": [
+        43,
+        46
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.8rgJtHPobieDj6NA"
+    },
+    {
+      "_id": "CB70krzXJL5JG4jY",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Lex Talionis",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "00K5m6EBITgjRywF",
+      "weight": 1,
+      "range": [
+        47,
+        49
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.CB70krzXJL5JG4jY"
+    },
+    {
+      "_id": "zH7ah5npc3S2PrK8",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Logos",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "Camxj5W1oPMJlIfY",
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.zH7ah5npc3S2PrK8"
+    },
+    {
+      "_id": "NPSftiQhPVOJN3bw",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Lyre of Longing",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "sU2EstovRlDOnJfb",
+      "weight": 1,
+      "range": [
+        51,
+        53
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.NPSftiQhPVOJN3bw"
+    },
+    {
+      "_id": "dZwEiDyyuQ15tZlv",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Memorious Fragrance",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "SGFXsZn6hg7mZuV7",
+      "weight": 1,
+      "range": [
+        54,
+        57
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.dZwEiDyyuQ15tZlv"
+    },
+    {
+      "_id": "fcGd0W1Y0fOeEGZT",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Purification Salt",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "1fam8EEvMNTQ3nz4",
+      "weight": 1,
+      "range": [
+        58,
+        62
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.fcGd0W1Y0fOeEGZT"
+    },
+    {
+      "_id": "pfcND65xISZA6exZ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Rain-Beckoning Drum",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "pc0livsnytjD254w",
+      "weight": 1,
+      "range": [
+        63,
+        65
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.pfcND65xISZA6exZ"
+    },
+    {
+      "_id": "ALaKYfH0VdQ8SxnH",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Ring of Sea Princes",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "0dMfn4y015di9qda",
+      "weight": 1,
+      "range": [
+        66,
+        69
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.ALaKYfH0VdQ8SxnH"
+    },
+    {
+      "_id": "nl3SpFPnZ4E2Q9mA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Rod of Repudiation",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "BarVTggFEpb4VzrN",
+      "weight": 1,
+      "range": [
+        70,
+        72
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.nl3SpFPnZ4E2Q9mA"
+    },
+    {
+      "_id": "lPw811Prp09YQemM",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Seed of Flesh",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "YDuKB61dQubAkvIy",
+      "weight": 1,
+      "range": [
+        73,
+        77
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.lPw811Prp09YQemM"
+    },
+    {
+      "_id": "YfohIpOPX61suNAH",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Staff of the Old Lords",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "mghJAbXOArKUurPx",
+      "weight": 1,
+      "range": [
+        78,
+        80
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.YfohIpOPX61suNAH"
+    },
+    {
+      "_id": "QBfLBoYuygUNFVtu",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Stonepeg",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "yak8bLIR4LAs9BGG",
+      "weight": 1,
+      "range": [
+        81,
+        84
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.QBfLBoYuygUNFVtu"
+    },
+    {
+      "_id": "FRxqEm4rSe9TJnEM",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Stutterhatchet",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "WinGLIy0pMsBIQrS",
+      "weight": 1,
+      "range": [
+        85,
+        87
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.FRxqEm4rSe9TJnEM"
+    },
+    {
+      "_id": "uCbl2jqQZhP5y4ZQ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Vessel of Hours",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "y5EsX8AE28TJIqvf",
+      "weight": 1,
+      "range": [
+        88,
+        91
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.uCbl2jqQZhP5y4ZQ"
+    },
+    {
+      "_id": "P1P2M2zvNL3V0Emq",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Vigilant Banner",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "6U7qhaIq177GvztK",
+      "weight": 1,
+      "range": [
+        92,
+        95
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.P1P2M2zvNL3V0Emq"
+    },
+    {
+      "_id": "sLV2JXeScrqAch0g",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Vothite Icon",
+      "img": "systems/wwn/assets/default/item.png",
+      "collection": "wwn.magic-items",
+      "resultId": "IzZggO4lo3K1GYbO",
+      "weight": 1,
+      "range": [
+        96,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Sjmz5VY4hHtcP4GI.sLV2JXeScrqAch0g"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!Sjmz5VY4hHtcP4GI",
+  "folder": "lNk7aQ8vhZ8d8QQE"
+}

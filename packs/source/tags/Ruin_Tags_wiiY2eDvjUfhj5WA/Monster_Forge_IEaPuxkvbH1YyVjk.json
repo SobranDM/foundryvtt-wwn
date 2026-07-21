@@ -1,0 +1,17 @@
+{
+  "_id": "IEaPuxkvbH1YyVjk",
+  "name": "Monster Forge",
+  "content": "<h1>Monster Forge</h1><div>\n<p>The ruin somehow creates a particular type of monster by its simple existence. It might be an ancient spawning-pit for Blighted, a cloning facility gone berserk, an ancient agricultural complex with feral livestock, an open portal to an Iterum of monsters, a source of very infectious monster-creating plagues, or something in that vein. These monsters probably infest the surrounding area, unless something about their nature requires them to stay close to the ruin.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Alpha monster of the horde, Sorcerous would-be tyrant over the creatures, Terrible anomaly-beast that’s even worse than usual</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Victim of a monstrous rampage, Grim monsterhunter trying to hold back the tide, Local lord overcome by the wave</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The ruin has only recently started to belch forth the creatures, The monsters capture humans to make more of their kind, The monsters were once slaves or servants but have now broken free</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Implement meant to destroy or control them, Plunder brought back by raiding creatures, Treasures lost by slain adventurers</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Frenetic chamber of ever-blossoming life, Overcrowded living quarters, Re-purposed ancient chamber</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 6600000
+    }
+  },
+  "_key": "!journal!IEaPuxkvbH1YyVjk",
+  "ownership": {
+    "default": 0
+  }
+}

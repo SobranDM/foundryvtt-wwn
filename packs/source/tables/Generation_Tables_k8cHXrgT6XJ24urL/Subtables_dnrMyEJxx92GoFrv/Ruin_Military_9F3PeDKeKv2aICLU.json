@@ -1,0 +1,174 @@
+{
+  "_id": "9F3PeDKeKv2aICLU",
+  "name": "Ruin-Military",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Grand fortress of major significance",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "i6jsspgf9r9tuug4",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.i6jsspgf9r9tuug4"
+    },
+    {
+      "type": 0,
+      "text": "Remote frontier keep",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "cxqnpkxzy0jai1wv",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.cxqnpkxzy0jai1wv"
+    },
+    {
+      "type": 0,
+      "text": "Isolated watchtower",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "amgebev7tnkw671y",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.amgebev7tnkw671y"
+    },
+    {
+      "type": 0,
+      "text": "Military training camp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "21h8j62zziwsgp79",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.21h8j62zziwsgp79"
+    },
+    {
+      "type": 0,
+      "text": "Half-subterranean entrenchments",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "8u3xs9f273bt5wd4",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.8u3xs9f273bt5wd4"
+    },
+    {
+      "type": 0,
+      "text": "Battlefield littered with fortifications",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "ilc3a1n5qiokwgv5",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.ilc3a1n5qiokwgv5"
+    },
+    {
+      "type": 0,
+      "text": "Hidden bunker or strongpoint",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "0yqptg76fv1bm9jl",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.0yqptg76fv1bm9jl"
+    },
+    {
+      "type": 0,
+      "text": "Secret operations base",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "86zx3bycq7qqiw3k",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.86zx3bycq7qqiw3k"
+    },
+    {
+      "type": 0,
+      "text": "Battered front-line fortress",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "deoqbs1rr6k87qyo",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.deoqbs1rr6k87qyo"
+    },
+    {
+      "type": 0,
+      "text": "Gatehouse controlling a",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "bs5wge7svrsmado9",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.bs5wge7svrsmado9"
+    },
+    {
+      "type": 0,
+      "text": "Military cache or storehouse",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "69pa3a972ktriqvh",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.69pa3a972ktriqvh"
+    },
+    {
+      "type": 0,
+      "text": "Fortified waystation",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "s9yp0l743cg4hxoq",
+      "flags": {},
+      "_key": "!tables.results!9F3PeDKeKv2aICLU.s9yp0l743cg4hxoq"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!9F3PeDKeKv2aICLU"
+}

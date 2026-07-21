@@ -1,0 +1,29 @@
+{
+  "_id": "jaXKYF5M94tHv66u",
+  "name": "Key of the Former House",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>A stylized key, this item may be used as a Main Action to create a shimmering doorway into a prior period of time in which there was an uninhabited domicile in the current location. Those who pass through the doorway enter into this place and time; if they move more than thirty feet away from the other side of the doorway, they&rsquo;re immediately ejected back into the present. The doorway in the present day continues to glow for five minutes after the key is triggered before fading to invisibility, though it can still be passed through from either side. The house on the other side of the doorway is abandoned or empty; it may look more or less normal, but there&rsquo;s a 1 in 6 chance each time this key is used that there is something dangerous there, a toxic environment, or some other hazard. The key may be used once per day, with the doorway lasting up to twenty-four hours before ejecting any remaining interlopers and closing. Each time the doorway closes, there&rsquo;s a 1 in 6 chance the key shatters.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 0,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.jaXKYF5M94tHv66u"
+    }
+  },
+  "_key": "!items!jaXKYF5M94tHv66u"
+}

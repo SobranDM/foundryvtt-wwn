@@ -1,0 +1,32 @@
+{
+  "_id": "pc6u5sv3eevhgwgn",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Invincible Legion",
+  "type": "asset",
+  "_key": "!items!pc6u5sv3eevhgwgn",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d10+4",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 40,
+    "counter": "2d10+4",
+    "desc": "The faction has developed a truly irresistible military organization that can smash its way through opposition without the aid of any support units. During a Relocate Asset action, the Invincible Legion can relocate to locations that would otherwise not permit a formal military force to relocate there, as if it had the Subtle quality. It is not, however, in any way subtle.",
+    "health": {
+      "max": 30,
+      "value": 30
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 8,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "sHYx3F4Q1dDEBQqO",
+  "name": "Clairvoyance",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Mage",
+    "duration": "12 turns",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The caster gains the ability to see through the eyes of other living creatures.</p>\n<p><strong>▶ Focus for 1 turn: </strong>To establish a connection with a creature, the caster must focus their concentration in one particular direction for one turn.</p>\n<p><strong>▶ After this turn: </strong>The visual perceptions of one creature within range in that direction are relayed to the caster.</p>\n<p><strong>▶ Switching:</strong> Once a connection is established, the caster may choose to maintain it or to change to another subject.</p>\n<p><strong>▶ Obstructions:</strong> The spell is blocked by a thin layer of lead or by rock of 2&rsquo; thick or greater.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!sHYx3F4Q1dDEBQqO"
+}

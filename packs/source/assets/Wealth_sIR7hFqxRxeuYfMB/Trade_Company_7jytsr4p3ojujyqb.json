@@ -1,0 +1,32 @@
+{
+  "_id": "7jytsr4p3ojujyqb",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Trade Company",
+  "type": "asset",
+  "_key": "!items!7jytsr4p3ojujyqb",
+  "system": {
+    "assetType": "wealth",
+    "attackDamage": "2d6",
+    "attackSource": "wealth",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 15,
+    "counter": "1d6",
+    "desc": "Bold traders undertake potentially lucrative- or catastrophic- new business opportunities. As a free action, once per turn, the owner of the Asset may roll accept [[1d4]] damage done to the Asset in exchange for earning [[1d6-1]] Treasure points.",
+    "health": {
+      "max": 10,
+      "value": 10
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 6,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "As a free action, once per turn, the owner of the Asset may roll accept [[/roll 1d4]] damage done to the Asset in exchange for earning [[/roll 1d6-1]] Treasure points.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

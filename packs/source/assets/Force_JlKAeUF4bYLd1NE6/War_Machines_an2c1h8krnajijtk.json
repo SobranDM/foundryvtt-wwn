@@ -1,0 +1,32 @@
+{
+  "_id": "an2c1h8krnajijtk",
+  "img": "systems/wwn/assets/force.png",
+  "name": "War Machines",
+  "type": "asset",
+  "_key": "!items!an2c1h8krnajijtk",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "2d10+4",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 25,
+    "counter": "1d10",
+    "desc": "Mobile war machines driven by trained beasts or magical motive power are under the faction's control.",
+    "health": {
+      "max": 14,
+      "value": 14
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 6,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

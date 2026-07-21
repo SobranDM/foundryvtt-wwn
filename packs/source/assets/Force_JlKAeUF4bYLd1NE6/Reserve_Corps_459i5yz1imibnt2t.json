@@ -1,0 +1,32 @@
+{
+  "_id": "459i5yz1imibnt2t",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Reserve Corps",
+  "type": "asset",
+  "_key": "!items!459i5yz1imibnt2t",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d6",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "1d6",
+    "desc": "Retired military personnel and rear-line troops are spread through the area as workers or colonists, available to resist hostilities as needed.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

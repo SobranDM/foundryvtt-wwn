@@ -1,0 +1,18 @@
+{
+  "_id": "aY7FspDXjUH6ZQtR",
+  "name": "Rider",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Anyone with any level of Ride skill can fight competently on horseback or keep their mount healthy. You have an almost supernatural bond with your steeds, however, and can push them beyond normal limits.</p>\n<p><strong>Level 1: </strong>Gain Ride as a bonus skill. Your steeds all count as Morale 12 in battle, use your AC if it&rsquo;s higher than theirs, and can travel 50% further in a day than normal for their kind. You can intuitively communicate with riding beasts, gaining as much information from it as its intellect can convey.</p>\n<p><strong>Level 2:</strong> Once per scene, negate a successful attack against your steed as an Instant action. Once per scene, reroll any failed Ride skill check. You can telepathically send and receive simple warnings, thoughts, and commands to and from your steed so long as it&rsquo;s within two hundred feet. You can so bond with one steed at a time, taking an hour to do so.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!aY7FspDXjUH6ZQtR",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

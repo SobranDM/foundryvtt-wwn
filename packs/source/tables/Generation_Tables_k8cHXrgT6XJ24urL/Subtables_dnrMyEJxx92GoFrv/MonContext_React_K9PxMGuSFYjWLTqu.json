@@ -1,0 +1,122 @@
+{
+  "_id": "K9PxMGuSFYjWLTqu",
+  "name": "MonContext-React",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "They try to placate or appease its hungers",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "wqknlugopriwt6bf",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.wqknlugopriwt6bf"
+    },
+    {
+      "type": 0,
+      "text": "They try to kill it, actively hunting it down",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "m8nqvdpfi6q7jxb4",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.m8nqvdpfi6q7jxb4"
+    },
+    {
+      "type": 0,
+      "text": "They avoid its territory out of spiritual fear",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "t766elqwoqrhm94m",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.t766elqwoqrhm94m"
+    },
+    {
+      "type": 0,
+      "text": "They accept a certain amount of loss from it",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "yb5wiwj5z19izoh5",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.yb5wiwj5z19izoh5"
+    },
+    {
+      "type": 0,
+      "text": "They build countermeasures against it",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "7cy0bsodb1u5a89k",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.7cy0bsodb1u5a89k"
+    },
+    {
+      "type": 0,
+      "text": "They try to contain it within a certain area",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "hxfw5a10o3c1vzrg",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.hxfw5a10o3c1vzrg"
+    },
+    {
+      "type": 0,
+      "text": "They try to use it against their enemies",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "q34jwnas2e84ws3b",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.q34jwnas2e84ws3b"
+    },
+    {
+      "type": 0,
+      "text": "They worship it or take it as a leader",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "068f16ee1wsob7iy",
+      "flags": {},
+      "_key": "!tables.results!K9PxMGuSFYjWLTqu.068f16ee1wsob7iy"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!K9PxMGuSFYjWLTqu"
+}

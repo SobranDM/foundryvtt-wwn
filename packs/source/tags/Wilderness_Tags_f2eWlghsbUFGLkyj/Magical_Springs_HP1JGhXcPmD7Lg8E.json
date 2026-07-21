@@ -1,0 +1,17 @@
+{
+  "_id": "HP1JGhXcPmD7Lg8E",
+  "name": "Magical Springs",
+  "content": "<h1>Magical Springs</h1><div>\n<p>There’s an enchanted spring in the area, one empowered by an ancient Working or warped by ambient currents of magic. The creatures that drink from it might be blessed with some special grace, but it’s just as likely that some more sinister consequence comes from imbibing its water. The animal and plant life around it have doubtless been substantially altered by its effects. Most such springwater loses its powers if separated from the main body for very long.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Beast warped by the spring’s power, Ruthless sorcerer experimenting with its effects, Barbaric chieftain using it to advance his power</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Ancestral guardian of the spring, Pioneer plagued by the spring’s effects, Scholar who thinks they can fix any negative effects of the spring</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The spring grants a blessing that comes with a substantial cost, The spring’s blessing becomes a curse when over-imbibed, The spring’s created an entire ecosystem of servitor-addicts</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Cure for the changes the spring forces, Vessel that can hold the springwater without losing its power, Precious fragment of the original Working</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Pool of obviously uncanny water, Shore marked with the spring’s effects, Weird den of a springtouched beast</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 5000000
+    }
+  },
+  "_key": "!journal!HP1JGhXcPmD7Lg8E",
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "_id": "7OhivHdI4zWEpML7",
+  "name": "Nation Construction - Balanced",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "This uses the Nation Construction tables with exactly one positive theme and exactly one negative.",
+  "results": [
+    {
+      "_id": "QLAKevPhTDMxigV3",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Disputes With a Neighboring State</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.QLAKevPhTDMxigV3"
+    },
+    {
+      "_id": "0OnCv0xPi7YNOfiQ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Disputes",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "jeCuXrdZZZvm1ej0",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.0OnCv0xPi7YNOfiQ"
+    },
+    {
+      "_id": "He0Ttf8bbhCG74na",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Positive Ties With a Neighboring State</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.He0Ttf8bbhCG74na"
+    },
+    {
+      "_id": "lxGNlmNuBXmJn97d",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Ties",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "2DPPH7wJPoPnQ0Pj",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.lxGNlmNuBXmJn97d"
+    },
+    {
+      "_id": "iVKBkJqsZEY7HyCJ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Current National Problems</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.iVKBkJqsZEY7HyCJ"
+    },
+    {
+      "_id": "tUgXXdmRFPxrzNna",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Problems",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "xR9vJU4cLdDuKN1U",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.tUgXXdmRFPxrzNna"
+    },
+    {
+      "_id": "PrZHpyBTur8Ab5pC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Good Things Happening Right Now</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.PrZHpyBTur8Ab5pC"
+    },
+    {
+      "_id": "70ZDBfn1MJaoDBD4",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Good",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "c5eQWf7iNFptBEcH",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.70ZDBfn1MJaoDBD4"
+    },
+    {
+      "_id": "4XS3oHCRE0bAtdj8",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "<b>Thematic Elements</b>",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.4XS3oHCRE0bAtdj8"
+    },
+    {
+      "_id": "Hbcm5BsFUQoEW9CX",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Theme-Negative",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "FmylTEcaxCeuVxjg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.Hbcm5BsFUQoEW9CX"
+    },
+    {
+      "_id": "VS1VkKxsoBdw0Ef5",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Nation-Theme-Positive",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "hJT8CvHuORcLlsiC",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!7OhivHdI4zWEpML7.VS1VkKxsoBdw0Ef5"
+    }
+  ],
+  "formula": "1d1",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!7OhivHdI4zWEpML7"
+}

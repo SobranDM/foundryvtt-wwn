@@ -1,0 +1,18 @@
+/* Shared "hover to reveal edit field" pattern used by both the character and monster sheet headers */
+@mixin wwn-check-field-reveal {
+  .check-field:hover .check {
+    display: block;
+  }
+
+  .check-field .check {
+    display: none;
+    line-height: 35px;
+    flex: 0 0 20px;
+    position: absolute;
+    font-size: 12px;
+  }
+
+  .check-field .check:hover {
+    color: var(--wwn-border-dark);
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "ukwzihfkr7ww8iiy",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Bewitching Charmer",
+  "type": "asset",
+  "_key": "!items!ukwzihfkr7ww8iiy",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "Special",
+    "attackSource": "cunning",
+    "attackSpecial": "When the Bewitching Charmer succeeds in an Attack, the targeted Asset is unable to leave the same location as the Bewitching Charmer until the latter Asset moves or is destroyed. Bewitching Charmers are immune to Counterattack.",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "None",
+    "desc": "When the Bewitching Charmer succeeds in an Attack, the targeted Asset is unable to leave the same location as the Bewitching Charmer until the latter Asset moves or is destroyed. Bewitching Charmers are immune to Counterattack.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "Low",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

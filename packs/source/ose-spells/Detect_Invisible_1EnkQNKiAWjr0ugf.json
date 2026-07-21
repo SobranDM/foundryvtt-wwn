@@ -1,0 +1,26 @@
+{
+  "_id": "1EnkQNKiAWjr0ugf",
+  "name": "Detect Invisible",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "10' / level",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 10&rsquo; per level</strong></p>\n<p>Invisible creatures or items in range are revealed to the caster.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!1EnkQNKiAWjr0ugf"
+}

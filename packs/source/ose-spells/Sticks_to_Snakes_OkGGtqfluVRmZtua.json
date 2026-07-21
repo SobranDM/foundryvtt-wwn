@@ -1,0 +1,26 @@
+{
+  "_id": "OkGGtqfluVRmZtua",
+  "name": "Sticks to Snakes",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Cleric",
+    "duration": "6 turns",
+    "range": "120'",
+    "roll": "2d8",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>2d8 normal sticks are miraculously transformed into snakes that follow the caster&rsquo;s orders.</p>\n<p><strong>▶ Reversion: </strong>When killed or at the end of the spell&rsquo;s duration, the snakes revert back into sticks.</p>\n<hr />\n<p><strong>Conjured Snakes</strong></p>\n<p>AC 6 [13], HD 1 (4hp), Att 1 &times; bite (1d4), THAC0 19 [0], MV 90&rsquo; (30&rsquo;), SV 15, ML 7, AL Neutral, XP 10 (13 if poisonous)</p>\n<hr />\n<p><strong>▶ Poison: </strong>There is a 50% chance of the snakes being poisonous.</p>\n<p><strong>▶ When killed: </strong>Revert back to sticks.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!OkGGtqfluVRmZtua"
+}

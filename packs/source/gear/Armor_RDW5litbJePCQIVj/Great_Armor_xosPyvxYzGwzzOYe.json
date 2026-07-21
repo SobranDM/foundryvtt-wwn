@@ -1,0 +1,31 @@
+{
+  "_id": "xosPyvxYzGwzzOYe",
+  "name": "Great Armor",
+  "type": "armor",
+  "img": "systems/wwn/assets/default/armor.png",
+  "effects": [],
+  "folder": "RDW5litbJePCQIVj",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.xosPyvxYzGwzzOYe"
+    }
+  },
+  "system": {
+    "description": "<p><em><strong>Great armor </strong></em>is less finely tailored, relying instead on stacking layer upon layer of mail, plates, hide, cloth, and other protective materials until a suit almost too heavy for movement is finally assembled.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+    "ac": 9,
+    "aac": {
+      "value": 18,
+      "mod": 0
+    },
+    "armorBonus": 0,
+    "type": "heavy",
+    "price": 2000,
+    "weight": 3
+  },
+  "_key": "!items!xosPyvxYzGwzzOYe"
+}

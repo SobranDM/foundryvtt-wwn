@@ -1,0 +1,1024 @@
+{
+  "_id": "5gykneK3pLRuFMyJ",
+  "name": "Historical-Events",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "The events described here provide a selection of possibilities for your own history-building. When applying them to different levels of your backdrop, scale them accordingly; the Immigrants result rolled on a village scale might be a family of foreigners moving into an isolated farmstead, while applying it on a national scale might mean an entire barbarian tribe has marched in and requested citizenship.",
+  "results": [
+    {
+      "_id": "oxVgaF8tubtj6TXA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Battleground: The group’s territory ended up as a battleground between two stronger rival powers, and they suffered bitterly for it.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.oxVgaF8tubtj6TXA"
+    },
+    {
+      "_id": "4Zd8gRx2W9Wr72Ma",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Betrayal: Either they betrayed some trusting neighbor to a foe, or were betrayed in turn by such a false friend.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.4Zd8gRx2W9Wr72Ma"
+    },
+    {
+      "_id": "FeV7Bk0Hysps6eic",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Brutal Oppression: Some portion of the group was reduced to a state of wretched subservience by the rest.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.FeV7Bk0Hysps6eic"
+    },
+    {
+      "_id": "lshcyNnnCMbJwuJD",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Class Struggle: Different classes were in conflict, either subtle or overt, all seeking their own gain.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.lshcyNnnCMbJwuJD"
+    },
+    {
+      "_id": "norvBml0W2TK4yZS",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Consequences: Pick an event of a prior age; it had longterm consequences that were good, for a bad event, or bad, for a good event.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.norvBml0W2TK4yZS"
+    },
+    {
+      "_id": "SJeo6YiObr4JubLv",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Decadence: Old strengths and glories crumbled away into decadent remnants, the group becoming indolent and indulgent.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.SJeo6YiObr4JubLv"
+    },
+    {
+      "_id": "xClOV7DfZb4hzxjz",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Depravity: Vile debauches, unclean habits, and base hungers became commonplace among the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.xClOV7DfZb4hzxjz"
+    },
+    {
+      "_id": "60OD6NKTytNoRtJp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Desolation: Some portion of the group’s territory was rendered uninhabitable by something, either permanently or for a long time.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.60OD6NKTytNoRtJp"
+    },
+    {
+      "_id": "y2pOsIhOIz6LkDqL",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Diplomatic Coup: The group achieved an extremely successful alliance or affiliation with a neighboring group that may yet persist.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.y2pOsIhOIz6LkDqL"
+    },
+    {
+      "_id": "qnNgsUO707irzEvs",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Economic Boom: Circumstances produced a burst of tremendous prosperity for them.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.qnNgsUO707irzEvs"
+    },
+    {
+      "_id": "qTxgGcQMxf8Fq4Io",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Enemies Within: A hostile sub-group inside the group worked to do it evil, perhaps on behalf of a neighbor or due to some old grudge.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.qTxgGcQMxf8Fq4Io"
+    },
+    {
+      "_id": "SDjQpHMARlPbOMqc",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Evil Wizard: A malevolent sorcerer, arcane cult, or other powerful magical entity caused a great deal of trouble for the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.SDjQpHMARlPbOMqc"
+    },
+    {
+      "_id": "9W1ndjCP400QliRE",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Exodus: A significant chunk of the group packed up and left for some supposedly-superior land.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.9W1ndjCP400QliRE"
+    },
+    {
+      "_id": "AqgXQF14hwmady9Y",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Exquisite Art: The group produced art that is revered to this day, either in general or in a specific medium or form of literature.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.AqgXQF14hwmady9Y"
+    },
+    {
+      "_id": "DOqEdeqoKwKFJVav",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "External War: The group faced a war with some external enemy or rival nation, with grave consequences.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.DOqEdeqoKwKFJVav"
+    },
+    {
+      "_id": "DGb8lG6OmFuhA4w9",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Freakish Magic: A particular type of magic was developed here that is unknown elsewhere, and its practitioners keep its secrets well.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.DGb8lG6OmFuhA4w9"
+    },
+    {
+      "_id": "kTdMZcmMQL5jAuZO",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Golden Age: Everything went remarkably well for the group for an extended period of time, allowing prosperity and success.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.kTdMZcmMQL5jAuZO"
+    },
+    {
+      "_id": "UHckk3fStYJfMgO2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Good Wizard: Some magic-using entity of great power protected the group, taught them magic, or otherwise assisted them.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.UHckk3fStYJfMgO2"
+    },
+    {
+      "_id": "gKfaroR5hsaB8lVA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Great Awakening: A tremendous wave of reform, purification, and re-commitment to venerable values swept through the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.gKfaroR5hsaB8lVA"
+    },
+    {
+      "_id": "Uwz0klUKoL1gEfGe",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Great Builders: The group constructed a great many vast palaces, monuments, estates, or other structures of wide fame.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.Uwz0klUKoL1gEfGe"
+    },
+    {
+      "_id": "CiGl5Nm8IJrqTyth",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Great Infrastructure: Some tremendous work of infrastructure was accomplished: canals, vast walls, roads, aqueducts, mines, or the like.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.CiGl5Nm8IJrqTyth"
+    },
+    {
+      "_id": "7uKwijG3RTJXoKZe",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Hero King: Some king or other ruler achieved legendary glory in war, diplomacy, or governance. Their name is honored even today.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.7uKwijG3RTJXoKZe"
+    },
+    {
+      "_id": "wVRNgxhVbfXY5Bfu",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Immigrants: A large group of foreigners entered the land more-or-less peacefully and may or may not have been welcomed.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.wVRNgxhVbfXY5Bfu"
+    },
+    {
+      "_id": "Gszd9APEGRWyyWEK",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Inefficient Rule: The group’s governance was impractical, inefficient, or corrupt, holding to values that turned out to be unhelpful.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.Gszd9APEGRWyyWEK"
+    },
+    {
+      "_id": "7ayQh7GlD1s5ZvYd",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Internal War: A straight-up civil war was sparked in the group, one that involved all or many of its members.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.7ayQh7GlD1s5ZvYd"
+    },
+    {
+      "_id": "mB54Lb7uPmT4Plj6",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Loss of Confidence: Some encounter with a new group or some shocking event made the group lose faith in its own customs and values.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.mB54Lb7uPmT4Plj6"
+    },
+    {
+      "_id": "AwUjzOowSoFTaYTI",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Magical Disaster: Some large-scale magical disaster scarred the group, either natural in nature or the result of someone’s sorcerous doings.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.AwUjzOowSoFTaYTI"
+    },
+    {
+      "_id": "n93JNUcnL0tqVHg9",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Magical Tech: The group developed a useful and widespread magical tech or infrastructure that may have survived into the present.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.n93JNUcnL0tqVHg9"
+    },
+    {
+      "_id": "XTm516j0fTDWk9eC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Natural Calamity: Earthquakes, multi-year droughts, tsunamis, meteor strikes, or some other ruins smote the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.XTm516j0fTDWk9eC"
+    },
+    {
+      "_id": "Ygln6yStM9meJxUC",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "New Horizons: The group discovered new territory, whether trans-dimensional, a far terrestrial region, underground realms, or the like.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.Ygln6yStM9meJxUC"
+    },
+    {
+      "_id": "jKNLW3xolJyFOsG0",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "New Rulers: The group’s former ruling dynasty was replaced, either peacefully, through intrigue, or perhaps through outright conquest.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.jKNLW3xolJyFOsG0"
+    },
+    {
+      "_id": "61oIBn5Oosx9CP73",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Noble Function: Aside from the usual roles of nobles, their ruling class was all expected to fill some specific role: priest, mage, scholar, or the like.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.61oIBn5Oosx9CP73"
+    },
+    {
+      "_id": "TFlCG3wA1fmAZL4j",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Noble Strife: The group’s nobility found itself embroiled in assassinations, petty wars, and mutual struggle.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.TFlCG3wA1fmAZL4j"
+    },
+    {
+      "_id": "9ahmVWdmuB37LB5y",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Plague: A sickness of vast scope culled many of the group, and may yet linger in some form.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.9ahmVWdmuB37LB5y"
+    },
+    {
+      "_id": "GOnCD9Lm3TqaJoyb",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Poverty: Circumstances conspired to reduce the group to a state of great poverty and harsh simplicity for a time.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.GOnCD9Lm3TqaJoyb"
+    },
+    {
+      "_id": "MgvIEJAgDpw0FREN",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Power Brokers: The group was a critical regional power broker for a time, their aid or influence critical in determining who would be the hegemon.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.MgvIEJAgDpw0FREN"
+    },
+    {
+      "_id": "fjmbCGpcmfr0dEB2",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Praetorian Coups: Soldiers or guardsmen in service to the ruler ended up becoming the ruler’s electors or deposers.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.fjmbCGpcmfr0dEB2"
+    },
+    {
+      "_id": "SSoYODTQOs65WK6b",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Priest King: One or more religions became deeply intertwined with the legitimacy of the ruling class, priests becoming nobles and vice-versa.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.SSoYODTQOs65WK6b"
+    },
+    {
+      "_id": "wOO1vclZKuN0jgpk",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Rare Resource: A uniquely valuable resource was found or manufactured by the group, which used or traded it to full effect.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.wOO1vclZKuN0jgpk"
+    },
+    {
+      "_id": "LxZO4SvFISYRGmxp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Religious Fall: A once-honored religion collapsed, perhaps through divine displeasure, human corruption, or harsh suppression",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.LxZO4SvFISYRGmxp"
+    },
+    {
+      "_id": "vIIKiXAUcJ6j4eeZ",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Religious Rise: A powerful new religion arose among the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        81,
+        82
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.vIIKiXAUcJ6j4eeZ"
+    },
+    {
+      "_id": "1wZD5GpnqLVc86EG",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Resource Collapse: Some critical resource ran short; water, arable land, timber, magical power, or the like.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        83,
+        84
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.1wZD5GpnqLVc86EG"
+    },
+    {
+      "_id": "9hHHH8nTVfIhRTuF",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Secession: A substantial portion of the group’s territory tried to secede from the rest, successfully or otherwise.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        85,
+        86
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.9hHHH8nTVfIhRTuF"
+    },
+    {
+      "_id": "s8PeZkuWcKJTChxp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Terrain Change: Some portion of the group’s land slowly changed its basic ecosystem; plains to forest, desert to savannah, or the like.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        87,
+        88
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.s8PeZkuWcKJTChxp"
+    },
+    {
+      "_id": "cJaDRkYEW9bn2CDv",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Total Collapse: Whether due to war, civil strife, magical curses, or sheer decadence, the group’s society collapsed into anarchistic chaos for a time.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        89,
+        90
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.cJaDRkYEW9bn2CDv"
+    },
+    {
+      "_id": "p9RIalZwgeGmhBV9",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Twist of Fate: Roll again; if the event was positive twist it to ultimately be a negative to the group, and vice-versa.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        91,
+        92
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.p9RIalZwgeGmhBV9"
+    },
+    {
+      "_id": "ddKMGkvTcuHoyBuI",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Urbanization: One or more urban sites became unusually heavily populated, growing vastly and having a wide net of supporting towns.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        93,
+        94
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.ddKMGkvTcuHoyBuI"
+    },
+    {
+      "_id": "cqNi9BjBfcSSAjwj",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Weak Throne: The central government of the group became weak, and feudal lords or subsidiaries gained much effective independence.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        95,
+        96
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.cqNi9BjBfcSSAjwj"
+    },
+    {
+      "_id": "yzV98By0RbSmkIbp",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Xenophilia: The group adopted many customs from their neighbors and many foreigners joined the group.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        97,
+        98
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.yzV98By0RbSmkIbp"
+    },
+    {
+      "_id": "dj7KwEsVAJqXLLbA",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "Xenophobia: The group conceived a strong distaste for foreign people and their customs, curtailing outside contact.",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 2,
+      "range": [
+        99,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!5gykneK3pLRuFMyJ.dj7KwEsVAJqXLLbA"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "k8cHXrgT6XJ24urL",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "loot-amount-key": ""
+    }
+  },
+  "_key": "!tables!5gykneK3pLRuFMyJ"
+}

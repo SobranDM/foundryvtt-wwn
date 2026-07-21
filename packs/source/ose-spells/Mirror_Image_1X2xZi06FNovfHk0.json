@@ -1,0 +1,26 @@
+{
+  "_id": "1X2xZi06FNovfHk0",
+  "name": "Mirror Image",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Mage",
+    "duration": "",
+    "range": "",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>[[1d4]] illusory duplicate(s) of the caster appear.</p>\n<p><strong>▶ Behaviour:</strong> The mirror images look and behave exactly as the caster.</p>\n<p><strong>▶ Attacks on the caster: </strong>Destroy one of the mirror images (even if the attack misses).</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!1X2xZi06FNovfHk0"
+}

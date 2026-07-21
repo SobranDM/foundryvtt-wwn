@@ -1,0 +1,148 @@
+{
+  "_id": "otkjQvQjnq7LbrRR",
+  "name": "MonContext-Scars",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Many widows and orphans of its hunters",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "9otk38cnp27kt6lf",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.9otk38cnp27kt6lf"
+    },
+    {
+      "type": 0,
+      "text": "A grand structure ruined by its acts",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "iu6az0jf6q3plxid",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.iu6az0jf6q3plxid"
+    },
+    {
+      "type": 0,
+      "text": "Land has been made worthless by its threat",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "f6gb5napp5lbqyva",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.f6gb5napp5lbqyva"
+    },
+    {
+      "type": 0,
+      "text": "A local hero has been slain by it",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "wgcll1b4ig8y61df",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.wgcll1b4ig8y61df"
+    },
+    {
+      "type": 0,
+      "text": "Local clergy have been shown as helpless",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "mbgpcr9i03xq75xj",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.mbgpcr9i03xq75xj"
+    },
+    {
+      "type": 0,
+      "text": "A local lord has lost much wealth from it",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "lf2do64a5wyofw6l",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.lf2do64a5wyofw6l"
+    },
+    {
+      "type": 0,
+      "text": "The poorest have suffered most from it",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "yzm8qicmedug25b4",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.yzm8qicmedug25b4"
+    },
+    {
+      "type": 0,
+      "text": "A great plan for the future was ruined by it",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "fn6ih9kom9pe6j07",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.fn6ih9kom9pe6j07"
+    },
+    {
+      "type": 0,
+      "text": "A venerated tradition was defiled by it",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "qvnbkv2fwus85pbh",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.qvnbkv2fwus85pbh"
+    },
+    {
+      "type": 0,
+      "text": "A vital good or resource was spoiled by it",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "x3364t0gl7bsu3af",
+      "flags": {},
+      "_key": "!tables.results!otkjQvQjnq7LbrRR.x3364t0gl7bsu3af"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!otkjQvQjnq7LbrRR"
+}

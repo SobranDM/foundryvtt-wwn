@@ -1,0 +1,30 @@
+{
+  "_id": "84vqr345r5b78gdj",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Arcane Laboratory",
+  "type": "asset",
+  "_key": "!items!84vqr345r5b78gdj",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "None",
+    "desc": "The faction's overall Magic is counted as one step higher for the purposes of creating Assets in the same location as the laboratory. Multiple Arcane Laboratories in the same location can increase the Magic boost by multiple steps.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

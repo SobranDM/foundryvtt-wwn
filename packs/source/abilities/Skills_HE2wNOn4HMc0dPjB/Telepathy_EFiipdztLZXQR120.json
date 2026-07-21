@@ -1,0 +1,34 @@
+{
+  "name": "Telepathy",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/telepathy.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.6R0nCByUdMYMx6QT"
+    }
+  },
+  "system": {
+    "description": "Master the reading and influencing of other sapient minds.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "combatSkill": false,
+    "secondary": true
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806177883,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "EFiipdztLZXQR120",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EFiipdztLZXQR120"
+}

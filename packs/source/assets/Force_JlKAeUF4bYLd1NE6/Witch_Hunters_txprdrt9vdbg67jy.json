@@ -1,0 +1,32 @@
+{
+  "_id": "txprdrt9vdbg67jy",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Witch Hunters",
+  "type": "asset",
+  "_key": "!items!txprdrt9vdbg67jy",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d4+1",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 6,
+    "counter": "1d6",
+    "desc": "Certain personnel are trained in sniffing out traitors and spies in the organization, along with the presence of hostile magic or hidden spellcraft.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "Low",
+    "maintenance": 0,
+    "rating": 3,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

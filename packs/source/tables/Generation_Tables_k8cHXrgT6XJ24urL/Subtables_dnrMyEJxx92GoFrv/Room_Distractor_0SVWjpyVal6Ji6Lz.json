@@ -1,0 +1,278 @@
+{
+  "_id": "0SVWjpyVal6Ji6Lz",
+  "name": "Room-Distractor",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Books or records from the site’s owners",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "wh7p09z6an8m0gcc",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.wh7p09z6an8m0gcc"
+    },
+    {
+      "type": 0,
+      "text": "Unique furniture related to the site’s past",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "xqkkouy24mrw3pcn",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.xqkkouy24mrw3pcn"
+    },
+    {
+      "type": 0,
+      "text": "Trophies or prizes taken by the owners",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "odt41qfa3akkrl14",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.odt41qfa3akkrl14"
+    },
+    {
+      "type": 0,
+      "text": "Portraits or tapestries related to the site’s past",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "9aogwp8f0267oe1s",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.9aogwp8f0267oe1s"
+    },
+    {
+      "type": 0,
+      "text": "Ornate, imposing, but harmless doors",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "vb8z2cjlc2a1f41o",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.vb8z2cjlc2a1f41o"
+    },
+    {
+      "type": 0,
+      "text": "Daily life debris from the inhabitants",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "7dprkvhjuh784ovn",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.7dprkvhjuh784ovn"
+    },
+    {
+      "type": 0,
+      "text": "Worthless ancient personal effects",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "6n3his3loxv68yuh",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.6n3his3loxv68yuh"
+    },
+    {
+      "type": 0,
+      "text": "Odd-looking but normal household goods",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "jetw09edufof07a6",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.jetw09edufof07a6"
+    },
+    {
+      "type": 0,
+      "text": "Shrines or hedge ritual remains of inhabitants",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "oz7h9e4slumr6j3s",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.oz7h9e4slumr6j3s"
+    },
+    {
+      "type": 0,
+      "text": "Corpses of fallen intruders",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "xcov6rlcaqokwwc2",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.xcov6rlcaqokwwc2"
+    },
+    {
+      "type": 0,
+      "text": "Bones and other food remnants",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "x1g964kt66haz3hy",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.x1g964kt66haz3hy"
+    },
+    {
+      "type": 0,
+      "text": "Statuary or carvings related to the site",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "yhqcc6k0y5j1krz4",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.yhqcc6k0y5j1krz4"
+    },
+    {
+      "type": 0,
+      "text": "Signs of recent bloodshed and battle",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "xml1k4vidc9vi3wr",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.xml1k4vidc9vi3wr"
+    },
+    {
+      "type": 0,
+      "text": "Empty cabinets or containers",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "yb8mkysvmo3g81l8",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.yb8mkysvmo3g81l8"
+    },
+    {
+      "type": 0,
+      "text": "A discharged or broken trap",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "5w6jwka6obsy5f8m",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.5w6jwka6obsy5f8m"
+    },
+    {
+      "type": 0,
+      "text": "Remnants of an inhabitant social event",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "ukfsqt0erwg8kd58",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.ukfsqt0erwg8kd58"
+    },
+    {
+      "type": 0,
+      "text": "Mouldering or ruined goods or supplies",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "qrolgj1p6zpkilpb",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.qrolgj1p6zpkilpb"
+    },
+    {
+      "type": 0,
+      "text": "Half-completed work done by inhabitants",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "uktupf7mkz82yc7b",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.uktupf7mkz82yc7b"
+    },
+    {
+      "type": 0,
+      "text": "Once-valuable but now-ruined object",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "uyjbrgr0awgjmbzf",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.uyjbrgr0awgjmbzf"
+    },
+    {
+      "type": 0,
+      "text": "Broken or expended once-magical object",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "cptsam0ibz54jw4h",
+      "flags": {},
+      "_key": "!tables.results!0SVWjpyVal6Ji6Lz.cptsam0ibz54jw4h"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!0SVWjpyVal6Ji6Lz"
+}

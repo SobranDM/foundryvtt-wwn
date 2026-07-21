@@ -1,0 +1,125 @@
+{
+  "_id": "izC3MiEmUZVetS4K",
+  "name": "Society-Physical-Eyes",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Eye Coloration",
+  "results": [
+    {
+      "_id": "D0dpuyg6SQ1KZwIb",
+      "flags": {},
+      "type": 0,
+      "text": "Black or extremely dark brown",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.D0dpuyg6SQ1KZwIb"
+    },
+    {
+      "_id": "5Sc0mZb8s6hmA2vo",
+      "flags": {},
+      "type": 0,
+      "text": "Hazel or olive",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.5Sc0mZb8s6hmA2vo"
+    },
+    {
+      "_id": "YZ8uVL8Q47sFKY4t",
+      "flags": {},
+      "type": 0,
+      "text": "Blues in varying shades",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.YZ8uVL8Q47sFKY4t"
+    },
+    {
+      "_id": "Yn7qMiN20pS5WJEV",
+      "flags": {},
+      "type": 0,
+      "text": "Grays, whether flat or metallic",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.Yn7qMiN20pS5WJEV"
+    },
+    {
+      "_id": "Y4W9f2C9uFoeWymv",
+      "flags": {},
+      "type": 0,
+      "text": "Ambers and yellows",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.Y4W9f2C9uFoeWymv"
+    },
+    {
+      "_id": "TAV5XEwuMK6e0s7Y",
+      "flags": {},
+      "type": 0,
+      "text": "Greens in different shades",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.TAV5XEwuMK6e0s7Y"
+    },
+    {
+      "_id": "O0Vtv2nzPwkRd39s",
+      "flags": {},
+      "type": 0,
+      "text": "An unusual or luminous color",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.O0Vtv2nzPwkRd39s"
+    },
+    {
+      "_id": "r6e1ggBOMYaFezWK",
+      "flags": {},
+      "type": 0,
+      "text": "Slit or unusual pupils; roll again for color",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!izC3MiEmUZVetS4K.r6e1ggBOMYaFezWK"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!izC3MiEmUZVetS4K"
+}

@@ -1,0 +1,498 @@
+/* Attribute grid and inventory lists shared by every actor sheet type */
+
+.wwn.sheet.actor .sheet-body .attributes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.wwn.sheet.actor .sheet-body .attributes .attribute {
+  position: relative;
+  border: 1px solid var(--wwn-border);
+  box-shadow: 0 0 2px var(--wwn-border);
+  height: 40px;
+}
+.wwn.sheet.actor .sheet-body .attributes .attribute .attribute-name {
+  color: var(--wwn-light);
+  padding: 2px;
+  margin: 0;
+  border: 1px solid var(--wwn-border-dark);
+  background: var(--wwn-dark);
+  text-align: center;
+}
+.wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value {
+  line-height: 36px;
+  width: auto;
+  min-width: 15px;
+  text-align: center;
+  padding: 4px;
+}
+.wwn.sheet.actor .sheet-body .attributes .attribute .attribute-mod {
+  border-left: 1px solid var(--wwn-border);
+  padding: 4px;
+  text-align: center;
+}
+.wwn.sheet.actor .sheet-body .attributes .attribute .attribute-value .sep {
+  line-height: 24px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group {
+  padding-left: 5px;
+  padding-right: 0px;
+  margin-right: 0px;
+  max-width: 160px;
+}
+.wwn.sheet.actor.monster .sheet-body .attributes-tab {
+  flex-direction: row;
+  flex-grow: 0;
+}
+.wwn.sheet.actor.monster .sheet-body .attributes-tab section.flexrow {
+  flex-direction: column;
+}
+.wwn.sheet.actor.monster .sheet-body .attributes-tab .attribute-value.flexrow {
+  flex-direction: row;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group {
+  margin-left: 0px;
+  margin-right: 25px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  width: 310px;
+}
+.wwn.sheet.actor .sheet-body .inventory.skills .item {
+  border: 1px #b5b3a4 solid;
+  border-top: none;
+}
+.wwn.sheet.actor .sheet-body .inventory.skills .skill-roll {
+  margin-left: 4px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes {
+  display: inline-block;
+  flex-direction: column;
+  margin-bottom: -10px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes {
+  display: inline-block;
+  padding-left: 0px;
+  margin-right: 0px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+  height: 30px;
+  line-height: 30px;
+  width: 170px;
+  margin-bottom: 0px;
+}
+.wwn.actor.character .sheet-body .inventory.skills {
+  padding-left: 5px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute.skills select {
+  height: 30px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name {
+  width: 40px;
+  margin: 0;
+  line-height: 35px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-name {
+  width: 100px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  line-height: 25px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-name a {
+  margin: auto;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value {
+  width: 45px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group.skill-group .attributes .attribute .attribute-value {
+  line-height: 25px;
+  padding: 0 10px 0 10px;
+  width: 40px;
+}
+.wwn.sheet.actor .sheet-body .attribute-group .attributes .attribute .attribute-value input {
+  padding: 0;
+}
+.wwn.sheet.actor.monster .sheet-body .inventory {
+  padding-top: 0px;
+  margin-top: 0px;
+  max-height: 380px;
+  overflow: auto;
+}
+.wwn.sheet.actor.monster .sheet-body .attributes-tab .inventory {
+  width: 420px;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab .inventory .item-titles {
+  margin-top: 2px;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab .inventory .item-list {
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 370px;
+  justify-content: start;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab .inventory .item-name {
+  flex-basis: 20%;
+  flex-shrink: 1;
+  margin: 0;
+}
+.wwn.sheet.actor.character .sheet-body .attributes-tab .inventory.skills .item-entry {
+  max-width: 250px;
+  flex-grow: 0;
+}
+.wwn.sheet.actor .sheet-body .inventory div.spells div.spells-parent li.item-titles div.field-long input[type="text"] {
+  height: auto;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-titles {
+  text-align: center;
+  padding: 4px 0;
+  border: 1px solid var(--wwn-border-dark);
+  box-shadow: 0 0 5px var(--wwn-border-dark);
+  font-weight: 300;
+  font-size: 13px;
+  background: var(--wwn-dark);
+  color: #fff;
+  margin-top: 7px;
+}
+.wwn.sheet.actor .sheet-body .inventory .spell-resources {
+  margin-left: 4px;
+}
+.wwn.sheet.actor.monster .inventory .item-titles {
+  margin-top: 0px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-titles .item-name {
+  text-align: left;
+  text-indent: 8px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-titles .item-name-short {
+  text-align: left;
+  text-indent: 2px;
+  flex-basis: 25px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-titles input {
+  color: #fff;
+  margin: auto;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list > * {
+  line-height: 30px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-summary {
+  font-size: 13px;
+  padding: 0 4px;
+  line-height: 20px;
+  box-shadow: 0 0 3px var(--wwn-border-dark);
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-summary .tag-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-summary .tag-list .tag {
+  margin: 1px 2px;
+  border: 1px solid var(--wwn-tan);
+  font-size: 11px;
+  line-height: 14px;
+  background: var(--wwn-dark-alt);
+  padding: 1px 4px;
+  color: var(--wwn-light);
+  border-radius: 3px;
+  box-shadow: 0 0 1px var(--wwn-tan);
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-header {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-entry:nth-child(even) .item {
+  background: rgba(0, 0, 0, 0.1);
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item {
+  line-height: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-equipped {
+  grid-area: item-equipped;
+  justify-self: center;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-rollable:hover .item-image {
+  background-image: url("/icons/svg/d20-grey.svg") !important;
+  cursor: pointer;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-rollable .item-image:hover {
+  background-image: url("/icons/svg/d20-black.svg") !important;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-name {
+  text-indent: 8px;
+  text-align: left;
+  overflow: hidden;
+  height: 30px;
+  margin: 0;
+  line-height: 30px;
+  flex-basis: 90px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-name .item-image {
+  flex-basis: 30px;
+  flex-grow: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-list .item-name h4 {
+  margin: 0;
+}
+.wwn.sheet.actor .sheet-body .inventory .icon-row img {
+  border: none;
+  margin: 3px 1px;
+  flex: 0 0 24px;
+}
+.wwn.sheet.actor .sheet-body .inventory .icon-row span {
+  font-size: 12px;
+  flex-grow: 0;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-long {
+  flex-basis: 80px;
+  flex-grow: 0;
+  text-align: center;
+  font-size: 12px;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-long.memorize input {
+  border-bottom: none;
+  margin: 3px 0;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short {
+  font-size: 12px;
+  flex-basis: 45px;
+  flex-grow: 0;
+  text-align: center;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-xshort {
+  font-size: 12px;
+  flex-basis: 16px;
+  flex-grow: 0;
+  text-align: center;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.quantity {
+  display: flex;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.quantity input {
+  margin: 3px 0;
+  border-bottom: none;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-caret {
+  flex: 0 0 10px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-controls {
+  font-size: 12px;
+  flex-basis: 60px;
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 4px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-controls-short {
+  font-size: 12px;
+  flex-basis: 15px;
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 1px;
+}
+.wwn.sheet.actor .sheet-body .inventory .item-controls .item-off,
+.wwn.sheet.actor .sheet-body .inventory .item-controls .item-unequipped,
+.wwn.sheet.actor .sheet-body .inventory .item-controls .item-unstowed,
+.wwn.sheet.actor .sheet-body .inventory .item-controls .item-unprepared {
+  color: rgba(0, 0, 0, 0.2);
+}
+.wwn.sheet.actor .sheet-body .inventory .item-controls a:hover {
+  color: #44191a;
+  text-shadow: 0 0 5px var(--wwn-tan), 1px 0 5px var(--wwn-tan), 0 1px 5px var(--wwn-tan), 1px 1px 5px var(--wwn-tan);
+}
+.wwn.sheet.actor .sheet-body .inventory.spells .item-titles {
+  line-height: 13px;
+}
+.wwn.sheet.actor .sheet-body .inventory.spells .item-controls {
+  flex-basis: 65px;
+}
+.wwn.sheet.actor .inventory.spells .spells-parent .item-list.spells-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.wwn.sheet.actor .inventory.spells .item-list .item-entry {
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+.wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow {
+  flex-basis: 100%;
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+.wwn.sheet.actor .inventory.spells .item-list .item-entry .item.flexrow.expanded {
+  display: flex;
+  flex-shrink: 0;
+}
+.wwn.sheet.actor .inventory .inventory-right .currency-header {
+  color: var(--wwn-light);
+  padding: 2px;
+  padding-top: 4px;
+  margin: 2px 0px 0px 4px;
+  border: 1px solid var(--wwn-border-dark);
+  background: var(--wwn-dark);
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+}
+.wwn.sheet.actor .inventory .currency {
+  position: relative;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #000;
+  box-shadow: 0 0 2px var(--wwn-border);
+  margin-top: 2px;
+  margin-bottom: 0px;
+  display: flex;
+  width: 10px;
+  vertical-align: middle;
+  height: 30px;
+}
+.wwn.actor .inventory .currency-adjust {
+  padding-left: 14px;
+  padding-right: 14px;
+  color: var(--wwn-tan);
+}
+.wwn.actor .inventory .currency-adjust:hover {
+  color: #fff;
+}
+.wwn.sheet.actor .flexrow .readied-header {
+  color: var(--wwn-light);
+  padding: 2px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  margin: 2px 0px 0px 4px;
+  border: 1px solid var(--wwn-border-dark);
+  background: var(--wwn-dark);
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+}
+.wwn.sheet.actor .flexrow .readied {
+  position: relative;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #000;
+  box-shadow: 0 0 2px var(--wwn-border);
+  margin-top: 2px;
+  display: flex;
+  width: 10px;
+  vertical-align: middle;
+  height: 30px;
+}
+.wwn.sheet.actor .inventory .inventory-all .inventory-right .item-titles {
+  flex-grow: 0;
+  height: 26px;
+  line-height: 21px;
+  width: 98%;
+  margin-left: 4px;
+}
+.wwn.sheet.actor .inventory .inventory-right.flexrow {
+  flex-direction: column;
+}
+.wwn.sheet.actor .inventory .inventory-right.flexrow .flexrow.readied-group {
+  flex-direction: column;
+}
+.wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group {
+  flex-direction: column;
+}
+.wwn.sheet.actor .inventory .inventory-right.flexrow .flexrow.readied-group .flexrow.readied-subgroup {
+  height: 10px;
+}
+.wwn.sheet.actor .inventory .inventory-right .flexrow.currency-group .currency-subgroup.currency-buffer {
+  margin-top: 7px;
+}
+
+/* Reload button styling */
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges .item-reload {
+  flex: 0 0 16px;
+  color: var(--wwn-border);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges .item-reload:hover {
+  color: var(--wwn-tan);
+  text-shadow: 0 0 5px var(--wwn-tan);
+}
+
+/* Disabled charges input styling */
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges .charges-input:disabled {
+  cursor: not-allowed;
+}
+
+/* Charges reload overlay */
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges .charges-reload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges:hover .charges-reload-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wwn.sheet.actor .sheet-body .inventory .field-short.charges .charges-reload-overlay .item-reload {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1.1em;
+}
+
+/* Nested container items (e.g. a backpack holding other items) */
+.container-arrow {
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+}
+.container-arrow i {
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+.container-arrow i:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+.container-spacer {
+  flex: 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

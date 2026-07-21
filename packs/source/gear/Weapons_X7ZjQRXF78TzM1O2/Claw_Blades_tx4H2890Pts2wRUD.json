@@ -1,0 +1,48 @@
+{
+  "_id": "tx4H2890Pts2wRUD",
+  "name": "Claw Blades",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "weapon",
+  "flags": {},
+  "img": "systems/wwn/assets/default/weapon.png",
+  "effects": [],
+  "system": {
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "pattern": "transparent",
+    "description": "<p><em><strong>Claw blades</strong></em> are the sharper kin of fist loads, being small blades or finger talons that are easily concealed or disguised as metal ornaments. While they are vicious weapons, they can&rsquo;t be usefully thrown.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": 2,
+      "ac": 13
+    },
+    "skill": "punch",
+    "score": "str",
+    "tags": [
+      {
+        "title": "S",
+        "value": "S"
+      }
+    ],
+    "slow": false,
+    "missile": false,
+    "melee": true,
+    "price": 10,
+    "weight": 1,
+    "counter": {
+      "value": 0,
+      "max": 0
+    },
+    "skillDamage": false
+  },
+  "_key": "!items!tx4H2890Pts2wRUD",
+  "folder": "X7ZjQRXF78TzM1O2"
+}

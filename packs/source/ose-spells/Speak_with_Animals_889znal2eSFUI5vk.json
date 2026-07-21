@@ -1,0 +1,26 @@
+{
+  "_id": "889znal2eSFUI5vk",
+  "name": "Speak with Animals",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 2,
+    "class": "Cleric",
+    "duration": "6 turns",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster can communicate with one type of animal within range when the spell is cast.</p>\n<p><strong>▶ Type of animal:</strong> Ordinary animals or giant versions of ordinary animals may be targeted.</p>\n<p><strong>▶ Questions: </strong>The caster can ask questions of and receive answers from animals of the chosen kind, although the spell doesn&rsquo;t make animals any more friendly or cooperative than normal (a reaction roll may be required).</p>\n<p><strong>▶ Services: </strong>If an animal is friendly toward the caster, it may perform some favour or service.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!889znal2eSFUI5vk"
+}

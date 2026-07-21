@@ -1,0 +1,17 @@
+{
+  "_id": "4Z1X6gLnqjqqUC2z",
+  "name": "Rampant Experiment",
+  "content": "<h1>Rampant Experiment</h1><div>\n<p>Not every Working or spell research is a success, and some effort here went drastically wrong. Some sort of rampantly overgrown flora or monstrously altered fauna roam the place, the result of magic gone awry. They probably have some quality or trait that was useful to the creator, but it was combined with so many drawbacks or dangers that the result is a menace.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Mad sorcerer who caused it, Creature warped terribly by the experiment, Looter with no regard for the chaos their blundering is releasing</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Apologetic apprentice of the culprit, Non-hostile experimental victim, Local desperately fighting the experiments</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>An outside power is promoting the disaster because it’s somehow to their advantage, The experiment results seem wholly beneficial at first, The experiment’s area of effect is slowly growing</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Cure or tool to halt the experiment, Precious object created by the experiment, Magical tool used in the experiment</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Sinister occult laboratory, Normal area terribly warped by the experiment, Local structure destroyed by the experiment</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 7200000
+    }
+  },
+  "_key": "!journal!4Z1X6gLnqjqqUC2z",
+  "ownership": {
+    "default": 0
+  }
+}

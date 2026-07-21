@@ -1,0 +1,24 @@
+{
+  "_id": "z2atvHiYv5O8aeVd",
+  "name": "Waterskin, 1 gallon",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "item",
+  "data": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 1,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "_key": "!items!z2atvHiYv5O8aeVd",
+  "folder": "2JRbC6jpR9k3HWcM"
+}

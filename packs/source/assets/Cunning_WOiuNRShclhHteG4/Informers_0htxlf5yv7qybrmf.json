@@ -1,0 +1,32 @@
+{
+  "_id": "0htxlf5yv7qybrmf",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Informers",
+  "type": "asset",
+  "_key": "!items!0htxlf5yv7qybrmf",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "Special",
+    "attackSource": "cunning",
+    "attackSpecial": "As a free action, once per turn, the faction can spend 1 Treasure and have the Informers look for Stealthed Assets. To do so, the Informers pick a faction and make a Cunning vs. Cunning Attack on them. No counterattack damage is taken if they fail, but if they succeed, all Stealthed Assets of that faction within one move of the Informers are revealed.",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "None",
+    "desc": "As a free action, once per turn, the faction can spend 1 Treasure and have the Informers look for Stealthed Assets. To do so, the Informers pick a faction and make a Cunning vs. Cunning Attack on them. No counterattack damage is taken if they fail, but if they succeed, all Stealthed Assets of that faction within one move of the Informers are revealed.",
+    "health": {
+      "max": 3,
+      "value": 3
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "As a free action, once per turn, the faction can spend 1 Treasure and have the Informers look for Stealthed Assets. To do so, the Informers pick a faction and make a Cunning vs. Cunning Attack on them. No counterattack damage is taken if they fail, but if they succeed, all Stealthed Assets of that faction within one move of the Informers are revealed.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

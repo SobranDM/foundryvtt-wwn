@@ -1,0 +1,26 @@
+{
+  "name": "Protection from Evil 10' Radius (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 4,
+    "class": "Cleric",
+    "duration": "12 turns",
+    "range": "10' radius",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 10&rsquo; around the caster</strong></p>\n<p>This spell wards the caster and all allies within 10&rsquo; from attacks by creatures of another alignment, as follows:</p>\n<p><strong>▶ Bonuses:</strong> Those warded gain a +1 bonus to saving throws against attacks or special abilities of affected creatures.</p>\n<p><strong>▶ Affected creatures&rsquo; attacks: </strong>Against those warded are penalised by &ndash;1.</p>\n<p><strong>▶ Enchanted, constructed, or summoned </strong><strong>creatures: </strong>The spell additionally prevents such creatures from making melee attacks against those warded, though they may still make ranged attacks. If any of the warded party engages such a creature in melee, this protection is broken (those warded still gain the save and attack bonuses mentioned above).</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "x3b0D7wZlBTyrHy6",
+  "_key": "!items!x3b0D7wZlBTyrHy6"
+}

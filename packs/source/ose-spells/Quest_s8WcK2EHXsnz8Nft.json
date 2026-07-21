@@ -1,0 +1,26 @@
+{
+  "_id": "s8WcK2EHXsnz8Nft",
+  "name": "Quest",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 5,
+    "class": "Cleric",
+    "duration": "Indefinite",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: Until quest is completed / </strong><strong>Instant (remove quest)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster commands a single subject to perform a specific quest or task.</p>\n<p><strong>▶ Examples:</strong> Rescuing a prisoner, killing a specific monster, bringing a magic item to the caster, or going on a journey to a holy site.</p>\n<p><strong>▶ Suicidal quests:</strong> The prescribed quest must not be obviously suicidal.</p>\n<p><strong>▶ Saving throw: </strong>The subject may make a Mental save, with success indicating that the quest has no effect.</p>\n<p><strong>▶ Refusal:</strong> Otherwise, the subject must undertake the quest or fall under a curse (per the curse spell, with the exact nature of the curse determined by the referee).</p>\n<p><strong>▶ Completion:</strong> Once the task is completed, the spell ends.</p>\n<p><strong>Reversed: Remove Quest</strong></p>\n<p>Can dispel an active quest spell. If the character who cast the quest spell to be nullified is higher level than the character casting remove quest, there is a chance of the spell having no effect. The probability of failure is 5% per level the caster is below the caster of quest.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!s8WcK2EHXsnz8Nft"
+}

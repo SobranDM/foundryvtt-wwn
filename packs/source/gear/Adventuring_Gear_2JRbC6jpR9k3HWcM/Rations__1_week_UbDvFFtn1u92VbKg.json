@@ -1,0 +1,39 @@
+{
+  "_id": "UbDvFFtn1u92VbKg",
+  "name": "Rations, 1 week",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "",
+    "quantity": 1,
+    "treasure": false,
+    "price": 5,
+    "weight": 4,
+    "weightless": "never",
+    "charges": {
+      "value": 7,
+      "max": 7
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "hasCharges": true,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UbDvFFtn1u92VbKg"
+}

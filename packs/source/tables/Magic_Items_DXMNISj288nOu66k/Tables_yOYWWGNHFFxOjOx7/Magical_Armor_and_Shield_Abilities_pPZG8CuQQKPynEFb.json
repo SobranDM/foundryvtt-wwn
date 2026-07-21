@@ -1,0 +1,397 @@
+{
+  "_id": "pPZG8CuQQKPynEFb",
+  "name": "Magical Armor and Shield Abilities",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "none"
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "Rq3KVDbTVofrweSB",
+      "flags": {},
+      "type": 0,
+      "text": "Augmented: The bearer can carry four more points of Readied encumbrance. Once per scene, they can lift or briefly manipulate with brute strength anything a human possibly could.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.Rq3KVDbTVofrweSB"
+    },
+    {
+      "_id": "AdcufHpSdnmO0GUL",
+      "flags": {},
+      "type": 0,
+      "text": "Bracing: As a Move Action, the bearer can brace against one specific foe. Until they voluntarily move from their location, they’re immune to Shock from that foe and cannot be forcibly moved.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        5,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.AdcufHpSdnmO0GUL"
+    },
+    {
+      "_id": "1O47h95V1YsLeNpw",
+      "flags": {},
+      "type": 0,
+      "text": "Clotting: Once per day, it automatically stabilizes a Mortally Wounded bearer.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        9,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.1O47h95V1YsLeNpw"
+    },
+    {
+      "_id": "IAtSXbuLUhhabFpD",
+      "flags": {},
+      "type": 0,
+      "text": "Feathery: The user is immune to falling damage and can choose a landing site within 30 feet of their target.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        13,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.IAtSXbuLUhhabFpD"
+    },
+    {
+      "_id": "xffQOFIYHNRrSUQI",
+      "flags": {},
+      "type": 0,
+      "text": "Feral: At the cost of one System Strain, the bearer can talk to animals for a scene, who will reply with human intellect but bestial interests and focus.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        17,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.xffQOFIYHNRrSUQI"
+    },
+    {
+      "_id": "tU0K1YOMgb4X1YLB",
+      "flags": {},
+      "type": 0,
+      "text": "Fireproof: The bearer ignores the first 10 points of fire or heat damage they suffer each round.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        21,
+        24
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.tU0K1YOMgb4X1YLB"
+    },
+    {
+      "_id": "NVLeyj3jaR8yGqf8",
+      "flags": {},
+      "type": 0,
+      "text": "Fortified: The bearer ignores the first point of System Strain they’d otherwise incur in a day.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        25,
+        28
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.NVLeyj3jaR8yGqf8"
+    },
+    {
+      "_id": "2cTWLgMItR5xWELE",
+      "flags": {},
+      "type": 0,
+      "text": "Graceful: The bearer walks so lightly as to leave no footprints and cannot slip, trip, or be subject to forced movement by a man-sized foe.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        29,
+        32
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.2cTWLgMItR5xWELE"
+    },
+    {
+      "_id": "77yl7pVGfgZZSGXh",
+      "flags": {},
+      "type": 0,
+      "text": "Harmonic: An allied mage can cast a spell on it; the bearer is then immune to that spell until it is changed.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        33,
+        36
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.77yl7pVGfgZZSGXh"
+    },
+    {
+      "_id": "AJLD1YRsqyAlprVT",
+      "flags": {},
+      "type": 0,
+      "text": "Impervious: Once per round, the bearer ignores an instance of Shock they would otherwise have suffered.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        37,
+        40
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.AJLD1YRsqyAlprVT"
+    },
+    {
+      "_id": "kpvgoTM7yDRgKaQ8",
+      "flags": {},
+      "type": 0,
+      "text": "Inspiring: Allies who can see the wearer gain a +1 Morale bonus and may reroll failed Mental saves against emotion or thought-controlling effects.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        41,
+        44
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.kpvgoTM7yDRgKaQ8"
+    },
+    {
+      "_id": "GKX4ZZUQ127VG4Gb",
+      "flags": {},
+      "type": 0,
+      "text": "Lucky: Once per day, as an Instant action, turn a failed save into a success.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        45,
+        48
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.GKX4ZZUQ127VG4Gb"
+    },
+    {
+      "_id": "6t1CcXmoKCxwE2vA",
+      "flags": {},
+      "type": 0,
+      "text": "Majestic: Its magnificent appearance makes it socially acceptable wear in any situation or context.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        49,
+        52
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.6t1CcXmoKCxwE2vA"
+    },
+    {
+      "_id": "jZtnS4aIzyPGsRYP",
+      "flags": {},
+      "type": 0,
+      "text": "Sealed: The bearer ignores toxic atmospheres, terrestrial temperature extremes, and has no need to breathe.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        53,
+        56
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.jZtnS4aIzyPGsRYP"
+    },
+    {
+      "_id": "KbUveILhFN13KTiq",
+      "flags": {},
+      "type": 0,
+      "text": "Shifting: The bearer can teleport up to 30’ to a visible location as a Move action.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        57,
+        60
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.KbUveILhFN13KTiq"
+    },
+    {
+      "_id": "cMc7j0Urm6ognCTD",
+      "flags": {},
+      "type": 0,
+      "text": "Shining: It can emit light in a 30’ radius at will. Once per day as an On Turn action, force a melee foe to make a Physical save or lose their next Main Action from being dazzled.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        61,
+        64
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.cMc7j0Urm6ognCTD"
+    },
+    {
+      "_id": "O6B5tA9MsGt9PonQ",
+      "flags": {},
+      "type": 0,
+      "text": "Silent: It applies no penalty to Sneak skill checks. If light armor or a shield, it grants a +1 bonus to the checks.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        65,
+        68
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.O6B5tA9MsGt9PonQ"
+    },
+    {
+      "_id": "SYZNSOpTtzno8OlG",
+      "flags": {},
+      "type": 0,
+      "text": "Soaring: As a Main Action, the bearer can move twice their movement rate through the air. They’ll fall if they end the turn on an unsupported surface.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        69,
+        72
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.SYZNSOpTtzno8OlG"
+    },
+    {
+      "_id": "mOw6wrwUi70Knucm",
+      "flags": {},
+      "type": 0,
+      "text": "Sustaining: Once per day, cause the bearer to gain a point of System Strain and lose all need for sleep, food, air, or drink for the next 24 hours.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        73,
+        76
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.mOw6wrwUi70Knucm"
+    },
+    {
+      "_id": "Uq8oiRzrLkBdu9oH",
+      "flags": {},
+      "type": 0,
+      "text": "Thorned: Successful grapple, unarmed or natural weapon attacks against them also inflict 1d6 damage on the attacker, plus any armor enhancement bonus.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        77,
+        80
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.Uq8oiRzrLkBdu9oH"
+    },
+    {
+      "_id": "PE6sQdcHDVAKr4W8",
+      "flags": {},
+      "type": 0,
+      "text": "Transient: It can vanish from its wearer or return to their person as an On Turn action once per round.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        81,
+        84
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.PE6sQdcHDVAKr4W8"
+    },
+    {
+      "_id": "SS9xFWFYMJxSp0B4",
+      "flags": {},
+      "type": 0,
+      "text": "Unsleeping: The bearer need not sleep, but will not get the benefits of a night’s rest unless they do so.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        85,
+        88
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.SS9xFWFYMJxSp0B4"
+    },
+    {
+      "_id": "5O6XDhUU8j9Mb3LQ",
+      "flags": {},
+      "type": 0,
+      "text": "Vigilant: The bearer can see normally even in deep mists or total darkness. They cannot be surprised.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        89,
+        92
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.5O6XDhUU8j9Mb3LQ"
+    },
+    {
+      "_id": "qKfK7uMXAhpH4zId",
+      "flags": {},
+      "type": 0,
+      "text": "Warded: The GM chooses one weapon entry from the table on page XX. Non-magic weapons of that kind can’t hurt the bearer, and magic ones do only half damage, rounded down. Neither can inflict Shock.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        93,
+        96
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.qKfK7uMXAhpH4zId"
+    },
+    {
+      "_id": "3Woecj5b2djz8uaW",
+      "flags": {},
+      "type": 0,
+      "text": "Weightless: It has no Encumbrance, but this benefit does not apply to the Armored Magic Focus’ limits.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        97,
+        100
+      ],
+      "drawn": false,
+      "_key": "!tables.results!pPZG8CuQQKPynEFb.3Woecj5b2djz8uaW"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!pPZG8CuQQKPynEFb",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

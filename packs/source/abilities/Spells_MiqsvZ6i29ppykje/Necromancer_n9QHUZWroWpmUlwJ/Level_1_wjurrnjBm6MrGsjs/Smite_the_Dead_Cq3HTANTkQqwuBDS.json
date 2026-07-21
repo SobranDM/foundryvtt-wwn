@@ -1,0 +1,41 @@
+{
+  "_id": "Cq3HTANTkQqwuBDS",
+  "name": "Smite the Dead",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "wjurrnjBm6MrGsjs",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.Cq3HTANTkQqwuBDS"
+    }
+  },
+  "system": {
+    "lvl": 1,
+    "class": "Necromancer",
+    "duration": "",
+    "range": "20-ft. radius within 100 ft. per level",
+    "roll": "(@level)d10",
+    "description": "<p>The necromancer conjures a blast of dispelling force at a point within one hundred feet per caster level, affecting an area up to 20 feet in radius. All hostile undead within that area immediately suffer 1d10 damage per caster level. Undead with hit dice equal or less than the caster&rsquo;s level must make a Physical save or be destroyed outright. The necromancer may Commit Effort for the day immediately after casting this spell to restore it to their mind for use again.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": "physical"
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities.Cq3HTANTkQqwuBDS",
+    "duplicateSource": null
+  },
+  "_key": "!items!Cq3HTANTkQqwuBDS"
+}

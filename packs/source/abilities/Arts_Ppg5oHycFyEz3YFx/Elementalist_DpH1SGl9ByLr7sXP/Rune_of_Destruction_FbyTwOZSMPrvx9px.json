@@ -1,0 +1,39 @@
+{
+  "_id": "FbyTwOZSMPrvx9px",
+  "name": "Rune of Destruction",
+  "type": "art",
+  "img": "systems/wwn/assets/new/elementalist_art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.FbyTwOZSMPrvx9px"
+    }
+  },
+  "system": {
+    "pattern": "white",
+    "roll": "2d6+@level",
+    "rollType": "result",
+    "rollTarget": 0,
+    "blindroll": false,
+    "description": "<p>Commit Effort for the day as a Main Action and target an adjacent solid surface. A glowing rune the size of a handprint forms on the surface and persists for one hour per caster level. Any creature who gets within two feet of the rune will trigger it, causing it to explode in a five-foot radius with an elemental force of your choice and suffering 2d6 damage plus your caster level. Creatures already within five feet of the rune when it is laid will not trigger it until they re-enter the area, nor will the caster trigger their own runes. Runes cannot overlap their areas of effect.</p>",
+    "save": "",
+    "source": "Elementalist",
+    "effort": 0,
+    "time": "Day",
+    "range": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FbyTwOZSMPrvx9px"
+}

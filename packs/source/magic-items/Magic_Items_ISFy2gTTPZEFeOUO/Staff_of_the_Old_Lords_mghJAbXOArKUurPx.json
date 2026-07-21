@@ -1,0 +1,24 @@
+{
+  "_id": "mghJAbXOArKUurPx",
+  "name": "Staff of the Old Lords",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "item",
+  "data": {
+    "description": "<p>These rods were once carried by certain human viceroys of the Outsider lords. So long as it is carried in one hand, it will automatically jerk to interpose itself before attacks made by human or demihuman foes, making the bearer immune to Execution Attacks or Shock and granting a +2 bonus to their Armor Class. For 24 hours after the staff is last touched, however, the bearer will find it impossible to perform a hostile act against an Outsider without first making a successful Mental save; on a failure, the action is lost. During this time any Mental saves made to resist Outsider spells or abilities must be rolled twice and the worst taken.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "flags": {},
+  "img": "systems/wwn/assets/default/item.png",
+  "effects": [],
+  "_key": "!items!mghJAbXOArKUurPx",
+  "folder": "ISFy2gTTPZEFeOUO"
+}

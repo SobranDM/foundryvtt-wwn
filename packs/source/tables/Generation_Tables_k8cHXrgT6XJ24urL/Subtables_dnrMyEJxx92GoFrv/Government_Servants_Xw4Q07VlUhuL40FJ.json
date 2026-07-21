@@ -1,0 +1,177 @@
+{
+  "_id": "Xw4Q07VlUhuL40FJ",
+  "name": "Government-Servants",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Insitutions and Agents of Control",
+  "results": [
+    {
+      "_id": "8azb9bwBpSdKFAtk",
+      "flags": {},
+      "type": 0,
+      "text": "Subordinate lords pledged to the ruler",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.8azb9bwBpSdKFAtk"
+    },
+    {
+      "_id": "WLxQn4yLe0lg6E14",
+      "flags": {},
+      "type": 0,
+      "text": "Obedient commoner bureaucracies",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.WLxQn4yLe0lg6E14"
+    },
+    {
+      "_id": "VleJhvSUwjHwao04",
+      "flags": {},
+      "type": 0,
+      "text": "Magically-empowered enforcers",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.VleJhvSUwjHwao04"
+    },
+    {
+      "_id": "9c4DwTxAflv9tJgn",
+      "flags": {},
+      "type": 0,
+      "text": "A major religion allied with state power",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.9c4DwTxAflv9tJgn"
+    },
+    {
+      "_id": "1doIOWBrEk58KveZ",
+      "flags": {},
+      "type": 0,
+      "text": "A powerful and respected judiciary",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.1doIOWBrEk58KveZ"
+    },
+    {
+      "_id": "vIaITXanx5LCoGYM",
+      "flags": {},
+      "type": 0,
+      "text": "Savage brutes on the government leash",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.vIaITXanx5LCoGYM"
+    },
+    {
+      "_id": "PRhrVEw2FY5ZZih4",
+      "flags": {},
+      "type": 0,
+      "text": "Economy-controlling officialdom",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.PRhrVEw2FY5ZZih4"
+    },
+    {
+      "_id": "zgku6PifZ7AG2m4P",
+      "flags": {},
+      "type": 0,
+      "text": "Divine blessings and curses on the people",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.zgku6PifZ7AG2m4P"
+    },
+    {
+      "_id": "pZv3b3sPcCra9ciL",
+      "flags": {},
+      "type": 0,
+      "text": "Ingrained obedience in the populace",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.pZv3b3sPcCra9ciL"
+    },
+    {
+      "_id": "2DjbtcA7HMjzrXVp",
+      "flags": {},
+      "type": 0,
+      "text": "Hireling enforcers employed at need",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.2DjbtcA7HMjzrXVp"
+    },
+    {
+      "_id": "0OBDAfHp5ncfYQzs",
+      "flags": {},
+      "type": 0,
+      "text": "Sorcerers in service to the ruler",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.0OBDAfHp5ncfYQzs"
+    },
+    {
+      "_id": "5WwD2II6pG49e46i",
+      "flags": {},
+      "type": 0,
+      "text": "A specific ethnic client group of the ruler",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Xw4Q07VlUhuL40FJ.5WwD2II6pG49e46i"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Xw4Q07VlUhuL40FJ"
+}

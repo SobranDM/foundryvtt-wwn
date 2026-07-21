@@ -1,0 +1,26 @@
+{
+  "_id": "iVJwd37qJK4jtylC",
+  "name": "Purify Food and Water",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Cleric",
+    "duration": "Permanent",
+    "range": "10'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!iVJwd37qJK4jtylC"
+}

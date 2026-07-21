@@ -1,0 +1,174 @@
+{
+  "_id": "d0JsJbQXJHLwrT6I",
+  "name": "Ruin-Production",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Illicit manufactory for illegal goods",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "dif5cw1kgm5vlwwg",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.dif5cw1kgm5vlwwg"
+    },
+    {
+      "type": 0,
+      "text": "Sacred shrine for holy product",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "pzxxc5crky0hb8kr",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.pzxxc5crky0hb8kr"
+    },
+    {
+      "type": 0,
+      "text": "Destroyed camp or extraction site",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "l6fnphm9prf8lwxc",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.l6fnphm9prf8lwxc"
+    },
+    {
+      "type": 0,
+      "text": "Inexplicable ancient manufactory",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "4sbbzgizn6xm8ldy",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.4sbbzgizn6xm8ldy"
+    },
+    {
+      "type": 0,
+      "text": "Outsider goods production site",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "xrarwahjm6abod03",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.xrarwahjm6abod03"
+    },
+    {
+      "type": 0,
+      "text": "Magical production facility",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "0ratfox0evmeilyc",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.0ratfox0evmeilyc"
+    },
+    {
+      "type": 0,
+      "text": "Mine or open pit for excavation",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "szp853o9sgfz53io",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.szp853o9sgfz53io"
+    },
+    {
+      "type": 0,
+      "text": "Overgrown ancient plantation",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "coq9i0mdf5im7vxg",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.coq9i0mdf5im7vxg"
+    },
+    {
+      "type": 0,
+      "text": "Managed woodland gone feral",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "5ka3xmjhth3gzpha",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.5ka3xmjhth3gzpha"
+    },
+    {
+      "type": 0,
+      "text": "Farm for now-feral valuable beasts",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "rqs1nwnai7901ost",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.rqs1nwnai7901ost"
+    },
+    {
+      "type": 0,
+      "text": "Repurposed ancient manufactory",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "6aqd7c8kwkqyry46",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.6aqd7c8kwkqyry46"
+    },
+    {
+      "type": 0,
+      "text": "Fishery or salt extraction site",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "j044gmtn3vf1jlpd",
+      "flags": {},
+      "_key": "!tables.results!d0JsJbQXJHLwrT6I.j044gmtn3vf1jlpd"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!d0JsJbQXJHLwrT6I"
+}

@@ -1,0 +1,29 @@
+{
+  "_id": "1fam8EEvMNTQ3nz4",
+  "name": "Purification Salt",
+  "type": "item",
+  "img": "systems/wwn/assets/default/item.png",
+  "data": {
+    "description": "<p>This small bag contains a never-ending supply of spiritually-purifying salt. If the salt is used to dust an object or weapon as a Main Action, that object can interact with incorporeal entities or spirits as if they were solid for the rest of the scene. If hurled directly at a creature from melee distance, it does 3d6 damage to incorporeal beings, mages, or unnatural magical creatures. If actually consumed by a sentient creature, it fills the imbiber with a sense of guilt and acute sorrow, inflicting 3d6 emotional damage. Creatures reduced to zero hit points regain one point but will attempt suicide. One pinch of salt can be taken from the bag each scene.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 0,
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.1fam8EEvMNTQ3nz4"
+    }
+  },
+  "_key": "!items!1fam8EEvMNTQ3nz4"
+}

@@ -1,0 +1,96 @@
+{
+  "_id": "gZR5Svdf8ulbUuEI",
+  "name": "MonContext-Contact",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "The locals have no idea it exists",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "eyesccoyirh3uzqq",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.eyesccoyirh3uzqq"
+    },
+    {
+      "type": 0,
+      "text": "The locals make wild guesses and myths of it",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "g6bkzxbkspu10g86",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.g6bkzxbkspu10g86"
+    },
+    {
+      "type": 0,
+      "text": "They’ve had a few significant encounters",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "61dl2cse2jjar4ie",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.61dl2cse2jjar4ie"
+    },
+    {
+      "type": 0,
+      "text": "They know it’s there and a little of its wants",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "gh7kxeu4zwwblk91",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.gh7kxeu4zwwblk91"
+    },
+    {
+      "type": 0,
+      "text": "It’s a regular threat they need to deal with",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "hirww6my4mygu0j7",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.hirww6my4mygu0j7"
+    },
+    {
+      "type": 0,
+      "text": "They know its nature and needs very well",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "whusp3sfcrgaw5r3",
+      "flags": {},
+      "_key": "!tables.results!gZR5Svdf8ulbUuEI.whusp3sfcrgaw5r3"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!gZR5Svdf8ulbUuEI"
+}

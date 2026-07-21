@@ -1,0 +1,32 @@
+{
+  "_id": "uise6bux2cialf20",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Summoned Hunter",
+  "type": "asset",
+  "_key": "!items!uise6bux2cialf20",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d6",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "force",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "None",
+    "desc": "A skilled sorcerer has summoned a magical beast or mentally bound a usefully disposable assassin into the faction's service.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "Medium",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

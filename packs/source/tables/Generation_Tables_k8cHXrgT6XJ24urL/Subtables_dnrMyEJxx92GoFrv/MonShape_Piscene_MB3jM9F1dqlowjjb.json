@@ -1,0 +1,174 @@
+{
+  "_id": "MB3jM9F1dqlowjjb",
+  "name": "MonShape-Piscene",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Scales",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "tb6u220j1cfmzi01",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.tb6u220j1cfmzi01"
+    },
+    {
+      "type": 0,
+      "text": "Bulging eyes",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "cdrltnj1kdupu4t2",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.cdrltnj1kdupu4t2"
+    },
+    {
+      "type": 0,
+      "text": "Fins",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "4ja0mppk9su0f6e3",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.4ja0mppk9su0f6e3"
+    },
+    {
+      "type": 0,
+      "text": "Suckers",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "swbeujau1hq5etdr",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.swbeujau1hq5etdr"
+    },
+    {
+      "type": 0,
+      "text": "Tentacles",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "mwt93y6y9569clbx",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.mwt93y6y9569clbx"
+    },
+    {
+      "type": 0,
+      "text": "Pincers",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "t8euzqs5v8j5roh4",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.t8euzqs5v8j5roh4"
+    },
+    {
+      "type": 0,
+      "text": "Rubbery hide",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "8dntpxyt255ycmhs",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.8dntpxyt255ycmhs"
+    },
+    {
+      "type": 0,
+      "text": "Huge maws",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "jav05iysf8lrmn17",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.jav05iysf8lrmn17"
+    },
+    {
+      "type": 0,
+      "text": "Water jets",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ifksvt2f4mmcyyr8",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.ifksvt2f4mmcyyr8"
+    },
+    {
+      "type": 0,
+      "text": "Slime",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "dv3dhk2pezqves6o",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.dv3dhk2pezqves6o"
+    },
+    {
+      "type": 0,
+      "text": "Spines",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "e14uve1qq6migpa6",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.e14uve1qq6migpa6"
+    },
+    {
+      "type": 0,
+      "text": "Mineral deposit",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "7z6xrll62mucilef",
+      "flags": {},
+      "_key": "!tables.results!MB3jM9F1dqlowjjb.7z6xrll62mucilef"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!MB3jM9F1dqlowjjb"
+}

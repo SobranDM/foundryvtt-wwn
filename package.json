@@ -1,12 +1,17 @@
 {
   "name": "wwn",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Worlds Without Number system for Foundry VTT",
   "scripts": {
     "build:css": "sass scss/:styles/ --style compressed",
-    "watch:css": "sass scss/:styles/ --watch --style compressed"
+    "watch:css": "sass scss/:styles/ --watch --style compressed",
+    "lint:packs": "node ./build/lint-pack-folders.mjs",
+    "build:packs": "npm run lint:packs && node ./build/build-packs.mjs",
+    "extract:packs": "node ./build/extract-packs.mjs",
+    "build": "npm run build:css && npm run build:packs"
   },
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.4",
     "sass": "^1.71.1"
   }
 }

@@ -1,0 +1,125 @@
+{
+  "_id": "QuF42f2R0jP4IOxm",
+  "name": "Society-Physical-Skin",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Typical Skin Colors in the Populace",
+  "results": [
+    {
+      "_id": "2SLZpbOCDJ9YInna",
+      "flags": {},
+      "type": 0,
+      "text": "Extremely dark hues",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.2SLZpbOCDJ9YInna"
+    },
+    {
+      "_id": "eyrWmed4E2keoNQk",
+      "flags": {},
+      "type": 0,
+      "text": "Dark browns and mocha shades",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.eyrWmed4E2keoNQk"
+    },
+    {
+      "_id": "7bjwGeZMlHioo3iX",
+      "flags": {},
+      "type": 0,
+      "text": "Golden, sallow, or ivory",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.7bjwGeZMlHioo3iX"
+    },
+    {
+      "_id": "jsUFrGoPXjQIevkW",
+      "flags": {},
+      "type": 0,
+      "text": "Olives or light browns",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.jsUFrGoPXjQIevkW"
+    },
+    {
+      "_id": "btx10nleYJr3flS4",
+      "flags": {},
+      "type": 0,
+      "text": "Ruddy or tanned complexions",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.btx10nleYJr3flS4"
+    },
+    {
+      "_id": "FNvbp8TNWxP1sNkC",
+      "flags": {},
+      "type": 0,
+      "text": "Pale white or pinkish hues",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.FNvbp8TNWxP1sNkC"
+    },
+    {
+      "_id": "RisyfAtXmJwUXup3",
+      "flags": {},
+      "type": 0,
+      "text": "An unusual color or pattern of colors",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.RisyfAtXmJwUXup3"
+    },
+    {
+      "_id": "bgpCuDprZrRBDo3G",
+      "flags": {},
+      "type": 0,
+      "text": "Scales, fur, or unusual hide type",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QuF42f2R0jP4IOxm.bgpCuDprZrRBDo3G"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!QuF42f2R0jP4IOxm"
+}

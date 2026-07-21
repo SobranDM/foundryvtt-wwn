@@ -1,0 +1,177 @@
+{
+  "_id": "GSjlxrEQJeqwTZ8x",
+  "name": "Society-Physical-Adornment",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Optional Common Forms of Adornment",
+  "results": [
+    {
+      "_id": "eNo0TDxRb4heRDFS",
+      "flags": {},
+      "type": 0,
+      "text": "Intricate hair styles or braiding",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.eNo0TDxRb4heRDFS"
+    },
+    {
+      "_id": "YsXKS2YgXU5sXBOH",
+      "flags": {},
+      "type": 0,
+      "text": "Painted skin markings that sometimes change",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.YsXKS2YgXU5sXBOH"
+    },
+    {
+      "_id": "wTPo1oaKdy2hJPRD",
+      "flags": {},
+      "type": 0,
+      "text": "Tattoos of some cultural significance",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.wTPo1oaKdy2hJPRD"
+    },
+    {
+      "_id": "Fh2mbBhiqs6d4bk2",
+      "flags": {},
+      "type": 0,
+      "text": "Piercings, whether minor or elaborate",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.Fh2mbBhiqs6d4bk2"
+    },
+    {
+      "_id": "Gv7zwu9C5gztkKM1",
+      "flags": {},
+      "type": 0,
+      "text": "Role or class-specific clothing items",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.Gv7zwu9C5gztkKM1"
+    },
+    {
+      "_id": "J4E4PmyzumnBi5Cz",
+      "flags": {},
+      "type": 0,
+      "text": "Patterned hair shaving or depilation",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.J4E4PmyzumnBi5Cz"
+    },
+    {
+      "_id": "oJUAMKPbNvVpZJrh",
+      "flags": {},
+      "type": 0,
+      "text": "Culturally-significant jewelry or accessories",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.oJUAMKPbNvVpZJrh"
+    },
+    {
+      "_id": "TMZT2GU7ZW6yUYYM",
+      "flags": {},
+      "type": 0,
+      "text": "Color choices with social meaning to them",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.TMZT2GU7ZW6yUYYM"
+    },
+    {
+      "_id": "b9NWlcrRiPItfhqJ",
+      "flags": {},
+      "type": 0,
+      "text": "Socially-meaningful animal motif items",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.b9NWlcrRiPItfhqJ"
+    },
+    {
+      "_id": "xMI1xueR19BI2Zo0",
+      "flags": {},
+      "type": 0,
+      "text": "Worn weapons, tools or trade implements",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.xMI1xueR19BI2Zo0"
+    },
+    {
+      "_id": "4pNYpjfyDM6u2RnP",
+      "flags": {},
+      "type": 0,
+      "text": "Significant scent or perfume uses",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.4pNYpjfyDM6u2RnP"
+    },
+    {
+      "_id": "jOf6hjjNBcg6gEYb",
+      "flags": {},
+      "type": 0,
+      "text": "Impractical or elaborate role-based clothes",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!GSjlxrEQJeqwTZ8x.jOf6hjjNBcg6gEYb"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!GSjlxrEQJeqwTZ8x"
+}

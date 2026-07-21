@@ -1,0 +1,17 @@
+{
+  "_id": "eNlnJDaw2VZCSYRH",
+  "name": "Hospitable Natives",
+  "content": "<h1>Hospitable Natives</h1><div>\n<p>While not all denizens of the ruin are friendly, there’s at least one faction that’s known to be willing to host guests and negotiate for favors. This group may be made up of bandits, exiles, hermits, or other social outcasts who find even the most dubious human visitors preferable to their neighbors, or they might be “civilized” humanoids who find it profitable to parley as well as raid.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Sinister chieftain with ulterior motives, Xenophobic rebel who hates outsiders, Outsider adventurer bent on exploiting their hospitality</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Wide-eyed native urchin, Outsider gone native, Outsider envoy trying to make a pact with them</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>They’re hospitable because they desperately need allies, They recently were betrayed by a guest, Their hospitality comes at a high price</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Trade goods gathered from the ruin, Map of the ruin interior, Key to unlock a route normally accessible only to ruin natives</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Alien but friendly meeting-chamber, Makeshift guest lodgings, Ritual room for strange rites</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "wiiY2eDvjUfhj5WA",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 4600000
+    }
+  },
+  "_key": "!journal!eNlnJDaw2VZCSYRH",
+  "ownership": {
+    "default": 0
+  }
+}

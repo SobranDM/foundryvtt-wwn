@@ -1,0 +1,41 @@
+{
+  "_id": "iZ4225aCgWMO1l9I",
+  "name": "Augment Mortal Vitality",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "IyQZT1vXb6sZwlLe",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.iZ4225aCgWMO1l9I"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "Necromancer",
+    "duration": "Scene",
+    "range": "Visible",
+    "roll": "",
+    "description": "<p>The necromancer may refine and enhance the natural flow of vitality within a willing visible target. For the rest of the scene, all Physical saving throws they make gain a bonus equal to the necromancer&rsquo;s Magic skill and they automatically stabilize when Mortally Wounded. Once during the scene, as an Instant action, they can immediately heal from all damage inflicted by an injury that did not Mortally Wound them. The recipient of this spell gains one System Strain.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!iZ4225aCgWMO1l9I"
+}

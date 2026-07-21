@@ -1,0 +1,26 @@
+{
+  "_id": "Lwb2vrvQ0AL9riIk",
+  "name": "Cure Disease",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Cleric",
+    "duration": "Instant",
+    "range": "30'",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Cure a subject of any disease: </strong>Including those of magical origin.</p>\n<p><strong>2. Kill green slime: </strong>This monster is killed instantly.</p>\n<p><strong>Reversed: Cause Disease</strong></p>\n<p>Inflicts a terrible, withering disease on a victim, if a Physical save is failed. The disease has the following effects:</p>\n<p><strong>▶ Death: </strong>Within [[2d12]] days.</p>\n<p><strong>▶ Attack penalty: </strong>&ndash;2 to attack rolls.</p>\n<p><strong>▶ Natural healing: </strong>Takes twice the usual amount of time.</p>\n<p><strong>▶ Magical healing: </strong>Is utterly ineffective.</p>\n<p><strong>▶ Curing: </strong>This disease can be cured with a casting of cure disease.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "physical"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!Lwb2vrvQ0AL9riIk"
+}

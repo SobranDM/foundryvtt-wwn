@@ -1,0 +1,42 @@
+{
+  "_id": "43X5QtAdqBX9xJzJ",
+  "name": "Persistent Luminescence",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.43X5QtAdqBX9xJzJ"
+    }
+  },
+  "system": {
+    "description": "<p>When this liquid is applied to an object or imbibed, the target begins to glow like a lantern, shining light out to a 30&rsquo; radius. This glow persists until dispelled or a week has passed.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!43X5QtAdqBX9xJzJ"
+}

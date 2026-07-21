@@ -1,0 +1,32 @@
+{
+  "_id": "g0o2pn23dt8w0qjm",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Smugglers",
+  "type": "asset",
+  "_key": "!items!g0o2pn23dt8w0qjm",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "1d4",
+    "attackSource": "cunning",
+    "attackSpecial": "",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "None",
+    "desc": "As a free action, once per faction turn, the Smugglers can move any allied Wealth or Cunning Asset in their same location to a destination within movement range, even if the destination wouldn't normally allow an un-Subtle Asset to locate there.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "As a free action, once per faction turn, the Smugglers can move any allied Wealth or Cunning Asset in their same location to a destination within movement range, even if the destination wouldn't normally allow an un-Subtle Asset to locate there.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

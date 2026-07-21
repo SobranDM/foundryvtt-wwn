@@ -1,0 +1,41 @@
+{
+  "_id": "YxSzHZxl0Dkq3mGV",
+  "name": "Visitation of the Clement Clime",
+  "type": "spell",
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 1200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.YxSzHZxl0Dkq3mGV"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 2,
+    "class": "High Mage",
+    "duration": "1 hour per level",
+    "range": "Visible",
+    "roll": "",
+    "description": "<p>The caster and up to three visible allies per caster level are shielded from the excesses of hostile elemental energies, becoming immune to mundane extremes of heat and cold and natural acids or electrical discharges. Against magical harm of this nature, they automatically take only half the damage they normally would, or none if they make a successful Physical saving throw. This spell lasts for one hour per caster level.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!YxSzHZxl0Dkq3mGV"
+}

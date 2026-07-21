@@ -1,0 +1,41 @@
+{
+  "_id": "qsBi6fB81zkcPKcK",
+  "name": "Merge Souls",
+  "type": "spell",
+  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "effects": [],
+  "folder": "srJvVpDjTgBmnEpd",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities.qsBi6fB81zkcPKcK"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "lvl": 3,
+    "class": "Necromancer",
+    "duration": "Until dawn",
+    "range": "Touch",
+    "roll": "",
+    "description": "<p>By molding the plasmic stuff of life force, the necromancer can create a bond between two willing or helpless targets. These subjects must be close enough for the necromancer to touch; thereafter, for as long as the spell is in effect, the two creatures pool their hit points. Injuries to either subtract from this pool, and neither dies until it is reduced to zero, whereupon both are Mortally Wounded. They can communicate telepathically at will while the spell is in effect. The power ends at daybreak; if dispelled sooner, the remaining pool is split proportionately.</p>",
+    "prepared": true,
+    "containerId": "",
+    "cast": 0,
+    "memorized": 0,
+    "save": ""
+  },
+  "_key": "!items!qsBi6fB81zkcPKcK"
+}

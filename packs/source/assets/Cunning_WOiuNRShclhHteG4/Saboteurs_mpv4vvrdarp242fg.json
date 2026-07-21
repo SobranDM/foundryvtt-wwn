@@ -1,0 +1,32 @@
+{
+  "_id": "mpv4vvrdarp242fg",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Saboteurs",
+  "type": "asset",
+  "_key": "!items!mpv4vvrdarp242fg",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "2d4",
+    "attackSource": "cunning",
+    "attackSpecial": "An Asset that is Attacked by the Saboteurs can't use any free action abilities it may have during the next turn, whether or not the Attack was successful.",
+    "attackTarget": "wealth",
+    "baseOfInfluence": false,
+    "cost": 5,
+    "counter": "None",
+    "desc": "An Asset that is Attacked by the Saboteurs can't use any free action abilities it may have during the next turn, whether or not the Attack was successful.",
+    "health": {
+      "max": 6,
+      "value": 6
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

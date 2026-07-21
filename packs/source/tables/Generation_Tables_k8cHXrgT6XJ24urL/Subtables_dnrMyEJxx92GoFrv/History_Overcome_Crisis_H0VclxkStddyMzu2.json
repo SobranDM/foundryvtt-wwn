@@ -1,0 +1,151 @@
+{
+  "_id": "H0VclxkStddyMzu2",
+  "name": "History-Overcome-Crisis",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "How Did They Overcome the Crisis?",
+  "results": [
+    {
+      "_id": "ebosfo386zq009vp",
+      "flags": {},
+      "type": 0,
+      "text": "A brilliant and inspirational leader arose",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.ebosfo386zq009vp"
+    },
+    {
+      "_id": "Agj3K5t8Y4JLq97T",
+      "flags": {},
+      "type": 0,
+      "text": "Organization and unity overcame the trouble",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.Agj3K5t8Y4JLq97T"
+    },
+    {
+      "_id": "0GFIWef5IQ0KBCJq",
+      "flags": {},
+      "type": 0,
+      "text": "Grim determination and enduring the evil",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.0GFIWef5IQ0KBCJq"
+    },
+    {
+      "_id": "H3AR9Zammr5BVTni",
+      "flags": {},
+      "type": 0,
+      "text": "Faith strengthened them against the woe",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.H3AR9Zammr5BVTni"
+    },
+    {
+      "_id": "b2HtsatazfFbCOEk",
+      "flags": {},
+      "type": 0,
+      "text": "Skillful use of magic resolved the problem",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.b2HtsatazfFbCOEk"
+    },
+    {
+      "_id": "I7Qm4gDpdfgBVmzf",
+      "flags": {},
+      "type": 0,
+      "text": "Martial prowess and military cunning",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.I7Qm4gDpdfgBVmzf"
+    },
+    {
+      "_id": "SlS5E7t1yNOW1Lin",
+      "flags": {},
+      "type": 0,
+      "text": "Diplomatic ties and outside help",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.SlS5E7t1yNOW1Lin"
+    },
+    {
+      "_id": "TLSZh5s53yKkrf8U",
+      "flags": {},
+      "type": 0,
+      "text": "Industrious labor and tireless exertion",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.TLSZh5s53yKkrf8U"
+    },
+    {
+      "_id": "onPP7VbXSqxVpj9p",
+      "flags": {},
+      "type": 0,
+      "text": "Economic brilliance and trading acumen",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.onPP7VbXSqxVpj9p"
+    },
+    {
+      "_id": "UEQq1qKIIxOOiBtH",
+      "flags": {},
+      "type": 0,
+      "text": "Ruthless but effective sacrifices were made",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!H0VclxkStddyMzu2.UEQq1qKIIxOOiBtH"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!H0VclxkStddyMzu2"
+}

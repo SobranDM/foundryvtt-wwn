@@ -1,0 +1,281 @@
+{
+  "_id": "Egc5cbj4FZf6sRT0",
+  "name": "Society-Organization",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Major Unit of Social Identity",
+  "results": [
+    {
+      "_id": "WO9bJ5PbnnbDTm4Z",
+      "flags": {},
+      "type": 0,
+      "text": "Extended family out to cousins and like kin",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.WO9bJ5PbnnbDTm4Z"
+    },
+    {
+      "_id": "r4YFSlSqZURo6V5f",
+      "flags": {},
+      "type": 0,
+      "text": "Religious factions or faith alliances",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.r4YFSlSqZURo6V5f"
+    },
+    {
+      "_id": "Pk2BfwkmoITnsOU4",
+      "flags": {},
+      "type": 0,
+      "text": "Regional and province-based identity",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.Pk2BfwkmoITnsOU4"
+    },
+    {
+      "_id": "EHzFLgtBjSZbuR4k",
+      "flags": {},
+      "type": 0,
+      "text": "Ethnic membership",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.EHzFLgtBjSZbuR4k"
+    },
+    {
+      "_id": "9hyyKIl4ikvFW1b8",
+      "flags": {},
+      "type": 0,
+      "text": "Professional guild or trade-specific group",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.9hyyKIl4ikvFW1b8"
+    },
+    {
+      "_id": "fyb2PfoA0YNroFBu",
+      "flags": {},
+      "type": 0,
+      "text": "Identity based on their local community",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.fyb2PfoA0YNroFBu"
+    },
+    {
+      "_id": "DCJ1ysB4I0qdBDIk",
+      "flags": {},
+      "type": 0,
+      "text": "Educational ties to institutions or traditions",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.DCJ1ysB4I0qdBDIk"
+    },
+    {
+      "_id": "IYYGRfk2h29IVHit",
+      "flags": {},
+      "type": 0,
+      "text": "Patron-client relationships with major figures",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.IYYGRfk2h29IVHit"
+    },
+    {
+      "_id": "30XCyUPQqBN7mdM2",
+      "flags": {},
+      "type": 0,
+      "text": "Hereditary loyalty to a political group",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.30XCyUPQqBN7mdM2"
+    },
+    {
+      "_id": "itnENhLCVGjA66U1",
+      "flags": {},
+      "type": 0,
+      "text": "Trade guilds specific to particular roles",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.itnENhLCVGjA66U1"
+    },
+    {
+      "_id": "yd9jNisaJ5nNvmRh",
+      "flags": {},
+      "type": 0,
+      "text": "Dynastic lineages with cadet branches",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.yd9jNisaJ5nNvmRh"
+    },
+    {
+      "_id": "DyaXpWlpIM0DEnzz",
+      "flags": {},
+      "type": 0,
+      "text": "Lineages based on ancient hero-ancestors",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.DyaXpWlpIM0DEnzz"
+    },
+    {
+      "_id": "Zmay2xekTG5F2gPA",
+      "flags": {},
+      "type": 0,
+      "text": "Numerous castes of hereditary workers",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.Zmay2xekTG5F2gPA"
+    },
+    {
+      "_id": "IhVmnhALPh4299BC",
+      "flags": {},
+      "type": 0,
+      "text": "Inheritance of an ancient body modification",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.IhVmnhALPh4299BC"
+    },
+    {
+      "_id": "1yGM4iKQ9CfVhSnU",
+      "flags": {},
+      "type": 0,
+      "text": "Astrologically-determined birth groups",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.1yGM4iKQ9CfVhSnU"
+    },
+    {
+      "_id": "enaMPEOwoTVOURcl",
+      "flags": {},
+      "type": 0,
+      "text": "Warbands or civic military service groups",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.enaMPEOwoTVOURcl"
+    },
+    {
+      "_id": "EfEHkudIF4aO62v4",
+      "flags": {},
+      "type": 0,
+      "text": "Voluntary mutual-assistance brotherhoods",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.EfEHkudIF4aO62v4"
+    },
+    {
+      "_id": "ePblL0IXPybAwlpQ",
+      "flags": {},
+      "type": 0,
+      "text": "Far-flung clans of affiliated families",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.ePblL0IXPybAwlpQ"
+    },
+    {
+      "_id": "2IFT32vexo4VTA8O",
+      "flags": {},
+      "type": 0,
+      "text": "Having or lacking noble blood",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.2IFT32vexo4VTA8O"
+    },
+    {
+      "_id": "GGXf06aylzTfT02q",
+      "flags": {},
+      "type": 0,
+      "text": "Ideological groups or philosophical sects",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!Egc5cbj4FZf6sRT0.GGXf06aylzTfT02q"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!Egc5cbj4FZf6sRT0"
+}

@@ -1,0 +1,18 @@
+{
+  "_id": "AwScGoE0nyAZj4XN",
+  "name": "Trapmaster",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You have uncommon expertise in handling traps and snares, both mundane ones and the magical perils sometimes found in Deeps or the lairs of sorcerers. You know how to quickly improvise traps with materials you commonly carry.</p>\n<p><strong>Level 1: </strong>Gain Notice as a bonus skill. Once per scene, reroll any failed saving throw or skill check related to traps or snares. Given five minutes of work you can trap a portal, container, passageway, or other relatively narrow space with foot snares, caltrops, toxic needles, or other hazards. Non-lethal traps cause the first victim to trigger it to lose a round of actions while dangerous ones inflict 1d6 damage plus twice the character&rsquo;s level, with an appropriate saving throw for half. Only one such improvised trap can be maintained at a time. More fearsome traps may be laid with congenial circumstances and the GM&rsquo;s permission.</p>\n<p><strong>Level 2:</strong> You know secrets for unraveling even magical traps or arcane hazards that would normally require a wizard to dispel them. Once per scene, your efforts count as an <em><strong>Extirpate Arcana </strong></em>spell against the trap or hazard, cast as if a Mage of twice your level, with any relevant skill check being Int/Notice or Dex/Notice. This ability can be used against any stationary magical effect that&rsquo;s susceptible to being dispelled by <em><strong>Extirpate Arcana</strong></em>.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!AwScGoE0nyAZj4XN",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

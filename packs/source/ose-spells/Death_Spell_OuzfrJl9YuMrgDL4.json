@@ -1,0 +1,26 @@
+{
+  "_id": "OuzfrJl9YuMrgDL4",
+  "name": "Death Spell",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "Instant",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Up to [[4d8]] Hit Dice of creatures within a 60&rsquo; cube area must make a Physical save or die, instantly.</p>\n<p><strong>Restrictions:</strong> Undead and creatures with greater than 7 Hit Dice are unaffected.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "physical"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!OuzfrJl9YuMrgDL4"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "6782lq67wffwp6vb",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Healers",
+  "type": "asset",
+  "_key": "!items!6782lq67wffwp6vb",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "Whenever an Asset within one move of the Healers is destroyed by an Attack that used Force against the target, the owner of the Healers may pay half its purchase price in Treasure, rounded up, to instantly restore it with 1 hit point. This cannot be used to repair Bases of Influence.",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 12,
+    "counter": "None",
+    "desc": "Whenever an Asset within one move of the Healers is destroyed by an Attack that used Force against the target, the owner of the Healers may pay half its purchase price in Treasure, rounded up, to instantly restore it with 1 hit point. This cannot be used to repair Bases of Influence.",
+    "health": {
+      "max": 8,
+      "value": 8
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 4,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

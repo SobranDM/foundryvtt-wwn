@@ -1,0 +1,17 @@
+{
+  "_id": "FgJRPyid33vRw9fu",
+  "name": "Ruined Fortification",
+  "content": "<h1>Ruined Fortification</h1><div>\n<p>This place was of great strategic importance in some prior age, and a ruined castle, outpost, waystation, or military base can be found here. It may have been destroyed by the slow march of time, or some great military catastrophe may have shattered it. The site is probably too remote or now of too little military value to attract the interest of current governments, but it may still serve as an excellent lair for a more local tyrant or bandit lord.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Failed usurper “ruling” from this new seat, Zealous rebel chief marshaling strength here, Ghostly shade of the fortress’ last commander</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Native forced to take refuge here, Remnant survivor of the original garrison, Government agent sent to investigate the site for usability</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The fortress was built to keep something in rather than out, Some political change has just made the site very valuable once more, The real bulk of the site is hidden from easy view</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Key to open restricted areas of the site, Massive fixed weapon that still works, Precious trove guarded by the fortress</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Long-broken gate, Wall slumped into a ramp, Tower snapped halfway up</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 8000000
+    }
+  },
+  "_key": "!journal!FgJRPyid33vRw9fu",
+  "ownership": {
+    "default": 0
+  }
+}

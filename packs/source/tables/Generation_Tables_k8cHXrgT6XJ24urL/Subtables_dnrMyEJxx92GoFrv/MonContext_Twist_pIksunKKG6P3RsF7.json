@@ -1,0 +1,278 @@
+{
+  "_id": "pIksunKKG6P3RsF7",
+  "name": "MonContext-Twist",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Its activities are very useful to some group",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "apj4dovott9k3mbh",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.apj4dovott9k3mbh"
+    },
+    {
+      "type": 0,
+      "text": "It’s currently hurting an unsympathetic group",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "60cp8awotnm8ex13",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.60cp8awotnm8ex13"
+    },
+    {
+      "type": 0,
+      "text": "It responds to certain ancient codes",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "vk2mm9ixjchfjhtj",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.vk2mm9ixjchfjhtj"
+    },
+    {
+      "type": 0,
+      "text": "It targets a group the PCs count as friends",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "rjr85b3fmv8actf1",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.rjr85b3fmv8actf1"
+    },
+    {
+      "type": 0,
+      "text": "It’s friendly to those sharing its tie to the past",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "rhu8bm4bl4p1dp15",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.rhu8bm4bl4p1dp15"
+    },
+    {
+      "type": 0,
+      "text": "A byproduct of its activities is very valuable",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "k87b17mmlc8t3y4p",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.k87b17mmlc8t3y4p"
+    },
+    {
+      "type": 0,
+      "text": "It has some devotees or cowed minions",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "whxolfzqo8s0s74e",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.whxolfzqo8s0s74e"
+    },
+    {
+      "type": 0,
+      "text": "It hates something the PCs have or relate to",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "jqb6rnaog7l00bn6",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.jqb6rnaog7l00bn6"
+    },
+    {
+      "type": 0,
+      "text": "It was formerly benevolent or useful",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "zd2m6gpcwvp8umkp",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.zd2m6gpcwvp8umkp"
+    },
+    {
+      "type": 0,
+      "text": "A victim plots a desperate act of revenge",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "dlyrq5002pl89cw4",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.dlyrq5002pl89cw4"
+    },
+    {
+      "type": 0,
+      "text": "People think its victims somehow deserved it",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "hfigogp8tskhubvz",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.hfigogp8tskhubvz"
+    },
+    {
+      "type": 0,
+      "text": "Killing it would cause some dire consequence",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "34o2vz58s7bmnxvw",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.34o2vz58s7bmnxvw"
+    },
+    {
+      "type": 0,
+      "text": "It’s being hunted by something even worse",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "pv75rdechy8yeo8s",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.pv75rdechy8yeo8s"
+    },
+    {
+      "type": 0,
+      "text": "It has regular cycles of activity and torpor",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "0pmephl6x25y11lh",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.0pmephl6x25y11lh"
+    },
+    {
+      "type": 0,
+      "text": "It has some defensible reason for its acts",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "qrl3k51dk1jx6et1",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.qrl3k51dk1jx6et1"
+    },
+    {
+      "type": 0,
+      "text": "It protects or spares its willing subjects",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "dn7fngn21om8foif",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.dn7fngn21om8foif"
+    },
+    {
+      "type": 0,
+      "text": "Someone is profiting by its depredations",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "9qv53e1g0479bzod",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.9qv53e1g0479bzod"
+    },
+    {
+      "type": 0,
+      "text": "The locals believe something very false of it",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "y78rqfx0tr8g6sp1",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.y78rqfx0tr8g6sp1"
+    },
+    {
+      "type": 0,
+      "text": "Its damage is insidious and slow to be seen",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "f7axe66ada62q0nv",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.f7axe66ada62q0nv"
+    },
+    {
+      "type": 0,
+      "text": "Hunters quarrel over who is to claim it",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "wrk5wxwpne9dyz61",
+      "flags": {},
+      "_key": "!tables.results!pIksunKKG6P3RsF7.wrk5wxwpne9dyz61"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!pIksunKKG6P3RsF7"
+}

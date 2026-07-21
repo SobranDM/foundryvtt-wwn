@@ -1,0 +1,70 @@
+{
+  "_id": "auvkXvLBr7VUuASw",
+  "name": "MonContext-Arise",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "It’s a relict of the malice of the Outsiders",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "88b6mwnrtnuhc5kp",
+      "flags": {},
+      "_key": "!tables.results!auvkXvLBr7VUuASw.88b6mwnrtnuhc5kp"
+    },
+    {
+      "type": 0,
+      "text": "It’s the product of human sorcerer-kings",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "1z8osq3h19g5i5nb",
+      "flags": {},
+      "_key": "!tables.results!auvkXvLBr7VUuASw.1z8osq3h19g5i5nb"
+    },
+    {
+      "type": 0,
+      "text": "It’s an accident of magic or nature",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "qn06pyf7qbrc3c43",
+      "flags": {},
+      "_key": "!tables.results!auvkXvLBr7VUuASw.qn06pyf7qbrc3c43"
+    },
+    {
+      "type": 0,
+      "text": "It’s a decayed form of something once noble",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "c0lywnk3f4bkz4fp",
+      "flags": {},
+      "_key": "!tables.results!auvkXvLBr7VUuASw.c0lywnk3f4bkz4fp"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!auvkXvLBr7VUuASw"
+}

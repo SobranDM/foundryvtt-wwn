@@ -1,0 +1,26 @@
+{
+  "name": "Detect Magic (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Cleric",
+    "duration": "2 turns",
+    "range": "60'",
+    "roll": "",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>Enchanted objects, areas, or creatures are caused to glow. Both permanent and temporary enchantments are revealed.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "ahsUGVcrUaxvClEg",
+  "_key": "!items!ahsUGVcrUaxvClEg"
+}

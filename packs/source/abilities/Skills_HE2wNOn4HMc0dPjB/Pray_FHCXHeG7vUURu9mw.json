@@ -1,0 +1,34 @@
+{
+  "name": "Pray",
+  "type": "skill",
+  "img": "/systems/wwn/assets/skills/pray.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.LbZindFCPYYExTae"
+    }
+  },
+  "system": {
+    "description": "Peform the clerical rites of your religion, and be familiar with the gods, demons, and taboos of major and minor faiths, and identify iconography and persons of religious importance. Pray also helps you know the state of local faiths and the important persons in their hierarchies.",
+    "ownedLevel": -1,
+    "score": "wis",
+    "skillDice": "2d6",
+    "combatSkill": false,
+    "secondary": false
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806156939,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "FHCXHeG7vUURu9mw",
+  "folder": "HE2wNOn4HMc0dPjB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FHCXHeG7vUURu9mw"
+}

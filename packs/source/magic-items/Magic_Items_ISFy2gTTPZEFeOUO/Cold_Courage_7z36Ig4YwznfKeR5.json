@@ -1,0 +1,42 @@
+{
+  "_id": "7z36Ig4YwznfKeR5",
+  "name": "Cold Courage",
+  "type": "item",
+  "img": "icons/tools/laboratory/vial-orange.webp",
+  "effects": [],
+  "folder": "ISFy2gTTPZEFeOUO",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.7z36Ig4YwznfKeR5"
+    }
+  },
+  "system": {
+    "description": "<p>The user of this potion is filled with invincible confidence and perfect self-assurance for the rest of the scene, fighting as calmly in bloody battle as if on a sparring field. When they attack, they roll a skill check instead of an attack roll, at a difficulty equal to half the target&rsquo;s Armor Class, rounded down. They are also immune to any mental effect that would alter their emotions. While under the potion&rsquo;s influence, however, the GM keeps track of their hit points and damage taken, and the player is told only when they hit zero.</p>",
+    "quantity": 1,
+    "treasure": false,
+    "price": 0,
+    "weight": 1,
+    "weightless": "whenStowed",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "equipped": false,
+    "stowed": false,
+    "version": 3
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!7z36Ig4YwznfKeR5"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "idt3OTNn6sVaHm97",
+  "name": "Criminal Meet",
+  "content": "<h1>Criminal Meet</h1><div>\n<p>This site is used as a meeting place for smugglers, bandits, illegal slavers, fences, or other criminals. Something about the place gives them a good view of any incoming strangers and discreet privacy for their dealings. Some few criminals may remain here at all times to maintain the place, or it might be used only as the situation requires. These criminals may be particular, dealing only with known associates, or they may be far enough from the law to feel comfortable about trading with adventurers.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Corrupt merchant grandee, Sinister black market boss, Monstrous entity that enforces the meet’s peace</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Theft victim searching for their goods, Frustrated local lawman, Merchant with suspicions about a fence</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The local authorities turn a knowing blind eye to it, The meet is trading in something much worse than everyone thinks it is, Significant amounts of stolen goods are stored there</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Valuable smuggled contraband, Cache of stolen goods, Precious object that’s very hard to fence</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Concealed cave storehouse, Rocky observation point, Sheltered glade in a thick forest</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "f2eWlghsbUFGLkyj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 2200000
+    }
+  },
+  "_key": "!journal!idt3OTNn6sVaHm97",
+  "ownership": {
+    "default": 0
+  }
+}

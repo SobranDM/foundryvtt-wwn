@@ -1,0 +1,32 @@
+{
+  "_id": "atv37koxbe63mb2y",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Thugs",
+  "type": "asset",
+  "_key": "!items!atv37koxbe63mb2y",
+  "system": {
+    "assetType": "force",
+    "attackDamage": "1d6",
+    "attackSource": "force",
+    "attackSpecial": "",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "None",
+    "desc": "These gutter ruffians and common kneebreakers have been organized in service to the faction's causes.",
+    "health": {
+      "max": 1,
+      "value": 1
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

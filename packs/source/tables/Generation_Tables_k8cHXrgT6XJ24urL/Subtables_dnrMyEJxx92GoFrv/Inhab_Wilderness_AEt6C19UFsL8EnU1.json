@@ -1,0 +1,174 @@
+{
+  "_id": "AEt6C19UFsL8EnU1",
+  "name": "Inhab-Wilderness",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "Alpha predator of the area",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "v8r1dw767fobm9m0",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.v8r1dw767fobm9m0"
+    },
+    {
+      "type": 0,
+      "text": "Intelligent monstrous beings",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "cugsfkqzolh9ucnw",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.cugsfkqzolh9ucnw"
+    },
+    {
+      "type": 0,
+      "text": "Swarms or packs of dangerous beasts",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "ssccte3ku5lpklc3",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.ssccte3ku5lpklc3"
+    },
+    {
+      "type": 0,
+      "text": "Violently reclusive local natives",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "ya2ez94x5snfx1yo",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.ya2ez94x5snfx1yo"
+    },
+    {
+      "type": 0,
+      "text": "Remnant of a destroyed state",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "lb8nwwvuwbrnr04n",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.lb8nwwvuwbrnr04n"
+    },
+    {
+      "type": 0,
+      "text": "Survivors of a displaced ethnic group",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "r805arigpdpk842a",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.r805arigpdpk842a"
+    },
+    {
+      "type": 0,
+      "text": "Demihumans who prefer isolation",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "i4j3s866k6dxoyf9",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.i4j3s866k6dxoyf9"
+    },
+    {
+      "type": 0,
+      "text": "Bestially savage tribals, perhaps inhuman",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "hi3t5l84aeqmpnxa",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.hi3t5l84aeqmpnxa"
+    },
+    {
+      "type": 0,
+      "text": "Expedition from a surrounding nation",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "uwu6vexncxl7el2q",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.uwu6vexncxl7el2q"
+    },
+    {
+      "type": 0,
+      "text": "Prospectors or resource-hunters",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "gauanh607wvedowm",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.gauanh607wvedowm"
+    },
+    {
+      "type": 0,
+      "text": "Spirit or elemental related to the wilderness",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "vy5iejoyl8y8l6eg",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.vy5iejoyl8y8l6eg"
+    },
+    {
+      "type": 0,
+      "text": "Sorcerers, cultists, or other solitude-lovers",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "pwmul8y71phorzfr",
+      "flags": {},
+      "_key": "!tables.results!AEt6C19UFsL8EnU1.pwmul8y71phorzfr"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!AEt6C19UFsL8EnU1"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Continual Light (Cleric)",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 3,
+    "class": "Cleric",
+    "duration": "Permanent",
+    "range": "120'",
+    "roll": "",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<p><strong>1. Conjuring light: </strong>In a 30&rsquo; radius. The magical light is as bright as full daylight (creatures that suffer attack penalties in daylight are affected). The spell may be cast upon an object, in which case, the light moves with the object.</p>\n<p><strong>2. Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded. A blind creature cannot attack.</p>\n<p><strong>3. Cancelling darkness: </strong>Continual light may cancel a continual darkness spell (see below).</p>\n<p><strong>Reversed: Continual Darkness</strong></p>\n<p>Creates a 30&rsquo; radius area of magical blackness, preventing both normal sight and infravision. Light sources brought within the area of darkness do not illuminate it. Like continual light, it may alternatively be used to blind creatures or to dispel a continual light spell.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": "mental"
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_id": "iV7RzEGlyuglmUbP",
+  "_key": "!items!iV7RzEGlyuglmUbP"
+}

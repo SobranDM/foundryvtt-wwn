@@ -1,0 +1,18 @@
+{
+  "_id": "uaLg0Q1b1YC5xrcx",
+  "name": "Class Ability: Quick Learner",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/class%20ability.png",
+  "effects": [],
+  "system": {
+    "description": "<p>When you advance a character level, you gain an extra skill point which may only be spent on gaining or improving non-combat skills or raising attributes. You may save this point to spend later if you wish.</p>",
+    "ownedLevel": null
+  },
+  "_key": "!items!uaLg0Q1b1YC5xrcx",
+  "folder": "UR9FVVPeEHoDzXa5"
+}

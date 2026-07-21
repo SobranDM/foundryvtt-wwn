@@ -1,0 +1,31 @@
+{
+  "_id": "7svlixyos0zed59i",
+  "img": "systems/wwn/assets/force.png",
+  "name": "Fearful Intimidation",
+  "type": "asset",
+  "_key": "!items!7svlixyos0zed59i",
+  "system": {
+    "assetType": "force",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 2,
+    "counter": "1d4",
+    "desc": "Judicious exercises of force have intimidated the locals, making them reluctant to cooperate with any group that stands opposed to the faction.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 1,
+    "special": false,
+    "subtle": false,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "JlKAeUF4bYLd1NE6"
+}

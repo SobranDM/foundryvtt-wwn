@@ -34,6 +34,44 @@ Everything you need to play Worlds Without Number in Foundry VTT.
 - Compendium includes weapons, armor, adventuring gear, arts, spells, and foci. Deluxe edition content is not included.
   - Thanks to Gavin over at Necrotic Gnome, the Compendium now includes OSE spells and (some) monsters.
 
+## Development
+
+This system's stylesheet is written in SCSS, compiled to `styles/main.css` with [Dart Sass](https://sass-lang.com/dart-sass/). Compendium packs are stored as JSON under `packs/source/` and compiled to LevelDB under `packs/`. Neither the compiled CSS nor the LevelDB packs are committed, so after cloning or pulling you'll need to build them:
+
+```bash
+npm install
+npm run build:css     # compile styles/main.css
+npm run build:packs   # compile packs/* from packs/source/*
+npm run build         # both of the above
+npm run watch:css     # recompile SCSS on change
+```
+
+To refresh JSON source from built LevelDB packs (after editing packs in Foundry):
+
+```bash
+npm run extract:packs
+```
+
+Pack folder depth is limited to **3** (Foundry's compendium limit). `npm run build:packs` runs a lint check first.
+
+Compendium layout:
+
+| Pack | Visibility | Contents |
+|------|------------|----------|
+| `gear` | Players | Adventuring Gear, Weapons, Armor (non-magical) |
+| `magic-items` | GM only (`private`) | Magic Items, Magical Weapons, Magical Armor |
+| `abilities` | Players | Skills / Arts / Spells (by class & level) / Foci |
+| `assets` | Players | Faction assets by type (Cunning / Force / Wealth) |
+| `tags`, `tables` | Players | Location tags; generation & magic-item tables |
+| `creatures-of-a-far-age` | Players | WWN monsters |
+| `ose-monsters`, `ose-spells` | Players | OSE content |
+
+## Releases
+
+Publishing a GitHub Release (tag + release notes) triggers CI to build the CSS and packs, rewrite `system.json` with the release version and download URL, zip the system, and attach `wwn.zip` and `system.json` to that release.
+
+Bump `version` in `system.json` (and `package.json`) on the branch you intend to release before creating the tag. Tag names may include a leading `v` (e.g. `v2.0.0`); the workflow strips it when writing the manifest version.
+
 ## License
 
 This Foundry VTT system requires the Worlds Without Number rules, available at DrivethruRPG.

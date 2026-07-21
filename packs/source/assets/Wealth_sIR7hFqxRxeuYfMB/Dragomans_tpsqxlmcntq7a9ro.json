@@ -1,0 +1,31 @@
+{
+  "_id": "tpsqxlmcntq7a9ro",
+  "img": "systems/wwn/assets/wealth.png",
+  "name": "Dragomans",
+  "type": "asset",
+  "_key": "!items!tpsqxlmcntq7a9ro",
+  "system": {
+    "assetType": "wealth",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 4,
+    "counter": "1d4",
+    "desc": "Interpreters, cultural specialists, and go-betweens simplify the expansion of a faction's influence in an area. A faction that takes an Expand Influence action in the same location as this Asset can roll an extra die on all checks there that turn. As a free action once per turn, this Asset can move.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 2,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "A faction that takes an Expand Influence action in the same location as this Asset can roll an extra die on all checks there that turn. As a free action once per turn, this Asset can move.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "sIR7hFqxRxeuYfMB"
+}

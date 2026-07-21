@@ -1,0 +1,174 @@
+{
+  "_id": "x3mT0GDELCfeMUvT",
+  "name": "Combat-Bestial",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "It’s eaten recently and is lolling around, disinclined to hunt new prey",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "nqyh82adtomlwxfq",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.nqyh82adtomlwxfq"
+    },
+    {
+      "type": 0,
+      "text": "It’s fighting with another of its kind over a mate",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "91xe3vj8hmuc5g2x",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.91xe3vj8hmuc5g2x"
+    },
+    {
+      "type": 0,
+      "text": "It’s guarding cubs, eggs, or a recent kill",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "widlyoculm1li703",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.widlyoculm1li703"
+    },
+    {
+      "type": 0,
+      "text": "It’s currently hunting something else but might choose to select the PCs as new prey",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "pj33xap5633nt8lo",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.pj33xap5633nt8lo"
+    },
+    {
+      "type": 0,
+      "text": "It’s asleep or torpid, and has probably chosen a seemingly-safe spot to do so",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "voghwgo8879c4oz2",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.voghwgo8879c4oz2"
+    },
+    {
+      "type": 0,
+      "text": "It’s playing after the manner of its kind",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "pcduglhrg9lxz534",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.pcduglhrg9lxz534"
+    },
+    {
+      "type": 0,
+      "text": "It’s patrolling its territory to repel intruders or rivals for mates",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "o4yws7ogckevgn04",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.o4yws7ogckevgn04"
+    },
+    {
+      "type": 0,
+      "text": "It’s fleeing, having been driven out by a foe or a more powerful rival",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "af7tiia8ocb3pmt8",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.af7tiia8ocb3pmt8"
+    },
+    {
+      "type": 0,
+      "text": "It licks its wounds after a hard battle, perhaps still surrounded by the corpses of its prey and their remaining belongings",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "yujg4m0c4dkc6wyo",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.yujg4m0c4dkc6wyo"
+    },
+    {
+      "type": 0,
+      "text": "It’s digging, marking, or otherwise preparing its new lair, and may have a mate helping it do so",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "81to48sp2mxqnrgj",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.81to48sp2mxqnrgj"
+    },
+    {
+      "type": 0,
+      "text": "It’s grooming itself or engaging in behavior specific to its type of creature",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "866357071pxxk8vv",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.866357071pxxk8vv"
+    },
+    {
+      "type": 0,
+      "text": "It’s starving, and is ravenous for prey that it might not dare attack in more prosperous times",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "4skx8yu86wff2tfe",
+      "flags": {},
+      "_key": "!tables.results!x3mT0GDELCfeMUvT.4skx8yu86wff2tfe"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!x3mT0GDELCfeMUvT"
+}

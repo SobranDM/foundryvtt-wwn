@@ -1,0 +1,32 @@
+{
+  "_id": "ogco7pfqrbz3ce2j",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Expert Treachery",
+  "type": "asset",
+  "_key": "!items!ogco7pfqrbz3ce2j",
+  "system": {
+    "assetType": "cunning",
+    "attackDamage": "Special",
+    "attackSource": "cunning",
+    "attackSpecial": "On a successful Attack by Expert Treachery, this Asset is lost, 5 Treasure is gained by its owning faction, and the Asset that Expert Treachery targeted switches sides. This conversion happens even if their new owners lack the attributes usually necessary to maintain their new Asset.",
+    "attackTarget": "cunning",
+    "baseOfInfluence": false,
+    "cost": 10,
+    "counter": "None",
+    "desc": "On a successful Attack by Expert Treachery, this Asset is lost, 5 Treasure is gained by its owning faction, and the Asset that Expert Treachery targeted switches sides. This conversion happens even if their new owners lack the attributes usually necessary to maintain their new Asset.",
+    "health": {
+      "max": 5,
+      "value": 5
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 7,
+    "special": false,
+    "subtle": true,
+    "turnRoll": "",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

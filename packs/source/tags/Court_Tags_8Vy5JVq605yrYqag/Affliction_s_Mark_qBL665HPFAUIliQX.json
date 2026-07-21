@@ -1,0 +1,17 @@
+{
+  "_id": "qBL665HPFAUIliQX",
+  "name": "Affliction’s Mark",
+  "content": "<h1>Affliction’s Mark</h1><div>\n<p>Some sort of persistent, incurable illness is gnawing at the court. The principle leader might have been felled by it, or a beloved member, or it may be a spreading curse within its circles. Acute diseases will likely have the sufferers desperate to find some cure, while chronic illnesses might need regular infusions of some costly or morally-dubious remedy.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Manipulative quack, Amorally desperate parent, Secret spreader of plague</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Appealing victim, Struggling physician, Worried spouse-to-be of a victim</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The sickness is a direct result of their choices, A faction would profit enormously if the current victims died, The only known cure comes with a dire moral or material cost</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Palliative that can slow or ease the disease, Proof of its source or cause, The price gathered to pay for a perhaps-real cure</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Hushed and shadowed sickroom, Gathering place with an air of forced gaiety, Untouched quarters of the recently dead</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "8Vy5JVq605yrYqag",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 200000
+    }
+  },
+  "_key": "!journal!qBL665HPFAUIliQX",
+  "ownership": {
+    "default": 0
+  }
+}

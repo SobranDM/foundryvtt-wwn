@@ -1,0 +1,26 @@
+{
+  "_id": "HUwrOLG2sVe4jPon",
+  "name": "Projected Image",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "6 turns",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An illusory duplicate of the caster appears within range.</p>\n<p><strong>▶ Duplicate: </strong>The image is an exact duplicate of the caster that can only be differentiated by touch.</p>\n<p><strong>▶ Subsequent spells cast:</strong> Appear to originate from the image. (Targets must still be visible to the caster, however.)</p>\n<p><strong>▶ Spells and missiles:</strong> The image appears unaffected by spells or missile weapons.</p>\n<p><strong>▶ Melee or touch: </strong>If the image is touched or hit in melee, it disappears.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!HUwrOLG2sVe4jPon"
+}

@@ -1,0 +1,174 @@
+{
+  "_id": "ISghrbzq7VJ7wqxA",
+  "name": "Combat-Problems",
+  "img": "icons/svg/d20-grey.svg",
+  "results": [
+    {
+      "type": 0,
+      "text": "An ambitious underling plots against the leader or undermines their control",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "dgttx7vyzfwmgoz0",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.dgttx7vyzfwmgoz0"
+    },
+    {
+      "type": 0,
+      "text": "They’re arguing over the fair division of some recently-gained spoils",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "izgzarz33lcjkjyn",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.izgzarz33lcjkjyn"
+    },
+    {
+      "type": 0,
+      "text": "Some are seriously ill with a disease",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "i1g687lnfkewq70x",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.i1g687lnfkewq70x"
+    },
+    {
+      "type": 0,
+      "text": "The leader is being foolish or irrational, driven by their own desires",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "sea44hxkakfh3caf",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.sea44hxkakfh3caf"
+    },
+    {
+      "type": 0,
+      "text": "They’re overconfident and careless",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "ptu7z8msi7n9z5rp",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.ptu7z8msi7n9z5rp"
+    },
+    {
+      "type": 0,
+      "text": "They’ve lost some treasure precious to them",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "lo5dg7e1h6nt8lkf",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.lo5dg7e1h6nt8lkf"
+    },
+    {
+      "type": 0,
+      "text": "The underlings are ignoring the leader’s will",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "yqoow1xzxgjdhxho",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.yqoow1xzxgjdhxho"
+    },
+    {
+      "type": 0,
+      "text": "They’ve been afflicted by some danger of their current environment",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "ducxos789jlvvdbc",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.ducxos789jlvvdbc"
+    },
+    {
+      "type": 0,
+      "text": "They’re out of food or some other supply",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "056399jbzdt90hwu",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.056399jbzdt90hwu"
+    },
+    {
+      "type": 0,
+      "text": "They’re being targeted by some hostile rival or dangerous local denizen",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "jaiqic8f9kbpj222",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.jaiqic8f9kbpj222"
+    },
+    {
+      "type": 0,
+      "text": "They’ve been driven from their usual home by an enemy or a natural hazard",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "kd9n68geqboo8rp9",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.kd9n68geqboo8rp9"
+    },
+    {
+      "type": 0,
+      "text": "Some of their members have been taken prisoner or lost.",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "iqzkzthiplshu57w",
+      "flags": {},
+      "_key": "!tables.results!ISghrbzq7VJ7wqxA.iqzkzthiplshu57w"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {},
+  "_key": "!tables!ISghrbzq7VJ7wqxA"
+}

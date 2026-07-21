@@ -1,0 +1,31 @@
+{
+  "_id": "b7vjpkvyyrdzoufo",
+  "img": "systems/wwn/assets/cunning.png",
+  "name": "Covert Transport",
+  "type": "asset",
+  "_key": "!items!b7vjpkvyyrdzoufo",
+  "system": {
+    "assetType": "cunning",
+    "attackSource": "",
+    "attackSpecial": "",
+    "attackTarget": "",
+    "baseOfInfluence": false,
+    "cost": 8,
+    "counter": "None",
+    "desc": "As a free action once per turn, the faction can pay 1 Treasure and move any Cunning or Wealth Asset at the same location as the Covert Transport. The transported Asset gains the Stealth quality until it performs some action or is otherwise utilized by the faction.",
+    "health": {
+      "max": 4,
+      "value": 4
+    },
+    "income": 0,
+    "magic": "None",
+    "maintenance": 0,
+    "rating": 3,
+    "special": true,
+    "subtle": true,
+    "turnRoll": "As a free action once per turn, the faction can pay 1 Treasure and move any Cunning or Wealth Asset at the same location as the Covert Transport. The transported Asset gains the Stealth quality until it performs some action or is otherwise utilized by the faction.",
+    "unusable": false,
+    "locationRoll": ""
+  },
+  "folder": "WOiuNRShclhHteG4"
+}

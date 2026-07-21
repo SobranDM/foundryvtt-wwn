@@ -1,0 +1,18 @@
+{
+  "_id": "ZSGBoKSlvy2ADRB1",
+  "name": "Assassin",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are practiced at sudden murder, and have certain advantages in carrying out an Execution Attack as described in the rules on page 44.</p>\n<p><strong>Level 1: </strong>Gain Sneak as a bonus skill. You can conceal an object no larger than a knife from anything less invasive than a strip search. You can draw or produce this object as an On Turn action, and your point-blank thrown or melee attacks made during a surprise round with it cannot miss the target.</p>\n<p><strong>Level 2:</strong> You can take a Move action on the same round as you make an Execution Attack, closing rapidly with a target before you attack. You may split this Move action when making an Execution Attack, taking part of it before you murder your target and part of it afterwards. This movement happens too quickly to alert a victim or to be hindered by bodyguards.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!ZSGBoKSlvy2ADRB1",
+  "folder": "GR0WaGPqGSlQs9zB"
+}

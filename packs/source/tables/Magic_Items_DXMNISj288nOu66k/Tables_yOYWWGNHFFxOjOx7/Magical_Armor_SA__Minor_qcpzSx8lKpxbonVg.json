@@ -1,0 +1,68 @@
+{
+  "_id": "qcpzSx8lKpxbonVg",
+  "name": "Magical Armor SA, Minor",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {
+      "table-type": "better",
+      "table-currency-string": "",
+      "loot-actor-name": "",
+      "loot-amount-key": ""
+    }
+  },
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "nSkPKXXe5poPY9pb",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 0,
+      "text": "No special abilities.",
+      "img": "icons/svg/d20-black.svg",
+      "resultId": "",
+      "weight": 1,
+      "range": [
+        1,
+        19
+      ],
+      "drawn": false,
+      "_key": "!tables.results!qcpzSx8lKpxbonVg.nSkPKXXe5poPY9pb"
+    },
+    {
+      "_id": "u9lmxfYTcelSjQ6X",
+      "flags": {
+        "better-rolltables": {
+          "brt-result-formula": {
+            "formula": ""
+          }
+        }
+      },
+      "type": 2,
+      "text": "Magical Armor and Shield Abilities",
+      "img": "icons/svg/d20-grey.svg",
+      "collection": "wwn.tables",
+      "resultId": "pPZG8CuQQKPynEFb",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_key": "!tables.results!qcpzSx8lKpxbonVg.u9lmxfYTcelSjQ6X"
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "_key": "!tables!qcpzSx8lKpxbonVg",
+  "folder": "yOYWWGNHFFxOjOx7"
+}

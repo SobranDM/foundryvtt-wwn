@@ -1,0 +1,133 @@
+{
+  "_id": "QOju0I5ESGWgjLZY",
+  "name": "Terrain-Use",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "What Use is the Feature?",
+  "results": [
+    {
+      "_id": "h2FFCiiT135YlsoW",
+      "flags": {},
+      "type": 0,
+      "text": "A rare and precious resource is found there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.h2FFCiiT135YlsoW"
+    },
+    {
+      "_id": "ia1TJSjJMIcfvGJ7",
+      "flags": {},
+      "type": 0,
+      "text": "Ancient sites and relics are common there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.ia1TJSjJMIcfvGJ7"
+    },
+    {
+      "_id": "J5KfslLOljzX1HKj",
+      "flags": {},
+      "type": 0,
+      "text": "It’s sacred land to a group or religion",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.J5KfslLOljzX1HKj"
+    },
+    {
+      "_id": "Za2liSoTbTo1n4yp",
+      "flags": {},
+      "type": 0,
+      "text": "Controlling it has military significance",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.Za2liSoTbTo1n4yp"
+    },
+    {
+      "_id": "wrUuVh9jxuue2okT",
+      "flags": {},
+      "type": 0,
+      "text": "It has substantial productive infrastructure",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.wrUuVh9jxuue2okT"
+    },
+    {
+      "_id": "eJQBV2ZXA3XE12uC",
+      "flags": {},
+      "type": 0,
+      "text": "A major trade route goes through it",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.eJQBV2ZXA3XE12uC"
+    },
+    {
+      "_id": "6k1jfmxQCgc2dpn3",
+      "flags": {},
+      "type": 0,
+      "text": "Uncontrolled, it’s a nest of raiders and worse",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.6k1jfmxQCgc2dpn3"
+    },
+    {
+      "_id": "Wn9n6yrc0j5qsYCO",
+      "flags": {},
+      "type": 0,
+      "text": "A mighty Working is still functioning there",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!QOju0I5ESGWgjLZY.Wn9n6yrc0j5qsYCO"
+    }
+  ],
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!QOju0I5ESGWgjLZY"
+}

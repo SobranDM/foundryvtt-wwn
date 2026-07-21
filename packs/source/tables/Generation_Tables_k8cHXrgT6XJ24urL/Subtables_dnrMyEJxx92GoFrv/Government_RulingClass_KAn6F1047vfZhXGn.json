@@ -1,0 +1,177 @@
+{
+  "_id": "KAn6F1047vfZhXGn",
+  "name": "Government-RulingClass",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "Ruling Class",
+  "results": [
+    {
+      "_id": "xBTLQtTcqNuSfHbJ",
+      "flags": {},
+      "type": 0,
+      "text": "Hereditary nobility of blood",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.xBTLQtTcqNuSfHbJ"
+    },
+    {
+      "_id": "rSu0n9o87lPH8V5u",
+      "flags": {},
+      "type": 0,
+      "text": "Powerful merchant-princes and oligarchs",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.rSu0n9o87lPH8V5u"
+    },
+    {
+      "_id": "cLXC0geQ86Upo7oa",
+      "flags": {},
+      "type": 0,
+      "text": "Sorcerers and the arcanely skilled",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.cLXC0geQ86Upo7oa"
+    },
+    {
+      "_id": "bsYqMqVmkKMdaCfO",
+      "flags": {},
+      "type": 0,
+      "text": "Magically-empowered bloodlines",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.bsYqMqVmkKMdaCfO"
+    },
+    {
+      "_id": "MsqoCESWHJ4TU5u6",
+      "flags": {},
+      "type": 0,
+      "text": "Proletariat peasantry or artisans",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.MsqoCESWHJ4TU5u6"
+    },
+    {
+      "_id": "mIJ2uM3xqHldIS8B",
+      "flags": {},
+      "type": 0,
+      "text": "Minority ethnicity of long historical rule",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.mIJ2uM3xqHldIS8B"
+    },
+    {
+      "_id": "B2iymnQLUa3s2Tv5",
+      "flags": {},
+      "type": 0,
+      "text": "Clergy of one or more local faiths",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.B2iymnQLUa3s2Tv5"
+    },
+    {
+      "_id": "KAQLDDoLUzxZaSmT",
+      "flags": {},
+      "type": 0,
+      "text": "Citizens of a special city or old homeland",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.KAQLDDoLUzxZaSmT"
+    },
+    {
+      "_id": "d6SwOADUeGdqKIdk",
+      "flags": {},
+      "type": 0,
+      "text": "Outsiders or nonhumans of a certain type",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.d6SwOADUeGdqKIdk"
+    },
+    {
+      "_id": "TOelDqwOh9v9ZgaQ",
+      "flags": {},
+      "type": 0,
+      "text": "Warlords or military leaders",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.TOelDqwOh9v9ZgaQ"
+    },
+    {
+      "_id": "yMpFycgIFX1TaOfm",
+      "flags": {},
+      "type": 0,
+      "text": "Clan heads or ethnarchs of particular groups",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.yMpFycgIFX1TaOfm"
+    },
+    {
+      "_id": "NlvZXfvUsA86qfpq",
+      "flags": {},
+      "type": 0,
+      "text": "Colonizer viceroys of a foreign hegemon",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_key": "!tables.results!KAn6F1047vfZhXGn.NlvZXfvUsA86qfpq"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "dnrMyEJxx92GoFrv",
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "flags": {
+    "better-rolltables": {}
+  },
+  "_key": "!tables!KAn6F1047vfZhXGn"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "oD2hhImQ4sqpB0w7",
+  "name": "Sleep",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 1,
+    "class": "Mage",
+    "duration": "[[4d4 turns]]",
+    "range": "240'",
+    "roll": "",
+    "description": "<p><strong>Duration: [[4d4]] turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A sleep spell causes a magical slumber to come upon creatures, excluding the undead. The spell may target either:</p>\n<ol>\n<li>A single creature with 4+1 Hit Dice.</li>\n<li>A total of [[2d8]] Hit Dice of creatures of 4 HD or lower each.</li>\n</ol>\n<p>When targeting creatures of 4 HD or less, the following rules apply:</p>\n<p><strong>▶ Weakest first:</strong> Targets with the least HD are affected first.</p>\n<p><strong>▶ HD:</strong> Calculate monsters with less than 1 HD as having 1 HD and monsters with a bonus to HD as having the flat amount. (For example, a 3+2 HD monster would be calculated as having 3 HD.)</p>\n<p><strong>▶ Excess:</strong> Rolled Hit Dice that are not sufficient to affect a creature are wasted.</p>\n<p><strong>Killing: </strong>Creatures enchanted by this spell are helpless and can be killed instantly with a bladed weapon.</p>\n<p><strong>Awakening:</strong> Slapping or wounding awakens an affected creature.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!oD2hhImQ4sqpB0w7"
+}

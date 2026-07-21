@@ -1,0 +1,17 @@
+{
+  "_id": "0PMMhs8Zvn6Wljqm",
+  "name": "Heavy Fortification",
+  "content": "<h1>Heavy Fortification</h1><div>\n<p>The community is remarkably well-fortified for a site of its size and role. Tall, stout walls, strongpoints inside the community, concentric defenses, a strategic terrain location, or a large body of standing troops might be present. Some threat is thought to exist that makes maintaining this fortification worthwhile, though it may come at a dear cost to the locals. The community’s suzerain may be uncomfortable with these defenses, as they could just as easily be used to defy the ruler.</p>\n<table style=\"border-color:#34495e;border-style:solid;margin-left:auto;margin-right:auto\" border=\"5\">\n<tbody>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>E</strong></td>\n<td>Outside enemy seeking to pierce the defenses, Rebel trying to declare independence, Heavyhanded local ruler demanding protection money</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>F</strong></td>\n<td>Industrious maintenance chief, Ruler’s appointed local military commander, Local warning of some sudden impending danger</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>C</strong></td>\n<td>The threat is gone but those who profit by the defenses keep them going, The defenses are impractical, The community can no longer bear the expense of the defenses</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>T</strong></td>\n<td>Components of a powerful fixed weapon, Payroll for the soldiers, Precious and specialized maintenance components</td>\n</tr>\n<tr>\n<td style=\"text-align:center;width:5.1793%\"><strong>P</strong></td>\n<td>Oversized weapon emplacement, Top of a looming city wall, Stronghold keep at the center of the community</td>\n</tr>\n</tbody>\n</table>\n</div>",
+  "img": null,
+  "folder": "0q8iu2vxAUbkpBIj",
+  "sort": 0,
+  "flags": {
+    "entityorder": {
+      "order": 3800000
+    }
+  },
+  "_key": "!journal!0PMMhs8Zvn6Wljqm",
+  "ownership": {
+    "default": 0
+  }
+}

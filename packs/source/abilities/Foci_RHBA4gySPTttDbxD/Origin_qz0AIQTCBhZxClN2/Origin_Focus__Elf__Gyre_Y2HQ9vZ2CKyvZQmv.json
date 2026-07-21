@@ -1,0 +1,18 @@
+{
+  "_id": "Y2HQ9vZ2CKyvZQmv",
+  "name": "Origin Focus: Elf, Gyre",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "focus",
+  "flags": {},
+  "img": "systems/wwn/assets/default/origin_focus.png",
+  "effects": [],
+  "system": {
+    "description": "<p>You are a reincarnated transhuman, shards of your former life still lingering in your memories. The more intently you focus on developing and integrating these fragments, the more effectively you can call on them.</p>\n<p>Elves are invariably devoid of obvious mental or physical debilities. If you have any attribute scores below 9, you must move points from your other attributes to raise the deficient ones up to a score of 9. You may decide which attribute points to shift. Afflictions incurred after play begins can lower your attributes below this floor.</p>\n<p>If your PC is killed, it will reincarnate eventually, but it will likely be at a place far distant from the campaign. Such new incarnations are unlikely to ever be met again, and may not even remember anything particularly compelling about their most recent past life.</p>\n<p><strong>Level 1: </strong>Pick any skill as a bonus skill reflecting your past memories. You may reroll a failed skill check in this skill once per day. You have extremely sharp senses, gaining Notice as a bonus skill and being able to see clearly in anything short of complete darkness.</p>\n<p><strong>Level 2: </strong>Pick a mental attribute; gain +1 to your ability modifier in it, up to a maximum of +3 as you draw on past memories. Pick any skill as an additional bonus skill.</p>",
+    "ownedLevel": 1
+  },
+  "_key": "!items!Y2HQ9vZ2CKyvZQmv",
+  "folder": "qz0AIQTCBhZxClN2"
+}

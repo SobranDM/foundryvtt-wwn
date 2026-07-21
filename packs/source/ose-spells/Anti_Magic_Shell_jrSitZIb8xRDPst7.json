@@ -1,0 +1,26 @@
+{
+  "_id": "jrSitZIb8xRDPst7",
+  "name": "Anti-Magic Shell",
+  "permission": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  },
+  "type": "spell",
+  "data": {
+    "lvl": 6,
+    "class": "Mage",
+    "duration": "12 turns",
+    "range": "Caster",
+    "roll": "",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>An anti-magic barrier is created around the caster.</p>\n<p><strong>▶ Blocks magic:</strong> No spells or spell effects can pass through this barrier, whether from inside or outside.</p>\n<p><strong>▶ Dismissing:</strong> The caster may end this spell at any time before the duration has expired.</p>",
+    "prepared": true,
+    "cast": 0,
+    "save": ""
+  },
+  "flags": {
+    "cf": null
+  },
+  "img": "systems/wwn/assets/default/spell.png",
+  "effects": [],
+  "_key": "!items!jrSitZIb8xRDPst7"
+}
