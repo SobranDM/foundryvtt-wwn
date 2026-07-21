@@ -1,0 +1,20 @@
+<form class="save-dialog flexcol">
+  <h3>Selected Token Saves</h3>
+  <div class="form-group flexrow save-dialog-header">
+    <label>Roll Modifier</label>
+    <input class="save-dialog-global-modifier" type="number" name="globalModifier" value="0" />
+  </div>
+
+  <div class="form-group save-dialog-body">
+    <h3>Individual Save Modifiers</h3>
+    <p>These modifiers replace the roll modifier above.</p>
+    <div class="token-modifiers">
+      {{#each tokens}}
+      <div class="form-group flexrow">
+        <label>{{name}}</label>
+        <input type="number" name="modifier-{{id}}" value="" placeholder="Override" />
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</form>

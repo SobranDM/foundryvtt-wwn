@@ -1,0 +1,59 @@
+<div class="wwn chat-message">
+  <div class="wwn chat-block">
+    <div class="save-header">
+      {{saveType}} Saves
+      <div class="save-actions">
+        {{#if hasSuccessfulSaves}}
+        <button class="select-tokens" data-action="select-successful">
+          <i class="fas fa-check-circle"></i> Select Successful
+        </button>
+        {{/if}}
+        {{#if hasFailedSaves}}
+        <button class="select-tokens" data-action="select-failed">
+          <i class="fas fa-times-circle"></i> Select Failed
+        </button>
+        {{/if}}
+      </div>
+    </div>
+
+    {{#if hasSuccessfulSaves}}
+    <div class="save-group">
+      <div class="save-group-header">Successful Saves</div>
+      <ul class="save-list">
+        {{#each results}}
+        {{#if isSuccess}}
+        <li class="save-item" data-token-id="{{tokenId}}">
+          <span class="token-name">{{name}}</span>
+          <span class="roll-details">({{roll.total}}{{#if modifier}}{{#if (gt modifier 0)}}+{{/if}}{{modifier}}{{/if}}
+            vs {{target}})</span>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if hasFailedSaves}}
+    <div class="save-group">
+      <div class="save-group-header">Failed Saves</div>
+      <ul class="save-list">
+        {{#each results}}
+        {{#if isFailure}}
+        <li class="save-item" data-token-id="{{tokenId}}">
+          <span class="token-name">{{name}}</span>
+          <span class="roll-details">({{roll.total}}{{#if modifier}}{{#if (gt modifier 0)}}+{{/if}}{{modifier}}{{/if}}
+            vs {{target}})</span>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#each results}}
+    <div class="save-roll" style="display: none;">
+      {{{rollWWN}}}
+    </div>
+    {{/each}}
+  </div>
+</div>

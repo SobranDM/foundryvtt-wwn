@@ -1,76 +1,89 @@
-/**
- * Party XP dialog using DialogV2 (v13-only).
- */
-import { WwnDialog } from "./wwn-dialog.js";
+export class WwnPartyXP extends FormApplication {
 
-function getPartyXPData() {
-  const actors = game.actors.filter((e) => e.type === "character" && e.flags.wwn?.party === true);
-  return {
-    actors,
-    config: CONFIG.WWN,
-    user: game.user,
-    settings: game.settings,
-  };
-}
+  static get defaultOptions() {
+    return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ["wwn", "dialog", "party-xp"],
+      template: "systems/wwn/templates/apps/party-xp.html",
+      width: 280,
+      height: 400,
+      resizable: false,
+    });
+  }
 
-function calculateShare(dialogEl) {
-  const actors = game.actors.filter((e) => e.type === "character" && e.flags.wwn?.party === true);
-  const totalInput = dialogEl?.querySelector?.('input[name="total"]');
-  const toDeal = totalInput?.value;
-  const shares = actors.length;
-  const value = parseFloat(toDeal) / shares / 100;
-  if (!value || !Number.isFinite(value)) return;
-  actors.forEach((a) => {
-    const row = dialogEl?.querySelector(`div[data-actor-id='${a.id}'] input`);
-    if (row) row.value = Math.floor(a.system.details.xp.share * value);
-  });
-}
+  /* -------------------------------------------- */
+  /**
+   * Add the Entity name into the window title
+   * @type {String}
+   */
+  get title() {
+    return game.i18n.localize("WWN.dialog.xp.deal");
+  }
 
-function dealXP(dialogEl) {
-  dialogEl?.querySelectorAll?.(".actor").forEach((row) => {
-    const input = row.querySelector("input");
-    const value = input?.value;
-    const id = row.dataset?.actorId;
-    const actor = id ? game.actors.get(id) : null;
-    if (value && actor) actor.getExperience(Math.floor(parseInt(value, 10)));
-  });
-}
+  /* -------------------------------------------- */
+  /**
+   * Construct and return the data object used to render the HTML template for this form application.
+   * @return {Object}
+   */
+  getData() {
+    const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+    let data = {
+      actors: actors,
+      data: this.object,
+      config: CONFIG.WWN,
+      user: game.user,
+      settings: settings
+    };
+    return data;
+  }
 
-/**
- * Open the Deal XP dialog for party characters.
- */
-export async function openPartyXPDialog() {
-  const data = getPartyXPData();
-  const content = await renderTemplate("systems/wwn/templates/apps/party-xp.hbs", data);
+  _onDrop(event) {
+    event.preventDefault();
+    // WIP Drop Item Quantity
+    let data;
+    try {
+      data = JSON.parse(event.dataTransfer.getData("text/plain"));
+      if (data.type !== "Item") return;
+    } catch (err) {
+      return false;
+    }
+  }
+  /* -------------------------------------------- */
 
-  await WwnDialog.wait({
-    title: game.i18n.localize("WWN.dialog.xp.deal"),
-    content,
-    position: { width: 280, height: 400 },
-    buttons: [
-      {
-        action: "calculate",
-        label: "Calculate Share",
-        icon: "fa-solid fa-calculator",
-        callback: (_ev, _btn, dialog) => {
-          const root = dialog?.element;
-          const el = root?.length ? root[0] : root;
-          calculateShare(el);
-          return null;
-        },
-      },
-      {
-        action: "deal",
-        label: game.i18n.localize("WWN.dialog.xp.deal"),
-        icon: "fa-solid fa-gift",
-        default: true,
-        callback: (_ev, _btn, dialog) => {
-          const root = dialog?.element;
-          const el = root?.length ? root[0] : root;
-          dealXP(el);
-        },
-      },
-      { action: "cancel", label: "Cancel", icon: "fa-solid fa-times" },
-    ],
-  });
+  _calculateShare(ev) {
+    const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+    const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
+    const html = $(this.form);
+    const shares = actors.length;
+    const value = parseFloat(toDeal) / shares / 100;
+    if (value) {
+      actors.forEach(a => {
+        html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.system.details.xp.share * value));
+      })
+    }
+  }
+
+  _dealXP(ev) {
+    const html = $(this.form);
+    const rows = html.find('.actor');
+    rows.each((_, row) => {
+      const qRow = $(row);
+      const value = qRow.find('input').val();
+      const id = qRow.data('actorId');
+      const actor = game.actors.find(e => e.id === id);
+      if (value) {
+        actor.getExperience(Math.floor(parseInt(value)));
+      }
+    })
+  }
+
+  /** @override */
+  activateListeners(html) {
+    super.activateListeners(html);
+    html
+      .find('button[data-action="calculate-share"')
+      .click(this._calculateShare.bind(this));
+    html
+      .find('button[data-action="deal-xp"')
+      .click(this._dealXP.bind(this));
+  }
 }

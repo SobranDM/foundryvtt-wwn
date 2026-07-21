@@ -1,9 +1,6 @@
 /**
  * Perform a system migration for the entire World, applying migrations for Actors, Items, and Compendium packs
  * @returns {Promise}      A Promise which resolves once the migration is completed
- *
- * TypeDataModel (v13): When CONFIG.Actor.dataModels["character"] etc. are registered, Foundry applies
- * schema defaults to existing documents; no extra migration step is required if models use initial/optional fields.
  */
 export const migrateWorld = async function () {
   ui.notifications.info(`Applying WWN System Migration for version ${game.system.version}. Please be patient and do not close your game or shut down your server.`, { permanent: true });

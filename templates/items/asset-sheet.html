@@ -1,0 +1,190 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="info">Statistics</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="flexrow tab" data-group="primary" data-tab="info">
+      <div class="stats">
+        <div class="form-group">
+          <label title="{{localize 'WWN.HealthLong'}}">{{localize 'WWN.HealthShort'}}</i></label>
+          <div class="form-fields">
+            <input type="number" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"
+              title="{{localize 'WWN.Health'}}" />
+            /
+            <input type="number" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"
+              title="{{localize 'WWN.HealthMax'}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.rating'}}</i></label>
+          <div class="form-fields">
+            <input type="number" name="system.rating" value="{{system.rating}}" data-dtype="Number" min="1" max="8" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.location'}}</i></label>
+          <div class="form-fields">
+            <input type="text" name="system.location" value="{{system.location}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.asset.cost'}}</i></label>
+          <div class="form-fields">
+            <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.asset.type'}}</label>
+          <div class="form-fields">
+            <select name="system.assetType">
+              {{selectOptions config.assetTypes selected=system.assetType localize=true}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize 'WWN.skills.magic'}}</label>
+          <div class=form-fields>
+            <select name="system.magic">
+              {{selectOptions config.assetMagic selected=system.magic localize=true}}
+            </select>
+          </div>
+        </div>
+        <!--income -->
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.income'}}</label>
+          <div class=form-fields>
+            <input type="number" name="system.income" value="{{system.income}}" data-dtype="Number" />
+          </div>
+        </div>
+
+        <!--maintenance -->
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.maintenance'}}</label>
+          <div class=form-fields>
+            <input type="number" name="system.maintenance" value="{{system.maintenance}}" data-dtype="Number" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.note'}}</i></label>
+          <div class="form-fields">
+            <input type="text" name="system.note" value="{{system.note}}" />
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label>{{localize 'WWN.faction.turnRoll'}}</i></label>
+          <div class="form-fields">
+            <input type="text" name="system.turnRoll" value="{{system.turnRoll}}" />
+          </div>
+        </div>
+      </div>
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.Attack'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.attackDamage" value="{{system.attackDamage}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.faction.attackSource'}}</label>
+            <div class="form-fields">
+              <select class="" name="system.attackSource">
+                {{selectOptions config.assetTypes selected=system.attackSource localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.faction.attackTarget'}}</label>
+            <div class="form-fields">
+              <select class="" name="system.attackTarget">
+                {{selectOptions config.assetTypes selected=system.attackTarget localize=true}}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>{{localize 'WWN.faction.attackSpecial'}}</i></label>
+            <div class="form-fields">
+              <input type="text" name="system.attackSpecial" value="{{system.attackSpecial}}" />
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label>{{localize 'WWN.faction.locationRoll'}}</i></label>
+            <div class="form-fields">
+              <input type="text" name="system.locationRoll" value="{{system.locationRoll}}" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.counter'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.counter" value="{{system.counter}}" data-dtype="String" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.BoIHint'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.baseOfInfluence" value="{{system.baseOfInfluence}}" {{checked
+                system.baseOfInfluence}} data-dtype="Boolean" title="{{localize 'WWN.items.BoIHint'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.subtle'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.subtle" value="{{system.subtle}}" {{checked system.subtle}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.stealthed'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.stealthed" value="{{system.stealthed}}" {{checked system.stealthed}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.asset.special'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.special" value="{{system.special}}" {{checked system.special}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>{{localize 'WWN.faction.unusable'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.unusable" value="{{system.unusable}}" {{checked system.unusable}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Description Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="description">
+      {{> "systems/wwn/templates/items/partials/description.html"}}
+    </div>
+
+  </section>
+</form>

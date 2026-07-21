@@ -1,0 +1,49 @@
+<script>
+  $(document).ready(function(){
+      $("#targetFaction").change(function(){
+          $(this).find("option:selected").each(function(){
+              var optionValue = $(this).attr("value");
+              if(optionValue){
+                  $(".sel").not("." + optionValue).hide();
+                  $("." + optionValue).show();
+              } else{
+                  $(".sel").hide();
+              }
+          });
+      }).change();
+  });
+  </script>
+  <form class="">
+    <div class="flex flex-col gap-2">
+      <div>
+        {{localize 'TYPES.Actor.faction'}} {{localize 'WWN.items.RollTarget'}}:
+        <select id="targetFaction" name="targetFaction"
+          class="">
+          <option value=""></option>
+          {{#each targetFactionsIdNames}}
+          <option value="{{@key}}">{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+      {{#each targets}}
+      <div class="sel {{@key}}">
+        {{localize 'TYPES.Actor.faction'}} {{ this.[0].name }} {{localize 'WWN.items.RollTarget'}}s:
+        <select name="asset-{{@key}}"
+          class="">
+          <option value=""></option>
+          {{#each this.[1] as |faitems|}}
+          <option value="{{faitems.id}}">{{faitems.name}} 
+            {{#if faitems.system.location}}
+                ({{faitems.system.location}})
+            {{/if}}
+            {{#if faitems.system.stealthed}}
+                [{{localize 'WWN.faction.stealth'}}]
+            {{/if}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+      {{/each}}
+    </div>
+  </form>
+  

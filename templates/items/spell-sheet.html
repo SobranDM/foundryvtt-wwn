@@ -1,0 +1,72 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{name}}" placeholder="Name" />
+      </h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="info">Statistics</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="flexrow card-body tab" data-group="primary" data-tab="info">
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Level'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.lvl" value="{{system.lvl}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Class'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.class" value="{{system.class}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Duration'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.duration" value="{{system.duration}}" data-dtype="String" />
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Range'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.range" value="{{system.range}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.items.Roll'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.roll" value="{{system.roll}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize 'WWN.spells.Save'}}</label>
+            <div class="form-fields">
+              <select name="system.save">
+                <option value=""></option>
+                {{selectOptions config.saves selected=system.save localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Description Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="description">
+      {{> "systems/wwn/templates/items/partials/description.html"}}
+    </div>
+
+  </section>
+</form>

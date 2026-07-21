@@ -1,7 +1,7 @@
 
-import { WwnItem } from "./entity.js";
-
 /**
- * Legacy alias; prefer WwnItem (extends foundry.documents.Item).
+ * Override and extend the basic :class:`Item` implementation
  */
-export class WwnBaseItem extends WwnItem {}
+export class WwnBaseItem extends Item {
+
+}

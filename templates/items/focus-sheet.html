@@ -1,0 +1,40 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+        <div class="details">
+          <div class="form-group">
+            <label><b>{{localize 'WWN.details.level'}}</b></label>
+            <div class="form-fields">
+              <input type="text" name="system.ownedLevel" value="{{system.ownedLevel}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="description">
+      {{> "systems/wwn/templates/items/partials/description.html"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+    </div>
+
+  </section>
+</form>

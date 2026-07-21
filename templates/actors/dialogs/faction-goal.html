@@ -1,0 +1,27 @@
+<form class="">
+  <div class="flex flex-col">
+    <div class="flex flexrow gap-2">
+      If setting a manual goal, simply change the fields. Note the rules on abandoning old goal (lose turn/income) vs completing prior goal (gain XP).
+  </div>
+    <div class="flex flexrow gap-2">
+      <div class="flex flex-col">
+        <label for="goal">Set New Goal:</label>
+        <select name="goal">
+          {{#each goalArray }}
+          <option value="{{this.name}}">{{this.name}}: {{this.desc}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="flex flexrow gap-2">
+      <div class="flex flex-col">
+        <label for="goalType">Goal Changing Reason:</label>
+        <select name="goalType">
+          <option value="new" selected>New Goal: First time or completed goal</option>
+          <option value="abandon">Abandoning old goal (no income or turn)</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</form>

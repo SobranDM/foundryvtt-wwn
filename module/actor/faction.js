@@ -1,5 +1,3 @@
-import { WwnDialog } from "../dialog/wwn-dialog.js";
-
 export class WwnFaction extends Actor {
   prepareData() {
     super.prepareData();
@@ -14,15 +12,10 @@ export class WwnFaction extends Actor {
 
   }
 
-  _preCreate(data, options, user) {
-    super._preCreate(data, options, user);
-    const dm = CONST.TOKEN_DISPLAY_MODES;
-    this.updateSource({
-      "prototypeToken.actorLink": true,
-      "prototypeToken.displayName": dm.HOVER ?? 3,
-      "prototypeToken.displayBars": dm.OWNER_HOVER ?? 2,
-      "prototypeToken.bar1": { attribute: "system.health" },
-      img: "systems/wwn/assets/default/faction.png"
+  async _onCreate() {
+    await this.actor.update({
+      "token.actorLink": true,
+      "img" : "systems/wwn/assets/default/faction.png"
     });
   }
 
@@ -60,8 +53,18 @@ export class WwnFaction extends Actor {
       ui.notifications?.error("Cannot find journal");
       return;
     }
-    const title = game.i18n.format("WWN.faction.setHomeworld", { name: journal.name });
-    const performHome = await WwnDialog.confirm({ title, content: title });
+    const performHome = await new Promise((resolve) => {
+      Dialog.confirm({
+        title: game.i18n.format("WWN.faction.setHomeworld", {
+          name: journal.name,
+        }),
+        yes: () => resolve(true),
+        no: () => resolve(false),
+        content: game.i18n.format("WWN.faction.setHomeworld", {
+          name: journal.name,
+        }),
+      });
+    });
     if (!performHome) {
       return;
     }

@@ -34,13 +34,6 @@ Everything you need to play Worlds Without Number in Foundry VTT.
 - Compendium includes weapons, armor, adventuring gear, arts, spells, and foci. Deluxe edition content is not included.
   - Thanks to Gavin over at Necrotic Gnome, the Compendium now includes OSE spells and (some) monsters.
 
-## Development / Architecture
-
-- **Document classes**: A single `WwnActor` and `WwnItem` are registered; type-specific logic lives in `module/actor/types/*.mjs`, `module/item/chat-cards.mjs`, `module/item/rolls.mjs`, and `module/item/assets.mjs`. See `docs/ENTITY_BEHAVIOR.md` for method responsibilities.
-- **Sheets**: Actor and item sheets live under `module/actor/` and `module/item/`. The vehicle sheet has a DocumentSheetV2 (PARTS) variant in `module/actor/vehicle-sheet-v2.js` when Foundry’s AppV2 API is available; it uses Handlebars (`.hbs`) templates.
-- **Dialogs**: System dialogs use `module/dialog/wwn-dialog.js` (WwnDialog.confirm / WwnDialog.wait) with DialogV2 where available; legacy Dialog fallback when not.
-- **Data models**: Placeholder and example for TypeDataModel migration are in `module/data/`; see `module/data/README.md`.
-
 ## License
 
 This Foundry VTT system requires the Worlds Without Number rules, available at DrivethruRPG.

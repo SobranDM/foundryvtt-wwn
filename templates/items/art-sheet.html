@@ -1,0 +1,70 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" />
+    <div class="header-col">
+      <div class="flexrow">
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="info">Statistics</a>
+    <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="flexrow card-body tab" data-group="primary" data-tab="info">
+      <div class="flexrow item-footer">
+        <div class="stats">
+          <div class="form-group">
+            <label>{{localize 'WWN.items.Roll'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.roll" value="{{system.roll}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title={{localize 'WWN.spells.ArtSourceHint' }}>{{localize 'WWN.spells.ArtSource'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.source" value="{{system.source}}"
+                placeholder="{{localize 'WWN.spells.HighMage'}}" />
+            </div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="form-group">
+            <label title="{{localize 'WWN.spells.TimeHint'}}">{{localize
+              'WWN.spells.Commit'}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.time" value="{{system.time}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title={{localize 'WWN.spells.Save' }}>{{localize 'WWN.spells.Save'}}</label>
+            <div class=form-fields>
+              <select name="system.save">
+                <option value=""></option>
+                {{selectOptions config.saves selected=system.save localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Description Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="description">
+      {{> "systems/wwn/templates/items/partials/description.html"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/wwn/templates/items/partials/item-effects.html"}}
+    </div>
+
+  </section>
+</form>

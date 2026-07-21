@@ -1,13 +1,3 @@
-/** System ID for sheet registration and paths. */
-export const WWN_SYSTEM_ID = "wwn";
-
-/**
- * Resolve a path relative to the system root to a Foundry data path.
- * @param {string} path - Path relative to systems/wwn/ (e.g. "templates/actors/character/header.hbs").
- * @returns {string} Full path (e.g. "systems/wwn/templates/actors/character/header.hbs").
- */
-export const systemPath = (path) => `systems/${WWN_SYSTEM_ID}/${path}`;
-
 export const WWN = {
   scores: {
     str: "WWN.scores.str.short",
@@ -67,17 +57,6 @@ export const WWN = {
     whenReadied: "WWN.items.WeightlessReadied",
     whenStowed: "WWN.items.WeightlessStowed"
   },
-  ranges: {
-    abreast: "WWN.items.weapon.abreast",
-    near: "WWN.items.weapon.near",
-    far: "WWN.items.weapon.far",
-    sighted: "WWN.items.weapon.sighted"
-  },
-  sizes: {
-    small: "WWN.ships.size.small",
-    medium: "WWN.ships.size.medium", 
-    large: "WWN.ships.size.large"
-  }, 
   armor: {
     unarmored: "WWN.armor.unarmored",
     light: "WWN.armor.light",

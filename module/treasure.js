@@ -1,33 +1,32 @@
 export const augmentTable = (table, html, data) => {
-  const el = html instanceof jQuery ? html[0] : html;
-  if (!el) return;
-
-  const head = el.querySelector(".sheet-header");
+  // Treasure Toggle
+  let head = html.find(".sheet-header");
   const flag = table.object.getFlag("wwn", "treasure");
   const treasure = flag
     ? "<div class='toggle-treasure active'></div>"
     : "<div class='toggle-treasure'></div>";
-  if (head) head.insertAdjacentHTML("beforeend", treasure);
+  head.append(treasure);
 
-  el.querySelectorAll(".toggle-treasure").forEach((node) => {
-    node.addEventListener("click", () => {
-      const isTreasure = table.object.getFlag("wwn", "treasure");
-      table.object.setFlag("wwn", "treasure", !isTreasure);
-    });
+  html.find(".toggle-treasure").click((ev) => {
+    let isTreasure = table.object.getFlag("wwn", "treasure");
+    table.object.setFlag("wwn", "treasure", !isTreasure);
   });
 
+  // Treasure table formatting
   if (flag) {
-    el.querySelectorAll(".result-range").forEach((n) => n.remove());
-    el.querySelectorAll(".normalize-results").forEach((n) => n.remove());
-    const firstWeight = el.querySelector(".result-weight");
-    if (firstWeight) firstWeight.textContent = "Chance";
-    const roll = `<button class="roll-treasure" type="button"><i class="fas fa-gem"></i> ${game.i18n.localize("WWN.table.treasure.roll")}</button>`;
-    const footerRoll = el.querySelector(".sheet-footer .roll");
-    if (footerRoll) footerRoll.outerHTML = roll;
+    // Remove Interval
+    html.find(".result-range").remove();
+    html.find(".normalize-results").remove();
+
+    html.find(".result-weight").first().text("Chance");
+
+    // Replace Roll button
+    const roll = `<button class="roll-treasure" type="button"><i class="fas fa-gem"></i> ${game.i18n.localize('WWN.table.treasure.roll')}</button>`;
+    html.find(".sheet-footer .roll").replaceWith(roll);
   }
 
-  el.querySelectorAll(".roll-treasure").forEach((node) => {
-    node.addEventListener("click", (ev) => rollTreasure(table.object, { event: ev }));
+  html.find(".roll-treasure").click((ev) => {
+    rollTreasure(table.object, { event: ev });
   });
 };
 
@@ -70,18 +69,21 @@ async function rollTreasure(table, options = {}) {
     table: table,
   };
 
+  // Animation
   if (options.event) {
-    const parent = options.event.currentTarget?.parentElement;
-    const prev = parent?.previousElementSibling;
-    const results = prev?.querySelectorAll?.(".table-result") ?? [];
-    results.forEach((item) => {
+    let results = $(options.event.currentTarget.parentElement)
+      .prev()
+      .find(".table-result");
+    results.each((_, item) => {
       item.classList.remove("active");
-      if (data.treasure[item.dataset?.resultId]) item.classList.add("active");
+      if (data.treasure[item.dataset.resultId]) {
+        item.classList.add("active");
+      }
     });
   }
 
   let html = await renderTemplate(
-    "systems/wwn/templates/chat/roll-treasure.hbs",
+    "systems/wwn/templates/chat/roll-treasure.html",
     templateData
   );
 

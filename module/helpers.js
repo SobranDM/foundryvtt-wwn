@@ -28,10 +28,6 @@ export const registerHelpers = async function () {
     return !a && !b;
   });
 
-  Handlebars.registerHelper("contains", function (arr, val) {
-    return Array.isArray(arr) && arr.includes(val);
-  });
-
   Handlebars.registerHelper("mod", function (val) {
     if (val > 0) {
       return `+${val}`;

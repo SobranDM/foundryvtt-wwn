@@ -1,30 +1,39 @@
-import { openPartySheet } from "./dialog/party-sheet.js";
+import { WwnPartySheet } from "./dialog/party-sheet.js";
 
 export const addControl = (object, html) => {
-  const el = html instanceof jQuery ? html[0] : html;
-  if (!el) return;
+  // Convert html to jQuery if it's not already
+  const $html = html instanceof jQuery ? html : $(html);
 
-  const control = document.createElement("button");
-  control.className = "wwn-party-sheet";
-  control.type = "button";
-  control.title = game.i18n.localize("WWN.dialog.partysheet");
-  control.innerHTML = "<i class='fas fa-users'></i>";
-  control.addEventListener("click", () => showPartySheet(object));
+  let control = `<button class='wwn-party-sheet' type="button" title='${game.i18n.localize('WWN.dialog.partysheet')}'><i class='fas fa-users'></i></button>`;
 
-  const toggleSearch = el.querySelector(".toggle-search-mode");
-  if (toggleSearch) {
-    toggleSearch.before(control);
+  // Try to find the toggle-search-mode element first since we know it exists
+  const toggleSearch = $html.find(".toggle-search-mode");
+  if (toggleSearch.length) {
+    toggleSearch.before($(control));
   } else {
-    const header = el.querySelector("#actors header");
-    if (header) header.prepend(control);
+    // Fallback to inserting at the start of the header
+    $html.find("#actors").find("header").prepend($(control));
+  }
+
+  $html.find('.wwn-party-sheet').click(ev => {
+    showPartySheet(object);
+  });
+}
+
+export const showPartySheet = (object) => {
+  event.preventDefault();
+  new WwnPartySheet(object, {
+    top: window.screen.height / 2 - 180,
+    left: window.screen.width / 2 - 140,
+  }).render(true);
+}
+
+export const update = (actor, data) => {
+  if (actor.getFlag('wwn', 'party')) {
+    Object.values(ui.windows).forEach(w => {
+      if (w instanceof WwnPartySheet) {
+        w.render(true);
+      }
+    })
   }
 }
-
-export const showPartySheet = () => {
-  openPartySheet();
-}
-
-/**
- * Called when an actor is updated. Party sheet is now dialog-based; no persistent sheet to refresh.
- */
-export const update = (_actor, _data) => {}

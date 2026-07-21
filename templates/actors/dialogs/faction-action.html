@@ -1,0 +1,18 @@
+<form class="">
+  <div class="flex flex-col">
+    <div class="flex flexrow gap-2">
+      {{localize "WWN.faction.action-desc"}}<br><br>
+    </div>
+    <div class="flex flexrow gap-2">
+      <div class="flex flex-col">
+        <label for="action">Action:</label>
+        <select name="action"
+          class="">
+          {{#each actions }}
+          <option value="{{this.name}}">{{this.name}}: {{trim this.desc 50}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </div>
+</form>
