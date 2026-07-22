@@ -1,10 +1,6 @@
 {
   "_id": "hyMSzrFzVObqBWF4",
   "name": "Magical Armor +2",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "loot",
@@ -263,5 +259,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!hyMSzrFzVObqBWF4",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

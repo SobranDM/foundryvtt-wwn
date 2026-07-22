@@ -48,7 +48,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="info">Statistics</a>
     <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
-    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.category.effects"}}</a>
   </nav>
 
   <section class="sheet-body">
@@ -154,7 +154,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label title={{localize 'WWN.items.Charges' }}>{{localize 'WWN.items.Charges'}}</label>
+            <label title="{{localize 'WWN.Weapon.Magazine'}}">{{localize 'WWN.Weapon.Magazine'}}</label>
             <div class="form-fields">
               <input type="number" name="system.charges.value" value="{{system.charges.value}}" data-dtype="Number"
                 title="{{localize 'WWN.items.CurrCharges'}}" />
@@ -163,12 +163,30 @@
             </div>
           </div>
           <div class="form-group">
-            <label title="{{localize 'WWN.items.DecrementOnAttackHint'}}">{{localize
-              'WWN.items.DecrementOnAttack'}}</label>
+            <label>{{localize "WWN.Weapon.AmmoMode"}}</label>
             <div class="form-fields">
-              <input type="checkbox" name="system.charges.decrementOnAttack"
-                value="{{system.charges.decrementOnAttack}}" {{checked system.charges.decrementOnAttack}}
-                data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.DecrementOnAttackHint'}}" />
+              <select name="system.ammoMode">
+                {{selectOptions config.ammoModes selected=system.ammoMode localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Weapon.Ammo"}}</label>
+            <div class="form-fields">
+              {{#if ammoChoices}}
+              <select name="system.ammoId">
+                {{selectOptions ammoChoices selected=system.ammoId blank=""}}
+              </select>
+              {{else}}
+              <input type="hidden" name="system.ammoId" value="{{system.ammoId}}" />
+              {{/if}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Weapon.AmmoFallback"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.ammoFallback" value="{{system.ammoFallback}}" data-dtype="String"
+                title="{{localize 'WWN.Weapon.AmmoFallbackHint'}}" />
             </div>
           </div>
           <div class="form-group">
@@ -177,13 +195,6 @@
               <select name="system.weightless">
                 {{selectOptions config.weightless selected=system.weightless}}
               </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Ammo</label>
-            <div class="form-fields">
-              <input type="text" name="system.ammo" value="{{system.ammo}}" data-dtype="String"
-                title="Name of the item used as ammo for this weapon." />
             </div>
           </div>
         </div>

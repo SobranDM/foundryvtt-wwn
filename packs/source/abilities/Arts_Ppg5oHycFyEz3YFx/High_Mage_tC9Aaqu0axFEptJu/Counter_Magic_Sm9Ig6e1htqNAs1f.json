@@ -1,8 +1,8 @@
 {
   "_id": "Sm9Ig6e1htqNAs1f",
   "name": "Counter Magic",
-  "type": "art",
-  "img": "systems/wwn/assets/default/art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
   "effects": [],
   "folder": "tC9Aaqu0axFEptJu",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort for the day as an Instant action when a visible enemy mage casts a spell. Both of you make opposed Int/Magic or Cha/Magic skill checks; if you win, their spell fizzles and is wasted. This art only works on actual spellcasters and not creatures that merely activate magical powers. You can use this art no more than once per round.</p>",
-    "save": "",
     "source": "High Mage",
-    "effort": 0,
-    "time": "Day",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

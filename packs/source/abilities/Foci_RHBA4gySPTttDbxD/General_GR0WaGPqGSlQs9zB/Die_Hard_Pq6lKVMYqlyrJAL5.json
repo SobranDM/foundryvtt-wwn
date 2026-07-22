@@ -1,18 +1,58 @@
 {
   "_id": "Pq6lKVMYqlyrJAL5",
   "name": "Die Hard",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "HlvWvOqdC5GQhaFd",
+      "type": "base",
+      "name": "Die Hard (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.hitDice.perLevelMod",
+            "type": "add",
+            "value": 2,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!Pq6lKVMYqlyrJAL5.HlvWvOqdC5GQhaFd"
+    }
+  ],
   "system": {
     "description": "<p>Die Hard You are surprisingly hard to kill. You can survive injuries or bear up under stresses that would incapacitate a less determined hero.</p>\n<p><strong>Level 1: </strong>You gain an extra 2 maximum hit points per level. This bonus applies retroactively if you take this Focus after first level. You automatically stabilize if mortally wounded, provided you have not been incinerated, dismembered, or otherwise torn apart.</p>\n<p><strong>Level 2: </strong>The first time each day that you are reduced to zero hit points by an injury, you instead survive with one hit point remaining. This ability can&rsquo;t save you from large-scale, instantly-lethal trauma.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!Pq6lKVMYqlyrJAL5",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

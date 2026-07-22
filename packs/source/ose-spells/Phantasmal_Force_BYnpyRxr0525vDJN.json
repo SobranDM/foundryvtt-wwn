@@ -1,26 +1,49 @@
 {
   "_id": "BYnpyRxr0525vDJN",
   "name": "Phantasmal Force",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "Concentration",
-    "range": "",
-    "roll": "1d4",
-    "description": "<p><strong>Duration: Concentration</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A visual illusion of the caster&rsquo;s choosing manifests in a 20&rsquo; cube area. Three types of illusions may be created:</p>\n<p><strong>1. An illusionary monster:</strong> That can be directed to attack. The monster has an Armour Class of 10 and will vanish if hit in combat.</p>\n<p><strong>2. An illusionary attack:</strong> For example, an avalanche, a falling ceiling, a magic missile, etc. Targets who make a Mental save&nbsp;are unaffected.</p>\n<p><strong>3. A scene:</strong> Either changing the appearance of the affected area or creating the appearance of something new. The scene disappears if touched.</p>\n<p><strong>Stipulations:</strong> The following apply:</p>\n<p><strong>▶ Concentration:</strong> Is required to maintain the illusion. If the caster moves or loses concentration, the spell ends.</p>\n<p><strong>▶ Illusionary monsters or attacks:</strong> May appear to be harmful but no real damage is ever inflicted. A character who appears to die actually falls unconscious, a character turned to stone will actually be paralysed, and so on. Such effects last for 1d4 turns.</p>\n<p><strong>▶ Illusions from imagination:</strong> If the illusion is of something the caster has not personally seen, the referee should grant targets a bonus to any applicable saving throws.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!BYnpyRxr0525vDJN"
+  "_key": "!items!BYnpyRxr0525vDJN",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Concentration</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A visual illusion of the caster&rsquo;s choosing manifests in a 20&rsquo; cube area. Three types of illusions may be created:</p>\n<p><strong>1. An illusionary monster:</strong> That can be directed to attack. The monster has an Armour Class of 10 and will vanish if hit in combat.</p>\n<p><strong>2. An illusionary attack:</strong> For example, an avalanche, a falling ceiling, a magic missile, etc. Targets who make a Mental save&nbsp;are unaffected.</p>\n<p><strong>3. A scene:</strong> Either changing the appearance of the affected area or creating the appearance of something new. The scene disappears if touched.</p>\n<p><strong>Stipulations:</strong> The following apply:</p>\n<p><strong>▶ Concentration:</strong> Is required to maintain the illusion. If the caster moves or loses concentration, the spell ends.</p>\n<p><strong>▶ Illusionary monsters or attacks:</strong> May appear to be harmful but no real damage is ever inflicted. A character who appears to die actually falls unconscious, a character turned to stone will actually be paralysed, and so on. Such effects last for 1d4 turns.</p>\n<p><strong>▶ Illusions from imagination:</strong> If the illusion is of something the caster has not personally seen, the referee should grant targets a bonus to any applicable saving throws.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "1d4",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": "Concentration"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>This potion is meant to be applied to a restrained, willing, or helpless sentient target. The user must envision a specific query before anointing the target with the potion. The subject may make a Mental saving throw to resist; on a failure, they tell the user a truthful, undeceptive answer to their question in no more than five sentences. On a success, the user&rsquo;s psychic impression has tainted the elixir, and the target will instead instinctively give the answer that the user thinks is most likely or plausible in the GM&rsquo;s estimation. The user cannot discern the result of the save except by their own good judgment of the answer.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

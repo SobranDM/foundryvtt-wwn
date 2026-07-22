@@ -1,15 +1,11 @@
 {
   "_id": "B4VfGl4Ib6b7gU19",
   "name": "Psychic Conversion",
-  "type": "art",
-  "img": "systems/wwn/assets/default/art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
   "effects": [],
   "folder": "tC9Aaqu0axFEptJu",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.B4VfGl4Ib6b7gU19"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!B4VfGl4Ib6b7gU19",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Once per day as an On Turn action, expend one casting slot to remove one point of accrued&nbsp;System Strain and heal 2 hit points per level.</p>",
-    "save": "",
     "source": "High Mage",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

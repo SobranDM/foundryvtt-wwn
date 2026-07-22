@@ -37,15 +37,15 @@
                     <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
                         {{ localize "WWN.ArmorClassShort" }}</h4>
                     <div class="attribute-value">
-                        <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number"
-                            placeholder="10" data-dtype="Number" />
+                        <input name="system.combat.acManual.melee" type="number" value="{{system.combat.acManual.melee}}"
+                            data-dtype="Number" placeholder="10" />
                     </div>
                 </li>
                 <li class="attribute monster-skill-check">
                     <h4 class="attribute-name box-title"><a>{{ localize "WWN.skill" }}</a>
                     </h4>
                     <div class="attribute-value">
-                        <input name="system.details.skill" type="number" value="{{system.details.skill}}" placeholder="0"
+                        <input name="system.skill" type="number" value="{{system.skill}}" placeholder="0"
                             data-dtype="Number" />
                     </div>
                 </li>
@@ -54,8 +54,8 @@
                         {{ localize "WWN.movement.monsterShort" }}
                     </h4>
                     <div class="attribute-value flexrow">
-                        <input name="system.movement.base" type="text" value="{{system.movement.base}}" placeholder="0"
-                            data-dtype="text" />
+                        <input name="system.movement.base.value" type="number" value="{{system.movement.base.value}}"
+                            placeholder="30" data-dtype="Number" />
                     </div>
                 </li>
             </ul>

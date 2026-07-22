@@ -9,132 +9,53 @@
   "effects": [],
   "_key": "!actors!yOeDp9SyvCn4muY9",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 45,
+      "max": 45
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 8,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": true,
-      "perDay": {
-        "value": 0,
-        "max": 5
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "High Mage",
-        "value": 0,
-        "max": 6
-      },
-      "effort2": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 4,
     "details": {
-      "biography": "<p>Elven Sorcerers cast spells and have arts as per a third or fourth level High Mage, while arch-memorists cast as an eighth to tenth level High Mage. Effort is equal to their skill bonus plus two.</p>\n<p><span style=\"color: #191813;\">Shock ignores AC value.</span></p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 0,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 10,
-      "instinct": 0,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.kRkyVb4oBeJNH4xk]{Sorcerers or Other Spellcasters}",
-        "link": ""
-      },
-      "skill": 4
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 45,
-      "max": 45
+    "favorites": [],
+    "notes": "",
+    "combat": {
+      "ab": 8,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
     },
-    "damageBonus": 3
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Elven Sorcerers cast spells and have arts as per a third or fourth level High Mage, while arch-memorists cast as an eighth to tenth level High Mage. Effort is equal to their skill bonus plus two.</p>\n<p><span style=\"color: #191813;\">Shock ignores AC value.</span></p>"
   },
   "ownership": {
     "default": 0

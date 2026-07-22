@@ -1,8 +1,8 @@
 {
   "_id": "elldowQwT47rl13D",
   "name": "Revivifying Breath",
-  "type": "art",
-  "img": "systems/wwn/assets/new/vowed_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
   "effects": [],
   "folder": "aoyWimpThirwSQEk",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "1d6+@level",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort for the day as an On Turn action to heal yourself for 1d6 hit points plus your level. This healing does not increase System Strain. This ability may be used on your turn even when you are at zero hit points, but in such a case it Commits all your remaining Effort for the day. This art can be used only once per scene.</p>",
-    "save": "",
     "source": "Vowed",
-    "effort": 0,
-    "time": "Day",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "1d6+@level",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

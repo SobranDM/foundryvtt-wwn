@@ -1,0 +1,61 @@
+{
+  "_id": "cc3012df7753bc64",
+  "name": "Full High Mage",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFull000002",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cc3012df7753bc64",
+  "system": {
+    "description": "<p>High Mages represent the default spellcaster in most campaigns. Their spells tend to be generalist in nature rather than focusing on particular specific themes, but their arts make them extremely skilled at manipulating and augmenting the magics they use.</p><h3>High Mage Benefits</h3><p>All High Mages gain Magic as a bonus skill, acquiring it at level-0, or level-1 if it was already level-0. Every High Mage is well-educated in the principles of magic as understood by the sorcerers of this world.</p><p>High Mages can prepare and cast High Magic spells, and have a number of arts dedicated to improving their use of these incantations. As usual for spellcasters, they cannot wear bulky clothing or armor while casting or using arts, nor use shields. Mages who have trained to overcome these limits with the Armored Magic Focus have more latitude.</p><p>High Mages conduct extensive experimentation and study as part of their daily activities. Each time they advance a level, they may pick two High Magic spells from the list in this book to add to their repertoire. These spells must be of a level they can cast.</p><p>High Mages also gain arts specific to their tradition. At first level, a full High Mage picks two arts and a partial High Mage picks one. As they gain levels and experience, they&rsquo;ll learn additional arts from the adjacent list. Once picked, an art cannot be changed.</p><h3>Full High Mage Arts and Spells</h3><table><thead><tr><th>Level</th><th>Max Spell Level</th><th>Spells Cast</th><th>Spells Prepared</th><th>Arts Gained</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>3</td><td>Any Two</td></tr><tr><td>2</td><td>1</td><td>1</td><td>3</td><td>Any One</td></tr><tr><td>3</td><td>2</td><td>2</td><td>4</td><td></td></tr><tr><td>4</td><td>2</td><td>2</td><td>5</td><td>Any One</td></tr><tr><td>5</td><td>3</td><td>3</td><td>6</td><td></td></tr><tr><td>6</td><td>3</td><td>3</td><td>7</td><td>Any One</td></tr><tr><td>7</td><td>4</td><td>4</td><td>8</td><td></td></tr><tr><td>8</td><td>4</td><td>4</td><td>9</td><td>Any One</td></tr><tr><td>9</td><td>5</td><td>5</td><td>10</td><td></td></tr><tr><td>10</td><td>5</td><td>6</td><td>12</td><td>Any One</td></tr></tbody></table><h3>Full High Mage</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6-1</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6-2</td><td>+0</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6-3</td><td>+0</td><td></td></tr><tr><td>4</td><td>4d6-4</td><td>+0</td><td></td></tr><tr><td>5</td><td>5d6-5</td><td>+1</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6-6</td><td>+1</td><td></td></tr><tr><td>7</td><td>7d6-7</td><td>+1</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6-8</td><td>+1</td><td></td></tr><tr><td>9</td><td>9d6-9</td><td>+1</td><td></td></tr><tr><td>10</td><td>10d6-10</td><td>+2</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "High Mage Effort",
+      "formula": "1 + @magic + max(@int, @cha)",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": -1
+    },
+    "preparedGrant": {
+      "progression": [
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
+    }
+  }
+}

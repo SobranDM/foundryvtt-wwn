@@ -1,10 +1,6 @@
 {
   "_id": "rQZeiqnlbhXB9831",
   "name": "Magical Armor SA, Great",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -86,5 +82,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!rQZeiqnlbhXB9831",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

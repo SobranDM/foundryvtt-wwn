@@ -1,10 +1,6 @@
 {
   "_id": "kQnfCoh88pzOKPNe",
   "name": "Magical Weapon SA, Great",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -106,5 +102,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!kQnfCoh88pzOKPNe",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

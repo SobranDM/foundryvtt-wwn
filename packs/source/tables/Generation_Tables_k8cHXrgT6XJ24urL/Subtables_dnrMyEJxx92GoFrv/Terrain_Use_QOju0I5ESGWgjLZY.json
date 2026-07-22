@@ -122,12 +122,12 @@
   "displayRoll": true,
   "folder": "dnrMyEJxx92GoFrv",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {}
   },
-  "_key": "!tables!QOju0I5ESGWgjLZY"
+  "_key": "!tables!QOju0I5ESGWgjLZY",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Exert",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/exert.png",
+  "img": "systems/wwn/assets/icons/skills/exert.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "con",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "exert"
   },
   "_stats": {
     "systemId": "wwn",

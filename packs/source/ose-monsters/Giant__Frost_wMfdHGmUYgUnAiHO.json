@@ -7,59 +7,55 @@
       "_id": "9KqYFzOUpS7JoXB4",
       "name": "Gigantic Weapon",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "4d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "6",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "4d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 6,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        },
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!wMfdHGmUYgUnAiHO.9KqYFzOUpS7JoXB4"
     },
@@ -67,155 +63,175 @@
       "_id": "AW3J2USvHgLSSB1D",
       "name": "Boulder",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "3d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": false,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 200,
           "medium": 0,
           "long": 200
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "3d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": true,
-        "melee": false,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        },
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!wMfdHGmUYgUnAiHO.AW3J2USvHgLSSB1D"
     },
     {
       "_id": "LEcZuQsd2G5CTw3C",
       "name": "Cold Immunity",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Unharmed by cold-based attacks.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!wMfdHGmUYgUnAiHO.LEcZuQsd2G5CTw3C"
     },
     {
       "_id": "LWHaWRfuyFXbRmIW",
       "name": "Castle",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>High upon snowy mountains.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!wMfdHGmUYgUnAiHO.LWHaWRfuyFXbRmIW"
     },
     {
       "_id": "DD694ZFgZPiPXloa",
       "name": "Guardians",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>20% chance of [[/r 3d6]] polar bears, [[/r 6d6]] wolves otherwise.</p>",
-        "roll": "1d100",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "1d100",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!wMfdHGmUYgUnAiHO.DD694ZFgZPiPXloa"
     }
@@ -227,126 +243,56 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 46,
+      "max": 46
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 16,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 9,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 120,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "10d8+1",
+    "skill": 4,
     "details": {
-      "biography": "<p>18&rsquo; tall humanoids with pale skin and pale hair (yellow or blue hued). Wear furs or iron armour. Males have long beards.</p>",
       "alignment": "Chaotic",
       "xp": 900,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 3,
+      "instinctTable": null,
       "appearing": {
         "d": "1d2",
         "w": "1d4"
       },
-      "morale": 9,
-      "instinct": 3,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 4
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "10d8+1",
-      "value": 46,
-      "max": 46
-    }
+    "favorites": [
+      "9KqYFzOUpS7JoXB4",
+      "AW3J2USvHgLSSB1D"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 9,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 16,
+        "ranged": 16
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>18&rsquo; tall humanoids with pale skin and pale hair (yellow or blue hued). Wear furs or iron armour. Males have long beards.</p>"
   },
   "prototypeToken": {
     "name": "Frost Giant",

@@ -1,15 +1,11 @@
 {
   "_id": "KGZ01j9mBhJrN48C",
   "name": "Faultless Awareness",
-  "type": "art",
-  "img": "systems/wwn/assets/new/vowed_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
   "effects": [],
   "folder": "aoyWimpThirwSQEk",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.KGZ01j9mBhJrN48C"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!KGZ01j9mBhJrN48C",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Your awareness is such that you cannot be surprised, and will even wake from a sound sleep in time to respond normally to some imminent peril.</p>",
-    "save": "",
     "source": "Vowed",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

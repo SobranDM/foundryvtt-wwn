@@ -12,61 +12,59 @@
       "_id": "aC2sr7d3idwvTaod",
       "name": "Sword, Long",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 800000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 13
-        },
-        "shockTotal": 0,
-        "skill": "stab",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 100,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 100,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!ddQj5WHAFztkfr6t.aC2sr7d3idwvTaod"
     },
@@ -74,37 +72,30 @@
       "_id": "44CVhzsiYAAn5gHx",
       "name": "Plate Armor",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 900000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.HTW8ih7ZUiudz5ls"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Plate armor</strong></em> is an extremely expensive suit of tailored metal pieces that cover both the vitals and the limbs of the wearer.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 17,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 17,
+        "acRanged": 17,
+        "mod": 0,
         "type": "heavy",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 2000,
-        "weight": 2
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 2,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!ddQj5WHAFztkfr6t.44CVhzsiYAAn5gHx"
     },
@@ -112,209 +103,117 @@
       "_id": "38Zs2ILQLA7rFll5",
       "name": "Spear, Heavy",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 1000000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.QIUKOdWt2PQX0UVH"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 15
-        },
-        "shockTotal": 0,
-        "skill": "stab",
-        "score": "str",
         "tags": [
-          {
-            "title": "2H",
-            "value": "2H"
-          }
+          "2H"
         ],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 10,
-        "weight": 2,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 10,
+        "weight": 2,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!ddQj5WHAFztkfr6t.38Zs2ILQLA7rFll5"
     }
   ],
   "effects": [],
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
-    },
-    "ac": {
-      "value": 0,
-      "mod": 0
-    },
-    "aac": {
-      "value": 17,
-      "mod": 0
-    },
-    "thac0": {
+    "hp": {
       "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+      "max": 19
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
+    "strain": {
+      "value": 0
     },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "mounted"
+    "alienation": {
+      "value": 0
     },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
+    "stress": {
+      "value": 0
     },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Outlaws and mercenaries who make a living by raiding settlements and attacking travellers.</p>\n<ul>\n<li><strong>Footmen:</strong>&nbsp;Half the group has: leather armour, shield, sword, shortbow.</li>\n<li><strong>Cavalry:</strong>&nbsp;The other half is mounted on riding horses and has: chainmail, shield, sword.</li>\n<li><strong>Leaders and commanders:&nbsp;</strong>For every 20 brigands, there is a leader (2nd level fighter). For every 40 brigands, there is a commander (4th level fighter). Leaders ride war horses (with barding) and have: plate mail, sword, lance.</li>\n<li><strong>Fortified camps:&nbsp;</strong>Bands commonly combine and live in a camp of 5d6 &times; 10 brigands.</li>\n<li><strong>Camp leaders:</strong>&nbsp;Combined camps are led by a 9th level fighter, plus a 5th level fighter for every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30% chance of a cleric (8th level).</li>\n</ul>",
       "alignment": "Chaotic",
       "xp": 10,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 8,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "1d4*10"
       },
-      "morale": 8,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 2,
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 19,
-      "max": 19
-    }
+    "favorites": [
+      "aC2sr7d3idwvTaod",
+      "38Zs2ILQLA7rFll5"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 17,
+        "ranged": 17
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Outlaws and mercenaries who make a living by raiding settlements and attacking travellers.</p>\n<ul>\n<li><strong>Footmen:</strong>&nbsp;Half the group has: leather armour, shield, sword, shortbow.</li>\n<li><strong>Cavalry:</strong>&nbsp;The other half is mounted on riding horses and has: chainmail, shield, sword.</li>\n<li><strong>Leaders and commanders:&nbsp;</strong>For every 20 brigands, there is a leader (2nd level fighter). For every 40 brigands, there is a commander (4th level fighter). Leaders ride war horses (with barding) and have: plate mail, sword, lance.</li>\n<li><strong>Fortified camps:&nbsp;</strong>Bands commonly combine and live in a camp of 5d6 &times; 10 brigands.</li>\n<li><strong>Camp leaders:</strong>&nbsp;Combined camps are led by a 9th level fighter, plus a 5th level fighter for every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30% chance of a cleric (8th level).</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {

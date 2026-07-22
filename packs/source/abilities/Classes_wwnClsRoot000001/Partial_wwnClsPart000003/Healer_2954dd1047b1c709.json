@@ -1,0 +1,39 @@
+{
+  "_id": "2954dd1047b1c709",
+  "name": "Healer",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2954dd1047b1c709",
+  "system": {
+    "description": "<p>The Healer is a partial Mage class that does not use spells. Instead, its abilities mend wounds, cure illnesses, and sustain allies. <strong>Healer Benefits.</strong> It is taken by an Adventurer with another partial class; a Partial Warrior/Healer might be a grizzled combat medic, a Partial Expert/Healer an erudite physician, and a Partial Necromancer/Healer an adept of life and death. All Healers gain Heal at level-0, or level-1 if already trained. Healers focus on arcane healing abilities that require touch and concentration, work in armor or with a shield, and are subtle. At first level, a Healer gains Healing Touch and one additional ability; choices are permanent.</p><h3>Partial Warrior/Healer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior, +1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Expert/Healer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Expert, +1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table><h3>Partial Mage/Healer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6-1</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6-2</td><td>+0</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6-3</td><td>+0</td><td></td></tr><tr><td>4</td><td>4d6-4</td><td>+0</td><td></td></tr><tr><td>5</td><td>5d6-5</td><td>+1</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6-6</td><td>+1</td><td></td></tr><tr><td>7</td><td>7d6-7</td><td>+1</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6-8</td><td>+1</td><td></td></tr><tr><td>9</td><td>9d6-9</td><td>+1</td><td></td></tr><tr><td>10</td><td>10d6-10</td><td>+2</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Healer Effort",
+      "formula": "max(1, @heal + max(@int, @cha))",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": []
+    }
+  }
+}

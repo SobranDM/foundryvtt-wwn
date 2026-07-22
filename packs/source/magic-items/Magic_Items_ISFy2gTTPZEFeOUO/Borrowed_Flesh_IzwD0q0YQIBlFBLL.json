@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>When found, these potions fill only half their vials. If several drops of blood are let into the fluid by a willing subject, the subject may transfer up to six of their hit points into the elixir, accepting the damage and healing it normally afterwards. The blood droplets congeal and begin growing into a fleshy slurry once activated. A month later the slurry is digested back into its inert, half-full state, but until that point the brew may be poured on a wounded subject to restore as many hit points as were charged into it. The flesh that mends the wounds is of the same kind and texture as the flesh of the donor, though it will assimilate within a few months afterwards.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

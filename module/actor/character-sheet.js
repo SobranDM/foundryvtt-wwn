@@ -2,6 +2,8 @@ import { WwnActorSheet } from "./actor-sheet.js";
 import { WwnCharacterModifiers } from "../dialog/character-modifiers.js";
 import { WwnAdjustCurrency } from "../dialog/adjust-currency.js";
 import { WwnCharacterCreator } from "../dialog/character-creation.js";
+import { preparePowersTabContext } from "../helpers/power-sections.mjs";
+import { maybeShowClassAssignmentDialog } from "../dialog/class-assignment.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -9,6 +11,8 @@ import { WwnCharacterCreator } from "../dialog/character-creation.js";
 export class WwnActorSheetCharacter extends WwnActorSheet {
   constructor(...args) {
     super(...args);
+    /** @type {boolean} */
+    this._wwnClassAssignmentPrompted = false;
   }
 
   /* -------------------------------------------- */
@@ -39,102 +43,55 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
    * @private
    */
   _prepareItems(data) {
-    // Partition items by category
-    let [items, weapons, armors, abilities, spells, arts, foci, skills] =
-      this.actor.items.reduce(
-        (arr, item) => {
-          // Classify items into types
-          if (item.type === "item") arr[0].push(item);
-          else if (item.type === "weapon") arr[1].push(item);
-          else if (item.type === "armor") arr[2].push(item);
-          else if (item.type === "ability") arr[3].push(item);
-          else if (item.type === "spell") arr[4].push(item);
-          else if (item.type === "art") arr[5].push(item);
-          else if (item.type === "focus") arr[6].push(item);
-          else if (item.type === "skill") arr[7].push(item);
-          return arr;
-        },
-        [[], [], [], [], [], [], [], []]
-      );
+    let [items, weapons, armors, skills] = this.actor.items.reduce(
+      (arr, item) => {
+        if (item.type === "item" || item.type === "currency") arr[0].push(item);
+        else if (item.type === "weapon") arr[1].push(item);
+        else if (item.type === "armor") arr[2].push(item);
+        else if (item.type === "skill") arr[3].push(item);
+        return arr;
+      },
+      [[], [], [], []]
+    );
 
-    // Validate and clean up container relationships
-    const containers = items.filter(item => item.system.container.isContainer);
-    const containerIds = new Set(containers.map(item => item.id));
+    const containers = items.filter((item) => item.system.container?.isContainer);
+    const containerIds = new Set(containers.map((item) => item.id));
 
-    // Check all items for invalid containerIds and clear containerId from containers
     const itemsToUpdate = [];
     for (const item of this.actor.items) {
-      // Clear containerId if the container doesn't exist
       if (item.system.containerId && !containerIds.has(item.system.containerId)) {
         itemsToUpdate.push({
           _id: item.id,
-          "system.containerId": ""
+          "system.containerId": "",
         });
       }
-      // Clear containerId from items that are themselves containers
       if (item.system.container?.isContainer && item.system.containerId) {
         itemsToUpdate.push({
           _id: item.id,
-          "system.containerId": ""
+          "system.containerId": "",
         });
       }
     }
 
-    // Update items with invalid containerIds
     if (itemsToUpdate.length > 0) {
       this.actor.updateEmbeddedDocuments("Item", itemsToUpdate);
     }
 
-    // Sort spells by level
-    var sortedSpells = {};
-    var slots = {};
-    for (var i = 0; i < spells.length; i++) {
-      const lvl = spells[i].system.lvl;
-      if (!sortedSpells[lvl]) sortedSpells[lvl] = [];
-      if (!slots[lvl]) slots[lvl] = 0;
-      slots[lvl] += spells[i].system.memorized;
-      sortedSpells[lvl].push(spells[i]);
-    }
+    const primarySkills = skills
+      .filter((skill) => !skill.system.secondary)
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
+    const secondarySkills = skills
+      .filter((skill) => skill.system.secondary)
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
 
-    // Sort each level
-    Object.keys(sortedSpells).forEach((level) => {
-      sortedSpells[level].sort((a, b) => a.name > b.name ? 1 : -1);
-    });
-
-    data.slots = {
-      used: slots,
-    };
-
-    // Sort arts by class
-    let sortedArts = {};
-    for (var i = 0; i < arts.length; i++) {
-      let source = arts[i].system.source;
-      if (!sortedArts[source]) sortedArts[source] = [];
-      sortedArts[source].push(arts[i]);
-    }
-
-    // Sort each class
-    Object.keys(sortedArts).forEach(source => {
-      sortedArts[source].sort((a, b) => a.name > b.name ? 1 : -1);
-    });
-
-    // Divide skills into primary and secondary
-    const primarySkills = skills.filter((skill) => !skill.system.secondary)
-      .sort((a, b) => a.name > b.name ? 1 : -1);
-    const secondarySkills = skills.filter((skill) => skill.system.secondary)
-      .sort((a, b) => a.name > b.name ? 1 : -1);
-
-    // Assign and return
     data.owned = {
-      items: items.sort((a, b) => a.name > b.name ? 1 : -1),
-      armors: armors.sort((a, b) => a.name > b.name ? 1 : -1),
-      abilities: abilities.sort((a, b) => a.name > b.name ? 1 : -1),
-      weapons: weapons.sort((a, b) => a.name > b.name ? 1 : -1),
-      arts: sortedArts,
-      foci: foci.sort((a, b) => a.name > b.name ? 1 : -1),
+      items: items.sort((a, b) => (a.name > b.name ? 1 : -1)),
+      armors: armors.sort((a, b) => (a.name > b.name ? 1 : -1)),
+      weapons: weapons.sort((a, b) => (a.name > b.name ? 1 : -1)),
       skills: [...primarySkills, ...secondarySkills],
-      spells: sortedSpells
     };
+
+    preparePowersTabContext(data, this.actor);
   }
 
   generateScores() {
@@ -153,11 +110,9 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   /**
    * Prepare data for rendering the Actor sheet
-   * The prepared data object contains both the actor data as well as additional sheet options
    */
   async getData() {
     const data = super.getData();
-    // Prepare owned items
     this._prepareItems(data);
 
     data.config.initiative = game.settings.get("wwn", "initiative") != "group";
@@ -169,10 +124,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     data.config.useTrauma = game.settings.get("wwn", "useTrauma");
 
     data.enrichedBiography = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-      this.object.system.details.biography
+      this.object.system.biography ?? ""
     );
     data.enrichedNotes = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-      this.object.system.details.notes
+      this.object.system.details?.notes ?? ""
     );
     return data;
   }
@@ -186,7 +141,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         "systems/wwn/templates/actors/dialogs/lang-create.html",
         templateData
       );
-    //Create Dialog window
     return new Promise((resolve) => {
       new Dialog({
         title: "",
@@ -217,7 +171,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         "systems/wwn/templates/items/entity-create.html",
         templateData
       );
-    //Create Dialog window
     return new Promise((resolve) => {
       new Dialog({
         title: game.i18n.localize("WWN.dialog.createItem"),
@@ -244,21 +197,16 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
   }
 
   _onDropItem(event, dragData) {
-
-    // If the drag originated from outside our sheet, let Foundry handle it
-    if (!event.target.closest('.wwn.sheet.actor')) {
+    if (!event.target.closest(".wwn.sheet.actor")) {
       super._onDropItem(event, dragData);
       return;
     }
 
-    // Get the dragged item from the UUID
     const draggedItem = fromUuidSync(dragData.uuid);
     if (!draggedItem) return;
 
-    // Find the target item under the drop point
-    const targetElement = event.target.closest('.item');
+    const targetElement = event.target.closest(".item");
     if (!targetElement) {
-      // If dropped on empty space, remove from container if it was in one
       if (draggedItem.system?.containerId) {
         draggedItem.update({
           "system.containerId": "",
@@ -272,7 +220,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
     const targetItemId = targetElement.dataset.itemId;
     if (!targetItemId) {
-      // If dropped on something that isn't an item, remove from container if it was in one
       if (draggedItem.system?.containerId) {
         draggedItem.update({
           "system.containerId": "",
@@ -284,40 +231,36 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       return;
     }
 
-    // Get the target item
     const targetItem = this.actor.items.get(targetItemId);
     if (!targetItem || !targetItem.system.container?.isContainer) {
-      // If dropped on a non-container item, remove from container if it was in one
       if (draggedItem.system?.containerId) {
         draggedItem.update({
           "system.containerId": "",
           "system.equipped": false,
-          "system.stowed": true
+          "system.stowed": true,
         });
       }
       super._onDropItem(event, dragData);
       return;
     }
 
-    // Only allow certain item types to be added to containers
-    const allowedTypes = ['item', 'weapon', 'armor'];
+    const allowedTypes = ["item", "weapon", "armor"];
     if (!allowedTypes.includes(draggedItem.type)) {
       super._onDropItem(event, dragData);
       return;
     }
 
-    // Prevent containers from being placed in other containers
     if (draggedItem.system?.container?.isContainer) {
       super._onDropItem(event, dragData);
       return;
     }
 
-    // Update the dragged item's containerId
-    draggedItem.system && draggedItem.update({
-      "system.containerId": targetItemId,
-      "system.equipped": false,
-      "system.stowed": targetItem.system.equipped || targetItem.system.stowed,
-    });
+    draggedItem.system &&
+      draggedItem.update({
+        "system.containerId": targetItemId,
+        "system.equipped": false,
+        "system.stowed": targetItem.system.equipped || targetItem.system.stowed,
+      });
 
     super._onDropItem(event, dragData);
   }
@@ -392,16 +335,23 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
 
   /**
    * Activate event listeners using the prepared sheet HTML
-   * @param html {HTML}   The prepared HTML object ready to be rendered into the DOM
    */
   activateListeners(html) {
     super.activateListeners(html);
+
+    if (!this._wwnClassAssignmentPrompted && this.isEditable) {
+      this._wwnClassAssignmentPrompted = true;
+      queueMicrotask(() => {
+        maybeShowClassAssignmentDialog(this.actor).catch((err) => {
+          console.error("WWN | Class assignment dialog failed:", err);
+        });
+      });
+    }
 
     html.find(".ability-score .attribute-name a").click((ev) => {
       let actorObject = this.actor;
       let element = ev.currentTarget;
       let score = element.parentElement.parentElement.dataset.score;
-      let stat = element.parentElement.parentElement.dataset.stat;
       if (!score) {
         actorObject.rollCheck(score, { event: event });
       }
@@ -415,9 +365,7 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
     });
 
     html.find(".inventory .item-titles .item-caret").click((ev) => {
-      let items = $(ev.currentTarget.parentElement.parentElement).children(
-        ".item-list"
-      );
+      let items = $(ev.currentTarget.parentElement.parentElement).children(".item-list");
       if (items.css("display") == "none") {
         let el = $(ev.currentTarget).find(".fas.fa-caret-right");
         el.removeClass("fa-caret-right");
@@ -431,27 +379,21 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }
     });
 
-    // Container toggle listener
     html.find(".inventory .container-arrow").click(async (ev) => {
-      const container = $(ev.currentTarget).closest('.item-entry');
-      const itemId = container.find('.item').data('itemId');
+      const container = $(ev.currentTarget).closest(".item-entry");
+      const itemId = container.find(".item").data("itemId");
       const item = this.actor.items.get(itemId);
-      const items = container.find('.container-items');
+      const items = container.find(".container-items");
 
       if (item && item.system.container.isContainer) {
         const isCurrentlyOpen = item.system.container.isOpen;
-        const icon = $(ev.currentTarget).find('i');
-
-        // Animate the container
         if (!isCurrentlyOpen) {
           items.slideDown(200);
         } else {
           items.slideUp(200);
         }
-
-        // Update the item state
         await item.update({
-          "system.container.isOpen": !isCurrentlyOpen
+          "system.container.isOpen": !isCurrentlyOpen,
         });
       }
     });
@@ -460,17 +402,14 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       this._onShowModifiers(ev);
     });
 
-    // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
-    // Update Inventory Item
     html.find(".item-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
-    // Delete Inventory Item
     html.find(".item-delete").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
       this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
@@ -491,7 +430,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       this._popLang(table, $(ev.currentTarget).closest(".item").data("lang"));
     });
 
-    //Toggle Equipment
     html.find(".item-toggle").click(async (ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
@@ -502,14 +440,16 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         },
       });
 
-      // Update contained items
       if (item.type === "item" && item.system.container.isContainer) {
         const containedItems = item.actor.items.filter((i) => i.system.containerId === item.id);
-        item.actor.updateEmbeddedDocuments("Item", containedItems.map((i) => ({
-          _id: i.id,
-          "system.equipped": false,
-          "system.stowed": item.system.equipped || item.system.stowed,
-        })));
+        item.actor.updateEmbeddedDocuments(
+          "Item",
+          containedItems.map((i) => ({
+            _id: i.id,
+            "system.equipped": false,
+            "system.stowed": item.system.equipped || item.system.stowed,
+          }))
+        );
       }
     });
 
@@ -523,25 +463,17 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
         },
       });
 
-      // Update contained items
       if (item.system.container.isContainer) {
         const containedItems = item.actor.items.filter((i) => i.system.containerId === item.id);
-        item.actor.updateEmbeddedDocuments("Item", containedItems.map((i) => ({
-          _id: i.id,
-          "system.equipped": false,
-          "system.stowed": item.system.equipped || item.system.stowed,
-        })));
+        item.actor.updateEmbeddedDocuments(
+          "Item",
+          containedItems.map((i) => ({
+            _id: i.id,
+            "system.equipped": false,
+            "system.stowed": item.system.equipped || item.system.stowed,
+          }))
+        );
       }
-    });
-
-    html.find(".item-prep").click(async (ev) => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
-      await item.update({
-        system: {
-          prepared: !item.system.prepared,
-        },
-      });
     });
 
     html
@@ -562,31 +494,23 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       this.adjustCurrency(ev);
     });
 
-    // Use unspent skill points to improve the skill
     html.find(".skill-up").click(async (ev) => {
       ev.preventDefault();
       const li = $(ev.currentTarget).parents(".item");
       const skill = this.actor.items.get(li.data("itemId"));
       if (skill.type == "skill") {
         const rank = skill.system.ownedLevel;
-        // Check if char has sufficient level
         if (rank > 0) {
           const lvl = this.actor.system.details.level;
           if (!game.settings.get("wwn", "noSkillLevelReq")) {
             if (rank == 1 && lvl < 3) {
-              ui.notifications?.error(
-                "Must be at least level 3 (edit manually to override)"
-              );
+              ui.notifications?.error("Must be at least level 3 (edit manually to override)");
               return;
             } else if (rank == 2 && lvl < 6) {
-              ui.notifications?.error(
-                "Must be at least level 6 (edit manually to override)"
-              );
+              ui.notifications?.error("Must be at least level 6 (edit manually to override)");
               return;
             } else if (rank == 3 && lvl < 9) {
-              ui.notifications?.error(
-                "Must be at least level 9 (edit manually to override)"
-              );
+              ui.notifications?.error("Must be at least level 9 (edit manually to override)");
               return;
             } else if (rank > 3) {
               ui.notifications?.error("Cannot auto-level above 4");
@@ -594,7 +518,6 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
             }
           }
         }
-        // check costs and update if points available
         const flatCost = game.settings.get("wwn", "flatSkillCost");
         const skillCost = flatCost ? 1 : rank + 2;
         const skillPointsAvail = this.actor.system.skills.unspent;
@@ -614,11 +537,10 @@ export class WwnActorSheetCharacter extends WwnActorSheet {
       }
     });
 
-    // Show / hide skill buttons, persisting the locked state so it survives re-renders
     html.find(".lock-skills").click(async (ev) => {
       ev.preventDefault();
       const lock = ev.currentTarget.dataset.type === "lock";
-      await this.actor.update({ "system.skills.locked": lock });
+      await this.actor.update({ "system.skills.levelsUnlocked": !lock });
     });
   }
 }

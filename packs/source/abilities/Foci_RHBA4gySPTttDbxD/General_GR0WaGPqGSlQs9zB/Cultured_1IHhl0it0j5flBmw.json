@@ -1,18 +1,33 @@
 {
   "_id": "1IHhl0it0j5flBmw",
   "name": "Cultured",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>Through wide travel, careful observation, or extensive study, you&rsquo;ve obtained a wide experience of the cultures of your region and an ability to navigate their customs, laws, and languages. You know what to do and say to impress others with the reasonableness of your wishes.</p>\n<p><strong>Level 1: </strong>Gain Connect as a bonus skill. You can fluently speak all the common languages of your native region and convey at least basic information in the uncommon or esoteric ones. You can learn a new language with only a week&rsquo;s practice with a native speaker. Once per game day, your polished ways automatically gain a minor favor from an NPC that would not put them to significant expense or risk, assuming the NPC isn&rsquo;t hostile to you.</p>\n<p><strong>Level 2:</strong> Once per game session, reroll a failed social skill check as you use your cultural knowledge to push your interlocutor toward the desired result.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!1IHhl0it0j5flBmw",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

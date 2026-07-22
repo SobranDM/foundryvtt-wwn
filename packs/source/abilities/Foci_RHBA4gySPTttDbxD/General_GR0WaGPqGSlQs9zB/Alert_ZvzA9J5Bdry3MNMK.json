@@ -1,18 +1,102 @@
 {
   "_id": "ZvzA9J5Bdry3MNMK",
   "name": "Alert",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "bpAmqZ7jIvnVx6QQ",
+      "type": "base",
+      "name": "Alert (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.individual.roll",
+            "type": "override",
+            "value": "2d8kh",
+            "phase": "initial"
+          },
+          {
+            "key": "system.combat.initiative.group.mod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.combat.immuneToSurprise",
+            "type": "override",
+            "value": "true",
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!ZvzA9J5Bdry3MNMK.bpAmqZ7jIvnVx6QQ"
+    },
+    {
+      "_id": "lCq68pHrkAHksge5",
+      "type": "base",
+      "name": "Alert (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.individual.mod",
+            "type": "add",
+            "value": 100,
+            "phase": "initial"
+          },
+          {
+            "key": "system.combat.initiative.group.mod",
+            "type": "add",
+            "value": 100,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!ZvzA9J5Bdry3MNMK.lCq68pHrkAHksge5"
+    }
+  ],
   "system": {
     "description": "<p>You are keenly aware of your surroundings and virtually impossible to take unaware.</p>\n<p><strong>Level 1: </strong>Gain Notice as a bonus skill. You cannot be surprised, nor can others use the Execution Attack option on you. If the GM rolls initiative by sides, you can add a +1 bonus to your side&rsquo;s initiative roll, though multiple <em><strong>Alert </strong></em>PCs don&rsquo;t stack this bonus. If you roll initiative individually, you can roll it twice and take the better result.</p>\n<p><strong>Level 2:</strong> You always act first in a combat round unless someone else involved is also this <em><strong>Alert.</strong></em></p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "notice"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!ZvzA9J5Bdry3MNMK",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

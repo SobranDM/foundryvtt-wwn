@@ -1,15 +1,11 @@
 {
   "_id": "tFkJDnceQYuX8BVz",
   "name": "Uncanny Ichor",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.tFkJDnceQYuX8BVz"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!tFkJDnceQYuX8BVz",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Your blood is not like the blood of normal beings. Predators find it nauseating and will not bite you unless provoked. Unintelligent predators will not consider you edible. This ichor is reluctant to leave your body, and stabbing or puncture injuries can Mortally Wound you but cannot result in your death unless you are entirely pincushioned by your foes or suffer catastrophic physical damage.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
   }
 }

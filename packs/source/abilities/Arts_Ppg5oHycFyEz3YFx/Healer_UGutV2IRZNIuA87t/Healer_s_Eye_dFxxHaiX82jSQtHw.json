@@ -1,15 +1,11 @@
 {
   "_id": "dFxxHaiX82jSQtHw",
   "name": "Healer's Eye",
-  "type": "art",
-  "img": "systems/wwn/assets/new/healer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/healer-art.png",
   "effects": [],
   "folder": "UGutV2IRZNIuA87t",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.dFxxHaiX82jSQtHw"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!dFxxHaiX82jSQtHw",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort as an On Turn action; while the Effort remains committed, you can use a Main Action to visually detect diseases and poisons, diagnose creatures flawlessly, perceive their physiology, and learn their current hit point totals. As a side effect, you can detect living creatures by sight regardless of available light or obscuring mists.</p>",
-    "save": "",
     "source": "Healer",
-    "effort": 0,
-    "time": "Active",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

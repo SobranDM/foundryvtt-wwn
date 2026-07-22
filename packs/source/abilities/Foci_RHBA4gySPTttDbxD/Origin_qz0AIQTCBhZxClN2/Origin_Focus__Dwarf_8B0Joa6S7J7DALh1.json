@@ -1,18 +1,33 @@
 {
   "_id": "8B0Joa6S7J7DALh1",
   "name": "Origin Focus: Dwarf",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>This origin serves for the classical dwarf; short, sturdy, and given to craftsmanship and drinking.</p>\n<p><strong>Level 1:</strong> Gain Craft as a bonus skill. Your Constitution modifier increases by +1 and either your Dexterity or Charisma modifier decreases by -1. You can see in the dark up to sixty feet.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!8B0Joa6S7J7DALh1",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

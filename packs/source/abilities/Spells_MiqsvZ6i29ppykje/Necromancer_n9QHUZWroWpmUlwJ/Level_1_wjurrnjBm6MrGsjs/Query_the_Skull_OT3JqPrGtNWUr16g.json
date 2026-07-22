@@ -1,8 +1,8 @@
 {
   "_id": "OT3JqPrGtNWUr16g",
   "name": "Query the Skull",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
   "effects": [],
   "folder": "wjurrnjBm6MrGsjs",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "Necromancer",
-    "duration": "",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>This spell requires a corpse with largely-intact organs of communication. The corpse cannot have been dead for more than one day per caster level. Once sorceled, the corpse will answer up to one question per caster level, with the caster understanding the answers regardless of the creature&rsquo;s natural language. Corpses are laconic, and generally answer in no more than one or two sentences; their replies will be truthful, but tend to be literal and they have no power to hypothesize or make judgments. This spell may not be used twice on the same corpse.</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "_key": "!items!OT3JqPrGtNWUr16g"
 }

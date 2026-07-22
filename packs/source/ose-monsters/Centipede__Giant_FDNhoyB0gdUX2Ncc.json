@@ -7,57 +7,55 @@
       "_id": "Fbu7oz2VexT3dd8T",
       "name": "Poison Bite",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><strong>Poison:</strong> Causes victims to become horribly sick for ten days (Physical save): no physical activity possible except half speed movement.</p>",
+        "damage": "0",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "physical",
-        "pattern": "transparent",
-        "description": "<p><strong>Poison:</strong> Causes victims to become horribly sick for ten days (Physical save): no physical activity possible except half speed movement.</p>",
-        "damage": "0",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!FDNhoyB0gdUX2Ncc.Fbu7oz2VexT3dd8T"
     }
@@ -69,143 +67,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 2,
+      "max": 2
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 10,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 0,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "20",
-      "exploration": 60,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d4",
+    "skill": 0,
     "details": {
-      "biography": "<p>1&rsquo; long centipedes that dwell in dark, damp locations.</p>",
       "alignment": "Neutral",
       "xp": 6,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 7,
+      "instinct": 6,
+      "instinctTable": null,
       "appearing": {
         "d": "2d4",
         "w": "1d8"
       },
-      "morale": 7,
-      "instinct": 6,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.TE8v9dEbY95Qe2Hq]{Insects and Semi-Mindless Beasts}",
-        "link": ""
-      },
-      "skill": 0
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": null,
-    "character": false,
-    "hp": {
-      "hd": "1d4",
-      "value": 2,
-      "max": 2
-    }
+    "favorites": [
+      "Fbu7oz2VexT3dd8T"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 0,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 10,
+        "ranged": 10
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 20
+      }
+    },
+    "biography": "<p>1&rsquo; long centipedes that dwell in dark, damp locations.</p>"
   },
   "prototypeToken": {
     "flags": {},

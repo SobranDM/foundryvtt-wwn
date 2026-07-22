@@ -1,26 +1,49 @@
 {
   "_id": "emK6XULeJkvt7Es7",
   "name": "Bless",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Cleric",
-    "duration": "6 turns",
-    "range": "60'",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>May be used in one of two situations:</p>\n<ol>\n<li><strong>Battle:</strong> Allies within a 20&rsquo; square area who are not yet in melee gain a +1 bonus to attack and damage rolls and a +1 bonus to morale.</li>\n<li><strong>Ritual:</strong> Casting bless may also form part of rituals of purification or consecration, at the referee&rsquo;s discretion.</li>\n</ol>\n<p><strong>Reversed: Blight</strong></p>\n<p>Incurs a &ndash;1 penalty to morale checks, attack rolls, and damage rolls of enemies within a 20&rsquo; square area. A save versus spells is allowed to resist the blight.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!emK6XULeJkvt7Es7"
+  "_key": "!items!emK6XULeJkvt7Es7",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>May be used in one of two situations:</p>\n<ol>\n<li><strong>Battle:</strong> Allies within a 20&rsquo; square area who are not yet in melee gain a +1 bonus to attack and damage rolls and a +1 bonus to morale.</li>\n<li><strong>Ritual:</strong> Casting bless may also form part of rituals of purification or consecration, at the referee&rsquo;s discretion.</li>\n</ol>\n<p><strong>Reversed: Blight</strong></p>\n<p>Incurs a &ndash;1 penalty to morale checks, attack rolls, and damage rolls of enemies within a 20&rsquo; square area. A save versus spells is allowed to resist the blight.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "60'",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

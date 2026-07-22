@@ -1,8 +1,8 @@
 {
   "_id": "VHqcgN9KGp7O8bBp",
   "name": "Casting Forth the Inner Eye",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "b3iyaDttxz0U70Pm",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 2,
-    "class": "High Mage",
-    "duration": "Until another action is performed",
-    "range": "100 ft. per level",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>A pool of water, mirror, open flame, polished crystal, or other luminous or reflective surface is used to peer at a distant location. The location must either be within one hundred feet per caster level or be a location the caster has physically occupied before. The caster perceives the location as if he were standing at the targeted point within it, seeing and hearing events there as if he were present. This spell cannot scry locations that have been magically warded, and scrying the same location repeatedly is hindered by the resonance created by the spell. The spell cannot perceive the same area twice within the same week, or position its target point so as to overlap a prior area with its perceptions within that time. If a target present in the area has more hit dice than the caster has levels, they get a Mental saving throw to get an uncanny sense of being watched, something that will alert those cognizant of this spell. This spell lasts until the caster performs some action other than focusing on the scrying.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "mental"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "100 ft. per level",
+      "duration": "Until another action is performed"
+    }
   },
   "_key": "!items!VHqcgN9KGp7O8bBp"
 }

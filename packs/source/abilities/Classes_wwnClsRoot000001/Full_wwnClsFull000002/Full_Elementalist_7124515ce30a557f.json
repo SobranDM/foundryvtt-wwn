@@ -1,0 +1,61 @@
+{
+  "_id": "7124515ce30a557f",
+  "name": "Full Elementalist",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFull000002",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7124515ce30a557f",
+  "system": {
+    "description": "<p>Elementalists are spellcasting Mages who focus on the manipulation of the material world around them. While they are capable of using High Magic, their specialist spells focus chiefly on wielding the classical elements of fire, air, water, and earth.</p><h3>Elementalist Benefits</h3><p>All Elementalists gain Magic as a bonus skill, acquiring it at level-0, or level-1 if it was already level-0.</p><p>Elementalists can prepare and cast High Magic spells in addition to the spells specific to Elementalists. As usual for spellcasters, Elementalists can&rsquo;t cast spells or use arts while armored or holding a shield.</p><p>Elementalists are not as talented at general High Magic research as High Mages are, but their studies still bear fruit in time. Each time they advance a level, they can pick a new High Magic spell or an Elementalist spell to add to their spellbook. They must be able to cast the spell to add it to their selection.</p><p>Elementalists gain the Elemental Resilience and Elemental Sparks arts as part of their basic training, and may pick one additional art from the list below. Further arts are learned as they advance in character level, as given in the tables below. Once chosen, an art cannot be changed.</p><h3>Full Elementalist Arts and Spells</h3><table><thead><tr><th>Level</th><th>Max Spell Level</th><th>Spells Cast</th><th>Spells Prepared</th><th>Arts Gained</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>3</td><td>Elemental Resilience, Elemental Sparks, and Any One</td></tr><tr><td>2</td><td>1</td><td>1</td><td>3</td><td>Any One</td></tr><tr><td>3</td><td>2</td><td>2</td><td>4</td><td></td></tr><tr><td>4</td><td>2</td><td>2</td><td>5</td><td>Any One</td></tr><tr><td>5</td><td>3</td><td>3</td><td>6</td><td></td></tr><tr><td>6</td><td>3</td><td>3</td><td>7</td><td>Any One</td></tr><tr><td>7</td><td>4</td><td>4</td><td>8</td><td></td></tr><tr><td>8</td><td>4</td><td>4</td><td>9</td><td>Any One</td></tr><tr><td>9</td><td>5</td><td>5</td><td>10</td><td></td></tr><tr><td>10</td><td>5</td><td>6</td><td>12</td><td>Any One</td></tr></tbody></table><h3>Full Elementalist</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6-1</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6-2</td><td>+0</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6-3</td><td>+0</td><td></td></tr><tr><td>4</td><td>4d6-4</td><td>+0</td><td></td></tr><tr><td>5</td><td>5d6-5</td><td>+1</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6-6</td><td>+1</td><td></td></tr><tr><td>7</td><td>7d6-7</td><td>+1</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6-8</td><td>+1</td><td></td></tr><tr><td>9</td><td>9d6-9</td><td>+1</td><td></td></tr><tr><td>10</td><td>10d6-10</td><td>+2</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Elementalist Effort",
+      "formula": "1 + @magic + max(@int, @cha)",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": -1
+    },
+    "preparedGrant": {
+      "progression": [
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
+    }
+  }
+}

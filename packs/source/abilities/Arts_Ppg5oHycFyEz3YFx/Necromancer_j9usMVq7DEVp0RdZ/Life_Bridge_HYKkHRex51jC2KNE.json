@@ -1,15 +1,11 @@
 {
   "_id": "HYKkHRex51jC2KNE",
   "name": "Life Bridge",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.HYKkHRex51jC2KNE"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!HYKkHRex51jC2KNE",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>You can transfer life force between willing or helpless participants. Commit Effort for the day; for the rest of the scene, you can shift hit points from one willing or helpless target no smaller than a dog to another as a Main Action, provided you are touching both. You can shift enough hit points to Mortally Wound a donor, but you can&rsquo;t give more to the recipient than would refresh their maximum allowed hit points.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "Day",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

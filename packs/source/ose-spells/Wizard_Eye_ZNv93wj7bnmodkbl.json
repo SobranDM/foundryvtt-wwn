@@ -1,26 +1,49 @@
 {
   "_id": "ZNv93wj7bnmodkbl",
   "name": "Wizard Eye",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Mage",
-    "duration": "6 turns",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An invisible, magical eye is conjured that allows the caster to see at a distance.</p>\n<p><strong>▶ Movement: </strong>The eye can be directed to move within range at up to 120&rsquo; per turn.</p>\n<p><strong>▶ Seeing through the eye:</strong> By concentrating, the caster can see through the eye.</p>\n<p><strong>▶ Types of vision: </strong>The magical eye grants both normal vision and infravision.</p>\n<p><strong>▶ Barriers:</strong> Solid barriers block its passage, but it can pass through a hole or space as small as 1 inch in diameter.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!ZNv93wj7bnmodkbl"
+  "_key": "!items!ZNv93wj7bnmodkbl",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An invisible, magical eye is conjured that allows the caster to see at a distance.</p>\n<p><strong>▶ Movement: </strong>The eye can be directed to move within range at up to 120&rsquo; per turn.</p>\n<p><strong>▶ Seeing through the eye:</strong> By concentrating, the caster can see through the eye.</p>\n<p><strong>▶ Types of vision: </strong>The magical eye grants both normal vision and infravision.</p>\n<p><strong>▶ Barriers:</strong> Solid barriers block its passage, but it can pass through a hole or space as small as 1 inch in diameter.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

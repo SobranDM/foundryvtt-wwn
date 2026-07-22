@@ -1,7 +1,7 @@
 {
   "name": "Polymath",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/polymath.png",
+  "img": "systems/wwn/assets/icons/skills/polymath.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "int",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": true
+    "secondary": true,
+    "slug": "polymath"
   },
   "_stats": {
     "systemId": "wwn",

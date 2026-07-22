@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>Often a pale blue powder meant to be inhaled, this dust allows the user to explore the immediate future. Their next fifteen minutes will play out in their visions, their actions chosen as they wish and their most probable consequences made evident in the dreamlike fugue, assuming those consequences are evident within the next fifteen minutes. While under the dust&rsquo;s effects the subject is oblivious to the mundane world.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

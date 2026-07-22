@@ -1,7 +1,7 @@
 {
   "name": "Trade",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/trade.png",
+  "img": "systems/wwn/assets/icons/skills/trade.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "cha",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "trade"
   },
   "_stats": {
     "systemId": "wwn",

@@ -12,200 +12,110 @@
       "_id": "kvAbFYYXWRV88xgz",
       "name": "Fists",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "",
+        "damage": "2d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "6",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "2d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 6,
-          "ac": 15
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!bfRxbyRGFuPGHe3d.kvAbFYYXWRV88xgz"
     }
   ],
   "effects": [],
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 32,
+      "max": 32
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 14,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 7,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 12,
-        "mod": 0
-      },
-      "mental": {
-        "value": 12,
-        "mod": 0
-      },
-      "physical": {
-        "value": 12,
-        "mod": 0
-      },
-      "luck": {
-        "value": 12,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "80' flying"
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "7d8+1",
+    "skill": 3,
     "details": {
-      "biography": "<p>Highly magical, free-willed, intelligent beings from the elemental plane of air. Tall humanoids wreathed in clouds.</p>\n<ul>\n<li><strong>Mundane damage immunity:</strong> Can only be harmed by magical attacks.</li>\n<li><strong>Magic powers: </strong>Each can be used three times per day:\n<ul>\n<li><strong>Whirlwind form:</strong> 5 rounds to transform (or change back). 70&rsquo; tall, 20&rsquo; wide at top, 10&rsquo; wide at base. Moves at 120&rsquo; (40&rsquo;). 2d6 damage to all in path. Creatures with less than 2HD swept aside (Physical save).</li>\n<li><strong>Gaseous form</strong></li>\n<li><strong>Invisibility</strong></li>\n<li><strong>Illusion: </strong>Visual and audial. No concentration required. Remains until touched or dispelled.</li>\n<li><strong>Create food and drink: </strong>For 12 humans and mounts for one day.</li>\n<li><strong>Conjure metallic objects:</strong> Up to 10 encumbrance in weight. Temporary: hardness determines duration (gold: 1 day; iron: 1 round).</li>\n<li><strong>Conjure soft goods / wooden objects:</strong> Up to 10 encumbrance in weight. Permanent.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Carrying capacity:</strong> 60 encumbrance without fatigue. Up to 120 encumbrance for 3 turns walking / 1 turn flying. Must rest 1 turn afterwards.</p>\n<p><strong>If killed: </strong>Returns to the plane of air.</p>",
       "alignment": "Neutral",
       "xp": 850,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "1",
         "w": "1"
       },
-      "morale": 12,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 3
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "7d8+1",
-      "value": 32,
-      "max": 32
-    }
+    "favorites": [
+      "kvAbFYYXWRV88xgz"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 7,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 14,
+        "ranged": 14
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Highly magical, free-willed, intelligent beings from the elemental plane of air. Tall humanoids wreathed in clouds.</p>\n<ul>\n<li><strong>Mundane damage immunity:</strong> Can only be harmed by magical attacks.</li>\n<li><strong>Magic powers: </strong>Each can be used three times per day:\n<ul>\n<li><strong>Whirlwind form:</strong> 5 rounds to transform (or change back). 70&rsquo; tall, 20&rsquo; wide at top, 10&rsquo; wide at base. Moves at 120&rsquo; (40&rsquo;). 2d6 damage to all in path. Creatures with less than 2HD swept aside (Physical save).</li>\n<li><strong>Gaseous form</strong></li>\n<li><strong>Invisibility</strong></li>\n<li><strong>Illusion: </strong>Visual and audial. No concentration required. Remains until touched or dispelled.</li>\n<li><strong>Create food and drink: </strong>For 12 humans and mounts for one day.</li>\n<li><strong>Conjure metallic objects:</strong> Up to 10 encumbrance in weight. Temporary: hardness determines duration (gold: 1 day; iron: 1 round).</li>\n<li><strong>Conjure soft goods / wooden objects:</strong> Up to 10 encumbrance in weight. Permanent.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Carrying capacity:</strong> 60 encumbrance without fatigue. Up to 120 encumbrance for 3 turns walking / 1 turn flying. Must rest 1 turn afterwards.</p>\n<p><strong>If killed: </strong>Returns to the plane of air.</p>"
   },
   "prototypeToken": {
     "flags": {},

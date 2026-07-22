@@ -1,8 +1,8 @@
 {
   "_id": "LjwZKTFslaEdVY0z",
   "name": "The Ochre Sigil of Juxtaposition",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "JclP1CQkdbQ2tqVo",
   "sort": 900000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 4,
-    "class": "High Mage",
-    "duration": "1 day",
-    "range": "1 mile",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>This spell is cast in two parts, each of which must be cast separately within a mile of each other, though such paired use counts as only a single spell slot. The first casting inscribes a palm-sized seal of ruddy brown radiance on the ground beneath the caster. The second casting will immediately switch the caster and all creatures and objects within ten feet with all creatures and objects within ten feet of the sigil. The caster may refrain from swapping certain targets as they wish. Only portable objects are swapped; any object too heavy for the caster to lift or secured in place remains unmoved. Unwilling targets get no saving throw if they have four or less hit dice; others can make a Mental save. Unused sigils dissipate in a day.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "mental"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "1 mile",
+      "duration": "1 day"
+    }
   },
   "_key": "!items!LjwZKTFslaEdVY0z"
 }

@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>The user of this potion is filled with invincible confidence and perfect self-assurance for the rest of the scene, fighting as calmly in bloody battle as if on a sparring field. When they attack, they roll a skill check instead of an attack roll, at a difficulty equal to half the target&rsquo;s Armor Class, rounded down. They are also immune to any mental effect that would alter their emotions. While under the potion&rsquo;s influence, however, the GM keeps track of their hit points and damage taken, and the player is told only when they hit zero.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

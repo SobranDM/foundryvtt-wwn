@@ -1,26 +1,49 @@
 {
   "_id": "aSML0sKw45uclSOB",
   "name": "Invisibility 10' Radius",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 3,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "120'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent (but may be broken,</strong></p>\n<p><strong>see below)</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>A selected creature and all creatures within 10&rsquo; of it become invisible:</p>\n<p><strong>▶ Area: </strong>The 10&rsquo; radius area of the spell&rsquo;s effect moves with the chosen creature.</p>\n<p><strong>▶ Exiting the area:</strong> Subjects that move more than 10&rsquo; away from the chosen creature become visible.</p>\n<p><strong>▶ Entering the area:</strong> Creatures that move into the area after the spell is cast do not become invisible.</p>\n<p><strong>▶ Gear:</strong> Any gear a subject is carrying is also rendered invisible. Items dropped or put down by an invisible creature become visible. Carried light sources become invisible but the emitted light does not.</p>\n<p><strong>▶ Breaking the invisibility: </strong>If a subject attacks or casts a spell, the invisibility is broken for that subject.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!aSML0sKw45uclSOB"
+  "_key": "!items!aSML0sKw45uclSOB",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent (but may be broken,</strong></p>\n<p><strong>see below)</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>A selected creature and all creatures within 10&rsquo; of it become invisible:</p>\n<p><strong>▶ Area: </strong>The 10&rsquo; radius area of the spell&rsquo;s effect moves with the chosen creature.</p>\n<p><strong>▶ Exiting the area:</strong> Subjects that move more than 10&rsquo; away from the chosen creature become visible.</p>\n<p><strong>▶ Entering the area:</strong> Creatures that move into the area after the spell is cast do not become invisible.</p>\n<p><strong>▶ Gear:</strong> Any gear a subject is carrying is also rendered invisible. Items dropped or put down by an invisible creature become visible. Carried light sources become invisible but the emitted light does not.</p>\n<p><strong>▶ Breaking the invisibility: </strong>If a subject attacks or casts a spell, the invisibility is broken for that subject.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "120'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

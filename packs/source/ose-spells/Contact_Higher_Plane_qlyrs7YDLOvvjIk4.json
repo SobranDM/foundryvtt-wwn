@@ -1,26 +1,49 @@
 {
   "_id": "qlyrs7YDLOvvjIk4",
   "name": "Contact Higher Plane",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "One conversation",
-    "range": "Caster",
-    "roll": "",
-    "description": "<p><strong>Duration: One conversation</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>A channel of communication is opened to a higher plane of existence, allowing the caster to ask powerful, otherworldly beings for advice and knowledge on any subject.</p>\n<p><strong>▶ Plane: </strong>The caster must choose which plane of existence to contact: communion with beings of the 3rd to 12th planes is possible via this spell. Higher numbered planes are home to more powerful and knowledgeable beings.</p>\n<p><strong>▶ Questions:</strong> The caster may then ask a number of simple yes/no questions equal to the number of the plane contacted. The referee plays the role of the contacted being, responding to the caster&rsquo;s questions.</p>\n<p><strong>▶ Answers:</strong> For each question asked, there is a chance of the contacted being not knowing the answer or of answering untruthfully: see the table to the right. It is impossible to detect whether the entity is lying.</p>\n<p><strong>Restrictions:</strong> Casting contact higher plane is a great and perilous deed.</p>\n<p><strong>▶ Usage limit:</strong> It may be cast at most once per week. (The referee may limit the spell&rsquo;s usage to even less frequently, if desired.)</p>\n<p><strong>▶ Insanity: </strong>Communion with otherworldly beings of great power can shatter the caster&rsquo;s sanity. The basic chance is shown in the table above. For every level of the caster above 11, this chance is reduced by 5%. If the caster is driven insane as a result of the communion, the recovery time is a number of weeks equal to the number of the plane contacted.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<h3><strong>Plane</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>#Qs</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Don't Know</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Truth</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Insanity</strong></h3>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">3rd</td>\n<td style=\"text-align: center;\">3</td>\n<td style=\"text-align: center;\">75%</td>\n<td style=\"text-align: center;\">50%</td>\n<td style=\"text-align: center;\">5%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">4th</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">70%</td>\n<td style=\"text-align: center;\">55%</td>\n<td style=\"text-align: center;\">10%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">5th</td>\n<td style=\"text-align: center;\">5</td>\n<td style=\"text-align: center;\">65%</td>\n<td style=\"text-align: center;\">60%</td>\n<td style=\"text-align: center;\">15%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6th</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">60%</td>\n<td style=\"text-align: center;\">65%</td>\n<td style=\"text-align: center;\">20%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">7th</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">50%</td>\n<td style=\"text-align: center;\">70%</td>\n<td style=\"text-align: center;\">25%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">8th</td>\n<td style=\"text-align: center;\">8</td>\n<td style=\"text-align: center;\">40%</td>\n<td style=\"text-align: center;\">75%</td>\n<td style=\"text-align: center;\">30%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">9th</td>\n<td style=\"text-align: center;\">9</td>\n<td style=\"text-align: center;\">30%</td>\n<td style=\"text-align: center;\">80%</td>\n<td style=\"text-align: center;\">35%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">10th</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">20%</td>\n<td style=\"text-align: center;\">85%</td>\n<td style=\"text-align: center;\">40%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">11th</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">10%</td>\n<td style=\"text-align: center;\">90%</td>\n<td style=\"text-align: center;\">45%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">12th</td>\n<td style=\"text-align: center;\">12</td>\n<td style=\"text-align: center;\">5%</td>\n<td style=\"text-align: center;\">95%</td>\n<td style=\"text-align: center;\">50%</td>\n</tr>\n</tbody>\n</table>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!qlyrs7YDLOvvjIk4"
+  "_key": "!items!qlyrs7YDLOvvjIk4",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: One conversation</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>A channel of communication is opened to a higher plane of existence, allowing the caster to ask powerful, otherworldly beings for advice and knowledge on any subject.</p>\n<p><strong>▶ Plane: </strong>The caster must choose which plane of existence to contact: communion with beings of the 3rd to 12th planes is possible via this spell. Higher numbered planes are home to more powerful and knowledgeable beings.</p>\n<p><strong>▶ Questions:</strong> The caster may then ask a number of simple yes/no questions equal to the number of the plane contacted. The referee plays the role of the contacted being, responding to the caster&rsquo;s questions.</p>\n<p><strong>▶ Answers:</strong> For each question asked, there is a chance of the contacted being not knowing the answer or of answering untruthfully: see the table to the right. It is impossible to detect whether the entity is lying.</p>\n<p><strong>Restrictions:</strong> Casting contact higher plane is a great and perilous deed.</p>\n<p><strong>▶ Usage limit:</strong> It may be cast at most once per week. (The referee may limit the spell&rsquo;s usage to even less frequently, if desired.)</p>\n<p><strong>▶ Insanity: </strong>Communion with otherworldly beings of great power can shatter the caster&rsquo;s sanity. The basic chance is shown in the table above. For every level of the caster above 11, this chance is reduced by 5%. If the caster is driven insane as a result of the communion, the recovery time is a number of weeks equal to the number of the plane contacted.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<h3><strong>Plane</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>#Qs</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Don't Know</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Truth</strong></h3>\n</td>\n<td style=\"text-align: center;\">\n<h3><strong>Insanity</strong></h3>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">3rd</td>\n<td style=\"text-align: center;\">3</td>\n<td style=\"text-align: center;\">75%</td>\n<td style=\"text-align: center;\">50%</td>\n<td style=\"text-align: center;\">5%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">4th</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">70%</td>\n<td style=\"text-align: center;\">55%</td>\n<td style=\"text-align: center;\">10%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">5th</td>\n<td style=\"text-align: center;\">5</td>\n<td style=\"text-align: center;\">65%</td>\n<td style=\"text-align: center;\">60%</td>\n<td style=\"text-align: center;\">15%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6th</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">60%</td>\n<td style=\"text-align: center;\">65%</td>\n<td style=\"text-align: center;\">20%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">7th</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">50%</td>\n<td style=\"text-align: center;\">70%</td>\n<td style=\"text-align: center;\">25%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">8th</td>\n<td style=\"text-align: center;\">8</td>\n<td style=\"text-align: center;\">40%</td>\n<td style=\"text-align: center;\">75%</td>\n<td style=\"text-align: center;\">30%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">9th</td>\n<td style=\"text-align: center;\">9</td>\n<td style=\"text-align: center;\">30%</td>\n<td style=\"text-align: center;\">80%</td>\n<td style=\"text-align: center;\">35%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">10th</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">20%</td>\n<td style=\"text-align: center;\">85%</td>\n<td style=\"text-align: center;\">40%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">11th</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">10%</td>\n<td style=\"text-align: center;\">90%</td>\n<td style=\"text-align: center;\">45%</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">12th</td>\n<td style=\"text-align: center;\">12</td>\n<td style=\"text-align: center;\">5%</td>\n<td style=\"text-align: center;\">95%</td>\n<td style=\"text-align: center;\">50%</td>\n</tr>\n</tbody>\n</table>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Caster",
+      "duration": "One conversation"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

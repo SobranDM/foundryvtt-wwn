@@ -1,0 +1,9 @@
+<p>{{localize "WWN.Focus.SkillBonusDialogBody"}}</p>
+<label class="form-group">
+  <span>{{localize "WWN.Focus.SkillBonusDialogLabel"}}</span>
+  <select name="skill">
+    {{#each skillOptions as |opt|}}
+    <option value="{{opt.slug}}">{{opt.label}}</option>
+    {{/each}}
+  </select>
+</label>

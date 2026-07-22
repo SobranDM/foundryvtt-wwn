@@ -1,24 +1,34 @@
 {
   "_id": "tQUWHaueqlKptgzR",
   "name": "Dungeoneering Kit",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "item",
-  "data": {
-    "description": "<h3><strong>Gear Bundles</strong></h3>\n<p>Depending on the tastes of the group, some parties might enjoy tracking every torch and carefully weighing their resource expenditures on perilous expeditions. Others prefer to gloss over the details. The &ldquo;gear bundle&rdquo; options below cover all the non-weapon, non-armor gear expected of a particular role and the usual encumbrance weight of it all. The specific contents of each bundle are as broad as the GM finds reasonable for the role. A GM who prefers exact accounting can disallow bundles.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 200,
-    "weight": 6,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
   "flags": {},
-  "img": "systems/wwn/assets/default/item.png",
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "_key": "!items!tQUWHaueqlKptgzR",
-  "folder": "2JRbC6jpR9k3HWcM"
+  "folder": "2JRbC6jpR9k3HWcM",
+  "system": {
+    "description": "<h3><strong>Gear Bundles</strong></h3>\n<p>Depending on the tastes of the group, some parties might enjoy tracking every torch and carefully weighing their resource expenditures on perilous expeditions. Others prefer to gloss over the details. The &ldquo;gear bundle&rdquo; options below cover all the non-weapon, non-armor gear expected of a particular role and the usual encumbrance weight of it all. The specific contents of each bundle are as broad as the GM finds reasonable for the role. A GM who prefers exact accounting can disallow bundles.</p>",
+    "price": 200,
+    "weight": 6,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

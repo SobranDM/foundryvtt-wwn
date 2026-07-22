@@ -1,0 +1,58 @@
+{
+  "_id": "3aa910792e44441f",
+  "name": "Martial Style",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFeat000004",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3aa910792e44441f",
+  "system": {
+    "description": "<p>Your unarmed attacks are treated as weapons. Hit dice are never worse than 1d6. Punch attack bonus is at least that of an Expert of your level.</p>",
+    "subType": "art",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "Vowed Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false
+  }
+}

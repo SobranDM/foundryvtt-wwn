@@ -1,26 +1,49 @@
 {
   "_id": "veIMoInZtPm3fioD",
   "name": "Insect Plague",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Cleric",
-    "duration": "up to 1 day",
-    "range": "480'",
-    "roll": "",
-    "description": "<p><strong>Duration: Concentration (up to 1 day)</strong></p>\n<p><strong>Range: 480&rsquo;</strong></p>\n<p>Cast above ground, this spell conjures a 60&rsquo; diameter swarm of flying insects with the following properties:</p>\n<p><strong>▶ Movement: </strong>20&rsquo; per round. While the swarm is within range, the caster is able to direct its movements.</p>\n<p><strong>▶ Vision: </strong>Within the area of the swarm is obscured.</p>\n<p><strong>▶ Creatures of 2 HD or less: </strong>Are driven away, if caught within the swarm.</p>\n<p><strong>▶ Concentration:</strong> If the caster moves or loses concentration, the swarm dissipates, ending the spell.</p>\n<p><strong>Restrictions: </strong>The spell has no effect if&nbsp;cast underground.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!veIMoInZtPm3fioD"
+  "_key": "!items!veIMoInZtPm3fioD",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Concentration (up to 1 day)</strong></p>\n<p><strong>Range: 480&rsquo;</strong></p>\n<p>Cast above ground, this spell conjures a 60&rsquo; diameter swarm of flying insects with the following properties:</p>\n<p><strong>▶ Movement: </strong>20&rsquo; per round. While the swarm is within range, the caster is able to direct its movements.</p>\n<p><strong>▶ Vision: </strong>Within the area of the swarm is obscured.</p>\n<p><strong>▶ Creatures of 2 HD or less: </strong>Are driven away, if caught within the swarm.</p>\n<p><strong>▶ Concentration:</strong> If the caster moves or loses concentration, the swarm dissipates, ending the spell.</p>\n<p><strong>Restrictions: </strong>The spell has no effect if&nbsp;cast underground.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "480'",
+      "duration": "up to 1 day"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

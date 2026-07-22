@@ -10,268 +10,281 @@
       "_id": "xGKb821KPSfSjpPt",
       "name": "Distorted Space-Time",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!RCpTcYhcpa7V1k22.xGKb821KPSfSjpPt",
       "system": {
+        "description": "",
+        "damage": "2d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "4",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": false,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 100,
           "medium": 0,
           "long": 100
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "2d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 4,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [
-          {
-            "title": "100'",
-            "value": "Missile"
-          }
+          "Missile"
         ],
-        "slow": false,
-        "missile": true,
-        "melee": false,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!RCpTcYhcpa7V1k22.xGKb821KPSfSjpPt"
     },
     {
       "_id": "vXHkUATMPWOc05Rv",
       "name": "Scrying Gaze",
-      "type": "art",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/art.png",
       "sort": 200000,
       "flags": {},
-      "img": "systems/wwn/assets/default/art.png",
       "effects": [],
-      "_key": "!actors.items!RCpTcYhcpa7V1k22.vXHkUATMPWOc05Rv",
       "system": {
-        "pattern": "white",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
+        "subType": "art",
         "description": "<p>Scrying gaze allows them to observe a particular point within ten miles for up to a scene as if they were standing there, assuming magical wards don&rsquo;t forfend them.</p>",
-        "save": "",
         "source": "Tuhulot",
-        "effort": 0,
-        "time": "Day",
-        "range": ""
-      }
+        "resourceName": "Effort",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
+      },
+      "_key": "!actors.items!RCpTcYhcpa7V1k22.vXHkUATMPWOc05Rv"
     },
     {
       "_id": "lRnsXrZFBPlEruic",
       "name": "Blandishing Voice",
-      "type": "art",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/art.png",
       "sort": 300000,
       "flags": {},
-      "img": "systems/wwn/assets/default/art.png",
       "effects": [],
-      "_key": "!actors.items!RCpTcYhcpa7V1k22.lRnsXrZFBPlEruic",
       "system": {
-        "pattern": "white",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
+        "subType": "art",
         "description": "<p>Blandishing voice bends the mind of a single target on a failed Mental save, making it friendly toward the Tuhulot until the creature does something obviously hostile.</p>",
-        "save": "mental",
         "source": "Tuhulot",
-        "effort": 0,
-        "time": "Day",
-        "range": ""
-      }
+        "resourceName": "Effort",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "",
+          "duration": ""
+        }
+      },
+      "_key": "!actors.items!RCpTcYhcpa7V1k22.lRnsXrZFBPlEruic"
     },
     {
       "_id": "HwaR6CA21ZPrQRjN",
       "name": "Sidewards Step",
-      "type": "art",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/art.png",
       "sort": 400000,
       "flags": {},
-      "img": "systems/wwn/assets/default/art.png",
       "effects": [],
-      "_key": "!actors.items!RCpTcYhcpa7V1k22.HwaR6CA21ZPrQRjN",
       "system": {
-        "pattern": "white",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
+        "subType": "art",
         "description": "<p>Sidewards step lets them teleport to any location within a mile they&rsquo;ve occupied before, provided neither their current location nor their destination is directly illuminated by sunlight.</p>",
-        "save": "",
         "source": "Tuhulot",
-        "effort": 0,
-        "time": "Day",
-        "range": ""
-      }
+        "resourceName": "Effort",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
+      },
+      "_key": "!actors.items!RCpTcYhcpa7V1k22.HwaR6CA21ZPrQRjN"
     },
     {
       "_id": "4dnqg7kLuBWlaslK",
       "name": "Soul Consumption",
-      "type": "art",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/art.png",
       "sort": 500000,
       "flags": {},
-      "img": "systems/wwn/assets/default/art.png",
       "effects": [],
-      "_key": "!actors.items!RCpTcYhcpa7V1k22.4dnqg7kLuBWlaslK",
       "system": {
-        "pattern": "white",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
+        "subType": "art",
         "description": "<p>Soul consumption power allows them to eat the memories and identity of a helpless sentient victim over the course of a torturous hour. The victim becomes a passive meat puppet for the Tuhulot, carrying out its orders with total obedience and human levels of intellect, but with all trace of its former personality erased. The only way to cure the victim is for the Tuhulot to give back the soul, a thing which it will do only for a suitable price.</p>",
-        "save": "",
         "source": "Tuhulot",
-        "effort": 0,
-        "time": "Day",
-        "range": ""
-      }
+        "resourceName": "Effort",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
+      },
+      "_key": "!actors.items!RCpTcYhcpa7V1k22.4dnqg7kLuBWlaslK"
     }
   ],
   "effects": [],
   "_key": "!actors!RCpTcYhcpa7V1k22",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 45,
+      "max": 45
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 12,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "50",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": true,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "Tuhulot",
-        "value": 0,
-        "max": 3
-      },
-      "effort2": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Tuhulot have several magical powers specific to their kind, most usable as a Main Action three times per day.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 7,
+      "instinct": 3,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 7,
-      "instinct": 3,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.kRkyVb4oBeJNH4xk]{Sorcerers or Other Spellcasters}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 45,
-      "max": 45
+    "favorites": [
+      "xGKb821KPSfSjpPt"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 12,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 50
+      }
+    },
+    "biography": "<p>Tuhulot have several magical powers specific to their kind, most usable as a Main Action three times per day.</p>"
   },
   "ownership": {
     "default": 0

@@ -1,7 +1,7 @@
 {
   "name": "Magic",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/magic.png",
+  "img": "systems/wwn/assets/icons/skills/magic.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "int",
     "skillDice": "2d6",
-    "combatSkill": true,
-    "secondary": false
+    "secondary": false,
+    "slug": "magic"
   },
   "_stats": {
     "systemId": "wwn",

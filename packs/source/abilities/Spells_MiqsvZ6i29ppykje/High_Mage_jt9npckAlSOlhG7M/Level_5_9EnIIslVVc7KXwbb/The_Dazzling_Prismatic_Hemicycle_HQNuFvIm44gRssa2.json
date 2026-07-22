@@ -1,8 +1,8 @@
 {
   "_id": "HQNuFvIm44gRssa2",
   "name": "The Dazzling Prismatic Hemicycle",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "9EnIIslVVc7KXwbb",
   "sort": 600000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 5,
-    "class": "High Mage",
-    "duration": "",
-    "range": "100-ft. cone",
-    "roll": "1d6",
+    "subType": "spell",
     "description": "<p>A blinding fan of impossible colors cascades over all targets in front of the caster in an area equal to a cone a hundred feet long and a hundred feet wide at the end. Each creature within that area must make a Physical saving throw; those who fail roll 1d6. On a 1, they are unharmed, on a 2 they collapse into a handful of dust, on a 3 they fall unconscious for an hour, on a 4 they go violently insane for the next hour and attack all around them, on a 5 they turn to stone, and on a 6 they become utterly enthralled to the caster&rsquo;s commands for the next hour, as if under the effect of an @Compendium[wwn.abilities.om8rt7ZXQBNhonbg]{Ineluctable Shackles of Volition} spell.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "physical"
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100-ft. cone",
+      "duration": ""
+    }
   },
   "_key": "!items!HQNuFvIm44gRssa2"
 }

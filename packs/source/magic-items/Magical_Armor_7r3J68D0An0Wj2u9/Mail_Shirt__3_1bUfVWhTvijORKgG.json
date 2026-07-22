@@ -2,30 +2,35 @@
   "_id": "1bUfVWhTvijORKgG",
   "name": "Mail Shirt +3",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 14,
-      "mod": 3
-    },
-    "armorBonus": 0,
-    "type": "medium",
-    "price": 250,
-    "weight": 0
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.1bUfVWhTvijORKgG"
     }
   },
-  "_key": "!items!1bUfVWhTvijORKgG"
+  "_key": "!items!1bUfVWhTvijORKgG",
+  "system": {
+    "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
+    "ac": 14,
+    "acRanged": 14,
+    "mod": 3,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 250,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,26 +1,49 @@
 {
   "_id": "iDVF9aArKurz9h38",
   "name": "Create Water",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Cleric",
-    "duration": "Permanent",
-    "range": "Touch",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: Touch</strong></p>\n<p>This spell causes a magical fount to spring forth from the ground or a wall.</p>\n<p><strong>▶ Volume: </strong>The fount produces approximately 50 gallons of water&mdash;enough to sustain twelve humans and twelve mounts for one day.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, water sufficient for an additional twelve humans and mounts is produced for each level beyond 8th.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!iDVF9aArKurz9h38"
+  "_key": "!items!iDVF9aArKurz9h38",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: Touch</strong></p>\n<p>This spell causes a magical fount to spring forth from the ground or a wall.</p>\n<p><strong>▶ Volume: </strong>The fount produces approximately 50 gallons of water&mdash;enough to sustain twelve humans and twelve mounts for one day.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, water sufficient for an additional twelve humans and mounts is produced for each level beyond 8th.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Touch",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

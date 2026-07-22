@@ -2,28 +2,38 @@
   "_id": "yak8bLIR4LAs9BGG",
   "name": "Stonepeg",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>These devices are always found in groups of 1d4+2 pegs, each one appearing to be a glyphed&nbsp;metal rod perhaps a foot in length with a chisel-shaped point on one end. If thrust firmly into a stone or earthen surface, the peg will effortlessly sink into the material and become as firm and fixed as if it were cemented in place. The peg can only be freely removed by the person who sank it into place, otherwise requiring that it be chiseled out with a scene&rsquo;s effort and the correct tools.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.yak8bLIR4LAs9BGG"
     }
   },
-  "_key": "!items!yak8bLIR4LAs9BGG"
+  "_key": "!items!yak8bLIR4LAs9BGG",
+  "system": {
+    "description": "<p>These devices are always found in groups of 1d4+2 pegs, each one appearing to be a glyphed&nbsp;metal rod perhaps a foot in length with a chisel-shaped point on one end. If thrust firmly into a stone or earthen surface, the peg will effortlessly sink into the material and become as firm and fixed as if it were cemented in place. The peg can only be freely removed by the person who sank it into place, otherwise requiring that it be chiseled out with a scene&rsquo;s effort and the correct tools.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

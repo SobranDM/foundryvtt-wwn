@@ -1,18 +1,33 @@
 {
   "_id": "ZCGn68nqFh8byyXc",
   "name": "Nullifier",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>Something about your hero interferes with easy use of magic on them. It may be a strangely powerful birth blessing, a particular supernatural bloodline, or simple occult incompatibility. This Focus cannot be taken by Mages or Partial Mages.</p>\n<p><strong>Level 1: </strong>You and all allies within twenty feet gain a +2 bonus to all saving throws against magical effects. As an On Turn action, you can feel the presence or use of magic within twenty feet of you, though you can&rsquo;t discern details about it or the specific source. The first failed saving throw against a magical effect you suffer in a day is turned into a success.</p>\n<p><strong>Level 2: </strong>Once per day, as an Instant action, you are simply not affected by an unwanted magical effect or supernatural monstrous ability, even if it wouldn&rsquo;t normally allow a saving throw. Immunity to a persistent effect lasts for the rest of the scene.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!ZCGn68nqFh8byyXc",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

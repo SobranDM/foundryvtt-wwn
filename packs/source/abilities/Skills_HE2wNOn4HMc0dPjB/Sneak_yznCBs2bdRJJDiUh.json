@@ -1,7 +1,7 @@
 {
   "name": "Sneak",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/sneak.png",
+  "img": "systems/wwn/assets/icons/skills/sneak.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "dex",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "sneak"
   },
   "_stats": {
     "systemId": "wwn",

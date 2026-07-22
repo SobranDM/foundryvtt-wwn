@@ -1,26 +1,49 @@
 {
   "_id": "JCBjmkUSFHF0PUqW",
   "name": "Knock",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "1 round",
-    "range": "60'",
-    "roll": "",
-    "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The knock spell opens stuck, barred, or locked doors, gates, chests, and so forth.</p>\n<p><strong>▶ Magically held doors:</strong> Are affected (e.g. hold portal, wizard lock).</p>\n<p><strong>▶ Secret doors: </strong>May be opened, but they must be known to the caster.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!JCBjmkUSFHF0PUqW"
+  "_key": "!items!JCBjmkUSFHF0PUqW",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The knock spell opens stuck, barred, or locked doors, gates, chests, and so forth.</p>\n<p><strong>▶ Magically held doors:</strong> Are affected (e.g. hold portal, wizard lock).</p>\n<p><strong>▶ Secret doors: </strong>May be opened, but they must be known to the caster.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "60'",
+      "duration": "1 round"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

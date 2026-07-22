@@ -1,0 +1,31 @@
+<form class="wwn-class-assignment">
+  <p class="notes">{{hint}}</p>
+
+  {{#if full.length}}
+  <fieldset>
+    <legend>{{fullLabel}}</legend>
+    <div class="class-assignment-grid">
+      {{#each full as |opt|}}
+      <label class="checkbox">
+        <input type="checkbox" name="classEdge" value="{{opt.name}}" {{checked opt.checked}} />
+        <span>{{opt.name}}</span>
+      </label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+
+  {{#if partial.length}}
+  <fieldset>
+    <legend>{{partialLabel}}</legend>
+    <div class="class-assignment-grid">
+      {{#each partial as |opt|}}
+      <label class="checkbox">
+        <input type="checkbox" name="classEdge" value="{{opt.name}}" {{checked opt.checked}} />
+        <span>{{opt.name}}</span>
+      </label>
+      {{/each}}
+    </div>
+  </fieldset>
+  {{/if}}
+</form>

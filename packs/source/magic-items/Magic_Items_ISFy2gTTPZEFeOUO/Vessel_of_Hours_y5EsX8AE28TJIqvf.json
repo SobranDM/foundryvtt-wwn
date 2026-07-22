@@ -2,28 +2,38 @@
   "_id": "y5EsX8AE28TJIqvf",
   "name": "Vessel of Hours",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>A precious implement most often appearing as a miniature clock, hourglass, incense clock, or some other horological device, this item can wind back time by a few moments. As an Instant action, the bearer can invoke it to undo their actions and any consequences for the immediate turn, resetting their turn back to its beginning. This action cannot be taken after someone else&rsquo;s turn has begun. This object and others of its kind will only work once for any given user.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.y5EsX8AE28TJIqvf"
     }
   },
-  "_key": "!items!y5EsX8AE28TJIqvf"
+  "_key": "!items!y5EsX8AE28TJIqvf",
+  "system": {
+    "description": "<p>A precious implement most often appearing as a miniature clock, hourglass, incense clock, or some other horological device, this item can wind back time by a few moments. As an Instant action, the bearer can invoke it to undo their actions and any consequences for the immediate turn, resetting their turn back to its beginning. This action cannot be taken after someone else&rsquo;s turn has begun. This object and others of its kind will only work once for any given user.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

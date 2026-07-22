@@ -10,171 +10,111 @@
       "_id": "1Q8ZU5W0ON7xqnX7",
       "name": "Unarmed Strike",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!woucJaiYHq9f0jcX.1Q8ZU5W0ON7xqnX7",
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!woucJaiYHq9f0jcX.1Q8ZU5W0ON7xqnX7"
     }
   ],
   "effects": [],
   "_key": "!actors!woucJaiYHq9f0jcX",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 4,
+      "max": 4
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 1,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d8",
+    "skill": 0,
     "details": {
-      "biography": "<p>Created by the @Compendium[wwn.abilities.M746O61w32xuSNfc]{Raise Corpse} spell.</p>\n<blockquote>\n<p>Such corpses may be equipped with weapons or armor. Its decay or dissolution immediately ceases, and it becomes suicidally loyal to its creator. The corpse has no natural volition, but will obey commands with a human degree of intelligence. It has only vague memories of its prior life, and while it may retain human tics or habits it had in life it can answer only the simplest and most self-evident questions. Damage to a corpse can be repaired only by casting this spell on it again, which restores it to its original &ldquo;health&rdquo;. The corpse continues to exist until it is reduced to zero hit points or its creator releases it. A necromancer cannot have more active subjects of this spell than their character level.</p>\n</blockquote>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 0,
+      "instinctTable": null,
       "appearing": {
         "d": "",
         "w": "0"
       },
-      "morale": 12,
-      "instinct": 0,
-      "instinctTable": {
+      "treasure": {
         "table": "",
-        "link": ""
-      },
-      "skill": 0
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "1d8",
-      "value": 4,
-      "max": 4
+    "favorites": [
+      "1Q8ZU5W0ON7xqnX7"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 1,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Created by the @Compendium[wwn.abilities.M746O61w32xuSNfc]{Raise Corpse} spell.</p>\n<blockquote>\n<p>Such corpses may be equipped with weapons or armor. Its decay or dissolution immediately ceases, and it becomes suicidally loyal to its creator. The corpse has no natural volition, but will obey commands with a human degree of intelligence. It has only vague memories of its prior life, and while it may retain human tics or habits it had in life it can answer only the simplest and most self-evident questions. Damage to a corpse can be repaired only by casting this spell on it again, which restores it to its original &ldquo;health&rdquo;. The corpse continues to exist until it is reduced to zero hit points or its creator releases it. A necromancer cannot have more active subjects of this spell than their character level.</p>\n</blockquote>"
   },
   "ownership": {
     "default": 0

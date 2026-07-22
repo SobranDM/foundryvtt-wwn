@@ -3,12 +3,14 @@
  */
 import { WWN } from "../config.js"
 import WWNCombatGroupSelector from "./combat-set-groups.js"
+import { findAdjacentGroupTurn } from "./side-collapse.mjs"
+import { isNpc } from "../helpers/actor-types.mjs";
 
 /**
  * An extension of Foundry's Combat class that implements initiative for individual combatants.
  */
 export class WWNCombat extends foundry.documents.Combat {
-  static FORMULA = "@initiative.roll + @initiative.value"
+  static FORMULA = "@initiativeRoll + @init"
 
   static get GROUPS() {
     return {
@@ -30,6 +32,77 @@ export class WWNCombat extends foundry.documents.Combat {
     return game.settings.get(game.system.id, "initiative") === "group";
   }
 
+  /**
+   * Group initiative + collapse-sides setting: side-skip turns and nested tracker.
+   * @returns {boolean}
+   */
+  get isSideCollapseEnabled() {
+    return (
+      this.isGroupInitiative &&
+      game.settings.get(game.system.id, "collapseSidesInGroupInitiative") === true
+    );
+  }
+
+  /**
+   * Descriptors used by side-collapse turn helpers.
+   * @returns {{ id: string, groupId: string|null, isDefeated: boolean }[]}
+   */
+  #sideCollapseTurns() {
+    return this.turns.map(c => ({
+      id: c.id,
+      groupId: c.group?.id ?? null,
+      isDefeated: c.isDefeated
+    }));
+  }
+
+  /** @inheritDoc */
+  async nextTurn() {
+    if (!this.isSideCollapseEnabled) return super.nextTurn();
+    if (this.round === 0) return this.nextRound();
+
+    const result = findAdjacentGroupTurn({
+      turns: this.#sideCollapseTurns(),
+      currentTurnIndex: this.turn,
+      direction: 1,
+      skipDefeated: this.settings.skipDefeated
+    });
+
+    if (result.kind === "none") return this.nextRound();
+    if (result.kind === "round") return this.nextRound();
+
+    const nextTurn = result.turnIndex;
+    const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, nextTurn);
+    const updateData = { round: this.round, turn: nextTurn };
+    const updateOptions = { direction: 1, worldTime: { delta: advanceTime } };
+    Hooks.callAll("combatTurn", this, updateData, updateOptions);
+    await this.update(updateData, updateOptions);
+    return this;
+  }
+
+  /** @inheritDoc */
+  async previousTurn() {
+    if (!this.isSideCollapseEnabled) return super.previousTurn();
+    if (this.round === 0) return this;
+
+    const result = findAdjacentGroupTurn({
+      turns: this.#sideCollapseTurns(),
+      currentTurnIndex: this.turn,
+      direction: -1,
+      skipDefeated: this.settings.skipDefeated
+    });
+
+    if (result.kind === "none") return this;
+    if (result.kind === "round") return this.previousRound();
+
+    const previousTurn = result.turnIndex;
+    const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, previousTurn);
+    const updateData = { round: this.round, turn: previousTurn };
+    const updateOptions = { direction: -1, worldTime: { delta: advanceTime } };
+    Hooks.callAll("combatTurn", this, updateData, updateOptions);
+    await this.update(updateData, updateOptions);
+    return this;
+  }
+
   async _getGroupInitiativeData(group, olderSiblingGroup, { excludeAlreadyRolled = false } = {}) {
     if (
       group.members.size === 0 ||
@@ -40,28 +113,26 @@ export class WWNCombat extends foundry.documents.Combat {
 
     let initRoll;
     let maxInitValue = -Infinity;
-    const hasAlert = [...group.members].some(combatant => {
-      const items = combatant.token?.delta?.syntheticActor?.items ?? [];
-      return items.find(i => i.name === "Alert" && i.system?.ownedLevel === 1);
+    // AE-seeded init: group.mod >= 1 ≈ Alert L1; individual/group mod >= 100 ≈ Alert L2 / Vigilant
+    const hasAlert = [...group.members].some((combatant) => {
+      const init = combatant.actor?.system?.combat?.initiative;
+      return (Number(init?.group?.mod) || 0) >= 1 && (Number(init?.individual?.mod) || 0) < 100;
     });
-    const hasTopCombatant = [...group.members].some(combatant => {
-      const items = combatant.token?.delta?.syntheticActor?.items ?? [];
-      return items.some(i =>
-        (i.name === "Alert" && i.system?.ownedLevel === 2) ||
-        i.name === "Vigilant"
-      );
+    const hasTopCombatant = [...group.members].some((combatant) => {
+      const init = combatant.actor?.system?.combat?.initiative;
+      return (Number(init?.individual?.mod) || 0) >= 100 || (Number(init?.group?.mod) || 0) >= 100;
     });
 
     const allMembers = olderSiblingGroup
       ? [...group.members, ...olderSiblingGroup.members]
       : [...group.members];
     for (const combatant of allMembers) {
-      const data = combatant.token?.delta?.syntheticActor?.system;
-      if (!data?.initiative) continue;
+      const init = combatant.actor?.system?.combat?.initiative;
+      if (!init) continue;
 
-      const initValue = data.initiative.value ?? -Infinity;
+      const initValue = init.group?.value ?? init.value ?? -Infinity;
       if (initValue > maxInitValue) maxInitValue = initValue;
-      if (!initRoll) initRoll = data.initiative.roll;
+      if (!initRoll) initRoll = init.group?.roll ?? init.roll ?? "1d8";
     }
 
     if (maxInitValue === -Infinity) maxInitValue = 0;
@@ -258,7 +329,7 @@ export class WWNCombat extends foundry.documents.Combat {
       }
     }
 
-    const npcs = this.combatants.filter(c => c.actor.type === "monster");
+    const npcs = this.combatants.filter(c => isNpc(c.actor));
     npcs.forEach(npc => {
       const weapons = npc.token?.delta?.syntheticActor?.items.filter(i => i.type === "weapon");
       weapons.forEach(weapon => weapon.update({ "system.counter.value": weapon.system.counter.max }));
@@ -293,6 +364,27 @@ export class WWNCombat extends foundry.documents.Combat {
   async activateCombatant(turn) {
     if (game.user.isGM) {
       await game.combat.update({ turn })
+    }
+  }
+
+  /**
+   * Set initiative for a CombatantGroup and all of its members.
+   * @param {string} groupId
+   * @param {number|null} value
+   */
+  async setGroupInitiative(groupId, value) {
+    const group = this.groups.get(groupId);
+    if (!group || !game.user.isGM) return;
+
+    const combatantUpdates = [...group.members].map(c => ({
+      _id: c.id,
+      initiative: value
+    }));
+
+    if (combatantUpdates.length) {
+      await this.updateEmbeddedDocuments("Combatant", combatantUpdates);
+    } else {
+      await group.update({ initiative: value });
     }
   }
 

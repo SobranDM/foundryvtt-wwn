@@ -1,18 +1,33 @@
 {
   "_id": "hWY3SjyYUhGEMfBe",
   "name": "Diplomatic Grace",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>Your skill at personal negotiations is enormous and uncanny. Some might even think it is supernatural in origin.</p>\n<p><strong>Level 1: </strong>Gain Convince as a bonus skill. You speak all the languages common to your region of the world and can learn new ones to a workable level in a week, becoming fluent in a month. Reroll 1s on any skill check dice related to negotiation or diplomacy.</p>\n<p><strong>Level 2:&nbsp;</strong>Once per day, silently consecrate a bargain; the target must make a Mental save to break the deal unless their life or something they love as much is imperiled by it. Most NPCs won&rsquo;t even try to break it. The deal must be for something specific and time-limited, and not an open-ended bargain.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!hWY3SjyYUhGEMfBe",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

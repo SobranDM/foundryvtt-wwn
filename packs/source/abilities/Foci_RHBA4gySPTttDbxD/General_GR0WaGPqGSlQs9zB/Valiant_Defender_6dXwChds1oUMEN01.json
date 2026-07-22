@@ -1,18 +1,33 @@
 {
   "_id": "6dXwChds1oUMEN01",
   "name": "Valiant Defender",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>You are a bodyguard, shieldbearer, or other gifted defender of others, accustomed to the roil of bloody battle and desperate struggle.</p>\n<p><strong>Level 1:</strong> Gain Stab or Punch as a bonus skill. Gain a +2 on all skill checks for the <em><strong>Screen Ally </strong></em>combat action. You can screen against one more attacker per round than your skill would normally allow. Once per round, you can<em><strong> Screen Ally </strong></em>against even intangible spells or magical attacks or bodily shield them from an area-effect explosion or magic. Such attempts require the usual successful opposing skill check, with the assailant using their Magic skill.</p>\n<p><strong>Level 2: </strong>The first <em><strong>Screen Ally</strong></em> skill check you make in a round is always successful. Gain +2 AC while screening someone. You can screen against foes as large as ogres or oxen.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!6dXwChds1oUMEN01",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

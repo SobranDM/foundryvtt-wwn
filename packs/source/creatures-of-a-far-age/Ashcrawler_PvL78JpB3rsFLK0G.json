@@ -10,171 +10,111 @@
       "_id": "CDKP4VbiItWny7Q7",
       "name": "Bite",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!PvL78JpB3rsFLK0G.CDKP4VbiItWny7Q7",
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!PvL78JpB3rsFLK0G.CDKP4VbiItWny7Q7"
     }
   ],
   "effects": [],
   "_key": "!actors!PvL78JpB3rsFLK0G",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 23,
+      "max": 23
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 8,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 12,
-        "mod": 0
-      },
-      "mental": {
-        "value": 12,
-        "mod": 0
-      },
-      "physical": {
-        "value": 12,
-        "mod": 0
-      },
-      "luck": {
-        "value": 12,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "50",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "6d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>One of the hideous fungal life forms that sometimes emerge from the Ashblight, an ashcrawler resembles a centipede that stands half as tall as a man and is at least ten feet long. The &ldquo;chitin&rdquo; of the crawler is nothing but a hardened fungal shell around the soft, damp interior of the organism. Those bitten by an ashcrawler must make a Physical save or be infected by the fungus. Without magical healing, they&rsquo;ll become wholly enslaved by the parasitical fungus within a week, becoming a &ldquo;crawler slave&rdquo; and using their own intellect and abilities to gather new prey for the creature. The stat line given for them below reflects an average unlucky peasant, but stronger slaves are possible. Crawler slaves can hide most of the infection under concealing clothing, and can only be saved by powerful healing magic at the GM&rsquo;s discretion.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 10,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.TE8v9dEbY95Qe2Hq]{Insects and Semi-Mindless Beasts}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "6d8",
-      "value": 23,
-      "max": 23
+    "favorites": [
+      "CDKP4VbiItWny7Q7"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 8,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 50
+      }
+    },
+    "biography": "<p>One of the hideous fungal life forms that sometimes emerge from the Ashblight, an ashcrawler resembles a centipede that stands half as tall as a man and is at least ten feet long. The &ldquo;chitin&rdquo; of the crawler is nothing but a hardened fungal shell around the soft, damp interior of the organism. Those bitten by an ashcrawler must make a Physical save or be infected by the fungus. Without magical healing, they&rsquo;ll become wholly enslaved by the parasitical fungus within a week, becoming a &ldquo;crawler slave&rdquo; and using their own intellect and abilities to gather new prey for the creature. The stat line given for them below reflects an average unlucky peasant, but stronger slaves are possible. Crawler slaves can hide most of the infection under concealing clothing, and can only be saved by powerful healing magic at the GM&rsquo;s discretion.</p>"
   },
   "ownership": {
     "default": 0

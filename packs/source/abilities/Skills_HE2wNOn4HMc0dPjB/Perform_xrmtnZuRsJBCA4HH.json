@@ -1,7 +1,7 @@
 {
   "name": "Perform",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/perform.png",
+  "img": "systems/wwn/assets/icons/skills/perform.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "cha",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "perform"
   },
   "_stats": {
     "systemId": "wwn",

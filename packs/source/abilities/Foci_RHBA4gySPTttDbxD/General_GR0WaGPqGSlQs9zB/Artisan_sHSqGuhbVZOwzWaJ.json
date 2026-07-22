@@ -1,18 +1,33 @@
 {
   "_id": "sHSqGuhbVZOwzWaJ",
   "name": "Artisan",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>You have considerable gifts as a crafter and know numerous secrets for employing arcane salvage and magical materials. You are able to create mods for equipment even if you are not an Expert, as per the rules on page 56.</p>\n<p><strong>Level 1: </strong>Gain Craft as a bonus skill. Your Craft skill is treated as one level higher, up to a maximum of 5, for purposes of crafting and maintaining mods. Mods you build require one fewer unit of arcane salvage, down to a minimum of one.</p>\n<p><strong>Level 2:</strong> The first mod you add to an item requires no Maintenance and only half the silver piece price usually required. This benefit is in addition to the benefits of installing a mod in masterwork gear you build. You automatically succeed at any attempt to build masterwork gear appropriate to your background or past practice, and once per month you can reduce a created mod&rsquo;s salvage price by one further unit, down to a minimum of zero.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!sHSqGuhbVZOwzWaJ",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

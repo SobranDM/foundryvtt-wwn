@@ -10,156 +10,84 @@
       "_id": "S0yd6HpyVQzIz5kN",
       "name": "Great Armor",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 100000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.xosPyvxYzGwzzOYe"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
-      "_key": "!actors.items!zTOCQJdPXWIJEDCY.S0yd6HpyVQzIz5kN",
       "system": {
         "description": "<p><em><strong>Great armor </strong></em>is less finely tailored, relying instead on stacking layer upon layer of mail, plates, hide, cloth, and other protective materials until a suit almost too heavy for movement is finally assembled.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 18
-        },
+        "ac": 18,
+        "acRanged": 18,
+        "mod": 0,
         "type": "heavy",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 4000,
-        "weight": 3
-      }
+        "weight": 3,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
+      },
+      "_key": "!actors.items!zTOCQJdPXWIJEDCY.S0yd6HpyVQzIz5kN"
     }
   ],
   "effects": [],
   "_key": "!actors!zTOCQJdPXWIJEDCY",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 45,
+      "max": 45
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 20,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 11,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Two attacks per round. Shock ignores AC value.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 10,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 45,
-      "max": 45
+    "favorites": [],
+    "notes": "",
+    "combat": {
+      "ab": 11,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 20,
+        "ranged": 20
+      }
     },
-    "damageBonus": 5
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Two attacks per round. Shock ignores AC value.</p>"
   },
   "ownership": {
     "default": 0

@@ -1,5 +1,4 @@
-import { WwnActor } from '../actor/entity.js';
-import { WwnDice } from "../dice.js";
+import { WwnDice } from "../dice/dice.mjs";
 
 export class WwnCharacterCreator extends FormApplication {
   static get defaultOptions() {
@@ -87,21 +86,12 @@ export class WwnCharacterCreator extends FormApplication {
 
     const label = score != "silver" ? game.i18n.localize(`WWN.scores.${score}.long`) : "Silver";
     const rollParts = ["3d6"];
-    const data = {
-      roll: {
-        type: "result"
-      }
-    };
     // Roll and return
-    return await WwnDice.Roll({
-      event: options.event,
-      parts: rollParts,
-      data: data,
-      skipDialog: true,
-      speaker: ChatMessage.getSpeaker({ actor: this }),
-      flavor: game.i18n.format('WWN.dialog.generateScore', { score: label, count: this.counters[score] }),
-      title: game.i18n.format('WWN.dialog.generateScore', { score: label, count: this.counters[score] }),
+    const title = game.i18n.format("WWN.dialog.generateScore", {
+      score: label,
+      count: this.counters[score],
     });
+    return WwnDice.rollFormula(this.object, rollParts.join("+"), { title });
   }
 
   async close(options) {

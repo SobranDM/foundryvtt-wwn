@@ -17,11 +17,68 @@
     }
   ],
   "esmodules": [
-    "wwn.js"
+    "module/wwn.mjs"
   ],
   "styles": [
     "styles/main.css"
   ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["biography", "details.notes"]
+      },
+      "monster": {
+        "htmlFields": ["biography"]
+      },
+      "faction": {
+        "htmlFields": ["description"]
+      },
+      "pc": {
+        "htmlFields": ["biography", "details.notes"]
+      },
+      "npc": {
+        "htmlFields": ["biography"]
+      }
+    },
+    "Item": {
+      "item": {
+        "htmlFields": ["description"]
+      },
+      "weapon": {
+        "htmlFields": ["description"]
+      },
+      "armor": {
+        "htmlFields": ["description"]
+      },
+      "skill": {
+        "htmlFields": ["description"]
+      },
+      "power": {
+        "htmlFields": ["description"]
+      },
+      "classEdge": {
+        "htmlFields": ["description"]
+      },
+      "focus": {
+        "htmlFields": ["description"]
+      },
+      "currency": {
+        "htmlFields": ["description"]
+      },
+      "asset": {
+        "htmlFields": ["desc"]
+      },
+      "art": {
+        "htmlFields": ["description"]
+      },
+      "spell": {
+        "htmlFields": ["description"]
+      },
+      "ability": {
+        "htmlFields": ["description"]
+      }
+    }
+  },
   "primaryTokenAttribute": "hp",
   "packs": [
     {

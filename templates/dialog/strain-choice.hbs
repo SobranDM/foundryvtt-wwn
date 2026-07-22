@@ -1,0 +1,11 @@
+<div>
+  <p>{{localize hintKey}}</p>
+  <div class="form-group">
+    <label>{{localize labelKey}}</label>
+    <select name="strain">
+      {{#each values}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+</div>

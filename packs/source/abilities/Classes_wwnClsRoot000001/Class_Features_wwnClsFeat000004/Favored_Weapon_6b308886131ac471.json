@@ -1,0 +1,58 @@
+{
+  "_id": "6b308886131ac471",
+  "name": "Favored Weapon",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFeat000004",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6b308886131ac471",
+  "system": {
+    "description": "<p>Choose one specific type of non-unarmed melee weapon. Begin with such a weapon. When using it, you may use the Favored Weapon attack bonus column on the Duelist table unless your class attack bonus is better.</p>",
+    "subType": "art",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "Duelist Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false
+  }
+}

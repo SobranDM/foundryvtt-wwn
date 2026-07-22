@@ -2,30 +2,35 @@
   "_id": "1CEqAhe0UD6r9sBe",
   "name": "Linothorax +3",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Linothorax </strong></em>armor is a stiffer armor of glued, layered cloth, often as elaborately decorated as the arts of its maker allow.</p>\n<p><em><strong>Light armor&nbsp;</strong></em>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 13,
-      "mod": 3
-    },
-    "armorBonus": 0,
-    "type": "light",
-    "price": 20,
-    "weight": 0
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.1CEqAhe0UD6r9sBe"
     }
   },
-  "_key": "!items!1CEqAhe0UD6r9sBe"
+  "_key": "!items!1CEqAhe0UD6r9sBe",
+  "system": {
+    "description": "<p><em><strong>Linothorax </strong></em>armor is a stiffer armor of glued, layered cloth, often as elaborately decorated as the arts of its maker allow.</p>\n<p><em><strong>Light armor&nbsp;</strong></em>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 3,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 20,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

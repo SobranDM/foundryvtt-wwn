@@ -1,26 +1,49 @@
 {
   "_id": "aa3geKDIfpRMK91n",
   "name": "Invisibility",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent (but may be broken, </strong><strong>see below)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>The caster or another creature or object within range becomes invisible:</p>\n<p><strong>▶ If cast on a creature:</strong> Any gear the subject is carrying is also rendered invisible (this includes clothing and armour). Items dropped or put down by an invisible creature become visible. If the subject attacks or casts a spell, the invisibility is broken, ending the spell.</p>\n<p><strong>▶ If cast on an object: </strong>The invisibility is permanent.</p>\n<p><strong>▶ Light sources:</strong> If a light source is made invisible (either as part of a creature&rsquo;s gear or as an individual object), the light it casts is unaffected.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!aa3geKDIfpRMK91n"
+  "_key": "!items!aa3geKDIfpRMK91n",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent (but may be broken, </strong><strong>see below)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>The caster or another creature or object within range becomes invisible:</p>\n<p><strong>▶ If cast on a creature:</strong> Any gear the subject is carrying is also rendered invisible (this includes clothing and armour). Items dropped or put down by an invisible creature become visible. If the subject attacks or casts a spell, the invisibility is broken, ending the spell.</p>\n<p><strong>▶ If cast on an object: </strong>The invisibility is permanent.</p>\n<p><strong>▶ Light sources:</strong> If a light source is made invisible (either as part of a creature&rsquo;s gear or as an individual object), the light it casts is unaffected.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

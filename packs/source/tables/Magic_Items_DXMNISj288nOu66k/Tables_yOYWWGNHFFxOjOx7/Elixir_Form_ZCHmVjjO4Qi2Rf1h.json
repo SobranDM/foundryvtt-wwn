@@ -1,10 +1,6 @@
 {
   "_id": "ZCHmVjjO4Qi2Rf1h",
   "name": "Elixir Form",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {},
   "img": "icons/svg/d20-grey.svg",
   "description": "",
@@ -164,5 +160,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!ZCHmVjjO4Qi2Rf1h",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

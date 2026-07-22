@@ -28,7 +28,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="info">Statistics</a>
     <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
-    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.category.effects"}}</a>
   </nav>
 
   <section class="sheet-body">
@@ -36,49 +36,47 @@
       <div class="flexrow item-footer">
         <div class="stats">
           <div class="form-group">
-            <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.items.ArmorAAC'}}</label>
+            <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.Armor.AC'}}</label>
             <div class="form-fields">
-              <input type="number" name="system.aac.value" value="{{system.aac.value}}" data-dtype="Number" />
+              <input type="number" name="system.ac" value="{{system.ac}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.ArmorClass'}}">{{localize 'WWN.Armor.AC'}} (Ranged)</label>
+            <div class="form-fields">
+              <input type="number" name="system.acRanged" value="{{system.acRanged}}" data-dtype="Number" />
             </div>
           </div>
           <div class="form-group">
             <label title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize 'WWN.items.ArmorBonus'}}</label>
             <div class="form-fields">
-              <input type="number" name="system.aac.mod" value="{{system.aac.mod}}" data-dtype="Number" />
+              <input type="number" name="system.mod" value="{{system.mod}}" data-dtype="Number" />
             </div>
           </div>
           {{#if config.useTrauma}}
           <div class="form-group">
             <label data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">{{localize 'WWN.items.TraumaModArmor'}}</label>
             <div class="form-fields">
-              <input type="number" name="system.traumaMod" value="{{system.traumaMod}}" data-dtype="Number" />
+              <input type="number" name="system.traumaTarget" value="{{system.traumaTarget}}" data-dtype="Number" />
             </div>
           </div>
           {{/if}}
         </div>
         <div class="stats">
-          {{#if config.useFlatArmorPenalty}}
-          <div class="form-group">
-            <label>{{localize 'WWN.armor.shield'}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.isShield" value="{{system.isShield}}" {{checked system.isShield}}
-                data-dtype="Boolean" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize 'WWN.armor.heavy'}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.ashesHeavy" value="{{system.ashesHeavy}}" {{checked
-                system.ashesHeavy}} data-dtype="Boolean" />
-            </div>
-          </div>
-          {{else}}
           <div class="form-group">
             <label>{{localize 'WWN.armor.type'}}</label>
             <div class="form-fields">
               <select name="system.type">
                 {{selectOptions config.armor selected=system.type localize=true}}
               </select>
+            </div>
+          </div>
+          {{#if config.useFlatArmorPenalty}}
+          <div class="form-group">
+            <label>{{localize 'WWN.armor.heavy'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.ashesHeavy" value="{{system.ashesHeavy}}" {{checked
+                system.ashesHeavy}} data-dtype="Boolean" />
             </div>
           </div>
           {{/if}}

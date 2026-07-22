@@ -1,26 +1,49 @@
 {
   "name": "Remove Curse (Mage)",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Mage",
-    "duration": "Instant / Permanent",
-    "range": "Touch",
-    "roll": "",
-    "description": "<p><strong>Duration: Instant / Permanent (curse)</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>Remove curse instantaneously removes one curse from a creature. It may allow a character to discard a cursed magic item.</p>\n<p><strong>Reversed: Curse</strong></p>\n<p>Places a deleterious effect upon a creature, if it fails Mental save.</p>\n<p><strong>▶ Effects: </strong>The exact form and effects of the curse are determined by the caster.</p>\n<p><strong>▶ Maximum possible effects include:</strong> A &ndash;2 penalty to saving throws, a &ndash;4 penalty to hit, reducing an ability score by 50%.</p>\n<p><strong>▶ Multiple curses:</strong> May afflict a creature, as long as each has a different effect.</p>\n<p><strong>▶ Referee judgement: </strong>The referee should judge the effects of this spell and may turn overly powerful curses back onto the caster!</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "_id": "Lq3zxXLm9ACoNfJe",
-  "_key": "!items!Lq3zxXLm9ACoNfJe"
+  "_key": "!items!Lq3zxXLm9ACoNfJe",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Instant / Permanent (curse)</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>Remove curse instantaneously removes one curse from a creature. It may allow a character to discard a cursed magic item.</p>\n<p><strong>Reversed: Curse</strong></p>\n<p>Places a deleterious effect upon a creature, if it fails Mental save.</p>\n<p><strong>▶ Effects: </strong>The exact form and effects of the curse are determined by the caster.</p>\n<p><strong>▶ Maximum possible effects include:</strong> A &ndash;2 penalty to saving throws, a &ndash;4 penalty to hit, reducing an ability score by 50%.</p>\n<p><strong>▶ Multiple curses:</strong> May afflict a creature, as long as each has a different effect.</p>\n<p><strong>▶ Referee judgement: </strong>The referee should judge the effects of this spell and may turn overly powerful curses back onto the caster!</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "Touch",
+      "duration": "Instant / Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

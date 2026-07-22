@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>A rare and precious potion, this elixir allows a mage to cast one prepared spell within the next scene without it counting against their allowed spells for the day. This force exerts a severe cost on their bodily constitution, however, and they gain Systm Strain equal to the spell&rsquo;s level after it is cast. If this cost is more than their Constitution can bear, they fall unconscious and wake up in fifteen minutes with maximized System Strain.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

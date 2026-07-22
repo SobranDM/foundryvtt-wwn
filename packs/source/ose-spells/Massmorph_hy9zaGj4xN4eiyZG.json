@@ -1,26 +1,49 @@
 {
   "_id": "hy9zaGj4xN4eiyZG",
   "name": "Massmorph",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A force of human-sized creatures within a 240&rsquo; diameter area is veiled by illusion to appear as a copse of trees or orchard.</p>\n<p><strong>▶ Moving through:</strong> Once the illusion is in place, even creatures moving among the veiled subjects are deceived.</p>\n<p><strong>▶ Subjects who leave the affected area: </strong>Cease to be veiled.</p>\n<p><strong>▶ Dismissing:</strong> The caster may dismiss the illusion in its entirety at any time.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!hy9zaGj4xN4eiyZG"
+  "_key": "!items!hy9zaGj4xN4eiyZG",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A force of human-sized creatures within a 240&rsquo; diameter area is veiled by illusion to appear as a copse of trees or orchard.</p>\n<p><strong>▶ Moving through:</strong> Once the illusion is in place, even creatures moving among the veiled subjects are deceived.</p>\n<p><strong>▶ Subjects who leave the affected area: </strong>Cease to be veiled.</p>\n<p><strong>▶ Dismissing:</strong> The caster may dismiss the illusion in its entirety at any time.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

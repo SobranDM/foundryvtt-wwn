@@ -1,8 +1,8 @@
 {
   "_id": "bl1yCOI1MUdknIuJ",
   "name": "Abdictation of Temporal Presence",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "9EnIIslVVc7KXwbb",
   "sort": 100000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 5,
-    "class": "High Mage",
-    "duration": "1d4+1 rounds",
-    "range": "",
-    "roll": "1d4+1",
+    "subType": "spell",
     "description": "<p>The caster and up to one visible ally per caster level briefly step outside of the conventional flow of time, the rest of the world freezing around them. These subjects can take 1d4+1 free rounds of actions, but they cannot physically affect the world or move any object they were not carrying at the time they cast the spell. Any spells the caster or other allies cast can affect only their own group, and not those entities still in the normal flow of time.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "1d4+1",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "1d4+1 rounds"
+    }
   },
   "_key": "!items!bl1yCOI1MUdknIuJ"
 }

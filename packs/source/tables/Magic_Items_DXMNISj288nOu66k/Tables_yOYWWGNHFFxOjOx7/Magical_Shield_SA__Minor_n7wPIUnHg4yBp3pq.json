@@ -1,10 +1,6 @@
 {
   "_id": "n7wPIUnHg4yBp3pq",
   "name": "Magical Shield SA, Minor",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -46,5 +42,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!n7wPIUnHg4yBp3pq",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,8 +1,8 @@
 {
   "_id": "9AO23ikskyuhenJx",
   "name": "Elemental Spy",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
   "effects": [],
   "folder": "EKBFwEIj1iHwEq45",
   "sort": 300000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "Elementalist",
-    "duration": "Until dispelled, destroyed, or dismissed",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The elementalist enchants a stone, ounce of liquid, flame no smaller than a candleflame, or a particular plume of smoke or incense. For one day per level, so long as the charmed object is not destroyed, dispersed, or consumed, they can as a Main Action see and listen to anything around the object as if they were standing there.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Until dispelled, destroyed, or dismissed"
+    }
   },
   "_key": "!items!9AO23ikskyuhenJx"
 }

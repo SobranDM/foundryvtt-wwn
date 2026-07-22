@@ -2,14 +2,10 @@
   "_id": "zK1IqUEgWev2MBEL",
   "name": "Impervious Defense",
   "type": "armor",
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "folder": "RDW5litbJePCQIVj",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.gear.zK1IqUEgWev2MBEL"
@@ -17,15 +13,24 @@
   },
   "system": {
     "description": "<p>You have an innate Armor Class of 15 plus half your character level, rounded up.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 16,
-      "mod": 0
-    },
-    "armorBonus": 0,
+    "ac": 16,
+    "acRanged": 16,
+    "mod": 0,
     "type": "unarmored",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
     "price": 0,
-    "weight": 0
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
   },
-  "_key": "!items!zK1IqUEgWev2MBEL"
+  "_key": "!items!zK1IqUEgWev2MBEL",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

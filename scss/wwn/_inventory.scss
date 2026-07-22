@@ -496,3 +496,54 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Powers tab */
+.wwn.sheet.actor .powers-tab .powers-pools-grid {
+  gap: 8px;
+}
+.wwn.sheet.actor .powers-tab .powers-pool-value {
+  text-align: right;
+  white-space: nowrap;
+}
+.wwn.sheet.actor .powers-tab .powers-sep {
+  line-height: 24px;
+  padding: 0 2px;
+}
+.wwn.sheet.actor .powers-tab .powers-muted {
+  opacity: 0.75;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wwn.sheet.actor .powers-tab .powers-uses input {
+  width: 2.5rem;
+  text-align: right;
+}
+.wwn.sheet.actor .powers-tab .powers-active-badge {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--wwn-dark);
+}
+.wwn.sheet.actor .powers-tab .powers-col-header {
+  opacity: 0.7;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.wwn.sheet.actor .powers-tab .powers-empty-hint,
+.wwn.sheet.actor .powers-tab .powers-add-footer {
+  text-align: center;
+  padding: 6px;
+  opacity: 0.8;
+}
+.wwn.sheet.actor .powers-tab .powers-empty-state {
+  font-size: 16px;
+  padding-top: 24px;
+  text-align: center;
+}
+.wwn.sheet.actor .powers-tab .item-unprepared {
+  opacity: 0.45;
+}
+.wwn.sheet.actor .powers-tab .powers-section {
+  margin-bottom: 8px;
+}
+

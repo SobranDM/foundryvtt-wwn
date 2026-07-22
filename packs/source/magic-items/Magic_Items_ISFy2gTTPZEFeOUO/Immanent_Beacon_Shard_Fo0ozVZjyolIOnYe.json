@@ -2,28 +2,38 @@
   "_id": "Fo0ozVZjyolIOnYe",
   "name": "Immanent Beacon Shard",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>Fragments of some unfathomable monolith of congealed natural law, these shards of faceted crystal are usually the size of a short baton. When a user presses the correct facet of the crystal and releases it, the shard remains fixed precisely in that location, even if hanging in mid-air. Absolutely no mundane force can shift or damage the crystal, and even magical powers must dispel the effect at difficulty 12 before the shard can be affected in any way. The person who placed the shard is perpetually aware of its exact location in&nbsp;relation to their present place, and can see and hear the area around the beacon as if they were standing there. The user can reclaim the beacon at a cost of 1 System Strain, or wait for the effect to wear out and the shard to become movable again a day later.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.Fo0ozVZjyolIOnYe"
     }
   },
-  "_key": "!items!Fo0ozVZjyolIOnYe"
+  "_key": "!items!Fo0ozVZjyolIOnYe",
+  "system": {
+    "description": "<p>Fragments of some unfathomable monolith of congealed natural law, these shards of faceted crystal are usually the size of a short baton. When a user presses the correct facet of the crystal and releases it, the shard remains fixed precisely in that location, even if hanging in mid-air. Absolutely no mundane force can shift or damage the crystal, and even magical powers must dispel the effect at difficulty 12 before the shard can be affected in any way. The person who placed the shard is perpetually aware of its exact location in&nbsp;relation to their present place, and can see and hear the area around the beacon as if they were standing there. The user can reclaim the beacon at a cost of 1 System Strain, or wait for the effect to wear out and the shard to become movable again a day later.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

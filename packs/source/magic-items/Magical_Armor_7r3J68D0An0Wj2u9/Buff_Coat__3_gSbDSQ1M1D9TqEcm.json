@@ -2,30 +2,35 @@
   "_id": "gSbDSQ1M1D9TqEcm",
   "name": "Buff Coat +3",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Buff coats</strong></em> are long coats of thick, supple hide, sometimes worn to cushion the bite of heavier armor and sometimes sported as ornamented street clothing for the gentry who can afford such luxuries</p>\n<p><strong><em>Light armor</em>&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 12,
-      "mod": 3
-    },
-    "armorBonus": 0,
-    "type": "light",
-    "price": 50,
-    "weight": 0
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.gSbDSQ1M1D9TqEcm"
     }
   },
-  "_key": "!items!gSbDSQ1M1D9TqEcm"
+  "_key": "!items!gSbDSQ1M1D9TqEcm",
+  "system": {
+    "description": "<p><em><strong>Buff coats</strong></em> are long coats of thick, supple hide, sometimes worn to cushion the bite of heavier armor and sometimes sported as ornamented street clothing for the gentry who can afford such luxuries</p>\n<p><strong><em>Light armor</em>&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
+    "ac": 12,
+    "acRanged": 12,
+    "mod": 3,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

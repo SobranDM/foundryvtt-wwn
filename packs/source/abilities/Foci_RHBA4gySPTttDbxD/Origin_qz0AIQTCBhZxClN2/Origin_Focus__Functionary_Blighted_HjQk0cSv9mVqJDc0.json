@@ -1,18 +1,33 @@
 {
   "_id": "HjQk0cSv9mVqJDc0",
   "name": "Origin Focus: Functionary Blighted",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>Your ancestors were created as tools for a specific functional purpose, one more specific than that of a general laborer. Some may have been living musical instruments, while others could be warped maintenance-drones, inhuman performers, tireless living calculators, or some similar purpose-grown organism. While you probably still look somewhat human, most such functionaries suffered significant, crippling debilities to gain their powers. These Blighted are naturally equipped with the tools and abilities necessary to carry out their role, either as physical organs, implanted devices, or innate magical powers.</p>\n<p><strong>Level 1: </strong>Pick any one non-combat, non-Magic skill as a bonus skill and gain the Specialist Focus in it. Pick any one attribute; it suffers a -1 penalty to its modifier, to a minimum of -2. You are capable of carrying out your intended function even without normally-necessary tools or instruments; functionaries intended to be artisans can replicate or mimic hand tools, those meant to be healers do not need medical supplies, and so forth. You gain an intrinsic +1 bonus to all skill checks related to your function.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!HjQk0cSv9mVqJDc0",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

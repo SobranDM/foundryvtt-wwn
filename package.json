@@ -8,7 +8,9 @@
     "lint:packs": "node ./build/lint-pack-folders.mjs",
     "build:packs": "npm run lint:packs && node ./build/build-packs.mjs",
     "extract:packs": "node ./build/extract-packs.mjs",
-    "build": "npm run build:css && npm run build:packs"
+    "build": "npm run build:css && npm run build:packs",
+    "test": "node --test tests/**/*.test.mjs",
+    "migrate:packs": "node ./build/migrate-packs.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.4",

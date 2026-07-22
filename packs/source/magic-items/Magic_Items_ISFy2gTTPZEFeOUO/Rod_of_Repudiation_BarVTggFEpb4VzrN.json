@@ -2,28 +2,38 @@
   "_id": "BarVTggFEpb4VzrN",
   "name": "Rod of Repudiation",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>An ancient punishment-tool, this short rod may be used to strike a target in melee as if a <em><strong>club +1</strong></em> or used against a helpless target automatically. An affected subject must make a Physical saving throw or have a dully-glowing brand appear on their face. This brand inspires universal, unreasoning loathing in humans and demihumans, causing a -2 penalty to all their reaction rolls and a -2 penalty to all Charisma-based skill checks. Friends, lovers, spouses, and others with close relationships must make a Mental saving throw on first seeing the brand or break off all association with the subject. The rod may inflict such a brand once per scene, and the curse lasts until it is dispelled or the rod is used again on the same target.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.BarVTggFEpb4VzrN"
     }
   },
-  "_key": "!items!BarVTggFEpb4VzrN"
+  "_key": "!items!BarVTggFEpb4VzrN",
+  "system": {
+    "description": "<p>An ancient punishment-tool, this short rod may be used to strike a target in melee as if a <em><strong>club +1</strong></em> or used against a helpless target automatically. An affected subject must make a Physical saving throw or have a dully-glowing brand appear on their face. This brand inspires universal, unreasoning loathing in humans and demihumans, causing a -2 penalty to all their reaction rolls and a -2 penalty to all Charisma-based skill checks. Friends, lovers, spouses, and others with close relationships must make a Mental saving throw on first seeing the brand or break off all association with the subject. The rod may inflict such a brand once per scene, and the curse lasts until it is dispelled or the rod is used again on the same target.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -2,54 +2,66 @@
   "_id": "UfzW0ZWALLbtdb6g",
   "name": "Spear, Heavy +2",
   "type": "weapon",
-  "img": "systems/wwn/assets/default/weapon.png",
-  "data": {
+  "img": "systems/wwn/assets/icons/items/weapon.png",
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.magic-items.UfzW0ZWALLbtdb6g"
+    }
+  },
+  "_key": "!items!UfzW0ZWALLbtdb6g",
+  "system": {
+    "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
+    "damage": "1d10+2",
+    "bonus": 2,
+    "skillDamage": false,
+    "shock": {
+      "damage": "4",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 0,
       "medium": 0,
       "long": 0
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Spears,</strong></em> and their longer cousin the <em><strong>pike,</strong></em> are common military weapons throughout the Latter Earth. Lighter spears are effective thrown weapons, while heavier two-handed versions penetrate armor well.</p>",
-    "damage": "1d10+2",
-    "bonus": 2,
-    "skillDamage": false,
-    "shock": {
-      "damage": 4,
-      "ac": 15
-    },
-    "shockTotal": "0",
-    "skill": "stab",
-    "score": "str",
     "tags": [
-      {
-        "title": "2H",
-        "value": "2H"
-      }
+      "2H"
     ],
-    "slow": false,
-    "missile": false,
-    "melee": true,
-    "price": 10,
-    "weight": 2,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
     },
-    "quantity": 1
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 10,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
-  "effects": [],
-  "folder": "OIyd6nt6BoF6ZIqn",
-  "sort": 0,
-  "permission": {
+  "ownership": {
     "default": 0,
     "mgBwP0sTLP1VFg1m": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.wwn.magic-items.UfzW0ZWALLbtdb6g"
-    }
-  },
-  "_key": "!items!UfzW0ZWALLbtdb6g"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "_id": "cRbIxIWtGeuZDN5b",
   "name": "Tremors of the Depths",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
   "effects": [],
   "folder": "yan5em9k0iZiFxv4",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 5,
-    "class": "Elementalist",
-    "duration": "5 minutes",
-    "range": "500-ft. radius",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The elementalist calls up a deep, rolling tremor from within the earth, centering it on a visible point and affecting all structures in a radius of up to five hundred feet. This spell&rsquo;s effects are slow, requiring five minutes to fully manifest, but they can successfully topple or destroy any structures, tunnels, or caves within the affected area unless such structures are magically reinforced. The effects are negated if the spell is dispelled before it fully manifests.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "500-ft. radius",
+      "duration": "5 minutes"
+    }
   },
   "_key": "!items!cRbIxIWtGeuZDN5b"
 }

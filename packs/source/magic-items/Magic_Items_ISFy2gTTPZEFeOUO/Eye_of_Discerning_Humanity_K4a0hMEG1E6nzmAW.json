@@ -2,28 +2,38 @@
   "_id": "K4a0hMEG1E6nzmAW",
   "name": "Eye of Discerning Humanity",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>A jade-colored sphere the size of an eyeball, this device may be pointed at any creature within sixty feet and activated by pressing a small stud. The target will be limned in yellow light if human, green if demihuman, and blue if non-human. The eye&rsquo;s categorization draws on the creator&rsquo;s personal taxonomu, so the result shown may not entirely agree with a user&rsquo;s opinion. Only the wielder can see this light, which lasts for 1d6 rounds. The eye&rsquo;s discernment can penetrate any mundane disguise or magical spell of third level or less. If the GM thinks the subject has a stronger kind of concealment, they may make a secret Wis/Notice skill check against an appropriate difficulty to determine if a true answer is given. The eye can be used once per scene.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 0,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.K4a0hMEG1E6nzmAW"
     }
   },
-  "_key": "!items!K4a0hMEG1E6nzmAW"
+  "_key": "!items!K4a0hMEG1E6nzmAW",
+  "system": {
+    "description": "<p>A jade-colored sphere the size of an eyeball, this device may be pointed at any creature within sixty feet and activated by pressing a small stud. The target will be limned in yellow light if human, green if demihuman, and blue if non-human. The eye&rsquo;s categorization draws on the creator&rsquo;s personal taxonomu, so the result shown may not entirely agree with a user&rsquo;s opinion. Only the wielder can see this light, which lasts for 1d6 rounds. The eye&rsquo;s discernment can penetrate any mundane disguise or magical spell of third level or less. If the GM thinks the subject has a stronger kind of concealment, they may make a secret Wis/Notice skill check against an appropriate difficulty to determine if a true answer is given. The eye can be used once per scene.</p>",
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

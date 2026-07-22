@@ -1,26 +1,49 @@
 {
   "_id": "fkKLuu2DHkvDqJGh",
   "name": "Geas",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent / </strong><strong>Instant (remove geas)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster commands a subject to perform or avoid performing a specific action.</p>\n<p><strong>▶ Examples: </strong>Bringing a specific item to the caster, eating or drinking without restraint, keeping a certain fact secret.</p>\n<p><strong>▶ Impossible or deadly tasks:</strong> The prescribed geas must not be impossible or directly deadly&mdash;if such a geas is cast, it affects the caster, instead.</p>\n<p><strong>▶ Saving throw: </strong>The subject may make a Mental save to avoid coming under the spell&rsquo;s effect.</p>\n<p><strong>▶ If the save fails: </strong>The subject must follow the stipulated course of action or suffer gradually increasing (and eventually fatal) penalties determined by the referee (e.g. penalties to attack, ability score reductions, inability to memorize spells, physical torment and feebleness, etc.).</p>\n<p><strong>Reversed: Remove Geas</strong></p>\n<p>Can dispel an active geas spell and any incurred penalties. If the caster of the geas to be nullified is higher level than the character casting remove geas, there is a chance of the spell having no effect. The probability of spell failure is 5% per level the caster is below the caster of geas.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!fkKLuu2DHkvDqJGh"
+  "_key": "!items!fkKLuu2DHkvDqJGh",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent / </strong><strong>Instant (remove geas)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster commands a subject to perform or avoid performing a specific action.</p>\n<p><strong>▶ Examples: </strong>Bringing a specific item to the caster, eating or drinking without restraint, keeping a certain fact secret.</p>\n<p><strong>▶ Impossible or deadly tasks:</strong> The prescribed geas must not be impossible or directly deadly&mdash;if such a geas is cast, it affects the caster, instead.</p>\n<p><strong>▶ Saving throw: </strong>The subject may make a Mental save to avoid coming under the spell&rsquo;s effect.</p>\n<p><strong>▶ If the save fails: </strong>The subject must follow the stipulated course of action or suffer gradually increasing (and eventually fatal) penalties determined by the referee (e.g. penalties to attack, ability score reductions, inability to memorize spells, physical torment and feebleness, etc.).</p>\n<p><strong>Reversed: Remove Geas</strong></p>\n<p>Can dispel an active geas spell and any incurred penalties. If the caster of the geas to be nullified is higher level than the character casting remove geas, there is a chance of the spell having no effect. The probability of spell failure is 5% per level the caster is below the caster of geas.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "30'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

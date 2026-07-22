@@ -1,26 +1,49 @@
 {
   "_id": "4UIlIitrvpSAWE3z",
   "name": "Create Food",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Cleric",
-    "duration": "Permanent",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 30'</strong></p>\n<p>Conjures food from thin air.</p>\n<p><strong>▶ Volume: </strong>Food sufficient for twelve humans and twelve mounts for one day is conjured.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, food sufficient for an additional 12 humans and mounts is produced for each level beyond 8th.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!4UIlIitrvpSAWE3z"
+  "_key": "!items!4UIlIitrvpSAWE3z",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 30'</strong></p>\n<p>Conjures food from thin air.</p>\n<p><strong>▶ Volume: </strong>Food sufficient for twelve humans and twelve mounts for one day is conjured.</p>\n<p><strong>▶ Higher level casters: </strong>If the caster is higher than 8th level, food sufficient for an additional 12 humans and mounts is produced for each level beyond 8th.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

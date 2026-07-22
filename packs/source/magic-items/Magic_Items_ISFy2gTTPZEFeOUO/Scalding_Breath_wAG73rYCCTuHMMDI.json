@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>The creature that imbibes this fluid can exhale it again as a Main Action to do 4d6 damage plus their character level to all targets within a cone thirty feet long and wide. Victims can make an Evasion saving throw to halve the damage. Different fluids produce different noxious exhalations, though flame, frost, poison, and lethal radiation are not uncommon finds. Only one breath attack is allowed, and if not made within a scene the potion is wasted.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

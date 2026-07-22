@@ -3,24 +3,27 @@
   "name": "Hurlant Bolts",
   "type": "item",
   "flags": {},
-  "img": "systems/wwn/assets/default/item.png",
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "system": {
     "description": "",
-    "quantity": 1,
-    "treasure": false,
     "price": 20,
     "weight": 0.05,
-    "hasCharges": true,
-    "charges": {
-      "value": 20,
-      "max": 20,
-      "consumable": false
-    },
-    "roll": "",
+    "quantity": 1,
     "equipped": false,
     "stowed": false,
-    "version": 3
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 20,
+      "max": 20
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

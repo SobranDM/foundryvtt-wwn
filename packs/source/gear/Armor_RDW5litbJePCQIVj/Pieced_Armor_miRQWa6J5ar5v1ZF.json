@@ -2,14 +2,10 @@
   "_id": "miRQWa6J5ar5v1ZF",
   "name": "Pieced Armor",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "RDW5litbJePCQIVj",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.gear.miRQWa6J5ar5v1ZF"
@@ -17,15 +13,24 @@
   },
   "system": {
     "description": "<p><em><strong>Pieced armor</strong></em> is assembled of a thicker or more durable chestpiece and piecework limb armor. While less effective than a proper cuirass and greaves, it&rsquo;s often the best that scavengers or poor adventurers can get.</p>\n<p><strong>Light armor&nbsp;</strong>may be decidedly heavy, but it is loose&nbsp;and flexible enough to offer minimal hindrance to the&nbsp;wearer&rsquo;s actions. Some varieties are also discreet enough&nbsp;to be worn politely in common society.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 14,
-      "mod": 0
-    },
-    "armorBonus": 0,
+    "ac": 14,
+    "acRanged": 14,
+    "mod": 0,
     "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
     "price": 100,
-    "weight": 2
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
   },
-  "_key": "!items!miRQWa6J5ar5v1ZF"
+  "_key": "!items!miRQWa6J5ar5v1ZF",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

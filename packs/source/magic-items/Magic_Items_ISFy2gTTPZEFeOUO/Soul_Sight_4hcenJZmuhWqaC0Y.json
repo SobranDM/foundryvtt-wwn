@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>If applied to a creature&rsquo;s eyes, this potion causes their vision to become hazy and indistinct, too blurry to read text or make out any details more precise than facial features, albeit not so much as to hinder their fighting ability. They are able to see living or animate entities as glowing colored outlines, however, regardless of the ambient light or their invisibility, and can identify specific individuals by the details of the image. The glow tells the user the subject&rsquo;s current mental state as described in one or two words. The sight lasts for six hours or until the user rinses their eyes.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

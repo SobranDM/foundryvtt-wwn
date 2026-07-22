@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>The user of this potion transforms into a normal animal of their choice no larger than a horse nor smaller than a rat. Their own attributes and statistics are retained, though they gain the chosen creature&rsquo;s movement modes and speed. Their belongings meld with them on the transformation, still applying their benefits, but they cannot be removed until the change ends. The transformation lasts until the user ends it as an On Turn action, they die, or the next dawn.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

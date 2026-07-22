@@ -1,8 +1,8 @@
 {
   "_id": "tL8TraNsuwVRWMfc",
   "name": "The Howl of Light",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "FpLCULEmzzpLk08x",
   "sort": 800000,
@@ -12,17 +12,38 @@
     }
   },
   "system": {
-    "lvl": 3,
-    "class": "High Mage",
-    "duration": "",
-    "range": "25-ft. radius",
-    "roll": "(@level)d8",
+    "subType": "spell",
     "description": "<p>A flattened disc of tremendous heat, sound, and shock is triggered at a visible point within fifty feet per caster level, erupting in a twenty-foot radius eight feet in height. Everything within the area suffers 1d8 damage from flame, concussion, and sonic shock per caster level, with an Evasion save for half. If used in a space less than 40 feet in width, the explosion is channeled through adjacent spaces and passages for an additional [[/roll 1d6]] x 10 feet.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "evasion"
+    "activation": {
+      "roll": "(@level)d8",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "evasion",
+      "range": "25-ft. radius",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

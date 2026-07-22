@@ -1,0 +1,39 @@
+{
+  "_id": "aee4449386d8b792",
+  "name": "Partial Warrior",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aee4449386d8b792",
+  "system": {
+    "description": "<p>The Warrior is a hero born to the blade, a man or woman gifted with a superb capacity for physical violence. Savage barbarians, hardened mercenaries, courageous young farm boys, and ordinary laborers who just happen to have an undiscovered capacity for massive bloodshed all might qualify as Warriors.</p><p>Warriors aren&rsquo;t all formal soldiers or recognized veterans of the blade. Any adventurer who excels in dealing with their problems through violence might qualify as a Warrior, however peaceful their background. It&rsquo;s possible that their very talent for killing was what forced them out of their old life after some terrible event or awful encounter compelled them to recognize their gifts.</p><p>Warriors have more hit points than heroes of other class, and are capable of surviving wounds and hardships that would kill an ordinary man. They&rsquo;re also gifted with a superior attack bonus, and a native ability to inflict more damage than other PCs. Full Warriors even have the ability to ensure a hit or force a miss by an enemy once per scene, making them lethal foes to common combatants.</p><h3>Class Ability: Killing Blow</h3><p>Whenever a Warrior inflicts damage with any attack, spell, or special ability they may add half their character level, rounded up, to the damage done. This damage is also added to any Shock they may inflict.</p><p>Combined with Foci meant to improve Shock attacks such as Armsmaster, Close Combatant, or Shocking Assault, this ability ensures that an experienced Warrior will almost always kill any ordinary human soldier or minor monster, regardless of their attack roll result.</p><p>Partial Warriors do not get this ability.</p><h3>Class Ability: Veteran&rsquo;s Luck</h3><p>Once per scene, as an Instant action, the Warrior may turn a missed attack they have made into a hit. Alternately, they may turn a successful attack against them into a miss, also as an Instant action. This ability is particularly lethal when used with the Make a Snap Attack action and leveled against weaker monsters or ordinary human warriors.</p><p>Only one exercise of this ability is possible in a scene, either to force a miss or ensure a hit on a foe; both options may not be employed in the same fight.</p><p>A Warrior may use this ability with crew-served weapons they are assisting in firing. This ability cannot be used to negate environmental damage or damage done to a vehicle or mount they are riding.</p><p>Partial Warriors do not get this ability.</p><h3>Partial Warrior/Partial Expert</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior + 1 Expert + 1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Mage/Partial Warrior</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Any + 1 Warrior</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "partialWarrior",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 2
+    },
+    "preparedGrant": {
+      "progression": []
+    }
+  }
+}

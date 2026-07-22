@@ -93,14 +93,14 @@
   "displayRoll": true,
   "folder": "JPUcp1bOrJIxqBjV",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "RollTable.CVZMeX9EQV6oQ0aM"
     }
   },
-  "_key": "!tables!328FVFOWsYIHOzMr"
+  "_key": "!tables!328FVFOWsYIHOzMr",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

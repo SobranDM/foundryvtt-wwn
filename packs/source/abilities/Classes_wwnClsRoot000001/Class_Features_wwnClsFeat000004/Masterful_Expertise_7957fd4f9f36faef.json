@@ -1,0 +1,58 @@
+{
+  "_id": "7957fd4f9f36faef",
+  "name": "Masterful Expertise",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFeat000004",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7957fd4f9f36faef",
+  "system": {
+    "description": "<p>Once per scene, as an Instant action, reroll a failed non-combat skill check. Use the better roll if it matters.</p>",
+    "subType": "ability",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 1,
+      "max": 1
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false
+  }
+}

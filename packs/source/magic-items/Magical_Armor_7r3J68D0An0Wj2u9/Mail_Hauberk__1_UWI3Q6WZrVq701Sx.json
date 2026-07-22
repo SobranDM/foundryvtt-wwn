@@ -2,30 +2,35 @@
   "_id": "UWI3Q6WZrVq701Sx",
   "name": "Mail Hauberk +1",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p>A <em><strong>mail hauberk </strong></em>in the listed style covers not only the wearer&rsquo;s chest, but also their arms, with a long skirt extended to the knee. As with a mail shirt, the padding beneath the armor is sometimes so thick as to qualify as protective gear in its own right</p>\n<p><em><strong>Heavy armor </strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 16,
-      "mod": 1
-    },
-    "armorBonus": 0,
-    "type": "heavy",
-    "price": 1000,
-    "weight": 1
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.UWI3Q6WZrVq701Sx"
     }
   },
-  "_key": "!items!UWI3Q6WZrVq701Sx"
+  "_key": "!items!UWI3Q6WZrVq701Sx",
+  "system": {
+    "description": "<p>A <em><strong>mail hauberk </strong></em>in the listed style covers not only the wearer&rsquo;s chest, but also their arms, with a long skirt extended to the knee. As with a mail shirt, the padding beneath the armor is sometimes so thick as to qualify as protective gear in its own right</p>\n<p><em><strong>Heavy armor </strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+    "ac": 16,
+    "acRanged": 16,
+    "mod": 1,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

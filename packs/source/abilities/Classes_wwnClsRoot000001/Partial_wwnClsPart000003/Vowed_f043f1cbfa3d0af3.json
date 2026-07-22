@@ -1,0 +1,63 @@
+{
+  "_id": "f043f1cbfa3d0af3",
+  "name": "Vowed",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [
+    {
+      "_id": "56d0ada836cc3451",
+      "name": "Unarmored Defense",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "changes": [],
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": "13 + @halfLevel",
+            "priority": null,
+            "phase": "final"
+          }
+        ]
+      },
+      "_key": "!items.effects!f043f1cbfa3d0af3.56d0ada836cc3451"
+    }
+  ],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!f043f1cbfa3d0af3",
+  "system": {
+    "description": "<p>Adepts of fist and bodily discipline, the Vowed are a partial Mage class dedicated to unarmed combat, physical training, and mental discipline. <strong>Vowed Benefits.</strong> Vowed are taken by an Adventurer with another partial class. Their hit dice can never be worse than 1d6 per level thanks to Martial Style. Each gains an appropriate non-combat bonus skill, such as Exert, Know, Pray, or Magic. Vowed do not cast spells but refine inner powers; these abilities cannot be used in heavy clothing, armor, or shields, though Armored Magic can mitigate this. At first level, a Vowed gains Martial Style, Unarmed Might, and Unarmored Defense, plus one additional ability.</p><h3>Partial Warrior/Vowed</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior, +1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Expert/Vowed</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Expert, +1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table><h3>Partial Other Mage/Vowed</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+0</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+0</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+0</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+1</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+1</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+1</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+2</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Vowed Effort",
+      "formula": "max(1, @exert + max(@str, @dex, @con, @int, @wis, @cha))",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": []
+    }
+  }
+}

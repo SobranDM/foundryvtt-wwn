@@ -1,24 +1,34 @@
 {
   "_id": "CAjMS8kgi7TI2eF3",
   "name": "Lantern",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "item",
-  "data": {
-    "description": "<p>A lantern or torch casts usable light in a thirty-foot radius. Objects outside this range are too indistinct to be made out in the typical stygian gloom of a Deep.</p>\n<p>A filled lantern lasts for 24 turns (4 hours) before burning out.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 10,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
   "flags": {},
-  "img": "systems/wwn/assets/default/item.png",
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "_key": "!items!CAjMS8kgi7TI2eF3",
-  "folder": "2JRbC6jpR9k3HWcM"
+  "folder": "2JRbC6jpR9k3HWcM",
+  "system": {
+    "description": "<p>A lantern or torch casts usable light in a thirty-foot radius. Objects outside this range are too indistinct to be made out in the typical stygian gloom of a Deep.</p>\n<p>A filled lantern lasts for 24 turns (4 hours) before burning out.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

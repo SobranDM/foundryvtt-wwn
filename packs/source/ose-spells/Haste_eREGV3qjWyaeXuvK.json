@@ -1,26 +1,49 @@
 {
   "_id": "eREGV3qjWyaeXuvK",
   "name": "Haste",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 3,
-    "class": "Mage",
-    "duration": "3 turns",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Up to 24 creatures in a 60&rsquo; diameter area are enchanted to be able to move and act twice as quickly as normal:</p>\n<p><strong>▶ Movement:</strong> Subjects&rsquo; maximum movement rates are doubled.</p>\n<p><strong>▶ Attacks: </strong>Subjects may make double the normal number of attacks per round.</p>\n<p><strong>▶ Spells:</strong> The number of spells a subject may cast per round is not doubled.</p>\n<p><strong>▶ Magical devices:</strong> The use of devices such as wands is also not doubled.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!eREGV3qjWyaeXuvK"
+  "_key": "!items!eREGV3qjWyaeXuvK",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Up to 24 creatures in a 60&rsquo; diameter area are enchanted to be able to move and act twice as quickly as normal:</p>\n<p><strong>▶ Movement:</strong> Subjects&rsquo; maximum movement rates are doubled.</p>\n<p><strong>▶ Attacks: </strong>Subjects may make double the normal number of attacks per round.</p>\n<p><strong>▶ Spells:</strong> The number of spells a subject may cast per round is not doubled.</p>\n<p><strong>▶ Magical devices:</strong> The use of devices such as wands is also not doubled.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "3 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

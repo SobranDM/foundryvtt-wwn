@@ -1,15 +1,11 @@
 {
   "_id": "bRUT9lMcCEzXWN6W",
   "name": "Facile Healer",
-  "type": "art",
-  "img": "systems/wwn/assets/new/healer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/healer-art.png",
   "effects": [],
   "folder": "UGutV2IRZNIuA87t",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.bRUT9lMcCEzXWN6W"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!bRUT9lMcCEzXWN6W",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Your <em><strong>Healing Touch</strong></em> ability is improved;, and you no longer need to Commit Effort to activate it.</p>",
-    "save": "",
     "source": "Healer",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>When imbibed, the user is prompted to think of a particular time and place in their own past. They are instantly whisked back to a perfect temporal parallel of that time, occupying the body they had at the time for one hour. During that hour they may do as they wish in that time and place, but if they die during that hour, they die in the present as well. At the hour&rsquo;s end their mind is returned to the present time. Nothing that happened in the facsimile remains or has any effect on true reality, but things they learned or observed during that hour may be retained.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

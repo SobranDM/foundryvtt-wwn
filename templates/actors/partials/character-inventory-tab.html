@@ -58,7 +58,7 @@
               </div>
               {{/if}}
               <div class="field-short charges">
-                {{#if item.system.charges.decrementOnAttack}}
+                {{#if (eq item.system.ammoMode "magazine")}}
                 <input value="{{item.system.charges.value}}" type="number" disabled class="charges-input" />
                 <div class="charges-reload-overlay">
                   <a class="item-control item-reload" data-item-id="{{item.id}}"
@@ -100,7 +100,7 @@
         <li class="item-titles flexrow">
           <div class="item-caret"><i class="fas fa-caret-down"></i></div>
           <div class="item-name">{{localize "WWN.items.Armors"}}</div>
-          <div class="field-short">{{localize "WWN.items.ArmorAAC"}}</div>
+          <div class="field-short">{{localize "WWN.Armor.AC"}}</div>
           <div class="field-short" title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize "WWN.items.ArmorBonus"}}
           </div>
           {{#if config.useTrauma}}
@@ -130,14 +130,14 @@
                 </a>
               </div>
               <div class="field-short">
-                {{item.system.aac.value}}
+                {{item.system.acValue}}
               </div>
               <div class="field-short">
-                {{item.system.aac.mod}}
+                {{item.system.modValue}}
               </div>
               {{#if ../config.useTrauma}}
               <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">
-                {{item.system.traumaMod}}
+                {{item.system.traumaTargetValue}}
               </div>
               {{/if}}
               <div class="field-short">
@@ -190,17 +190,7 @@
                 </a>
               </div>
               <div class="field-short charges">
-                {{#if item.system.charges.decrementOnAttack}}
-                <input value="{{item.system.charges.value}}" type="number" disabled class="charges-input" />
-                <div class="charges-reload-overlay">
-                  <a class="item-control item-reload" data-item-id="{{item.id}}"
-                    title="{{localize 'WWN.items.ReloadWeapon'}}">
-                    <i class="fas fa-sync-alt"></i>
-                  </a>
-                </div>
-                {{else}}
                 <input value="{{item.system.charges.value}}" type="number" />
-                {{/if}}
               </div>
               <div class="field-short">
                 <input value="{{item.system.weight}}" type="number" readonly />

@@ -1,8 +1,8 @@
 {
   "_id": "8Q9pePj7Jet2nS6N",
   "name": "Forgetting the Grave",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
   "effects": [],
   "folder": "srJvVpDjTgBmnEpd",
   "sort": 300000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 3,
-    "class": "Necromancer",
-    "duration": "1 rounde per level",
-    "range": "Visible",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>A necromancer can temporarily suspend the mortality of a willing target within sight. For one round per Necromancer level, the creature simply cannot die, no matter how drastic their injuries. Those reduced to zero hit points lose their Move action each turn but can continue to act otherwise; if such a target is damaged yet again, they must make a Physical saving throw each time or become incapable of movement until healed. At the spell&rsquo;s end targets reduced to zero hit points are Mortally Wounded; those that have been dismembered or otherwise slaughtered beyond the hope of survival die instantly</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "physical"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "Visible",
+      "duration": "1 rounde per level"
+    }
   },
   "_key": "!items!8Q9pePj7Jet2nS6N"
 }

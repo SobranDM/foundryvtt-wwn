@@ -1,26 +1,49 @@
 {
   "_id": "trQ2hT6bLmfLGsfn",
   "name": "Move Earth",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "6 turns",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Earth (but not stone) within range is rearranged as the caster wishes.</p>\n<p><strong>▶ Movement rate:</strong> The caster can move earth in the area at up to 60&rsquo; per turn.</p>\n<p><strong>▶ Excavations: </strong>The range of the spell also extends downwards, allowing excavations to be made.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!trQ2hT6bLmfLGsfn"
+  "_key": "!items!trQ2hT6bLmfLGsfn",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>Earth (but not stone) within range is rearranged as the caster wishes.</p>\n<p><strong>▶ Movement rate:</strong> The caster can move earth in the area at up to 60&rsquo; per turn.</p>\n<p><strong>▶ Excavations: </strong>The range of the spell also extends downwards, allowing excavations to be made.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

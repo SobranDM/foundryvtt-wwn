@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>When this liquid is applied to an object or imbibed, the target begins to glow like a lantern, shining light out to a 30&rsquo; radius. This glow persists until dispelled or a week has passed.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

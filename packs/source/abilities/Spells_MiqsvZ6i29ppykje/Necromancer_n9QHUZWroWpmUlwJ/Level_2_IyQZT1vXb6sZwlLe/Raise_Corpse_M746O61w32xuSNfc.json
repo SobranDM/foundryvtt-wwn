@@ -1,8 +1,8 @@
 {
   "_id": "M746O61w32xuSNfc",
   "name": "Raise Corpse",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
   "effects": [],
   "folder": "IyQZT1vXb6sZwlLe",
   "sort": 400000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 2,
-    "class": "Necromancer",
-    "duration": "Until destroyed or released",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The necromancer targets a mostly-intact skeleton or corpse, imbuing it with a semblance of life. Whatever the creature&rsquo;s attributes were in life, it now has 1 HD, an AC of 13, a Move of 30&rsquo;/round, a +0 skill bonus, saves of 15+, a +1/1d6 unarmed melee attack, Instinct 0, and a Morale of 12. Its decay or dissolution immediately ceases, and it becomes suicidally loyal to its creator. The corpse has no natural volition, but will obey commands with a human degree of intelligence. It has only vague memories of its prior life, and while it may retain human tics or habits it had in life it can answer only the simplest and most self-evident questions. Damage to a corpse can be repaired only by casting this spell on it again, which restores it to its original &ldquo;health&rdquo;. The corpse continues to exist until it is reduced to zero hit points or its creator releases it. A necromancer cannot have more active subjects of this spell than their character level.</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.woucJaiYHq9f0jcX]{Raised Corpse}</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Until destroyed or released"
+    }
   },
   "_key": "!items!M746O61w32xuSNfc"
 }

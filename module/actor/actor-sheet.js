@@ -1,9 +1,15 @@
-import { WwnActor } from "./entity.js";
 import {
   onManageActiveEffect,
   prepareActiveEffectCategories,
-} from "../effects.mjs";
-import { WwnEntityTweaks } from "../dialog/entity-tweaks.js";
+} from "../helpers/effects.mjs";
+import {
+  applyLegacySheetAliases,
+  remapLegacySubmitData,
+} from "../helpers/sheet-legacy-bridge.mjs";
+import { applySubtypeDefaults, POWER_SUBTYPES } from "../config/power-subtypes.mjs";
+import { syncPowerTransferEffects } from "../helpers/power-effects.mjs";
+import { reloadWeapon } from "../helpers/ammo.mjs";
+import { isPc, isNpc } from "../helpers/actor-types.mjs";
 
 export class WwnActorSheet extends ActorSheet {
   constructor(...args) {
@@ -12,12 +18,27 @@ export class WwnActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   getData() {
-    const data = foundry.utils.deepClone(super.getData().data);
+    const context = super.getData();
+    const data = foundry.utils.deepClone(context.data);
+    // Document#toObject(false) only keeps schema fields. Rebuild a plain
+    // snapshot from the live prepared model so derived values (combat.ab,
+    // hitDice.display, combat.ac, …) reach the sheet without mutating the actor.
+    data.system = foundry.utils.expandObject(
+      foundry.utils.flattenObject(this.actor.system)
+    );
     data.owner = this.actor.isOwner;
     data.editable = this.actor.sheet.isEditable;
 
     data.config = CONFIG.WWN;
-    data.isNew = this.actor.isNew();
+    data.isNew = this.actor.isNew?.() ?? false;
+    data.separateRangedAC = game.settings.get("wwn", "separateRangedAC");
+    data.showMovement = game.settings.get("wwn", "showMovement");
+
+    if (data.system) {
+      applyLegacySheetAliases(data.system, {
+        separateRangedAC: data.separateRangedAC,
+      });
+    }
 
     if (this.actor.type != "faction") {
       // Prepare active effects
@@ -27,82 +48,139 @@ export class WwnActorSheet extends ActorSheet {
     return data;
   }
 
+  /** @override */
+  _getSubmitData(updateData = {}) {
+    const data = super._getSubmitData(updateData);
+    return remapLegacySubmitData(data);
+  }
+
   _onItemSummary(event) {
     event.preventDefault();
-    let li = $(event.currentTarget).parents(".item"),
-      item = this.actor.items.get(li.data("item-id")),
-      description = item.system.enrichedDescription;
+    event.stopPropagation();
+    const li = $(event.currentTarget).parents(".item");
+    const item = this.actor.items.get(li.data("itemId"));
+    if (!item) return;
+
     // Toggle summary
     if (li.hasClass("expanded")) {
-      let summary = li.parents(".item-entry").children(".item-summary");
+      const summary = li.parents(".item-entry").children(".item-summary");
       summary.slideUp(200, () => summary.remove());
-    } else {
-      // Add item tags
-      let div = $(
-        `<div class="item-summary"><ol class="tag-list">${item.getTags()}</ol><div>${description}</div></div>`
+      li.removeClass("expanded");
+      return;
+    }
+
+    li.addClass("expanded");
+    void this._expandItemSummary(li, item);
+  }
+
+  /**
+   * @param {JQuery} li
+   * @param {Item} item
+   */
+  async _expandItemSummary(li, item) {
+    try {
+      const description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        item.system.description ?? "",
+        { relativeTo: item, secrets: this.actor.isOwner }
+      );
+      const div = $(
+        `<div class="item-summary"><ol class="tag-list">${item.getTags()}</ol><div class="item-summary-body">${description || ""}</div></div>`
       );
       li.parent(".item-entry").append(div.hide());
       div.slideDown(200);
-    }
-    li.toggleClass("expanded");
-  }
-
-  async _onSpellChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.items.get(itemId);
-    if (event.target.dataset.field == "cast") {
-      return item.update({ "system.cast": parseInt(event.target.value) });
-    } else if (event.target.dataset.field == "memorize") {
-      return item.update({
-        "system.memorized": parseInt(event.target.value),
-      });
+    } catch (err) {
+      li.removeClass("expanded");
+      console.error("WWN | Failed to expand item summary", err);
     }
   }
 
-  async _resetSpells(event) {
-    if (this.actor.system.spells.leveledSlots) {
-      const spells = this.actor.items.filter(item => item.type === "spell");
-      await spells.forEach(spell => {
-        spell.update({
-          "system.cast": spell.system.memorized
-        });
-      });
-    } else {
-      this.actor.update({
-        "system.spells.perDay.value": 0
-      });
-    }
-  };
+  async _refreshPowers(scope) {
+    const { refreshPowers } = await import("../helpers/power-refresh.mjs");
+    await refreshPowers(this.actor, scope);
+  }
 
-  async _resetEffort(event) {
-    const arts = this.actor.items.filter(item => item.type === "art");
-    await arts.forEach(art => {
-      const itemId = art.id;
-      const item = this.actor.items.get(itemId);
-      item.update({ "system.effort": 0 });
+  async _pickPowerSubtype() {
+    const subtypes = Object.entries(POWER_SUBTYPES).map(([key, cfg]) => ({
+      key,
+      label: game.i18n.localize(cfg.label),
+    }));
+    const content = await foundry.applications.handlebars.renderTemplate(
+      "systems/wwn/templates/dialog/power-subtype-picker.hbs",
+      { subtypes }
+    );
+    return new Promise((resolve) => {
+      let settled = false;
+      const finish = (value) => {
+        if (settled) return;
+        settled = true;
+        resolve(value);
+      };
+      new Dialog({
+        title: game.i18n.localize("WWN.Power.SubType"),
+        content,
+        buttons: {
+          ok: {
+            icon: '<i class="fas fa-check"></i>',
+            label: game.i18n.localize("WWN.Ok"),
+            callback: (html) => {
+              const root = html?.[0] ?? html;
+              const select = root?.querySelector?.('[name="subType"]');
+              finish(select?.value ?? html?.find?.('[name="subType"]').val() ?? null);
+            },
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: game.i18n.localize("WWN.Cancel"),
+            callback: () => finish(null),
+          },
+        },
+        default: "ok",
+        close: () => finish(null),
+      }).render(true);
     });
   }
 
-  async _onEffortChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.items.get(itemId);
-    return item.update({ "system.effort": parseInt(event.target.value) });
+  async _createPowerItem({ name, subType } = {}) {
+    let chosen = subType;
+    if (!chosen) {
+      chosen = await this._pickPowerSubtype();
+      if (!chosen) return;
+    }
+    const system = applySubtypeDefaults(chosen, {});
+    return this.actor.createEmbeddedDocuments("Item", [
+      {
+        name: name || game.i18n.localize(POWER_SUBTYPES[chosen]?.label ?? "WWN.Power.AddPower"),
+        type: "power",
+        system,
+      },
+    ]);
   }
 
-  async _onArtSourceChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.items.get(itemId);
-    return item.update({ "system.source": event.target.value });
+  async _togglePrepared(item) {
+    if (item.type !== "power" || item.system.subType !== "spell") return;
+    const next = !item.system.prepared;
+    if (next && this.isPc(actor)) {
+      const prepared = this.actor.system.casting?.prepared ?? {};
+      const current = prepared.value ?? 0;
+      const max = prepared.max ?? 0;
+      if (current >= max) {
+        return ui.notifications.warn(game.i18n.localize("WWN.Power.PreparedAtMax"));
+      }
+    }
+    return item.update({ "system.prepared": next });
   }
 
-  async _onArtTimeChange(event) {
-    event.preventDefault();
-    const itemId = event.currentTarget.closest(".item").dataset.itemId;
-    const item = this.actor.items.get(itemId);
-    return item.update({ "system.time": event.target.value });
+  async _toggleInstalled(item) {
+    if (item.type !== "power") return;
+    const installing = !item.system.installed;
+    await item.update({ "system.installed": installing });
+    await syncPowerTransferEffects(item);
+    const cost = Number(item.system.alienationCost) || 0;
+    if (cost && this.actor.system.alienation) {
+      const delta = installing ? cost : -cost;
+      const value = Math.max((this.actor.system.alienation.value ?? 0) + delta, 0);
+      await this.actor.update({ "system.alienation.value": value });
+    }
   }
 
   activateListeners(html) {
@@ -113,7 +191,7 @@ export class WwnActorSheet extends ActorSheet {
       .find(".effect-control")
       .click((ev) => onManageActiveEffect(ev, this.actor));
 
-    // Item summaries
+    // Item summaries (name click → drawer only; chat via image / eye)
     html
       .find(".item .item-name h4")
       .click((event) => this._onItemSummary(event));
@@ -150,16 +228,12 @@ export class WwnActorSheet extends ActorSheet {
       const itemId = $(ev.currentTarget).parents(".item");
       const item = this.document.items.get(itemId.data("itemId"));
       if (item.type == "weapon") {
-        if (this.actor.type === "monster") {
+        if (this.isNpc(actor)) {
           await item.update({
-            system: { counter: { value: item.system.counter.value - 1 } }
-          })
+            system: { counter: { value: item.system.counter.value - 1 } },
+          });
         }
         item.rollWeapon({ skipDialog: ev.ctrlKey });
-      } else if (item.type == "spell") {
-        item.spendSpell({ skipDialog: ev.ctrlKey });
-      } else if (item.type == "art") {
-        item.spendArt({ skipDialogue: ev.ctrlKey, itemId: itemId });
       } else if (item.type == "skill") {
         item.rollSkill({ skipDialog: ev.ctrlKey });
       } else {
@@ -167,18 +241,69 @@ export class WwnActorSheet extends ActorSheet {
       }
     });
 
-    // Reload weapon functionality
+    html.find(".item-prep").click(async (ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      if (item) await this._togglePrepared(item);
+    });
+
+    html.find(".item-install").click(async (ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      if (item) await this._toggleInstalled(item);
+    });
+
+    html.find(".power-activate").click(async (ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      await item?.activatePower({ skipDialog: ev.ctrlKey });
+    });
+
+    html.find(".power-deactivate").click(async (ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      await item?.deactivatePower();
+    });
+
+    html.find(".power-damage").click(async (ev) => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      await item?.rollPowerDamage();
+    });
+
+    html.find(".power-refresh-scene").click(async (ev) => {
+      ev.preventDefault();
+      await this._refreshPowers("scene");
+    });
+
+    html.find(".power-refresh-day").click(async (ev) => {
+      ev.preventDefault();
+      await this._refreshPowers("day");
+    });
+
+    html.find("[data-item-field]").change(async (ev) => {
+      const input = ev.currentTarget;
+      const li = input.closest(".item");
+      if (!li) return;
+      const item = this.actor.items.get(li.dataset.itemId);
+      if (!item) return;
+      const field = input.dataset.itemField;
+      const value =
+        input.dataset.dtype === "Number" ? Number(input.value) : input.value;
+      await item.update({ [field]: value });
+    });
+
+    // Reload magazine weapons
     html.find(".item-reload").click(async (ev) => {
       ev.preventDefault();
       const itemId = ev.currentTarget.dataset.itemId;
       const item = this.actor.items.get(itemId);
-      if (item && (item.type === "weapon" || (item.type === "item" && item.system.charges?.decrementOnAttack))) {
-        if (item.type === "weapon") {
-          await this._reloadWeapon(item);
-        } else {
-          await this._reloadConsumable(item);
-        }
-      }
+      if (item?.type === "weapon") await this._reloadWeapon(item);
     });
 
     html.find(".attack a").click((ev) => {
@@ -200,6 +325,7 @@ export class WwnActorSheet extends ActorSheet {
       event.preventDefault();
       const header = event.currentTarget;
       const itemType = header.dataset.type;
+      const subType = header.dataset.subtype;
       const candidateItems = {};
       const gameGen = game?.release?.generation;
 
@@ -209,7 +335,13 @@ export class WwnActorSheet extends ActorSheet {
         } else if (gameGen > 10 && e.metadata.ownership.PLAYER == "NONE") {
           continue;
         }
-        const items = (await e.getDocuments()).filter((i) => i.type == itemType);
+        const items = (await e.getDocuments()).filter((i) => {
+          if (i.type !== itemType) return false;
+          if (itemType === "power" && subType) {
+            return i.system?.subType === subType;
+          }
+          return true;
+        });
         if (items.length) {
           for (const ci of items.map((item) => item.toObject())) {
             candidateItems[ci.name] = ci;
@@ -244,8 +376,7 @@ export class WwnActorSheet extends ActorSheet {
               addItem: {
                 label: `Add ${itemType}`,
                 callback: async (html) => {
-                  const itemNameToAdd = ((
-                    html.find("#itemList")[0])).value;
+                  const itemNameToAdd = html.find("#itemList")[0].value;
                   const toAdd = await candidateItems[itemNameToAdd];
                   await this.actor.createEmbeddedDocuments("Item", [{ ...toAdd }], {});
                 },
@@ -264,7 +395,6 @@ export class WwnActorSheet extends ActorSheet {
         );
         const s = popUpDialog.render(true);
         if (s instanceof Promise) await s;
-
       } else {
         ui.notifications?.info("Could not find any items in the compendium");
       }
@@ -274,25 +404,34 @@ export class WwnActorSheet extends ActorSheet {
       event.preventDefault();
       const header = event.currentTarget;
       const type = header.dataset.type;
+      const subType = header.dataset.subtype;
 
-      // item creation helper func
       let createItem = function (type, name = `New ${type.capitalize()}`, data = {}) {
-
         const itemData = {
           name: name ? name : `New ${type.capitalize()}`,
           type: type,
-          data,
+          system: data,
         };
-        delete itemData.data["type"];
         return itemData;
       };
 
-      // Getting back to main logic
       if (type == "choice") {
         this._chooseItemType().then((dialogInput) => {
           const itemData = createItem(dialogInput.type, dialogInput.name);
           this.actor.createEmbeddedDocuments("Item", [itemData]);
         });
+        return;
+      }
+
+      if (type === "power") {
+        await this._createPowerItem({ subType });
+        return;
+      }
+
+      if (type === "classEdge" || type === "focus") {
+        await this.actor.createEmbeddedDocuments("Item", [
+          createItem(type, `New ${type === "classEdge" ? "Class" : "Focus"}`),
+        ]);
         return;
       }
 
@@ -305,7 +444,6 @@ export class WwnActorSheet extends ActorSheet {
         treasure: false,
         item: false,
       };
-      let extraFields = "";
       if (type == "armor") {
         dialogData.armor = true;
         dialogData.item = true;
@@ -321,7 +459,10 @@ export class WwnActorSheet extends ActorSheet {
         }
       }
       const dialogTemplate = "systems/wwn/templates/items/dialogs/new-item.html";
-      const dialogContent = await foundry.applications.handlebars.renderTemplate(dialogTemplate, dialogData);
+      const dialogContent = await foundry.applications.handlebars.renderTemplate(
+        dialogTemplate,
+        dialogData
+      );
       const popUpDialog = new Dialog(
         {
           title: `Add ${type}`,
@@ -335,7 +476,6 @@ export class WwnActorSheet extends ActorSheet {
                 const price = html.find("#price")?.val();
                 const qty = html.find("#quantity")?.val();
                 const location = html.find("#location")?.val();
-                //let data = foundry.utils.deepClone(header.dataset);
                 let data = {
                   weight: Number(enc),
                   price: Number(price),
@@ -366,7 +506,7 @@ export class WwnActorSheet extends ActorSheet {
                   const aac = Number(html.find("#aac")?.val());
                   const armorType = html.find("#armorType")?.val();
                   data.aac = { value: aac, mod: 0 };
-                  data.type = armorType
+                  data.type = armorType;
                 } else if (type == "item") {
                   if (dialogData.consumable) {
                     data.charges = {};
@@ -395,57 +535,26 @@ export class WwnActorSheet extends ActorSheet {
         }
       );
       const s = popUpDialog.render(true);
-
-
-
+      if (s instanceof Promise) await s;
     });
 
-    html
-      .find(".artEffort input")
-      .click((ev) => ev.target.select())
-      .change(this._onEffortChange.bind(this));
-
-    html
-      .find(".artSource input")
-      .click((ev) => ev.target.select())
-      .change(this._onArtSourceChange.bind(this));
-
-    html
-      .find(".artTime input")
-      .click((ev) => ev.target.select())
-      .change(this._onArtTimeChange.bind(this));
-
-    html.find(".check-field .check.hd-roll").click((ev) => {
-      let actorObject = this.actor;
-      actorObject.rollHitDice({ event: event });
+    html.find(".hd-roll").click((ev) => {
+      ev.preventDefault();
+      this.actor.rollHitDice({ event: ev });
     });
 
-    html.find(".morale-check a").click((ev) => {
-      let actorObject = this.actor;
-      actorObject.rollMorale({ event: event });
+    html.find(".morale-check").click((ev) => {
+      ev.preventDefault();
+      this.actor.rollMorale({ event: ev });
     });
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
-    html
-      .find(".memorize input")
-      .click((ev) => ev.target.select())
-      .change(this._onSpellChange.bind(this));
-
-
-    html.find(".slot-reset").click((ev) => {
-      this._resetSpells(ev);
-    });
-
-    html.find(".effort-reset").click((ev) => {
-      this._resetEffort(ev);
-    });
-
     /** Attempt to copy input focus */
     if (this.isEditable) {
       const inputs = html.find("input");
-      inputs.focus(ev => ev.currentTarget.select());
+      inputs.focus((ev) => ev.currentTarget.select());
     }
   }
 
@@ -474,136 +583,19 @@ export class WwnActorSheet extends ActorSheet {
     });
   }
 
-  _onConfigureActor(event) {
-    event.preventDefault();
-    new WwnEntityTweaks(this.actor, {
-      top: this.position.top + 40,
-      left: this.position.left + (this.position.width - 400) / 2,
-    }).render(true);
-  }
-
   /**
    * Extend and override the sheet header buttons
    * @override
    */
   _getHeaderButtons() {
-    let buttons = super._getHeaderButtons();
-
-    // Token Configuration
-    const canConfigure = game.user.isGM || this.actor.isOwner;
-    if (this.options.editable && canConfigure) {
-      buttons = [
-        {
-          label: game.i18n.localize("WWN.dialog.tweaks"),
-          class: "configure-actor",
-          icon: "fas fa-code",
-          onclick: (ev) => this._onConfigureActor(ev),
-        },
-      ].concat(buttons);
-    }
-    return buttons;
+    return super._getHeaderButtons();
   }
 
   /**
-   * Reload a weapon with ammo
-   * @param {Item} weapon - The weapon to reload
+   * Reload a magazine weapon from linked ammo.
+   * @param {Item} weapon
    */
   async _reloadWeapon(weapon) {
-    // Check if weapon has ammo field set
-    if (!weapon.system.ammo) {
-      ui.notifications.error(`No ammo type specified for ${weapon.name}. Please edit the weapon and set an ammo type.`);
-      return;
-    }
-
-    // Find the ammo item
-    const ammoItem = this.actor.items.find(item =>
-      item.name.toLowerCase().includes(weapon.system.ammo.toLowerCase()) &&
-      item.system.charges.value != null
-    );
-
-    if (!ammoItem) {
-      ui.notifications.error(`No ${weapon.system.ammo} found in inventory.`);
-      return;
-    }
-
-    if (ammoItem.system.charges.value <= 0) {
-      ui.notifications.error(`No ${weapon.system.ammo} remaining.`);
-      return;
-    }
-
-    // Calculate how many charges we need to reload
-    const currentCharges = weapon.system.charges.value || 0;
-    const maxCharges = weapon.system.charges.max || 0;
-    const neededCharges = maxCharges - currentCharges;
-
-    if (neededCharges <= 0) {
-      ui.notifications.info(`${weapon.name} is already fully loaded.`);
-      return;
-    }
-
-    // Check if we have enough ammo charges
-    const availableCharges = ammoItem.system.charges.value;
-    let chargesToTransfer = Math.min(neededCharges, availableCharges);
-    let newWeaponCharges = currentCharges + chargesToTransfer;
-    let newAmmoCharges = availableCharges - chargesToTransfer;
-
-    // Update the weapon charges
-    await weapon.update({
-      "system.charges.value": newWeaponCharges
-    });
-
-    // Update the ammo charges
-    await ammoItem.update({
-      "system.charges.value": newAmmoCharges
-    });
-
-    // Send chat message
-    const reloadMessage = chargesToTransfer === neededCharges
-      ? `${this.actor.name} reloaded ${weapon.name}.`
-      : `${this.actor.name} partially reloaded ${weapon.name} (${newWeaponCharges}/${maxCharges}).`;
-
-    const chatData = {
-      user: game.user.id,
-      content: reloadMessage,
-      speaker: ChatMessage.getSpeaker({ actor: this.actor })
-    };
-
-    ChatMessage.create(chatData);
-  }
-
-  /**
-   * Reload a consumable item
-   * @param {Item} consumable - The consumable item to reload
-   */
-  async _reloadConsumable(consumable) {
-    // Check if consumable has max charges
-    if (!consumable.system.charges.max || consumable.system.charges.max <= 0) {
-      ui.notifications.error(`${consumable.name} doesn't have a maximum charge limit set.`);
-      return;
-    }
-
-    // Check if we need to reload
-    const currentCharges = consumable.system.charges.value || 0;
-    const maxCharges = consumable.system.charges.max;
-
-    if (currentCharges >= maxCharges) {
-      ui.notifications.info(`${consumable.name} is already fully charged.`);
-      return;
-    }
-
-    // For consumables, we'll just refill to max charges
-    // In a more complex system, you might want to consume other items or resources
-    await consumable.update({
-      "system.charges.value": maxCharges
-    });
-
-    // Send chat message
-    const chatData = {
-      user: game.user.id,
-      content: `${this.actor.name} reloaded ${consumable.name} to full charges (${maxCharges}).`,
-      speaker: ChatMessage.getSpeaker({ actor: this.actor })
-    };
-
-    ChatMessage.create(chatData);
+    await reloadWeapon(weapon);
   }
 }

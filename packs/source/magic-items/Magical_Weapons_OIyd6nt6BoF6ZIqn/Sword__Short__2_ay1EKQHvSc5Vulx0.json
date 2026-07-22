@@ -1,42 +1,60 @@
 {
   "name": "Sword, Short +2",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "weapon",
-  "data": {
+  "flags": {},
+  "img": "systems/wwn/assets/icons/items/weapon.png",
+  "effects": [],
+  "_id": "ay1EKQHvSc5Vulx0",
+  "_key": "!items!ay1EKQHvSc5Vulx0",
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "system": {
+    "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+    "damage": "1d6+2",
+    "bonus": 2,
+    "skillDamage": false,
+    "shock": {
+      "damage": "4",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 0,
       "medium": 0,
       "long": 0
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
-    "damage": "1d6+2",
-    "bonus": 2,
-    "shock": {
-      "damage": 4,
-      "ac": 15
-    },
-    "skill": "stab",
-    "score": "str",
     "tags": [],
-    "slow": false,
-    "missile": false,
-    "melee": true,
-    "price": 10,
-    "weight": 1,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
-    }
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
-  "flags": {},
-  "img": "systems/wwn/assets/default/weapon.png",
-  "effects": [],
-  "_id": "ay1EKQHvSc5Vulx0",
-  "_key": "!items!ay1EKQHvSc5Vulx0",
-  "folder": "OIyd6nt6BoF6ZIqn"
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

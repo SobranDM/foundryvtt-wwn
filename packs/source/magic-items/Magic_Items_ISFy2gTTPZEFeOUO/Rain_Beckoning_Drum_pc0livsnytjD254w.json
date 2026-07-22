@@ -2,28 +2,38 @@
   "_id": "pc0livsnytjD254w",
   "name": "Rain-Beckoning Drum",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>Sigiled and worked with signs of rule, this hand drum will produce an immediate deluge of rain in a hundred-foot radius around the user when it is beaten rhythmically. The rain lasts no more than one round but will drop three inches of water on all surfaces within the area of effect; if used indoors, the rain issues from the room&rsquo;s ceiling. The drum can be used safely once per day. Each additional time it is used in the same day, it adds 1 System Strain to the user.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.pc0livsnytjD254w"
     }
   },
-  "_key": "!items!pc0livsnytjD254w"
+  "_key": "!items!pc0livsnytjD254w",
+  "system": {
+    "description": "<p>Sigiled and worked with signs of rule, this hand drum will produce an immediate deluge of rain in a hundred-foot radius around the user when it is beaten rhythmically. The rain lasts no more than one round but will drop three inches of water on all surfaces within the area of effect; if used indoors, the rain issues from the room&rsquo;s ceiling. The drum can be used safely once per day. Each additional time it is used in the same day, it adds 1 System Strain to the user.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

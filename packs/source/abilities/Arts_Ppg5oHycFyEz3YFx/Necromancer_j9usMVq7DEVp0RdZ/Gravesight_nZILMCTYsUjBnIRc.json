@@ -1,15 +1,11 @@
 {
   "_id": "nZILMCTYsUjBnIRc",
   "name": "Gravesight",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.nZILMCTYsUjBnIRc"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!nZILMCTYsUjBnIRc",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort as an On Turn action; while it remains Committed, you can see the life energies of living creatures around you as various glowing patterns, regardless of the mundane illumination available. You can perceive sicknesses, poisons, and other physical qualities on sight. As a side effect of this ability, you can see normally even in perfect blackness.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "Active",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

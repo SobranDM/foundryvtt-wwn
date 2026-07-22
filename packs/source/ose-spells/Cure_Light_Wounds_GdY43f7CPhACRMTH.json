@@ -1,26 +1,49 @@
 {
   "_id": "GdY43f7CPhACRMTH",
   "name": "Cure Light Wounds",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 1,
-    "class": "Cleric",
-    "duration": "",
-    "range": "Touch",
-    "roll": "1d6+1",
-    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Healing a living subject: </strong>Restores 1d6+1 hit points of damage. This cannot grant more hit points than the subject&rsquo;s normal maximum.</li>\n<li><strong>Curing paralysis:</strong> Paralysing effects are negated.</li>\n</ol>\n<p><strong>Reversed: Cause Light Wounds</strong></p>\n<p>Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!GdY43f7CPhACRMTH"
+  "_key": "!items!GdY43f7CPhACRMTH",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Healing a living subject: </strong>Restores 1d6+1 hit points of damage. This cannot grant more hit points than the subject&rsquo;s normal maximum.</li>\n<li><strong>Curing paralysis:</strong> Paralysing effects are negated.</li>\n</ol>\n<p><strong>Reversed: Cause Light Wounds</strong></p>\n<p>Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6+1",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Touch",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

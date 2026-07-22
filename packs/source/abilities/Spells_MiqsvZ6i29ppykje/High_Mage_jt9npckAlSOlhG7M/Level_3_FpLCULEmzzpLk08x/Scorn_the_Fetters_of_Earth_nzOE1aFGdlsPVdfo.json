@@ -1,8 +1,8 @@
 {
   "_id": "nzOE1aFGdlsPVdfo",
   "name": "Scorn the Fetters of Earth",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "FpLCULEmzzpLk08x",
   "sort": 600000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 3,
-    "class": "High Mage",
-    "duration": "Scene",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster and up to one visible ally per caster level are briefly granted the ability to move in three dimensions, being able to walk and run upward into the air as easily as along flat ground. For the rest of the scene, those affected can move in such a way, remaining suspended in the air after their movement for the round. When the spell ends, either naturally or upon being dispelled, all affected targets float gently to the ground. Optionally, the caster can instead use this spell on one visible flying creature per caster level, which must make a Physical save at a penalty equal to the caster&rsquo;s Magic skill or be forced to land as they had fallen half the distance they had descended. For the rest of the scene, such creatures remain grounded and unable to fly.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "physical"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!nzOE1aFGdlsPVdfo"
 }

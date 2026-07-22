@@ -2,14 +2,10 @@
   "_id": "AH49psjY4mgF5Opl",
   "name": "Cold Flesh",
   "type": "armor",
-  "img": "systems/wwn/assets/default/necromancer_art.png",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "RDW5litbJePCQIVj",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.gear.AH49psjY4mgF5Opl"
@@ -17,15 +13,24 @@
   },
   "system": {
     "description": "<p>You no longer require sleep and feel pain only in an abstract sense. You can suffer no more than 2&nbsp;points of damage from any given instance of Shock and you have a natural Armor Class equal to 12 plus half your level, rounded down.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 12,
-      "mod": 0
-    },
-    "armorBonus": 0,
+    "ac": 12,
+    "acRanged": 12,
+    "mod": 0,
     "type": "unarmored",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
     "price": 0,
-    "weight": 0
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
   },
-  "_key": "!items!AH49psjY4mgF5Opl"
+  "_key": "!items!AH49psjY4mgF5Opl",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,18 +1,33 @@
 {
   "_id": "FVqIASD6ZDESB83j",
   "name": "Origin Focus: Drudge",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>You are remarkably intelligent for a Drudge, being able to understand abstract concepts, anticipate consequences, and conceive of hypothetical outcomes. You are also much more capable of violence than most of your kind.</p>\n<p><strong>Level 1: </strong>Gain Exert as a bonus skill. Your Strength and Constitution modifiers increase by +1, to a maximum of +2. Your Intelligence and Charisma modifiers decrease by -1, to a minimum of -2. You suffer a -2 penalty to all Mental saving throws.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!FVqIASD6ZDESB83j",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

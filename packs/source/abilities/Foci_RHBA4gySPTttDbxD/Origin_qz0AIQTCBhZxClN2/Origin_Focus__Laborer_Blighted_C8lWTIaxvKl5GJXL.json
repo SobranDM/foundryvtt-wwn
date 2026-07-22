@@ -1,18 +1,33 @@
 {
   "_id": "C8lWTIaxvKl5GJXL",
   "name": "Origin Focus: Laborer Blighted",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>Your bloodline was reshaped into a caste of toilers and brute laborers for some more powerful group. While you are less badly afflicted than most of your kind, your mental faculties remain duller than most baseline humans and you have an instinctive urge to obey orders and instructions.</p>\n<p><strong>Level 1: </strong>Gain Exert as a bonus skill. Each of your Intelligence, Wisdom, and Charisma attribute modifiers suffers a -1 penalty, down to a minimum of -2, while your Strength and Constitution modifiers are improved by +1, up to a maximum of +3 for each. You require only half as much food and rest as a normal human. You suffer a -2 penalty to all Mental saving throws to resist mind-influencing effects.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!C8lWTIaxvKl5GJXL",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

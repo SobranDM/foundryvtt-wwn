@@ -17,8 +17,16 @@
   justify-content: space-between;
   height: 95%;
 }
-.has-spells .wwn.sheet.actor.character .sheet-tabs {
-  right: -185px;
+
+/* Rotated 90°: `width` is the vertical span along the sheet edge.
+   Six tabs (incl. Config) need a longer strip than the shared actor default. */
+.wwn.sheet.actor.character .sheet-tabs {
+  width: 420px;
+  bottom: 195px;
+  right: -219px;
+}
+.wwn.sheet.actor.character .sheet-tabs .item {
+  padding: 1px 14px 3px;
 }
 
 .wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
@@ -62,12 +70,34 @@
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
   margin: 2px;
   margin-top: 0px;
-  flex: 0 0 130px;
+  flex: 1 1 160px;
+  min-width: 140px;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .details-top {
   display: flex;
   flex-shrink: 1;
   flex-grow: 1;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity {
+  flex: 1 1 220px;
+  gap: 0.35rem;
+  margin: 2px;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .form-group {
+  margin: 0;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .owned-class-edges {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.5rem;
+  min-height: 24px;
+  line-height: 1.4;
+}
+.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .owned-class-edges .unowned-hint {
+  opacity: 0.65;
+  font-style: italic;
 }
 .wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
   flex: 0 0 20px;

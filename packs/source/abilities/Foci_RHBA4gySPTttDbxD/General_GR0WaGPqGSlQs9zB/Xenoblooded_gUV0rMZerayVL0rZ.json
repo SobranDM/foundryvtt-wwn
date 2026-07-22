@@ -1,18 +1,33 @@
 {
   "_id": "gUV0rMZerayVL0rZ",
   "name": "Xenoblooded",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>You have been both blessed and cursed by the Outsiders, gaining the ability to survive in alien environments that humans were never meant to tolerate. This may be from ancient modifications made to your lineage in order to make them better servants, or it could be that you&rsquo;re some sort of alien-human hybrid yourself. Those cursed with such a hated heritage usually have considerable physical variations from human normality, and usually try to pass themselves off as merely an unusual kind of demihuman or unfortunate human mutant.</p>\n<p><strong>Level 1:</strong> Choose one set of benefits from the list below to reflect your alien heritage. Other gifts may exist.</p>\n<ul>\n<li>You are immune to heat damage and can breathe and see through smoke without hindrance.</li>\n<li>You are water-adapted and can breathe water and see through it up to 120&rsquo; regardless of light. You swim at double your normal Move rate.</li>\n<li>You were built to heavier or lighter gravity conditions; gain a +1 to either your Strength or Dexterity modifiers, to a maximum of +3, and a -1 penalty to the modifier of the other attribute.</li>\n<li>You are nourished by invisible radiations and need neither eat, sleep, nor breathe. You can see clearly even in the absence of any light.</li>\n</ul>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!gUV0rMZerayVL0rZ",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

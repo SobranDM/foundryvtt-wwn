@@ -1,18 +1,33 @@
 {
   "_id": "abAUwj8dYBQAG3FN",
   "name": "Impostor",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>You are exceedingly skilled at presenting yourself as something you are not, including disguises, voice mimicry, and lightning-fast wardrobe changes. Some impostors rely on the acting skills of Perform, while others lean more to the nefarious tricks of Sneak.</p>\n<p><strong>Level 1: </strong>Gain Perform or Sneak as a bonus skill. Once per scene, reroll any failed skill check or saving throw related to maintaining an imposture or disguise. Create one false identity of no great social importance; you can flawlessly pretend to be that person, such that only extremely persuasive proof can connect you with it. You can change this identity with a week&rsquo;s worth of effort in building a new one.</p>\n<p><strong>Level 2: </strong>You can alter your clothing and armor such that a single Main Action lets you swap between any of three chosen appearances. In addition to your original false identity, you can establish a new false identity in each city or significant community you spend at least a week in.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!abAUwj8dYBQAG3FN",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

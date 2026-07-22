@@ -1,26 +1,49 @@
 {
   "_id": "QCnRv7sNDtbPMthh",
   "name": "Neutralize Poison",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Cleric",
-    "duration": "Instant",
-    "range": "Touch",
-    "roll": "",
-    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature or object </strong><strong>touched</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Characters:</strong> Neutralize the effects of poison on a character. A character who has died from poisoning can be revived, if neutralize poison is cast within ten rounds.</p>\n<p><strong>2. Items: </strong>Remove poison from an item.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!QCnRv7sNDtbPMthh"
+  "_key": "!items!QCnRv7sNDtbPMthh",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature or object </strong><strong>touched</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Characters:</strong> Neutralize the effects of poison on a character. A character who has died from poisoning can be revived, if neutralize poison is cast within ten rounds.</p>\n<p><strong>2. Items: </strong>Remove poison from an item.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Touch",
+      "duration": "Instant"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

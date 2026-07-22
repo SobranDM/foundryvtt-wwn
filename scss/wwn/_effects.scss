@@ -1,5 +1,28 @@
 /* Active effects list, shared by actor and item sheets */
 
+/* WWN AE config Changes tab: core uses a fixed 5-col grid (incl. priority).
+   Our sheet has Target / Mode / Value / controls only — give Target the leftover width. */
+.wwn.active-effect-config .tab.changes {
+  header,
+  ol {
+    grid-template-columns: minmax(10rem, 1fr) 7rem 6rem 1.75rem;
+    width: 100%;
+  }
+
+  .effect-target,
+  .effect-mode,
+  .effect-value {
+    min-width: 0;
+  }
+
+  .effect-target select,
+  .effect-mode select,
+  .effect-value input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .effects-list .item .effect-source,
 .effects-list .item .effect-duration,
 .effects-list .item .effect-controls {

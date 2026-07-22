@@ -1,26 +1,49 @@
 {
   "_id": "rdHd79oat2iG21rD",
   "name": "Stone to Flesh",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "120'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell transforms stone into living flesh. It is especially useful for restoring life to a petrified creature and its equipment to its normal state.</p>\n<p><strong>Reversed: Flesh to Stone</strong></p>\n<p>Turns one creature into a statue, including all gear and any items currently held. A Physical save is permitted to resist the transformation.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "physical"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!rdHd79oat2iG21rD"
+  "_key": "!items!rdHd79oat2iG21rD",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell transforms stone into living flesh. It is especially useful for restoring life to a petrified creature and its equipment to its normal state.</p>\n<p><strong>Reversed: Flesh to Stone</strong></p>\n<p>Turns one creature into a statue, including all gear and any items currently held. A Physical save is permitted to resist the transformation.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "120'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

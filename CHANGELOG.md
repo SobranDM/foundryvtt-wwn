@@ -2,25 +2,30 @@
 
 ## New in 2.0.0
 
-### Note: Updated for v14. No attempt was made to maintain compatibility with v13.
+### Before you update
 
-### Changes
+- **Back up your world** before installing 2.0.0.
+- Migration runs automatically for the GM when the world loads. On a large world it can take a long time — leave Foundry open and wait for it to finish.
+- Requires **Foundry VTT v14**. Not compatible with v13.
 
-- Rewrote the system stylesheet from a single unstructured CSS file into an organized SCSS source tree. Dropped a large amount of dead/duplicate/overridden CSS that had accumulated over time, including a duplicate copy of the Godbound damage styling that existed both as an orphaned, unused `styles/godbound.css` and inside `styles/main.css`.
-- Converted compendium packs from committed NeDB `.db` / LevelDB binaries to JSON source under `packs/source/`, built to LevelDB via `@foundryvtt/foundryvtt-cli` (`npm run build:packs`).
-- Reorganized compendia into foldered packs (Foundry max folder depth 3): player-visible `gear` (adventuring gear / weapons / armor); GM-only `magic-items`; `abilities` (skills / arts / spells / foci); `assets` (cunning / force / wealth); `tags` (community / court / ruin / wilderness); `tables` (generation tables with nested subtables / magic item tables / instinct). If you have journals that link to compendium items, some of these links may now be broken.
-- Default prototype tokens for new characters, factions, and monsters: prepend random adjective, name shown on hover by anyone, HP bar shown on hover by owner. Characters and factions use linked tokens; monsters do not. These can be overridden in Foundry settings.
-- The character sheet's skill list lock/unlock state is now persisted per-actor (`system.skills.locked`) instead of resetting to locked on every re-render, so it no longer re-locks itself after every skill upgrade.
+### What's new
 
-### Fixes
-
-- Fixed several calls to `TextEditor.enrichHTML()` that were missing an `await`, which meant a `Promise` was displayed instead of the enriched text.
-- Fixed the treasure roll table logic drawing treasure without awaiting the async draw, so treasure data was never actually read.
-- Fixed the Character Modifiers dialog reading a nonexistent `Actor#data` property (removed since Foundry v10) instead of `Actor#system`.
-- Fixed Active Effect creation using the legacy `icon` field instead of `img`.
-- Replaced all remaining deprecated global API calls (`renderTemplate`, `TextEditor.enrichHTML`, `duplicate`, `pack.metadata.entity`, `foundry.utils.isObjectEmpty`, `CONST.TABLE_RESULT_TYPES.ENTITY`, and stray leftover `.data` references in the old-world migration path) with their modern Foundry v14 equivalents.
-- Replaced the deprecated `renderChatMessage` hook (Faction sheet "show long description" chat button) with `renderChatMessageHTML`, using plain DOM instead of jQuery.
-- Removed a dead, immediately-overwritten `CONFIG.Combat.initiative` assignment left over in system init.
+- **Classes** are now items you add to a character (Full/Partial Warrior, Expert, mage traditions, and other partial classes).
+  - They drive attack bonus, hit dice, Effort or spell capacity, and class features.
+  - Existing characters are prompted once to pick their class(es). Old Class Ability foci are archived under Items.
+- **Character sheet** layout and combat bonuses have been reworked.
+  - The old Tweaks menu is gone; bonuses live as Active Effects.
+  - Powers, classes, and foci share one Powers tab. Alignment, background, and class list live on Details.
+  - Attack bonus and hit dice come from your classes (adjustments via Active Effects when needed).
+- **Foci and class features** are refreshed from the system packs on migration when they are out of date.
+  - Your focus level and skill choices are kept.
+  - Replaced copies are saved under Items in a **Migration Backup** folder per character.
+- **Compendiums** are reorganized (gear, magic items, abilities, assets, tags, tables).
+  - Some old journal links into packs may need fixing.
+- **Weapons and ammo** support linked ammo and magazine-style reload more clearly.
+- **Group initiative** can collapse the tracker by side (default on), advancing one side at a time.
+- **Monsters** keep editable combat numbers on a Config tab.
+- Assorted sheet, combat, and pack fixes for Foundry v14.
 
 ## New in 1.6.1
 
@@ -74,7 +79,7 @@
 
 ## New in 1.5.0
 
-### Note: Updated for v13. No attempt was made to maintain compatibility with v12.
+### Note: Updated for v13. No attempt was made to maintain compatibility with v12
 
 - All testing efforts were done in v13's Dark mode. The sheet was never designed with v13's theming in mind and it turned out to be pretty difficult to attempt to add it this late in the game. Light mode will _probably_ work fine but don't be surprised if there are small visual issues here and there.
 
@@ -365,7 +370,7 @@
 
 ## New in 1.0.0
 
-### Warning!
+### Warning
 
 This update contains significant breaking changes. Please backup existing worlds before updating to avoid the nightmare of data loss or in case you wish to roll back to the previous version.
 
@@ -423,10 +428,10 @@ This update contains significant breaking changes. Please backup existing worlds
 ### Changes
 
 - Changed the way attribute mods, saves, and AC are calculated to better support Foundry's export function.
-  - This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: https://github.com/SobranDM/foundryvtt-wwn/issues
+  - This required some refactoring, so if you see any odd behavior, please report it on the WWN Github page: <https://github.com/SobranDM/foundryvtt-wwn/issues>
 - Removed the book icon on PCs that previously displayed a few modifiers. Most of these are now exposed to the user elsewhere and the rest were wildly out of date.
 - Tweaked the display size of the description and notes fields on the details tab. If both of these exceed 4 lines or so, you will get a scrollbar while on that tab.
-- Removed references to 5e token art, as it has been pointed out that this is pretty bad practice and I am forced to agree. I encourage anyone who enjoys that art to go support Forgotten Adventures for their amazing library of token art, which is constantly growing: https://www.patreon.com/forgottenadventures/posts
+- Removed references to 5e token art, as it has been pointed out that this is pretty bad practice and I am forced to agree. I encourage anyone who enjoys that art to go support Forgotten Adventures for their amazing library of token art, which is constantly growing: <https://www.patreon.com/forgottenadventures/posts>
 - All inventory items and spells are now sorted alphabetically.
 - All monster abilities and equipment are now divided by type and sorted alphabetically.
 - All monster item types are now rollable.
@@ -550,7 +555,7 @@ This update contains significant breaking changes. Please backup existing worlds
 
 - Updated system to function with version 0.8.6 of Foundry. While most things appear to be working correctly, this is an early release. Bugs may abound.
 
-# Known Issues:
+# Known Issues
 
 - Attribute roller does not save results correctly. The rolls happen and they appear to save but the attributes will reset to null upon next server reboot. Please set your attributes manually until I get this fixed.
 - Linking Instinct tables to a monster sheet does not work when dragged from the Compendium. RollTables outside of a Compendium link correctly and pre-existing monsters with tables linked in the Compendium continue to function correctly.

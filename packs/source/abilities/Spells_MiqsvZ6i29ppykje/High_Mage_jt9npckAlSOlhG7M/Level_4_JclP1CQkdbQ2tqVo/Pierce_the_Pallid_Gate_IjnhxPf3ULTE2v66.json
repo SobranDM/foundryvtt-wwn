@@ -1,8 +1,8 @@
 {
   "_id": "IjnhxPf3ULTE2v66",
   "name": "Pierce the Pallid Gate",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "JclP1CQkdbQ2tqVo",
   "sort": 600000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 4,
-    "class": "High Mage",
-    "duration": "1 round per level",
-    "range": "100 ft. per level",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster opens a short-ranged spatial rift between two points within one hundred feet per level, provided they can see or have physically occupied both points at some prior time and provided the two points are at least twenty feet apart. The rift forms a gateway that connects the two points, one large enough to drive a cart through, and allows subjects on either side to see through and pass through the gate. Ambient environmental qualities such as liquids or atmospheres will not pass through the portal; only intentionally-directed creatures and objects will transfer. Once the creature has passed through a portal, it cannot pass through again until its next turn. The portal remains open for up to one round per caster level, but can be shut as an Instant action by the caster. Creatures partially in a rift when it closes are spat out on the far side.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "100 ft. per level",
+      "duration": "1 round per level"
+    }
   },
   "_key": "!items!IjnhxPf3ULTE2v66"
 }

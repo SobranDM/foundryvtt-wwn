@@ -1,8 +1,8 @@
 {
   "_id": "4qfGBIX4kFnS7F6e",
   "name": "The Earth as Clay",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "9EnIIslVVc7KXwbb",
   "sort": 700000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 5,
-    "class": "High Mage",
-    "duration": "300 ft. per level",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster molds the soil and stone of the land around them, raising hills, digging trenches, or forming simple structures out of extruded bedrock. Once cast, the mage may psychically mold the terrain within three hundred feet per caster level, shifting it slowly over the course of an hour to form whatever shape they desire out of it, provided the material used can actually maintain such a shape. Simple buildings and walls may be created out of bedrock or available stone, and tunnels and caves may be shaped up to 50 feet down from the caster, while hills may be raised up to 200 feet above the prevailing grade. This spell cannot work within a thousand feet of stone or earth that has been significantly worked by intelligent creatures, though the use of this spell by the same caster doesn&rsquo;t count as working the earth on further castings.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "300 ft. per level"
+    }
   },
   "_key": "!items!4qfGBIX4kFnS7F6e"
 }

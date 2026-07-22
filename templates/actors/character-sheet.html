@@ -9,14 +9,13 @@
     <a class="item" data-tab="attributes">
       {{localize "WWN.category.attributes"}}
     </a>
-    {{#if system.spells.enabled}}
-    <a class="item" data-tab="spells"> {{localize "WWN.category.spells"}} </a>
-    {{/if}}
+    <a class="item" data-tab="powers"> {{localize "WWN.Tabs.Powers"}} </a>
     <a class="item" data-tab="inventory">
       {{localize "WWN.category.inventory"}}
     </a>
     <a class="item" data-tab="notes"> {{localize "WWN.category.details"}} </a>
-    <a class="item" data-tab="effects"> {{localize "WWN.Effects"}} </a>
+    <a class="item" data-tab="config"> {{localize "WWN.category.config"}} </a>
+    <a class="item" data-tab="effects"> {{localize "WWN.category.effects"}} </a>
   </nav>
   {{! Sheet Body }}
   <section class="sheet-body">
@@ -25,16 +24,17 @@
       {{>
       "systems/wwn/templates/actors/partials/character-attributes-tab.html"}}
     </div>
-    {{#if system.spells.enabled}}
-    <div class="tab" data-group="primary" data-tab="spells">
-      {{> "systems/wwn/templates/actors/partials/character-spells-tab.html"}}
+    <div class="tab" data-group="primary" data-tab="powers">
+      {{> "systems/wwn/templates/actors/partials/character-powers-tab.html"}}
     </div>
-    {{/if}}
     <div class="tab" data-group="primary" data-tab="inventory">
       {{> "systems/wwn/templates/actors/partials/character-inventory-tab.html"}}
     </div>
     <div class="tab" data-group="primary" data-tab="notes">
       {{> "systems/wwn/templates/actors/partials/character-notes-tab.html"}}
+    </div>
+    <div class="tab" data-group="primary" data-tab="config">
+      {{> "systems/wwn/templates/actors/partials/character-config-tab.html"}}
     </div>
     {{!-- Active Effects Tab --}}
     <div class="tab" data-group="primary" data-tab="effects">

@@ -1,0 +1,39 @@
+{
+  "_id": "79a6d44a2c7cde63",
+  "name": "Partial Expert",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!79a6d44a2c7cde63",
+  "system": {
+    "description": "<p>Your hero is an expert at some useful skill. Thieves, diplomats, healers, scholars, explorers, artisans, and other such heroes should pick the Expert class if they wish to focus on developing their special skills and performing tremendous feats of mastery with them. Experts gain the widest variety of non-combat skills and are the quickest to learn more of them.</p><p>An Expert has an uncanny knack for wielding their skills successfully at a crucial moment, whether or not it&rsquo;s a skill they&rsquo;ve taken for their specialty. Once per scene, the Expert can reroll a failed non-combat skill check, gaining a second chance to yank victory from the jaws of otherwise certain failure. Their natural focus on personal development and determined refinement of their skills bleeds through even into those talents they don&rsquo;t make their special domain.</p><p>Experts are also capable combatants, fully able to hold their own in the midst of a murderous fray. It&rsquo;s not unknown for some Experts to specialize in professions related to martial pursuits, such as an assassin who relies heavily on their superb powers of stealth and deception to reach their unwary foes.</p><h3>Class Ability: Masterful Expertise</h3><p>Once per scene, a Full Expert may reroll any non-combat skill check as an Instant action. This allows the Expert to make a roll and then immediately use this ability if the resulting total isn&rsquo;t good enough to succeed. In cases where it matters, the better of the two rolls may be used.</p><p>Note that the typical ten-minute dungeon exploration turn generally counts as a scene, allowing the Full Expert to use this ability every turn if they so wish.</p><p>Partial Experts do not receive this ability.</p><h3>Class Ability: Quick Learner</h3><p>When you advance a character level, you gain an extra skill point which may only be spent on gaining or improving non-combat skills or raising attributes. You may save this point to spend later if you wish.</p><p>Partial Experts do receive this ability.</p><h3>Partial Warrior/Partial Expert</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior + 1 Expert + 1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Mage/Partial Expert</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Expert + 1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "expert",
+    "skillPointsPerLevel": 4,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": []
+    }
+  }
+}

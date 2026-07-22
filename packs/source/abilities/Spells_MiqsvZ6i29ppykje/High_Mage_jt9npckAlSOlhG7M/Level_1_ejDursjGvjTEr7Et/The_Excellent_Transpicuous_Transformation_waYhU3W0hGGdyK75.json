@@ -1,8 +1,8 @@
 {
   "_id": "waYhU3W0hGGdyK75",
   "name": "The Excellent Transpicuous Transformation",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "ejDursjGvjTEr7Et",
   "sort": 900000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "High Mage",
-    "duration": "1 hour per level",
-    "range": "100 ft.",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The mage chooses up to one visible willing target per caster level provided they are within 100 feet, though afterwards the targets can separate freely. The targets and all they wear or carry become perfectly transparent. Missile attacks against invisible foes are largely impossible, and melee attacks against them usually suffer a -4 penalty to hit rolls. The spell lasts for up to an hour per caster level, but it breaks if a subject performs some violent motion, such as running, attacking, or casting a spell. Once broken for one subject, it breaks for all.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "100 ft.",
+      "duration": "1 hour per level"
+    }
   },
   "_key": "!items!waYhU3W0hGGdyK75"
 }

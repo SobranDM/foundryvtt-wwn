@@ -1,8 +1,8 @@
 {
   "_id": "4i4lsi8CQDl2Kh4h",
   "name": "Vallation of Specified Exclusion",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "FpLCULEmzzpLk08x",
   "sort": 1100000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 3,
-    "class": "High Mage",
-    "duration": "1 hour per level",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster must form some sort of line as part of this spell&rsquo;s invocation, either with dropped powders or a trace drawn in the dirt or a more permanent inlay into a floor. In extremis, the caster can make such a line as part of a Move action, tracing it out or scattering powder as they go. The line itself may be no longer than twenty feet per caster level, and may be straight or curved as the caster wishes. Once it has been drawn, this spell may be cast, empowering the line with the ability to ward off a particular target and prevent them or their powers from crossing or being made to cross the line, as if it were a physical wall. The caster can nominate any kind of target to be warded that could be distinguished without need for knowing their thoughts, such as &ldquo;humans&rdquo; or &ldquo;non-humans&rdquo; or &ldquo;men wearing the livery of the baron&rdquo;. The barrier extends a hundred feet upward and ten feet downward and blocks any attack or magical power used by those warded. If the excluded creatures are attacked or targeted by powers from the other side of the barrier, however, the entire field shatters. The barrier lasts until dispelled, the caster drops it, or until one hour has passed per caster level.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "1 hour per level"
+    }
   },
   "_key": "!items!4i4lsi8CQDl2Kh4h"
 }

@@ -1,10 +1,6 @@
 {
   "_id": "kzzW4WurYXaXOHg0",
   "name": "Magical Weapon +2",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "none",
@@ -480,5 +476,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!kzzW4WurYXaXOHg0",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

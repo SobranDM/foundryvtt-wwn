@@ -2,62 +2,68 @@
   "_id": "ZN5qk2XEc19smlRj",
   "name": "Throwing Blade +2",
   "type": "weapon",
-  "img": "systems/wwn/assets/default/weapon.png",
-  "data": {
+  "img": "systems/wwn/assets/icons/items/weapon.png",
+  "effects": [],
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.world.weapons.m1NrAB7GO4ODyPkp"
+    }
+  },
+  "_key": "!items!ZN5qk2XEc19smlRj",
+  "system": {
+    "description": "<p><em><strong>Throwing blades</strong></em> are small leaves of steel that are not terribly useful as melee weapons but are easy to carry discreetly in considerable numbers.</p>",
+    "damage": "1d4+2",
+    "bonus": 2,
+    "skillDamage": false,
+    "shock": {
+      "damage": "0",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 30,
       "medium": 0,
       "long": 60
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Throwing blades</strong></em> are small leaves of steel that are not terribly useful as melee weapons but are easy to carry discreetly in considerable numbers.</p>",
-    "damage": "1d4+2",
-    "bonus": 2,
-    "skillDamage": false,
-    "shock": {
-      "damage": 0,
-      "ac": null
-    },
-    "shockTotal": "0",
-    "skill": "stab",
-    "score": "dex",
     "tags": [
-      {
-        "title": "S",
-        "value": "S"
-      },
-      {
-        "title": "T",
-        "value": "T"
-      },
-      {
-        "title": "N",
-        "value": "N"
-      }
+      "S",
+      "T",
+      "N"
     ],
-    "slow": false,
-    "missile": true,
-    "melee": false,
-    "price": 3,
-    "weight": 0.2,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
     },
-    "quantity": 1
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 3,
+    "weight": 0.2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
-  "effects": [],
-  "folder": "OIyd6nt6BoF6ZIqn",
-  "sort": 0,
-  "permission": {
+  "ownership": {
     "default": 0,
     "mgBwP0sTLP1VFg1m": 3
-  },
-  "flags": {
-    "core": {
-      "sourceId": "Compendium.world.weapons.m1NrAB7GO4ODyPkp"
-    }
-  },
-  "_key": "!items!ZN5qk2XEc19smlRj"
+  }
 }

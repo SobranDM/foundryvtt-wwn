@@ -1,10 +1,6 @@
 {
   "_id": "HcrnXlXSfzAmeMG8",
   "name": "Magical Armor Bonus, Minor",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -85,5 +81,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!HcrnXlXSfzAmeMG8",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

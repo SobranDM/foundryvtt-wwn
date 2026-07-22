@@ -1,26 +1,49 @@
 {
   "_id": "2UIFVq5d5JHHKw61",
   "name": "Dispel Evil",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Cleric",
-    "duration": "Concentration (1 turn)",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: Concentration (up to 1 turn) </strong><strong>or instant (see below)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has three uses:</p>\n<ol>\n<li><strong>Ward: </strong>By concentrating and remaining stationary, enchanted or undead monsters that come within range may be banished or destroyed. Each monster may make a Mental save to avoid banishment or destruction. If a monster&rsquo;s save succeeds, it flees the affected area.</li>\n<li><strong>Target single monster:</strong> Instantly banish or destroy a single enchanted or undead monster within range. The monster may make a Mental save (with a &ndash;2 penalty) to avoid banishment or destruction. If the monster&rsquo;s&nbsp; save succeeds, it flees the affected area.</li>\n<li><strong>Dispel curse: </strong>Instantly dispel the hold that a cursed item has over a being within range.</li>\n</ol>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!2UIFVq5d5JHHKw61"
+  "_key": "!items!2UIFVq5d5JHHKw61",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Concentration (up to 1 turn) </strong><strong>or instant (see below)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has three uses:</p>\n<ol>\n<li><strong>Ward: </strong>By concentrating and remaining stationary, enchanted or undead monsters that come within range may be banished or destroyed. Each monster may make a Mental save to avoid banishment or destruction. If a monster&rsquo;s save succeeds, it flees the affected area.</li>\n<li><strong>Target single monster:</strong> Instantly banish or destroy a single enchanted or undead monster within range. The monster may make a Mental save (with a &ndash;2 penalty) to avoid banishment or destruction. If the monster&rsquo;s&nbsp; save succeeds, it flees the affected area.</li>\n<li><strong>Dispel curse: </strong>Instantly dispel the hold that a cursed item has over a being within range.</li>\n</ol>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "30'",
+      "duration": "Concentration (1 turn)"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

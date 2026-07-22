@@ -1,10 +1,6 @@
 {
   "_id": "15l8vsBmHeKyd3cc",
   "name": "Enchanted Elixirs",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -655,5 +651,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!15l8vsBmHeKyd3cc",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

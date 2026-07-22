@@ -27,14 +27,11 @@ export class WWNCombatant extends Combatant {
   }
 
   getGroupSuffix() {
-    const items = this.token?.delta?.syntheticActor?.items ?? [];
-
-    const topCombatant = items.some(i =>
-      (i.name === "Alert" && i.system?.ownedLevel === 2) ||
-      i.name === "Vigilant"
-    );
-
-    return topCombatant ? "*" : "";
+    const init = this.actor?.system?.combat?.initiative;
+    const individualMod = Number(init?.individual?.mod) || 0;
+    const groupMod = Number(init?.group?.mod) || 0;
+    // Alert L2 / Vigilant style: large individual or group init mods
+    return individualMod >= 100 || groupMod >= 100 ? "*" : "";
   }
 
   /**

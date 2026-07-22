@@ -1,26 +1,49 @@
 {
   "_id": "s42dAiKKcLvxz1FU",
   "name": "Striking",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 3,
-    "class": "Cleric",
-    "duration": "1 turn",
-    "range": "30'",
-    "roll": "1d6",
-    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single weapon is enchanted:</p>\n<p><strong>▶ Damage:</strong> It deals an additional 1d6 damage.</p>\n<p><strong>▶ Treated as magical:</strong> It is able to harm monsters which are normally only harmed by magical weapons.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!s42dAiKKcLvxz1FU"
+  "_key": "!items!s42dAiKKcLvxz1FU",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single weapon is enchanted:</p>\n<p><strong>▶ Damage:</strong> It deals an additional 1d6 damage.</p>\n<p><strong>▶ Treated as magical:</strong> It is able to harm monsters which are normally only harmed by magical weapons.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30'",
+      "duration": "1 turn"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

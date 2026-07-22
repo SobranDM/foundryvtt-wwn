@@ -2,30 +2,35 @@
   "_id": "lPBj7pDYtopUGXuR",
   "name": "Great Armor +2",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Great armor </strong></em>is less finely tailored, relying instead on stacking layer upon layer of mail, plates, hide, cloth, and other protective materials until a suit almost too heavy for movement is finally assembled.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 18,
-      "mod": 2
-    },
-    "armorBonus": 0,
-    "type": "heavy",
-    "price": 4000,
-    "weight": 2
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.lPBj7pDYtopUGXuR"
     }
   },
-  "_key": "!items!lPBj7pDYtopUGXuR"
+  "_key": "!items!lPBj7pDYtopUGXuR",
+  "system": {
+    "description": "<p><em><strong>Great armor </strong></em>is less finely tailored, relying instead on stacking layer upon layer of mail, plates, hide, cloth, and other protective materials until a suit almost too heavy for movement is finally assembled.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 2,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 4000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,18 +1,33 @@
 {
   "_id": "9cieAemwgn3uxy7Z",
   "name": "Origin Focus: Halfman",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>You have been separated from your herd. Your intellect has achieved human levels in the time since, and for whatever reason you no longer seek to return to them.</p>\n<p><strong>Level 1: </strong>Gain Survive as a bonus skill. Your Constitution modifier increases by +1, up to a +2 maximum. You are immune to natural extremes of heat and cold, and can digest any plant matter a normal ruminant could. Your isolation from the herd inflicts a -2 penalty on all Mental saving throws, however.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!9cieAemwgn3uxy7Z",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

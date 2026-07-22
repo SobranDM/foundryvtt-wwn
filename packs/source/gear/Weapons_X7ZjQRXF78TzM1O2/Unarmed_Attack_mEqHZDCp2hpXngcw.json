@@ -3,48 +3,55 @@
   "name": "Unarmed Attack",
   "type": "weapon",
   "flags": {},
-  "img": "systems/wwn/assets/default/weapon.png",
+  "img": "systems/wwn/assets/icons/items/weapon.png",
   "effects": [],
   "system": {
+    "description": "<p>The <em><strong>unarmed attack </strong></em>given here is a common punch or kick, unimproved by a Vowed&rsquo;s arts or a Focus. Unarmed attacks add the assailant&rsquo;s Punch skill to the damage roll as well as the attack roll.</p>",
+    "damage": "1d2+@punch",
+    "bonus": 0,
+    "skillDamage": false,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 0,
       "medium": 0,
       "long": 0
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p>The <em><strong>unarmed attack </strong></em>given here is a common punch or kick, unimproved by a Vowed&rsquo;s arts or a Focus. Unarmed attacks add the assailant&rsquo;s Punch skill to the damage roll as well as the attack roll.</p>",
-    "damage": "1d2+@punch",
-    "bonus": "0",
-    "skillDamage": false,
-    "shock": {
-      "damage": "",
-      "ac": null
-    },
-    "shockTotal": 0,
-    "skill": "",
-    "score": "str",
     "tags": [
-      {
-        "title": "LL",
-        "value": "LL"
-      }
+      "LL"
     ],
-    "slow": false,
-    "missile": false,
-    "melee": true,
-    "price": 0,
-    "weight": 0,
-    "counter": {
-      "value": 0,
-      "max": 0
-    },
-    "quantity": 1,
+    "ammoId": "",
     "charges": {
       "value": 0,
       "max": 0
     },
-    "weightless": "never"
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "never",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
   "ownership": {
     "default": 0

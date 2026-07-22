@@ -1,0 +1,63 @@
+<section class="tab changes {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <header>
+    <div class="effect-target">{{localize "WWN.Effects.Target"}}</div>
+    <div class="effect-mode">{{localize "WWN.Effects.ChangeType"}}</div>
+    <div class="effect-value">{{localize "WWN.Effects.ChangeValue"}}</div>
+    <div class="controls">
+      <button type="button" class="inline-control icon fa-regular fa-square-plus" data-action="addChange"
+              data-tooltip="{{localize 'WWN.Effects.AddChange'}}"></button>
+    </div>
+  </header>
+  <ol class="scrollable" data-changes>
+    {{#each wwnChanges as |change|}}
+    <li class="effect-change" data-index="{{change.index}}">
+      <div class="effect-target">
+        {{#if change.known}}
+        <select name="{{change.keyPath}}">
+          <option value=""></option>
+          {{#each change.optgroups as |group|}}
+          <optgroup label="{{group.label}}">
+            {{#each group.options as |opt|}}
+            <option value="{{opt.value}}" {{#if (eq opt.value change.key)}}selected{{/if}}>{{opt.label}}</option>
+            {{/each}}
+          </optgroup>
+          {{/each}}
+        </select>
+        {{else}}
+        <select name="{{change.keyPath}}">
+          <option value="{{change.key}}" selected>{{change.key}} ({{localize "WWN.Effects.UnknownTarget"}})</option>
+          <option value=""></option>
+          {{#each change.optgroups as |group|}}
+          <optgroup label="{{group.label}}">
+            {{#each group.options as |opt|}}
+            <option value="{{opt.value}}">{{opt.label}}</option>
+            {{/each}}
+          </optgroup>
+          {{/each}}
+        </select>
+        {{/if}}
+      </div>
+      <div class="effect-mode">
+        {{#if change.modeLocked}}
+        <span>{{change.lockedModeLabel}}</span>
+        <input type="hidden" name="{{change.typePath}}" value="{{change.lockedModeValue}}" />
+        {{else}}
+        <select name="{{change.typePath}}">
+          {{#each change.modes as |mode|}}
+          <option value="{{mode.value}}" {{#if mode.selected}}selected{{/if}}>{{mode.label}}</option>
+          {{/each}}
+        </select>
+        {{/if}}
+      </div>
+      <div class="effect-value">
+        <input type="{{change.valueInputType}}" name="{{change.valuePath}}" value="{{change.value}}"
+               {{#if (eq change.valueInputType "number")}}step="any"{{/if}} />
+        <input type="hidden" name="{{change.phasePath}}" value="{{change.phase}}" />
+      </div>
+      <div class="controls">
+        <button type="button" class="inline-control icon fa-solid fa-trash" data-action="deleteChange"></button>
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+</section>

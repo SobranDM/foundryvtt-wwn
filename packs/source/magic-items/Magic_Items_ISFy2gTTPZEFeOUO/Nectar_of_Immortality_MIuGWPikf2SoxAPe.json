@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>Grandly named, this liquid offers a nominal prolongation of the subject&rsquo;s natural longevity. Sages speculate that it was once a reward given by the Outsiders to pliant human rulers. Each bottle consumed adds an additional 1d6 years to the subject&rsquo;s healthy lifespan and immediately cures all but the most sorcerously-potent diseases or sicknesses. The nectar cannot do more than double the subject&rsquo;s natural lifespan, however, and after each dose a 1d20 must be rolled; on a natural 1, the nectar instead causes the subject to perish in a hideous welter of cancers and rebellious growths.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

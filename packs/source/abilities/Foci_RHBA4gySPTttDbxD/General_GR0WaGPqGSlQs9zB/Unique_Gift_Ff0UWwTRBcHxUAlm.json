@@ -1,18 +1,33 @@
 {
   "_id": "Ff0UWwTRBcHxUAlm",
   "name": "Unique Gift",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>Your hero has some unusual ability or magical knack that can&rsquo;t be adequately described by an existing Focus. This choice is a catch-all meant to represent a special power that&rsquo;s in some way worth a Focus pick.</p>\n<p>The exact effect of the ability should be defined by the player and the GM together, working out some result that seems fair and reasonable. This will vary from table to table and from campaign to campaign; an innate ability to breathe water is little more than a novelty in a desert setting, while a campaign based on piracy in an endless archipelago might make it far more significant.</p>\n<p>As with any power, the group should be willing to reconsider the gift if it turns out to be exceptionally weak in play or a stronger power than was anticipated.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!Ff0UWwTRBcHxUAlm",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

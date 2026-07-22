@@ -1,8 +1,8 @@
 {
   "_id": "XaHlyNef8rwwaZOP",
   "name": "Elemental Favor",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
   "effects": [],
   "folder": "EKBFwEIj1iHwEq45",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "Elementalist",
-    "duration": "Scene",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The elementalist makes a direct appeal to a non-magical mass of earth, stone, water, flame, or air no larger than a ten-foot cube. At the end of the round, the mass will move or reshape itself within that space as the elementalist requests, maintaining its new form until the end of the scene. If its new shape is one that is stable without magical help, it can be told to remain in it after the spell is finished.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!XaHlyNef8rwwaZOP"
 }

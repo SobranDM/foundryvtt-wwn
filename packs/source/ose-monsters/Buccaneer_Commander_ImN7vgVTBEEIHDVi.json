@@ -12,37 +12,30 @@
       "_id": "zvIdwhFdbOpSTxH4",
       "name": "Mail Shirt",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 400000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.y2XpAnL4R2KKOz0T"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 14,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 14,
+        "acRanged": 14,
+        "mod": 0,
         "type": "medium",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 250,
-        "weight": 1
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!ImN7vgVTBEEIHDVi.zvIdwhFdbOpSTxH4"
     },
@@ -50,74 +43,63 @@
       "_id": "Od1ddSbYRV6dfKyJ",
       "name": "Crossbow",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 500000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.vvUjlXBFZiH0Puop"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "shoot",
+        "score": "dex",
+        "melee": false,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 100,
           "medium": 0,
           "long": 300
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "shoot",
-        "score": "dex",
         "tags": [
-          {
-            "title": "2H",
-            "value": "2H"
-          },
-          {
-            "title": "SR",
-            "value": "SR"
-          },
-          {
-            "title": "PM",
-            "value": "PM"
-          }
+          "2H",
+          "SR",
+          "PM"
         ],
-        "slow": false,
-        "missile": true,
-        "melee": false,
-        "price": 10,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 10,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "linked",
+        "ammoFallback": "Bolt"
       },
       "_key": "!actors.items!ImN7vgVTBEEIHDVi.Od1ddSbYRV6dfKyJ"
     },
@@ -125,204 +107,115 @@
       "_id": "lyGMmVbUL7WdhN3Z",
       "name": "Sword, Long",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 400000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 13
-        },
-        "shockTotal": 0,
-        "skill": "stab",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 100,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 100,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!ImN7vgVTBEEIHDVi.lyGMmVbUL7WdhN3Z"
     }
   ],
   "effects": [],
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 42,
+      "max": 42
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 14,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 9,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 11,
-        "mod": 0
-      },
-      "mental": {
-        "value": 11,
-        "mod": 0
-      },
-      "physical": {
-        "value": 11,
-        "mod": 0
-      },
-      "luck": {
-        "value": 11,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "9d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Sailors who make a living by raiding coastal settlements and robbing other ships. Typically ply rivers, lakes, and coastal waters; occasionally oceans.</p>\n<ul>\n<li><strong>Ships and crew:&nbsp;</strong>Depends where encountered. Rivers or lakes: 1d8 river boats (1d2 &times; 10 buccaneers each); coastal waters: 1d6 small galleys (1d3+1 &times; 10 buccaneers each); any: 1d4 longships (1d3+2 &times; 10 buccaneers each); ocean: 1d3 small warships (1d5+3 &times; 10 buccaneers each). (See the Advanced Fantasy Player&rsquo;s Tome or use Worlds Without Number equivalents for ships.)</li>\n<li><strong>Arms:&nbsp;</strong>60% of group have: leather armour, sword; 30% have: leather armour, sword, crossbow; 10% have: chainmail, sword, crossbow.</li>\n<li><strong>Leaders and captains:&nbsp;</strong>For every 30 buccaneers, there is a 4th level fighter. Each ship has a captain (7th level fighter).</li>\n<li><strong>Fleet commander:</strong>&nbsp;9th level fighter. 30% chance of a magic-user (level 1d2 + 9); 25% chance of a cleric (8th level).</li>\n<li><strong>Treasure:&nbsp;</strong>Divided between vessels. Instead of carrying aboard, may have a map to where it is buried.</li>\n<li><strong>Havens:</strong>&nbsp;Lawless, fortified, coastal towns may act as a haven for buccaneers and pirates.</li>\n</ul>",
       "alignment": "Neutral",
       "xp": 75,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 6,
+      "instinct": 0,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "varies"
       },
-      "morale": 6,
-      "instinct": 0,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "9d8",
-      "value": 42,
-      "max": 42
-    }
+    "favorites": [
+      "Od1ddSbYRV6dfKyJ",
+      "lyGMmVbUL7WdhN3Z"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 9,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 14,
+        "ranged": 14
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Sailors who make a living by raiding coastal settlements and robbing other ships. Typically ply rivers, lakes, and coastal waters; occasionally oceans.</p>\n<ul>\n<li><strong>Ships and crew:&nbsp;</strong>Depends where encountered. Rivers or lakes: 1d8 river boats (1d2 &times; 10 buccaneers each); coastal waters: 1d6 small galleys (1d3+1 &times; 10 buccaneers each); any: 1d4 longships (1d3+2 &times; 10 buccaneers each); ocean: 1d3 small warships (1d5+3 &times; 10 buccaneers each). (See the Advanced Fantasy Player&rsquo;s Tome or use Worlds Without Number equivalents for ships.)</li>\n<li><strong>Arms:&nbsp;</strong>60% of group have: leather armour, sword; 30% have: leather armour, sword, crossbow; 10% have: chainmail, sword, crossbow.</li>\n<li><strong>Leaders and captains:&nbsp;</strong>For every 30 buccaneers, there is a 4th level fighter. Each ship has a captain (7th level fighter).</li>\n<li><strong>Fleet commander:</strong>&nbsp;9th level fighter. 30% chance of a magic-user (level 1d2 + 9); 25% chance of a cleric (8th level).</li>\n<li><strong>Treasure:&nbsp;</strong>Divided between vessels. Instead of carrying aboard, may have a map to where it is buried.</li>\n<li><strong>Havens:</strong>&nbsp;Lawless, fortified, coastal towns may act as a haven for buccaneers and pirates.</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {

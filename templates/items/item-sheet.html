@@ -41,7 +41,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="info">Statistics</a>
     <a class="item" data-tab="description">{{localize "WWN.category.description"}}</a>
-    <a class="item" data-tab="effects">{{localize "WWN.Effects"}}</a>
+    <a class="item" data-tab="effects">{{localize "WWN.category.effects"}}</a>
   </nav>
 
   <section class="sheet-body">
@@ -85,6 +85,13 @@
                 title="{{localize 'WWN.items.CurrCharges'}}" />
               <input type="number" name="system.charges.max" value="{{system.charges.max}}" data-dtype="Number"
                 title="{{localize 'WWN.items.MaxCharges'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.ExpendOnUseHint'}}">{{localize 'WWN.items.ExpendOnUse'}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.expendOnUse" value="{{system.expendOnUse}}" {{checked system.expendOnUse}}
+                data-dtype="Boolean" data-tooltip="{{localize 'WWN.items.ExpendOnUseHint'}}" />
             </div>
           </div>
         </div>

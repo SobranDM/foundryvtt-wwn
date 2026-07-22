@@ -1,8 +1,8 @@
 {
   "_id": "cgvZTRyfWmWKwJdE",
   "name": "Compel Flesh",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
   "effects": [],
   "folder": "srJvVpDjTgBmnEpd",
   "sort": 100000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 3,
-    "class": "Necromancer",
-    "duration": "Scene",
-    "range": "100 ft.",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>A visible living creature or physically-bodied undead within 100 feet is ensorceled by this spell, their flesh and bones becoming temporarily enthralled to the caster&rsquo;s will. The target becomes paralyzed unless commanded by the caster as an On Turn action; once given a command, their body will dutifully carry it out on their next turn. The user&rsquo;s mind is not affected by this spell, so they cannot be made to cast spells, answer questions, or perform other intellectual tasks, but they will fight, move, and perform other non-suicidal physical acts as normal. The target may make a Physical saving throw at the start of each of their turns to throw off the effect, but they will inevitably suffer one point of damage per caster level with each attempt as their flesh writhes and tears. If not thrown off earlier, the spell lasts until the end of the scene.</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "physical"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100 ft.",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!cgvZTRyfWmWKwJdE"
 }

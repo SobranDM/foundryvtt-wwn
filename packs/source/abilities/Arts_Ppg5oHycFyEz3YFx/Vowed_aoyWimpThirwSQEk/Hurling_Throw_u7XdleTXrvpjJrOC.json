@@ -1,15 +1,11 @@
 {
   "_id": "u7XdleTXrvpjJrOC",
   "name": "Hurling Throw",
-  "type": "art",
-  "img": "systems/wwn/assets/new/vowed_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
   "effects": [],
   "folder": "aoyWimpThirwSQEk",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.u7XdleTXrvpjJrOC"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!u7XdleTXrvpjJrOC",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>After you make a successful attack, you may Commit Effort for the scene as an Instant action. The target must make a Physical saving throw or be thrown up to ten feet in any direction, falling prone on landing and suffering the damage rolled for your attack. If the Physical save is successful, the target simply takes damage as normal. This art can be used only once per round on any given target, and the target must be no larger than an ox.</p>",
-    "save": "physical",
     "source": "Vowed",
-    "effort": 0,
-    "time": "Scene",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }
