@@ -2,30 +2,35 @@
   "_id": "RA31paBrWKqYxh4r",
   "name": "Cuirass and Greaves +1",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Cuirass and greave</strong></em> armor reflects those different designs that rely on solid metal plating over the wearer&rsquo;s vitals along with lighter limb armor.</p>\n<p><em><strong>Medium armor</strong></em>&nbsp;is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 15,
-      "mod": 1
-    },
-    "armorBonus": 0,
-    "type": "medium",
-    "price": 250,
-    "weight": 1
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.RA31paBrWKqYxh4r"
     }
   },
-  "_key": "!items!RA31paBrWKqYxh4r"
+  "_key": "!items!RA31paBrWKqYxh4r",
+  "system": {
+    "description": "<p><em><strong>Cuirass and greave</strong></em> armor reflects those different designs that rely on solid metal plating over the wearer&rsquo;s vitals along with lighter limb armor.</p>\n<p><em><strong>Medium armor</strong></em>&nbsp;is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
+    "ac": 15,
+    "acRanged": 15,
+    "mod": 1,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 250,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

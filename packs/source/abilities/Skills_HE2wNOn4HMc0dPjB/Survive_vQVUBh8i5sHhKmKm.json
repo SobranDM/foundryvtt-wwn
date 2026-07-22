@@ -1,7 +1,7 @@
 {
   "name": "Survive",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/survive.png",
+  "img": "systems/wwn/assets/icons/skills/survive.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "wis",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "survive"
   },
   "_stats": {
     "systemId": "wwn",

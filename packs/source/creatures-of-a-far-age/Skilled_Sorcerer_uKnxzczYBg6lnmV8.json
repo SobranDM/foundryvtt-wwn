@@ -9,133 +9,53 @@
   "effects": [],
   "_key": "!actors!uKnxzczYBg6lnmV8",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 22,
+      "max": 22
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 10,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 1,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "encounter": 10,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": true,
-      "perDay": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "High Mage",
-        "value": 0,
-        "max": 4
-      },
-      "effort2": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      }
-    },
+    "hd": "5d8",
+    "skill": 2,
     "details": {
-      "biography": null,
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "",
         "w": ""
       },
-      "morale": 9,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.kRkyVb4oBeJNH4xk]{Sorcerers or Other Spellcasters}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "5d8",
-      "value": 22,
-      "max": 22
+    "favorites": [],
+    "notes": "",
+    "combat": {
+      "ab": 1,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 10,
+        "ranged": 10
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": ""
   },
   "ownership": {
     "default": 0

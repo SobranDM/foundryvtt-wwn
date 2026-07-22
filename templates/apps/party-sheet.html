@@ -41,19 +41,19 @@
           </div>
           <div class="field-short" title="{{localize 'WWN.ArmorClass'}}">
             <i class="fas fa-shield-alt"></i>
-            <strong>{{e.system.aac.value}}</strong>
-            <sub>{{e.system.aac.naked}}</sub>
+            <strong>{{e.system.combat.ac.melee.value}}</strong>
+            <sub>{{e.system.combat.ac.base}}</sub>
           </div>
           <div class="field-short" title="{{localize 'WWN.SystemStrainLong'}}">
             <i class="fas fa-tint"></i>
-            <strong>{{e.system.details.strain.value}}</strong>
-            <sub>{{e.system.details.strain.max}}</sub>
+            <strong>{{e.system.strain.value}}</strong>
+            <sub>{{e.system.strain.max}}</sub>
           </div>
         </div>
         <div class="flexrow field-row">
           <div class="field-short" title="{{localize 'WWN.AB'}}">
             <i class="fas fa-crosshairs"></i>
-            {{e.system.thac0.bba}}
+            {{e.system.combat.ab}}
           </div>
           <div class="field-long flex3">
             <strong>{{localize 'WWN.category.saves'}}</strong>

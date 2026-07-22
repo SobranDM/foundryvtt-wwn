@@ -1,10 +1,6 @@
 {
   "_id": "VvOh8RhdjaRpjpGR",
   "name": "Magical Shield SA, Major",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -68,5 +64,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!VvOh8RhdjaRpjpGR",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -7,57 +7,55 @@
       "_id": "h1ZmiFy324ZhA6jX",
       "name": "Claw",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "",
+        "damage": "1d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "1",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d4",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 1,
-          "ac": 13
-        },
-        "shockTotal": 1,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!Nazo0xGYDcitWsWv.h1ZmiFy324ZhA6jX"
     },
@@ -65,57 +63,55 @@
       "_id": "VlFdqXP4guI98czI",
       "name": "Thrown Rock",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 200000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": false,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 20,
           "medium": 0,
           "long": 40
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": true,
-        "melee": false,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!Nazo0xGYDcitWsWv.VlFdqXP4guI98czI"
     }
@@ -127,143 +123,56 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 18,
+      "max": 18
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 14,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 3,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 120,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Albino, herbivorous, gorilla-like apes. Live in caves and emerge at night to forage.</p>\n<ul>\n<li><strong>Territorial: </strong>Defend their lair with threats and, if this is ignored, violence.</li>\n</ul>",
       "alignment": "Neutral",
       "xp": 75,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 7,
+      "instinct": 3,
+      "instinctTable": null,
       "appearing": {
         "d": "1d6",
         "w": "2d4"
       },
-      "morale": 7,
-      "instinct": 3,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.e97Psa2HYkSfcSIi]{Viciously Violent Beasts}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 18,
-      "max": 18
-    }
+    "favorites": [
+      "h1ZmiFy324ZhA6jX",
+      "VlFdqXP4guI98czI"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 3,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 14,
+        "ranged": 14
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Albino, herbivorous, gorilla-like apes. Live in caves and emerge at night to forage.</p>\n<ul>\n<li><strong>Territorial: </strong>Defend their lair with threats and, if this is ignored, violence.</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {},

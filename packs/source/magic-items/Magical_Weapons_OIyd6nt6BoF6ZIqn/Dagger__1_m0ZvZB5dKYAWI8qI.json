@@ -1,55 +1,64 @@
 {
   "name": "Dagger +1",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "weapon",
-  "data": {
+  "flags": {},
+  "img": "systems/wwn/assets/icons/items/weapon.png",
+  "effects": [],
+  "_id": "m0ZvZB5dKYAWI8qI",
+  "_key": "!items!m0ZvZB5dKYAWI8qI",
+  "folder": "OIyd6nt6BoF6ZIqn",
+  "system": {
+    "description": "<p><em><strong>Daggers </strong></em>come in ten thousand varieties, but the listed kind is a common fighting dirk, big enough to push through light armor while remaining small enough to be discreetly hidden. <em><strong>Stilettos </strong></em>and similar armor-piercing daggers aren&rsquo;t usually effective as thrown weapons.</p>",
+    "damage": "1d4+1",
+    "bonus": 1,
+    "skillDamage": false,
+    "shock": {
+      "damage": "2",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "dex",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 30,
       "medium": 0,
       "long": 60
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Daggers </strong></em>come in ten thousand varieties, but the listed kind is a common fighting dirk, big enough to push through light armor while remaining small enough to be discreetly hidden. <em><strong>Stilettos </strong></em>and similar armor-piercing daggers aren&rsquo;t usually effective as thrown weapons.</p>",
-    "damage": "1d4+1",
-    "bonus": 1,
-    "shock": {
-      "damage": 2,
-      "ac": 15
-    },
-    "skill": "stab",
-    "score": "dex",
     "tags": [
-      {
-        "title": "S",
-        "value": "S"
-      },
-      {
-        "title": "T",
-        "value": "T"
-      },
-      {
-        "title": "PM",
-        "value": "PM"
-      }
+      "S",
+      "T",
+      "PM"
     ],
-    "slow": false,
-    "missile": true,
-    "melee": true,
-    "price": 3,
-    "weight": 1,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
-    }
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 3,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
-  "flags": {},
-  "img": "systems/wwn/assets/default/weapon.png",
-  "effects": [],
-  "_id": "m0ZvZB5dKYAWI8qI",
-  "_key": "!items!m0ZvZB5dKYAWI8qI",
-  "folder": "OIyd6nt6BoF6ZIqn"
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

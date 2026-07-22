@@ -10,171 +10,111 @@
       "_id": "twonyATyqRHqkTaF",
       "name": "Punch",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!35Oj0ot88g8xMlGq.twonyATyqRHqkTaF",
       "system": {
+        "description": "",
+        "damage": "1d2+3",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d2+3",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!35Oj0ot88g8xMlGq.twonyATyqRHqkTaF"
     }
   ],
   "effects": [],
   "_key": "!actors!35Oj0ot88g8xMlGq",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 13,
+      "max": 13
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 11,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 14,
-        "mod": 0
-      },
-      "mental": {
-        "value": 14,
-        "mod": 0
-      },
-      "physical": {
-        "value": 14,
-        "mod": 0
-      },
-      "luck": {
-        "value": 14,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "3d8",
+    "skill": 1,
     "details": {
-      "biography": "",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 6,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 9,
-      "instinct": 6,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "3d8",
-      "value": 13,
-      "max": 13
+    "favorites": [
+      "twonyATyqRHqkTaF"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 11,
+        "ranged": 11
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": ""
   },
   "ownership": {
     "default": 0

@@ -1,18 +1,33 @@
 {
   "_id": "TIgPyL8HCb5uVLBp",
   "name": "Origin Focus: Warlike Blighted",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>Your kind were born to kill, whether as the slave-soldiers of some lost empire or as a living biological plague meant solely to scourge the land of all human life. You are constantly assailed by urges to slay, torment, and destroy, but unlike most of your brethren you are capable of controlling these impulses&hellip; when you must.</p>\n<p><strong>Level 1: </strong>Gain Stab and Punch as bonus skills and gain a natural +1 bonus on all hit rolls. Choose two attributes from Intelligence, Wisdom, and Charisma; these attribute modifiers suffer a -1 penalty, down to a -2 maximum. Increase either your Strength, Dexterity, or Constitution modifier by +1, up to a maximum of +3. You suffer a -1 penalty on all social skill checks not related to intimidation.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!TIgPyL8HCb5uVLBp",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

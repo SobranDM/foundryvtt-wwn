@@ -13,11 +13,11 @@
           {{ localize "WWN.scores.str.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.str.value" type="number" value="{{system.scores.str.value}}" placeholder="0"
+          <input name="system.abilities.str.value" type="number" value="{{system.abilities.str.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.str.mod" type="number" value="{{system.scores.str.mod}}" data-dtype="Number"
+          <input name="system.abilities.str.mod" type="number" value="{{system.abilities.str.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -26,11 +26,11 @@
           {{ localize "WWN.scores.dex.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.dex.value" type="number" value="{{system.scores.dex.value}}" placeholder="0"
+          <input name="system.abilities.dex.value" type="number" value="{{system.abilities.dex.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.dex.mod" type="number" value="{{system.scores.dex.mod}}" data-dtype="Number"
+          <input name="system.abilities.dex.mod" type="number" value="{{system.abilities.dex.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -39,11 +39,11 @@
           {{ localize "WWN.scores.con.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.con.value" type="number" value="{{system.scores.con.value}}" placeholder="0"
+          <input name="system.abilities.con.value" type="number" value="{{system.abilities.con.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.con.mod" type="number" value="{{system.scores.con.mod}}" data-dtype="Number"
+          <input name="system.abilities.con.mod" type="number" value="{{system.abilities.con.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -52,11 +52,11 @@
           {{ localize "WWN.scores.int.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.int.value" type="number" value="{{system.scores.int.value}}" placeholder="0"
+          <input name="system.abilities.int.value" type="number" value="{{system.abilities.int.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.int.mod" type="number" value="{{system.scores.int.mod}}" data-dtype="Number"
+          <input name="system.abilities.int.mod" type="number" value="{{system.abilities.int.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -65,11 +65,11 @@
           {{ localize "WWN.scores.wis.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.wis.value" type="number" value="{{system.scores.wis.value}}" placeholder="0"
+          <input name="system.abilities.wis.value" type="number" value="{{system.abilities.wis.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.wis.mod" type="number" value="{{system.scores.wis.mod}}" data-dtype="Number"
+          <input name="system.abilities.wis.mod" type="number" value="{{system.abilities.wis.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -78,11 +78,11 @@
           {{ localize "WWN.scores.cha.short" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.scores.cha.value" type="number" value="{{system.scores.cha.value}}" placeholder="0"
+          <input name="system.abilities.cha.value" type="number" value="{{system.abilities.cha.value}}" placeholder="0"
             data-dtype="Number" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.scores.cha.mod" type="number" value="{{system.scores.cha.mod}}" data-dtype="Number"
+          <input name="system.abilities.cha.mod" type="number" value="{{system.abilities.cha.mod}}" data-dtype="Number"
             disabled />
         </div>
       </li>
@@ -91,11 +91,11 @@
           {{localize 'WWN.movement.short'}}
         </h4>
         <div class="attribute-value">
-          <input name="system.movement.base" title="{{localize 'WWN.movement.round'}}" type="number"
-            value="{{system.movement.base}}" placeholder="30" data-dtype="Number" {{#if
-            system.config.movementAuto}}disabled{{/if}} />
+          <input name="system.movement.base.value" title="{{localize 'WWN.movement.round'}}" type="number"
+            value="{{system.movement.base.value}}" placeholder="30" data-dtype="Number" {{#if
+            showMovement}}disabled{{/if}} />
         </div>
-        {{#if config.showMovement}}
+        {{#if showMovement}}
         <div class="attribute-value attribute-mod">
           <input name="system.movement.exploration" title="{{localize 'WWN.movement.turn'}}" type="number"
             value="{{system.movement.exploration}}" data-dtype="Number" disabled />
@@ -122,17 +122,28 @@
       </li>
       <li class="attribute ability-score">
         <h4 class="attribute-name box-title" title="{{ localize 'WWN.ArmorClass' }}">
-          {{ localize "WWN.ArmorClassShort" }}
+          {{#if separateRangedAC}}{{ localize "WWN.Armor.ACMelee" }}{{else}}{{ localize "WWN.ArmorClassShort" }}{{/if}}
         </h4>
         <div class="attribute-value">
-          <input name="system.aac.value" type="number" value="{{system.aac.value}}" data-dtype="Number" placeholder=0
+          <input type="number" value="{{system.combat.ac.melee.value}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.ArmorClass' }}" disabled />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.aac.naked" type="number" value="{{system.aac.naked}}" data-dtype="Number" placeholder=0
+          <input type="number" value="{{system.ac.naked}}" data-dtype="Number" placeholder=0
             title="{{ localize 'WWN.ArmorClassNaked' }}" disabled />
         </div>
       </li>
+      {{#if separateRangedAC}}
+      <li class="attribute ability-score">
+        <h4 class="attribute-name box-title" title="{{ localize 'WWN.Armor.ACRanged' }}">
+          {{ localize "WWN.Armor.ACRanged" }}
+        </h4>
+        <div class="attribute-value">
+          <input type="number" value="{{system.combat.ac.ranged.value}}" data-dtype="Number" placeholder=0
+            title="{{ localize 'WWN.Armor.ACRanged' }}" disabled />
+        </div>
+      </li>
+      {{/if}}
 
       {{#if config.replaceStrainWithWounds}}
       <li class="attribute ability-score">
@@ -156,12 +167,12 @@
           {{ localize "WWN.SystemStrainShort" }}
         </h4>
         <div class="attribute-value">
-          <input name="system.details.strain.value" type="number" value="{{system.details.strain.value}}"
+          <input name="system.strain.value" type="number" value="{{system.strain.value}}"
             data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrain' }}" />
         </div>
         <div class="attribute-value attribute-mod">
-          <input name="system.details.strain.max" type="number" value="{{system.details.strain.max}}"
-            data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" />
+          <input type="number" value="{{system.strain.max}}"
+            data-dtype="Number" placeholder=0 title="{{ localize 'WWN.SystemStrainMax' }}" disabled />
         </div>
       </li>
       {{/if}}
@@ -207,9 +218,9 @@
     <li class="item-titles flexrow">
       <div class="item-name">{{localize "WWN.category.skills"}}</div>
       <div class="item-controls">
-        <a class="item-control lock-skills lock {{#if system.skills.locked}}hidden{{/if}}" data-type="lock" title="{{localize 'WWN.Lock'}}"><i
+        <a class="item-control lock-skills lock {{#unless system.skills.levelsUnlocked}}hidden{{/unless}}" data-type="lock" title="{{localize 'WWN.Lock'}}"><i
             class="fa fa-unlock" style="padding-right:2px;"></i></a>
-        <a class="item-control lock-skills unlock {{#unless system.skills.locked}}hidden{{/unless}}" data-type="unlock" title="{{localize 'WWN.Lock'}}"><i
+        <a class="item-control lock-skills unlock {{#if system.skills.levelsUnlocked}}hidden{{/if}}" data-type="unlock" title="{{localize 'WWN.Lock'}}"><i
             class="fa fa-lock" style="padding-right:2px;"></i></a>
         <a class="item-control item-create" data-type="skill" title="{{localize 'WWN.Add'}}"><i
             class="fa fa-plus"></i></a>
@@ -240,18 +251,18 @@
               </h4>
             </a>
           </div>
-          <div class="field-xshort unhidden reverse-lock {{#unless @root.system.skills.locked}}hidden{{/unless}}">
+          <div class="field-xshort unhidden reverse-lock {{#if @root.system.skills.levelsUnlocked}}hidden{{/if}}">
             {{lookup @root.config.scores skill.system.score}}
           </div>
-          <div class="field-xshort unhidden reverse-lock {{#unless @root.system.skills.locked}}hidden{{/unless}}">
+          <div class="field-xshort unhidden reverse-lock {{#if @root.system.skills.levelsUnlocked}}hidden{{/if}}">
             {{skill.system.ownedLevel}}
           </div>
           {{#if ../owner}}
-          <div class="item-controls-short skill-lock {{#if @root.system.skills.locked}}hidden{{/if}}"><a class="item-control item-edit"
+          <div class="item-controls-short skill-lock {{#unless @root.system.skills.levelsUnlocked}}hidden{{/unless}}"><a class="item-control item-edit"
               title='{{localize "WWN.Edit"}}'><i class="fas fa-edit"></i></a></div>
-          <div class="item-controls-short skill-lock {{#if @root.system.skills.locked}}hidden{{/if}}"><a class="item-control item-delete"
+          <div class="item-controls-short skill-lock {{#unless @root.system.skills.levelsUnlocked}}hidden{{/unless}}"><a class="item-control item-delete"
               title='{{localize "WWN.Delete"}}'><i class="fas fa-trash"></i></a></div>
-          <div class="item-controls-short skill-lock {{#if @root.system.skills.locked}}hidden{{/if}}"><a class="item-control skill-up"
+          <div class="item-controls-short skill-lock {{#unless @root.system.skills.levelsUnlocked}}hidden{{/unless}}"><a class="item-control skill-up"
               title='{{localize "WWN.Up"}}'><i class="fas fa-level-up-alt"></i></a></div>
           {{/if}}
         </div>

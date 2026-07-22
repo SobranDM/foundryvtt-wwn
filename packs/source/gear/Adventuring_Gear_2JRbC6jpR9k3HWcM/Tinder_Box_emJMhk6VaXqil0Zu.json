@@ -3,23 +3,27 @@
   "name": "Tinder Box",
   "type": "item",
   "flags": {},
-  "img": "systems/wwn/assets/default/item.png",
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "system": {
     "description": "<p>This item is effectively weightless in modest numbers.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 1,
     "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "never",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

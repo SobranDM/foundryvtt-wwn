@@ -1,0 +1,58 @@
+{
+  "_id": "20fc87f879621bfb",
+  "name": "Healing Touch",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFeat000004",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!20fc87f879621bfb",
+  "system": {
+    "description": "<p>Commit Effort for the scene and touch a living creature to heal it. See the Healer arts for the full effect by Effort committed and level.</p>",
+    "subType": "art",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "Healer Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false
+  }
+}

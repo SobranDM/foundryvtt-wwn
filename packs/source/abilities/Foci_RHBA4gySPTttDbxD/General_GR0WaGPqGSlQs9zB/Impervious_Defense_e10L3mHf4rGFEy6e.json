@@ -1,18 +1,58 @@
 {
   "_id": "e10L3mHf4rGFEy6e",
   "name": "Impervious Defense",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "BHY679Ji5E36UmRD",
+      "type": "base",
+      "name": "Impervious Defense (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": "@halfLevel + 15",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!e10L3mHf4rGFEy6e.BHY679Ji5E36UmRD"
+    }
+  ],
   "system": {
     "description": "<p>Whether through uncanny reflexes, remarkable luck, supernatural heritage, or magical talent, you have natural defenses equivalent to high-quality armor. The benefits of this Focus don&rsquo;t stack with armor, though Dexterity or shield modifiers apply.</p>\n<p><strong>Level 1: </strong>You have an innate Armor Class of 15 plus half your character level, rounded up.</p>\n<p><strong>Level 2:</strong> Once per day, as an Instant action, you can shrug off any single weapon attack or physical trauma inflicted by a foe. Environmental damage, falling damage, or other harm that couldn&rsquo;t be forfended by strong armor cannot be resisted this way.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!e10L3mHf4rGFEy6e",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

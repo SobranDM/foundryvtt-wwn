@@ -1,0 +1,23 @@
+<div class="wwn-chat-card{{#if defaultHealing}} wwn-heal-mode{{/if}}" data-heal="{{#if defaultHealing}}true{{else}}false{{/if}}" data-multiplier="1">
+  <header class="wwn-chat-header">
+    {{#if img}}<img src="{{img}}" class="wwn-chat-img" alt="" />{{/if}}
+    <div class="wwn-chat-titles">
+      <div class="wwn-chat-title">{{title}}</div>
+      {{#if subtitle}}<div class="wwn-chat-subtitle">{{subtitle}}</div>{{/if}}
+    </div>
+    {{#if badge}}
+    <span class="wwn-badge wwn-badge--{{badge.type}}">{{badge.label}}</span>
+    {{/if}}
+  </header>
+  {{#if rollsHtml}}
+  <div class="wwn-chat-rolls">
+    {{{rollsHtml}}}
+  </div>
+  {{/if}}
+  <div class="wwn-chat-body">
+    {{{body}}}
+  </div>
+  {{#if footer}}
+  <footer class="wwn-chat-footer">{{{footer}}}</footer>
+  {{/if}}
+</div>

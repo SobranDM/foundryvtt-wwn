@@ -10,171 +10,111 @@
       "_id": "XSygzgJwuyEv0ZQU",
       "name": "Attack",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!rjx3Ic2iC4DgUsh2.XSygzgJwuyEv0ZQU",
       "system": {
+        "description": "",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!rjx3Ic2iC4DgUsh2.XSygzgJwuyEv0ZQU"
     }
   ],
   "effects": [],
   "_key": "!actors!rjx3Ic2iC4DgUsh2",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 18,
+      "max": 18
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 6,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "flight"
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 1,
     "details": {
-      "biography": "<p><span style=\"color: #191813;\">Summoned by a @Compendium[wwn.abilities.8Do2nMcP0RHQitf9]{Elemental Guardian} spell.</span></p>\n<blockquote>\n<p><span style=\"color: #191813;\">If called from earth, it has 6 hit dice, albeit its other stats don&rsquo;t change. If called from fire, it does 5/- Shock damage. If summoned from water, it has an AC of 18, and if called from air, it can fly at its usual movement rate.</span></p>\n</blockquote>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 0,
+      "instinctTable": null,
       "appearing": {
         "d": "",
         "w": "0"
       },
-      "morale": 12,
-      "instinct": 0,
-      "instinctTable": {
+      "treasure": {
         "table": "",
-        "link": ""
-      },
-      "skill": 1
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 18,
-      "max": 18
+    "favorites": [
+      "XSygzgJwuyEv0ZQU"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 6,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p><span style=\"color: #191813;\">Summoned by a @Compendium[wwn.abilities.8Do2nMcP0RHQitf9]{Elemental Guardian} spell.</span></p>\n<blockquote>\n<p><span style=\"color: #191813;\">If called from earth, it has 6 hit dice, albeit its other stats don&rsquo;t change. If called from fire, it does 5/- Shock damage. If summoned from water, it has an AC of 18, and if called from air, it can fly at its usual movement rate.</span></p>\n</blockquote>"
   },
   "ownership": {
     "default": 0

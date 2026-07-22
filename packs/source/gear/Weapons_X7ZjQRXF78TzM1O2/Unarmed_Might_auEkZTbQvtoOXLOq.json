@@ -3,43 +3,53 @@
   "name": "Unarmed Might",
   "type": "weapon",
   "flags": {},
-  "img": "systems/wwn/assets/default/vowed_art.png",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
   "effects": [],
   "system": {
+    "description": "<p>Your unarmed attack damage increases as you gain levels, as noted on the chart. You may add your Punch skill to the damage done by these attacks as usual, but Foci such as Unarmed Combatant that replace or improve your usual Punch damage do not apply to you.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\"><strong>Level</strong></td>\n<td style=\"text-align: center;\">\n<p><strong>Hit Bonus</strong></p>\n</td>\n<td style=\"text-align: center;\">\n<p><strong>Damage</strong></p>\n</td>\n<td style=\"text-align: center;\">\n<p><strong>Shock</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">1</td>\n<td>\n<p style=\"text-align: center;\">+0</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d6</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">2</td>\n<td>\n<p style=\"text-align: center;\">+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d6</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">3</td>\n<td>\n<p style=\"text-align: center;\">+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d8</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">4</td>\n<td>\n<p style=\"text-align: center;\">+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d8</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">5</td>\n<td>\n<p style=\"text-align: center;\">+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6</td>\n<td>\n<p style=\"text-align: center;\">+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">7</td>\n<td>\n<p style=\"text-align: center;\">+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">8</td>\n<td>\n<p style=\"text-align: center;\">+4</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">9</td>\n<td>\n<p style=\"text-align: center;\">+4</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>4/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">10</td>\n<td>\n<p style=\"text-align: center;\">+5</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>4/15</p>\n</td>\n</tr>\n</tbody>\n</table>",
+    "damage": "1d6",
+    "bonus": 0,
+    "skillDamage": false,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 0,
       "medium": 0,
       "long": 0
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p>Your unarmed attack damage increases as you gain levels, as noted on the chart. You may add your Punch skill to the damage done by these attacks as usual, but Foci such as Unarmed Combatant that replace or improve your usual Punch damage do not apply to you.</p>\n<table style=\"border-color: #34495e; border-style: solid; margin-left: auto; margin-right: auto;\" border=\"5\" cellpadding=\"2\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\"><strong>Level</strong></td>\n<td style=\"text-align: center;\">\n<p><strong>Hit Bonus</strong></p>\n</td>\n<td style=\"text-align: center;\">\n<p><strong>Damage</strong></p>\n</td>\n<td style=\"text-align: center;\">\n<p><strong>Shock</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">1</td>\n<td>\n<p style=\"text-align: center;\">+0</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d6</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">2</td>\n<td>\n<p style=\"text-align: center;\">+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d6</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">3</td>\n<td>\n<p style=\"text-align: center;\">+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d8</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">4</td>\n<td>\n<p style=\"text-align: center;\">+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d8</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">5</td>\n<td>\n<p style=\"text-align: center;\">+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10</p>\n</td>\n<td style=\"text-align: center;\">\n<p>2/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6</td>\n<td>\n<p style=\"text-align: center;\">+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">7</td>\n<td>\n<p style=\"text-align: center;\">+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">8</td>\n<td>\n<p style=\"text-align: center;\">+4</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+1</p>\n</td>\n<td style=\"text-align: center;\">\n<p>3/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">9</td>\n<td>\n<p style=\"text-align: center;\">+4</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+2</p>\n</td>\n<td style=\"text-align: center;\">\n<p>4/15</p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">10</td>\n<td>\n<p style=\"text-align: center;\">+5</p>\n</td>\n<td style=\"text-align: center;\">\n<p>1d10+3</p>\n</td>\n<td style=\"text-align: center;\">\n<p>4/15</p>\n</td>\n</tr>\n</tbody>\n</table>",
-    "damage": "1d6",
-    "bonus": "0",
-    "skillDamage": false,
-    "shock": {
-      "damage": "1",
-      "ac": "15"
-    },
-    "shockTotal": 0,
-    "skill": "",
-    "score": "str",
     "tags": [],
-    "slow": false,
-    "missile": false,
-    "melee": true,
-    "price": 0,
-    "weight": 0,
-    "counter": {
-      "value": 0,
-      "max": 0
-    },
-    "quantity": 1,
+    "ammoId": "",
     "charges": {
       "value": 0,
       "max": 0
     },
-    "weightless": "never"
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "never",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
   "ownership": {
     "default": 0

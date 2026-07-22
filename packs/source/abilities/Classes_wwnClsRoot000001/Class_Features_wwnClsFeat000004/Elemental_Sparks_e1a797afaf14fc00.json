@@ -1,0 +1,58 @@
+{
+  "_id": "e1a797afaf14fc00",
+  "name": "Elemental Sparks",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsFeat000004",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e1a797afaf14fc00",
+  "system": {
+    "description": "<p>Conjure petty amounts of flame, water, ice, stone, or wind for minor tricks. Conjured matter lasts no longer than a scene. Useful for solving a problem no more than once per game session.</p>",
+    "subType": "art",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "Elementalist Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false
+  }
+}

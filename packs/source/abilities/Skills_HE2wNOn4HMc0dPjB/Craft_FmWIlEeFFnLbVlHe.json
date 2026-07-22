@@ -1,7 +1,7 @@
 {
   "name": "Craft",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/craft.png",
+  "img": "systems/wwn/assets/icons/skills/craft.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "int",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "craft"
   },
   "_stats": {
     "systemId": "wwn",

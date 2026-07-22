@@ -1,26 +1,49 @@
 {
   "_id": "1X2xZi06FNovfHk0",
   "name": "Mirror Image",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "",
-    "range": "",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>[[1d4]] illusory duplicate(s) of the caster appear.</p>\n<p><strong>▶ Behaviour:</strong> The mirror images look and behave exactly as the caster.</p>\n<p><strong>▶ Attacks on the caster: </strong>Destroy one of the mirror images (even if the attack misses).</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!1X2xZi06FNovfHk0"
+  "_key": "!items!1X2xZi06FNovfHk0",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>[[1d4]] illusory duplicate(s) of the caster appear.</p>\n<p><strong>▶ Behaviour:</strong> The mirror images look and behave exactly as the caster.</p>\n<p><strong>▶ Attacks on the caster: </strong>Destroy one of the mirror images (even if the attack misses).</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

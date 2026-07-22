@@ -1,26 +1,49 @@
 {
   "name": "Locate Object (Cleric)",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 3,
-    "class": "Cleric",
-    "duration": "6 turns",
-    "range": "120'",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>The caster can sense the direction (but not distance) of an object. One of two types of objects may be located:</p>\n<ol>\n<li><strong>General class:</strong> An object of a general class (e.g. a stairway, an altar, etc.). In this case, the nearest object of that type is located.</li>\n<li><strong>Specific object:</strong> A specific object which the caster can clearly visualise in all aspects.</li>\n</ol>\n<p><strong>Restrictions:</strong> This spell cannot be used to locate creatures.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "_id": "ZECGsXXJ7yWNYpoY",
-  "_key": "!items!ZECGsXXJ7yWNYpoY"
+  "_key": "!items!ZECGsXXJ7yWNYpoY",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>The caster can sense the direction (but not distance) of an object. One of two types of objects may be located:</p>\n<ol>\n<li><strong>General class:</strong> An object of a general class (e.g. a stairway, an altar, etc.). In this case, the nearest object of that type is located.</li>\n<li><strong>Specific object:</strong> A specific object which the caster can clearly visualise in all aspects.</li>\n</ol>\n<p><strong>Restrictions:</strong> This spell cannot be used to locate creatures.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "120'",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

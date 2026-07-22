@@ -1,8 +1,8 @@
 {
   "_id": "u5HSAlCz1CEypvd9",
   "name": "Unarmored Defense",
-  "type": "art",
-  "img": "systems/wwn/assets/new/vowed_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
   "effects": [],
   "folder": "aoyWimpThirwSQEk",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "13+floor(@level/2)",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>When not wearing armor or using a shield, your base AC is equal to 13 plus half your character level, rounded down.&nbsp;</p>",
-    "save": "",
     "source": "Vowed",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "13+floor(@level/2)",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

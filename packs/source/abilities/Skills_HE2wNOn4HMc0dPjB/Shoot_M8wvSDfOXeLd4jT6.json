@@ -1,7 +1,7 @@
 {
   "name": "Shoot",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/shoot.png",
+  "img": "systems/wwn/assets/icons/skills/shoot.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "dex",
     "skillDice": "2d6",
-    "combatSkill": true,
-    "secondary": false
+    "secondary": false,
+    "slug": "shoot"
   },
   "_stats": {
     "systemId": "wwn",

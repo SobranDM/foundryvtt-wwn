@@ -1,10 +1,6 @@
 {
   "_id": "pPZG8CuQQKPynEFb",
   "name": "Magical Armor and Shield Abilities",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "none"
@@ -393,5 +389,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!pPZG8CuQQKPynEFb",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

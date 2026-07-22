@@ -93,10 +93,6 @@
   "displayRoll": true,
   "folder": "JPUcp1bOrJIxqBjV",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "wwn": {
       "treasure": false
@@ -105,5 +101,9 @@
       "sourceId": "RollTable.cy1JeOBRMUcWpYPM"
     }
   },
-  "_key": "!tables!xq6rwhNERi8vSReO"
+  "_key": "!tables!xq6rwhNERi8vSReO",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

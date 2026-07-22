@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>This rare elixir reinforces a living user&rsquo;s body, decreasing their current System Strain by three points. It takes three days for the potion&rsquo;s residue to be fully flushed from a user&rsquo;s system, however, and this potion cannot be used again until it is fully purged.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

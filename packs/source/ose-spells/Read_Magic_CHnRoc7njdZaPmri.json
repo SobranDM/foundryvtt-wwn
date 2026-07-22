@@ -1,26 +1,49 @@
 {
   "_id": "CHnRoc7njdZaPmri",
   "name": "Read Magic",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 1,
-    "class": "Mage",
-    "duration": "1 turn",
-    "range": "Caster",
-    "roll": "",
-    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>By means of read magic, the caster can decipher magical inscriptions or runes, as follows:</p>\n<p><strong>▶ Scrolls:</strong> The magical script of a scroll of arcane spells can be understood. The caster is then able to activate the scroll at any time in the future.</p>\n<p><strong>▶ Spell books: </strong>A spell book written by another arcane spell caster can be deciphered.</p>\n<p><strong>▶ Inscriptions:</strong> Runes or magical words inscribed on an object or surface can be understood.</p>\n<p><strong>▶ Reading again:</strong> Once the caster has read a magical inscription using read magic, they are thereafter able to read that particular writing without recourse to the use of this spell.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!CHnRoc7njdZaPmri"
+  "_key": "!items!CHnRoc7njdZaPmri",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 1 turn</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>By means of read magic, the caster can decipher magical inscriptions or runes, as follows:</p>\n<p><strong>▶ Scrolls:</strong> The magical script of a scroll of arcane spells can be understood. The caster is then able to activate the scroll at any time in the future.</p>\n<p><strong>▶ Spell books: </strong>A spell book written by another arcane spell caster can be deciphered.</p>\n<p><strong>▶ Inscriptions:</strong> Runes or magical words inscribed on an object or surface can be understood.</p>\n<p><strong>▶ Reading again:</strong> Once the caster has read a magical inscription using read magic, they are thereafter able to read that particular writing without recourse to the use of this spell.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Caster",
+      "duration": "1 turn"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

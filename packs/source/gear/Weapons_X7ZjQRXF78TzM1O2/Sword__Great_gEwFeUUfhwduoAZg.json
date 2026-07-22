@@ -1,48 +1,62 @@
 {
   "_id": "gEwFeUUfhwduoAZg",
   "name": "Sword, Great",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "weapon",
   "flags": {},
-  "img": "systems/wwn/assets/default/weapon.png",
+  "img": "systems/wwn/assets/icons/items/weapon.png",
   "effects": [],
   "system": {
+    "description": "<p><em><strong>Swords </strong></em>are common sidearms throughout the Latter Earth. The expense of forging a large blade makes it a symbol of wealth and status in many cultures, and its convenience makes it a favored arm for street wear.</p>",
+    "damage": "1d12",
+    "bonus": 0,
+    "skillDamage": false,
+    "shock": {
+      "damage": "2",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 0,
       "medium": 0,
       "long": 0
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Swords </strong></em>are common sidearms throughout the Latter Earth. The expense of forging a large blade makes it a symbol of wealth and status in many cultures, and its convenience makes it a favored arm for street wear.</p>",
-    "damage": "1d12",
-    "bonus": 0,
-    "shock": {
-      "damage": 2,
-      "ac": 15
-    },
-    "skill": "stab",
-    "score": "str",
     "tags": [
-      {
-        "title": "2H",
-        "value": "2H"
-      }
+      "2H"
     ],
-    "slow": false,
-    "missile": false,
-    "melee": true,
-    "price": 250,
-    "weight": 2,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
     },
-    "skillDamage": false
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 250,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
   "_key": "!items!gEwFeUUfhwduoAZg",
-  "folder": "X7ZjQRXF78TzM1O2"
+  "folder": "X7ZjQRXF78TzM1O2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

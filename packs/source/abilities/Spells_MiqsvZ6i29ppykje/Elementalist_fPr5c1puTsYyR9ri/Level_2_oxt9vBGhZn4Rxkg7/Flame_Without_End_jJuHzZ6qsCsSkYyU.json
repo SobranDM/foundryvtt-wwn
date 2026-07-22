@@ -1,8 +1,8 @@
 {
   "_id": "jJuHzZ6qsCsSkYyU",
   "name": "Flame Without End",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/elementalist_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
   "effects": [],
   "folder": "oxt9vBGhZn4Rxkg7",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 2,
-    "class": "Elementalist",
-    "duration": "Until dispelled or smothered",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>A sample of flame no larger than the caster is made effectively eternal. It no longer consumes the object it burns, though it can still be used to burn or heat other things, and it resists all extinguishing save being buried or wholly immersed in water. The elementalist can temporarily extinguish it at will. A number of such flames can be created equal to the elementalist&rsquo;s level; beyond that, special ingredients and fuels are needed that price 500 silver pieces per flame. If used as a weapon, it adds +2 damage to a successful hit, albeit nothing to Shock. The flame lasts until dispelled, extinguished, or the elementalist releases it.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Until dispelled or smothered"
+    }
   },
   "_key": "!items!jJuHzZ6qsCsSkYyU"
 }

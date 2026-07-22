@@ -1,0 +1,52 @@
+{{#if description}}
+<div class="wwn-chat-desc">{{{description}}}</div>
+{{/if}}
+
+{{#if cost}}
+<div class="wwn-chat-meta">
+  {{#if commitment}}{{commitment}}{{else}}{{localize "WWN.Power.SpentCost"}}: {{cost}} {{resourceName}}{{/if}}
+</div>
+{{/if}}
+{{#if strainSpend}}
+<div class="wwn-chat-meta">
+  {{localize "WWN.Power.SpentUserStrain"}}: {{strainSpend}}
+</div>
+{{/if}}
+
+{{#if hasTargetStrain}}
+<div class="wwn-chat-actions">
+  <button type="button" data-action="applyTargetStrain">
+    <i class="fa-solid fa-heart-pulse"></i> {{localize "WWN.Power.ApplyTargetStrain"}}
+    {{#if targetStrainLabel}} ({{targetStrainLabel}}){{/if}}
+  </button>
+</div>
+{{/if}}
+
+{{#if hasDamage}}
+<div class="wwn-chat-actions">
+  <button type="button" data-action="powerDamage">
+    {{#if healing}}
+    <i class="fa-solid fa-heart"></i> {{localize "WWN.Power.HealingButton"}}
+    {{else}}
+    <i class="fa-solid fa-burst"></i> {{localize "WWN.Power.DamageButton"}}
+    {{/if}}
+  </button>
+</div>
+{{/if}}
+
+{{#if hasApplyEffects}}
+<div class="wwn-chat-actions">
+  <button type="button" data-action="applyPowerEffects">
+    <i class="fa-solid fa-wand-magic-sparkles"></i> {{localize "WWN.Power.ApplyEffects"}}
+    {{#if durationScopeLabel}} ({{durationScopeLabel}}){{/if}}
+  </button>
+</div>
+{{/if}}
+
+{{#if save}}
+<div class="wwn-chat-actions">
+  <button type="button" data-action="rollCardSave" data-save="{{save}}">
+    <i class="fa-solid fa-shield-halved"></i> {{localize "WWN.Chat.RollSave"}} ({{save}})
+  </button>
+</div>
+{{/if}}

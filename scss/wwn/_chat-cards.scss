@@ -189,6 +189,77 @@
   padding-right: 0;
 }
 
+/* Modern chat card shell (createCardMessage / createRollMessage) */
+.wwn-chat-card {
+  padding: 4px;
+}
+.wwn-chat-card .wwn-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--wwn-border, #999);
+}
+.wwn-chat-card .wwn-chat-img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--wwn-border, #999);
+  border-radius: 3px;
+  flex: 0 0 auto;
+}
+.wwn-chat-card .wwn-chat-titles {
+  flex: 1;
+  min-width: 0;
+}
+.wwn-chat-card .wwn-chat-title {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wwn-chat-card .wwn-chat-subtitle,
+.wwn-chat-card .wwn-chat-meta,
+.wwn-chat-card .wwn-chat-footer {
+  font-size: 12px;
+  opacity: 0.75;
+}
+.wwn-chat-card .wwn-chat-desc {
+  font-size: 13px;
+}
+.wwn-chat-card .wwn-chat-actions {
+  margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px solid var(--wwn-border, #ccc);
+}
+.wwn-chat-card .wwn-chat-actions button {
+  width: 100%;
+  margin: 2px 0;
+}
+.wwn-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  flex: 0 0 auto;
+}
+.wwn-badge--hit {
+  background: #2d5a27;
+  color: #fff;
+}
+.wwn-badge--miss {
+  background: #8b2a2a;
+  color: #fff;
+}
+.wwn-badge--warn {
+  background: #8a6d1d;
+  color: #fff;
+}
+.wwn-chat-card.wwn-heal-mode .wwn-chat-actions button[data-action="toggleHeal"] {
+  font-weight: bold;
+}
+
 /* Godbound damage conversion block, injected into weapon/asset attack chat cards */
 .godbound-conversion {
   padding: 4px 8px;

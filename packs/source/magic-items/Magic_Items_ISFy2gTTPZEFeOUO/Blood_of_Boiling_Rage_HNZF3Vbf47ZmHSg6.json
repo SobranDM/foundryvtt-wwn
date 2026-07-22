@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>The imbiber of this brew is suffused with a berserk fury. For the rest of the scene, or until the potion&rsquo;s effect is ended, they can roll their attack and damage rolls twice, taking the better result. Every round, however, they must either attack someone physically or try to reach them in order to attack them. If all foes are downed, allies will be targeted next. If the berserker is left alone or wishes to end the rage prematurely, they must spend a Main Action fighting the fury and make a Mental saving throw to end it. On a failure, they must spend their next round raging before they can try again. Berserk subjects have enough presence of mind to use special abilities or do complicated actions in order to kill or reach a target, but they cannot cast spells.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

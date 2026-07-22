@@ -1,8 +1,8 @@
 {
   "_id": "uimwHfLFXLk5jJXo",
   "name": "Foresightful Apprehension",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "FpLCULEmzzpLk08x",
   "sort": 400000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 3,
-    "class": "High Mage",
-    "duration": "",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster probes the near currents of fate to discern the likely immediate outcome of an action. The caster describes a particular action they or a comrade intend to presently undertake, whereupon the GM tells them what is most likely to happen in consequence within the first five minutes after the action, as the GM thinks it most probable. This spell cannot be used more than once a week on the same general topic.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "_key": "!items!uimwHfLFXLk5jJXo"
 }

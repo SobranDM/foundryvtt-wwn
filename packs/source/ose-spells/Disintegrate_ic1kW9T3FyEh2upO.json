@@ -1,26 +1,49 @@
 {
   "_id": "ic1kW9T3FyEh2upO",
   "name": "Disintegrate",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "Instant",
-    "range": "60'",
-    "roll": "",
-    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The material form of a single, non-magical creature or object is instantly and permanently destroyed.</p>\n<p><strong>▶ If a creature is targeted: </strong>It may make a Physical save&nbsp;to resist disintegration.</p>\n<p><strong>▶ Examples of objects:</strong> The following might be targeted: a tree, a ship, a 10&rsquo; section of wall.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "physical"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!ic1kW9T3FyEh2upO"
+  "_key": "!items!ic1kW9T3FyEh2upO",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>The material form of a single, non-magical creature or object is instantly and permanently destroyed.</p>\n<p><strong>▶ If a creature is targeted: </strong>It may make a Physical save&nbsp;to resist disintegration.</p>\n<p><strong>▶ Examples of objects:</strong> The following might be targeted: a tree, a ship, a 10&rsquo; section of wall.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "60'",
+      "duration": "Instant"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

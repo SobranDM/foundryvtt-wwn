@@ -1,3 +1,4 @@
+import { isPc } from "../helpers/actor-types.mjs";
 export class WwnPartyXP extends FormApplication {
 
   static get defaultOptions() {
@@ -25,7 +26,7 @@ export class WwnPartyXP extends FormApplication {
    * @return {Object}
    */
   getData() {
-    const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+    const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
     let data = {
       actors: actors,
       data: this.object,
@@ -50,7 +51,7 @@ export class WwnPartyXP extends FormApplication {
   /* -------------------------------------------- */
 
   _calculateShare(ev) {
-    const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+    const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
     const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
     const html = $(this.form);
     const shares = actors.length;

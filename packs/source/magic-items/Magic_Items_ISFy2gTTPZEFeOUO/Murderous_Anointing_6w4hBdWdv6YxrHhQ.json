@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>When this potion is applied to a weapon, it gains a brief semi-sentience dedicated entirely to bloodshed. For the following scene, the wielder can accept a System Strain point to reroll a failed attack roll with the weapon, up to once per failed attack. A weapon affected by this potion cannot be used for less than lethal strikes.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

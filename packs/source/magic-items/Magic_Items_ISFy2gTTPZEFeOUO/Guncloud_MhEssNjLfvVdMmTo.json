@@ -2,28 +2,38 @@
   "_id": "MhEssNjLfvVdMmTo",
   "name": "Guncloud",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>This collection of ten silvery discs is intended to be applied to up to ten hand hurlants or one-handed thrown weapons. Once affixed to the weapons, the implements spatially collapse into a single gun or weapon until at least one disc is removed. When the bearer draws the weapon, all the conjoined implements immediately fan out around them in a whirling cloud, remaining within three feet of the bearer without obstructing their actions or vision. The bearer can fire or throw any of the weapons in the cloud as if they were Readied, provided they have at least one hand free. Thrown weapons will return to the cloud after ten rounds or one minute has passed, and discharged hand hurlants will reload themselves ten rounds after being fired, assuming the wielder is carrying ammunition for them. The cloud can be returned to its collapsed state as an On Turn action by the wielder should they sheath or holster one of the weapons. Foes in melee range who want to grab or smash one of the weapons must hit an AC of 16; four points of damage will smash a weapon or knock its disc off, but the guncloud discs themselves are immune to anything short of intentional damage inflicted by a possessor.</p>",
-    "quantity": 10,
-    "treasure": false,
-    "price": 0,
-    "weight": 0.1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.MhEssNjLfvVdMmTo"
     }
   },
-  "_key": "!items!MhEssNjLfvVdMmTo"
+  "_key": "!items!MhEssNjLfvVdMmTo",
+  "system": {
+    "description": "<p>This collection of ten silvery discs is intended to be applied to up to ten hand hurlants or one-handed thrown weapons. Once affixed to the weapons, the implements spatially collapse into a single gun or weapon until at least one disc is removed. When the bearer draws the weapon, all the conjoined implements immediately fan out around them in a whirling cloud, remaining within three feet of the bearer without obstructing their actions or vision. The bearer can fire or throw any of the weapons in the cloud as if they were Readied, provided they have at least one hand free. Thrown weapons will return to the cloud after ten rounds or one minute has passed, and discharged hand hurlants will reload themselves ten rounds after being fired, assuming the wielder is carrying ammunition for them. The cloud can be returned to its collapsed state as an On Turn action by the wielder should they sheath or holster one of the weapons. Foes in melee range who want to grab or smash one of the weapons must hit an AC of 16; four points of damage will smash a weapon or knock its disc off, but the guncloud discs themselves are immune to anything short of intentional damage inflicted by a possessor.</p>",
+    "price": 0,
+    "weight": 0.1,
+    "quantity": 10,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

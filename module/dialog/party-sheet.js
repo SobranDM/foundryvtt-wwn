@@ -1,5 +1,6 @@
 import { WwnPartyXP } from "./party-xp.js";
 import { WwnPartyCurrency } from "./party-coin.js";
+import { isPc } from "../helpers/actor-types.mjs";
 
 export class WwnPartySheet extends FormApplication {
 
@@ -31,7 +32,7 @@ export class WwnPartySheet extends FormApplication {
    */
   getData() {
     // Get all actors that are marked as party members
-    const partyActors = game.actors.filter(e => e.type === "character" && e.flags.wwn?.party === true);
+    const partyActors = game.actors.filter(e => isPc(e) && e.flags.wwn?.party === true);
 
     let data = {
       data: {
@@ -71,7 +72,7 @@ export class WwnPartySheet extends FormApplication {
   async _selectActors(ev) {
     const template = "systems/wwn/templates/apps/party-select.html";
     // Get all character actors, not just party members
-    const allCharacterActors = game.actors.filter(e => e.type === "character");
+    const allCharacterActors = game.actors.filter(e => isPc(e));
     const templateData = {
       actors: allCharacterActors
     }

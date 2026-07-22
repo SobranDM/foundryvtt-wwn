@@ -1,26 +1,49 @@
 {
   "_id": "iVJwd37qJK4jtylC",
   "name": "Purify Food and Water",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 1,
-    "class": "Cleric",
-    "duration": "Permanent",
-    "range": "10'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!iVJwd37qJK4jtylC"
+  "_key": "!items!iVJwd37qJK4jtylC",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "10'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,26 +1,49 @@
 {
   "name": "Locate Object (Mage)",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "2 turns",
-    "range": "60' + 10' / level",
-    "roll": "",
-    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo; +10&rsquo; per level</strong></p>\n<p>The caster can sense the direction (but not distance) of an object. One of two types of objects may be located:</p>\n<ol>\n<li><strong>General class:</strong> An object of a general class (e.g. a stairway, an altar, etc.). In this case, the nearest object of that type is located.</li>\n<li><strong>Specific object: </strong>A specific object known to the caster.</li>\n</ol>\n<p><strong>Restrictions: </strong>This spell cannot be used to locate creatures.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "_id": "xxXGBqvQS4lV5Gw4",
-  "_key": "!items!xxXGBqvQS4lV5Gw4"
+  "_key": "!items!xxXGBqvQS4lV5Gw4",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 60&rsquo; +10&rsquo; per level</strong></p>\n<p>The caster can sense the direction (but not distance) of an object. One of two types of objects may be located:</p>\n<ol>\n<li><strong>General class:</strong> An object of a general class (e.g. a stairway, an altar, etc.). In this case, the nearest object of that type is located.</li>\n<li><strong>Specific object: </strong>A specific object known to the caster.</li>\n</ol>\n<p><strong>Restrictions: </strong>This spell cannot be used to locate creatures.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "60' + 10' / level",
+      "duration": "2 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

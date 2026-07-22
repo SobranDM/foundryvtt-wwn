@@ -93,14 +93,14 @@
   "displayRoll": true,
   "folder": "JPUcp1bOrJIxqBjV",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.tables.kRkyVb4oBeJNH4xk"
     }
   },
-  "_key": "!tables!kRkyVb4oBeJNH4xk"
+  "_key": "!tables!kRkyVb4oBeJNH4xk",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

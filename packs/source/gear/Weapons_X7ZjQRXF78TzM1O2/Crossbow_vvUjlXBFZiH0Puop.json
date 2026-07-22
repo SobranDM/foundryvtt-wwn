@@ -2,62 +2,65 @@
   "_id": "vvUjlXBFZiH0Puop",
   "name": "Crossbow",
   "type": "weapon",
-  "img": "systems/wwn/assets/default/weapon.png",
+  "img": "systems/wwn/assets/icons/items/weapon.png",
   "effects": [],
   "folder": "X7ZjQRXF78TzM1O2",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {},
   "system": {
+    "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
+    "damage": "1d10",
+    "bonus": 0,
+    "skillDamage": false,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 100,
       "medium": 0,
       "long": 300
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p><em><strong>Crossbows </strong></em>come in heavier varieties than the one listed, but such slow, bulky arbalests are rarely in the hands of adventurers. Reloading a crossbow of this size takes a full Main Action, but due to the simplicity of their operation, someone without Shoot-0 can still use them at no unskilled hit penalty.</p>",
-    "damage": "1d10",
-    "bonus": 0,
-    "skillDamage": false,
-    "shock": {
-      "damage": null,
-      "ac": null
-    },
-    "shockTotal": 0,
-    "skill": "shoot",
-    "score": "dex",
     "tags": [
-      {
-        "title": "2H",
-        "value": "2H"
-      },
-      {
-        "title": "SR",
-        "value": "SR"
-      },
-      {
-        "title": "PM",
-        "value": "PM"
-      },
-      {
-        "title": "CB",
-        "value": "CB"
-      }
+      "2H",
+      "SR",
+      "PM",
+      "CB"
     ],
-    "slow": false,
-    "missile": true,
-    "melee": false,
-    "price": 10,
-    "weight": 1,
-    "counter": {
+    "ammoId": "",
+    "charges": {
       "value": 0,
       "max": 0
     },
-    "quantity": 1
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Bolt"
   },
-  "_key": "!items!vvUjlXBFZiH0Puop"
+  "_key": "!items!vvUjlXBFZiH0Puop",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

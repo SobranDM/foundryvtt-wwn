@@ -1,10 +1,6 @@
 {
   "_id": "sEzwkDybTVwodMFV",
   "name": "Magical Weapon Abilities",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {}
   },
@@ -766,5 +762,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!sEzwkDybTVwodMFV",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

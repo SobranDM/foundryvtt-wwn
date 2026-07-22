@@ -10,171 +10,111 @@
       "_id": "2kcILsJb1g3guRZo",
       "name": "Horns",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!aUjDMhr9SP7m35ay.2kcILsJb1g3guRZo",
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!aUjDMhr9SP7m35ay.2kcILsJb1g3guRZo"
     }
   ],
   "effects": [],
   "_key": "!actors!aUjDMhr9SP7m35ay",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 4,
+      "max": 4
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 12,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 3,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 14,
-        "mod": 0
-      },
-      "mental": {
-        "value": 14,
-        "mod": 0
-      },
-      "physical": {
-        "value": 14,
-        "mod": 0
-      },
-      "luck": {
-        "value": 14,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "2d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>A goat the size of a cow and possessed of an elaborate fan of very sharp horns, the Judas goat is unusual in that its preferred browse is the xenoformed plant life of an arratu. Over the course of decades a flock of Judas goats can gradually push back a mild arratu&rsquo;s borders. Their flesh is toxic to predators and they are highly aggressive toward anything perceived as a threat to the flock. Only their hair is of any use to humans, but unusually skilled and brave goatherds can train them as watchbeasts or even as mounts.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 5,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 9,
-      "instinct": 5,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "2d8",
-      "value": 4,
-      "max": 4
+    "favorites": [
+      "2kcILsJb1g3guRZo"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 3,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 12,
+        "ranged": 12
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>A goat the size of a cow and possessed of an elaborate fan of very sharp horns, the Judas goat is unusual in that its preferred browse is the xenoformed plant life of an arratu. Over the course of decades a flock of Judas goats can gradually push back a mild arratu&rsquo;s borders. Their flesh is toxic to predators and they are highly aggressive toward anything perceived as a threat to the flock. Only their hair is of any use to humans, but unusually skilled and brave goatherds can train them as watchbeasts or even as mounts.</p>"
   },
   "ownership": {
     "default": 0

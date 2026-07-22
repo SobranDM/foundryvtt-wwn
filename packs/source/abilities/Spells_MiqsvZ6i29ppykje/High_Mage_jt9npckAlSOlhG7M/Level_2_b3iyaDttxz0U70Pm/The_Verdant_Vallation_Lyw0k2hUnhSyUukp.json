@@ -1,8 +1,8 @@
 {
   "_id": "Lyw0k2hUnhSyUukp",
   "name": "The Verdant Vallation",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "b3iyaDttxz0U70Pm",
   "sort": 1100000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 2,
-    "class": "High Mage",
-    "duration": "Scene or longer",
-    "range": "100 ft. per level",
-    "roll": "2d6",
+    "subType": "spell",
     "description": "<p>A vast wall of thick, heavy vines and other plant life blooms from a visible point within one hundred feet per caster level. The wall is ten feet high and one foot thick and runs for twenty feet in width per caster level. The vine wall can be shaped as the caster wishes within the spell&rsquo;s area of effect, so long as it&rsquo;s contiguous, and may be laid horizontally if a bridge or roof is desired. Enemies must inflict five hit points of damage per caster level to cut a man-sized hole in the vines, and they must be using weapons or means that could actually cut through a wooden wall to do any meaningful harm. The vines may be optionally covered in long, vicious thorns to discourage climbing, inflicting 2d6 damage on any creature who tries to climb over it. If the vine wall is summoned from earth that could plausibly support plant life, it remains until dispelled or until it dies naturally. If called from bare stone or other infertile soils, it withers away to dust at the end of the scene</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "2d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "100 ft. per level",
+      "duration": "Scene or longer"
+    }
   },
   "_key": "!items!Lyw0k2hUnhSyUukp"
 }

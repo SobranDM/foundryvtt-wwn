@@ -1,8 +1,8 @@
 {
   "_id": "nm80ErKWquTauwXM",
   "name": "Cold Flesh",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "12+floor(@level/2)",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>You no longer require sleep. You can suffer no more than 2 points of damage from any given instance of Shock and you have a natural Armor Class equal to 12 plus half your level, rounded down.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "12+floor(@level/2)",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

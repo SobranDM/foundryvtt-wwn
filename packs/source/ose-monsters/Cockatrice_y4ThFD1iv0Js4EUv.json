@@ -7,87 +7,95 @@
       "_id": "W8NaNYdfOukW2mAk",
       "name": "Beak",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><strong>Petrification:</strong> Anyone touched is turned to stone (save to resist).</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "physical",
-        "pattern": "transparent",
-        "description": "<p><strong>Petrification:</strong> Anyone touched is turned to stone (save to resist).</p>",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!y4ThFD1iv0Js4EUv.W8NaNYdfOukW2mAk"
     },
     {
       "_id": "CLmu08gIpocvMnlr",
       "name": "Petrification",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 200000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p>Anyone touched is turned to stone (save to resist).</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "physical"
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!y4ThFD1iv0Js4EUv.CLmu08gIpocvMnlr"
     }
@@ -99,143 +107,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 22,
+      "max": 22
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "60' flying"
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "5d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Small, magical, bird / reptile hybrids with long serpent tails and the head, legs, and wings of a cockerel. Live in all environments.</p>",
       "alignment": "Neutral",
       "xp": 425,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 7,
+      "instinct": 5,
+      "instinctTable": null,
       "appearing": {
         "d": "1d4",
         "w": "1d8"
       },
-      "morale": 7,
-      "instinct": 5,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "5d8",
-      "value": 22,
-      "max": 22
-    }
+    "favorites": [
+      "W8NaNYdfOukW2mAk"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Small, magical, bird / reptile hybrids with long serpent tails and the head, legs, and wings of a cockerel. Live in all environments.</p>"
   },
   "prototypeToken": {
     "flags": {},

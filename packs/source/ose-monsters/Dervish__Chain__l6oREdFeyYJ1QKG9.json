@@ -12,37 +12,30 @@
       "_id": "6Qm8sIOSXm38OAnJ",
       "name": "Shield, Large",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 200000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.rvMM5CPehc6caauf"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Shields</strong></em>&nbsp;come in two general varieties. Small ones,&nbsp;often made of costlier metal, can be strapped to the wearer&rsquo;s&nbsp;arm and allow them to hold and manipulate objects&nbsp;with that hand, albeit not wield a weapon with it. Larger&nbsp;shields are of cheaper wood and require a good grip.</p>\n<p>A&nbsp;<em><strong>small shield</strong></em>&nbsp;user has a base AC of 13, while a<strong>&nbsp;<em>large shield</em></strong>&nbsp;user has a base AC of 14. Unlike other armor,&nbsp;however, if the user is already wearing equal or better&nbsp;armor the shield grants a +1 bonus to their AC. Shields&nbsp;allow the bearer to ignore the first instance of Shock they&nbsp;might otherwise suffer in a round.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 1,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 1,
+        "acRanged": 1,
+        "mod": 0,
         "type": "shield",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 10,
-        "weight": 1
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!l6oREdFeyYJ1QKG9.6Qm8sIOSXm38OAnJ"
     },
@@ -50,66 +43,61 @@
       "_id": "XA2vwFAniyJYv5hA",
       "name": "Spear, Light",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 300000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.3qp7kpBwEhFIxmRG"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "dex",
+        "melee": true,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 30,
           "medium": 0,
           "long": 60
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 13
-        },
-        "shockTotal": 0,
-        "skill": "stab",
-        "score": "dex",
         "tags": [
-          {
-            "title": "T",
-            "value": "T"
-          }
+          "T"
         ],
-        "slow": false,
-        "missile": true,
-        "melee": true,
-        "price": 5,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 5,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!l6oREdFeyYJ1QKG9.XA2vwFAniyJYv5hA"
     },
@@ -117,180 +105,85 @@
       "_id": "3jF1Vz2hLOwsaHuN",
       "name": "Mail Shirt",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 400000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.y2XpAnL4R2KKOz0T"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 14,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 14,
+        "acRanged": 14,
+        "mod": 0,
         "type": "medium",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 250,
-        "weight": 1
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!l6oREdFeyYJ1QKG9.3jF1Vz2hLOwsaHuN"
     }
   ],
   "effects": [],
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 4,
+      "max": 4
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 0,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "mounted"
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Fanatically religious, nomadic people who wander steppes and desert regions, living in tents.</p>\n<ul>\n<li><strong>Mounted: </strong>On warhorses.</li>\n<li><strong>Arms: </strong>50% of group have: leather armour, shield, lance; 25% have: leather armour, shield, shortbow, sword; 25% have: chainmail, shield, lance.</li>\n<li><strong>Camps:</strong> Groups commonly combine and live in a camp or tribe of up to 300 dervishes, plus women, children, and animals. 25% chance of a wood or brick enclosure.</li>\n<li><strong>Camp leaders: </strong>Led by 10th level cleric.</li>\n<li><strong>Intolerant:</strong> Of other religious views.</li>\n<li><strong>Holy war:</strong> Occasionally wage war against other religious factions. Will slay people of different faith, or take them prisoner. Prisoners must convert; otherwise killed or used as slaves. Characters of Lawful alignment may be asked to join the holy war. Dervishes are highly suspicious of those who refuse (without good reason).</li>\n</ul>",
       "alignment": "Lawful",
       "xp": 10,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "(1d6+1) * 10"
       },
-      "morale": 10,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "1d8",
-      "value": 4,
-      "max": 4
-    }
+    "favorites": [
+      "XA2vwFAniyJYv5hA"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 0,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Fanatically religious, nomadic people who wander steppes and desert regions, living in tents.</p>\n<ul>\n<li><strong>Mounted: </strong>On warhorses.</li>\n<li><strong>Arms: </strong>50% of group have: leather armour, shield, lance; 25% have: leather armour, shield, shortbow, sword; 25% have: chainmail, shield, lance.</li>\n<li><strong>Camps:</strong> Groups commonly combine and live in a camp or tribe of up to 300 dervishes, plus women, children, and animals. 25% chance of a wood or brick enclosure.</li>\n<li><strong>Camp leaders: </strong>Led by 10th level cleric.</li>\n<li><strong>Intolerant:</strong> Of other religious views.</li>\n<li><strong>Holy war:</strong> Occasionally wage war against other religious factions. Will slay people of different faith, or take them prisoner. Prisoners must convert; otherwise killed or used as slaves. Characters of Lawful alignment may be asked to join the holy war. Dervishes are highly suspicious of those who refuse (without good reason).</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {},

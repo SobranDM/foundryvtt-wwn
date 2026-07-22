@@ -1,8 +1,8 @@
 {
   "_id": "fkduSlH1DDQRWzJf",
   "name": "The Wind of the Final Repose",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "ejDursjGvjTEr7Et",
   "sort": 1100000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "High Mage",
-    "duration": "Scene",
-    "range": "20-ft. radius within 200 ft.",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The mage designates a visible point within two hundred feet. A silent, invisible burst of soporific influence erupts from that point, targeting all living creatures within a twenty-foot radius. All such targets with 4 or fewer hit dice within that area fall unconscious instantly, and can be roused only by damage or by a Main Action used to kick them awake. If not roused, they revive at the end of the scene. Entities that do not sleep are immune to this spell.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "20-ft. radius within 200 ft.",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!fkduSlH1DDQRWzJf"
 }

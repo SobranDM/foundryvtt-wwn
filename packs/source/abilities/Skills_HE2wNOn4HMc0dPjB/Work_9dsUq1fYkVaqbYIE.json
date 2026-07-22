@@ -1,7 +1,7 @@
 {
   "name": "Work",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/work.png",
+  "img": "systems/wwn/assets/icons/skills/work.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "con",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": false
+    "secondary": false,
+    "slug": "work"
   },
   "_stats": {
     "systemId": "wwn",

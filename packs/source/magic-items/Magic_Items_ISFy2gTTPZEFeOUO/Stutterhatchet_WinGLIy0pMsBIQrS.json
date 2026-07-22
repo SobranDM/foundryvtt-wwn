@@ -2,28 +2,38 @@
   "_id": "WinGLIy0pMsBIQrS",
   "name": "Stutterhatchet",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>This small workman&rsquo;s hatchet has a flat hammer-poll on its opposite side and a blade that cannot be dulled by anything short of intentional effort to damage it. It functions as a<em><strong> hand axe +1 </strong></em>if used in combat, but when applied to inanimate objects its true function becomes plain. Whatever inanimate matter the stutterhatchet damages, smashes, or cuts will return to its perfect, unbroken state at the next dawn, or sooner if the flat of the axe is tapped against a fragment of it. Fragments or pieces of the object will disappear when the object reforms. If the object is broken into several pieces, it is restored around the largest one, or around the one the wielder taps with the hatchet if it&rsquo;s triggered early. If fragments are burned, melted, or destroyed with equivalent thoroughness they will be missing from the reformed object.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.WinGLIy0pMsBIQrS"
     }
   },
-  "_key": "!items!WinGLIy0pMsBIQrS"
+  "_key": "!items!WinGLIy0pMsBIQrS",
+  "system": {
+    "description": "<p>This small workman&rsquo;s hatchet has a flat hammer-poll on its opposite side and a blade that cannot be dulled by anything short of intentional effort to damage it. It functions as a<em><strong> hand axe +1 </strong></em>if used in combat, but when applied to inanimate objects its true function becomes plain. Whatever inanimate matter the stutterhatchet damages, smashes, or cuts will return to its perfect, unbroken state at the next dawn, or sooner if the flat of the axe is tapped against a fragment of it. Fragments or pieces of the object will disappear when the object reforms. If the object is broken into several pieces, it is restored around the largest one, or around the one the wielder taps with the hatchet if it&rsquo;s triggered early. If fragments are burned, melted, or destroyed with equivalent thoroughness they will be missing from the reformed object.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

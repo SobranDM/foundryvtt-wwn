@@ -1,26 +1,49 @@
 {
   "_id": "7qx6bKLhjU8QZCpo",
   "name": "ESP",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "12 turns",
-    "range": "60'",
-    "roll": "",
-    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>This spell grants the caster the ability to perceive and understand the thoughts of other living creatures, provided they fail a Mental save.</p>\n<p><strong>▶ Focus for 1 turn:</strong> To pick up thoughts, the caster must focus their concentration in one direction for one turn.</p>\n<p><strong>▶ After this turn:</strong> The thoughts of all creatures within range in that direction can be perceived.</p>\n<p><strong>▶ Multiple creatures: </strong>If multiple creatures are within the range in the direction being focused on, their thoughts mingle into a confusing jumble. The caster must spend an additional turn to sort out one creature&rsquo;s thoughts.</p>\n<p><strong>▶ Meaning: </strong>The caster understands the meaning of all thoughts even if they do not share the creature&rsquo;s language.</p>\n<p><strong>▶ Obstructions:</strong> The ability to perceive thoughts is obstructed by a thin layer of lead or by rock of 2&rsquo; thick or greater.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!7qx6bKLhjU8QZCpo"
+  "_key": "!items!7qx6bKLhjU8QZCpo",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>This spell grants the caster the ability to perceive and understand the thoughts of other living creatures, provided they fail a Mental save.</p>\n<p><strong>▶ Focus for 1 turn:</strong> To pick up thoughts, the caster must focus their concentration in one direction for one turn.</p>\n<p><strong>▶ After this turn:</strong> The thoughts of all creatures within range in that direction can be perceived.</p>\n<p><strong>▶ Multiple creatures: </strong>If multiple creatures are within the range in the direction being focused on, their thoughts mingle into a confusing jumble. The caster must spend an additional turn to sort out one creature&rsquo;s thoughts.</p>\n<p><strong>▶ Meaning: </strong>The caster understands the meaning of all thoughts even if they do not share the creature&rsquo;s language.</p>\n<p><strong>▶ Obstructions:</strong> The ability to perceive thoughts is obstructed by a thin layer of lead or by rock of 2&rsquo; thick or greater.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "60'",
+      "duration": "12 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

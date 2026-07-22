@@ -1,7 +1,7 @@
 {
   "name": "Biopsionics",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/biopsionics.png",
+  "img": "systems/wwn/assets/icons/skills/psychic.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "int",
     "skillDice": "2d6",
-    "combatSkill": false,
-    "secondary": true
+    "secondary": true,
+    "slug": "biopsionics"
   },
   "_stats": {
     "systemId": "wwn",

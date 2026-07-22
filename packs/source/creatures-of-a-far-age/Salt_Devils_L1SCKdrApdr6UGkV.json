@@ -10,171 +10,111 @@
       "_id": "bz25n2ljUNZBAItn",
       "name": "Limb Blades",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!L1SCKdrApdr6UGkV.bz25n2ljUNZBAItn",
       "system": {
+        "description": "",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "4",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 4,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!L1SCKdrApdr6UGkV.bz25n2ljUNZBAItn"
     }
   ],
   "effects": [],
   "_key": "!actors!L1SCKdrApdr6UGkV",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 23,
+      "max": 23
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 6,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Found wherever brackish or befouled water is found, a salt devil resembles a pony-sized mantis shrimp with a rainbow shell. These voracious predators are almost transparent when submerged in water, but pounce to cleave prey with the huge blades of their two forelimbs.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 5,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 10,
-      "instinct": 5,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 23,
-      "max": 23
+    "favorites": [
+      "bz25n2ljUNZBAItn"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 6,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Found wherever brackish or befouled water is found, a salt devil resembles a pony-sized mantis shrimp with a rainbow shell. These voracious predators are almost transparent when submerged in water, but pounce to cleave prey with the huge blades of their two forelimbs.</p>"
   },
   "ownership": {
     "default": 0

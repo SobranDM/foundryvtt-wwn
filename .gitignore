@@ -9,12 +9,27 @@ styles/*.css.map
 /packs/*
 !/packs/source/
 !/packs/source/**
+!/packs/.gitattributes
+
+# LevelDB / Foundry pack DB artifacts
+packs/**/CURRENT
+packs/**/LOCK
+packs/**/LOG
+packs/**/LOG.old
+packs/**/MANIFEST-*
+packs/**/*.ldb
+packs/**/*.sst
+packs/**/*.log
 
 # Legacy NeDB pack files
 /packs/*.db
+packs/**/*.db
 
 # Local editor config
 .vscode/
+
+# Local design/plan docs (not shipped)
+/docs/
 
 # Agent SDD scratch (local only)
 .superpowers/

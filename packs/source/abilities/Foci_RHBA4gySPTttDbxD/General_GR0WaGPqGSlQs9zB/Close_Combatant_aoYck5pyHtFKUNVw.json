@@ -1,18 +1,86 @@
 {
   "_id": "aoYck5pyHtFKUNVw",
   "name": "Close Combatant",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "42eKfnxktAzeHnJ0",
+      "type": "base",
+      "name": "Close Combatant (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.immuneToShock",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!aoYck5pyHtFKUNVw.42eKfnxktAzeHnJ0"
+    },
+    {
+      "_id": "x4YhUHK54zDMhuZa",
+      "type": "base",
+      "name": "Close Combatant (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.treatAllMeleeAsAcTen",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!aoYck5pyHtFKUNVw.x4YhUHK54zDMhuZa"
+    }
+  ],
   "system": {
     "description": "<p>You&rsquo;ve had all too much practice at close-in fighting and desperate struggles with drawn blades. You&rsquo;re extremely skilled at avoiding injury in melee combat, and at level 2 you can dodge through a melee scrum without fear of being knifed in passing.</p>\n<p><strong>Level 1: </strong>Gain any combat skill as a bonus skill. You can use knife-sized thrown weapons in melee without suffering penalties for the proximity of melee attackers. You ignore Shock damage from melee assailants, even if you&rsquo;re unarmored at the time, but invoking this benefit disrupts any spellcasting you might do that round due to the need for violently active evasion.</p>\n<p><strong>Level 2: </strong>The Shock damage from your melee attacks treats all targets as if they were AC 10. The <strong><em>Fighting Withdrawal</em></strong> combat action is treated as an On Turn action for you and can be performed freely</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "stab",
+      "punch",
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!aoYck5pyHtFKUNVw",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -7,155 +7,175 @@
       "_id": "ufBuWK0vB32r4vzj",
       "name": "Bite",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
-        "range": {
-          "short": 0,
-          "medium": 0,
-          "long": 0
-        },
-        "save": "",
-        "pattern": "transparent",
         "description": "",
         "damage": "1d6",
         "bonus": 0,
         "skillDamage": false,
         "shock": {
           "damage": "1",
-          "ac": "15"
+          "ac": 15
         },
-        "shockTotal": 0,
-        "skill": "",
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "",
         "score": "",
-        "tags": [],
-        "slow": false,
-        "missile": false,
         "melee": true,
-        "price": 0,
-        "weight": 0,
+        "missile": false,
+        "slow": false,
+        "burst": false,
+        "range": {
+          "short": 0,
+          "medium": 0,
+          "long": 0
+        },
+        "save": "",
+        "tags": [],
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 5,
           "max": 5
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        },
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!r4zTrABEy2sXQpaY.ufBuWK0vB32r4vzj"
     },
     {
       "_id": "08uvkn4A6Ri81JES",
       "name": "Heads",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>[[/r 1d8+4]] heads; 1 HD per head. Attack bonus equal to HD.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!r4zTrABEy2sXQpaY.08uvkn4A6Ri81JES"
     },
     {
       "_id": "bygfSUWFCXAd6ebY",
       "name": "Disabling Heads",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>For every 8 hp damage taken, one head is disabled (cannot attack).</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!r4zTrABEy2sXQpaY.bygfSUWFCXAd6ebY"
     },
     {
       "_id": "T8KgEHOpUQpmccGx",
       "name": "Variants",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Special hydras sometimes found with venom, fiery breath, etc.</p>\n<p>Add 125 XP per special ability.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!r4zTrABEy2sXQpaY.T8KgEHOpUQpmccGx"
     }
@@ -167,126 +187,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 40,
+      "max": 40
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 5,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40'",
-      "exploration": null,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "5d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Large, dragon-like creatures with multiple, serpentine heads. Sea hydras (adapted to water, with fins) also exist.</p>",
       "alignment": "Neutral",
       "xp": 175,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 5,
+      "instinctTable": null,
       "appearing": {
         "d": "1",
         "w": "1"
       },
-      "morale": 9,
-      "instinct": 5,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.e97Psa2HYkSfcSIi]{Viciously Violent Beasts}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "5d8",
-      "value": 40,
-      "max": 40
-    }
+    "favorites": [
+      "ufBuWK0vB32r4vzj"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 5,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Large, dragon-like creatures with multiple, serpentine heads. Sea hydras (adapted to water, with fins) also exist.</p>"
   },
   "prototypeToken": {
     "name": "Hydra",

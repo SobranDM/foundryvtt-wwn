@@ -1,10 +1,6 @@
 {
   "_id": "MSWL5kT3hZRlZsbJ",
   "name": "Magical Weapon Bonus, Minor",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -85,5 +81,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!MSWL5kT3hZRlZsbJ",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

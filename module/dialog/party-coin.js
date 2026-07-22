@@ -1,3 +1,4 @@
+import { isPc } from "../helpers/actor-types.mjs";
 export class WwnPartyCurrency extends FormApplication {
 
     static get defaultOptions() {
@@ -25,7 +26,7 @@ export class WwnPartyCurrency extends FormApplication {
      * @return {Object}
      */
     getData() {
-        const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+        const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
         let data = {
             actors: actors,
             data: this.object,
@@ -50,17 +51,17 @@ export class WwnPartyCurrency extends FormApplication {
     /* -------------------------------------------- */
 
     _calculateShare(ev) {
-        const actors = game.actors.filter(e => e.type === "character" && e.flags.wwn && e.flags.wwn.party === true);
+        const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
         const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
         const html = $(this.form);
         let shares = 0;
         actors.forEach((a) => {
-            shares += a.system.currency.share;
+            shares += a.system.currencyShare ?? 0;
         });
         const value = parseFloat(toDeal) / shares;
         if (value) {
             actors.forEach(a => {
-                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor(a.system.currency.share * value));
+                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor((a.system.currencyShare ?? 0) * value));
             })
         }
     }

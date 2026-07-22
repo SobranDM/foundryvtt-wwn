@@ -10,171 +10,111 @@
       "_id": "W0UP1xTu6zRCcedO",
       "name": "Fists",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!LYiwITy0SpHHU5qe.W0UP1xTu6zRCcedO",
       "system": {
+        "description": "",
+        "damage": "2d8+5",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "8",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "2d8+5",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 8,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!LYiwITy0SpHHU5qe.W0UP1xTu6zRCcedO"
     }
   ],
   "effects": [],
   "_key": "!actors!LYiwITy0SpHHU5qe",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 45,
+      "max": 45
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 16,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 10,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "20",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Legion Hulks stand twelve feet tall, with spade-like hands and plowshare fingers fit to tear down walls, or build them up again if their handlers so instruct.</p>\n<p><strong>Note: </strong>All Brass Legion automatons are immune to damage from non-magical weapons or minor environmental hazards.</p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "0"
       },
-      "morale": 12,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.eriltzOM4smkhj0R]{Automatons}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 45,
-      "max": 45
+    "favorites": [
+      "W0UP1xTu6zRCcedO"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 10,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 16,
+        "ranged": 16
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 20
+      }
+    },
+    "biography": "<p>Legion Hulks stand twelve feet tall, with spade-like hands and plowshare fingers fit to tear down walls, or build them up again if their handlers so instruct.</p>\n<p><strong>Note: </strong>All Brass Legion automatons are immune to damage from non-magical weapons or minor environmental hazards.</p>"
   },
   "ownership": {
     "default": 0

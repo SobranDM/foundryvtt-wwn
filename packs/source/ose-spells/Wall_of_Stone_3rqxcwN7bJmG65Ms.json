@@ -1,26 +1,49 @@
 {
   "_id": "3rqxcwN7bJmG65Ms",
   "name": "Wall of Stone",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "60'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>A wall of solid rock appears.</p>\n<p><strong>▶ Size: </strong>The wall may be of whatever shape the caster desires and is of 1,000 cubic feet in volume. (For example, a 2&rsquo; thick wall, 50&rsquo; long and 10&rsquo; high.)</p>\n<p><strong>▶ Location: </strong>The wall must rest upon a solid surface and may not be evoked so that it appears where objects are.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!3rqxcwN7bJmG65Ms"
+  "_key": "!items!3rqxcwN7bJmG65Ms",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>A wall of solid rock appears.</p>\n<p><strong>▶ Size: </strong>The wall may be of whatever shape the caster desires and is of 1,000 cubic feet in volume. (For example, a 2&rsquo; thick wall, 50&rsquo; long and 10&rsquo; high.)</p>\n<p><strong>▶ Location: </strong>The wall must rest upon a solid surface and may not be evoked so that it appears where objects are.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "60'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

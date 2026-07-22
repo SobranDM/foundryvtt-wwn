@@ -1,26 +1,49 @@
 {
   "_id": "0TZ2UzncewM9vF29",
   "name": "Cloudkill",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "6 turns",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A poisonous fog streams from the caster&rsquo;s fingertips, filling a 30&rsquo; diameter area.</p>\n<p><strong>▶ Movement:</strong> The fog moves at 60&rsquo; per turn (20&rsquo; per round), driven by the wind (or away from the caster, in still conditions).</p>\n<p><strong>▶ Sinking: </strong>Because the fog is heavier than air, it sinks to the lowest level of the land, even pouring down den or sinkhole openings.</p>\n<p><strong>▶ Damage: </strong>All creatures in contact with the vapours suffer 1 hit point of damage per round of contact.</p>\n<p><strong>▶ Creatures with less than 5 Hit Dice: </strong>Must also make a physical save (once per round of contact) or die.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "physical"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!0TZ2UzncewM9vF29"
+  "_key": "!items!0TZ2UzncewM9vF29",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A poisonous fog streams from the caster&rsquo;s fingertips, filling a 30&rsquo; diameter area.</p>\n<p><strong>▶ Movement:</strong> The fog moves at 60&rsquo; per turn (20&rsquo; per round), driven by the wind (or away from the caster, in still conditions).</p>\n<p><strong>▶ Sinking: </strong>Because the fog is heavier than air, it sinks to the lowest level of the land, even pouring down den or sinkhole openings.</p>\n<p><strong>▶ Damage: </strong>All creatures in contact with the vapours suffer 1 hit point of damage per round of contact.</p>\n<p><strong>▶ Creatures with less than 5 Hit Dice: </strong>Must also make a physical save (once per round of contact) or die.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "30'",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

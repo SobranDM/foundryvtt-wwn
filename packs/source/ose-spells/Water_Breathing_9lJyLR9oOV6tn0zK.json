@@ -1,26 +1,49 @@
 {
   "_id": "9lJyLR9oOV6tn0zK",
   "name": "Water Breathing",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 3,
-    "class": "Mage",
-    "duration": "1 day",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: 1 day</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The subject can breathe water freely by means of this spell.</p>\n<p><strong>▶ Breathing air: </strong>The spell does not affect the subject&rsquo;s ability to breathe air.</p>\n<p><strong>▶ Swimming:</strong> No additional proficiency at swimming is granted.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!9lJyLR9oOV6tn0zK"
+  "_key": "!items!9lJyLR9oOV6tn0zK",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 1 day</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The subject can breathe water freely by means of this spell.</p>\n<p><strong>▶ Breathing air: </strong>The spell does not affect the subject&rsquo;s ability to breathe air.</p>\n<p><strong>▶ Swimming:</strong> No additional proficiency at swimming is granted.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30'",
+      "duration": "1 day"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

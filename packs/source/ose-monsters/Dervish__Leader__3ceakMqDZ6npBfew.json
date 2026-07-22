@@ -12,37 +12,30 @@
       "_id": "6Qm8sIOSXm38OAnJ",
       "name": "Shield, Large",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 200000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.rvMM5CPehc6caauf"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Shields</strong></em>&nbsp;come in two general varieties. Small ones,&nbsp;often made of costlier metal, can be strapped to the wearer&rsquo;s&nbsp;arm and allow them to hold and manipulate objects&nbsp;with that hand, albeit not wield a weapon with it. Larger&nbsp;shields are of cheaper wood and require a good grip.</p>\n<p>A&nbsp;<em><strong>small shield</strong></em>&nbsp;user has a base AC of 13, while a<strong>&nbsp;<em>large shield</em></strong>&nbsp;user has a base AC of 14. Unlike other armor,&nbsp;however, if the user is already wearing equal or better&nbsp;armor the shield grants a +1 bonus to their AC. Shields&nbsp;allow the bearer to ignore the first instance of Shock they&nbsp;might otherwise suffer in a round.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 1,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 1,
+        "acRanged": 1,
+        "mod": 0,
         "type": "shield",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 10,
-        "weight": 1
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.6Qm8sIOSXm38OAnJ"
     },
@@ -50,44 +43,38 @@
       "_id": "DQ74qKMSgRAHpgQT",
       "name": "Plate Armor",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 400000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.HTW8ih7ZUiudz5ls"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
       "system": {
         "description": "<p><em><strong>Plate armor</strong></em> is an extremely expensive suit of tailored metal pieces that cover both the vitals and the limbs of the wearer.</p>\n<p><em><strong>Heavy armor&nbsp;</strong></em>is the thickest, toughest panoply available on the market, and its bulk and noise make its encumbrance apply as a penalty to Sneak or Exert checks made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 17,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 17,
+        "acRanged": 17,
+        "mod": 0,
         "type": "heavy",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 2000,
-        "weight": 2
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 2,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.DQ74qKMSgRAHpgQT"
     },
     {
       "_id": "WGUhMMacD4jOl258",
       "name": "Bless",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 500000,
       "flags": {
         "cf": null,
@@ -95,37 +82,48 @@
           "sourceId": "Compendium.wwn.ose-spells.emK6XULeJkvt7Es7"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 2,
-        "class": "Cleric",
-        "duration": "6 turns",
-        "range": "60'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>May be used in one of two situations:</p>\n<ol>\n<li><strong>Battle:</strong> Allies within a 20&rsquo; square area who are not yet in melee gain a +1 bonus to attack and damage rolls and a +1 bonus to morale.</li>\n<li><strong>Ritual:</strong> Casting bless may also form part of rituals of purification or consecration, at the referee&rsquo;s discretion.</li>\n</ol>\n<p><strong>Reversed: Blight</strong></p>\n<p>Incurs a &ndash;1 penalty to morale checks, attack rolls, and damage rolls of enemies within a 20&rsquo; square area. A save versus spells is allowed to resist the blight.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 2,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "60'",
+          "duration": "6 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.WGUhMMacD4jOl258"
     },
     {
       "_id": "RF36KWPHNuqaZsxE",
       "name": "Cure Light Wounds",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 600000,
       "flags": {
         "cf": null,
@@ -133,37 +131,48 @@
           "sourceId": "Compendium.wwn.ose-spells.GdY43f7CPhACRMTH"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 1,
-        "class": "Cleric",
-        "duration": "",
-        "range": "Touch",
-        "roll": "1d6+1",
+        "subType": "spell",
         "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>This spell has two uses:</p>\n<ol>\n<li><strong>Healing a living subject: </strong>Restores 1d6+1 hit points of damage. This cannot grant more hit points than the subject&rsquo;s normal maximum.</li>\n<li><strong>Curing paralysis:</strong> Paralysing effects are negated.</li>\n</ol>\n<p><strong>Reversed: Cause Light Wounds</strong></p>\n<p>Inflicts 1d6+1 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 1,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "1d6+1",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "Touch",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.RF36KWPHNuqaZsxE"
     },
     {
       "_id": "jvjqfRdROSzLrg7I",
       "name": "Cure Serious Wounds",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 700000,
       "flags": {
         "cf": null,
@@ -171,37 +180,48 @@
           "sourceId": "Compendium.wwn.ose-spells.uv2VpjhglsQy8062"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 4,
-        "class": "Cleric",
-        "duration": "Instant",
-        "range": "Touch",
-        "roll": "2d6+2",
+        "subType": "spell",
         "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>The caster&rsquo;s touch heals 2d6+2 hit points of damage in one living subject. This cannot grant more hit points than the subject&rsquo;s normal maximum.</p>\n<p><strong>Reversed: Cause Serious Wounds</strong></p>\n<p>Inflicts 2d6+2 hit points of damage to a touched creature. In combat, a melee attack roll is required.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 4,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "2d6+2",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "Touch",
+          "duration": "Instant"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.jvjqfRdROSzLrg7I"
     },
     {
       "_id": "maOOYNc8ets4Lm6q",
       "name": "Detect Evil (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 800000,
       "flags": {
         "cf": null,
@@ -209,37 +229,48 @@
           "sourceId": "Compendium.wwn.ose-spells.ec7o2qPzMTmk9Urn"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 1,
-        "class": "Cleric",
-        "duration": "6 turns",
-        "range": "120'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>Objects enchanted for evil purposes or living beings with evil intentions are caused to magically glow.</p>\n<p><strong>▶ Intent only:</strong> This spell does not grant the ability to read minds, but only grants a general sense of evil intent.</p>\n<p><strong>▶ Definition of evil: </strong>The referee must decide what is &ldquo;evil&rdquo;. Some things that are potentially harmful, like traps, are not &ldquo;evil.&rdquo;</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 1,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "120'",
+          "duration": "6 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.maOOYNc8ets4Lm6q"
     },
     {
       "_id": "TlzkQ1voJdPecaKM",
       "name": "Protection from Evil (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 900000,
       "flags": {
         "cf": null,
@@ -247,37 +278,48 @@
           "sourceId": "Compendium.wwn.ose-spells.TswbcyMdpTwNfKHB"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 1,
-        "class": "Cleric",
-        "duration": "12 turns",
-        "range": "Caster",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>This spell wards the caster from attacks by creatures of another alignment, as follows:</p>\n<p><strong>▶ Bonuses:</strong> The caster gains a +1 bonus to saving throws against attacks or special abilities of affected creatures.</p>\n<p><strong>▶ Affected creatures&rsquo; attacks:</strong> Against the caster are penalised by &ndash;1.</p>\n<p><strong>▶ Enchanted, constructed, or summoned </strong><strong>creatures:</strong> The spell additionally prevents such creatures from attacking the caster in melee, though they may still make ranged attacks. If the caster engages such a creature in melee, this protection is broken (the caster still gains the save and attack bonuses mentioned above).</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 1,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "Caster",
+          "duration": "12 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.TlzkQ1voJdPecaKM"
     },
     {
       "_id": "4x4kWCMOY68bx3Dm",
       "name": "Protection from Evil 10' Radius (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1000000,
       "flags": {
         "cf": null,
@@ -285,37 +327,48 @@
           "sourceId": "Compendium.wwn.ose-spells.x3b0D7wZlBTyrHy6"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 4,
-        "class": "Cleric",
-        "duration": "12 turns",
-        "range": "10' radius",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 10&rsquo; around the caster</strong></p>\n<p>This spell wards the caster and all allies within 10&rsquo; from attacks by creatures of another alignment, as follows:</p>\n<p><strong>▶ Bonuses:</strong> Those warded gain a +1 bonus to saving throws against attacks or special abilities of affected creatures.</p>\n<p><strong>▶ Affected creatures&rsquo; attacks: </strong>Against those warded are penalised by &ndash;1.</p>\n<p><strong>▶ Enchanted, constructed, or summoned </strong><strong>creatures: </strong>The spell additionally prevents such creatures from making melee attacks against those warded, though they may still make ranged attacks. If any of the warded party engages such a creature in melee, this protection is broken (those warded still gain the save and attack bonuses mentioned above).</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 4,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "10' radius",
+          "duration": "12 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.4x4kWCMOY68bx3Dm"
     },
     {
       "_id": "CVlPNXE059vM4sKp",
       "name": "Purify Food and Water",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1100000,
       "flags": {
         "cf": null,
@@ -323,37 +376,48 @@
           "sourceId": "Compendium.wwn.ose-spells.iVJwd37qJK4jtylC"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 1,
-        "class": "Cleric",
-        "duration": "Permanent",
-        "range": "10'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell makes spoiled, rotten, poisonous, or otherwise contaminated food and water pure and suitable for eating and drinking. One of the following may be affected:</p>\n<p><strong>▶ Drink: </strong>6 quarts.</p>\n<p><strong>▶ Rations: </strong>One trail ration (iron or standard).</p>\n<p><strong>▶ Unpreserved food: </strong>A quantity sufficient for 12 human-sized beings.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 1,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "10'",
+          "duration": "Permanent"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.CVlPNXE059vM4sKp"
     },
     {
       "_id": "CF88ASMlz2vjQoUa",
       "name": "Raise Dead",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1200000,
       "flags": {
         "cf": null,
@@ -361,37 +425,48 @@
           "sourceId": "Compendium.wwn.ose-spells.M6hrITgy4o8vJ4SM"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 5,
-        "class": "Cleric",
-        "duration": "Instant",
-        "range": "120'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Restore life: </strong>To a recently deceased human or demihuman. See below.</p>\n<p><strong>2. Destroy undead: </strong>A single undead monster is destroyed, if it fails a Physical save.</p>\n<p><strong>Restoring life: </strong>When used to restore life, the following stipulations apply:</p>\n<p><strong>▶ Time limit: </strong>The caster can raise a person that has been dead for no longer than four days per level of the caster above 7th. For example, a 10th level caster can revive a character that has been dead for twelve days (three levels above 7th &times; four days).</p>\n<p><strong>▶ Weakness: </strong>Returning from death is an ordeal. Until the subject gets two full weeks of bed rest, they are fragile, move at half the normal rate, cannot carry heavy items, and cannot attack, cast spells, or use other class abilities. This period of weakness may not be shortened by any magical healing.</p>\n<p><strong>Reversed: Finger of Death</strong></p>\n<p>Directs a ray of deadly magic at a single target. If the target fails a Physical save, it dies instantly. Casting finger of death is a chaotic act; it will only be used by lawful casters in desperate situations.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 5,
         "prepared": true,
-        "cast": 0,
-        "save": "physical"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "120'",
+          "duration": "Instant"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.CF88ASMlz2vjQoUa"
     },
     {
       "_id": "eI7eviwFKuAMwfAX",
       "name": "Hold Person (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1300000,
       "flags": {
         "cf": null,
@@ -399,37 +474,48 @@
           "sourceId": "Compendium.wwn.ose-spells.xub3R22wlS9eVrQ7"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 2,
-        "class": "Cleric",
-        "duration": "9 turns",
-        "range": "180'",
-        "roll": "1d4",
+        "subType": "spell",
         "description": "<p><strong>Duration: 9 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>This spell causes one or more humans, demihumans, or human-like monsters to be paralysed if they fail a Mental save. It may be cast in two ways:</p>\n<ol>\n<li><strong>Against an individual:</strong> The target&rsquo;s saving throw is penalised by &ndash;2.</li>\n<li><strong>Against a group:</strong> 1d4 individuals in the group are targeted.</li>\n</ol>\n<p><strong>Restrictions:</strong> Human-like monsters of greater than 4+1 HD and undead are not affected.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 2,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "1d4",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "180'",
+          "duration": "9 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.eI7eviwFKuAMwfAX"
     },
     {
       "_id": "lKVzYegTygBrF7oi",
       "name": "Cure Disease",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1400000,
       "flags": {
         "cf": null,
@@ -437,37 +523,48 @@
           "sourceId": "Compendium.wwn.ose-spells.Lwb2vrvQ0AL9riIk"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 3,
-        "class": "Cleric",
-        "duration": "Instant",
-        "range": "30'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Instant</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has two uses:</p>\n<p><strong>1. Cure a subject of any disease: </strong>Including those of magical origin.</p>\n<p><strong>2. Kill green slime: </strong>This monster is killed instantly.</p>\n<p><strong>Reversed: Cause Disease</strong></p>\n<p>Inflicts a terrible, withering disease on a victim, if a Physical save is failed. The disease has the following effects:</p>\n<p><strong>▶ Death: </strong>Within [[2d12]] days.</p>\n<p><strong>▶ Attack penalty: </strong>&ndash;2 to attack rolls.</p>\n<p><strong>▶ Natural healing: </strong>Takes twice the usual amount of time.</p>\n<p><strong>▶ Magical healing: </strong>Is utterly ineffective.</p>\n<p><strong>▶ Curing: </strong>This disease can be cured with a casting of cure disease.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 3,
         "prepared": true,
-        "cast": 0,
-        "save": "physical"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "30'",
+          "duration": "Instant"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.lKVzYegTygBrF7oi"
     },
     {
       "_id": "zbd6he1dEIFIaAqj",
       "name": "Remove Curse (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1500000,
       "flags": {
         "cf": null,
@@ -475,37 +572,48 @@
           "sourceId": "Compendium.wwn.ose-spells.qQQYZ73nPfgbe45E"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 3,
-        "class": "Cleric",
-        "duration": "Permanent",
-        "range": "Touch",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Instant / Permanent (curse)</strong></p>\n<p><strong>Range: The caster or a creature touched</strong></p>\n<p>Remove curse instantaneously removes one curse from a creature. It may allow a character to discard a cursed magic item.</p>\n<p><strong>Reversed: Curse</strong></p>\n<p>Places a deleterious effect upon a creature, if it fails a Mental save.</p>\n<p><strong>▶ Effects: </strong>The exact form and effects of the curse are determined by the caster.</p>\n<p><strong>▶ Maximum possible effects include:</strong> A &ndash;2 penalty to saving throws, a &ndash;4 penalty to hit, reducing an ability score by 50%.</p>\n<p><strong>▶ Multiple curses: </strong>May afflict a creature, as long as each has a different effect.</p>\n<p><strong>▶ Referee judgement:</strong> The referee should judge the effects of this spell and may turn overly powerful curses back onto the caster!</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 3,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "Touch",
+          "duration": "Permanent"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.zbd6he1dEIFIaAqj"
     },
     {
       "_id": "7KuuyfS9v1LgmJ1H",
       "name": "Continual Light (Cleric)",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1600000,
       "flags": {
         "cf": null,
@@ -513,37 +621,48 @@
           "sourceId": "Compendium.wwn.ose-spells.iV7RzEGlyuglmUbP"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 3,
-        "class": "Cleric",
-        "duration": "Permanent",
-        "range": "120'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>This spell has three usages:</p>\n<p><strong>1. Conjuring light: </strong>In a 30&rsquo; radius. The magical light is as bright as full daylight (creatures that suffer attack penalties in daylight are affected). The spell may be cast upon an object, in which case, the light moves with the object.</p>\n<p><strong>2. Blinding a creature: </strong>By casting the spell upon its eyes. If the target fails an Evasion save, it is blinded. A blind creature cannot attack.</p>\n<p><strong>3. Cancelling darkness: </strong>Continual light may cancel a continual darkness spell (see below).</p>\n<p><strong>Reversed: Continual Darkness</strong></p>\n<p>Creates a 30&rsquo; radius area of magical blackness, preventing both normal sight and infravision. Light sources brought within the area of darkness do not illuminate it. Like continual light, it may alternatively be used to blind creatures or to dispel a continual light spell.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 3,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "120'",
+          "duration": "Permanent"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.7KuuyfS9v1LgmJ1H"
     },
     {
       "_id": "zyRl1gLTiKheMS3j",
       "name": "Know Alignment",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1700000,
       "flags": {
         "cf": null,
@@ -551,37 +670,48 @@
           "sourceId": "Compendium.wwn.ose-spells.DWmLGv5zuU28DqdO"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 2,
-        "class": "Cleric",
-        "duration": "1 round",
-        "range": "10'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 1 round</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>The caster gains immediate knowledge of the alignment of one character, monster, object, or location within range. (Most objects or locations do not have an alignment, but magic items or holy places might.)</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 2,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "10'",
+          "duration": "1 round"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.zyRl1gLTiKheMS3j"
     },
     {
       "_id": "7PWOOYatDIe9GtJD",
       "name": "Silence 15' Radius",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1800000,
       "flags": {
         "cf": null,
@@ -589,37 +719,48 @@
           "sourceId": "Compendium.wwn.ose-spells.qJzS5Fn32Kz2GLLC"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 2,
-        "class": "Cleric",
-        "duration": "12 turns",
-        "range": "180'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: 180&rsquo;</strong></p>\n<p>A 15&rsquo; radius area is rendered utterly silent.</p>\n<p><strong>▶ Within the area:</strong> All sound is stopped. Conversation and spell casting are impossible.</p>\n<p><strong>▶ Noise from outside the area:</strong> Can be heard by those within it.</p>\n<p><strong>▶ Casting upon a creature: </strong>Silence may be cast upon a creature, which must make a Mental save. If the save fails, the 15&rsquo; radius area of silence moves with the creature. If the save succeeds, the spell&rsquo;s effect remains stationary&mdash;the targeted creature may move out of it.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 2,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "180'",
+          "duration": "12 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.7PWOOYatDIe9GtJD"
     },
     {
       "_id": "VzBOrYqmQUzziDUY",
       "name": "Dispel Evil",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 1900000,
       "flags": {
         "cf": null,
@@ -627,37 +768,48 @@
           "sourceId": "Compendium.wwn.ose-spells.2UIFVq5d5JHHKw61"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 5,
-        "class": "Cleric",
-        "duration": "Concentration (1 turn)",
-        "range": "30'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Concentration (up to 1 turn) </strong><strong>or instant (see below)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>This spell has three uses:</p>\n<ol>\n<li><strong>Ward: </strong>By concentrating and remaining stationary, enchanted or undead monsters that come within range may be banished or destroyed. Each monster may make a Mental save to avoid banishment or destruction. If a monster&rsquo;s save succeeds, it flees the affected area.</li>\n<li><strong>Target single monster:</strong> Instantly banish or destroy a single enchanted or undead monster within range. The monster may make a Mental save (with a &ndash;2 penalty) to avoid banishment or destruction. If the monster&rsquo;s&nbsp; save succeeds, it flees the affected area.</li>\n<li><strong>Dispel curse: </strong>Instantly dispel the hold that a cursed item has over a being within range.</li>\n</ol>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 5,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "30'",
+          "duration": "Concentration (1 turn)"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.VzBOrYqmQUzziDUY"
     },
     {
       "_id": "dHPkDY7j1jkRifaz",
       "name": "Quest",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 2000000,
       "flags": {
         "cf": null,
@@ -665,37 +817,48 @@
           "sourceId": "Compendium.wwn.ose-spells.s8WcK2EHXsnz8Nft"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 5,
-        "class": "Cleric",
-        "duration": "Indefinite",
-        "range": "30'",
-        "roll": "",
+        "subType": "spell",
         "description": "<p><strong>Duration: Until quest is completed / </strong><strong>Instant (remove quest)</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>The caster commands a single subject to perform a specific quest or task.</p>\n<p><strong>▶ Examples:</strong> Rescuing a prisoner, killing a specific monster, bringing a magic item to the caster, or going on a journey to a holy site.</p>\n<p><strong>▶ Suicidal quests:</strong> The prescribed quest must not be obviously suicidal.</p>\n<p><strong>▶ Saving throw: </strong>The subject may make a Mental save, with success indicating that the quest has no effect.</p>\n<p><strong>▶ Refusal:</strong> Otherwise, the subject must undertake the quest or fall under a curse (per the curse spell, with the exact nature of the curse determined by the referee).</p>\n<p><strong>▶ Completion:</strong> Once the task is completed, the spell ends.</p>\n<p><strong>Reversed: Remove Quest</strong></p>\n<p>Can dispel an active quest spell. If the character who cast the quest spell to be nullified is higher level than the character casting remove quest, there is a chance of the spell having no effect. The probability of failure is 5% per level the caster is below the caster of quest.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 5,
         "prepared": true,
-        "cast": 0,
-        "save": "mental"
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "mental",
+          "range": "30'",
+          "duration": "Indefinite"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.dHPkDY7j1jkRifaz"
     },
     {
       "_id": "sw2MHsGtVRZk5seZ",
       "name": "Sticks to Snakes",
-      "type": "spell",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/spell.png",
       "sort": 2100000,
       "flags": {
         "cf": null,
@@ -703,30 +866,40 @@
           "sourceId": "Compendium.wwn.ose-spells.OkGGtqfluVRmZtua"
         }
       },
-      "img": "systems/wwn/assets/default/spell.png",
       "effects": [],
       "system": {
-        "lvl": 4,
-        "class": "Cleric",
-        "duration": "6 turns",
-        "range": "120'",
-        "roll": "2d8",
+        "subType": "spell",
         "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 120&rsquo;</strong></p>\n<p>2d8 normal sticks are miraculously transformed into snakes that follow the caster&rsquo;s orders.</p>\n<p><strong>▶ Reversion: </strong>When killed or at the end of the spell&rsquo;s duration, the snakes revert back into sticks.</p>\n<hr />\n<p><strong>Conjured Snakes</strong></p>\n<p>AC 6 [13], HD 1 (4hp), Att 1 &times; bite (1d4), THAC0 19 [0], MV 90&rsquo; (30&rsquo;), SV 15, ML 7, AL Neutral, XP 10 (13 if poisonous)</p>\n<hr />\n<p><strong>▶ Poison: </strong>There is a 50% chance of the snakes being poisonous.</p>\n<p><strong>▶ When killed: </strong>Revert back to sticks.</p>",
+        "source": "Cleric",
+        "resourceName": "Spell Slots",
+        "commitmentOptions": [
+          {
+            "cost": 1,
+            "length": "day",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "level": 4,
         "prepared": true,
-        "cast": 0,
-        "save": ""
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "activation": {
+          "roll": "2d8",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "120'",
+          "duration": "6 turns"
+        }
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.sw2MHsGtVRZk5seZ"
     },
@@ -734,209 +907,116 @@
       "_id": "lmSnXZDvzTiTcBhV",
       "name": "Mace",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 2200000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.4jBmE0lnO9VafcT4"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
       "system": {
+        "description": "<p><em><strong>Clubs,&nbsp;</strong></em><em><strong>staves</strong></em><em><strong>,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "1",
+          "ac": 18
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Clubs,&nbsp;</strong></em><em><strong>staves</strong></em><em><strong>,</strong></em>&nbsp;and&nbsp;<em><strong>maces&nbsp;</strong></em>are of much the same genus,&nbsp;though the latter is usually made of metal. While fully&nbsp;capable of killing a man, a careful user can usually avoid&nbsp;inflicting lethal injury.</p>",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 1,
-          "ac": 18
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [
-          {
-            "title": "LL",
-            "value": "LL"
-          }
+          "LL"
         ],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 15,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 15,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!3ceakMqDZ6npBfew.lmSnXZDvzTiTcBhV"
     }
   ],
   "effects": [],
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 45,
+      "max": 45
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 18,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 8,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": "mounted"
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": true,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 0,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Fanatically religious, nomadic people who wander steppes and desert regions, living in tents.</p>\n<ul>\n<li><strong>Mounted: </strong>On warhorses.</li>\n<li><strong>Arms: </strong>50% of group have: leather armour, shield, lance; 25% have: leather armour, shield, shortbow, sword; 25% have: chainmail, shield, lance.</li>\n<li><strong>Camps:</strong> Groups commonly combine and live in a camp or tribe of up to 300 dervishes, plus women, children, and animals. 25% chance of a wood or brick enclosure.</li>\n<li><strong>Camp leaders: </strong>Led by 10th level cleric.</li>\n<li><strong>Intolerant:</strong> Of other religious views.</li>\n<li><strong>Holy war:</strong> Occasionally wage war against other religious factions. Will slay people of different faith, or take them prisoner. Prisoners must convert; otherwise killed or used as slaves. Characters of Lawful alignment may be asked to join the holy war. Dervishes are highly suspicious of those who refuse (without good reason).</li>\n</ul>",
       "alignment": "Lawful",
       "xp": 1600,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 10,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "(1d6+1) * 10"
       },
-      "morale": 10,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 3,
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 45,
-      "max": 45
-    }
+    "favorites": [
+      "lmSnXZDvzTiTcBhV"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 8,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 18,
+        "ranged": 18
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Fanatically religious, nomadic people who wander steppes and desert regions, living in tents.</p>\n<ul>\n<li><strong>Mounted: </strong>On warhorses.</li>\n<li><strong>Arms: </strong>50% of group have: leather armour, shield, lance; 25% have: leather armour, shield, shortbow, sword; 25% have: chainmail, shield, lance.</li>\n<li><strong>Camps:</strong> Groups commonly combine and live in a camp or tribe of up to 300 dervishes, plus women, children, and animals. 25% chance of a wood or brick enclosure.</li>\n<li><strong>Camp leaders: </strong>Led by 10th level cleric.</li>\n<li><strong>Intolerant:</strong> Of other religious views.</li>\n<li><strong>Holy war:</strong> Occasionally wage war against other religious factions. Will slay people of different faith, or take them prisoner. Prisoners must convert; otherwise killed or used as slaves. Characters of Lawful alignment may be asked to join the holy war. Dervishes are highly suspicious of those who refuse (without good reason).</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {},

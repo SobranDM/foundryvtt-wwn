@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>These flasks are always permanently sealed. When intentionally hurled at a location, they detonate to do 2d6 damage to all targets within 15&rsquo;. The magic in the flasks ensures that they always hit the targeted point, provided it&rsquo;s within 60&rsquo;. Accidental breakage or breakage by an object is insufficient to trigger the magic, which requires human volition to catalyze it. Only one flask can be hurled at a time or the first to detonate will ruin the rest.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

@@ -1,15 +1,11 @@
 {
   "_id": "7RUET3DzMcLRr0J2",
   "name": "Iron Resolution",
-  "type": "art",
-  "img": "systems/wwn/assets/default/art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
   "effects": [],
   "folder": "tC9Aaqu0axFEptJu",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.7RUET3DzMcLRr0J2"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!7RUET3DzMcLRr0J2",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort for the day when injured or disturbed in combat; you may make a Physical saving throw to resist spell disruption and ignore the damage for purposes of spellcasting.</p>",
-    "save": "physical",
     "source": "High Mage",
-    "effort": 0,
-    "time": "Day",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

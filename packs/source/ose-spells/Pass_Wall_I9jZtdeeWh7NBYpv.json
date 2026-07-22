@@ -1,26 +1,49 @@
 {
   "_id": "I9jZtdeeWh7NBYpv",
   "name": "Pass-Wall",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "3 turns",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A 5&rsquo; diameter hole is temporarily opened in solid rock or stone, forming a passageway up to 10&rsquo; deep.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!I9jZtdeeWh7NBYpv"
+  "_key": "!items!I9jZtdeeWh7NBYpv",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 3 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A 5&rsquo; diameter hole is temporarily opened in solid rock or stone, forming a passageway up to 10&rsquo; deep.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30'",
+      "duration": "3 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

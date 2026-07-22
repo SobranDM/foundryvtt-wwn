@@ -2,30 +2,35 @@
   "_id": "BOPl3HjFJAXt0DJd",
   "name": "Magic Shield, Small",
   "type": "armor",
-  "img": "systems/wwn/assets/default/armor.png",
-  "data": {
-    "description": "<p><em><strong>Shields </strong></em>come in two general varieties. Small ones, often made of metal, can be strapped to the wearer&rsquo;s arm and allow them to hold and manipulate objects with that hand. Larger shields require the use of a gripping hand, but are usually of cheaper, lighter wood.</p>\n<p>A <em><strong>small shield</strong></em> user has a base AC of 13, while a <em><strong>large shield</strong></em> user has a base AC of 14. Unlike other armor, however, if the user is already wearing equal or better armor the shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the first instance of Shock they might otherwise suffer in a round.</p>\n<p><em><strong>Magical shields</strong></em>&nbsp;do not have enchantment bonuses that add to the user&rsquo;s Armor Class. Instead, they&rsquo;re empowered with unique abilities or benefits that apply to the bearer. Magical shields cannot be ruined with the&nbsp;<em>Shatter Shield</em>&nbsp;combat maneuver mentioned on page XX, though they can be destroyed by intentional abuse.</p>",
-    "ac": 9,
-    "aac": {
-      "value": 13,
-      "mod": 0
-    },
-    "armorBonus": 0,
-    "type": "shield",
-    "price": 20,
-    "weight": 1
-  },
+  "img": "systems/wwn/assets/icons/items/armor.png",
   "effects": [],
   "folder": "7r3J68D0An0Wj2u9",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.BOPl3HjFJAXt0DJd"
     }
   },
-  "_key": "!items!BOPl3HjFJAXt0DJd"
+  "_key": "!items!BOPl3HjFJAXt0DJd",
+  "system": {
+    "description": "<p><em><strong>Shields </strong></em>come in two general varieties. Small ones, often made of metal, can be strapped to the wearer&rsquo;s arm and allow them to hold and manipulate objects with that hand. Larger shields require the use of a gripping hand, but are usually of cheaper, lighter wood.</p>\n<p>A <em><strong>small shield</strong></em> user has a base AC of 13, while a <em><strong>large shield</strong></em> user has a base AC of 14. Unlike other armor, however, if the user is already wearing equal or better armor the shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the first instance of Shock they might otherwise suffer in a round.</p>\n<p><em><strong>Magical shields</strong></em>&nbsp;do not have enchantment bonuses that add to the user&rsquo;s Armor Class. Instead, they&rsquo;re empowered with unique abilities or benefits that apply to the bearer. Magical shields cannot be ruined with the&nbsp;<em>Shatter Shield</em>&nbsp;combat maneuver mentioned on page XX, though they can be destroyed by intentional abuse.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "shield",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

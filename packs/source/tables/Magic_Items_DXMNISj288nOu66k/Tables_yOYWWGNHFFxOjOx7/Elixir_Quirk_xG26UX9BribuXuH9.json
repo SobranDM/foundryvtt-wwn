@@ -1,10 +1,6 @@
 {
   "_id": "xG26UX9BribuXuH9",
   "name": "Elixir Quirk",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {}
   },
@@ -166,5 +162,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!xG26UX9BribuXuH9",
-  "folder": "yOYWWGNHFFxOjOx7"
+  "folder": "yOYWWGNHFFxOjOx7",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

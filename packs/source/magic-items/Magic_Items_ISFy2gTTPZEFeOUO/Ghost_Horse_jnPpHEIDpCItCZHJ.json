@@ -2,28 +2,38 @@
   "_id": "jnPpHEIDpCItCZHJ",
   "name": "Ghost Horse",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>A fist-sized crystal acts as a locus for manifesting a strange, geometric-looking steed of translucent force. The ghost horse can be summoned as a Main Action, and will dutifully and fearlessly carry its summoner and up to two hundred pounds of weight or thirty-five points of encumbrance for up to twelve hours before needing an equal amount of time to recharge. A ghost horse has an effective Move of 60&rsquo; per action and can cross any terrain a mountain goat or small boat could navigate, moving up to 50 miles in the course of twelve hours. Natural animals shy away from the beast. The ghost horse has an effective AC of 13, 20 hit points, and cannot fight; if destroyed, it collapses back into its locus and cannot be recalled for a week.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.jnPpHEIDpCItCZHJ"
     }
   },
-  "_key": "!items!jnPpHEIDpCItCZHJ"
+  "_key": "!items!jnPpHEIDpCItCZHJ",
+  "system": {
+    "description": "<p>A fist-sized crystal acts as a locus for manifesting a strange, geometric-looking steed of translucent force. The ghost horse can be summoned as a Main Action, and will dutifully and fearlessly carry its summoner and up to two hundred pounds of weight or thirty-five points of encumbrance for up to twelve hours before needing an equal amount of time to recharge. A ghost horse has an effective Move of 60&rsquo; per action and can cross any terrain a mountain goat or small boat could navigate, moving up to 50 miles in the course of twelve hours. Natural animals shy away from the beast. The ghost horse has an effective AC of 13, 20 hit points, and cannot fight; if destroyed, it collapses back into its locus and cannot be recalled for a week.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,15 +1,11 @@
 {
   "_id": "Xi93GELIQBA3w5fc",
   "name": "False Death",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.Xi93GELIQBA3w5fc"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!Xi93GELIQBA3w5fc",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort as an Instant action; while it remains Committed you appear dead to all mundane examination. You lose your Main Actions while &ldquo;dead&rdquo;, but can move and perceive normally and do not need to eat, drink, breathe, or perform other bodily functions. Poisons and diseases do not progress in you while you are &ldquo;dead&rdquo;. You can maintain this state of death for up to one day per level before needing at least an hour to recover.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "Active",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

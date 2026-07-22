@@ -7,58 +7,55 @@
       "_id": "TGMsMhXgsLyS9Uq1",
       "name": "Hoof",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 15
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!aj9HBHYR3CpRjWyZ.TGMsMhXgsLyS9Uq1"
     },
@@ -66,120 +63,135 @@
       "_id": "lFDFDRKZczNmTsYB",
       "name": "Horn",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "3",
+          "ac": 18
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 3,
-          "ac": 18
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!aj9HBHYR3CpRjWyZ.lFDFDRKZczNmTsYB"
     },
     {
       "_id": "NGsPZHTH98vXjxLJ",
       "name": "Teleport",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Once per day, up to 360&rsquo; (including rider).</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!aj9HBHYR3CpRjWyZ.NGsPZHTH98vXjxLJ"
     },
     {
       "_id": "lZr9rpUruSpZ9wHj",
       "name": "Empathy With Maidens",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>A pure-hearted maiden can communicate with and ride a unicorn.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!aj9HBHYR3CpRjWyZ.lZr9rpUruSpZ9wHj"
     }
@@ -191,126 +203,56 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 14,
+      "max": 14
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 17,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "80",
-      "exploration": 240,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 2,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Fantastic creatures that appear as elegant horses with a long horn. Unicorns are timid, but proud and willful.</p>",
       "alignment": "Lawful",
       "xp": 125,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 7,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "1d6",
         "w": "1d8"
       },
-      "morale": 7,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 14,
-      "max": 14
-    }
+    "favorites": [
+      "TGMsMhXgsLyS9Uq1",
+      "lFDFDRKZczNmTsYB"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 17,
+        "ranged": 17
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 80
+      }
+    },
+    "biography": "<p>Fantastic creatures that appear as elegant horses with a long horn. Unicorns are timid, but proud and willful.</p>"
   },
   "prototypeToken": {
     "name": "Unicorn",

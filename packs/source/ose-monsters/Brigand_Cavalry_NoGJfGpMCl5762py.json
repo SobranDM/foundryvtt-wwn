@@ -7,37 +7,30 @@
       "_id": "dKhFZtlgz4lN2SSZ",
       "name": "Small Shield",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 700000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.ONPlY9QS5Qdxf9IQ"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
-      "folder": null,
       "system": {
         "description": "<p><em><strong>Shields </strong></em>come in two general varieties. Small ones, often made of metal, can be strapped to the wearer&rsquo;s arm and allow them to hold and manipulate objects with that hand. Larger shields require the use of a gripping hand, but are usually of cheaper, lighter wood.</p>\n<p>A <em><strong>small shield</strong></em> user has a base AC of 13, while a <em><strong>large shield</strong></em> user has a base AC of 14. Unlike other armor, however, if the user is already wearing equal or better armor the shield grants a +1 bonus to their AC. Shields allow the bearer to ignore the first instance of Shock they might otherwise suffer in a round.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 1,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 1,
+        "acRanged": 1,
+        "mod": 0,
         "type": "shield",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 20,
-        "weight": 1
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!NoGJfGpMCl5762py.dKhFZtlgz4lN2SSZ"
     },
@@ -45,61 +38,59 @@
       "_id": "LKETDfMGb1Chpk0h",
       "name": "Sword, Long",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 800000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.RI9vqfJ63lQbeNJf"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Swords&nbsp;</strong></em>are common sidearms throughout the Latter&nbsp;Earth. The expense of forging a large blade makes it&nbsp;a symbol of wealth and status in many cultures, and its&nbsp;convenience makes it a favored arm for street wear.</p>",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 13
-        },
-        "shockTotal": "0",
-        "skill": "stab",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 100,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 100,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!NoGJfGpMCl5762py.LKETDfMGb1Chpk0h"
     },
@@ -107,37 +98,30 @@
       "_id": "IwItIGanYXvUY9xH",
       "name": "Mail Shirt",
       "type": "armor",
+      "img": "systems/wwn/assets/icons/items/armor.png",
       "sort": 900000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.y2XpAnL4R2KKOz0T"
         }
       },
-      "img": "systems/wwn/assets/default/armor.png",
       "effects": [],
-      "folder": null,
       "system": {
         "description": "<p><em><strong>Mail shirts </strong></em>are usually of iron or steel wire, though bronze and other more exotic materials are not unknown. Such shirts cover only the vitals of the wearer, but are much less burdensome than a full hauberk.</p>\n<p><em><strong>Medium armor</strong></em> is significantly noisier and more overt; it cannot be worn discreetly and applies its encumbrance as a penalty to any physical Sneak rolls made by the wearer.</p>",
-        "ac": 9,
-        "aac": {
-          "value": 14,
-          "mod": 0
-        },
-        "armorBonus": 0,
+        "ac": 14,
+        "acRanged": 14,
+        "mod": 0,
         "type": "medium",
+        "soak": 0,
+        "traumaTarget": 6,
+        "ashesHeavy": false,
         "price": 250,
-        "weight": 1
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "weight": 1,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": ""
       },
       "_key": "!actors.items!NoGJfGpMCl5762py.IwItIGanYXvUY9xH"
     }
@@ -149,143 +133,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 4,
+      "max": 4
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 1,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 120,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Outlaws and mercenaries who make a living by raiding settlements and attacking travellers.</p>\n<ul>\n<li><strong>Footmen:</strong> Half the group has: leather armour, shield, sword, shortbow.</li>\n<li><strong>Cavalry:</strong> The other half is mounted on riding horses and has: chainmail, shield, sword.</li>\n<li><strong>Leaders and commanders: </strong>For every 20 brigands, there is a leader (2nd level fighter). For every 40 brigands, there is a commander (4th level fighter). Leaders ride war horses (with barding) and have: plate mail, sword, lance.</li>\n<li><strong>Fortified camps: </strong>Bands commonly combine and live in a camp of 5d6 &times; 10 brigands.</li>\n<li><strong>Camp leaders:</strong> Combined camps are led by a 9th level fighter, plus a 5th level fighter for every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30% chance of a cleric (8th level).</li>\n</ul>",
       "alignment": "Chaotic",
       "xp": 10,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 8,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "1d4*10"
       },
-      "morale": 8,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "1d8",
-      "value": 4,
-      "max": 4
-    }
+    "favorites": [
+      "LKETDfMGb1Chpk0h"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 1,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>Outlaws and mercenaries who make a living by raiding settlements and attacking travellers.</p>\n<ul>\n<li><strong>Footmen:</strong> Half the group has: leather armour, shield, sword, shortbow.</li>\n<li><strong>Cavalry:</strong> The other half is mounted on riding horses and has: chainmail, shield, sword.</li>\n<li><strong>Leaders and commanders: </strong>For every 20 brigands, there is a leader (2nd level fighter). For every 40 brigands, there is a commander (4th level fighter). Leaders ride war horses (with barding) and have: plate mail, sword, lance.</li>\n<li><strong>Fortified camps: </strong>Bands commonly combine and live in a camp of 5d6 &times; 10 brigands.</li>\n<li><strong>Camp leaders:</strong> Combined camps are led by a 9th level fighter, plus a 5th level fighter for every 50 brigands. Also 50% chance of a magic-user (level 1d3 + 8); 30% chance of a cleric (8th level).</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {

@@ -1,8 +1,8 @@
 {
   "_id": "H6KsAiAlz2k8b8H7",
   "name": "Healing Touch",
-  "type": "art",
-  "img": "systems/wwn/assets/new/healer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/healer-art.png",
   "effects": [],
   "folder": "UGutV2IRZNIuA87t",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "2d6+@heal",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort for the scene as an Instant action; for the rest of the scene, you may heal 2d6 damage plus your Heal skill to a touched ally as a Main Action. This healing adds 1 System Strain to the target each time it is applied.</p>",
-    "save": "",
     "source": "Healer",
-    "effort": 0,
-    "time": "Scene",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "2d6+@heal",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

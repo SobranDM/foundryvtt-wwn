@@ -1,26 +1,49 @@
 {
   "_id": "orUQGhIxvP8xovCQ",
   "name": "Resist Fire",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Cleric",
-    "duration": "2 turns",
-    "range": "30'",
-    "roll": "",
-    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single creature is bestowed with supernatural resistance to fire, as follows:</p>\n<p><strong>▶ Normal heat:</strong> Unharmed by non-magical heat or fire.</p>\n<p><strong>▶ Save bonus:</strong> Gain a +2 bonus to all saving throws versus fire-based magical or breath attacks.</p>\n<p><strong>▶ Fire-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!orUQGhIxvP8xovCQ"
+  "_key": "!items!orUQGhIxvP8xovCQ",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 2 turns</strong></p>\n<p><strong>Range: 30&rsquo;</strong></p>\n<p>A single creature is bestowed with supernatural resistance to fire, as follows:</p>\n<p><strong>▶ Normal heat:</strong> Unharmed by non-magical heat or fire.</p>\n<p><strong>▶ Save bonus:</strong> Gain a +2 bonus to all saving throws versus fire-based magical or breath attacks.</p>\n<p><strong>▶ Fire-based damage:</strong> Is reduced by 1 point per damage die rolled. (Each die inflicts a minimum of 1 hit point damage.)</p>",
+    "source": "Cleric",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30'",
+      "duration": "2 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

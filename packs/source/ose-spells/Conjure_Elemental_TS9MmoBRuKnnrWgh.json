@@ -1,26 +1,49 @@
 {
   "_id": "TS9MmoBRuKnnrWgh",
   "name": "Conjure Elemental",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent (until dismissed </strong><strong>or slain)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A 16 Hit Dice elemental&mdash;a being formed of pure elemental matter&mdash;is summoned from an elemental plane of the caster&rsquo;s choice (air, earth, fire, water) to do the caster&rsquo;s bidding.</p>\n<p><strong>▶ Materials: </strong>The summons requires a large volume of the appropriate element.</p>\n<p><strong>▶ Concentration:</strong> Is required to command an elemental.</p>\n<p><strong>▶ Dismissing:</strong> While control over the elemental is maintained, the caster may dismiss it at any time, sending it back to its plane of origin.</p>\n<p><strong>▶ Disruption:</strong> If the caster moves at more than half speed or their concentration is disturbed, the command over the elemental ends. It is, henceforth, a freewilled entity and will immediately try to kill the caster and any who get in its way.</p>\n<p><strong>▶ Dispelling:</strong> A conjured elemental may be dispelled by dispel magic or dispel evil.</p>\n<p><strong>Restrictions: </strong>The caster may summon at most one elemental from each plane in a single day.</p>\n<p>&nbsp;</p>\n<h3><strong>Air Elemental</strong></h3>\n<p>Huge vortexes of whirling air.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD</strong> 16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>360&rsquo; (120&rsquo;) flying, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 32&rsquo; tall, 8&rsquo; across.</p>\n<p><strong>▶ Whirlwind: </strong>Creatures with less than 2HD swept aside (save versus death).</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm flying creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Earth Elemental</strong></h3>\n<p>Huge humanoid figures of earth or stone.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>60&rsquo; (20&rsquo;), <strong>SV</strong> 7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own height.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures on the ground:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Fire Elemental</strong></h3>\n<p>Whirling columns of fire.</p>\n<hr />\n<p><strong>AC </strong>&ndash;21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>120&rsquo; (40&rsquo;),</p>\n<p><strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall, 16&rsquo; across.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own diameter.</p>\n<p><strong>▶ Mundane damage immunity: </strong>Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm cold-based creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Water Elemental</strong></h3>\n<p>Huge waves of water.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus</strong> +11, <strong>MV </strong>60&rsquo; (20&rsquo;) / 180&rsquo; (60&rsquo;) swimming, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 8&rsquo; tall, 32&rsquo; across.</p>\n<p><strong>▶ Water-bound:</strong> Must remain within 60&rsquo; of water.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures in water:</strong> Inflict extra 1d8 damage.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!TS9MmoBRuKnnrWgh"
+  "_key": "!items!TS9MmoBRuKnnrWgh",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent (until dismissed </strong><strong>or slain)</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>A 16 Hit Dice elemental&mdash;a being formed of pure elemental matter&mdash;is summoned from an elemental plane of the caster&rsquo;s choice (air, earth, fire, water) to do the caster&rsquo;s bidding.</p>\n<p><strong>▶ Materials: </strong>The summons requires a large volume of the appropriate element.</p>\n<p><strong>▶ Concentration:</strong> Is required to command an elemental.</p>\n<p><strong>▶ Dismissing:</strong> While control over the elemental is maintained, the caster may dismiss it at any time, sending it back to its plane of origin.</p>\n<p><strong>▶ Disruption:</strong> If the caster moves at more than half speed or their concentration is disturbed, the command over the elemental ends. It is, henceforth, a freewilled entity and will immediately try to kill the caster and any who get in its way.</p>\n<p><strong>▶ Dispelling:</strong> A conjured elemental may be dispelled by dispel magic or dispel evil.</p>\n<p><strong>Restrictions: </strong>The caster may summon at most one elemental from each plane in a single day.</p>\n<p>&nbsp;</p>\n<h3><strong>Air Elemental</strong></h3>\n<p>Huge vortexes of whirling air.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD</strong> 16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>360&rsquo; (120&rsquo;) flying, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 32&rsquo; tall, 8&rsquo; across.</p>\n<p><strong>▶ Whirlwind: </strong>Creatures with less than 2HD swept aside (save versus death).</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm flying creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Earth Elemental</strong></h3>\n<p>Huge humanoid figures of earth or stone.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>60&rsquo; (20&rsquo;), <strong>SV</strong> 7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own height.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures on the ground:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Fire Elemental</strong></h3>\n<p>Whirling columns of fire.</p>\n<hr />\n<p><strong>AC </strong>&ndash;21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus </strong>+11, <strong>MV </strong>120&rsquo; (40&rsquo;),</p>\n<p><strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 16&rsquo; tall, 16&rsquo; across.</p>\n<p><strong>▶ Blocked by water:</strong> Cannot cross a channel wider than own diameter.</p>\n<p><strong>▶ Mundane damage immunity: </strong>Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm cold-based creatures:</strong> Inflict extra 1d8 damage.</p>\n<p>&nbsp;</p>\n<h3><strong>Water Elemental</strong></h3>\n<p>Huge waves of water.</p>\n<hr />\n<p><strong>AC </strong>21, <strong>HD </strong>16* (72hp), <strong>Att </strong>1 &times; blow (3d8), <strong>Bonus</strong> +11, <strong>MV </strong>60&rsquo; (20&rsquo;) / 180&rsquo; (60&rsquo;) swimming, <strong>SV </strong>7, <strong>ML </strong>10, <strong>AL </strong>Neutral, <strong>XP </strong>2,300</p>\n<hr />\n<p><strong>▶ Size:</strong> 8&rsquo; tall, 32&rsquo; across.</p>\n<p><strong>▶ Water-bound:</strong> Must remain within 60&rsquo; of water.</p>\n<p><strong>▶ Mundane damage immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>▶ Harm creatures in water:</strong> Inflict extra 1d8 damage.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

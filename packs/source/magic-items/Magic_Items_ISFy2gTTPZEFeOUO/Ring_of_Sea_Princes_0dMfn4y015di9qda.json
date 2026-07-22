@@ -2,28 +2,38 @@
   "_id": "0dMfn4y015di9qda",
   "name": "Ring of Sea Princes",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>A lost empire of sea-going lords has left behind only these loops of polished coral. Someone who wears one will be able to breathe underwater, see clearly out to 120&rsquo; when submerged regardless of the light level, and they and their belongings are impervious to the chill and crushing pressure of the depths, though not to other sources of cold damage. The wearer&rsquo;s swimming speed is equal to twice their usual movement rate.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 0,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.0dMfn4y015di9qda"
     }
   },
-  "_key": "!items!0dMfn4y015di9qda"
+  "_key": "!items!0dMfn4y015di9qda",
+  "system": {
+    "description": "<p>A lost empire of sea-going lords has left behind only these loops of polished coral. Someone who wears one will be able to breathe underwater, see clearly out to 120&rsquo; when submerged regardless of the light level, and they and their belongings are impervious to the chill and crushing pressure of the depths, though not to other sources of cold damage. The wearer&rsquo;s swimming speed is equal to twice their usual movement rate.</p>",
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

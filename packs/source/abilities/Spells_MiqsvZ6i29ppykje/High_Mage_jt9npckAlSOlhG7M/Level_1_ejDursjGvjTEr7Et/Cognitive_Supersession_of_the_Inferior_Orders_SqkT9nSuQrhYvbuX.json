@@ -1,8 +1,8 @@
 {
   "_id": "SqkT9nSuQrhYvbuX",
   "name": "Cognitive Supersession of the Inferior Orders",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "ejDursjGvjTEr7Et",
   "sort": 200000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "High Mage",
-    "duration": "Until dispelled, released, or cast again",
-    "range": "Visible",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The mage targets a visible, normal, non-magical animal or insect, obtaining temporary control of the beast and the ability to share its senses. The animal gains a telepathic bond with the caster, obeying any non-suicidal command and allowing the mage to perceive everything it perceives. The beast will not fight for the caster, but can perform complex actions entirely out of character for it while under the mage&rsquo;s control. The mage must focus to share the beast&rsquo;s senses, requiring a Main Action and leaving the mage unable to act physically while so focused. The spell lasts until the mage releases the beast, it is dispelled, or it is cast again.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Visible",
+      "duration": "Until dispelled, released, or cast again"
+    }
   },
   "_key": "!items!SqkT9nSuQrhYvbuX"
 }

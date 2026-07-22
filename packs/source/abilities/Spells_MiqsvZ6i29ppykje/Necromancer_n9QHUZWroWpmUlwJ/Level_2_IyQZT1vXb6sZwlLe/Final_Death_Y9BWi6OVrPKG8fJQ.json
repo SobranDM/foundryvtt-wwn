@@ -1,8 +1,8 @@
 {
   "_id": "Y9BWi6OVrPKG8fJQ",
   "name": "Final Death",
-  "type": "spell",
-  "img": "systems/wwn/assets/new/necromancer_spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
   "effects": [],
   "folder": "IyQZT1vXb6sZwlLe",
   "sort": 300000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 2,
-    "class": "Necromancer",
-    "duration": "Scene",
-    "range": "Visible",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The necromancer curses one visible target per level. For the rest of the scene, these targets cannot recover or gain hit points and will die instantly if Mortally Wounded. After each failed instance of healing, a target can make a Physical save to throw off the spell.</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "physical"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "Visible",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!Y9BWi6OVrPKG8fJQ"
 }

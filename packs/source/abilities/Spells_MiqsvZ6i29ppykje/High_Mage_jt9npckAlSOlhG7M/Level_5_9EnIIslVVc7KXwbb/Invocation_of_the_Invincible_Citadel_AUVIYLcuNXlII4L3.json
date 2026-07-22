@@ -1,8 +1,8 @@
 {
   "_id": "AUVIYLcuNXlII4L3",
   "name": "Invocation of the Invincible Citadel",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "9EnIIslVVc7KXwbb",
   "sort": 400000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 5,
-    "class": "High Mage",
-    "duration": "",
-    "range": "Until the caster departs",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster hurls up a magical shield that is impervious to almost all hostile powers. Unlike most sorceries, this spell can be cast as an Instant action, and immediately creates a transparent bubble of force around the caster with up to a twenty-foot radius. Entities and forces outside the bubble cannot penetrate it, and the interior remains a warm, breathable, safe environment regardless of the exterior. Those within the bubble can pass out of it, but they cannot then return within. The bubble can be dispelled by appropriate magics, but other enchantments and attacks cannot harm it, nor can magical effects or material objects pass through it from either direction. The spell lasts until the caster departs from the bubble.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Until the caster departs",
+      "duration": ""
+    }
   },
   "_key": "!items!AUVIYLcuNXlII4L3"
 }

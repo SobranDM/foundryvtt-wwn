@@ -1,18 +1,178 @@
 {
   "_id": "n0wnLcRezRkPJqE8",
   "name": "Developed Attribute",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "1yLfFZrVil7GCdAq",
+      "type": "base",
+      "name": "Developed Attribute (Strength)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.1yLfFZrVil7GCdAq"
+    },
+    {
+      "_id": "39iMGFMWhRxzYtq9",
+      "type": "base",
+      "name": "Developed Attribute (Dexterity)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.39iMGFMWhRxzYtq9"
+    },
+    {
+      "_id": "LxmjT3VaJdP9HCKs",
+      "type": "base",
+      "name": "Developed Attribute (Constitution)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.LxmjT3VaJdP9HCKs"
+    },
+    {
+      "_id": "BSmBdwCE5rUOVNZo",
+      "type": "base",
+      "name": "Developed Attribute (Intelligence)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.BSmBdwCE5rUOVNZo"
+    },
+    {
+      "_id": "LmCseRwFnGnRZHtl",
+      "type": "base",
+      "name": "Developed Attribute (Wisdom)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.LmCseRwFnGnRZHtl"
+    },
+    {
+      "_id": "zw8IkElkFodjnUl8",
+      "type": "base",
+      "name": "Developed Attribute (Charisma)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!n0wnLcRezRkPJqE8.zw8IkElkFodjnUl8"
+    }
+  ],
   "system": {
     "description": "<p>Your hero has a remarkable degree of development to one or more of their attributes. This may be derived from an eldritch bloodline, native brilliance, or sheer, stubborn determination. This Focus cannot be taken by heroes with the Mage or Partial Mage classes.</p>\n<p><strong>Level 1: </strong>Choose an attribute; its modifier is increased by +1, up to a maximum of +3. The actual score does not change, but the modifier increases, and may increase again if later advancement improves the attribute enough. You can choose this Focus more than once to improve different attributes.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!n0wnLcRezRkPJqE8",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

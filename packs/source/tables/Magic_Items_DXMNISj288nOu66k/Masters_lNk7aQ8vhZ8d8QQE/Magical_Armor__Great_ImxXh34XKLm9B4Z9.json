@@ -1,10 +1,6 @@
 {
   "_id": "ImxXh34XKLm9B4Z9",
   "name": "Magical Armor, Great",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -63,5 +59,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!ImxXh34XKLm9B4Z9",
-  "folder": "lNk7aQ8vhZ8d8QQE"
+  "folder": "lNk7aQ8vhZ8d8QQE",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

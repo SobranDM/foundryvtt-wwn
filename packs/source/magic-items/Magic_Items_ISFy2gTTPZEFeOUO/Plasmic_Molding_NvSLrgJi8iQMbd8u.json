@@ -13,19 +13,23 @@
   },
   "system": {
     "description": "<p>When applied to a non-magical object no larger than a large door the substance becomes soft and malleable as clay for one scene. At the end of the scene, the material hardens back to its original consistency in whatever form it now takes. If taken by a living creature, they may reshape their own body to a degree, taking any appearance that a creature of their species might naturally have. This alteration lasts until dispelled or the user ends it, but they can&rsquo;t recover System Strain while so altered.</p>",
-    "quantity": 1,
-    "treasure": false,
     "price": 0,
     "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
     "weightless": "whenStowed",
+    "containerId": "",
+    "treasure": false,
     "charges": {
       "value": 0,
       "max": 0
     },
     "roll": "",
-    "equipped": false,
-    "stowed": false,
-    "version": 3
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
   },
   "ownership": {
     "default": 0

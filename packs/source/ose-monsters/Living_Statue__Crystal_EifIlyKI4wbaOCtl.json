@@ -7,155 +7,175 @@
       "_id": "oSxAg5frVRMJlH33",
       "name": "Sturdy Blow",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "1",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 1,
-          "ac": 15
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        },
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!EifIlyKI4wbaOCtl.oSxAg5frVRMJlH33"
     },
     {
       "_id": "OyO6snNt7likoKjH",
       "name": "Sleep Immunity",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Unaffected by sleep spells.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!EifIlyKI4wbaOCtl.OyO6snNt7likoKjH"
     },
     {
       "_id": "CZ2jrei6Q9nWubeX",
       "name": "Magical Origins",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Created by powerful wizards.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!EifIlyKI4wbaOCtl.CZ2jrei6Q9nWubeX"
     },
     {
       "_id": "YawtrgpoKhCiJ8uL",
       "name": "Attacks",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Depend on form of statue (humanoid statues may use weapons, animal statues use claws, etc.).</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!EifIlyKI4wbaOCtl.YawtrgpoKhCiJ8uL"
     }
@@ -167,126 +187,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 13,
+      "max": 13
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 16,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 3,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 14,
-        "mod": 0
-      },
-      "mental": {
-        "value": 14,
-        "mod": 0
-      },
-      "physical": {
-        "value": 14,
-        "mod": 0
-      },
-      "luck": {
-        "value": 14,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "3d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Animated statues of any size and material (three types described below; others may be invented by the referee).</p>",
       "alignment": "Neutral",
       "xp": 35,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 11,
+      "instinct": 5,
+      "instinctTable": null,
       "appearing": {
         "d": "1d6",
         "w": "1d6"
       },
-      "morale": 11,
-      "instinct": 5,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.eriltzOM4smkhj0R]{Automatons}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "3d8",
-      "value": 13,
-      "max": 13
-    }
+    "favorites": [
+      "oSxAg5frVRMJlH33"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 3,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 16,
+        "ranged": 16
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Animated statues of any size and material (three types described below; others may be invented by the referee).</p>"
   },
   "prototypeToken": {
     "name": "Crystal Living Statue",

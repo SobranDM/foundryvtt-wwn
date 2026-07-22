@@ -1,8 +1,8 @@
 {
   "_id": "8HqCRnbI8pxw1kQA",
   "name": "Consume Life Energy",
-  "type": "art",
-  "img": "systems/wwn/assets/new/necromancer_art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
   "effects": [],
   "folder": "j9usMVq7DEVp0RdZ",
   "sort": 0,
@@ -12,17 +12,36 @@
     }
   },
   "system": {
-    "pattern": "white",
-    "roll": "1d6",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>By making a Punch attack or using a melee weapon you have spent at least an hour properly consecrating, you can absorb a portion of the damage you inflict on others as healing to yourself. For each successful attack you make with such implements, you heal 1d6 damage, up to a maximum of the damage done by the attack You cannot drain more life than the target has remaining hit points.</p>",
-    "save": "",
     "source": "Necromancer",
-    "effort": 0,
-    "time": "",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

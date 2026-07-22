@@ -1,26 +1,49 @@
 {
   "_id": "1EnkQNKiAWjr0ugf",
   "name": "Detect Invisible",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 2,
-    "class": "Mage",
-    "duration": "6 turns",
-    "range": "10' / level",
-    "roll": "",
-    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 10&rsquo; per level</strong></p>\n<p>Invisible creatures or items in range are revealed to the caster.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!1EnkQNKiAWjr0ugf"
+  "_key": "!items!1EnkQNKiAWjr0ugf",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 6 turns</strong></p>\n<p><strong>Range: 10&rsquo; per level</strong></p>\n<p>Invisible creatures or items in range are revealed to the caster.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "10' / level",
+      "duration": "6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

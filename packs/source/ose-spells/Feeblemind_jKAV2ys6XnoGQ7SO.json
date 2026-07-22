@@ -1,26 +1,49 @@
 {
   "_id": "jKAV2ys6XnoGQ7SO",
   "name": "Feeblemind",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 5,
-    "class": "Mage",
-    "duration": "Permanent",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An arcane spell caster within range must make a Mental save&nbsp;(at a &ndash;4 penalty) or become an imbecile, unable to think clearly or cast spells.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": "mental"
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!jKAV2ys6XnoGQ7SO"
+  "_key": "!items!jKAV2ys6XnoGQ7SO",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Permanent</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>An arcane spell caster within range must make a Mental save&nbsp;(at a &ndash;4 penalty) or become an imbecile, unable to think clearly or cast spells.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "240'",
+      "duration": "Permanent"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

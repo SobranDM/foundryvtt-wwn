@@ -220,15 +220,15 @@
   "displayRoll": true,
   "folder": "k8cHXrgT6XJ24urL",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
       "loot-amount-key": ""
     }
   },
-  "_key": "!tables!IxwO3c0z8umxW82Z"
+  "_key": "!tables!IxwO3c0z8umxW82Z",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

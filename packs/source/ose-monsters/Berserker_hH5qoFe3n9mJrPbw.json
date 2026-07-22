@@ -7,66 +7,61 @@
       "_id": "xdS6CMAJXiADTRJH",
       "name": "Hammer, Great",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.ov7mB0hGhMfrTYGb"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><em><strong>Hammers </strong></em>listed here are the fighting variety, narrow-headed and made for penetrating or shocking heavy plates of armor.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 18
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Hammers </strong></em>listed here are the fighting variety, narrow-headed and made for penetrating or shocking heavy plates of armor.</p>",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 18
-        },
-        "shockTotal": "0",
-        "skill": "stab",
-        "score": "str",
         "tags": [
-          {
-            "title": "2H",
-            "value": "2H"
-          }
+          "2H"
         ],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 50,
-        "weight": 2,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 50,
+        "weight": 2,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!hH5qoFe3n9mJrPbw.xdS6CMAJXiADTRJH"
     },
@@ -74,66 +69,61 @@
       "_id": "4cVa048wLCIcv2yA",
       "name": "Axe, War",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 200000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.2jjmtIH3lkzvhW2m"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><em><strong>Axes&nbsp;</strong></em>given here are those fashioned for war; lighter&nbsp;and more agile than their working cousins, though still&nbsp;capable of hacking through a door or hewing a cable if&nbsp;needed. War axes are big enough to demand two hands&nbsp;for their use.</p>",
+        "damage": "1d10",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "3",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Axes&nbsp;</strong></em>given here are those fashioned for war; lighter&nbsp;and more agile than their working cousins, though still&nbsp;capable of hacking through a door or hewing a cable if&nbsp;needed. War axes are big enough to demand two hands&nbsp;for their use.</p>",
-        "damage": "1d10",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 3,
-          "ac": 15
-        },
-        "shockTotal": "0",
-        "skill": "stab",
-        "score": "str",
         "tags": [
-          {
-            "title": "2H",
-            "value": "2H"
-          }
+          "2H"
         ],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 50,
-        "weight": 2,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 50,
+        "weight": 2,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!hH5qoFe3n9mJrPbw.4cVa048wLCIcv2yA"
     },
@@ -141,96 +131,101 @@
       "_id": "sZVg856Mx3WKZJEQ",
       "name": "Spear, Light",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 300000,
       "flags": {
         "core": {
           "sourceId": "Compendium.wwn.gear.3qp7kpBwEhFIxmRG"
         }
       },
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 13
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "stab",
+        "score": "dex",
+        "melee": true,
+        "missile": true,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 30,
           "medium": 0,
           "long": 60
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><em><strong>Spears,</strong></em>&nbsp;and their longer cousin the&nbsp;<em><strong>pike,</strong></em>&nbsp;are common&nbsp;military weapons throughout the Latter Earth.&nbsp;Lighter spears are effective thrown weapons, while heavier&nbsp;two-handed versions penetrate armor well.</p>",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 13
-        },
-        "shockTotal": "0",
-        "skill": "stab",
-        "score": "dex",
         "tags": [
-          {
-            "title": "T",
-            "value": "T"
-          }
+          "T"
         ],
-        "slow": false,
-        "missile": true,
-        "melee": true,
-        "price": 5,
-        "weight": 1,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 5,
+        "weight": 1,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!hH5qoFe3n9mJrPbw.sZVg856Mx3WKZJEQ"
     },
     {
       "_id": "9UGNnmKw0NYxImke",
       "name": "Battle Rage",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 400000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p>+2 to hit humans and similar humanoids (e.g. orcs, goblins). Rage sometimes makes them attack their allies.</p>\n<p>Note: This is figured into the Attack Bonus. Use a -2 situational penalty when the berserker is not raging or is attacking a non-humanoid.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!hH5qoFe3n9mJrPbw.9UGNnmKw0NYxImke"
     }
@@ -242,143 +237,57 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 6,
+      "max": 6
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 12,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40'",
-      "exploration": null,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 1,
-      "mod": 1,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d8+1",
+    "skill": 0,
     "details": {
-      "biography": "<p>Fighters who enter a rage in battle. They never take prisoners.</p>\n<ul>\n<li><strong>Hoard:</strong> Only have treasure type B when encountered in the wilderness.</li>\n</ul>",
       "alignment": "Neutral",
       "xp": 19,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 2,
+      "instinctTable": null,
       "appearing": {
         "d": "1d6",
         "w": "3d10"
       },
-      "morale": 12,
-      "instinct": 2,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 0
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 1,
-    "character": false,
-    "hp": {
-      "hd": "1d8+1",
-      "value": 6,
-      "max": 6
-    }
+    "favorites": [
+      "xdS6CMAJXiADTRJH",
+      "4cVa048wLCIcv2yA",
+      "sZVg856Mx3WKZJEQ"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 12,
+        "ranged": 12
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Fighters who enter a rage in battle. They never take prisoners.</p>\n<ul>\n<li><strong>Hoard:</strong> Only have treasure type B when encountered in the wilderness.</li>\n</ul>"
   },
   "prototypeToken": {
     "flags": {

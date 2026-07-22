@@ -2,28 +2,38 @@
   "_id": "YDuKB61dQubAkvIy",
   "name": "Seed of Flesh",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>A ball of soft, warm skin approximately four inches in diameter, the seed of flesh may be hurled at any surface within thirty feet as a Main Action. If flung with force, the seed transforms into a perfect duplicate of the creature that threw it, albeit naked and unequipped. It uses the user&rsquo;s attributes, skills, Foci, and other abilities, though it has only 6 hit points and it cannot cast spells or use arts. The duplicate will obey even suicidal commands and will remain active for up to a scene before shriveling back into a ball. It can be used only once per day. If it dies while active, the seed is destroyed.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 1,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.YDuKB61dQubAkvIy"
     }
   },
-  "_key": "!items!YDuKB61dQubAkvIy"
+  "_key": "!items!YDuKB61dQubAkvIy",
+  "system": {
+    "description": "<p>A ball of soft, warm skin approximately four inches in diameter, the seed of flesh may be hurled at any surface within thirty feet as a Main Action. If flung with force, the seed transforms into a perfect duplicate of the creature that threw it, albeit naked and unequipped. It uses the user&rsquo;s attributes, skills, Foci, and other abilities, though it has only 6 hit points and it cannot cast spells or use arts. The duplicate will obey even suicidal commands and will remain active for up to a scene before shriveling back into a ball. It can be used only once per day. If it dies while active, the seed is destroyed.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

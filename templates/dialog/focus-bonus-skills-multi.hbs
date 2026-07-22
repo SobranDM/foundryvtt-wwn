@@ -1,0 +1,9 @@
+<p>{{localize "WWN.Focus.BonusSkillDialogBodyMulti" pick=pick}}</p>
+<div class="form-group stacked">
+  {{#each skillOptions as |opt|}}
+  <label class="checkbox">
+    <input type="checkbox" name="skill_{{opt.slug}}" value="1" />
+    <span>{{opt.label}}</span>
+  </label>
+  {{/each}}
+</div>

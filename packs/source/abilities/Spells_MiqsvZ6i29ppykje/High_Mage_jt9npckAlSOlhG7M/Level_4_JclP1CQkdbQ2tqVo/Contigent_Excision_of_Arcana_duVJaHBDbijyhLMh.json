@@ -1,8 +1,8 @@
 {
   "_id": "duVJaHBDbijyhLMh",
   "name": "Contigent Excision of Arcana",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "JclP1CQkdbQ2tqVo",
   "sort": 200000,
@@ -12,17 +12,38 @@
     }
   },
   "system": {
-    "lvl": 4,
-    "class": "High Mage",
-    "duration": "",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster sets up a triggered resonance of dispelling magic which may later be invoked as an Instant action. Until the next dawn, the mage may negate magic as if with an @UUID[Compendium.wwn.abilities.zVoaLPVwZghGSACI]{Extirpate Arcana} spell as an Instant action. Once this negation is triggered, the spell ends.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
   },
   "ownership": {
     "default": 0

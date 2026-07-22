@@ -1,0 +1,30 @@
+<div>
+  {{#if canChoose}}
+  <div class="form-group">
+    <label>{{localize "WWN.Dialog.AttackKind"}}</label>
+    <select name="attackKind">
+      <option value="melee" {{#if (eq attackKind "melee")}}selected{{/if}}>{{localize "WWN.Dialog.Melee"}}</option>
+      <option value="ranged" {{#if (eq attackKind "ranged")}}selected{{/if}}>{{localize "WWN.Dialog.Ranged"}}</option>
+    </select>
+  </div>
+  {{else}}
+  <input type="hidden" name="attackKind" value="{{attackKind}}" />
+  {{/if}}
+  <div class="form-group">
+    <label>{{localize "WWN.Dialog.SituationalModifier"}}</label>
+    <input type="number" name="modifier" value="0" autofocus />
+  </div>
+  {{#if canBurst}}
+  <div class="form-group">
+    <label>{{localize "WWN.Dialog.BurstFire"}}</label>
+    <input type="checkbox" name="burst" />
+  </div>
+  {{/if}}
+  {{#if isPc}}
+  <div class="form-group">
+    <label>{{localize "WWN.Dialog.Charge"}}</label>
+    <input type="checkbox" name="charge" />
+    <p class="hint">{{localize "WWN.Dialog.ChargeHint"}}</p>
+  </div>
+  {{/if}}
+</div>

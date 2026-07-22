@@ -1,8 +1,8 @@
 {
   "_id": "DEUNdz1vlGroTFyh",
   "name": "Damnation of the Sense",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "ejDursjGvjTEr7Et",
   "sort": 300000,
@@ -25,17 +25,38 @@
     "default": 0
   },
   "system": {
-    "lvl": 1,
-    "class": "High Mage",
-    "duration": "Scene",
-    "range": "200 ft.",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The caster targets a visible creature within two hundred feet. The target gets a Mental saving throw to resist; on a failure, one sense of the caster&rsquo;s choice is entirely under the caster&rsquo;s control for the rest of the scene, while a success leaves them bound only for the next round. Any false impression may be given, or any true one concealed, and a creature may be left effectively blinded or deafened. Distracting tactile sensations can force the victim to make a Physical saving throw in order to act each round. Blinded creatures can&rsquo;t make ranged attacks and roll all melee hit rolls twice, taking the worst result. If a creature thinks itself in mortal peril its excitement allows it to make a Mental save to throw off the spell at the end of each round.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": "mental"
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "200 ft.",
+      "duration": "Scene"
+    }
   },
   "_key": "!items!DEUNdz1vlGroTFyh"
 }

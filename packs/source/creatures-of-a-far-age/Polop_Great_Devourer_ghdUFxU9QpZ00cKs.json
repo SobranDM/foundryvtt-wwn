@@ -10,171 +10,111 @@
       "_id": "vkQboPTiQns0d7RK",
       "name": "Massive Weapon",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "_key": "!actors.items!ghdUFxU9QpZ00cKs.vkQboPTiQns0d7RK",
       "system": {
+        "description": "",
+        "damage": "2d8+5",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "10",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "2d8+5",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 10,
-          "ac": null
-        },
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 3,
           "max": 3
-        }
-      }
+        },
+        "price": 0,
+        "weight": 0,
+        "quantity": 1,
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
+      },
+      "_key": "!actors.items!ghdUFxU9QpZ00cKs.vkQboPTiQns0d7RK"
     }
   ],
   "effects": [],
   "_key": "!actors!ghdUFxU9QpZ00cKs",
   "system": {
-    "retainer": {
-      "enabled": false,
-      "morale": 0,
-      "wage": ""
+    "hp": {
+      "value": 90,
+      "max": 90
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 15,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 20,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 5,
-        "mod": 0
-      },
-      "mental": {
-        "value": 5,
-        "mod": 0
-      },
-      "physical": {
-        "value": 5,
-        "mod": 0
-      },
-      "luck": {
-        "value": 5,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "20d8",
+    "skill": 2,
     "details": {
-      "biography": "<p><span style=\"color: #191813;\">While the Polop who invade the land are usually of </span><span style=\"color: #191813;\">the hunter or slaver varieties, legends speak of the living </span><span style=\"color: #191813;\">gods of the Polop, those of them who have eaten so </span><span style=\"color: #191813;\">much and of so many mighty foes that they become the </span><span style=\"color: #191813;\">awe-inspiring patrons of entire Polop cities. These &ldquo;great </span><span style=\"color: #191813;\">devourers&rdquo; are twice the size of ordinary Polop, but lack </span><span style=\"color: #191813;\">nothing of cunning and cruel intellect.</span></p>",
       "alignment": "",
       "xp": 0,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 11,
+      "instinct": 7,
+      "instinctTable": null,
       "appearing": {
         "d": "",
         "w": ""
       },
-      "morale": 11,
-      "instinct": 7,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "character": false,
-    "hp": {
-      "hd": "20d8",
-      "value": 90,
-      "max": 90
+    "favorites": [
+      "vkQboPTiQns0d7RK"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 20,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 15,
+        "ranged": 15
+      }
     },
-    "damageBonus": 0
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p><span style=\"color: #191813;\">While the Polop who invade the land are usually of </span><span style=\"color: #191813;\">the hunter or slaver varieties, legends speak of the living </span><span style=\"color: #191813;\">gods of the Polop, those of them who have eaten so </span><span style=\"color: #191813;\">much and of so many mighty foes that they become the </span><span style=\"color: #191813;\">awe-inspiring patrons of entire Polop cities. These &ldquo;great </span><span style=\"color: #191813;\">devourers&rdquo; are twice the size of ordinary Polop, but lack </span><span style=\"color: #191813;\">nothing of cunning and cruel intellect.</span></p>"
   },
   "ownership": {
     "default": 0

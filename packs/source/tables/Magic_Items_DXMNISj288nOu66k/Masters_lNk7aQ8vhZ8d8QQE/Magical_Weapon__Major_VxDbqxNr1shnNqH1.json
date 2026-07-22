@@ -1,10 +1,6 @@
 {
   "_id": "VxDbqxNr1shnNqH1",
   "name": "Magical Weapon, Major",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -106,5 +102,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!VxDbqxNr1shnNqH1",
-  "folder": "lNk7aQ8vhZ8d8QQE"
+  "folder": "lNk7aQ8vhZ8d8QQE",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

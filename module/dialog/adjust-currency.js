@@ -1,3 +1,4 @@
+import { isPc } from "../helpers/actor-types.mjs";
 export class WwnAdjustCurrency extends FormApplication {
 
   static get defaultOptions() {
@@ -25,7 +26,7 @@ export class WwnAdjustCurrency extends FormApplication {
    */
   getData() {
     const data = foundry.utils.deepClone(this.object);
-    if (data.type === 'character') {
+    if (isPc(data)) {
       data.isCharacter = true;
     }
     data.user = game.user;

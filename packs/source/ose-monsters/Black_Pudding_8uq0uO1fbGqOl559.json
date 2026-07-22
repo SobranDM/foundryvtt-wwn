@@ -7,207 +7,255 @@
       "_id": "SzWVThFc3rijb67N",
       "name": "Touch",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "",
+        "damage": "3d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "3",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "3d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 3,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.SzWVThFc3rijb67N"
     },
     {
       "_id": "0rcHLv54FFrnbMwG",
       "name": "Immunity",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 200000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Only harmed by fire-based attacks.</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.0rcHLv54FFrnbMwG"
     },
     {
       "_id": "iD0o9M4SS8tcQwmV",
       "name": "Division",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 300000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Non-fire attacks (including spells) cause the pudding to divide. Each hit creates a 2HD pudding that does 1d8 damage.</span></p>\n<p><span style=\"color: #191813;\">@Compendium[wwn.ose-monsters.0MawbqGnZlYNLKRI]{Black Pudding Spawn}</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.iD0o9M4SS8tcQwmV"
     },
     {
       "_id": "XnfkmPJNvj5BhMX2",
       "name": "Erode Wood/Metal",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 400000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Can dissolve wood or metal in one turn.</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.XnfkmPJNvj5BhMX2"
     },
     {
       "_id": "U8SkCk7TdVRqFWNk",
       "name": "Cling",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 500000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Can move across walls and ceilings.</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.U8SkCk7TdVRqFWNk"
     },
     {
       "_id": "TWI99uR7UzQ7ZqqB",
       "name": "Seep",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 600000,
       "flags": {},
-      "img": "systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Can squeeze through small holes and cracks.</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!8uq0uO1fbGqOl559.TWI99uR7UzQ7ZqqB"
     }
@@ -219,143 +267,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 47,
+      "max": 47
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 8,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 10,
-        "mod": 0
-      },
-      "mental": {
-        "value": 10,
-        "mod": 0
-      },
-      "physical": {
-        "value": 10,
-        "mod": 0
-      },
-      "luck": {
-        "value": 10,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "20'",
-      "exploration": null,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "10d8",
+    "skill": 0,
     "details": {
-      "biography": "<p>Huge (5&rsquo;&ndash;30&rsquo; across), mindless blobs of amorphous black jelly. Driven by ravenous hunger.</p>",
       "alignment": "Neutral",
       "xp": 1600,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 8,
+      "instinctTable": null,
       "appearing": {
         "d": "1",
         "w": "0"
       },
-      "morale": 12,
-      "instinct": 8,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.TE8v9dEbY95Qe2Hq]{Insects and Semi-Mindless Beasts}",
-        "link": ""
-      },
-      "skill": 0
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "10d8",
-      "value": 47,
-      "max": 47
-    }
+    "favorites": [
+      "SzWVThFc3rijb67N"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 8,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Huge (5&rsquo;&ndash;30&rsquo; across), mindless blobs of amorphous black jelly. Driven by ravenous hunger.</p>"
   },
   "prototypeToken": {
     "flags": {

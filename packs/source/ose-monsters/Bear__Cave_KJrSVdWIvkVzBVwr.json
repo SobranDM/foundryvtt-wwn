@@ -7,57 +7,55 @@
       "_id": "G671R6LgNwW0SMol",
       "name": "Claw",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 100000,
       "flags": {},
-      "img": "/systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "<p><strong style=\"box-sizing: border-box; user-select: text; color: #191813;\">Bear hug:&nbsp;</strong><span style=\"color: #191813;\">If a victim is hit by both paws in the same round, the bear hugs for an extra 2d8 automatic damage.</span></p>",
+        "damage": "1d8",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><strong style=\"box-sizing: border-box; user-select: text; color: #191813;\">Bear hug:&nbsp;</strong><span style=\"color: #191813;\">If a victim is hit by both paws in the same round, the bear hugs for an extra 2d8 automatic damage.</span></p>",
-        "damage": "1d8",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": 15
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 2,
           "max": 2
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!KJrSVdWIvkVzBVwr.G671R6LgNwW0SMol"
     },
@@ -65,117 +63,135 @@
       "_id": "qjWv1xYpfnqAERSF",
       "name": "Bite",
       "type": "weapon",
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 200000,
       "flags": {},
-      "img": "/systems/wwn/assets/default/weapon.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "description": "",
+        "damage": "2d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "3",
+          "ac": 18
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "2d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 3,
-          "ac": 18
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!KJrSVdWIvkVzBVwr.qjWv1xYpfnqAERSF"
     },
     {
       "_id": "ZGzsFenJBqTf51qU",
       "name": "Bear Hug",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 300000,
       "flags": {},
-      "img": "/systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">If a victim is hit by both paws in the same round, the bear hugs for an extra 2d8 automatic damage.</span></p>",
-        "roll": "2d8",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "2d8",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!KJrSVdWIvkVzBVwr.ZGzsFenJBqTf51qU"
     },
     {
       "_id": "5j8DIHPuUhRR6qoL",
       "name": "Sense of Smell",
-      "type": "ability",
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 400000,
       "flags": {},
-      "img": "/systems/wwn/assets/new/ability.png",
       "effects": [],
-      "folder": null,
       "system": {
+        "subType": "ability",
         "description": "<p><span style=\"color: #191813;\">Poor eyesight, but keen sense of smell. When hungry, will follow a track of blood by scent.</span></p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": ""
-      },
-      "ownership": {
-        "default": 0
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!KJrSVdWIvkVzBVwr.5j8DIHPuUhRR6qoL"
     }
@@ -187,143 +203,56 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": "",
-      "morale": 0
+    "hp": {
+      "value": 36,
+      "max": 36
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 14,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 6,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 12,
-        "mod": 0
-      },
-      "mental": {
-        "value": 12,
-        "mod": 0
-      },
-      "physical": {
-        "value": 12,
-        "mod": 0
-      },
-      "luck": {
-        "value": 12,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40'",
-      "exploration": null,
-      "overland": 24,
-      "bonus": 0,
-      "value": ""
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "1": {
-        "max": 0
-      },
-      "2": {
-        "max": 0
-      },
-      "3": {
-        "max": 0
-      },
-      "4": {
-        "max": 0
-      },
-      "5": {
-        "max": 0
-      },
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "7d8",
+    "skill": 2,
     "details": {
-      "biography": "<p>Ferocious, 15&rsquo; tall grizzly bears found in caves and Lost World settings. Omnivorous, but prefer meat, including humans.</p>",
       "alignment": "Neutral",
       "xp": 450,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 9,
+      "instinct": 4,
+      "instinctTable": null,
       "appearing": {
         "d": "1d2",
         "w": "1d2"
       },
-      "morale": 9,
-      "instinct": 4,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.e97Psa2HYkSfcSIi]{Viciously Violent Beasts}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "7d8",
-      "value": 36,
-      "max": 36
-    }
+    "favorites": [
+      "G671R6LgNwW0SMol",
+      "qjWv1xYpfnqAERSF"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 6,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 14,
+        "ranged": 14
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p>Ferocious, 15&rsquo; tall grizzly bears found in caves and Lost World settings. Omnivorous, but prefer meat, including humans.</p>"
   },
   "prototypeToken": {
     "flags": {},

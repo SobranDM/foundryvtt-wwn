@@ -7,58 +7,55 @@
       "_id": "Zi6ZzgqoWPZ5Eg6y",
       "name": "Touch",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "<p><strong>Life Drain:</strong> Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>",
+        "damage": "1d4",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "1",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><strong>Life Drain:</strong> Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>",
-        "damage": "1d4",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 1,
-          "ac": 15
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!UNpEnOtPeQkszSZk.Zi6ZzgqoWPZ5Eg6y"
     }
@@ -70,126 +67,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 17,
+      "max": 17
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 12,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 2,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 14,
-        "mod": 0
-      },
-      "mental": {
-        "value": 14,
-        "mod": 0
-      },
-      "physical": {
-        "value": 14,
-        "mod": 0
-      },
-      "luck": {
-        "value": 14,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30",
-      "exploration": 90,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "2d8+2",
+    "skill": 1,
     "details": {
-      "biography": "<p><strong>Life Drain: </strong>Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>\n<p><strong>Surprise:</strong> Surprises unless opponents make a Wis/Notice check of 11.</p>\n<p><strong>Mundane Damage Immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>Spell Immunity:</strong> Unaffected by&nbsp;<em>charm&nbsp;</em>or&nbsp;<em>sleep</em> spells.</p>",
       "alignment": "Chaotic",
       "xp": 35,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 12,
+      "instinct": 8,
+      "instinctTable": null,
       "appearing": {
         "d": "1d8",
         "w": "1d12"
       },
-      "morale": 12,
-      "instinct": 8,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.ODWKbUBbnFxGLvgg]{Undead Creatures}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "2d8+2",
-      "value": 17,
-      "max": 17
-    }
+    "favorites": [
+      "Zi6ZzgqoWPZ5Eg6y"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 2,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 12,
+        "ranged": 12
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": "<p><strong>Life Drain: </strong>Each hit inflicts 1 System Strain. If this would take a victim over their maximum, they immediately die and become a shadow.</p>\n<p><strong>Surprise:</strong> Surprises unless opponents make a Wis/Notice check of 11.</p>\n<p><strong>Mundane Damage Immunity:</strong> Can only be harmed by magical attacks.</p>\n<p><strong>Spell Immunity:</strong> Unaffected by&nbsp;<em>charm&nbsp;</em>or&nbsp;<em>sleep</em> spells.</p>"
   },
   "prototypeToken": {
     "name": "Shadow",

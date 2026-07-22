@@ -1,15 +1,11 @@
 {
   "_id": "wbyC30m4zBpss0pL",
   "name": "Hang Sorcery",
-  "type": "art",
-  "img": "systems/wwn/assets/default/art.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
   "effects": [],
   "folder": "tC9Aaqu0axFEptJu",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "QNGrpF7th7u5lloF": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities.wbyC30m4zBpss0pL"
@@ -17,16 +13,39 @@
   },
   "_key": "!items!wbyC30m4zBpss0pL",
   "system": {
-    "pattern": "white",
-    "roll": "",
-    "rollType": "result",
-    "rollTarget": 0,
-    "blindroll": false,
+    "subType": "art",
     "description": "<p>Commit Effort for the scene as an Instant action when casting a spell. The spell does not go off, but remains &ldquo;hung&rdquo; and waiting to be triggered as an On Turn action, with details of targeting and effect determined at that time. Damage does not disrupt a hung spell, but no additional spells can be cast until the hung spell is released or allowed to dissipate.</p>",
-    "save": "",
     "source": "High Mage",
-    "effort": 0,
-    "time": "Day",
-    "range": ""
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
   }
 }

@@ -3,48 +3,55 @@
   "name": "Elemental Blast",
   "type": "weapon",
   "flags": {},
-  "img": "systems/wwn/assets/new/elementalist_art.png",
+  "img": "systems/wwn/assets/icons/powers/elementalist-art.png",
   "effects": [],
   "system": {
+    "description": "<p>Commit Effort for the scene as a Main Action to hurl a blast of some elemental force at a visible target within fifty feet per character level. The attack is made with Magic as the combat skill, Int, Cha, or Dex as the attribute, and a bonus to hit equal to your character level. It is not hindered by melee foes. On a hit, the attack does 1d6 damage plus your character level and attribute mod. The blast may have collateral effects on objects in the case of hurled fire or a torrent of pressurized water, but any conjured matter vanishes at the end of the round.</p>",
+    "damage": "1d6+@level",
+    "bonus": 0,
+    "skillDamage": false,
+    "shock": {
+      "damage": "0",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "",
+    "score": "int",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
     "range": {
       "short": 50,
       "medium": 0,
       "long": 50
     },
     "save": "",
-    "pattern": "transparent",
-    "description": "<p>Commit Effort for the scene as a Main Action to hurl a blast of some elemental force at a visible target within fifty feet per character level. The attack is made with Magic as the combat skill, Int, Cha, or Dex as the attribute, and a bonus to hit equal to your character level. It is not hindered by melee foes. On a hit, the attack does 1d6 damage plus your character level and attribute mod. The blast may have collateral effects on objects in the case of hurled fire or a torrent of pressurized water, but any conjured matter vanishes at the end of the round.</p>",
-    "damage": "1d6+@level",
-    "bonus": "@level",
-    "skillDamage": false,
-    "shock": {
-      "damage": 0,
-      "ac": "0"
-    },
-    "shockTotal": 0,
-    "skill": "",
-    "score": "int",
     "tags": [
-      {
-        "title": "50'",
-        "value": "Missile"
-      }
+      "Missile"
     ],
-    "slow": false,
-    "missile": true,
-    "melee": false,
-    "price": 0,
-    "weight": 0,
-    "counter": {
-      "value": 0,
-      "max": 0
-    },
-    "quantity": 1,
+    "ammoId": "",
     "charges": {
       "value": 0,
       "max": 0
     },
-    "weightless": "never"
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "never",
+    "containerId": "",
+    "ammoMode": "none",
+    "ammoFallback": ""
   },
   "ownership": {
     "default": 0

@@ -1,26 +1,49 @@
 {
   "_id": "AntKz8ukH1U6sXUR",
   "name": "Lower Water",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "10 turns",
-    "range": "240'",
-    "roll": "",
-    "description": "<p><strong>Duration: 10 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>This spell reduces the depth of a body of water by half for the duration. An area of up to 10,000 square feet may be affected.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!AntKz8ukH1U6sXUR"
+  "_key": "!items!AntKz8ukH1U6sXUR",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 10 turns</strong></p>\n<p><strong>Range: 240&rsquo;</strong></p>\n<p>This spell reduces the depth of a body of water by half for the duration. An area of up to 10,000 square feet may be affected.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "240'",
+      "duration": "10 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

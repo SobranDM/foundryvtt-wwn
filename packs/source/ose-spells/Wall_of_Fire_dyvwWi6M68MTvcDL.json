@@ -1,26 +1,49 @@
 {
   "_id": "dyvwWi6M68MTvcDL",
   "name": "Wall of Fire",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 4,
-    "class": "Mage",
-    "duration": "Concentration",
-    "range": "60'",
-    "roll": "1d6",
-    "description": "<p><strong>Duration: Concentration</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>An immobile, opaque curtain of shimmering, violet fire springs into existence.</p>\n<p><strong>▶ Size: </strong>The wall can be any size, and may be shaped in any manner and to any dimensions the caster desires, up to 1,200 sq. ft. For example, it may be a straight wall or curved into a protective circle.</p>\n<p><strong>▶ Location: </strong>The wall may not be evoked so that it appears where objects are.</p>\n<p><strong>▶ Monsters with fewer than 4 HD: </strong>Cannot pass the wall of flames.</p>\n<p><strong>▶ Monsters with 4 or more HD:</strong> Take 1d6 hit points of damage when they pass through the wall. The wall deals double damage to undead creatures or creatures that use cold or are accustomed to cold.</p>\n<p><strong>▶ Concentration: </strong>The wall persists as long as the caster concentrates on the spell and does not move.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!dyvwWi6M68MTvcDL"
+  "_key": "!items!dyvwWi6M68MTvcDL",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: Concentration</strong></p>\n<p><strong>Range: 60&rsquo;</strong></p>\n<p>An immobile, opaque curtain of shimmering, violet fire springs into existence.</p>\n<p><strong>▶ Size: </strong>The wall can be any size, and may be shaped in any manner and to any dimensions the caster desires, up to 1,200 sq. ft. For example, it may be a straight wall or curved into a protective circle.</p>\n<p><strong>▶ Location: </strong>The wall may not be evoked so that it appears where objects are.</p>\n<p><strong>▶ Monsters with fewer than 4 HD: </strong>Cannot pass the wall of flames.</p>\n<p><strong>▶ Monsters with 4 or more HD:</strong> Take 1d6 hit points of damage when they pass through the wall. The wall deals double damage to undead creatures or creatures that use cold or are accustomed to cold.</p>\n<p><strong>▶ Concentration: </strong>The wall persists as long as the caster concentrates on the spell and does not move.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "60'",
+      "duration": "Concentration"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

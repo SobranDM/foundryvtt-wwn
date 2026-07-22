@@ -1,18 +1,33 @@
 {
   "_id": "fVvm43qMZGMizwfb",
   "name": "Origin Focus: Goblin, Tinker",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>This variety of goblin is for those campaign settings where they are inveterate builders.</p>\n<p><strong>Level 1:</strong> Gain Craft as a bonus skill. Your Dexterity or Intelligence modifier increases by +1, and your Wisdom modifier decreases by -1. You have the weapon restrictions of halflings. You can see clearly in the dark out to sixty feet.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!fVvm43qMZGMizwfb",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

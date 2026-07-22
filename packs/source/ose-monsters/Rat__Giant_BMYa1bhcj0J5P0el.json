@@ -7,58 +7,55 @@
       "_id": "tmoOax43jFrftksb",
       "name": "Bite",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "<p><strong>Disease:</strong> Bite has a 1-in-20 chance of infecting the target (Physical save). The disease has a 1-in-4 chance of being deadly (die in 1d6 days). Otherwise the victim is sick and bedridden for one month.</p>",
+        "damage": "1d3",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p><strong>Disease:</strong> Bite has a 1-in-20 chance of infecting the target (Physical save). The disease has a 1-in-4 chance of being deadly (die in 1d6 days). Otherwise the victim is sick and bedridden for one month.</p>",
-        "damage": "1d3",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!BMYa1bhcj0J5P0el.tmoOax43jFrftksb"
     }
@@ -70,126 +67,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 4,
+      "max": 4
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 13,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 1,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 15,
-        "mod": 0
-      },
-      "mental": {
-        "value": 15,
-        "mod": 0
-      },
-      "physical": {
-        "value": 15,
-        "mod": 0
-      },
-      "luck": {
-        "value": 15,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "40",
-      "exploration": 120,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "1d4",
+    "skill": 0,
     "details": {
-      "biography": "<p>3&rsquo; long (or larger), with black or grey fur. Often live in dark, dungeon areas and close to undead monsters.</p>\n<ul>\n<li><strong>Afraid of fire:</strong> Will flee fire, unless forced to fight by summoner.</li>\n<li><strong>Attacking in water: </strong>May attack without penalty; excellent swimmers.</li>\n</ul>",
       "alignment": "Neutral",
       "xp": 5,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 8,
+      "instinct": 7,
+      "instinctTable": null,
       "appearing": {
         "d": "2d6",
         "w": "0"
       },
-      "morale": 8,
-      "instinct": 7,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 0
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "1d4",
-      "value": 4,
-      "max": 4
-    }
+    "favorites": [
+      "tmoOax43jFrftksb"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 1,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 13,
+        "ranged": 13
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 40
+      }
+    },
+    "biography": "<p>3&rsquo; long (or larger), with black or grey fur. Often live in dark, dungeon areas and close to undead monsters.</p>\n<ul>\n<li><strong>Afraid of fire:</strong> Will flee fire, unless forced to fight by summoner.</li>\n<li><strong>Attacking in water: </strong>May attack without penalty; excellent swimmers.</li>\n</ul>"
   },
   "prototypeToken": {
     "name": "Rat, Giant",

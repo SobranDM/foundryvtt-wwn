@@ -101,3 +101,60 @@
   --combat-set-option-bg: #92bbc9;
   --combat-set-option-font-color: black;
 }
+
+/* Collapsed side rows in group initiative */
+.combat-tracker-grouped .combatant-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.combat-tracker-grouped .combatant-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.combat-tracker-grouped .combatant-group.active > .combatant-group-header {
+  outline: 1px solid var(--color-warm-2, #ff6400);
+}
+
+.combat-tracker-grouped .group-caret {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.combat-tracker-grouped .combatant-group-header .token-name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.combat-tracker-grouped .combatant-group-header .group-count {
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+.combat-tracker-grouped .combatant-group-header .token-initiative {
+  flex: 0 0 auto;
+}
+
+.combat-tracker-grouped .combatant-group-members {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+}
+
+.combat-tracker-grouped .combatant-group-members[hidden] {
+  display: none;
+}
+
+.combat-tracker-grouped .combatant-group-members .combatant {
+  padding-left: 0.25rem;
+}

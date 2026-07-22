@@ -6,25 +6,26 @@
   <ul class="summary flexrow">
     <li class="flexrow check-field">
       <div>
-        <input type="text" name="system.hp.hd" value="{{system.hp.hd}}" />
+        <input type="text" name="system.hd" value="{{system.hd}}" />
         <label>{{localize 'WWN.HitDiceLong'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="system.initiative.mod" value="{{system.initiative.mod}}" />
+        <input type="number" name="system.combat.initMod" value="{{system.combat.initMod}}" data-dtype="Number" />
         <label>{{localize 'WWN.Initiative'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="system.thac0.bba" value="{{system.thac0.bba}}" />
+        <input type="number" name="system.combat.ab" value="{{system.combat.ab}}" data-dtype="Number" />
         <label title="{{localize 'WWN.AB'}}">{{localize 'WWN.ABShort'}}</label>
       </div>
     </li>
     <li class="flexrow check-field">
       <div>
-        <input type="number" name="system.damageBonus" value="{{system.damageBonus}}" />
+        <input type="number" name="system.combat.damageBonus" value="{{system.combat.damageBonus}}"
+          data-dtype="Number" />
         <label title="{{localize 'WWN.DB'}}">{{localize 'WWN.DBShort'}}</label>
       </div>
     </li>
@@ -67,7 +68,7 @@
     </li>
     {{/if}}
     <li class="treasure-table" title="{{localize 'WWN.details.instinctTableHint'}}">
-      <div>{{{system.details.instinctTable.link}}}</div>
+      <div>{{{instinctTableLink}}}</div>
       <label>{{localize 'WWN.details.instinct'}}</label>
     </li>
   </ul>

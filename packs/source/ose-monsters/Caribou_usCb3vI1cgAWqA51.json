@@ -7,58 +7,55 @@
       "_id": "a329GhXEVllxcsVS",
       "name": "Antlers or Hoofs",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "1",
+          "ac": 14
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": 1,
-          "ac": 14
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!usCb3vI1cgAWqA51.a329GhXEVllxcsVS"
     },
@@ -66,62 +63,59 @@
       "_id": "EyvMKiQ7wnbqNnLH",
       "name": "Stampede",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {
         "core": {
           "sourceId": "Item.duHHT1gaZyUARBBq"
         }
       },
+      "effects": [],
       "system": {
+        "description": "<p>Herds of 20 or more can trample those in their path. 3-in-4 chance each round. +4 to hit human-sized or smaller creatures. 1d20 damage.</p>",
+        "damage": "1d20",
+        "bonus": 4,
+        "skillDamage": false,
+        "shock": {
+          "damage": "2",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "",
-        "pattern": "transparent",
-        "description": "<p>Herds of 20 or more can trample those in their path. 3-in-4 chance each round. +4 to hit human-sized or smaller creatures. 1d20 damage.</p>",
-        "damage": "1d20",
-        "bonus": 4,
-        "skillDamage": false,
-        "shock": {
-          "damage": 2,
-          "ac": null
-        },
-        "shockTotal": "0",
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        }
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!usCb3vI1cgAWqA51.EyvMKiQ7wnbqNnLH"
     }
@@ -133,126 +127,56 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 10,
+      "max": 10
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 12,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 2,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 14,
-        "mod": 0
-      },
-      "mental": {
-        "value": 14,
-        "mod": 0
-      },
-      "physical": {
-        "value": 14,
-        "mod": 0
-      },
-      "luck": {
-        "value": 14,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "80",
-      "exploration": 240,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "3d8",
+    "skill": 1,
     "details": {
-      "biography": "<p>Wild animals that live in large, grazing herds. The exact type depends on the terrain.</p>\n<ul>\n<li><strong>Stampede: </strong>Herds of 20 or more can trample those in their path. 3-in-4 chance each round. +4 to hit human-sized or smaller creatures. 1d20 damage.</li>\n<li><strong>Males:</strong> In groups of 3 or more, only 1-in-4 are males. These have 1d4 extra hit points and protect the herd.</li>\n<li><strong>Females and young:</strong> Flee from danger. Females do not have a butt attack. Young have half normal hit points.</li>\n</ul>",
       "alignment": "Neutral",
       "xp": 35,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 5,
+      "instinct": 8,
+      "instinctTable": null,
       "appearing": {
         "d": "0",
         "w": "3d10"
       },
-      "morale": 5,
-      "instinct": 8,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.AdhcClvUZ5b3p3vH]{Ordinary Predatory Beasts}",
-        "link": ""
-      },
-      "skill": 1
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "3d8",
-      "value": 10,
-      "max": 10
-    }
+    "favorites": [
+      "a329GhXEVllxcsVS",
+      "EyvMKiQ7wnbqNnLH"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 2,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 12,
+        "ranged": 12
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 80
+      }
+    },
+    "biography": "<p>Wild animals that live in large, grazing herds. The exact type depends on the terrain.</p>\n<ul>\n<li><strong>Stampede: </strong>Herds of 20 or more can trample those in their path. 3-in-4 chance each round. +4 to hit human-sized or smaller creatures. 1d20 damage.</li>\n<li><strong>Males:</strong> In groups of 3 or more, only 1-in-4 are males. These have 1d4 extra hit points and protect the herd.</li>\n<li><strong>Females and young:</strong> Flee from danger. Females do not have a butt attack. Young have half normal hit points.</li>\n</ul>"
   },
   "prototypeToken": {
     "name": "Caribou",

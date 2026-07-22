@@ -1,18 +1,33 @@
 {
   "_id": "g8HzYopr2bPsirdu",
   "name": "Henchkeeper",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
+  "img": "systems/wwn/assets/icons/items/focus.png",
   "effects": [],
   "system": {
     "description": "<p>You have a distinct knack for picking up lost souls who willingly do your bidding. You might induce them with promises of money, power, excitement, sex, or some other prize that you may or may not eventually grant. A henchman obtained with this Focus will serve in loyal fashion until clearly betrayed or placed in unacceptable danger. Henchmen are not &ldquo;important&rdquo; people in their society, and are usually marginal sorts, outcasts, the desperate, or other persons with few options.</p>\n<p>You can use more conventional pay or inducements to acquire additional henchmen, but these extra hirelings are no more loyal or competent than your pay and treatment can purchase.</p>\n<p><strong>Level 1: </strong>Gain Lead as a bonus skill. You can acquire henchmen within 24 hours of arriving in a community, assuming anyone is suitable hench material. These henchmen will not fight except to save their own lives, but will escort you on adventures and risk great danger to help you. Most henchmen from a civilized society will be treated as Peaceful Humans from the bestiary section of the book. You can have one henchmen at a time for every three character levels you have, rounded up. You can release henchmen with no hard feelings at any plausible time and pick them back up later should you be without a current henchman.</p>\n<p><strong>Level 2:</strong> Your henchmen are remarkably loyal and determined, and will fight for you against anything but clearly overwhelming odds. Whether through natural competence or their devotion to you, they&rsquo;re treated as Veteran Soldiers from the bestiary section. You can make faithful henchmen out of skilled and highly-capable NPCs, but this requires that you actually have done them some favor or help that would reasonably earn such fierce loyalty.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!g8HzYopr2bPsirdu",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

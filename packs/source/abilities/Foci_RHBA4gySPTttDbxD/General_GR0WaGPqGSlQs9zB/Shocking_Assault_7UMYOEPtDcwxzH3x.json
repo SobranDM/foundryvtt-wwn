@@ -1,18 +1,85 @@
 {
   "_id": "7UMYOEPtDcwxzH3x",
   "name": "Shocking Assault",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "crgiJajEKcFR2q0U",
+      "type": "base",
+      "name": "Shocking Assault (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.treatAllMeleeAsAcTen",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!7UMYOEPtDcwxzH3x.crgiJajEKcFR2q0U"
+    },
+    {
+      "_id": "ZQnIYFlF6UeZiYPc",
+      "type": "base",
+      "name": "Shocking Assault (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.meleeShock",
+            "type": "add",
+            "value": 2,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!7UMYOEPtDcwxzH3x.ZQnIYFlF6UeZiYPc"
+    }
+  ],
   "system": {
     "description": "<p>You&rsquo;re extremely dangerous to enemies around you. The ferocity of your melee attacks stresses and distracts enemies even when your blows don&rsquo;t draw blood.</p>\n<p><strong>Level 1:</strong> Gain Punch or Stab as a bonus skill. The Shock damage of your weapon treats all targets as if they were AC 10, assuming your weapon is capable of harming the target in the first place and the target is not immune to Shock.</p>\n<p><strong>Level 2: </strong>In addition, you gain a +2 bonus to the Shock damage rating of all melee weapons and unarmed attacks. As usual, regular hits never do less damage than this Shock would do on a miss.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "stab",
+      "punch"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!7UMYOEPtDcwxzH3x",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

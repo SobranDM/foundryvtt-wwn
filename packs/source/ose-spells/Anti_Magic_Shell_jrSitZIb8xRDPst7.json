@@ -1,26 +1,49 @@
 {
   "_id": "jrSitZIb8xRDPst7",
   "name": "Anti-Magic Shell",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 6,
-    "class": "Mage",
-    "duration": "12 turns",
-    "range": "Caster",
-    "roll": "",
-    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>An anti-magic barrier is created around the caster.</p>\n<p><strong>▶ Blocks magic:</strong> No spells or spell effects can pass through this barrier, whether from inside or outside.</p>\n<p><strong>▶ Dismissing:</strong> The caster may end this spell at any time before the duration has expired.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!jrSitZIb8xRDPst7"
+  "_key": "!items!jrSitZIb8xRDPst7",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: 12 turns</strong></p>\n<p><strong>Range: The caster</strong></p>\n<p>An anti-magic barrier is created around the caster.</p>\n<p><strong>▶ Blocks magic:</strong> No spells or spell effects can pass through this barrier, whether from inside or outside.</p>\n<p><strong>▶ Dismissing:</strong> The caster may end this spell at any time before the duration has expired.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 6,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "Caster",
+      "duration": "12 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

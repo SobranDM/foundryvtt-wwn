@@ -1,6 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import { WwnActor } from '../actor/entity.js';
-
 export class WwnCharacterModifiers extends FormApplication {
   static get defaultOptions() {
     const options = super.defaultOptions;

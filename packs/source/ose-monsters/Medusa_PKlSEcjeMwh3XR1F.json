@@ -7,251 +7,295 @@
       "_id": "kZ3yTekP44z0CzKZ",
       "name": "Snakebites",
       "type": "weapon",
-      "img": "/systems/wwn/assets/default/weapon.png",
-      "effects": [],
-      "folder": null,
+      "img": "systems/wwn/assets/icons/items/weapon.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "description": "<p><strong>Poison: </strong>The snakes' bites are venemous: save or die in 1 turn.</p>",
+        "damage": "1d6",
+        "bonus": 0,
+        "skillDamage": false,
+        "shock": {
+          "damage": "",
+          "ac": 15
+        },
+        "trauma": {
+          "die": "1d6",
+          "rating": 2
+        },
+        "skillId": "",
+        "skillFallback": "punch",
+        "score": "str",
+        "melee": true,
+        "missile": false,
+        "slow": false,
+        "burst": false,
         "range": {
           "short": 0,
           "medium": 0,
           "long": 0
         },
         "save": "physical",
-        "pattern": "transparent",
-        "description": "<p><strong>Poison: </strong>The snakes' bites are venemous: save or die in 1 turn.</p>",
-        "damage": "1d6",
-        "bonus": 0,
-        "skillDamage": false,
-        "shock": {
-          "damage": null,
-          "ac": null
-        },
-        "shockTotal": 0,
-        "skill": "punch",
-        "score": "str",
         "tags": [],
-        "slow": false,
-        "missile": false,
-        "melee": true,
-        "price": 0,
-        "weight": 0,
+        "ammoId": "",
+        "charges": {
+          "value": 0,
+          "max": 0
+        },
         "counter": {
           "value": 1,
           "max": 1
         },
+        "price": 0,
+        "weight": 0,
         "quantity": 1,
-        "charges": {
-          "value": 0,
-          "max": 0,
-          "consumable": false
-        },
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "equipped": false,
+        "stowed": false,
+        "weightless": "",
+        "containerId": "",
+        "ammoMode": "none",
+        "ammoFallback": ""
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.kZ3yTekP44z0CzKZ"
     },
     {
       "_id": "MsExPZiAedb5ui27",
       "name": "Poison",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>The snakes' bites are venemous: save or die in 1 turn.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "physical",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.MsExPZiAedb5ui27"
     },
     {
       "_id": "nlasGScioB0gsofJ",
       "name": "Disguise",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Use hooded cloaks to lure victims close before revealing their true form.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.nlasGScioB0gsofJ"
     },
     {
       "_id": "xXbwOcc7DB0P2JdU",
       "name": "Petrification",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>Anyone who looks at an undisguised medusa will be turned to stone (save to resist).</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "physical",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.xXbwOcc7DB0P2JdU"
     },
     {
       "_id": "w8tpMlTnNrbqtcXB",
       "name": "Avert Eyes",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>-4 penalty to attack rolls and the medusa gains +2 bonus on attack rolls.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.w8tpMlTnNrbqtcXB"
     },
     {
       "_id": "Mb1w7LRGkMj47akL",
       "name": "Mirrors",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>The reflection of a medusa is harmless. If a medusa sees her own reflection, she must save or be petrified.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "physical",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "physical",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.Mb1w7LRGkMj47akL"
     },
     {
       "_id": "6IwJkDVUseaZoWX0",
       "name": "Magic Resistance",
-      "type": "ability",
-      "img": "/systems/wwn/assets/default/ability.png",
-      "effects": [],
-      "folder": null,
+      "type": "power",
+      "img": "systems/wwn/assets/icons/items/ability.png",
       "sort": 0,
       "flags": {},
+      "effects": [],
       "system": {
+        "subType": "ability",
         "description": "<p>+2 bonus to saves versus magical effects.</p>",
-        "roll": "",
-        "rollType": "result",
-        "rollTarget": 0,
-        "blindroll": false,
-        "save": "",
-        "choices": "weapon,ability,armor,item"
-      },
-      "ownership": {
-        "default": 0,
-        "mgBwP0sTLP1VFg1m": 3
-      },
-      "_stats": {
-        "systemId": null,
-        "systemVersion": null,
-        "coreVersion": null,
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
+        "commitmentOptions": [
+          {
+            "cost": 0,
+            "length": "none",
+            "note": ""
+          }
+        ],
+        "poolCommitted": {
+          "none": 0,
+          "active": 0,
+          "scene": 0,
+          "day": 0
+        },
+        "internalResource": {
+          "value": 0,
+          "max": 0
+        },
+        "internalResourceLength": "scene",
+        "activation": {
+          "roll": "",
+          "rollType": "result",
+          "rollTarget": 0,
+          "save": "",
+          "range": "",
+          "duration": ""
+        }
       },
       "_key": "!actors.items!PKlSEcjeMwh3XR1F.6IwJkDVUseaZoWX0"
     }
@@ -263,126 +307,55 @@
     }
   },
   "system": {
-    "retainer": {
-      "enabled": false,
-      "wage": ""
+    "hp": {
+      "value": 18,
+      "max": 18
     },
-    "ac": {
-      "value": 0,
-      "mod": 0
+    "strain": {
+      "value": 0
     },
-    "aac": {
-      "value": 12,
-      "mod": 0
+    "alienation": {
+      "value": 0
     },
-    "thac0": {
-      "value": 19,
-      "bba": 4,
-      "mod": {
-        "missile": 0,
-        "melee": 0
-      }
+    "stress": {
+      "value": 0
     },
-    "saves": {
-      "evasion": {
-        "value": 13,
-        "mod": 0
-      },
-      "mental": {
-        "value": 13,
-        "mod": 0
-      },
-      "physical": {
-        "value": 13,
-        "mod": 0
-      },
-      "luck": {
-        "value": 13,
-        "mod": 0
-      }
-    },
-    "movement": {
-      "base": "30'",
-      "exploration": null,
-      "overland": 24,
-      "bonus": 0
-    },
-    "initiative": {
-      "value": 0,
-      "mod": 0,
-      "roll": 0
-    },
-    "currency": {
-      "cp": 0,
-      "sp": 0,
-      "ep": 0,
-      "gp": 0,
-      "pp": 0,
-      "bank": 0,
-      "total": 0,
-      "share": 100
-    },
-    "spells": {
-      "enabled": false,
-      "perDay": {
-        "value": 0,
-        "max": 0
-      },
-      "prepared": {
-        "value": 0,
-        "max": 3
-      }
-    },
-    "classes": {
-      "effort1": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort2": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort3": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      },
-      "effort4": {
-        "name": "",
-        "value": 1,
-        "max": 1
-      }
-    },
+    "hd": "4d8",
+    "skill": 2,
     "details": {
-      "biography": "",
       "alignment": "Chaotic",
       "xp": 175,
-      "treasure": {
-        "table": "",
-        "type": ""
-      },
+      "morale": 8,
+      "instinct": 3,
+      "instinctTable": null,
       "appearing": {
         "d": "1d3",
         "w": "1d4"
       },
-      "morale": 8,
-      "instinct": 3,
-      "instinctTable": {
-        "table": "@Compendium[wwn.tables.pCayfwBEwsfFc4Hn]{Combat-Trained Humanoids}",
-        "link": ""
-      },
-      "skill": 2
+      "treasure": {
+        "table": "",
+        "type": ""
+      }
     },
-    "attacks": "",
-    "damageBonus": 0,
-    "character": false,
-    "hp": {
-      "hd": "4d8",
-      "value": 18,
-      "max": 18
-    }
+    "favorites": [
+      "kZ3yTekP44z0CzKZ"
+    ],
+    "notes": "",
+    "combat": {
+      "ab": 4,
+      "damageBonus": 0,
+      "damageBonusHalfLevel": false,
+      "acManual": {
+        "melee": 12,
+        "ranged": 12
+      }
+    },
+    "movement": {
+      "base": {
+        "value": 30
+      }
+    },
+    "biography": ""
   },
   "prototypeToken": {
     "name": "Medusa",

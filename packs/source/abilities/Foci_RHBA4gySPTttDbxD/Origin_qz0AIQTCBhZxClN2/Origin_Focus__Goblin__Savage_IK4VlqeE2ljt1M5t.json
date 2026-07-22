@@ -1,18 +1,33 @@
 {
   "_id": "IK4VlqeE2ljt1M5t",
   "name": "Origin Focus: Goblin, Savage",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/origin_focus.png",
+  "img": "systems/wwn/assets/icons/items/origin-focus.png",
   "effects": [],
   "system": {
     "description": "<p>Feral tribe-dwelling marauders of swamp, forest, and wasteland, this style of goblin can also fill in for other small, vicious humanoids.</p>\n<p><strong>Level 1:</strong> Gain Sneak and Survive as bonus skills. Your Dexterity modifier increases by +1, but your Intelligence modifier decreases by -1. You have the weapon restrictions of halflings. You can see clearly in the dark out to sixty feet.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!IK4VlqeE2ljt1M5t",
-  "folder": "qz0AIQTCBhZxClN2"
+  "folder": "qz0AIQTCBhZxClN2",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

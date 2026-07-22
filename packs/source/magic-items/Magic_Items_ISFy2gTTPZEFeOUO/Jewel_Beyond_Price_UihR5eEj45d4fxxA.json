@@ -2,28 +2,38 @@
   "_id": "UihR5eEj45d4fxxA",
   "name": "Jewel Beyond Price",
   "type": "item",
-  "img": "systems/wwn/assets/default/item.png",
-  "data": {
-    "description": "<p>This small gemstone is impossible to mistake for an ordinary jewel, for it fills all onlookers with an overwhelming desire to obtain it. If found as treasure or plunder, the finders can decide calmly who is to have it, but if it is offered to a person in exchange for some favor or service that some amount of wealth could theoretically compel them to do, the would-be recipient must make a Mental saving throw or agree to perform the act in exchange for the jewel. If they receive the jewel, they will faithfully carry out the spirit of the agreement for at least a week. The jewel&rsquo;s full bewitchment of them will last for at most a week, after which they will be able to think clearly about whether or not the trade was reasonable and worth it.</p>",
-    "quantity": 1,
-    "treasure": false,
-    "price": 0,
-    "weight": 0,
-    "equipped": false,
-    "stowed": false,
-    "version": 3
-  },
+  "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
   "folder": "ISFy2gTTPZEFeOUO",
   "sort": 0,
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.magic-items.UihR5eEj45d4fxxA"
     }
   },
-  "_key": "!items!UihR5eEj45d4fxxA"
+  "_key": "!items!UihR5eEj45d4fxxA",
+  "system": {
+    "description": "<p>This small gemstone is impossible to mistake for an ordinary jewel, for it fills all onlookers with an overwhelming desire to obtain it. If found as treasure or plunder, the finders can decide calmly who is to have it, but if it is offered to a person in exchange for some favor or service that some amount of wealth could theoretically compel them to do, the would-be recipient must make a Mental saving throw or agree to perform the act in exchange for the jewel. If they receive the jewel, they will faithfully carry out the spirit of the agreement for at least a week. The jewel&rsquo;s full bewitchment of them will last for at most a week, after which they will be able to think clearly about whether or not the trade was reasonable and worth it.</p>",
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

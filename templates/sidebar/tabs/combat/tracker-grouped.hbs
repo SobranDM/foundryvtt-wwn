@@ -1,0 +1,78 @@
+<ol class="combat-tracker plain combat-tracker-grouped">
+    {{#each groups}}
+    <li class="combatant-group {{ css }}" data-group-id="{{ id }}" data-expanded="{{ expanded }}">
+        <div class="combatant-group-header" data-action="activateGroup" data-group-id="{{ id }}"
+             style="background: linear-gradient(90deg, var(--wwn-group-color-{{ colorKey }}, {{ colorKey }}), transparent)">
+            <button type="button" class="inline-control group-caret icon" data-action="toggleGroupCollapse"
+                    data-group-id="{{ id }}" data-tooltip
+                    aria-label="{{ localize (ifThen expanded "WWN.combat.CollapseSide" "WWN.combat.ExpandSide") }}">
+                <i class="fas {{#if expanded}}fa-caret-down{{else}}fa-caret-right{{/if}}"></i>
+            </button>
+            <div class="token-name">
+                <strong class="name">{{ label }}</strong>
+                <span class="group-count">({{ memberCount }})</span>
+            </div>
+            <div class="token-initiative">
+                {{#if initiative includeZero=true}}
+                {{#if @root.hasDecimals}}
+                <span>{{ initiative }}</span>
+                {{else}}
+                <input type="text" class="initiative-input" inputmode="numeric" pattern="^[+=\-]?\d*"
+                       value="{{ initiative }}"
+                       aria-label="{{ localize "COMBATANT.FIELDS.initiative.label" }}"
+                       {{#unless @root.user.isGM}}readonly{{/unless}}>
+                {{/if}}
+                {{else if isOwner}}
+                <button type="button" class="combatant-control roll" data-action="rollGroupInitiative"
+                        data-group-id="{{ id }}" data-tooltip
+                        aria-label="{{ localize "COMBAT.InitiativeRoll" }}"
+                        style="--initiative-icon: url('{{ @root.initiativeIcon.icon }}'); --initiative-icon-hover: url('{{ @root.initiativeIcon.hover }}');"></button>
+                {{/if}}
+            </div>
+        </div>
+        <ol class="combatant-group-members plain" {{#unless expanded}}hidden{{/unless}}>
+            {{#each turns}}
+            <li class="combatant {{ css }}" data-combatant-id="{{ id }}" data-action="activateCombatant">
+                <img class="token-image" src="{{ img }}" alt="{{ name }}" loading="lazy">
+                <div class="token-name">
+                    <strong class="name">{{ name }}</strong>
+                    <div class="combatant-controls">
+                        {{#if @root.user.isGM}}
+                        <button type="button" class="inline-control combatant-control icon fa-solid fa-flag"
+                                data-action="setCombatantGroup" data-tooltip
+                                aria-label="{{ localize "WWN.combat.SetCombatantGroups" }}"></button>
+                        <button type="button" class="inline-control combatant-control icon fa-solid fa-eye-slash {{#if hidden}}active{{/if}}"
+                                data-action="toggleHidden" data-tooltip
+                                aria-label="{{ localize (ifThen hidden "COMBATANT.Show" "COMBATANT.Hide") }}"></button>
+                        <button type="button" class="inline-control combatant-control icon fa-solid fa-skull {{#if isDefeated}}active{{/if}}"
+                                data-action="toggleDefeated" data-tooltip
+                                aria-label="{{ localize (ifThen isDefeated "COMBATANT.UnmarkDefeated" "COMBATANT.MarkDefeated") }}"></button>
+                        {{/if}}
+                        {{#if canPing}}
+                        <button type="button" class="inline-control combatant-control icon fa-solid fa-bullseye-arrow"
+                                data-action="pingCombatant" data-tooltip
+                                aria-label="{{ localize "COMBATANT.Ping" }}"></button>
+                        {{/if}}
+                        {{#unless @root.user.isGM}}
+                        <button type="button" class="inline-control combatant-control icon fa-solid fa-arrows-to-eye"
+                                data-action="panToCombatant" data-tooltip
+                                aria-label="{{ localize "COMBATANT.PanTo" }}"></button>
+                        {{/unless}}
+                        <div class="token-effects" data-tooltip-html="{{ effects.tooltip }}">
+                            {{#each effects.icons}}
+                            <img class="token-effect" src="{{ img }}" alt="{{ name }}">
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                {{#if resource includeZero=true}}
+                <div class="token-resource">
+                    <span class="resource">{{ resource }}</span>
+                </div>
+                {{/if}}
+            </li>
+            {{/each}}
+        </ol>
+    </li>
+    {{/each}}
+</ol>

@@ -1,10 +1,6 @@
 {
   "_id": "scGwW7STysk3CzcV",
   "name": "Magical Armor, Minor",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "flags": {
     "better-rolltables": {
       "table-type": "better",
@@ -63,5 +59,9 @@
   "replacement": true,
   "displayRoll": true,
   "_key": "!tables!scGwW7STysk3CzcV",
-  "folder": "lNk7aQ8vhZ8d8QQE"
+  "folder": "lNk7aQ8vhZ8d8QQE",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

@@ -1,26 +1,49 @@
 {
   "_id": "85aLbKr9PuEjN9N8",
   "name": "Hold Portal",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
-  "type": "spell",
-  "data": {
-    "lvl": 1,
-    "class": "Mage",
-    "duration": "2d6 turns",
-    "range": "10'",
-    "roll": "",
-    "description": "<p><strong>Duration: [[2d6]] turns</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell magically holds shut a door, gate, window, or other kind of portal.</p>\n<p><strong>▶ Opening by magic:</strong> A knock spell opens the held portal instantly.</p>\n<p><strong>▶ Opening by force:</strong> Creatures with at least 3 Hit Dice more than the caster can open the held portal with one round of effort.</p>",
-    "prepared": true,
-    "cast": 0,
-    "save": ""
-  },
+  "type": "power",
   "flags": {
     "cf": null
   },
-  "img": "systems/wwn/assets/default/spell.png",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
-  "_key": "!items!85aLbKr9PuEjN9N8"
+  "_key": "!items!85aLbKr9PuEjN9N8",
+  "system": {
+    "subType": "spell",
+    "description": "<p><strong>Duration: [[2d6]] turns</strong></p>\n<p><strong>Range: 10&rsquo;</strong></p>\n<p>This spell magically holds shut a door, gate, window, or other kind of portal.</p>\n<p><strong>▶ Opening by magic:</strong> A knock spell opens the held portal instantly.</p>\n<p><strong>▶ Opening by force:</strong> Creatures with at least 3 Hit Dice more than the caster can open the held portal with one round of effort.</p>",
+    "source": "Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "10'",
+      "duration": "2d6 turns"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

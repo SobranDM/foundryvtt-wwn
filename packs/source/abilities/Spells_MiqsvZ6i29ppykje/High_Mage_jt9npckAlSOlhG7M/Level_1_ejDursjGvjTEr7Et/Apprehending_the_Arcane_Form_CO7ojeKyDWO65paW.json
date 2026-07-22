@@ -1,8 +1,8 @@
 {
   "_id": "CO7ojeKyDWO65paW",
   "name": "Apprehending the Arcane Form",
-  "type": "spell",
-  "img": "systems/wwn/assets/default/spell.png",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
   "effects": [],
   "folder": "ejDursjGvjTEr7Et",
   "sort": 100000,
@@ -12,17 +12,38 @@
     }
   },
   "system": {
-    "lvl": 1,
-    "class": "High Mage",
-    "duration": "(15*@level) minutes",
-    "range": "",
-    "roll": "",
+    "subType": "spell",
     "description": "<p>The mage opens up their mind to the presence of occult energies. For fifteen minutes per character level, they are capable of seeing active magical effects, curses, enchantments, or other dweomers as colored auras or patterns of light. They may identify magical items and get a one-sentence description of their purpose or most significant powers, and may get more sophisticated answers with successful Wis/Magic skill checks at difficulties of 8 or more depending on the subtlety of the enchantment. Mages with prepared spells are visible to the caster, though which spells the subject might have prepared is not knowable. As a side effect of this spell, the ambient thaumic currents cast enough quasi-light to allow the caster to see normally even in perfect darkness.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
     "prepared": true,
-    "containerId": "",
-    "cast": 0,
-    "memorized": 0,
-    "save": ""
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "(15*@level) minutes"
+    }
   },
   "ownership": {
     "default": 0

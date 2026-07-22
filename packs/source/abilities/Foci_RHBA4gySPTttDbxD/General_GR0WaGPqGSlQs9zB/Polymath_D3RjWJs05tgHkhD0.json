@@ -1,18 +1,56 @@
 {
   "_id": "D3RjWJs05tgHkhD0",
   "name": "Polymath",
-  "permission": {
-    "default": 0,
-    "mgBwP0sTLP1VFg1m": 3
-  },
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/default/focus.png",
-  "effects": [],
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "hlnQkIg8Nl79ICjE",
+      "type": "base",
+      "name": "Polymath",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.skills.floor",
+            "type": "upgrade",
+            "value": "@item.ownedLevel - 1",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {}
+      },
+      "_key": "!items.effects!D3RjWJs05tgHkhD0.hlnQkIg8Nl79ICjE"
+    }
+  ],
   "system": {
     "description": "<p>You have a passing acquaintance with a vast variety of practical skills and pastimes, and can make a modest attempt at almost any exercise of skill or artisanry. Note that the phantom skill levels granted by this Focus don&rsquo;t stack with normal skill levels or give a skill purchase discount. Only Experts or Partial Experts can take this Focus.</p>\n<p><strong>Level 1: </strong>Gain any one bonus skill. You treat all non-combat skills as if they were at least level-0 for purposes of skill checks, even if you lack them entirely.</p>\n<p><strong>Level 2: </strong>You treat all non-combat skills as if they were at least level-1 for purposes of skill checks.</p>",
-    "ownedLevel": 1
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
   },
   "_key": "!items!D3RjWJs05tgHkhD0",
-  "folder": "GR0WaGPqGSlQs9zB"
+  "folder": "GR0WaGPqGSlQs9zB",
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
 }

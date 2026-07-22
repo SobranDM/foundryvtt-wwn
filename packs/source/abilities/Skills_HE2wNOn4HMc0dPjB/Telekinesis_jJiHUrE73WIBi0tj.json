@@ -1,7 +1,7 @@
 {
   "name": "Telekinesis",
   "type": "skill",
-  "img": "/systems/wwn/assets/skills/telekinesis.png",
+  "img": "systems/wwn/assets/icons/skills/psychic.png",
   "effects": [],
   "flags": {
     "core": {
@@ -13,8 +13,8 @@
     "ownedLevel": -1,
     "score": "int",
     "skillDice": "2d6",
-    "combatSkill": true,
-    "secondary": true
+    "secondary": true,
+    "slug": "telekinesis"
   },
   "_stats": {
     "systemId": "wwn",
