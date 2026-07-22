@@ -5,7 +5,7 @@
 ### Before you update
 
 - **Back up your world** before installing 2.0.0.
-- Migration runs automatically for the GM when the world loads. On a large world it can take a long time — leave Foundry open and wait for it to finish.
+- Migration runs automatically for the GM when the world loads. On a large world **migration can take a long time** — leave Foundry open and wait for it to finish.
 - Requires **Foundry VTT v14**. Not compatible with v13.
 
 ### What's new
@@ -20,6 +20,9 @@
 - **Foci and class features** are refreshed from the system packs on migration when they are out of date.
   - Your focus level and skill choices are kept.
   - Replaced copies are saved under Items in a **Migration Backup** folder per character.
+- **Arts and Spells** have been converted to the new **Powers** item type.
+  - Subtypes of Powers should support mutant powers, psychic abilities, cyberware, and all of the other xWN abilities.
+  - This may need further work before it is working perfectly.
 - **Compendiums** are reorganized (gear, magic items, abilities, assets, tags, tables).
   - Some old journal links into packs may need fixing.
 - **Weapons and ammo** support linked ammo and magazine-style reload more clearly.
