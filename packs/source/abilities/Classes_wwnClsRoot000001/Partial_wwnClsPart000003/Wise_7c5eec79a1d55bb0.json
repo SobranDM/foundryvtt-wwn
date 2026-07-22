@@ -1,0 +1,39 @@
+{
+  "_id": "7c5eec79a1d55bb0",
+  "name": "Wise",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7c5eec79a1d55bb0",
+  "system": {
+    "description": "<p>The Wise have a special role in low-magic settings, whether mundane priest, feared forest warlock, or sacred oracle. Their limited powers are normally viable only where standard magic is absent or rare. <strong>Benefits of the Wise.</strong> The Wise is a partial Expert class taken with another partial class. It does not gain Quick Learner or the normal first-level bonus non-combat Focus, though a standard Partial Expert partner provides those perks. All Wise gain a level-0 bonus skill appropriate to their concept. They do not use Effort; their abilities are constant or usable under stated circumstances or daily limits. Abilities are generally fixed by concept and role, with occasional choices.</p><h3>Partial Warrior/Wise</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior, +1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Expert/Wise</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Expert, +1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table><h3>Partial Mage/Wise</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "expert",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": []
+    }
+  }
+}
