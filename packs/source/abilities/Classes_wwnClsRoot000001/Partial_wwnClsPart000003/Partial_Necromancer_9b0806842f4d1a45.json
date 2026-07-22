@@ -1,0 +1,85 @@
+{
+  "_id": "9b0806842f4d1a45",
+  "name": "Partial Necromancer",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [
+    {
+      "_id": "2e1f529145904bd5",
+      "name": "Cold Flesh",
+      "img": "icons/svg/aura.svg",
+      "type": "base",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "changes": [],
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": "12 + floor(@level / 2)",
+            "priority": null,
+            "phase": "final"
+          }
+        ]
+      },
+      "_key": "!items.effects!9b0806842f4d1a45.2e1f529145904bd5"
+    }
+  ],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9b0806842f4d1a45",
+  "system": {
+    "description": "<p>Necromancers are those spellcasting Mages who deal with the energies of life and death.</p><h3>Necromancer Benefits</h3><p>All Necromancers gain Magic as a bonus skill, acquiring it at level-0, or level-1 if it was already level-0.</p><p>Necromancers can prepare and cast High Magic spells in addition to the spells specific to Necromancers. Some of the latter are given on the following pages, but others doubtless exist. As usual for spellcasters, Necromancers can&rsquo;t cast spells or use arts while armored or holding a shield.</p><p>Necromancers are not as talented at general High Magic research as High Mages are, but their studies still bear fruit in time. Each time they advance a level, they can pick a new High Magic spell or a Necromancer spell to add to their spellbook. They must be able to cast the spell to add it to their selection.</p><p>Necromancers can pick an art specific to their tradition from the adjacent list. Further arts are learned as they advance in character level, as given in the tables below. Once chosen, an art cannot be changed.</p><h3>Partial Necromancer Arts and Spells</h3><table><thead><tr><th>Level</th><th>Max Spell Level</th><th>Spells Cast</th><th>Spells Prepared</th><th>Arts Gained</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>2</td><td>Any One</td></tr><tr><td>2</td><td>1</td><td>1</td><td>3</td><td>Any One</td></tr><tr><td>3</td><td>1</td><td>1</td><td>3</td><td>Any One</td></tr><tr><td>4</td><td>1</td><td>2</td><td>4</td><td></td></tr><tr><td>5</td><td>2</td><td>2</td><td>5</td><td></td></tr><tr><td>6</td><td>2</td><td>3</td><td>6</td><td>Any One</td></tr><tr><td>7</td><td>2</td><td>3</td><td>7</td><td></td></tr><tr><td>8</td><td>2</td><td>3</td><td>7</td><td></td></tr><tr><td>9</td><td>3</td><td>4</td><td>8</td><td>Any One</td></tr><tr><td>10</td><td>3</td><td>4</td><td>9</td><td></td></tr></tbody></table><h3>Partial Warrior/Necromancer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6+2</td><td>+1</td><td>1 Warrior, +1 Any</td></tr><tr><td>2</td><td>2d6+4</td><td>+2</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6+6</td><td>+2</td><td></td></tr><tr><td>4</td><td>4d6+8</td><td>+3</td><td></td></tr><tr><td>5</td><td>5d6+10</td><td>+4</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6+12</td><td>+5</td><td></td></tr><tr><td>7</td><td>7d6+14</td><td>+5</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6+16</td><td>+6</td><td></td></tr><tr><td>9</td><td>9d6+18</td><td>+6</td><td></td></tr><tr><td>10</td><td>10d6+20</td><td>+7</td><td>+1 Any</td></tr></tbody></table><h3>Partial Expert/Necromancer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6</td><td>+0</td><td>1 Expert, +1 Any</td></tr><tr><td>2</td><td>2d6</td><td>+1</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6</td><td>+1</td><td></td></tr><tr><td>4</td><td>4d6</td><td>+2</td><td></td></tr><tr><td>5</td><td>5d6</td><td>+2</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6</td><td>+3</td><td></td></tr><tr><td>7</td><td>7d6</td><td>+3</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6</td><td>+4</td><td></td></tr><tr><td>9</td><td>9d6</td><td>+4</td><td></td></tr><tr><td>10</td><td>10d6</td><td>+5</td><td>+1 Any</td></tr></tbody></table><h3>Partial Other Mage/Necromancer</h3><table><thead><tr><th>Level</th><th>Hit Dice</th><th>Attack Bonus</th><th>Focus Picks</th></tr></thead><tbody><tr><td>1</td><td>1d6-1</td><td>+0</td><td>1 Any</td></tr><tr><td>2</td><td>2d6-2</td><td>+0</td><td>+1 Any</td></tr><tr><td>3</td><td>3d6-3</td><td>+0</td><td></td></tr><tr><td>4</td><td>4d6-4</td><td>+0</td><td></td></tr><tr><td>5</td><td>5d6-5</td><td>+1</td><td>+1 Any</td></tr><tr><td>6</td><td>6d6-6</td><td>+1</td><td></td></tr><tr><td>7</td><td>7d6-7</td><td>+1</td><td>+1 Any</td></tr><tr><td>8</td><td>8d6-8</td><td>+1</td><td></td></tr><tr><td>9</td><td>9d6-9</td><td>+1</td><td></td></tr><tr><td>10</td><td>10d6-10</td><td>+2</td><td>+1 Any</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Necromancer Effort",
+      "formula": "max(1, @magic + max(@int, @cha))",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": [
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7,
+        8,
+        9
+      ]
+    }
+  }
+}

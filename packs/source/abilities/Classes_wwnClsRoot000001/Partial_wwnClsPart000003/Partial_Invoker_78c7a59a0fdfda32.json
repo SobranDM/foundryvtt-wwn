@@ -1,0 +1,61 @@
+{
+  "_id": "78c7a59a0fdfda32",
+  "name": "Partial Invoker",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "folder": "wwnClsPart000003",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!78c7a59a0fdfda32",
+  "system": {
+    "description": "<p>The Invoker is an optional spellcasting Mage class that allows a caster to gain flexibility in casting weaker spells. In exchange, an Invoker sacrifices arts and finds more powerful spells to be more draining to cast.</p><h3>Invoker Benefits</h3><p>All Invokers gain Magic as a bonus skill, acquiring it at level-0, or level-1 if it was already level-0. Their arcane versatility requires a thorough grounding in theory.</p><p>Invokers can learn and prepare spells of the High Magic tradition, and have the same limits on casting in armor as they do. Each Invoker can prepare a number of known spells as indicated by the table each day, plus their Intelligence modifier.</p><p>Each Invoker has a number of spell points based on their level, to which is added their Intelligence modifier. When they cast the spell, they subtract its level from their available spell points for the day. So long as they have sufficient spell points left, they can cast the same spell repeatedly. Spell points refresh each morning.</p><p>Invokers do not normally gain arts; their versatility requires complete focus, barring those who take the Invoker-specific Traditional Education Focus. While it&rsquo;s possible to be a Partial Invoker, this partial class may not be mixed with another partial spellcasting class.</p><p>Invokers begin play knowing four first level High Magic spells, or two if a partial class. When they advance a level, they learn two more of any level or tradition from which they can cast, or one if a partial Invoker.</p><h3>Focus: Traditional Education</h3><p>Your Invoker has received a great deal of education in a specialist arcane spellcasting tradition such as High Magic arts, Elementalism, or Necromancy. Only Invokers can take this Focus, and it can only be taken once.</p><p><strong>Level 1:</strong> You may learn and prepare spells of your chosen tradition as well as those of High Magic. You gain arts as if a first level practitioner of that tradition, full or partial based on whether you&rsquo;re a full or partial Invoker, and your maximum Effort score is equal to your Magic skill, to a minimum of 1. You cannot gain further arts from this tradition.</p><h3>Partial Invoker Hit Dice and Attack Bonuses</h3><p>Partial Invokers use the High Mage partial-class tables for hit dice and attack bonuses when blending with other classes.</p><h3>Partial Invoker Spells</h3><table><thead><tr><th>Level</th><th>Max Spell Level</th><th>Spell Points</th><th>Spells Prepared</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1 + Int Mod</td><td>1 + Int Mod</td></tr><tr><td>2</td><td>1</td><td>1 + Int Mod</td><td>3 + Int Mod</td></tr><tr><td>3</td><td>1</td><td>2 + Int Mod</td><td>3 + Int Mod</td></tr><tr><td>4</td><td>1</td><td>2 + Int Mod</td><td>4 + Int Mod</td></tr><tr><td>5</td><td>2</td><td>3 + Int Mod</td><td>4 + Int Mod</td></tr><tr><td>6</td><td>2</td><td>3 + Int Mod</td><td>5 + Int Mod</td></tr><tr><td>7</td><td>2</td><td>4 + Int Mod</td><td>5 + Int Mod</td></tr><tr><td>8</td><td>2</td><td>4 + Int Mod</td><td>6 + Int Mod</td></tr><tr><td>9</td><td>3</td><td>5 + Int Mod</td><td>6 + Int Mod</td></tr><tr><td>10</td><td>3</td><td>6 + Int Mod</td><td>7 + Int Mod</td></tr></tbody></table>",
+    "edgeType": "class",
+    "attackProgression": "mage",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Spell Points",
+      "formula": "@int",
+      "value": 0,
+      "progression": [
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "preparedGrant": {
+      "progression": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6
+      ]
+    }
+  }
+}
