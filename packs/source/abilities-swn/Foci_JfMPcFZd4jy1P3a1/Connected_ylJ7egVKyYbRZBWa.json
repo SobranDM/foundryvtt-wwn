@@ -1,0 +1,35 @@
+{
+  "name": "Connected",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You&rsquo;re remarkably gifted at making friends and forging ties with the people around you. Wherever you go, you always seem to know somebody useful to your ends.</p><p><strong>Level 1:</strong> Gain Connect as a bonus skill. If you&rsquo;ve spent at least a week in a not-entirely-hostile location, you&rsquo;ll have built a web of contacts willing to do favors for you that are no more than mildly illegal. You can call on one favor per game day and the GM decides how far they&rsquo;ll go for you.</p><p><strong>Level 2:</strong> Once per game session, if it&rsquo;s not entirely implausible, you meet someone you know who is willing to do modest favors for you. You can decide when and where you want to meet this person, but the GM decides who they are and what they can do for you.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "connect"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "ylJ7egVKyYbRZBWa",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ylJ7egVKyYbRZBWa"
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Star Captain",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "J4rDNhrr1JxbSolF",
+      "type": "base",
+      "name": "Star Captain (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.starship.commandPointsBonus",
+            "type": "add",
+            "value": 2,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!fI0jXe9WIeZmqy7m.J4rDNhrr1JxbSolF"
+    },
+    {
+      "_id": "xwStBfYTfba5HWac",
+      "type": "base",
+      "name": "Star Captain (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.starship.combatBonusHpPercent",
+            "type": "override",
+            "value": 20,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!fI0jXe9WIeZmqy7m.xwStBfYTfba5HWac"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have a tremendous natural talent for ship combat, and can make any starship you captain a significantly more fearsome opponent. You must take the captain&rsquo;s role during a fight in order to benefit from this focus.</p><p><strong>Level 1:</strong> Gain Lead as a bonus skill. Your ship gains 2 extra Command Points at the start of each turn.</p><p><strong>Level 2:</strong> A ship you captain gains bonus hit points equal to 20% of its maximum at the start of each combat. Damage is taken from these bonus points first, and they vanish at the end of the fight and do not require repairs to replenish before the next. In addition, once per engagement, you may resolve a Crisis as an Instant action by explaining how your leadership resolves the problem.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "scene",
+    "bonusSkills": [
+      "lead"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "fI0jXe9WIeZmqy7m",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fI0jXe9WIeZmqy7m"
+}

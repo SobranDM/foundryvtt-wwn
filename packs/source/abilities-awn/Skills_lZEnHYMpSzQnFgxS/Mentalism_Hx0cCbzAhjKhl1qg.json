@@ -1,0 +1,30 @@
+{
+  "name": "Mentalism",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/psychic.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Mentalism represents a Mentalist's mastery of their particular brand of Psychic abilities.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": true,
+    "slug": "mentalism"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443015,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Hx0cCbzAhjKhl1qg",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Hx0cCbzAhjKhl1qg"
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "gBvraNRU1RllRQ9M",
+  "name": "Petrifying Stare",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.gBvraNRU1RllRQ9M"
+    }
+  },
+  "_key": "!items!gBvraNRU1RllRQ9M",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action and target a visible creature. The creature must make a Physical save or become partially petrified, losing its Move action for a number of rounds equal to half your caster level, rounded up. Flying creatures are forced to land by this art and swimming creatures will inevitably sink to the bottom.</p>",
+    "source": "Elementalist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

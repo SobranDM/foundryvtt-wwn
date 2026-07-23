@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 import { FOCUS_BONUS_SKILL_SEEDS } from "../module/helpers/focus-automation-seeds.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.join(__dirname, "..", "packs", "source", "abilities", "Foci_RHBA4gySPTttDbxD");
+const root = path.join(__dirname, "..", "packs", "source", "abilities-wwn", "Foci_RHBA4gySPTttDbxD");
 
 function walk(dir, acc = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

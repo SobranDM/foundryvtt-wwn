@@ -1,0 +1,51 @@
+{
+  "_id": "aEDgIZUrM5uW3hPM",
+  "name": "Style Weaponry",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.aEDgIZUrM5uW3hPM"
+    }
+  },
+  "_key": "!items!aEDgIZUrM5uW3hPM",
+  "system": {
+    "subType": "art",
+    "description": "<p>Pick three general classes of weapons, such as &ldquo;swords&rdquo;, &ldquo;bows&rdquo;, &ldquo;axes&rdquo;, &ldquo;daggers&rdquo;, or the like. When using weapons of those classes, you may use Punch for hit rolls instead of Stab or Shoot. Your Punch skill does not add to the damage done by these weapons, however, though the benefits of <em><strong>Martial Style</strong></em> apply to their hit rolls.</p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

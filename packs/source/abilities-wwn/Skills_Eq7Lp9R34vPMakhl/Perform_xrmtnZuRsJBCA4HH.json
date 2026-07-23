@@ -1,0 +1,34 @@
+{
+  "name": "Perform",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/perform.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.8KDg33STngm5X7uN"
+    }
+  },
+  "system": {
+    "description": "Sing, act, dance, orate, or otherwise perform impressively for an audience. Compose music, plays, writings, or other works of performance art. Most performers will have a particular field they excel at, though polymaths might exist if the PC’s background is appropriate for such versatility.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "perform"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806154261,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "xrmtnZuRsJBCA4HH",
+  "folder": "Eq7Lp9R34vPMakhl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xrmtnZuRsJBCA4HH"
+}

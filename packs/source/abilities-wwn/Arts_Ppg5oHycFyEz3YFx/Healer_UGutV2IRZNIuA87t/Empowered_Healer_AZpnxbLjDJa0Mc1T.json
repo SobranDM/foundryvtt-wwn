@@ -1,0 +1,51 @@
+{
+  "_id": "AZpnxbLjDJa0Mc1T",
+  "name": "Empowered Healer",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/healer-art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.AZpnxbLjDJa0Mc1T"
+    }
+  },
+  "_key": "!items!AZpnxbLjDJa0Mc1T",
+  "system": {
+    "subType": "art",
+    "description": "<p>Your <em><strong>Healing Touch</strong></em> becomes more powerful, adding your level to any healing.</p>",
+    "source": "Healer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

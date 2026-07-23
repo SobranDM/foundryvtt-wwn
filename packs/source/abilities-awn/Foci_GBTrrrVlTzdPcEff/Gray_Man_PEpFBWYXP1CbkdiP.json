@@ -1,0 +1,35 @@
+{
+  "name": "Gray Man",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You are uncannily unremarkable. No one thinks to look twice at you, and you always seem an unprofitable mark for violence or theft.</p><p><strong>Level 1:</strong> Gain Sneak as a bonus skill. You know how to conceal your carried belongings so that you never appear to have anything worth stealing. Enemies will not target you in combat unless you are the only practical target or you are making yourself an immediate threat.</p><p><strong>Level 2:</strong> You can dress and carry yourself to blend into any group unless it&rsquo;s so small that all members know each other. Once per day, as an On Turn action, gain two System Strain to be forgotten or ignored by everyone around you for the rest of the scene until you act in such a way as to draw attention. This ability can&rsquo;t be used if someone is already paying specific attention to you.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "PEpFBWYXP1CbkdiP",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PEpFBWYXP1CbkdiP"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Survivalist",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "NXsCHvnJICJ9dsvN",
+      "type": "base",
+      "name": "Survivalist (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!12kI6rRWzRBEWBla.NXsCHvnJICJ9dsvN"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are a grizzled survivor of harsh environments and bitter privation. A lifestyle that would rapidly kill an office worker is no more than daily living for you.</p><p><strong>Level 1:</strong> Gain Survive as a bonus skill. You can sleep without fire or shelter without suffering privation, barring midwinter conditions. A foraging party you are with rolls all foraging skill checks twice and takes the better roll. You can find enough food and water to sustain yourself while traveling normally through any non-desolate landscape.</p><p><strong>Level 2:</strong> Your Constitution modifier increases by +1, to a maximum of +2. You sleep so lightly that you count as being awake for purposes of detecting danger or unusual events around the campsite.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "survive"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "12kI6rRWzRBEWBla",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!12kI6rRWzRBEWBla"
+}

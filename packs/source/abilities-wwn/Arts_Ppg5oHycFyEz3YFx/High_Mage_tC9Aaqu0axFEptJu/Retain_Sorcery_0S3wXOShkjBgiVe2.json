@@ -1,0 +1,51 @@
+{
+  "_id": "0S3wXOShkjBgiVe2",
+  "name": "Retain Sorcery",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.0S3wXOShkjBgiVe2"
+    }
+  },
+  "_key": "!items!0S3wXOShkjBgiVe2",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action after casting a spell; it does not count against your casting limits for the day. You can use this art no more than once per day, and the stress of using it prevents you from casting another spell before the end of your next turn.</p>",
+    "source": "High Mage",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

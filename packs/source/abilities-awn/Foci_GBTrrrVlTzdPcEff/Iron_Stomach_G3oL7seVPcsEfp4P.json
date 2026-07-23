@@ -1,0 +1,60 @@
+{
+  "name": "Iron Stomach",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "gogsTkUrWurbmI7u",
+      "type": "base",
+      "name": "Iron Stomach (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.saves.base.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!G3oL7seVPcsEfp4P.gogsTkUrWurbmI7u"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are capable of eating even the most unappetizing, badly-contaminated, and semi-rotten foodstuffs without incurring harm, though you still can&rsquo;t eat outright poison or other wholly inedible substances.</p><p><strong>Level 1:</strong> Gain Survive as a bonus skill. You do not need to make a disease check when drinking unfiltered water and you need only one ration of food every two days. You gain a +2 bonus on all saves versus poison or diseases.</p><p><strong>Level 2:</strong> Your System Strain maximum increases by +2, to a maximum of 20. By constant casual foraging of insects, grasses, bark, and other semi-edible substances you can feed yourself in any natural environment. You become immune to poisons short of military-grade engineered toxins.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "survive"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "G3oL7seVPcsEfp4P",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G3oL7seVPcsEfp4P"
+}

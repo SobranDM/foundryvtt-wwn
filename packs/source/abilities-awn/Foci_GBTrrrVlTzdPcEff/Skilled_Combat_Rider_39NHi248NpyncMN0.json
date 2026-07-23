@@ -1,0 +1,36 @@
+{
+  "name": "Skilled Combat Rider",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You were meant to fight from beast-back. You can always find a horse or setting-equivalent riding beast with a week of searching if any are to be had in the area. This may be a self-broken wild mustang or an &ldquo;acquired&rdquo; animal. Only you can ride this mount.</p><p><strong>Level 1:</strong> Gain Drive or Ride as a bonus skill. Your mount shares your AC, if better, and once per round you can take damage in lieu of harm to your mount. Any beast you ride counts as a combat-trained animal in terms of the mounted combat rules.</p><p><strong>Level 2:</strong> Any beast you ride counts as a war beast for training purposes. You suffer no penalty for ranged mounted attacks. Your mount gains 10 bonus hit points to their maximum. These bonus hit points are refreshed at the start of each fight.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "drive",
+      "ride"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "39NHi248NpyncMN0",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!39NHi248NpyncMN0"
+}

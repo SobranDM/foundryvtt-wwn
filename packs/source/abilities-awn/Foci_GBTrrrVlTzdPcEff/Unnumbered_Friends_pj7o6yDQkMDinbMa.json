@@ -1,0 +1,60 @@
+{
+  "name": "Unnumbered Friends",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "wdwCKJjkfpDfBsp8",
+      "type": "base",
+      "name": "Unnumbered Friends (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!pj7o6yDQkMDinbMa.wdwCKJjkfpDfBsp8"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have an astonishing ability to find or make friends in the most unlikely places.</p><p><strong>Level 1:</strong> Gain Connect as a bonus skill. Once per game session, when dealing with a group or organization, the GM picks someone among them as a friend of yours or one who takes a great liking to you. They&rsquo;ll do favors that don&rsquo;t expose them to serious danger or loss, and the friendship will continue unless you or your allies directly harm them or things they love.</p><p><strong>Level 2:</strong> Your Charisma modifier increases by +1, to a maximum of +2. Once per session, spend an hour socializing with someone. They become your good friend unless they have a very good reason not to be, and will remain so until you or your allies betray the friendship.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "connect"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "pj7o6yDQkMDinbMa",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pj7o6yDQkMDinbMa"
+}

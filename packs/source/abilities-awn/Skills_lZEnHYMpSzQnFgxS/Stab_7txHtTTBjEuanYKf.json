@@ -1,0 +1,30 @@
+{
+  "name": "Stab",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/stab.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Use it as a combat skill when wielding melee weapons, whether primitive or complex. It can also be used when throwing weapons in lieu of Shoot.",
+    "ownedLevel": -1,
+    "score": "str",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "stab"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443012,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7txHtTTBjEuanYKf",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7txHtTTBjEuanYKf"
+}

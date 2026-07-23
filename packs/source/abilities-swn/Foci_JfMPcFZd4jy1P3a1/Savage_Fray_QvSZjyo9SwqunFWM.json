@@ -1,0 +1,84 @@
+{
+  "name": "Savage Fray",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "g47cHfoEsvB8sVJ1",
+      "type": "base",
+      "name": "Savage Fray (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.endOfTurnAdjacentShock",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!QvSZjyo9SwqunFWM.g47cHfoEsvB8sVJ1"
+    },
+    {
+      "_id": "8Bo57KjgFaII42H4",
+      "type": "base",
+      "name": "Savage Fray (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.missAfterFirstMeleeHit",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!QvSZjyo9SwqunFWM.8Bo57KjgFaII42H4"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are a whirlwind of bloody havoc in melee combat, and can survive being surrounded far better than most combatants.</p><p><strong>Level 1:</strong> Gain Stab as a bonus skill. All enemies adjacent to you at the end of your turn whom you have not attacked suffer the Shock damage of your weapon if their Armor Class is not too high to be affected.</p><p><strong>Level 2:</strong> After suffering your first melee hit in a round, any further melee attacks from other assailants automatically miss you. If the attacker who hits you has multiple attacks, they may attempt all of them, but other foes around you simply miss.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "stab"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "QvSZjyo9SwqunFWM",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QvSZjyo9SwqunFWM"
+}

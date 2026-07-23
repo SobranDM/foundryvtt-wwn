@@ -1,0 +1,51 @@
+{
+  "_id": "2RT2kIVB880WoCgP",
+  "name": "Mob Justice",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.2RT2kIVB880WoCgP"
+    }
+  },
+  "_key": "!items!2RT2kIVB880WoCgP",
+  "system": {
+    "subType": "art",
+    "description": "<p>As an Instant action, Commit Effort for the day to become impervious to the <em>Make a Swarm Attack</em> maneuver as described on page 44. Your assailants cannot use this maneuver against you for the rest of the scene, and you become immune to Shock as long as you remain in melee with at least two foes. Making use of this benefit disrupts any spellcasting you may attempt, however, due to the violent motion required.</p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
+}

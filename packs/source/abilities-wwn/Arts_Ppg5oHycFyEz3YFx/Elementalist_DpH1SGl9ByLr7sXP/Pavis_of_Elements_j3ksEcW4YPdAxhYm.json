@@ -1,0 +1,51 @@
+{
+  "_id": "j3ksEcW4YPdAxhYm",
+  "name": "Pavis of Elements",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.j3ksEcW4YPdAxhYm"
+    }
+  },
+  "_key": "!items!j3ksEcW4YPdAxhYm",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action to conjure an elemental barrier around yourself. The barrier improves your Armor Class by +4 and remains as long as the Effort remains Committed. This bonus stacks with other effects, but cannot increase AC above 18, regardless of the combinations.</p>",
+    "source": "Elementalist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

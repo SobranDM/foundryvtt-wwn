@@ -1,0 +1,51 @@
+{
+  "_id": "y4FKLNG5k4QNwutW",
+  "name": "Preparatory Countermagic",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.y4FKLNG5k4QNwutW"
+    }
+  },
+  "_key": "!items!y4FKLNG5k4QNwutW",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene when you are affected by a spell you have prepared, including when you are standing in the area of effect of one of your own damaging spells. You are unaffected by the spell&rsquo;s direct effects.</p>",
+    "source": "High Mage",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

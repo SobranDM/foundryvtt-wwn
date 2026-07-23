@@ -1,6 +1,7 @@
-import { promises as fs } from "fs";
 import path from "path";
 import crypto from "crypto";
+import fsSync from "fs";
+import { makeFolder, writeSourceDoc, buildFoldersById, readSourceDocs } from "./pack-folder-paths.mjs";
 
 function id16() {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -44,8 +45,8 @@ function iconFor(slug) {
   return `systems/wwn/assets/icons/skills/${map[slug] ?? "know"}.png`;
 }
 
-function skillDoc({ name, slug, description, score, secondary }) {
-  const _id = id16();
+function skillDoc({ name, slug, description, score, secondary }, folderId, existingId) {
+  const _id = existingId || id16();
   return {
     name,
     type: "skill",
@@ -69,23 +70,57 @@ function skillDoc({ name, slug, description, score, secondary }) {
       lastModifiedBy: null,
     },
     _id,
-    folder: null,
+    folder: folderId,
     sort: 0,
     ownership: { default: 0 },
     _key: `!items!${_id}`,
   };
 }
 
-async function writePack(packName, skills) {
-  const dir = path.join("packs/source", packName);
+/**
+ * Write skills into abilities-{line}/Skills, preserving existing skill _ids by slug.
+ * @param {string} abilitiesPack  e.g. abilities-swn
+ * @param {object[]} skills
+ */
+async function writeSkillsIntoAbilities(abilitiesPack, skills) {
+  const dir = path.join("packs/source", abilitiesPack);
   await fs.mkdir(dir, { recursive: true });
-  for (const s of skills) {
-    const doc = skillDoc(s);
-    const file = `${s.name.replace(/[^A-Za-z0-9]+/g, "_")}_${doc._id}.json`;
-    await fs.writeFile(path.join(dir, file), `${JSON.stringify(doc, null, 2)}\n`);
+
+  const docs = [...readSourceDocs(dir)];
+  let skillsFolder = docs.find((d) => d._key?.startsWith("!folders") && d.name === "Skills" && !d.folder);
+  if (!skillsFolder) {
+    skillsFolder = makeFolder("Skills", "Item", null, `${abilitiesPack}-skills`);
   }
-  console.log(`${packName}: ${skills.length} skills`);
+
+  const existingBySlug = new Map();
+  for (const d of docs) {
+    if (d.type === "skill" && d.system?.slug) existingBySlug.set(d.system.slug, d);
+  }
+
+  function walkFiles(p, acc = []) {
+    for (const e of fsSync.readdirSync(p, { withFileTypes: true })) {
+      const full = path.join(p, e.name);
+      if (e.isDirectory()) walkFiles(full, acc);
+      else if (e.name.endsWith(".json") && !e.name.startsWith("_")) acc.push(full);
+    }
+    return acc;
+  }
+  for (const file of walkFiles(dir)) {
+    const raw = JSON.parse(fsSync.readFileSync(file, "utf8"));
+    if (raw.type === "skill") fsSync.unlinkSync(file);
+  }
+
+  const foldersById = buildFoldersById([...docs.filter((d) => d.type !== "skill"), skillsFolder]);
+  writeSourceDoc(dir, skillsFolder, foldersById);
+
+  for (const s of skills) {
+    const prev = existingBySlug.get(s.slug);
+    const doc = skillDoc(s, skillsFolder._id, prev?._id);
+    writeSourceDoc(dir, doc, foldersById);
+  }
+  console.log(`${abilitiesPack}: ${skills.length} skills (folder ${skillsFolder._id})`);
 }
+
 
 const swn = [
   {
@@ -415,5 +450,5 @@ const awn = [
   },
 ];
 
-await writePack("skills-swn", swn);
-await writePack("skills-awn", awn);
+await writeSkillsIntoAbilities("abilities-swn", swn);
+await writeSkillsIntoAbilities("abilities-awn", awn);

@@ -1,0 +1,60 @@
+{
+  "name": "Strong Back",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "z7viSVxkTUeGH7yi",
+      "type": "base",
+      "name": "Strong Back (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!U2oikezRv70s7tEn.z7viSVxkTUeGH7yi"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You can carry a remarkable amount of gear for someone of your size and strength, gaining special benefits in Encumbrance.</p><p><strong>Level 1:</strong> Gain Exert as a bonus skill. Your Strength is treated as 18 for purposes of Encumbrance. You can carry a downed teammate as if they were 6 points of Encumbrance, and it does not slow down your overland travel.</p><p><strong>Level 2:</strong> Your Strength modifier increases by +1, to a maximum of +2. You can use your Stowed Encumbrance as if it were Readied, and it takes you no extra time to break open bundled gear.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "exert"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "U2oikezRv70s7tEn",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!U2oikezRv70s7tEn"
+}

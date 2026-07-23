@@ -1,0 +1,33 @@
+{
+  "name": "Unique Gift",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Your PC has a unique type of mutation, an exceptional human ability, or some experimental genetic modification that grants them some benefit that isn&rsquo;t covered under existing options. This benefit shouldn&rsquo;t be a simple bonus to something you already do; it should be a power or ability that gives you options that you just wouldn&rsquo;t have otherwise. It&rsquo;s up to the GM to decide what&rsquo;s reasonable and fair to be covered under this gift, and whatever they allow should be roughly equivalent to the existing focus options in overall power. If an ability is particularly powerful or a mutation is especially draining, it might require the user to take System Strain to use it. As a general rule this ability should be better than a piece of gear the PC could buy, since the player is spending a very limited resource when they make this focus pick.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "DRuDt9vxo6xMJdNX",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DRuDt9vxo6xMJdNX"
+}

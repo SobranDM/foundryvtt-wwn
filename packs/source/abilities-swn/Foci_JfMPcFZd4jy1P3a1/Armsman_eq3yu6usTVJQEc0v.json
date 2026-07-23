@@ -1,0 +1,96 @@
+{
+  "name": "Armsman",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "h804HMLV8rbfbGfQ",
+      "type": "base",
+      "name": "Armsman (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.meleeDamage",
+            "type": "add",
+            "value": "@stab",
+            "phase": "final"
+          },
+          {
+            "key": "system.combat.meleeShock",
+            "type": "add",
+            "value": "@stab",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!eq3yu6usTVJQEc0v.h804HMLV8rbfbGfQ"
+    },
+    {
+      "_id": "6E8wZjPEi0LtdJp0",
+      "type": "base",
+      "name": "Armsman (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.meleeCountsAsTl4",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "system.combat.meleeMissDamage",
+            "type": "override",
+            "value": "1d4",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!eq3yu6usTVJQEc0v.6E8wZjPEi0LtdJp0"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have an unusual competence with thrown weapons and melee attacks. This focus&rsquo; benefits do not apply to unarmed attacks or projectile weapons. For thrown weapons, you can&rsquo;t use the benefits of the <em><strong>Armsman</strong></em> focus at the same time as <em><strong>Gunslinger</strong></em>.</p><p><strong>Level 1:</strong> Gain Stab as a bonus skill. You can draw or sheath a Stowed melee or thrown weapon as an Instant action. You may add your Stab skill level to a melee or thrown weapon&rsquo;s damage roll or Shock damage, assuming it has any to begin with.</p><p><strong>Level 2:</strong> Your primitive melee and thrown weapons count as TL4 weapons for the purpose of overcoming advanced armors. Even on a miss with a melee weapon, you do an unmodified 1d4 damage to the target, plus any Shock damage. This bonus damage doesn&rsquo;t apply to thrown weapons or attacks that use the Punch skill.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "stab"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "eq3yu6usTVJQEc0v",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eq3yu6usTVJQEc0v"
+}

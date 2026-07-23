@@ -27,6 +27,11 @@ import {
   syncActorFocusBonusSkills,
 } from "./helpers/focus-bonus-skills.mjs";
 import { promptFocusSkillBonus } from "./helpers/focus-skill-dice.mjs";
+import {
+  promptSparkSkillPool,
+  notifyPsychicFocusGrant,
+  syncWildPsychicEffort,
+} from "./helpers/focus-extra-prompts.mjs";
 import { grantClassEdgeCompanions } from "./helpers/class-edge-grants.mjs";
 import { isPc } from "./helpers/actor-types.mjs";
 import { registerHelpers } from "./helpers.js";
@@ -187,6 +192,9 @@ Hooks.once("init", async function () {
         if ((Number(item.system.bonusDice) || 0) > 0 && !item.system.skillBonus?.trim()) {
           await promptFocusSkillBonus(item, item.parent);
         }
+        await promptSparkSkillPool(item, item.parent);
+        notifyPsychicFocusGrant(item);
+        await syncWildPsychicEffort(item);
       }
     }
   });
@@ -199,6 +207,7 @@ Hooks.once("init", async function () {
       const flat = foundry.utils.flattenObject(changes);
       if (isPc(item.parent) && ["system.ownedLevel", "system.bonusSkillsChosen"].some((k) => k in flat)) {
         await syncFocusBonusSkills(item, item.parent, { prompt: false });
+        await syncWildPsychicEffort(item);
       }
       if (
         isPc(item.parent)

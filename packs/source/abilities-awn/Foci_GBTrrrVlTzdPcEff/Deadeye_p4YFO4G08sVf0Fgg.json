@@ -1,0 +1,60 @@
+{
+  "name": "Deadeye",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "GXdRJzBdaSTi3g6L",
+      "type": "base",
+      "name": "Deadeye (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.rangeDamage",
+            "type": "add",
+            "value": "@shoot",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!p4YFO4G08sVf0Fgg.GXdRJzBdaSTi3g6L"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have a gift with ranged weapons. While this talent most commonly applies to guns, it is also applicable to thrown weapons or other ranged weapons that can be used with the Shoot skill. For thrown weapons, you can&rsquo;t use the benefits of the <em><strong>Armsmaster</strong></em> focus at the same time as <em><strong>Deadeye</strong></em>.</p><p><strong>Level 1:</strong> Gain Shoot as a bonus skill. You can Ready a Stowed ranged weapon as an Instant action. You may use a rifle or two-handed ranged weapon even when an enemy is within melee range, albeit at a -4 hit penalty. You may add your Shoot skill level to a ranged weapon&rsquo;s damage roll.</p><p><strong>Level 2:</strong> You can reload guns, crossbows, or other slow-loading weapons as an On Turn action, provided they don&rsquo;t take more than a round to reload. You can use ranged weapons of any size in melee without penalty. Once per scene, as an On Turn action when target shooting at an inanimate, non-creature target, you automatically hit unless you roll a 2 on your Shoot skill check or the shot is physically impossible.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "p4YFO4G08sVf0Fgg",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!p4YFO4G08sVf0Fgg"
+}

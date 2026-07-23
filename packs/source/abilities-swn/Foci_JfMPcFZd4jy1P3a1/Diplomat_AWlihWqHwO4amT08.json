@@ -1,0 +1,35 @@
+{
+  "name": "Diplomat",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You know how to get your way in personal negotiations, and can manipulate the attitudes of those around you. Even so, while smooth words are versatile, they&rsquo;ll only work if your interlocutor is actually willing to listen to you.</p><p><strong>Level 1:</strong> Gain Talk as a bonus skill. You speak all the languages common to the sector and can learn new ones to a workable level in a week, becoming fluent in a month. Reroll 1s on any skill check dice related to negotiation or diplomacy.</p><p><strong>Level 2:</strong> Once per game session, shift an intelligent NPC&rsquo;s reaction roll one step closer to friendly if you can talk to them for at least thirty seconds.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "talk"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "AWlihWqHwO4amT08",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AWlihWqHwO4amT08"
+}

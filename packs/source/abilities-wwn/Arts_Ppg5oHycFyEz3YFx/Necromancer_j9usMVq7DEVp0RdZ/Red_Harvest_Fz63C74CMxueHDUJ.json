@@ -1,0 +1,58 @@
+{
+  "_id": "Fz63C74CMxueHDUJ",
+  "name": "Red Harvest",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+  "effects": [],
+  "folder": "j9usMVq7DEVp0RdZ",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.Fz63C74CMxueHDUJ"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>You are empowered by death. As an Instant action, whenever an intelligent living creature with at least one hit die perishes within fifty feet of you, Commit Effort for the day to either heal 1d6 plus your level in lost hit points or gain a +4 bonus on your next hit roll this scene. This art cannot be stacked, and it can be used only once per round.</p>",
+    "source": "Necromancer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "1d6+@level",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Fz63C74CMxueHDUJ"
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vN2BMl1O6BRFFTsZ",
+  "name": "Wizard's Grandeur",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.vN2BMl1O6BRFFTsZ"
+    }
+  },
+  "_key": "!items!vN2BMl1O6BRFFTsZ",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action. As long as it remains Committed, you will not become dirty, sweaty, stained, or rumpled regardless of the circumstances. Noxious substances will slide off you without staining and you will remain comfortable regardless of your attire in any normal climate. You may sleep comfortably without shelter or bedding as per the privation rules on page 51.</p>",
+    "source": "High Mage",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "mgBwP0sTLP1VFg1m": 3
+  }
+}

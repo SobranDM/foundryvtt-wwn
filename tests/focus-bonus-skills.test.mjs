@@ -85,6 +85,27 @@ describe("focus bonus skill resolution", () => {
     assert.equal(resolveBonusSkillSlugs(focus), null);
   });
 
+  it("Psychic Training and Spark of Brilliance use open modes", () => {
+    assert.equal(openBonusMode({ name: "Psychic Training" }), "psychic");
+    assert.equal(openBonusMode({ name: "Spark of Brilliance" }), "any");
+    assert.equal(
+      focusNeedsBonusSkillChoice({
+        name: "Psychic Training",
+        system: { bonusSkills: [], bonusSkillsPick: 1, bonusSkillsChosen: [] },
+      }),
+      true,
+    );
+  });
+
+  it("Apex Predator grants both skills without choice", () => {
+    const focus = {
+      name: "Apex Predator",
+      system: { bonusSkills: ["survive", "shoot"], bonusSkillsPick: 2, bonusSkillsChosen: [] },
+    };
+    assert.equal(focusNeedsBonusSkillChoice(focus), false);
+    assert.deepEqual(resolveChoiceBonusSkillSlugs(focus), ["survive", "shoot"]);
+  });
+
   it("Orc always grants survive plus stab/punch choice", () => {
     const focus = {
       name: "Origin Focus: Orc",

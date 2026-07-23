@@ -1,0 +1,62 @@
+{
+  "_id": "4STQylBCJsd0H02c",
+  "name": "Fury of the Elements",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
+  "effects": [],
+  "folder": "yan5em9k0iZiFxv4",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.4STQylBCJsd0H02c"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>A combination of molten rock, searing pyroclastic winds, and superheated steam erupts forth to ravage a chosen target point within two hundred feet per caster level. The cataclysmic ruin smites everything within thirty feet of the target point for 10d6 damage, destroying all conventional structures. The zone of devastation then moves 60 feet in a random direction at the start of the next round, blasting everything in its path. The zone will continue to wander in this fashion for [[/roll 1d6]] rounds in total before dying out. The molten remnants of the spell remain after this duration, a hazard for whomever enters the area for the rest of the day.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "10d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "200 ft. per level",
+      "duration": "1d6 rounds"
+    }
+  },
+  "_key": "!items!4STQylBCJsd0H02c"
+}

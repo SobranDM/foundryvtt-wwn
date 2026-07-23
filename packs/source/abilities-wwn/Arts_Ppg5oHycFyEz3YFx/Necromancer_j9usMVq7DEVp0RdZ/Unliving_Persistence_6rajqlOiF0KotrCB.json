@@ -1,0 +1,51 @@
+{
+  "_id": "6rajqlOiF0KotrCB",
+  "name": "Unliving Persistence",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+  "effects": [],
+  "folder": "j9usMVq7DEVp0RdZ",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.6rajqlOiF0KotrCB"
+    }
+  },
+  "_key": "!items!6rajqlOiF0KotrCB",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action to automatically stabilize when Mortally Wounded. You may use this ability to benefit others if you are able to touch them. This ability cannot save a subject that has experienceddismemberment, incineration, or other extremely final deaths.</p>",
+    "source": "Necromancer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

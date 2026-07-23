@@ -1,0 +1,51 @@
+{
+  "_id": "zJcUPxyrSJ5Lg0KH",
+  "name": "Restrained Casting",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.zJcUPxyrSJ5Lg0KH"
+    }
+  },
+  "_key": "!items!zJcUPxyrSJ5Lg0KH",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an Instant action when casting a High Magic spell. You may do so in perfect silence and without need for somatic gestures, though damage will still disrupt the casting.</p>",
+    "source": "High Mage",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

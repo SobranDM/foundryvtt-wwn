@@ -121,9 +121,9 @@ WWN.headerTrackers = [
 
 /** Pack ids keyed by the `skillSet` world setting. */
 WWN.skillSetPacks = {
-  wwn: "wwn.skills-wwn",
-  swn: "wwn.skills-swn",
-  awn: "wwn.skills-awn",
+  wwn: "wwn.abilities-wwn",
+  swn: "wwn.abilities-swn",
+  awn: "wwn.abilities-awn",
 };
 
 /** Combat skills are exempt from the skills.floor (Polymath) derivation. */

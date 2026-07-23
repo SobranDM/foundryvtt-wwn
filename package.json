@@ -12,6 +12,7 @@
     "test": "node --test tests/**/*.test.mjs",
     "migrate:packs": "node ./build/migrate-packs.mjs",
     "generate:skills": "node ./build/generate-swn-awn-skills.mjs",
+    "generate:foci": "node ./build/generate-swn-awn-foci.mjs",
     "generate:starship-fittings": "node ./build/generate-starship-fittings.mjs",
     "generate:example-starships": "node ./build/generate-example-starships.mjs",
     "generate:armor-fittings": "node ./build/generate-armor-fittings.mjs",

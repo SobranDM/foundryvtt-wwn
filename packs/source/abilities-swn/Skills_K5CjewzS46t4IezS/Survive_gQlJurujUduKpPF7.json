@@ -1,0 +1,30 @@
+{
+  "name": "Survive",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/survive.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Obtain the basics of food, water, and shelter in hostile environments, along with avoiding their natural perils. Roll it to handle animals, navigate difficult terrain, scrounge urban resources, make basic tools, and avoid wild beasts or gangs.",
+    "ownedLevel": -1,
+    "score": "wis",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "survive"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442997,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "gQlJurujUduKpPF7",
+  "folder": "K5CjewzS46t4IezS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gQlJurujUduKpPF7"
+}

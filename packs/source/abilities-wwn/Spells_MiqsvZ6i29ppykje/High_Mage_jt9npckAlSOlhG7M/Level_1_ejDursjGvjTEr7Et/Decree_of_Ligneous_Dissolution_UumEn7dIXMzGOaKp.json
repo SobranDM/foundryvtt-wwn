@@ -1,0 +1,62 @@
+{
+  "_id": "UumEn7dIXMzGOaKp",
+  "name": "Decree of Ligneous Dissolution",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
+  "effects": [],
+  "folder": "ejDursjGvjTEr7Et",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.UumEn7dIXMzGOaKp"
+    }
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>Wood, linen, cotton, rope, and other plant- or fungus-derived matter is annihilated by a wave of entropic force that washes through an area near the caster. The mage targets a point within one hundred feet per caster level and designates a number of contiguous 10-foot cubes within that area equal to or less than their caster level. All non-magical plant matter within that area immediately erodes away to dust. Enchanted objects of plant matter cannot be affected, but ordinary plant-based clothing, bows, or wooden-hafted weapons will be destroyed. If used against plant-based monsters, the spell does 1d10 damage per caster level, with a Physical save for half.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 1,
+    "prepared": true,
+    "activation": {
+      "roll": "(@level)d10",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100 ft. per level",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities-wwn.UumEn7dIXMzGOaKp",
+    "duplicateSource": null
+  },
+  "_key": "!items!UumEn7dIXMzGOaKp"
+}

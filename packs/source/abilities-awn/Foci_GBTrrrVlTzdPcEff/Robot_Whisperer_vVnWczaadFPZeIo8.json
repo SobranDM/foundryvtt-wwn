@@ -1,0 +1,36 @@
+{
+  "name": "Robot Whisperer",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have an intuitive knack for dealing with robotic entities or AIs, whether diplomatically or otherwise.</p><p><strong>Level 1:</strong> Gain Fix or Program as a bonus skill. Once per day, as an Instant action, reroll any social skill check made involving an expert system robot, VI, or AI. Gain a +2 bonus on all Reaction Rolls involving robots. Gain a +4 bonus on hit and damage rolls toward robots, and you can harm them even with primitive weapons or unarmed attacks.</p><p><strong>Level 2:</strong> You have mastered esoteric override codes. Once per scene, as a Main Action, issue a command to an expert system robot that is no longer than two sentences. The robot gets a Mental save to resist at a penalty equal to your Fix or Program skill level; on a failure, it obeys that command for up to a scene, even if suicidal. VIs and AIs cannot be controlled this way.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "fix",
+      "program"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "vVnWczaadFPZeIo8",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vVnWczaadFPZeIo8"
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "vMWotoySMAKnljFU",
+  "name": "Bonetalker",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+  "effects": [],
+  "folder": "j9usMVq7DEVp0RdZ",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.vMWotoySMAKnljFU"
+    }
+  },
+  "_key": "!items!vMWotoySMAKnljFU",
+  "system": {
+    "subType": "art",
+    "description": "<p>You can see and communicate with any undead creature, regardless of a shared language or the creature&rsquo;s natural state of invisibility. By Committing Effort for the scene you can sense the surface thoughts of any visible undead, including an impression of any commands or behavior it has been ordered to carry out. Unintelligent undead will not attack you or your companions unless specifically compelled to do so by a command or a master. Even intelligent undead will generally pause at least for an initial parley before attacking.</p>",
+    "source": "Necromancer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Natural Immunity",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "FYU7AbeztZxjVHlm",
+      "type": "base",
+      "name": "Natural Immunity (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.saves.base.mod",
+            "type": "add",
+            "value": 4,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!SEHbW0Vrif3VrfDz.FYU7AbeztZxjVHlm"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have a remarkably strong immune system and are impervious to most ordinary sicknesses.</p><p><strong>Level 1:</strong> Your maximum System Strain increases by 2 points, up to a maximum of 20. You gain a +4 bonus on all saving throws versus diseases, and any diseases you incur are reduced one level of severity, with Mild diseases automatically resisted.</p><p><strong>Level 2:</strong> As level 1, but your maximum System Strain increases by a further +2 to a maximum of 22. You are immune to all normal diseases.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "SEHbW0Vrif3VrfDz",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SEHbW0Vrif3VrfDz"
+}

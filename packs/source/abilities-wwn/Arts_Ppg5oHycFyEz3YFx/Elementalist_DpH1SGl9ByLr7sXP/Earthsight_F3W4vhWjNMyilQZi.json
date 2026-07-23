@@ -1,0 +1,58 @@
+{
+  "_id": "F3W4vhWjNMyilQZi",
+  "name": "Earthsight",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.F3W4vhWjNMyilQZi"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as an On Turn action. For the rest of the scene, you can see the outlines of solid objects even in perfect darkness, and can peer through a number of feet of earth or stone equal to your character level.</p>",
+    "source": "Elementalist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!F3W4vhWjNMyilQZi"
+}

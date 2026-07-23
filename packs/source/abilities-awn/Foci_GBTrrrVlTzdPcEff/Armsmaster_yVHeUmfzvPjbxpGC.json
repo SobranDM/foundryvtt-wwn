@@ -1,0 +1,96 @@
+{
+  "name": "Armsmaster",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "YrYmhi9DuenxPlVJ",
+      "type": "base",
+      "name": "Armsmaster (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.meleeDamage",
+            "type": "add",
+            "value": "@stab",
+            "phase": "final"
+          },
+          {
+            "key": "system.combat.meleeShock",
+            "type": "add",
+            "value": "@stab",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!yVHeUmfzvPjbxpGC.YrYmhi9DuenxPlVJ"
+    },
+    {
+      "_id": "LNRtzJiGpM8VU3zv",
+      "type": "base",
+      "name": "Armsmaster (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.treatAllMeleeAsAcTen",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "system.combat.meleeAttack",
+            "type": "add",
+            "value": 1,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!yVHeUmfzvPjbxpGC.LNRtzJiGpM8VU3zv"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have an unusual competence with thrown weapons and melee attacks. This focus&rsquo; benefits do not apply to unarmed attacks or non-thrown projectile weapons. This focus&rsquo; bonuses also don&rsquo;t stack with <em><strong>Deadeye</strong></em> or other foci that add a skill&rsquo;s level to your damage or Shock.</p><p><strong>Level 1:</strong> Gain Stab as a bonus skill. You can Ready a Stowed melee or thrown weapon as an Instant action. You may add your Stab skill level to a melee or thrown weapon&rsquo;s damage roll or Shock damage, assuming it has any to begin with.</p><p><strong>Level 2:</strong> The Shock from your melee attacks always treats the target as if they have AC 10. Gain a +1 bonus to hit with all thrown or melee attacks.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "stab"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "yVHeUmfzvPjbxpGC",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yVHeUmfzvPjbxpGC"
+}

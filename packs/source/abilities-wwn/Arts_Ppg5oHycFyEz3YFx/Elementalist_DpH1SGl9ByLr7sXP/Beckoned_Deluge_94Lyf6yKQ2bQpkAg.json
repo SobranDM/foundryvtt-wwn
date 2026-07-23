@@ -1,0 +1,58 @@
+{
+  "_id": "94Lyf6yKQ2bQpkAg",
+  "name": "Beckoned Deluge",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-art.png",
+  "effects": [],
+  "folder": "DpH1SGl9ByLr7sXP",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.94Lyf6yKQ2bQpkAg"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as a Main Action to conjure a considerable amount of water at a visible point within fifty feet per caster level. This water is sufficient to drench one 10-foot cube of matter per character level, making mundane bowstrings useless, extinguishing flames, and inflicting 1d6 damage per caster level on fiery supernatural creatures. This water persists indefinitely after its conjuration and is sufficient to hydrate ten people per caster level.</p>",
+    "source": "Elementalist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "(@level)d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!94Lyf6yKQ2bQpkAg"
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "pc8jwXR7JUYG2TNE",
+  "name": "Calculation of the Phantasmal Eidolon",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
+  "effects": [],
+  "folder": "JclP1CQkdbQ2tqVo",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.pc8jwXR7JUYG2TNE"
+    }
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>The caster conjures up a semi-real phantasmal creature in any shape or appearance they desire, provided it is no larger than an ox. The servitor is as intelligent as a human and will obey the caster with fearless and suicidal devotion, having 4 effective hit dice, 20 hit points, AC 15, a movement rate of 30&rsquo; per action, a +1 skill modifier, saves of 13+, and a +6/1d8 damage melee attack with 2/ AC 15 Shock. As the creature is partly phantasmal, the damage it inflicts cannot kill a subject, but only knock them unconscious for an hour before they awaken with 1 hit point. The caster may pick one special quality for the creature when it is summoned: the ability to fly at a rate of 30&rsquo;/move, the perfect duplication of a particular person they&rsquo;ve seen, the ability to form a telepathic speech connection with the caster, or the ability to effectively use normal weaponry and armor. The servitor lasts until destroyed or the dawn after the spell is cast.</p>\n<p>@UUID[Compendium.wwn.creatures-of-a-far-age.MwoUjHFY21ZIZ3Lx]{Phantasmal Eidolon}</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Until destroyed or dawn"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities-wwn.pc8jwXR7JUYG2TNE",
+    "duplicateSource": null
+  },
+  "_key": "!items!pc8jwXR7JUYG2TNE"
+}

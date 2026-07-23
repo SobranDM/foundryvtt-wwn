@@ -61,6 +61,28 @@
             <input type="number" step="1" min="0" data-dtype="Number" name="system.npcCp" value="{{system.npcCp}}" />
           </div>
         </div>
+        {{#if captainFocusBonuses.commandPointsBonus}}
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.EffectiveCp"}}</label>
+          <div class="form-fields">
+            <span>{{effectiveCommandPoints}}
+              <span class="units">({{localize "WWN.Starship.CaptainFocusBonus"}}
+                +{{captainFocusBonuses.commandPointsBonus}})</span>
+            </span>
+          </div>
+        </div>
+        {{/if}}
+        {{#if captainFocusBonuses.spikeDriveLevelBonus}}
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.EffectiveDrive"}}</label>
+          <div class="form-fields">
+            <span>{{effectiveDrive}}
+              <span class="units">({{localize "WWN.Starship.CaptainFocusBonus"}}
+                +{{captainFocusBonuses.spikeDriveLevelBonus}})</span>
+            </span>
+          </div>
+        </div>
+        {{/if}}
       </div>
     </div>
 

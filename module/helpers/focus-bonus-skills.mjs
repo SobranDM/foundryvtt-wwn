@@ -16,12 +16,15 @@ const ALWAYS_BONUS_SKILLS = {
 /**
  * Open-choice modes when `bonusSkills` is empty (or for dual-grant open half).
  * - any: all primary skills
- * - specialist: exclude Magic/Stab/Shoot/Punch
+ * - specialist: exclude Magic/Stab/Shoot/Punch (and psychic secondaries via primary-only list)
  * - nonCombatNonMagic: same exclusions as specialist
+ * - psychic: secondary psychic skill slugs only
  */
 const OPEN_BONUS_MODES = {
   Polymath: "any",
   Specialist: "specialist",
+  "Spark of Brilliance": "any",
+  "Psychic Training": "psychic",
   "Origin Focus: Chattel Blighted": "nonCombatNonMagic",
   "Origin Focus: Functionary Blighted": "nonCombatNonMagic",
   "Origin Focus: Elf, Half-Elf": "any",
@@ -151,7 +154,11 @@ export function resolveBonusSkillSlugs(focus) {
  */
 function openChoiceSlugs(focus) {
   const mode = openBonusMode(focus) ?? "any";
-  const slugs = getSkillSetCache().primarySlugs;
+  const cache = getSkillSetCache();
+  if (mode === "psychic") {
+    return [...(cache.secondarySlugs ?? [])];
+  }
+  const slugs = cache.primarySlugs;
   if (mode === "any") return [...slugs];
   const excluded = mode === "specialist" ? SPECIALIST_EXCLUDED : NON_COMBAT_NON_MAGIC_EXCLUDED;
   return slugs.filter((slug) => !excluded.has(slug));

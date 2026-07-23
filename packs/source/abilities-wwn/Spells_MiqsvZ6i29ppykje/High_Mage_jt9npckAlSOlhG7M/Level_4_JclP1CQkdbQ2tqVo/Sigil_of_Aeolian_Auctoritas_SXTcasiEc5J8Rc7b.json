@@ -1,0 +1,62 @@
+{
+  "_id": "SXTcasiEc5J8Rc7b",
+  "name": "Sigil of Aeolian Auctoritas",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
+  "effects": [],
+  "folder": "JclP1CQkdbQ2tqVo",
+  "sort": 700000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.SXTcasiEc5J8Rc7b"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>A fierce gust of wind may be conjured in a line a hundred feet long and thirty feet wide. All creatures of man-size or smaller must make Physical saves or be bowled over and blown back thirty feet, losing their next round&rsquo;s Main Action and suffering 1d6 damage. Light wooden constructions or similar structures are flattened by the wind. If used outdoors, the spell can instead control the local weather, transforming the quarter-mile around the caster into any climate found normally at that location at any point during the year. The spell cannot summon a tornado or other extreme weather, but it can call rain and conventional storms sufficient to cause flooding in areas prone to it. The gust of wind is instantaneous, but the weather change lasts for one hour per caster level before reverting to its natural state.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100 ft. x 30 ft.",
+      "duration": "1 hour per caster level"
+    }
+  },
+  "_key": "!items!SXTcasiEc5J8Rc7b"
+}

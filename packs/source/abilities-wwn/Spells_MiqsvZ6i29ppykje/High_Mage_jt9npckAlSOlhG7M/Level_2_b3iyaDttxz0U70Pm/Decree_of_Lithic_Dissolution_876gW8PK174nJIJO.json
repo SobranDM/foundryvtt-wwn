@@ -1,0 +1,62 @@
+{
+  "_id": "876gW8PK174nJIJO",
+  "name": "Decree of Lithic Dissolution",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 400000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.876gW8PK174nJIJO"
+    }
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>Stone, earth, sod, sand, or other largely mineral material is reduced to a faint spray of fine dust by this sorcery, though metal and enchanted objects are unaffected. The caster nominates up to one contiguous 10-foot cube per caster level in a visible area within one hundred feet per caster level, causing all such stone or mineral material within the cubes to disappear. Such rapid destruction may well cause larger structures to collapse as well. If used against rock-based monsters, the spell does 1d10 damage per caster level, with a Physical save for half.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "(@level)d10",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100 ft. per level",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities-wwn.876gW8PK174nJIJO",
+    "duplicateSource": null
+  },
+  "_key": "!items!876gW8PK174nJIJO"
+}

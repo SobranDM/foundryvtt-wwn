@@ -1,0 +1,33 @@
+{
+  "name": "Unstable Mutant",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Your mutations are prone to shifting randomly over time as your body seeks a stasis it never quite achieves. This focus is available only to PCs with the Mutant Edge.</p><p><strong>Level 1:</strong> You gain one randomly-rolled positive mutation. This mutation is rerolled at the start of each month. Once per day, as a Main Action, accept four points of System Strain to reroll the mutation right then and there.</p><p><strong>Level 2:</strong> When you reroll this focus&rsquo;s mutation, roll twice and pick whichever you prefer. Once per week, as a Main Action, accept four points of System Strain and shift this mutation to any positive mutation of your choice. This change lasts one scene, after which it reverts to its prior roll.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "Y27PTJi4vCeIwZ3V",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Y27PTJi4vCeIwZ3V"
+}

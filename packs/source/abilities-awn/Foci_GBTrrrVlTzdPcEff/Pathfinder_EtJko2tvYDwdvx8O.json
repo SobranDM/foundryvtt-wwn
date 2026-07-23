@@ -1,0 +1,35 @@
+{
+  "name": "Pathfinder",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Even without navigation gear you have an instinctive knack for directions and safe routes of travel.</p><p><strong>Level 1:</strong> Gain Survive as a bonus skill. You always know what direction you&rsquo;re facing. Groups you lead cannot Go Astray, and gain bonus movement equal to two hours of travel without actually taking that time.</p><p><strong>Level 2:</strong> Scouting a hex takes half the ordinary time. You&rsquo;re so good at choosing routes and muffling noise that your group is not considered Exposed even if you follow a road or drive a vehicle.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "survive"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "EtJko2tvYDwdvx8O",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EtJko2tvYDwdvx8O"
+}

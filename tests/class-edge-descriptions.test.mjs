@@ -9,7 +9,7 @@ const ROOT = path.join(
   "..",
   "packs",
   "source",
-  "abilities",
+  "abilities-wwn",
   "Classes_wwnClsRoot000001",
 );
 

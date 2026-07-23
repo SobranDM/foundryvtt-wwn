@@ -1,0 +1,51 @@
+{
+  "_id": "B4VfGl4Ib6b7gU19",
+  "name": "Psychic Conversion",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "folder": "tC9Aaqu0axFEptJu",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.B4VfGl4Ib6b7gU19"
+    }
+  },
+  "_key": "!items!B4VfGl4Ib6b7gU19",
+  "system": {
+    "subType": "art",
+    "description": "<p>Once per day as an On Turn action, expend one casting slot to remove one point of accrued&nbsp;System Strain and heal 2 hit points per level.</p>",
+    "source": "High Mage",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

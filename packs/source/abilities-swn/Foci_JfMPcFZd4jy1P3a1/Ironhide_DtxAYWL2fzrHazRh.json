@@ -1,0 +1,82 @@
+{
+  "name": "Ironhide",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "UkzKJ6vP69IRE5s6",
+      "type": "base",
+      "name": "Ironhide (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": "@halfLevel + 15",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!DtxAYWL2fzrHazRh.UkzKJ6vP69IRE5s6"
+    },
+    {
+      "_id": "lawX4jkx0SL5wNMB",
+      "type": "base",
+      "name": "Ironhide (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.immuneToPrimitiveWeapons",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!DtxAYWL2fzrHazRh.lawX4jkx0SL5wNMB"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether through uncanny reflexes, remarkable luck, gengineered skin fibers, or subtle telekinetic shielding, you have natural defenses equivalent to high-quality combat armor. The benefits of this focus don&rsquo;t stack with armor, though Dexterity or shield modifiers apply.</p><p><strong>Level 1:</strong> You have an innate Armor Class of 15 plus half your character level, rounded up.</p><p><strong>Level 2:</strong> Your abilities are so effective that they render you immune to unarmed attacks or primitive weaponry as if you wore powered armor.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "DtxAYWL2fzrHazRh",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DtxAYWL2fzrHazRh"
+}

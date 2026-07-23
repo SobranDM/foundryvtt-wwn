@@ -76,6 +76,23 @@ export default class WwnActorBase extends foundry.abstract.TypeDataModel {
     this.combat.treatAllMeleeAsAcTen = false;
     this.combat.immuneToShock = false;
     this.combat.innateAc = { min: 0 };
+    this.combat.autoStabilize = false;
+    this.combat.meleeCountsAsTl4 = false;
+    this.combat.meleeMissDamage = "";
+    this.combat.rangeMissDamage = "";
+    this.combat.punchMissDamage = "";
+    this.combat.immuneToPrimitiveWeapons = false;
+    this.combat.endOfTurnAdjacentShock = false;
+    this.combat.missAfterFirstMeleeHit = false;
+
+    // Captain / navigator focus bonuses (read from PC when crewing a starship)
+    this.starship = {
+      commandPointsBonus: 0,
+      combatBonusHpPercent: 0,
+      spikeDrillAutoSucceedDiff: 0,
+      spikeDrillDoublePilot: false,
+      spikeDriveLevelBonus: 0,
+    };
 
     // Initiative — individual vs group (side) rolls are separate AE targets
     this.combat.initiative = {

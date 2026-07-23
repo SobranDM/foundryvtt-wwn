@@ -1,0 +1,58 @@
+{
+  "_id": "lJXJ07LIx848jvKu",
+  "name": "Brutal Counter",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.lJXJ07LIx848jvKu"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as an Instant action after resolving an enemy melee attack against you, whether it hits or misses. You may make a free physical attack against your assailant, using either a normal attack or some other offensive ability that takes no more than one Main Action to execute. You cannot use this art more than once per round against a single foe, but you may use it while performing a <em>Total Defense.</em></p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!lJXJ07LIx848jvKu"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Pilot",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/sail.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Use this skill to pilot vehicles or ride beasts. Roll it to fly spaceships, drive vehicles, ride animals, or tend to basic vehicle repair. This skill doesn't help you with things entirely outside the scope of your background or experience, though with some practice a PC can expand their expertise.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "pilot"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442994,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7d6q8Ub2MHq8blfR",
+  "folder": "K5CjewzS46t4IezS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7d6q8Ub2MHq8blfR"
+}

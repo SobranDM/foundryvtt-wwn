@@ -1,0 +1,30 @@
+{
+  "name": "Heal",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/heal.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "heal"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442983,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "0cTetSiyPXDfyDP9",
+  "folder": "K5CjewzS46t4IezS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0cTetSiyPXDfyDP9"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Trade",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/trade.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.CG2YUFh5sWvpc9SE"
+    }
+  },
+  "system": {
+    "description": "Buy and sell at a profit, identify the worth of goods or treasures, deal with merchants and traders, find black-market goods and services, and know laws regarding smuggling and contraband.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "trade"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806180171,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8rqHSD9eJ2A0Ph5U",
+  "folder": "Eq7Lp9R34vPMakhl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8rqHSD9eJ2A0Ph5U"
+}

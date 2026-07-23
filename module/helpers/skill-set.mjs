@@ -5,17 +5,17 @@
 const NS = "wwn";
 const DEFAULT_KEY = "wwn";
 
-/** @returns {{ primarySlugs: string[], allSlugs: string[], labels: Record<string, string> }} */
-const emptyCache = () => ({ primarySlugs: [], allSlugs: [], labels: {} });
+/** @returns {{ primarySlugs: string[], secondarySlugs: string[], allSlugs: string[], labels: Record<string, string> }} */
+const emptyCache = () => ({ primarySlugs: [], secondarySlugs: [], allSlugs: [], labels: {} });
 
 /**
  * Sync cache for roll data / sheet dropdowns. Refreshed on ready and when skillSet changes.
- * @type {{ primarySlugs: string[], allSlugs: string[], labels: Record<string, string> }}
+ * @type {{ primarySlugs: string[], secondarySlugs: string[], allSlugs: string[], labels: Record<string, string> }}
  */
 let skillSetCache = emptyCache();
 
 /**
- * @returns {{ primarySlugs: string[], allSlugs: string[], labels: Record<string, string> }}
+ * @returns {{ primarySlugs: string[], secondarySlugs: string[], allSlugs: string[], labels: Record<string, string> }}
  */
 export function getSkillSetCache() {
   return skillSetCache;
@@ -35,9 +35,12 @@ export async function refreshSkillSetCache({ notify = false } = {}) {
     const slug = i.system?.slug || i.name.slugify({ strict: true }).replace(/-/g, "");
     if (!slug) continue;
     next.allSlugs.push(slug);
-    if (i.system?.secondary === true) continue;
-    next.primarySlugs.push(slug);
     next.labels[slug] = i.name;
+    if (i.system?.secondary === true) {
+      next.secondarySlugs.push(slug);
+      continue;
+    }
+    next.primarySlugs.push(slug);
   }
   skillSetCache = next;
   if (CONFIG.WWN) CONFIG.WWN.skillSetCache = next;

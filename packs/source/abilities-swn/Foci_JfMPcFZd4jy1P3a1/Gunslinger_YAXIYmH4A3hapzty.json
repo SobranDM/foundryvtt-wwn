@@ -1,0 +1,84 @@
+{
+  "name": "Gunslinger",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "uID8WrswcH3n3Lai",
+      "type": "base",
+      "name": "Gunslinger (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.rangeDamage",
+            "type": "add",
+            "value": "@shoot",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!YAXIYmH4A3hapzty.uID8WrswcH3n3Lai"
+    },
+    {
+      "_id": "ip6Wb2TUp9alpKGU",
+      "type": "base",
+      "name": "Gunslinger (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.rangeMissDamage",
+            "type": "override",
+            "value": "1d4",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!YAXIYmH4A3hapzty.ip6Wb2TUp9alpKGU"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You have a gift with a gun. While this talent most commonly applies to slugthrowers or energy weapons, it is also applicable to thrown weapons, bows, or other ranged weapons that can be used with the Shoot skill. For thrown weapons, you can&rsquo;t use the benefits of the <em><strong>Armsman</strong></em> focus at the same time as <em><strong>Gunslinger</strong></em>.</p><p><strong>Level 1:</strong> Gain Shoot as a bonus skill. You can draw or holster a Stowed ranged weapon as an On Turn action. You may add your Shoot skill level to a ranged weapon&rsquo;s damage roll.</p><p><strong>Level 2:</strong> Once per round, you can reload a ranged weapon as an On Turn action if it takes no more than one round to reload. Even on a miss with a Shoot attack, you do an unmodified 1d4 damage.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "YAXIYmH4A3hapzty",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YAXIYmH4A3hapzty"
+}

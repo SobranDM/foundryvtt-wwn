@@ -1,0 +1,62 @@
+{
+  "_id": "Xd11eUJnstEwRMYm",
+  "name": "Elemental Vallation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
+  "effects": [],
+  "folder": "Mdq56uNjIJ1S97Bt",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.Xd11eUJnstEwRMYm"
+    }
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>A wall of a chosen churning elemental force can be called up by the elementalist. The barrier is ten feet long per character level, with a height of ten feet and a thickness of one foot. The barrier must rest on solid ground but may be bent or shaped as desired so long as no part of it &bull;77 is more than two hundred feet from the caster. Earthen walls are impervious to anything but mining-appropriate tools or rock-shattering strength, taking 20 HP of damage to knock a man-sized hole in them. Fire walls inflict [[/roll 3d6]] damage plus the elementalist&rsquo;s level on anyone who passes through them. Water walls spin and hurl creatures of ox-size or less who pass through them, ejecting them at a random point on the far side of the wall and doing [[/roll 2d6]] damage from the buffeting. Air walls are invisible, inaudible, and twenty feet in height; those who cross them suffer 1d6 plus the elementalist&rsquo;s level in electrical damage. The walls vanish at the end of the scene.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 3,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6+@level",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "200 ft.",
+      "duration": "Scene"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.wwn.abilities-wwn.Xd11eUJnstEwRMYm",
+    "duplicateSource": null
+  },
+  "_key": "!items!Xd11eUJnstEwRMYm"
+}

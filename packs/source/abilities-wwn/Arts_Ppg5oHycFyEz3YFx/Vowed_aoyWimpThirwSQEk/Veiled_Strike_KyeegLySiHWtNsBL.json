@@ -1,0 +1,51 @@
+{
+  "_id": "KyeegLySiHWtNsBL",
+  "name": "Veiled Strike",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.KyeegLySiHWtNsBL"
+    }
+  },
+  "_key": "!items!KyeegLySiHWtNsBL",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as an On Turn action before touching an unresisting or unsuspecting target. Inflict normal unarmed attack damage, but it appears to be no more than a touch or innocent gesture to onlookers. The victim is unaware of the harm unless they make a successful Physical save to notice. Targets reduced to zero hit points by this can either be killed or struck unconscious at your discretion.</p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

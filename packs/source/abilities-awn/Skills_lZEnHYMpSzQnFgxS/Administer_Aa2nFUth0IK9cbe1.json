@@ -1,0 +1,30 @@
+{
+  "name": "Administer",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/administer.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and getting answers from old files or records.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "administer"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443005,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Aa2nFUth0IK9cbe1",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Aa2nFUth0IK9cbe1"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Scrapsmith",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You find use in the smallest fragment of salvage, and can build things far more efficiently and effectively than other technicians.</p><p><strong>Level 1:</strong> Gain Fix as a bonus skill. Building devices from scrap costs half as much scrap as it normally would, rounded up. Once per game session, you can declare that you actually have any device, weapon, or object your skills and resources would have allowed you to make during recent downtime, though it costs no scrap and can&rsquo;t be larger than a suit of armor. Any weapon using ammo is fully loaded. This device or object functions until you use this ability again, after which it breaks down due to lack of maintenance.</p><p><strong>Level 2:</strong> You can repair damaged weapons, armor, or personal equipment without needing to use scrap, and can fix a whole party&rsquo;s gear in fifteen minutes. When you break down an object for scrap, you get 50% more scrap from it, rounded down.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "fix"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "rfmz4Zo3uoEiYsGj",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rfmz4Zo3uoEiYsGj"
+}

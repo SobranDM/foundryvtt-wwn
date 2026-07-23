@@ -1,0 +1,30 @@
+{
+  "name": "Talk",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/convince.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "talk"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442997,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "8kP0vc5Eza6CyylC",
+  "folder": "K5CjewzS46t4IezS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8kP0vc5Eza6CyylC"
+}

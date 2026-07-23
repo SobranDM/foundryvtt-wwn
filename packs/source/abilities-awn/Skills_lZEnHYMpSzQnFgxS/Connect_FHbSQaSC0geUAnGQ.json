@@ -1,0 +1,30 @@
+{
+  "name": "Connect",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/connect.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill. Note that the people you meet via Connect are not necessarily inclined to work with you without a good reason. Gifts can often be that reason.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "connect"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443005,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "FHbSQaSC0geUAnGQ",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FHbSQaSC0geUAnGQ"
+}

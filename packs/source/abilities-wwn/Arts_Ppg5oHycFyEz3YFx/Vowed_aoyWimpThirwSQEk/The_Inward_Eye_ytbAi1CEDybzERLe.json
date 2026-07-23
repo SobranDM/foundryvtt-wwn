@@ -1,0 +1,51 @@
+{
+  "_id": "ytbAi1CEDybzERLe",
+  "name": "The Inward Eye",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.ytbAi1CEDybzERLe"
+    }
+  },
+  "_key": "!items!ytbAi1CEDybzERLe",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action. For as long as it remains Committed, you are mystically aware of your surroundings with a sense equivalent to normal eyesight regardless of darkness, obscuring mists, or your actual eyes being closed or blinded.</p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}

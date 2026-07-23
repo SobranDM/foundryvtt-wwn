@@ -1,0 +1,62 @@
+{
+  "_id": "XbSp1J2b54pDjCf4",
+  "name": "Call of the Tomb",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/necromancer-spell.png",
+  "effects": [],
+  "folder": "JngPlJ6cQzWyzTmc",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.Q2MaMxKfQu9dQj5a"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>The necromancer invokes the inescapable urge for self-dissolution within the substance of all that exists, amplifying the weight of their own mortality. All enemy creatures within forty feet are affected. Targets can make a Mental saving throw to resist, in which case the effects last only one round, otherwise lasting for one round per caster level. During this time all attacks made against the victims automatically hit and all damage dice they suffer are maximized. Any special defenses they may have against mundane weapons or certain types of injury are negated while the spell is on them.</p>",
+    "source": "Necromancer",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 5,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "40 ft. radius",
+      "duration": "1 round per level"
+    }
+  },
+  "_key": "!items!XbSp1J2b54pDjCf4"
+}

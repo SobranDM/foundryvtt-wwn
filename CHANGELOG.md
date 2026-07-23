@@ -10,6 +10,10 @@
 
 ### What's new
 
+- **Abilities compendiums by game line:** **WWN Abilities**, **SWN Abilities**, and **AWN Abilities**. Skills for each line live in a Skills folder inside that pack (standalone skills packs removed). `skillSet` still seeds PCs from the matching pack.
+  - SWN Abilities includes the full SWN focus list with bonus-skill prompts and Active Effects.
+  - AWN Abilities includes the full AWN focus list (including Spark of Brilliance skill pool and open skill picks).
+  - Pack collection ids are now `wwn.abilities-wwn` / `wwn.abilities-swn` / `wwn.abilities-awn` (old `wwn.abilities` / `wwn.skills-*` world links are not auto-remapped).
 - **Classes** are now items you add to a character (Full/Partial Warrior, Expert, mage traditions, and other partial classes).
   - They drive attack bonus, hit dice, Effort or spell capacity, and class features.
   - Existing characters are prompted once to pick their class(es). Old Class Ability foci are archived under Items.

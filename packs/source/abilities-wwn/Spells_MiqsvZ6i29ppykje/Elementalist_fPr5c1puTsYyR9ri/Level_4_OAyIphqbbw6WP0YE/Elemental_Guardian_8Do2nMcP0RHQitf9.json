@@ -1,0 +1,62 @@
+{
+  "_id": "8Do2nMcP0RHQitf9",
+  "name": "Elemental Guardian",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
+  "effects": [],
+  "folder": "OAyIphqbbw6WP0YE",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.8Do2nMcP0RHQitf9"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>The elementalist imbues a human-sized mass of earth, water, fire, or air with a crude awareness and an eagerness to defend them. Whatever the substance used, it now has 4 HD, AC 15, a Move of 40&rsquo;/action, a +1 skill bonus, saves of 13+, Morale of 12, and a melee attack of +6/1d10 with no Shock. If called from earth, it has 6 hit dice, albeit its other stats don&rsquo;t change. If called from fire, it does 5/- Shock damage. If summoned from water, it has an AC of 18, and if called from air, it can fly at its usual movement rate. It has a human degree of intelligence, can communicate with others and manipulate objects, and serves with suicidal devotion. Only one elemental guardian can be summoned at any one time, and if destroyed, a new one cannot be called that same scene. A guardian persists until destroyed or until the dawn after they have been summoned.</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.rjx3Ic2iC4DgUsh2]{Elemental Guardian (Air)}</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.68DcmqWOIZrPrFJ6]{Elemental Guardian (Earth)}</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.iG481rhPc2RCO35T]{Elemental Guardian (Fire)}</p>\n<p>@Compendium[wwn.creatures-of-a-far-age.L3DGZfHkKo6DM7Hk]{Elemental Guardian (Water)}</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Until destroyed or dawn"
+    }
+  },
+  "_key": "!items!8Do2nMcP0RHQitf9"
+}

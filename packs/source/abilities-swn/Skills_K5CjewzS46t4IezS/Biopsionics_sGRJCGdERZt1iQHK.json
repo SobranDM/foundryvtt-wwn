@@ -1,0 +1,30 @@
+{
+  "name": "Biopsionics",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/psychic.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Master powers of physical repair, body augmentation, and shapeshifting.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": true,
+    "slug": "biopsionics"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442999,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "sGRJCGdERZt1iQHK",
+  "folder": "K5CjewzS46t4IezS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sGRJCGdERZt1iQHK"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Slippery",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "xBX2iDnA4J1atbEQ",
+      "type": "base",
+      "name": "Slippery (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!5FDw00AM0olPDzm5.xBX2iDnA4J1atbEQ"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are remarkably hard to grapple or restrain, either due to natural nimbleness, flexible joints, or blind luck.</p><p><strong>Level 1:</strong> Gain Punch or Exert as a bonus skill. You gain a natural +4 bonus on all rolls to resist grappling attempts and can slip out of any restraints short of a full-body straitjacket as a Main Action. You can make a Fighting Withdrawal as an On Turn action.</p><p><strong>Level 2:</strong> As level 1, but you cannot be grappled against your will. Your Dexterity modifier increases by +1, to a maximum of +2.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "punch",
+      "exert"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "5FDw00AM0olPDzm5",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5FDw00AM0olPDzm5"
+}

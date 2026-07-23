@@ -1,0 +1,60 @@
+{
+  "name": "Unarmed Combatant",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "fyDz5RV2JEQRBzk0",
+      "type": "base",
+      "name": "Unarmed Combatant (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.punchMissDamage",
+            "type": "override",
+            "value": "1d6",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!3Qq9ZtqyaSRedoeq.fyDz5RV2JEQRBzk0"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>Your empty hands are more dangerous than knives and guns in the grip of the less gifted. Your unarmed attacks are counted as melee weapons when it comes to binding up opponents wielding rifles and similar long arms, though you need at least one hand free to do so.</p><p><strong>Level 1:</strong> Gain Punch as a bonus skill. Your unarmed attacks become more dangerous as your Punch skill increases: at level-0 they do 1d6 damage, at level-1 1d8, at level-2 1d10, level-3 1d12, and level-4 1d12+1. At Punch-1 or better, they have the Shock quality equal to your Punch skill against AC 15 or less. While you normally add your Punch skill level to any unarmed damage, don&rsquo;t add it twice to this Shock damage.</p><p><strong>Level 2:</strong> You know locks and twists that use powered servos against their wearer. Your unarmed attacks count as TL4 weapons for the purpose of overcoming advanced armors. Even on a miss with a Punch attack, you do an unmodified 1d6 damage.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "punch"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "3Qq9ZtqyaSRedoeq",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3Qq9ZtqyaSRedoeq"
+}

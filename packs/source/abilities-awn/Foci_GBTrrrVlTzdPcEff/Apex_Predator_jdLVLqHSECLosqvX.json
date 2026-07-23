@@ -1,0 +1,36 @@
+{
+  "name": "Apex Predator",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have extensive experience in hunting or handling dangerous wild animals, and know how to avoid, intimidate, or kill such beasts.</p><p><strong>Level 1:</strong> Gain Survive and Shoot as bonus skills. Once per scene, as an On Turn action, force any hostile beasts in combat with the party to make a Morale check. Add half your level, rounded up, to any damage or Shock done to sub-sapient beasts.</p><p><strong>Level 2:</strong> Once per scene, as an Instant action, force a beast you&rsquo;ve hit to make a Physical saving throw at a penalty equal to your Survive or combat skill, whichever is higher. On a failure, it takes your maximum hit points in extra damage.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "scene",
+    "bonusSkills": [
+      "survive",
+      "shoot"
+    ],
+    "bonusSkillsPick": 2,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "jdLVLqHSECLosqvX",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jdLVLqHSECLosqvX"
+}

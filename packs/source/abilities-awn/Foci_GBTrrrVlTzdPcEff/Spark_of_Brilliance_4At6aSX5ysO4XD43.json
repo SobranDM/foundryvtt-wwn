@@ -1,0 +1,33 @@
+{
+  "name": "Spark of Brilliance",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether a grizzled veteran who can still perform when the chips are down or a young prodigy with flashes of genius, you demonstrate sudden moments of superlative skill.</p><p><strong>Level 1:</strong> Gain any skill as a bonus skill. Pick three skills relevant to your background or concept. Once per day, as an Instant action, treat one of those skills as level-4 for the rest of the scene. This insight doesn&rsquo;t last long enough to undertake prolonged efforts such as gear construction or mod maintenance, but it&rsquo;s time enough for surgery or repair. Any time you advance a level, you may choose to swap out this focus for a different one.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "4At6aSX5ysO4XD43",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4At6aSX5ysO4XD43"
+}

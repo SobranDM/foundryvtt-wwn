@@ -1,0 +1,33 @@
+{
+  "name": "Zombie Smasher",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether through long practice or sheer bloodthirst, you are incredibly efficient at putting down the dead. This focus is inapplicable to non-Deadlands campaigns.</p><p><strong>Level 1:</strong> As a Main Action, kill up to six zombies of 1 HD or less within range of your weapon. If using a gun, expend one bullet or charge per zombie. Each use of this ability in a scene after the first adds one System Strain.</p><p><strong>Level 2:</strong> Your attack roll against zombies always counts as a natural 20. You do an additional 8 points of damage to zombies on a hit.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "tiqO287l8cOUnocd",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tiqO287l8cOUnocd"
+}

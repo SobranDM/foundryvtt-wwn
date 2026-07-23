@@ -1,0 +1,35 @@
+{
+  "name": "Authority",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have an uncanny kind of charisma about you, one that makes others instinctively follow your instructions and further your causes. Where this focus refers to followers, it means NPCs who have voluntarily chosen to be in your service. PCs never count as followers.</p><p><strong>Level 1:</strong> Gain Lead as a bonus skill. Once per day, you can make a request from an NPC who is not openly hostile to you, rolling a Cha/Lead skill check at a difficulty of the NPC&rsquo;s Morale score. If you succeed, they will comply with the request, provided it is not harmful or very uncharacteristic.</p><p><strong>Level 2:</strong> Those who follow you are fired with confidence. Any NPC being directly led by you gains a Morale and hit roll bonus equal to your Lead skill and a +1 bonus on all skill checks. Your followers will not act against your interests unless under extreme pressure.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "lead"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "fTz145bPSgOAMyYj",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fTz145bPSgOAMyYj"
+}

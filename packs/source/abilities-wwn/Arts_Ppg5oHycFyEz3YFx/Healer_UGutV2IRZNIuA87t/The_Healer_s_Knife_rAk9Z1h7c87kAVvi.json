@@ -1,0 +1,58 @@
+{
+  "_id": "rAk9Z1h7c87kAVvi",
+  "name": "The Healer's Knife",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/healer-art.png",
+  "effects": [],
+  "folder": "UGutV2IRZNIuA87t",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.rAk9Z1h7c87kAVvi"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>&nbsp;Your <em><strong>Healing Touch</strong></em> ability is altered, and may be used to inflict damage to a living target instead of healing it. The damage done is equivalent to the healing that would normally be done, albeit you receive 1 System Strain instead of the target. Using this power in melee requires a successful Punch attack with a hit bonus equal to your Heal skill, with the damage added to any done by the blow, or simply touching an unwary target. Arts that modify your <em><strong>Healing Touch</strong></em> don&rsquo;t aid this power.</p>",
+    "source": "Healer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "2d6+@heal",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!rAk9Z1h7c87kAVvi"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Shoot",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/shoot.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Use it as a combat skill when using ranged weaponry, whether thrown weapons, bows, pistols, combat rifles, or heavy artillery.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "shoot"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443011,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yIEAQnwX9jko58CL",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yIEAQnwX9jko58CL"
+}

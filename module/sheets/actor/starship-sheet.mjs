@@ -24,6 +24,9 @@ import {
 } from "../../helpers/starship-crew.mjs";
 import { rollStationCheck } from "../../helpers/starship-rolls.mjs";
 import { applyHullPreset } from "../../config/starship-hulls.mjs";
+import {
+  starshipFocusBonusesForShip,
+} from "../../helpers/starship-focus-bonuses.mjs";
 import { showWwnDialog, confirmWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -113,6 +116,12 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
     context.enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
       system.description ?? ""
     );
+
+    const captainBonuses = await starshipFocusBonusesForShip(actor);
+    context.captainFocusBonuses = captainBonuses;
+    context.effectiveCommandPoints = (Number(system.npcCp) || 0) + captainBonuses.commandPointsBonus;
+    context.effectiveDrive =
+      (Number(system.drive) || 0) + captainBonuses.spikeDriveLevelBonus;
 
     return context;
   }

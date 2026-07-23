@@ -1,0 +1,90 @@
+{
+  "name": "Starfarer",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "zDk0jt9fRCKHGpov",
+      "type": "base",
+      "name": "Starfarer (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.starship.spikeDrillAutoSucceedDiff",
+            "type": "override",
+            "value": 10,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!caRcoI04SSfLLm20.zDk0jt9fRCKHGpov"
+    },
+    {
+      "_id": "XydYRyr3JVFHABIM",
+      "type": "base",
+      "name": "Starfarer (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.starship.spikeDrillDoublePilot",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "system.starship.spikeDriveLevelBonus",
+            "type": "add",
+            "value": 1,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!caRcoI04SSfLLm20.XydYRyr3JVFHABIM"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are an expert in the plotting and execution of interstellar spike drills. While most experienced pilots can manage conventional drills along well-charted spike routes, you have the knack for forging new drill paths and cutting courses too dangerous for lesser navigators.</p><p><strong>Level 1:</strong> Gain Pilot as a bonus skill. You automatically succeed at all spike drill-related skill checks of difficulty 10 or less.</p><p><strong>Level 2:</strong> Double your Pilot skill for all spike drill-related skill checks. Spike drives of ships you navigate are treated as one level higher, up to a maximum of drive-7. Spike drills you personally oversee take only half the time they would otherwise require.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "pilot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "caRcoI04SSfLLm20",
+  "folder": "JfMPcFZd4jy1P3a1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!caRcoI04SSfLLm20"
+}

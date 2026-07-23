@@ -1,0 +1,62 @@
+{
+  "_id": "sIQ8fX2Z32EQD2UF",
+  "name": "Calcifying Scourge",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/elementalist-spell.png",
+  "effects": [],
+  "folder": "OAyIphqbbw6WP0YE",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.sIQ8fX2Z32EQD2UF"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>A visible target within one hundred feet must make a Physical saving throw or be turned to stone. Any size of living creature may be so transmuted, though inanimate objects larger than a cart cannot. Objects being held or worn by someone else get a Physical saving throw made by their user. The calcification remains until dispelled or the caster undoes the magic, but if the object or creature is damaged in the meanwhile, it may end up being harmed or killed on its restoration. If the Physical saving throw is made successfully by a creature, the target is temporarily slowed, losing its Move action for the next 1d6 rounds.</p>",
+    "source": "Elementalist",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 4,
+    "prepared": true,
+    "activation": {
+      "roll": "1d6",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "100 ft.",
+      "duration": "Until dispelled"
+    }
+  },
+  "_key": "!items!sIQ8fX2Z32EQD2UF"
+}

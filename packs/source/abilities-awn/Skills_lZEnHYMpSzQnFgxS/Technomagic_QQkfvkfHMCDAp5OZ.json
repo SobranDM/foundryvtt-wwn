@@ -1,0 +1,30 @@
+{
+  "name": "Technomagic",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/magic.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Technomagic skill is exclusive to Ash Sorcerers, and represents both their personal mastery of their arcane powers and their academic knowledge of the dark secrets of before-times science. It can be used to comprehend magic, know of techno-wizards, and apprehend facts about creatures born of dark sorcery.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": true,
+    "slug": "technomagic"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443015,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "QQkfvkfHMCDAp5OZ",
+  "folder": "lZEnHYMpSzQnFgxS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QQkfvkfHMCDAp5OZ"
+}

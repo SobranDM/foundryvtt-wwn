@@ -1,0 +1,62 @@
+{
+  "_id": "KkbXmtvk20k2jsrW",
+  "name": "Conjunction of the Inexorable Step",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/spell.png",
+  "effects": [],
+  "folder": "b3iyaDttxz0U70Pm",
+  "sort": 300000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.KkbXmtvk20k2jsrW"
+    }
+  },
+  "_stats": {
+    "coreVersion": null,
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "system": {
+    "subType": "spell",
+    "description": "<p>A visible target within a hundred feet is immediately teleported to any visible, solid resting point within a half-mile, provided the target point has enough room to accept them and it is not a position of imminent physical peril. Unattended objects can be translocated by the spell, but they can be no larger than a horse. Unwilling creatures targeted by this spell may make a Mental saving throw to resist; on a success, it is the caster who is transported to the intended destination instead.</p>",
+    "source": "High Mage",
+    "resourceName": "Spell Slots",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "level": 2,
+    "prepared": true,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "100 ft.",
+      "duration": ""
+    }
+  },
+  "_key": "!items!KkbXmtvk20k2jsrW"
+}

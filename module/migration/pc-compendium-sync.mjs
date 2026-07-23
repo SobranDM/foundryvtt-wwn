@@ -173,7 +173,7 @@ export async function buildSystemItemIndex() {
   for (const pack of game.packs) {
     if (pack.metadata.packageType !== "system") continue;
     if (pack.documentName !== "Item") continue;
-    // This system's packs are collections like "wwn.abilities"
+    // This system's packs are collections like "wwn.abilities-wwn"
     if (!String(pack.collection).startsWith(`${NS}.`)) continue;
 
     const docs = await pack.getDocuments();

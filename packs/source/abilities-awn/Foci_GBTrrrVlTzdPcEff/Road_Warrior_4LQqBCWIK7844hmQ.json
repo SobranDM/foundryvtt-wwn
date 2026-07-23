@@ -1,0 +1,35 @@
+{
+  "name": "Road Warrior",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You pair enormous natural talent at driving with a zest for highway bloodshed. This focus benefits only the driver of a vehicle, and for sci-fi campaign settings it does not include starships or non-atmospheric craft.</p><p><strong>Level 1:</strong> Gain Drive as a bonus skill. Once per scene, as an Instant action, reroll a Drive skill check. Any vehicle you drive has bonus hit points equal to twice your character level. You take no hit penalty for shooting from a moving vehicle and gain a bonus Main Action each round that can only be used to attack with a weapon while driving or fire a vehicle-mounted weapon.</p><p><strong>Level 2:</strong> Any vehicle you drive gains a +1 Speed bonus. Allies riding with you suffer no penalty for shooting from a moving vehicle. Once per scene, gain the benefits of the Veteran&rsquo;s Luck Edge applied only to vehicle weapons or hits by weapons against the vehicle you&rsquo;re driving.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "scene",
+    "bonusSkills": [
+      "drive"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "4LQqBCWIK7844hmQ",
+  "folder": "GBTrrrVlTzdPcEff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4LQqBCWIK7844hmQ"
+}

@@ -210,6 +210,24 @@ export class WwnDice {
   }
 
   /**
+   * Focus-driven flat miss damage (Armsman / Gunslinger / Unarmed L2).
+   * @param {Actor} actor
+   * @param {Item} weapon
+   * @param {"melee"|"ranged"} attackKind
+   * @returns {string|null}
+   */
+  static #focusMissDamageFormula(actor, weapon, attackKind) {
+    const combat = actor.system.combat ?? {};
+    const skill = weapon.system.linkedSkill;
+    const skillSlug = skill?.system?.slug || String(skill?.name ?? "").toLowerCase().replace(/[^a-z]/g, "");
+    const isPunch = skillSlug === "punch" || /unarmed|fist|punch/i.test(weapon.name ?? "");
+    if (isPunch && combat.punchMissDamage) return String(combat.punchMissDamage);
+    if (attackKind === "melee" && combat.meleeMissDamage) return String(combat.meleeMissDamage);
+    if (attackKind === "ranged" && combat.rangeMissDamage) return String(combat.rangeMissDamage);
+    return null;
+  }
+
+  /**
    * Pure assembly of attack/damage/shock parts.
    * @returns {{attack: RollParts, damage: RollParts, shock: RollParts|null, attackKind: string}}
    */
@@ -415,6 +433,17 @@ export class WwnDice {
         altValue: straightValue,
         altLabel: straightValue !== null ? game.i18n.format("WWN.Roll.Straight", { value: straightValue }) : null,
       });
+    } else if (isPc(actor)) {
+      const missFormula = this.#focusMissDamageFormula(actor, weapon, attackKind);
+      if (missFormula) {
+        const missRoll = await new WwnDamageRoll(missFormula, rollData, { kind: "damage" }).evaluate();
+        rolls.push(missRoll);
+        applyRows.push({
+          id: "miss-damage",
+          label: game.i18n.localize("WWN.Roll.MissDamage"),
+          value: missRoll.total,
+        });
+      }
     }
     if (shockTotal !== null) {
       const shockLabel = shockTargetAc !== null

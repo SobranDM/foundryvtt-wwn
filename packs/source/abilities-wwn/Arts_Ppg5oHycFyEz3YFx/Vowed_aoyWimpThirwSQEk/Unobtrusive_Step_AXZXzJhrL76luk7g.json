@@ -1,0 +1,51 @@
+{
+  "_id": "AXZXzJhrL76luk7g",
+  "name": "Unobtrusive Step",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/vowed-art.png",
+  "effects": [],
+  "folder": "aoyWimpThirwSQEk",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.AXZXzJhrL76luk7g"
+    }
+  },
+  "_key": "!items!AXZXzJhrL76luk7g",
+  "system": {
+    "subType": "art",
+    "description": "<p>You not only possess a considerable skill for disguise and obfuscation, you can become extremely hard to detect. Once per scene, you may Commit Effort for the day as an Instant action to reroll a failed Sneak skill check or skill check related to impersonating someone else.</p>",
+    "source": "Vowed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "QNGrpF7th7u5lloF": 3
+  }
+}
