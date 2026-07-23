@@ -1,0 +1,64 @@
+{{!-- Pilot assign, power cell, maintenance, notes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.PowerArmor.Pilot"}}</div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.PowerArmor.Pilot"}}</label>
+          <div class="form-fields">
+            {{#if pilot.linked}}
+            <a data-action="openPilot">{{pilot.name}}</a>
+            {{else if pilot.broken}}
+            <span class="wwn-budget-over">{{localize "WWN.PowerArmor.BrokenPilot"}}</span>
+            {{else}}
+            <span class="hint">{{localize "WWN.PowerArmor.DropPilot"}}</span>
+            {{/if}}
+            <a class="wwn-chip" data-action="clearPilot"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.ClearPilot"}}</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.PowerArmor.Ops"}}</div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group">
+          <label>{{localize "WWN.PowerArmor.Runtime"}}</label>
+          <div class="form-fields">
+            {{#if derived.perpetual}}
+            <span>{{localize "WWN.PowerArmor.PerpetualPower"}}</span>
+            {{else}}
+            <input type="number" name="system.runtime.remaining" value="{{system.runtime.remaining}}" data-dtype="Number" />
+            <span>/</span>
+            <span>{{system.runtime.max}}</span>
+            {{/if}}
+            <a class="wwn-chip" data-action="insertPowerCell"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.InsertCell"}}</span></a>
+            <a class="wwn-chip" data-action="useEmergencyCell"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.UseEmergencyCell"}}</span></a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.PowerArmor.MaintenanceSkipped"}}</label>
+          <div class="form-fields">
+            <input type="number" name="system.maintenance.skipped" value="{{system.maintenance.skipped}}" data-dtype="Number" min="0" />
+            <a class="wwn-chip" data-action="markMaintenance"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.MarkMaintained"}}</span></a>
+            <a class="wwn-chip" data-action="skipMaintenance"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.SkipMaintenance"}}</span></a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.PowerArmor.Cost"}}</label>
+          <div class="form-fields">
+            <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
+      <div class="wwn-power-armor-editor">
+        {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+      </div>
+    </div>
+  </div>
+</section>

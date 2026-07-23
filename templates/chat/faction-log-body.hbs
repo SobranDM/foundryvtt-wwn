@@ -1,0 +1,9 @@
+{{#if longContent}}
+<div>
+  <span style="display:none" class="hiddenLong">{{{ longContent }}}</span><br>
+  <button type="button" class="longShowDesc">Show Long Desc.</button>
+</div>
+{{/if}}
+{{{ content }}}
+{{#if roll}}{{{ roll }}}{{/if}}
+{{#if logRollString}}{{{ logRollString }}}{{/if}}

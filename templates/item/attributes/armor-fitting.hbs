@@ -1,0 +1,124 @@
+{{!-- Armor fitting attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.PowerArmor.Fitting"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.EffectId"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.effectId" value="{{system.effectId}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.TL"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.tl" value="{{system.tl}}" min="0" step="1" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Mass"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.mass" value="{{system.mass}}" step="any" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Power"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.power" value="{{system.power}}" step="any" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Cost"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.cost" value="{{system.cost}}" min="0" step="1" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.PowerArmor.Flags"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Stackable"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.stackable" {{checked system.stackable}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Integral"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.integral" {{checked system.integral}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Disabled"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.disabled" {{checked system.disabled}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.IsWeapon"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.isWeapon" {{checked system.isWeapon}} data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.PowerArmor.DamageRoll"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.PowerArmor.DamageRoll"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.damageRoll" value="{{system.damageRoll}}" placeholder="6d6" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Save"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.save" value="{{system.save}}" placeholder="evasion" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Power.Healing"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.healing" {{checked system.healing}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.WeaponBonus"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.weaponBonus" value="{{system.weaponBonus}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.ShockDamage"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.shock.damage" value="{{system.shock.damage}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.ShockAC"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.TraumaDie"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.trauma.die" value="{{system.trauma.die}}" placeholder="d8" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.TraumaRating"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.trauma.rating" value="{{system.trauma.rating}}" placeholder="x4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

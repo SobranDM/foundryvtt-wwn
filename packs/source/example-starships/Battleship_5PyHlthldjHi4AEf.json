@@ -1,0 +1,466 @@
+{
+  "_id": "5PyHlthldjHi4AEf",
+  "name": "Battleship",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "LG0N3BlaEv8O14YD",
+      "name": "Vortex Tunnel Inductor",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>A capital-class model of the Spike Inversion Projector, a VTI is capable of incapacitating a cruiser in two hits. Its bulk limits its utility against fighter-class craft, however.</p>",
+        "cost": 5000000,
+        "power": 20,
+        "mass": 10,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d20",
+        "hardpoints": 4,
+        "tl": 4,
+        "qualities": "AP 20, Clumsy",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.LG0N3BlaEv8O14YD"
+    },
+    {
+      "_id": "0oV9LevUOYFumcNm",
+      "name": "Lightning Charge Mantle",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Modulation of the ship's power core emits a cloak of MES lightning. Larger spike drive craft can shunt the energies away harmlessly, but fighter-class ships are almost invariably destroyed if hit.</p>",
+        "cost": 4000000,
+        "power": 15,
+        "mass": 5,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "1d20",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 5, Cloud",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.0oV9LevUOYFumcNm"
+    },
+    {
+      "_id": "pj597c2kiRgvBbnR",
+      "name": "Multifocal Laser",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. Popular on fighters intended for frigate or cruiser engagement.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "1d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.pj597c2kiRgvBbnR"
+    },
+    {
+      "_id": "oK8h6FI7BlE0PAdl",
+      "name": "Multifocal Laser",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. Popular on fighters intended for frigate or cruiser engagement.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "1d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.oK8h6FI7BlE0PAdl"
+    },
+    {
+      "_id": "CHm8DpRmwxBCkZFr",
+      "name": "Gravcannon",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Using much the same principles as man-portable grav weaponry, the gravcannon causes targets to fall apart in a welter of mutually-antagonistic gravitic fields.</p>",
+        "cost": 2000000,
+        "power": 15,
+        "mass": 4,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "4d6",
+        "hardpoints": 3,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.CHm8DpRmwxBCkZFr"
+    },
+    {
+      "_id": "Lcif7v3bHL2p2EbY",
+      "name": "Hardened Polyceramic Overlay",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.Lcif7v3bHL2p2EbY"
+    },
+    {
+      "_id": "At70aj7nrxSOtQ6q",
+      "name": "Ablative Hull Compartments",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>+1 AC, +20 maximum hit points, by sacrificing empty hull space to a complex system of ablative blast baffles.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "capital",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.At70aj7nrxSOtQ6q"
+    },
+    {
+      "_id": "Zn7iCa8fQaWM7hFj",
+      "name": "Drop Pod",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",
+        "cost": 300000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.Zn7iCa8fQaWM7hFj"
+    },
+    {
+      "_id": "zYS3zs3PZjHhrWvQ",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.zYS3zs3PZjHhrWvQ"
+    },
+    {
+      "_id": "Fe4Y8OfyAI2IuFZX",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.Fe4Y8OfyAI2IuFZX"
+    },
+    {
+      "_id": "uyIKsyfImGwGUFY6",
+      "name": "Boarding Tubes",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows boarding of a hostile disabled ship.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.uyIKsyfImGwGUFY6"
+    },
+    {
+      "_id": "2HSTxzyapJPhsF8p",
+      "name": "Fuel Scoops",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.2HSTxzyapJPhsF8p"
+    },
+    {
+      "_id": "Vt2JUnT0zlndN0sX",
+      "name": "Advanced Nav Computer",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds +2 for traveling familiar spike courses.</p>",
+        "cost": 10000,
+        "power": 1,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": true,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.Vt2JUnT0zlndN0sX"
+    },
+    {
+      "_id": "4iKg4gGHXVeQyqXO",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.4iKg4gGHXVeQyqXO"
+    },
+    {
+      "_id": "huekCnqnoBFKiEcb",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!5PyHlthldjHi4AEf.huekCnqnoBFKiEcb"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Very few worlds have the technology or economy to build and crew a battleship. Its tremendous weight of fire can pop a cruiser in a single firing pass, and its reinforced hull plating shrugs off all but the heaviest armor-piercing blows. Its main weakness: it is only a single, extremely expensive ship.</p><p><strong>Crew:</strong> 200/1,000. <strong>Cargo:</strong> 200 tons. <strong>Cost:</strong> 79.06M base price, 3.953M six-month maintenance, 35M yearly crew cost (800 crew).</p>",
+    "hullType": "battleship",
+    "hullClass": "capital",
+    "hp": {
+      "value": 100,
+      "max": 100
+    },
+    "ac": 16,
+    "armor": 20,
+    "speed": 0,
+    "drive": 3,
+    "power": {
+      "max": 75
+    },
+    "mass": {
+      "max": 50
+    },
+    "hardpoints": {
+      "max": 15
+    },
+    "crew": {
+      "min": 200,
+      "max": 1000,
+      "current": 200
+    },
+    "cost": 79060000,
+    "cargo": 200,
+    "npcCp": 6,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+3"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Battleship",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "5PyHlthldjHi4AEf",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!5PyHlthldjHi4AEf"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Qz2G5mnaidtd3TtC",
+  "name": "Automation Support",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Ship can use simple robots as crew.</p>",
+    "cost": 10000,
+    "power": 2,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Qz2G5mnaidtd3TtC"
+}

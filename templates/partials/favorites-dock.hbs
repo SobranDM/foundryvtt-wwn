@@ -1,0 +1,40 @@
+{{!-- Favorites dock list (PC / power-armor Main sidebar). --}}
+<div class="wwn-panel inventory wwn-favorites-dock">
+  <div class="wwn-section-header">
+    <i class="fas fa-star"></i> {{localize "WWN.Favorites.Title"}}
+  </div>
+  <ol class="item-list">
+    {{#each favorites as |fav|}}
+    <li class="item-entry">
+      <div class="item flexrow" data-item-id="{{fav.id}}">
+        <div class="item-name item-rollable flexrow" data-action="showItem">
+          <img class="item-image" src="{{fav.img}}" alt="" data-action="rollItem"
+            title="{{localize 'WWN.Favorites.Roll'}}" />
+          <h4 title="{{fav.name}}">{{fav.name~}}</h4>
+        </div>
+        {{#if fav.counter}}
+        <span class="powers-fav-counter">{{fav.counter.value}}/{{fav.counter.max}}</span>
+        {{/if}}
+        <div class="item-controls">
+          {{#if fav.canActivatePower}}
+          <a class="item-control" data-action="activatePower" title="{{localize 'WWN.Power.ActivateHint'}}">
+            <i class="fas fa-power-off"></i>
+          </a>
+          {{/if}}
+          {{#if fav.canDeactivatePower}}
+          <a class="item-control powers-active-badge" data-action="deactivatePower"
+            title="{{localize 'WWN.Power.DeactivateHint'}}">
+            {{localize "WWN.Power.Active"}}
+          </a>
+          {{/if}}
+          <a class="item-control" data-action="toggleFavorite" title="{{localize 'WWN.Favorites.Remove'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </div>
+    </li>
+    {{else}}
+    <li class="item-entry wwn-favorites-empty">{{localize "WWN.Favorites.Empty"}}</li>
+    {{/each}}
+  </ol>
+</div>

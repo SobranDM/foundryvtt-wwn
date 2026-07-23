@@ -1,0 +1,33 @@
+{
+  "_id": "JIHUnPL9Zmq9llWr",
+  "name": "Exodus Bay",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Houses vast numbers of cold sleep passengers: up to 1,000 in a cruiser, 5,000 in a capital ship. Each further selection doubles capacity.</p>",
+    "cost": 50000,
+    "power": 1,
+    "mass": 2,
+    "minClass": "cruiser",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!JIHUnPL9Zmq9llWr"
+}

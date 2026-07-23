@@ -1,0 +1,30 @@
+{
+  "name": "Shoot",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/shoot.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship's gunnery.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "shoot"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442996,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "F0kT52eMuFKPqSsq",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!F0kT52eMuFKPqSsq"
+}

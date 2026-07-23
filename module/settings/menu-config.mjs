@@ -32,8 +32,12 @@ export const WWN_SETTING_MENUS = {
         settings: ["saveSet", "removeLevelSave"],
       },
       {
+        legend: "WWN.Setting.Section.Skills",
+        settings: ["skillSet", "bonusSkillsGrantPointsAtFirstLevel", "flatSkillCost", "noSkillLevelReq"],
+      },
+      {
         legend: "WWN.Setting.Section.HouseRules",
-        settings: ["attributeModType", "bonusSkillsGrantPointsAtFirstLevel", "flatSkillCost", "noSkillLevelReq"],
+        settings: ["attributeModType"],
       },
       {
         legend: "WWN.Setting.Section.Experience",

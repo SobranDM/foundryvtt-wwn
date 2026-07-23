@@ -1,0 +1,30 @@
+{
+  "name": "Perform",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/perform.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Exhibit some performative skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "perform"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442994,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "CYHiGLyH23y7Hb0C",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CYHiGLyH23y7Hb0C"
+}

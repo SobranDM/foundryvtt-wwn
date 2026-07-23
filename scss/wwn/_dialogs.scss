@@ -1,106 +1,108 @@
-/* Currency adjustment, character creation, tweaks, modifiers, party dialogs */
+/* Dialog / ApplicationV2 windows opened via showWwnDialog and themed apps */
 
-.wwn.roll-dialog .roll-details {
-  font-weight: bold;
-  text-align: center;
-}
-
-.wwn.dialog.creator .attribute-list .form-fields {
+.wwn-app--creator .attribute-list .form-fields,
+.wwn-dialog--creator .attribute-list .form-fields {
   flex: 0 0 50px;
 }
-.wwn.dialog.creator .attribute-list .form-fields input {
+.wwn-app--creator .attribute-list .form-fields input,
+.wwn-dialog--creator .attribute-list .form-fields input {
   text-align: center;
   font-weight: bold;
 }
-.wwn.dialog.creator .roll-stats {
+.wwn-app--creator .roll-stats,
+.wwn-dialog--creator .roll-stats {
   flex: 0 0 65px;
   padding: 5px;
   margin-left: 4px;
   border-left: 1px solid var(--wwn-border);
 }
-.wwn.dialog.creator .roll-stats .form-group .form-fields span {
+.wwn-app--creator .roll-stats .form-group .form-fields span,
+.wwn-dialog--creator .roll-stats .form-group .form-fields span {
   text-align: center;
   line-height: 24px;
   flex: 0;
 }
 
-.wwn.dialog.party-xp .actors {
+.wwn-dialog--party-xp .actors,
+.wwn-dialog--party-coin .actors {
   height: 270px;
   padding: 0;
   overflow-y: auto;
 }
-.wwn.dialog.party-xp .actors .form-group input {
+.wwn-dialog--party-xp .actors .form-group input,
+.wwn-dialog--party-coin .actors .form-group input {
   max-width: 100px;
 }
-.wwn.dialog.party-xp .form-group button {
+.wwn-dialog--party-xp .form-group button,
+.wwn-dialog--party-coin .form-group button {
   line-height: 18px;
   flex-grow: 0;
 }
 
-.wwn.dialog.party-sheet {
+.wwn-app--party-sheet {
   min-width: 250px;
   min-height: 250px;
 }
-.wwn.dialog.party-sheet .window-content {
+.wwn-app--party-sheet .window-content {
   padding: 0;
 }
-.wwn.dialog.party-sheet .header {
+.wwn-app--party-sheet .header {
   color: var(--wwn-light);
   background: var(--wwn-dark);
   padding: 2px 10px;
   line-height: 20px;
   text-align: left;
 }
-.wwn.dialog.party-sheet .header .item-controls .item-control {
+.wwn-app--party-sheet .header .item-controls .item-control {
   padding: 0 2px;
 }
-.wwn.dialog.party-sheet .header .item-controls .item-control button {
+.wwn-app--party-sheet .header .item-controls .item-control button {
   line-height: 15px;
   margin: 0 1px;
   background: rgba(255, 255, 240, 0.8);
   border: 1px solid #b5b3a4;
 }
-.wwn.dialog.party-sheet .actor-list {
+.wwn-app--party-sheet .actor-list {
   margin: 0;
   overflow: auto;
   list-style: none;
   padding: 0;
 }
-.wwn.dialog.party-sheet .actor-list .actor {
+.wwn-app--party-sheet .actor-list .actor {
   border-bottom: 1px solid var(--wwn-border);
   border-top: 1px solid var(--wwn-border);
   margin-bottom: 2px;
   font-size: 12px;
   text-align: center;
 }
-.wwn.dialog.party-sheet .actor-list .actor .fas {
+.wwn-app--party-sheet .actor-list .actor .fas {
   padding: 0 2px;
   font-size: 10px;
 }
-.wwn.dialog.party-sheet .actor-list .actor .fields .field-row:nth-child(odd) {
+.wwn-app--party-sheet .actor-list .actor .fields .field-row:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.wwn.dialog.party-sheet .actor-list .actor .field-img {
+.wwn-app--party-sheet .actor-list .actor .field-img {
   flex: 0 0 50px;
   position: relative;
   object-fit: contain;
 }
-.wwn.dialog.party-sheet .actor-list .actor .field-img:hover .img-btns button {
+.wwn-app--party-sheet .actor-list .actor .field-img:hover .img-btns button {
   display: block;
 }
-.wwn.dialog.party-sheet .actor-list .actor .field-img img {
+.wwn-app--party-sheet .actor-list .actor .field-img img {
   border: none;
   width: 45px;
   height: 45px;
 }
-.wwn.dialog.party-sheet .actor-list .actor .field-img .img-btns {
+.wwn-app--party-sheet .actor-list .actor .field-img .img-btns {
   position: absolute;
   bottom: 6px;
   left: 3px;
   width: 45px;
   height: 12px;
 }
-.wwn.dialog.party-sheet .actor-list .actor .field-img .img-btns button {
+.wwn-app--party-sheet .actor-list .actor .field-img .img-btns button {
   display: none;
   cursor: pointer;
   font-size: 10px;
@@ -113,34 +115,20 @@
   background: var(--wwn-tan);
   box-shadow: inset 0 0px 3px var(--wwn-border);
 }
-.wwn.dialog.party-sheet .field-name {
+.wwn-app--party-sheet .field-name {
   text-align: left;
   text-indent: 10px;
 }
 
-.wwn.dialog.modifiers .attribute-bonuses label {
+.wwn-dialog--modifiers .attribute-bonuses label {
   font-weight: bold;
 }
-.wwn.dialog.modifiers .attribute-bonuses ol {
+.wwn-dialog--modifiers .attribute-bonuses ol {
   list-style: outside;
-}
-
-/* Tweaks dialog */
-.dialog-tweaks .row .column .form-group label {
-  min-width: 140px;
-}
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
 }
 
 .currency-adjustment {
   flex-direction: column;
-}
-
-.greyrow {
-  color: #777;
 }
 
 /* Class assignment: two columns per Full / Partial section */

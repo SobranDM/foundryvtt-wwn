@@ -1,0 +1,50 @@
+{
+  "_id": "DcMBnwhJHSQaER7U",
+  "name": "Ghost Walker Field",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>On Turn: invisible/inaudible to unaided and typical TL4 sensors. Melee -4 if location known; ranged futile. Breaks on run/attack/sharp motion/psychic use. Up to 15 min; 15 min recharge.</p>",
+    "tl": 5,
+    "mass": 1,
+    "power": 2,
+    "cost": 0,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "ghostWalkerField",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "oRS0vaygbjRN9VFW",
+  "sort": 60,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DcMBnwhJHSQaER7U"
+}

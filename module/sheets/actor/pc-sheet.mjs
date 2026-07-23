@@ -6,6 +6,7 @@ import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
 import { prepareXpBar } from "../helpers/resource-bar.mjs";
 import { maybeShowClassAssignmentDialog } from "../../dialog/class-assignment.mjs";
+import { computeSkillPurchaseCost } from "../../helpers/skill-points.mjs";
 
 const TPL = "systems/wwn/templates/actor/pc";
 
@@ -74,7 +75,6 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
     context.xpBar = prepareXpBar(actor);
     context.isNew = actor.isNew?.() ?? false;
     context.showMovement = game.settings.get("wwn", "showMovement");
-    context.currencyTypes = game.settings.get("wwn", "currencyTypes");
     context.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
     context.xpPerChar = game.settings.get("wwn", "xpPerChar");
     context.useTrauma = game.settings.get("wwn", "useTrauma");
@@ -116,40 +116,32 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
   static #onGenerateScores() {
     return import("../../dialog/character-creation.js").then(({ WwnCharacterCreator }) => {
       new WwnCharacterCreator(this.actor, {
-        top: (this.position?.top ?? 0) + 40,
-        left: (this.position?.left ?? 0) + ((this.position?.width ?? 780) - 400) / 2,
-      }).render(true);
+        position: {
+          top: (this.position?.top ?? 0) + 40,
+          left: (this.position?.left ?? 0) + ((this.position?.width ?? 780) - 400) / 2,
+        },
+      }).render({ force: true });
     });
   }
 
-  /** Legacy currency conversion/adjustment dialog. */
+  /** Currency adjustment dialog. */
   static #onAdjustCurrency() {
-    return import("../../dialog/adjust-currency.js").then(({ WwnAdjustCurrency }) => {
-      new WwnAdjustCurrency(this.actor, {
-        top: (this.position?.top ?? 0) + 300,
-        left: (this.position?.left ?? 0) + ((this.position?.width ?? 780) - 200) / 2,
-      }).render(true);
+    return import("../../dialog/adjust-currency.js").then(({ showAdjustCurrencyDialog }) => {
+      return showAdjustCurrencyDialog(this.actor);
     });
   }
 
-  /** Legacy "show modifiers" breakdown dialog. */
+  /** Show modifiers breakdown dialog. */
   static #onShowModifiers() {
-    return import("../../dialog/character-modifiers.js").then(({ WwnCharacterModifiers }) => {
-      new WwnCharacterModifiers(this.actor, {
-        top: (this.position?.top ?? 0) + 40,
-        left: (this.position?.left ?? 0) + ((this.position?.width ?? 780) - 400) / 2,
-      }).render(true);
+    return import("../../dialog/character-modifiers.js").then(({ showCharacterModifiersDialog }) => {
+      return showCharacterModifiersDialog(this.actor);
     });
   }
 
-  /** Bulk-add primary skills from the core Abilities compendium. */
+  /** Bulk-add primary skills from the configured skill pack. */
   static async #onAddSkills() {
-    const pack = game.packs.get("wwn.abilities");
-    if (!pack) return;
-    const docs = await pack.getDocuments();
-    const primary = docs
-      .filter((i) => i.type === "skill" && i.system.secondary === false)
-      .map((i) => i.toObject());
+    const { getPrimarySkillData } = await import("../../helpers/skill-set.mjs");
+    const primary = await getPrimarySkillData();
     if (primary.length) await Item.createDocuments(primary, { parent: this.actor });
   }
 
@@ -199,13 +191,18 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
         return ui.notifications.error(game.i18n.localize("WWN.Skills.LevelTooLow"));
       }
     }
-    const flatCost = game.settings.get("wwn", "flatSkillCost");
-    const cost = flatCost ? 1 : rank + 2;
+    const { fromInvested, fromUnspent } = computeSkillPurchaseCost(item, this.actor);
     const unspent = Number(this.actor.system.skills?.unspent) || 0;
-    if (cost > unspent) return ui.notifications.error(game.i18n.localize("WWN.Skills.NotEnoughPoints"));
+    if (fromUnspent > unspent) return ui.notifications.error(game.i18n.localize("WWN.Skills.NotEnoughPoints"));
 
-    await item.update({ "system.ownedLevel": rank + 1 });
-    await this.actor.update({ "system.skills.unspent": unspent - cost });
+    const invested = item.system.pointsInvested ?? 0;
+    await item.update({
+      "system.ownedLevel": rank + 1,
+      "system.pointsInvested": Math.max(invested - fromInvested, 0),
+    });
+    if (fromUnspent > 0) {
+      await this.actor.update({ "system.skills.unspent": unspent - fromUnspent });
+    }
   }
 
   static async #onToggleSkillLevelsUnlock() {

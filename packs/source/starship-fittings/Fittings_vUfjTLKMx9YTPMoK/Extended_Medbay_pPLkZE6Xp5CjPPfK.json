@@ -1,0 +1,33 @@
+{
+  "_id": "pPLkZE6Xp5CjPPfK",
+  "name": "Extended Medbay",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Allows medical treatment of up to the ship's entire maximum crew at once, including critically wounded patients.</p>",
+    "cost": 5000,
+    "power": 1,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!pPLkZE6Xp5CjPPfK"
+}

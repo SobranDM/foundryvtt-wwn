@@ -1,0 +1,26 @@
+/* Power armor sheet layout — under .wwn.sheet.actor.power-armor only */
+
+.wwn.sheet.actor.power-armor {
+  .wwn-power-armor-resources {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .wwn-ability-value.wwn-overlay {
+    font-weight: 600;
+  }
+
+  .wwn-power-armor-combat-actions {
+    margin-top: 0.5rem;
+  }
+
+  .wwn-power-armor-editor {
+    min-height: 8rem;
+  }
+
+  /* Frame panel: budget chips under the frame picker */
+  .wwn-power-armor-budget {
+    margin-top: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

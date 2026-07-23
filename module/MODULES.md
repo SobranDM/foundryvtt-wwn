@@ -36,5 +36,5 @@ Actor/item sheets live under [`sheets/`](sheets/) (`ActorSheetV2` / `ItemSheetV2
 
 | Kind | Types |
 |------|--------|
-| Actor | `pc`, `npc`, `faction` |
-| Item | `power`, `classEdge`, `focus`, `skill`, `weapon`, `armor`, `item` (gear), `currency`, `asset` |
+| Actor | `pc`, `npc`, `faction`, `starship` |
+| Item | `power`, `classEdge`, `focus`, `skill`, `weapon`, `armor`, `item` (gear), `currency`, `asset`, `shipFitting`, `shipWeapon`, `shipDefense` |

@@ -33,6 +33,12 @@
       "faction": {
         "htmlFields": ["description"]
       },
+      "starship": {
+        "htmlFields": ["description"]
+      },
+      "powerArmor": {
+        "htmlFields": ["description"]
+      },
       "pc": {
         "htmlFields": ["biography", "details.notes"]
       },
@@ -68,6 +74,18 @@
       "asset": {
         "htmlFields": ["desc"]
       },
+      "shipFitting": {
+        "htmlFields": ["description"]
+      },
+      "shipWeapon": {
+        "htmlFields": ["description"]
+      },
+      "shipDefense": {
+        "htmlFields": ["description"]
+      },
+      "armorFitting": {
+        "htmlFields": ["description"]
+      },
       "art": {
         "htmlFields": ["description"]
       },
@@ -86,6 +104,33 @@
       "label": "Abilities",
       "system": "wwn",
       "path": "packs/abilities",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "skills-wwn",
+      "label": "Skills (WWN)",
+      "system": "wwn",
+      "path": "packs/skills-wwn",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "skills-swn",
+      "label": "Skills (SWN)",
+      "system": "wwn",
+      "path": "packs/skills-swn",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "skills-awn",
+      "label": "Skills (AWN)",
+      "system": "wwn",
+      "path": "packs/skills-awn",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -161,6 +206,42 @@
       "type": "Item",
       "private": false,
       "flags": {}
+    },
+    {
+      "name": "starship-fittings",
+      "label": "Starship Fittings",
+      "system": "wwn",
+      "path": "packs/starship-fittings",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "example-starships",
+      "label": "Example Starships",
+      "system": "wwn",
+      "path": "packs/example-starships",
+      "type": "Actor",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "armor-fittings",
+      "label": "Armor Fittings",
+      "system": "wwn",
+      "path": "packs/armor-fittings",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "example-power-armor",
+      "label": "Example Power Armor",
+      "system": "wwn",
+      "path": "packs/example-power-armor",
+      "type": "Actor",
+      "private": false,
+      "flags": {}
     }
   ],
   "languages": [
@@ -185,6 +266,7 @@
       "color": "#4b4a44",
       "packs": [
         "abilities",
+        "skills-wwn",
         "gear",
         "magic-items",
         "assets",
@@ -201,6 +283,28 @@
       "packs": [
         "ose-monsters",
         "ose-spells"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Stars Without Number",
+      "sorting": "m",
+      "color": "#2f5f7a",
+      "packs": [
+        "skills-swn",
+        "starship-fittings",
+        "example-starships"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Ashes Without Number",
+      "sorting": "m",
+      "color": "#6b4a2f",
+      "packs": [
+        "skills-awn",
+        "armor-fittings",
+        "example-power-armor"
       ],
       "folders": []
     }

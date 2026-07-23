@@ -1,0 +1,50 @@
+{
+  "_id": "U2E4yPW9NfOmXK9M",
+  "name": "Exoskeletal Boost, Advanced",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>As Basic, but effective Str mod +3; Stowed Enc. usable as Readied.</p>",
+    "tl": 4,
+    "mass": 2,
+    "power": 1,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "exoAdvanced",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 27,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!U2E4yPW9NfOmXK9M"
+}

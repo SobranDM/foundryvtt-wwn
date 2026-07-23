@@ -1,0 +1,33 @@
+{
+  "_id": "L2wB80PP3JHColyp",
+  "name": "Colony Core",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Ship can be deconstructed into a colony base supporting up to five times its maximum crew. Once activated it cannot be re-packed.</p>",
+    "cost": 100000,
+    "power": 4,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!L2wB80PP3JHColyp"
+}

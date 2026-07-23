@@ -1,0 +1,50 @@
+{
+  "_id": "0z71yK9pwaJaIozq",
+  "name": "Tsukumogami Processor",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Companion VI: bonus Main Action for non-physical actions or triggering suit systems (not weapons/movement). +3 to suit/military skill checks.</p>",
+    "tl": 4,
+    "mass": 1,
+    "power": 3,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "tsukumogamiProcessor",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 50,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0z71yK9pwaJaIozq"
+}

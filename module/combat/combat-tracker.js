@@ -1,7 +1,8 @@
 /**
  * Applies custom styling and controls to the combat tracker
  */
-import { WWN } from "../config.js";
+import { WWN } from "../config/index.mjs";
+import { showWwnDialog, confirmButton, cancelButton } from "../applications/wwn-dialog.mjs";
 
 export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
   .CombatTracker {
@@ -244,26 +245,17 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
       </form>
     `;
 
-    new Dialog({
+    const result = await showWwnDialog({
+      modifier: "combat-set-group",
       title: game.i18n.localize("WWN.combat.SetCombatantGroups"),
       content,
-      buttons: {
-        set: {
-          icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize("Submit"),
-          callback: async html => {
-            const formData = new FormData(html[0].querySelector("form"));
-            const group = formData.get("group");
-            await combatant.assignGroup(group);
-          }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("Cancel")
-        }
-      },
-      default: "set"
-    }).render(true);
+      buttons: [
+        confirmButton({ label: "Submit" }),
+        cancelButton(),
+      ],
+    });
+    if (!result || result === "cancel") return;
+    await combatant.assignGroup(result.group);
   }
 
   /**

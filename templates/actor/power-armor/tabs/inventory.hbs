@@ -1,0 +1,130 @@
+{{!-- Suit-owned inventory + mount transfer (PC-like columns, thin sections). --}}
+<section class="tab inventory {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-inventory-stack wwn-data-table">
+    <div class="wwn-form-panel-fields">
+      <a class="wwn-chip" data-action="transferFromPilot">
+        <span class="wwn-chip-label">{{localize "WWN.PowerArmor.TransferFromPilot"}}</span>
+      </a>
+    </div>
+
+    {{#> wwnCollapsibleSection sectionId="powerArmor.weapons"
+      label=(localize "TYPES.Item.weapon")
+      count=weapons.length
+      collapsed=(lookup @root.collapsed "powerArmor.weapons")
+      searchType="weapon"
+      createType="weapon"}}
+    <div class="item-titles item-col-header wwn-col-header flexrow">
+      <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+      <div class="icon-row">{{localize "WWN.items.enterTrait"}}</div>
+      {{#if useTrauma}}
+      <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">
+        {{localize "WWN.items.TraumaDie"}}
+      </div>
+      {{/if}}
+      <div class="field-short" data-tooltip="{{localize 'WWN.items.Charges'}}"><i class="fas fa-magic"></i></div>
+      <div class="field-short" data-tooltip="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+      <div class="field-short" data-tooltip="{{localize 'WWN.items.Weight'}}">
+        <i class="fas fa-weight-hanging"></i>
+      </div>
+      <div class="item-controls"></div>
+    </div>
+    <ol class="item-list">
+      {{#each weapons as |item|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{item.id}}">
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
+            <h4 title="{{item.name}}">
+              {{item.name~}}
+              {{#if item.system.damage}}<span class="greyrow">({{item.system.damage}})</span>{{/if}}
+            </h4>
+          </div>
+          <div class="icon-row flexrow">
+            {{#each item.system.tags as |tag|}}
+            {{#if (getTagIcon tag)}}
+            <img title="{{getTagDesc tag}}" src="{{getTagIcon tag}}" />
+            {{else}}
+            <span title="{{tag}}">{{tag}}{{#unless @last}},{{/unless}}</span>
+            {{/if}}
+            {{/each}}
+          </div>
+          {{#if @root.useTrauma}}
+          <div class="field-short" data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">
+            {{#if item.system.trauma.die}}{{item.system.trauma.die}}/x{{item.system.trauma.rating}}{{/if}}
+          </div>
+          {{/if}}
+          <div class="field-short charges">
+            {{#if (eq item.system.ammoMode "magazine")}}
+            <input value="{{item.system.charges.value}}" type="number" disabled class="charges-input" />
+            <div class="charges-reload-overlay">
+              <a class="item-control" data-action="reloadWeapon" title="{{localize 'WWN.items.ReloadWeapon'}}">
+                <i class="fas fa-sync-alt"></i>
+              </a>
+            </div>
+            {{else}}
+            <input value="{{item.system.charges.value}}" type="number" data-item-field="system.charges.value" />
+            {{/if}}
+          </div>
+          <div class="field-short quantity">
+            <input value="{{item.system.quantity}}" type="number" data-item-field="system.quantity" />
+          </div>
+          <div class="field-short">
+            <input value="{{item.system.weight}}" type="number" readonly />
+          </div>
+          <div class="item-controls">
+            {{#if @root.owner}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{else}}
+      <li class="item-entry">
+        <p class="hint">{{localize "WWN.None"}}</p>
+      </li>
+      {{/each}}
+    </ol>
+    {{/wwnCollapsibleSection}}
+
+    {{#> wwnCollapsibleSection sectionId="powerArmor.gear"
+      label=(localize "WWN.category.items")
+      count=gear.length
+      collapsed=(lookup @root.collapsed "powerArmor.gear")
+      searchType="item"
+      createType="item"}}
+    <div class="item-titles item-col-header wwn-col-header flexrow">
+      <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+      <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></div>
+      <div class="item-controls"></div>
+    </div>
+    <ol class="item-list">
+      {{#each gear as |item|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{item.id}}">
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{item.img}}" alt="" />
+            <h4 title="{{item.name}}">{{item.name}}</h4>
+          </div>
+          <div class="field-short quantity">
+            <input value="{{item.system.quantity}}" type="number" placeholder="0" data-item-field="system.quantity" />
+          </div>
+          <div class="field-short">
+            <input value="{{item.system.weight}}" type="number" readonly />
+          </div>
+          <div class="item-controls">
+            {{#if @root.owner}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{else}}
+      <li class="item-entry">
+        <p class="hint">{{localize "WWN.None"}}</p>
+      </li>
+      {{/each}}
+    </ol>
+    {{/wwnCollapsibleSection}}
+  </div>
+</section>

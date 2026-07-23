@@ -1,0 +1,33 @@
+{
+  "_id": "nDm5jZLWdGrNCF7r",
+  "name": "Augmented Plating",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>+2 AC, at the cost of speed and maneuverability. Can decrease a ship's Speed below 0, applied as a penalty to Pilot tests.</p>",
+    "cost": 25000,
+    "power": 0,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nDm5jZLWdGrNCF7r"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "w2V4ZOFpnv12o08t",
+  "name": "Integral Ripper Bar",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Cut man-sized hole in non-metallic non-fortified barrier as Main Action. Weapon: Str/Dex, 3d6, Shock 2/18, Trauma d8/x4, -3 to hit.</p>",
+    "tl": 4,
+    "mass": 2,
+    "power": 1,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "integralRipperBar",
+    "mountWeaponId": "",
+    "damageRoll": "3d6",
+    "save": "",
+    "healing": false,
+    "isWeapon": true,
+    "weaponBonus": -3,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "2",
+      "ac": 18
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 4
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 32,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!w2V4ZOFpnv12o08t"
+}

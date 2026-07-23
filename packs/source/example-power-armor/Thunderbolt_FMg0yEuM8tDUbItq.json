@@ -1,0 +1,151 @@
+{
+  "_id": "FMg0yEuM8tDUbItq",
+  "name": "Thunderbolt",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "ir80wRTAzJBm4AlU",
+      "name": "Exoskeletal Boost, Advanced",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>As Basic, but effective Str mod +3; Stowed Enc. usable as Readied.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "exoAdvanced",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!FMg0yEuM8tDUbItq.ir80wRTAzJBm4AlU"
+    },
+    {
+      "_id": "LmupocZ0bGCT9gFY",
+      "name": "Breacher Fist",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>Main Action: blast human-sized hole in adjacent wall up to 1m thick (not TL4 fortification). Vs immobile targets: demo charge damage.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "breacherFist",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 200000,
+      "_key": "!actors.items!FMg0yEuM8tDUbItq.LmupocZ0bGCT9gFY"
+    },
+    {
+      "_id": "LbHLPW92V6pKoKu2",
+      "name": "Regenerative Force Field",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>+10 Soak.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "regenerativeForceField",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 300000,
+      "_key": "!actors.items!FMg0yEuM8tDUbItq.LbHLPW92V6pKoKu2"
+    },
+    {
+      "_id": "Q43Fi0r7k4VfUiZ4",
+      "name": "Plating, Basic",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 18, Soak 20, +1 Trauma Target, Shock immune, immune to TL3 or lower weapons. Only one plating.</p>",
+        "tl": 4,
+        "mass": 2,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": false,
+        "effectId": "platingBasic",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 400000,
+      "_key": "!actors.items!FMg0yEuM8tDUbItq.Q43Fi0r7k4VfUiZ4"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Thunderbolt modular power armor frame.</p>",
+    "frameType": "thunderbolt",
+    "mass": {
+      "max": 11
+    },
+    "power": {
+      "max": 8
+    },
+    "cost": 0,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 1,
+    "perpetual": false,
+    "transportFrames": 3,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Thunderbolt",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 5,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!FMg0yEuM8tDUbItq"
+}

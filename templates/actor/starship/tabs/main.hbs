@@ -1,0 +1,83 @@
+{{!-- Starship Main: left stats + crew stations | right equipment collapsibles. --}}
+<section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-sheet-main-grid">
+    <div class="wwn-sheet-main-left wwn-form-stack">
+      <div class="wwn-panel">
+        <div class="wwn-stat-grid wwn-starship-stat-grid">
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">{{localize "WWN.Starship.AC"}}</div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" data-dtype="Number" name="system.ac" value="{{system.ac}}" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">{{localize "WWN.Starship.Armor"}}</div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" min="0" data-dtype="Number" name="system.armor" value="{{system.armor}}" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">{{localize "WWN.Starship.Speed"}}</div>
+            <div class="wwn-stat-chip-value">
+              {{#if speedEditable}}
+              <input type="number" step="1" data-dtype="Number" name="system.speed" value="{{system.speed}}" />
+              {{else}}
+              <span>—</span>
+              {{/if}}
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">{{localize "WWN.Starship.Drive"}}</div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" min="0" data-dtype="Number" name="system.drive" value="{{system.drive}}" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip{{#if powerOver}} wwn-budget-over{{/if}}">
+            <div class="wwn-section-header" title="{{localize 'WWN.Starship.PowerFreeMax'}}">
+              {{localize "WWN.Starship.Power"}}
+            </div>
+            <div class="wwn-stat-chip-value">
+              <span>{{system.power.free}}</span>
+              <span class="sep">/</span>
+              <input type="number" step="1" min="0" data-dtype="Number" name="system.power.max"
+                value="{{system.power.max}}" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip{{#if massOver}} wwn-budget-over{{/if}}">
+            <div class="wwn-section-header" title="{{localize 'WWN.Starship.MassFreeMax'}}">
+              {{localize "WWN.Starship.Mass"}}
+            </div>
+            <div class="wwn-stat-chip-value">
+              <span>{{system.mass.free}}</span>
+              <span class="sep">/</span>
+              <input type="number" step="1" min="0" data-dtype="Number" name="system.mass.max"
+                value="{{system.mass.max}}" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip{{#if hardpointsOver}} wwn-budget-over{{/if}}">
+            <div class="wwn-section-header" title="{{localize 'WWN.Starship.HardpointsUsedMax'}}">
+              {{localize "WWN.Starship.Hardpoints"}}
+            </div>
+            <div class="wwn-stat-chip-value">
+              <span>{{system.hardpoints.used}}</span>
+              <span class="sep">/</span>
+              <input type="number" step="1" min="0" data-dtype="Number" name="system.hardpoints.max"
+                value="{{system.hardpoints.max}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{> wwnStarshipCrewStations stations=stations}}
+    </div>
+
+    <div class="wwn-sheet-main-right wwn-form-stack">
+      {{> wwnStarshipEquipmentPanel sectionId="weapons" label=(localize "WWN.Starship.WeaponsSection")
+        items=weapons itemType="shipWeapon" isWeapon=true}}
+      {{> wwnStarshipEquipmentPanel sectionId="defenses" label=(localize "WWN.Starship.DefensesSection")
+        items=defenses itemType="shipDefense" isWeapon=false}}
+      {{> wwnStarshipEquipmentPanel sectionId="fittings" label=(localize "WWN.Starship.FittingsSection")
+        items=fittings itemType="shipFitting" isWeapon=false}}
+    </div>
+  </div>
+</section>

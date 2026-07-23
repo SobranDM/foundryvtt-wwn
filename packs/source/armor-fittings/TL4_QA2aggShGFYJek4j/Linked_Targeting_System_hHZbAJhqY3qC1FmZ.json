@@ -1,0 +1,50 @@
+{
+  "_id": "hHZbAJhqY3qC1FmZ",
+  "name": "Linked Targeting System",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Associated with a weapon mount (change at maintenance). Bonus attack with that weapon whenever attacking with another. Each after first: +1 Mass and Power.</p>",
+    "tl": 4,
+    "mass": 1,
+    "power": 2,
+    "cost": 20000,
+    "stackable": true,
+    "disabled": false,
+    "integral": false,
+    "effectId": "linkedTargetingSystem",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 34,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hHZbAJhqY3qC1FmZ"
+}

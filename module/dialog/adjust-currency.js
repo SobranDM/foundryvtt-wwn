@@ -1,75 +1,58 @@
 import { isPc } from "../helpers/actor-types.mjs";
-export class WwnAdjustCurrency extends FormApplication {
+import { applyCurrencyDeltas, getCurrencyItems } from "../helpers/currency.mjs";
+import { showWwnDialog, confirmButton, cancelButton } from "../applications/wwn-dialog.mjs";
 
-  static get defaultOptions() {
-    const options = super.defaultOptions;
-    options.id = 'sheet-tweaks';
-    options.template =
-      'systems/wwn/templates/actors/dialogs/adjust-currency.html';
-    options.width = 280;
-    return options;
+/**
+ * Open the adjust-currency dialog for an actor and apply deltas on confirm.
+ * @param {Actor} actor
+ */
+export async function showAdjustCurrencyDialog(actor) {
+  const currencies = getCurrencyItems(actor).map((i) => ({
+    id: i.id,
+    name: i.name,
+    carried: i.system.carried ?? 0,
+    banked: i.system.banked ?? 0,
+    multiplier: i.system.multiplier ?? 1,
+  }));
+  if (!currencies.length) {
+    return ui.notifications.warn(game.i18n.format("WWN.Currency.NoCurrencyItems", { name: actor.name }));
   }
 
-  /* -------------------------------------------- */
-  /**
-   * Add the Entity name into the window title
-   * @type {String}
-   */
-  get title() {
-    return game.i18n.localize("WWN.items.adjustCurrency");
-  }
-  /* -------------------------------------------- */
+  const context = {
+    isCharacter: isPc(actor),
+    currencies,
+    user: game.user,
+    config: CONFIG.WWN,
+  };
 
-  /**
-   * Construct and return the data object used to render the HTML template for this form application.
-   * @return {Object}
-   */
-  getData() {
-    const data = foundry.utils.deepClone(this.object);
-    if (isPc(data)) {
-      data.isCharacter = true;
-    }
-    data.user = game.user;
-    data.config = CONFIG.WWN;
-    return data;
-  }
-  /* -------------------------------------------- */
+  const result = await showWwnDialog({
+    modifier: "adjust-currency",
+    title: game.i18n.localize("WWN.items.adjustCurrency"),
+    template: "systems/wwn/templates/actors/dialogs/adjust-currency.html",
+    context,
+    position: { width: 280 },
+    buttons: [
+      confirmButton({ label: "WWN.items.adjustCurrency" }),
+      cancelButton(),
+    ],
+  });
+  if (!result || result === "cancel") return;
 
-  async _adjustCurrency(ev) {
-    let updatedCurrency = { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0, bank: 0 };
-    updatedCurrency.cp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="copper"]').val()) || 0;
-    updatedCurrency.sp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="silver"]').val()) || 0;
-    updatedCurrency.gp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="gold"]').val()) || 0;
-    updatedCurrency.bank = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="bank"]').val()) || 0;
-    if (game.settings.get("wwn", "currencyTypes") === "currencybx") {
-      updatedCurrency.ep = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="electrum"]').val()) || 0;
-      updatedCurrency.pp = parseInt($(ev.currentTarget.parentElement.parentElement).find('input[name="platinum"]').val()) || 0;
-    }
-    updatedCurrency = {
-      cp: updatedCurrency.cp + this.object.system.currency.cp,
-      sp: updatedCurrency.sp + this.object.system.currency.sp,
-      ep: updatedCurrency.ep + this.object.system.currency.ep,
-      gp: updatedCurrency.gp + this.object.system.currency.gp,
-      pp: updatedCurrency.pp + this.object.system.currency.pp,
-      bank: updatedCurrency.bank + this.object.system.currency.bank
-    }
-    const invalidEntries = Object.entries(updatedCurrency).filter(curr => curr[1] < 0)
-    if (invalidEntries.length > 0) {
-      return ui.notifications.warn(`Cannot reduce ${invalidEntries[0][0].toUpperCase()} below 0!`)
-    }
-    await this.object.update({ "system.currency": updatedCurrency });
+  const carriedDeltas = {};
+  for (const c of currencies) {
+    carriedDeltas[c.id] = parseInt(result[`carried_${c.id}`], 10) || 0;
   }
+  const bankDelta = parseInt(result.bank, 10) || 0;
+  const ok = await applyCurrencyDeltas(actor, { carriedDeltas, bankDelta });
+  if (ok) actor.sheet?.render(true);
+}
 
-  async _updateObject(event, formData) {
-    event.preventDefault();
-    this.object.sheet.render(true);
+/** @deprecated Prefer {@link showAdjustCurrencyDialog} */
+export class WwnAdjustCurrency {
+  constructor(object) {
+    this.object = object;
   }
-
-  /** @override */
-  activateListeners(html) {
-    super.activateListeners(html);
-    html
-      .find('button[data-action="adjust-currency"')
-      .click(this._adjustCurrency.bind(this));
+  render() {
+    return showAdjustCurrencyDialog(this.object);
   }
 }

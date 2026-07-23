@@ -1,11 +1,11 @@
-<form autocomplete="off" onsubmit="event.preventDefault();">
+<form autocomplete="off">
     <div class="flexrow">
         <div class="attribute-list">
-            {{#each config.scores as |score id| }}
+            {{#each config.abilityAbbreviations as |label id| }}
             <div data-score="{{id}}" class="form-group">
-                <label><a class="score-roll"><i class="fas fa-dice"></i></a> {{score}}</label>
+                <label><a data-action="rollScore"><i class="fas fa-dice"></i></a> {{localize label}}</label>
                 <div class="form-fields">
-                    <input class="score-value" name="system.scores.{{id}}.value" type="number" value="0" data-dtype="Number"/>
+                    <input class="score-value" name="system.abilities.{{id}}.value" type="number" value="0" data-dtype="Number"/>
                 </div>
             </div>
             {{/each}}
@@ -33,12 +33,12 @@
             <div class="form-group">
                 <label>Silver&nbsp;</label>
                 <div class="form-fields">
-                    <a class="silver-roll"><i class="fas fa-dice"></i></a>
+                    <a data-action="rollSilver"><i class="fas fa-dice"></i></a>
                 </div>
             </div>
             <div></div>
             <div class="form-group">
-                <input id="silver" class="silver-value" type="number" value="0" disabled/>
+                <input name="silver" class="silver-value" type="number" value="0" disabled/>
             </div>
         </div>
     </div>

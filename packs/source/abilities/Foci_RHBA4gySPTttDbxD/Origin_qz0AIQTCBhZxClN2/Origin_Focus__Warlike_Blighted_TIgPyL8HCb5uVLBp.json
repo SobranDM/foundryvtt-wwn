@@ -4,7 +4,176 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "qTa15LzwI90C0QRV",
+      "type": "base",
+      "name": "Warlike Blighted (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.allAttack",
+            "type": "add",
+            "value": 1,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.qTa15LzwI90C0QRV"
+    },
+    {
+      "_id": "gou6BRvnIL6BpVJH",
+      "type": "base",
+      "name": "Warlike Blighted Mental −1 (Intelligence −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.gou6BRvnIL6BpVJH"
+    },
+    {
+      "_id": "MMt0tYKSH5rwFgdg",
+      "type": "base",
+      "name": "Warlike Blighted Mental −1 (Wisdom −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.MMt0tYKSH5rwFgdg"
+    },
+    {
+      "_id": "PnlPDjkcBM3NFlwT",
+      "type": "base",
+      "name": "Warlike Blighted Mental −1 (Charisma −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.PnlPDjkcBM3NFlwT"
+    },
+    {
+      "_id": "0V60nwus5GIMNDm8",
+      "type": "base",
+      "name": "Warlike Blighted Physical +1 (Strength +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.0V60nwus5GIMNDm8"
+    },
+    {
+      "_id": "9DTX04E3kCY75a22",
+      "type": "base",
+      "name": "Warlike Blighted Physical +1 (Dexterity +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.9DTX04E3kCY75a22"
+    },
+    {
+      "_id": "6UuFQ8Pw5JZ2KGR5",
+      "type": "base",
+      "name": "Warlike Blighted Physical +1 (Constitution +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!TIgPyL8HCb5uVLBp.6UuFQ8Pw5JZ2KGR5"
+    }
+  ],
   "system": {
     "description": "<p>Your kind were born to kill, whether as the slave-soldiers of some lost empire or as a living biological plague meant solely to scourge the land of all human life. You are constantly assailed by urges to slay, torment, and destroy, but unlike most of your brethren you are capable of controlling these impulses&hellip; when you must.</p>\n<p><strong>Level 1: </strong>Gain Stab and Punch as bonus skills and gain a natural +1 bonus on all hit rolls. Choose two attributes from Intelligence, Wisdom, and Charisma; these attribute modifiers suffer a -1 penalty, down to a -2 maximum. Increase either your Strength, Dexterity, or Constitution modifier by +1, up to a maximum of +3. You suffer a -1 penalty on all social skill checks not related to intimidation.</p>",
     "ownedLevel": 1,
@@ -18,8 +187,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "stab",
+      "punch"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

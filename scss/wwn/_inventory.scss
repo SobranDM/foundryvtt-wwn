@@ -225,62 +225,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* Row metric columns — keep in sync with .wwn-data-table in _components.scss
-   so column headers center over content (fixed flex basis on every metric col). */
-.wwn.sheet.actor .inventory .icon-row,
-.wwn.sheet.actor .wwn-data-table .icon-row {
-  flex: 0 0 8rem;
-  width: 8rem;
-  min-width: 8rem;
-  max-width: 8rem;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  gap: 0.1rem;
-}
-.wwn.sheet.actor .inventory .icon-row img {
-  border: none;
-  margin: 3px 1px;
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
-}
-.wwn.sheet.actor .inventory .icon-row span {
-  font-size: 11px;
-  flex-grow: 0;
-  white-space: nowrap;
-}
-.wwn.sheet.actor .inventory .field-long,
-.wwn.sheet.actor .wwn-data-table .field-long {
-  flex: 0 0 5rem;
-  width: 5rem;
-  min-width: 5rem;
-  max-width: 5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
-  font-size: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Row metric columns live on `.wwn-data-table` in _components.scss.
+   Inventory-only extras below. */
 .wwn.sheet.actor .inventory .field-long.memorize input {
   border-bottom: none;
   margin: 3px 0;
-}
-.wwn.sheet.actor .inventory .field-short,
-.wwn.sheet.actor .wwn-data-table .field-short {
-  font-size: 11px;
-  flex: 0 0 3.25rem;
-  width: 3.25rem;
-  min-width: 3.25rem;
-  max-width: 3.25rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .wwn.sheet.actor .inventory .field-xshort {
   font-size: 11px;
@@ -299,23 +248,6 @@
   flex: 0 0 10px;
   margin: 0 4px;
   cursor: pointer;
-}
-.wwn.sheet.actor .inventory .item-controls,
-.wwn.sheet.actor .wwn-data-table .item-controls {
-  font-size: 11px;
-  flex: 0 0 5.5rem;
-  width: 5.5rem;
-  min-width: 5.5rem;
-  max-width: 5.5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.15rem;
-  text-align: right;
-  margin-right: 4px;
 }
 .wwn.sheet.actor .inventory .item-controls-short {
   font-size: 11px;
@@ -376,7 +308,7 @@
   height: auto;
 }
 
-/* GWN-aligned single-column inventory stack */
+/* single-column inventory stack */
 .wwn.sheet.actor.pc .tab.inventory.active {
   display: flex;
   flex-direction: column;

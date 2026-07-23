@@ -1,0 +1,33 @@
+{
+  "_id": "sAgVKz20dHOoJGEf",
+  "name": "Hardened Polyceramic Overlay",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+    "cost": 25000,
+    "power": 0,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!sAgVKz20dHOoJGEf"
+}

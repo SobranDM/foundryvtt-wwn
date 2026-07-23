@@ -4,7 +4,80 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "S1T8ICh9JKqKAxP8",
+      "type": "base",
+      "name": "Goblin, Tinker (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!fVvm43qMZGMizwfb.S1T8ICh9JKqKAxP8"
+    },
+    {
+      "_id": "epaLexg1RHUE9bdg",
+      "type": "base",
+      "name": "Goblin, Tinker (Dexterity +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!fVvm43qMZGMizwfb.epaLexg1RHUE9bdg"
+    },
+    {
+      "_id": "EX7uwz01nQgHCVBw",
+      "type": "base",
+      "name": "Goblin, Tinker (Intelligence +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!fVvm43qMZGMizwfb.EX7uwz01nQgHCVBw"
+    }
+  ],
   "system": {
     "description": "<p>This variety of goblin is for those campaign settings where they are inveterate builders.</p>\n<p><strong>Level 1:</strong> Gain Craft as a bonus skill. Your Dexterity or Intelligence modifier increases by +1, and your Wisdom modifier decreases by -1. You have the weapon restrictions of halflings. You can see clearly in the dark out to sixty feet.</p>",
     "ownedLevel": 1,
@@ -18,8 +91,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "craft"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

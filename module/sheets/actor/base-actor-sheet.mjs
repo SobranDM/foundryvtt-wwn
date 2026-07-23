@@ -1,35 +1,10 @@
 /**
  * Shared WWN actor sheet behavior: tabs, item lists, powers grouping,
  * effects, rolls, and inline item-field editing.
- *
- * Ported from
- * games-without-number/module/sheets/actor/base-actor-sheet.mjs and adapted
- * to WWN's existing helpers (which already mirror GWN's AppV2-ready shape):
- * module/helpers/effects.mjs, power-sections.mjs, power-refresh.mjs,
- * weapon-counter.mjs, ammo.mjs, favorites via WwnActor#toggleFavorite, and
- * module/dice/dice.mjs (WwnDice) + WwnItem#roll() for all rolls.
- *
- * Behaviors preserved from the legacy V1 module/actor/actor-sheet.js:
- * - Active Effect management, item CRUD, item summaries (click-to-expand
- *   `.item-summary` drawer via `showItem`; Shift+click posts chat via
- *   `item.show()`).
- * - Equip / stow toggles, prepared/installed power toggles, power
- *   activate/deactivate/damage, scene/day refresh, weapon-counter reset.
- * - NPC weapon counter decrement on attack (now handled inside
- *   `WwnItem#roll()` itself via `spendWeaponCounter`, so it is not
- *   duplicated here).
- * - Compendium item search (`.item-search`) and ad hoc item creation
- *   dialogs — ported as `itemSearch` / `createItem` actions.
- * - Magazine weapon reload.
- * - Container nesting on item drop (PC-only; see pc-sheet.mjs).
- *
- * NOT ported (dead code in the legacy sheet, no corresponding markup):
- * - `.attack a` / `targetAttack` — vestigial; no template referenced it and
- *   `Actor#targetAttack` does not exist on `WwnActor`.
  */
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../../helpers/effects.mjs";
 import { prepareResourceBars } from "../helpers/resource-bar.mjs";
-import { applyLegacySheetAliases } from "../../helpers/sheet-legacy-bridge.mjs";
+import { applyLegacySheetAliases, remapLegacySubmitData } from "../../helpers/sheet-legacy-bridge.mjs";
 import { resetWeaponCounters } from "../../helpers/weapon-counter.mjs";
 import { WwnDice } from "../../dice/dice.mjs";
 import { refreshPowers } from "../../helpers/power-refresh.mjs";
@@ -134,17 +109,13 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     return context;
   }
 
-  /** Column visibility for Inventory tab list sections. */
-  #buildInventoryColumns(context) {
-    const weapons = context.weapons ?? [];
-    return {
-      weapons: {
-        showCounter: isNpc(this.actor),
-      },
-      armor: {
-        showRangedAc: !!context.separateRangedAC,
-      },
-    };
+  /**
+   * Remap legacy form paths and collapse null/array submit quirks.
+   * @override
+   */
+  _processFormData(event, form, formData) {
+    const remapped = remapLegacySubmitData(foundry.utils.flattenObject(formData.object));
+    return foundry.utils.expandObject(remapped);
   }
 
   /** Categorize items for rendering. Subclasses may extend via `_prepareTypeItems`. */
@@ -194,7 +165,6 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       item.favorited = favorites.includes(item.id);
     }
 
-    context.inventoryColumns = this.#buildInventoryColumns(context);
     context.tracksWeaponCounter = isNpc(actor);
 
     this._prepareTypeItems?.(context, items);

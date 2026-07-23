@@ -1,0 +1,34 @@
+{
+  "name": "Know",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/know.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.sDdCDdMUMZRGCBBD"
+    }
+  },
+  "system": {
+    "description": "Know matters of history, geography, natural science, zoology, and other academic fields appropriate to a sage or scholar. While some sages might specialize in particular fields, most learned men and women in this age have a broad range of understanding, and will rarely be unable to even attempt to answer a question relevant to this skill.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "know"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806148948,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "KjY5dhj8h00pBhOk",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KjY5dhj8h00pBhOk"
+}

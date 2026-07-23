@@ -27,11 +27,61 @@ export function applyUiTheme(theme) {
 }
 
 /**
+ * Active UI theme key (wwn|swn|awn|cwn).
+ * @returns {string}
+ */
+export function getUiTheme() {
+  let theme = "wwn";
+  try {
+    theme = game?.settings?.get("wwn", "uiTheme") ?? "wwn";
+  } catch {
+    theme = "wwn";
+  }
+  return theme in THEMES ? theme : "wwn";
+}
+
+/**
+ * Foundry `themed theme-{key}` class for the active UI theme.
+ * @returns {string}
+ */
+export function getUiThemeClass() {
+  return `theme-${getUiTheme()}`;
+}
+
+/**
+ * Apply/refresh Foundry theme classes on an Application root element.
+ * @param {HTMLElement} element
+ */
+export function applyAppThemeClasses(element) {
+  if (!element) return;
+  element.classList.add("themed");
+  for (const key of Object.keys(THEMES)) {
+    element.classList.remove(`theme-${key}`);
+  }
+  element.classList.add(getUiThemeClass());
+}
+
+/**
+ * Build consistent app classes for dialogs and long-lived ApplicationV2 windows.
+ * @param {object} [options]
+ * @param {"dialog"|"app"} [options.kind="dialog"]
+ * @param {string} [options.modifier]  BEM modifier (e.g. "roll-options" → wwn-dialog--roll-options)
+ * @param {string[]} [options.extra]   Additional classes appended after the base set
+ * @returns {string[]}
+ */
+export function buildWwnAppClasses({ kind = "dialog", modifier, extra = [] } = {}) {
+  const base = kind === "app" ? "wwn-app" : "wwn-dialog";
+  const classes = ["wwn", base, "themed", getUiThemeClass()];
+  if (modifier) classes.push(`${base}--${modifier}`);
+  if (extra.length) classes.push(...extra);
+  return classes;
+}
+
+/**
  * Add the active theme class to a rendered chat message.
  * @param {ChatMessage} _message
  * @param {HTMLElement} html
  */
 export function themeChatMessage(_message, html) {
-  const theme = game.settings.get("wwn", "uiTheme") ?? "wwn";
-  html.classList.add("themed", `theme-${theme}`);
+  html.classList.add("themed", getUiThemeClass());
 }

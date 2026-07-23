@@ -1,0 +1,33 @@
+{
+  "_id": "ialaysZ7RjUBW1Vv",
+  "name": "Drop Pod",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",
+    "cost": 300000,
+    "power": 0,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ialaysZ7RjUBW1Vv"
+}

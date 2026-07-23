@@ -1,0 +1,33 @@
+{
+  "_id": "Q68HYdxnRb9E0zQG",
+  "name": "Emissions Dampers",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Adds +2 to skill checks to avoid detection. Doubles all in-system travel times while engaged.</p>",
+    "cost": 25000,
+    "power": 1,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Q68HYdxnRb9E0zQG"
+}

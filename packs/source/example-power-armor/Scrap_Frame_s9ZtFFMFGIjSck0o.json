@@ -1,0 +1,62 @@
+{
+  "_id": "s9ZtFFMFGIjSck0o",
+  "name": "Scrap Frame",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Scrap Frame modular power armor frame.</p>",
+    "frameType": "scrap",
+    "mass": {
+      "max": 4
+    },
+    "power": {
+      "max": 4
+    },
+    "cost": 25000,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 1,
+    "perpetual": false,
+    "transportFrames": 1,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Scrap Frame",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!s9ZtFFMFGIjSck0o"
+}

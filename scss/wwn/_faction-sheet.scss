@@ -1,5 +1,7 @@
 /* Faction sheet — shared components + faction-specific columns */
 
+@use "mixins" as *;
+
 .wwn.sheet.actor.faction {
   min-width: 960px;
 }
@@ -26,42 +28,6 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-main,
-.wwn.sheet.actor.faction .wwn-faction-main-grid {
-  width: 100%;
-  min-width: 0;
-}
-
-.wwn.sheet.actor.faction .attributes-tab.active {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: auto;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-main-grid {
-  display: grid;
-  grid-template-columns: minmax(12rem, 1fr) minmax(24rem, 2fr);
-  gap: 0.5rem;
-  align-items: start;
-}
-
-@media (width < 56rem) {
-  .wwn.sheet.actor.faction .wwn-faction-main-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.wwn.sheet.actor.faction .wwn-faction-main-left,
-.wwn.sheet.actor.faction .wwn-faction-main-right {
-  min-width: 0;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-main-right {
-  max-height: 36rem;
-  overflow: auto;
 }
 
 .wwn.sheet.actor.faction .wwn-faction-hp-xp {
@@ -102,26 +68,13 @@
   overflow: auto;
 }
 
-.wwn.sheet.actor.faction .wwn-faction-editor--desc {
-  min-height: 0;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-editor--desc .editor {
-  min-height: 5rem;
-  max-height: 10rem;
-  overflow: auto;
-}
-
 .wwn.sheet.actor.faction .wwn-faction-goal .form-fields input {
   text-align: left;
 }
 
 /* Asset table metric columns (wider than PC inventory shorts) */
 .wwn .faction-field {
-  flex: 0 0 3.25rem;
-  width: 3.25rem;
-  min-width: 3.25rem;
-  max-width: 3.25rem;
+  @include wwn-metric-col(3.25rem);
   font-size: 11px;
   text-align: center;
   display: flex;
@@ -130,10 +83,7 @@
 }
 
 .wwn .faction-field-wide {
-  flex: 0 0 5.5rem;
-  width: 5.5rem;
-  min-width: 5.5rem;
-  max-width: 5.5rem;
+  @include wwn-metric-col(5.5rem);
   font-size: 11px;
   text-align: left;
   display: flex;
@@ -152,13 +102,6 @@
 
 .wwn .faction-field.counter {
   text-align: center;
-}
-
-.wwn.sheet.actor.faction .wwn-data-table .item-controls {
-  flex: 0 0 5.5rem;
-  width: 5.5rem;
-  min-width: 5.5rem;
-  max-width: 5.5rem;
 }
 
 .wwn.sheet.actor.faction .wwn-data-table .item-name.faction-name {

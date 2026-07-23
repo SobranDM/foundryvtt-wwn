@@ -1,0 +1,33 @@
+{
+  "_id": "qdWrpFxrvCLSgp4Y",
+  "name": "Foxer Drones",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>+2 AC for one round when fired, Ammo 5; cheaply constructed, short-lived drones that confuse foes with energy emissions.</p>",
+    "cost": 10000,
+    "power": 2,
+    "mass": 1,
+    "minClass": "cruiser",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qdWrpFxrvCLSgp4Y"
+}

@@ -1,0 +1,401 @@
+{
+  "_id": "FTIUQ7uZcUGPTZ6O",
+  "name": "Large Station (Arx)",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "VxjYkccjt3Y7RCeS",
+      "name": "Flak Emitter Battery",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>A baseline frigate anti-fighter system, this battery fires waves of lasers or charged particles to knock down small craft.</p>",
+        "cost": 500000,
+        "power": 5,
+        "mass": 3,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "2d6",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 10, Flak",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 2
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.VxjYkccjt3Y7RCeS"
+    },
+    {
+      "_id": "0ZznX8285EWsuhs2",
+      "name": "Flak Emitter Battery",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>A baseline frigate anti-fighter system, this battery fires waves of lasers or charged particles to knock down small craft.</p>",
+        "cost": 500000,
+        "power": 5,
+        "mass": 3,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "2d6",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 10, Flak",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 2
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.0ZznX8285EWsuhs2"
+    },
+    {
+      "_id": "o7Zs7XOrCN7Rogb3",
+      "name": "Point Defense Lasers",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>+2 AC versus weapons that use ammo; too small to damage ships, these lasers detonate or melt incoming torpedoes, fractal charges, and other ammunition-based munitions.</p>",
+        "cost": 10000,
+        "power": 3,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.o7Zs7XOrCN7Rogb3"
+    },
+    {
+      "_id": "Pg6TDH1IsPM1k392",
+      "name": "Boarding Countermeasures",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Makes enemy boarding more difficult: hardened bulkheads, reinforced hatches, and automated kill corridors deny entry to intruders lacking shipyard-grade or military breaching tools.</p>",
+        "cost": 25000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.Pg6TDH1IsPM1k392"
+    },
+    {
+      "_id": "AStTOEMyxQGseuUn",
+      "name": "Cargo Lighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Orbit-to-surface cargo shuttle. Only capable of surface-to-orbit flight (roughly 20 minutes either way); can latch onto a standard pressurized cargo container holding up to 200 tons. Can be purchased multiple times.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.AStTOEMyxQGseuUn"
+    },
+    {
+      "_id": "sNUHPDaKfulTvzc6",
+      "name": "Cargo Lighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Orbit-to-surface cargo shuttle. Only capable of surface-to-orbit flight (roughly 20 minutes either way); can latch onto a standard pressurized cargo container holding up to 200 tons. Can be purchased multiple times.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.sNUHPDaKfulTvzc6"
+    },
+    {
+      "_id": "nPeVtbghbetrY5q7",
+      "name": "Fuel Scoops",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.nPeVtbghbetrY5q7"
+    },
+    {
+      "_id": "eBUN4mQ3G79ryssf",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.eBUN4mQ3G79ryssf"
+    },
+    {
+      "_id": "5SanfbnBYfTwacP6",
+      "name": "Advanced Nav Computer",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds +2 for traveling familiar spike courses.</p>",
+        "cost": 10000,
+        "power": 1,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": true,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.5SanfbnBYfTwacP6"
+    },
+    {
+      "_id": "xN2ICkYHeCU1HYdm",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.xN2ICkYHeCU1HYdm"
+    },
+    {
+      "_id": "w3571mpDQaVxufyy",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.w3571mpDQaVxufyy"
+    },
+    {
+      "_id": "ATyjiqrFbQRGJxGX",
+      "name": "Extended Medbay",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows medical treatment of up to the ship's entire maximum crew at once, including critically wounded patients.</p>",
+        "cost": 5000,
+        "power": 1,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.ATyjiqrFbQRGJxGX"
+    },
+    {
+      "_id": "4PTSVn8Zd5i49UJY",
+      "name": "Workshop",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Automated TL4 tech workshops for maintenance and modification below a hull's maximum size.</p>",
+        "cost": 500,
+        "power": 1,
+        "mass": 0.5,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!FTIUQ7uZcUGPTZ6O.4PTSVn8Zd5i49UJY"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p><strong>Not from the PDF's Example Starships stat blocks</strong> -- only the large-station hull row (Building a Starship, hull table) and a one-paragraph blurb exist in the source; this loadout is an original example built on that hull for this pack. A station has no Speed and no spike drive, and cannot maneuver in combat. The Arx is a major trade hub for a wealthy world, with enough point defenses and boarding countermeasures to deter pirates and smugglers drawn to its traffic.</p><p><strong>Cargo:</strong> 5,000 tons (informational estimate). <strong>Cost:</strong> 40M base price (hull table).</p>",
+    "hullType": "largeStation",
+    "hullClass": "capital",
+    "hp": {
+      "value": 120,
+      "max": 120
+    },
+    "ac": 17,
+    "armor": 20,
+    "speed": null,
+    "drive": 0,
+    "power": {
+      "max": 125
+    },
+    "mass": {
+      "max": 75
+    },
+    "hardpoints": {
+      "max": 30
+    },
+    "crew": {
+      "min": 100,
+      "max": 1000,
+      "current": 100
+    },
+    "cost": 40000000,
+    "cargo": 5000,
+    "npcCp": 6,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Large Station (Arx)",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "FTIUQ7uZcUGPTZ6O",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!FTIUQ7uZcUGPTZ6O"
+}

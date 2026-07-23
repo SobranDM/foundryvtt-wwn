@@ -1,6 +1,8 @@
 /* Shared WWN sheet components — design language for PC / NPC / faction sheets.
    Sheet-specific SCSS should compose these rather than redefine layout. */
 
+@use "mixins" as *;
+
 /* ---- Surfaces ---- */
 
 .wwn-sheet .wwn-panel {
@@ -188,6 +190,19 @@
 
 .wwn-sheet .wwn-form-panel > .wwn-section-header .item-controls a:hover {
   opacity: 1;
+}
+
+/* Chip actions in form-panel section headers (Apply Hull / Frame, Reassign, …) */
+.wwn-sheet .wwn-form-panel > .wwn-section-header .wwn-chip {
+  color: inherit;
+  font-size: 0.7rem;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.wwn-sheet .wwn-form-panel > .wwn-section-header .wwn-chip-label {
+  color: inherit;
+  opacity: 0.9;
 }
 
 .wwn-sheet .wwn-form-panel .wwn-form-panel-fields {
@@ -392,14 +407,7 @@
 }
 
 .wwn-sheet .wwn-data-table .icon-row {
-  flex: 0 0 8rem;
-  width: 8rem;
-  min-width: 8rem;
-  max-width: 8rem;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  gap: 0.1rem;
+  @include wwn-icon-row-col;
 }
 
 .wwn-sheet .wwn-data-table .icon-row img {
@@ -418,12 +426,7 @@
 
 .wwn-sheet .wwn-data-table .field-short {
   font-size: 11px;
-  flex: 0 0 3.25rem;
-  width: 3.25rem;
-  min-width: 3.25rem;
-  max-width: 3.25rem;
-  flex-grow: 0;
-  flex-shrink: 0;
+  @include wwn-metric-col(3.25rem);
   text-align: center;
   display: flex;
   align-items: center;
@@ -431,12 +434,7 @@
 }
 
 .wwn-sheet .wwn-data-table .field-long {
-  flex: 0 0 5rem;
-  width: 5rem;
-  min-width: 5rem;
-  max-width: 5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
+  @include wwn-metric-col(5rem);
   text-align: center;
   font-size: 11px;
   display: flex;
@@ -449,12 +447,7 @@
 
 .wwn-sheet .wwn-data-table .item-controls {
   font-size: 11px;
-  flex: 0 0 5.5rem;
-  width: 5.5rem;
-  min-width: 5.5rem;
-  max-width: 5.5rem;
-  flex-grow: 0;
-  flex-shrink: 0;
+  @include wwn-metric-col(5.5rem);
   margin-left: auto;
   display: inline-flex;
   align-items: center;
@@ -462,6 +455,10 @@
   gap: 0.15rem;
   text-align: right;
   margin-right: 4px;
+}
+
+.wwn-sheet .wwn-data-table .item-controls .item-off {
+  opacity: 0.35;
 }
 
 /* Quiet column headers — same flex metrics as cells so labels center over content */
@@ -498,6 +495,64 @@
 .wwn-sheet .wwn-data-table .item-titles.item-col-header .icon-row {
   justify-content: center;
   text-align: center;
+}
+
+/* Over-budget / broken-link warning (power/mass/hardpoints; display only) */
+.wwn-sheet .wwn-budget-over {
+  color: var(--wwn-failure, #a33);
+}
+
+.wwn-sheet .wwn-budget-over .wwn-stat-chip-value {
+  color: var(--wwn-failure, #a33);
+  font-weight: 700;
+}
+
+.wwn-sheet .wwn-chip--warn {
+  outline: 1px solid var(--wwn-failure, #a33);
+}
+
+/* Two-column main tab (faction / starship) */
+.wwn-sheet .attributes-tab.active:has(> .wwn-sheet-main-grid) {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+
+.wwn-sheet .wwn-sheet-main-grid {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(24rem, 2fr);
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (width < 56rem) {
+  .wwn-sheet .wwn-sheet-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn-sheet .wwn-sheet-main-left,
+.wwn-sheet .wwn-sheet-main-right {
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-sheet-main-right {
+  max-height: 36rem;
+  overflow: auto;
+}
+
+/* Description / notes ProseMirror height band */
+.wwn-sheet .wwn-sheet-editor {
+  min-height: 0;
+}
+
+.wwn-sheet .wwn-sheet-editor .editor {
+  min-height: 5rem;
+  max-height: 10rem;
+  overflow: auto;
 }
 
 /* Stat chips (Main combat / NPC combat stats) */
@@ -734,4 +789,58 @@
   .wwn-sheet .wwn-attributes-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---- Combat chips + save grid (shared PC / PA / NPC) ---- */
+
+.wwn-sheet .wwn-combat-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.wwn-sheet .wwn-combat-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wwn-sheet .wwn-combat-row > .wwn-combat-stat {
+  flex: 1 1 0;
+}
+
+.wwn-sheet .wwn-combat-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-combat-stat-value {
+  @include wwn-centered-value;
+  gap: 0.25rem;
+}
+
+.wwn-sheet .wwn-combat-sep {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
+.wwn-sheet .wwn-save-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.wwn-sheet .wwn-save-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.wwn-sheet .wwn-save-value {
+  @include wwn-centered-value;
 }

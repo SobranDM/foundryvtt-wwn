@@ -1,0 +1,50 @@
+{
+  "_id": "anC6yex60bdVQ41r",
+  "name": "Efficiency Core, Pretech",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>24 hours on one Type B cell (cell ruined).</p>",
+    "tl": 5,
+    "mass": 2,
+    "power": 2,
+    "cost": 0,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "efficiencyPretech",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "oRS0vaygbjRN9VFW",
+  "sort": 57,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!anC6yex60bdVQ41r"
+}

@@ -18,8 +18,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "convince"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

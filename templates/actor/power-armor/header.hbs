@@ -1,0 +1,61 @@
+{{!-- Power armor header: identity + suit chips + Soak / pilot HP. --}}
+<header class="sheet-header wwn-sheet-header wwn-power-armor-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        {{#if system.frameType}}
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.PowerArmor.Frame"}}</span>
+          <span>{{lookup frameOptions system.frameType}}</span>
+        </label>
+        {{/if}}
+        <label class="wwn-chip {{#unless system.powered}}wwn-chip--warn{{/unless}}">
+          <span class="wwn-chip-label">{{localize "WWN.PowerArmor.Powered"}}</span>
+          <a data-action="togglePowered">{{#if system.powered}}{{localize "WWN.Yes"}}{{else}}{{localize "WWN.No"}}{{/if}}</a>
+        </label>
+        {{#if overBudget}}
+        <label class="wwn-chip wwn-chip--warn">
+          <span class="wwn-chip-label">{{localize "WWN.PowerArmor.OverBudget"}}</span>
+        </label>
+        {{/if}}
+        {{#if pilot.linked}}
+        <label class="wwn-chip {{#unless pilot.trained}}wwn-chip--warn{{/unless}}">
+          <span class="wwn-chip-label">{{localize "WWN.PowerArmor.Training"}}</span>
+          <a data-action="togglePilotTrained">{{#if pilot.trained}}{{localize "WWN.PowerArmor.Trained"}}{{else}}{{localize "WWN.PowerArmor.Untrained"}}{{/if}}</a>
+        </label>
+        {{/if}}
+      </div>
+      <div class="wwn-header-row wwn-header-row--secondary wwn-power-armor-resources">
+        {{#if pilot.linked}}
+        <label class="wwn-header-chip" title="{{localize 'WWN.Tracker.HP'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.Tracker.HP"}}</span>
+          <input type="number" name="system.pilotHp.value" value="{{pilotHp.value}}" data-dtype="Number" />
+          <span>/</span>
+          <input type="number" name="system.pilotHp.max" value="{{pilotHp.max}}" data-dtype="Number" />
+        </label>
+        {{/if}}
+        <label class="wwn-header-chip" title="{{localize 'WWN.PowerArmor.Soak'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.PowerArmor.Soak"}}</span>
+          <input type="number" name="system.soak.value" value="{{system.soak.value}}" data-dtype="Number" />
+          <span>/</span>
+          <input type="number" name="system.soak.max" value="{{system.soak.max}}" data-dtype="Number" />
+        </label>
+        <label class="wwn-header-chip" title="{{localize 'WWN.PowerArmor.AC'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.PowerArmor.AC"}}</span>
+          <span>{{ac}}</span>
+        </label>
+        <label class="wwn-header-chip" title="{{localize 'WWN.PowerArmor.Mass'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.PowerArmor.Mass"}}</span>
+          <span class="{{#if massOver}}wwn-budget-over{{/if}}">{{system.mass.free}} / {{system.mass.max}}</span>
+        </label>
+        <label class="wwn-header-chip" title="{{localize 'WWN.PowerArmor.Power'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.PowerArmor.Power"}}</span>
+          <span class="{{#if powerOver}}wwn-budget-over{{/if}}">{{system.power.free}} / {{system.power.max}}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</header>

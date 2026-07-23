@@ -14,6 +14,8 @@ import {
   EFFECT_APPLICATION_CHOICES,
 } from "./power-subtypes.mjs";
 import { THEMES } from "./themes.mjs";
+import { HULL_CLASSES, STARSHIP_HULLS } from "./starship-hulls.mjs";
+import { POWER_ARMOR_FRAMES } from "./power-armor-frames.mjs";
 import { getAeTargetGroups, getAeTargets, getFilteredAeTargetGroups, localizeAeTarget } from "./ae-targets.mjs";
 import {
   getItemAeTargetGroups,
@@ -24,6 +26,10 @@ import {
 import { ATTACK_PROGRESSIONS, ATTACK_PROGRESSION_MODES } from "./attack-progression.mjs";
 
 export const WWN = {};
+
+WWN.starshipHulls = STARSHIP_HULLS;
+WWN.hullClasses = HULL_CLASSES;
+WWN.powerArmorFrames = POWER_ARMOR_FRAMES;
 
 /* -------------------------------------------- */
 /*  Abilities                                   */
@@ -46,6 +52,9 @@ WWN.abilityAbbreviations = {
   wis: "WWN.Ability.Wis.abbr",
   cha: "WWN.Ability.Cha.abbr",
 };
+
+/** @deprecated Prefer {@link WWN.abilityAbbreviations}; kept for skill/weapon score selects. */
+WWN.scores = { ...WWN.abilityAbbreviations };
 
 /** Attribute modifier tables, keyed by the attributeModType setting. */
 WWN.modifierTables = {
@@ -110,17 +119,12 @@ WWN.headerTrackers = [
 /*  Skills                                      */
 /* -------------------------------------------- */
 
-/** Core WWN skill list used to auto-seed new PCs. */
-WWN.coreSkills = [
-  "administer", "connect", "convince", "craft", "exert", "heal", "know",
-  "lead", "magic", "notice", "perform", "pray", "punch", "ride", "sail",
-  "shoot", "sneak", "stab", "survive", "trade", "work",
-];
-
-/** Secondary (psychic) skills — created only on demand. */
-WWN.psychicSkills = [
-  "biopsionics", "metapsionics", "precognition", "telekinesis", "telepathy", "teleportation",
-];
+/** Pack ids keyed by the `skillSet` world setting. */
+WWN.skillSetPacks = {
+  wwn: "wwn.skills-wwn",
+  swn: "wwn.skills-swn",
+  awn: "wwn.skills-awn",
+};
 
 /** Combat skills are exempt from the skills.floor (Polymath) derivation. */
 WWN.combatSkills = ["stab", "shoot", "punch"];
@@ -254,3 +258,139 @@ WWN.getItemAeTargetGroups = getItemAeTargetGroups;
 WWN.getItemAeTargets = getItemAeTargets;
 WWN.getFilteredItemAeTargetGroups = getFilteredItemAeTargetGroups;
 WWN.localizeItemAeTarget = localizeItemAeTarget;
+
+/* -------------------------------------------- */
+/*  Shared / sheet UI dictionaries              */
+/* -------------------------------------------- */
+
+WWN.roll_type = {
+  result: "=",
+  above: "≥",
+  below: "≤",
+};
+
+WWN.saves = {
+  evasion: "WWN.saves.evasion",
+  mental: "WWN.saves.mental",
+  physical: "WWN.saves.physical",
+  luck: "WWN.saves.luck",
+};
+
+WWN.skills = {};
+
+WWN.encumbLocation = {
+  readied: "WWN.items.readied",
+  stowed: "WWN.items.stowed",
+  other: "WWN.items.other",
+};
+
+WWN.weightless = {
+  never: "WWN.items.WeightlessNever",
+  whenReadied: "WWN.items.WeightlessReadied",
+  whenStowed: "WWN.items.WeightlessStowed",
+};
+
+WWN.armor = {
+  unarmored: "WWN.armor.unarmored",
+  light: "WWN.armor.light",
+  medium: "WWN.armor.medium",
+  heavy: "WWN.armor.heavy",
+  shield: "WWN.armor.shield",
+};
+
+WWN.colors = {
+  green: "WWN.colors.green",
+  red: "WWN.colors.red",
+  yellow: "WWN.colors.yellow",
+  purple: "WWN.colors.purple",
+  blue: "WWN.colors.blue",
+  orange: "WWN.colors.orange",
+  white: "WWN.colors.white",
+};
+
+WWN.languages = [
+  "Trade Cant",
+  "Ancient Vothian",
+  "Old Vothian",
+  "Modern Vothian",
+  "Ancient Olok",
+  "Brass Speech",
+  "Ancient Lin",
+  "Emedian",
+  "Ancient Osrin",
+  "Thurian",
+  "Ancient Khalan",
+  "Llaigisan",
+  "Anak Speech",
+  "Predecessant",
+  "Abased",
+  "Recurrent",
+  "Deep Speech",
+];
+
+WWN.tags = {
+  melee: "WWN.items.Melee",
+  missile: "WWN.items.Missile",
+  SR: "WWN.items.SR",
+  TH: "WWN.items.2H",
+  AP: "WWN.items.AP",
+  FX: "WWN.items.FX",
+  L: "WWN.items.L",
+  R: "WWN.items.R",
+  LL: "WWN.items.LL",
+  N: "WWN.items.N",
+  PM: "WWN.items.PM",
+  S: "WWN.items.S",
+  SS: "WWN.items.SS",
+  T: "WWN.items.T",
+  CB: "WWN.items.CB",
+};
+
+WWN.tag_images = {
+  melee: "systems/wwn/assets/melee.png",
+  missile: "systems/wwn/assets/missile.png",
+  SR: "systems/wwn/assets/slow_reload.png",
+  TH: "systems/wwn/assets/twohanded.png",
+  AP: "systems/wwn/assets/armor_piercing.png",
+  FX: "systems/wwn/assets/fixed.png",
+  L: "systems/wwn/assets/long.png",
+  R: "systems/wwn/assets/reload.png",
+  LL: "systems/wwn/assets/less_lethal.png",
+  N: "systems/wwn/assets/numerous.png",
+  PM: "systems/wwn/assets/precisely_murderous.png",
+  S: "systems/wwn/assets/subtle.png",
+  SS: "systems/wwn/assets/single_shot.png",
+  T: "systems/wwn/assets/throwable.png",
+  CB: "systems/wwn/assets/crossbow.png",
+};
+
+WWN.tag_desc = {
+  melee: "WWN.items.desc.Melee",
+  missile: "WWN.items.desc.Missile",
+  SR: "WWN.items.desc.SR",
+  TH: "WWN.items.desc.2H",
+  AP: "WWN.items.desc.AP",
+  FX: "WWN.items.desc.FX",
+  L: "WWN.items.desc.L",
+  R: "WWN.items.desc.R",
+  LL: "WWN.items.desc.LL",
+  N: "WWN.items.desc.N",
+  PM: "WWN.items.desc.PM",
+  S: "WWN.items.desc.S",
+  SS: "WWN.items.desc.SS",
+  T: "WWN.items.desc.T",
+  CB: "WWN.items.desc.CB",
+};
+
+WWN.assetTypes = {
+  cunning: "WWN.asset.cunning",
+  force: "WWN.asset.force",
+  wealth: "WWN.asset.wealth",
+};
+
+WWN.assetMagic = {
+  none: "WWN.asset.magicNone",
+  low: "WWN.asset.magicLow",
+  medium: "WWN.asset.magicMedium",
+  high: "WWN.asset.magicHigh",
+};

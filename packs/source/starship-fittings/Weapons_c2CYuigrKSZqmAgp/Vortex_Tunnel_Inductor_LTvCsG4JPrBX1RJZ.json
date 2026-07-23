@@ -1,0 +1,40 @@
+{
+  "_id": "LTvCsG4JPrBX1RJZ",
+  "name": "Vortex Tunnel Inductor",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>A capital-class model of the Spike Inversion Projector, a VTI is capable of incapacitating a cruiser in two hits. Its bulk limits its utility against fighter-class craft, however.</p>",
+    "cost": 5000000,
+    "power": 20,
+    "mass": 10,
+    "minClass": "capital",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "3d20",
+    "hardpoints": 4,
+    "tl": 4,
+    "qualities": "AP 20, Clumsy",
+    "ammo": null,
+    "ammoCost": 0,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LTvCsG4JPrBX1RJZ"
+}

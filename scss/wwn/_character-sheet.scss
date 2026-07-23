@@ -1,4 +1,6 @@
-/* PC sheet specific overrides (AppV2: .pc, no .sheet-body) */
+/* PC / power-armor shared Main tab layout (AppV2: no .sheet-body).
+   Use :is() so descendant selectors apply to both sheet classes. */
+$actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
 
 .wwn.sheet.actor.pc {
   min-width: 640px;
@@ -21,7 +23,7 @@
   min-height: 8rem;
 }
 
-.wwn.sheet.actor.pc .attributes-tab.active {
+#{$actor-main} .attributes-tab.active {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -33,8 +35,8 @@
   overflow: hidden;
 }
 
-/* Main 2×2 grid: abilities | saves ; skills | combat+favorites */
-.wwn.sheet.actor.pc .wwn-actor-main-grid {
+/* Main 2×2 grid: abilities | saves ; skills | combat(+favorites on PC) */
+#{$actor-main} .wwn-actor-main-grid {
   display: grid;
   flex: 1 1 auto;
   min-height: 0;
@@ -44,18 +46,23 @@
 }
 
 @media (width < 48rem) {
-  .wwn.sheet.actor.pc .wwn-actor-main-grid {
+  #{$actor-main} .wwn-actor-main-grid {
     grid-template-columns: 1fr;
     grid-template-rows: none;
   }
 }
 
 /* Abilities */
-.wwn.sheet.actor.pc .wwn-main-abilities {
+#{$actor-main} .wwn-main-abilities {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.wwn.sheet.actor.pc .wwn-main-abilities {
+  /* Match visual right inset (panel pad + generate-scores control). */
+  padding-left: 0.85rem;
 }
 
 .wwn.sheet.actor.pc .wwn-main-abilities-actions {
@@ -65,7 +72,7 @@
   line-height: 1;
 }
 
-.wwn.sheet.actor.pc .wwn-ability-grid {
+#{$actor-main} .wwn-ability-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
@@ -73,73 +80,88 @@
   align-content: center;
 }
 
-.wwn.sheet.actor.pc .wwn-ability-row {
+#{$actor-main} .wwn-ability-row {
   display: flex;
-  align-items: center;
-  gap: 0.35rem;
+  align-items: stretch;
   min-width: 0;
+  min-height: 1.75rem;
+  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--wwn-input-bg, rgba(255, 255, 255, 0.6));
 }
 
-.wwn.sheet.actor.pc .wwn-ability-label {
-  flex: 0 0 2rem;
+#{$actor-main} .wwn-ability-label {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  padding: 0.2rem 0.35rem;
   font-weight: 700;
   font-size: 0.75rem;
   text-transform: uppercase;
   text-align: center;
-}
-
-.wwn.sheet.actor.pc .wwn-ability-value {
-  width: 3rem;
-  text-align: center;
-}
-
-.wwn.sheet.actor.pc .wwn-ability-mod {
-  font-size: 0.875rem;
-  font-weight: 700;
-  min-width: 1.5rem;
-}
-
-/* Saves */
-.wwn.sheet.actor.pc .wwn-main-saves {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.wwn.sheet.actor.pc .wwn-save-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-}
-
-.wwn.sheet.actor.pc .wwn-save-cell {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0;
   text-decoration: none;
-  color: inherit;
+  color: var(--wwn-header-text, var(--wwn-light));
+  background: var(--wwn-header-bg, var(--wwn-dark));
+  border-radius: 0;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
 
-.wwn.sheet.actor.pc .wwn-save-value {
+#{$actor-main} .wwn-ability-body {
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0 0.25rem;
+}
+
+/* Input (PC) and span (power armor) must share the same box so chips match height. */
+#{$actor-main} .wwn-ability-value {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
   font-size: 0.875rem;
-  line-height: 1.2;
-  padding: 0.1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+#{$actor-main} .wwn-ability-mod {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  min-width: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+#{$actor-main} .wwn-main-saves {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Skills */
-.wwn.sheet.actor.pc .wwn-main-skills {
+#{$actor-main} .wwn-main-skills {
   display: flex;
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills-header {
+#{$actor-main} .wwn-main-skills-header {
   justify-content: space-between;
   flex: 0 0 auto;
   margin-bottom: 0.35rem;
@@ -172,7 +194,7 @@
   opacity: 1;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .wwn-skills-list {
+#{$actor-main} .wwn-main-skills .wwn-skills-list {
   flex: 1 1 auto;
   min-height: 0;
   overflow-x: hidden;
@@ -185,29 +207,29 @@
   padding: 0;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .item-entry {
+#{$actor-main} .wwn-main-skills .item-entry {
   break-inside: avoid;
   width: 100%;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .item-entry:nth-child(even) .item {
+#{$actor-main} .wwn-main-skills .item-entry:nth-child(even) .item {
   background: transparent;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .item-name-short {
+#{$actor-main} .wwn-main-skills .item-name-short {
   flex: 1 1 auto;
   min-width: 0;
   margin: 0;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .item-name-short h4 {
+#{$actor-main} .wwn-main-skills .item-name-short h4 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
 }
 
-.wwn.sheet.actor.pc .wwn-main-skills .field-xshort {
+#{$actor-main} .wwn-main-skills .field-xshort {
   flex-basis: 2rem;
   flex-grow: 0;
 }
@@ -220,55 +242,16 @@
   align-items: center;
 }
 
-/* Right sidebar: combat + favorites */
-.wwn.sheet.actor.pc .wwn-main-sidebar {
+/* Right sidebar: combat (+ favorites on PC) */
+#{$actor-main} .wwn-main-sidebar {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   min-height: 0;
 }
 
-.wwn.sheet.actor.pc .wwn-main-combat-panel {
+#{$actor-main} .wwn-main-combat-panel {
   flex: 0 0 auto;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-row {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-row > .wwn-combat-stat {
-  flex: 1 1 0;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-stat-value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.2;
-  padding: 0.1rem;
-}
-
-.wwn.sheet.actor.pc .wwn-combat-sep {
-  opacity: 0.4;
-  font-weight: 400;
 }
 
 .wwn.sheet.actor.pc .wwn-movement-base-input,
@@ -279,7 +262,7 @@
   font-weight: 700;
 }
 
-.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock {
+#{$actor-main} .wwn-main-sidebar .wwn-favorites-dock {
   flex: 1 1 auto;
   min-height: 0;
   max-width: none;
@@ -288,13 +271,13 @@
   overflow: hidden;
 }
 
-.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock > .wwn-section-header {
+#{$actor-main} .wwn-main-sidebar .wwn-favorites-dock > .wwn-section-header {
   flex: 0 0 auto;
   justify-content: flex-start;
   margin-bottom: 0.35rem;
 }
 
-.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock .item-list {
+#{$actor-main} .wwn-main-sidebar .wwn-favorites-dock .item-list {
   flex: 1 1 auto;
   min-height: 0;
   overflow: auto;

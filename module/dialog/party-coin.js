@@ -1,93 +1,69 @@
 import { isPc } from "../helpers/actor-types.mjs";
-export class WwnPartyCurrency extends FormApplication {
+import { depositBank } from "../helpers/currency.mjs";
+import { showWwnDialog, confirmButton, cancelButton } from "../applications/wwn-dialog.mjs";
 
-    static get defaultOptions() {
-        return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["wwn", "dialog", "party-xp"],
-            template: "systems/wwn/templates/apps/party-coin.html",
-            width: 280,
-            height: 400,
-            resizable: false,
-        });
-    }
+function partyActors() {
+  return game.actors.filter((e) => isPc(e) && e.flags.wwn?.party === true);
+}
 
-    /* -------------------------------------------- */
-    /**
-     * Add the Entity name into the window title
-     * @type {String}
-     */
-    get title() {
-        return game.i18n.localize("WWN.dialog.currency.deal");
-    }
-
-    /* -------------------------------------------- */
-    /**
-     * Construct and return the data object used to render the HTML template for this form application.
-     * @return {Object}
-     */
-    getData() {
-        const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
-        let data = {
-            actors: actors,
-            data: this.object,
-            config: CONFIG.WWN,
-            user: game.user,
-            settings: settings
-        };
-        return data;
-    }
-
-    _onDrop(event) {
-        event.preventDefault();
-        // WIP Drop Item Quantity
-        let data;
-        try {
-            data = JSON.parse(event.dataTransfer.getData("text/plain"));
-            if (data.type !== "Item") return;
-        } catch (err) {
-            return false;
-        }
-    }
-    /* -------------------------------------------- */
-
-    _calculateShare(ev) {
-        const actors = game.actors.filter(e => isPc(e) && e.flags.wwn && e.flags.wwn.party === true);
-        const toDeal = $(ev.currentTarget.parentElement).find('input[name="total"]').val();
-        const html = $(this.form);
+/**
+ * Deal bank currency among party members.
+ */
+export async function showPartyCurrencyDialog() {
+  const actors = partyActors();
+  await showWwnDialog({
+    modifier: "party-coin",
+    title: game.i18n.localize("WWN.dialog.currency.deal"),
+    template: "systems/wwn/templates/apps/party-coin.html",
+    context: {
+      actors,
+      config: CONFIG.WWN,
+      user: game.user,
+      settings: game.settings,
+    },
+    position: { width: 280, height: 400 },
+    buttons: [
+      confirmButton({
+        label: "WWN.dialog.currency.deal",
+        callback: async (_event, button) => {
+          const rows = button.form.querySelectorAll(".actor");
+          for (const row of rows) {
+            const value = row.querySelector("input")?.value;
+            const id = row.dataset.actorId;
+            const actor = game.actors.get(id);
+            const amount = Math.floor(parseInt(value, 10) || 0);
+            if (amount && actor) await depositBank(actor, amount);
+          }
+          return true;
+        },
+      }),
+      cancelButton(),
+    ],
+    onRender: (_event, dialog) => {
+      const root = dialog.element;
+      root?.querySelector('[data-action="calculate-share"]')?.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        const form = root.querySelector("form") ?? root;
+        const toDeal = form.querySelector('input[name="total"]')?.value;
         let shares = 0;
-        actors.forEach((a) => {
-            shares += a.system.currencyShare ?? 0;
-        });
+        for (const a of actors) shares += a.system.currencyShare ?? 0;
         const value = parseFloat(toDeal) / shares;
-        if (value) {
-            actors.forEach(a => {
-                html.find(`div[data-actor-id='${a.id}'] input`).val(Math.floor((a.system.currencyShare ?? 0) * value));
-            })
+        if (!value) return;
+        for (const a of actors) {
+          const input = form.querySelector(`div[data-actor-id='${a.id}'] input`);
+          if (input) input.value = Math.floor((a.system.currencyShare ?? 0) * value);
         }
-    }
+      });
+    },
+  });
+}
 
-    _dealCurrency(ev) {
-        const html = $(this.form);
-        const rows = html.find('.actor');
-        rows.each((_, row) => {
-            const qRow = $(row);
-            const value = qRow.find('input').val();
-            const id = qRow.data('actorId');
-            const actor = game.actors.find(e => e.id === id);
-            if (value) {
-                actor.getBank(Math.floor(parseInt(value)));
-            }
-        })
-    }
-
-    /** @override */
-    activateListeners(html) {
-        super.activateListeners(html);
-        html
-            .find('button[data-action="calculate-share"')
-            .click(this._calculateShare.bind(this));
-        html
-            .find('button[data-action="deal-currency"')
-            .click(this._dealCurrency.bind(this));
-    }
+/** @deprecated Prefer {@link showPartyCurrencyDialog} */
+export class WwnPartyCurrency {
+  constructor(object) {
+    this.object = object;
+  }
+  render() {
+    return showPartyCurrencyDialog();
+  }
 }

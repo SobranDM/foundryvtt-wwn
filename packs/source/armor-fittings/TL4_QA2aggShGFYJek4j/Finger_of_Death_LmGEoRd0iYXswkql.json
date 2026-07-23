@@ -1,0 +1,50 @@
+{
+  "_id": "LmGEoRd0iYXswkql",
+  "name": "Finger of Death",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Main Action: invisible lethal radiation beam within 10m. On hit, death in 48h without TL4 care / vacc-suit shielding. Each use: 1d6 on 1 exposes user.</p>",
+    "tl": 4,
+    "mass": 1,
+    "power": 2,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "fingerOfDeath",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 28,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LmGEoRd0iYXswkql"
+}

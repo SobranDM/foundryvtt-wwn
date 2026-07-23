@@ -1,0 +1,342 @@
+{
+  "_id": "XtsGaAukrJLwL4iN",
+  "name": "Corvette",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "haf7GkTAnbu7JFRf",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.haf7GkTAnbu7JFRf"
+    },
+    {
+      "_id": "40JNa5UJjjWCCG8U",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.40JNa5UJjjWCCG8U"
+    },
+    {
+      "_id": "Zb6HASUqAzGLUtXT",
+      "name": "Sandthrower",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Projecting a spray of tiny, dense particulate matter, sandthrowers are highly effective against lightly-armored fighters.</p>",
+        "cost": 50000,
+        "power": 3,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "2d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "Flak",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.Zb6HASUqAzGLUtXT"
+    },
+    {
+      "_id": "2RKX098rSwndvI3g",
+      "name": "Hardened Polyceramic Overlay",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.2RKX098rSwndvI3g"
+    },
+    {
+      "_id": "AL2djt9kR2DP9Ukj",
+      "name": "Cargo Lighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Orbit-to-surface cargo shuttle. Only capable of surface-to-orbit flight (roughly 20 minutes either way); can latch onto a standard pressurized cargo container holding up to 200 tons. Can be purchased multiple times.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.AL2djt9kR2DP9Ukj"
+    },
+    {
+      "_id": "682PTfghXS1SVMML",
+      "name": "Extended Stores",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Maximum life support duration is doubled. Can be fitted multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.682PTfghXS1SVMML"
+    },
+    {
+      "_id": "FW95Xj01eBfHGkiV",
+      "name": "Boarding Tubes",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows boarding of a hostile disabled ship.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.FW95Xj01eBfHGkiV"
+    },
+    {
+      "_id": "KyW4nCRpntOocYZY",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.KyW4nCRpntOocYZY"
+    },
+    {
+      "_id": "bR1u43Kc4BnZSz4V",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.bR1u43Kc4BnZSz4V"
+    },
+    {
+      "_id": "2T2Wb6Ej3hSoDnxL",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!XtsGaAukrJLwL4iN.2T2Wb6Ej3hSoDnxL"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>The usual ship of the line of most modestly-funded frontier navies -- a true warship, albeit minimal in size. Good armor, multiple ship-killing guns, and trained boarding marines make a corvette a death sentence to most stellar ruffians. Its cargo lighter allows crew and cargo transit to worlds it cannot land on, and its extended stores allow more than four months of field operation.</p><p><strong>Crew:</strong> 10/40. <strong>Cost:</strong> 5.973M base price, 298,650cr six-month maintenance, 1.314M yearly crew cost (30 crew).</p>",
+    "hullType": "corvette",
+    "hullClass": "frigate",
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "ac": 13,
+    "armor": 10,
+    "speed": 2,
+    "drive": 2,
+    "power": {
+      "max": 15
+    },
+    "mass": {
+      "max": 15
+    },
+    "hardpoints": {
+      "max": 6
+    },
+    "crew": {
+      "min": 10,
+      "max": 40,
+      "current": 10
+    },
+    "cost": 5973000,
+    "cargo": 0,
+    "npcCp": 5,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Corvette",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "XtsGaAukrJLwL4iN",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!XtsGaAukrJLwL4iN"
+}

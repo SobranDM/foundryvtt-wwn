@@ -1,0 +1,58 @@
+{{!-- Collapsible ship equipment panel: weapons / defenses / fittings.
+      Context: sectionId, label, items, itemType, isWeapon, collapsed. --}}
+{{#> wwnCollapsibleSection sectionId=(concat "starship." sectionId)
+  label=label
+  count=items.length
+  createType=itemType
+  collapsed=(lookup @root.collapsed (concat "starship." sectionId))}}
+<div class="wwn-data-table wwn-starship-equipment">
+  <div class="item-titles wwn-col-header flexrow">
+    <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+    {{#if isWeapon}}
+    <div class="field-short" title="{{localize 'WWN.Starship.Damage'}}">{{localize "WWN.Starship.DamageAbbr"}}</div>
+    <div class="field-short" title="{{localize 'WWN.Starship.Hardpoints'}}">
+      {{localize "WWN.Starship.HardpointsAbbr"}}
+    </div>
+    {{/if}}
+    <div class="field-short" title="{{localize 'WWN.Starship.Power'}}">{{localize "WWN.Starship.PowerAbbr"}}</div>
+    <div class="field-short" title="{{localize 'WWN.Starship.Mass'}}">{{localize "WWN.Starship.MassAbbr"}}</div>
+    <div class="item-controls"></div>
+  </div>
+  <ol class="item-list">
+    {{#each items as |item|}}
+    <li class="item-entry">
+      <div class="item flexrow{{#if item.system.disabled}} greyrow{{/if}}" data-item-id="{{item.id}}">
+        <div class="item-name item-rollable flexrow">
+          <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
+          <a data-action="rollItem">
+            <h4 title="{{item.system.description}}">{{item.name}}</h4>
+          </a>
+        </div>
+        {{#if isWeapon}}
+        <div class="field-short">{{item.system.damage}}</div>
+        <div class="field-short">{{item.system.hardpoints}}</div>
+        {{/if}}
+        <div class="field-short">{{item.system.power}}</div>
+        <div class="field-short">{{item.system.mass}}</div>
+        <div class="item-controls">
+          <a class="item-control{{#unless item.system.disabled}} item-off{{/unless}}" data-action="toggleDisabled"
+            title="{{localize 'WWN.Starship.Disabled'}}">
+            <i class="fas fa-ban"></i>
+          </a>
+          <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      </div>
+    </li>
+    {{else}}
+    <li class="item-entry">
+      <p class="hint">{{localize "WWN.None"}}</p>
+    </li>
+    {{/each}}
+  </ol>
+</div>
+{{/wwnCollapsibleSection}}

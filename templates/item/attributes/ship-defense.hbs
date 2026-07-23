@@ -1,0 +1,73 @@
+{{!-- Starship defense attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Starship.Defense"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.Cost"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.cost" value="{{system.cost}}" min="0" step="1" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.SpecialCost"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.specialCost" {{checked system.specialCost}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.Power"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.power" value="{{system.power}}" step="any" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.Mass"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.mass" value="{{system.mass}}" step="any" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.Starship.MinimumHullClass"}}</label>
+            <div class="form-fields">
+              <select name="system.minClass">
+                {{selectOptions config.hullClasses selected=system.minClass}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Starship.Equipment"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.CostScales"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.costScales" {{checked system.costScales}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.PowerScales"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.powerScales" {{checked system.powerScales}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.MassScales"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.massScales" {{checked system.massScales}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Starship.Disabled"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.disabled" {{checked system.disabled}} data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

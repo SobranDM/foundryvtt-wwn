@@ -4,7 +4,80 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "7AakCVpMomPdlwlY",
+      "type": "base",
+      "name": "Elf, Civilized (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!b3JFQ4E6He20OaBl.7AakCVpMomPdlwlY"
+    },
+    {
+      "_id": "NDoFuNtsUtSrnnLO",
+      "type": "base",
+      "name": "Elf, Civilized (Dexterity +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!b3JFQ4E6He20OaBl.NDoFuNtsUtSrnnLO"
+    },
+    {
+      "_id": "A5ZsTJyX2sQRkawD",
+      "type": "base",
+      "name": "Elf, Civilized (Intelligence +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!b3JFQ4E6He20OaBl.A5ZsTJyX2sQRkawD"
+    }
+  ],
   "system": {
     "description": "<p>This style of elf represents the city-dwelling, magic-loving, sophisticated interpretation of elvishness favored in some worlds.</p>\n<p><strong>Level 1: </strong>Gain Know and Magic as bonus skills. Your Dexterity or Intelligence modifier increases by +1 and your Constitution modifier decreases by -1. You can see clearly in any light level above complete darkness.</p>",
     "ownedLevel": 1,
@@ -18,8 +91,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "know",
+      "magic"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

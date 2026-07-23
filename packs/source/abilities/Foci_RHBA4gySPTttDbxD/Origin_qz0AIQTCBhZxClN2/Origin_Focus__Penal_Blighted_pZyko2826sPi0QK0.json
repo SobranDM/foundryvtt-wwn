@@ -4,7 +4,176 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "XRbnI9GG6Xhh9FDa",
+      "type": "base",
+      "name": "Penal Blighted (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.saves.base.mod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.XRbnI9GG6Xhh9FDa"
+    },
+    {
+      "_id": "w2RZFWbBvr72eNMu",
+      "type": "base",
+      "name": "Penal Blighted (Strength −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.w2RZFWbBvr72eNMu"
+    },
+    {
+      "_id": "Umf7D7kZ2QcZKNyW",
+      "type": "base",
+      "name": "Penal Blighted (Dexterity −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.Umf7D7kZ2QcZKNyW"
+    },
+    {
+      "_id": "rNq5u4toGMeqC7ao",
+      "type": "base",
+      "name": "Penal Blighted (Constitution −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.rNq5u4toGMeqC7ao"
+    },
+    {
+      "_id": "KutkrbONIDu21j6f",
+      "type": "base",
+      "name": "Penal Blighted (Intelligence −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.KutkrbONIDu21j6f"
+    },
+    {
+      "_id": "NzudNecbvB898AhK",
+      "type": "base",
+      "name": "Penal Blighted (Wisdom −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.NzudNecbvB898AhK"
+    },
+    {
+      "_id": "BNlzLHXdr1HcbPVd",
+      "type": "base",
+      "name": "Penal Blighted (Charisma −2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!pZyko2826sPi0QK0.BNlzLHXdr1HcbPVd"
+    }
+  ],
   "system": {
     "description": "<p>Your lineage was cursed by some sadistic sorcerer-king or merciless alien artificer. Perhaps an ancestor offended them, or your people were dominated and made perpetual tools of their conquerors, or your forebears were a fallen ruling caste rendered permanently incapable of threatening the new order. You have been terribly compromised in some physical or mental way.</p>\n<p>Despite this curse, you have somehow managed to avoid complete incapacitation from it and have done your best to compensate for your limitations.</p>\n<p><strong>Level 1: </strong>Choose an attribute; its modifier suffers a permanent -2 penalty, to a maximum of -3. Only one of your attribute scores can be above 13; reduce any others to no more than 13. You may pick two additional Foci to reflect the efforts you&rsquo;ve made to overcome your natural limits. Gain a +2 bonus to all saving throws to reflect your indomitable spirit. You cannot pick the Developed Attribute Focus.</p>",
     "ownedLevel": 1,

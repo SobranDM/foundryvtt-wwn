@@ -1,0 +1,50 @@
+{
+  "_id": "nb4xW7tnVky0btbY",
+  "name": "Jump Jets",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Move action: leap 30m H/V; ignore falls ≤30m. Not usable two consecutive rounds.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 2,
+    "cost": 5000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "jumpJets",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 7,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nb4xW7tnVky0btbY"
+}

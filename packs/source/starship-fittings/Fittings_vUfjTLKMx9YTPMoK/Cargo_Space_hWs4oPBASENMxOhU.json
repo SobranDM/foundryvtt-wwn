@@ -1,0 +1,33 @@
+{
+  "_id": "hWs4oPBASENMxOhU",
+  "name": "Cargo Space",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Free mass traded for pressurized cargo space: 2 tons in a fighter, 20 in a frigate, 200 in a cruiser, 2000 in a capital ship. Can be purchased multiple times.</p>",
+    "cost": 0,
+    "power": 0,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hWs4oPBASENMxOhU"
+}

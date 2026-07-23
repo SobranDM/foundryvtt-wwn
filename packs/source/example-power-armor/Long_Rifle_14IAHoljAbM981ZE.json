@@ -1,0 +1,85 @@
+{
+  "_id": "14IAHoljAbM981ZE",
+  "name": "Long Rifle",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "47yG6cdW48pLP7Kt",
+      "name": "Plating, Basic",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 18, Soak 20, +1 Trauma Target, Shock immune, immune to TL3 or lower weapons. Only one plating.</p>",
+        "tl": 4,
+        "mass": 2,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": false,
+        "effectId": "platingBasic",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!14IAHoljAbM981ZE.47yG6cdW48pLP7Kt"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Long Rifle modular power armor frame.</p>",
+    "frameType": "longRifle",
+    "mass": {
+      "max": 7
+    },
+    "power": {
+      "max": 8
+    },
+    "cost": 0,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 1,
+    "perpetual": true,
+    "transportFrames": 1,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Long Rifle",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 7,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!14IAHoljAbM981ZE"
+}

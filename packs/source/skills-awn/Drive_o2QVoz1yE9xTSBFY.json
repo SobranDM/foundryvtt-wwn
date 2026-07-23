@@ -1,0 +1,30 @@
+{
+  "name": "Drive",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/ride.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Drive vehicles, sail ships, fly planes, ride animals, or otherwise use vehicles or riding beasts, including basic repairs or mount care. The particular scope of a PC's skill depends on their background, but someone with a good Drive skill can quickly pick up other modes with a little practice. Primitive campaign worlds might substitute Ride for this skill.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "drive"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443006,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "o2QVoz1yE9xTSBFY",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!o2QVoz1yE9xTSBFY"
+}

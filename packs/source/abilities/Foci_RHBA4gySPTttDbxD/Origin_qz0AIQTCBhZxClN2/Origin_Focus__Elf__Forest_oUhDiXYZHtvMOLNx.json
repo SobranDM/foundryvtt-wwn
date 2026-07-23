@@ -4,7 +4,38 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "2jzUjfF8fL406etH",
+      "type": "base",
+      "name": "Elf, Forest (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!oUhDiXYZHtvMOLNx.2jzUjfF8fL406etH"
+    }
+  ],
   "system": {
     "description": "<p>This interpretation of elvishness is for those kinds given to nature-reverence, archery, and nimbleness.</p>\n<p><strong>Level 1: </strong>Gain Shoot and Survive as bonus skills. Your Dexterity modifier increases by +1 and your Constitution modifier decreases by -1. You can see clearly in any light level above complete darkness.</p>",
     "ownedLevel": 1,
@@ -18,8 +49,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "shoot",
+      "survive"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

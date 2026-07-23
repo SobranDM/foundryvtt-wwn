@@ -12,14 +12,12 @@
  *   (ported verbatim from `startTurn()`), and log management.
  *
  * Complex multi-field prompts (Start Turn action picker, Set Goal, Add Tag,
- * Add Custom Tag, Add Log, Add Base) pragmatically stay on the legacy V1
- * `Dialog` API rather than being rebuilt as DialogV2/ProseMirror forms — the
- * migration plan calls for the new *sheet* shell, not a rewrite of every
- * nested prompt.
+ * Add Custom Tag, Add Log, Add Base) use the shared `showWwnDialog` factory.
  */
 import { HEALTH__XP_TABLE, FACTION_TAGS, FACTION_GOALS, FACTION_ACTIONS } from "../../config/faction-catalog.mjs";
 import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
+import { showWwnDialog, confirmWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -151,8 +149,9 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
   static async #onDeleteItem(event, target) {
     const item = this._getItem(target);
     if (!item) return;
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
-      window: { title: game.i18n.format("WWN.Delete", { name: item.name }) },
+    const confirmed = await confirmWwnDialog({
+      modifier: "delete-item",
+      title: game.i18n.format("WWN.Delete", { name: item.name }),
       content: `<p>${game.i18n.format("WWN.DeleteContent", { name: item.name, actor: this.actor.name })}</p>`,
     });
     if (confirmed) await item.delete();
@@ -192,7 +191,8 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
   static async #onAddBase(event, target) {
     const assetType = target.dataset.assetType;
     const givenName = target.dataset.assetName;
-    new Dialog({
+    const result = await showWwnDialog({
+      modifier: "faction-add-base",
       title: "Add New Base",
       content: `
         Adding a new base from Expand Influence Action.<br>
@@ -203,16 +203,20 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
             <input type='text' name='inputField'>
           </div>
         </form>`,
-      buttons: { yes: { icon: "<i class='fas fa-check'></i>", label: "Expand Influence - New Base" } },
-      default: "yes",
-      close: (html) => {
-        const form = html[0].querySelector("form");
-        const hp = Number(form.querySelector('[name="inputField"]')?.value);
-        if (!hp) return;
-        this.addBase(hp, assetType, givenName ? `Base of Inf. ${givenName}` : "New Base of Inf",
-          WwnFactionSheet.#assetImage(assetType));
-      },
-    }).render(true);
+      buttons: [
+        confirmButton({ label: "Expand Influence - New Base" }),
+        cancelButton(),
+      ],
+    });
+    if (!result || result === "cancel") return;
+    const hp = Number(result.inputField);
+    if (!hp) return;
+    await this.addBase(
+      hp,
+      assetType,
+      givenName ? `Base of Inf. ${givenName}` : "New Base of Inf",
+      WwnFactionSheet.#assetImage(assetType),
+    );
   }
 
   async addBase(hp, assetType, name, imgPath) {
@@ -246,60 +250,54 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
   }
 
   static async #onSetGoal() {
-    const template = "systems/wwn/templates/actors/dialogs/faction-goal.html";
-    const html = await foundry.applications.handlebars.renderTemplate(template, { goalArray: FACTION_GOALS });
     const actor = this.actor;
-
-    const _goalForm = async (formHtml) => {
-      const form = formHtml[0].querySelector("form");
-      const goal = form.querySelector('[name="goal"]').value;
-      const goalType = form.querySelector('[name="goalType"]').value;
-      const match = FACTION_GOALS.find((g) => g.name === goal);
-      if (!match) return ui.notifications.info("No goal selected. Ignoring");
-      await actor.update({ "system.factionGoal": match.name, "system.factionGoalDesc": match.desc });
-      const goalTypeMessage =
-        goalType === "abandon"
-          ? "<b>Goal abandoned.</b><br> Reminder: If not, it can abandon the old goal and pick a new one, but it will sacrifice its next turn's Faction Action to do so and may not trigger any Asset special abilities that round, either."
-          : "<b>Goal completed</b>.<br> Reminder: The faction collects the experience points for doing so and picks a new goal.";
-      await WwnFactionSheet.logMessage(actor, `Faction ${actor.name} changed their goal to ${match.name}.`, goalTypeMessage);
-    };
-
-    new Dialog(
-      { title: "Set Goal", content: html, default: "setgoal", buttons: { setgoal: { label: "Set Goal", callback: _goalForm } } },
-      { classes: ["wwn"] }
-    ).render(true);
+    const result = await showWwnDialog({
+      modifier: "faction-set-goal",
+      title: "Set Goal",
+      template: "systems/wwn/templates/actors/dialogs/faction-goal.html",
+      context: { goalArray: FACTION_GOALS },
+      buttons: [confirmButton({ label: "Set Goal" }), cancelButton()],
+    });
+    if (!result || result === "cancel") return;
+    const goal = result.goal;
+    const goalType = result.goalType;
+    const match = FACTION_GOALS.find((g) => g.name === goal);
+    if (!match) return ui.notifications.info("No goal selected. Ignoring");
+    await actor.update({ "system.factionGoal": match.name, "system.factionGoalDesc": match.desc });
+    const goalTypeMessage =
+      goalType === "abandon"
+        ? "<b>Goal abandoned.</b><br> Reminder: If not, it can abandon the old goal and pick a new one, but it will sacrifice its next turn's Faction Action to do so and may not trigger any Asset special abilities that round, either."
+        : "<b>Goal completed</b>.<br> Reminder: The faction collects the experience points for doing so and picks a new goal.";
+    await WwnFactionSheet.logMessage(actor, `Faction ${actor.name} changed their goal to ${match.name}.`, goalTypeMessage);
   }
 
   static async #onStartTurn() {
     await WwnFactionSheet.#startTurn(this.actor);
 
-    const template = "systems/wwn/templates/actors/dialogs/faction-action.html";
-    const html = await foundry.applications.handlebars.renderTemplate(template, { actions: FACTION_ACTIONS });
     const actor = this.actor;
-
-    const _form = async (formHtml) => {
-      const form = formHtml[0].querySelector("form");
-      const action = form.querySelector('[name="action"]').value;
-      const match = FACTION_ACTIONS.find((a) => a.name === action);
-      if (!match) return;
-      let rollString = null;
-      if (match.roll) {
-        const roll = new Roll(match.roll, actor.system);
-        rollString = await roll.render();
-      }
-      await WwnFactionSheet.logMessage(
-        actor,
-        `Faction ${actor.name} action: ${action}`,
-        match.desc,
-        match.longDesc ?? null,
-        rollString
-      );
-    };
-
-    new Dialog(
-      { title: "Take Action", content: html, default: "setgoal", buttons: { setgoal: { label: "Take Action", callback: _form } } },
-      { classes: ["wwn"] }
-    ).render(true);
+    const result = await showWwnDialog({
+      modifier: "faction-action",
+      title: "Take Action",
+      template: "systems/wwn/templates/actors/dialogs/faction-action.html",
+      context: { actions: FACTION_ACTIONS },
+      buttons: [confirmButton({ label: "Take Action" }), cancelButton()],
+    });
+    if (!result || result === "cancel") return;
+    const action = result.action;
+    const match = FACTION_ACTIONS.find((a) => a.name === action);
+    if (!match) return;
+    let rollString = null;
+    if (match.roll) {
+      const roll = new Roll(match.roll, actor.system);
+      rollString = await roll.render();
+    }
+    await WwnFactionSheet.logMessage(
+      actor,
+      `Faction ${actor.name} action: ${action}`,
+      match.desc,
+      match.longDesc ?? null,
+      rollString,
+    );
   }
 
   /** Faction turn income/maintenance resolution. Ported verbatim from the legacy sheet. */
@@ -355,56 +353,38 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
       tagDesc += `<div> <b>${tag.name}</b></div><div>${tag.desc}</div><div><i>Effect:</i> ${tag.effect}</div>`;
     }
     const actor = this.actor;
-    new Dialog(
-      {
-        title: "Add Tag",
-        content: `<div class="flex flex-col"><h1> Add Tag </h1><div class="flex flexrow">Tag: <select id="tag">${tagOptions}</select></div>${tagDesc}</div>`,
-        buttons: {
-          addTag: {
-            label: "Add Tag",
-            callback: (html) => {
-              const name = html.find("#tag")[0].value;
-              const match = FACTION_TAGS.find((t) => t.name === name);
-              if (!match) return ui.notifications.error(`Unable to find tag ${name}`);
-              const tags = [...actor.system.tags, match];
-              return actor.update({ "system.tags": tags });
-            },
-          },
-          close: { label: "Close" },
-        },
-        default: "addTag",
-      },
-      { classes: ["wwn"] }
-    ).render(true);
+    const result = await showWwnDialog({
+      modifier: "faction-add-tag",
+      title: "Add Tag",
+      content: `<div class="flex flex-col"><h1> Add Tag </h1><div class="flex flexrow">Tag: <select name="tag">${tagOptions}</select></div>${tagDesc}</div>`,
+      buttons: [confirmButton({ label: "Add Tag" }), cancelButton()],
+    });
+    if (!result || result === "cancel") return;
+    const match = FACTION_TAGS.find((t) => t.name === result.tag);
+    if (!match) return ui.notifications.error(`Unable to find tag ${result.tag}`);
+    const tags = [...actor.system.tags, match];
+    await actor.update({ "system.tags": tags });
   }
 
   static async #onAddCustomTag() {
     const actor = this.actor;
-    new Dialog(
-      {
-        title: "Add Custom Tag",
-        content: `<div class="flex flex-col">
-          <div class="flex flexrow">Tag Name: <input type='text' id="tagname"></div>
-          <div class="flex flexrow">Tag Desc: <textarea id="tagdesc" rows="4" cols="50"></textarea></div>
-          <div class="flex flexrow">Tag Effect: <textarea id="tageffect" rows="4" cols="50"></textarea></div>
+    const result = await showWwnDialog({
+      modifier: "faction-add-custom-tag",
+      title: "Add Custom Tag",
+      content: `<div class="flex flex-col">
+          <div class="flex flexrow">Tag Name: <input type='text' name="tagname"></div>
+          <div class="flex flexrow">Tag Desc: <textarea name="tagdesc" rows="4" cols="50"></textarea></div>
+          <div class="flex flexrow">Tag Effect: <textarea name="tageffect" rows="4" cols="50"></textarea></div>
         </div>`,
-        buttons: {
-          addTag: {
-            label: "Add Custom Tag",
-            callback: (html) => {
-              const name = html.find("#tagname")[0].value;
-              const desc = html.find("#tagdesc")[0].value;
-              const effect = html.find("#tageffect")[0].value;
-              const tags = [...actor.system.tags, { name, desc, effect }];
-              return actor.update({ "system.tags": tags });
-            },
-          },
-          close: { label: "Close" },
-        },
-        default: "addTag",
-      },
-      { classes: ["wwn"] }
-    ).render(true);
+      buttons: [confirmButton({ label: "Add Custom Tag" }), cancelButton()],
+    });
+    if (!result || result === "cancel") return;
+    const tags = [...actor.system.tags, {
+      name: result.tagname,
+      desc: result.tagdesc,
+      effect: result.tageffect,
+    }];
+    await actor.update({ "system.tags": tags });
   }
 
   static async #onDeleteTag(event, target) {
@@ -412,8 +392,9 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
     const tags = this.actor.system.tags;
     const tag = tags[idx];
     if (!tag) return;
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
-      window: { title: "Delete Tag" },
+    const confirmed = await confirmWwnDialog({
+      modifier: "delete-tag",
+      title: "Delete Tag",
       content: `<p>Remove tag ${tag.name}?</p>`,
     });
     if (!confirmed) return;
@@ -424,35 +405,27 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
 
   static async #onAddLog() {
     const actor = this.actor;
-    new Dialog(
-      {
-        title: "Add Log",
-        content: `<form><div class="form-group">
+    const result = await showWwnDialog({
+      modifier: "faction-add-log",
+      title: "Add Log",
+      content: `<form><div class="form-group">
           <label>Manual Log Entry. To inline a roll use [[1dX]].</label>
-          <textarea id="inputField" name="inputField" rows="4" cols="50"></textarea>
+          <textarea name="inputField" rows="4" cols="50"></textarea>
         </div></form>`,
-        default: "add",
-        buttons: {
-          add: {
-            label: "Add Manual Log Entry",
-            callback: (html) => {
-              const form = html[0].querySelector("form");
-              const log = form.querySelector('[name="inputField"]')?.value;
-              if (log) return WwnFactionSheet.logMessage(actor, "Manual Faction Log", log);
-            },
-          },
-        },
-      },
-      { classes: ["wwn"] }
-    ).render(true);
+      buttons: [confirmButton({ label: "Add Manual Log Entry" }), cancelButton()],
+    });
+    if (!result || result === "cancel") return;
+    const log = result.inputField;
+    if (log) await WwnFactionSheet.logMessage(actor, "Manual Faction Log", log);
   }
 
   static async #onDeleteLog(event, target) {
     const idx = Number(target.closest("[data-idx]")?.dataset.idx);
     const logs = this.actor.system.log;
     if (!(idx in logs)) return;
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
-      window: { title: "Delete Log" },
+    const confirmed = await confirmWwnDialog({
+      modifier: "delete-log",
+      title: "Delete Log",
       content: `<p>Remove this log entry?</p>`,
     });
     if (!confirmed) return;
@@ -462,8 +435,9 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
   }
 
   static async #onDeleteAllLogs() {
-    const confirmed = await foundry.applications.api.DialogV2.confirm({
-      window: { title: "Delete Log" },
+    const confirmed = await confirmWwnDialog({
+      modifier: "delete-all-logs",
+      title: "Delete Log",
       content: `<p>Remove all logs for this faction (cannot be undone)?</p>`,
     });
     if (!confirmed) return;
@@ -479,19 +453,21 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
       content = `(${c.currentDate.year}-${c.currentDate.month + 1}-${c.currentDate.day + 1}) ${content}`;
     }
 
-    const template = "systems/wwn/templates/chat/faction-log.html";
-    const chatData = {
-      speaker: ChatMessage.getSpeaker({ actor }),
-      content: await foundry.applications.handlebars.renderTemplate(template, { title, content, longContent, logRollString }),
-      type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
+    const { createCardMessage } = await import("../../chat/chat-card.mjs");
+    const msg = await createCardMessage({
+      title,
+      actor,
+      bodyTemplate: "systems/wwn/templates/chat/faction-log-body.hbs",
+      context: { content, longContent, logRollString },
       whisper: gmIds,
-    };
-    const msg = await ChatMessage.create(chatData);
+      flags: { kind: "faction-log" },
+    });
     let renderedContent = content;
     if (msg) {
       const html = await msg.getHTML();
-      html.find(".message-header").remove();
-      renderedContent = html.html().toString();
+      const el = html?.[0] ?? html;
+      el?.querySelector?.(".message-header")?.remove();
+      renderedContent = el?.innerHTML?.toString?.() ?? content;
     }
     const log = [...actor.system.log, renderedContent];
     await actor.update({ "system.log": log });

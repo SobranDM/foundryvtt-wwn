@@ -4,7 +4,128 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "4u1ZG6PGfVlrF5CA",
+      "type": "base",
+      "name": "Lizardman (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": 13,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!bi2EKXHDv2L6mt4f.4u1ZG6PGfVlrF5CA"
+    },
+    {
+      "_id": "YDHRqxlGebedfvF7",
+      "type": "base",
+      "name": "Lizardman +1 (Strength +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!bi2EKXHDv2L6mt4f.YDHRqxlGebedfvF7"
+    },
+    {
+      "_id": "3J2hs5G0PEzXwBVE",
+      "type": "base",
+      "name": "Lizardman +1 (Charisma +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!bi2EKXHDv2L6mt4f.3J2hs5G0PEzXwBVE"
+    },
+    {
+      "_id": "yRNV9aH6luYcdI7C",
+      "type": "base",
+      "name": "Lizardman −1 (Dexterity −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!bi2EKXHDv2L6mt4f.yRNV9aH6luYcdI7C"
+    },
+    {
+      "_id": "W7gdRHbYWXHSC1fh",
+      "type": "base",
+      "name": "Lizardman −1 (Charisma −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!bi2EKXHDv2L6mt4f.W7gdRHbYWXHSC1fh"
+    }
+  ],
   "system": {
     "description": "<p>Whether dressed up as dragon-folk or left as common crocodilian swamp lizardmen, this Focus can fill in the details.</p>\n<p><strong>Level 1: </strong>Gain Stab and Survive as bonus skills. Your Strength or Charisma modifier increases by +1, but your Dexterity or Charisma modifier decreases by -1. Your unarmored Armor Class is 13, and if you wear better armor you get a +1 bonus to its AC.</p>\n<p><strong>Level 2:</strong> You&rsquo;re some sort of dragon-man and can breathe fire, frost, or some other noxious substance. The breath can be done once per scene and affects a cone up to 15 feet long and wide at its end. All within must make an appropriate save or take 2d6 damage plus your character level. You gain immunity to the substance you exhale.</p>",
     "ownedLevel": 1,
@@ -18,8 +139,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "stab",
+      "survive"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

@@ -1,0 +1,33 @@
+{
+  "_id": "NeGiYlfSIdU2g6Sc",
+  "name": "Survey Sensor Array",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Improved planetary sensory array; any rolls with it add +2 to skill checks.</p>",
+    "cost": 5000,
+    "power": 2,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NeGiYlfSIdU2g6Sc"
+}

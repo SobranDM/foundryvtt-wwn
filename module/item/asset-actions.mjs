@@ -1,6 +1,9 @@
 /**
  * Faction asset item actions (ported from legacy item entity).
  */
+import { showWwnDialog, confirmButton, cancelButton } from "../applications/wwn-dialog.mjs";
+import { createCardMessage, createNoticeMessage } from "../chat/chat-card.mjs";
+
 export class AssetItemActions {
   async getAssetAttackRolls(isOffense, attackTarget = null) {
     const data = this.system;
@@ -52,9 +55,6 @@ export class AssetItemActions {
     if (!attackRolls) {
       return;
     }
-    const diceData = Roll.fromTerms([
-      foundry.dice.terms.PoolTerm.fromRolls([attackRolls[0], attackRolls[1]]),
-    ]);
     const attackKey = isOffense
       ? "WWN.faction.attack-roll"
       : "WWN.faction.counter-roll";
@@ -72,21 +72,19 @@ export class AssetItemActions {
       attackSpecial: this.system.attackSpecial,
       assetsWithLocationNotes
     };
-    const template = "systems/wwn/templates/chat/asset-attack.html";
-    const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
-
     if (this.actor?.type == "faction") {
-      const actor = this.actor;
-      //actor.logMessage("Attack Roll", chatContent, null, null);
-    } else {
-      const chatData = {
-        roll: JSON.stringify(diceData),
-        content: chatContent,
-        type: CONST.CHAT_MESSAGE_STYLES.ROLL,
-      };
-      getDocumentClass("ChatMessage").applyRollMode(chatData, "gmroll");
-      getDocumentClass("ChatMessage").create(chatData);
+      // Faction attacks are logged via sheet flows; keep parity with prior no-op branch.
+      return;
     }
+    await createCardMessage({
+      title: dialogData.name,
+      subtitle: dialogData.attackKey,
+      actor: this.actor,
+      bodyTemplate: "systems/wwn/templates/chat/asset-attack-body.hbs",
+      context: dialogData,
+      messageMode: "gmroll",
+      flags: { kind: "asset-attack" },
+    });
   }
 
   // Search other factions for attack targets with targetType
@@ -97,7 +95,6 @@ export class AssetItemActions {
       );
       return;
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const otherActiveFactions = game.actors?.filter(
       (i) =>
         i.type === "faction" &&
@@ -131,140 +128,124 @@ export class AssetItemActions {
       targetFactionsIdNames: factionIdNames,
       targets: targetFactions,
     };
-    const template = "systems/wwn/templates/items/dialogs/select-asset-target.html";
-    const html = await foundry.applications.handlebars.renderTemplate(template, dialogData);
 
-    const _rollAssetForm = async (html) => {
-      const form = html[0].querySelector("form");
-
-      const attackedFactionId = ((
-        form.querySelector('[name="targetFaction"]')
-      ))?.value;
-      const attackedFaction = game.actors?.get(attackedFactionId);
-      if (!attackedFaction) {
-        ui.notifications?.info("Attack faction not selected or not found");
-        return;
-      }
-      const assetFormName = `[name="asset-${attackedFactionId}"]`;
-      const attackedAssetId = ((
-        form.querySelector(assetFormName)
-      ))?.value;
-      const attackedAsset = attackedFaction?.getEmbeddedDocument(
-        "Item",
-        attackedAssetId
-      );
-      if (!attackedAsset) {
-        ui.notifications?.info("Attacked asset not selected or not found");
-        return;
-      }
-      const attackedAssetsWithLocationNotes = attackedFaction.items.filter(i =>
-        i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
-      );
-      const attackingAssetsWithLocationNotes = this.actor.items.filter(i =>
-        i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
-      );
-      const attackRolls = await this.getAssetAttackRolls(true);
-      const defenseRolls = await attackedAsset.getAssetAttackRolls(
-        false, this.system.attackTarget
-      );
-      if (!attackRolls || !defenseRolls) {
-        ui.notifications?.error("Unable to roll for asset");
-        return;
-      }
-      const hitRoll = attackRolls[0];
-      const defRoll = defenseRolls[0];
-      if (
-        !hitRoll ||
-        hitRoll == undefined ||
-        !hitRoll.total ||
-        !defRoll.total
-      ) {
-        return;
-      }
-      let attackDamage = null;
-      let defDamage = null;
-      let attackDesc = "";
-      if (hitRoll.total > defRoll.total) {
-        //attacker hits
-        attackDamage = await attackRolls[1].render();
-        attackDesc = "<b>Attacker Hits.</b><br>";
-      } else if (hitRoll.total < defRoll.total) {
-        //defender hits
-        defDamage = await defenseRolls[1].render();
-        attackDesc = "<b>Defender Hits Counter.</b><br>";
-      } else {
-        //both hit
-        attackDamage = await attackRolls[1].render();
-        defDamage = await defenseRolls[1].render();
-        attackDesc = "<b>Tie! Both do damage.</b><br>";
-      }
-      const name = `${this.actor?.name} - ${this.name} attacking ${attackedAsset.name} (${attackedFaction.name})`;
-      const dialogData = {
-        desc: this.system.description,
-        name,
-        hitRoll: await hitRoll.render(),
-        defRoll: await defRoll.render(),
-        attackDamage: attackDamage,
-        defDamage: defDamage,
-        attackDesc: attackDesc,
-        attackKey: game.i18n.localize("attackKey"),
-        defenseSpecial: attackedAsset.system.attackSpecial,
-        attackSpecial: this.system.attackSpecial,
-        attackedAssetsWithLocationNotes,
-        attackingAssetsWithLocationNotes,
-      };
-      const template = "systems/wwn/templates/chat/asset-attack-def.html";
-      const chatContent = await foundry.applications.handlebars.renderTemplate(template, dialogData);
-      if (this.actor?.type == "faction") {
-        const chatData = {
-          content: chatContent,
-          type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
+    const result = await showWwnDialog({
+      modifier: "asset-select-target",
+      title: `Select asset to attack for ${this.name} (${this.system.location})`,
+      template: "systems/wwn/templates/items/dialogs/select-asset-target.html",
+      context: dialogData,
+      buttons: [confirmButton({ label: "WWN.faction.attack" }), cancelButton()],
+      onRender: (_event, dialog) => {
+        const root = dialog.element;
+        const select = root?.querySelector("#targetFaction") ?? root?.querySelector('[name="targetFaction"]');
+        const sync = () => {
+          const optionValue = select?.value;
+          root?.querySelectorAll(".sel").forEach((el) => {
+            el.style.display = optionValue && el.classList.contains(optionValue) ? "" : "none";
+          });
         };
-        getDocumentClass("ChatMessage").applyRollMode(chatData, "gmroll");
-        getDocumentClass("ChatMessage").create(chatData);
-      }
-    };
-
-    this.popUpDialog?.close();
-    this.popUpDialog = new Dialog(
-      {
-        title: `Select asset to attack for ${this.name} (${this.system.location})`,
-        content: html,
-        default: "roll",
-        buttons: {
-          roll: {
-            label: game.i18n.localize("WWN.faction.attack"),
-            callback: _rollAssetForm,
-          },
-        },
+        select?.addEventListener("change", sync);
+        sync();
       },
-      {
-        classes: ["wwn"],
-      }
+    });
+    if (!result || result === "cancel") return;
+
+    const attackedFactionId = result.targetFaction;
+    const attackedFaction = game.actors?.get(attackedFactionId);
+    if (!attackedFaction) {
+      ui.notifications?.info("Attack faction not selected or not found");
+      return;
+    }
+    const attackedAssetId = result[`asset-${attackedFactionId}`];
+    const attackedAsset = attackedFaction?.getEmbeddedDocument("Item", attackedAssetId);
+    if (!attackedAsset) {
+      ui.notifications?.info("Attacked asset not selected or not found");
+      return;
+    }
+    const attackedAssetsWithLocationNotes = attackedFaction.items.filter(i =>
+      i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
     );
-    this.popUpDialog.render(true);
+    const attackingAssetsWithLocationNotes = this.actor.items.filter(i =>
+      i.id != this.id && i.type == "asset" && i.system.location === this.system.location && i.system.locationRoll
+    );
+    const attackRolls = await this.getAssetAttackRolls(true);
+    const defenseRolls = await attackedAsset.getAssetAttackRolls(
+      false, this.system.attackTarget
+    );
+    if (!attackRolls || !defenseRolls) {
+      ui.notifications?.error("Unable to roll for asset");
+      return;
+    }
+    const hitRoll = attackRolls[0];
+    const defRoll = defenseRolls[0];
+    if (
+      !hitRoll ||
+      hitRoll == undefined ||
+      !hitRoll.total ||
+      !defRoll.total
+    ) {
+      return;
+    }
+    let attackDamage = null;
+    let defDamage = null;
+    let attackDesc = "";
+    if (hitRoll.total > defRoll.total) {
+      attackDamage = await attackRolls[1].render();
+      attackDesc = "<b>Attacker Hits.</b><br>";
+    } else if (hitRoll.total < defRoll.total) {
+      defDamage = await defenseRolls[1].render();
+      attackDesc = "<b>Defender Hits Counter.</b><br>";
+    } else {
+      attackDamage = await attackRolls[1].render();
+      defDamage = await defenseRolls[1].render();
+      attackDesc = "<b>Tie! Both do damage.</b><br>";
+    }
+    const name = `${this.actor?.name} - ${this.name} attacking ${attackedAsset.name} (${attackedFaction.name})`;
+    const cardData = {
+      desc: this.system.description,
+      name,
+      hitRoll: await hitRoll.render(),
+      defRoll: await defRoll.render(),
+      attackDamage: attackDamage,
+      defDamage: defDamage,
+      attackDesc: attackDesc,
+      attackKey: game.i18n.localize("attackKey"),
+      defenseSpecial: attackedAsset.system.attackSpecial,
+      attackSpecial: this.system.attackSpecial,
+      attackedAssetsWithLocationNotes,
+      attackingAssetsWithLocationNotes,
+    };
+    if (this.actor?.type == "faction") {
+      await createCardMessage({
+        title: name,
+        actor: this.actor,
+        bodyTemplate: "systems/wwn/templates/chat/asset-attack-def-body.hbs",
+        context: cardData,
+        messageMode: "gmroll",
+        flags: { kind: "asset-attack-def" },
+      });
+    }
   }
 
   async _assetLogAction() {
-    // Basic template rendering data
-    let content = `<h3> ${this.name} </h3>`;
+    let body = "";
     if ("description" in this.system) {
-      content += `<span class="flavor-text"> ${this.system.description}</span>`;
+      body = `<span class="flavor-text">${this.system.description}</span>`;
     } else {
-      content += "<span class='flavor-text'> No Description</span>";
+      body = "<span class='flavor-text'> No Description</span>";
     }
     if (this.actor?.type == "faction") {
-      const actor = this.actor;
       const gm_ids = ChatMessage.getWhisperRecipients("GM")
         .filter((i) => i)
         .map((i) => i.id)
         .filter((i) => i !== null);
 
-      ChatMessage.create({
-        speaker: ChatMessage.getSpeaker(),
-        content: content, //${item.data.description}
-        type: CONST.CHAT_MESSAGE_STYLES.WHISPER,
+      await createNoticeMessage({
+        title: this.name,
+        body,
+        actor: this.actor,
         whisper: gm_ids,
+        flags: { kind: "asset-action" },
       });
     }
   }
@@ -277,40 +258,27 @@ export class AssetItemActions {
       return;
     }
     if ((data.attackDamage && data.attackDamage !== "") || data.counter) {
-      const d = new Dialog(
-        {
-          title: "Attack with Asset",
-          content:
-            "<p>Do you want to roll an attack(default), counter, search for an asset to attack, or use asset/chat description?</p>",
-          buttons: {
-            attack: {
-              icon: '<i class="fas fa-check"></i>',
-              label: "Attack",
-              callback: () => this._assetAttack(true),
-            },
-            counter: {
-              icon: '<i class="fas fa-check"></i>',
-              label: "Counter",
-              callback: () => this._assetAttack(false),
-            },
-            search: {
-              icon: '<i class="fas fa-check"></i>',
-              label: "Search active factions for an asset to attack",
-              callback: () => this._assetSearch(data.attackTarget),
-            },
-            action: {
-              icon: '<i class="fas fa-check"></i>',
-              label: "Use Action",
-              callback: () => this._assetLogAction(),
-            },
+      const choice = await showWwnDialog({
+        modifier: "asset-action",
+        title: "Attack with Asset",
+        content:
+          "<p>Do you want to roll an attack(default), counter, search for an asset to attack, or use asset/chat description?</p>",
+        buttons: [
+          { action: "attack", label: "Attack", default: true, callback: () => "attack" },
+          { action: "counter", label: "Counter", callback: () => "counter" },
+          {
+            action: "search",
+            label: "Search active factions for an asset to attack",
+            callback: () => "search",
           },
-          default: "attack",
-        },
-        {
-          classes: ["wwn.dialog"],
-        }
-      );
-      d.render(true);
+          { action: "action", label: "Use Action", callback: () => "action" },
+          cancelButton(),
+        ],
+      });
+      if (choice === "attack") return this._assetAttack(true);
+      if (choice === "counter") return this._assetAttack(false);
+      if (choice === "search") return this._assetSearch(data.attackTarget);
+      if (choice === "action") return this._assetLogAction();
     } else {
       this._assetLogAction();
     }

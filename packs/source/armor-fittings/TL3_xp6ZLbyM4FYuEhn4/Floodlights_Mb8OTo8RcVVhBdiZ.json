@@ -1,0 +1,85 @@
+{
+  "_id": "Mb8OTo8RcVVhBdiZ",
+  "name": "Floodlights",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "yy8s6NAbAHruf1gi",
+      "type": "base",
+      "name": "Floodlights",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "token.light.dim",
+            "type": "override",
+            "value": 30,
+            "phase": "final"
+          },
+          {
+            "key": "token.light.bright",
+            "type": "override",
+            "value": 15,
+            "phase": "final"
+          },
+          {
+            "key": "token.light.color",
+            "type": "override",
+            "value": "#fff8e0",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {}
+      },
+      "_key": "!items.effects!Mb8OTo8RcVVhBdiZ.yy8s6NAbAHruf1gi"
+    }
+  ],
+  "system": {
+    "description": "<p>Illuminate 30m around or 50m ahead. Attackers -2 to hit while on unless glare-protected. Token light AE applies while the fitting is enabled and the suit is powered.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 0,
+    "cost": 5000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "floodlights",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 5,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Mb8OTo8RcVVhBdiZ"
+}

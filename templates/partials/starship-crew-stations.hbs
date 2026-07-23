@@ -1,0 +1,50 @@
+{{!-- Crew stations: station | assignment (actor name XOR formula) | roll. --}}
+<div class="wwn-form-panel wwn-starship-stations">
+  <div class="wwn-section-header">
+    <span>{{localize "WWN.Starship.CrewStations"}}</span>
+    <div class="item-controls">
+      <a class="wwn-chip" data-action="reassignCrew" title="{{localize 'WWN.Starship.ReassignCrewHint'}}">
+        <span class="wwn-chip-label">{{localize "WWN.Starship.ReassignCrew"}}</span>
+        <i class="fas fa-people-arrows"></i>
+      </a>
+    </div>
+  </div>
+  <div class="wwn-starship-station-list">
+    <div class="wwn-starship-station-row wwn-starship-station-row--header">
+      <span>{{localize "WWN.Starship.StationLabel"}}</span>
+      <span>{{localize "WWN.Starship.Assignment"}}</span>
+      <span></span>
+    </div>
+    {{#each stations as |station|}}
+    <div class="wwn-starship-station-row{{#if station.broken}} wwn-starship-station-row--broken{{/if}}"
+      data-station="{{station.key}}">
+      <div class="wwn-starship-station-label" title="{{localize 'WWN.Starship.DefaultSkill'}}: {{station.skill}}">
+        {{localize station.label}}
+      </div>
+      <div class="wwn-starship-station-assignment">
+        {{#if station.actorUuid}}
+        <a class="wwn-starship-station-actor-name{{#if station.broken}} wwn-budget-over{{/if}}"
+          data-action="openStationActor" data-station="{{station.key}}"
+          title="{{localize 'WWN.Starship.OpenActor'}}">
+          {{#if station.broken}}{{localize "WWN.Starship.BrokenActor"}}{{else}}{{station.actorName}}{{/if}}
+        </a>
+        <a class="item-control" data-action="clearStationActor" data-station="{{station.key}}"
+          title="{{localize 'WWN.Starship.ClearActor'}}">
+          <i class="fas fa-times"></i>
+        </a>
+        {{else}}
+        <input type="text" name="system.stations.{{station.key}}.formula" value="{{station.formula}}"
+          placeholder="{{localize 'WWN.Starship.FormulaPlaceholder'}}"
+          title="{{localize 'WWN.Starship.Formula'}}" />
+        {{/if}}
+      </div>
+      <div class="wwn-starship-station-roll">
+        <a class="wwn-chip" data-action="rollStation" data-station="{{station.key}}"
+          title="{{localize 'WWN.Starship.RollStation'}}">
+          <i class="fas fa-dice-d20"></i>
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

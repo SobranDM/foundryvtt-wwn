@@ -4,6 +4,7 @@
  * (toObject() output or pack JSON) and returns transformed plain data.
  */
 import { mergeWeaponFavorites } from "../helpers/favorites.mjs";
+import { applyFocusBonusSkillSeed, seedFocusAutomationEffects } from "../helpers/focus-automation-seeds.mjs";
 
 import { remapAssetPath } from "./asset-map.mjs";
 import { normalizeInternalResourceLength } from "../config/power-subtypes.mjs";
@@ -452,6 +453,9 @@ export function migrateFocus(item) {
       seed([{ key: "system.combat.initiative.individual.mod", type: "add", value: 100, phase: "initial" }]);
     }
   }
+
+  applyFocusBonusSkillSeed(out.system, item.name);
+  seedFocusAutomationEffects(item.name, seed);
   return out;
 }
 

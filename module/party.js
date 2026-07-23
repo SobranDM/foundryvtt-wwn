@@ -12,30 +12,27 @@ export const addControl = (object, html) => {
   control.innerHTML = `<i class="fas fa-users"></i>`;
   control.addEventListener("click", (ev) => showPartySheet(object, ev));
 
-  // Try to find the toggle-search-mode element first since we know it exists
   const toggleSearch = html.querySelector(".toggle-search-mode");
   if (toggleSearch) {
     toggleSearch.before(control);
   } else {
-    // Fallback to inserting at the start of the header
     html.querySelector("header")?.prepend(control);
   }
 };
 
 export const showPartySheet = (object, event) => {
   event?.preventDefault();
-  new WwnPartySheet(object, {
-    top: window.screen.height / 2 - 180,
-    left: window.screen.width / 2 - 140,
-  }).render(true);
+  new WwnPartySheet({
+    position: {
+      top: window.screen.height / 2 - 180,
+      left: window.screen.width / 2 - 140,
+    },
+  }).render({ force: true });
 };
 
 export const update = (actor) => {
-  if (actor.getFlag("wwn", "party")) {
-    Object.values(ui.windows).forEach((w) => {
-      if (w instanceof WwnPartySheet) {
-        w.render(true);
-      }
-    });
+  if (!actor.getFlag("wwn", "party")) return;
+  for (const app of foundry.applications.instances.values()) {
+    if (app instanceof WwnPartySheet) app.render(true);
   }
 };

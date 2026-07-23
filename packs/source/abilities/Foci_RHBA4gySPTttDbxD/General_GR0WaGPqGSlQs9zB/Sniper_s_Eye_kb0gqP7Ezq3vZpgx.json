@@ -18,11 +18,13 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
-    "bonusDice": null,
-    "skillBonus": ""
+    "bonusDice": 1,
+    "skillBonus": "shoot"
   },
   "_key": "!items!kb0gqP7Ezq3vZpgx",
   "folder": "GR0WaGPqGSlQs9zB",

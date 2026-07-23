@@ -1,20 +1,20 @@
 <form autocomplete="off">
   <div class="actor header flexrow">
     <div>
-      <a class="item-control resync"><i class="fas fa-sync"></i></a>
+      <a class="item-control" data-action="resync"><i class="fas fa-sync"></i></a>
     </div>
     {{#if user.isGM}}
     <div class="item-controls flexrow">
       <div class="item-control">
-        <button type="button" class="deal-xp" title="{{localize 'WWN.dialog.xp.deal'}}"><i
+        <button type="button" data-action="dealXp" title="{{localize 'WWN.dialog.xp.deal'}}"><i
             class="fas fa-level-up-alt"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="deal-currency" title="{{localize 'WWN.dialog.currency.deal'}}"><i
+        <button type="button" data-action="dealCurrency" title="{{localize 'WWN.dialog.currency.deal'}}"><i
             class="fas fa-coins"></i></button>
       </div>
       <div class="item-control">
-        <button type="button" class="select-actors" title="{{localize 'WWN.dialog.selectActors'}}"><i
+        <button type="button" data-action="selectActors" title="{{localize 'WWN.dialog.selectActors'}}"><i
             class="fas fa-users"></i></button>
       </div>
     </div>
@@ -25,9 +25,9 @@
     {{#each data.documents as |e|}} {{#if e.flags.wwn.party}}
     <li class="actor flexrow" data-actor-id="{{e.id}}">
       <div class="field-img">
-        <img src="{{e.img}}" />
+        <img src="{{e.img}}" alt="" />
         <div class="img-btns flexrow">
-          <button type="button" data-action="open-sheet"><i class="fas fa-user"></i></button>
+          <button type="button" data-action="openSheet"><i class="fas fa-user"></i></button>
         </div>
       </div>
       <div class="fields">
@@ -88,7 +88,4 @@
     </li>
     {{/if}} {{/each}}
   </ol>
-  <footer>
-    <div class=""></div>
-  </footer>
 </form>

@@ -1,0 +1,40 @@
+{
+  "_id": "ZbEWt0mQVXj3hawK",
+  "name": "Charged Particle Caster",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>A focalized upgrade to the reaper battery, the CPC has a much better armor penetration profile.</p>",
+    "cost": 800000,
+    "power": 10,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "3d6",
+    "hardpoints": 2,
+    "tl": 4,
+    "qualities": "AP 15, Clumsy",
+    "ammo": null,
+    "ammoCost": 0,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZbEWt0mQVXj3hawK"
+}

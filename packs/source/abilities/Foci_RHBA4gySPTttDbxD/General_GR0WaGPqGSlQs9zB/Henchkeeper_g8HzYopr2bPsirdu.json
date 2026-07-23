@@ -18,8 +18,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "lead"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

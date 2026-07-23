@@ -1,0 +1,129 @@
+{
+  "_id": "Tegfgx1vT4EWCU7j",
+  "name": "Praetorian",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "v2mGHhBSLZWlhf8U",
+      "name": "Comm Suite, Advanced",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>50 km range; encrypted vs TL4; TL3 cannot detect.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "commSuiteAdvanced",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!Tegfgx1vT4EWCU7j.v2mGHhBSLZWlhf8U"
+    },
+    {
+      "_id": "Ytf0ITpHAL42lGxy",
+      "name": "Onboard Medical Unit",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>Up to 12 pharma doses; On Turn administer to self or adjacent ally (1/round). Heal-1 if user lower. Counts as medkit.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "onboardMedicalUnit",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 200000,
+      "_key": "!actors.items!Tegfgx1vT4EWCU7j.Ytf0ITpHAL42lGxy"
+    },
+    {
+      "_id": "tZxU2Vt0TNh6hbyg",
+      "name": "Plating, Basic",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 18, Soak 20, +1 Trauma Target, Shock immune, immune to TL3 or lower weapons. Only one plating.</p>",
+        "tl": 4,
+        "mass": 2,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": false,
+        "effectId": "platingBasic",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 300000,
+      "_key": "!actors.items!Tegfgx1vT4EWCU7j.tZxU2Vt0TNh6hbyg"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Praetorian modular power armor frame.</p>",
+    "frameType": "praetorian",
+    "mass": {
+      "max": 9
+    },
+    "power": {
+      "max": 9
+    },
+    "cost": 500000,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 1,
+    "perpetual": false,
+    "transportFrames": 1,
+    "stealthPenalty": -2,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Praetorian",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 4,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!Tegfgx1vT4EWCU7j"
+}

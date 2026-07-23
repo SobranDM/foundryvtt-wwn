@@ -1,0 +1,33 @@
+{
+  "_id": "F3s0BEoHPgLFBQ1m",
+  "name": "Ship Bay/Fighter",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+    "cost": 200000,
+    "power": 0,
+    "mass": 2,
+    "minClass": "cruiser",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!F3s0BEoHPgLFBQ1m"
+}

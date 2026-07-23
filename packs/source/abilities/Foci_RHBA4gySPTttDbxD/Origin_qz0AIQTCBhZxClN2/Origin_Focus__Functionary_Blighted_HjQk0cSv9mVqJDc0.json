@@ -4,7 +4,152 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "buroEFSiB5VgvbMn",
+      "type": "base",
+      "name": "Functionary Blighted (Strength −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.buroEFSiB5VgvbMn"
+    },
+    {
+      "_id": "iLrxZ49fOF6s63gs",
+      "type": "base",
+      "name": "Functionary Blighted (Dexterity −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.iLrxZ49fOF6s63gs"
+    },
+    {
+      "_id": "FnqcD1lXYGmh3qH4",
+      "type": "base",
+      "name": "Functionary Blighted (Constitution −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.FnqcD1lXYGmh3qH4"
+    },
+    {
+      "_id": "DGMFxwXhefCnk7L3",
+      "type": "base",
+      "name": "Functionary Blighted (Intelligence −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.DGMFxwXhefCnk7L3"
+    },
+    {
+      "_id": "BRavZixq1IhxQNoK",
+      "type": "base",
+      "name": "Functionary Blighted (Wisdom −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.BRavZixq1IhxQNoK"
+    },
+    {
+      "_id": "lLcbEDRLYvrVTigk",
+      "type": "base",
+      "name": "Functionary Blighted (Charisma −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!HjQk0cSv9mVqJDc0.lLcbEDRLYvrVTigk"
+    }
+  ],
   "system": {
     "description": "<p>Your ancestors were created as tools for a specific functional purpose, one more specific than that of a general laborer. Some may have been living musical instruments, while others could be warped maintenance-drones, inhuman performers, tireless living calculators, or some similar purpose-grown organism. While you probably still look somewhat human, most such functionaries suffered significant, crippling debilities to gain their powers. These Blighted are naturally equipped with the tools and abilities necessary to carry out their role, either as physical organs, implanted devices, or innate magical powers.</p>\n<p><strong>Level 1: </strong>Pick any one non-combat, non-Magic skill as a bonus skill and gain the Specialist Focus in it. Pick any one attribute; it suffers a -1 penalty to its modifier, to a minimum of -2. You are capable of carrying out your intended function even without normally-necessary tools or instruments; functionaries intended to be artisans can replicate or mimic hand tools, those meant to be healers do not need medical supplies, and so forth. You gain an intrinsic +1 bonus to all skill checks related to your function.</p>",
     "ownedLevel": 1,
@@ -19,7 +164,7 @@
     },
     "resourceLength": "none",
     "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

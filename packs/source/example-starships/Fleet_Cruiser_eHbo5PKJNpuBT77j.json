@@ -1,0 +1,371 @@
+{
+  "_id": "eHbo5PKJNpuBT77j",
+  "name": "Fleet Cruiser",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "Hew1AUBkdpytLipd",
+      "name": "Gravcannon",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Using much the same principles as man-portable grav weaponry, the gravcannon causes targets to fall apart in a welter of mutually-antagonistic gravitic fields.</p>",
+        "cost": 2000000,
+        "power": 15,
+        "mass": 4,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "4d6",
+        "hardpoints": 3,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 5
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.Hew1AUBkdpytLipd"
+    },
+    {
+      "_id": "0LMTc7MWWgc08mSw",
+      "name": "Smart Cloud",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>A swarm of self-directed microdrones sweeps over the ship. Their integral beam weaponry is too small to damage larger ships, but they can wipe out an attacking fighter wave.</p>",
+        "cost": 2000000,
+        "power": 10,
+        "mass": 5,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d10",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "Cloud, Clumsy",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 5
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.0LMTc7MWWgc08mSw"
+    },
+    {
+      "_id": "KZYnDBIT0vk1xAYK",
+      "name": "Multifocal Laser",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. Popular on fighters intended for frigate or cruiser engagement.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "1d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 5
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.KZYnDBIT0vk1xAYK"
+    },
+    {
+      "_id": "8yuQOz0CRtUbhGyP",
+      "name": "Multifocal Laser",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Twinned assay and penetration lasers modulate the frequency of this beam for remarkable armor penetration. Popular on fighters intended for frigate or cruiser engagement.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "1d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 5
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.8yuQOz0CRtUbhGyP"
+    },
+    {
+      "_id": "SAD8aRfB3JtNNBZL",
+      "name": "Hardened Polyceramic Overlay",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.SAD8aRfB3JtNNBZL"
+    },
+    {
+      "_id": "N28K3SMWeUdQfL9b",
+      "name": "Drop Pod",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",
+        "cost": 300000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.N28K3SMWeUdQfL9b"
+    },
+    {
+      "_id": "HaS8gRaHjLerHBUm",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.HaS8gRaHjLerHBUm"
+    },
+    {
+      "_id": "W1VsejoYgm9fh14h",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.W1VsejoYgm9fh14h"
+    },
+    {
+      "_id": "Z20g97QMn1hu2lB5",
+      "name": "Boarding Tubes",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows boarding of a hostile disabled ship.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.Z20g97QMn1hu2lB5"
+    },
+    {
+      "_id": "YGHOJzlugzbYWdJb",
+      "name": "Fuel Scoops",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.YGHOJzlugzbYWdJb"
+    },
+    {
+      "_id": "HDaVDnsMqJl0KrU2",
+      "name": "Advanced Nav Computer",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds +2 for traveling familiar spike courses.</p>",
+        "cost": 10000,
+        "power": 1,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": true,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!eHbo5PKJNpuBT77j.HDaVDnsMqJl0KrU2"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>The archetypal warship of post-Silence humanity, a ship-eating monster compared to its smaller brethren. Its chief advantage is a heavily-armored hull; only special hunter-killer ships fitted with armor-piercing weaponry have a real chance of penetrating it.</p><p><strong>Crew:</strong> 50/200. <strong>Cargo:</strong> 60 tons. <strong>Cost:</strong> 17.17M base price, 858,500cr six-month maintenance, 6.58M yearly crew cost (150 crew).</p>",
+    "hullType": "fleetCruiser",
+    "hullClass": "cruiser",
+    "hp": {
+      "value": 60,
+      "max": 60
+    },
+    "ac": 14,
+    "armor": 15,
+    "speed": 1,
+    "drive": 3,
+    "power": {
+      "max": 50
+    },
+    "mass": {
+      "max": 30
+    },
+    "hardpoints": {
+      "max": 10
+    },
+    "crew": {
+      "min": 50,
+      "max": 200,
+      "current": 50
+    },
+    "cost": 17170000,
+    "cargo": 60,
+    "npcCp": 5,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Fleet Cruiser",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "eHbo5PKJNpuBT77j",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!eHbo5PKJNpuBT77j"
+}

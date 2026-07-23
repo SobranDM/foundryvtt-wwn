@@ -39,7 +39,7 @@ export const registerHelpers = async function () {
   });
 
   Handlebars.registerHelper("add", function (lh, rh) {
-    return parseInt(lh) + parseInt(rh);
+    return Number(lh) + Number(rh);
   });
 
   Handlebars.registerHelper("subtract", function (lh, rh) {

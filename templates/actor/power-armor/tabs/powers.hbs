@@ -1,0 +1,8 @@
+{{!-- Pilot powers read-through. --}}
+<section class="tab powers-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  {{#unless pilot.linked}}
+  <p class="hint">{{localize "WWN.PowerArmor.AssignPilotHint"}}</p>
+  {{else}}
+  {{> wwnPowersTabBody}}
+  {{/unless}}
+</section>

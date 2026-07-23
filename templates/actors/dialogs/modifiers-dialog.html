@@ -1,56 +1,50 @@
 <form autocomplete="off">
   <div class="attribute-bonuses">
-    <label>{{localize 'WWN.scores.str.long'}}</label>
+    <label>{{localize 'WWN.Ability.Str.long'}}</label>
     <ol>
       <li>
-        {{localize 'WWN.Melee'}} ({{mod system.scores.str.mod}})
+        {{localize 'WWN.Melee'}} ({{mod system.abilities.str.mod}})
       </li>
     </ol>
   </div>
   <div class="attribute-bonuses">
-    <label>{{localize 'WWN.scores.int.long'}}</label>
+    <label>{{localize 'WWN.Ability.Int.long'}}</label>
     <ol>
       <li>
-        {{localize 'WWN.SpokenLanguages'}} ({{localize system.languages.spoken}} {{system.langTotal}})
-      </li>
-      <li>
-        {{localize 'WWN.Literacy'}} ({{localize system.languages.literacy}})
+        {{localize 'WWN.SpokenLanguages'}} ({{languages.length}})
       </li>
     </ol>
   </div>
   <div class="attribute-bonuses">
-    <label>{{localize 'WWN.scores.dex.long'}}</label>
+    <label>{{localize 'WWN.Ability.Dex.long'}}</label>
     <ol>
       <li>
-        {{localize 'WWN.Missile'}} ({{mod system.scores.dex.mod}})
+        {{localize 'WWN.Missile'}} ({{mod system.abilities.dex.mod}})
       </li>
       <li>
-        {{localize 'WWN.Initiative'}} ({{mod system.scores.dex.init}})
+        {{localize 'WWN.Initiative'}} ({{mod system.abilities.dex.mod}})
       </li>
       <li>
-        {{localize 'WWN.ArmorClass'}} ({{mod system.scores.dex.mod}})
+        {{localize 'WWN.ArmorClass'}} ({{mod system.abilities.dex.mod}})
       </li>
     </ol>
   </div>
   <div class="attribute-bonuses">
-    <label>{{localize 'WWN.scores.con.long'}}</label>
+    <label>{{localize 'WWN.Ability.Con.long'}}</label>
     <ol>
       <li>
-        {{localize 'WWN.Health'}} ({{mod system.scores.con.mod}})
+        {{localize 'WWN.Health'}} ({{mod system.abilities.con.mod}})
       </li>
     </ol>
   </div>
   <div class="attribute-bonuses">
-    <label>{{localize 'WWN.scores.cha.long'}}</label>
+    <label>{{localize 'WWN.Ability.Cha.long'}}</label>
     <ol>
       <li>
-        {{localize 'WWN.NPCReaction'}} ({{mod system.scores.cha.npc}})
+        {{localize 'WWN.RetainersMax'}} ({{add system.abilities.cha.mod 4}})
       </li>
       <li>
-        {{localize 'WWN.RetainersMax'}} ({{add system.scores.cha.mod 4}})
-      </li>
-      <li>
-        {{localize 'WWN.Loyalty'}} ({{add system.scores.cha.mod 7}})
+        {{localize 'WWN.Loyalty'}} ({{add system.abilities.cha.mod 7}})
       </li>
     </ol>
   </div>

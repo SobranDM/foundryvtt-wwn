@@ -74,24 +74,14 @@ async function drawTreasure(table, data) {
 
 async function rollTreasure(table) {
   const data = await drawTreasure(table, {});
-  const templateData = {
-    treasure: data.treasure,
-    table: table,
-  };
-
-  const html = await foundry.applications.handlebars.renderTemplate(
-    "systems/wwn/templates/chat/roll-treasure.html",
-    templateData
-  );
-
-  const chatData = {
-    content: html,
-  };
-
+  const { createCardMessage } = await import("./chat/chat-card.mjs");
   const rollMode = game.settings.get("core", "rollMode");
-  if (["gmroll", "blindroll"].includes(rollMode)) chatData["whisper"] = ChatMessage.getWhisperRecipients("GM");
-  if (rollMode === "selfroll") chatData["whisper"] = [game.user.id];
-  if (rollMode === "blindroll") chatData["blind"] = true;
-
-  ChatMessage.create(chatData);
+  await createCardMessage({
+    title: table.name,
+    img: "systems/wwn/assets/treasure.png",
+    bodyTemplate: "systems/wwn/templates/chat/treasure-card.hbs",
+    context: { treasure: data.treasure, table },
+    messageMode: rollMode,
+    flags: { kind: "treasure" },
+  });
 }

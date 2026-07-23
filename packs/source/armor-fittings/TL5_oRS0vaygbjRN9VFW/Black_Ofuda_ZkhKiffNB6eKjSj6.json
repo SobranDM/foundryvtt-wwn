@@ -1,0 +1,50 @@
+{
+  "_id": "ZkhKiffNB6eKjSj6",
+  "name": "Black Ofuda",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Jailbreak for Tsukumogami Processor (1 day, Int/Program vs 10). VI may fire weapons, take bonus physical actions, or move; wearer cannot override. Empty VI suit: 15 HP + Soak, +6 AB, save 14+, Move 10m.</p>",
+    "tl": 5,
+    "mass": 0,
+    "power": 0,
+    "cost": 0,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "blackOfuda",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "oRS0vaygbjRN9VFW",
+  "sort": 55,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZkhKiffNB6eKjSj6"
+}

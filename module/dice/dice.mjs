@@ -1,4 +1,4 @@
-import { RollParts } from "./roll-parts.mjs";
+import { RollParts, resolveSkillDiceFormula } from "./roll-parts.mjs";
 import { WwnRoll, WwnAttackRoll, WwnSkillRoll, WwnDamageRoll } from "./rolls.mjs";
 import { showWwnDialog, rollButton, cancelButton } from "../applications/wwn-dialog.mjs";
 import { createRollMessage, createCardMessage } from "../chat/chat-card.mjs";
@@ -114,11 +114,12 @@ export class WwnDice {
     return Math.max(owned, floor);
   }
 
-  static async rollSkill(actor, skill, { skipDialog = false, abilityKey = null } = {}) {
+  static async rollSkill(actor, skill, { skipDialog = false, abilityKey = null, title = null } = {}) {
     abilityKey ??= skill.system.score ?? "int";
     const ability = actor.system.abilities?.[abilityKey];
+    const rollTitle = title ?? game.i18n.format("WWN.Roll.SkillTitle", { skill: skill.name });
     const prompt = await this.promptModifier({
-      title: game.i18n.format("WWN.Roll.SkillTitle", { skill: skill.name }),
+      title: rollTitle,
       skipDialog,
     });
     if (!prompt) return;
@@ -130,7 +131,7 @@ export class WwnDice {
       const totalDice = 2 + extraDice;
       parts.add(`${totalDice}d6dl${dropLowest}`, game.i18n.localize("WWN.Roll.SkillDice"));
     } else {
-      parts.add(skill.system.skillDice || "2d6", game.i18n.localize("WWN.Roll.SkillDice"));
+      parts.add(resolveSkillDiceFormula(skill.system.skillDice), game.i18n.localize("WWN.Roll.SkillDice"));
     }
     parts.add(this.effectiveSkillLevel(actor, skill), skill.name);
     parts.add(ability?.mod ?? 0, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[abilityKey] ?? abilityKey));
@@ -147,7 +148,7 @@ export class WwnDice {
       kind: "skill",
       actor,
       img: skill.img,
-      title: game.i18n.format("WWN.Roll.SkillTitle", { skill: skill.name }),
+      title: rollTitle,
       bodyTemplate: "systems/wwn/templates/chat/simple-roll.hbs",
       context: { breakdown: parts.breakdown() },
     });

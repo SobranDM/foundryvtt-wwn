@@ -4,7 +4,80 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "z6CfGsKKsR7oN635",
+      "type": "base",
+      "name": "Orc (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!gfmWD7AXLVYte4Eo.z6CfGsKKsR7oN635"
+    },
+    {
+      "_id": "hsqrkfo9ZCGuQ4Xe",
+      "type": "base",
+      "name": "Orc (Strength +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!gfmWD7AXLVYte4Eo.hsqrkfo9ZCGuQ4Xe"
+    },
+    {
+      "_id": "1ManaFPfsuQuOxR1",
+      "type": "base",
+      "name": "Orc (Constitution +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!gfmWD7AXLVYte4Eo.1ManaFPfsuQuOxR1"
+    }
+  ],
   "system": {
     "description": "<p>Large, strong, brutish, and comparatively stupid; such is the standard orc of fantasy campaigns. Players who want to play such a PC can use this Focus.</p>\n<p><strong>Level 1: </strong>Gain Survive and Stab or Punch as bonus skills. Your Strength or Constitution modifier increases by +1, but your Intelligence modifier decreases by -1. You can see clearly in the dark out to sixty feet.</p>",
     "ownedLevel": 1,
@@ -18,8 +91,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "stab",
+      "punch"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

@@ -1,0 +1,33 @@
+{
+  "_id": "hr9uopWSa4FYeonr",
+  "name": "Mobile Factory",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Self-sustaining TL4 fabrication plant and repair facilities; can create and repair vehicles, equipment, and structures. Operating one requires at least 100 well-trained personnel.</p>",
+    "cost": 50000,
+    "power": 3,
+    "mass": 2,
+    "minClass": "cruiser",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hr9uopWSa4FYeonr"
+}

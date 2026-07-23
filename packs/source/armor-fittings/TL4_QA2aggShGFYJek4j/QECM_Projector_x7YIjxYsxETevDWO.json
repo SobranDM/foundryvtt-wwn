@@ -1,0 +1,50 @@
+{
+  "_id": "x7YIjxYsxETevDWO",
+  "name": "QECM Projector",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>As ECM, 500m, affects TL4 comms and non-LOS remote; fizzles nuclear detonations in area.</p>",
+    "tl": 4,
+    "mass": 2,
+    "power": 2,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "qecmProjector",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 41,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!x7YIjxYsxETevDWO"
+}

@@ -1,0 +1,85 @@
+{
+  "_id": "Ht9tC421FivFFRQ1",
+  "name": "Night Vision Sensors",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "aOL4nR8nzM1Zi4Wt",
+      "type": "base",
+      "name": "Night Vision Sensors",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "token.sight.enabled",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.range",
+            "type": "override",
+            "value": 100,
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.visionMode",
+            "type": "override",
+            "value": "darkvision",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {}
+      },
+      "_key": "!items.effects!Ht9tC421FivFFRQ1.aOL4nR8nzM1Zi4Wt"
+    }
+  ],
+  "system": {
+    "description": "<p>Monochrome night vision to 100m. Token sight AE (darkvision, range 100) while enabled and powered.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 1,
+    "cost": 5000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "nightVisionSensors",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 8,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Ht9tC421FivFFRQ1"
+}

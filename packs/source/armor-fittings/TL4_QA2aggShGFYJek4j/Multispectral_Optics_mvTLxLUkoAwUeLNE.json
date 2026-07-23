@@ -1,0 +1,97 @@
+{
+  "_id": "mvTLxLUkoAwUeLNE",
+  "name": "Multispectral Optics",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "OLr4Y0hQ6xydG54j",
+      "type": "base",
+      "name": "Multispectral Optics",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "token.sight.enabled",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.range",
+            "type": "override",
+            "value": 120,
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.visionMode",
+            "type": "override",
+            "value": "darkvision",
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.brightness",
+            "type": "override",
+            "value": 0,
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.saturation",
+            "type": "override",
+            "value": 0,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {}
+      },
+      "_key": "!items.effects!mvTLxLUkoAwUeLNE.OLr4Y0hQ6xydG54j"
+    }
+  ],
+  "system": {
+    "description": "<p>Full-color + thermal out to normal sight; ignores smoke/mist/darkness. Token sight AE approximates darkvision while enabled and powered.</p>",
+    "tl": 4,
+    "mass": 1,
+    "power": 2,
+    "cost": 20000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "multispectralOptics",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 35,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mvTLxLUkoAwUeLNE"
+}

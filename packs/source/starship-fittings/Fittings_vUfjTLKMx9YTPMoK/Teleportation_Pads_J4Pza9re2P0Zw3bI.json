@@ -1,0 +1,33 @@
+{
+  "_id": "J4Pza9re2P0Zw3bI",
+  "name": "Teleportation Pads",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>TL5 pretech teleportation to and from the ship: up to a dozen people or 1,200kg of matter, usable once every five minutes. Costs 200k where the tech is widely available.</p>",
+    "cost": 0,
+    "power": 1,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!J4Pza9re2P0Zw3bI"
+}

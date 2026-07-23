@@ -1,7 +1,7 @@
 /**
  * @file System-level modifications to the way combat works
  */
-import { WWN } from "../config.js"
+import { WWN } from "../config/index.mjs"
 import WWNCombatGroupSelector from "./combat-set-groups.js"
 import { findAdjacentGroupTurn } from "./side-collapse.mjs"
 import { isNpc } from "../helpers/actor-types.mjs";
@@ -420,16 +420,16 @@ export class WWNCombat extends foundry.documents.Combat {
       if (groupInit !== maxInitiative && maxInitiative != -Infinity) {
         await group.update({ _id: group.id, initiative: maxInitiative });
         if (groupInit) {
-          ChatMessage.create({
-            speaker: {
-              alias: game.i18n.localize("WWN.Initiative")
-            },
-            flavor: game.i18n.format("WWN.combat.modifyInitiative", {
+          const { createNoticeMessage } = await import("../chat/chat-card.mjs");
+          await createNoticeMessage({
+            title: game.i18n.localize("WWN.Initiative"),
+            body: game.i18n.format("WWN.combat.modifyInitiative", {
               group: foundry.utils.escapeHTML(group.name),
               oldInit: groupInit,
               newInit: maxInitiative
             }),
-          })
+            flags: { kind: "initiative" },
+          });
         }
       }
       this.setupTurns();
@@ -504,30 +504,4 @@ export class WWNCombat extends foundry.documents.Combat {
     return (a.name || "").localeCompare(b.name || "")
   }
 
-  // ===========================================================================
-  // Randomize NPC HP
-  // ===========================================================================
-
-  static async preCreateToken(token, data, options, userId) {
-    const actor = game.actors.get(data.actorId);
-    const newData = {};
-
-    if (!actor || data.actorLink || !game.settings.get("wwn", "randomHP")) {
-      return token.updateSource(newData);
-    }
-
-    let newTotal = 0;
-    const modSplit = token.actor.system.hp.hd.split("+");
-    const dieSize = modSplit[0].split("d")[1];
-    const dieCount = modSplit[0].split("d")[0];
-    for (let i = 0; i < dieCount; i++) {
-      newTotal += Math.floor(Math.random() * dieSize + 1);
-    }
-    newTotal += parseInt(modSplit[1]) || 0;
-
-    foundry.utils.setProperty(newData, "delta.system.hp.value", newTotal);
-    foundry.utils.setProperty(newData, "delta.system.hp.max", newTotal);
-
-    return token.updateSource(newData);
-  }
 }

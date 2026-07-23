@@ -1,0 +1,27 @@
+/* Shared metric column flex bases — keep inventory/faction/data-table in sync. */
+@mixin wwn-metric-col($basis) {
+  flex: 0 0 $basis;
+  width: $basis;
+  min-width: $basis;
+  max-width: $basis;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@mixin wwn-icon-row-col {
+  @include wwn-metric-col(8rem);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+@mixin wwn-centered-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}

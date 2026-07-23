@@ -1,0 +1,105 @@
+{{!-- Starship Details: hull picker, crew capacity, economy, description. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">
+        <span>{{localize "WWN.Starship.HullType"}}</span>
+        <div class="item-controls">
+          <a class="wwn-chip" data-action="applyHull" title="{{localize 'WWN.Starship.ApplyHullHint'}}">
+            <span class="wwn-chip-label">{{localize "WWN.Starship.ApplyHull"}}</span>
+            <i class="fas fa-sync"></i>
+          </a>
+        </div>
+      </div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.Starship.HullType"}}</label>
+          <div class="form-fields">
+            <select name="system.hullType">
+              {{selectOptions config.starshipHulls selected=system.hullType blank=""}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.HullClass"}}</label>
+          <div class="form-fields">
+            <select name="system.hullClass">
+              {{selectOptions config.hullClasses selected=system.hullClass}}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.Starship.CrewCapacity"}}</div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.CrewMin"}}</label>
+          <div class="form-fields">
+            <input type="number" step="1" min="0" data-dtype="Number" name="system.crew.min"
+              value="{{system.crew.min}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.CrewMax"}}</label>
+          <div class="form-fields">
+            <input type="number" step="1" min="0" data-dtype="Number" name="system.crew.max"
+              value="{{system.crew.max}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.CrewCurrent"}}</label>
+          <div class="form-fields">
+            <input type="number" step="1" min="0" data-dtype="Number" name="system.crew.current"
+              value="{{system.crew.current}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.NpcCp"}}</label>
+          <div class="form-fields">
+            <input type="number" step="1" min="0" data-dtype="Number" name="system.npcCp" value="{{system.npcCp}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.Starship.Economy"}}</div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.Cost"}}</label>
+          <div class="form-fields">
+            <input type="number" step="1" min="0" data-dtype="Number" name="system.cost" value="{{system.cost}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.Maintenance"}}</label>
+          <div class="form-fields">
+            <span>{{system.maintenance}}</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.Cargo"}}</label>
+          <div class="form-fields">
+            <input type="number" step="any" min="0" data-dtype="Number" name="system.cargo"
+              value="{{system.cargo}}" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.Starship.HP"}}</label>
+          <div class="form-fields">
+            <span>{{system.hp.max}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
+      <div class="wwn-sheet-editor">
+        {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+      </div>
+    </div>
+  </div>
+</section>

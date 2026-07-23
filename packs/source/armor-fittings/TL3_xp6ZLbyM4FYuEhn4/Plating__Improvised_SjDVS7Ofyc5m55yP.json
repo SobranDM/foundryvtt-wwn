@@ -1,0 +1,50 @@
+{
+  "_id": "SjDVS7Ofyc5m55yP",
+  "name": "Plating, Improvised",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>AC 16, Soak 15, +1 Trauma Target; immune to TL2 or lower weapons. Only one plating.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 0,
+    "cost": 5000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "platingImprovised",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 10,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SjDVS7Ofyc5m55yP"
+}

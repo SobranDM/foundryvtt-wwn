@@ -1,0 +1,111 @@
+{{!-- Power armor Main: PC-like abilities / saves / skills / combat + favorites. --}}
+<section class="tab attributes-tab flexcol {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  {{#unless pilot.linked}}
+  <p class="hint">{{localize "WWN.PowerArmor.AssignPilotHint"}}</p>
+  {{else}}
+  <div class="wwn-actor-main-grid">
+    <div class="wwn-panel wwn-main-abilities">
+      <div class="wwn-ability-grid">
+        {{#each abilities as |ability|}}
+        <div class="wwn-ability-row" data-score="{{ability.key}}">
+          <a class="wwn-rollable wwn-ability-label" data-action="rollCheck" data-ability="{{ability.key}}"
+            title="{{localize ability.label}}">{{localize ability.label}}</a>
+          <div class="wwn-ability-body">
+            <span class="wwn-ability-value{{#if ability.overlay}} wwn-overlay{{/if}}">{{ability.value}}</span>
+            <span class="wwn-ability-mod">{{wwnSigned ability.mod}}</span>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="wwn-panel wwn-main-saves">
+      <div class="wwn-save-grid">
+        {{#each saves as |save|}}
+        <a class="wwn-rollable wwn-save-cell" data-action="rollSave" data-save="{{save.id}}"
+          title="{{localize save.label}}">
+          <span class="wwn-section-header">{{localize save.label}}</span>
+          <span class="wwn-save-value">{{save.value}}</span>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="wwn-panel wwn-main-skills inventory skills">
+      <div class="wwn-section-header wwn-main-skills-header">
+        <span>{{localize "WWN.category.skills"}}</span>
+      </div>
+      <ol class="item-list wwn-skills-list">
+        {{#each skills as |skill|}}
+        <li class="item-entry">
+          <div class="item flexrow" data-skill-name="{{skill.name}}">
+            <div class="item-name-short item-rollable flexrow">
+              <a data-action="rollSkill" data-skill-name="{{skill.name}}">
+                <h4>{{skill.name}}</h4>
+              </a>
+            </div>
+            <div class="field-xshort">{{skill.system.ownedLevel}}</div>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+    <div class="wwn-main-sidebar">
+      <div class="wwn-panel wwn-main-combat-panel">
+        <div class="wwn-combat-stats">
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.PowerArmor.AttackBonus'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-crosshairs"></i>
+                <span>{{localize "WWN.Sheet.AttackBonusShort"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <span>{{wwnSigned pilotSystem.combat.ab}}</span>
+              </div>
+            </div>
+            <div class="wwn-combat-stat" title="{{localize 'WWN.PowerArmor.AC'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-shield-alt"></i>
+                <span>{{localize "WWN.Sheet.ArmorClassShort"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <span>{{ac}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.PowerArmor.Soak'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-heart"></i>
+                <span>{{localize "WWN.PowerArmor.Soak"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <span>{{system.soak.value}}</span>
+                <span class="wwn-combat-sep">/</span>
+                <span>{{system.soak.max}}</span>
+              </div>
+            </div>
+            {{#if derived.effectiveStrength}}
+            <div class="wwn-combat-stat" title="{{localize 'WWN.PowerArmor.EffectiveStr'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-dumbbell"></i>
+                <span>{{localize "WWN.PowerArmor.EffectiveStr"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <span>{{derived.effectiveStrength}}</span>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+        <div class="wwn-form-panel-fields wwn-power-armor-combat-actions">
+          <a class="wwn-chip" data-action="refreshSoak"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.RefreshSoak"}}</span></a>
+        </div>
+      </div>
+
+      {{> wwnFavoritesDock}}
+    </div>
+  </div>
+  {{/unless}}
+</section>

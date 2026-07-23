@@ -87,6 +87,10 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       focus: "focus",
       asset: "asset",
       currency: "currency",
+      shipFitting: "ship-fitting",
+      shipWeapon: "ship-weapon",
+      shipDefense: "ship-defense",
+      armorFitting: "armor-fitting",
     };
     parts.info.template = `${TPL}/attributes/${byType[type] ?? "item"}.hbs`;
     return parts;
@@ -219,11 +223,9 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     context.ammoChoices = choices;
   }
 
-  /** Core skill slugs for bonus skill / skillBonus dropdowns. */
+  /** Primary skill slugs/names from the configured skill pack. */
   #prepareFocusContext(context) {
-    context.skillBonusChoices = Object.fromEntries(
-      CONFIG.WWN.coreSkills.map((slug) => [slug, `WWN.Skills.${slug}`])
-    );
+    context.skillBonusChoices = { ...(CONFIG.WWN.skillSetCache?.labels ?? {}) };
   }
 
   /** @override */

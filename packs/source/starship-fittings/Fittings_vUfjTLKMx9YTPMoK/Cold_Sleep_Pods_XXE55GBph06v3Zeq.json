@@ -1,0 +1,33 @@
+{
+  "_id": "XXE55GBph06v3Zeq",
+  "name": "Cold Sleep Pods",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Keeps a number of people equal to the ship's maximum crew in stasis indefinitely. Can be installed multiple times.</p>",
+    "cost": 5000,
+    "power": 1,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XXE55GBph06v3Zeq"
+}

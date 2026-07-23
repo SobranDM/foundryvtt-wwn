@@ -257,10 +257,12 @@ export async function reloadWeapon(weapon) {
   const content = plan.partial
     ? `${actor.name} partially reloaded ${weapon.name} (${plan.newWeaponCharges}/${plan.max}).`
     : `${actor.name} reloaded ${weapon.name}.`;
-  await ChatMessage.create({
-    user: game.user.id,
-    content,
-    speaker: ChatMessage.getSpeaker({ actor }),
+  const { createNoticeMessage } = await import("../chat/chat-card.mjs");
+  await createNoticeMessage({
+    title: weapon.name,
+    body: content,
+    actor,
+    flags: { kind: "reload" },
   });
   return true;
 }

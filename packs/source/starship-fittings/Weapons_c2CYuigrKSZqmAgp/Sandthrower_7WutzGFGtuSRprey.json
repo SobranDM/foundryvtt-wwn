@@ -1,0 +1,40 @@
+{
+  "_id": "7WutzGFGtuSRprey",
+  "name": "Sandthrower",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Projecting a spray of tiny, dense particulate matter, sandthrowers are highly effective against lightly-armored fighters.</p>",
+    "cost": 50000,
+    "power": 3,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "2d4",
+    "hardpoints": 1,
+    "tl": 4,
+    "qualities": "Flak",
+    "ammo": null,
+    "ammoCost": 0,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!7WutzGFGtuSRprey"
+}

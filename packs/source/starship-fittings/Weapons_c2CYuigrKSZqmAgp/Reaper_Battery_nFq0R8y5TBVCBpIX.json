@@ -1,0 +1,40 @@
+{
+  "_id": "nFq0R8y5TBVCBpIX",
+  "name": "Reaper Battery",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Stepped tapping of the spike drive power plant emits a torrent of charged particles. Little armor penetration, but can fry a small ship's power grid in a strike or two.</p>",
+    "cost": 100000,
+    "power": 4,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "3d4",
+    "hardpoints": 1,
+    "tl": 4,
+    "qualities": "Clumsy",
+    "ammo": null,
+    "ammoCost": 0,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nFq0R8y5TBVCBpIX"
+}

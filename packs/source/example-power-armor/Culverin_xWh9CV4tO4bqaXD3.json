@@ -1,0 +1,151 @@
+{
+  "_id": "xWh9CV4tO4bqaXD3",
+  "name": "Culverin",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "uov1XUOeeqnpXwnO",
+      "name": "Sealed Systems, Advanced",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>Immune toxic gases; nullifies non-instantly-lethal radiation; oxygen/thermal for deep space/underwater while powered.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "sealedSystemsAdvanced",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!xWh9CV4tO4bqaXD3.uov1XUOeeqnpXwnO"
+    },
+    {
+      "_id": "n3O1rBW2vanao2Sc",
+      "name": "Comm Suite, Advanced",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>50 km range; encrypted vs TL4; TL3 cannot detect.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "commSuiteAdvanced",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 200000,
+      "_key": "!actors.items!xWh9CV4tO4bqaXD3.n3O1rBW2vanao2Sc"
+    },
+    {
+      "_id": "1R9JHWQaVeK1lfMf",
+      "name": "Breacher Fist",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>Main Action: blast human-sized hole in adjacent wall up to 1m thick (not TL4 fortification). Vs immobile targets: demo charge damage.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "breacherFist",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 300000,
+      "_key": "!actors.items!xWh9CV4tO4bqaXD3.1R9JHWQaVeK1lfMf"
+    },
+    {
+      "_id": "pzeBhH9maPI7bSji",
+      "name": "Plating, Basic",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 18, Soak 20, +1 Trauma Target, Shock immune, immune to TL3 or lower weapons. Only one plating.</p>",
+        "tl": 4,
+        "mass": 2,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": false,
+        "effectId": "platingBasic",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 400000,
+      "_key": "!actors.items!xWh9CV4tO4bqaXD3.pzeBhH9maPI7bSji"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Culverin modular power armor frame.</p>",
+    "frameType": "culverin",
+    "mass": {
+      "max": 8
+    },
+    "power": {
+      "max": 8
+    },
+    "cost": 300000,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": true,
+    "runtimeMultiplier": 1,
+    "perpetual": false,
+    "transportFrames": 1,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Culverin",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 3,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!xWh9CV4tO4bqaXD3"
+}

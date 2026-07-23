@@ -14,6 +14,27 @@ export function normalizeRollPart(value) {
   return trimmed;
 }
 
+/**
+ * Resolve a skill's dice pool to a real dice formula.
+ *
+ * Bare integers like `"2"` / `"3"` must not pass through {@link normalizeRollPart}
+ * as flat modifiers — that yields skill+attribute with no 2d6/3d6kh2 pool.
+ * Map known counts onto the system skill-dice options; otherwise default to 2d6.
+ *
+ * @param {string|number|null|undefined} skillDice
+ * @returns {string}
+ */
+export function resolveSkillDiceFormula(skillDice) {
+  const raw = String(skillDice ?? "").trim();
+  if (/\dd\d/i.test(raw)) return raw;
+
+  const n = Number(raw);
+  if (n === 3) return "3d6kh2";
+  if (n === 4) return "4d6kh2";
+  if (n === 1) return "1d6";
+  return "2d6";
+}
+
 export class RollParts {
   /** @type {Array<{value: number|string, label: string}>} */
   parts = [];

@@ -1,0 +1,40 @@
+{
+  "_id": "wMpCd54UaMWW6TL9",
+  "name": "Fractal Impact Charge",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>A spray of penetrator sabots using fractal surfacing to increase impact. Favored for bomber-class fighter hulls.</p>",
+    "cost": 200000,
+    "power": 5,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "2d6",
+    "hardpoints": 1,
+    "tl": 4,
+    "qualities": "AP 15, Ammo 4",
+    "ammo": 4,
+    "ammoCost": 500,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wMpCd54UaMWW6TL9"
+}

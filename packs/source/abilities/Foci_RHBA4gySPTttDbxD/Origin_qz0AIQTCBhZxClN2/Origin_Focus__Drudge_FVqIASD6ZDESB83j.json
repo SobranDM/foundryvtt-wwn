@@ -4,7 +4,56 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "wWIygW6uW11JBaay",
+      "type": "base",
+      "name": "Drudge (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.saves.mental.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!FVqIASD6ZDESB83j.wWIygW6uW11JBaay"
+    }
+  ],
   "system": {
     "description": "<p>You are remarkably intelligent for a Drudge, being able to understand abstract concepts, anticipate consequences, and conceive of hypothetical outcomes. You are also much more capable of violence than most of your kind.</p>\n<p><strong>Level 1: </strong>Gain Exert as a bonus skill. Your Strength and Constitution modifiers increase by +1, to a maximum of +2. Your Intelligence and Charisma modifiers decrease by -1, to a minimum of -2. You suffer a -2 penalty to all Mental saving throws.</p>",
     "ownedLevel": 1,
@@ -18,8 +67,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "exert"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

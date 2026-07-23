@@ -4,7 +4,152 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "nGu6H5tQKwMfTMDM",
+      "type": "base",
+      "name": "Automaton (Strength −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.nGu6H5tQKwMfTMDM"
+    },
+    {
+      "_id": "AAnFUWWBhfbhOGrc",
+      "type": "base",
+      "name": "Automaton (Dexterity −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.AAnFUWWBhfbhOGrc"
+    },
+    {
+      "_id": "nIkvtdbMUpZ4y3Ux",
+      "type": "base",
+      "name": "Automaton (Constitution −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.nIkvtdbMUpZ4y3Ux"
+    },
+    {
+      "_id": "syMEHqWLvQBuidFi",
+      "type": "base",
+      "name": "Automaton (Intelligence −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.syMEHqWLvQBuidFi"
+    },
+    {
+      "_id": "0mLfbtrTnGwAS6vz",
+      "type": "base",
+      "name": "Automaton (Wisdom −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.0mLfbtrTnGwAS6vz"
+    },
+    {
+      "_id": "hASzzOQlGptkAzI0",
+      "type": "base",
+      "name": "Automaton (Charisma −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!lxTktDa45Eu1VuCa.hASzzOQlGptkAzI0"
+    }
+  ],
   "system": {
     "description": "<p>You are a self-willed automaton, gaining all the usual benefits and limitations of that state. You probably have a humanoid form; at your option, you can be human-like enough that only a close inspection reveals your nature. While you are capable of eating and drinking, it is not necessary for you.</p>\n<p>As with other origin Foci, it&rsquo;s up to the GM to decide whether or not this option fits well with their campaign, and it may be disallowed at their discretion.</p>\n<p><strong>Level 1: </strong>You have an automaton&rsquo;s traits and qualities. You gain System Strain as normal for a living creature when healing or similar effects are applied to you. The long ages or questionable self-repair functions have hindered your functionality; pick one attribute and decrease its modifier by -1, to a minimum of -2.</p>",
     "ownedLevel": 1,

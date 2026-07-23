@@ -22,7 +22,7 @@ describe("actor-types", () => {
   });
 
   it("exposes creatable types without reverse aliases", () => {
-    assert.deepEqual([...CREATABLE_ACTOR_TYPES], ["character", "monster", "faction"]);
+    assert.deepEqual([...CREATABLE_ACTOR_TYPES], ["character", "monster", "faction", "starship", "powerArmor"]);
     assert.ok(PC_TYPES.includes("character"));
     assert.ok(NPC_TYPES.includes("monster"));
   });

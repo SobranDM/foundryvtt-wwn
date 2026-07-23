@@ -1,0 +1,23 @@
+{{!-- Starship sheet header: identity band + hull/drive chips + HP bar. --}}
+<header class="sheet-header wwn-sheet-header wwn-starship-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.Starship.HullClass"}}</span>
+          <span>{{lookup @root.config.hullClasses system.hullClass}}</span>
+        </label>
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.Starship.Drive"}}</span>
+          <span>{{system.drive}}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="wwn-header-bars">
+    {{> wwnResourceBars}}
+  </div>
+</header>

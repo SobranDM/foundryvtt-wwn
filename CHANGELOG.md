@@ -31,6 +31,24 @@
 - **Weapons and ammo** support linked ammo and magazine-style reload more clearly.
 - **Group initiative** can collapse the tracker by side (default on), advancing one side at a time.
 - **Monsters** keep editable combat numbers on a Config tab.
+- **Starship actors** for Stars Without Number ship play.
+  - Pick a hull preset to seed speed, armor, HP, crew limits, AC, and power/mass/hardpoint budgets; all stats stay editable afterward.
+  - The sheet tracks used and free power, mass, and hardpoints as you add equipment (over-budget builds are allowed).
+- **Dialog and chat factories** unify theming for prompts (`showWwnDialog`) and cards (`createRollMessage` / `createCardMessage` / `createNoticeMessage`). Long-lived windows (party sheet, character creator) use themed ApplicationV2. Legacy chat/dialog templates and dual-era CSS have been removed.
+- **Ship fittings, weapons, and defenses** are new item types that install on a starship.
+  - Fitting cost, power, and mass scale with hull class the same way as the SWN rulebook (`*` and `#` entries).
+- **Crew stations** on each ship: bridge, gunnery, engineering, comms, and captain.
+  - Link a world actor or enter an NPC roll formula (for example `2d6+3`); linked PCs and NPCs roll with their live skills from the sheet.
+  - Roll department skill checks and ship weapon attacks from the starship sheet.
+- **SWN compendiums** in the Stars Without Number pack folder: **Starship Fittings** (fittings, weapons, and defenses from the book) and **Example Starships** (ready-made ships from the rulebook).
+- **Modular power armor** for Ashes Without Number.
+  - Dedicated **power armor** actors with frame presets, mass/power budgets, Soak pools, power cells/runtime, and maintenance tracking.
+  - **Armor fittings** install on the suit; over-budget builds inert all fittings (per the rules).
+  - Assign a live PC pilot: the suit sheet overlays pilot skills/abilities/powers/HP while AC, Soak, and exo Strength stay on the suit.
+  - Damage depletes suit Soak first, then the linked pilot’s HP.
+  - Phase A automates plating, exoskeletal boost, efficiency cores, training disadvantage, and weapon mounts.
+  - Selected fitting helpers: damage/save chat rolls (Plague Wind, Kinetic Rebuke, Reactive Antipersonnel, Stun Skin), Integral Ripper as a weapon roll, Regenerative Soak / Camo Stealth derive, Emergency Power Cell swap, and token sight/light AEs on Night Vision / Multispectral / Floodlights.
+- **AWN compendiums** in the Ashes Without Number pack folder: **Armor Fittings** and **Example Power Armor**.
 - Assorted sheet, combat, and pack fixes for Foundry v14.
 
 ## New in 1.6.1

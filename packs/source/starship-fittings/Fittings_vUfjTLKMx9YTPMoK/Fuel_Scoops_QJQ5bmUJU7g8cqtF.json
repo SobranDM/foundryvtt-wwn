@@ -1,0 +1,33 @@
+{
+  "_id": "QJQ5bmUJU7g8cqtF",
+  "name": "Fuel Scoops",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+    "cost": 5000,
+    "power": 2,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QJQ5bmUJU7g8cqtF"
+}

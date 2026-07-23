@@ -4,7 +4,80 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "jfz92wPEksA0qzdl",
+      "type": "base",
+      "name": "Chattel Blighted (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.allAttack",
+            "type": "add",
+            "value": -2,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!NTqgXiV3J9MfxLEm.jfz92wPEksA0qzdl"
+    },
+    {
+      "_id": "IhNvcynUET6vQnOM",
+      "type": "base",
+      "name": "Chattel Blighted (Constitution +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!NTqgXiV3J9MfxLEm.IhNvcynUET6vQnOM"
+    },
+    {
+      "_id": "HnSwOqb1O7RV3Nfg",
+      "type": "base",
+      "name": "Chattel Blighted (Charisma +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!NTqgXiV3J9MfxLEm.HnSwOqb1O7RV3Nfg"
+    }
+  ],
   "system": {
     "description": "<p>Some cruel power has made your lineage one of human cattle to serve their hungers. Physically weak and unable to resist abuse, your demihuman strain was meant to exist as playthings and ornaments in the best case, and literal human livestock in less favorable lands. Most such chattel are designed to take a helpless satisfaction in their miserable condition, but you have enough self-control to plot your own course in the world, despite the awful urges that whisper in your blood.</p>\n<p><strong>Level 1:</strong> Pick any one non-combat, non-Magic skill as a bonus skill. Reroll your Strength attribute as 1d4+2 instead of 3d6. Choose either Constitution or Charisma; that attribute modifier is increased by +1, up to a maximum of +3. You gain a +1 bonus on all social skill checks due to your lifelong need to manage and manipulate others, but your innate mental blocks against physical violence give you a -2 hit penalty on all attack rolls.</p>",
     "ownedLevel": 1,
@@ -19,7 +92,7 @@
     },
     "resourceLength": "none",
     "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

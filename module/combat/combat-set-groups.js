@@ -1,4 +1,5 @@
-import { WWN } from "../config.js"
+import { WWN } from "../config/index.mjs"
+import { applyAppThemeClasses } from "../config/themes.mjs"
 
 const { HandlebarsApplicationMixin, ApplicationV2 } = foundry.applications.api
 
@@ -8,7 +9,7 @@ export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(A
   // ===========================================================================
   static DEFAULT_OPTIONS = {
     id: "combat-set-groups-{id}",
-    classes: ["combat-set-groups", "scrollable"],
+    classes: ["wwn", "wwn-app", "wwn-app--combat-set-groups", "combat-set-groups", "scrollable"],
     tag: "form",
     window: {
       frame: true,
@@ -53,6 +54,7 @@ export default class WWNCombatGroupSelector extends HandlebarsApplicationMixin(A
   /** @inheritDoc */
   _onRender(context, options) {
     super._onRender(context, options);
+    applyAppThemeClasses(this.element);
     for (const li of this.element.querySelectorAll("[data-combatant-id]")) {
       li.addEventListener("mouseover", this.#onCombatantHoverIn.bind(this));
       li.addEventListener("mouseout", this.#onCombatantHoverOut.bind(this));

@@ -1,0 +1,33 @@
+{
+  "_id": "nVBl2hGWpufcg7il",
+  "name": "Hydroponic Production",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Ship produces life-support resources for a number of crew equal to its maximum crew. Can be taken multiple times, each additional selection doubling supported crew.</p>",
+    "cost": 10000,
+    "power": 1,
+    "mass": 2,
+    "minClass": "cruiser",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nVBl2hGWpufcg7il"
+}

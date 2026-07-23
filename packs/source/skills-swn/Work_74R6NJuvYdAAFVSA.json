@@ -1,0 +1,30 @@
+{
+  "name": "Work",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/work.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade.",
+    "ownedLevel": -1,
+    "score": "con",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "work"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831442999,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "74R6NJuvYdAAFVSA",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!74R6NJuvYdAAFVSA"
+}

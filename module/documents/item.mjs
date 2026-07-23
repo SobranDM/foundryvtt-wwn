@@ -17,6 +17,8 @@ import {
 } from "../helpers/power-effects.mjs";
 import { AssetItemActions } from "../item/asset-actions.mjs";
 import { migrateItemData } from "../migration/transforms.mjs";
+import { rollShipWeapon } from "../helpers/starship-rolls.mjs";
+import { rollSuitArmorFitting } from "../helpers/power-armor-rolls.mjs";
 
 /**
  * WWN Item document: roll dispatch and power usage flow.
@@ -127,6 +129,18 @@ export class WwnItem extends Item {
       }
       case "asset":
         return this.rollAsset(skipDialog);
+      case "shipWeapon": {
+        if (actor.type === "starship") {
+          return rollShipWeapon(actor, this, { skipDialog });
+        }
+        return this.show();
+      }
+      case "armorFitting": {
+        if (actor.type === "powerArmor") {
+          return rollSuitArmorFitting(actor, this, { skipDialog });
+        }
+        return this.show();
+      }
       default:
         return this.show();
     }

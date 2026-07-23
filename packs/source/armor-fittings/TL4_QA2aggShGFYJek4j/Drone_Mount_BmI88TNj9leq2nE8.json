@@ -1,0 +1,50 @@
+{
+  "_id": "BmI88TNj9leq2nE8",
+  "name": "Drone Mount",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Mount one man-portable drone (10 min). Bonus Main Action per mount for commanding that drone only.</p>",
+    "tl": 4,
+    "mass": 2,
+    "power": 1,
+    "cost": 20000,
+    "stackable": true,
+    "disabled": false,
+    "integral": false,
+    "effectId": "droneMount",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "QA2aggShGFYJek4j",
+  "sort": 23,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BmI88TNj9leq2nE8"
+}

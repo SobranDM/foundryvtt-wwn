@@ -1,0 +1,251 @@
+{
+  "$comment": "Source table for the example-starships compendium (Task 9). Transcribed from reference/temp/swn-starship.txt (SWN 'Example Starships', pp. 104-107) for the first 10 ships. Hull baseline stats (hp/ac/armor/speed/power.max/mass.max/hardpoints.max/crew/hullClass) come from module/config/starship-hulls.mjs (STARSHIP_HULLS), which already encodes the PDF hull table (p. 95) and is the authoritative source used by the live 'Apply Hull' sheet action -- narrative-block free-Power/free-Mass numbers are informational only per the Task 9 brief and are not re-derived here (item-derived 'used/free' will differ slightly from the flavor text since Cargo Space tonnage and spare-ammunition stock aren't modeled as separate line items; see each ship's description). 'Spike Drive-N' from the fittings list is encoded as system.drive (an integer), not an embedded item, matching the existing 'drive is authoritative' convention. smallStation and largeStation have no narrative stat block in the PDF's Example Starships section (only the hull table, p.95, and a one-paragraph Stations blurb, p.95) -- their loadouts below are original examples for this pack, not PDF transcriptions; each ship's description says so explicitly. Generated into packs/source/example-starships/ by build/generate-example-starships.mjs.",
+  "stationFormulaNote": "All five crew stations (bridge, gunnery, engineering, comms, captain) use the NPC check formula 2d6+<Crew Skill>, e.g. Crew Skill +2 -> 2d6+2. This convention is documented in the Strike Fighter's description.",
+  "ships": [
+    {
+      "key": "strikeFighter",
+      "hullType": "strikeFighter",
+      "name": "Strike Fighter",
+      "crewSkill": 2,
+      "npcCp": 4,
+      "cost": 305000,
+      "drive": 1,
+      "weapons": [{ "name": "Reaper Battery", "attackBonus": 4 }],
+      "defenses": [],
+      "fittings": [{ "name": "Atmospheric Configuration" }],
+      "description": "<p>The standard drill-capable fighter craft of most TL4 polities, this model retains a spike drive instead of replacing it with a cheaper systems drive. This particular model is equipped with a reaper battery for dealing with small, lightly-armored civilian ships.</p><p><strong>Crew:</strong> 1/1 pilot. <strong>Cost:</strong> 305,000cr base price, 15,250cr six-month maintenance, 43,800cr yearly crew cost (1 pilot).</p><p><strong>NPC crew station convention:</strong> all five crew stations (Bridge, Gunnery, Engineering, Comms, Captain) use the check formula <code>2d6+Crew Skill</code> when no PC is assigned -- this ship's Crew Skill +2 gives <code>2d6+2</code> on every station. This convention applies to every ship in this compendium.</p>"
+    },
+    {
+      "key": "shuttle",
+      "hullType": "shuttle",
+      "name": "Shuttle",
+      "crewSkill": 1,
+      "npcCp": 4,
+      "cost": 210000,
+      "drive": 1,
+      "cargo": 6,
+      "weapons": [],
+      "defenses": [],
+      "fittings": [{ "name": "Atmospheric Configuration" }, { "name": "Extended Life Support" }],
+      "description": "<p>A conventional civilian shuttle, albeit one with a spike drive sufficient to reach a neighboring system and enough passenger space for a minimally-acceptable transport for brave VIPs and light cargo. Entirely unarmed.</p><p><strong>Crew:</strong> 1/10. <strong>Cargo:</strong> 6 tons. <strong>Cost:</strong> 210,000cr base price, 10,500cr six-month maintenance, 43,800cr yearly crew cost (1 pilot).</p>"
+    },
+    {
+      "key": "freeMerchant",
+      "hullType": "freeMerchant",
+      "name": "Free Merchant",
+      "crewSkill": 1,
+      "npcCp": 4,
+      "cost": 775000,
+      "drive": 1,
+      "cargo": 160,
+      "weapons": [
+        { "name": "Multifocal Laser", "attackBonus": 3 },
+        { "name": "Sandthrower", "attackBonus": 3 }
+      ],
+      "defenses": [],
+      "fittings": [{ "name": "Atmospheric Configuration" }, { "name": "Fuel Scoops" }, { "name": "Fuel Bunkers" }],
+      "description": "<p>A mainstay of freebooting merchant-adventurers, the free merchant is an extremely versatile craft, hauling significant cargo to neighboring systems with very few hands. Its sandthrower discourages pirate shuttles and small craft; the multifocal laser lets a skilled gunner snipe important systems on an attacker, though the hull lacks the armor to stand up to a true warship.</p><p><strong>Crew:</strong> 1/6. <strong>Cargo:</strong> 160 tons. <strong>Cost:</strong> 775,000cr base price, 38,750cr six-month maintenance, 131,400cr yearly crew cost (3 crew).</p>"
+    },
+    {
+      "key": "patrolBoat",
+      "hullType": "patrolBoat",
+      "name": "Patrol Boat",
+      "crewSkill": 2,
+      "npcCp": 5,
+      "cost": 3523000,
+      "drive": 2,
+      "weapons": [{ "name": "Plasma Beam", "attackBonus": 4 }],
+      "defenses": [],
+      "fittings": [
+        { "name": "Atmospheric Configuration" },
+        { "name": "Extended Stores" },
+        { "name": "Boarding Tubes" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Survey Sensor Array" }
+      ],
+      "description": "<p>Often the largest ship fielded by poor or backward frontier worlds. Patrol boats are the smallest independent warships fielded by most navies, with considerable spike-drive reach and speed in-system. The single mounted gun is vulnerable to being disabled, but thick armor and a skilled damage-control crew mitigate that danger.</p><p><strong>Crew:</strong> 5/20. <strong>Cost:</strong> 3.523M base price, 176,150cr six-month maintenance, 657,000cr yearly crew cost (15 crew).</p>"
+    },
+    {
+      "key": "corvette",
+      "hullType": "corvette",
+      "name": "Corvette",
+      "crewSkill": 2,
+      "npcCp": 5,
+      "cost": 5973000,
+      "drive": 2,
+      "weapons": [
+        { "name": "Plasma Beam", "attackBonus": 4, "qty": 2 },
+        { "name": "Sandthrower", "attackBonus": 4 }
+      ],
+      "defenses": [{ "name": "Hardened Polyceramic Overlay" }],
+      "fittings": [
+        { "name": "Cargo Lighter" },
+        { "name": "Extended Stores" },
+        { "name": "Boarding Tubes" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Fuel Bunkers" }
+      ],
+      "description": "<p>The usual ship of the line of most modestly-funded frontier navies -- a true warship, albeit minimal in size. Good armor, multiple ship-killing guns, and trained boarding marines make a corvette a death sentence to most stellar ruffians. Its cargo lighter allows crew and cargo transit to worlds it cannot land on, and its extended stores allow more than four months of field operation.</p><p><strong>Crew:</strong> 10/40. <strong>Cost:</strong> 5.973M base price, 298,650cr six-month maintenance, 1.314M yearly crew cost (30 crew).</p>"
+    },
+    {
+      "key": "heavyFrigate",
+      "hullType": "heavyFrigate",
+      "name": "Heavy Frigate",
+      "crewSkill": 2,
+      "npcCp": 5,
+      "cost": 9783000,
+      "drive": 2,
+      "weapons": [
+        { "name": "Plasma Beam", "attackBonus": 4, "qty": 2 },
+        { "name": "Torpedo Launcher", "attackBonus": 4 }
+      ],
+      "defenses": [{ "name": "Hardened Polyceramic Overlay" }],
+      "fittings": [
+        { "name": "Drop Pod" },
+        { "name": "Fuel Scoops" },
+        { "name": "Fuel Bunkers" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Boarding Tubes" }
+      ],
+      "description": "<p>Sometimes called a 'light cruiser', the heavy frigate pushes a frigate hull to its engineering maximum. Its torpedo launcher (carrying 16 torpedoes' worth of reload stock) can threaten even cruiser-class enemies, and its heavy crew complement and drop pod let it dispatch marines to hot spots quickly. Its armor is still inferior to a true cruiser's.</p><p><strong>Crew:</strong> 30/120. <strong>Cost:</strong> 9.783M base price, 489,150cr six-month maintenance, 3.942M yearly crew cost (90 crew).</p>"
+    },
+    {
+      "key": "bulkFreighter",
+      "hullType": "bulkFreighter",
+      "name": "Bulk Freighter",
+      "crewSkill": 1,
+      "npcCp": 4,
+      "cost": 6088000,
+      "drive": 2,
+      "cargo": 3400,
+      "weapons": [{ "name": "Plasma Beam", "attackBonus": 3 }],
+      "defenses": [],
+      "fittings": [{ "name": "Cargo Lighter" }, { "name": "Fuel Bunkers" }, { "name": "Ship's Locker" }],
+      "description": "<p>Found only in rich, peaceful regions of space, the bulk freighter hauls thousands of tons of goods between systems. It carries enough of a sting to discourage small-ship piracy but is woefully inadequate against a warship or up-gunned free merchant.</p><p><strong>Crew:</strong> 10/40. <strong>Cargo:</strong> 3,400 tons. <strong>Cost:</strong> 6.088M base price, 304,400cr six-month maintenance, 657,000cr yearly crew cost (15 crew).</p>"
+    },
+    {
+      "key": "fleetCruiser",
+      "hullType": "fleetCruiser",
+      "name": "Fleet Cruiser",
+      "crewSkill": 2,
+      "npcCp": 5,
+      "cost": 17170000,
+      "drive": 3,
+      "cargo": 60,
+      "weapons": [
+        { "name": "Gravcannon", "attackBonus": 5 },
+        { "name": "Smart Cloud", "attackBonus": 5 },
+        { "name": "Multifocal Laser", "attackBonus": 5, "qty": 2 }
+      ],
+      "defenses": [{ "name": "Hardened Polyceramic Overlay" }],
+      "fittings": [
+        { "name": "Drop Pod" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Boarding Tubes" },
+        { "name": "Fuel Scoops" },
+        { "name": "Advanced Nav Computer" }
+      ],
+      "description": "<p>The archetypal warship of post-Silence humanity, a ship-eating monster compared to its smaller brethren. Its chief advantage is a heavily-armored hull; only special hunter-killer ships fitted with armor-piercing weaponry have a real chance of penetrating it.</p><p><strong>Crew:</strong> 50/200. <strong>Cargo:</strong> 60 tons. <strong>Cost:</strong> 17.17M base price, 858,500cr six-month maintenance, 6.58M yearly crew cost (150 crew).</p>"
+    },
+    {
+      "key": "battleship",
+      "hullType": "battleship",
+      "name": "Battleship",
+      "crewSkill": 3,
+      "npcCp": 6,
+      "cost": 79060000,
+      "drive": 3,
+      "cargo": 200,
+      "weapons": [
+        { "name": "Vortex Tunnel Inductor", "attackBonus": 6 },
+        { "name": "Lightning Charge Mantle", "attackBonus": 6 },
+        { "name": "Multifocal Laser", "attackBonus": 6, "qty": 2 },
+        { "name": "Gravcannon", "attackBonus": 6 }
+      ],
+      "defenses": [{ "name": "Hardened Polyceramic Overlay" }, { "name": "Ablative Hull Compartments" }],
+      "fittings": [
+        { "name": "Drop Pod" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Boarding Tubes" },
+        { "name": "Fuel Scoops" },
+        { "name": "Advanced Nav Computer" },
+        { "name": "Ship Bay/Fighter", "note": "w/Shuttle" },
+        { "name": "Fuel Bunkers" }
+      ],
+      "description": "<p>Very few worlds have the technology or economy to build and crew a battleship. Its tremendous weight of fire can pop a cruiser in a single firing pass, and its reinforced hull plating shrugs off all but the heaviest armor-piercing blows. Its main weakness: it is only a single, extremely expensive ship.</p><p><strong>Crew:</strong> 200/1,000. <strong>Cargo:</strong> 200 tons. <strong>Cost:</strong> 79.06M base price, 3.953M six-month maintenance, 35M yearly crew cost (800 crew).</p>"
+    },
+    {
+      "key": "carrier",
+      "hullType": "carrier",
+      "name": "Carrier",
+      "crewSkill": 3,
+      "npcCp": 6,
+      "cost": 126880000,
+      "drive": 3,
+      "cargo": 1000,
+      "weapons": [{ "name": "Gravcannon", "attackBonus": 6 }],
+      "defenses": [{ "name": "Hardened Polyceramic Overlay" }, { "name": "Ablative Hull Compartments" }],
+      "fittings": [
+        { "name": "Drop Pod" },
+        { "name": "Armory" },
+        { "name": "Ship's Locker" },
+        { "name": "Workshop" },
+        { "name": "Fuel Scoops" },
+        { "name": "Advanced Nav Computer" },
+        { "name": "Lifeboats" },
+        { "name": "Fuel Bunkers" },
+        { "name": "Ship Bay/Fighter", "qty": 20, "note": "w/Fighters" },
+        { "name": "Ship Bay/Frigate", "qty": 5, "note": "w/Corvettes" }
+      ],
+      "description": "<p>The queen of any navy that has one -- the pinnacle of TL4 shipbuilding, and a massive credit sink. The carrier itself is only the vector for its tremendous payload of ships, both small fighters and corvette-type daughter craft. Lightly gunned and armored compared to a battleship, it relies on an escort to screen it from hostile attention.</p><p><strong>Crew:</strong> 200/1,500. <strong>Cargo:</strong> 1,000 tons. <strong>Cost:</strong> 126.88M base price, 6.344M six-month maintenance, 43.8M yearly crew cost (1,000 crew).</p>"
+    },
+    {
+      "key": "smallStation",
+      "hullType": "smallStation",
+      "name": "Small Station (Bannerjee-12)",
+      "crewSkill": 1,
+      "npcCp": 4,
+      "cost": 5000000,
+      "drive": 0,
+      "cargo": 500,
+      "weapons": [],
+      "defenses": [],
+      "fittings": [
+        { "name": "Cargo Lighter" },
+        { "name": "Fuel Bunkers" },
+        { "name": "Survey Sensor Array" },
+        { "name": "Ship's Locker" },
+        { "name": "Extended Medbay" }
+      ],
+      "description": "<p><strong>Not from the PDF's Example Starships stat blocks</strong> -- only the small-station hull row (Building a Starship, hull table) and a one-paragraph blurb exist in the source; this loadout is an original example built on that hull for this pack. A station has no Speed and no spike drive, and cannot maneuver in combat, though transit jets can slowly reposition it in-system over weeks. The Bannerjee-12 is a common civilian trade/customs station found on poor or backwater worlds with light traffic; it allows docking by bulk freighters and ships not cleared to land planetside.</p><p><strong>Cargo:</strong> 500 tons (informational estimate). <strong>Cost:</strong> 5M base price (hull table).</p>"
+    },
+    {
+      "key": "largeStation",
+      "hullType": "largeStation",
+      "name": "Large Station (Arx)",
+      "crewSkill": 2,
+      "npcCp": 6,
+      "cost": 40000000,
+      "drive": 0,
+      "cargo": 5000,
+      "weapons": [{ "name": "Flak Emitter Battery", "attackBonus": 2, "qty": 2 }],
+      "defenses": [{ "name": "Point Defense Lasers" }, { "name": "Boarding Countermeasures" }],
+      "fittings": [
+        { "name": "Cargo Lighter", "qty": 2 },
+        { "name": "Fuel Scoops" },
+        { "name": "Fuel Bunkers" },
+        { "name": "Advanced Nav Computer" },
+        { "name": "Ship's Locker" },
+        { "name": "Armory" },
+        { "name": "Extended Medbay" },
+        { "name": "Workshop" }
+      ],
+      "description": "<p><strong>Not from the PDF's Example Starships stat blocks</strong> -- only the large-station hull row (Building a Starship, hull table) and a one-paragraph blurb exist in the source; this loadout is an original example built on that hull for this pack. A station has no Speed and no spike drive, and cannot maneuver in combat. The Arx is a major trade hub for a wealthy world, with enough point defenses and boarding countermeasures to deter pirates and smugglers drawn to its traffic.</p><p><strong>Cargo:</strong> 5,000 tons (informational estimate). <strong>Cost:</strong> 40M base price (hull table).</p>"
+    }
+  ]
+}

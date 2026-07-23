@@ -1,0 +1,129 @@
+{
+  "_id": "jEI3O3f7idEG5xtB",
+  "name": "Tarnkappe",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "17tJF9JULMKPsopO",
+      "name": "Exoskeletal Boost, Pretech",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>As Advanced; Str 22 for Encumbrance; lift/bend/break unarmored objects up to compact-car size as Main Action.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "exoPretech",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!jEI3O3f7idEG5xtB.17tJF9JULMKPsopO"
+    },
+    {
+      "_id": "HQyX67DVV05OiUzR",
+      "name": "Ghost Walker Field",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>On Turn: invisible/inaudible to unaided and typical TL4 sensors. Melee -4 if location known; ranged futile. Breaks on run/attack/sharp motion/psychic use. Up to 15 min; 15 min recharge.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "ghostWalkerField",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 200000,
+      "_key": "!actors.items!jEI3O3f7idEG5xtB.HQyX67DVV05OiUzR"
+    },
+    {
+      "_id": "shCN5i8TLzrBkU2u",
+      "name": "Plating, Pretech",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 22, Soak 30, +2 Trauma Target; Trauma only from vehicle-Trauma weapons; Shock immune; immune TL3−. Only one plating.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "platingPretech",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 300000,
+      "_key": "!actors.items!jEI3O3f7idEG5xtB.shCN5i8TLzrBkU2u"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Tarnkappe modular power armor frame.</p>",
+    "frameType": "tarnkappe",
+    "mass": {
+      "max": 10
+    },
+    "power": {
+      "max": 10
+    },
+    "cost": 0,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 0.2,
+    "perpetual": false,
+    "transportFrames": 1,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": 24,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Tarnkappe",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 8,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!jEI3O3f7idEG5xtB"
+}

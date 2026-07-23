@@ -1,0 +1,34 @@
+{
+  "name": "Craft",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/craft.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.CkDjfJhRF0uGjIVJ"
+    }
+  },
+  "system": {
+    "description": "Craft or repair goods and technology appropriate to the PC’s background and society. The Craft skill can be used for a wide range of artisan pursuits, though a GM is within their rights to keep the PC from building complex things that are too far away from their past background and experience.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "craft"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806112516,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "FmWIlEeFFnLbVlHe",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FmWIlEeFFnLbVlHe"
+}

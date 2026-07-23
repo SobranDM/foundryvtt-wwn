@@ -1,5 +1,17 @@
-{{!-- Standard per-row item controls: favorite / edit / delete.
+{{!-- Standard per-row item controls: optional equip/stow, favorite / edit / delete.
       Emits bare anchors so the row supplies a single .item-controls wrapper. --}}
+{{#if showEquip}}
+<a class="item-control{{#unless equipped}} item-unequipped{{/unless}}"
+  data-action="toggleEquipped" title="{{localize 'WWN.items.Equip'}}">
+  <i class="fas fa-tshirt"></i>
+</a>
+{{/if}}
+{{#if showStow}}
+<a class="item-control{{#unless stowed}} item-unstowed{{/unless}}"
+  data-action="toggleStowed" title="{{localize 'WWN.items.stowed'}}">
+  <i class="fas fa-archive"></i>
+</a>
+{{/if}}
 {{#if favoritable}}
 <a class="item-control" data-action="toggleFavorite" title="{{localize 'WWN.Sheet.ToggleFavorite'}}">
   <i class="{{#if favorited}}fas{{else}}far{{/if}} fa-star"></i>

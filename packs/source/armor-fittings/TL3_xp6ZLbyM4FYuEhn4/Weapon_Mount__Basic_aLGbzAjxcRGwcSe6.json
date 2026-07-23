@@ -1,0 +1,50 @@
+{
+  "_id": "aLGbzAjxcRGwcSe6",
+  "name": "Weapon Mount, Basic",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Integrate one 1–2H non-heavy weapon (1 day). Energy unlimited ammo; slugthrowers 2 magazines (reload both as one Main). +2 hit and damage (not Shock).</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 1,
+    "cost": 5000,
+    "stackable": true,
+    "disabled": false,
+    "integral": false,
+    "effectId": "weaponMountBasic",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 14,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!aLGbzAjxcRGwcSe6"
+}

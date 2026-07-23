@@ -1,13 +1,13 @@
 /**
  * Bridge remaining legacy sheet/template field paths onto the current system
- * schema so Application V1 sheets and dialogs keep working.
+ * schema so older dialogs and form submits keep working.
  *
- * Still aliased (templates/dialogs not fully migrated):
- * - scores ↔ abilities (character creation, modifiers dialog)
- * - initiative.mod / thac0.bba / damageBonus / hp.hd (monster header submits)
+ * Still aliased:
+ * - scores ↔ abilities (modifiers dialog / skill score selects)
+ * - initiative.mod / thac0.bba / damageBonus / hp.hd (legacy submits)
  *
+ * `remapLegacySubmitData` is applied from `WwnBaseActorSheet._processFormData`.
  * AC display uses system.combat.ac.* and system.ac.naked (derived here).
- * Prefer those paths in new templates; do not reintroduce system.aac.
  */
 
 /**

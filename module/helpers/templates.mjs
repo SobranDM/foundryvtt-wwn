@@ -19,5 +19,8 @@ export async function preloadHandlebarsTemplates() {
     wwnContainerItem: "systems/wwn/templates/partials/container-item.hbs",
     wwnFactionAssetPanel: "systems/wwn/templates/partials/faction-asset-panel.hbs",
     wwnPowersTabBody: "systems/wwn/templates/partials/powers-tab-body.hbs",
+    wwnStarshipCrewStations: "systems/wwn/templates/partials/starship-crew-stations.hbs",
+    wwnStarshipEquipmentPanel: "systems/wwn/templates/partials/starship-equipment-panel.hbs",
+    wwnFavoritesDock: "systems/wwn/templates/partials/favorites-dock.hbs",
   });
 }

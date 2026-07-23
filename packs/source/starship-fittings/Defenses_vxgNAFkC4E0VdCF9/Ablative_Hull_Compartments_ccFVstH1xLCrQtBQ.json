@@ -1,0 +1,33 @@
+{
+  "_id": "ccFVstH1xLCrQtBQ",
+  "name": "Ablative Hull Compartments",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>+1 AC, +20 maximum hit points, by sacrificing empty hull space to a complex system of ablative blast baffles.</p>",
+    "cost": 100000,
+    "power": 5,
+    "mass": 2,
+    "minClass": "capital",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ccFVstH1xLCrQtBQ"
+}

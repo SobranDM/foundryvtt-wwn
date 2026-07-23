@@ -1,0 +1,33 @@
+{
+  "_id": "Q4w3TH8cSrm2zekD",
+  "name": "System Drive",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Replaces the drive-1 spike drive with a smaller system drive: the ship keeps drive-1 for maneuvering/system transit but cannot make interstellar drills. Lowers hull cost by 10% and adds free Power (1 fighter/2 frigate/3 cruiser/4 capital) and twice that amount of free Mass. This item's power value already represents that added free Power (accounting simplification); no separate mass bonus is auto-applied.</p>",
+    "cost": 0,
+    "power": 1,
+    "mass": 0,
+    "minClass": "fighter",
+    "costScales": false,
+    "powerScales": true,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Q4w3TH8cSrm2zekD"
+}

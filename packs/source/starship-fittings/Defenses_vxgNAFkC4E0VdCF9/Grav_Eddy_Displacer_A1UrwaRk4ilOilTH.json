@@ -1,0 +1,33 @@
+{
+  "_id": "A1UrwaRk4ilOilTH",
+  "name": "Grav Eddy Displacer",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>1 in 6 chance of any given attack missing entirely, by randomizing the ship's motion vectors in sympathy with metadimensional gravitic currents.</p>",
+    "cost": 50000,
+    "power": 5,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!A1UrwaRk4ilOilTH"
+}

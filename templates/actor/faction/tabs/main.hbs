@@ -1,7 +1,7 @@
 {{!-- Faction Main: left stats/goal/desc | right assets. --}}
 <section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
-  <div class="wwn-faction-main-grid">
-    <div class="wwn-faction-main-left wwn-form-stack">
+  <div class="wwn-sheet-main-grid">
+    <div class="wwn-sheet-main-left wwn-form-stack">
       {{!-- HP + XP --}}
       <div class="wwn-panel">
         <div class="wwn-stat-grid wwn-faction-hp-xp">
@@ -95,13 +95,13 @@
 
       <div class="wwn-form-panel">
         <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
-        <div class="wwn-faction-editor wwn-faction-editor--desc">
+        <div class="wwn-sheet-editor">
           {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
         </div>
       </div>
     </div>
 
-    <div class="wwn-faction-main-right wwn-form-stack">
+    <div class="wwn-sheet-main-right wwn-form-stack">
       {{> wwnFactionAssetPanel assetType="cunning" name="Cunning" assets=cunningAssets}}
       {{> wwnFactionAssetPanel assetType="force" name="Force" assets=forceAssets}}
       {{> wwnFactionAssetPanel assetType="wealth" name="Wealth" assets=wealthAssets}}

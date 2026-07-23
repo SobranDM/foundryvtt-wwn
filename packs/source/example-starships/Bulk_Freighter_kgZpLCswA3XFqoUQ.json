@@ -1,0 +1,196 @@
+{
+  "_id": "kgZpLCswA3XFqoUQ",
+  "name": "Bulk Freighter",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "azXgrALFkxMtwLWT",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 3
+      },
+      "_key": "!actors.items!kgZpLCswA3XFqoUQ.azXgrALFkxMtwLWT"
+    },
+    {
+      "_id": "EDLHVIfrdNcxgZB7",
+      "name": "Cargo Lighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Orbit-to-surface cargo shuttle. Only capable of surface-to-orbit flight (roughly 20 minutes either way); can latch onto a standard pressurized cargo container holding up to 200 tons. Can be purchased multiple times.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!kgZpLCswA3XFqoUQ.EDLHVIfrdNcxgZB7"
+    },
+    {
+      "_id": "eu6cuyrUJVghTZRN",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!kgZpLCswA3XFqoUQ.eu6cuyrUJVghTZRN"
+    },
+    {
+      "_id": "V1nxD84qzjujzTGz",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!kgZpLCswA3XFqoUQ.V1nxD84qzjujzTGz"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Found only in rich, peaceful regions of space, the bulk freighter hauls thousands of tons of goods between systems. It carries enough of a sting to discourage small-ship piracy but is woefully inadequate against a warship or up-gunned free merchant.</p><p><strong>Crew:</strong> 10/40. <strong>Cargo:</strong> 3,400 tons. <strong>Cost:</strong> 6.088M base price, 304,400cr six-month maintenance, 657,000cr yearly crew cost (15 crew).</p>",
+    "hullType": "bulkFreighter",
+    "hullClass": "cruiser",
+    "hp": {
+      "value": 40,
+      "max": 40
+    },
+    "ac": 11,
+    "armor": 0,
+    "speed": 0,
+    "drive": 2,
+    "power": {
+      "max": 15
+    },
+    "mass": {
+      "max": 25
+    },
+    "hardpoints": {
+      "max": 2
+    },
+    "crew": {
+      "min": 10,
+      "max": 40,
+      "current": 10
+    },
+    "cost": 6088000,
+    "cargo": 3400,
+    "npcCp": 4,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+1"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Bulk Freighter",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "kgZpLCswA3XFqoUQ",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!kgZpLCswA3XFqoUQ"
+}

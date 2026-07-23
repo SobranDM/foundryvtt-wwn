@@ -2,7 +2,6 @@
  * Worlds Without Number — system entry point.
  */
 import { WWN as WWN_CORE } from "./config/index.mjs";
-import { WWN as WWN_LEGACY } from "./config.js";
 import { registerSettings } from "./settings.mjs";
 import * as models from "./data/_module.mjs";
 import { WwnActor } from "./documents/actor.mjs";
@@ -40,6 +39,8 @@ import { WwnItemSheet } from "./sheets/item/item-sheet.mjs";
 import { WwnPcSheet } from "./sheets/actor/pc-sheet.mjs";
 import { WwnNpcSheet } from "./sheets/actor/npc-sheet.mjs";
 import { WwnFactionSheet } from "./sheets/actor/faction-sheet.mjs";
+import { WwnStarshipSheet } from "./sheets/actor/starship-sheet.mjs";
+import { WwnPowerArmorSheet } from "./sheets/actor/power-armor-sheet.mjs";
 import { applyUiTheme, sheetThemeChoices, themeChatMessage } from "./config/themes.mjs";
 
 const { DocumentSheetConfig } = foundry.applications.apps;
@@ -47,7 +48,7 @@ const { DocumentSheetConfig } = foundry.applications.apps;
 Hooks.once("init", async function () {
   console.log("WWN | Initializing Worlds Without Number");
 
-  CONFIG.WWN = foundry.utils.mergeObject(WWN_LEGACY, WWN_CORE, { inplace: false });
+  CONFIG.WWN = WWN_CORE;
 
   game.wwn = {
     WwnActor,
@@ -76,6 +77,8 @@ Hooks.once("init", async function () {
     character: models.WwnPc,
     monster: models.WwnNpc,
     faction: models.WwnFaction,
+    starship: models.WwnStarship,
+    powerArmor: models.WwnPowerArmor,
     // Reverse aliases — load half-migrated worlds that already remapped to pc/npc.
     pc: models.WwnPc,
     npc: models.WwnNpc,
@@ -84,6 +87,8 @@ Hooks.once("init", async function () {
     character: "TYPES.Actor.character",
     monster: "TYPES.Actor.monster",
     faction: "TYPES.Actor.faction",
+    starship: "TYPES.Actor.starship",
+    powerArmor: "TYPES.Actor.powerArmor",
     pc: "TYPES.Actor.pc",
     npc: "TYPES.Actor.npc",
   };
@@ -97,10 +102,20 @@ Hooks.once("init", async function () {
     focus: models.WwnFocus,
     currency: models.WwnCurrency,
     asset: models.WwnAsset,
+    shipFitting: models.WwnShipFitting,
+    shipWeapon: models.WwnShipWeapon,
+    shipDefense: models.WwnShipDefense,
+    armorFitting: models.WwnArmorFitting,
     // Legacy item types — load aliases during migration.
     art: models.WwnPower,
     spell: models.WwnPower,
     ability: models.WwnPower,
+  });
+  Object.assign(CONFIG.Item.typeLabels, {
+    shipFitting: "TYPES.Item.shipFitting",
+    shipWeapon: "TYPES.Item.shipWeapon",
+    shipDefense: "TYPES.Item.shipDefense",
+    armorFitting: "TYPES.Item.armorFitting",
   });
 
   CONFIG.Dice.rolls.unshift(WwnDamageRoll, WwnSkillRoll, WwnAttackRoll, WwnRoll);
@@ -128,6 +143,18 @@ Hooks.once("init", async function () {
     types: ["faction"],
     makeDefault: true,
     label: "WWN.SheetClassFaction",
+    themes,
+  });
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnStarshipSheet, {
+    types: ["starship"],
+    makeDefault: true,
+    label: "WWN.SheetClassStarship",
+    themes,
+  });
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnPowerArmorSheet, {
+    types: ["powerArmor"],
+    makeDefault: true,
+    label: "WWN.SheetClassPowerArmor",
     themes,
   });
   DocumentSheetConfig.registerSheet(Item, "wwn", WwnItemSheet, {
@@ -206,7 +233,6 @@ Hooks.once("init", async function () {
 });
 
 Handlebars.registerHelper("toLowerCase", (str) => String(str).toLowerCase());
-Handlebars.registerHelper("add", (a, b) => Number(a) + Number(b));
 Handlebars.registerHelper("join", (arr, sep) => {
   if (!Array.isArray(arr)) return "";
   return arr.join(typeof sep === "string" ? sep : ", ");
@@ -217,7 +243,18 @@ Handlebars.registerHelper("wwnSigned", (value) => {
 });
 
 Hooks.once("setup", function () {
-  const toLocalize = ["saves", "scores", "armor", "weightless", "colors", "tags", "skills", "encumbLocation", "assetTypes", "assetMagic"];
+  const toLocalize = [
+    "saves",
+    "abilityAbbreviations",
+    "armor",
+    "weightless",
+    "colors",
+    "tags",
+    "skills",
+    "encumbLocation",
+    "assetTypes",
+    "assetMagic",
+  ];
   for (const o of toLocalize) {
     if (!CONFIG.WWN[o]) continue;
     CONFIG.WWN[o] = Object.entries(CONFIG.WWN[o]).reduce((obj, e) => {
@@ -225,10 +262,17 @@ Hooks.once("setup", function () {
       return obj;
     }, {});
   }
+  // Keep scores in sync after localization (same keys as ability abbreviations).
+  if (CONFIG.WWN.abilityAbbreviations) {
+    CONFIG.WWN.scores = { ...CONFIG.WWN.abilityAbbreviations };
+  }
 });
 
 Hooks.once("ready", async function () {
   applyUiTheme(game.settings.get("wwn", "uiTheme"));
+
+  const { refreshSkillSetCache } = await import("./helpers/skill-set.mjs");
+  await refreshSkillSetCache({ notify: false });
 
   Hooks.on("hotbarDrop", (bar, data, slot) => {
     macros.createWwnMacro(data, slot);
@@ -273,7 +317,6 @@ Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);
 Hooks.on("renderRollTableSheet", treasure.augmentTable);
 Hooks.on("updateActor", party.update);
 
-Hooks.on("preCreateToken", WWNCombat.preCreateToken);
 Hooks.on("renderCombatTracker", (app, html) =>
   app.renderGroups?.(html instanceof HTMLElement ? html : html[0])
 );

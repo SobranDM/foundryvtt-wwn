@@ -1,0 +1,34 @@
+{
+  "name": "Survive",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/survive.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.kJYKoWqDcpvCOwXy"
+    }
+  },
+  "system": {
+    "description": "Hunt, fish, navigate by the stars, mitigate environmental hazards, identify plants and wildlife, and craft basic survival tools and shelter. A PC’s Survive skill is most pertinent to the environments in their background, but the basic principles can be applied in all but the most alien environments.",
+    "ownedLevel": -1,
+    "score": "wis",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "survive"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1674806175627,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "vQVUBh8i5sHhKmKm",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vQVUBh8i5sHhKmKm"
+}

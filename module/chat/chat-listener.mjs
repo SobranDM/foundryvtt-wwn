@@ -25,7 +25,8 @@ export class ChatListener {
   static async #onAction(event, target, message) {
     event.preventDefault();
     const action = target.dataset.action;
-    const card = target.closest(".wwn-chat-card") ?? target.closest(".message-content");
+    const card = target.closest(".wwn-chat-card");
+    if (!card) return;
     switch (action) {
       case "toggleHeal": {
         const healing = card.dataset.heal === "true";

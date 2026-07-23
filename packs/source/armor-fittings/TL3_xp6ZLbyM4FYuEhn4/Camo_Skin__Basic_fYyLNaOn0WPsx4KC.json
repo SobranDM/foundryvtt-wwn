@@ -1,0 +1,50 @@
+{
+  "_id": "fYyLNaOn0WPsx4KC",
+  "name": "Camo Skin, Basic",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>On Turn: change coloration. +2 Stealth if no observer closer than 20m.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 2,
+    "cost": 5000,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "camoSkinBasic",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fYyLNaOn0WPsx4KC"
+}

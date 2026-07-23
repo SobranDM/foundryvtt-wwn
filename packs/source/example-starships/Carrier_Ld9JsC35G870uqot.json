@@ -1,0 +1,900 @@
+{
+  "_id": "Ld9JsC35G870uqot",
+  "name": "Carrier",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "sLxWPdXG7GMgr0iK",
+      "name": "Gravcannon",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Using much the same principles as man-portable grav weaponry, the gravcannon causes targets to fall apart in a welter of mutually-antagonistic gravitic fields.</p>",
+        "cost": 2000000,
+        "power": 15,
+        "mass": 4,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "4d6",
+        "hardpoints": 3,
+        "tl": 4,
+        "qualities": "AP 20",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 6
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.sLxWPdXG7GMgr0iK"
+    },
+    {
+      "_id": "kbnvOxdHh3OX2WyJ",
+      "name": "Hardened Polyceramic Overlay",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.kbnvOxdHh3OX2WyJ"
+    },
+    {
+      "_id": "XZ9PC7kv75WgE6JK",
+      "name": "Ablative Hull Compartments",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>+1 AC, +20 maximum hit points, by sacrificing empty hull space to a complex system of ablative blast baffles.</p>",
+        "cost": 100000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "capital",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.XZ9PC7kv75WgE6JK"
+    },
+    {
+      "_id": "S2ZLvjsDSNGM3SzF",
+      "name": "Drop Pod",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",
+        "cost": 300000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.S2ZLvjsDSNGM3SzF"
+    },
+    {
+      "_id": "yMxMvQ08d3G7Pprs",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.yMxMvQ08d3G7Pprs"
+    },
+    {
+      "_id": "qgQE71aQOBtNSbqx",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.qgQE71aQOBtNSbqx"
+    },
+    {
+      "_id": "u82ohgdQDhN2m1tt",
+      "name": "Workshop",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Automated TL4 tech workshops for maintenance and modification below a hull's maximum size.</p>",
+        "cost": 500,
+        "power": 1,
+        "mass": 0.5,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.u82ohgdQDhN2m1tt"
+    },
+    {
+      "_id": "pDjqoCT2RIUDoGjY",
+      "name": "Fuel Scoops",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.pDjqoCT2RIUDoGjY"
+    },
+    {
+      "_id": "AcAGd6HvLk28heFo",
+      "name": "Advanced Nav Computer",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds +2 for traveling familiar spike courses.</p>",
+        "cost": 10000,
+        "power": 1,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": true,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.AcAGd6HvLk28heFo"
+    },
+    {
+      "_id": "MDG82d90WzFOL2zz",
+      "name": "Lifeboats",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Single-use escape craft for the ship's maximum crew (up to 20 people per boat), with comms and basic survival supplies.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.MDG82d90WzFOL2zz"
+    },
+    {
+      "_id": "ieOTKuaxw6C2Qe58",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.ieOTKuaxw6C2Qe58"
+    },
+    {
+      "_id": "JehHEIjaumRswK7j",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.JehHEIjaumRswK7j"
+    },
+    {
+      "_id": "unFDTMawsP0Hrncq",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.unFDTMawsP0Hrncq"
+    },
+    {
+      "_id": "XFVzf2jzV7kkYkEN",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.XFVzf2jzV7kkYkEN"
+    },
+    {
+      "_id": "xN0qr5jqaRknT4bh",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.xN0qr5jqaRknT4bh"
+    },
+    {
+      "_id": "IVjkRULXImAC15Xc",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.IVjkRULXImAC15Xc"
+    },
+    {
+      "_id": "JgrifTnaKF0aElaI",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.JgrifTnaKF0aElaI"
+    },
+    {
+      "_id": "YcDVXpMmH6INIwzk",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.YcDVXpMmH6INIwzk"
+    },
+    {
+      "_id": "ofnAVw2fxNUVir7v",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.ofnAVw2fxNUVir7v"
+    },
+    {
+      "_id": "AcyNJ3fLcrMSQq5M",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.AcyNJ3fLcrMSQq5M"
+    },
+    {
+      "_id": "qHW5knZD23OOhlHO",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.qHW5knZD23OOhlHO"
+    },
+    {
+      "_id": "44HjCjBAH3rzjOUH",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.44HjCjBAH3rzjOUH"
+    },
+    {
+      "_id": "VGqQRGYy4SSgOA2K",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.VGqQRGYy4SSgOA2K"
+    },
+    {
+      "_id": "kVld13HqVymnMHhb",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.kVld13HqVymnMHhb"
+    },
+    {
+      "_id": "QWc0GWp5FsV3USRw",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.QWc0GWp5FsV3USRw"
+    },
+    {
+      "_id": "E9IQlJCuL0JSswu8",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.E9IQlJCuL0JSswu8"
+    },
+    {
+      "_id": "A7W3GU4ymM2zmM3l",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.A7W3GU4ymM2zmM3l"
+    },
+    {
+      "_id": "qcXZ7tj772QP1ivz",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.qcXZ7tj772QP1ivz"
+    },
+    {
+      "_id": "pYEmfAkWBZJK9JbF",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 2900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.pYEmfAkWBZJK9JbF"
+    },
+    {
+      "_id": "g8IigCD0PHW1GduC",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.g8IigCD0PHW1GduC"
+    },
+    {
+      "_id": "cnFNxqRHgKmYkit6",
+      "name": "Ship Bay/Fighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one fighter-class ship. Can be taken multiple times.</p>",
+        "cost": 200000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "cruiser",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.cnFNxqRHgKmYkit6"
+    },
+    {
+      "_id": "5V1mFx96Es7uYeQg",
+      "name": "Ship Bay/Frigate",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+        "cost": 1000000,
+        "power": 1,
+        "mass": 4,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.5V1mFx96Es7uYeQg"
+    },
+    {
+      "_id": "WDd5y7PVm1ZqrpKw",
+      "name": "Ship Bay/Frigate",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+        "cost": 1000000,
+        "power": 1,
+        "mass": 4,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.WDd5y7PVm1ZqrpKw"
+    },
+    {
+      "_id": "8y4iajAlwxrnY7T1",
+      "name": "Ship Bay/Frigate",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+        "cost": 1000000,
+        "power": 1,
+        "mass": 4,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.8y4iajAlwxrnY7T1"
+    },
+    {
+      "_id": "8torpDsnOp5S4Rd0",
+      "name": "Ship Bay/Frigate",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+        "cost": 1000000,
+        "power": 1,
+        "mass": 4,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.8torpDsnOp5S4Rd0"
+    },
+    {
+      "_id": "nBzI2zrRG86UHOvV",
+      "name": "Ship Bay/Frigate",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 3600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+        "cost": 1000000,
+        "power": 1,
+        "mass": 4,
+        "minClass": "capital",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!Ld9JsC35G870uqot.nBzI2zrRG86UHOvV"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>The queen of any navy that has one -- the pinnacle of TL4 shipbuilding, and a massive credit sink. The carrier itself is only the vector for its tremendous payload of ships, both small fighters and corvette-type daughter craft. Lightly gunned and armored compared to a battleship, it relies on an escort to screen it from hostile attention.</p><p><strong>Crew:</strong> 200/1,500. <strong>Cargo:</strong> 1,000 tons. <strong>Cost:</strong> 126.88M base price, 6.344M six-month maintenance, 43.8M yearly crew cost (1,000 crew).</p>",
+    "hullType": "carrier",
+    "hullClass": "capital",
+    "hp": {
+      "value": 75,
+      "max": 75
+    },
+    "ac": 14,
+    "armor": 10,
+    "speed": 0,
+    "drive": 3,
+    "power": {
+      "max": 50
+    },
+    "mass": {
+      "max": 100
+    },
+    "hardpoints": {
+      "max": 4
+    },
+    "crew": {
+      "min": 300,
+      "max": 1500,
+      "current": 300
+    },
+    "cost": 126880000,
+    "cargo": 1000,
+    "npcCp": 6,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+3"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+3"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Carrier",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "Ld9JsC35G870uqot",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!Ld9JsC35G870uqot"
+}

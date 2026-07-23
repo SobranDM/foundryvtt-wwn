@@ -8,6 +8,8 @@ import { computeLevelUpSkillGrant } from "../helpers/skill-points.mjs";
 import { mergeWeaponFavorites } from "../helpers/favorites.mjs";
 import { CREATABLE_ACTOR_TYPES, isNpc, isPc } from "../helpers/actor-types.mjs";
 import { migrateActorData, applyEmbeddedItemMigration } from "../migration/transforms.mjs";
+import { splitSoakDamage } from "../helpers/power-armor-damage.mjs";
+import { getPrimarySkillData } from "../helpers/skill-set.mjs";
 
 export class WwnActor extends Actor {
   /**
@@ -130,17 +132,14 @@ export class WwnActor extends Actor {
     if (isPc(this) && options.wwnSkipSeeding !== true) this.#seedNewPc();
   }
 
-  /** Seed core skills and the default currency set onto a brand-new PC. */
+  /** Seed primary skills from the configured skill pack and the default currency set. */
   async #seedNewPc() {
     const toCreate = [];
 
     if (!this.items.some((i) => i.type === "skill")) {
-      for (const slug of CONFIG.WWN.coreSkills) {
-        toCreate.push({
-          type: "skill",
-          name: game.i18n.localize(`WWN.Skills.${slug}`),
-          system: { ownedLevel: -1, score: "int", skillDice: "2d6", secondary: false, slug },
-        });
+      const primary = await getPrimarySkillData();
+      for (const data of primary) {
+        toCreate.push(foundry.utils.deepClone(data));
       }
     }
 
@@ -199,6 +198,10 @@ export class WwnActor extends Actor {
    * @param {boolean} [options.ignoreSoak]
    */
   async applyDamage(amount, multiplier = 1, { source = "", ignoreSoak = false } = {}) {
+    if (this.type === "powerArmor") {
+      return this.#applyPowerArmorDamage(amount, multiplier, { source, ignoreSoak });
+    }
+
     let value = Math.floor(amount * multiplier);
 
     // Armor soak (CWN): flat reduction of incoming damage only
@@ -223,6 +226,87 @@ export class WwnActor extends Actor {
     Hooks.callAll("wwn.applyDamage", this, ctx);
     if (hpAfter === 0 && hpBefore > 0) {
       Hooks.callAll("wwn.actorZeroHp", this, ctx);
+    }
+  }
+
+  /**
+   * Modular power armor: deplete suit Soak pool, then apply remainder to linked pilot HP.
+   * @private
+   */
+  async #applyPowerArmorDamage(amount, multiplier = 1, { source = "", ignoreSoak = false } = {}) {
+    let value = Math.floor(amount * multiplier);
+
+    let soakTaken = 0;
+    let soakRemaining = this.system.soak?.value ?? 0;
+    if (value > 0 && !ignoreSoak) {
+      const split = splitSoakDamage(value, soakRemaining);
+      soakTaken = split.soakTaken;
+      soakRemaining = split.soakRemaining;
+      value = split.overflow;
+    } else if (value < 0) {
+      // Healing: apply to pilot HP when linked; otherwise no-op on suit.
+      value = value;
+    }
+
+    const ctx = {
+      amount: value,
+      multiplier,
+      soaked: soakTaken,
+      source,
+      powerArmor: true,
+    };
+    if (Hooks.call("wwn.preApplyDamage", this, ctx) === false) return;
+    value = ctx.amount;
+
+    if (soakTaken > 0) {
+      await this.update({ "system.soak.value": soakRemaining });
+    }
+
+    const pilotUuid = this.system.pilot?.actor;
+    const pilot = pilotUuid ? await fromUuid(pilotUuid) : null;
+
+    if (!pilot) {
+      Object.assign(ctx, {
+        applied: 0,
+        excess: Math.max(value, 0),
+        hpBefore: 0,
+        hpAfter: 0,
+        soakRemaining,
+      });
+      Hooks.callAll("wwn.applyDamage", this, ctx);
+      if (value > 0) {
+        ui.notifications?.warn?.(game.i18n.localize("WWN.PowerArmor.DamageNoPilot"));
+      }
+      return;
+    }
+
+    if (value === 0) {
+      Object.assign(ctx, {
+        applied: 0,
+        excess: 0,
+        hpBefore: pilot.system.hp.value,
+        hpAfter: pilot.system.hp.value,
+        soakRemaining,
+      });
+      Hooks.callAll("wwn.applyDamage", this, ctx);
+      return;
+    }
+
+    const hpBefore = pilot.system.hp?.value ?? 0;
+    // Healing (negative) or overflow damage → pilot, ignoring CWN flat soak / personal armor.
+    await pilot.applyDamage(value, 1, { source, ignoreSoak: true });
+    const hpAfter = pilot.system.hp?.value ?? hpBefore;
+    Object.assign(ctx, {
+      applied: hpBefore - hpAfter,
+      excess: 0,
+      hpBefore,
+      hpAfter,
+      soakRemaining,
+      pilotUuid,
+    });
+    Hooks.callAll("wwn.applyDamage", this, ctx);
+    if (hpAfter === 0 && hpBefore > 0) {
+      Hooks.callAll("wwn.actorZeroHp", pilot, ctx);
     }
   }
 

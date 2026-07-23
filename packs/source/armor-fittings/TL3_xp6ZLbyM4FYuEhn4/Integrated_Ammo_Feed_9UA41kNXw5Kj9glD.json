@@ -1,0 +1,50 @@
+{
+  "_id": "9UA41kNXw5Kj9glD",
+  "name": "Integrated Ammo Feed",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Load up to 10 Enc. physical ammo; On Turn reload into any Readied weapon.</p>",
+    "tl": 3,
+    "mass": 1,
+    "power": 0,
+    "cost": 5000,
+    "stackable": true,
+    "disabled": false,
+    "integral": false,
+    "effectId": "integratedAmmoFeed",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "xp6ZLbyM4FYuEhn4",
+  "sort": 6,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9UA41kNXw5Kj9glD"
+}

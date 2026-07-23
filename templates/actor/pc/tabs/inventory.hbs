@@ -1,10 +1,10 @@
-{{!-- Inventory tab: GWN-aligned single stack — purse strip, then weapons,
+{{!-- Inventory tab: single-column stack — purse strip, then weapons,
       armor, consumables, misc (containers), personal/party treasure, treasure,
       and currency items. --}}
 <section class="tab inventory {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="wwn-inventory-stack wwn-data-table">
 
-    {{!-- Actor purse / totals (was the right rail) --}}
+    {{!-- Wealth summary (coin amounts live in the Currency section below) --}}
     <div class="wwn-panel wwn-inventory-purse">
       <div class="wwn-inventory-purse-header">
         <span class="wwn-section-header">
@@ -15,54 +15,21 @@
         </span>
       </div>
       <div class="wwn-inventory-purse-fields">
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.CP.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.CP.short"}}</span>
-          <input class="currency" name="system.currency.cp" type="number" value="{{system.currency.cp}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.SP.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.SP.short"}}</span>
-          <input class="currency" name="system.currency.sp" type="number" value="{{system.currency.sp}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        {{#if (eq currencyTypes "currencybx")}}
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.EP.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.EP.short"}}</span>
-          <input class="currency" name="system.currency.ep" type="number" value="{{system.currency.ep}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        {{/if}}
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.GP.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.GP.short"}}</span>
-          <input class="currency" name="system.currency.gp" type="number" value="{{system.currency.gp}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        {{#if (eq currencyTypes "currencybx")}}
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.PP.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.PP.short"}}</span>
-          <input class="currency" name="system.currency.pp" type="number" value="{{system.currency.pp}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        {{/if}}
         <label class="wwn-purse-field" title="{{localize 'WWN.items.PersonalTreasureHint'}}">
           <span class="wwn-purse-label">{{localize "WWN.items.PersonalTreasure"}}</span>
-          <input class="currency" name="system.personalTreasure" type="number" value="{{system.personalTreasure}}"
-            data-dtype="Number" disabled />
+          <input class="currency" type="number" value="{{system.personalTreasure}}" data-dtype="Number" disabled />
         </label>
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.bank.long'}}">
+        <label class="wwn-purse-field" title="{{localize 'WWN.Currency.BankedHint'}}">
           <span class="wwn-purse-label">{{localize "WWN.items.bank.short"}}</span>
-          <input class="currency" name="system.currency.bank" type="number" value="{{system.currency.bank}}"
-            data-dtype="Number" placeholder="0" />
-        </label>
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.total.long'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.total.short"}}</span>
-          <input class="currency" name="system.currency.total" type="number" value="{{system.currency.total}}"
-            data-dtype="Number" disabled />
+          <input class="currency" type="number" value="{{system.bankedWealth}}" data-dtype="Number" disabled />
         </label>
         <label class="wwn-purse-field" title="{{localize 'WWN.items.TreasureSP'}}">
           <span class="wwn-purse-label">{{localize "WWN.items.Treasure"}}</span>
-          <input class="currency" name="system.treasure" type="number" value="{{system.treasure}}"
-            data-dtype="Number" disabled />
+          <input class="currency" type="number" value="{{system.treasure}}" data-dtype="Number" disabled />
+        </label>
+        <label class="wwn-purse-field" title="{{localize 'WWN.items.total.long'}}">
+          <span class="wwn-purse-label">{{localize "WWN.items.total.short"}}</span>
+          <input class="currency" type="number" value="{{system.wealth}}" data-dtype="Number" disabled />
         </label>
       </div>
     </div>
@@ -131,15 +98,7 @@
           </div>
           <div class="item-controls">
             {{#if @root.owner}}
-            <a class="item-control{{#unless item.system.equipped}} item-unequipped{{/unless}}"
-              data-action="toggleEquipped" title="{{localize 'WWN.items.Equip'}}">
-              <i class="fas fa-tshirt"></i>
-            </a>
-            <a class="item-control{{#unless item.system.stowed}} item-unstowed{{/unless}}"
-              data-action="toggleStowed" title="{{localize 'WWN.items.stowed'}}">
-              <i class="fas fa-archive"></i>
-            </a>
-            {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
             {{/if}}
           </div>
         </div>
@@ -181,15 +140,7 @@
           <div class="field-short">{{item.system.weight}}</div>
           <div class="item-controls">
             {{#if @root.owner}}
-            <a class="item-control{{#unless item.system.equipped}} item-unequipped{{/unless}}"
-              data-action="toggleEquipped" title="{{localize 'WWN.items.Equip'}}">
-              <i class="fas fa-tshirt"></i>
-            </a>
-            <a class="item-control{{#unless item.system.stowed}} item-unstowed{{/unless}}"
-              data-action="toggleStowed" title="{{localize 'WWN.items.stowed'}}">
-              <i class="fas fa-archive"></i>
-            </a>
-            {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
             {{/if}}
           </div>
         </div>
@@ -225,15 +176,7 @@
           </div>
           <div class="item-controls">
             {{#if @root.owner}}
-            <a class="item-control{{#unless item.system.equipped}} item-unequipped{{/unless}}"
-              data-action="toggleEquipped" title="{{localize 'WWN.items.Equip'}}">
-              <i class="fas fa-tshirt"></i>
-            </a>
-            <a class="item-control{{#unless item.system.stowed}} item-unstowed{{/unless}}"
-              data-action="toggleStowed" title="{{localize 'WWN.items.stowed'}}">
-              <i class="fas fa-archive"></i>
-            </a>
-            {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
             {{/if}}
           </div>
         </div>
@@ -276,15 +219,7 @@
           </div>
           <div class="item-controls">
             {{#if @root.owner}}
-            <a class="item-control{{#unless item.system.equipped}} item-unequipped{{/unless}}"
-              data-action="toggleEquipped" title="{{localize 'WWN.items.Equip'}}">
-              <i class="fas fa-tshirt"></i>
-            </a>
-            <a class="item-control{{#unless item.system.stowed}} item-unstowed{{/unless}}"
-              data-action="toggleStowed" title="{{localize 'WWN.items.stowed'}}">
-              <i class="fas fa-archive"></i>
-            </a>
-            {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
             {{/if}}
           </div>
         </div>

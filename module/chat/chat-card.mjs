@@ -113,3 +113,51 @@ export async function createCardMessage({
   if (messageMode) ChatMessage.applyMode(messageData, messageMode);
   return ChatMessage.create(messageData);
 }
+
+const NOTICE_BODY = "systems/wwn/templates/chat/notice-body.hbs";
+
+/**
+ * Create a simple notice card (reload, apply-damage, initiative flavor, etc.).
+ * Sugar over {@link createCardMessage} that always uses the shared shell.
+ *
+ * @param {object} options
+ * @param {string} options.title
+ * @param {string} [options.subtitle]
+ * @param {string} [options.img]
+ * @param {string} [options.body]           Raw HTML body (wrapped by notice-body.hbs unless bodyTemplate set)
+ * @param {string[]} [options.list]         Optional list items rendered by notice-body.hbs
+ * @param {string} [options.bodyTemplate]   Override body partial
+ * @param {object} [options.context]        Extra / full body template context
+ * @param {Actor} [options.actor]
+ * @param {TokenDocument} [options.token]
+ * @param {object} [options.flags]
+ * @param {string[]} [options.whisper]
+ * @param {keyof typeof CONFIG.ChatMessage.modes} [options.messageMode]
+ */
+export async function createNoticeMessage({
+  title,
+  subtitle,
+  img,
+  body = "",
+  list,
+  bodyTemplate = NOTICE_BODY,
+  context = {},
+  actor,
+  token,
+  flags = {},
+  whisper,
+  messageMode,
+} = {}) {
+  return createCardMessage({
+    title,
+    subtitle,
+    img,
+    bodyTemplate,
+    context: { body, list, ...context },
+    actor,
+    token,
+    flags: { kind: "notice", ...flags },
+    whisper,
+    messageMode,
+  });
+}

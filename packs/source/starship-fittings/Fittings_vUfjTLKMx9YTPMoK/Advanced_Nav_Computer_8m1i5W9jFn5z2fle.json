@@ -1,0 +1,33 @@
+{
+  "_id": "8m1i5W9jFn5z2fle",
+  "name": "Advanced Nav Computer",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Adds +2 for traveling familiar spike courses.</p>",
+    "cost": 10000,
+    "power": 1,
+    "mass": 0,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8m1i5W9jFn5z2fle"
+}

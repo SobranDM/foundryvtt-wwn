@@ -1,0 +1,33 @@
+{
+  "_id": "e4rVYz1Lr3AufTDR",
+  "name": "Atmospheric Configuration",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Can land. Must be installed at build time; cannot be installed on cruiser-class or larger ships. Frigates and fighters only.</p>",
+    "cost": 5000,
+    "power": 0,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!e4rVYz1Lr3AufTDR"
+}

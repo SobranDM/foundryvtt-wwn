@@ -1,0 +1,33 @@
+{
+  "_id": "EwryB0YkG5Kuu2xl",
+  "name": "Fuel Bunkers",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+    "cost": 2500,
+    "power": 0,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EwryB0YkG5Kuu2xl"
+}

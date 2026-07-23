@@ -1,0 +1,40 @@
+{
+  "_id": "XJAGphweIQGFMCb8",
+  "name": "Mass Cannon",
+  "type": "shipWeapon",
+  "img": "icons/svg/explosion.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>By firing projectiles almost as large as fighter-scale craft, the mass cannon inflicts tremendous damage on a target. Serious ammunition limitations hamper its wider-scale use.</p>",
+    "cost": 5000000,
+    "power": 10,
+    "mass": 5,
+    "minClass": "capital",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false,
+    "damage": "2d20",
+    "hardpoints": 4,
+    "tl": 4,
+    "qualities": "AP 20, Ammo 4",
+    "ammo": 4,
+    "ammoCost": 50000,
+    "attackBonus": 0
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "c2CYuigrKSZqmAgp",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XJAGphweIQGFMCb8"
+}

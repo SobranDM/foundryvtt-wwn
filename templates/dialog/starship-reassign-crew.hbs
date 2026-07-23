@@ -1,0 +1,24 @@
+<div class="wwn-sheet wwn-starship-reassign">
+  <p class="hint">{{localize "WWN.Starship.ReassignCrewHint"}}</p>
+  <div class="wwn-starship-reassign-list">
+    {{#each stations as |station|}}
+    <div class="wwn-starship-reassign-row" data-station="{{station.key}}">
+      <div class="wwn-starship-reassign-label">{{localize station.label}}</div>
+      <div class="wwn-starship-reassign-slot">
+        {{#if station.actorUuid}}
+        <a class="wwn-starship-reassign-actor{{#if station.broken}} wwn-budget-over{{/if}}"
+          draggable="true" data-uuid="{{station.actorUuid}}" data-station="{{station.key}}">
+          {{#if station.broken}}{{localize "WWN.Starship.BrokenActor"}}{{else}}{{station.actorName}}{{/if}}
+        </a>
+        <a class="item-control" data-action="clear" data-station="{{station.key}}"
+          title="{{localize 'WWN.Starship.ClearActor'}}">
+          <i class="fas fa-times"></i>
+        </a>
+        {{else}}
+        <span class="wwn-starship-reassign-empty">{{localize "WWN.Starship.StationEmpty"}}</span>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

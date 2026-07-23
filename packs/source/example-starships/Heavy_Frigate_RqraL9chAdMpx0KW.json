@@ -1,0 +1,342 @@
+{
+  "_id": "RqraL9chAdMpx0KW",
+  "name": "Heavy Frigate",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "iSNJVSyUdTKhlhqj",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.iSNJVSyUdTKhlhqj"
+    },
+    {
+      "_id": "6DGlDi9gvHvNgcVw",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.6DGlDi9gvHvNgcVw"
+    },
+    {
+      "_id": "2HbtV8bKFhXDmPw5",
+      "name": "Torpedo Launcher",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Capable of damaging even a battleship, torpedoes are cumbersome, expensive, and often the core of a line frigate's armament.</p>",
+        "cost": 500000,
+        "power": 10,
+        "mass": 3,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d8",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "AP 20, Ammo 4",
+        "ammo": 4,
+        "ammoCost": 2500,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.2HbtV8bKFhXDmPw5"
+    },
+    {
+      "_id": "wpsB7u7MULjeH2At",
+      "name": "Hardened Polyceramic Overlay",
+      "type": "shipDefense",
+      "img": "icons/svg/shield.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.wpsB7u7MULjeH2At"
+    },
+    {
+      "_id": "TPoxs4ntBaKtjAbG",
+      "name": "Drop Pod",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",
+        "cost": 300000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.TPoxs4ntBaKtjAbG"
+    },
+    {
+      "_id": "fBfe6AALholdQbzI",
+      "name": "Fuel Scoops",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.fBfe6AALholdQbzI"
+    },
+    {
+      "_id": "dSkSMy1nqh09BlXy",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.dSkSMy1nqh09BlXy"
+    },
+    {
+      "_id": "x4tn1daElXsOQRzv",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.x4tn1daElXsOQRzv"
+    },
+    {
+      "_id": "edYzS2PQi5PiuvC3",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 900000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.edYzS2PQi5PiuvC3"
+    },
+    {
+      "_id": "8adrTKGskgH0Li2b",
+      "name": "Boarding Tubes",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 1000000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows boarding of a hostile disabled ship.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!RqraL9chAdMpx0KW.8adrTKGskgH0Li2b"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Sometimes called a 'light cruiser', the heavy frigate pushes a frigate hull to its engineering maximum. Its torpedo launcher (carrying 16 torpedoes' worth of reload stock) can threaten even cruiser-class enemies, and its heavy crew complement and drop pod let it dispatch marines to hot spots quickly. Its armor is still inferior to a true cruiser's.</p><p><strong>Crew:</strong> 30/120. <strong>Cost:</strong> 9.783M base price, 489,150cr six-month maintenance, 3.942M yearly crew cost (90 crew).</p>",
+    "hullType": "heavyFrigate",
+    "hullClass": "frigate",
+    "hp": {
+      "value": 50,
+      "max": 50
+    },
+    "ac": 15,
+    "armor": 10,
+    "speed": 1,
+    "drive": 2,
+    "power": {
+      "max": 25
+    },
+    "mass": {
+      "max": 20
+    },
+    "hardpoints": {
+      "max": 8
+    },
+    "crew": {
+      "min": 30,
+      "max": 120,
+      "current": 30
+    },
+    "cost": 9783000,
+    "cargo": 0,
+    "npcCp": 5,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Heavy Frigate",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "RqraL9chAdMpx0KW",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!RqraL9chAdMpx0KW"
+}

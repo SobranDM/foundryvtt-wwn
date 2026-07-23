@@ -1,0 +1,33 @@
+{
+  "_id": "DiGkPEzYBuRhoGoy",
+  "name": "Extended Life Support",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Doubles maximum crew size. Can be fitted multiple times, each adding another 100% of the base maximum.</p>",
+    "cost": 5000,
+    "power": 1,
+    "mass": 1,
+    "minClass": "fighter",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DiGkPEzYBuRhoGoy"
+}

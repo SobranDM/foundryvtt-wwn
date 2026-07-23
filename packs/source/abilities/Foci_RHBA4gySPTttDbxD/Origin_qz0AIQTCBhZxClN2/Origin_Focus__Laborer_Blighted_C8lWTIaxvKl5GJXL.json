@@ -4,7 +4,62 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "jt7Odxr6W8RTJNWU",
+      "type": "base",
+      "name": "Laborer Blighted (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.saves.mental.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!C8lWTIaxvKl5GJXL.jt7Odxr6W8RTJNWU"
+    }
+  ],
   "system": {
     "description": "<p>Your bloodline was reshaped into a caste of toilers and brute laborers for some more powerful group. While you are less badly afflicted than most of your kind, your mental faculties remain duller than most baseline humans and you have an instinctive urge to obey orders and instructions.</p>\n<p><strong>Level 1: </strong>Gain Exert as a bonus skill. Each of your Intelligence, Wisdom, and Charisma attribute modifiers suffers a -1 penalty, down to a minimum of -2, while your Strength and Constitution modifiers are improved by +1, up to a maximum of +3 for each. You require only half as much food and rest as a normal human. You suffer a -2 penalty to all Mental saving throws to resist mind-influencing effects.</p>",
     "ownedLevel": 1,
@@ -18,8 +73,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "exert"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

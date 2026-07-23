@@ -1,0 +1,151 @@
+{
+  "_id": "CaeLBWxGPVCRymrw",
+  "name": "Executor",
+  "type": "powerArmor",
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "CPcEk1HAZsyzsDps",
+      "name": "Plating, Pretech",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>AC 22, Soak 30, +2 Trauma Target; Trauma only from vehicle-Trauma weapons; Shock immune; immune TL3−. Only one plating.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "platingPretech",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 100000,
+      "_key": "!actors.items!CaeLBWxGPVCRymrw.CPcEk1HAZsyzsDps"
+    },
+    {
+      "_id": "D6Hnpb0a2l0ubBVv",
+      "name": "Short-Range Warp Capacitor",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>On Turn: teleport ≤30m to visible location. After first use in scene: 1d6, 3− fails for rest of scene.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "shortRangeWarpCapacitor",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 200000,
+      "_key": "!actors.items!CaeLBWxGPVCRymrw.D6Hnpb0a2l0ubBVv"
+    },
+    {
+      "_id": "tk7HiY5YHF29tZQE",
+      "name": "Exoskeletal Boost, Pretech",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>As Advanced; Str 22 for Encumbrance; lift/bend/break unarmored objects up to compact-car size as Main Action.</p>",
+        "tl": 5,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "exoPretech",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 300000,
+      "_key": "!actors.items!CaeLBWxGPVCRymrw.tk7HiY5YHF29tZQE"
+    },
+    {
+      "_id": "GBldEnJ1dDb8Qulz",
+      "name": "Sealed Systems, Advanced",
+      "type": "armorFitting",
+      "img": "icons/svg/upgrade.svg",
+      "effects": [],
+      "system": {
+        "description": "<p>Immune toxic gases; nullifies non-instantly-lethal radiation; oxygen/thermal for deep space/underwater while powered.</p>",
+        "tl": 4,
+        "mass": 0,
+        "power": 0,
+        "cost": 0,
+        "stackable": false,
+        "disabled": false,
+        "integral": true,
+        "effectId": "sealedSystemsAdvanced",
+        "mountWeaponId": ""
+      },
+      "flags": {},
+      "sort": 400000,
+      "_key": "!actors.items!CaeLBWxGPVCRymrw.GBldEnJ1dDb8Qulz"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Example Executor modular power armor frame.</p>",
+    "frameType": "executor",
+    "mass": {
+      "max": 13
+    },
+    "power": {
+      "max": 11
+    },
+    "cost": 1000000,
+    "pilot": {
+      "actor": null
+    },
+    "trainedPilots": [],
+    "powered": true,
+    "runtime": {
+      "remaining": 30,
+      "max": 30
+    },
+    "maintenance": {
+      "skipped": 0
+    },
+    "soak": {
+      "value": 0,
+      "max": 0
+    },
+    "forbidEfficiency": false,
+    "runtimeMultiplier": 1,
+    "perpetual": false,
+    "transportFrames": 1,
+    "stealthPenalty": 0,
+    "maxRuntimeCap": null,
+    "ac": 10
+  },
+  "prototypeToken": {
+    "name": "Executor",
+    "displayName": 20,
+    "actorLink": true
+  },
+  "folder": null,
+  "sort": 6,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!CaeLBWxGPVCRymrw"
+}

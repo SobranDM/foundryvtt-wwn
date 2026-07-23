@@ -9,6 +9,8 @@ styles/*.css.map
 /packs/*
 !/packs/source/
 !/packs/source/**
+!/packs/data/
+!/packs/data/**
 !/packs/.gitattributes
 
 # LevelDB / Foundry pack DB artifacts

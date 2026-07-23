@@ -1,0 +1,91 @@
+{{!-- Power armor Armor tab: frame + fittings budget table. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">
+        <span>{{localize "WWN.PowerArmor.Frame"}}</span>
+        <div class="item-controls">
+          <a class="wwn-chip" data-action="applyFrame" title="{{localize 'WWN.PowerArmor.ApplyFrameHint'}}">
+            <span class="wwn-chip-label">{{localize "WWN.PowerArmor.ApplyFrame"}}</span>
+            <i class="fas fa-sync"></i>
+          </a>
+        </div>
+      </div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.PowerArmor.Frame"}}</label>
+          <div class="form-fields">
+            <select name="system.frameType">
+              {{selectOptions frameOptions selected=system.frameType blank=""}}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-stat-grid wwn-power-armor-budget">
+        <div class="wwn-stat-chip{{#if massOver}} wwn-budget-over{{/if}}">
+          <div class="wwn-section-header" title="{{localize 'WWN.PowerArmor.Mass'}}">
+            {{localize "WWN.PowerArmor.Mass"}}
+          </div>
+          <div class="wwn-stat-chip-value">
+            <span class="{{#if massOver}}wwn-budget-over{{/if}}">{{system.mass.free}}</span>
+            <span class="sep">/</span>
+            <input type="number" name="system.mass.max" value="{{system.mass.max}}" data-dtype="Number" min="0" />
+          </div>
+        </div>
+        <div class="wwn-stat-chip{{#if powerOver}} wwn-budget-over{{/if}}">
+          <div class="wwn-section-header" title="{{localize 'WWN.PowerArmor.Power'}}">
+            {{localize "WWN.PowerArmor.Power"}}
+          </div>
+          <div class="wwn-stat-chip-value">
+            <span class="{{#if powerOver}}wwn-budget-over{{/if}}">{{system.power.free}}</span>
+            <span class="sep">/</span>
+            <input type="number" name="system.power.max" value="{{system.power.max}}" data-dtype="Number" min="0" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{#> wwnCollapsibleSection sectionId="powerArmor.fittings"
+      label=(localize "WWN.PowerArmor.Fittings")
+      count=fittings.length
+      createType="armorFitting"
+      collapsed=(lookup @root.collapsed "powerArmor.fittings")}}
+    <div class="wwn-data-table">
+      <div class="item-titles wwn-col-header flexrow">
+        <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+        <div class="field-short">{{localize "WWN.PowerArmor.TL"}}</div>
+        <div class="field-short">{{localize "WWN.PowerArmor.MassAbbr"}}</div>
+        <div class="field-short">{{localize "WWN.PowerArmor.PowerAbbr"}}</div>
+        <div class="item-controls"></div>
+      </div>
+      <ol class="item-list">
+        {{#each fittings as |item|}}
+        <li class="item-entry">
+          <div class="item flexrow{{#if item.system.disabled}} greyrow{{/if}}{{#if item.system.integral}} integral{{/if}}"
+            data-item-id="{{item.id}}">
+            <div class="item-name flexrow">
+              <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
+              <a data-action="rollItem"><h4 title="{{item.system.effectId}}">{{item.name}}{{#if item.system.integral}} *{{/if}}</h4></a>
+            </div>
+            <div class="field-short">{{item.system.tl}}</div>
+            <div class="field-short">{{item.system.mass}}</div>
+            <div class="field-short">{{item.system.power}}</div>
+            <div class="item-controls">
+              <a class="item-control" data-action="toggleDisabled" title="{{localize 'WWN.PowerArmor.Disabled'}}">
+                <i class="fas {{#if item.system.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+              </a>
+              <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+        </li>
+        {{else}}
+        <li class="item-entry">
+          <p class="hint">{{localize "WWN.None"}}</p>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    {{/wwnCollapsibleSection}}
+  </div>
+</section>

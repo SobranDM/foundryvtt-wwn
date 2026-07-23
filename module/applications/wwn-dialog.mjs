@@ -4,6 +4,8 @@
  * No other code in the system may call DialogV2 directly.
  */
 
+import { buildWwnAppClasses } from "../config/themes.mjs";
+
 const { DialogV2 } = foundry.applications.api;
 
 /**
@@ -18,6 +20,7 @@ const { DialogV2 } = foundry.applications.api;
  * @param {Array}  [config.buttons]       DialogV2 button configs
  * @param {Function} [config.onRender]    Callback (event, dialog) on render
  * @param {boolean} [config.rejectClose=false]
+ * @param {string[]} [config.classes]     Extra app classes merged after the base set
  * @returns {Promise<*>} The chosen button's callback result, or null
  */
 export async function showWwnDialog({
@@ -29,15 +32,15 @@ export async function showWwnDialog({
   buttons,
   onRender,
   rejectClose = false,
+  classes: extraClasses = [],
   ...rest
 } = {}) {
   if (template) {
     content = await foundry.applications.handlebars.renderTemplate(template, context);
   }
-  const theme = game.settings.get("wwn", "uiTheme") ?? "wwn";
   return DialogV2.wait({
     window: { title },
-    classes: ["wwn", "wwn-dialog", `wwn-dialog--${modifier}`, "themed", `theme-${theme}`],
+    classes: buildWwnAppClasses({ kind: "dialog", modifier, extra: extraClasses }),
     content,
     buttons: buttons ?? [confirmButton()],
     rejectClose,

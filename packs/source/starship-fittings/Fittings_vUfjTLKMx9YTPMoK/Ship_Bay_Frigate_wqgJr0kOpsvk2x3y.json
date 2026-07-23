@@ -1,0 +1,33 @@
+{
+  "_id": "wqgJr0kOpsvk2x3y",
+  "name": "Ship Bay/Frigate",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Carrier housing for one frigate-class ship. Can be taken multiple times.</p>",
+    "cost": 1000000,
+    "power": 1,
+    "mass": 4,
+    "minClass": "capital",
+    "costScales": false,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wqgJr0kOpsvk2x3y"
+}

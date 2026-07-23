@@ -1,0 +1,33 @@
+{
+  "_id": "MavXA4eazyxvqkcy",
+  "name": "Planetary Defense Array",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Anti-impact and anti-nuke surface defenses: gravitic braker guns and an upgraded nuke snuffer field deflect meteor impacts and dampen nuclear fission over a hemisphere-sized area. Useless in ship-to-ship combat.</p>",
+    "cost": 50000,
+    "power": 4,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MavXA4eazyxvqkcy"
+}

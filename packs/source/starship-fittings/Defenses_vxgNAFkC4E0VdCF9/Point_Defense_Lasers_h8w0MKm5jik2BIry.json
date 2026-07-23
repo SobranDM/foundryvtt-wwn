@@ -1,0 +1,33 @@
+{
+  "_id": "h8w0MKm5jik2BIry",
+  "name": "Point Defense Lasers",
+  "type": "shipDefense",
+  "img": "icons/svg/shield.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>+2 AC versus weapons that use ammo; too small to damage ships, these lasers detonate or melt incoming torpedoes, fractal charges, and other ammunition-based munitions.</p>",
+    "cost": 10000,
+    "power": 3,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": true,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vxgNAFkC4E0VdCF9",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!h8w0MKm5jik2BIry"
+}

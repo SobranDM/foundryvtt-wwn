@@ -4,7 +4,80 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "MQxDLM6nZMgGZy1C",
+      "type": "base",
+      "name": "Dwarf (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!8B0Joa6S7J7DALh1.MQxDLM6nZMgGZy1C"
+    },
+    {
+      "_id": "5O0gDNhctrDp4xdT",
+      "type": "base",
+      "name": "Dwarf (Dexterity −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!8B0Joa6S7J7DALh1.5O0gDNhctrDp4xdT"
+    },
+    {
+      "_id": "6yZoAoehyOr3NcKa",
+      "type": "base",
+      "name": "Dwarf (Charisma −1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!8B0Joa6S7J7DALh1.6yZoAoehyOr3NcKa"
+    }
+  ],
   "system": {
     "description": "<p>This origin serves for the classical dwarf; short, sturdy, and given to craftsmanship and drinking.</p>\n<p><strong>Level 1:</strong> Gain Craft as a bonus skill. Your Constitution modifier increases by +1 and either your Dexterity or Charisma modifier decreases by -1. You can see in the dark up to sixty feet.</p>",
     "ownedLevel": 1,
@@ -18,8 +91,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "craft"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

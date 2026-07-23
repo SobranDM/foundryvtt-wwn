@@ -1,0 +1,50 @@
+{
+  "_id": "LaAwFNdEmRBqZmJi",
+  "name": "Deployable Force Shield",
+  "type": "armorFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Main Action: 3×3m force shield, hard cover, 20 HP (heavy weapons). Scene / deactivate / reuse. Second+ use in scene: 1d6, 5+ drains for scene.</p>",
+    "tl": 5,
+    "mass": 1,
+    "power": 3,
+    "cost": 0,
+    "stackable": false,
+    "disabled": false,
+    "integral": false,
+    "effectId": "deployableForceShield",
+    "mountWeaponId": "",
+    "damageRoll": "",
+    "save": "",
+    "healing": false,
+    "isWeapon": false,
+    "weaponBonus": 0,
+    "melee": true,
+    "missile": false,
+    "score": "str",
+    "linkedSkill": "",
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "oRS0vaygbjRN9VFW",
+  "sort": 56,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LaAwFNdEmRBqZmJi"
+}

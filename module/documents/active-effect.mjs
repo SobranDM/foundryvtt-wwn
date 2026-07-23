@@ -20,6 +20,14 @@ export class WwnActiveEffect extends foundry.documents.ActiveEffect {
     if (["weapon", "armor"].includes(item.type)) {
       return !item.system?.equipped;
     }
+    // Armor fittings: off when disabled, depowered, or over-budget (inert).
+    if (item.type === "armorFitting") {
+      if (item.system?.disabled) return true;
+      const actor = item.parent;
+      if (actor?.type === "powerArmor") {
+        if (!actor.system?.powered || actor.system?.overBudget) return true;
+      }
+    }
     return false;
   }
 

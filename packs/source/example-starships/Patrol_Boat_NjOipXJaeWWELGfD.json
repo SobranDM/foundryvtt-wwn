@@ -1,0 +1,262 @@
+{
+  "_id": "NjOipXJaeWWELGfD",
+  "name": "Patrol Boat",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "0zfLAjvHJk2mHcrf",
+      "name": "Plasma Beam",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>With superior targeting and a smaller energy drain than a CPC, a plasma beam sacrifices some armor penetration.</p>",
+        "cost": 700000,
+        "power": 5,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d6",
+        "hardpoints": 2,
+        "tl": 4,
+        "qualities": "AP 10",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.0zfLAjvHJk2mHcrf"
+    },
+    {
+      "_id": "AxsyZvWsnBpS240l",
+      "name": "Atmospheric Configuration",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Can land. Must be installed at build time; cannot be installed on cruiser-class or larger ships. Frigates and fighters only.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.AxsyZvWsnBpS240l"
+    },
+    {
+      "_id": "6bm5NrfYL2uWCLlZ",
+      "name": "Extended Stores",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Maximum life support duration is doubled. Can be fitted multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.6bm5NrfYL2uWCLlZ"
+    },
+    {
+      "_id": "f73n47QMNGS1gKdd",
+      "name": "Boarding Tubes",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows boarding of a hostile disabled ship.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.f73n47QMNGS1gKdd"
+    },
+    {
+      "_id": "y9puqkxDrOR5TaU8",
+      "name": "Armory",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Weapons and armor for the crew. There is enough gear to outfit the entire crew for normal use, but giving it away or losing it in use may deplete it.</p>",
+        "cost": 10000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.y9puqkxDrOR5TaU8"
+    },
+    {
+      "_id": "VHei2af8S1hiBFGj",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.VHei2af8S1hiBFGj"
+    },
+    {
+      "_id": "TXPFA6AKZ9MYi3pi",
+      "name": "Survey Sensor Array",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Improved planetary sensory array; any rolls with it add +2 to skill checks.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!NjOipXJaeWWELGfD.TXPFA6AKZ9MYi3pi"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>Often the largest ship fielded by poor or backward frontier worlds. Patrol boats are the smallest independent warships fielded by most navies, with considerable spike-drive reach and speed in-system. The single mounted gun is vulnerable to being disabled, but thick armor and a skilled damage-control crew mitigate that danger.</p><p><strong>Crew:</strong> 5/20. <strong>Cost:</strong> 3.523M base price, 176,150cr six-month maintenance, 657,000cr yearly crew cost (15 crew).</p>",
+    "hullType": "patrolBoat",
+    "hullClass": "frigate",
+    "hp": {
+      "value": 25,
+      "max": 25
+    },
+    "ac": 14,
+    "armor": 5,
+    "speed": 4,
+    "drive": 2,
+    "power": {
+      "max": 15
+    },
+    "mass": {
+      "max": 10
+    },
+    "hardpoints": {
+      "max": 4
+    },
+    "crew": {
+      "min": 5,
+      "max": 20,
+      "current": 5
+    },
+    "cost": 3523000,
+    "cargo": 0,
+    "npcCp": 5,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Patrol Boat",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "NjOipXJaeWWELGfD",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!NjOipXJaeWWELGfD"
+}

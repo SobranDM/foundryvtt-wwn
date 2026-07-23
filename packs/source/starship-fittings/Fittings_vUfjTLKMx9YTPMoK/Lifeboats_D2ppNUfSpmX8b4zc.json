@@ -1,0 +1,33 @@
+{
+  "_id": "D2ppNUfSpmX8b4zc",
+  "name": "Lifeboats",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Single-use escape craft for the ship's maximum crew (up to 20 people per boat), with comms and basic survival supplies.</p>",
+    "cost": 2500,
+    "power": 0,
+    "mass": 1,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": false,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!D2ppNUfSpmX8b4zc"
+}

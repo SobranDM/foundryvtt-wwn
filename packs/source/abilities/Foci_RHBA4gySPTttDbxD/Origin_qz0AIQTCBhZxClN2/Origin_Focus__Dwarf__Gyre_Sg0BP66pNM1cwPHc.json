@@ -4,7 +4,32 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "lNgMEZAsbJ7iAgVe",
+      "type": "base",
+      "name": "Dwarf, Gyre (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.hitDice.perLevelMod",
+            "type": "add",
+            "value": 1,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!Sg0BP66pNM1cwPHc.lNgMEZAsbJ7iAgVe"
+    }
+  ],
   "system": {
     "description": "<p>Your PC is a dwarf, a demihuman weapon-race devised during the ancient rule of the Outsiders. You are probably a recusant from some dwarven polity, though it could be you are a loyal believer in your homeland&rsquo;s ideals who simply wants to see more of the world before returning home and helping in their Great Plan.</p>\n<p><strong>Level 1:</strong> Gain Craft as a bonus skill. You have the dwarven surrounding-sense out to twenty feet, able to distinguish solid objects as if you were using your sense of sight. You have a natural resistance to magic, gaining a +2 bonus on all saves against hostile magical effects. You need only half the usual amount of food, water, and air and gain a +1 bonus to your hit point die at each level.</p>\n<p><strong>Level 2:</strong> You have such a deep connection with your dwarven nature that once per day, as an Instant action, you can simply negate an unwanted magical effect that would otherwise affect you. If you accept one System Strain point, you can use this ability to negate a magical effect you can see or otherwise sense, provided it&rsquo;s within one hundred feet. This ability applies only to spellcasting, relatively minor standing enchantments, and creature-generated magic; it cannot negate Workings, suppress magic items, or nullify effects created by magic items or exceptionally potent rituals. Note that NPC dwarves of more than 2 hit dice will also have this ability.</p>",
     "ownedLevel": 1,
@@ -18,8 +43,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "craft"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

@@ -4,7 +4,56 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "8KVZYf0qTbMJVXek",
+      "type": "base",
+      "name": "Halfling (Constitution +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!I59KavZ6BAnbWpHr.8KVZYf0qTbMJVXek"
+    },
+    {
+      "_id": "ByyNl6SG0554bv3A",
+      "type": "base",
+      "name": "Halfling (Dexterity +1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!I59KavZ6BAnbWpHr.ByyNl6SG0554bv3A"
+    }
+  ],
   "system": {
     "description": "<p>This origin serves for a breed of bucolic and diminutive demihumans with exceptional reserves of toughness.</p>\n<p><strong>Level 1: </strong>Gain Sneak as a bonus skill. Your Constitution or Dexterity modifier increases by +1. You are too small to effectively use two-handed melee weapons or large bows.</p>",
     "ownedLevel": 1,
@@ -18,8 +67,10 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

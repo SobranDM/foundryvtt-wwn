@@ -163,6 +163,22 @@ export function registerSettings() {
   });
 
   /* ---- Skills ---- */
+  registerWwnSetting("skillSet", {
+    name: "WWN.Setting.SkillSet",
+    hint: "WWN.Setting.SkillSetHint",
+    scope: "world",
+    type: String,
+    default: "wwn",
+    choices: {
+      wwn: "WWN.Setting.SkillSetWWN",
+      swn: "WWN.Setting.SkillSetSWN",
+      awn: "WWN.Setting.SkillSetAWN",
+    },
+    onChange: () => {
+      import("./helpers/skill-set.mjs").then(({ refreshSkillSetCache }) => refreshSkillSetCache({ notify: true }));
+    },
+  });
+
   registerWwnSetting("flatSkillCost", {
     name: "WWN.Setting.FlatSkillCost",
     hint: "WWN.Setting.FlatSkillCostHint",

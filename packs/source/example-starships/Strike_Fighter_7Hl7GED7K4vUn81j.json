@@ -1,0 +1,152 @@
+{
+  "_id": "7Hl7GED7K4vUn81j",
+  "name": "Strike Fighter",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "7gMT6q69BlEvSACM",
+      "name": "Reaper Battery",
+      "type": "shipWeapon",
+      "img": "icons/svg/explosion.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Stepped tapping of the spike drive power plant emits a torrent of charged particles. Little armor penetration, but can fry a small ship's power grid in a strike or two.</p>",
+        "cost": 100000,
+        "power": 4,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false,
+        "damage": "3d4",
+        "hardpoints": 1,
+        "tl": 4,
+        "qualities": "Clumsy",
+        "ammo": null,
+        "ammoCost": 0,
+        "attackBonus": 4
+      },
+      "_key": "!actors.items!7Hl7GED7K4vUn81j.7gMT6q69BlEvSACM"
+    },
+    {
+      "_id": "HbzsfoodMixeHpRb",
+      "name": "Atmospheric Configuration",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Can land. Must be installed at build time; cannot be installed on cruiser-class or larger ships. Frigates and fighters only.</p>",
+        "cost": 5000,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": true,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!7Hl7GED7K4vUn81j.HbzsfoodMixeHpRb"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p>The standard drill-capable fighter craft of most TL4 polities, this model retains a spike drive instead of replacing it with a cheaper systems drive. This particular model is equipped with a reaper battery for dealing with small, lightly-armored civilian ships.</p><p><strong>Crew:</strong> 1/1 pilot. <strong>Cost:</strong> 305,000cr base price, 15,250cr six-month maintenance, 43,800cr yearly crew cost (1 pilot).</p><p><strong>NPC crew station convention:</strong> all five crew stations (Bridge, Gunnery, Engineering, Comms, Captain) use the check formula <code>2d6+Crew Skill</code> when no PC is assigned -- this ship's Crew Skill +2 gives <code>2d6+2</code> on every station. This convention applies to every ship in this compendium.</p>",
+    "hullType": "strikeFighter",
+    "hullClass": "fighter",
+    "hp": {
+      "value": 8,
+      "max": 8
+    },
+    "ac": 16,
+    "armor": 5,
+    "speed": 5,
+    "drive": 1,
+    "power": {
+      "max": 5
+    },
+    "mass": {
+      "max": 2
+    },
+    "hardpoints": {
+      "max": 1
+    },
+    "crew": {
+      "min": 1,
+      "max": 1,
+      "current": 1
+    },
+    "cost": 305000,
+    "cargo": 0,
+    "npcCp": 4,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+2"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+2"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Strike Fighter",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "7Hl7GED7K4vUn81j",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!7Hl7GED7K4vUn81j"
+}

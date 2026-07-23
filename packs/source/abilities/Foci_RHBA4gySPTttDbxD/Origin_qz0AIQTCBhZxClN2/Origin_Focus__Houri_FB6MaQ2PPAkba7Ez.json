@@ -4,7 +4,38 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "u2FT4THaxJEnUV4i",
+      "type": "base",
+      "name": "Houri (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.saves.mental.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!FB6MaQ2PPAkba7Ez.u2FT4THaxJEnUV4i"
+    }
+  ],
   "system": {
     "description": "<p>You&rsquo;ve taught yourself to resist the lure of enforced happiness and seek other forms of satisfaction or personal integrity. While you gain an emotional rush from cooperating with commands, you don&rsquo;t let it control your decisions.</p>\n<p><strong>Level 1: </strong>Gain Convince and Perform as bonus skills. Your Charisma modifier increases by +1, up to a maximum of +2. Your innate nature makes you susceptible to mental influence, however, inflicting a -2 penalty on Mental saving throws.</p>",
     "ownedLevel": 1,
@@ -18,8 +49,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "convince",
+      "perform"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

@@ -1,0 +1,211 @@
+{
+  "_id": "1Mk3JCM5E0KgbMUp",
+  "name": "Small Station (Bannerjee-12)",
+  "type": "starship",
+  "sort": 100000,
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "items": [
+    {
+      "_id": "xYi5IypcgpRWuCtu",
+      "name": "Cargo Lighter",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Orbit-to-surface cargo shuttle. Only capable of surface-to-orbit flight (roughly 20 minutes either way); can latch onto a standard pressurized cargo container holding up to 200 tons. Can be purchased multiple times.</p>",
+        "cost": 25000,
+        "power": 0,
+        "mass": 2,
+        "minClass": "frigate",
+        "costScales": false,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!1Mk3JCM5E0KgbMUp.xYi5IypcgpRWuCtu"
+    },
+    {
+      "_id": "y4iM8sLRsdZrO0da",
+      "name": "Fuel Bunkers",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Adds fuel for one more drill between fuelings. Can be installed multiple times.</p>",
+        "cost": 2500,
+        "power": 0,
+        "mass": 1,
+        "minClass": "fighter",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!1Mk3JCM5E0KgbMUp.y4iM8sLRsdZrO0da"
+    },
+    {
+      "_id": "0zdg9Y9KA6DNYQNH",
+      "name": "Survey Sensor Array",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Improved planetary sensory array; any rolls with it add +2 to skill checks.</p>",
+        "cost": 5000,
+        "power": 2,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!1Mk3JCM5E0KgbMUp.0zdg9Y9KA6DNYQNH"
+    },
+    {
+      "_id": "8zV8JGjLy0RoIpk1",
+      "name": "Ship's Locker",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",
+        "cost": 2000,
+        "power": 0,
+        "mass": 0,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!1Mk3JCM5E0KgbMUp.8zV8JGjLy0RoIpk1"
+    },
+    {
+      "_id": "Pq8Nx8kob5efl1BA",
+      "name": "Extended Medbay",
+      "type": "shipFitting",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "flags": {},
+      "effects": [],
+      "system": {
+        "description": "<p>Allows medical treatment of up to the ship's entire maximum crew at once, including critically wounded patients.</p>",
+        "cost": 5000,
+        "power": 1,
+        "mass": 1,
+        "minClass": "frigate",
+        "costScales": true,
+        "powerScales": false,
+        "massScales": false,
+        "disabled": false,
+        "specialCost": false
+      },
+      "_key": "!actors.items!1Mk3JCM5E0KgbMUp.Pq8Nx8kob5efl1BA"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "description": "<p><strong>Not from the PDF's Example Starships stat blocks</strong> -- only the small-station hull row (Building a Starship, hull table) and a one-paragraph blurb exist in the source; this loadout is an original example built on that hull for this pack. A station has no Speed and no spike drive, and cannot maneuver in combat, though transit jets can slowly reposition it in-system over weeks. The Bannerjee-12 is a common civilian trade/customs station found on poor or backwater worlds with light traffic; it allows docking by bulk freighters and ships not cleared to land planetside.</p><p><strong>Cargo:</strong> 500 tons (informational estimate). <strong>Cost:</strong> 5M base price (hull table).</p>",
+    "hullType": "smallStation",
+    "hullClass": "cruiser",
+    "hp": {
+      "value": 120,
+      "max": 120
+    },
+    "ac": 11,
+    "armor": 5,
+    "speed": null,
+    "drive": 0,
+    "power": {
+      "max": 50
+    },
+    "mass": {
+      "max": 40
+    },
+    "hardpoints": {
+      "max": 10
+    },
+    "crew": {
+      "min": 20,
+      "max": 200,
+      "current": 20
+    },
+    "cost": 5000000,
+    "cargo": 500,
+    "npcCp": 4,
+    "stations": {
+      "bridge": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "gunnery": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "engineering": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "comms": {
+        "actor": null,
+        "formula": "2d6+1"
+      },
+      "captain": {
+        "actor": null,
+        "formula": "2d6+1"
+      }
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "flags": {},
+    "name": "Small Station (Bannerjee-12)",
+    "displayName": 30,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": false,
+    "dimSight": 0,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "lightAnimation": {
+      "speed": 5,
+      "intensity": 5
+    },
+    "actorId": "1Mk3JCM5E0KgbMUp",
+    "actorLink": false,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {},
+    "randomImg": false,
+    "prependAdjective": true
+  },
+  "_key": "!actors!1Mk3JCM5E0KgbMUp"
+}

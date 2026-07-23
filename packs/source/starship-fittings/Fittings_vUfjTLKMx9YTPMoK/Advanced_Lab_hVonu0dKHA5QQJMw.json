@@ -1,0 +1,33 @@
+{
+  "_id": "hVonu0dKHA5QQJMw",
+  "name": "Advanced Lab",
+  "type": "shipFitting",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "system": {
+    "description": "<p>Skill bonus for analysis and research.</p>",
+    "cost": 10000,
+    "power": 1,
+    "mass": 2,
+    "minClass": "frigate",
+    "costScales": true,
+    "powerScales": true,
+    "massScales": false,
+    "disabled": false,
+    "specialCost": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "vUfjTLKMx9YTPMoK",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hVonu0dKHA5QQJMw"
+}

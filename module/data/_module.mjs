@@ -1,6 +1,8 @@
 export { default as WwnPc } from "./actor/pc.mjs";
 export { default as WwnNpc } from "./actor/npc.mjs";
 export { default as WwnFaction } from "./actor/faction.mjs";
+export { default as WwnStarship } from "./actor/starship.mjs";
+export { default as WwnPowerArmor } from "./actor/power-armor.mjs";
 
 export { default as WwnGear } from "./item/gear.mjs";
 export { default as WwnWeapon } from "./item/weapon.mjs";
@@ -11,3 +13,7 @@ export { default as WwnClassEdge } from "./item/class-edge.mjs";
 export { default as WwnFocus } from "./item/focus.mjs";
 export { default as WwnCurrency } from "./item/currency.mjs";
 export { default as WwnAsset } from "./item/asset.mjs";
+export { default as WwnShipFitting } from "./item/ship-fitting.mjs";
+export { default as WwnShipWeapon } from "./item/ship-weapon.mjs";
+export { default as WwnShipDefense } from "./item/ship-defense.mjs";
+export { default as WwnArmorFitting } from "./item/armor-fitting.mjs";

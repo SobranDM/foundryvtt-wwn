@@ -1,0 +1,30 @@
+{
+  "name": "Precognition",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/psychic.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Master the ability to sense future events and control probability.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": true,
+    "slug": "precognition"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784831443000,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Rl2OgrifA3Il62cA",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Rl2OgrifA3Il62cA"
+}

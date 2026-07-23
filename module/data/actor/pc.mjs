@@ -171,17 +171,25 @@ export default class WwnPc extends WwnActorBase {
 
   #computeTreasure() {
     let total = 0;
+    let personal = 0;
     for (const item of this.parent.items) {
       if (item.type !== "item" || !item.system.treasure) continue;
-      total += (item.system.quantity ?? 1) * (item.system.price ?? 0);
+      const value = (item.system.quantity ?? 1) * (item.system.price ?? 0);
+      total += value;
+      if (item.system.personal) personal += value;
     }
     this.treasure = total;
+    this.personalTreasure = personal;
 
     // Total wealth in base-currency units
     let wealth = 0;
+    let banked = 0;
     for (const c of this.parent.items.filter((i) => i.type === "currency")) {
-      wealth += ((c.system.carried ?? 0) + (c.system.banked ?? 0)) * (c.system.multiplier ?? 1);
+      const mult = c.system.multiplier ?? 1;
+      wealth += ((c.system.carried ?? 0) + (c.system.banked ?? 0)) * mult;
+      banked += (c.system.banked ?? 0) * mult;
     }
+    this.bankedWealth = banked;
     this.wealth = wealth + total;
   }
 
@@ -204,7 +212,8 @@ export default class WwnPc extends WwnActorBase {
     data.groupInitiativeRoll = this.combat.initiative.group.roll;
 
     // Owned skill levels by slug (@exert, @know, ...); missing skill = -1
-    for (const slug of [...CONFIG.WWN.coreSkills, ...CONFIG.WWN.psychicSkills]) {
+    const cachedSlugs = CONFIG.WWN.skillSetCache?.allSlugs ?? [];
+    for (const slug of cachedSlugs) {
       data[slug] = -1;
     }
     for (const skill of this.parent.items.filter((i) => i.type === "skill")) {

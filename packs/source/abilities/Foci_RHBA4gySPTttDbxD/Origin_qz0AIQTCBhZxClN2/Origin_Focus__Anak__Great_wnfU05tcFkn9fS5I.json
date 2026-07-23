@@ -4,7 +4,50 @@
   "type": "focus",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/origin-focus.png",
-  "effects": [],
+  "effects": [
+    {
+      "_id": "fE2k9RtKt6ACyo7Z",
+      "type": "base",
+      "name": "Anak, Great (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!wnfU05tcFkn9fS5I.fE2k9RtKt6ACyo7Z"
+    }
+  ],
   "system": {
     "description": "<p>Unlike most Anak, you are capable of functioning in human society, either through a weakened sense of Hate or an overwhelming force of will. Unless your appearance is much more human than most, however, you may have an extremely difficult time in human lands.</p>\n<p><strong>Level 1: </strong>Gain Stab and Punch as bonus skills. Your Strength and Constitution modifiers increase by +1, up to a maximum of +2. Your Dexterity and Charisma modifiers decrease by -1, to a minimum of -2.</p>",
     "ownedLevel": 1,
@@ -18,8 +61,11 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "stab",
+      "punch"
+    ],
+    "bonusSkillsPick": 2,
     "bonusSkillsChosen": [],
     "bonusDice": null,
     "skillBonus": ""

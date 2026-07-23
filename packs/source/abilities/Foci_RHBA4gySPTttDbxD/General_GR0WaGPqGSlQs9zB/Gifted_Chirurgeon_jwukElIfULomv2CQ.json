@@ -18,11 +18,13 @@
       "max": 0
     },
     "resourceLength": "none",
-    "bonusSkills": [],
-    "bonusSkillsPick": 0,
+    "bonusSkills": [
+      "heal"
+    ],
+    "bonusSkillsPick": 1,
     "bonusSkillsChosen": [],
-    "bonusDice": null,
-    "skillBonus": ""
+    "bonusDice": 1,
+    "skillBonus": "heal"
   },
   "_key": "!items!jwukElIfULomv2CQ",
   "folder": "GR0WaGPqGSlQs9zB",
