@@ -1,0 +1,49 @@
+{
+  "name": "Mutant",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You gain 2 mutation points to spend as described in the Mutations section after you pick your Edges. If a negative mutation spoils an Edge, you may pick a different Edge. After you&rsquo;ve spent the points, pick one attribute of your choice that has a modifier of &minus;1 or better; it suffers a &minus;1 penalty to its attribute modifier.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "modMinus1",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "A9AC1adlvm7S9aG5",
+  "folder": "NzsPIlIlaVlVfs8v",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A9AC1adlvm7S9aG5"
+}

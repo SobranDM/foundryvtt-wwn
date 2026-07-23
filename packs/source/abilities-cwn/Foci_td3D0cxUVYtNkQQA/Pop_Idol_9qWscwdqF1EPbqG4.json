@@ -1,0 +1,35 @@
+{
+  "name": "Pop Idol",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether a street musician, graffiti artist, underground journalist, cam girl, folk singer, or Robin Hood-esque thief, you have a devoted following of enthusiasts who are willing to help you when you need them.</p><p><strong>Level 1:</strong> Gain Perform as a bonus skill. Once per game week, with an hour or so of messaging, you can mobilize about a hundred of your fans to perform some act of your choice, provided it&rsquo;s no more than mildly criminal or slightly dangerous. Flash mobs, getaway drivers, scouting reports, tailing people, or instant parties might all qualify as services. Your fans don&rsquo;t have any special skills, but they&rsquo;ll do anything ordinary workers or civilians could do. If you mobilize them for donations or merch purchases, you get $1,000 per character level, doubled at fifth level and quadrupled at tenth. You can&rsquo;t mobilize them to buy your content more than once per month.</p><p><strong>Level 2:</strong> You can mobilize up to a hundred fans per character level, though major mobs are likely to draw a law enforcement response. You&rsquo;ve cultivated fan leaders who can pass along your wishes deniably, concealing your involvement in the crowd. Your donation and merch earning amounts double. Your Charisma modifier increases by +1, to a maximum of +2.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "day",
+    "bonusSkills": [
+      "perform"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "9qWscwdqF1EPbqG4",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9qWscwdqF1EPbqG4"
+}

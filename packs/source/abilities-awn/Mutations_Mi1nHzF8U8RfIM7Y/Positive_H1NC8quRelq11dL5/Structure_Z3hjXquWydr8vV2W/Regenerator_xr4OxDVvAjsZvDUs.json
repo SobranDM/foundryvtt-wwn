@@ -1,0 +1,87 @@
+{
+  "name": "Regenerator",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "BJelSwpprBBoJJW8",
+      "type": "base",
+      "name": "Regenerator",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.autoStabilize",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!xr4OxDVvAjsZvDUs.BJelSwpprBBoJJW8"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.xr4OxDVvAjsZvDUs"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You automatically stabilize if Mortally Wounded and regenerate 2 hit points of damage every hour. If mutilated, you can regrow missing limbs or organs in one week, assuming you can survive their absence that long. You cannot recover from effects that instantly kill you.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": true,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "xr4OxDVvAjsZvDUs",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xr4OxDVvAjsZvDUs"
+}

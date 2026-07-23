@@ -1,0 +1,87 @@
+{
+  "name": "Overtaxed Physique",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "VbfpDvX9PNMKaNsQ",
+      "type": "base",
+      "name": "Overtaxed Physique",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.strain.max",
+            "type": "add",
+            "value": -3,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!oCFZjPAlYOOcWbed.VbfpDvX9PNMKaNsQ"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.oCFZjPAlYOOcWbed"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your mutations are more than your body can handle safely. Your maximum System Strain is lowered by 3 points, to a minimum of 3.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "oCFZjPAlYOOcWbed",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 57000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oCFZjPAlYOOcWbed"
+}

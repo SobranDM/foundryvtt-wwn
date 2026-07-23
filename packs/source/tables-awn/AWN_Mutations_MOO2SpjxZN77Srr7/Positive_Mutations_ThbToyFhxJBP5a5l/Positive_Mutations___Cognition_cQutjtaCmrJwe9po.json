@@ -1,0 +1,186 @@
+{
+  "_id": "cQutjtaCmrJwe9po",
+  "name": "Positive Mutations — Cognition",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "rZ8EOZHvxoVLbGi8",
+      "type": "document",
+      "name": "Augmented Cognition",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.eKUaf7G8Yaexauy1",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.rZ8EOZHvxoVLbGi8"
+    },
+    {
+      "_id": "sCNNe7KLCXpZ4HNd",
+      "type": "document",
+      "name": "Ballistic Calculator",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.sb2Cp00ttUwkOSea",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.sCNNe7KLCXpZ4HNd"
+    },
+    {
+      "_id": "YczoAHKgE74WaKBX",
+      "type": "document",
+      "name": "Eidetic Memory",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.g9WM42SWX8eYOTDF",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.YczoAHKgE74WaKBX"
+    },
+    {
+      "_id": "N8WsZLhsCHujO4BT",
+      "type": "document",
+      "name": "Internal Map",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.XlN8HMyMRtpfWENI",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.N8WsZLhsCHujO4BT"
+    },
+    {
+      "_id": "dAi1cq3iFZ4ufzb2",
+      "type": "document",
+      "name": "Intuitive Leap",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.099dFyDQDsjhWdZh",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.dAi1cq3iFZ4ufzb2"
+    },
+    {
+      "_id": "ZVVisFE7XCSzK25x",
+      "type": "document",
+      "name": "Memory Eater",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.qe6eIsgPfuqqaPNq",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.ZVVisFE7XCSzK25x"
+    },
+    {
+      "_id": "PqCLg2n7OxLYBqB0",
+      "type": "document",
+      "name": "Mental Bifurcation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.o5ALTydbpjZiydKN",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.PqCLg2n7OxLYBqB0"
+    },
+    {
+      "_id": "1xnfy3mW4REY7sAL",
+      "type": "document",
+      "name": "Mind Over Body",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.j2G14mmgzXB07Kf2",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.1xnfy3mW4REY7sAL"
+    },
+    {
+      "_id": "7RiifbIBvocSif1J",
+      "type": "document",
+      "name": "Omniglot",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.nLGdRezEp5EIZ6Ef",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.7RiifbIBvocSif1J"
+    },
+    {
+      "_id": "ZHjyfwUGFXhdMmdM",
+      "type": "document",
+      "name": "Predictive Analysis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.kQJw1BqsTOhC3u5w",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!cQutjtaCmrJwe9po.ZHjyfwUGFXhdMmdM"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!cQutjtaCmrJwe9po"
+}

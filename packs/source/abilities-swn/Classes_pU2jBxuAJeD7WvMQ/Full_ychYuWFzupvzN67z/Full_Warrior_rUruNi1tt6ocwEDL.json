@@ -1,0 +1,51 @@
+{
+  "name": "Full Warrior",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether a hiveworld thug, barbarian lostworlder, gengineered combat hominid, or a natural-born killer, your hero has a real talent for inflicting mayhem. Warriors gain a free level in a combat-related focus associated with their background.</p><p>Warriors are lucky in combat. Once per scene, as an Instant ability, you can either negate a successful attack roll against you or turn a missed attack roll you made into a successful hit. You gain two extra maximum hit points at each character level.</p><p>Unlike Worlds Without Number Warriors, Stars Without Number Warriors do not receive Killing Blow.</p><p>Hit points are 1d6+2 per level plus Constitution modifier. Attack bonus equals character level.</p>",
+    "edgeType": "class",
+    "attackProgression": "warrior",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 2
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Veteran's Luck"
+    ]
+  },
+  "_id": "rUruNi1tt6ocwEDL",
+  "folder": "ychYuWFzupvzN67z",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rUruNi1tt6ocwEDL"
+}

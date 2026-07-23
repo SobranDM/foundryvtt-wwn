@@ -1,0 +1,66 @@
+{
+  "name": "Terminal Reflection",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.lUgE0TC1lnhwa9Y3"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The psychic's Oracle power automatically triggers as an Instant action moments before some unexpected danger or ambush, giving the precog a brief vision of the impending hazard. This warning comes just in time to avoid springing a trap or to negate combat surprise for the precog and their companions. If the psychic does not immediately Commit Effort for the day, this sense goes numb and this technique cannot be used for the rest of the day.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "If not committed immediately after the vision"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "lUgE0TC1lnhwa9Y3",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lUgE0TC1lnhwa9Y3"
+}

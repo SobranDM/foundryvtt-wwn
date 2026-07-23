@@ -1,0 +1,66 @@
+{
+  "name": "Arboreal Aptitude",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.2WRf8BBZQ9A3vcHf"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You are an unnaturally nimble climber, able to scale all but perfectly smooth surfaces as if they were flat ground. You can hang from vertical or overhead surfaces so long as one hand has purchase. All falling damage you take is halved, rounded down.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "2WRf8BBZQ9A3vcHf",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2WRf8BBZQ9A3vcHf"
+}

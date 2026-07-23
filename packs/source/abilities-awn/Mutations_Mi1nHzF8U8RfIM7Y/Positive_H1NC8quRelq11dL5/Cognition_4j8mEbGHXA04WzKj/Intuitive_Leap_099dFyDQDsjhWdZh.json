@@ -1,0 +1,89 @@
+{
+  "name": "Intuitive Leap",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "yJCuAnLGfpmmetnH",
+      "type": "base",
+      "name": "Intuitive Leap",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!099dFyDQDsjhWdZh.yJCuAnLGfpmmetnH"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.099dFyDQDsjhWdZh"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You are capable of drawing remarkable insights from seemingly trivial observations. Your Wisdom modifier increases by +1 to a maximum of +2 and you gain Notice as a bonus skill. Once per game session, you may accept one System Strain as a Main Action and ask the GM a question. The GM then gives a one-sentence answer as if the PC were Sherlock Holmes or some other hyper-capable literary detective, along with a brief description of how the PC&rsquo;s inhuman abilities of deduction produced the result.</p>",
+    "source": "Cognition",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "internalResourceLength": "day",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [
+      "notice"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "099dFyDQDsjhWdZh",
+  "folder": "4j8mEbGHXA04WzKj",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!099dFyDQDsjhWdZh"
+}

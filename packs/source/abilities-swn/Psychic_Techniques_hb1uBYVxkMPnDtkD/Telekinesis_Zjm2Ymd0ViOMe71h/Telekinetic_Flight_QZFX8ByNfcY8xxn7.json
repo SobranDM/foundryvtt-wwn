@@ -1,0 +1,66 @@
+{
+  "name": "Telekinetic Flight",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.QZFX8ByNfcY8xxn7"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As an Instant action, the telekinetic can Commit Effort to begin flying, and may extend this effect to up to a half-dozen unresisting, human-sized allies within 30 meters. While flying, the psychic can move at twice their normal movement rate in any direction. They can plunge earthward at up to terminal velocity without harm, and even orbital insertions are survivable with this power if a vacc suit is available or the Pressure Field technique is used. Allies must end their turns within 30 meters of the psychic to maintain this flight but control their own motion. As an Instant, this power may be triggered in time to negate falling damage. The flight lasts for as long as the Effort remains Committed.</p>",
+    "source": "Telekinesis",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "QZFX8ByNfcY8xxn7",
+  "folder": "Zjm2Ymd0ViOMe71h",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QZFX8ByNfcY8xxn7"
+}

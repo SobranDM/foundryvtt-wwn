@@ -1,0 +1,87 @@
+{
+  "name": "Weak Heart",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "wuffFr7V145QpOMV",
+      "type": "base",
+      "name": "Weak Heart",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!mjJzaDPAHVXi1TGZ.wuffFr7V145QpOMV"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.mjJzaDPAHVXi1TGZ"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Sharp exertion quickly exhausts you. Your Constitution modifier suffers a -1 penalty, and all Exert skill checks are rolled twice and the worst taken.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "mjJzaDPAHVXi1TGZ",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 79000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mjJzaDPAHVXi1TGZ"
+}

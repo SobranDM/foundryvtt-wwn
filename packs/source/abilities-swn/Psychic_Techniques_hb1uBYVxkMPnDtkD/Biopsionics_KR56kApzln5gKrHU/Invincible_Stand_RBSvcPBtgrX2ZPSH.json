@@ -1,0 +1,66 @@
+{
+  "name": "Invincible Stand",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.RBSvcPBtgrX2ZPSH"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The biopsion has mastered techniques of emergency tissue reinforcement and system stabilization. As an Instant action, they can Commit Effort for the scene to keep themself or a target they can touch active even at zero hit points. This technique must be used once every round on the target or they collapse at the end of the round. If the target suffers hit point damage, the biopsion must Instantly Commit Effort for the scene or the target goes down immediately with a mortal wound. A Heavy weapon hit on a subject of this power or similar physical dismemberment will always kill a target, regardless of this technique.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "RBSvcPBtgrX2ZPSH",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RBSvcPBtgrX2ZPSH"
+}

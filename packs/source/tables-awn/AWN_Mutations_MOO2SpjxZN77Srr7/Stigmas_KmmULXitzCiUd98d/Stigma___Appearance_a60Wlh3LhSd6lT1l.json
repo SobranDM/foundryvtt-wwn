@@ -1,0 +1,218 @@
+{
+  "_id": "a60Wlh3LhSd6lT1l",
+  "name": "Stigma — Appearance",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "pqOgM7d6MZQjv2b5",
+      "type": "text",
+      "name": "",
+      "description": "Bright Solid Hue",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.pqOgM7d6MZQjv2b5"
+    },
+    {
+      "_id": "BZZzWGsU7s5aAcHC",
+      "type": "text",
+      "name": "",
+      "description": "Chromed",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.BZZzWGsU7s5aAcHC"
+    },
+    {
+      "_id": "PaqdOZ5w7KymVLOi",
+      "type": "text",
+      "name": "",
+      "description": "Gemlike",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.PaqdOZ5w7KymVLOi"
+    },
+    {
+      "_id": "d3zuWzAfCdkBfabi",
+      "type": "text",
+      "name": "",
+      "description": "Gradient Hue",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.d3zuWzAfCdkBfabi"
+    },
+    {
+      "_id": "O0tFJdjRcbJZy9cT",
+      "type": "text",
+      "name": "",
+      "description": "Iridescent",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.O0tFJdjRcbJZy9cT"
+    },
+    {
+      "_id": "UMkKyjdTRqMyugpM",
+      "type": "text",
+      "name": "",
+      "description": "Luminescent",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.UMkKyjdTRqMyugpM"
+    },
+    {
+      "_id": "eSzI1QtHV6WbiNsn",
+      "type": "text",
+      "name": "",
+      "description": "Neon",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.eSzI1QtHV6WbiNsn"
+    },
+    {
+      "_id": "HqXt92VuSuZJoqyh",
+      "type": "text",
+      "name": "",
+      "description": "Opalescent",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.HqXt92VuSuZJoqyh"
+    },
+    {
+      "_id": "t3oofBz21y5U0YK3",
+      "type": "text",
+      "name": "",
+      "description": "Patchy Coloring",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.t3oofBz21y5U0YK3"
+    },
+    {
+      "_id": "vLGFRCwum7weR94h",
+      "type": "text",
+      "name": "",
+      "description": "Strobing Colors",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.vLGFRCwum7weR94h"
+    },
+    {
+      "_id": "CT3IltG35pmoqgCV",
+      "type": "text",
+      "name": "",
+      "description": "Transparent Skin",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.CT3IltG35pmoqgCV"
+    },
+    {
+      "_id": "yIlyS76i69Bsjjjm",
+      "type": "text",
+      "name": "",
+      "description": "Whorled",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!a60Wlh3LhSd6lT1l.yIlyS76i69Bsjjjm"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!a60Wlh3LhSd6lT1l"
+}

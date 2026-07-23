@@ -1,0 +1,49 @@
+{
+  "name": "Partial Warrior",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You gain a free level in a combat focus related to your background. Gain +1 to your attack bonus at first and fifth levels (encoded as Partial Warrior progression). Gain 2 extra maximum hit points each level.</p><p>Pair with another Partial class via Adventurer.</p>",
+    "edgeType": "class",
+    "attackProgression": "partialWarrior",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 2
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "YdcSfmPvGEw1M5h7",
+  "folder": "dyutBgqlUFfxEBBI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YdcSfmPvGEw1M5h7"
+}

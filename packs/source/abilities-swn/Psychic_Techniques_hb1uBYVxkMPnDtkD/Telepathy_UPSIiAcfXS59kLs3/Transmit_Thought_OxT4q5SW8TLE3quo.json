@@ -1,0 +1,66 @@
+{
+  "name": "Transmit Thought",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.OxT4q5SW8TLE3quo"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The telepath can send thoughts and images over a Telepathic Contact, allowing two-way communication with a willing target as an Instant action when desired.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "OxT4q5SW8TLE3quo",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OxT4q5SW8TLE3quo"
+}

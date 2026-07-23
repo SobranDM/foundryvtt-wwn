@@ -1,0 +1,66 @@
+{
+  "name": "Image Projection",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.Zc35of1P7t8LVl2Y"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Main Action, create a visual illusion within 30 meters that can fit in a 5-meter cube. The image can involve sound up to normal conversational volume and can move and act so long as you spend a Move action concentrating on it each round. The illusion persists for one round per character level after you stop concentrating on it. It is entirely intangible, and objects cannot be made invisible by the illusion, though they can be concealed by another image. After the first time you use this mutation in a scene, additional uses add 1 System Strain.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "0,1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30m",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Zc35of1P7t8LVl2Y",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Zc35of1P7t8LVl2Y"
+}

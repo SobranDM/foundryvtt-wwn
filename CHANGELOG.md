@@ -10,10 +10,16 @@
 
 ### What's new
 
-- **Abilities compendiums by game line:** **WWN Abilities**, **SWN Abilities**, and **AWN Abilities**. Skills for each line live in a Skills folder inside that pack (standalone skills packs removed). `skillSet` still seeds PCs from the matching pack.
-  - SWN Abilities includes the full SWN focus list with bonus-skill prompts and Active Effects.
-  - AWN Abilities includes the full AWN focus list (including Spark of Brilliance skill pool and open skill picks).
-  - Pack collection ids are now `wwn.abilities-wwn` / `wwn.abilities-swn` / `wwn.abilities-awn` (old `wwn.abilities` / `wwn.skills-*` world links are not auto-remapped).
+- **SWN Classes** and **AWN/CWN Edges** as `classEdge` items in the matching Abilities packs, with attack/HD/pool grants, bonus-skill prompts, Active Effects (On Target, Hard To Kill, Killing Blow, attribute Edges), and companion powers for scene/day limited abilities. Edge-only PCs keep half-level AB via the existing Expert fallback; On Target raises AB to full level. SWN Full Warrior has no Killing Blow (book difference from WWN). Regenerate with `node ./build/generate-cross-line-class-edges.mjs`.
+- **SWN Psychic Techniques** catalog in **SWN Abilities** (`power` / `psychic` subtype): all six disciplines’ cores and techniques from Stars Without Number, committing from a shared **Psychic Effort** pool, with System Strain fields where the book applies them. Psychic subtype default pool name is now **Psychic Effort**.
+- **AWN Mutations** catalog in **AWN Abilities** (`power` / `mutation` subtype): all positive and negative mutations from Ashes Without Number, with System Strain costs, scene/day use limits, Active Effects where automatable, and bonus-skill grants.
+- **AWN Tables** compendium for mutation generation (linked document results) and stigma tables (text). The former **Tables** pack is now labeled **WWN Tables**.
+- **Powers** can grant bonus skills (rank-only: train untrained skills to level-0). Unlike foci, power grants never use the skill-points path or the level-1 skill-points setting.
+- **Abilities compendiums by game line:** **WWN Abilities**, **SWN Abilities**, **AWN Abilities**, and **CWN Abilities**. Skills for each line live in a Skills folder inside that pack (standalone skills packs removed). `skillSet` still seeds PCs from the matching pack.
+  - SWN Abilities includes the full SWN focus list with bonus-skill prompts and Active Effects, plus the full Psychic Techniques catalog (Psychic Effort pool), and Full/Partial Expert, Psychic, and Warrior class items.
+  - AWN Abilities includes the full AWN focus list (including Spark of Brilliance skill pool and open skill picks), mutations, and the full Survivor Edges list.
+  - CWN Abilities includes Cities Without Number skills (Cast/Summon are secondary and not auto-seeded), the full CWN focus list (including Ace Driver’s level-2 Fix grant and All Natural attribute choice effects), and Operator Edges.
+  - Pack collection ids are now `wwn.abilities-wwn` / `wwn.abilities-swn` / `wwn.abilities-awn` / `wwn.abilities-cwn` (old `wwn.abilities` / `wwn.skills-*` world links are not auto-remapped).
 - **Classes** are now items you add to a character (Full/Partial Warrior, Expert, mage traditions, and other partial classes).
   - They drive attack bonus, hit dice, Effort or spell capacity, and class features.
   - Existing characters are prompted once to pick their class(es). Old Class Ability foci are archived under Items.

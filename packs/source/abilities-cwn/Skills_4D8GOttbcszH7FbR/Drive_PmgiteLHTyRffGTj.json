@@ -1,0 +1,30 @@
+{
+  "name": "Drive",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/ride.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Drive vehicles, sail ships, fly planes, pilot drones, and perform maintenance and basic repairs on such devices. A PC's background may incline them to a particular kind of driving, but with some practice this skill can be applied generally.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "drive"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198759,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "PmgiteLHTyRffGTj",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PmgiteLHTyRffGTj"
+}

@@ -1,0 +1,122 @@
+{
+  "_id": "F39T6zHyy8Q55MhB",
+  "name": "Stigma — Nature of the Mutation",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "gKojE3Y9gCnVSucd",
+      "type": "text",
+      "name": "",
+      "description": "Odd appearance or texture",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.gKojE3Y9gCnVSucd"
+    },
+    {
+      "_id": "KXUE1HuF11egVKbu",
+      "type": "text",
+      "name": "",
+      "description": "Animalistic structure",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.KXUE1HuF11egVKbu"
+    },
+    {
+      "_id": "YV4lsuewZD3Pyilt",
+      "type": "text",
+      "name": "",
+      "description": "Abnormal size or proportion",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.YV4lsuewZD3Pyilt"
+    },
+    {
+      "_id": "MW7WTQTyJun8zXIn",
+      "type": "text",
+      "name": "",
+      "description": "Plant-like structure",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.MW7WTQTyJun8zXIn"
+    },
+    {
+      "_id": "inL2Je1eksL2nieZ",
+      "type": "text",
+      "name": "",
+      "description": "Amorphous or tentacular structure",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.inL2Je1eksL2nieZ"
+    },
+    {
+      "_id": "JU4wO73h8ZpEs4v5",
+      "type": "text",
+      "name": "",
+      "description": "Inorganic or mineralized structure",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!F39T6zHyy8Q55MhB.JU4wO73h8ZpEs4v5"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!F39T6zHyy8Q55MhB"
+}

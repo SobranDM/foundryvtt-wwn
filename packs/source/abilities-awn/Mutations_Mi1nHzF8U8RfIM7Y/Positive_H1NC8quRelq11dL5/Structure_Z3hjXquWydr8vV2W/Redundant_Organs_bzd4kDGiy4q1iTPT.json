@@ -1,0 +1,87 @@
+{
+  "name": "Redundant Organs",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "xr22SUB8NOT1K02I",
+      "type": "base",
+      "name": "Redundant Organs",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!bzd4kDGiy4q1iTPT.xr22SUB8NOT1K02I"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.bzd4kDGiy4q1iTPT"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Once per week, as an On Turn action, get up after being Mortally Wounded by physical injury and regain 25% of your maximum hit points, rounded up. This mutation cannot save you from unavoidably certain death. If using Trauma rules, your Trauma Target increases by +1.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "",
+    "healing": true,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "bzd4kDGiy4q1iTPT",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bzd4kDGiy4q1iTPT"
+}

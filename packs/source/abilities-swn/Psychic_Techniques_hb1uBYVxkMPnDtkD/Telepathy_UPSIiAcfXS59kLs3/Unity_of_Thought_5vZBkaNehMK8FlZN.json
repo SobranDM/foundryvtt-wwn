@@ -1,0 +1,66 @@
+{
+  "name": "Unity of Thought",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.5vZBkaNehMK8FlZN"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The telepath becomes exceptionally skilled at weaving together multiple allied minds. When they establish a Telepathic Contact with a willing ally they may bind up to six willing participants into the same contact without further Effort. This multi-person link is relatively shallow, and allows only the Instant exchange of thoughts, images, and sensory impressions. While under its effect, every participant knows the exact location and condition of all others, and uses the best Initiative roll of any of them if combat commences. At the table, up to five minutes of discussion and coordination among the players can be arranged each round without incurring delays for the PCs. Every combat turn, one gestalt member of the psychic's choice gets an extra round of action to represent the benefits of the perfect coordination of the group. The psychic cannot gain this bonus round himself. The telepathic link lasts as long as the psychic initiates no new Telepathic Contact, and it has a range that extends to any point within a solar system.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "5vZBkaNehMK8FlZN",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5vZBkaNehMK8FlZN"
+}

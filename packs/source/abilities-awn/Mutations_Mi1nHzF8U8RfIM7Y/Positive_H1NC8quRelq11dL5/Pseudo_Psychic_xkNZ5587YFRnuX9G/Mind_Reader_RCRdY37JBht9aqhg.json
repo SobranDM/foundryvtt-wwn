@@ -1,0 +1,66 @@
+{
+  "name": "Mind Reader",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.RCRdY37JBht9aqhg"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Main Action, accept one System Strain and target a visible creature. The target gets a Mental saving throw; if they succeed, you simply get a one-sentence description of what they&rsquo;re thinking about right now. If they fail, you get that description and can ask their memories one question, getting a one or two-sentence answer if the question is one their memories could answer. A creature can be targeted by this mutation only once per day, and will not normally notice it even if they succeed in their save.</p>",
+    "source": "Pseudo-Psychic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "visible",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "RCRdY37JBht9aqhg",
+  "folder": "xkNZ5587YFRnuX9G",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RCRdY37JBht9aqhg"
+}

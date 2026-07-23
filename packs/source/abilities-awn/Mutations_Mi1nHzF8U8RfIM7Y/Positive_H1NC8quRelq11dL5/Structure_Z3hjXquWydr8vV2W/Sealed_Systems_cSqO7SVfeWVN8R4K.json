@@ -1,0 +1,66 @@
+{
+  "name": "Sealed Systems",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.cSqO7SVfeWVN8R4K"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You do not need to breathe and are immune to toxic gases, extremes of high and low atmospheric pressure or natural temperature, aerosol-transmitted diseases, and anything else a modern hazmat suit would resist. You can rest comfortably in any non-damaging environment.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "cSqO7SVfeWVN8R4K",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cSqO7SVfeWVN8R4K"
+}

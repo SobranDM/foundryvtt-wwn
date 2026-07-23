@@ -1,0 +1,187 @@
+{
+  "name": "Attribute Deficiency",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "7CxfQ0wN58Bw2wCY",
+      "type": "base",
+      "name": "Attribute Deficiency (Strength)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.7CxfQ0wN58Bw2wCY"
+    },
+    {
+      "_id": "pIalNNy5GwYgGZf9",
+      "type": "base",
+      "name": "Attribute Deficiency (Dexterity)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.pIalNNy5GwYgGZf9"
+    },
+    {
+      "_id": "VJGfnlgJTwqs6Wx1",
+      "type": "base",
+      "name": "Attribute Deficiency (Constitution)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.VJGfnlgJTwqs6Wx1"
+    },
+    {
+      "_id": "ECF82XeqlOmJMFwV",
+      "type": "base",
+      "name": "Attribute Deficiency (Intelligence)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.ECF82XeqlOmJMFwV"
+    },
+    {
+      "_id": "yUcuBGM6luSIKO3y",
+      "type": "base",
+      "name": "Attribute Deficiency (Wisdom)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.yUcuBGM6luSIKO3y"
+    },
+    {
+      "_id": "6BRyd4982KX4DyRx",
+      "type": "base",
+      "name": "Attribute Deficiency (Charisma)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!t1F8432wrmqrDiWx.6BRyd4982KX4DyRx"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.t1F8432wrmqrDiWx"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your lowest attribute suffers a -1 modifier penalty. If the lowest is tied, pick one. Reroll this mutation if its modifier is already at -2.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "t1F8432wrmqrDiWx",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 81000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!t1F8432wrmqrDiWx"
+}

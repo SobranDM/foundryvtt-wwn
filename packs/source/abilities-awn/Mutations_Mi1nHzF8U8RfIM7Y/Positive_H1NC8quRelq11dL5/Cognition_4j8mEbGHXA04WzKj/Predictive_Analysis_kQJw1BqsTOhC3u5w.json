@@ -1,0 +1,107 @@
+{
+  "name": "Predictive Analysis",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "v0ZV8yLp95FJSkNC",
+      "type": "base",
+      "name": "Predictive Analysis (Intelligence)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!kQJw1BqsTOhC3u5w.v0ZV8yLp95FJSkNC"
+    },
+    {
+      "_id": "R9m4p45GMV9xlUkS",
+      "type": "base",
+      "name": "Predictive Analysis (Wisdom)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!kQJw1BqsTOhC3u5w.R9m4p45GMV9xlUkS"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.kQJw1BqsTOhC3u5w"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have the ability to predict what others around you are about to do. Your Intelligence or Wisdom modifier increases by +1. Once per game session, accept one System Strain as an Instant action after someone else acts; events rewind to the beginning of your last turn, as what played out was simply what you predicted would happen. By predicting it, you changed it, and you may now act differently. This rewind ability only works in response to a creature&rsquo;s actions, and cannot be used to undo natural events or accidents.</p>",
+    "source": "Cognition",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "internalResourceLength": "day",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "kQJw1BqsTOhC3u5w",
+  "folder": "4j8mEbGHXA04WzKj",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kQJw1BqsTOhC3u5w"
+}

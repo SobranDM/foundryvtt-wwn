@@ -1,0 +1,66 @@
+{
+  "name": "Leaper",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.xVgKIBrJKErW2pTp"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Subtract 20 meters from any falling damage taken. As a Move action, jump to any location within 20 meters. You cannot jump two rounds in a row. This jump does not count as a Fighting Withdrawal for purposes of escaping melee engagements.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "20m",
+      "duration": "Move action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "xVgKIBrJKErW2pTp",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xVgKIBrJKErW2pTp"
+}

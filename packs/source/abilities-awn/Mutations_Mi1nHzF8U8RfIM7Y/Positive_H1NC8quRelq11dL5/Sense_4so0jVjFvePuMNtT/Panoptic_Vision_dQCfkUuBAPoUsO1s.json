@@ -1,0 +1,87 @@
+{
+  "name": "Panoptic Vision",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "VDGh4NlvX1hvRDOf",
+      "type": "base",
+      "name": "Panoptic Vision",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.immuneToSurprise",
+            "type": "override",
+            "value": "true",
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!dQCfkUuBAPoUsO1s.VDGh4NlvX1hvRDOf"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.dQCfkUuBAPoUsO1s"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your visual senses function in a 360-degree circle and maintain awareness even while you are asleep or unconscious. You cannot be surprised or suffer Execution Attacks and you can awake from normal sleep instantly to respond to something you see.</p>",
+    "source": "Sense",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "dQCfkUuBAPoUsO1s",
+  "folder": "4so0jVjFvePuMNtT",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dQCfkUuBAPoUsO1s"
+}

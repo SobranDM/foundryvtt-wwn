@@ -26,6 +26,11 @@ import {
   revokeFocusBonusSkills,
   syncActorFocusBonusSkills,
 } from "./helpers/focus-bonus-skills.mjs";
+import {
+  syncPowerBonusSkills,
+  revokePowerBonusSkills,
+  syncActorPowerBonusSkills,
+} from "./helpers/power-bonus-skills.mjs";
 import { promptFocusSkillBonus } from "./helpers/focus-skill-dice.mjs";
 import {
   promptSparkSkillPool,
@@ -33,6 +38,7 @@ import {
   syncWildPsychicEffort,
 } from "./helpers/focus-extra-prompts.mjs";
 import { grantClassEdgeCompanions } from "./helpers/class-edge-grants.mjs";
+import { syncClassEdgeAttributeGrant } from "./helpers/class-edge-attribute-grants.mjs";
 import { isPc } from "./helpers/actor-types.mjs";
 import { registerHelpers } from "./helpers.js";
 import * as chat from "./chat.js";
@@ -181,9 +187,18 @@ Hooks.once("init", async function () {
     // companion creates) can deadlock the parent clear/recreate update.
     // Focus/power transfer sync is deferred via finalizeActorMigrationHooks.
     if (game.wwn?.migrating || options?.wwnMigrating) return;
-    if (item.type === "power") syncPowerTransferEffects(item);
+    if (item.type === "power") {
+      syncPowerTransferEffects(item);
+      if (isPc(item.parent) && userId === game.user.id) {
+        await syncPowerBonusSkills(item, item.parent, { prompt: true });
+      }
+    }
     if (item.type === "classEdge" && userId === game.user.id && !options?.wwnGranting) {
       await grantClassEdgeCompanions(item.parent, item, options);
+      if (isPc(item.parent)) {
+        await syncPowerBonusSkills(item, item.parent, { prompt: true });
+        await syncClassEdgeAttributeGrant(item, item.parent, { prompt: true });
+      }
     }
     if (item.type === "focus") {
       await syncFocusTransferEffects(item);
@@ -201,7 +216,30 @@ Hooks.once("init", async function () {
   Hooks.on("updateItem", async (item, changes, _options, userId) => {
     if (item.parent?.documentName !== "Actor") return;
     if (game.wwn?.migrating || _options?.wwnMigrating) return;
-    if (item.type === "power") syncPowerTransferEffects(item);
+    if (item.type === "power") {
+      syncPowerTransferEffects(item);
+      const flat = foundry.utils.flattenObject(changes);
+      if (isPc(item.parent) && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)) {
+        await syncPowerBonusSkills(item, item.parent, { prompt: false });
+      }
+    }
+    if (item.type === "classEdge") {
+      const flat = foundry.utils.flattenObject(changes);
+      if (
+        isPc(item.parent)
+        && userId === game.user.id
+        && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)
+      ) {
+        await syncPowerBonusSkills(item, item.parent, { prompt: false });
+      }
+      if (
+        isPc(item.parent)
+        && userId === game.user.id
+        && ["system.attributeGrant.chosen", "system.attributeGrant.mode"].some((k) => k in flat)
+      ) {
+        await syncClassEdgeAttributeGrant(item, item.parent, { prompt: false });
+      }
+    }
     if (item.type === "focus") {
       await syncFocusTransferEffects(item);
       const flat = foundry.utils.flattenObject(changes);
@@ -225,6 +263,12 @@ Hooks.once("init", async function () {
     if (game.wwn?.migrating || _options?.wwnMigrating) return;
     if (item.type === "focus" && isPc(item.parent) && userId === game.user.id) {
       await revokeFocusBonusSkills(item, item.parent);
+    }
+    if (item.type === "power" && isPc(item.parent) && userId === game.user.id) {
+      await revokePowerBonusSkills(item, item.parent);
+    }
+    if (item.type === "classEdge" && isPc(item.parent) && userId === game.user.id) {
+      await revokePowerBonusSkills(item, item.parent);
     }
   });
   Hooks.on("createActiveEffect", (effect) => {
@@ -292,7 +336,10 @@ Hooks.once("ready", async function () {
 
   for (const actor of game.actors) {
     await syncActorFocusEffects(actor);
-    if (isPc(actor)) await syncActorFocusBonusSkills(actor);
+    if (isPc(actor)) {
+      await syncActorFocusBonusSkills(actor);
+      await syncActorPowerBonusSkills(actor);
+    }
   }
 
   game.socket.on("system.wwn", async ({ action, data }) => {

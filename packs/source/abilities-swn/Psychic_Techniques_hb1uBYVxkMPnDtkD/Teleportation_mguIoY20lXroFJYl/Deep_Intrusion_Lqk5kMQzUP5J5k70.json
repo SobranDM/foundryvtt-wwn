@@ -1,0 +1,66 @@
+{
+  "name": "Deep Intrusion",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.Lqk5kMQzUP5J5k70"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The adept can use Personal Apportation to blind-teleport into a building, structure, vehicle, or spaceship visible to them, including spaceships close enough to engage in conventional ship-to-ship combat. They intuitively seek out a space large enough to hold them and without immediate environmental hazards, but cannot control their precise destination. Using this technique in conjunction with Personal Apportation is very draining to the psychic, and requires that they Commit an additional Effort point for the day.</p>",
+    "source": "Teleportation",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Additional Effort with Personal Apportation"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Lqk5kMQzUP5J5k70",
+  "folder": "mguIoY20lXroFJYl",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Lqk5kMQzUP5J5k70"
+}

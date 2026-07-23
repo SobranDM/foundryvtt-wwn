@@ -48,11 +48,11 @@ export async function refreshSkillSetCache({ notify = false } = {}) {
 }
 
 /**
- * @returns {"wwn"|"swn"|"awn"}
+ * @returns {"wwn"|"swn"|"awn"|"cwn"}
  */
 export function getSkillSetKey() {
   const key = game.settings.get(NS, "skillSet");
-  if (key === "swn" || key === "awn" || key === "wwn") return key;
+  if (key === "swn" || key === "awn" || key === "wwn" || key === "cwn") return key;
   return DEFAULT_KEY;
 }
 

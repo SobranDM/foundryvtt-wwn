@@ -127,6 +127,15 @@
       "flags": {}
     },
     {
+      "name": "abilities-cwn",
+      "label": "CWN Abilities",
+      "system": "wwn",
+      "path": "packs/abilities-cwn",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "gear",
       "label": "Gear",
       "system": "wwn",
@@ -155,9 +164,18 @@
     },
     {
       "name": "tables",
-      "label": "Tables",
+      "label": "WWN Tables",
       "system": "wwn",
       "path": "packs/tables",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "tables-awn",
+      "label": "AWN Tables",
+      "system": "wwn",
+      "path": "packs/tables-awn",
       "type": "RollTable",
       "private": false,
       "flags": {}
@@ -295,6 +313,15 @@
         "abilities-awn",
         "armor-fittings",
         "example-power-armor"
+      ],
+      "folders": []
+    },
+    {
+      "name": "Cities Without Number",
+      "sorting": "m",
+      "color": "#5a3d5c",
+      "packs": [
+        "abilities-cwn"
       ],
       "folders": []
     }

@@ -1,0 +1,66 @@
+{
+  "name": "Impact Sump",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.HbElRlJWvjHtXOUs"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The adept may Commit Effort for the day as an Instant action to negate a single instance of physical damage. This ability is too taxing to be used more than once per day, but as an Instant action, it can be triggered even after damage is rolled.</p>",
+    "source": "Telekinesis",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "HbElRlJWvjHtXOUs",
+  "folder": "Zjm2Ymd0ViOMe71h",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HbElRlJWvjHtXOUs"
+}

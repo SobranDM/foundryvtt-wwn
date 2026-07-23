@@ -1,0 +1,71 @@
+{
+  "name": "Accelerated Succor",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.zEOtKgEXuc6S3vUn"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The biopsion's Psychic Succor now can be used as an On Turn power, albeit only once per round. By Committing an additional Effort for the day with each use, it can even be used as an Instant power, though it still can only be used once per round. Any surcharges for augmenting the succor apply normally, such as with Tissue Integrity Field.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": "On Turn use (inherits Succor commitment)"
+      },
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Additional surcharge for Instant use"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "zEOtKgEXuc6S3vUn",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zEOtKgEXuc6S3vUn"
+}

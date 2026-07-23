@@ -1,0 +1,66 @@
+{
+  "name": "Chronic Seizures",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.pcyNTAsBVXHTmuj4"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Whenever you roll a natural 1 on a hit roll or a natural 2 on a skill check, you must make a Physical save or suffer a seizure of some kind, dropping anything you&rsquo;re holding and becoming unable to act for the rest of the scene. You can temporarily resist the seizure by accepting 1 System Strain for each round you delay it. You can&rsquo;t suffer a seizure more than once per week.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "pcyNTAsBVXHTmuj4",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pcyNTAsBVXHTmuj4"
+}

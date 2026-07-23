@@ -1,0 +1,66 @@
+{
+  "name": "Force Puppetry",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.XZKvi04KGhddMGgX"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As a Main Action, the telekinetic can Commit Effort for the day to suborn a visible target's mobility, whether robotic, vehicular, or human, provided it's no larger than a ground car. A sapient victim can make a Mental saving throw to resist the psychic onslaught; on a failure, they lose control of their physical actions. If not piloted by the telekinetic, the target remains motionless or continues on its current direction of travel. If the telekinetic spends a Main Action to control them, they can be made to perform any physical action that is not directly suicidal, using the psychic's skill levels and hit bonus for any attacks or skill checks they might make. The puppetry lasts until the end of the scene, until the target leaves the psychic's sight, or until a sapient target believes that their action or inaction is about to get them killed. The psychic's control is fine enough to achieve even very delicate physical motions, but it is not good enough to control the target's speech, though it can keep them silent.</p>",
+    "source": "Telekinesis",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "XZKvi04KGhddMGgX",
+  "folder": "Zjm2Ymd0ViOMe71h",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XZKvi04KGhddMGgX"
+}

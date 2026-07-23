@@ -173,6 +173,7 @@ export function registerSettings() {
       wwn: "WWN.Setting.SkillSetWWN",
       swn: "WWN.Setting.SkillSetSWN",
       awn: "WWN.Setting.SkillSetAWN",
+      cwn: "WWN.Setting.SkillSetCWN",
     },
     onChange: () => {
       import("./helpers/skill-set.mjs").then(({ refreshSkillSetCache }) => refreshSkillSetCache({ notify: true }));

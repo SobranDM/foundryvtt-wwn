@@ -1,0 +1,66 @@
+{
+  "name": "Telekinetic Manipulation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.fN2w7xgMJpzZWyOT"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>Telekinetic abilities are something of a mixed blessing to those psychics who have them. While they are among the least feared and distrusted of psychic powers, they also produce effects that are not nearly so widely-demanded as biopsionic healing or metapsionic brainguarding.</p><p>Telekinetic powers are strong but somewhat imprecise. The force they generate is usually invisible, though a psychic can allow a visible glow if desired, and the source of the telekinetic manipulation is not obvious to ordinary senses. Objects being held or worn by a mobile creature cannot normally be manipulated by telekinesis, nor can unwilling intelligent targets be directly manipulated. Machines, including non-sentient robots, can be affected as any other inanimate object, however. The psychic cannot use this discipline to lift their own person without special techniques.</p><p>Some techniques refer to a \"physical attack\" or \"physical damage\". This means a straightforward kinetic impact: bullets, punches, collisions, falls, compressions, or the like. Energy attacks are not included.</p><p>The adept may Commit Effort for the scene as a Main Action to direct telekinetic force toward an object or person within unaided visual range or with tactile contact with the psychic. This force isn't responsive enough to be effective as a weapon without further refinement of technique, and cannot cause damage to living or mobile targets. If used to crush or harm immobile unliving objects, it does 1d6 damage per skill level of the psychic per round of focus. Objects move at 20 meters per round when moved telekinetically. A telekinetic force can be maintained over multiple rounds without expending further actions, such as holding a metal platform in place under a group of allies, but the psychic cannot again activate this technique on a second object until they release the first.</p><p><strong>Level-0:</strong> The psychic can exert force as if with one hand and their own strength.</p><p><strong>Level-1:</strong> The psychic can manipulate objects as if with both hands and can lift up to two hundred kilograms with this ability.</p><p><strong>Level-2:</strong> The psychic can lift or manipulate up to four hundred kilograms and smash a human-sized hole in structures of light wooden construction or lighter as a Main Action.</p><p><strong>Level-3:</strong> The psychic can manipulate up to eight hundred kilograms and can affect as many individual objects at once as they have Telekinesis skill levels.</p><p><strong>Level-4:</strong> The psychic can manipulate up to a metric ton and can smash human-sized holes in TL4-constructed exterior walls, light stone walls, or similar barriers as a Main Action.</p>",
+    "source": "Telekinesis",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "fN2w7xgMJpzZWyOT",
+  "folder": "Zjm2Ymd0ViOMe71h",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fN2w7xgMJpzZWyOT"
+}

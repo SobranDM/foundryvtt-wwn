@@ -1,0 +1,68 @@
+{
+  "name": "Natural Projectiles",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.84F2GPtB0LbTwimI"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have some sort of natural projectile or energy weapon that has the same combat statistics as a rifle, can be used without penalty in melee, and never runs out of ammunition under normal combat usage. You gain the Shoot skill as a bonus skill. Your natural projectiles get a +1 damage and hit bonus at level 3, +2 at level 6, and +3 at level 9.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "2d6",
+    "healing": false,
+    "bonusSkills": [
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "84F2GPtB0LbTwimI",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!84F2GPtB0LbTwimI"
+}

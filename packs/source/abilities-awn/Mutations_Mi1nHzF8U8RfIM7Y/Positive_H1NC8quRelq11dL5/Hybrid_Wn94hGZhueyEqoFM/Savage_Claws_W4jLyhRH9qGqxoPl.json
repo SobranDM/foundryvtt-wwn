@@ -1,0 +1,66 @@
+{
+  "name": "Savage Claws",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.W4jLyhRH9qGqxoPl"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have murderously effective body weaponry of some kind, and your Punch attacks do 1d6 plus your character level in damage, have a Shock rating of half your level rounded up against AC 15, and may use either Dexterity or Strength as the modifying attribute. If using Traumatic Hit rules, they have a 1d6/x3 rating. As with other Punch attacks, you may add your skill level to the damage die, but not the Shock.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "1d6 + @lvl",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "W4jLyhRH9qGqxoPl",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W4jLyhRH9qGqxoPl"
+}

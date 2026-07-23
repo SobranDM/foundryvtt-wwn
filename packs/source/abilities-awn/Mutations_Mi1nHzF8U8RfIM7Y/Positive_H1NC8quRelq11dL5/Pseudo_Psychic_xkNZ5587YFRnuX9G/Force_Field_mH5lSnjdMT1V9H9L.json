@@ -1,0 +1,66 @@
+{
+  "name": "Force Field",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.mH5lSnjdMT1V9H9L"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Main Action, you can generate a force field around yourself that absorbs up to 10 points of damage plus your character level before failing. The field vanishes at the end of your next round unless you spend a Move action sustaining it each round or accept 1 System Strain to maintain it to the end of the scene. Damage done to the shield regenerates at the end of each scene. If the shield is destroyed entirely, any overflow damage is done to you and you cannot re-summon it that scene.</p>",
+    "source": "Pseudo-Psychic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "1 round (sustain with a Move action, or 1 Strain for the scene)"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "mH5lSnjdMT1V9H9L",
+  "folder": "xkNZ5587YFRnuX9G",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mH5lSnjdMT1V9H9L"
+}

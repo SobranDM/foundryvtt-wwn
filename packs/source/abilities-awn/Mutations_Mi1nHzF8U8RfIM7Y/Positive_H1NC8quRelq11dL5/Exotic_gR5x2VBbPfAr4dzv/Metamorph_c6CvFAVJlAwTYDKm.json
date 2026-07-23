@@ -1,0 +1,66 @@
+{
+  "name": "Metamorph",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.c6CvFAVJlAwTYDKm"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Main Action, alter your physical shape to any other humanoid form within 50% of your height or weight. You can mimic clothing and armor as part of this shift, but such mimicked items grant no AC or other benefits. You can perfectly impersonate another person if you&rsquo;ve spent at least ten minutes personally interacting with them or have at least ten grams of their blood, hair, or other tissues.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "c6CvFAVJlAwTYDKm",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!c6CvFAVJlAwTYDKm"
+}

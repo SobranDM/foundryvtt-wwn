@@ -1,0 +1,66 @@
+{
+  "name": "Slip Field",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.ZKrBGmAX2DbzaOPC"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As a Main Action, the psychic Commits Effort for the scene and decreases the friction at a point in sight. Up to ten meters in diameter is affected, making it difficult for enemies to move from their current position. All chosen targets must make an Evasion saving throw or fall prone, becoming unable to stand up or move more than a meter per Move action taken. If used against a ground vehicle, the driver must make a Dex/Pilot skill check at a difficulty of 8 plus the adept's Telekinesis skill or go out of control, driving directly forward for a round and crashing into any obstacles. Targets who save are immune to this technique for the scene.</p>",
+    "source": "Telekinesis",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Evasion",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "ZKrBGmAX2DbzaOPC",
+  "folder": "Zjm2Ymd0ViOMe71h",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZKrBGmAX2DbzaOPC"
+}

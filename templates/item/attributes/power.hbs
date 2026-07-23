@@ -260,5 +260,49 @@
     </div>
     {{/if}}
 
+    {{#if showPanel.bonusSkills}}
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.Power.PanelBonusSkills"}}</div>
+      <div class="wwn-form-panel-fields">
+        {{#if show.bonusSkills}}
+        <div class="form-group wwn-form-span">
+          <label title="{{localize 'WWN.Power.BonusSkillsListHint'}}">{{localize "WWN.Power.BonusSkillsList"}}</label>
+          <div class="form-fields">
+            <input type="text" name="system.bonusSkills" value="{{join system.bonusSkills ","}}" />
+          </div>
+        </div>
+        {{/if}}
+        {{#if show.bonusSkillsPick}}
+        <div class="form-group">
+          <label>{{localize "WWN.Power.BonusSkillsPick"}}</label>
+          <div class="form-fields">
+            <input type="number" name="system.bonusSkillsPick" value="{{system.bonusSkillsPick}}" min="0"
+              data-dtype="Number" />
+          </div>
+        </div>
+        {{/if}}
+        {{#if show.bonusSkillsMode}}
+        <div class="form-group">
+          <label>{{localize "WWN.Power.BonusSkillsMode"}} {{> wwnFieldHint hintKey="WWN.Power.BonusSkillsModeHint"}}</label>
+          <div class="form-fields">
+            <select name="system.bonusSkillsMode">
+              <option value="" {{#unless system.bonusSkillsMode}}selected{{/unless}}>{{localize "WWN.Power.BonusSkillsModeListed"}}</option>
+              <option value="any" {{#if (eq system.bonusSkillsMode "any")}}selected{{/if}}>{{localize "WWN.Power.BonusSkillsModeAny"}}</option>
+            </select>
+          </div>
+        </div>
+        {{/if}}
+        {{#if system.bonusSkillsChosen.length}}
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.Power.BonusSkillsChosen"}}</label>
+          <div class="form-fields">
+            <input type="text" value="{{join system.bonusSkillsChosen ","}}" disabled />
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+
   </div>
 </section>

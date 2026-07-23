@@ -1,0 +1,49 @@
+{
+  "name": "Partial Expert",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>As part of an Adventurer, you gain a free level in a non-combat focus related to your background. Gain an extra skill point every time you gain a character level which can be spent on any non-psychic, non-combat skill. Partial Experts do not receive the once-per-scene skill reroll.</p><p>Pair with another Partial class via Adventurer. Base Adventurer attack bonus is half level unless Partial Warrior is also taken.</p>",
+    "edgeType": "class",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 4,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "XUoB8aW9gVnpOINk",
+  "folder": "dyutBgqlUFfxEBBI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XUoB8aW9gVnpOINk"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Oracle",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.4GOx12smdDc1n89f"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The discipline of Precognition relates to sensing the cascade of future events and reading the achronal chaos of the metadimensional energy that ripples in the psychic's brain. Readings provided by Precognition tend to be focused on the psychic and what they find interesting or important. Matters irrelevant to the seer are unlikely to be noticed, even if they are of critical importance to those involved. More advanced techniques of Precognition can even influence the future, adjusting probabilities by changing or pruning certain metadimensional currents.</p><p>The precog gains a progressively-greater intuitive understanding of their own future. Each invocation of the Oracle technique requires a Main Action and that the user Commit Effort for the day. Once triggered, the adept gets a single brief vision related to the question about the future that they're asking. This vision is always from their own personal vantage point and never reveals more than a minute of insight, though the psychic processes it almost instantly as part of the power's use.</p><p>The GM should answer the question as if the PC were about to perform the act or engage in the investigation pertinent to the question. Visions should relate to actions and events, not abstract facts. Only the most important or significant information is conveyed by the technique, even if multiple events of interest might transpire during the time horizon. Oracle can only be used on a given question or topic once until the situation changes substantially or a week goes by. The maximum time horizon of the Oracle increases as the adept's Precognition skill improves.</p><p><strong>Level-0:</strong> One minute into the future.</p><p><strong>Level-1:</strong> One day into the future.</p><p><strong>Level-2:</strong> One week into the future.</p><p><strong>Level-3:</strong> Three months into the future.</p><p><strong>Level-4:</strong> One year into the future.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "4GOx12smdDc1n89f",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4GOx12smdDc1n89f"
+}

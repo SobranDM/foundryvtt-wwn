@@ -1,0 +1,49 @@
+{
+  "name": "Hardened Genetics",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You cannot be mutated by radiation or other mutagenics and gain a +4 bonus on radiation saving throws. You cannot choose or gain the Mutant Edge. Pick an attribute of your choice; its modifier increases by +1, to a maximum of +2.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "modPlus1Cap2",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "jpzZb6vhkeZJAl6I",
+  "folder": "NzsPIlIlaVlVfs8v",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jpzZb6vhkeZJAl6I"
+}

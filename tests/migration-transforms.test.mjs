@@ -32,6 +32,40 @@ describe("migrateArtToPower", () => {
     assert.equal(out.system.subType, "art");
     assert.equal(out.system.resourceName, "Effort");
     assert.equal(out.system.commitmentOptions[0].length, "scene");
+    assert.equal(out.system.commitmentOptions[0].cost, 1);
+  });
+
+  it("maps blank and dash time to no pool commitment", () => {
+    for (const time of ["", "-", "  ", undefined]) {
+      const out = migrateArtToPower({
+        name: "Passive Art",
+        type: "art",
+        system: time === undefined ? {} : { time },
+      });
+      assert.deepEqual(out.system.commitmentOptions[0], { cost: 0, length: "none", note: "" }, `time=${JSON.stringify(time)}`);
+    }
+  });
+
+  it("maps Active and commit time to active commitment", () => {
+    for (const time of ["Active", "commit", "ACTIVE"]) {
+      const out = migrateArtToPower({
+        name: "Maintained Art",
+        type: "art",
+        system: { time },
+      });
+      assert.deepEqual(out.system.commitmentOptions[0], { cost: 1, length: "active", note: "" }, `time=${time}`);
+    }
+  });
+
+  it("maps Scene and Day case-insensitively", () => {
+    assert.equal(
+      migrateArtToPower({ name: "A", type: "art", system: { time: "Scene" } }).system.commitmentOptions[0].length,
+      "scene"
+    );
+    assert.deepEqual(
+      migrateArtToPower({ name: "B", type: "art", system: { time: "Day" } }).system.commitmentOptions[0],
+      { cost: 1, length: "day", note: "" }
+    );
   });
 });
 

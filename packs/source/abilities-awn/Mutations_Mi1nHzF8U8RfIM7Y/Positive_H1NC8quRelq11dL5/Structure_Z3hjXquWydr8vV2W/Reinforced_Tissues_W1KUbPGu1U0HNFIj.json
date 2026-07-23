@@ -1,0 +1,87 @@
+{
+  "name": "Reinforced Tissues",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "Zb3U7PD6JCE24Izf",
+      "type": "base",
+      "name": "Reinforced Tissues",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.ac.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!W1KUbPGu1U0HNFIj.Zb3U7PD6JCE24Izf"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.W1KUbPGu1U0HNFIj"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your flesh is abnormally dense. You treat your Constitution as 18 for attribute modifier purposes when rolling hit points and you gain a +2 bonus to your Armor Class that stacks with any armor or other AC benefit you may have. As a consequence of your density, you cannot swim and roll all fall damage twice, taking the worst result.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "W1KUbPGu1U0HNFIj",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W1KUbPGu1U0HNFIj"
+}

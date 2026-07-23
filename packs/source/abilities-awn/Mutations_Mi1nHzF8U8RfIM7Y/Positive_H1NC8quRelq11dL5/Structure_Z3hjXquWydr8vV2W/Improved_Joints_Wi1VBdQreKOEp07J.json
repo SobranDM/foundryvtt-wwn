@@ -1,0 +1,93 @@
+{
+  "name": "Improved Joints",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "cB7vEuULKfW38FDx",
+      "type": "base",
+      "name": "Improved Joints",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.movement.bonus",
+            "type": "add",
+            "value": 5,
+            "phase": "initial"
+          },
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!Wi1VBdQreKOEp07J.cB7vEuULKfW38FDx"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.Wi1VBdQreKOEp07J"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You add 5 meters to your base Move rate and you gain a +1 bonus to your Dexterity modifier, to a maximum of +2.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Wi1VBdQreKOEp07J",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Wi1VBdQreKOEp07J"
+}

@@ -109,7 +109,7 @@ export default class WwnActorBase extends foundry.abstract.TypeDataModel {
 
     // Trackers
     this.strain.max = 0;
-    this.trauma = { base: 6, targetMod: 0, value: 6 };
+    this.trauma = { base: 6, targetMod: 0, dieMod: 0, value: 6 };
 
     // Saves container (per-save mods seeded by initial-phase AEs)
     this.saves = { base: { mod: 0 } };

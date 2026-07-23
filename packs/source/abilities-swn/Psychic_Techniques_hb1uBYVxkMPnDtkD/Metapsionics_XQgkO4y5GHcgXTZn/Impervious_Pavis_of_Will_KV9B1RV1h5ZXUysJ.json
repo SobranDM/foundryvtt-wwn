@@ -1,0 +1,71 @@
+{
+  "name": "Impervious Pavis of Will",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.KV9B1RV1h5ZXUysJ"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>When this technique is learned, the metapsion must choose a discipline. They then become entirely immune to unwanted powers from that discipline; they and their abilities are simply not valid targets for purposes of that discipline's powers unless the adept chooses to be affected. By Committing Effort for the day as an Instant action, they can extend this immunity for a scene to all allies within 50 meters. This technique may be learned more than once, and any shared protection applies to all disciplines negated by the adept.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": "Passive immunity to chosen discipline"
+      },
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Extend immunity to allies within 50m for the scene"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "50m",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "KV9B1RV1h5ZXUysJ",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KV9B1RV1h5ZXUysJ"
+}

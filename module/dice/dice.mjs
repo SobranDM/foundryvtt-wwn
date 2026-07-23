@@ -397,12 +397,16 @@ export class WwnDice {
     const useTrauma = game.settings.get("wwn", "useTrauma");
     let trauma = null;
     if (useTrauma && weapon.system.trauma?.die && hit && target?.actor) {
-      const traumaRoll = await new WwnRoll(weapon.system.trauma.die, rollData, { kind: "formula" }).evaluate();
+      const dieMod = Number(actor.system.trauma?.dieMod) || 0;
+      const traumaFormula = dieMod
+        ? `${weapon.system.trauma.die}+${dieMod}`
+        : weapon.system.trauma.die;
+      const traumaRoll = await new WwnRoll(traumaFormula, rollData, { kind: "formula" }).evaluate();
       rolls.push(traumaRoll);
       const traumaTarget = target.actor.system.trauma?.value ?? 6;
       const traumatic = traumaRoll.total >= traumaTarget;
       trauma = {
-        die: weapon.system.trauma.die,
+        die: traumaFormula,
         result: traumaRoll.total,
         target: traumaTarget,
         rating: weapon.system.traumaRatingValue ?? weapon.system.trauma?.rating ?? 2,

@@ -1,0 +1,30 @@
+{
+  "name": "Trade",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/trade.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "trade"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198767,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "71mKVhEETNAPcCoG",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!71mKVhEETNAPcCoG"
+}

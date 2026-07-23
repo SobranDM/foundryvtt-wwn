@@ -1,0 +1,186 @@
+{
+  "_id": "SXfMYMCb0LZnWTLi",
+  "name": "Positive Mutations — Pseudo-Psychic",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "GBnje9QHEILa55se",
+      "type": "document",
+      "name": "Force Field",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.mH5lSnjdMT1V9H9L",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.GBnje9QHEILa55se"
+    },
+    {
+      "_id": "x4xfvvetUpkgQv21",
+      "type": "document",
+      "name": "Induce Confusion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.UYhObTapFCE3JE4h",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.x4xfvvetUpkgQv21"
+    },
+    {
+      "_id": "kD0KGvgo32kSlFhQ",
+      "type": "document",
+      "name": "Limited Precognition",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.nAYv4RF5QWOOEtQP",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.kD0KGvgo32kSlFhQ"
+    },
+    {
+      "_id": "7B27W9KilbU5Qhyf",
+      "type": "document",
+      "name": "Mental Domination",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.ivKeM5mbJuyuuThs",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.7B27W9KilbU5Qhyf"
+    },
+    {
+      "_id": "xBlosZHGNvTcuE9K",
+      "type": "document",
+      "name": "Mind Reader",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RCRdY37JBht9aqhg",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.xBlosZHGNvTcuE9K"
+    },
+    {
+      "_id": "HkhVxkn0P9ZiERrT",
+      "type": "document",
+      "name": "Neural Lockdown",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.5iuSPJ8Y8qTnbd6N",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.HkhVxkn0P9ZiERrT"
+    },
+    {
+      "_id": "nGNNuqtkxR217WVc",
+      "type": "document",
+      "name": "Panic Wave",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xOuNB2Ghf3sstocH",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.nGNNuqtkxR217WVc"
+    },
+    {
+      "_id": "b8xwwzJtVdeERqBt",
+      "type": "document",
+      "name": "Spatial Displacement",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.AuDMwgLv3tIm1rez",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.b8xwwzJtVdeERqBt"
+    },
+    {
+      "_id": "xu1ytSAiiHfack97",
+      "type": "document",
+      "name": "Telekinetic Reach",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.mTjyFX2hPqJYyF3u",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.xu1ytSAiiHfack97"
+    },
+    {
+      "_id": "KyBz7WhZ22JtoCTD",
+      "type": "document",
+      "name": "Thermokinesis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xKd0G03xSgVdOFdq",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!SXfMYMCb0LZnWTLi.KyBz7WhZ22JtoCTD"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!SXfMYMCb0LZnWTLi"
+}

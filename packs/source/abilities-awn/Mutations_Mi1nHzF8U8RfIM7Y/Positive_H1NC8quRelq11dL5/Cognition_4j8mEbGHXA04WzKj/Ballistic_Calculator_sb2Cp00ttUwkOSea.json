@@ -1,0 +1,68 @@
+{
+  "name": "Ballistic Calculator",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.sb2Cp00ttUwkOSea"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have an intuitive grasp of distances, vectors, and other ballistic calculations. Gain Shoot as a bonus skill and ignore any penalty for shooting at long range. Once per scene, accept one System Strain as an Instant action to reroll a missed ranged attack.</p>",
+    "source": "Cognition",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "sb2Cp00ttUwkOSea",
+  "folder": "4j8mEbGHXA04WzKj",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sb2Cp00ttUwkOSea"
+}

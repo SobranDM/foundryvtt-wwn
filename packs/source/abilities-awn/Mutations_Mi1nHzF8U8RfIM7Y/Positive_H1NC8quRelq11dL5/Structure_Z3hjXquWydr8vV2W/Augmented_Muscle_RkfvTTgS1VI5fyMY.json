@@ -1,0 +1,87 @@
+{
+  "name": "Augmented Muscle",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "7irZmFLtNaJSbkae",
+      "type": "base",
+      "name": "Augmented Muscle",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!RkfvTTgS1VI5fyMY.7irZmFLtNaJSbkae"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.RkfvTTgS1VI5fyMY"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your Strength ability score is treated as four points greater for Encumbrance purposes and you gain a +1 bonus to your Strength modifier, to a maximum of +2.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "RkfvTTgS1VI5fyMY",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RkfvTTgS1VI5fyMY"
+}

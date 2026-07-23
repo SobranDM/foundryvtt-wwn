@@ -1,0 +1,87 @@
+{
+  "name": "Feeble Joints",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "D60mlmoh0pwI56Oe",
+      "type": "base",
+      "name": "Feeble Joints",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!nurVFfYRKVnTqgoL.D60mlmoh0pwI56Oe"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.nurVFfYRKVnTqgoL"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your musculature is poorly anchored. Your Strength modifier suffers a -1 penalty and you are entirely incapable of jumping.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "nurVFfYRKVnTqgoL",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 29000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nurVFfYRKVnTqgoL"
+}

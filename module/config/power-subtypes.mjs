@@ -110,7 +110,7 @@ export const POWER_SUBTYPES = {
     label: "WWN.PowerSubType.psychic",
     defaults: {
       source: "",
-      resourceName: "Effort",
+      resourceName: "Psychic Effort",
       commitmentOptions: [{ cost: 1, length: "scene", note: "" }],
       internalResource: { value: 0, max: 0 },
       internalResourceLength: "scene",
@@ -164,14 +164,23 @@ export const POWER_SUBTYPES = {
       internalResourceLength: "scene",
       userStrain: "",
       targetStrain: "",
+      bonusSkills: [],
+      bonusSkillsPick: 0,
+      bonusSkillsChosen: [],
+      bonusSkillsMode: "",
     },
     visibleFields: {
       commitmentOptions: true,
+      internalResource: true,
+      internalResourceLength: "dyn",
       userStrain: true,
       targetStrain: true,
       activation: true,
       damageRoll: true,
       healing: true,
+      bonusSkills: true,
+      bonusSkillsPick: true,
+      bonusSkillsMode: true,
     },
   },
   gift: {
@@ -252,6 +261,7 @@ const ALL_FIELD_KEYS = [
   "commitmentOptions", "internalResource", "internalResourceLength",
   "prepared", "permanentStrain", "userStrain", "targetStrain", "installed", "alienationCost",
   "activation", "activationRollType", "damageRoll", "healing",
+  "bonusSkills", "bonusSkillsPick", "bonusSkillsMode",
 ];
 
 const PANEL_FIELDS = {
@@ -263,6 +273,7 @@ const PANEL_FIELDS = {
     "activation", "activationRollType", "damageRoll", "healing",
     "internalResource", "internalResourceLength",
   ],
+  bonusSkills: ["bonusSkills", "bonusSkillsPick", "bonusSkillsMode"],
 };
 
 /**

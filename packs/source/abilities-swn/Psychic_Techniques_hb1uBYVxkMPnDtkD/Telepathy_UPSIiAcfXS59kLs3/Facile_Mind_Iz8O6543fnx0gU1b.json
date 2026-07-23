@@ -1,0 +1,76 @@
+{
+  "name": "Facile Mind",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.Iz8O6543fnx0gU1b"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The telepath is practiced at opening a Telepathic Contact, and need only Commit Effort for the scene to do so, instead of Committing Effort for the day. If contacting an ally who has practiced the process with the psychic for at least a week, opening the contact normally requires no Effort at all. In both cases, if the telepath chooses to Commit Effort for the day, they can open a Telepathic Contact as an Instant action rather than a Main Action.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": "Open Telepathic Contact"
+      },
+      {
+        "cost": 0,
+        "length": "none",
+        "note": "Practiced ally (1+ week of training)"
+      },
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Open contact as Instant action"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Iz8O6543fnx0gU1b",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Iz8O6543fnx0gU1b"
+}

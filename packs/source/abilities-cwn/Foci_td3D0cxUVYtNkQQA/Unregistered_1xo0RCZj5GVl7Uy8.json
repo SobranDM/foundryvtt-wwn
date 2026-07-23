@@ -1,0 +1,33 @@
+{
+  "name": "Unregistered",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Whether by unrecorded birth, database corruption, or sheer luck, you simply do not exist in any government or corporate database. If taken with the <em><strong>Many Faces</strong></em> focus, your own identity is lost, but you can create others for your own uses. If this focus is taken after character creation, it means your existing records have become hopelessly corrupted and lost.</p><p><strong>Level 1:</strong> You have no government or corporate database records associated with you, and it is almost impossible to add any such records without them ending up corrupted or deleted within a week. Human beings can remember you, but they can&rsquo;t rely on computerized records to keep track of you or your activities. You can keep money on credit chips or in cash, but banking or formal property ownership is almost impossible for you.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "1xo0RCZj5GVl7Uy8",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1xo0RCZj5GVl7Uy8"
+}

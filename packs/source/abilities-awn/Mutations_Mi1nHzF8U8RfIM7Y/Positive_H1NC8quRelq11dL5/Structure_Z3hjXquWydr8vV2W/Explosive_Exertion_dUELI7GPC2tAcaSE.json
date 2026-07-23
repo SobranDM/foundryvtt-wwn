@@ -1,0 +1,66 @@
+{
+  "name": "Explosive Exertion",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.dUELI7GPC2tAcaSE"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As an On Turn action, gain a tremendous boost of strength. Your next roll this round treats your Strength modifier as +2, or +3 if it&rsquo;s already +2. For the rest of this round, you can lift, break, or carry anything an ogre-sized humanoid could, smashing through ordinary doors and non-reinforced walls. After the first use of this mutation in a scene, additional uses add 1 System Strain.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "0,1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "1 round"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "dUELI7GPC2tAcaSE",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dUELI7GPC2tAcaSE"
+}

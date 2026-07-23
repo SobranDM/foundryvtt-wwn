@@ -1,0 +1,66 @@
+{
+  "name": "Holistic Optimization Patterning",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.poPgI1ItlSvp4Xvr"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The biopsion gains the ability to drastically augment their own or a touched ally's physical abilities as an On Turn action. This boost lasts for the rest of the scene, adds two points of System Strain to the target and gives them a +2 bonus to all Strength or Dexterity skill checks, hit rolls, and damage rolls along with 20 extra hit points. Any damage is taken off these temporary hit points first, and both the bonuses and any hit points in excess of the target's maximum are lost at the end of the scene. Each invocation of this technique requires the biopsion to Commit Effort for the day, and this power cannot be used on a given target more than once per scene.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "2",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "poPgI1ItlSvp4Xvr",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!poPgI1ItlSvp4Xvr"
+}

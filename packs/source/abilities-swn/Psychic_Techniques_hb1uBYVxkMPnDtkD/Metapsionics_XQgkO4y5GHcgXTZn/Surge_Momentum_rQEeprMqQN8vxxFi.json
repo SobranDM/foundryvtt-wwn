@@ -1,0 +1,66 @@
+{
+  "name": "Surge Momentum",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.rQEeprMqQN8vxxFi"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The metapsion's abilities can be reinforced with a degree of metadimensional energy that would cause substantial damage to a less adept mind. Particularly weak or unprepared minds might be completely crushed by the force of the adept's augmented will. The adept must Commit Effort for the day when using a power that normally grants its target a saving throw. The target then suffers a penalty equal to the adept's Metapsionics skill on any saving throw normally granted by the power. If the target's hit die total or character level is less than half the adept's level, rounded up, they automatically fail their saving throw.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "When using a power that grants a saving throw"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "rQEeprMqQN8vxxFi",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rQEeprMqQN8vxxFi"
+}

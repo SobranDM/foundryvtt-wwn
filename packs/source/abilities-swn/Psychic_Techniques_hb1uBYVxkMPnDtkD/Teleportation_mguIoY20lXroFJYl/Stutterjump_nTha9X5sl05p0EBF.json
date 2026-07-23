@@ -1,0 +1,71 @@
+{
+  "name": "Stutterjump",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.nTha9X5sl05p0EBF"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The psychic can instinctively micro-teleport away from incoming danger. As an On Turn action they may Commit Effort to begin shifting their spatial position away from attacks, gaining a base Armor Class of 20 so long as the Effort remains Committed. This Armor Class is not modified by armor, shields, or Dexterity modifiers, and the micro-jumps do not significantly move the psychic from their current location. While Stutterjump is active, as an Instant action the adept may Commit Effort for the day to negate a successful hit by a weapon attack, even after damage has been rolled. This reflexive defensive jump may be used only once per day and leaves the psychic just outside the radius of explosions or other area-effect attacks.</p>",
+    "source": "Teleportation",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": "Base AC 20 while active"
+      },
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Negate one successful weapon hit (once per day)"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "nTha9X5sl05p0EBF",
+  "folder": "mguIoY20lXroFJYl",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nTha9X5sl05p0EBF"
+}

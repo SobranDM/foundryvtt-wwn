@@ -1,0 +1,30 @@
+{
+  "name": "Know",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/know.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Know facts about academic or scientific fields. Roll it to understand academic topics, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "know"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198761,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "d8TdQKEsQczk6idq",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!d8TdQKEsQczk6idq"
+}

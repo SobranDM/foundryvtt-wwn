@@ -1,0 +1,66 @@
+{
+  "name": "Psychic Tutelage",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.KpQUNOTf6vPPDVbd"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>An expert metapsion can modulate and temper the metadimensional energy that surges through an untrained psychic's mind. This \"safety buffer\" allows the novice to experiment with their abilities and gradually develop the control they need to channel their powers without causing permanent brain damage. Without this technique, it is virtually impossible to turn a normal with untapped potential into a trained psychic. An adept with Metapsionics-3 skill can train up to ten pupils at once. One with Metapsionics-4 can train up to one hundred. It requires only a week to train a potential in ways to avoid accidentally triggering their powers and suffering the damage that follows, but actually teaching them to use their powers effectively takes anywhere from one to four years depending on their natural aptitude and the availability of other psychics willing to assist the metapsion in the training process.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "KpQUNOTf6vPPDVbd",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KpQUNOTf6vPPDVbd"
+}

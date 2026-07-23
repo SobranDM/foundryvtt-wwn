@@ -101,7 +101,26 @@ export function remapCombatAbEffect(effectData) {
   return touched ? out : effectData;
 }
 
-const TIME_TO_COMMITMENT = { commit: "active", scene: "scene", day: "day" };
+/**
+ * Map legacy art free-text `system.time` to a power commitment option.
+ * Blank / "-" / missing → no pool spend; Active/commit → while active.
+ * @param {unknown} time
+ * @returns {{ cost: number, length: string, note: string }}
+ */
+export function legacyArtTimeToCommitment(time) {
+  const normalized = String(time ?? "").trim().toLowerCase();
+  if (!normalized || normalized === "-") {
+    return { cost: 0, length: "none", note: "" };
+  }
+  if (normalized === "active" || normalized === "commit") {
+    return { cost: 1, length: "active", note: "" };
+  }
+  if (normalized === "day") {
+    return { cost: 1, length: "day", note: "" };
+  }
+  // "scene" and any unrecognized value
+  return { cost: 1, length: "scene", note: "" };
+}
 
 /** WWN silver-standard currency definitions used by currency conversion. */
 export const WWN_CURRENCIES = [
@@ -184,7 +203,6 @@ export function migrateEffectData(effectData) {
 
 export function migrateArtToPower(item) {
   const s = item.system ?? {};
-  const time = String(s.time ?? "scene").toLowerCase();
   return {
     _id: item._id,
     name: item.name,
@@ -198,7 +216,7 @@ export function migrateArtToPower(item) {
       description: s.description ?? "",
       source: s.source ?? "",
       resourceName: "Effort",
-      commitmentOptions: [{ cost: 1, length: TIME_TO_COMMITMENT[time] ?? "scene", note: "" }],
+      commitmentOptions: [legacyArtTimeToCommitment(s.time)],
       poolCommitted: { none: 0, active: 0, scene: 0, day: 0 },
       internalResource: { value: Number(s.effort) || 0, max: 0 },
       internalResourceLength: "scene",

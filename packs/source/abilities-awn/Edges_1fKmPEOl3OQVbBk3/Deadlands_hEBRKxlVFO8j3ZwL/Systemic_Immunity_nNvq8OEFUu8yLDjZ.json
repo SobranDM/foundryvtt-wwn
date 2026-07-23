@@ -1,0 +1,71 @@
+{
+  "name": "Systemic Immunity",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [
+    {
+      "_id": "0eVhDuhiRlWSlGLa",
+      "type": "base",
+      "name": "Systemic Immunity",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "statuses": [],
+      "flags": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.mod",
+            "type": "add",
+            "value": "1",
+            "phase": "final"
+          }
+        ]
+      },
+      "_key": "!items.effects!nNvq8OEFUu8yLDjZ.0eVhDuhiRlWSlGLa"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You gain both levels of the Natural Immunity Focus and are immune to zombie infection or the other major pathogenic threat of the campaign. Your Constitution modifier increases by +1, to a maximum of +2.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "nNvq8OEFUu8yLDjZ",
+  "folder": "hEBRKxlVFO8j3ZwL",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nNvq8OEFUu8yLDjZ"
+}

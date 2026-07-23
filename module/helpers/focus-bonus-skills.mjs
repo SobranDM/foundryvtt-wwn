@@ -14,6 +14,14 @@ const ALWAYS_BONUS_SKILLS = {
 };
 
 /**
+ * Extra bonus skills unlocked when focus ownedLevel reaches a threshold.
+ * @type {Record<string, Record<number, string[]>>}
+ */
+export const LEVEL_BONUS_SKILLS = {
+  "Ace Driver": { 2: ["fix"] },
+};
+
+/**
  * Open-choice modes when `bonusSkills` is empty (or for dual-grant open half).
  * - any: all primary skills
  * - specialist: exclude Magic/Stab/Shoot/Punch (and psychic secondaries via primary-only list)
@@ -24,6 +32,7 @@ const OPEN_BONUS_MODES = {
   Polymath: "any",
   Specialist: "specialist",
   "Spark of Brilliance": "any",
+  "All Natural": "any",
   "Psychic Training": "psychic",
   "Origin Focus: Chattel Blighted": "nonCombatNonMagic",
   "Origin Focus: Functionary Blighted": "nonCombatNonMagic",
@@ -59,7 +68,28 @@ function declaredBonusSkills(focus) {
  * @returns {string[]}
  */
 export function alwaysBonusSkills(focus) {
-  return (ALWAYS_BONUS_SKILLS[focus.name] ?? []).map((s) => String(s).trim().toLowerCase());
+  const base = (ALWAYS_BONUS_SKILLS[focus.name] ?? []).map((s) => String(s).trim().toLowerCase());
+  return [...base, ...levelBonusSkills(focus)];
+}
+
+/**
+ * Skills granted once focus ownedLevel reaches a threshold (e.g. Ace Driver L2 Fix).
+ * @param {Item} focus
+ * @returns {string[]}
+ */
+export function levelBonusSkills(focus) {
+  const table = LEVEL_BONUS_SKILLS[focus.name];
+  if (!table) return [];
+  const owned = Math.max(Number(focus.system?.ownedLevel) || 1, 1);
+  const out = [];
+  for (const [levelKey, slugs] of Object.entries(table)) {
+    if (owned < Number(levelKey)) continue;
+    for (const s of slugs ?? []) {
+      const slug = String(s).trim().toLowerCase();
+      if (slug) out.push(slug);
+    }
+  }
+  return out;
 }
 
 /**

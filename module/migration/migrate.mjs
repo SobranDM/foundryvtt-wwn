@@ -274,9 +274,11 @@ async function finalizeActorMigrationHooks(actor) {
   }
   if (!isPc(actor)) return;
   const { syncActorFocusBonusSkills } = await import("../helpers/focus-bonus-skills.mjs");
+  const { syncActorPowerBonusSkills } = await import("../helpers/power-bonus-skills.mjs");
   const { syncActorFocusEffects } = await import("../helpers/focus-effects.mjs");
   await syncActorFocusEffects(actor);
   await syncActorFocusBonusSkills(actor);
+  await syncActorPowerBonusSkills(actor);
 }
 
 /**

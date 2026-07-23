@@ -1,0 +1,49 @@
+{
+  "name": "Wired",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You may begin play with up to $200,000 worth of new or secondhand cyber. If secondhand, you roll once per system for its defect. You don&rsquo;t need to pay for installation and its maintenance is covered for the next two months. You can redeem this Edge later by paying double the cost of the cyber you selected and trade it for a different Edge with the GM&rsquo;s approval.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "WCSrnvLQ8iPDRHOv",
+  "folder": "0VLGxpx8i1ppZkDk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WCSrnvLQ8iPDRHOv"
+}

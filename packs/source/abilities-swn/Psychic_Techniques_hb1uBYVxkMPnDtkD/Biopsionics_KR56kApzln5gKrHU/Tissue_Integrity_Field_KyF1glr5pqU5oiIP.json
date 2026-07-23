@@ -1,0 +1,66 @@
+{
+  "name": "Tissue Integrity Field",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.KyF1glr5pqU5oiIP"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The biopsion's Psychic Succor may now also affect all allies within ten meters of the target. Allies can decline the healing if they don't require it or don't want to take the additional System Strain. Each use of this technique requires that the biopsion Commit Effort for the day in addition to the cost of the Psychic Succor.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "In addition to Psychic Succor cost"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "KyF1glr5pqU5oiIP",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KyF1glr5pqU5oiIP"
+}

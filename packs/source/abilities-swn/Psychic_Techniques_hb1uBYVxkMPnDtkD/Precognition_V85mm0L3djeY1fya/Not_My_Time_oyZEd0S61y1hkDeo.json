@@ -1,0 +1,66 @@
+{
+  "name": "Not My Time",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.oyZEd0S61y1hkDeo"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The precog instinctively wrenches the lines of probability away from futures in which they are about to die. This technique triggers automatically when the precog is about to die, provided they can Commit Effort for the day. On triggering, random events somehow conspire to leave the precog alive, even if outrageous coincidences and ridiculous luck are required. Provided the precog doesn't intentionally thrust herself back into danger, their life is secured for the next few minutes at least, though there's no guarantee the psychic will survive intact in mind or body. This technique can trigger no more often than once per week.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Automatic trigger when about to die"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "oyZEd0S61y1hkDeo",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oyZEd0S61y1hkDeo"
+}

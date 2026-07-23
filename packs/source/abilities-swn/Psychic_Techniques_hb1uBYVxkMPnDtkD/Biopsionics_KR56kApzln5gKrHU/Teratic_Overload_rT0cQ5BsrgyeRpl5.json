@@ -1,0 +1,71 @@
+{
+  "name": "Teratic Overload",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.rT0cQ5BsrgyeRpl5"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>This use of biopsionics inflicts potentially-lethal damage on a touched target as a Main Action, and requires that the biopsion Commit Effort for the scene. The target suffers 1d6 damage per level of the psychic's Biopsionics skill and must make a Physical saving throw. On a failure, the damage is tripled and the target is now affected by an obvious, lethal cancer that will kill them in 1d6 months. The cancer can be treated by a TL4 hospital or ship's sick bay if managed within a month's time. If the biopsion Commits Effort for the day instead of the scene, they can control the power sufficiently to do no hit point damage and create very subtle tumors, leaving the cancer undetectable without a TL4 medical examination. Such victims probably won't even know they've been attacked by this power. Whether a success or failure, this power cannot be used on the same target more than once per scene.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": "Normal lethal use"
+      },
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Subtle tumors, no hit point damage"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Physical",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "1d6 per Biopsionics skill level",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "rT0cQ5BsrgyeRpl5",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rT0cQ5BsrgyeRpl5"
+}

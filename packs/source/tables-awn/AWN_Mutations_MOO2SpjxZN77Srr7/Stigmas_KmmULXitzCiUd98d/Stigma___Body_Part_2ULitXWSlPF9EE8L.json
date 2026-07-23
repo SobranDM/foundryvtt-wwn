@@ -1,0 +1,122 @@
+{
+  "_id": "2ULitXWSlPF9EE8L",
+  "name": "Stigma — Body Part",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "SeGc2CkYOtJnDdAu",
+      "type": "text",
+      "name": "",
+      "description": "Head",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.SeGc2CkYOtJnDdAu"
+    },
+    {
+      "_id": "yBiVRvhzZbsyfZxR",
+      "type": "text",
+      "name": "",
+      "description": "Arm or Arms",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.yBiVRvhzZbsyfZxR"
+    },
+    {
+      "_id": "7YvmODQCNcpkP2y1",
+      "type": "text",
+      "name": "",
+      "description": "Leg or Legs",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.7YvmODQCNcpkP2y1"
+    },
+    {
+      "_id": "k5GqPGdkZXW4YvXN",
+      "type": "text",
+      "name": "",
+      "description": "Torso",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.k5GqPGdkZXW4YvXN"
+    },
+    {
+      "_id": "LxNAo7lwqJesCQE8",
+      "type": "text",
+      "name": "",
+      "description": "Eyes, Ears, or Hands",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.LxNAo7lwqJesCQE8"
+    },
+    {
+      "_id": "LlhjpZIbxEvBWjGY",
+      "type": "text",
+      "name": "",
+      "description": "Roll again and add that extra part",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!2ULitXWSlPF9EE8L.LlhjpZIbxEvBWjGY"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!2ULitXWSlPF9EE8L"
+}

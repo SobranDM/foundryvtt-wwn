@@ -76,6 +76,42 @@ export default class WwnClassEdge extends WwnItemBase {
       ),
     });
 
+    /* Bonus skills (same grant path as powers; rank-only). */
+    schema.bonusSkills = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
+    schema.bonusSkillsPick = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.bonusSkillsChosen = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
+    /** Empty = listed skills only; `"any"` = open primary-skill pick when list empty and pick > 0. */
+    schema.bonusSkillsMode = new fields.StringField({
+      required: true,
+      choices: ["", "any"],
+      initial: "",
+      blank: true,
+    });
+
+    /**
+     * Optional attribute grant requiring a player pick.
+     * - modPlus1Cap2: +1 to chosen ability mod
+     * - prodigy: chosen non-Con score → 18, mod → +3
+     * - modMinus1: −1 to chosen ability mod
+     */
+    schema.attributeGrant = new fields.SchemaField({
+      mode: new fields.StringField({
+        required: true,
+        choices: ["", "modPlus1Cap2", "prodigy", "modMinus1"],
+        initial: "",
+        blank: true,
+      }),
+      /** Ability keys excluded from the pick (e.g. ["con"] for Prodigy). */
+      exclude: new fields.ArrayField(new fields.StringField(), { required: true, initial: [] }),
+      chosen: new fields.StringField({ required: true, blank: true, initial: "" }),
+    });
+
+    /**
+     * Optional companion item names (powers/foci) granted on add.
+     * When non-empty, overrides CLASS_EDGE_COMPANIONS[name].
+     */
+    schema.companions = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
+
     return schema;
   }
 
@@ -95,6 +131,19 @@ export default class WwnClassEdge extends WwnItemBase {
     if (!Array.isArray(source.preparedGrant.progression)) source.preparedGrant.progression = [];
     source.poolGrant ??= {};
     if (!Array.isArray(source.poolGrant.progression)) source.poolGrant.progression = [];
+    if (!Array.isArray(source.bonusSkills)) source.bonusSkills = [];
+    if (source.bonusSkillsPick === undefined || source.bonusSkillsPick === null) source.bonusSkillsPick = 0;
+    if (!Array.isArray(source.bonusSkillsChosen)) source.bonusSkillsChosen = [];
+    if (source.bonusSkillsMode === undefined || source.bonusSkillsMode === null) source.bonusSkillsMode = "";
+    source.attributeGrant ??= {};
+    if (source.attributeGrant.mode === undefined || source.attributeGrant.mode === null) {
+      source.attributeGrant.mode = "";
+    }
+    if (!Array.isArray(source.attributeGrant.exclude)) source.attributeGrant.exclude = [];
+    if (source.attributeGrant.chosen === undefined || source.attributeGrant.chosen === null) {
+      source.attributeGrant.chosen = "";
+    }
+    if (!Array.isArray(source.companions)) source.companions = [];
     return source;
   }
 }

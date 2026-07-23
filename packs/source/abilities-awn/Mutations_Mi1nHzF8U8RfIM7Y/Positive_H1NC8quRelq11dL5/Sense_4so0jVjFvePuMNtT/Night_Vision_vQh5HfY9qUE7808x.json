@@ -1,0 +1,93 @@
+{
+  "name": "Night Vision",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "axN691HU0ADWl19j",
+      "type": "base",
+      "name": "Night Vision",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "token.sight.enabled",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          },
+          {
+            "key": "token.sight.range",
+            "type": "add",
+            "value": 60,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!vQh5HfY9qUE7808x.axN691HU0ADWl19j"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.vQh5HfY9qUE7808x"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your visual senses function perfectly even in the complete absence of light. Due to your visual sensitivity to the high-energy particles involved, you can also see dangerous zones of radiation.</p>",
+    "source": "Sense",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "vQh5HfY9qUE7808x",
+  "folder": "4so0jVjFvePuMNtT",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vQh5HfY9qUE7808x"
+}

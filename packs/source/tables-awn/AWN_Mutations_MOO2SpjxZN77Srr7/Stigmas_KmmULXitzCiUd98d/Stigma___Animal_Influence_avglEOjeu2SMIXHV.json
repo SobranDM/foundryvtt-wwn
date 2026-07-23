@@ -1,0 +1,218 @@
+{
+  "_id": "avglEOjeu2SMIXHV",
+  "name": "Stigma — Animal Influence",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "ipqBWYnVUGyrq6xY",
+      "type": "text",
+      "name": "",
+      "description": "Beetle",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.ipqBWYnVUGyrq6xY"
+    },
+    {
+      "_id": "U3s2kLCjCBBk3Rpi",
+      "type": "text",
+      "name": "",
+      "description": "Bird",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.U3s2kLCjCBBk3Rpi"
+    },
+    {
+      "_id": "zZpqQXROLoMffS5U",
+      "type": "text",
+      "name": "",
+      "description": "Bovine",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.zZpqQXROLoMffS5U"
+    },
+    {
+      "_id": "jc067GE3uIfW9szX",
+      "type": "text",
+      "name": "",
+      "description": "Canine",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.jc067GE3uIfW9szX"
+    },
+    {
+      "_id": "JgzCdBWC5SZUSCp4",
+      "type": "text",
+      "name": "",
+      "description": "Equine",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.JgzCdBWC5SZUSCp4"
+    },
+    {
+      "_id": "ZjeT3oxcPdHj2q4q",
+      "type": "text",
+      "name": "",
+      "description": "Feline",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.ZjeT3oxcPdHj2q4q"
+    },
+    {
+      "_id": "B2q5BpPKKfZ013Wq",
+      "type": "text",
+      "name": "",
+      "description": "Fish",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.B2q5BpPKKfZ013Wq"
+    },
+    {
+      "_id": "pE8vAqYivXKijGIQ",
+      "type": "text",
+      "name": "",
+      "description": "Lizard",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.pE8vAqYivXKijGIQ"
+    },
+    {
+      "_id": "Pce14rCse2IIu7OM",
+      "type": "text",
+      "name": "",
+      "description": "Mollusk",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.Pce14rCse2IIu7OM"
+    },
+    {
+      "_id": "V3BJKVXwOqnvTFqX",
+      "type": "text",
+      "name": "",
+      "description": "Snake",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.V3BJKVXwOqnvTFqX"
+    },
+    {
+      "_id": "YPxtCAQy0jBce0Se",
+      "type": "text",
+      "name": "",
+      "description": "Spider",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.YPxtCAQy0jBce0Se"
+    },
+    {
+      "_id": "0nluLUVF5oE361K0",
+      "type": "text",
+      "name": "",
+      "description": "Turtle",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!avglEOjeu2SMIXHV.0nluLUVF5oE361K0"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!avglEOjeu2SMIXHV"
+}

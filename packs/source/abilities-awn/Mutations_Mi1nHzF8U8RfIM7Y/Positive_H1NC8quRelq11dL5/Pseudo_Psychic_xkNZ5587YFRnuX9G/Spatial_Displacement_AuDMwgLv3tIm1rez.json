@@ -1,0 +1,66 @@
+{
+  "name": "Spatial Displacement",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.AuDMwgLv3tIm1rez"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Move action, teleport up to 10 meters to a location you can see. This movement counts as a Fighting Withdrawal for purposes of avoiding melee attacks. After the first use of this mutation in a scene, additional uses add 1 System Strain.</p>",
+    "source": "Pseudo-Psychic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "0,1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "10m",
+      "duration": "Move action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "AuDMwgLv3tIm1rez",
+  "folder": "xkNZ5587YFRnuX9G",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AuDMwgLv3tIm1rez"
+}

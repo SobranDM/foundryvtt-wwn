@@ -1,0 +1,51 @@
+{
+  "name": "Operator's Fortune",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Once per game session as an Instant action, when something bad happens to you such as an injury, a failed save, or a botched skill check, test your luck and roll 1d6. On a 1, the bad event is unaffected. On a 2&ndash;5, you somehow avert the consequences by blind chance. On a 6, it actually lands on an enemy or rival of the GM&rsquo;s choice, if that&rsquo;s possible.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Operator's Fortune"
+    ]
+  },
+  "_id": "oPgcTxL6hvfdwnZR",
+  "folder": "0VLGxpx8i1ppZkDk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oPgcTxL6hvfdwnZR"
+}

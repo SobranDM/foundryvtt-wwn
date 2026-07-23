@@ -1,0 +1,35 @@
+{
+  "name": "Ace Driver",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>If it&rsquo;s got wheels or wings, you can drive it. Your background may lend itself to a particular type of transport, but your natural talent lets you operate any vehicle with an almost instinctive aptitude. These focus benefits do not apply to drone piloting, however.</p><p><strong>Level 1:</strong> Gain Drive as a bonus skill. You have &ldquo;acquired&rdquo; vehicles worth no more than your character level&rsquo;s budget, and can replace lost or destroyed gear at a rate of $10,000 per week. Once per scene, as an Instant action, reroll a failed skill check related to driving or vehicle maintenance and repair.</p><p><strong>Level 2:</strong> Gain Fix as a bonus skill. The Speed of a vehicle you drive is increased by 1 point. Once per vehicle, you can add a mod to it for free, ignoring money and experimental component costs. Only you can effectively operate this mod, but it requires no Maintenance. You can change this free mod with a week of downtime.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "scene",
+    "bonusSkills": [
+      "drive"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "Cs9RvR5ZOmcUhpmF",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Cs9RvR5ZOmcUhpmF"
+}

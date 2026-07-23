@@ -1,0 +1,30 @@
+{
+  "name": "Sneak",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/sneak.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the physical defeating of security measures such as electronic locks.",
+    "ownedLevel": -1,
+    "score": "dex",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "sneak"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198764,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "d71dAR3kCbWwQMRe",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!d71dAR3kCbWwQMRe"
+}

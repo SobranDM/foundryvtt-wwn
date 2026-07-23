@@ -18,8 +18,8 @@
     "resourceName": "Effort",
     "commitmentOptions": [
       {
-        "cost": 1,
-        "length": "scene",
+        "cost": 0,
+        "length": "none",
         "note": ""
       }
     ],

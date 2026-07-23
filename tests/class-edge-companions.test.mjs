@@ -11,11 +11,18 @@ import {
 
 describe("companionsForClassEdge", () => {
   it("lists Full Warrior companions", () => {
-    assert.deepEqual(companionsForClassEdge("Full Warrior"), ["Veteran's Luck"]);
+    assert.deepEqual(companionsForClassEdge("Full Warrior"), [{ name: "Veteran's Luck" }]);
   });
 
   it("returns empty for unknown", () => {
     assert.deepEqual(companionsForClassEdge("Partial Warrior"), []);
+  });
+
+  it("honors system.companions override", () => {
+    assert.deepEqual(
+      companionsForClassEdge("Full Expert", ["Expert Skill Reroll"]),
+      [{ name: "Expert Skill Reroll" }],
+    );
   });
 });
 
@@ -23,11 +30,11 @@ describe("missingCompanions", () => {
   it("skips names already owned", () => {
     assert.deepEqual(
       missingCompanions("Full Warrior", new Set(["veteran's luck", "alert"])),
-      []
+      [],
     );
     assert.deepEqual(
       missingCompanions("Full Expert", new Set(["alert"])),
-      ["Masterful Expertise"]
+      [{ name: "Masterful Expertise" }],
     );
   });
 });

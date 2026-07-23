@@ -1,0 +1,66 @@
+{
+  "name": "Prophecy",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.ugM79OKu2976I3Pr"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The power of the precog extends to dictating future events that directly involve them. As a Main Action, the precognitive PC may make one prediction involving their personal future or future condition within the next year. Provided they take reasonable measures to enable this prediction, that no direct resistance is mounted by an enemy, and that the prediction doesn't seem highly improbable to the GM, it will come to pass. The adept must Commit Effort when this power is used, and the Effort remains Committed until the prophecy comes to pass or is abandoned. This ability cannot be used more than once per month and only one prophecy may be active at a time.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": "Until prophecy comes to pass or is abandoned"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "ugM79OKu2976I3Pr",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ugM79OKu2976I3Pr"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Safe Haven",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have the contacts and expertise to find safehouses and bolt holes that no one else would think to find. You know how to persuade landlords into helping you for nebulous future advantages.</p><p><strong>Level 1:</strong> Gain Sneak as a bonus skill. If you spend a week in a particular neighborhood, you can find or arrange a secure safe house and the on-call assistance of a local cyberdoc or medic willing to perform emergency care for no more than you can afford to pay. This safe house will always go unnoticed unless you are at Heat 8+ or specifically compromise it; even in that case, it will remain undiscovered for at least 24 hours if you can get to it without being followed. If a safe house is burnt, you can find a new one with another week&rsquo;s work. A PC can&rsquo;t have more safe houses active at once than their character level.</p><p><strong>Level 2:</strong> Your safe houses are actively protected by the local authorities, be they gang members, paid-off cops, or cooperative corp security. Provided you don&rsquo;t make them angry, they&rsquo;ll defend you from most ordinary degrees of pursuit. You can find safe havens geared with the equivalent of tech workshops or level one cyberclinics.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "thNU8fXEApqGonCd",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!thNU8fXEApqGonCd"
+}

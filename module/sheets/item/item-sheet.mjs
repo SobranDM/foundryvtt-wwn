@@ -282,6 +282,15 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
         );
         delete submitData.wwnPreparedProgressionText;
       }
+      if (submitData.system) {
+        const rawSkills = submitData.system.bonusSkills;
+        if (typeof rawSkills === "string") {
+          submitData.system.bonusSkills = rawSkills
+            .split(",")
+            .map((s) => s.trim().toLowerCase().replace(/\s+/g, ""))
+            .filter(Boolean);
+        }
+      }
     }
 
     if (this.item.type === "focus" && submitData.system) {
@@ -294,6 +303,16 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
       if (submitData.system.bonusDice === "" || submitData.system.bonusDice === undefined) {
         submitData.system.bonusDice = null;
+      }
+    }
+
+    if (this.item.type === "power" && submitData.system) {
+      const rawSkills = submitData.system.bonusSkills;
+      if (typeof rawSkills === "string") {
+        submitData.system.bonusSkills = rawSkills
+          .split(",")
+          .map((s) => s.trim().toLowerCase().replace(/\s+/g, ""))
+          .filter(Boolean);
       }
     }
 

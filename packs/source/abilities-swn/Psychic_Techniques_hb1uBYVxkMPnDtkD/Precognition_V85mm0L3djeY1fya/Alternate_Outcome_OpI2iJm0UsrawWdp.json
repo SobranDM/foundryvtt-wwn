@@ -1,0 +1,66 @@
+{
+  "name": "Alternate Outcome",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.OpI2iJm0UsrawWdp"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The precog can sense impending failure and attempt to salvage the action. As an Instant action, the precog can target a visible ally or their own self and Commit Effort for the day to allow the target to reroll a failed hit roll, saving throw, or skill check, taking the better of the two rolls. This power disrupts delicate lines of probability, however, and cannot be used on any given target more than once a day.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "OpI2iJm0UsrawWdp",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OpI2iJm0UsrawWdp"
+}

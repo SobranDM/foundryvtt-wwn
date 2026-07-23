@@ -1,0 +1,218 @@
+{
+  "_id": "WbrM5wG8xogm0viw",
+  "name": "Stigma — Plant Influence",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "3f8x0BQmRtSwVT1M",
+      "type": "text",
+      "name": "",
+      "description": "Bark",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.3f8x0BQmRtSwVT1M"
+    },
+    {
+      "_id": "pHJiL3Pc9zvJvvey",
+      "type": "text",
+      "name": "",
+      "description": "Flowers",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.pHJiL3Pc9zvJvvey"
+    },
+    {
+      "_id": "wrNXIMNFtHkMecmu",
+      "type": "text",
+      "name": "",
+      "description": "Fragrance",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.wrNXIMNFtHkMecmu"
+    },
+    {
+      "_id": "Ilq9rdPqZNSQ2Pr1",
+      "type": "text",
+      "name": "",
+      "description": "Fronds and tendrils",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.Ilq9rdPqZNSQ2Pr1"
+    },
+    {
+      "_id": "KMd1TTfHAkBbuvSg",
+      "type": "text",
+      "name": "",
+      "description": "Fungal masses",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.KMd1TTfHAkBbuvSg"
+    },
+    {
+      "_id": "Mn0vuYMoyqIFkEqS",
+      "type": "text",
+      "name": "",
+      "description": "Gnarled tissues",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.Mn0vuYMoyqIFkEqS"
+    },
+    {
+      "_id": "WnE8gc0GOaTRuRe4",
+      "type": "text",
+      "name": "",
+      "description": "Insect infestation",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.WnE8gc0GOaTRuRe4"
+    },
+    {
+      "_id": "6W6MpSZDRS3Nw6ox",
+      "type": "text",
+      "name": "",
+      "description": "Leaf growth",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.6W6MpSZDRS3Nw6ox"
+    },
+    {
+      "_id": "CTQrrh07nu4UZF2H",
+      "type": "text",
+      "name": "",
+      "description": "Mosses or lichens",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.CTQrrh07nu4UZF2H"
+    },
+    {
+      "_id": "oUgKVV7HuuM8wMud",
+      "type": "text",
+      "name": "",
+      "description": "Pollen growth",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.oUgKVV7HuuM8wMud"
+    },
+    {
+      "_id": "Kkd1HiWx6rf8MuMQ",
+      "type": "text",
+      "name": "",
+      "description": "Sap exudation",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.Kkd1HiWx6rf8MuMQ"
+    },
+    {
+      "_id": "24faUxy1ZDwllG4R",
+      "type": "text",
+      "name": "",
+      "description": "Vegetative texture",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!WbrM5wG8xogm0viw.24faUxy1ZDwllG4R"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!WbrM5wG8xogm0viw"
+}

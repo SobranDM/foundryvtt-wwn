@@ -1,0 +1,68 @@
+{
+  "name": "Chameleon Field",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.fu9m6JHaWbn8YR4f"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You can change your body and clothing&rsquo;s color and texture at will. While you cannot become invisible, you gain Sneak as a bonus skill and a +1 bonus on all Sneak skill checks. When motionless, you can make an opposed Sneak versus Notice skill check to avoid notice even when an observer is directly in view of you. When more than 30 meters distant from a normally-sighted viewer, you cannot be detected visually unless you draw attention somehow.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "fu9m6JHaWbn8YR4f",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fu9m6JHaWbn8YR4f"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Punch",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/punch.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Combatant Focus.",
+    "ownedLevel": -1,
+    "score": "str",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "punch"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198763,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "612M7kxNfodKLAxi",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!612M7kxNfodKLAxi"
+}

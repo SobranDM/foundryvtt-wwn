@@ -1,0 +1,30 @@
+{
+  "name": "Cast",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/magic.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "The Cast skill reflects a caster's talent at spellcasting and their intellectual mastery of the complex formulas, rituals, and incantations necessary to use their spells. Anyone can learn it as a strictly intellectual exercise, but only those with the Spellcaster Edge can actually use it to cast spells.",
+    "ownedLevel": -1,
+    "score": "int",
+    "skillDice": "2d6",
+    "secondary": true,
+    "slug": "cast"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198768,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "wdiJYFGnXGWnMAnb",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wdiJYFGnXGWnMAnb"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Stamina Reserves",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.iyniL7q4XsE49fuo"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You do not sleep, and can maintain a modest level of exertion indefinitely. You can recover daily System Strain as normal with four hours of comfortable, well-fed rest, during which you can perform light activity. You have +2 on all skill checks involving continuous exertion.</p>",
+    "source": "Structure",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "iyniL7q4XsE49fuo",
+  "folder": "Z3hjXquWydr8vV2W",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!iyniL7q4XsE49fuo"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Psychic Static",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.Pb4GYqNivYP0dVoU"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As an Instant action, the metapsion may Commit Effort for the day to negate a perceived psychic power. The psychic responsible for the effect must Commit Effort for the day as an Instant action to resist this negation, otherwise the power ends and any action used to trigger it is wasted. The PC may then Commit Effort for the day again, with each spending and counter-spending until one runs out of Effort or chooses to stop. Psychic Static can be applied only once per round to any particular power. The target of the Psychic Static automatically knows the position of the interfering metapsion, though other onlookers do not have any obvious way of identifying the metapsion.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Pb4GYqNivYP0dVoU",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Pb4GYqNivYP0dVoU"
+}

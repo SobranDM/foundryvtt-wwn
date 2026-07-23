@@ -1,0 +1,178 @@
+{
+  "name": "All Natural",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "bMzfnAPYAbKKEp4S",
+      "type": "base",
+      "name": "All Natural (Strength)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.bMzfnAPYAbKKEp4S"
+    },
+    {
+      "_id": "Xs33yu7WesvNiFwc",
+      "type": "base",
+      "name": "All Natural (Dexterity)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.Xs33yu7WesvNiFwc"
+    },
+    {
+      "_id": "kwqsN92ziJGZJAlf",
+      "type": "base",
+      "name": "All Natural (Constitution)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.kwqsN92ziJGZJAlf"
+    },
+    {
+      "_id": "aj9uQ5dhXjIsZkGP",
+      "type": "base",
+      "name": "All Natural (Intelligence)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.aj9uQ5dhXjIsZkGP"
+    },
+    {
+      "_id": "ZyRPJvoHhX5IMpjY",
+      "type": "base",
+      "name": "All Natural (Wisdom)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.ZyRPJvoHhX5IMpjY"
+    },
+    {
+      "_id": "7cimryAm0geWPqub",
+      "type": "base",
+      "name": "All Natural (Charisma)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "skipFocusLevelSync": true
+        }
+      },
+      "_key": "!items.effects!rksoEVnbdzpDIGl3.7cimryAm0geWPqub"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>Your mind and body are superbly gifted, but this very excellence leaves you profoundly incompatible with most cyber. You cannot accept implants except for minor cosmetic ones with an unmodified System Strain cost of zero.</p><p><strong>Level 1:</strong> Gain any skill as a bonus skill. Pick an attribute; its modifier increases by +1, up to a maximum of +3. You can make another such attribute pick at levels 3, 5, 7, and 10, choosing the same attribute or a different one. While you can still suffer Traumatic Hits, you never suffer major injuries.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "rksoEVnbdzpDIGl3",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rksoEVnbdzpDIGl3"
+}

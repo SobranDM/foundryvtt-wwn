@@ -1,0 +1,66 @@
+{
+  "name": "Mental Domination",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.ivKeM5mbJuyuuThs"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As a Main Action, focus on a living creature within 10 meters. The target must make a Mental save; if it succeeds, nothing happens, though they are aware of your attempt to control them. If it fails, roll 1d6 per character level; if the total equals or exceeds their current hit points, they become totally physically subject to your will so long as you can see them and spend a Move action each round maintaining control. Thralls cannot be made to exercise judgment or answer questions, but will perform physical actions to the best of their ability even if they are suicidal. Domination ends at the end of the scene, only one creature can be dominated at a time, and only one attempt may be made to dominate a given creature per scene. This mutation does not work on creatures with more hit dice than the user has levels. After the first time you use this mutation in a scene, additional uses add 1 System Strain.</p>",
+    "source": "Pseudo-Psychic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "0,1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "10m",
+      "duration": "scene"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "ivKeM5mbJuyuuThs",
+  "folder": "xkNZ5587YFRnuX9G",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ivKeM5mbJuyuuThs"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Lead",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/lead.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Convince others to also do whatever it is you're trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it's a bad idea. Roll it to lead troops in combat, convince others to follow you, inspire employee loyalty, or maintain morale and discipline.",
+    "ownedLevel": -1,
+    "score": "cha",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "lead"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198762,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "b2L1as6WOpP9BAXL",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!b2L1as6WOpP9BAXL"
+}

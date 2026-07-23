@@ -1,0 +1,51 @@
+{
+  "name": "Veteran's Luck",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Once per scene, as an Instant action, trigger this ability to gain one of two effects: an attack roll that just hit you is instead treated as a miss, or an attack roll you just made that missed is instead treated as a hit. This ability can be applied to vehicle weapons you use, but it cannot protect against environmental damage, vehicle crashes, falls, or other harm that doesn&rsquo;t involve an attack roll.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Veteran's Luck"
+    ]
+  },
+  "_id": "etv7lsR3a8exip5M",
+  "folder": "1ovKT4ewx1ZysKLG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!etv7lsR3a8exip5M"
+}

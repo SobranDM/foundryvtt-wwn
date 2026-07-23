@@ -1,0 +1,49 @@
+{
+  "name": "Forged By Fire",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>This Edge can only be taken during character creation by a PC meant to start as a perfectly ordinary member of their society. You don&rsquo;t get beginning Edges; instead, when you reach 2nd, 3rd, and 4th level you can pick an Edge. You still gain the bonus Edge at level five, for four Edges in total, and you start play with the same free Focus all PCs receive.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "EhBwDMOoZ8A957W8",
+  "folder": "Js3gEqGAwvnKI5iv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EhBwDMOoZ8A957W8"
+}

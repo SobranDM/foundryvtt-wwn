@@ -1,0 +1,698 @@
+{
+  "_id": "Efutv23GCEIyNNHy",
+  "name": "Negative Mutations",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "Z8wJAxSr4GHtPkMd",
+      "type": "document",
+      "name": "Animalistic Mentality",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.CoanFEdK7GmMl21s",
+      "weight": 2,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.Z8wJAxSr4GHtPkMd"
+    },
+    {
+      "_id": "y4r3woge9ocmBips",
+      "type": "document",
+      "name": "Anosmia",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.VRuPORMGPnFx4ULq",
+      "weight": 2,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.y4r3woge9ocmBips"
+    },
+    {
+      "_id": "pgYvimzYzUuzFGvJ",
+      "type": "document",
+      "name": "Awkward Mouth",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.dHQ03RK35UWZVgxo",
+      "weight": 2,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.pgYvimzYzUuzFGvJ"
+    },
+    {
+      "_id": "pbHCKl8pVRNqs0K7",
+      "type": "document",
+      "name": "Bestial Hunger",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.el1Um12Tr9Ddyouk",
+      "weight": 2,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.pbHCKl8pVRNqs0K7"
+    },
+    {
+      "_id": "P5omDz88Ovqn5vtk",
+      "type": "document",
+      "name": "Bleeder",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.gz6ONUyFpqTOLSN1",
+      "weight": 2,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.P5omDz88Ovqn5vtk"
+    },
+    {
+      "_id": "eHkbD2yaqRWdXlVi",
+      "type": "document",
+      "name": "Blindness",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.qbSA6eO7EBhWKmsU",
+      "weight": 2,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.eHkbD2yaqRWdXlVi"
+    },
+    {
+      "_id": "yip7yCDdvWk3f1xi",
+      "type": "document",
+      "name": "Chronic Seizures",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.pcyNTAsBVXHTmuj4",
+      "weight": 2,
+      "range": [
+        13,
+        14
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.yip7yCDdvWk3f1xi"
+    },
+    {
+      "_id": "n7vt6uLuZ9meMeJ9",
+      "type": "document",
+      "name": "Clumsy Paws",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.JxT9VAUCYKC8VQT3",
+      "weight": 2,
+      "range": [
+        15,
+        16
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.n7vt6uLuZ9meMeJ9"
+    },
+    {
+      "_id": "RqkcpxetqjdUjK08",
+      "type": "document",
+      "name": "Constant Secretions",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.gJ3FS1RBjfIVGB9j",
+      "weight": 2,
+      "range": [
+        17,
+        18
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.RqkcpxetqjdUjK08"
+    },
+    {
+      "_id": "dVc22VoxAr9oq6lj",
+      "type": "document",
+      "name": "Deafness",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.1cBP3nmJGpAs6CLW",
+      "weight": 2,
+      "range": [
+        19,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.dVc22VoxAr9oq6lj"
+    },
+    {
+      "_id": "oQKCTsGdPGdQwDTv",
+      "type": "document",
+      "name": "Deficient Polycephaly",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Hf9YotacOkxqyxLo",
+      "weight": 2,
+      "range": [
+        21,
+        22
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.oQKCTsGdPGdQwDTv"
+    },
+    {
+      "_id": "KEWz5oRSqQmLkNMX",
+      "type": "document",
+      "name": "Distorted Speech",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.iFRsyI411EjidlBi",
+      "weight": 2,
+      "range": [
+        23,
+        24
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.KEWz5oRSqQmLkNMX"
+    },
+    {
+      "_id": "fYke3LGhdDa0ZFWk",
+      "type": "document",
+      "name": "Distracted Mind",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.UGwes34IjXpeac3x",
+      "weight": 2,
+      "range": [
+        25,
+        26
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.fYke3LGhdDa0ZFWk"
+    },
+    {
+      "_id": "wMhaVjVBtihiuC6O",
+      "type": "document",
+      "name": "Energy Sink",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.iBcg0TmgzY6mpfBs",
+      "weight": 2,
+      "range": [
+        27,
+        28
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.wMhaVjVBtihiuC6O"
+    },
+    {
+      "_id": "WMOtgFIDnQHHmKwJ",
+      "type": "document",
+      "name": "Feeble Joints",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.nurVFfYRKVnTqgoL",
+      "weight": 2,
+      "range": [
+        29,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.WMOtgFIDnQHHmKwJ"
+    },
+    {
+      "_id": "S3O50GVerLyz3hLz",
+      "type": "document",
+      "name": "Feral Mind",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.EC7e3hCLnQtK01QM",
+      "weight": 2,
+      "range": [
+        31,
+        32
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.S3O50GVerLyz3hLz"
+    },
+    {
+      "_id": "ZdMd4MC4xn4ZuLOD",
+      "type": "document",
+      "name": "Fragile System",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.onN0VgSFB7k9axMj",
+      "weight": 2,
+      "range": [
+        33,
+        34
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.ZdMd4MC4xn4ZuLOD"
+    },
+    {
+      "_id": "QiiVF8Ks8B8RsGqo",
+      "type": "document",
+      "name": "Glowbug",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.MfiYH3GoWK0Ldi50",
+      "weight": 2,
+      "range": [
+        35,
+        36
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.QiiVF8Ks8B8RsGqo"
+    },
+    {
+      "_id": "8Y3TH9aM37vyLZ6l",
+      "type": "document",
+      "name": "Hemovore",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.N1DAgq9HMNIG4v9a",
+      "weight": 2,
+      "range": [
+        37,
+        38
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.8Y3TH9aM37vyLZ6l"
+    },
+    {
+      "_id": "ibdTkRWwmzbnwLsL",
+      "type": "document",
+      "name": "Insensate Flesh",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.rJJzUQjn2H3Nbgy8",
+      "weight": 2,
+      "range": [
+        39,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.ibdTkRWwmzbnwLsL"
+    },
+    {
+      "_id": "xm7GiH4OTHOtq87U",
+      "type": "document",
+      "name": "Light Sensitivity",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Z8Hppi8v16QNCVGT",
+      "weight": 2,
+      "range": [
+        41,
+        42
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.xm7GiH4OTHOtq87U"
+    },
+    {
+      "_id": "9FQ10kIjYQwXyOLS",
+      "type": "document",
+      "name": "Loose Limbs",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.wM4VXClVUj1on3r9",
+      "weight": 2,
+      "range": [
+        43,
+        44
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.9FQ10kIjYQwXyOLS"
+    },
+    {
+      "_id": "zXl9EqBwmVJ3em2G",
+      "type": "document",
+      "name": "Low Resistances",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.CdApYmyKopgt805g",
+      "weight": 2,
+      "range": [
+        45,
+        46
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.zXl9EqBwmVJ3em2G"
+    },
+    {
+      "_id": "8aOgpvuQ3LKB6w7M",
+      "type": "document",
+      "name": "Memory Damage",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.5Bv4Hu2zafUbra7f",
+      "weight": 2,
+      "range": [
+        47,
+        48
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.8aOgpvuQ3LKB6w7M"
+    },
+    {
+      "_id": "8BvfR8wjQdobq85n",
+      "type": "document",
+      "name": "Miasmic Stench",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.FVnVKUAMyeSxWXjZ",
+      "weight": 2,
+      "range": [
+        49,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.8BvfR8wjQdobq85n"
+    },
+    {
+      "_id": "HOeZAyuwKcWj1GN6",
+      "type": "document",
+      "name": "Misshapen",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.UiuXXhu3rnQ7qgvn",
+      "weight": 2,
+      "range": [
+        51,
+        52
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.HOeZAyuwKcWj1GN6"
+    },
+    {
+      "_id": "RpIBwH5PcpyCIwos",
+      "type": "document",
+      "name": "Musclebound",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.A35WJXhEAYt2jBJR",
+      "weight": 2,
+      "range": [
+        53,
+        54
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.RpIBwH5PcpyCIwos"
+    },
+    {
+      "_id": "ioAiMnsB6JlZV2ow",
+      "type": "document",
+      "name": "Narrow Focus",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.6dlDvgxVVlEmtaRU",
+      "weight": 2,
+      "range": [
+        55,
+        56
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.ioAiMnsB6JlZV2ow"
+    },
+    {
+      "_id": "fM3fUh6mac6oNXk2",
+      "type": "document",
+      "name": "Overtaxed Physique",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.oCFZjPAlYOOcWbed",
+      "weight": 2,
+      "range": [
+        57,
+        58
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.fM3fUh6mac6oNXk2"
+    },
+    {
+      "_id": "UILa4RtlRe5bVJ5i",
+      "type": "document",
+      "name": "Place Blindness",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.cNQTIWc9k2EiXLT1",
+      "weight": 2,
+      "range": [
+        59,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.UILa4RtlRe5bVJ5i"
+    },
+    {
+      "_id": "pYAEzsdmMelsFZOA",
+      "type": "document",
+      "name": "Poor Eyesight",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.web3DxchiY1iOpIo",
+      "weight": 2,
+      "range": [
+        61,
+        62
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.pYAEzsdmMelsFZOA"
+    },
+    {
+      "_id": "0W6OFke9EM3eD802",
+      "type": "document",
+      "name": "Primitive Cognition",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.7CfuP3pFZeZNxf6f",
+      "weight": 2,
+      "range": [
+        63,
+        64
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.0W6OFke9EM3eD802"
+    },
+    {
+      "_id": "8TgzPAj8XNxFCW3X",
+      "type": "document",
+      "name": "Sensitive Skin",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.vbz6GjCY6fr0piRN",
+      "weight": 2,
+      "range": [
+        65,
+        66
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.8TgzPAj8XNxFCW3X"
+    },
+    {
+      "_id": "2DIjxXbntoY8fEnO",
+      "type": "document",
+      "name": "Short Lifespan",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.5MTBHlcpmWWNUOCo",
+      "weight": 2,
+      "range": [
+        67,
+        68
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.2DIjxXbntoY8fEnO"
+    },
+    {
+      "_id": "EUBl7MmHQ531IqbV",
+      "type": "document",
+      "name": "Sleep Dependence",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.zINl4jUChdREUmnz",
+      "weight": 2,
+      "range": [
+        69,
+        70
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.EUBl7MmHQ531IqbV"
+    },
+    {
+      "_id": "ZsRkZID2NWQyKnES",
+      "type": "document",
+      "name": "Slow Development",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.wk5ncN12TncfrCev",
+      "weight": 2,
+      "range": [
+        71,
+        72
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.ZsRkZID2NWQyKnES"
+    },
+    {
+      "_id": "t646LURppCifX6wF",
+      "type": "document",
+      "name": "Spindly",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xY9MUeHmreeBIGYJ",
+      "weight": 2,
+      "range": [
+        73,
+        74
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.t646LURppCifX6wF"
+    },
+    {
+      "_id": "cKRVMYZtrko9L4Ex",
+      "type": "document",
+      "name": "Vexation Field",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.YfNa6xPDQjZi0t4Z",
+      "weight": 2,
+      "range": [
+        75,
+        76
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.cKRVMYZtrko9L4Ex"
+    },
+    {
+      "_id": "uzqBaBXzHMx4ECTh",
+      "type": "document",
+      "name": "Voracious",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.VHR1wNln6mHXVKk6",
+      "weight": 2,
+      "range": [
+        77,
+        78
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.uzqBaBXzHMx4ECTh"
+    },
+    {
+      "_id": "U0I44xLHjmpB2pXh",
+      "type": "document",
+      "name": "Weak Heart",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.mjJzaDPAHVXi1TGZ",
+      "weight": 2,
+      "range": [
+        79,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.U0I44xLHjmpB2pXh"
+    },
+    {
+      "_id": "ays9qnbPPvsxxsbc",
+      "type": "document",
+      "name": "Attribute Deficiency",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.t1F8432wrmqrDiWx",
+      "weight": 10,
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.ays9qnbPPvsxxsbc"
+    },
+    {
+      "_id": "Hz9PLyuZtAMtP4XG",
+      "type": "document",
+      "name": "Lightly Touched",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.5lQGjY3Bgjhje72U",
+      "weight": 10,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!Efutv23GCEIyNNHy.Hz9PLyuZtAMtP4XG"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "v5HNTRC8XDJ8ww5s",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!Efutv23GCEIyNNHy"
+}

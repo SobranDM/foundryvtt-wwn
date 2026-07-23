@@ -1,0 +1,66 @@
+{
+  "name": "Place Blindness",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.cNQTIWc9k2EiXLT1"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have profoundly poor navigational skills. While you can find your way around familiar places you&rsquo;ve lived in for at least a week, you will invariably become lost when traveling outside those areas unless guided.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "cNQTIWc9k2EiXLT1",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 59000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cNQTIWc9k2EiXLT1"
+}

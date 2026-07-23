@@ -1,0 +1,62 @@
+{
+  "name": "Survivor's Fortune",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Once per game session as an Instant action, when something bad happens to you, roll 1d6: 1 unaffected, 2&ndash;5 avert by chance, 6 redirects to an enemy if possible. (Tracked as a day use for sheet refresh.)</p>",
+    "subType": "ability",
+    "customTypeName": "",
+    "source": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 1,
+      "max": 1
+    },
+    "internalResourceLength": "day",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "srGBvYWO8sPvBgej",
+  "folder": "DoRS5OgcwoJ0Pc9U",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!srGBvYWO8sPvBgej"
+}

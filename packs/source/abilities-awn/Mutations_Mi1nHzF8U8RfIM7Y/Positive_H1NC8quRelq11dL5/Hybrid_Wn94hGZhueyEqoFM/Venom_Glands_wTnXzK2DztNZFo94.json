@@ -1,0 +1,66 @@
+{
+  "name": "Venom Glands",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.wTnXzK2DztNZFo94"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You may exude venom as an On Turn action at the cost of one System Strain. If imbibed or applied by a bladed weapon attack or body weaponry, it does 1d8 damage plus the user&rsquo;s level to subjects susceptible to poison for the rest of the scene. The user may make the toxin non-lethal simply by lessening the dosage. Envenoming a weapon with this toxin takes a Main Action and the toxin spoils after a scene, though it can last through multiple hits. A given victim can be harmed by this poison only once per scene.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "1d8 + @lvl",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "wTnXzK2DztNZFo94",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wTnXzK2DztNZFo94"
+}

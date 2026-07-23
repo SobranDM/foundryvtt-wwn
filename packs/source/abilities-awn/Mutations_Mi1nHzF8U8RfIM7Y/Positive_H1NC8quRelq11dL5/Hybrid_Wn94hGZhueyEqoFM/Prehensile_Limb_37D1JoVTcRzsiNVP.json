@@ -1,0 +1,66 @@
+{
+  "name": "Prehensile Limb",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.37D1JoVTcRzsiNVP"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have one or more tails, tentacles, or other extremities that can manipulate objects with your normal strength and manual dexterity. Once per scene, as an On Turn action, accept one System Strain to have a prehensile limb do something that wouldn&rsquo;t take more than a Main Action to perform, such as make an attack or manipulate a device.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "On Turn action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "37D1JoVTcRzsiNVP",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!37D1JoVTcRzsiNVP"
+}

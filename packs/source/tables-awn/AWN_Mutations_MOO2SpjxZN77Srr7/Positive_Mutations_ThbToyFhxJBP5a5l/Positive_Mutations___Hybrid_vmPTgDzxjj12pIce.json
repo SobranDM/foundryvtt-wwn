@@ -1,0 +1,186 @@
+{
+  "_id": "vmPTgDzxjj12pIce",
+  "name": "Positive Mutations — Hybrid",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "NaQBGwFZJudPVSNJ",
+      "type": "document",
+      "name": "Aquatic Adaptation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.PA6VCX1tDI091xoK",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.NaQBGwFZJudPVSNJ"
+    },
+    {
+      "_id": "KJHP0MoyTauz9Hvq",
+      "type": "document",
+      "name": "Arboreal Aptitude",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.2WRf8BBZQ9A3vcHf",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.KJHP0MoyTauz9Hvq"
+    },
+    {
+      "_id": "ksRh61J01F4zworI",
+      "type": "document",
+      "name": "Centauroid",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Sl4qYwmYjsm0GqCH",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.ksRh61J01F4zworI"
+    },
+    {
+      "_id": "DV4WcffRx5OZnWPK",
+      "type": "document",
+      "name": "Crushing Jaws",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.qdg3AXWJZnKkwCs8",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.DV4WcffRx5OZnWPK"
+    },
+    {
+      "_id": "hJtCYuDVfuzongaL",
+      "type": "document",
+      "name": "Digitigrade Legs",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.YMFwuzgiPaC46wTw",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.hJtCYuDVfuzongaL"
+    },
+    {
+      "_id": "xkyW8pcwUxkC4R9B",
+      "type": "document",
+      "name": "Functional Wings",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.IYq27ORSOH291LIS",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.xkyW8pcwUxkC4R9B"
+    },
+    {
+      "_id": "FVbOld8KCiyRy4SE",
+      "type": "document",
+      "name": "Prehensile Limb",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.37D1JoVTcRzsiNVP",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.FVbOld8KCiyRy4SE"
+    },
+    {
+      "_id": "BlVRfVtTCLH5X5Oi",
+      "type": "document",
+      "name": "Savage Claws",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.W4jLyhRH9qGqxoPl",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.BlVRfVtTCLH5X5Oi"
+    },
+    {
+      "_id": "fdW6ZhKxjvcRXRza",
+      "type": "document",
+      "name": "Thick Hide",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.lCuCPI5SVbb0wlpT",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.fdW6ZhKxjvcRXRza"
+    },
+    {
+      "_id": "VG1MztTSLv5lbJNX",
+      "type": "document",
+      "name": "Venom Glands",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.wTnXzK2DztNZFo94",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!vmPTgDzxjj12pIce.VG1MztTSLv5lbJNX"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!vmPTgDzxjj12pIce"
+}

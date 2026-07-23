@@ -1,0 +1,66 @@
+{
+  "name": "Poor Eyesight",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.web3DxchiY1iOpIo"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your eyes are too weak to make out anything more than 10 meters away from you. You cannot gain a positive Sensory mutation that improves your eyesight.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "web3DxchiY1iOpIo",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 61000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!web3DxchiY1iOpIo"
+}

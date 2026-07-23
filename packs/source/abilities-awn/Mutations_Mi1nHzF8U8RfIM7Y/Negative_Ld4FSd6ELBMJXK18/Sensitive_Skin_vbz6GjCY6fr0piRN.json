@@ -1,0 +1,66 @@
+{
+  "name": "Sensitive Skin",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.vbz6GjCY6fr0piRN"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your external integument can&rsquo;t handle heavy pressure or chafing. You can&rsquo;t wear armor of more than 1 Encumbrance and you gain 1 System Strain each day you wear any armor at all.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "vbz6GjCY6fr0piRN",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 65000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vbz6GjCY6fr0piRN"
+}

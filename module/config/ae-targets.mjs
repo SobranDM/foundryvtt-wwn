@@ -205,6 +205,13 @@ function staticGroups() {
           phase: "initial",
           setting: "useTrauma",
         },
+        "system.trauma.dieMod": {
+          label: "WWN.Effects.TraumaDieMod",
+          modes: ["add"],
+          valueType: "number",
+          phase: "initial",
+          setting: "useTrauma",
+        },
       },
     },
   };

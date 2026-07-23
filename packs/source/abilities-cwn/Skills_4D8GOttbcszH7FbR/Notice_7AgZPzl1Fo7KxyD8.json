@@ -1,0 +1,30 @@
+{
+  "name": "Notice",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/notice.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people.",
+    "ownedLevel": -1,
+    "score": "wis",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "notice"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198762,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "7AgZPzl1Fo7KxyD8",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7AgZPzl1Fo7KxyD8"
+}

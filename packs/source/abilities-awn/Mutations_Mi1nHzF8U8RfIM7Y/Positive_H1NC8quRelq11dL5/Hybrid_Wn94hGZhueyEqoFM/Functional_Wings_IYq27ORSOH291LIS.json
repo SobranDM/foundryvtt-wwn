@@ -1,0 +1,66 @@
+{
+  "name": "Functional Wings",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.IYq27ORSOH291LIS"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have wings of some kind, though it&rsquo;s difficult for them to lift you. You can fly at twice your standard Move rate, but it takes a Main Action to do so instead of a Move action. You cannot hover, so you must fly each round or land. You cannot fly when encumbered beyond your usual Strength maximum, and you cannot wear high-tech sealed-suit armor not built for a winged user. You can fly for up to ten minutes at a time before needing to spend an equal amount of time resting.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "IYq27ORSOH291LIS",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IYq27ORSOH291LIS"
+}

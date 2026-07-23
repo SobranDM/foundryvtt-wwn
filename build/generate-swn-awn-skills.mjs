@@ -33,6 +33,8 @@ function iconFor(slug) {
     trade: "trade",
     work: "work",
     drive: "ride",
+    cast: "magic",
+    summon: "psychic",
     biopsionics: "psychic",
     metapsionics: "psychic",
     precognition: "psychic",
@@ -84,7 +86,7 @@ function skillDoc({ name, slug, description, score, secondary }, folderId, exist
  */
 async function writeSkillsIntoAbilities(abilitiesPack, skills) {
   const dir = path.join("packs/source", abilitiesPack);
-  await fs.mkdir(dir, { recursive: true });
+  fsSync.mkdirSync(dir, { recursive: true });
 
   const docs = [...readSourceDocs(dir)];
   let skillsFolder = docs.find((d) => d._key?.startsWith("!folders") && d.name === "Skills" && !d.folder);
@@ -450,5 +452,159 @@ const awn = [
   },
 ];
 
+/** Cities Without Number — primary + Cast/Summon secondary. */
+const cwn = [
+  {
+    name: "Administer",
+    slug: "administer",
+    score: "int",
+    description:
+      "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and understanding how corps really work.",
+  },
+  {
+    name: "Connect",
+    slug: "connect",
+    score: "cha",
+    description:
+      "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill. Note that the people you meet via Connect are not necessarily inclined to work with you without a good reason; if you want reliably cooperative allies, you need Contacts.",
+  },
+  {
+    name: "Drive",
+    slug: "drive",
+    score: "dex",
+    description:
+      "Drive vehicles, sail ships, fly planes, pilot drones, and perform maintenance and basic repairs on such devices. A PC's background may incline them to a particular kind of driving, but with some practice this skill can be applied generally.",
+  },
+  {
+    name: "Exert",
+    slug: "exert",
+    score: "con",
+    description:
+      "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn't qualify as a combat skill for other uses.",
+  },
+  {
+    name: "Fix",
+    slug: "fix",
+    score: "int",
+    description:
+      "Create and repair devices both simple and complex. Your PC may be specialized in some field depending on their background, but this skill can be applied generally by most operators. Roll it to fix things, build things, and identify what something is supposed to do.",
+  },
+  {
+    name: "Heal",
+    slug: "heal",
+    score: "int",
+    description:
+      "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses. It's also an important skill for implanting and maintaining cyberware.",
+  },
+  {
+    name: "Know",
+    slug: "know",
+    score: "int",
+    description:
+      "Know facts about academic or scientific fields. Roll it to understand academic topics, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics.",
+  },
+  {
+    name: "Lead",
+    slug: "lead",
+    score: "cha",
+    description:
+      "Convince others to also do whatever it is you're trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it's a bad idea. Roll it to lead troops in combat, convince others to follow you, inspire employee loyalty, or maintain morale and discipline.",
+  },
+  {
+    name: "Notice",
+    slug: "notice",
+    score: "wis",
+    description:
+      "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people.",
+  },
+  {
+    name: "Perform",
+    slug: "perform",
+    score: "cha",
+    description:
+      "Exhibit some performance skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance.",
+  },
+  {
+    name: "Program",
+    slug: "program",
+    score: "int",
+    description:
+      "Operating or hacking computing and communications hardware. Roll it to program or hack computers, control computer-operated hardware, operate communications tech, or decrypt things. Hacker PCs rely heavily on this skill.",
+  },
+  {
+    name: "Punch",
+    slug: "punch",
+    score: "str",
+    description:
+      "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Combatant Focus.",
+  },
+  {
+    name: "Shoot",
+    slug: "shoot",
+    score: "dex",
+    description:
+      "Use it as a combat skill when using ranged weaponry, whether thrown weapons, bows, gun-linked pistols, combat rifles, or heavy artillery.",
+  },
+  {
+    name: "Sneak",
+    slug: "sneak",
+    score: "dex",
+    description:
+      "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the physical defeating of security measures such as electronic locks.",
+  },
+  {
+    name: "Stab",
+    slug: "stab",
+    score: "str",
+    description:
+      "Use it as a combat skill when wielding melee weapons, whether primitive or complex. It can also be used when throwing weapons.",
+  },
+  {
+    name: "Survive",
+    slug: "survive",
+    score: "wis",
+    description:
+      "Depending on the character's background, this might be more a matter of street smarts and urban survival or it might be directed towards outlands bushcraft and wilderness living. Regardless of the original focus, some time and practice can allow it to be generalized by a PC.",
+  },
+  {
+    name: "Talk",
+    slug: "talk",
+    score: "cha",
+    description:
+      "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation.",
+  },
+  {
+    name: "Trade",
+    slug: "trade",
+    score: "cha",
+    description:
+      "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business.",
+  },
+  {
+    name: "Work",
+    slug: "work",
+    score: "con",
+    description:
+      "This is a catch-all skill for professions not represented by other skills. When you take it, pick a particular profession, such as lawyering, stevedore work, painting, or some other career. The skill then applies to performing that work or making contacts with people in its sphere.",
+  },
+  {
+    name: "Cast",
+    slug: "cast",
+    score: "int",
+    secondary: true,
+    description:
+      "The Cast skill reflects a caster's talent at spellcasting and their intellectual mastery of the complex formulas, rituals, and incantations necessary to use their spells. Anyone can learn it as a strictly intellectual exercise, but only those with the Spellcaster Edge can actually use it to cast spells.",
+  },
+  {
+    name: "Summon",
+    slug: "summon",
+    score: "int",
+    secondary: true,
+    description:
+      "The Summon skill reflects the summoner's knowledge of spiritual entities and the rigors of their training in channeling the otherworldly energies of the spirits. Anyone can learn it as a purely intellectual study, but only those with the Summoner Edge can actually use it to beckon or banish spirits.",
+  },
+];
+
 await writeSkillsIntoAbilities("abilities-swn", swn);
 await writeSkillsIntoAbilities("abilities-awn", awn);
+await writeSkillsIntoAbilities("abilities-cwn", cwn);

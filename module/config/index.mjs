@@ -124,6 +124,7 @@ WWN.skillSetPacks = {
   wwn: "wwn.abilities-wwn",
   swn: "wwn.abilities-swn",
   awn: "wwn.abilities-awn",
+  cwn: "wwn.abilities-cwn",
 };
 
 /** Combat skills are exempt from the skills.floor (Polymath) derivation. */

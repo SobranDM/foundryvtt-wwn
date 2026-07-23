@@ -1,0 +1,127 @@
+{
+  "name": "Augmented Cognition",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "GcRuPwUOyez3K8vZ",
+      "type": "base",
+      "name": "Augmented Cognition (Intelligence)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!eKUaf7G8Yaexauy1.GcRuPwUOyez3K8vZ"
+    },
+    {
+      "_id": "IN5hKcqQg6RHBJhG",
+      "type": "base",
+      "name": "Augmented Cognition (Wisdom)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!eKUaf7G8Yaexauy1.IN5hKcqQg6RHBJhG"
+    },
+    {
+      "_id": "h3QLgkf1rVNfi1gS",
+      "type": "base",
+      "name": "Augmented Cognition (Charisma)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!eKUaf7G8Yaexauy1.h3QLgkf1rVNfi1gS"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.eKUaf7G8Yaexauy1"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your brain is simply superior to that of a baseline human. Your Intelligence, Wisdom, or Charisma modifier increases by +1, chosen as you wish, to a maximum of +2.</p>",
+    "source": "Cognition",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "eKUaf7G8Yaexauy1",
+  "folder": "4j8mEbGHXA04WzKj",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eKUaf7G8Yaexauy1"
+}

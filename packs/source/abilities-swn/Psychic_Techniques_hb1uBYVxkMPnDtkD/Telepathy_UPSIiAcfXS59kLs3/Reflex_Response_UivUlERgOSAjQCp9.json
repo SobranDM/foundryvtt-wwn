@@ -1,0 +1,66 @@
+{
+  "name": "Reflex Response",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.UivUlERgOSAjQCp9"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As a Main Action, the telepath can Commit Effort for the day to force a sudden, irrational impulse into the target of a Telepathic Contact. The target may make a Mental saving throw to resist; on a failure, they will use their next available action to carry out the impulse to the best of their ability. This impulse cannot be self-injurious or harmful to a loved one, but it can be foolish, reckless, or harmful to others. The target may not understand why they have done the action, but will usually attempt to rationalize it as their choice.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "UivUlERgOSAjQCp9",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UivUlERgOSAjQCp9"
+}

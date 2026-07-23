@@ -1,0 +1,96 @@
+{
+  "name": "Alert",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "y1wVel8WMv4yQ59S",
+      "type": "base",
+      "name": "Alert (Level 1)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.group.roll",
+            "type": "override",
+            "value": "2d8kh",
+            "phase": "initial"
+          },
+          {
+            "key": "system.combat.immuneToSurprise",
+            "type": "override",
+            "value": "true",
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 1
+        }
+      },
+      "_key": "!items.effects!aQ3XcVYANsxhfInN.y1wVel8WMv4yQ59S"
+    },
+    {
+      "_id": "GzAHhmS5y2uGsG5a",
+      "type": "base",
+      "name": "Alert (Level 2)",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.individual.mod",
+            "type": "add",
+            "value": 100,
+            "phase": "initial"
+          },
+          {
+            "key": "system.combat.initiative.group.mod",
+            "type": "add",
+            "value": 100,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {
+        "wwn": {
+          "focusLevel": 2
+        }
+      },
+      "_key": "!items.effects!aQ3XcVYANsxhfInN.GzAHhmS5y2uGsG5a"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>You are keenly aware of your surroundings and virtually impossible to take unaware. You have an instinctive alacrity of response that helps you act before less wary persons can think to move.</p><p><strong>Level 1:</strong> Gain Notice as a bonus skill. You cannot be surprised, nor can others use the Execution Attack option on you. When your group rolls initiative, your vigilance allows them to roll twice and take the higher roll.</p><p><strong>Level 2:</strong> In addition to the benefits of level 1, you always act first in a combat round unless someone else involved is also this <em><strong>Alert</strong></em>.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "notice"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "aQ3XcVYANsxhfInN",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aQ3XcVYANsxhfInN"
+}

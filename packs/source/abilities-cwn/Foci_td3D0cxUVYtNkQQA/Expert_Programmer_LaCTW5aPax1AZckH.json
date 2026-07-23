@@ -1,0 +1,35 @@
+{
+  "name": "Expert Programmer",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A skilled hacker can program their own utilities, but you take this expertise far beyond the norm.</p><p><strong>Level 1:</strong> Gain Program as a bonus skill. You can create and maintain an additional number of program elements equal to your character level+2, split among Verbs and Subjects as you see fit. You can change your choices with a week&rsquo;s work. Once per day, as an On Turn action, you can make an on-the-fly edit to a Subject program element to turn it into any other Subject program element you need. The element remains altered until you change it again.</p><p><strong>Level 2:</strong> Your programs are exceedingly efficient. Any program elements you write take up only half the usual Memory. A cyberdeck you use gains a CPU bonus equal to your Program skill level.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "program"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "LaCTW5aPax1AZckH",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LaCTW5aPax1AZckH"
+}

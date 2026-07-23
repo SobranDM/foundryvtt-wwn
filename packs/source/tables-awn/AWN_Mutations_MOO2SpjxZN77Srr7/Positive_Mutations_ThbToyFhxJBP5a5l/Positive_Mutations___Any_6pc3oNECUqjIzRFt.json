@@ -1,0 +1,986 @@
+{
+  "_id": "6pc3oNECUqjIzRFt",
+  "name": "Positive Mutations — Any",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "eOmfSDy12w5168wb",
+      "type": "document",
+      "name": "Augmented Muscle",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RkfvTTgS1VI5fyMY",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.eOmfSDy12w5168wb"
+    },
+    {
+      "_id": "KgQRRdrp7gRCv4KY",
+      "type": "document",
+      "name": "Explosive Exertion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.dUELI7GPC2tAcaSE",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.KgQRRdrp7gRCv4KY"
+    },
+    {
+      "_id": "MvxVI3dfaFAPcHSC",
+      "type": "document",
+      "name": "Hypercontortion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.JchGZnmMZGgrvigY",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.MvxVI3dfaFAPcHSC"
+    },
+    {
+      "_id": "ynZxlBRcrLzK3Y6N",
+      "type": "document",
+      "name": "Improved Joints",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Wi1VBdQreKOEp07J",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.ynZxlBRcrLzK3Y6N"
+    },
+    {
+      "_id": "Oe3bTPbT4xdTT7MN",
+      "type": "document",
+      "name": "Leaper",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xVgKIBrJKErW2pTp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.Oe3bTPbT4xdTT7MN"
+    },
+    {
+      "_id": "Js3seWFjLvmsqXvL",
+      "type": "document",
+      "name": "Redundant Organs",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.bzd4kDGiy4q1iTPT",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.Js3seWFjLvmsqXvL"
+    },
+    {
+      "_id": "hdFot92ZZYtX6Uyy",
+      "type": "document",
+      "name": "Regenerator",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xr4OxDVvAjsZvDUs",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.hdFot92ZZYtX6Uyy"
+    },
+    {
+      "_id": "pb0frxM2DDG4IJ3l",
+      "type": "document",
+      "name": "Reinforced Tissues",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.W1KUbPGu1U0HNFIj",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.pb0frxM2DDG4IJ3l"
+    },
+    {
+      "_id": "RBXWPhDH1M2aai6z",
+      "type": "document",
+      "name": "Sealed Systems",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.cSqO7SVfeWVN8R4K",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.RBXWPhDH1M2aai6z"
+    },
+    {
+      "_id": "vZ5LervEBQ70CA7O",
+      "type": "document",
+      "name": "Stamina Reserves",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.iyniL7q4XsE49fuo",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.vZ5LervEBQ70CA7O"
+    },
+    {
+      "_id": "D4jRnQDqhUYfB4LO",
+      "type": "document",
+      "name": "Accelerated Perception",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RivAWjD5cp29ncmB",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.D4jRnQDqhUYfB4LO"
+    },
+    {
+      "_id": "9DDbwcB4Pqh5a3IL",
+      "type": "document",
+      "name": "Acute Hearing",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.uPXJm4MrxaMRVU6I",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.9DDbwcB4Pqh5a3IL"
+    },
+    {
+      "_id": "pnvMX849iVGkOQc5",
+      "type": "document",
+      "name": "Acute Olfaction",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.oqyZANBmaXa2CUmU",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.pnvMX849iVGkOQc5"
+    },
+    {
+      "_id": "I8WrOVqZNrytxZLk",
+      "type": "document",
+      "name": "Echolocation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.agubikT1LgPntGq3",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.I8WrOVqZNrytxZLk"
+    },
+    {
+      "_id": "a1VQabycMTzoz1BT",
+      "type": "document",
+      "name": "Empathic Sensitivity",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.t2TUiRcoyCAz6XHK",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.a1VQabycMTzoz1BT"
+    },
+    {
+      "_id": "B8T7oZzl341Nmk1m",
+      "type": "document",
+      "name": "Night Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.vQh5HfY9qUE7808x",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.B8T7oZzl341Nmk1m"
+    },
+    {
+      "_id": "b1w3jI98PmXxsbQf",
+      "type": "document",
+      "name": "Panoptic Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.dQCfkUuBAPoUsO1s",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.b1w3jI98PmXxsbQf"
+    },
+    {
+      "_id": "fS8WZPMrr4NGWavF",
+      "type": "document",
+      "name": "Tactile Analysis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.tMbm4GVLuamSMlzz",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.fS8WZPMrr4NGWavF"
+    },
+    {
+      "_id": "8JxIyopn9faoFt8h",
+      "type": "document",
+      "name": "Telescopic Sight",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.e52lk58RjzlsU5Pm",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.8JxIyopn9faoFt8h"
+    },
+    {
+      "_id": "Ie8wxIcragdTCT38",
+      "type": "document",
+      "name": "Thermal Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xcKqS8SPfQ2zAu3O",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.Ie8wxIcragdTCT38"
+    },
+    {
+      "_id": "UtyBkMIbFWrKdgVr",
+      "type": "document",
+      "name": "Aquatic Adaptation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.PA6VCX1tDI091xoK",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.UtyBkMIbFWrKdgVr"
+    },
+    {
+      "_id": "DaR4aNjzb6bfeWzX",
+      "type": "document",
+      "name": "Arboreal Aptitude",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.2WRf8BBZQ9A3vcHf",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.DaR4aNjzb6bfeWzX"
+    },
+    {
+      "_id": "BNtyn8ZZrFQq6IYe",
+      "type": "document",
+      "name": "Centauroid",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Sl4qYwmYjsm0GqCH",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.BNtyn8ZZrFQq6IYe"
+    },
+    {
+      "_id": "bh0opyF1cQlr5MtJ",
+      "type": "document",
+      "name": "Crushing Jaws",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.qdg3AXWJZnKkwCs8",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.bh0opyF1cQlr5MtJ"
+    },
+    {
+      "_id": "XJyUeh8MomSI12JG",
+      "type": "document",
+      "name": "Digitigrade Legs",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.YMFwuzgiPaC46wTw",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.XJyUeh8MomSI12JG"
+    },
+    {
+      "_id": "zywLhzAJHC0E1xbU",
+      "type": "document",
+      "name": "Functional Wings",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.IYq27ORSOH291LIS",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.zywLhzAJHC0E1xbU"
+    },
+    {
+      "_id": "PSPKwXbpGExeZXYk",
+      "type": "document",
+      "name": "Prehensile Limb",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.37D1JoVTcRzsiNVP",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.PSPKwXbpGExeZXYk"
+    },
+    {
+      "_id": "jSTYrLSdLYlE4MdC",
+      "type": "document",
+      "name": "Savage Claws",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.W4jLyhRH9qGqxoPl",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.jSTYrLSdLYlE4MdC"
+    },
+    {
+      "_id": "DXTCfaJtcPWhHtXD",
+      "type": "document",
+      "name": "Thick Hide",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.lCuCPI5SVbb0wlpT",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.DXTCfaJtcPWhHtXD"
+    },
+    {
+      "_id": "OcChEpdHrr6aqyFz",
+      "type": "document",
+      "name": "Venom Glands",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.wTnXzK2DztNZFo94",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.OcChEpdHrr6aqyFz"
+    },
+    {
+      "_id": "iIa7wVJIFoSydUdo",
+      "type": "document",
+      "name": "Augmented Cognition",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.eKUaf7G8Yaexauy1",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.iIa7wVJIFoSydUdo"
+    },
+    {
+      "_id": "z4tdpsBMIIEw1lQv",
+      "type": "document",
+      "name": "Ballistic Calculator",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.sb2Cp00ttUwkOSea",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.z4tdpsBMIIEw1lQv"
+    },
+    {
+      "_id": "a7OCjgKBG6isw71k",
+      "type": "document",
+      "name": "Eidetic Memory",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.g9WM42SWX8eYOTDF",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.a7OCjgKBG6isw71k"
+    },
+    {
+      "_id": "TK0mt6TvVcQmbS09",
+      "type": "document",
+      "name": "Internal Map",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.XlN8HMyMRtpfWENI",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.TK0mt6TvVcQmbS09"
+    },
+    {
+      "_id": "9FNAwiEN3mNK3oP2",
+      "type": "document",
+      "name": "Intuitive Leap",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.099dFyDQDsjhWdZh",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.9FNAwiEN3mNK3oP2"
+    },
+    {
+      "_id": "FhZrp0ZVI6jm2Zt5",
+      "type": "document",
+      "name": "Memory Eater",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.qe6eIsgPfuqqaPNq",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.FhZrp0ZVI6jm2Zt5"
+    },
+    {
+      "_id": "7xTYJHIrRea6EV7S",
+      "type": "document",
+      "name": "Mental Bifurcation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.o5ALTydbpjZiydKN",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.7xTYJHIrRea6EV7S"
+    },
+    {
+      "_id": "jK3lINln23Cf09Wk",
+      "type": "document",
+      "name": "Mind Over Body",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.j2G14mmgzXB07Kf2",
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.jK3lINln23Cf09Wk"
+    },
+    {
+      "_id": "dg7OutnwaPnOGmoA",
+      "type": "document",
+      "name": "Omniglot",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.nLGdRezEp5EIZ6Ef",
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.dg7OutnwaPnOGmoA"
+    },
+    {
+      "_id": "Fvc6xPAZASvkFqOI",
+      "type": "document",
+      "name": "Predictive Analysis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.kQJw1BqsTOhC3u5w",
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.Fvc6xPAZASvkFqOI"
+    },
+    {
+      "_id": "bm6tGFkdoSPkUh4h",
+      "type": "document",
+      "name": "Force Field",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.mH5lSnjdMT1V9H9L",
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.bm6tGFkdoSPkUh4h"
+    },
+    {
+      "_id": "34rsQh8uwP2rEYJs",
+      "type": "document",
+      "name": "Induce Confusion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.UYhObTapFCE3JE4h",
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.34rsQh8uwP2rEYJs"
+    },
+    {
+      "_id": "rZNLRYgBhWVQnxkF",
+      "type": "document",
+      "name": "Limited Precognition",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.nAYv4RF5QWOOEtQP",
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.rZNLRYgBhWVQnxkF"
+    },
+    {
+      "_id": "MsdqW4TThiDZfvYK",
+      "type": "document",
+      "name": "Mental Domination",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.ivKeM5mbJuyuuThs",
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.MsdqW4TThiDZfvYK"
+    },
+    {
+      "_id": "e6IlD9VAnBcyG3Z2",
+      "type": "document",
+      "name": "Mind Reader",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RCRdY37JBht9aqhg",
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.e6IlD9VAnBcyG3Z2"
+    },
+    {
+      "_id": "Q35PzyhIv2zK4hhb",
+      "type": "document",
+      "name": "Neural Lockdown",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.5iuSPJ8Y8qTnbd6N",
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.Q35PzyhIv2zK4hhb"
+    },
+    {
+      "_id": "pTmC4SrBJYKLqY46",
+      "type": "document",
+      "name": "Panic Wave",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xOuNB2Ghf3sstocH",
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.pTmC4SrBJYKLqY46"
+    },
+    {
+      "_id": "dZwPfRW6Oicc77au",
+      "type": "document",
+      "name": "Spatial Displacement",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.AuDMwgLv3tIm1rez",
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.dZwPfRW6Oicc77au"
+    },
+    {
+      "_id": "vT85JqEKvhqgp64q",
+      "type": "document",
+      "name": "Telekinetic Reach",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.mTjyFX2hPqJYyF3u",
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.vT85JqEKvhqgp64q"
+    },
+    {
+      "_id": "vEZdWYPAXtSghaAc",
+      "type": "document",
+      "name": "Thermokinesis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xKd0G03xSgVdOFdq",
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.vEZdWYPAXtSghaAc"
+    },
+    {
+      "_id": "DIVwKxycFClR8Jw0",
+      "type": "document",
+      "name": "Chameleon Field",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.fu9m6JHaWbn8YR4f",
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.DIVwKxycFClR8Jw0"
+    },
+    {
+      "_id": "3O228Smw4Ch9qwXd",
+      "type": "document",
+      "name": "Electrical Generation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.r2M3eC5sOea9S9to",
+      "weight": 1,
+      "range": [
+        52,
+        52
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.3O228Smw4Ch9qwXd"
+    },
+    {
+      "_id": "BzXOjaq2ghW7TY3I",
+      "type": "document",
+      "name": "Hemovore",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.ZupjNXi1NUS3goCE",
+      "weight": 1,
+      "range": [
+        53,
+        53
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.BzXOjaq2ghW7TY3I"
+    },
+    {
+      "_id": "d1E9OATbfBL85YiG",
+      "type": "document",
+      "name": "Image Projection",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Zc35of1P7t8LVl2Y",
+      "weight": 1,
+      "range": [
+        54,
+        54
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.d1E9OATbfBL85YiG"
+    },
+    {
+      "_id": "YJoZl6DheyCk2PCC",
+      "type": "document",
+      "name": "Metamorph",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.c6CvFAVJlAwTYDKm",
+      "weight": 1,
+      "range": [
+        55,
+        55
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.YJoZl6DheyCk2PCC"
+    },
+    {
+      "_id": "YtDIabRJ23DcZ9ZK",
+      "type": "document",
+      "name": "Molecular Phasing",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.1IEFn9Hs9bCYA6fz",
+      "weight": 1,
+      "range": [
+        56,
+        56
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.YtDIabRJ23DcZ9ZK"
+    },
+    {
+      "_id": "sU8DpPAQ7uSGk0B1",
+      "type": "document",
+      "name": "Natural Projectiles",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.84F2GPtB0LbTwimI",
+      "weight": 1,
+      "range": [
+        57,
+        57
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.sU8DpPAQ7uSGk0B1"
+    },
+    {
+      "_id": "evPZB63WFcnCHHuV",
+      "type": "document",
+      "name": "Pheromone Cloud",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.rXZJ72MyGsSVtnHP",
+      "weight": 1,
+      "range": [
+        58,
+        58
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.evPZB63WFcnCHHuV"
+    },
+    {
+      "_id": "O1bNdnOCFw5s9ZiE",
+      "type": "document",
+      "name": "Photon Manipulation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.A4nyLnhV1kSdU8tH",
+      "weight": 1,
+      "range": [
+        59,
+        59
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.O1bNdnOCFw5s9ZiE"
+    },
+    {
+      "_id": "3zspv0b6IpMYfznl",
+      "type": "document",
+      "name": "Sound Generation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.BBmrPLMYRyrdwG9z",
+      "weight": 1,
+      "range": [
+        60,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!6pc3oNECUqjIzRFt.3zspv0b6IpMYfznl"
+    }
+  ],
+  "formula": "1d60",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!6pc3oNECUqjIzRFt"
+}

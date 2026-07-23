@@ -1,0 +1,66 @@
+{
+  "name": "Forced Outcome",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.sfuQYFXpPN6XXBsq"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>Through careful manipulation of probability, the adept can influence random physical events in their vicinity. Triggering this technique requires a Main Action and Committing Effort for the scene. Any simple, random mechanical outcome can be completely controlled for the scene, such as a roulette wheel or the order of a deck of shuffled cards. Any other physical event in the area that seems not-entirely-implausible may be made to occur by this technique, provided it doesn't involve more than a few objects and doesn't require human involvement. The GM decides what random events are and are not adequately possible. Anything more than one unusual coincidence or chance per scene is likely impossible to produce.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "sfuQYFXpPN6XXBsq",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sfuQYFXpPN6XXBsq"
+}

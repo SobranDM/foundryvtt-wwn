@@ -221,6 +221,17 @@ export default class WwnPc extends WwnActorBase {
       data[slug] = skill.system.ownedLevel ?? -1;
     }
 
+    // Highest SWN psychic skill for Psychic Effort (untrained treated as 0, not -1)
+    const PSYCHIC_SLUGS = [
+      "biopsionics",
+      "metapsionics",
+      "precognition",
+      "telekinesis",
+      "telepathy",
+      "teleportation",
+    ];
+    data.highestPsychic = Math.max(0, ...PSYCHIC_SLUGS.map((slug) => Math.max(0, data[slug] ?? 0)));
+
     data.combat = foundry.utils.deepClone(this.combat);
     data.abilities = foundry.utils.deepClone(this.abilities);
     return data;

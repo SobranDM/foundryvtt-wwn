@@ -1,0 +1,30 @@
+{
+  "name": "Work",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/work.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "This is a catch-all skill for professions not represented by other skills. When you take it, pick a particular profession, such as lawyering, stevedore work, painting, or some other career. The skill then applies to performing that work or making contacts with people in its sphere.",
+    "ownedLevel": -1,
+    "score": "con",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "work"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198767,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "5KG7J9FBfG5wYeRh",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5KG7J9FBfG5wYeRh"
+}

@@ -63,6 +63,13 @@ export function classEdgeGrantsFingerprint(system) {
     preparedGrant: {
       progression: s.preparedGrant?.progression ?? [],
     },
+    bonusSkills: s.bonusSkills ?? [],
+    bonusSkillsPick: Number(s.bonusSkillsPick) || 0,
+    bonusSkillsMode: s.bonusSkillsMode ?? "",
+    attributeGrant: {
+      mode: s.attributeGrant?.mode ?? "",
+      exclude: s.attributeGrant?.exclude ?? [],
+    },
   };
   return JSON.stringify(payload);
 }
@@ -104,6 +111,10 @@ export function extractPreservedFields(item) {
     poolGrant: {
       value: Number(s.poolGrant?.value) || 0,
     },
+    bonusSkillsChosen: Array.isArray(s.bonusSkillsChosen) ? [...s.bonusSkillsChosen] : [],
+    attributeGrant: {
+      chosen: String(s.attributeGrant?.chosen ?? ""),
+    },
   };
 }
 
@@ -139,11 +150,22 @@ export function buildReplacementData(packItemObject, preserved) {
         };
       }
       if (preserved.bonusDice != null) data.system.bonusDice = preserved.bonusDice;
-    } else if (data.type === "classEdge" && preserved.poolGrant) {
-      data.system.poolGrant = {
-        ...(data.system.poolGrant ?? {}),
-        value: preserved.poolGrant.value,
-      };
+    } else if (data.type === "classEdge" && preserved) {
+      if (preserved.poolGrant) {
+        data.system.poolGrant = {
+          ...(data.system.poolGrant ?? {}),
+          value: preserved.poolGrant.value,
+        };
+      }
+      if (Array.isArray(preserved.bonusSkillsChosen)) {
+        data.system.bonusSkillsChosen = preserved.bonusSkillsChosen;
+      }
+      if (preserved.attributeGrant?.chosen) {
+        data.system.attributeGrant = {
+          ...(data.system.attributeGrant ?? {}),
+          chosen: preserved.attributeGrant.chosen,
+        };
+      }
     }
   }
   return data;

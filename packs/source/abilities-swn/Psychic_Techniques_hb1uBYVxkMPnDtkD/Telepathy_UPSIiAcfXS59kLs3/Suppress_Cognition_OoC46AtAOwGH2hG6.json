@@ -1,0 +1,66 @@
+{
+  "name": "Suppress Cognition",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.OoC46AtAOwGH2hG6"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>Through intense focus, the telepath can make the target of a Telepathic Contact simply not think about something, whether that's the presence of the telepath, the possibility of committing violence, the absence of important documentation, or any other single potential action or one specific person. This technique requires the psychic to Commit Effort for the scene as a Main Action. The target gets a Mental saving throw to resist this power and become immune to it for the scene. If failed, the thought remains unthinkable for the rest of the scene unless the target perceives physical danger or a traumatic threat to something they prize highly. In that case, the block instantly dissolves and cannot be re-established during the scene. Once the effect ends, the target will remain oblivious to their temporary fugue unless it is brought to their attention somehow.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "OoC46AtAOwGH2hG6",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OoC46AtAOwGH2hG6"
+}

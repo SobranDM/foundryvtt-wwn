@@ -1,0 +1,51 @@
+{
+  "name": "Masterful Expertise",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Once per scene, as an Instant action, reroll a failed check for a non-combat skill.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Masterful Expertise"
+    ]
+  },
+  "_id": "dpMAK7WsCqc9oJFk",
+  "folder": "1ovKT4ewx1ZysKLG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dpMAK7WsCqc9oJFk"
+}

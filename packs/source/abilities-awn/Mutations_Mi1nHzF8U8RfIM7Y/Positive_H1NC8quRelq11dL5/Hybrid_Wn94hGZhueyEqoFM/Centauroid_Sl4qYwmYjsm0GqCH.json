@@ -1,0 +1,87 @@
+{
+  "name": "Centauroid",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "PE05V2tZJVmFIAyO",
+      "type": "base",
+      "name": "Centauroid",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.movement.bonus",
+            "type": "add",
+            "value": 10,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!Sl4qYwmYjsm0GqCH.PE05V2tZJVmFIAyO"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.Sl4qYwmYjsm0GqCH"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have a quadrupedal lower body, though you are not necessarily much larger than a normal human. Your base Move rate increases by 10 meters per Move action and you gain a +2 skill check bonus to resist grapples by human-sized foes. You can only wear armor specially crafted for you.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Sl4qYwmYjsm0GqCH",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Sl4qYwmYjsm0GqCH"
+}

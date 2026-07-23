@@ -1,0 +1,66 @@
+{
+  "name": "Burdened Apportation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.bHXWJtFM3F3jjN4r"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The psychic can carry willing companions with them when using Personal Apportation. Up to three human-sized companions and their man-portable gear may be carried per skill level in Teleportation. Allies must be within 3 meters of the teleporter to be carried along. Ordinary inert matter cannot be carried along unless the psychic is touching it or it's being carried by an ally affected by this power. If carrying inert mass, up to two hundred kilos of objects can be carried per skill level. Using this technique increases the Effort cost of Personal Apportation, requiring that an extra point of Effort be Committed for the day.</p>",
+    "source": "Teleportation",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": "Additional Effort when carrying companions or cargo"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "bHXWJtFM3F3jjN4r",
+  "folder": "mguIoY20lXroFJYl",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bHXWJtFM3F3jjN4r"
+}

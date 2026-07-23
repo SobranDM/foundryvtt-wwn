@@ -1,0 +1,66 @@
+{
+  "name": "Short Lifespan",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.5MTBHlcpmWWNUOCo"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Once you reach adulthood, your physical aging processes accelerate, though you do not become decrepit until your final year of life. At age 18 and each birthday afterwards, roll 1d100 and add your age. If the total is over 100, you&rsquo;re going to die in 1d4 years.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "5MTBHlcpmWWNUOCo",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 67000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5MTBHlcpmWWNUOCo"
+}

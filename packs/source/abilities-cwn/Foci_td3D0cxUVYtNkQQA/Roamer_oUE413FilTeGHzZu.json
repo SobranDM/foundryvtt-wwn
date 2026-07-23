@@ -1,0 +1,36 @@
+{
+  "name": "Roamer",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You might be a footloose bum with a knack for stowing aboard cargo shipments, a hard-bitten outlander smuggler, or a restless seeker of the horizon. Either way, you&rsquo;ve seen more of the world with your own two eyes than any common corper ever will.</p><p><strong>Level 1:</strong> Gain Survive and Drive as bonus skills. You have conversational skill in all common languages spoken in the region or city, and you never get lost. You have &ldquo;acquired&rdquo; one or more vehicles worth no more than your character level&rsquo;s budget. You can replace lost or damaged vehicles at a rate of $10,000 per week.</p><p><strong>Level 2:</strong> Once per scene, as an Instant action, you can reroll a failed skill check related to safe traveling or vehicle operation, whether to fix a blown engine or talk down a ganger who doesn&rsquo;t like strangers crossing his turf.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 1
+    },
+    "resourceLength": "scene",
+    "bonusSkills": [
+      "survive",
+      "drive"
+    ],
+    "bonusSkillsPick": 2,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "oUE413FilTeGHzZu",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oUE413FilTeGHzZu"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Awkward Mouth",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.dHQ03RK35UWZVgxo"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your mouthparts are altered in ways that make it impossible to speak. Your allies understand your vocalizations and sign language, but you can only communicate by gestures with unfamiliar strangers. You cannot gain the Talk or Lead skills, but you gain the Crushing Jaws positive mutation for free.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "dHQ03RK35UWZVgxo",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dHQ03RK35UWZVgxo"
+}

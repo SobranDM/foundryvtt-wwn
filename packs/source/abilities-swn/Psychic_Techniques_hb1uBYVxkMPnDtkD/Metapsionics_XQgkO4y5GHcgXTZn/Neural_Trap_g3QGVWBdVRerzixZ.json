@@ -1,0 +1,66 @@
+{
+  "name": "Neural Trap",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.g3QGVWBdVRerzixZ"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The metapsion allows a hostile psychic into their mental sanctum in order to gain a later advantage. When targeted by a hostile psionic power that allows a save, the metapsion may Commit Effort as an Instant action and voluntarily fail the saving throw, accepting the effect. The next psychic power the user targets at that assailant then allows the victim no saving throw. This technique lasts until the metapsion makes their psychic attack or reclaims their Committed Effort. A hostile psychic may be affected by only one Neural Trap from a given psychic at a time.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "g3QGVWBdVRerzixZ",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!g3QGVWBdVRerzixZ"
+}

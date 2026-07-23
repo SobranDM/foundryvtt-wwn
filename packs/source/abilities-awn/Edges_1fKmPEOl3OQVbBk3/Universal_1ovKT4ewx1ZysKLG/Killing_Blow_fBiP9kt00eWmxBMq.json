@@ -1,0 +1,87 @@
+{
+  "name": "Killing Blow",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [
+    {
+      "_id": "R9v3o16VIYZbtqQD",
+      "type": "base",
+      "name": "Killing Blow",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "statuses": [],
+      "flags": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.allDamage",
+            "type": "add",
+            "value": "@halfLevel",
+            "phase": "final"
+          },
+          {
+            "key": "system.combat.allShock",
+            "type": "add",
+            "value": "@halfLevel",
+            "phase": "final"
+          },
+          {
+            "key": "system.trauma.dieMod",
+            "type": "add",
+            "value": "1",
+            "phase": "initial"
+          }
+        ]
+      },
+      "_key": "!items.effects!fBiP9kt00eWmxBMq.R9v3o16VIYZbtqQD"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>Gain a combat skill as a bonus skill. Whenever you inflict hit point damage, whether by weapon, special ability, or any other source, the damage is increased by 1 point per two character levels, rounded up. If using Traumatic Hit rules, any Trauma Die you roll gains a +1 bonus.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [
+      "stab",
+      "punch",
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "fBiP9kt00eWmxBMq",
+  "folder": "1ovKT4ewx1ZysKLG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fBiP9kt00eWmxBMq"
+}

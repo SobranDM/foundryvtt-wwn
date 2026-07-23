@@ -1,0 +1,186 @@
+{
+  "_id": "KTeMWEdaCCzijGaQ",
+  "name": "Positive Mutations — Structure",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "wWrZUFyr4xoYuO7o",
+      "type": "document",
+      "name": "Augmented Muscle",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RkfvTTgS1VI5fyMY",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.wWrZUFyr4xoYuO7o"
+    },
+    {
+      "_id": "CvF61bLOKxOxISwD",
+      "type": "document",
+      "name": "Explosive Exertion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.dUELI7GPC2tAcaSE",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.CvF61bLOKxOxISwD"
+    },
+    {
+      "_id": "KhLtmZKDE2yHOo0X",
+      "type": "document",
+      "name": "Hypercontortion",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.JchGZnmMZGgrvigY",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.KhLtmZKDE2yHOo0X"
+    },
+    {
+      "_id": "aLq2thqZIChB0iVJ",
+      "type": "document",
+      "name": "Improved Joints",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Wi1VBdQreKOEp07J",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.aLq2thqZIChB0iVJ"
+    },
+    {
+      "_id": "or9Fld3ikxdFgzM9",
+      "type": "document",
+      "name": "Leaper",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xVgKIBrJKErW2pTp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.or9Fld3ikxdFgzM9"
+    },
+    {
+      "_id": "H9psmZSddGs5OCR5",
+      "type": "document",
+      "name": "Redundant Organs",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.bzd4kDGiy4q1iTPT",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.H9psmZSddGs5OCR5"
+    },
+    {
+      "_id": "TBCJdjHvdgjCqOYz",
+      "type": "document",
+      "name": "Regenerator",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xr4OxDVvAjsZvDUs",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.TBCJdjHvdgjCqOYz"
+    },
+    {
+      "_id": "d8PMVKs6NhtmOgxv",
+      "type": "document",
+      "name": "Reinforced Tissues",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.W1KUbPGu1U0HNFIj",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.d8PMVKs6NhtmOgxv"
+    },
+    {
+      "_id": "7aOT4FULh4UdHiQz",
+      "type": "document",
+      "name": "Sealed Systems",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.cSqO7SVfeWVN8R4K",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.7aOT4FULh4UdHiQz"
+    },
+    {
+      "_id": "fmdX896EFdebiqQQ",
+      "type": "document",
+      "name": "Stamina Reserves",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.iyniL7q4XsE49fuo",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!KTeMWEdaCCzijGaQ.fmdX896EFdebiqQQ"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!KTeMWEdaCCzijGaQ"
+}

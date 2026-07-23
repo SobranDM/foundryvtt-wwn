@@ -1,0 +1,87 @@
+{
+  "name": "Anosmia",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "uPQfBiTZva6j8fqW",
+      "type": "base",
+      "name": "Anosmia",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.wis.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!VRuPORMGPnFx4ULq.uPQfBiTZva6j8fqW"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.VRuPORMGPnFx4ULq"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have no sense of smell or taste. Your Wisdom modifier takes a -1 penalty and you fail all skill checks reliant on either sense. You cannot identify poisoned or contaminated food or water unless it is visually obvious.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "VRuPORMGPnFx4ULq",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VRuPORMGPnFx4ULq"
+}

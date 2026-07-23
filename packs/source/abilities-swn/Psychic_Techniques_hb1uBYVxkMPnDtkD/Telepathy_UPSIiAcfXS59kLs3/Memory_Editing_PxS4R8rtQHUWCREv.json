@@ -1,0 +1,66 @@
+{
+  "name": "Memory Editing",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.PxS4R8rtQHUWCREv"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The telepath can make simple edits to the memory of a target currently linked by a Telepathic Contact. Events of no more than 24 hours in duration can be erased from memory, conversations can be created or changed, new events can be added to a day, or other similar alterations made. The psychic can make these changes as a Main Action by Committing Effort for the day. If the psychic doesn't have a good understanding of the memories they're changing, such as might be granted by the level-4 degree of Telepathic Contact, the edits they make may not fit well. The target gets a Mental saving throw to resist editing for the rest of the scene, but on a failure, they will not notice the changed memories until given a reason to recollect them.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "PxS4R8rtQHUWCREv",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PxS4R8rtQHUWCREv"
+}

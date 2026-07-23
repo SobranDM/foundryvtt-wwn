@@ -1,0 +1,66 @@
+{
+  "name": "Telescopic Sight",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.e52lk58RjzlsU5Pm"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Any visible point within one kilometer can be observed as if you were standing adjacent. You suffer no penalties for using a ranged weapon at long range.</p>",
+    "source": "Sense",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "e52lk58RjzlsU5Pm",
+  "folder": "4so0jVjFvePuMNtT",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e52lk58RjzlsU5Pm"
+}

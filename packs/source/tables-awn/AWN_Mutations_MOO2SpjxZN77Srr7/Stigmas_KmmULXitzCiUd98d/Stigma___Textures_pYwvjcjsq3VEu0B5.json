@@ -1,0 +1,218 @@
+{
+  "_id": "pYwvjcjsq3VEu0B5",
+  "name": "Stigma — Textures",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "KzOcMs1WEYtQYgi7",
+      "type": "text",
+      "name": "",
+      "description": "Chitinous",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.KzOcMs1WEYtQYgi7"
+    },
+    {
+      "_id": "61HidcPnepy4f3ll",
+      "type": "text",
+      "name": "",
+      "description": "Feathered",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.61HidcPnepy4f3ll"
+    },
+    {
+      "_id": "o4sISn9GYL6JXZtN",
+      "type": "text",
+      "name": "",
+      "description": "Fibrous",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.o4sISn9GYL6JXZtN"
+    },
+    {
+      "_id": "ClfoFtlA8UhBabjo",
+      "type": "text",
+      "name": "",
+      "description": "Finned",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.ClfoFtlA8UhBabjo"
+    },
+    {
+      "_id": "llpEP85J0d12ytia",
+      "type": "text",
+      "name": "",
+      "description": "Furred",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.llpEP85J0d12ytia"
+    },
+    {
+      "_id": "tBrNduXQbbIOcawy",
+      "type": "text",
+      "name": "",
+      "description": "Glassy",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.tBrNduXQbbIOcawy"
+    },
+    {
+      "_id": "4wjcVNe0QSWHemdv",
+      "type": "text",
+      "name": "",
+      "description": "Metallic",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.4wjcVNe0QSWHemdv"
+    },
+    {
+      "_id": "6N2ZfSiaDyv6tBw0",
+      "type": "text",
+      "name": "",
+      "description": "Plated",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.6N2ZfSiaDyv6tBw0"
+    },
+    {
+      "_id": "pgwlNOpLorJjk1lI",
+      "type": "text",
+      "name": "",
+      "description": "Scabrous",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.pgwlNOpLorJjk1lI"
+    },
+    {
+      "_id": "sOYnCsUbYQZGcWMQ",
+      "type": "text",
+      "name": "",
+      "description": "Scaled",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.sOYnCsUbYQZGcWMQ"
+    },
+    {
+      "_id": "aSGIcwiM1HisyDCz",
+      "type": "text",
+      "name": "",
+      "description": "Slimy",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.aSGIcwiM1HisyDCz"
+    },
+    {
+      "_id": "eSZeNteDjt0K4M9m",
+      "type": "text",
+      "name": "",
+      "description": "Stony",
+      "img": "icons/svg/d20-black.svg",
+      "documentUuid": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!pYwvjcjsq3VEu0B5.eSZeNteDjt0K4M9m"
+    }
+  ],
+  "formula": "1d12",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "KmmULXitzCiUd98d",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!pYwvjcjsq3VEu0B5"
+}

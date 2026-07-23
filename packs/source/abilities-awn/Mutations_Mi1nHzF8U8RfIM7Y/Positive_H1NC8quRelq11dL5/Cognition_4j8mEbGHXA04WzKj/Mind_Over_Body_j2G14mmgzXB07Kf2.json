@@ -1,0 +1,87 @@
+{
+  "name": "Mind Over Body",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "JrtcnqO9qIFFS8VR",
+      "type": "base",
+      "name": "Mind Over Body",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.autoStabilize",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!j2G14mmgzXB07Kf2.JrtcnqO9qIFFS8VR"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.j2G14mmgzXB07Kf2"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your mind has an abnormal degree of control over your physical processes, driving them to exceed their normal level. You may substitute either your Intelligence or Wisdom modifiers for your Strength or Constitution modifiers when the latter are called for, even for your hit point rolls each level. You can intellectually ignore pain and other physical sensations, though you still suffer the mechanical penalties, and you automatically stabilize when Mortally Wounded.</p>",
+    "source": "Cognition",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "j2G14mmgzXB07Kf2",
+  "folder": "4j8mEbGHXA04WzKj",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!j2G14mmgzXB07Kf2"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Sleep Dependence",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.zINl4jUChdREUmnz"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Adequate sleep is critical for you. If you don&rsquo;t get a good night&rsquo;s sleep for some reason, you gain 2 System Strain.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "zINl4jUChdREUmnz",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 69000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zINl4jUChdREUmnz"
+}

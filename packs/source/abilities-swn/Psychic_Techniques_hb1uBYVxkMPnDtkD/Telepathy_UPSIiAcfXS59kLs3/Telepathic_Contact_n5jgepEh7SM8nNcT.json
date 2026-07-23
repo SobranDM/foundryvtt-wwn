@@ -1,0 +1,66 @@
+{
+  "name": "Telepathic Contact",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.n5jgepEh7SM8nNcT"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>There is no psychic power more threatening and disturbing to normal humanity than that of telepathy. The prospect of having one's innermost thoughts and secrets pried out by imperceptible means is deeply troubling to most men and women, and telepaths are often given a wide berth by others simply for fear of what private thoughts they might sift out.</p><p>Telepathy operates at a very basic level of mental contact, and is not impeded by a lack of shared languages. While the basic forms of telepathy only function on intelligent creatures, aliens or transhumans with human-like cognition can be affected. VIs, True AIs, and other non-biological intelligences are not normally subject to Telepathy techniques.</p><p>Telepathy is a subtle ability, and targets of its technique will not normally be aware of it. Only those with metapsionic expertise or Telepathy-0 skill or greater can tell when they've been targeted by Telepathy. Others may suspect this influence, particularly if they're aware of the existence of psychics and have just done something utterly inexplicable to their own reasoning.</p><p>The telepath can obtain a progressively-deeper understanding of a sentient target's thoughts. The target must be visible or otherwise perceptible to the telepath's unaided senses. Opening a contact requires the telepath to Commit Effort for the day as a Main Action, and the contact lasts for a scene at most unless augmented by other techniques. The depth of contact that can be made depends on the psychic's Telepathy skill. A single contact can use any or all of the effects permitted to a telepath of the user's skill level. Basic forms of contact do not allow for a saving throw, though more advanced probes allow the target to make a Mental saving throw to resist. On a successful save, no form of this technique that allows a save can be used on them for the rest of the scene.</p><p><strong>Level-0:</strong> Observe emotional states in a target. Intense emotions provide a single word or image related to the focus of the feelings.</p><p><strong>Level-1:</strong> A shallow gestalt with the target's language centers allows the telepath to understand any form of communication made by the target. If the psychic has the requisite body parts to speak the target's language, they can communicate with it in turn.</p><p><strong>Level-2:</strong> The psychic's awareness of the target's surface cognition is sophisticated enough to read their current thoughts, though it can't pick up memories or non-obvious connections. The target gets a Mental saving throw to resist this.</p><p><strong>Level-3:</strong> The psychic can drill down into the target's memory to get a one or two-sentence answer to any single question they ask, or receive a single answering vision of the target's recollections. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended. It can be re-established, but only by activating this technique again.</p><p><strong>Level-4:</strong> The psychic instantly gets a full and nuanced awareness of everything the target can remember about a particular topic. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended afterwards. It can be re-established, but only by activating this technique again.</p>",
+    "source": "Telepathy",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "n5jgepEh7SM8nNcT",
+  "folder": "UPSIiAcfXS59kLs3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!n5jgepEh7SM8nNcT"
+}

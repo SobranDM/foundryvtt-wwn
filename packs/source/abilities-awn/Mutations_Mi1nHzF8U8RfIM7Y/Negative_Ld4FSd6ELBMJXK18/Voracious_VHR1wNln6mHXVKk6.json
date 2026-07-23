@@ -1,0 +1,66 @@
+{
+  "name": "Voracious",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.VHR1wNln6mHXVKk6"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>If you don&rsquo;t consume at least two food rations a day, you are so distracted by hunger that you must make a Mental save to resist spending at least one round eating anything edible you encounter, including enemy bodies.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "VHR1wNln6mHXVKk6",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 77000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VHR1wNln6mHXVKk6"
+}

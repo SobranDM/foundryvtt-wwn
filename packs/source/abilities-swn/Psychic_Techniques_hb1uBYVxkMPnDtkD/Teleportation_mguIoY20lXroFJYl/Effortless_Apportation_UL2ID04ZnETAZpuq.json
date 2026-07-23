@@ -1,0 +1,66 @@
+{
+  "name": "Effortless Apportation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.UL2ID04ZnETAZpuq"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The psychic does not need to Commit Effort to use Personal Apportation. If the technique is augmented by other techniques that come with their own extra or increased cost, however, this extra cost must still be paid.</p>",
+    "source": "Teleportation",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "UL2ID04ZnETAZpuq",
+  "folder": "mguIoY20lXroFJYl",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UL2ID04ZnETAZpuq"
+}

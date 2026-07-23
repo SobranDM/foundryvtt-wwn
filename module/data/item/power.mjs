@@ -97,6 +97,18 @@ export default class WwnPower extends WwnItemBase {
     schema.damageRoll = new fields.StringField({ required: true, blank: true });
     schema.healing = new fields.BooleanField({ initial: false });
 
+    /* Bonus skills (rank-only grants; ignore focus points setting) */
+    schema.bonusSkills = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
+    schema.bonusSkillsPick = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.bonusSkillsChosen = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
+    /** Empty = listed skills only; `"any"` = open primary-skill pick when list empty and pick > 0. */
+    schema.bonusSkillsMode = new fields.StringField({
+      required: true,
+      choices: ["", "any"],
+      initial: "",
+      blank: true,
+    });
+
     return schema;
   }
 

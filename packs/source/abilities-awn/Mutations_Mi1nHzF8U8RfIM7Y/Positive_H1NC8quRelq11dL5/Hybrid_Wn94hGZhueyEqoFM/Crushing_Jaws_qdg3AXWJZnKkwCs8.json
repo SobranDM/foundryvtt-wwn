@@ -1,0 +1,66 @@
+{
+  "name": "Crushing Jaws",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.qdg3AXWJZnKkwCs8"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your jaws or mandibles are meant for crushing hard or fibrous substances. Your bite attacks use Punch and do 1d12 damage with no Shock, using the better of Strength or Dexterity to modify the attack. If using Traumatic Hit rules, your bite has a 1d8/x2 Trauma Rating. As with other Punch attacks, you may add your skill level to the damage roll. You can chew through up to twenty centimeters of hard wood or similar substances with one minute of gnawing.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "1d12",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "qdg3AXWJZnKkwCs8",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qdg3AXWJZnKkwCs8"
+}

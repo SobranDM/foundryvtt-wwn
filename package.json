@@ -13,11 +13,14 @@
     "migrate:packs": "node ./build/migrate-packs.mjs",
     "generate:skills": "node ./build/generate-swn-awn-skills.mjs",
     "generate:foci": "node ./build/generate-swn-awn-foci.mjs",
+    "generate:cwn-foci": "node ./build/generate-cwn-foci.mjs",
     "generate:starship-fittings": "node ./build/generate-starship-fittings.mjs",
     "generate:example-starships": "node ./build/generate-example-starships.mjs",
     "generate:armor-fittings": "node ./build/generate-armor-fittings.mjs",
     "generate:example-power-armor": "node ./build/generate-example-power-armor.mjs",
-    "generate:wire-foci": "node ./build/wire-foci-automation.mjs"
+    "generate:wire-foci": "node ./build/wire-foci-automation.mjs",
+    "generate:awn-mutations": "node ./build/generate-awn-mutations.mjs",
+    "generate:swn-psychic": "node ./build/generate-swn-psychic.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.4",

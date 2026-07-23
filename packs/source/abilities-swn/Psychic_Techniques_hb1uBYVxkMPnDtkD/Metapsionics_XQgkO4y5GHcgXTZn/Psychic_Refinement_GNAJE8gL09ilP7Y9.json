@@ -1,0 +1,66 @@
+{
+  "name": "Psychic Refinement",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.GNAJE8gL09ilP7Y9"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>Metapsionics is the rarest and most esoteric of the psychic disciplines, with few psychics having the necessary temperament or interest in developing these complex abilities. A metapsion controls psychic energy itself, molding and shaping the flows of energy that spill through the brains of those marked by MES.</p><p>The metapsion gains improved mastery over their own powers and an innate sensitivity to the use of psionic abilities in their presence.</p><p><strong>Level-0:</strong> The adept can visually and audibly detect the use of psychic powers. If both the source and target are visible to the metapsion, they can tell who's using the power, even if it's normally imperceptible. They gain a +2 bonus on any saving throw versus a psionic power.</p><p><strong>Level-1:</strong> The metapsion's maximum Effort increases by an additional point.</p><p><strong>Level-2:</strong> The adept can determine whether or not a person is a psychic or has latent psionic abilities through one round of visual inspection. Their saving throw bonus against psionic powers increases to +3.</p><p><strong>Level-3:</strong> The metapsion's maximum Effort increases by an additional point.</p><p><strong>Level-4:</strong> The metapsion can perform a slightly safer version of torching. Instead of rolling the torching damage die, they simply suffer 10 hit points of damage after torching is used. The damage occurs after the fueled power activates, allowing a psychic at low hit points to trigger a power before falling unconscious. This damage cannot be healed by anything but natural bed rest, though a psychic can be stabilized if this technique drops her to zero hit points.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "GNAJE8gL09ilP7Y9",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GNAJE8gL09ilP7Y9"
+}

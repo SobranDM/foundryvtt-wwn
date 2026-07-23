@@ -1,0 +1,66 @@
+{
+  "name": "Flawless Mastery",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.RAaacYXVjzTugtzN"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>When this technique is learned, the adept may choose one technique from any discipline they know. That technique no longer requires Effort to be Committed in any way, though other techniques that augment it may still exact a cost. Mastered Psychic Static, for example, can expend an effectively unlimited amount of effort. If the technique has a duration based on Committed Effort then it lasts until the metapsion chooses to end it or is killed. This technique may only be mastered once, though the perfected technique may be changed with a month of meditation and practice.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 4,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "RAaacYXVjzTugtzN",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RAaacYXVjzTugtzN"
+}

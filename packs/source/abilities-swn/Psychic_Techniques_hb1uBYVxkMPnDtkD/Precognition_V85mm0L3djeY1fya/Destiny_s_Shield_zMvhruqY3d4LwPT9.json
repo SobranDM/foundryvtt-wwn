@@ -1,0 +1,66 @@
+{
+  "name": "Destiny's Shield",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.zMvhruqY3d4LwPT9"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The precog observes an incoming injury and tries to find an alternate future in which the attack misses. As an Instant action, the precog can Commit Effort for the day to force an attacker to reroll a successful hit roll. This technique only works on attacks against the psychic's person, not against attacks aimed at a vehicle they're occupying or harm that doesn't involve an attack roll. If the rerolled attack still hits, however, the damage done is maximized. This technique can be used only once per incoming attack.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "zMvhruqY3d4LwPT9",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zMvhruqY3d4LwPT9"
+}

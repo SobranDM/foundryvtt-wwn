@@ -1,0 +1,66 @@
+{
+  "name": "Spatial Synchrony Mandala",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.c2WkgKW3FKaP3C3S"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The psychic imprints a particular object or person on their psionic awareness. Provided the object is relatively intact and in range of their Personal Apportation, the psychic always knows its exact location and can teleport to within three meters of it with Personal Apportation even if it has moved from its original location. Imprinting an object requires an hour's meditation with it, and only one object can be imprinted at a time. If imprinting on a person, the target must be willing and cooperative to make the imprint. Objects must be at least one kilogram in mass to be effectively tracked.</p>",
+    "source": "Teleportation",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "c2WkgKW3FKaP3C3S",
+  "folder": "mguIoY20lXroFJYl",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!c2WkgKW3FKaP3C3S"
+}

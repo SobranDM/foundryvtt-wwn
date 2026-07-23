@@ -1,0 +1,35 @@
+{
+  "name": "Many Faces",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have multiple usable identities registered with corporate and governmental databases. These identities are so deeply embedded in the systems that they&rsquo;re almost impossible to pry out unless you do something to compromise them.</p><p><strong>Level 1:</strong> Gain Sneak as a bonus skill. You can maintain one alternate identity at a time per three character levels, rounded up. These identities have their own names, backgrounds, criminal records, financial dealings, and bank accounts, and will register as authentic to all normal corporate and governmental checks. If an identity is compromised or you want a different one, you can replace it with a week&rsquo;s work. False identities cannot be important people or involve corporations you don&rsquo;t have a Contact in already.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "4txZetlWy8IfA33E",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4txZetlWy8IfA33E"
+}

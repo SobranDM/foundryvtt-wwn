@@ -1,0 +1,53 @@
+{
+  "name": "On Target",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Gain a combat skill as a bonus skill. Your basic attack bonus is equal to your character level, instead of the usual half level, rounded down.</p><p>Survivors without this Edge use half-level attack bonus.</p>",
+    "edgeType": "edge",
+    "attackProgression": "warrior",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [
+      "stab",
+      "punch",
+      "shoot"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "mMGgBlyH3pbwc1M2",
+  "folder": "1ovKT4ewx1ZysKLG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mMGgBlyH3pbwc1M2"
+}

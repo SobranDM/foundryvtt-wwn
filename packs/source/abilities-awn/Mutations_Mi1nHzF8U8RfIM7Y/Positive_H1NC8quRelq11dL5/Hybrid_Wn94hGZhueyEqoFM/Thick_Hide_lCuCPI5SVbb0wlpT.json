@@ -1,0 +1,87 @@
+{
+  "name": "Thick Hide",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "FFK73ztmtt7Ma4T0",
+      "type": "base",
+      "name": "Thick Hide",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": "@halfLevel + 15",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!lCuCPI5SVbb0wlpT.FFK73ztmtt7Ma4T0"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.lCuCPI5SVbb0wlpT"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Whether from dense skin, scales, thick fur, chitin, or some other body covering, your base Armor Class is equal to 15 plus half your level, rounded down. Armor worse than this does not help you, but you gain benefits from shields normally. Any Shock you suffer is lowered by 1 point, to a potential minimum of zero.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "lCuCPI5SVbb0wlpT",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lCuCPI5SVbb0wlpT"
+}

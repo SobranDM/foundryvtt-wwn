@@ -1,0 +1,186 @@
+{
+  "_id": "TXRo4DoWvVfveoPe",
+  "name": "Positive Mutations — Sense",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "xf2LyO5d7RhsZqEW",
+      "type": "document",
+      "name": "Accelerated Perception",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.RivAWjD5cp29ncmB",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.xf2LyO5d7RhsZqEW"
+    },
+    {
+      "_id": "zQrHP7GbofgABvCo",
+      "type": "document",
+      "name": "Acute Hearing",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.uPXJm4MrxaMRVU6I",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.zQrHP7GbofgABvCo"
+    },
+    {
+      "_id": "XXWNRHh1LgdFWEew",
+      "type": "document",
+      "name": "Acute Olfaction",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.oqyZANBmaXa2CUmU",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.XXWNRHh1LgdFWEew"
+    },
+    {
+      "_id": "ugJnVKphZiENLiKk",
+      "type": "document",
+      "name": "Echolocation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.agubikT1LgPntGq3",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.ugJnVKphZiENLiKk"
+    },
+    {
+      "_id": "Ymg2OsvNu1TkvB1B",
+      "type": "document",
+      "name": "Empathic Sensitivity",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.t2TUiRcoyCAz6XHK",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.Ymg2OsvNu1TkvB1B"
+    },
+    {
+      "_id": "0pYGzspn0bqMKG0Q",
+      "type": "document",
+      "name": "Night Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.vQh5HfY9qUE7808x",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.0pYGzspn0bqMKG0Q"
+    },
+    {
+      "_id": "jcm79C9jbzc4EqsP",
+      "type": "document",
+      "name": "Panoptic Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.dQCfkUuBAPoUsO1s",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.jcm79C9jbzc4EqsP"
+    },
+    {
+      "_id": "p1vM7LIRNLLM7Mdt",
+      "type": "document",
+      "name": "Tactile Analysis",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.tMbm4GVLuamSMlzz",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.p1vM7LIRNLLM7Mdt"
+    },
+    {
+      "_id": "zKqPdip30mi9kwxi",
+      "type": "document",
+      "name": "Telescopic Sight",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.e52lk58RjzlsU5Pm",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.zKqPdip30mi9kwxi"
+    },
+    {
+      "_id": "tkZ3OIjnbCpDcd2h",
+      "type": "document",
+      "name": "Thermal Vision",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.xcKqS8SPfQ2zAu3O",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!TXRo4DoWvVfveoPe.tkZ3OIjnbCpDcd2h"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!TXRo4DoWvVfveoPe"
+}

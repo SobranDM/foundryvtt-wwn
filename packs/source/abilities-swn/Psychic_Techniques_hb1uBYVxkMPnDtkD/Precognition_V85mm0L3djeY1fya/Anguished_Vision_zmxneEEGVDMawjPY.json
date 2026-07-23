@@ -1,0 +1,66 @@
+{
+  "name": "Anguished Vision",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.zmxneEEGVDMawjPY"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The adept's precognition is sophisticated enough to clearly foresee several seconds into the future. As an Instant action, the psychic may Commit Effort for the day and declare that what they have just done or seen is a vision of the immediate future. Time rolls back to the start of the initiative count in a combat turn, or six seconds earlier if out of combat. Nothing that happened during that round has really come to pass yet. This ability is tremendously draining, and can be used only once per day.</p>",
+    "source": "Precognition",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "zmxneEEGVDMawjPY",
+  "folder": "V85mm0L3djeY1fya",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zmxneEEGVDMawjPY"
+}

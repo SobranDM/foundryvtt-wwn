@@ -1,0 +1,87 @@
+{
+  "name": "Loose Limbs",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "Dsmz35yeyR43KbsH",
+      "type": "base",
+      "name": "Loose Limbs",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!wM4VXClVUj1on3r9.Dsmz35yeyR43KbsH"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.wM4VXClVUj1on3r9"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your limbs break off and regrow. You suffer a -1 Dexterity modifier and when Mortally Wounded or you intentionally break it off, you lose a randomly-chosen arm or leg. It regrows in 1d4 weeks.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "wM4VXClVUj1on3r9",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 43000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wM4VXClVUj1on3r9"
+}

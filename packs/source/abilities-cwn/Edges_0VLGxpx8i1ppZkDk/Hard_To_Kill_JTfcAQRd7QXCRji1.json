@@ -1,0 +1,71 @@
+{
+  "name": "Hard To Kill",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [
+    {
+      "_id": "Lnfn02orl7v1YfB2",
+      "type": "base",
+      "name": "Hard To Kill",
+      "img": "icons/svg/aura.svg",
+      "transfer": true,
+      "disabled": false,
+      "statuses": [],
+      "flags": {},
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": "1",
+            "phase": "initial"
+          }
+        ]
+      },
+      "_key": "!items.effects!JTfcAQRd7QXCRji1.Lnfn02orl7v1YfB2"
+    }
+  ],
+  "flags": {},
+  "system": {
+    "description": "<p>Instead of rolling 1d6 per level for your hit points, you roll 1d6+2. If using Traumatic Hit rules, your base Trauma Target increases by +1 (from 6 to 7).</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 2
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "JTfcAQRd7QXCRji1",
+  "folder": "0VLGxpx8i1ppZkDk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JTfcAQRd7QXCRji1"
+}

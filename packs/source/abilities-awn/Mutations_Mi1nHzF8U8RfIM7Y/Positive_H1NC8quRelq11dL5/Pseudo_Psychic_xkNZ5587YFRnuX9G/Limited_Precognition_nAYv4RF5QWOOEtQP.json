@@ -1,0 +1,66 @@
+{
+  "name": "Limited Precognition",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.nAYv4RF5QWOOEtQP"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>As an Instant action, accept 1 System Strain before performing an action that would take no more than a few seconds, such as pushing a button, drinking a liquid, or opening a door. You immediately sense the next six seconds of consequences that the GM thinks most likely to happen, observing them from your own perspective. If you wish, you may trigger this precognitive ability just before an otherwise-successful ambush or Execution Attack, foiling either.</p>",
+    "source": "Pseudo-Psychic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "nAYv4RF5QWOOEtQP",
+  "folder": "xkNZ5587YFRnuX9G",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nAYv4RF5QWOOEtQP"
+}

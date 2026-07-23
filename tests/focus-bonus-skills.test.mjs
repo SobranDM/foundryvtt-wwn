@@ -19,6 +19,7 @@ import {
   computeFocusBonusGrant,
   computeFocusBonusRevoke,
   specialistSkillBonusPatch,
+  levelBonusSkills,
 } from "../module/helpers/focus-bonus-skills.mjs";
 import { applyFocusBonusSkillSeed } from "../module/helpers/focus-automation-seeds.mjs";
 import { migrateFocus } from "../module/migration/transforms.mjs";
@@ -88,6 +89,7 @@ describe("focus bonus skill resolution", () => {
   it("Psychic Training and Spark of Brilliance use open modes", () => {
     assert.equal(openBonusMode({ name: "Psychic Training" }), "psychic");
     assert.equal(openBonusMode({ name: "Spark of Brilliance" }), "any");
+    assert.equal(openBonusMode({ name: "All Natural" }), "any");
     assert.equal(
       focusNeedsBonusSkillChoice({
         name: "Psychic Training",
@@ -95,6 +97,15 @@ describe("focus bonus skill resolution", () => {
       }),
       true,
     );
+  });
+
+  it("Ace Driver grants Fix at ownedLevel 2", () => {
+    const l1 = { name: "Ace Driver", system: { ownedLevel: 1, bonusSkills: ["drive"], bonusSkillsPick: 1, bonusSkillsChosen: [] } };
+    const l2 = { name: "Ace Driver", system: { ownedLevel: 2, bonusSkills: ["drive"], bonusSkillsPick: 1, bonusSkillsChosen: [] } };
+    assert.deepEqual(levelBonusSkills(l1), []);
+    assert.deepEqual(levelBonusSkills(l2), ["fix"]);
+    assert.deepEqual(resolveBonusSkillSlugs(l1), ["drive"]);
+    assert.deepEqual(resolveBonusSkillSlugs(l2)?.sort(), ["drive", "fix"]);
   });
 
   it("Apex Predator grants both skills without choice", () => {

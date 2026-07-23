@@ -1,0 +1,66 @@
+{
+  "name": "Photon Manipulation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.A4nyLnhV1kSdU8tH"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You can instinctively modulate the light level around you. You can create visible light within a 10-meter radius or shroud up to a 2-meter radius in inky darkness that resists all illumination. While shrouded, you gain an Armor Class bonus of +2 due to your obfuscation. You can see normally regardless of the light level around you. When you or an ally within 10 meters are hit by a laser weapon, accept one System Strain as an Instant action to negate the damage.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "10m",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "A4nyLnhV1kSdU8tH",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A4nyLnhV1kSdU8tH"
+}

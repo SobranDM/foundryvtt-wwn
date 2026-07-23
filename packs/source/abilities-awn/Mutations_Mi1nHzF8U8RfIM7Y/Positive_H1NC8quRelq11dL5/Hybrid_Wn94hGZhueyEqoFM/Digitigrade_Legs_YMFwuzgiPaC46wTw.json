@@ -1,0 +1,87 @@
+{
+  "name": "Digitigrade Legs",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "jgy7nZEZhYzEvJUS",
+      "type": "base",
+      "name": "Digitigrade Legs",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.movement.bonus",
+            "type": "add",
+            "value": 5,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!YMFwuzgiPaC46wTw.jgy7nZEZhYzEvJUS"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.YMFwuzgiPaC46wTw"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>Your animalistic legs grant you unusual speed. Your base Move rate increases by 5 meters per Move action and you can jump up to 10 meters horizontally or half vertically as a Move action.</p>",
+    "source": "Hybrid",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "YMFwuzgiPaC46wTw",
+  "folder": "Wn94hGZhueyEqoFM",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YMFwuzgiPaC46wTw"
+}

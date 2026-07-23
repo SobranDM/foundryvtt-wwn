@@ -1,0 +1,30 @@
+{
+  "name": "Survive",
+  "type": "skill",
+  "img": "systems/wwn/assets/icons/skills/survive.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "Depending on the character's background, this might be more a matter of street smarts and urban survival or it might be directed towards outlands bushcraft and wilderness living. Regardless of the original focus, some time and practice can allow it to be generalized by a PC.",
+    "ownedLevel": -1,
+    "score": "wis",
+    "skillDice": "2d6",
+    "secondary": false,
+    "slug": "survive"
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": 1784847198765,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "m9OBGoBAkzdAdHYE",
+  "folder": "4D8GOttbcszH7FbR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!m9OBGoBAkzdAdHYE"
+}

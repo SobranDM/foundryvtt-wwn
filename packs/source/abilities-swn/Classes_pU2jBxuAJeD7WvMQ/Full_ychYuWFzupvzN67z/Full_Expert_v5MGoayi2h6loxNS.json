@@ -1,0 +1,51 @@
+{
+  "name": "Full Expert",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Your hero is exceptionally good at a useful skill. Doctors, cat burglars, starship pilots, grifters, technicians, or any other concept that focuses on expertise in a non-combat skill should pick the Expert class. Experts are the best at such skills and gain more of them than other classes do.</p><p>Just as a Warrior can be relied upon to make a shot when the chips are down, an Expert has a knack for succeeding at the moments of greatest importance. Once per scene, an Expert can reroll a failed skill check, taking the new result if it&rsquo;s better. This benefit can be applied to any skill check, even those that the Expert isn&rsquo;t specially focused in.</p><p>Aside from the free focus level that all PCs get at the start of the game, an Expert can choose an additional level in a non-combat focus related to their background. When you advance an experience level, you gain a bonus skill point that can be spent on any non-combat, non-psychic skill.</p><p>Hit points are 1d6 per level plus Constitution modifier. Attack bonus is half level, rounded down.</p>",
+    "edgeType": "class",
+    "attackProgression": "expert",
+    "skillPointsPerLevel": 4,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Expert Skill Reroll"
+    ]
+  },
+  "_id": "v5MGoayi2h6loxNS",
+  "folder": "ychYuWFzupvzN67z",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!v5MGoayi2h6loxNS"
+}

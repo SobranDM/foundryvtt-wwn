@@ -1,0 +1,87 @@
+{
+  "name": "Insensate Flesh",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "K3G1BRPT48OCHDkq",
+      "type": "base",
+      "name": "Insensate Flesh",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.hitDice.perLevelMod",
+            "type": "add",
+            "value": -1,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!rJJzUQjn2H3Nbgy8.K3G1BRPT48OCHDkq"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.rJJzUQjn2H3Nbgy8"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have an extremely muted sense of touch, including sensing heat or pressure. You suffer a -1 penalty to your hit point roll each level, to a minimum of 1 point, as you are less capable of noticing injuries and aggravate them easily.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "rJJzUQjn2H3Nbgy8",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 39000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rJJzUQjn2H3Nbgy8"
+}

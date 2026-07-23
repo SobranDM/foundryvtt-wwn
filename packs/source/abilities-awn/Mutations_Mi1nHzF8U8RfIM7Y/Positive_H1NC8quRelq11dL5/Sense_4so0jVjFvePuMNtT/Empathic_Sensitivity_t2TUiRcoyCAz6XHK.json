@@ -1,0 +1,66 @@
+{
+  "name": "Empathic Sensitivity",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.t2TUiRcoyCAz6XHK"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You intuitively notice subtle physiological signifiers when speaking to another creature, identifying its current emotional state as a Main Action. Gain a +1 to all social skill checks. You can communicate with other intelligent creatures even in the absence of a shared language, though only via basic ideas and concepts.</p>",
+    "source": "Sense",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "t2TUiRcoyCAz6XHK",
+  "folder": "4so0jVjFvePuMNtT",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!t2TUiRcoyCAz6XHK"
+}

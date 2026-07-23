@@ -1,0 +1,66 @@
+{
+  "name": "Metadimensional Friction",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.g6bUcVctJ9ZOQNsR"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>As a Main Action, the metapsion Commits Effort for the scene to create localized MES turbulence around a visible target psychic within 200 meters. Each time the target Commits Effort or an NPC initiates a psychic power, they suffer 1d8 damage per Metapsionics skill level of the adept. Each time the target suffers the damage they can attempt a Mental saving throw to throw off the effect. It lasts no longer than the rest of the scene at most. Only one application of this friction can affect a target at once.</p>",
+    "source": "Metapsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 3,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "Mental",
+      "range": "200m",
+      "duration": "Main Action"
+    },
+    "damageRoll": "1d8 per Metapsionics skill level",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "g6bUcVctJ9ZOQNsR",
+  "folder": "XQgkO4y5GHcgXTZn",
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!g6bUcVctJ9ZOQNsR"
+}

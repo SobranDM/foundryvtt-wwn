@@ -1,0 +1,35 @@
+{
+  "name": "Tinker",
+  "type": "focus",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You have a natural talent for modifying and improving equipment.</p><p><strong>Level 1:</strong> Gain Fix as a bonus skill. Your Maintenance score is doubled, allowing you to maintain twice as many mods. Vehicle, cyber, and gear mods cost only half their usual price in dollars, though experimental component requirements remain the same.</p><p><strong>Level 2:</strong> Your Fix skill is treated as one level higher for purposes of building and maintaining mods and calculating your Maintenance score, up to a maximum of Fix-5. Advanced mods require one fewer experimental components to make, down to a minimum of zero.</p>",
+    "ownedLevel": 1,
+    "resourceGrant": {
+      "targetName": "",
+      "targetSource": "",
+      "bonusMax": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "resourceLength": "none",
+    "bonusSkills": [
+      "fix"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusDice": null,
+    "skillBonus": ""
+  },
+  "_id": "9RK7oJZowt8uT8g9",
+  "folder": "td3D0cxUVYtNkQQA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9RK7oJZowt8uT8g9"
+}

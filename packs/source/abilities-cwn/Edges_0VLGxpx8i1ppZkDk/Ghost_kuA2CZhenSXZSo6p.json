@@ -1,0 +1,54 @@
+{
+  "name": "Ghost",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>You are uncannily elusive. Gain Sneak as a bonus skill and the Fighting Withdrawal combat action is an On Turn action for you. Once per scene, reroll a failed Sneak check related to sneaking or going unseen. Once per game day, as a Move action, move up to 10 meters without anyone around you seeing you move.</p>",
+    "edgeType": "edge",
+    "attackProgression": "none",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "",
+      "formula": "",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [
+      "sneak"
+    ],
+    "bonusSkillsPick": 1,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": [
+      "Ghost Scene Reroll",
+      "Ghost Unseen Move"
+    ]
+  },
+  "_id": "kuA2CZhenSXZSo6p",
+  "folder": "0VLGxpx8i1ppZkDk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kuA2CZhenSXZSo6p"
+}

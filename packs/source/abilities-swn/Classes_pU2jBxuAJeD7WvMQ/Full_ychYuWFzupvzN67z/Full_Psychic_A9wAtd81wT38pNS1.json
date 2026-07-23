@@ -1,0 +1,56 @@
+{
+  "name": "Full Psychic",
+  "type": "classEdge",
+  "img": "systems/wwn/assets/icons/items/class-ability.png",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Your hero has received training in controlling their natural Metadimensional Extroversion Syndrome, and can wield the psychic powers that come from that strange affliction. Psychics are capable of learning psychic disciplines and their associated techniques.</p><p>When you pick this class, choose any two psychic skills as bonus skills. You can pick the same one twice to obtain level-1 proficiency in it and a free level-1 technique from that discipline.</p><p>You have an Effort score used to fuel psychic abilities. Maximum Effort equals 1 plus your highest psychic skill plus the better of your Wisdom or Constitution modifiers, to a minimum of 1.</p><p>Hit points are 1d6 per level plus Constitution modifier. Attack bonus is half level, rounded down.</p>",
+    "edgeType": "class",
+    "attackProgression": "expert",
+    "skillPointsPerLevel": 3,
+    "poolGrant": {
+      "name": "Psychic Effort",
+      "formula": "max(1, 1 + @highestPsychic + max(@wis, @con))",
+      "value": 0,
+      "progression": []
+    },
+    "slotGrant": {
+      "enabled": false,
+      "value": 0,
+      "progression": [],
+      "leveledProgression": []
+    },
+    "preparedGrant": {
+      "progression": []
+    },
+    "hdGrant": {
+      "die": "d6",
+      "perLevelMod": 0
+    },
+    "bonusSkills": [
+      "biopsionics",
+      "metapsionics",
+      "precognition",
+      "telekinesis",
+      "telepathy",
+      "teleportation"
+    ],
+    "bonusSkillsPick": 2,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": "",
+    "attributeGrant": {
+      "mode": "",
+      "exclude": [],
+      "chosen": ""
+    },
+    "companions": []
+  },
+  "_id": "A9wAtd81wT38pNS1",
+  "folder": "ychYuWFzupvzN67z",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A9wAtd81wT38pNS1"
+}

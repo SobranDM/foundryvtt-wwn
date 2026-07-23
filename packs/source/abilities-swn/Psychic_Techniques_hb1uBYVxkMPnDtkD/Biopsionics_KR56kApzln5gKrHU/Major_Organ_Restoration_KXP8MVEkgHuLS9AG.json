@@ -1,0 +1,66 @@
+{
+  "name": "Major Organ Restoration",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.KXP8MVEkgHuLS9AG"
+    }
+  },
+  "system": {
+    "subType": "psychic",
+    "description": "<p>The biopsion's Psychic Succor can now cure congenital birth defects and regrow missing limbs and organs. It can even be used to stabilize targets that have been dropped by Heavy weapons, decapitated, or otherwise dramatically dismembered, provided it's used within one round per level of Biopsionic skill. The best that can be done for such badly-mangled targets is stabilization, after which they must rest for 24 hours before any further hit points can be healed by Biopsionics, stims, or natural rest.</p>",
+    "source": "Biopsionics",
+    "customTypeName": "",
+    "resourceName": "Psychic Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 2,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "KXP8MVEkgHuLS9AG",
+  "folder": "KR56kApzln5gKrHU",
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KXP8MVEkgHuLS9AG"
+}

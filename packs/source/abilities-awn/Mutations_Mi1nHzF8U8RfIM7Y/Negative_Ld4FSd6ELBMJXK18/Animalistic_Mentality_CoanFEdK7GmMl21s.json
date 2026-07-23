@@ -1,0 +1,87 @@
+{
+  "name": "Animalistic Mentality",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [
+    {
+      "_id": "sBr44Io5oyybRr7G",
+      "type": "base",
+      "name": "Animalistic Mentality",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!CoanFEdK7GmMl21s.sBr44Io5oyybRr7G"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.CoanFEdK7GmMl21s"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You have psychological traits of some kind that make it difficult to deal with normal humans, including other mutants. Your Charisma modifier suffers a -1 penalty.</p>",
+    "source": "Negative",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "CoanFEdK7GmMl21s",
+  "folder": "Ld4FSd6ELBMJXK18",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CoanFEdK7GmMl21s"
+}

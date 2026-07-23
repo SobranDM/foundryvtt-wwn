@@ -1,0 +1,66 @@
+{
+  "name": "Sound Generation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/focus.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-awn.BBmrPLMYRyrdwG9z"
+    }
+  },
+  "system": {
+    "subType": "mutation",
+    "description": "<p>You can produce any sound you wish up to the volume of a shout originating from a visible point within 30 meters. As a Main Action, you can focus on a target within 30 meters and make a sonic attack that inflicts 2d6 plus your level in non-lethal damage to any non-deaf creature. After the first use of this sonic attack in a scene, additional uses add 1 System Strain.</p>",
+    "source": "Exotic",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 1,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "0,1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "30m",
+      "duration": "Main Action"
+    },
+    "damageRoll": "2d6 + @lvl",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "BBmrPLMYRyrdwG9z",
+  "folder": "gR5x2VBbPfAr4dzv",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BBmrPLMYRyrdwG9z"
+}

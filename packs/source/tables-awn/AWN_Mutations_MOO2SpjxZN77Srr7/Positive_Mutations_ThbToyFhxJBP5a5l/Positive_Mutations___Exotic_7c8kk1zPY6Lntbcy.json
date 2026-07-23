@@ -1,0 +1,186 @@
+{
+  "_id": "7c8kk1zPY6Lntbcy",
+  "name": "Positive Mutations — Exotic",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "_id": "usKBGUZQYZ0S3Kh0",
+      "type": "document",
+      "name": "Chameleon Field",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.fu9m6JHaWbn8YR4f",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.usKBGUZQYZ0S3Kh0"
+    },
+    {
+      "_id": "wuHYiDlzR69mVnvy",
+      "type": "document",
+      "name": "Electrical Generation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.r2M3eC5sOea9S9to",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.wuHYiDlzR69mVnvy"
+    },
+    {
+      "_id": "QMUxcrqqLnXC7WSU",
+      "type": "document",
+      "name": "Hemovore",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.ZupjNXi1NUS3goCE",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.QMUxcrqqLnXC7WSU"
+    },
+    {
+      "_id": "psejDmZP29y7AYvi",
+      "type": "document",
+      "name": "Image Projection",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.Zc35of1P7t8LVl2Y",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.psejDmZP29y7AYvi"
+    },
+    {
+      "_id": "2ij3DpyD0nyUX01M",
+      "type": "document",
+      "name": "Metamorph",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.c6CvFAVJlAwTYDKm",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.2ij3DpyD0nyUX01M"
+    },
+    {
+      "_id": "lXbTSVzJkFVV2gOP",
+      "type": "document",
+      "name": "Molecular Phasing",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.1IEFn9Hs9bCYA6fz",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.lXbTSVzJkFVV2gOP"
+    },
+    {
+      "_id": "R63VmbnKxblWazUf",
+      "type": "document",
+      "name": "Natural Projectiles",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.84F2GPtB0LbTwimI",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.R63VmbnKxblWazUf"
+    },
+    {
+      "_id": "JIe6NYisrAt4bNIs",
+      "type": "document",
+      "name": "Pheromone Cloud",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.rXZJ72MyGsSVtnHP",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.JIe6NYisrAt4bNIs"
+    },
+    {
+      "_id": "V72UuKihCOiU4EB7",
+      "type": "document",
+      "name": "Photon Manipulation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.A4nyLnhV1kSdU8tH",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.V72UuKihCOiU4EB7"
+    },
+    {
+      "_id": "d3qw6NbcwQIhkLaY",
+      "type": "document",
+      "name": "Sound Generation",
+      "description": "",
+      "img": "systems/wwn/assets/icons/items/focus.png",
+      "documentUuid": "Compendium.wwn.abilities-awn.BBmrPLMYRyrdwG9z",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!7c8kk1zPY6Lntbcy.d3qw6NbcwQIhkLaY"
+    }
+  ],
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "ThbToyFhxJBP5a5l",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!tables!7c8kk1zPY6Lntbcy"
+}
