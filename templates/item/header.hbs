@@ -1,0 +1,45 @@
+{{!-- Shared item sheet header: identity band + chips + weapon tags. --}}
+<header class="sheet-header wwn-sheet-header wwn-item-header">
+  <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt="" />
+  <div class="wwn-item-header-fields">
+    <input class="wwn-header-name" name="name" type="text" value="{{item.name}}"
+      placeholder="{{localize 'WWN.details.name'}}" />
+    <div class="wwn-item-header-chips">
+      {{#if (evalOr (eq item.type "weapon") (evalOr (eq item.type "armor") (eq item.type "item")))}}
+      <label class="wwn-chip" title="{{localize 'WWN.items.Price'}}">
+        <span class="wwn-chip-label"><i class="fas fa-circle"></i></span>
+        <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number" />
+      </label>
+      <label class="wwn-chip" title="{{localize 'WWN.items.Weight'}}">
+        <span class="wwn-chip-label"><i class="fas fa-weight-hanging"></i></span>
+        <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
+      </label>
+      <label class="wwn-chip" title="{{localize 'WWN.items.Quantity'}}">
+        <span class="wwn-chip-label"><i class="fas fa-hashtag"></i></span>
+        {{#if (evalOr system.charges.value system.charges.max)}}
+        <input type="number" name="system.quantity" value="1" data-dtype="Number"
+          title="{{localize 'WWN.items.ChargeQuantity'}}" disabled />
+        {{else}}
+        <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+        {{/if}}
+      </label>
+      {{/if}}
+      {{#if (eq item.type "focus")}}
+      <label class="wwn-chip" title="{{localize 'WWN.details.level'}}">
+        <span class="wwn-chip-label">{{localize "WWN.details.level"}}</span>
+        <input type="number" name="system.ownedLevel" value="{{system.ownedLevel}}" data-dtype="Number" min="1" />
+      </label>
+      {{/if}}
+    </div>
+    {{#if (eq item.type "weapon")}}
+    <ol class="wwn-tag-list">
+      {{#each system.tags as |tag|}}
+      <li class="wwn-tag" title="{{getTagDesc tag}}" data-tag="{{tag}}">
+        <span>{{tag}}</span>
+        <a data-action="deleteTag"><i class="fas fa-times"></i></a>
+      </li>
+      {{/each}}
+    </ol>
+    {{/if}}
+  </div>
+</header>

@@ -1,0 +1,162 @@
+{{!-- Details tab: identity, languages, combat/config, party shares, editors. --}}
+<section class="tab notes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Profile.Identity"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.Alignment"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.details.background"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.details.background" value="{{system.details.background}}" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.details.class"}}</label>
+            <div class="form-fields owned-class-edges">
+              {{#if classEdges.length}}
+              {{#each classEdges as |edge|}}
+              <span class="item" data-item-id="{{edge.id}}">
+                <a data-action="editItem" title="{{localize 'WWN.Edit'}}">{{edge.name}}</a>
+              </span>
+              {{/each}}
+              {{else}}
+              <span class="unowned-hint">{{localize "WWN.ClassEdge.NoneOnDetails"}}</span>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header flexrow">
+          <span class="wwn-collapsible-label">{{localize "WWN.category.languages"}}</span>
+          <div class="item-controls">
+            <a class="item-control" data-action="addLanguage" title="{{localize 'WWN.Add'}}">
+              <i class="fa fa-plus"></i>
+            </a>
+          </div>
+        </div>
+        <ol class="item-list wwn-data-table">
+          {{#each system.languages as |lang|}}
+          <li class="item-entry" data-lang="{{lang}}">
+            <div class="item flexrow">
+              <div class="item-name">{{lang}}</div>
+              <div class="item-controls">
+                <a class="item-control" data-action="removeLanguage" data-language="{{lang}}"
+                  title="{{localize 'WWN.Delete'}}">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.config"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label title="{{localize 'WWN.AB'}}">{{localize "WWN.ABShort"}}</label>
+            <div class="form-fields">
+              <input type="number" value="{{system.combat.ab}}" data-dtype="Number" disabled
+                title="{{localize 'WWN.Sheet.AttackBonusBreakdown' base=system.combat.abBase mod=system.combat.abMod}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.HitDice.Label"}}</label>
+            <div class="form-fields flexrow">
+              <input type="text" value="{{system.hitDice.display}}" disabled
+                title="{{#if system.hitDice.fromEdges}}{{localize 'WWN.HitDice.FromClassEdges'}}{{else}}{{localize 'WWN.HitDice.RollHint'}}{{/if}}" />
+              <a data-action="rollHitDice" title="{{localize 'WWN.Roll.HitDice'}}"><i class="fas fa-dice"></i></a>
+            </div>
+          </div>
+          {{#unless system.hitDice.fromEdges}}
+          <div class="form-group">
+            <label>{{localize "WWN.HitDice.DieType"}}</label>
+            <div class="form-fields">
+              <select name="system.hitDice.die">
+                {{#each config.hitDiceOptions as |die|}}
+                <option value="{{die}}" {{#if (eq die ../system.hitDice.die)}}selected{{/if}}>{{die}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.HitDice.PerLevelModHint'}}">{{localize "WWN.HitDice.PerLevelMod"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.hitDice.perLevelMod" value="{{system.hitDice.perLevelMod}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+          {{/unless}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.partyShares"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.XpBonus"}} (%)</label>
+            <div class="form-fields">
+              <input type="number" name="system.details.xp.bonus" value="{{system.details.xp.bonus}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.XpShare"}} (%)</label>
+            <div class="form-fields">
+              <input type="number" name="system.details.xp.share" value="{{system.details.xp.share}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.CurrencyShare"}} (%)</label>
+            <div class="form-fields">
+              <input type="number" name="system.currencyShare" value="{{system.currencyShare}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.Retainer"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.retainer.enabled" {{checked system.retainer.enabled}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          {{#if system.retainer.enabled}}
+          <div class="form-group">
+            <label>{{localize "WWN.Profile.Wage"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.retainer.wage" value="{{system.retainer.wage}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Loyalty"}}</label>
+            <div class="form-fields flexrow">
+              <input name="system.details.morale" type="number" value="{{system.details.morale}}" placeholder="0"
+                data-dtype="Number" />
+              <a data-action="rollMorale" title="{{localize 'WWN.roll.morale'}}"><i class="fas fa-dice"></i></a>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.Profile.Description"}}</div>
+      {{editor enrichedBiography target="system.biography" button=true editable=editable async=true}}
+    </div>
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.Profile.Notes"}}</div>
+      {{editor enrichedNotes target="system.details.notes" button=true editable=editable async=true}}
+    </div>
+  </div>
+</section>

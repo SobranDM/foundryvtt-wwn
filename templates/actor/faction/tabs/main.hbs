@@ -1,0 +1,110 @@
+{{!-- Faction Main: left stats/goal/desc | right assets. --}}
+<section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-faction-main-grid">
+    <div class="wwn-faction-main-left wwn-form-stack">
+      {{!-- HP + XP --}}
+      <div class="wwn-panel">
+        <div class="wwn-stat-grid wwn-faction-hp-xp">
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header" title="{{localize 'WWN.faction.hp'}}">{{localize "WWN.faction.hp"}}</div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" name="system.health.value" value="{{system.health.value}}"
+                data-dtype="Number" min="0" />
+              <span class="sep">/</span>
+              <span>{{system.health.max}}</span>
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header" title="{{localize 'WWN.faction.xp'}}">{{localize "WWN.faction.xp"}}</div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" data-dtype="Number" name="system.xp" value="{{system.xp}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Cunning / Force / Wealth / Treasure (2×2) --}}
+      <div class="wwn-panel">
+        <div class="wwn-stat-grid wwn-faction-ratings-2x2">
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">
+              {{localize "WWN.faction.cunningRating"}}
+              <a data-action="ratingUp" data-rating-type="cunning" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
+            </div>
+            <div class="wwn-stat-chip-value">
+              <input name="system.cunningRating" value="{{system.cunningRating}}" type="number" data-dtype="Number"
+                min="1" max="8" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">
+              {{localize "WWN.faction.forceRating"}}
+              <a data-action="ratingUp" data-rating-type="force" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
+            </div>
+            <div class="wwn-stat-chip-value">
+              <input name="system.forceRating" value="{{system.forceRating}}" type="number" data-dtype="Number" min="1"
+                max="8" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">
+              {{localize "WWN.faction.wealthRating"}}
+              <a data-action="ratingUp" data-rating-type="wealth" title="{{localize 'WWN.level-up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
+            </div>
+            <div class="wwn-stat-chip-value">
+              <input name="system.wealthRating" value="{{system.wealthRating}}" type="number" data-dtype="Number" min="1"
+                max="8" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header" title="{{localize 'WWN.faction.facCreds'}}">
+              {{localize "WWN.faction.facCreds"}}
+            </div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" data-dtype="Number" name="system.facCreds" value="{{system.facCreds}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel wwn-faction-goal">
+        <div class="wwn-section-header flexrow">
+          <span class="wwn-collapsible-label">{{localize "WWN.faction.factionGoal"}}</span>
+          <div class="item-controls">
+            <a data-action="setGoal" title="{{localize 'WWN.faction.setGoal'}}"><i class="fas fa-exchange-alt"></i></a>
+          </div>
+        </div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.factionGoal"}}</label>
+            <div class="form-fields">
+              <input name="system.factionGoal" value="{{system.factionGoal}}" />
+            </div>
+          </div>
+        </div>
+        <div class="wwn-faction-editor wwn-faction-editor--goal">
+          {{editor enrichedGoal target="system.factionGoalDesc" button=true editable=editable async=true}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
+        <div class="wwn-faction-editor wwn-faction-editor--desc">
+          {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-faction-main-right wwn-form-stack">
+      {{> wwnFactionAssetPanel assetType="cunning" name="Cunning" assets=cunningAssets}}
+      {{> wwnFactionAssetPanel assetType="force" name="Force" assets=forceAssets}}
+      {{> wwnFactionAssetPanel assetType="wealth" name="Wealth" assets=wealthAssets}}
+    </div>
+  </div>
+</section>

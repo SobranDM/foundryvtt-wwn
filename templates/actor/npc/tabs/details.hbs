@@ -1,0 +1,71 @@
+{{!-- NPC Details: former Config fields + biography. --}}
+<section class="tab notes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.config"}}</div>
+        <div class="wwn-form-panel-fields">
+          {{#if separateRangedAC}}
+          <div class="form-group">
+            <label>{{localize "WWN.ArmorClass"}} ({{localize "WWN.Missile"}})</label>
+            <div class="form-fields">
+              <input type="number" name="system.combat.acManual.ranged" value="{{system.combat.acManual.ranged}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <label>{{localize "WWN.DamageBonusHalfLevel"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.combat.damageBonusHalfLevel"
+                {{checked system.combat.damageBonusHalfLevel}} data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Effects.SaveModifiers"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label title="{{localize 'WWN.Effects.SaveBaseMod'}}">{{localize "WWN.Effects.SaveBaseMod"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.saveMods.base" value="{{system.saveMods.base}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.saves.evasion"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.saveMods.evasion" value="{{system.saveMods.evasion}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.saves.mental"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.saveMods.mental" value="{{system.saveMods.mental}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.saves.physical"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.saveMods.physical" value="{{system.saveMods.physical}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.saves.luck"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.saveMods.luck" value="{{system.saveMods.luck}}" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="hint">{{localize "WWN.NpcConfigHint"}}</p>
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.category.notes"}}</div>
+      <div class="resizable-editor" data-editor-size="320">
+        {{editor enrichedBiography target="system.biography" button=true editable=editable async=true}}
+      </div>
+    </div>
+  </div>
+</section>

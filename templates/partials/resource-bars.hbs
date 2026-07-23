@@ -1,0 +1,47 @@
+{{!-- Shared header resource bar row (HP / Strain / Alienation / Stress / XP).
+      Ported from games-without-number/templates/partials/resource-bars.hbs. --}}
+<div class="wwn-resource-bars">
+  {{#each resourceBars}}
+  <div class="wwn-resource-bar-box wwn-panel" data-tracker-id="{{this.id}}">
+    <div class="wwn-resource-bar-box-header">
+      <span class="wwn-resource-bar-label">{{localize this.label}}</span>
+      <span class="wwn-resource-bar-values">
+        <input type="number" name="{{this.valuePath}}" value="{{this.value}}" data-dtype="Number"
+          aria-label="{{localize this.label}}" />
+        <span class="sep">/</span>
+        {{#if this.maxPath}}
+        <input type="number" name="{{this.maxPath}}" value="{{this.ceiling}}" data-dtype="Number" />
+        {{else}}
+        <span>{{this.ceiling}}</span>
+        {{/if}}
+      </span>
+    </div>
+    <div class="{{this.barClass}}" style="--wwn-bar-pct: {{this.pct}}%;">
+      <div class="wwn-resource-bar-fill"></div>
+    </div>
+  </div>
+  {{/each}}
+  {{#if xpBar}}
+  <div class="wwn-resource-bar-box wwn-resource-bar-box--xp wwn-panel" data-tracker-id="{{xpBar.id}}"
+    {{#if @root.system.details.xp.bonus}}title="{{localize 'WWN.details.experience.bonus'}}: +{{@root.system.details.xp.bonus}}%"{{/if}}>
+    <div class="wwn-resource-bar-box-header">
+      <span class="wwn-resource-bar-label">
+        {{localize xpBar.label}}
+        {{#if @root.system.details.xp.bonus}}
+        <span class="wwn-xp-bonus">+{{@root.system.details.xp.bonus}}%</span>
+        {{/if}}
+      </span>
+      <span class="wwn-resource-bar-values">
+        <input type="number" name="{{xpBar.valuePath}}" value="{{xpBar.value}}" data-dtype="Number"
+          aria-label="{{localize xpBar.label}}" />
+        <span class="sep">/</span>
+        <input type="number" name="system.details.xp.next" value="{{xpBar.ceiling}}" data-dtype="Number"
+          {{#unless xpPerChar}}disabled{{/unless}} />
+      </span>
+    </div>
+    <div class="{{xpBar.barClass}}" style="--wwn-bar-pct: {{xpBar.pct}}%;">
+      <div class="wwn-resource-bar-fill"></div>
+    </div>
+  </div>
+  {{/if}}
+</div>

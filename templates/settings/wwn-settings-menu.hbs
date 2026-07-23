@@ -1,0 +1,20 @@
+<section class="standard-form scrollable">
+  {{#each sections as |section|}}
+  {{#if section.entries.length}}
+  <fieldset>
+    <legend>{{localize section.legend}}</legend>
+    {{#if section.hint}}
+    <p class="hint">{{localize section.hint}}</p>
+    {{/if}}
+    {{#each section.entries as |entry|}}
+    {{formGroup entry.field value=entry.value input=entry.input localize=true}}
+    {{/each}}
+  </fieldset>
+  {{else if section.hint}}
+  <fieldset>
+    <legend>{{localize section.legend}}</legend>
+    <p class="notes">{{localize section.hint}}</p>
+  </fieldset>
+  {{/if}}
+  {{/each}}
+</section>

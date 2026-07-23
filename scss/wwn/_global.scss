@@ -45,14 +45,15 @@
   @include wwn-check-field-reveal;
 }
 
-.wwn.sheet.actor .profile-img {
+.wwn.sheet.actor:not(.wwn-sheet) .profile-img {
   border: 0;
   flex: 0 0 145px;
   height: 145px;
   object-fit: contain;
 }
 
-.wwn.sheet.actor .summary {
+/* V1 summary layout; AppV2 uses .wwn-sheet .sheet-header .summary in _sheet-chrome.scss */
+.wwn.sheet.actor:not(.wwn-sheet) .summary {
   flex: 0 0 100%;
   height: 44px;
   margin: 0;
@@ -60,7 +61,7 @@
   list-style: none;
   border-top: none;
 }
-.wwn.sheet.actor .summary li {
+.wwn.sheet.actor:not(.wwn-sheet) .summary li {
   height: calc(100% - 6px);
   float: left;
   margin: 2px 0;
@@ -69,7 +70,7 @@
   color: var(--wwn-dark-alt);
   position: relative;
 }
-.wwn.sheet.actor .summary li label {
+.wwn.sheet.actor:not(.wwn-sheet) .summary li label {
   line-height: 10px;
   position: absolute;
   font-size: 10px;
@@ -77,12 +78,13 @@
   bottom: 0;
   left: 12px;
 }
-.wwn.sheet.actor .summary li.notify input {
+.wwn.sheet.actor:not(.wwn-sheet) .summary li.notify input {
   font-weight: bold;
   animation: 0.8s ease-in 1s infinite alternate notify;
 }
 
-.wwn.sheet.actor .sheet-tabs {
+/* Vertical side-tabs were V1 chrome; AppV2 sheets use horizontal tabs in _sheet-chrome.scss */
+.wwn.sheet.actor:not(.wwn-sheet) .sheet-tabs {
   position: absolute;
   transform: rotate(90deg);
   bottom: 216px;
@@ -91,7 +93,7 @@
   border-top: none;
   z-index: -1;
 }
-.wwn.sheet.actor .sheet-tabs .item {
+.wwn.sheet.actor:not(.wwn-sheet) .sheet-tabs .item {
   padding: 1px 20px 3px;
   margin-left: -5px;
   text-indent: 4px;
@@ -105,7 +107,7 @@
   font-size: 12px;
   filter: brightness(0.9);
 }
-.wwn.sheet.actor .sheet-tabs .item.active {
+.wwn.sheet.actor:not(.wwn-sheet) .sheet-tabs .item.active {
   filter: none;
   z-index: 1;
   font-weight: bold;
@@ -116,10 +118,10 @@
   box-shadow: 0 0 8px 2px var(--wwn-border-dark);
 }
 
-.wwn.sheet.actor .sheet-body .tab {
+.wwn.sheet.actor:not(.wwn-sheet) .tab {
   height: 100%;
 }
-.wwn.sheet.actor .sheet-body .editor {
+.wwn.sheet.actor .editor {
   height: 300px;
   padding: 4px;
 }
@@ -129,7 +131,13 @@
 }
 
 /* Window content overrides shared by every WWN application (sheets and dialogs alike) */
-.wwn .window-content input {
+.wwn .window-content input[type="number"],
+.wwn .window-content .attribute-value input,
+.wwn .window-content .summary input,
+.wwn .window-content .field-short input,
+.wwn .window-content .field-xshort input,
+.wwn .window-content .field-long input,
+.wwn .window-content .wwn-resource-bar-values input {
   text-align: center;
 }
 .wwn .window-content input:not([type="checkbox"]) {
@@ -148,6 +156,21 @@
 .wwn .window-content input:not([type="checkbox"]):focus:not(:disabled) {
   box-shadow: none;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+.wwn.wwn-sheet .window-content .form-fields input[type="text"],
+.wwn.wwn-sheet .window-content .character-identity input[type="text"] {
+  text-align: left;
+  background: var(--wwn-input-bg, rgba(255, 255, 255, 0.6));
+  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  border-radius: 0.15rem;
+  padding: 0.15rem 0.35rem;
+}
+.wwn.wwn-sheet .window-content .form-fields input[type="text"]:hover:not(:disabled),
+.wwn.wwn-sheet .window-content .form-fields input[type="text"]:focus:not(:disabled),
+.wwn.wwn-sheet .window-content .character-identity input[type="text"]:hover:not(:disabled),
+.wwn.wwn-sheet .window-content .character-identity input[type="text"]:focus:not(:disabled) {
+  background: var(--wwn-input-bg, rgba(255, 255, 255, 0.75));
+  box-shadow: none;
 }
 .wwn .window-content a:hover {
   text-shadow: none;

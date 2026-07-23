@@ -1,0 +1,29 @@
+{{!-- Faction Log tab. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header flexrow">
+        <span class="wwn-collapsible-label">{{localize "WWN.faction.log-tab"}}</span>
+        <div class="item-controls">
+          <a data-action="addLog" title="{{localize 'WWN.faction.add-log'}}"><i class="fas fa-plus"></i></a>
+          <a data-action="deleteAllLogs" title="{{localize 'WWN.faction.remove-log-all'}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </div>
+      {{#each system.log as |logentry id|}}
+      <div class="wwn-faction-log" data-idx="{{id}}">
+        <div class="wwn-faction-tag-header flexrow">
+          <b>Log Entry {{id}}</b>
+          <div class="item-controls">
+            <a class="item-control" data-action="deleteLog" title="{{localize 'WWN.faction.remove-log'}}">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </div>
+        <div>{{{logentry}}}</div>
+      </div>
+      {{else}}
+      <p class="hint">{{localize "WWN.faction.add-log"}}</p>
+      {{/each}}
+    </div>
+  </div>
+</section>

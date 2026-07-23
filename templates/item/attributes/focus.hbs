@@ -1,0 +1,92 @@
+{{!-- Focus attributes. Level lives in the header chip. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-form-stack">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Focus.BonusSkills"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.Focus.BonusSkillsListHint'}}">{{localize "WWN.Focus.BonusSkillsList"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.bonusSkills" value="{{join system.bonusSkills ","}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Focus.BonusSkillsPick"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.bonusSkillsPick" value="{{system.bonusSkillsPick}}" min="0"
+                data-dtype="Number" />
+            </div>
+          </div>
+          {{#if system.bonusSkillsChosen.length}}
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.Focus.BonusSkillsChosen"}}</label>
+            <div class="form-fields">
+              <input type="text" value="{{join system.bonusSkillsChosen ","}}" disabled />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Focus.SkillDiceBonus"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Focus.BonusDice"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.bonusDice" value="{{system.bonusDice}}" min="0" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Focus.SkillBonus"}}</label>
+            <div class="form-fields">
+              <select name="system.skillBonus">
+                <option value="">{{localize "WWN.Focus.SkillBonusNone"}}</option>
+                {{selectOptions skillBonusChoices selected=system.skillBonus localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Focus.ResourceGrant"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label title="{{localize 'WWN.Focus.TargetNameHint'}}">{{localize "WWN.Focus.TargetName"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.resourceGrant.targetName" value="{{system.resourceGrant.targetName}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Focus.BonusMax"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.resourceGrant.bonusMax" value="{{system.resourceGrant.bonusMax}}"
+                min="0" data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Focus.InternalResource"}}</div>
+        <div class="wwn-form-panel-fields">
+          {{> wwnRatioField
+            valueName="system.internalResource.value" value=system.internalResource.value
+            maxName="system.internalResource.max" max=system.internalResource.max
+            valueTitleKey="WWN.Power.InternalValue" maxTitleKey="WWN.Power.InternalMax"
+            min=0 span=true}}
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.Power.ResourceLength"}}</label>
+            <div class="form-fields">
+              <select name="system.resourceLength">
+                {{selectOptions config.commitmentLengthsNoUser selected=system.resourceLength localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

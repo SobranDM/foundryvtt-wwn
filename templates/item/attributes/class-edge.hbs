@@ -1,0 +1,128 @@
+{{!-- ClassEdge attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-form-stack">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.attributes"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.ClassEdge.Type"}}</label>
+            <div class="form-fields">
+              <select name="system.edgeType">
+                <option value="class" {{#if (eq system.edgeType "class")}}selected{{/if}}>{{localize "WWN.ClassEdge.class"}}</option>
+                <option value="edge" {{#if (eq system.edgeType "edge")}}selected{{/if}}>{{localize "WWN.ClassEdge.edge"}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.ClassEdge.AttackProgressionHint'}}">{{localize "WWN.ClassEdge.AttackProgression"}}</label>
+            <div class="form-fields">
+              <select name="system.attackProgression">
+                {{selectOptions config.attackProgressionModes selected=system.attackProgression localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.ClassEdge.SkillPointsPerLevelHint'}}">{{localize "WWN.ClassEdge.SkillPointsPerLevel"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.skillPointsPerLevel" value="{{system.skillPointsPerLevel}}" min="0"
+                data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.ClassEdge.HdGrantTitle"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.ClassEdge.HdDie"}}</label>
+            <div class="form-fields">
+              <select name="system.hdGrant.die">
+                <option value="" {{#unless system.hdGrant.die}}selected{{/unless}}>{{localize "WWN.None"}}</option>
+                {{#each config.hitDiceOptions as |die|}}
+                <option value="{{die}}" {{#if (eq ../system.hdGrant.die die)}}selected{{/if}}>{{die}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.ClassEdge.HdPerLevelModHint'}}">{{localize "WWN.ClassEdge.HdPerLevelMod"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.hdGrant.perLevelMod" value="{{system.hdGrant.perLevelMod}}"
+                data-dtype="Number" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.ClassEdge.PoolGrantTitle"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.ClassEdge.ResourceNameHint'}}">{{localize "WWN.ClassEdge.ResourceName"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.poolGrant.name" value="{{system.poolGrant.name}}" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.ClassEdge.FormulaHint'}}">{{localize "WWN.ClassEdge.Formula"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.poolGrant.formula" value="{{system.poolGrant.formula}}"
+                class="{{#if showFormulaInvalid}}error{{/if}}" />
+            </div>
+          </div>
+          {{#if system.poolGrant.formula}}
+          <p class="notes wwn-form-span">
+            {{#if formulaValid}}
+            {{localize "WWN.ClassEdge.FormulaPreview"}}: <b>{{formulaPreview}}</b>
+            {{else}}
+            {{localize "WWN.ClassEdge.FormulaInvalid"}}
+            {{/if}}
+          </p>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.ClassEdge.SlotGrantTitle"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.ClassEdge.SlotGrantEnabled"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.slotGrant.enabled" {{checked system.slotGrant.enabled}}
+                data-dtype="Boolean" />
+            </div>
+          </div>
+          {{#if system.slotGrant.enabled}}
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.ClassEdge.LeveledProgressionHint'}}">{{localize "WWN.ClassEdge.LeveledProgression"}}</label>
+            <div class="form-fields">
+              <textarea name="wwnLeveledProgressionText" rows="6">{{leveledProgressionText}}</textarea>
+            </div>
+          </div>
+          {{else}}
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.ClassEdge.ProgressionHint'}}">{{localize "WWN.ClassEdge.Progression"}}</label>
+            <div class="form-fields">
+              <input type="text" name="wwnSlotProgressionText" value="{{slotProgressionText}}" />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.ClassEdge.PreparedGrantTitle"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label title="{{localize 'WWN.ClassEdge.PreparedProgressionHint'}}">{{localize "WWN.ClassEdge.PreparedProgression"}}</label>
+            <div class="form-fields">
+              <input type="text" name="wwnPreparedProgressionText" value="{{preparedProgressionText}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

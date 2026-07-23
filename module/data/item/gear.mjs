@@ -12,6 +12,7 @@ export default class WwnGear extends PhysicalDataMixin(WwnItemBase) {
     const schema = super.defineSchema();
 
     schema.treasure = new fields.BooleanField({ initial: false });
+    schema.personal = new fields.BooleanField({ initial: false });
     schema.charges = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 0 }),

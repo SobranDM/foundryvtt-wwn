@@ -1,0 +1,9 @@
+{{!-- Standard per-row item controls: favorite / edit / delete.
+      Emits bare anchors so the row supplies a single .item-controls wrapper. --}}
+{{#if favoritable}}
+<a class="item-control" data-action="toggleFavorite" title="{{localize 'WWN.Sheet.ToggleFavorite'}}">
+  <i class="{{#if favorited}}fas{{else}}far{{/if}} fa-star"></i>
+</a>
+{{/if}}
+<a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}"><i class="fas fa-edit"></i></a>
+<a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}"><i class="fas fa-trash"></i></a>

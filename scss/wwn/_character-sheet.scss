@@ -1,130 +1,343 @@
-/* Character sheet specific overrides */
+/* PC sheet specific overrides (AppV2: .pc, no .sheet-body) */
 
-.wwn.sheet.actor.character {
-  min-width: 450px;
+.wwn.sheet.actor.pc {
+  min-width: 640px;
   min-height: 550px;
-  container-type: inline-size;
-  container-name: character-sheet;
-}
-.wwn.sheet.actor.character .sheet-header .xp-bonus {
-  top: -15px;
-  right: 3px;
-  color: var(--wwn-border);
-  font-size: 10px;
-  position: absolute;
-}
-.wwn.sheet.actor.character .sheet-body .attributes-tab {
-  justify-content: space-between;
-  height: 95%;
 }
 
-/* Rotated 90°: `width` is the vertical span along the sheet edge.
-   Six tabs (incl. Config) need a longer strip than the shared actor default. */
-.wwn.sheet.actor.character .sheet-tabs {
-  width: 420px;
-  bottom: 195px;
-  right: -219px;
-}
-.wwn.sheet.actor.character .sheet-tabs .item {
-  padding: 1px 14px 3px;
-}
-
-.wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group {
-  position: relative;
-  padding-right: 0px;
-  margin-right: 0px;
-  padding-bottom: 0px;
-}
-.wwn.sheet.actor.character .sheet-body .attributes-tab .attribute-group .modifiers-btn {
-  position: absolute;
-  left: 0;
-  top: -23px;
-}
-
-.wwn.actor.character .sheet-body .attributes-tab .attributes.saves {
-  margin-top: 10px;
-}
-.wwn.actor.character
-  .sheet-body
-  .attributes-tab
-  .attribute-group
-  .attributes.saves
-  .attribute.saving-throw
-  .attribute-name {
-  width: 85px;
-  height: 38px;
-}
-.wide-attribute {
-  width: 85px !important;
-}
-.wwn.actor.character .sheet-body .attributes-tab .attribute-group .attributes.saves .attribute-value {
-  padding-bottom: 0px;
-}
-
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory {
-  flex-grow: 1;
-  flex-shrink: 1;
+.wwn.sheet.actor.pc .notes-tab.active {
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  overflow: auto;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages {
-  margin: 2px;
-  margin-top: 0px;
-  flex: 1 1 160px;
-  min-width: 140px;
+
+.wwn.sheet.actor.pc .notes-tab .wwn-form-stack {
+  width: 100%;
+  min-width: 0;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .details-top {
+
+.wwn.sheet.actor.pc .notes-tab .wwn-form-panel .editor {
+  min-height: 8rem;
+}
+
+.wwn.sheet.actor.pc .attributes-tab.active {
   display: flex;
-  flex-shrink: 1;
-  flex-grow: 1;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
   gap: 0.5rem;
-  align-items: flex-start;
+  min-height: 0;
+  flex: 1 1 auto;
+  height: auto;
+  overflow: hidden;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity {
-  flex: 1 1 220px;
+
+/* Main 2×2 grid: abilities | saves ; skills | combat+favorites */
+.wwn.sheet.actor.pc .wwn-actor-main-grid {
+  display: grid;
+  flex: 1 1 auto;
+  min-height: 0;
+  gap: 0.5rem;
+  grid-template-columns: 1fr min(16rem, 34%);
+  grid-template-rows: auto 1fr;
+}
+
+@media (width < 48rem) {
+  .wwn.sheet.actor.pc .wwn-actor-main-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+}
+
+/* Abilities */
+.wwn.sheet.actor.pc .wwn-main-abilities {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wwn.sheet.actor.pc .wwn-main-abilities-actions {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  line-height: 1;
+}
+
+.wwn.sheet.actor.pc .wwn-ability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  height: 100%;
+  align-content: center;
+}
+
+.wwn.sheet.actor.pc .wwn-ability-row {
+  display: flex;
+  align-items: center;
   gap: 0.35rem;
-  margin: 2px;
+  min-width: 0;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .form-group {
+
+.wwn.sheet.actor.pc .wwn-ability-label {
+  flex: 0 0 2rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wwn.sheet.actor.pc .wwn-ability-value {
+  width: 3rem;
+  text-align: center;
+}
+
+.wwn.sheet.actor.pc .wwn-ability-mod {
+  font-size: 0.875rem;
+  font-weight: 700;
+  min-width: 1.5rem;
+}
+
+/* Saves */
+.wwn.sheet.actor.pc .wwn-main-saves {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wwn.sheet.actor.pc .wwn-save-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.wwn.sheet.actor.pc .wwn-save-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.wwn.sheet.actor.pc .wwn-save-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}
+
+/* Skills */
+.wwn.sheet.actor.pc .wwn-main-skills {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills-header {
+  justify-content: space-between;
+  flex: 0 0 auto;
+  margin-bottom: 0.35rem;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 0 auto;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills-controls .wwn-skills-unspent-input {
+  width: 2.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--wwn-header-text, var(--wwn-light));
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--wwn-header-text, #fff) 35%, transparent);
+  border-radius: 0.15rem;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills-controls .item-control {
+  color: inherit;
+  opacity: 0.75;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills-controls .item-control:hover {
+  opacity: 1;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .wwn-skills-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  columns: 2;
+  column-gap: 0.75rem;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .item-entry {
+  break-inside: avoid;
+  width: 100%;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .item-entry:nth-child(even) .item {
+  background: transparent;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .item-name-short {
+  flex: 1 1 auto;
+  min-width: 0;
   margin: 0;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .owned-class-edges {
+
+.wwn.sheet.actor.pc .wwn-main-skills .item-name-short h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .field-xshort {
+  flex-basis: 2rem;
+  flex-grow: 0;
+}
+
+.wwn.sheet.actor.pc .wwn-main-skills .item-controls.skill-lock {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-width: 0;
+  gap: 0.15rem;
+  align-items: center;
+}
+
+/* Right sidebar: combat + favorites */
+.wwn.sheet.actor.pc .wwn-main-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 0;
+}
+
+.wwn.sheet.actor.pc .wwn-main-combat-panel {
+  flex: 0 0 auto;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-row > .wwn-combat-stat {
+  flex: 1 1 0;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-stat-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}
+
+.wwn.sheet.actor.pc .wwn-combat-sep {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
+.wwn.sheet.actor.pc .wwn-movement-base-input,
+.wwn.sheet.actor.pc .wwn-iw-value input {
+  width: 2.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock > .wwn-section-header {
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  margin-bottom: 0.35rem;
+}
+
+.wwn.sheet.actor.pc .wwn-main-sidebar .wwn-favorites-dock .item-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Details tab (Config folded in) */
+.wwn.sheet.actor.pc .notes-tab .owned-class-edges {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.15rem 0.5rem;
   min-height: 24px;
   line-height: 1.4;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .character-identity .owned-class-edges .unowned-hint {
+
+.wwn.sheet.actor.pc .notes-tab .owned-class-edges .unowned-hint {
   opacity: 0.65;
   font-style: italic;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages .item-titles .item-controls {
-  flex: 0 0 20px;
-}
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li {
+
+.wwn.sheet.actor.pc .notes-tab .wwn-form-panel .item-list .item-entry {
   margin: 0;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li:hover .item-controls {
-  display: flex;
+
+.wwn.sheet.actor.pc .notes-tab .wwn-form-panel .item-list .item-entry .item-controls {
+  flex: 0 0 2rem;
+  width: 2rem;
+  min-width: 2rem;
+  max-width: 2rem;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .languages ol li .item-controls {
-  flex: 0 0 20px;
-  display: none;
-}
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description {
-  margin: 2px;
-}
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor {
+
+.wwn.wwn-sheet.actor.pc .notes-tab .editor {
   display: flex;
   flex-direction: column;
-  flex-grow: 0;
-  height: 100%;
-  min-height: 120px;
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 8rem;
 }
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor-content {
-  min-height: 120px;
-}
-.wwn.sheet.actor.character .sheet-body .notes-tab .inventory .description .editor .tox .tox-tbtn {
+
+.wwn.sheet.actor.pc .notes-tab .editor .tox .tox-tbtn {
   height: 24px;
 }

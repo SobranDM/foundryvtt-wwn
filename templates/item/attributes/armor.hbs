@@ -1,0 +1,61 @@
+{{!-- Armor attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.ArmorClass"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label title="{{localize 'WWN.ArmorClass'}}">{{localize "WWN.Armor.AC"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.ac" value="{{system.ac}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{#if separateRangedAC}}
+          <div class="form-group">
+            <label title="{{localize 'WWN.Armor.ACRanged'}}">{{localize "WWN.Armor.ACRanged"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.acRanged" value="{{system.acRanged}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.ArmorBonusHint'}}">{{localize "WWN.items.ArmorBonus"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.mod" value="{{system.mod}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{#if useTrauma}}
+          <div class="form-group">
+            <label data-tooltip="{{localize 'WWN.items.TraumaModHint'}}">{{localize "WWN.items.TraumaModArmor"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.traumaTarget" value="{{system.traumaTarget}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.armor.type"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.armor.type"}}</label>
+            <div class="form-fields">
+              <select name="system.type">
+                {{selectOptions config.armor selected=system.type localize=true}}
+              </select>
+            </div>
+          </div>
+          {{#if useFlatArmorPenalty}}
+          <div class="form-group">
+            <label>{{localize "WWN.armor.heavy"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.ashesHeavy" {{checked system.ashesHeavy}} data-dtype="Boolean" />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

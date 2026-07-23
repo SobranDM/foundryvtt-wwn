@@ -1,0 +1,294 @@
+{{!-- Shared Powers tab body (PC Powers tab + NPC Main right column). --}}
+  <div class="wwn-powers wwn-form-stack">
+
+    {{#if showPreparedCounter}}
+    <div class="wwn-panel wwn-powers-prepared flexrow">
+      <span class="wwn-chip-label">{{localize "WWN.Power.TotalPrepared"}}</span>
+      <div class="field-short">
+        <input name="system.casting.prepared.value" type="number" value="{{system.casting.prepared.value}}"
+          data-dtype="Number" disabled />
+      </div>
+      <span class="powers-sep">/</span>
+      <div class="field-short">
+        <input name="system.casting.prepared.max" type="number" value="{{system.casting.prepared.max}}"
+          data-dtype="Number" min="0" />
+      </div>
+      {{#if preparedOverMax}}
+      <i class="fas fa-exclamation-triangle" title="{{localize 'WWN.Power.PreparedOverMax'}}"></i>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{#if resourcePools.length}}
+    <div class="wwn-panel wwn-powers-pools">
+      <div class="wwn-section-header flexrow">
+        <span class="wwn-collapsible-label">{{localize "WWN.Pools.Title"}}</span>
+        <div class="item-controls">
+          <a class="item-control" data-action="refreshScene" title="{{localize 'WWN.Power.RefreshSceneHint'}}">
+            <i class="fas fa-hourglass-half"></i> {{localize "WWN.Power.RefreshScene"}}
+          </a>
+          <a class="item-control" data-action="refreshDay" title="{{localize 'WWN.Power.RefreshDayHint'}}">
+            <i class="fas fa-sun"></i> {{localize "WWN.Power.RefreshDay"}}
+          </a>
+        </div>
+      </div>
+      <div class="powers-pools-grid flexrow wwn-data-table">
+        <ol class="item-list flex1">
+          {{#each resourcePoolColumns.column1 as |pool|}}
+          <li class="item-entry">
+            <div class="item flexrow" data-pool-id="{{pool.id}}">
+              <div class="item-name">
+                {{pool.name}}{{#if pool.level}} — {{localize "WWN.Power.Level"}} {{pool.level}}{{/if}}
+              </div>
+              <div class="field-short powers-pool-value">{{pool.value}} / {{pool.max}}</div>
+              {{#if pool.warning}}
+              <i class="fas fa-exclamation-triangle" title="{{localize pool.warning}}"></i>
+              {{/if}}
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+        <ol class="item-list flex1">
+          {{#each resourcePoolColumns.column2 as |pool|}}
+          <li class="item-entry">
+            <div class="item flexrow" data-pool-id="{{pool.id}}">
+              <div class="item-name">
+                {{pool.name}}{{#if pool.level}} — {{localize "WWN.Power.Level"}} {{pool.level}}{{/if}}
+              </div>
+              <div class="field-short powers-pool-value">{{pool.value}} / {{pool.max}}</div>
+              {{#if pool.warning}}
+              <i class="fas fa-exclamation-triangle" title="{{localize pool.warning}}"></i>
+              {{/if}}
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+    {{/if}}
+
+    {{#each powerSections as |section|}}
+    {{#> wwnCollapsibleSection sectionId=section.id label=section.displayLabel
+      count=section.powers.length collapsed=section.collapsed
+      searchType="power" searchSubType=section.subType createType="power" createSubType=section.subType}}
+    <div class="wwn-data-table">
+      <div class="item-titles wwn-col-header flexrow">
+        <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+        {{#if section.columns.showLevel}}
+        <div class="field-short" title="{{localize 'WWN.Power.Level'}}">{{localize "WWN.Power.LevelShort"}}</div>
+        {{/if}}
+        {{#if section.columns.showSource}}
+        <div class="field-long" title="{{localize 'WWN.Power.Source'}}">{{localize "WWN.Power.Source"}}</div>
+        {{/if}}
+        {{#if section.columns.showPrepared}}
+        <div class="field-short" title="{{localize 'WWN.Power.Prepared'}}">{{localize "WWN.Power.PreparedShort"}}</div>
+        {{/if}}
+        {{#if section.columns.showInstalled}}
+        <div class="field-short" title="{{localize 'WWN.Power.Installed'}}"><i class="fas fa-plug"></i></div>
+        {{/if}}
+        {{#if section.columns.showCommitment}}
+        <div class="field-long" title="{{localize 'WWN.Power.TabCommitment'}}">{{localize "WWN.Power.TabCommitment"}}</div>
+        {{/if}}
+        {{#if section.columns.showPoolCommitted}}
+        <div class="field-short" title="{{localize 'WWN.Power.Committed'}}">{{localize "WWN.Power.TabCommittedShort"}}</div>
+        {{/if}}
+        {{#if section.columns.showUses}}
+        <div class="field-short" title="{{localize 'WWN.Power.TabUses'}}">{{localize "WWN.Power.TabUses"}}</div>
+        {{/if}}
+        {{#if section.columns.showStatus}}
+        <div class="field-short" title="{{localize 'WWN.Power.Active'}}">{{localize "WWN.Power.ActiveShort"}}</div>
+        {{/if}}
+        {{#if section.columns.showDamage}}
+        <div class="field-short" title="{{localize 'WWN.Power.DamageTitleShort'}}"><i class="fas fa-burst"></i></div>
+        {{/if}}
+        <div class="item-controls"></div>
+      </div>
+      <ol class="item-list">
+        {{#each section.powers as |power|}}
+        <li class="item-entry">
+          <div class="item flexrow" data-item-id="{{power.id}}">
+            <div class="item-name item-rollable flexrow" data-action="showItem">
+              <img class="item-image" src="{{power.img}}" alt="" data-action="rollItem" title="{{localize 'WWN.Power.Use'}}" />
+              <h4 title="{{power.name}}">{{power.name}}</h4>
+            </div>
+            {{#if section.columns.showLevel}}
+            <div class="field-short">
+              {{#if power.tabShowLevel}}L{{power.system.level}}{{/if}}
+            </div>
+            {{/if}}
+            {{#if section.columns.showSource}}
+            <div class="field-long" title="{{power.system.source}}">{{power.system.source}}</div>
+            {{/if}}
+            {{#if section.columns.showPrepared}}
+            <div class="field-short">
+              <a class="item-control{{#unless power.system.prepared}} item-unprepared{{/unless}}"
+                data-action="togglePrepared" title="{{localize 'WWN.Power.Prepared'}}">
+                <i class="{{#if power.system.prepared}}fas{{else}}far{{/if}} fa-bookmark"></i>
+              </a>
+            </div>
+            {{/if}}
+            {{#if section.columns.showInstalled}}
+            <div class="field-short">
+              <a class="item-control" data-action="toggleInstalled" title="{{localize 'WWN.Power.Installed'}}">
+                <i class="fas {{#if power.system.installed}}fa-plug{{else}}fa-unlink{{/if}}"></i>
+              </a>
+            </div>
+            {{/if}}
+            {{#if section.columns.showCommitment}}
+            <div class="field-long powers-muted" title="{{power.system.tabCommitmentChoicesTitle}}">
+              {{power.system.tabCommitmentChoices}}
+            </div>
+            {{/if}}
+            {{#if section.columns.showPoolCommitted}}
+            <div class="field-short powers-muted"
+              title="{{#if power.system.tabPoolCommittedTooltip}}{{power.system.tabPoolCommittedTooltip}}{{else}}{{localize 'WWN.Power.Committed'}}{{/if}}">
+              {{#if power.system.usesSharedPool}}{{power.system.tabPoolCommittedCompact}}{{/if}}
+            </div>
+            {{/if}}
+            {{#if section.columns.showUses}}
+            <div class="field-short powers-uses">
+              {{#if power.system.internalResource.max}}
+              <input type="number" value="{{power.system.internalResource.value}}" data-dtype="Number"
+                data-item-field="system.internalResource.value" />
+              / {{power.system.internalResource.max}}
+              {{/if}}
+            </div>
+            {{/if}}
+            {{#if section.columns.showStatus}}
+            <div class="field-short">
+              {{#if power.canActivatePower}}
+              <a class="item-control" data-action="activatePower" title="{{localize 'WWN.Power.ActivateHint'}}">
+                <i class="fas fa-power-off"></i>
+              </a>
+              {{/if}}
+              {{#if power.system.isActive}}
+              <a class="item-control powers-active-badge" data-action="deactivatePower"
+                title="{{localize 'WWN.Power.DeactivateHint'}}">
+                {{localize "WWN.Power.ActiveShort"}}
+              </a>
+              {{/if}}
+            </div>
+            {{/if}}
+            {{#if section.columns.showDamage}}
+            <div class="field-short">
+              {{#if power.system.damageRoll}}
+              <a class="item-control" data-action="powerDamage"
+                title="{{#if power.system.healing}}{{localize 'WWN.Power.HealingTitleShort'}}{{else}}{{localize 'WWN.Power.DamageTitleShort'}}{{/if}}">
+                <i class="fas {{#if power.system.healing}}fa-heart{{else}}fa-burst{{/if}}"></i>
+              </a>
+              {{/if}}
+            </div>
+            {{/if}}
+            <div class="item-controls">
+              {{#if @root.owner}}
+              {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=power.favorited}}
+              {{/if}}
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    {{/wwnCollapsibleSection}}
+    {{/each}}
+
+    {{#if showClassEdgesSection}}
+    {{#> wwnCollapsibleSection sectionId="powers.classEdges" label=(localize "WWN.ClassEdge.SectionTitle")
+      count=classEdges.length collapsed=(lookup @root.collapsed "powers.classEdges") createType="classEdge"}}
+    <div class="wwn-data-table">
+      {{#if classEdges.length}}
+      <div class="item-titles wwn-col-header flexrow">
+        <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+        <div class="field-long">{{localize "WWN.ClassEdge.Type"}}</div>
+        <div class="item-controls"></div>
+      </div>
+      <ol class="item-list">
+        {{#each classEdges as |edge|}}
+        <li class="item-entry">
+          <div class="item flexrow" data-item-id="{{edge.id}}">
+            <div class="item-name item-rollable flexrow" data-action="showItem">
+              <img class="item-image" src="{{edge.img}}" alt="" title="{{localize 'WWN.Show'}}" />
+              <h4 title="{{edge.name}}">{{edge.name}}</h4>
+            </div>
+            <div class="field-long powers-muted">{{localize edge.edgeTypeLabel}}</div>
+            <div class="item-controls">
+              {{#if @root.owner}}
+              {{> wwnItemControls}}
+              {{/if}}
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+      {{else}}
+      <div class="powers-empty-hint">
+        <a data-action="createItem" data-type="classEdge">{{localize "WWN.ClassEdge.CreateHint"}}</a>
+      </div>
+      {{/if}}
+    </div>
+    {{/wwnCollapsibleSection}}
+    {{/if}}
+
+    {{#if showFociSection}}
+    {{#> wwnCollapsibleSection sectionId="powers.foci" label=(localize "WWN.Focus.SectionTitle")
+      count=foci.length collapsed=(lookup @root.collapsed "powers.foci") createType="focus"}}
+    <div class="wwn-data-table">
+      {{#if foci.length}}
+      <div class="item-titles wwn-col-header flexrow">
+        <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+        <div class="field-short" title="{{localize 'WWN.details.level'}}">{{localize "WWN.Power.LevelShort"}}</div>
+        <div class="field-short" title="{{localize 'WWN.Power.TabUses'}}">{{localize "WWN.Power.TabUses"}}</div>
+        <div class="item-controls"></div>
+      </div>
+      <ol class="item-list">
+        {{#each foci as |focus|}}
+        <li class="item-entry">
+          <div class="item flexrow" data-item-id="{{focus.id}}">
+            <div class="item-name item-rollable flexrow" data-action="showItem">
+              <img class="item-image" src="{{focus.img}}" alt="" title="{{localize 'WWN.Show'}}" />
+              <h4 title="{{focus.name}}">{{focus.name}}</h4>
+            </div>
+            <div class="field-short">
+              <input type="number" value="{{focus.system.ownedLevel}}" data-dtype="Number"
+                data-item-field="system.ownedLevel" />
+            </div>
+            {{#if focus.system.internalResource.max}}
+            <div class="field-short powers-uses">
+              <input type="number" value="{{focus.system.internalResource.value}}" data-dtype="Number"
+                data-item-field="system.internalResource.value" />
+              / {{focus.system.internalResource.max}}
+            </div>
+            {{else}}
+            <div class="field-short"></div>
+            {{/if}}
+            <div class="item-controls">
+              {{#if @root.owner}}
+              {{> wwnItemControls}}
+              {{/if}}
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+      {{else}}
+      <div class="powers-empty-hint">
+        <a data-action="createItem" data-type="focus">{{localize "WWN.Focus.CreateHint"}}</a>
+      </div>
+      {{/if}}
+    </div>
+    {{/wwnCollapsibleSection}}
+    {{/if}}
+
+    <div class="powers-add-footer">
+      <a data-action="createItem" data-type="power">
+        <i class="fas fa-plus"></i> {{localize "WWN.Power.AddPower"}}
+      </a>
+    </div>
+
+    {{#unless hasPowersContent}}
+    {{#unless showPreparedCounter}}
+    <h4 class="powers-empty-state">{{localize "WWN.Power.EmptyHint"}}</h4>
+    {{/unless}}
+    {{/unless}}
+
+  </div>

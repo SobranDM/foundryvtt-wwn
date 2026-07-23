@@ -1,0 +1,54 @@
+{{!-- Misc/consumable gear attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.attributes"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.Treasure'}}">{{localize "WWN.items.Treasure"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.treasure" {{checked system.treasure}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.PersonalTreasureHint'}}">{{localize "WWN.items.PersonalTreasure"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.personal" {{checked system.personal}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Item.Container"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.container.isContainer" {{checked system.container.isContainer}} />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.items.WeightlessLabel"}}</label>
+            <div class="form-fields">
+              <select name="system.weightless">
+                {{selectOptions config.weightless selected=system.weightless localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.items.Charges"}}</div>
+        <div class="wwn-form-panel-fields">
+          {{> wwnRatioField labelKey="WWN.items.Charges"
+            valueName="system.charges.value" value=system.charges.value
+            maxName="system.charges.max" max=system.charges.max
+            valueTitleKey="WWN.items.CurrCharges" maxTitleKey="WWN.items.MaxCharges"}}
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.ExpendOnUseHint'}}">{{localize "WWN.items.ExpendOnUse"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.expendOnUse" {{checked system.expendOnUse}} data-dtype="Boolean"
+                data-tooltip="{{localize 'WWN.items.ExpendOnUseHint'}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+{{!-- Skill attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.category.attributes"}}</div>
+      <div class="wwn-form-panel-fields">
+        <div class="form-group">
+          <label>{{localize "WWN.details.level"}}</label>
+          <div class="form-fields">
+            <input type="number" name="system.ownedLevel" value="{{system.ownedLevel}}" data-dtype="Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.attribute"}}</label>
+          <div class="form-fields">
+            <select name="system.score">
+              <option value=""></option>
+              {{selectOptions config.scores selected=system.score}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.dialog.skillDice"}}</label>
+          <div class="form-fields">
+            <select name="system.skillDice">
+              {{selectOptions config.skillDice selected=system.skillDice}}
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>{{localize "WWN.skills.secondary"}}</label>
+          <div class="form-fields">
+            <input type="checkbox" name="system.secondary" {{checked system.secondary}} data-dtype="Boolean" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

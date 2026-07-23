@@ -1,0 +1,70 @@
+{{!-- One Cunning/Force/Wealth asset panel as collapsible data-table. --}}
+{{#> wwnCollapsibleSection sectionId=(concat "faction.assets." assetType)
+  label=(concat name " " (localize "WWN.faction.assets"))
+  count=assets.length
+  collapsed=(lookup @root.collapsed (concat "faction.assets." assetType))}}
+<div class="wwn-data-table wwn-faction-assets">
+  <div class="wwn-faction-asset-actions flexrow">
+    <a class="item-control" data-action="addBase" title="{{localize 'WWN.Add'}}" data-asset-type="{{assetType}}"
+      data-asset-name="{{name}}">
+      <i class="fas fa-home"></i>
+    </a>
+    <a class="item-control" data-action="assetCreate" title="{{localize 'WWN.Add'}}" data-asset-type="{{assetType}}"
+      data-asset-name="{{name}}">
+      <i class="fas fa-plus"></i>
+    </a>
+  </div>
+  <div class="item-titles wwn-col-header flexrow">
+    <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+    <div class="faction-field" title="{{localize 'WWN.faction.rating'}}">{{localize "WWN.faction.rating"}}</div>
+    <div class="faction-field" title="{{localize 'WWN.faction.hp'}}">{{localize "WWN.faction.hp"}}</div>
+    <div class="faction-field-wide" title="{{localize 'WWN.faction.location'}}">{{localize "WWN.faction.location"}}</div>
+    <div class="faction-field-wide damage" title="{{localize 'WWN.faction.attackDamage'}}">
+      {{localize "WWN.faction.attackDamage"}}
+    </div>
+    <div class="faction-field counter" title="{{localize 'WWN.faction.counter'}}">{{localize "WWN.faction.counter"}}</div>
+    <div class="item-controls"></div>
+  </div>
+  <ol class="item-list">
+    {{#each assets as |item|}}
+    <li class="item-entry">
+      <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-name item-rollable flexrow faction-name">
+          <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
+          <a data-action="rollItem">
+            <h4 title="{{item.system.description}}">
+              {{item.name}}
+              {{#if item.system.baseOfInfluence}}<i class="fas fa-home" style="color: rgba(0, 0, 0, 0.2);"></i>{{/if}}
+            </h4>
+          </a>
+        </div>
+        <div class="faction-field">{{item.system.rating}}</div>
+        <div class="faction-field">{{item.system.health.value}}/{{item.system.health.max}}</div>
+        <div class="faction-field-wide">
+          <input type="text" value="{{item.system.location}}" data-item-field="system.location" />
+        </div>
+        <div class="faction-field-wide damage">
+          {{#if item.system.attackDamage}}
+          {{firstLetter item.system.attackSource}} vs {{firstLetter item.system.attackTarget}} /
+          {{item.system.attackDamage}}
+          {{/if}}
+        </div>
+        <div class="faction-field counter">{{item.system.counter}}</div>
+        <div class="item-controls">
+          <a class="item-control{{#unless item.system.unusable}} item-off{{/unless}}" data-action="toggleAssetUnusable"
+            title="{{localize 'WWN.Break'}}">
+            <i class="fas fa-heart-broken{{#unless item.system.unusable}} item-off{{/unless}}"></i>
+          </a>
+          <a class="item-control{{#unless item.system.stealthed}} item-off{{/unless}}"
+            data-action="toggleAssetStealthed" title="{{localize 'WWN.faction.stealthed'}}">
+            <i class="fas fa-user-ninja{{#unless item.system.stealthed}} item-off{{/unless}}"></i>
+          </a>
+          <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}"><i class="fas fa-edit"></i></a>
+          <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+</div>
+{{/wwnCollapsibleSection}}

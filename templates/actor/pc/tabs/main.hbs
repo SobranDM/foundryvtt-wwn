@@ -1,0 +1,224 @@
+{{!-- PC Main tab: GWN-aligned 2×2 grid — abilities | saves; skills | combat+favorites. --}}
+<section class="tab attributes-tab flexcol {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-actor-main-grid">
+
+    {{!-- Abilities --}}
+    <div class="wwn-panel wwn-main-abilities">
+      {{#if isNew}}
+      <div class="wwn-main-abilities-actions">
+        <a class="wwn-rollable" data-action="generateScores" title="{{localize 'WWN.dialog.generateScores'}}">
+          <i class="fas fa-dice blinking"></i>
+        </a>
+      </div>
+      {{/if}}
+      <div class="wwn-ability-grid">
+        {{#each abilities as |ability|}}
+        <div class="wwn-ability-row" data-score="{{ability.key}}">
+          <a class="wwn-rollable wwn-ability-label" data-action="rollCheck" data-ability="{{ability.key}}"
+            title="{{localize ability.label}}">{{localize ability.label}}</a>
+          <input type="number" name="system.abilities.{{ability.key}}.value" value="{{ability.value}}"
+            data-dtype="Number" placeholder="0" class="wwn-ability-value" />
+          <span class="wwn-ability-mod">{{wwnSigned ability.mod}}</span>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- Saves --}}
+    <div class="wwn-panel wwn-main-saves">
+      <div class="wwn-save-grid">
+        {{#each saves as |save|}}
+        <a class="wwn-rollable wwn-save-cell" data-action="rollSave" data-save="{{save.id}}"
+          title="{{localize save.label}}">
+          <span class="wwn-section-header">{{localize save.label}}</span>
+          <span class="wwn-save-value">{{save.value}}</span>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- Skills --}}
+    <div class="wwn-panel wwn-main-skills inventory skills">
+      <div class="wwn-section-header wwn-main-skills-header">
+        <span>{{localize "WWN.category.skills"}}</span>
+        <div class="wwn-main-skills-controls">
+          <input name="system.skills.unspent" type="number" value="{{system.skills.unspent}}" data-dtype="Number"
+            class="wwn-skills-unspent-input" title="{{localize 'WWN.skills.unspentPointsHint'}}" />
+          <a class="item-control" data-action="toggleSkillLevelsUnlock" title="{{localize 'WWN.Lock'}}">
+            <i class="fa {{#if system.skills.levelsUnlocked}}fa-unlock{{else}}fa-lock{{/if}}"></i>
+          </a>
+          <a class="item-control" data-action="createItem" data-type="skill" title="{{localize 'WWN.Add'}}">
+            <i class="fa fa-plus"></i>
+          </a>
+        </div>
+      </div>
+      <ol class="item-list wwn-skills-list">
+        {{#if (eq skills.length 0)}}
+        <li class="item-entry">
+          <a class="item-name-short flexrow" data-action="addSkills">
+            <h4>{{localize "WWN.AddSkills"}}</h4>
+          </a>
+        </li>
+        {{/if}}
+        {{#each skills as |skill|}}
+        <li class="item-entry">
+          <div class="item flexrow{{#if (eq skill.system.ownedLevel -1)}} greyrow{{/if}}" data-item-id="{{skill.id}}">
+            <div class="item-name-short item-rollable flexrow">
+              <a data-action="rollItem">
+                <h4 data-tooltip="{{skill.system.description}}">{{skill.name}}</h4>
+              </a>
+            </div>
+            <div class="field-xshort unhidden reverse-lock{{#if @root.system.skills.levelsUnlocked}} hidden{{/if}}">
+              {{lookup @root.config.scores skill.system.score}}
+            </div>
+            <div class="field-xshort unhidden reverse-lock{{#if @root.system.skills.levelsUnlocked}} hidden{{/if}}">
+              <input type="number" value="{{skill.system.ownedLevel}}" data-item-field="system.ownedLevel"
+                {{#unless @root.system.skills.levelsUnlocked}}disabled{{/unless}} />
+            </div>
+            {{#if @root.owner}}
+            <div class="item-controls skill-lock{{#unless @root.system.skills.levelsUnlocked}} hidden{{/unless}}">
+              <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
+                <i class="fas fa-edit"></i>
+              </a>
+              <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
+                <i class="fas fa-trash"></i>
+              </a>
+              <a class="item-control" data-action="skillUp" title="{{localize 'WWN.Up'}}">
+                <i class="fas fa-level-up-alt"></i>
+              </a>
+            </div>
+            {{/if}}
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+    {{!-- Combat + Favorites --}}
+    <div class="wwn-main-sidebar">
+      <div class="wwn-panel wwn-main-combat-panel">
+        <div class="wwn-combat-stats">
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.Sheet.AttackBonus'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-crosshairs"></i>
+                <span>{{localize "WWN.Sheet.AttackBonusShort"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value"
+                title="{{localize 'WWN.Sheet.AttackBonusBreakdown' base=system.combat.abBase mod=system.combat.abMod}}">
+                <span>{{wwnSigned system.combat.ab}}</span>
+              </div>
+            </div>
+
+            <div class="wwn-combat-stat"
+              title="{{#if separateRangedAC}}{{localize 'WWN.Sheet.ArmorClassHintDual'}}{{else}}{{localize 'WWN.Sheet.ArmorClassHint'}}{{/if}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-shield-alt"></i>
+                <span>{{#if separateRangedAC}}{{localize "WWN.Sheet.ArmorClassShortDual"}}{{else}}{{localize "WWN.Sheet.ArmorClassShort"}}{{/if}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                {{#if separateRangedAC}}
+                <span title="{{localize 'WWN.Sheet.ArmorClassRanged'}}">{{system.combat.ac.ranged.value}}</span>
+                <span class="wwn-combat-sep">·</span>
+                <span title="{{localize 'WWN.Sheet.ArmorClassMelee'}}">{{system.combat.ac.melee.value}}</span>
+                {{else}}
+                <span title="{{localize 'WWN.Sheet.ArmorClassHint'}}">{{system.combat.ac.melee.value}}</span>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.Inventory.EncumbranceHint'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-weight-hanging"></i>
+                <span>{{localize "WWN.Inventory.EncumbranceShort"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <span title="{{localize 'WWN.Inventory.Readied'}}">{{system.encumbrance.readied.value}}/{{system.encumbrance.readied.max}}</span>
+                <span class="wwn-combat-sep">·</span>
+                <span title="{{localize 'WWN.Inventory.Stowed'}}">{{system.encumbrance.stowed.value}}/{{system.encumbrance.stowed.max}}</span>
+              </div>
+            </div>
+
+            <div class="wwn-combat-stat" title="{{localize 'WWN.Movement.TitleHint'}}">
+              <span class="wwn-section-header">
+                <i class="fas fa-running"></i>
+                <span>{{localize "WWN.Movement.LabelShort"}}</span>
+              </span>
+              <div class="wwn-combat-stat-value wwn-movement-value">
+                {{#if showMovement}}
+                <span title="{{localize 'WWN.movement.round'}}">{{system.movement.combat}}</span>
+                <span class="wwn-combat-sep">/</span>
+                <span title="{{localize 'WWN.movement.turn'}}">{{system.movement.exploration}}</span>
+                <span class="wwn-combat-sep">/</span>
+                <span title="{{localize 'WWN.Movement.TitleHint'}}">{{system.movement.daily}}</span>
+                {{else}}
+                <input name="system.movement.base.value" type="number" value="{{system.movement.base.value}}"
+                  data-dtype="Number" placeholder="30" title="{{localize 'WWN.movement.base'}}"
+                  class="wwn-movement-base-input" />
+                {{/if}}
+              </div>
+            </div>
+          </div>
+
+          {{#if replaceStrainWithWounds}}
+          <div class="wwn-combat-stat" data-tooltip="{{localize 'WWN.InjuriesWoundsHint'}}">
+            <span class="wwn-section-header">
+              <span>I/W</span>
+            </span>
+            <div class="wwn-combat-stat-value wwn-iw-value">
+              <input name="system.hp.injuries" type="number" value="{{system.hp.injuries}}" data-dtype="Number"
+                placeholder="0" data-tooltip="{{localize 'WWN.InjuriesHint'}}" />
+              <span class="wwn-combat-sep">/</span>
+              <input name="system.hp.wounds" type="number" value="{{system.hp.wounds}}" data-dtype="Number"
+                placeholder="0" data-tooltip="{{localize 'WWN.WoundsHint'}}" />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="wwn-panel inventory wwn-favorites-dock">
+        <div class="wwn-section-header">
+          <i class="fas fa-star"></i> {{localize "WWN.Favorites.Title"}}
+        </div>
+        <ol class="item-list">
+          {{#each favorites as |fav|}}
+          <li class="item-entry">
+            <div class="item flexrow" data-item-id="{{fav.id}}">
+              <div class="item-name item-rollable flexrow" data-action="showItem">
+                <img class="item-image" src="{{fav.img}}" alt="" data-action="rollItem"
+                  title="{{localize 'WWN.Favorites.Roll'}}" />
+                <h4 title="{{fav.name}}">{{fav.name~}}</h4>
+              </div>
+              {{#if fav.counter}}
+              <span class="powers-fav-counter">{{fav.counter.value}}/{{fav.counter.max}}</span>
+              {{/if}}
+              <div class="item-controls">
+                {{#if fav.canActivatePower}}
+                <a class="item-control" data-action="activatePower" title="{{localize 'WWN.Power.ActivateHint'}}">
+                  <i class="fas fa-power-off"></i>
+                </a>
+                {{/if}}
+                {{#if fav.canDeactivatePower}}
+                <a class="item-control powers-active-badge" data-action="deactivatePower"
+                  title="{{localize 'WWN.Power.DeactivateHint'}}">
+                  {{localize "WWN.Power.Active"}}
+                </a>
+                {{/if}}
+                <a class="item-control" data-action="toggleFavorite" title="{{localize 'WWN.Favorites.Remove'}}">
+                  <i class="fas fa-trash"></i>
+                </a>
+              </div>
+            </div>
+          </li>
+          {{else}}
+          <li class="item-entry wwn-favorites-empty">{{localize "WWN.Favorites.Empty"}}</li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</section>

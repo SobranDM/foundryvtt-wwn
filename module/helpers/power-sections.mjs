@@ -178,14 +178,16 @@ export function buildPowerSections(powers, { isSectionCollapsed, localize } = {}
  * Attach Powers-tab context fields onto sheet data.
  * @param {object} data  Sheet getData() object
  * @param {Actor} actor
+ * @param {object} [options]
+ * @param {(id: string) => boolean} [options.isSectionCollapsed]
  */
-export function preparePowersTabContext(data, actor) {
+export function preparePowersTabContext(data, actor, { isSectionCollapsed } = {}) {
   const items = Array.from(actor.items.values()).sort((a, b) => (a.sort || 0) - (b.sort || 0));
   const powers = items.filter((i) => i.type === "power");
   const classEdges = items.filter((i) => i.type === "classEdge");
   const foci = items.filter((i) => i.type === "focus");
 
-  data.powerSections = buildPowerSections(powers);
+  data.powerSections = buildPowerSections(powers, { isSectionCollapsed });
   data.classEdges = classEdges
     .slice()
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -204,6 +206,9 @@ export function preparePowersTabContext(data, actor) {
   data.hasSpellPowers = powers.some((p) => p.system.subType === "spell");
   // WWN PC document type is "pc"
   data.showPreparedCounter = isPc(actor) && data.hasSpellPowers;
+  // Monsters omit empty Class/Edge and Foci chrome; PCs always show create affordances.
+  data.showClassEdgesSection = isPc(actor) || data.classEdges.length > 0;
+  data.showFociSection = isPc(actor) || data.foci.length > 0;
   if (data.showPreparedCounter) {
     const prepared = actor.system.casting?.prepared ?? {};
     data.preparedOverMax = (prepared.value ?? 0) > (prepared.max ?? 0);

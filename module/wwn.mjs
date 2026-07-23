@@ -36,10 +36,11 @@ import * as treasure from "./treasure.js";
 import * as macros from "./macros.js";
 import * as party from "./party.js";
 
-import { WwnItemSheet } from "./item/item-sheet.js";
-import { WwnActorSheetCharacter } from "./actor/character-sheet.js";
-import { WwnActorSheetMonster } from "./actor/monster-sheet.js";
-import { WwnActorSheetFaction } from "./actor/faction-sheet.js";
+import { WwnItemSheet } from "./sheets/item/item-sheet.mjs";
+import { WwnPcSheet } from "./sheets/actor/pc-sheet.mjs";
+import { WwnNpcSheet } from "./sheets/actor/npc-sheet.mjs";
+import { WwnFactionSheet } from "./sheets/actor/faction-sheet.mjs";
+import { applyUiTheme, sheetThemeChoices, themeChatMessage } from "./config/themes.mjs";
 
 const { DocumentSheetConfig } = foundry.applications.apps;
 
@@ -109,26 +110,30 @@ Hooks.once("init", async function () {
     decimals: 2,
   };
 
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("wwn", WwnActorSheetCharacter, {
+  const themes = sheetThemeChoices();
+
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnPcSheet, {
     types: ["character", "pc"],
     makeDefault: true,
     label: "WWN.SheetClassCharacter",
+    themes,
   });
-  Actors.registerSheet("wwn", WwnActorSheetMonster, {
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnNpcSheet, {
     types: ["monster", "npc"],
     makeDefault: true,
     label: "WWN.SheetClassMonster",
+    themes,
   });
-  Actors.registerSheet("wwn", WwnActorSheetFaction, {
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnFactionSheet, {
     types: ["faction"],
     makeDefault: true,
     label: "WWN.SheetClassFaction",
+    themes,
   });
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("wwn", WwnItemSheet, {
+  DocumentSheetConfig.registerSheet(Item, "wwn", WwnItemSheet, {
     makeDefault: true,
     label: "WWN.SheetClassItem",
+    themes,
   });
   DocumentSheetConfig.registerSheet(ActiveEffect, "wwn", WwnActiveEffectConfig, {
     makeDefault: true,
@@ -223,6 +228,8 @@ Hooks.once("setup", function () {
 });
 
 Hooks.once("ready", async function () {
+  applyUiTheme(game.settings.get("wwn", "uiTheme"));
+
   Hooks.on("hotbarDrop", (bar, data, slot) => {
     macros.createWwnMacro(data, slot);
     return false;
@@ -257,7 +264,10 @@ Hooks.on("renderSettings", async (app, html) => {
 });
 
 Hooks.on("renderChatLog", (_app, html) => WwnItem.chatListeners?.(html));
-Hooks.on("renderChatMessageHTML", (_app, html) => WwnItem.chatListeners?.(html));
+Hooks.on("renderChatMessageHTML", (_message, html) => {
+  themeChatMessage(_message, html);
+  WwnItem.chatListeners?.(html);
+});
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
 Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);
 Hooks.on("renderRollTableSheet", treasure.augmentTable);

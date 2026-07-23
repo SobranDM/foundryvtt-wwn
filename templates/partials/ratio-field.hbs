@@ -1,0 +1,24 @@
+{{!-- Compact current / max (or any X / Y) number pair for form panels.
+      Optional block content renders after the pair (e.g. a Refresh select).
+      Params: labelKey, hintKey, valueName, value, maxName, max,
+               valueTitleKey, maxTitleKey, min, span (boolean). --}}
+<div class="form-group wwn-ratio-field{{#if span}} wwn-form-span{{/if}}">
+  {{#if labelKey}}
+  <label>
+    {{localize labelKey}}
+    {{#if hintKey}}{{> wwnFieldHint hintKey=hintKey}}{{/if}}
+  </label>
+  {{/if}}
+  <div class="form-fields">
+    <div class="wwn-ratio-inputs">
+      <input type="number" name="{{valueName}}" value="{{value}}" {{#if min}}min="{{min}}"{{/if}}
+        data-dtype="Number" {{#if valueTitleKey}}title="{{localize valueTitleKey}}"{{/if}}
+        aria-label="{{#if valueTitleKey}}{{localize valueTitleKey}}{{else}}{{localize labelKey}}{{/if}}" />
+      <span class="wwn-ratio-sep" aria-hidden="true">/</span>
+      <input type="number" name="{{maxName}}" value="{{max}}" {{#if min}}min="{{min}}"{{/if}}
+        data-dtype="Number" {{#if maxTitleKey}}title="{{localize maxTitleKey}}"{{/if}}
+        aria-label="{{#if maxTitleKey}}{{localize maxTitleKey}}{{else}}{{localize labelKey}}{{/if}}" />
+    </div>
+    {{#if @partial-block}}{{> @partial-block}}{{/if}}
+  </div>
+</div>

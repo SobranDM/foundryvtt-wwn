@@ -1,0 +1,737 @@
+/* Shared WWN sheet components — design language for PC / NPC / faction sheets.
+   Sheet-specific SCSS should compose these rather than redefine layout. */
+
+/* ---- Surfaces ---- */
+
+.wwn-sheet .wwn-panel {
+  background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
+  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  border-radius: 4px;
+  padding: 0.5rem;
+  min-height: 0;
+}
+
+.wwn-sheet .wwn-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: var(--wwn-header-bg, var(--wwn-dark));
+  color: var(--wwn-header-text, var(--wwn-light));
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.2rem 0.45rem;
+  white-space: nowrap;
+}
+
+/* ---- Collapsible sections ---- */
+
+.wwn-sheet .wwn-collapsible > .wwn-collapsible-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.wwn-sheet .wwn-collapsible > .wwn-collapsible-header .wwn-caret,
+.wwn-sheet .wwn-collapsible > .wwn-collapsible-header .item-caret {
+  flex: 0 0 auto;
+  transition: transform 0.15s ease;
+}
+
+.wwn-sheet .wwn-collapsible.collapsed > .wwn-collapsible-header .item-caret,
+.wwn-sheet .wwn-collapsible.collapsed > .wwn-collapsible-header .wwn-caret {
+  transform: rotate(-90deg);
+}
+
+.wwn-sheet .wwn-collapsible.collapsed > .wwn-collapsible-body {
+  display: none;
+}
+
+.wwn-sheet .wwn-collapsible > .wwn-collapsible-body {
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-collapsible > .wwn-collapsible-header.item-titles {
+  margin-top: 0;
+  border: none;
+  box-shadow: none;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+
+.wwn-sheet .wwn-collapsible-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+  text-indent: 0;
+}
+
+.wwn-sheet .wwn-collapsible-header .item-controls {
+  margin-left: auto;
+  margin-right: 0;
+  color: inherit;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-collapsible-header .item-controls a {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.wwn-sheet .wwn-collapsible-header .item-controls a:hover {
+  opacity: 1;
+  color: inherit;
+  text-shadow: none;
+}
+
+.wwn-sheet .wwn-collapsible-header .wwn-badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: inherit;
+  margin-left: 0;
+}
+
+/* ---- Inline chips (header Level / Renown style) ---- */
+
+.wwn-sheet .wwn-chip,
+.wwn-sheet .wwn-header-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.wwn-sheet .wwn-chip-label,
+.wwn-sheet .wwn-header-chip-label {
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.wwn-sheet .wwn-chip input,
+.wwn-sheet .wwn-header-chip input {
+  width: 2.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.wwn-sheet .wwn-chip a {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.wwn-sheet .wwn-chip a:hover {
+  opacity: 1;
+}
+
+/* ---- Form panels (Details / Config-style stacks) ---- */
+
+.wwn-sheet .wwn-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (width < 40rem) {
+  .wwn-sheet .wwn-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn-sheet .wwn-form-panel {
+  background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
+  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  border-radius: 4px;
+  padding: 0.5rem;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-form-panel > .wwn-section-header,
+.wwn-sheet .wwn-form-panel > .item-titles {
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.wwn-sheet .wwn-form-panel > .wwn-section-header .item-controls {
+  margin-left: auto;
+  margin-right: 0;
+  color: inherit;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
+
+.wwn-sheet .wwn-form-panel > .wwn-section-header .item-controls a {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.wwn-sheet .wwn-form-panel > .wwn-section-header .item-controls a:hover {
+  opacity: 1;
+}
+
+.wwn-sheet .wwn-form-panel .wwn-form-panel-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (width < 28rem) {
+  .wwn-sheet .wwn-form-panel .wwn-form-panel-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn-sheet .wwn-form-panel .wwn-form-panel-fields > .wwn-form-span {
+  grid-column: 1 / -1;
+}
+
+.wwn-sheet .wwn-form-panel .form-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-form-panel .form-group > label {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.wwn-sheet .wwn-field-hint {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  opacity: 0.55;
+  cursor: help;
+  color: var(--wwn-text-muted, var(--wwn-dark-alt));
+}
+
+.wwn-sheet .wwn-field-hint:hover {
+  opacity: 0.9;
+}
+
+/* Current / max (X / Y) input pair */
+.wwn-sheet .wwn-ratio-field .wwn-ratio-inputs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 10rem;
+}
+
+.wwn-sheet .wwn-ratio-field .wwn-ratio-inputs input {
+  flex: 1 1 3rem;
+  min-width: 2.5rem;
+  width: auto;
+  text-align: center;
+}
+
+.wwn-sheet .wwn-ratio-field .wwn-ratio-sep {
+  flex: 0 0 auto;
+  opacity: 0.65;
+  line-height: 1;
+  user-select: none;
+}
+
+.wwn-sheet .wwn-ratio-field .form-fields > select {
+  flex: 0 1 7rem;
+  min-width: 4.5rem;
+  width: auto;
+}
+
+.wwn-sheet .wwn-form-panel .form-group .form-fields {
+  flex: 0 0 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.wwn-sheet .wwn-form-panel .form-group .form-fields:has(input:not([type="checkbox"])),
+.wwn-sheet .wwn-form-panel .form-group .form-fields:has(select),
+.wwn-sheet .wwn-form-panel .form-group .form-fields:has(textarea) {
+  flex: 1 1 3rem;
+  min-width: 2.5rem;
+}
+
+.wwn-sheet .wwn-form-panel .form-group .form-fields input[type="number"],
+.wwn-sheet .wwn-form-panel .form-group .form-fields input[type="text"],
+.wwn-sheet .wwn-form-panel .form-group .form-fields select {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.wwn-sheet .wwn-form-panel .form-group .form-fields input[type="checkbox"] {
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.wwn-sheet .wwn-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+/* ---- Data tables (inventory / powers / equipment lists) ---- */
+
+.wwn-sheet .wwn-data-table {
+  width: 100%;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-data-table .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wwn-sheet .wwn-data-table .item-list .item,
+.wwn-sheet .wwn-data-table .wwn-col-header,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-data-table .item-list .item {
+  line-height: 1.2;
+  min-height: 1.75rem;
+  height: auto;
+  overflow: visible;
+}
+
+.wwn-sheet .wwn-data-table .item-list .item-entry:nth-child(even) .item {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.wwn-sheet .wwn-data-table .item-name {
+  text-indent: 8px;
+  text-align: left;
+  overflow: hidden;
+  height: auto;
+  min-height: 1.75rem;
+  margin: 0;
+  line-height: 1.2;
+  flex: 1 1 0;
+  min-width: 7rem;
+  max-width: none;
+  display: flex;
+  align-items: center;
+}
+
+.wwn-sheet .wwn-data-table .item-name[data-action="showItem"] {
+  cursor: pointer;
+}
+
+.wwn-sheet .wwn-data-table .item-name[data-action="showItem"] > h4 {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-data-table .item-name .item-image {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wwn-sheet .wwn-data-table .item-name h4,
+.wwn-sheet .wwn-data-table .item-name-short h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wwn-sheet .wwn-data-table .icon-row {
+  flex: 0 0 8rem;
+  width: 8rem;
+  min-width: 8rem;
+  max-width: 8rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.wwn-sheet .wwn-data-table .icon-row img {
+  border: none;
+  margin: 3px 1px;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.wwn-sheet .wwn-data-table .icon-row span {
+  font-size: 11px;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.wwn-sheet .wwn-data-table .field-short {
+  font-size: 11px;
+  flex: 0 0 3.25rem;
+  width: 3.25rem;
+  min-width: 3.25rem;
+  max-width: 3.25rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wwn-sheet .wwn-data-table .field-long {
+  flex: 0 0 5rem;
+  width: 5rem;
+  min-width: 5rem;
+  max-width: 5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wwn-sheet .wwn-data-table .item-controls {
+  font-size: 11px;
+  flex: 0 0 5.5rem;
+  width: 5.5rem;
+  min-width: 5.5rem;
+  max-width: 5.5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+  text-align: right;
+  margin-right: 4px;
+}
+
+/* Quiet column headers — same flex metrics as cells so labels center over content */
+.wwn-sheet .wwn-data-table .wwn-col-header,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header {
+  background: transparent;
+  color: var(--wwn-text-muted, var(--wwn-dark-alt));
+  border: none;
+  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  margin-top: 0.15rem;
+  margin-bottom: 0;
+  padding: 0.2rem 0.35rem;
+  text-align: center;
+}
+
+.wwn-sheet .wwn-data-table .wwn-col-header .item-name,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header .item-name {
+  text-align: left;
+  text-indent: 0.5rem;
+  justify-content: flex-start;
+}
+
+.wwn-sheet .wwn-data-table .wwn-col-header .field-short,
+.wwn-sheet .wwn-data-table .wwn-col-header .field-long,
+.wwn-sheet .wwn-data-table .wwn-col-header .icon-row,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header .field-short,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header .field-long,
+.wwn-sheet .wwn-data-table .item-titles.item-col-header .icon-row {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Stat chips (Main combat / NPC combat stats) */
+.wwn-sheet .wwn-stat-grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+}
+
+.wwn-sheet .wwn-stat-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  align-items: center;
+}
+
+.wwn-sheet .wwn-stat-chip .wwn-section-header {
+  width: 100%;
+}
+
+.wwn-sheet .wwn-stat-chip-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}
+
+/* Solo inputs fill the chip; current/max pairs share space evenly. */
+.wwn-sheet .wwn-stat-chip-value input,
+.wwn-sheet .wwn-stat-chip-value > span:not(.sep) {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  text-align: center;
+}
+
+.wwn-sheet .wwn-stat-chip-value input {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+}
+
+.wwn-sheet .wwn-stat-chip-value .sep {
+  flex: 0 0 auto;
+  opacity: 0.6;
+  padding: 0 0.1rem;
+}
+
+/* ---- Item sheet chrome ---- */
+
+.wwn-sheet .wwn-item-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.wwn-sheet .wwn-item-header .profile-img {
+  flex: 0 0 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border: 1px solid var(--wwn-border-theme, var(--wwn-border));
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.wwn-sheet .wwn-item-header-fields {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.wwn-sheet .wwn-item-header .wwn-header-name {
+  width: 100%;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.wwn-sheet .wwn-item-header-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wwn-sheet .wwn-item-header .wwn-chip input {
+  width: 3rem;
+}
+
+.wwn-sheet .wwn-tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  max-height: 3.5rem;
+  overflow: auto;
+}
+
+.wwn-sheet .wwn-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--wwn-header-bg, var(--wwn-dark));
+  color: var(--wwn-header-text, var(--wwn-light));
+  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.wwn-sheet .wwn-tag a {
+  color: inherit;
+  opacity: 0.75;
+}
+
+.wwn-sheet .wwn-tag a:hover {
+  opacity: 1;
+}
+
+.wwn-sheet .wwn-toggle-pair {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.wwn-sheet .wwn-toggle-pair a {
+  color: var(--wwn-text-muted, var(--wwn-dark-alt));
+  opacity: 0.45;
+  font-size: 1rem;
+}
+
+.wwn-sheet .wwn-toggle-pair a.active,
+.wwn-sheet .wwn-toggle-pair a:hover {
+  color: var(--wwn-accent-strong, var(--wwn-accent));
+  opacity: 1;
+}
+
+/* Field grid alias for item attribute bodies */
+.wwn-sheet .wwn-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (width < 28rem) {
+  .wwn-sheet .wwn-field-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn-sheet .wwn-field-grid > .wwn-form-span {
+  grid-column: 1 / -1;
+}
+
+.wwn-sheet .wwn-field-grid > .form-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.wwn-sheet .wwn-field-grid > .form-group > label {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wwn-sheet .wwn-field-grid > .form-group .form-fields {
+  flex: 0 0 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(input:not([type="checkbox"])),
+.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(select),
+.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(textarea) {
+  flex: 1 1 3rem;
+  min-width: 2.5rem;
+}
+
+.wwn-sheet .wwn-attributes-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  overflow: auto;
+}
+
+.wwn-sheet .wwn-attributes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (width < 36rem) {
+  .wwn-sheet .wwn-attributes-grid {
+    grid-template-columns: 1fr;
+  }
+}

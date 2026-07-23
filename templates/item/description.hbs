@@ -1,0 +1,11 @@
+{{!-- Description tab. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-form-panel wwn-item-description">
+      <div class="wwn-section-header">{{localize "WWN.Tabs.Description"}}</div>
+      <div class="description resizable-editor">
+        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable async=true}}
+      </div>
+    </div>
+  </div>
+</section>

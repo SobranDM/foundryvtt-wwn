@@ -14,6 +14,9 @@
   - They drive attack bonus, hit dice, Effort or spell capacity, and class features.
   - Existing characters are prompted once to pick their class(es). Old Class Ability foci are archived under Items.
 - **Character sheet** layout and combat bonuses have been reworked.
+  - Sheets use Foundry **Application V2 / SheetV2** with horizontal in-sheet tabs and selectable UI themes (WWN / SWN / AWN / CWN).
+  - The Attributes tab is renamed **Main** and includes a Favorites dock for PCs.
+  - Header resource bars show HP and System Strain always; Alienation and Stress when their settings are on; XP uses a fill bar.
   - The old Tweaks menu is gone; bonuses live as Active Effects.
   - Powers, classes, and foci share one Powers tab. Alignment, background, and class list live on Details.
   - Attack bonus and hit dice come from your classes (adjustments via Active Effects when needed).

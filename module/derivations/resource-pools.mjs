@@ -1,6 +1,7 @@
 import { WWN } from "../config/index.mjs";
 import { applyFocusResourceGrants } from "./focus-resources.mjs";
 import { progressionAtLevel, resolveCastProgression } from "./prepared-spells.mjs";
+import { findPoolGrantEdge } from "../helpers/resource-pool-resolve.mjs";
 
 /**
  * Resource pool builder.
@@ -29,7 +30,10 @@ export function evaluatePoolFormula(formula, rollData) {
  */
 export function getActorSpellSlotMode(actor) {
   const hasLeveled = actor.items.some(
-    (i) => i.type === "classEdge" && i.system.slotGrant?.enabled
+    (i) =>
+      i.type === "classEdge" &&
+      i.system.slotGrant?.enabled &&
+      (i.system.slotGrant?.leveledProgression?.length ?? 0) > 0
   );
   return hasLeveled ? "leveled" : null;
 }
@@ -132,64 +136,53 @@ export function deriveResourcePools(actor) {
   );
   const spellSlotsFromGrant = hasLeveledSlots || hasUnleveledSlots;
 
-  /* ---- Named pool groups (effort-style) ---- */
+  /* ---- Named pool groups (effort-style) ----
+   * Build from ClassEdge poolGrants. Powers with generic resourceName "Effort"
+   * resolve onto "{source} Effort" (e.g. Vowed → Vowed Effort) so we never
+   * invent a phantom Effort 0/0 pool beside the real grant.
+   */
   const namedPowers = powers.filter(
     (p) => p.system.subType !== "spell" || !spellSlotsFromGrant
   );
-  const namedGroups = Object.groupBy(namedPowers, (p) => p.system.resourceName ?? "");
 
-  for (const [name, members] of Object.entries(namedGroups ?? {})) {
-    if (!name) continue;
+  for (const edge of classEdges) {
+    if (!poolGrantActive(edge)) continue;
+    const grantName = String(edge.system.poolGrant?.name ?? "").trim();
+    if (!grantName) continue;
+
+    const members = namedPowers.filter(
+      (p) =>
+        findPoolGrantEdge(actor, {
+          resourceName: p.system.resourceName,
+          source: p.system.source,
+        })?.id === edge.id
+    );
     const value = members.reduce((sum, p) => sum + (p.system.poolCommittedSum ?? 0), 0);
-    const edge = classEdges.find((ce) => ce.system.poolGrant?.name === name);
-
-    let max = 0;
-    let warning = null;
-    if (edge) {
-      consumed.pool.add(edge.id);
-      const result = poolGrantMax(edge, rollData);
-      max = result.max;
-      if (!result.valid) warning = "WWN.Pools.WarnInvalidFormula";
-    } else {
-      warning = "WWN.Pools.WarnNoClassEdge";
-    }
-
+    const result = poolGrantMax(edge, rollData);
     pools.push({
-      id: `pool-${name}`.slugify(),
-      name,
+      id: `pool-${grantName}`.slugify(),
+      name: grantName,
       level: null,
       value,
-      max,
-      warning,
+      max: result.max,
+      warning: result.valid ? null : "WWN.Pools.WarnInvalidFormula",
     });
+    consumed.pool.add(edge.id);
   }
 
   /* ---- Leveled Spell Slots (all tiers with max > 0, not only levels with spells) ---- */
   if (hasLeveledSlots) {
-    const slotEdge = classEdges.find((ce) => ce.system.slotGrant?.enabled);
+    const slotEdge = classEdges.find(
+      (ce) => ce.system.slotGrant?.enabled && (ce.system.slotGrant?.leveledProgression?.length ?? 0) > 0
+    );
     const spellsByLevel = Object.groupBy(
       powers.filter((p) => p.system.subType === "spell"),
       (p) => p.system.level ?? 1
     );
     if (slotEdge) {
       consumed.slot.add(slotEdge.id);
-      const warning = pushLeveledSlotPools(
-        slotEdge,
-        rollData,
-        spellsByLevel,
-        pools,
-        spellSlotsName
-      );
-      if (warning && !pools.some((p) => p.name === spellSlotsName && p.level != null)) {
-        pools.push({
-          id: `pool-${spellSlotsName}-1`.slugify(),
-          name: spellSlotsName,
-          level: 1,
-          value: 0,
-          max: 0,
-          warning,
-        });
-      }
+      pushLeveledSlotPools(slotEdge, rollData, spellsByLevel, pools, spellSlotsName);
+      // Empty leveledProgression: do not push a placeholder Spell Slots row.
     } else {
       const leveledSpells = powers.filter((p) => p.system.subType === "spell");
       if (leveledSpells.length) {

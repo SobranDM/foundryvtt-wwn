@@ -7,29 +7,27 @@
 export function onManageActiveEffect(event, owner, element) {
   event.preventDefault();
   const a = element ?? event.currentTarget;
-  const li = a.closest('li');
-  const effect = li.dataset.effectId
-    ? owner.effects.get(li.dataset.effectId)
-    : null;
+  const li = a.closest("li");
+  const section = a.closest("[data-effect-type]");
+  const effect = li?.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
   switch (a.dataset.actionType ?? a.dataset.action) {
-    case 'create':
-      return owner.createEmbeddedDocuments('ActiveEffect', [
+    case "create":
+      return owner.createEmbeddedDocuments("ActiveEffect", [
         {
-          name: game.i18n.format('DOCUMENT.New', {
-            type: game.i18n.localize('DOCUMENT.ActiveEffect'),
+          name: game.i18n.format("DOCUMENT.New", {
+            type: game.i18n.localize("DOCUMENT.ActiveEffect"),
           }),
-          img: 'icons/svg/aura.svg',
+          img: "icons/svg/aura.svg",
           origin: owner.uuid,
-          'duration.rounds':
-            li.closest('[data-effect-type]')?.dataset.effectType === 'temporary' ? 1 : undefined,
-          disabled: li.closest('[data-effect-type]')?.dataset.effectType === 'inactive',
+          "duration.rounds": section?.dataset.effectType === "temporary" ? 1 : undefined,
+          disabled: section?.dataset.effectType === "inactive",
         },
       ]);
-    case 'edit':
+    case "edit":
       return effect.sheet.render(true);
-    case 'delete':
+    case "delete":
       return effect.delete();
-    case 'toggle':
+    case "toggle":
       return effect.update({ disabled: !effect.disabled });
   }
 }

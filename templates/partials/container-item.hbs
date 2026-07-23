@@ -1,0 +1,23 @@
+{{!-- Single row for an item nested inside an open container. Ported from the
+      repeated `container-item` blocks in
+      templates/actors/partials/character-inventory-tab.html. --}}
+<li class="item-entry container-item">
+  <div class="item flexrow" data-item-id="{{item.id}}">
+    <div class="item-name item-rollable flexrow" data-action="showItem">
+      <img class="item-image" src="{{item.img}}" alt="" />
+      <div class="container-spacer"></div>
+      <h4 title="{{item.name}}">{{item.name~}}</h4>
+    </div>
+    <div class="field-short quantity">
+      <input value="{{item.system.quantity}}" type="number" placeholder="0" data-item-field="system.quantity" />
+    </div>
+    <div class="field-short">
+      <input value="{{item.system.weight}}" type="number" readonly />
+    </div>
+    <div class="item-controls">
+      {{#if @root.owner}}
+      {{> wwnItemControls}}
+      {{/if}}
+    </div>
+  </div>
+</li>

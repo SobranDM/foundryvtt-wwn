@@ -232,9 +232,47 @@
   padding-top: 4px;
   border-top: 1px solid var(--wwn-border, #ccc);
 }
-.wwn-chat-card .wwn-chat-actions button {
+.wwn-chat-card .wwn-chat-actions > button {
   width: 100%;
   margin: 2px 0;
+}
+.wwn-chat-card .wwn-chat-apply-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+.wwn-chat-card .wwn-chat-apply-spacer {
+  flex: 1;
+}
+.wwn-chat-card .wwn-chat-apply-toolbar button {
+  width: auto;
+  min-width: 1.75rem;
+  margin: 0;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.wwn-chat-card .wwn-chat-apply-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 2px 0;
+}
+.wwn-chat-card .wwn-chat-apply-row button {
+  width: auto;
+  margin: 0;
+}
+.wwn-chat-card .wwn-chat-apply-main {
+  flex: 1;
+  text-align: left;
+}
+.wwn-chat-card .wwn-chat-trauma {
+  color: var(--wwn-failure, #8b2a2a);
+}
+.wwn-chat-card button.active {
+  font-weight: bold;
 }
 .wwn-badge {
   display: inline-block;
@@ -258,6 +296,11 @@
 }
 .wwn-chat-card.wwn-heal-mode .wwn-chat-actions button[data-action="toggleHeal"] {
   font-weight: bold;
+}
+.wwn-chat-card.wwn-heal-mode button[data-action="applyRow"],
+.wwn-chat-card.wwn-heal-mode button[data-action="applyStraight"] {
+  border-color: #2d5a27;
+  color: #2d5a27;
 }
 
 /* Godbound damage conversion block, injected into weapon/asset attack chat cards */

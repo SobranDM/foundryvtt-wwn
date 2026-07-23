@@ -1,0 +1,31 @@
+/* AWN theme — charcoal ember with rust/copper accents */
+.themed.theme-awn,
+.application.theme-awn,
+body.wwn-theme-awn {
+  --wwn-bg: linear-gradient(180deg, #1a1412, #2d1f1a);
+  --wwn-bg-solid: #1a1412;
+  --wwn-panel-bg: rgba(255, 255, 255, 0.05);
+  --wwn-border-theme: #c45c26;
+  --wwn-border-soft: rgba(196, 92, 38, 0.4);
+  --wwn-header-bg: #c45c26;
+  --wwn-header-text: #fbeee4;
+  --wwn-accent: #d98e5f;
+  --wwn-accent-strong: #f0a36b;
+  --wwn-text: #cfc8c2;
+  --wwn-text-muted: #948c85;
+  --wwn-input-bg: rgba(255, 255, 255, 0.07);
+  --wwn-select-option-bg: #ffffff;
+  --wwn-select-option-text: #1a1412;
+  --wwn-checkbox-bg: #b8957a;
+  --wwn-checkbox-checked: #f0a36b;
+  --wwn-checkbox-mark: transparent;
+  --wwn-bar-positive: #d98e5f;
+  --wwn-bar-negative: #b5341f;
+  --wwn-bar-alienation: #8d6cab;
+  --wwn-bar-stress: #e0a458;
+  --wwn-bar-overflow: #e63322;
+  --wwn-bar-track: rgba(255, 255, 255, 0.1);
+  --wwn-success: #7d9c52;
+  --wwn-failure: #d14b35;
+  --color-text-primary: var(--wwn-text);
+}

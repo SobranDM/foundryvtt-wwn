@@ -1,87 +1,196 @@
-/* Faction sheet and faction asset item fields */
+/* Faction sheet — shared components + faction-specific columns */
 
-.wwn .faction-field {
-  flex: 0 0 50px;
-  font-size: 12px;
-  text-align: center;
-  padding-left: 8px;
+.wwn.sheet.actor.faction {
+  min-width: 960px;
 }
-.wwn .faction-field-wide {
-  flex: 0 0 90px;
-  font-size: 12px;
-  text-align: left;
-  padding-left: 8px;
+
+.wwn.sheet.actor.faction .wwn-faction-header .faction-header-img {
+  flex: 0 0 5rem;
+  width: 5rem;
+  height: 5rem;
 }
-.wwn .faction-field-wide.damage {
-  flex: 0 0 110px;
-  text-align: left;
+
+.wwn.sheet.actor.faction .wwn-faction-header .wwn-chip select {
+  width: auto;
+  min-width: 4rem;
+  font-size: 0.8rem;
 }
-.wwn .faction-field.counter {
-  text-align: left;
+
+.wwn.sheet.actor.faction .wwn-faction-header .wwn-chip--grow input[type="text"] {
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 4rem;
 }
-.wwn .item-titles .faction-field {
-  text-align: center;
-  justify-content: center;
+
+.wwn.sheet.actor.faction .wwn-faction-turn {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
-.wwn.sheet.actor .sheet-body .inventory .item-list .item-name.faction-name {
-  flex-basis: 65px;
-}
-.wwn.sheet.actor .sheet-body .inventory .item-controls {
-  flex: 0 0 80px;
-  padding: 0 4px;
-  margin-right: 2px;
-}
-.wwn.sheet.actor .sheet-body .inventory .item-controls a {
-  margin-right: 0 2px;
-}
-.wwn.sheet.actor .faction-header-img {
-  flex: 0 0 100px;
-  height: 100px;
-}
-.wwn.sheet.actor .faction-header-summary {
-  align-items: center;
-}
-.wwn.sheet.actor .faction-header-active {
-  flex: 2;
-  line-height: normal;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-.wwn.sheet.actor .faction-header-turn {
-  flex: 2;
-  line-height: normal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-}
-.wwn.sheet.actor .faction-header-turn .cost {
-  display: flex;
-  align-items: center;
-}
-.wwn.sheet.actor .faction-header-turn span {
-  padding-left: 5px;
-}
-.wwn.sheet.actor .faction-header-homeworld {
-  flex: 3;
-  line-height: normal;
-  margin-right: 15px;
-  text-align: center;
-}
-.wwn.sheet.actor .faction-header-magic {
-  flex: 2;
-  line-height: normal;
-  text-align: center;
-}
-.wwn.sheet.actor .faction-header-homeworld label,
-.wwn.sheet.actor .faction-header-magic label {
-  position: auto;
-  left: 0;
+
+.wwn.sheet.actor.faction .wwn-faction-main,
+.wwn.sheet.actor.faction .wwn-faction-main-grid {
   width: 100%;
+  min-width: 0;
+}
+
+.wwn.sheet.actor.faction .attributes-tab.active {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-main-grid {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(24rem, 2fr);
+  gap: 0.5rem;
+  align-items: start;
+}
+
+@media (width < 56rem) {
+  .wwn.sheet.actor.faction .wwn-faction-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn.sheet.actor.faction .wwn-faction-main-left,
+.wwn.sheet.actor.faction .wwn-faction-main-right {
+  min-width: 0;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-main-right {
+  max-height: 36rem;
+  overflow: auto;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-hp-xp {
+  grid-template-columns: 1fr 1fr;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-ratings-2x2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.wwn.sheet.actor.faction .wwn-stat-chip .wwn-section-header a {
+  color: inherit;
+  margin-left: 0.25rem;
+}
+
+.wwn.sheet.actor.faction .wwn-form-panel > .wwn-section-header .item-controls {
+  margin-left: auto;
+  color: inherit;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
+
+.wwn.sheet.actor.faction .wwn-form-panel > .wwn-section-header .item-controls a {
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Goals are short catalog blurbs — keep the editor compact */
+.wwn.sheet.actor.faction .wwn-faction-editor--goal {
+  min-height: 0;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-editor--goal .editor {
+  min-height: 3.5rem;
+  max-height: 5.5rem;
+  overflow: auto;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-editor--desc {
+  min-height: 0;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-editor--desc .editor {
+  min-height: 5rem;
+  max-height: 10rem;
+  overflow: auto;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-goal .form-fields input {
+  text-align: left;
+}
+
+/* Asset table metric columns (wider than PC inventory shorts) */
+.wwn .faction-field {
+  flex: 0 0 3.25rem;
+  width: 3.25rem;
+  min-width: 3.25rem;
+  max-width: 3.25rem;
+  font-size: 11px;
   text-align: center;
-  bottom: 0;
-  margin: 0;
-  right: 0;
-  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wwn .faction-field-wide {
+  flex: 0 0 5.5rem;
+  width: 5.5rem;
+  min-width: 5.5rem;
+  max-width: 5.5rem;
+  font-size: 11px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wwn .faction-field-wide.damage {
+  flex: 0 0 7rem;
+  width: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
+}
+
+.wwn .faction-field.counter {
+  text-align: center;
+}
+
+.wwn.sheet.actor.faction .wwn-data-table .item-controls {
+  flex: 0 0 5.5rem;
+  width: 5.5rem;
+  min-width: 5.5rem;
+  max-width: 5.5rem;
+}
+
+.wwn.sheet.actor.faction .wwn-data-table .item-name.faction-name {
+  min-width: 6rem;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-asset-actions {
+  justify-content: flex-end;
+  gap: 0.35rem;
+  padding: 0.15rem 0.35rem;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-tag,
+.wwn.sheet.actor.faction .wwn-faction-log {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
+}
+
+.wwn.sheet.actor.faction .wwn-faction-tag:last-child,
+.wwn.sheet.actor.faction .wwn-faction-log:last-child {
+  border-bottom: none;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-tag-header {
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.wwn.sheet.actor.faction .wwn-faction-tag-header .item-controls {
+  margin-left: auto;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
 }

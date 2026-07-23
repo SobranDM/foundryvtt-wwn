@@ -1,0 +1,31 @@
+/* CWN theme — urban slate with neon teal */
+.themed.theme-cwn,
+.application.theme-cwn,
+body.wwn-theme-cwn {
+  --wwn-bg: linear-gradient(180deg, #2b2d42, #3d405b);
+  --wwn-bg-solid: #2b2d42;
+  --wwn-panel-bg: rgba(255, 255, 255, 0.06);
+  --wwn-border-theme: #00b4d8;
+  --wwn-border-soft: rgba(0, 180, 216, 0.35);
+  --wwn-header-bg: #00b4d8;
+  --wwn-header-text: #061a1f;
+  --wwn-accent: #90e0ef;
+  --wwn-accent-strong: #caf0f8;
+  --wwn-text: #d8dbe8;
+  --wwn-text-muted: #9aa0b8;
+  --wwn-input-bg: rgba(255, 255, 255, 0.08);
+  --wwn-select-option-bg: #ffffff;
+  --wwn-select-option-text: #2b2d42;
+  --wwn-checkbox-bg: #9aa0b8;
+  --wwn-checkbox-checked: #00b4d8;
+  --wwn-checkbox-mark: transparent;
+  --wwn-bar-positive: #00b4d8;
+  --wwn-bar-negative: #ef476f;
+  --wwn-bar-alienation: #b14aed;
+  --wwn-bar-stress: #ff9e00;
+  --wwn-bar-overflow: #ff2d55;
+  --wwn-bar-track: rgba(255, 255, 255, 0.12);
+  --wwn-success: #06d6a0;
+  --wwn-failure: #ef476f;
+  --color-text-primary: var(--wwn-text);
+}

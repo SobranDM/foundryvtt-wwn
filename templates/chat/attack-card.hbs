@@ -1,0 +1,57 @@
+{{!-- Sectioned attack/damage card. Card-local UI state (heal toggle, multiplier)
+     lives in data- attributes managed by the ChatListener. --}}
+
+{{#if attackBreakdown}}
+<div class="wwn-chat-meta" title="{{attackBreakdown}}">
+  <i class="fa-solid fa-crosshairs"></i> {{attackBreakdown}}
+</div>
+{{/if}}
+{{#if damageBreakdown}}
+<div class="wwn-chat-meta" title="{{damageBreakdown}}">
+  <i class="fa-solid fa-burst"></i> {{damageBreakdown}}
+</div>
+{{/if}}
+
+{{#if trauma}}
+<div class="wwn-chat-meta">
+  {{#if trauma.traumatic}}
+  <b class="wwn-chat-trauma">{{localize "WWN.Roll.Traumatic"}}</b>
+  {{/if}}
+  {{localize "WWN.Roll.TraumaResult"}}: {{trauma.result}} vs {{trauma.target}} (×{{trauma.rating}})
+</div>
+{{/if}}
+
+{{#if applyRows.length}}
+<div class="wwn-chat-actions">
+  <div class="wwn-chat-apply-toolbar">
+    <span class="wwn-chat-meta">{{localize "WWN.Chat.ApplyTo"}}</span>
+    <span class="wwn-chat-apply-spacer"></span>
+    <button type="button" data-action="setMultiplier" data-value="0.5">½</button>
+    <button type="button" data-action="setMultiplier" data-value="1" class="active">1×</button>
+    <button type="button" data-action="setMultiplier" data-value="2">2×</button>
+    <button type="button" data-action="toggleHeal" class="{{#if defaultHealing}}active{{/if}}" title="{{localize 'WWN.Chat.ToggleHeal'}}">
+      <i class="fa-solid fa-heart"></i>
+    </button>
+  </div>
+  {{#each applyRows}}
+  <div class="wwn-chat-apply-row">
+    <button type="button" data-action="applyRow" data-row-id="{{this.id}}" class="wwn-chat-apply-main">
+      {{this.label}}: <b>{{this.value}}</b>
+    </button>
+    {{#if this.altLabel}}
+    <button type="button" data-action="applyStraight" data-row-id="{{this.id}}" title="{{localize 'WWN.Chat.StraightHint'}}">
+      {{this.altLabel}}
+    </button>
+    {{/if}}
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+
+{{#if save}}
+<div class="wwn-chat-actions">
+  <button type="button" data-action="rollCardSave" data-save="{{save}}">
+    <i class="fa-solid fa-shield-halved"></i> {{localize "WWN.Chat.RollSave"}} ({{save}})
+  </button>
+</div>
+{{/if}}

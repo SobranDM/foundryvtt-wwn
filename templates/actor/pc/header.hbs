@@ -1,0 +1,38 @@
+{{!-- PC sheet header: GWN-aligned two-band layout — portrait + identity,
+      then resource bars (HP / Strain / gated trackers / XP). --}}
+<header class="sheet-header wwn-sheet-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        <label class="wwn-header-chip" title="{{localize 'WWN.details.level'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.details.level"}}</span>
+          <input type="number" name="system.details.level" value="{{system.details.level}}" data-dtype="Number" />
+        </label>
+      </div>
+      <div class="wwn-header-row wwn-header-row--secondary">
+        <input class="wwn-header-background" type="text" name="system.details.background"
+          value="{{system.details.background}}" placeholder="{{localize 'WWN.details.background'}}" />
+        <input class="wwn-header-class" type="text" name="system.details.class"
+          value="{{system.details.class}}" placeholder="{{localize 'WWN.details.class'}}" />
+        <label class="wwn-header-chip" title="{{localize 'WWN.details.renown.short'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.details.renown.short"}}</span>
+          <input type="number" name="system.details.renown.value" value="{{system.details.renown.value}}"
+            data-dtype="Number" />
+        </label>
+        {{#if useTrauma}}
+        <label class="wwn-header-chip" title="{{localize 'WWN.TraumaTargetLong'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.TraumaTargetMedium"}}</span>
+          <input type="number" name="system.trauma.value" value="{{system.trauma.value}}" data-dtype="Number"
+            placeholder="6" disabled data-tooltip="{{localize 'WWN.TraumaTargetLong'}}" />
+        </label>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <div class="wwn-header-bars">
+    {{> wwnResourceBars resourceBars=resourceBars xpBar=xpBar xpPerChar=xpPerChar}}
+  </div>
+</header>

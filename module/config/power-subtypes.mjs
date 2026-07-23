@@ -257,10 +257,12 @@ const ALL_FIELD_KEYS = [
 const PANEL_FIELDS = {
   type: ["customTypeName", "source", "level"],
   sharedPool: ["resourceName", "commitmentOptions"],
-  useLimits: ["internalResource", "internalResourceLength"],
   strain: ["permanentStrain", "userStrain", "targetStrain"],
   traits: ["prepared", "installed", "alienationCost"],
-  activation: ["activation", "activationRollType", "damageRoll", "healing"],
+  activation: [
+    "activation", "activationRollType", "damageRoll", "healing",
+    "internalResource", "internalResourceLength",
+  ],
 };
 
 /**

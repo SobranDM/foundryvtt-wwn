@@ -1,0 +1,156 @@
+{{!-- Weapon attributes: Attack | Damage/ammo panels. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Attack"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.items.enterTrait"}}</label>
+            <div class="form-fields">
+              <input type="text" data-tag-input title="{{localize 'WWN.items.typeTrait'}}"
+                placeholder="{{localize 'WWN.items.enterTrait'}}" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.items.Melee"}} / {{localize "WWN.items.Missile"}}</label>
+            <div class="form-fields wwn-toggle-pair">
+              <a data-action="toggleMelee" title="{{localize 'WWN.items.Melee'}}"
+                class="{{#if system.melee}}active{{/if}}"><i class="fas fa-fist-raised"></i></a>
+              <a data-action="toggleMissile" title="{{localize 'WWN.items.Missile'}}"
+                class="{{#if system.missile}}active{{/if}}"><i class="fas fa-bullseye"></i></a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.attribute'}}">{{localize "WWN.attribute"}}</label>
+            <div class="form-fields">
+              <select name="system.score">
+                {{selectOptions config.scores selected=system.score}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.skill'}}">{{localize "WWN.skill"}}</label>
+            <div class="form-fields">
+              <input name="system.skill" type="text" placeholder="Skill" value="{{system.skill}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.spells.Save'}}">{{localize "WWN.spells.Save"}}</label>
+            <div class="form-fields">
+              <select name="system.save">
+                <option value=""></option>
+                {{selectOptions config.saves selected=system.save}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.items.AtkBonus"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.bonus" value="{{system.bonus}}" data-dtype="String" />
+            </div>
+          </div>
+          {{#if system.missile}}
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.items.Range"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.range.short" value="{{system.range.short}}" data-dtype="Number" />
+              {{#if medRange}}
+              <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" />
+              {{/if}}
+              <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" />
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.items.Damage"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.items.Damage"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.damage" value="{{system.damage}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.items.Shock"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.shock.damage" value="{{system.shock.damage}}" data-dtype="Number"
+                placeholder="{{localize 'WWN.items.Damage'}}" title="{{localize 'WWN.items.ShockDamage'}}" />
+              /
+              <input type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="String"
+                placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
+            </div>
+          </div>
+          {{#if useTrauma}}
+          <div class="form-group wwn-form-span">
+            <label data-tooltip="{{localize 'WWN.items.TraumaDieHint'}}">{{localize "WWN.items.TraumaDieWeapon"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.trauma.die" value="{{system.trauma.die}}" data-dtype="String"
+                placeholder="1d6" title="{{localize 'WWN.items.TraumaDieHint'}}" />
+              /
+              <input type="number" name="system.trauma.rating" value="{{system.trauma.rating}}" data-dtype="Number"
+                placeholder="2" title="{{localize 'WWN.items.TraumaRatingHint'}}" />
+            </div>
+          </div>
+          {{/if}}
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.SkillDamageLong'}}">{{localize "WWN.items.SkillDamageShort"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.skillDamage" {{checked system.skillDamage}} data-dtype="Boolean"
+                title="{{localize 'WWN.items.SkillDamageLong'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.BurstLong'}}">{{localize "WWN.items.BurstShort"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.burst" {{checked system.burst}} data-dtype="Boolean"
+                title="{{localize 'WWN.items.BurstLong'}}" />
+            </div>
+          </div>
+          {{> wwnRatioField labelKey="WWN.Weapon.Magazine"
+            valueName="system.charges.value" value=system.charges.value
+            maxName="system.charges.max" max=system.charges.max
+            valueTitleKey="WWN.items.CurrCharges" maxTitleKey="WWN.items.MaxCharges"}}
+          <div class="form-group">
+            <label>{{localize "WWN.Weapon.AmmoMode"}}</label>
+            <div class="form-fields">
+              <select name="system.ammoMode">
+                {{selectOptions config.ammoModes selected=system.ammoMode localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.Weapon.Ammo"}}</label>
+            <div class="form-fields">
+              {{#if ammoChoices}}
+              <select name="system.ammoId">
+                {{selectOptions ammoChoices selected=system.ammoId blank=""}}
+              </select>
+              {{else}}
+              <input type="hidden" name="system.ammoId" value="{{system.ammoId}}" />
+              {{/if}}
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.Weapon.AmmoFallback"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.ammoFallback" value="{{system.ammoFallback}}" data-dtype="String"
+                title="{{localize 'WWN.Weapon.AmmoFallbackHint'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.items.WeightlessLabel"}}</label>
+            <div class="form-fields">
+              <select name="system.weightless">
+                {{selectOptions config.weightless selected=system.weightless}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

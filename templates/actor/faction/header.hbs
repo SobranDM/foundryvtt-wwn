@@ -1,0 +1,32 @@
+{{!-- Faction sheet header: identity band + status chips. --}}
+<header class="sheet-header wwn-sheet-header wwn-faction-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img faction-header-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.faction.active"}}</span>
+          <input type="checkbox" name="system.active" {{checked system.active}} />
+        </label>
+        <a class="wwn-chip wwn-faction-turn" data-action="startTurn" title="{{localize 'WWN.faction.turn'}}">
+          <i class="fas fa-hourglass-start"></i>
+          <span class="wwn-chip-label">{{localize "WWN.faction.turn"}}</span>
+        </a>
+      </div>
+      <div class="wwn-header-row wwn-header-row--secondary">
+        <label class="wwn-chip wwn-chip--grow">
+          <span class="wwn-chip-label">{{localize "WWN.faction.homeworld"}}</span>
+          <input type="text" name="system.homeworld" value="{{system.homeworld}}" />
+        </label>
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.faction.magicRating"}}</span>
+          <select name="system.magicRating">
+            {{selectOptions config.assetMagic selected=system.magicRating}}
+          </select>
+        </label>
+      </div>
+    </div>
+  </div>
+</header>

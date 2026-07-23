@@ -1,0 +1,31 @@
+{{!-- Collapsible inventory/powers section wrapper. Pairs with
+      CollapsibleSectionsMixin (module/sheets/mixins/collapsible-sections.mjs). --}}
+<section class="wwn-collapsible{{#if collapsed}} collapsed{{/if}}" data-section-id="{{sectionId}}">
+  <div class="item-titles flexrow wwn-collapsible-header wwn-section-header" data-action="toggleSection">
+    <div class="item-caret wwn-caret"><i class="fas fa-caret-down"></i></div>
+    <span class="wwn-collapsible-label">{{label}}</span>
+    {{#if count}}<span class="wwn-badge">{{count}}</span>{{/if}}
+    <div class="item-controls">
+      {{#if showResetWeaponCounters}}
+      <a class="item-control" data-action="resetWeaponCounters" title="{{localize 'WWN.Weapon.ResetAttacks'}}">
+        <i class="fas fa-sync"></i>
+      </a>
+      {{/if}}
+      {{#if searchType}}
+      <a class="item-control" data-action="itemSearch" data-type="{{searchType}}"
+        {{#if searchSubType}}data-subtype="{{searchSubType}}"{{/if}} title="{{localize 'WWN.Search'}}">
+        <i class="fa fa-search"></i>
+      </a>
+      {{/if}}
+      {{#if createType}}
+      <a class="item-control" data-action="createItem" data-type="{{createType}}"
+        {{#if createSubType}}data-subtype="{{createSubType}}"{{/if}} title="{{localize 'WWN.Sheet.CreateItem'}}">
+        <i class="fa fa-plus"></i>
+      </a>
+      {{/if}}
+    </div>
+  </div>
+  <div class="wwn-collapsible-body">
+    {{> @partial-block}}
+  </div>
+</section>

@@ -21,6 +21,25 @@ globalThis.foundry.utils.randomID ??= (length = 16) => {
   for (let i = 0; i < length; i++) id += chars.charAt(Math.floor(Math.random() * chars.length));
   return id;
 };
+globalThis.foundry.utils.getProperty ??= (object, key) => {
+  if (!object) return undefined;
+  const parts = key.split(".");
+  let target = object;
+  for (const part of parts) {
+    if (target == null) return undefined;
+    target = target[part];
+  }
+  return target;
+};
+globalThis.foundry.utils.mergeObject ??= (original = {}, other = {}) => ({ ...original, ...other });
+
+Math.clamp ??= (value, min, max) => Math.min(Math.max(value, min), max);
+
+if (!Array.prototype.filterJoin) {
+  Array.prototype.filterJoin = function (separator) {
+    return this.filter((v) => !!v).join(separator);
+  };
+}
 
 globalThis.CONFIG ??= {};
 globalThis.CONFIG.WWN ??= {

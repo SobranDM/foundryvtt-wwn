@@ -9,6 +9,7 @@ import {
 import { spendWeaponCounter, tracksWeaponCounter } from "../helpers/weapon-counter.mjs";
 import { expendGear } from "../helpers/ammo.mjs";
 import { getActorSpellSlotMode } from "../derivations/resource-pools.mjs";
+import { findNamedResourcePool } from "../helpers/resource-pool-resolve.mjs";
 import { WWN } from "../config/index.mjs";
 import {
   applySceneDayPowerEffects,
@@ -359,7 +360,7 @@ export class WwnItem extends Item {
       );
       if (spellPool) return spellPool;
     }
-    return pools.find((p) => p.name === system.resourceName);
+    return findNamedResourcePool(this.actor, system, pools);
   }
 
   /** HTML tags for item summaries on actor sheets. */

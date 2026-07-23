@@ -1,0 +1,223 @@
+{{!-- NPC Main: grouped stat cards + Attacks/Abilities | Powers. --}}
+<section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-npc-main wwn-form-stack">
+
+    <div class="wwn-npc-stat-cards">
+      {{!-- HP + Saves (first column) --}}
+      <div class="wwn-panel wwn-npc-card wwn-npc-card--saves">
+        <div class="wwn-npc-hp">
+          {{> wwnResourceBars resourceBars=resourceBars xpBar=null xpPerChar=false}}
+        </div>
+        <div class="wwn-save-grid">
+          {{#each saves as |save|}}
+          <a class="wwn-rollable wwn-save-cell" data-action="rollSave" data-save="{{save.id}}"
+            title="{{localize save.label}}">
+            <span class="wwn-section-header">{{localize save.label}}</span>
+            <span class="wwn-save-value">{{save.value}}</span>
+          </a>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Morale / Instinct / Appearing --}}
+      <div class="wwn-panel wwn-npc-card wwn-npc-card--morale">
+        <div class="wwn-combat-stats">
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat">
+              <span class="wwn-section-header">
+                <a data-action="rollMorale">{{localize "WWN.details.morale"}}</a>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <input name="system.details.morale" type="number" value="{{system.details.morale}}" placeholder="0"
+                  data-dtype="Number" />
+              </div>
+            </div>
+            <div class="wwn-combat-stat">
+              <span class="wwn-section-header">
+                <a data-action="rollInstinct">{{localize "WWN.details.instinct"}}</a>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <input name="system.details.instinct" type="number" value="{{system.details.instinct}}" placeholder="0"
+                  data-dtype="Number" />
+              </div>
+            </div>
+          </div>
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.details.dungeonAppearing'}}">
+              <span class="wwn-section-header">{{localize "WWN.details.appearingA"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="text" name="system.details.appearing.d" value="{{system.details.appearing.d}}" />
+                <a data-action="rollAppearing" data-which="d" title="{{localize 'WWN.details.dungeonAppearing'}}">
+                  <i class="fas fa-dice"></i>
+                </a>
+              </div>
+            </div>
+            <div class="wwn-combat-stat" title="{{localize 'WWN.details.wildernessAppearing'}}">
+              <span class="wwn-section-header">{{localize "WWN.details.appearingB"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="text" name="system.details.appearing.w" value="{{system.details.appearing.w}}" />
+                <a data-action="rollAppearing" data-which="w" title="{{localize 'WWN.details.wildernessAppearing'}}">
+                  <i class="fas fa-dice"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="wwn-npc-instinct-table" title="{{localize 'WWN.details.instinctTableHint'}}">
+            <span class="wwn-section-header">{{localize "WWN.details.instinct"}}</span>
+            <div class="wwn-npc-instinct-table-link">
+              {{#if instinctTableLink}}{{{instinctTableLink}}}{{else}}
+              <span class="powers-muted">{{localize "WWN.details.instinctTableHint"}}</span>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Combat: AB, AC, Skill, Move + Init, DB, Trauma --}}
+      <div class="wwn-panel wwn-npc-card wwn-npc-card--combat">
+        <div class="wwn-combat-stats">
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.AB'}}">
+              <span class="wwn-section-header">{{localize "WWN.ABShort"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="number" name="system.combat.ab" value="{{system.combat.ab}}" data-dtype="Number" />
+              </div>
+            </div>
+            <div class="wwn-combat-stat" title="{{localize 'WWN.ArmorClass'}}">
+              <span class="wwn-section-header">{{localize "WWN.ArmorClassShort"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input name="system.combat.acManual.melee" type="number" value="{{system.combat.acManual.melee}}"
+                  data-dtype="Number" placeholder="10" />
+              </div>
+            </div>
+          </div>
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat">
+              <span class="wwn-section-header">
+                <a data-action="rollNpcSkill">{{localize "WWN.skill"}}</a>
+              </span>
+              <div class="wwn-combat-stat-value">
+                <input name="system.skill" type="number" value="{{system.skill}}" placeholder="0" data-dtype="Number" />
+              </div>
+            </div>
+            <div class="wwn-combat-stat" title="{{localize 'WWN.movement.base'}}">
+              <span class="wwn-section-header">{{localize "WWN.movement.monsterShort"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input name="system.movement.base.value" type="number" value="{{system.movement.base.value}}"
+                  placeholder="30" data-dtype="Number" />
+              </div>
+            </div>
+          </div>
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.Initiative'}}">
+              <span class="wwn-section-header">{{localize "WWN.Initiative"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="number" name="system.combat.initMod" value="{{system.combat.initMod}}"
+                  data-dtype="Number" />
+              </div>
+            </div>
+            <div class="wwn-combat-stat" title="{{localize 'WWN.DB'}}">
+              <span class="wwn-section-header">{{localize "WWN.DBShort"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="number" name="system.combat.damageBonus" value="{{system.combat.damageBonus}}"
+                  data-dtype="Number" />
+              </div>
+            </div>
+          </div>
+          {{#if useTrauma}}
+          <div class="wwn-combat-row">
+            <div class="wwn-combat-stat" title="{{localize 'WWN.TraumaTargetLong'}}">
+              <span class="wwn-section-header">{{localize "WWN.TraumaTargetMedium"}}</span>
+              <div class="wwn-combat-stat-value">
+                <input type="number" name="system.trauma.value" value="{{system.trauma.value}}" data-dtype="Number"
+                  placeholder="6" />
+              </div>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <div class="wwn-npc-main-lists">
+      <div class="wwn-npc-equipment">
+        {{#> wwnCollapsibleSection sectionId="npc.equipment"
+          label=(concat (localize "WWN.category.abilities") " & " (localize "WWN.category.equipment"))
+          count=(add attackPatterns.length otherItems.length)
+          collapsed=(lookup @root.collapsed "npc.equipment")
+          searchType="weapon" createType="weapon" showResetWeaponCounters=true}}
+        <div class="wwn-data-table">
+          <div class="item-titles wwn-col-header flexrow">
+            <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+            <div class="field-short" title="{{localize 'WWN.items.pattern'}}">Pat</div>
+            <div class="field-long" title="{{localize 'WWN.items.roundAttacks'}}">Atk</div>
+            <div class="item-controls"></div>
+          </div>
+          <ol class="item-list">
+            {{#each attackPatterns as |item|}}
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="{{item.id}}">
+                <div class="item-name item-rollable flexrow" data-action="showItem">
+                  <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
+                  <h4 title="{{item.name}}">{{item.name}}</h4>
+                </div>
+                <div class="field-short">
+                  <a class="item-pattern" data-action="cyclePattern"
+                    title="{{localize (lookup @root.config.colors item.system.pattern)}}">
+                    <i class="fas fa-square" style="color: {{item.system.pattern}};"></i>
+                  </a>
+                </div>
+                <div class="field-long counter flexrow">
+                  <input type="text" value="{{item.system.counter.value}}" data-dtype="Number" placeholder="0"
+                    data-item-field="system.counter.value" title="{{localize 'WWN.items.roundAttacks'}}" />
+                  /
+                  <input type="text" value="{{item.system.counter.max}}" data-item-field="system.counter.max"
+                    data-dtype="Number" placeholder="0" title="{{localize 'WWN.items.roundAttacksMax'}}" />
+                </div>
+                <div class="item-controls">
+                  {{#if ../owner}}
+                  <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
+                    <i class="fas fa-trash"></i>
+                  </a>
+                  {{/if}}
+                </div>
+              </div>
+            </li>
+            {{/each}}
+            {{#each otherItems as |item|}}
+            <li class="item-entry">
+              <div class="item flexrow" data-item-id="{{item.id}}">
+                <div class="item-name item-rollable flexrow" data-action="showItem">
+                  <img class="item-image" src="{{item.img}}" alt="" />
+                  <h4 title="{{item.name}}">{{item.name}}</h4>
+                </div>
+                <div class="field-short"></div>
+                <div class="field-long"></div>
+                <div class="item-controls">
+                  {{#if ../owner}}
+                  <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
+                    <i class="fas fa-edit"></i>
+                  </a>
+                  <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
+                    <i class="fas fa-trash"></i>
+                  </a>
+                  {{/if}}
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+        {{/wwnCollapsibleSection}}
+      </div>
+
+      <div class="wwn-npc-powers powers-tab">
+        {{> wwnPowersTabBody}}
+      </div>
+    </div>
+
+  </div>
+</section>

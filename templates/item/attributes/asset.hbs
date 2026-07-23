@@ -1,0 +1,151 @@
+{{!-- Faction Asset attributes. --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.category.attributes"}}</div>
+        <div class="wwn-form-panel-fields">
+          {{> wwnRatioField labelKey="WWN.HealthShort"
+            valueName="system.health.value" value=system.health.value
+            maxName="system.health.max" max=system.health.max
+            valueTitleKey="WWN.Health" maxTitleKey="WWN.HealthMax"}}
+          <div class="form-group">
+            <label>{{localize "WWN.faction.rating"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.rating" value="{{system.rating}}" data-dtype="Number" min="1" max="8" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.location"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.location" value="{{system.location}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.cost"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.type"}}</label>
+            <div class="form-fields">
+              <select name="system.assetType">
+                {{selectOptions config.assetTypes selected=system.assetType localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.skills.magic"}}</label>
+            <div class="form-fields">
+              <select name="system.magic">
+                {{selectOptions config.assetMagic selected=system.magic localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.faction.income"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.income" value="{{system.income}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.faction.maintenance"}}</label>
+            <div class="form-fields">
+              <input type="number" name="system.maintenance" value="{{system.maintenance}}" data-dtype="Number" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.note"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.note" value="{{system.note}}" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.turnRoll"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.turnRoll" value="{{system.turnRoll}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Attack"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.Attack"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.attackDamage" value="{{system.attackDamage}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.faction.attackSource"}}</label>
+            <div class="form-fields">
+              <select name="system.attackSource">
+                {{selectOptions config.assetTypes selected=system.attackSource localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.faction.attackTarget"}}</label>
+            <div class="form-fields">
+              <select name="system.attackTarget">
+                {{selectOptions config.assetTypes selected=system.attackTarget localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.attackSpecial"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.attackSpecial" value="{{system.attackSpecial}}" />
+            </div>
+          </div>
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.faction.locationRoll"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.locationRoll" value="{{system.locationRoll}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.counter"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.counter" value="{{system.counter}}" data-dtype="String" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.BoIHint"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.baseOfInfluence" {{checked system.baseOfInfluence}}
+                data-dtype="Boolean" title="{{localize 'WWN.asset.BoIHint'}}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.subtle"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.subtle" {{checked system.subtle}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.stealthed"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.stealthed" {{checked system.stealthed}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.asset.special"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.special" {{checked system.special}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.faction.unusable"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.unusable" {{checked system.unusable}} data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

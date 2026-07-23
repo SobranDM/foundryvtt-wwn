@@ -1,0 +1,31 @@
+/* WWN theme — light, off-white with gold borders */
+.themed.theme-wwn,
+.application.theme-wwn,
+body.wwn-theme-wwn {
+  --wwn-bg: linear-gradient(180deg, #f5f2e8, #e8e4d8);
+  --wwn-bg-solid: #f5f2e8;
+  --wwn-panel-bg: rgba(255, 255, 255, 0.45);
+  --wwn-border-theme: #b5a642;
+  --wwn-border-soft: rgba(181, 166, 66, 0.4);
+  --wwn-header-bg: #3d3a30;
+  --wwn-header-text: #f5f5f5;
+  --wwn-accent: #7a7971;
+  --wwn-accent-strong: #8a7a2e;
+  --wwn-text: #4b4a44;
+  --wwn-text-muted: #7a7971;
+  --wwn-input-bg: rgba(255, 255, 255, 0.6);
+  --wwn-select-option-bg: #ffffff;
+  --wwn-select-option-text: var(--wwn-text);
+  --wwn-checkbox-bg: #7a7971;
+  --wwn-checkbox-checked: #8a7a2e;
+  --wwn-checkbox-mark: transparent;
+  --wwn-bar-positive: #7da661;
+  --wwn-bar-negative: #b5532e;
+  --wwn-bar-alienation: #7b5ea7;
+  --wwn-bar-stress: #c99a2e;
+  --wwn-bar-overflow: #b3261e;
+  --wwn-bar-track: rgba(0, 0, 0, 0.15);
+  --wwn-success: #4e7d3a;
+  --wwn-failure: #9e2b25;
+  --color-text-primary: var(--wwn-text);
+}

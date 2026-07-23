@@ -1,56 +1,244 @@
 @use "../mixins" as *;
 
-/* Monster sheet specific overrides */
+/* NPC sheet — shared components + monster-specific layout */
 
-.wwn.actor.monster {
+.wwn.actor.npc {
   min-height: 565px;
-  min-width: 480px;
+  min-width: 560px;
 }
-.wwn.actor.monster .header-details .summary .treasure-table {
+
+.wwn.actor.npc .wwn-npc-header .wwn-chip input[type="text"] {
+  width: 4rem;
+}
+
+.wwn.actor.npc .wwn-npc-header .wwn-chip--grow {
+  flex: 1 1 auto;
+  min-width: 8rem;
+}
+
+.wwn.actor.npc .wwn-npc-header .wwn-chip--grow input[type="text"] {
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 3rem;
+}
+
+.wwn.actor.npc .wwn-npc-main {
+  width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.wwn.actor.npc .attributes-tab.active {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+
+.wwn.actor.npc .notes-tab.active {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* Top: three concept cards */
+.wwn.actor.npc .wwn-npc-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+@media (width < 48rem) {
+  .wwn.actor.npc .wwn-npc-stat-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn.actor.npc .wwn-npc-card {
+  min-width: 0;
+}
+
+.wwn.actor.npc .wwn-combat-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.wwn.actor.npc .wwn-combat-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wwn.actor.npc .wwn-combat-row > .wwn-combat-stat {
+  flex: 1 1 0;
+}
+
+.wwn.actor.npc .wwn-combat-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.wwn.actor.npc .wwn-combat-stat .wwn-section-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wwn.actor.npc .wwn-combat-stat .wwn-section-header a:hover {
+  color: var(--wwn-tan, var(--wwn-header-text));
+}
+
+.wwn.actor.npc .wwn-combat-stat-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}
+
+.wwn.actor.npc .wwn-combat-stat-value input {
+  width: 100%;
+  max-width: 4rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+}
+
+.wwn.actor.npc .wwn-combat-stat-value a {
+  color: inherit;
+  opacity: 0.85;
+  flex: 0 0 auto;
+}
+
+.wwn.actor.npc .wwn-combat-stat-value a:hover {
+  opacity: 1;
+}
+
+.wwn.actor.npc .wwn-npc-instinct-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.wwn.actor.npc .wwn-npc-instinct-table-link {
+  font-size: 0.75rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.1rem;
+}
+
+.wwn.actor.npc .wwn-npc-card--saves {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wwn.actor.npc .wwn-npc-hp {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.wwn.actor.npc .wwn-npc-hp .wwn-resource-bars {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.wwn.actor.npc .wwn-npc-hp .wwn-resource-bar-box {
+  padding: 0.25rem 0.35rem;
+}
+
+.wwn.actor.npc .wwn-save-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.wwn.actor.npc .wwn-save-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.wwn.actor.npc .wwn-save-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
+}
+
+/* Bottom: Attacks | Powers */
+.wwn.actor.npc .wwn-npc-main-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (width < 48rem) {
+  .wwn.actor.npc .wwn-npc-main-lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wwn.actor.npc .wwn-npc-equipment,
+.wwn.actor.npc .wwn-npc-powers {
+  min-width: 0;
+  min-height: 0;
+}
+
+.wwn.actor.npc .wwn-npc-powers {
+  max-height: 28rem;
+  overflow: auto;
+}
+
+.wwn.actor.npc .wwn-npc-powers .wwn-powers {
+  gap: 0.35rem;
+}
+
+.wwn.actor.npc .wwn-data-table .field-long.counter {
+  gap: 0.15rem;
+}
+
+.wwn.actor.npc .wwn-data-table .field-long.counter input {
+  width: 1.75rem;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.wwn.actor.npc .notes-tab .wwn-form-stack {
+  width: 100%;
+  min-width: 0;
+}
+
+.wwn.actor.npc .notes-tab .editor {
+  min-height: 12rem;
+  height: auto;
+}
+
+/* Legacy attribute grid helpers (shared inventory lists) */
+.wwn.actor.npc .header-details .summary .treasure-table {
   text-align: center;
 }
-.wwn.actor.monster .header-details .summary {
+.wwn.actor.npc .header-details .summary {
   @include wwn-check-field-reveal;
-}
-
-.wwn.actor.monster .sheet-body .editor {
-  height: 350px;
-}
-.wwn.actor.monster .sheet-body .attributes-tab {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  height: 100%;
-  margin-bottom: 0px;
-}
-.wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attributes {
-  justify-content: space-between;
-}
-.wwn.actor.monster .sheet-body .attributes-tab .attribute-row .attribute-group {
-  margin: 5px;
-}
-.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute {
-  flex: 0 0 60px;
-  max-width: 80px;
-  height: 55px;
-  margin: 0px 10px 10px 10px;
-}
-.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute .attribute-value {
-  line-height: 15px;
-}
-.wwn.actor.monster .sheet-body .attributes-tab .attributes .attribute.health {
-  flex: 0 0 85px;
-}
-.wwn.actor.monster .attributes .attribute.health {
-  position: relative;
-}
-.wwn.actor.monster .attributes .attribute.health .attribute-name .hp-roll {
-  font-size: 12px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: var(--wwn-tan);
-}
-.wwn.actor.monster .attributes .attribute.health .attribute-name .hp-roll:hover {
-  color: #fff;
 }
