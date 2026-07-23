@@ -15,7 +15,7 @@ function primaryDieSize(formula) {
   return match ? Number(match[2]) : 0;
 }
 
-/** Replace the primary die in a formula with a larger die (upgrade). */
+/** Replace the primary die in a formula with a larger die (upgrade), preserving count. */
 function upgradePrimaryDie(base, mod) {
   const baseMatch = String(base ?? "").match(DIE_PATTERN);
   const modMatch = String(mod ?? "").match(DIE_PATTERN);
@@ -23,7 +23,9 @@ function upgradePrimaryDie(base, mod) {
   const baseSize = Number(baseMatch[2]);
   const modSize = Number(modMatch[2]);
   if (modSize <= baseSize) return base || "";
-  return String(base).replace(DIE_PATTERN, modMatch[0]);
+  const count = baseMatch[1] || "1";
+  const upgraded = `${count}d${modSize}`;
+  return String(base).replace(DIE_PATTERN, upgraded);
 }
 
 /**

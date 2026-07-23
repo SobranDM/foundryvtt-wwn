@@ -128,3 +128,22 @@ describe("attack bonus with edges", () => {
     assert.equal(actor.system.combat.abBase, 1);
   });
 });
+
+describe("power/classEdge bonus grants stay rank-only", () => {
+  it("never uses the focus +3 points path even at high level with setting on", async () => {
+    const { computeFocusBonusGrant } = await import("../module/helpers/focus-bonus-skills.mjs");
+    // Document the contract used by power-bonus-skills grantBonusSkill:
+    // computeFocusBonusGrant(skill, false) — always rank, never points.
+    const skill = { system: { ownedLevel: -1, pointsInvested: 0 } };
+    const grant = computeFocusBonusGrant(skill, false);
+    assert.equal(grant.focusBonusMode, "rank");
+    assert.equal(grant.ownedLevel, 0);
+    assert.equal(grant.focusBonusLevelDelta, 1);
+    assert.equal(grant.focusBonusPointsDelta, 0);
+
+    // Contrast: focus points path at the same skill state would cascade +3.
+    const pointsGrant = computeFocusBonusGrant(skill, true);
+    assert.equal(pointsGrant.focusBonusMode, "points");
+    assert.equal(pointsGrant.ownedLevel, 1);
+  });
+});

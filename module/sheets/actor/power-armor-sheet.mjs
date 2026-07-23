@@ -95,7 +95,7 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
     inventory: { template: `${TPL}/tabs/inventory.hbs`, scrollable: [""] },
     powers: { template: `${TPL}/tabs/powers.hbs`, scrollable: [""] },
     details: { template: `${TPL}/tabs/details.hbs`, scrollable: [""] },
-    effects: { template: `${TPL}/tabs/effects.hbs`, scrollable: [""] },
+    effects: { template: "systems/wwn/templates/actor/partials/effects-tab.hbs", scrollable: [""] },
   };
 
   /** @override */

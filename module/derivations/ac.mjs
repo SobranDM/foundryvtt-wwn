@@ -66,7 +66,9 @@ export function deriveAC(actor) {
     }
 
     baseMelee = Math.max(baseMelee, acBase + modBonus);
-    const rangedBase = separateRanged && (a.system.acRanged ?? a.system.ac) ? acRangedBase : acBase;
+    const hasExplicitRanged =
+      a.system.acRanged != null || a.system.acRangedValue != null;
+    const rangedBase = separateRanged && hasExplicitRanged ? acRangedBase : acBase;
     baseRanged = Math.max(baseRanged, rangedBase + modBonus);
 
     if (game.settings.get("wwn", "useFlatArmorPenalty")) {
@@ -111,6 +113,9 @@ export function deriveAC(actor) {
       }
     }
   }
+
+  // Keep melee/ranged mirrored when separate ranged AC is off (after innate floor).
+  if (!separateRanged) ac.ranged.value = ac.melee.value;
 
   if (system.skills) {
     system.skills.sneakPenalty = sneakPenalty;

@@ -57,7 +57,7 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
     powers: { template: `${TPL}/tabs/powers.hbs`, scrollable: [""] },
     inventory: { template: `${TPL}/tabs/inventory.hbs`, scrollable: [""] },
     details: { template: `${TPL}/tabs/details.hbs`, scrollable: [""] },
-    effects: { template: `${TPL}/tabs/effects.hbs`, scrollable: [""] },
+    effects: { template: "systems/wwn/templates/actor/partials/effects-tab.hbs", scrollable: [""] },
   };
 
   /** @override */

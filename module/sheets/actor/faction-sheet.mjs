@@ -17,6 +17,7 @@
 import { HEALTH__XP_TABLE, FACTION_TAGS, FACTION_GOALS, FACTION_ACTIONS } from "../../config/faction-catalog.mjs";
 import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
+import { ActorItemActionsMixin } from "../mixins/actor-item-actions.mjs";
 import { showWwnDialog, confirmWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -24,7 +25,7 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 
 const TPL = "systems/wwn/templates/actor/faction";
 
-export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
+export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, ActorItemActionsMixin)(
   HandlebarsApplicationMixin(ActorSheetV2)
 ) {
   /** @override */
@@ -47,9 +48,6 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
       addLog: WwnFactionSheet.#onAddLog,
       deleteLog: WwnFactionSheet.#onDeleteLog,
       deleteAllLogs: WwnFactionSheet.#onDeleteAllLogs,
-      editItem: WwnFactionSheet.#onEditItem,
-      deleteItem: WwnFactionSheet.#onDeleteItem,
-      rollItem: WwnFactionSheet.#onRollItem,
     },
   };
 
@@ -113,14 +111,8 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
   /** @override */
   async _onRender(context, options) {
     await super._onRender(context, options);
-
-    // Inline per-item field editing (e.g. asset location text input).
-    for (const input of this.element.querySelectorAll("[data-item-field]")) {
-      input.addEventListener("change", (event) => this.#onItemFieldChange(event));
-    }
-    for (const input of this.element.querySelectorAll("input")) {
-      input.addEventListener("focus", (event) => event.currentTarget.select());
-    }
+    this._bindItemFieldEditors(this.#onItemFieldChange);
+    this._bindFocusSelectInputs();
   }
 
   async #onItemFieldChange(event) {
@@ -133,33 +125,9 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin)(
     await item.update({ [field]: value });
   }
 
-  _getItem(target) {
-    const itemId = target.closest("[data-item-id]")?.dataset.itemId;
-    return this.actor.items.get(itemId);
-  }
-
   /* -------------------------------------------- */
   /*  Actions                                     */
   /* -------------------------------------------- */
-
-  static #onEditItem(event, target) {
-    this._getItem(target)?.sheet.render(true);
-  }
-
-  static async #onDeleteItem(event, target) {
-    const item = this._getItem(target);
-    if (!item) return;
-    const confirmed = await confirmWwnDialog({
-      modifier: "delete-item",
-      title: game.i18n.format("WWN.Delete", { name: item.name }),
-      content: `<p>${game.i18n.format("WWN.DeleteContent", { name: item.name, actor: this.actor.name })}</p>`,
-    });
-    if (confirmed) await item.delete();
-  }
-
-  static #onRollItem(event, target) {
-    return this._getItem(target)?.roll({ skipDialog: event.shiftKey });
-  }
 
   static async #onAssetCreate(event, target) {
     const assetType = target.dataset.assetType;

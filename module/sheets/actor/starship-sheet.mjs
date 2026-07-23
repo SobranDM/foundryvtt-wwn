@@ -15,6 +15,7 @@
  */
 import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
+import { ActorItemActionsMixin } from "../mixins/actor-item-actions.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../../helpers/effects.mjs";
 import { prepareResourceBars } from "../helpers/resource-bar.mjs";
 import {
@@ -27,15 +28,16 @@ import { applyHullPreset } from "../../config/starship-hulls.mjs";
 import {
   starshipFocusBonusesForShip,
 } from "../../helpers/starship-focus-bonuses.mjs";
-import { showWwnDialog, confirmWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { showWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 const TPL = "systems/wwn/templates/actor/starship";
+const EFFECTS_TPL = "systems/wwn/templates/actor/partials/effects-tab.hbs";
 const REASSIGN_TPL = "systems/wwn/templates/dialog/starship-reassign-crew.hbs";
 
-export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
+export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, ActorItemActionsMixin)(
   HandlebarsApplicationMixin(ActorSheetV2)
 ) {
   /** @override */
@@ -50,9 +52,6 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
       openStationActor: WwnStarshipSheet.#onOpenStationActor,
       reassignCrew: WwnStarshipSheet.#onReassignCrew,
       rollStation: WwnStarshipSheet.#onRollStation,
-      rollItem: WwnStarshipSheet.#onRollItem,
-      editItem: WwnStarshipSheet.#onEditItem,
-      deleteItem: WwnStarshipSheet.#onDeleteItem,
       createItem: WwnStarshipSheet.#onCreateItem,
       toggleDisabled: WwnStarshipSheet.#onToggleDisabled,
       effectAction: WwnStarshipSheet.#onEffectAction,
@@ -77,7 +76,7 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
     tabs: { template: "templates/generic/tab-navigation.hbs" },
     main: { template: `${TPL}/tabs/main.hbs`, scrollable: [""] },
     details: { template: `${TPL}/tabs/details.hbs`, scrollable: [""] },
-    effects: { template: `${TPL}/tabs/effects.hbs`, scrollable: [""] },
+    effects: { template: EFFECTS_TPL, scrollable: [""] },
   };
 
   /* -------------------------------------------- */
@@ -156,9 +155,7 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
   /** @override */
   async _onRender(context, options) {
     await super._onRender(context, options);
-    for (const input of this.element.querySelectorAll("input")) {
-      input.addEventListener("focus", (event) => event.currentTarget.select());
-    }
+    this._bindFocusSelectInputs();
   }
 
   /**
@@ -173,11 +170,6 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
       foundry.utils.mergeObject(submitData, foundry.utils.expandObject(applyHullPreset(nextHull)));
     }
     return submitData;
-  }
-
-  _getItem(target) {
-    const itemId = target.closest("[data-item-id]")?.dataset.itemId;
-    return this.actor.items.get(itemId);
   }
 
   /* -------------------------------------------- */
@@ -364,25 +356,6 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin)(
     const station = target.dataset.station;
     if (!station) return;
     return rollStationCheck(this.actor, station, { skipDialog: event.shiftKey || event.ctrlKey });
-  }
-
-  static #onRollItem(event, target) {
-    return this._getItem(target)?.roll({ skipDialog: event.shiftKey || event.ctrlKey });
-  }
-
-  static #onEditItem(event, target) {
-    this._getItem(target)?.sheet.render(true);
-  }
-
-  static async #onDeleteItem(event, target) {
-    const item = this._getItem(target);
-    if (!item) return;
-    const confirmed = await confirmWwnDialog({
-      modifier: "delete-item",
-      title: game.i18n.format("WWN.Delete", { name: item.name }),
-      content: `<p>${game.i18n.format("WWN.DeleteContent", { name: item.name, actor: this.actor.name })}</p>`,
-    });
-    if (confirmed) await item.delete();
   }
 
   static async #onCreateItem(event, target) {

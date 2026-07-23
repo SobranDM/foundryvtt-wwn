@@ -1,6 +1,11 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { RollParts, normalizeRollPart, resolveSkillDiceFormula } from "../module/dice/roll-parts.mjs";
+import {
+  RollParts,
+  normalizeRollPart,
+  resolveSkillDiceFormula,
+  skillDiceCount,
+} from "../module/dice/roll-parts.mjs";
 
 describe("resolveSkillDiceFormula", () => {
   it("keeps real dice formulas", () => {
@@ -26,6 +31,15 @@ describe("resolveSkillDiceFormula", () => {
   });
 });
 
+describe("skillDiceCount", () => {
+  it("reads dice count from formulas and bare tiers", () => {
+    assert.equal(skillDiceCount("2d6"), 2);
+    assert.equal(skillDiceCount("3d6kh2"), 3);
+    assert.equal(skillDiceCount("4"), 4);
+    assert.equal(skillDiceCount(""), 2);
+  });
+});
+
 describe("RollParts + skill dice", () => {
   it("does not coerce 2d6 into a flat modifier", () => {
     assert.equal(normalizeRollPart("2d6"), "2d6");
@@ -42,5 +56,14 @@ describe("RollParts + skill dice", () => {
     parts.add(1, "Pilot");
     assert.equal(parts.formula(), "3d6kh2 + 1");
     assert.match(parts.breakdown(), /3d6kh2/);
+  });
+
+  it("breakdown uses minus for negative modifiers", () => {
+    const parts = new RollParts();
+    parts.add("1d20", "Die");
+    parts.add(-2, "Armor Penalty");
+    parts.add(1, "DEX");
+    assert.equal(parts.breakdown(), "1d20 (Die) - 2 (Armor Penalty) + 1 (DEX)");
+    assert.equal(parts.formula(), "1d20 - 2 + 1");
   });
 });

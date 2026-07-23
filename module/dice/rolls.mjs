@@ -45,6 +45,7 @@ export class WwnDamageRoll extends WwnRoll {
   /**
    * Godbound-converted total: each die result converts individually;
    * flat modifiers convert as a single value.
+   * Recurses into ParentheticalTerm / PoolTerm so wrapped formulas are not dropped.
    * @returns {{ total: number, breakdown: string[] }}
    */
   get godboundTotal() {
@@ -52,20 +53,38 @@ export class WwnDamageRoll extends WwnRoll {
     let total = 0;
     const breakdown = [];
     let flat = 0;
-    for (const term of this.terms) {
-      if (term instanceof foundry.dice.terms.DiceTerm) {
-        for (const result of term.results) {
-          if (!result.active) continue;
-          const converted = WwnDamageRoll.convertValue(result.result);
-          total += converted;
-          breakdown.push(`${result.result} → ${converted}`);
+
+    const walk = (terms) => {
+      for (let i = 0; i < terms.length; i++) {
+        const term = terms[i];
+        if (term instanceof foundry.dice.terms.DiceTerm) {
+          for (const result of term.results) {
+            if (!result.active) continue;
+            const converted = WwnDamageRoll.convertValue(result.result);
+            total += converted;
+            breakdown.push(`${result.result} → ${converted}`);
+          }
+          continue;
         }
-      } else if (term instanceof foundry.dice.terms.NumericTerm) {
-        const operator = this.terms[this.terms.indexOf(term) - 1];
-        const sign = operator?.operator === "-" ? -1 : 1;
-        flat += sign * term.number;
+        if (term instanceof foundry.dice.terms.NumericTerm) {
+          const operator = terms[i - 1];
+          const sign = operator?.operator === "-" ? -1 : 1;
+          flat += sign * term.number;
+          continue;
+        }
+        if (term instanceof foundry.dice.terms.ParentheticalTerm && term.roll?.terms) {
+          walk(term.roll.terms);
+          continue;
+        }
+        if (term instanceof foundry.dice.terms.PoolTerm && Array.isArray(term.rolls)) {
+          for (const nested of term.rolls) {
+            if (nested?.terms) walk(nested.terms);
+          }
+        }
       }
-    }
+    };
+
+    walk(this.terms);
     if (flat !== 0) {
       const converted = WwnDamageRoll.convertValue(flat);
       total += converted;

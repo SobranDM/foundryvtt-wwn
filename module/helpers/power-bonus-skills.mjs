@@ -1,10 +1,17 @@
 import { isPc } from "./actor-types.mjs";
-import { getSkillLabelChoices, getSkillSetCache } from "./skill-set.mjs";
+import { getSkillSetCache } from "./skill-set.mjs";
 import {
   computeFocusBonusGrant,
   computeFocusBonusRevoke,
-  findSkillBySlug,
 } from "./focus-bonus-skills.mjs";
+import {
+  findSkillBySlug,
+  declaredBonusSkills,
+  bonusSkillsPickCount,
+  needsBonusSkillChoice,
+  resolveListedBonusSkillSlugs,
+  promptBonusSkillChoiceDialog,
+} from "./bonus-skills-shared.mjs";
 
 const FLAG = "wwn";
 
@@ -36,22 +43,6 @@ function flagKeys(item) {
 
 /**
  * @param {Item} item
- * @returns {string[]}
- */
-function declaredBonusSkills(item) {
-  return (item.system.bonusSkills ?? []).map((s) => String(s).trim().toLowerCase()).filter(Boolean);
-}
-
-/**
- * @param {Item} item
- * @returns {number}
- */
-function bonusSkillsPickCount(item) {
-  return Math.max(Number(item.system.bonusSkillsPick) || 0, 0);
-}
-
-/**
- * @param {Item} item
  * @returns {boolean}
  */
 function usesOpenAnyChoice(item) {
@@ -64,17 +55,7 @@ function usesOpenAnyChoice(item) {
  */
 export function powerNeedsBonusSkillChoice(item) {
   if (!BONUS_SKILL_ITEM_TYPES.has(item?.type)) return false;
-  const pick = bonusSkillsPickCount(item);
-  if (pick <= 0) return false;
-
-  const declared = declaredBonusSkills(item);
-  const chosen = item.system.bonusSkillsChosen ?? [];
-  if (chosen.length) return false;
-
-  if (!declared.length) return usesOpenAnyChoice(item);
-  if (pick === declared.length) return false;
-  if (declared.length === 1) return false;
-  return pick < declared.length;
+  return needsBonusSkillChoice(item, { usesOpenChoice: usesOpenAnyChoice });
 }
 
 /** @deprecated Use powerNeedsBonusSkillChoice (works for power and classEdge). */
@@ -86,21 +67,10 @@ export const classEdgeNeedsBonusSkillChoice = powerNeedsBonusSkillChoice;
  */
 export function resolvePowerBonusSkillSlugs(item) {
   if (!BONUS_SKILL_ITEM_TYPES.has(item?.type)) return [];
-  const pick = bonusSkillsPickCount(item);
-  const chosen = (item.system.bonusSkillsChosen ?? [])
-    .map((s) => String(s).trim().toLowerCase())
-    .filter(Boolean);
-  if (chosen.length) return chosen;
-
-  const declared = declaredBonusSkills(item);
-  if (pick <= 0) {
-    return declared;
-  }
-
-  if (!declared.length) return usesOpenAnyChoice(item) ? null : [];
-  if (declared.length === 1 || pick === declared.length) return declared;
-  if (pick < declared.length) return null;
-  return declared.slice(0, pick);
+  return resolveListedBonusSkillSlugs(item, {
+    usesOpenChoice: usesOpenAnyChoice,
+    emptyPickReturnsDeclared: true,
+  });
 }
 
 export const resolveClassEdgeBonusSkillSlugs = resolvePowerBonusSkillSlugs;
@@ -114,27 +84,13 @@ function openAnySlugs() {
 
 /**
  * @param {Item} item
- * @param {Actor} actor
+ * @param {Actor} _actor
  * @returns {Promise<string[]|null>}
  */
-async function promptBonusSkillChoice(item, actor) {
+async function promptBonusSkillChoice(item, _actor) {
   const declared = declaredBonusSkills(item);
   const pick = bonusSkillsPickCount(item);
-  if (pick <= 0) return null;
-  const { showWwnDialog, confirmButton, cancelButton } = await import("../applications/wwn-dialog.mjs");
-  const labels = await getSkillLabelChoices();
   const options = declared.length ? declared : openAnySlugs();
-
-  const skillOptions = options.map((slug) => ({
-    slug,
-    label: labels[slug] ?? slug,
-  }));
-
-  const multi = pick > 1;
-  const template = multi
-    ? "systems/wwn/templates/dialog/focus-bonus-skills-multi.hbs"
-    : "systems/wwn/templates/dialog/focus-bonus-skills.hbs";
-
   const titleKey = item.type === "classEdge"
     ? "WWN.ClassEdge.BonusSkillDialogTitle"
     : "WWN.Power.BonusSkillDialogTitle";
@@ -142,29 +98,13 @@ async function promptBonusSkillChoice(item, actor) {
     ? { edge: item.name }
     : { power: item.name };
 
-  const result = await showWwnDialog({
-    modifier: "focus-bonus-skills",
-    title: game.i18n.format(titleKey, titleData),
-    template,
-    context: { skillOptions, pick, focusName: item.name },
-    buttons: [confirmButton(), cancelButton()],
+  return promptBonusSkillChoiceDialog({
+    item,
+    options,
+    pick,
+    titleKey,
+    titleData,
   });
-
-  if (!result || result === "cancel") return null;
-
-  if (multi) {
-    const selected = Object.entries(result)
-      .filter(([key, val]) => key.startsWith("skill_") && val)
-      .map(([key]) => key.replace(/^skill_/, ""));
-    if (selected.length !== pick) {
-      ui.notifications.warn(game.i18n.format("WWN.Focus.BonusSkillPickCount", { pick }));
-      return null;
-    }
-    return selected;
-  }
-
-  const slug = result.skill;
-  return slug ? [String(slug)] : null;
 }
 
 /**
@@ -186,6 +126,7 @@ async function grantBonusSkill(item, skill) {
   if (isGrantedByItem(item, skill)) return;
 
   const keys = flagKeys(item);
+  // Powers and classEdges always use rank grants — never FOCUS_BONUS_SKILL_POINTS.
   const grant = computeFocusBonusGrant(skill, false);
   const updates = {
     [`flags.${FLAG}.${keys.from}`]: item.id,

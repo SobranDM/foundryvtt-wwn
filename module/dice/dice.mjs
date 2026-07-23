@@ -1,4 +1,4 @@
-import { RollParts, resolveSkillDiceFormula } from "./roll-parts.mjs";
+import { RollParts, resolveSkillDiceFormula, skillDiceCount } from "./roll-parts.mjs";
 import { WwnRoll, WwnAttackRoll, WwnSkillRoll, WwnDamageRoll } from "./rolls.mjs";
 import { showWwnDialog, rollButton, cancelButton } from "../applications/wwn-dialog.mjs";
 import { createRollMessage, createCardMessage } from "../chat/chat-card.mjs";
@@ -128,7 +128,7 @@ export class WwnDice {
     const parts = new RollParts();
     const { extraDice, dropLowest } = getFocusSkillDiceBonus(actor, slug);
     if (extraDice > 0) {
-      const totalDice = 2 + extraDice;
+      const totalDice = skillDiceCount(skill.system.skillDice) + extraDice;
       parts.add(`${totalDice}d6dl${dropLowest}`, game.i18n.localize("WWN.Roll.SkillDice"));
     } else {
       parts.add(resolveSkillDiceFormula(skill.system.skillDice), game.i18n.localize("WWN.Roll.SkillDice"));
@@ -385,12 +385,19 @@ export class WwnDice {
     if (target?.actor) {
       targetName = target.name;
       const tc = target.actor.system.combat;
-      const targetAC = attackKind === "ranged" && separateRanged ? tc.ac.ranged.value : tc.ac.melee.value;
-      hit = attackRoll.total >= targetAC;
-      badge = {
-        label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
-        type: hit ? "hit" : "miss",
-      };
+      const meleeAc = tc?.ac?.melee?.value;
+      const rangedAc = tc?.ac?.ranged?.value;
+      if (Number.isFinite(meleeAc) || Number.isFinite(rangedAc)) {
+        const targetAC =
+          attackKind === "ranged" && separateRanged
+            ? (Number.isFinite(rangedAc) ? rangedAc : meleeAc)
+            : (Number.isFinite(meleeAc) ? meleeAc : rangedAc);
+        hit = attackRoll.total >= targetAC;
+        badge = {
+          label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+          type: hit ? "hit" : "miss",
+        };
+      }
     }
 
     // Trauma (on hit, when enabled)

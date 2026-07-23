@@ -35,6 +35,17 @@ export function resolveSkillDiceFormula(skillDice) {
   return "2d6";
 }
 
+/**
+ * Number of dice in a skill pool formula (e.g. 3d6kh2 → 3, bare "4" → 4).
+ * @param {string|number|null|undefined} skillDice
+ * @returns {number}
+ */
+export function skillDiceCount(skillDice) {
+  const formula = resolveSkillDiceFormula(skillDice);
+  const match = formula.match(/^(\d+)d/i);
+  return match ? Number(match[1]) : 2;
+}
+
 export class RollParts {
   /** @type {Array<{value: number|string, label: string}>} */
   parts = [];
@@ -80,11 +91,24 @@ export class RollParts {
     return formula || "0";
   }
 
-  /** Flavor breakdown, e.g. "1d20 + 2 (Attack Bonus) + 1 (DEX)". */
+  /** Flavor breakdown, e.g. "1d20 + 2 (Attack Bonus) - 2 (Armor Penalty)". */
   breakdown() {
-    return this.parts
-      .map((p) => (p.label ? `${p.value} (${p.label})` : `${p.value}`))
-      .join(" + ");
+    let out = "";
+    for (const p of this.parts) {
+      const labeled =
+        typeof p.value === "number" && p.value < 0
+          ? `${Math.abs(p.value)}${p.label ? ` (${p.label})` : ""}`
+          : p.label
+            ? `${p.value} (${p.label})`
+            : `${p.value}`;
+      if (!out) {
+        out = typeof p.value === "number" && p.value < 0 ? `-${labeled}` : labeled;
+        continue;
+      }
+      if (typeof p.value === "number" && p.value < 0) out += ` - ${labeled}`;
+      else out += ` + ${labeled}`;
+    }
+    return out;
   }
 
   get isEmpty() {

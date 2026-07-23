@@ -13,7 +13,9 @@ import { reloadWeapon } from "../../helpers/ammo.mjs";
 import { applySubtypeDefaults, POWER_SUBTYPES, hasActiveCommitment } from "../../config/power-subtypes.mjs";
 import { syncPowerTransferEffects } from "../../helpers/power-effects.mjs";
 import { isNpc, isPc } from "../../helpers/actor-types.mjs";
-import { showWwnDialog, confirmWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { showWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
+import composeMixins from "../mixins/compose-mixins.mjs";
+import { ActorItemActionsMixin } from "../mixins/actor-item-actions.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -21,7 +23,9 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 /**
  * Shared WWN actor sheet behavior.
  */
-export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
+export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
+  HandlebarsApplicationMixin(ActorSheetV2)
+) {
   /** @override */
   static DEFAULT_OPTIONS = {
     classes: ["wwn", "wwn-sheet", "sheet", "actor"],
@@ -30,9 +34,6 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     window: { resizable: true, contentClasses: ["flex", "flex-col", "min-h-0"] },
     actions: {
       createItem: WwnBaseActorSheet.#onCreateItem,
-      editItem: WwnBaseActorSheet.#onEditItem,
-      deleteItem: WwnBaseActorSheet.#onDeleteItem,
-      rollItem: WwnBaseActorSheet.#onRollItem,
       showItem: WwnBaseActorSheet.#onShowItem,
       itemSearch: WwnBaseActorSheet.#onItemSearch,
       effectAction: WwnBaseActorSheet.#onEffectAction,
@@ -178,15 +179,8 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
   async _onRender(context, options) {
     await super._onRender(context, options);
 
-    // Inline item-field editing ([data-item-field] inputs)
-    for (const input of this.element.querySelectorAll("[data-item-field]")) {
-      input.addEventListener("change", (event) => this.#onItemFieldChange(event));
-    }
-
-    // Focus-to-select, matching legacy sheet ergonomics
-    for (const input of this.element.querySelectorAll("input")) {
-      input.addEventListener("focus", (event) => event.currentTarget.select());
-    }
+    this._bindItemFieldEditors(this.#onItemFieldChange);
+    this._bindFocusSelectInputs();
 
     // Drag items for macros / favorites
     if (this.actor.isOwner) {
@@ -225,15 +219,6 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
    * @param {*} previous
    */
   async onItemFieldUpdated(item, field, value, previous) {}
-
-  /* -------------------------------------------- */
-  /*  Item helpers                                */
-  /* -------------------------------------------- */
-
-  _getItem(target) {
-    const itemId = target.closest("[data-item-id]")?.dataset.itemId;
-    return this.actor.items.get(itemId);
-  }
 
   /* -------------------------------------------- */
   /*  Actions                                     */
@@ -284,25 +269,6 @@ export class WwnBaseActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     });
     if (!result || result === "cancel") return null;
     return result.subType ?? null;
-  }
-
-  static #onEditItem(event, target) {
-    this._getItem(target)?.sheet.render(true);
-  }
-
-  static async #onDeleteItem(event, target) {
-    const item = this._getItem(target);
-    if (!item) return;
-    const confirmed = await confirmWwnDialog({
-      title: game.i18n.format("WWN.Delete", { name: item.name }),
-      content: `<p>${game.i18n.format("WWN.DeleteContent", { name: item.name, actor: this.actor.name })}</p>`,
-      modifier: "delete-item",
-    });
-    if (confirmed) await item.delete();
-  }
-
-  static #onRollItem(event, target) {
-    return this._getItem(target)?.roll({ skipDialog: event.shiftKey || event.ctrlKey });
   }
 
   /** Toggle an in-row description drawer; Shift+click posts a chat card. */

@@ -250,8 +250,9 @@ export class WWNCombat extends foundry.documents.Combat {
       const olderSiblingGroup = this.groups.find(g => g.name === group.name + "*");
 
       if (excludePCGroups) {
-        let hasPC = [...group.members].some(c => !c.isNPC);
-        hasPC = hasPC || [...olderSiblingGroup.members].some(c => !c.isNPC);
+        const membersHavePc = (members) => [...members].some((c) => !isNpc(c.actor));
+        let hasPC = membersHavePc(group.members);
+        if (olderSiblingGroup) hasPC = hasPC || membersHavePc(olderSiblingGroup.members);
         if (hasPC) continue;
       }
       const data = await this._getGroupInitiativeData(group, olderSiblingGroup, { excludeAlreadyRolled });
@@ -330,10 +331,12 @@ export class WWNCombat extends foundry.documents.Combat {
     }
 
     const npcs = this.combatants.filter(c => isNpc(c.actor));
-    npcs.forEach(npc => {
-      const weapons = npc.token?.delta?.syntheticActor?.items.filter(i => i.type === "weapon");
-      weapons.forEach(weapon => weapon.update({ "system.counter.value": weapon.system.counter.max }));
-    });
+    for (const npc of npcs) {
+      const weapons = npc.actor?.items?.filter((i) => i.type === "weapon") ?? [];
+      for (const weapon of weapons) {
+        await weapon.update({ "system.counter.value": weapon.system.counter.max });
+      }
+    }
   }
 
   /** @inheritDoc */
