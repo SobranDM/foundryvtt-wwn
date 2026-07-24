@@ -76,16 +76,46 @@ export async function resolveStarshipCaptain(starship) {
 }
 
 /**
- * Combined focus bonuses from captain + bridge crew.
+ * Combined focus bonuses from captain + bridge crew (legacy merge).
+ * Prefer captainFocusBonusesForShip / bridgeFocusBonusesForShip for attribution.
  * @param {Actor} starship
  */
 export async function starshipFocusBonusesForShip(starship) {
+  const captain = await captainFocusBonusesForShip(starship);
+  const bridge = await bridgeFocusBonusesForShip(starship);
+  return mergeStarshipFocusBonuses(captain, bridge);
+}
+
+/**
+ * Captain-station bonuses (CP, combat bonus HP%).
+ * @param {Actor} starship
+ */
+export async function captainFocusBonusesForShip(starship) {
   const captain = await resolveStarshipStationActor(starship, "captain");
+  const raw = starshipFocusBonusesFromActor(captain);
+  return {
+    commandPointsBonus: raw.commandPointsBonus,
+    combatBonusHpPercent: raw.combatBonusHpPercent,
+    spikeDrillAutoSucceedDiff: 0,
+    spikeDrillDoublePilot: false,
+    spikeDriveLevelBonus: 0,
+  };
+}
+
+/**
+ * Bridge-station bonuses (spike drill / drive).
+ * @param {Actor} starship
+ */
+export async function bridgeFocusBonusesForShip(starship) {
   const bridge = await resolveStarshipStationActor(starship, "bridge");
-  return mergeStarshipFocusBonuses(
-    starshipFocusBonusesFromActor(captain),
-    starshipFocusBonusesFromActor(bridge),
-  );
+  const raw = starshipFocusBonusesFromActor(bridge);
+  return {
+    commandPointsBonus: 0,
+    combatBonusHpPercent: 0,
+    spikeDrillAutoSucceedDiff: raw.spikeDrillAutoSucceedDiff,
+    spikeDrillDoublePilot: raw.spikeDrillDoublePilot,
+    spikeDriveLevelBonus: raw.spikeDriveLevelBonus,
+  };
 }
 
 /**
@@ -95,6 +125,17 @@ export async function starshipFocusBonusesForShip(starship) {
  */
 export async function effectiveStarshipCommandPoints(starship) {
   const base = Number(starship.system.npcCp) || 0;
-  const bonuses = await starshipFocusBonusesForShip(starship);
+  const bonuses = await captainFocusBonusesForShip(starship);
   return base + bonuses.commandPointsBonus;
+}
+
+/**
+ * Effective spike drive (capped at 7) including bridge focus bonus.
+ * @param {Actor} starship
+ * @returns {Promise<number>}
+ */
+export async function effectiveStarshipDrive(starship) {
+  const base = Number(starship.system.drive) || 0;
+  const bonuses = await bridgeFocusBonusesForShip(starship);
+  return Math.min(7, base + bonuses.spikeDriveLevelBonus);
 }

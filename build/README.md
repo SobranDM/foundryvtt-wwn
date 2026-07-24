@@ -11,17 +11,8 @@
 | `foundry-shim.mjs` | (tests) | Minimal Foundry globals for Node tests |
 | `pack-folder-paths.mjs` | (lib) | Shared path helpers for pack tooling |
 
-## One-shot generators (not part of normal build)
+## One-shot generators
 
-These rewrite or seed pack source JSON. Run intentionally after changing authoring data:
+Content import/generator scripts live in the gitignored `import-scripts/` folder (local only). When present, run them via the `npm run generate:*` scripts in `package.json`.
 
-```bash
-npm run generate:skills          # SWN/AWN skill packs
-npm run generate:starship-fittings
-npm run generate:example-starships
-npm run generate:armor-fittings
-npm run generate:example-power-armor
-npm run generate:wire-foci       # apply focus automation seeds to pack JSON
-```
-
-Shared focus seed tables live in `module/helpers/focus-automation-seeds.mjs` (imported by migration and `wire-foci-automation.mjs`).
+Shared focus seed tables used by migration live in `module/helpers/focus-automation-seeds.mjs`.

@@ -67,6 +67,8 @@ export default class WwnWeapon extends PhysicalDataMixin(WwnItemBase) {
     schema.missile = new fields.BooleanField({ initial: false });
     schema.slow = new fields.BooleanField({ initial: false });
     schema.burst = new fields.BooleanField({ initial: false });
+    /** Tech level (0–3 primitive; 4+ advanced). Default 0 = primitive. */
+    schema.tl = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 
     schema.range = new fields.SchemaField({
       short: new fields.NumberField({ ...requiredInteger, initial: 0 }),

@@ -15,6 +15,9 @@
         {{#if change.known}}
         <select name="{{change.keyPath}}">
           <option value=""></option>
+          {{#unless change.inOptgroups}}
+          <option value="{{change.key}}" selected>{{change.knownLabel}}</option>
+          {{/unless}}
           {{#each change.optgroups as |group|}}
           <optgroup label="{{group.label}}">
             {{#each group.options as |opt|}}

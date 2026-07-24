@@ -120,12 +120,14 @@ export class WwnActiveEffectConfig extends CoreActiveEffectConfig {
     }
     if (partId !== "changes") return partContext;
 
-    const groups = this.#getTargetGroups();
-    const flat = {};
-    for (const group of Object.values(groups)) {
-      Object.assign(flat, group.targets);
-    }
+    // Recognition uses the full registry so setting-gated keys (e.g. trauma
+    // when useTrauma is off) still show as known. Optgroups stay filtered.
+    const flat = this.#getFlatTargets();
     const optgroups = this.#buildOptgroups();
+    const inOptgroups = new Set();
+    for (const group of optgroups) {
+      for (const opt of group.options) inOptgroups.add(opt.value);
+    }
 
     partContext.wwnChanges = foundry.utils.deepClone(this.document.system.changes ?? []).map((change, index) => {
       const target = flat[change.key];
@@ -140,6 +142,8 @@ export class WwnActiveEffectConfig extends CoreActiveEffectConfig {
         ...change,
         index,
         known,
+        knownLabel: known ? this.#localizeTarget(target) : null,
+        inOptgroups: known && inOptgroups.has(change.key),
         keyPath: `system.changes.${index}.key`,
         typePath: `system.changes.${index}.type`,
         valuePath: `system.changes.${index}.value`,

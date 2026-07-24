@@ -5,13 +5,13 @@
  * `gunnerySkillName`, `bestAttributeMod`) live in `starship-crew.mjs` with no
  * Foundry imports and are unit tested there. This module wires them to the
  * live `WwnDice` / chat-card pipeline, so — like `module/dice/dice.mjs`
- * itself — it isn't unit tested under plain Node; it's exercised via manual
- * QA (see `.superpowers/sdd/task-7-report.md`).
+ * itself — it isn't unit tested under plain Node; exercise it via manual QA.
  */
 import { WwnDice } from "../dice/dice.mjs";
 import { RollParts, resolveSkillDiceFormula } from "../dice/roll-parts.mjs";
 import { WwnAttackRoll, WwnDamageRoll, WwnSkillRoll } from "../dice/rolls.mjs";
-import { createRollMessage } from "../chat/chat-card.mjs";
+import { createRollMessage, createNoticeMessage } from "../chat/chat-card.mjs";
+import { showWwnDialog, rollButton, cancelButton } from "../applications/wwn-dialog.mjs";
 import { isNpc } from "./actor-types.mjs";
 import {
   DEFAULT_STATION_SKILL,
@@ -20,6 +20,7 @@ import {
   gunnerySkillName,
   bestAttributeMod,
 } from "./starship-crew.mjs";
+import { bridgeFocusBonusesForShip } from "./starship-focus-bonuses.mjs";
 
 /** Resolve a station against the live actor it points at (async `fromUuid`). */
 async function resolveStationLive(starship, stationKey) {
@@ -182,3 +183,104 @@ export async function rollShipWeapon(starship, weapon, { skipDialog = false } = 
 
   return postShipWeaponCard({ starship, weapon, title, attack, damage, rollData: actor.getRollData() });
 }
+
+/* -------------------------------------------- */
+/*  Spike drill                                 */
+/* -------------------------------------------- */
+
+/**
+ * Dedicated spike-drill check (bridge Pilot). Honors Starfarer AE flags.
+ * @param {Actor} starship
+ * @param {{ difficulty?: number, skipDialog?: boolean }} [options]
+ */
+export async function rollSpikeDrill(starship, { difficulty, skipDialog = false } = {}) {
+  const bonuses = await bridgeFocusBonusesForShip(starship);
+  const stationLabel = game.i18n.localize("WWN.Starship.Station.bridge");
+  const title = game.i18n.format("WWN.Starship.SpikeDrillTitle", { ship: starship.name });
+
+  const resolved = await resolveStationLive(starship, "bridge");
+  if (resolved.mode === "unassigned") {
+    return ui.notifications.warn(
+      game.i18n.format("WWN.Starship.StationUnassigned", { station: stationLabel }),
+    );
+  }
+
+  let diff = difficulty;
+  if (diff == null || !Number.isFinite(Number(diff))) {
+    if (skipDialog) diff = 0;
+    else {
+      const result = await showWwnDialog({
+        modifier: "spike-drill",
+        title,
+        template: "systems/wwn/templates/dialog/spike-drill.hbs",
+        context: {
+          difficulty: 10,
+          autoThreshold: bonuses.spikeDrillAutoSucceedDiff,
+        },
+        buttons: [rollButton(), cancelButton()],
+      });
+      if (!result || result === "cancel") return;
+      diff = Number(result.difficulty) || 0;
+    }
+  }
+
+  if (
+    bonuses.spikeDrillAutoSucceedDiff > 0 &&
+    diff <= bonuses.spikeDrillAutoSucceedDiff
+  ) {
+    return createNoticeMessage({
+      title,
+      actor: resolved.mode === "actor" ? resolved.actor : starship,
+      body: game.i18n.format("WWN.Starship.SpikeDrillAutoSuccess", {
+        difficulty: diff,
+        threshold: bonuses.spikeDrillAutoSucceedDiff,
+      }),
+      flags: { kind: "spike-drill" },
+    });
+  }
+
+  if (resolved.mode === "formula") {
+    return WwnDice.rollFormula(starship, resolved.formula, { title });
+  }
+
+  const actor = resolved.actor;
+  const skillName = DEFAULT_STATION_SKILL.bridge;
+  const skill = findStationSkillItem(actor.items, skillName);
+  if (!skill && !isNpc(actor)) {
+    return ui.notifications.warn(
+      game.i18n.format("WWN.Starship.NoStationSkill", {
+        actor: actor.name,
+        skill: skillName,
+      }),
+    );
+  }
+
+  // Temporarily double Pilot skill level for the check when Starfarer L2 applies.
+  if (bonuses.spikeDrillDoublePilot && skill) {
+    const baseLevel = WwnDice.effectiveSkillLevel(actor, skill);
+    const doubled = baseLevel * 2;
+    const prompt = await WwnDice.promptModifier({ title, skipDialog });
+    if (!prompt) return;
+    const parts = new RollParts().add(
+      resolveSkillDiceFormula(skill.system?.dice || "2d6"),
+      game.i18n.localize("WWN.Roll.SkillDice"),
+    );
+    parts.add(doubled, game.i18n.localize("WWN.Starship.SpikeDrillDoublePilot"));
+    const attrKey = skill.system?.score || "int";
+    parts.add(actor.system.abilities?.[attrKey]?.mod ?? 0, attrKey.toUpperCase());
+    parts.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
+    const roll = await new WwnSkillRoll(parts.formula(), actor.getRollData(), { kind: "skill" }).evaluate();
+    return createRollMessage({
+      rolls: [roll],
+      kind: "skill",
+      actor,
+      title,
+      bodyTemplate: "systems/wwn/templates/chat/simple-roll.hbs",
+      context: { breakdown: parts.breakdown() },
+    });
+  }
+
+  if (skill) return WwnDice.rollSkill(actor, skill, { skipDialog, title });
+  return rollNpcStationCheck(actor, { title, skipDialog });
+}
+

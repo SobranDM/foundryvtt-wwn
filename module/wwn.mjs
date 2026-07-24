@@ -334,6 +334,11 @@ Hooks.once("ready", async function () {
 
   await checkMigration();
 
+  const { onActorZeroHpAutoStabilize } = await import("./helpers/auto-stabilize.mjs");
+  Hooks.on("wwn.actorZeroHp", (actor, ctx) => {
+    void onActorZeroHpAutoStabilize(actor, ctx);
+  });
+
   for (const actor of game.actors) {
     await syncActorFocusEffects(actor);
     if (isPc(actor)) {

@@ -10,55 +10,46 @@
 
 ### What's new
 
-- **SWN Classes** and **AWN/CWN Edges** as `classEdge` items in the matching Abilities packs, with attack/HD/pool grants, bonus-skill prompts, Active Effects (On Target, Hard To Kill, Killing Blow, attribute Edges), and companion powers for scene/day limited abilities. Edge-only PCs keep half-level AB via the existing Expert fallback; On Target raises AB to full level. SWN Full Warrior has no Killing Blow (book difference from WWN). Regenerate with `node ./build/generate-cross-line-class-edges.mjs`.
-- **SWN Psychic Techniques** catalog in **SWN Abilities** (`power` / `psychic` subtype): all six disciplines’ cores and techniques from Stars Without Number, committing from a shared **Psychic Effort** pool, with System Strain fields where the book applies them. Psychic subtype default pool name is now **Psychic Effort**.
-- **AWN Mutations** catalog in **AWN Abilities** (`power` / `mutation` subtype): all positive and negative mutations from Ashes Without Number, with System Strain costs, scene/day use limits, Active Effects where automatable, and bonus-skill grants.
-- **AWN Tables** compendium for mutation generation (linked document results) and stigma tables (text). The former **Tables** pack is now labeled **WWN Tables**.
-- **Powers** can grant bonus skills (rank-only: train untrained skills to level-0). Unlike foci, power grants never use the skill-points path or the level-1 skill-points setting.
-- **Abilities compendiums by game line:** **WWN Abilities**, **SWN Abilities**, **AWN Abilities**, and **CWN Abilities**. Skills for each line live in a Skills folder inside that pack (standalone skills packs removed). `skillSet` still seeds PCs from the matching pack.
-  - SWN Abilities includes the full SWN focus list with bonus-skill prompts and Active Effects, plus the full Psychic Techniques catalog (Psychic Effort pool), and Full/Partial Expert, Psychic, and Warrior class items.
-  - AWN Abilities includes the full AWN focus list (including Spark of Brilliance skill pool and open skill picks), mutations, and the full Survivor Edges list.
-  - CWN Abilities includes Cities Without Number skills (Cast/Summon are secondary and not auto-seeded), the full CWN focus list (including Ace Driver’s level-2 Fix grant and All Natural attribute choice effects), and Operator Edges.
-  - Pack collection ids are now `wwn.abilities-wwn` / `wwn.abilities-swn` / `wwn.abilities-awn` / `wwn.abilities-cwn` (old `wwn.abilities` / `wwn.skills-*` world links are not auto-remapped).
-- **Classes** are now items you add to a character (Full/Partial Warrior, Expert, mage traditions, and other partial classes).
+- **Classes and Edges** are items you add to a character (Full/Partial classes for WWN and SWN; Edges for AWN and CWN).
   - They drive attack bonus, hit dice, Effort or spell capacity, and class features.
+  - Edge-only characters keep the Expert half-level attack bonus unless an Edge raises it to full level (for example On Target).
   - Existing characters are prompted once to pick their class(es). Old Class Ability foci are archived under Items.
-- **Character sheet** layout and combat bonuses have been reworked.
-  - Sheets use Foundry **Application V2 / SheetV2** with horizontal in-sheet tabs and selectable UI themes (WWN / SWN / AWN / CWN).
-  - The Attributes tab is renamed **Main** and includes a Favorites dock for PCs.
-  - Header resource bars show HP and System Strain always; Alienation and Stress when their settings are on; XP uses a fill bar.
+- **Abilities compendiums by game line:** **WWN Abilities**, **SWN Abilities**, **AWN Abilities**, and **CWN Abilities**. Skills for each line live in a Skills folder inside that pack. New characters get the matching skill set from world settings.
+  - SWN: full focus list, Psychic Techniques (shared **Psychic Effort** pool), and Expert / Psychic / Warrior class items.
+  - AWN: full focus list, mutations, and Survivor Edges.
+  - CWN: Cities Without Number skill, full focus list, and Operator Edges.
+- **Compendiums** are reorganized (gear, magic items, abilities, assets, tags, tables) using Foundry's compendium folder feature. Old broken items from the defunct Compendium Folders module removed.
+  - Pack ids changed (`wwn.abilities-wwn` and the matching SWN/AWN/CWN packs). Old `wwn.abilities` / `wwn.skills-*` world links are not remapped, so journals that link to compendium items WILL break.
+- **SWN Psychic Techniques** in **SWN Abilities**: all six disciplines’ cores and techniques, committing from **Psychic Effort**, with System Strain where the book calls for it.
+- **AWN Mutations** in **AWN Abilities**: positive and negative mutations with System Strain, use limits, automated effects where practical, and bonus-skill grants.
+- **AWN Tables** for mutation generation and stigma tables. The former **Tables** pack is now labeled **WWN Tables**.
+- **Powers** replace Arts and Spells. Subtypes cover arts, spells, psychic techniques, mutations, cyberware, and related abilities. Powers can grant bonus skills.
+- **Character sheet** layout and combat bonuses have been reworked to lean on Active Effects.
+  - Modern Foundry sheets with in-sheet tabs and selectable UI themes (WWN / SWN / AWN / CWN). Still WIP.
+  - The Attributes tab is renamed **Main** and includes a Favorites section for PCs.
+  - Header bars show HP and System Strain always; Alienation and Stress when those settings are on; XP uses a fill bar.
   - The old Tweaks menu is gone; bonuses live as Active Effects.
   - Powers, classes, and foci share one Powers tab. Alignment, background, and class list live on Details.
-  - Attack bonus and hit dice come from your classes (adjustments via Active Effects when needed).
-- **Foci and class features** are refreshed from the system packs on migration when they are out of date.
-  - Your focus level and skill choices are kept.
-  - Replaced copies are saved under Items in a **Migration Backup** folder per character.
-- **Arts and Spells** have been converted to the new **Powers** item type.
-  - Subtypes of Powers should support mutant powers, psychic abilities, cyberware, and all of the other xWN abilities.
-  - This may need further work before it is working perfectly.
-- **Compendiums** are reorganized (gear, magic items, abilities, assets, tags, tables).
-  - Some old journal links into packs may need fixing.
-- **Weapons and ammo** support linked ammo and magazine-style reload more clearly.
-- **Group initiative** can collapse the tracker by side (default on), advancing one side at a time.
+  - Attack bonus and hit dice come from your classes (adjust with Active Effects when needed).
+- **Foci and class features** on characters from world pre-2.0.0 refresh from system packs on migration. Your focus level and skill choices are kept; replaced copies go under Items in a **Migration Backup** folder.
+- **Weapons and ammo** support linked ammo and magazine-style reload more clearly. WIP. Ammo item type and proper items need creating.
+- **Group initiative** can collapse the tracker by side (default on), advancing one side at a time. WIP. Untested.
 - **Monsters** keep editable combat numbers on a Config tab.
-- **Starship actors** for Stars Without Number ship play.
-  - Pick a hull preset to seed speed, armor, HP, crew limits, AC, and power/mass/hardpoint budgets; all stats stay editable afterward.
-  - The sheet tracks used and free power, mass, and hardpoints as you add equipment (over-budget builds are allowed).
-- **Dialog and chat factories** unify theming for prompts (`showWwnDialog`) and cards (`createRollMessage` / `createCardMessage` / `createNoticeMessage`). Long-lived windows (party sheet, character creator) use themed ApplicationV2. Legacy chat/dialog templates and dual-era CSS have been removed.
-- **Ship fittings, weapons, and defenses** are new item types that install on a starship.
-  - Fitting cost, power, and mass scale with hull class the same way as the SWN rulebook (`*` and `#` entries).
-- **Crew stations** on each ship: bridge, gunnery, engineering, comms, and captain.
-  - Link a world actor or enter an NPC roll formula (for example `2d6+3`); linked PCs and NPCs roll with their live skills from the sheet.
-  - Roll department skill checks and ship weapon attacks from the starship sheet.
-- **SWN compendiums** in the Stars Without Number pack folder: **Starship Fittings** (fittings, weapons, and defenses from the book) and **Example Starships** (ready-made ships from the rulebook).
+- **Starships** for Stars Without Number.
+  - Hull presets seed speed, armor, HP, crew limits, AC, and power/mass/hardpoint budgets; stats stay editable.
+  - Fittings, weapons, and defenses install on the ship; cost, power, and mass scale with hull class as in the rulebook.
+  - Crew stations (bridge, gunnery, engineering, comms, captain) can link a world actor or use an NPC roll formula; roll checks and ship weapons from the sheet.
+  - Compendiums: **Starship Fittings** and **Example Starships**.
+  - WIP. Largely untested.
+  - TODO: Starship combat.
+- **Dialogs and chat cards** share the selected UI theme. Party sheet and character creator use the same theming. Old chat/dialog templates are removed.
 - **Modular power armor** for Ashes Without Number.
-  - Dedicated **power armor** actors with frame presets, mass/power budgets, Soak pools, power cells/runtime, and maintenance tracking.
-  - **Armor fittings** install on the suit; over-budget builds inert all fittings (per the rules).
-  - Assign a live PC pilot: the suit sheet overlays pilot skills/abilities/powers/HP while AC, Soak, and exo Strength stay on the suit.
-  - Damage depletes suit Soak first, then the linked pilot’s HP.
-  - Phase A automates plating, exoskeletal boost, efficiency cores, training disadvantage, and weapon mounts.
-  - Selected fitting helpers: damage/save chat rolls (Plague Wind, Kinetic Rebuke, Reactive Antipersonnel, Stun Skin), Integral Ripper as a weapon roll, Regenerative Soak / Camo Stealth derive, Emergency Power Cell swap, and token sight/light AEs on Night Vision / Multispectral / Floodlights.
-- **AWN compendiums** in the Ashes Without Number pack folder: **Armor Fittings** and **Example Power Armor**.
+  - Power armor actors with frame presets, mass/power budgets, Soak, power cells/runtime, and maintenance.
+  - Armor fittings install on the suit; over-budget builds shut down fittings per the rules.
+  - Link a PC pilot: the suit shows pilot skills and HP while AC, Soak, and exo Strength stay on the suit. Damage hits Soak first, then the pilot.
+  - Automation for common fittings (plating, exo boost, efficiency, training disadvantage, weapon mounts, and selected special fittings).
+  - Compendiums: **Armor Fittings** and **Example Power Armor**. FOR TESTING ONLY. This compendium will be removed later, as it is part of paid content.
+  - WIP. Largely untested.
 - Assorted sheet, combat, and pack fixes for Foundry v14.
 
 ## New in 1.6.1

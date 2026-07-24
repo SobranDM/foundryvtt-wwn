@@ -6,6 +6,12 @@ import { hitDiceRollFormula } from "../derivations/hit-dice.mjs";
 import { getFocusSkillDiceBonus } from "../helpers/focus-skill-dice.mjs";
 import { spendAttackAmmo } from "../helpers/ammo.mjs";
 import { isPc, isNpc } from "../helpers/actor-types.mjs";
+import { isTruthyAeFlag } from "../helpers/combat-ae-flags.mjs";
+import { resolveWeaponTlGate, traumaDieFormula } from "../helpers/weapon-tl.mjs";
+import {
+  shouldMissAfterFirstMeleeHit,
+  appendAttackedThisTurn,
+} from "../helpers/savage-fray.mjs";
 
 /**
  * WwnDice: the roll pipeline.
@@ -181,6 +187,10 @@ export class WwnDice {
     if (targetActor.system.combat?.immuneToShock) {
       return { applies: false, effectiveTargetAc: 0, threshold };
     }
+    const { blocked } = resolveWeaponTlGate(attacker, targetActor, weapon, attackKind);
+    if (blocked) {
+      return { applies: false, effectiveTargetAc: 0, threshold };
+    }
     const effectiveTargetAc = attacker.system.combat?.treatAllMeleeAsAcTen
       ? 10
       : (targetActor.system.combat?.ac?.melee?.value ?? 10);
@@ -225,6 +235,40 @@ export class WwnDice {
     if (attackKind === "melee" && combat.meleeMissDamage) return String(combat.meleeMissDamage);
     if (attackKind === "ranged" && combat.rangeMissDamage) return String(combat.rangeMissDamage);
     return null;
+  }
+
+  /**
+   * Track attacks for Savage Fray L1 (EOT shock) and L2 (first melee hit).
+   * @param {Actor} attacker
+   * @param {Actor} defender
+   * @param {string} attackKind
+   * @param {boolean} hit
+   */
+  static async #recordCombatAttackFlags(attacker, defender, attackKind, hit) {
+    const combat = game.combat;
+    if (!combat) return;
+    const attackerC =
+      combat.getCombatantByActor?.(attacker.id) ??
+      combat.combatants?.find((c) => c.actorId === attacker.id);
+    if (attackerC) {
+      const prev = attackerC.getFlag("wwn", "attackedThisTurn") ?? [];
+      const next = appendAttackedThisTurn(prev, defender.id);
+      await attackerC.setFlag("wwn", "attackedThisTurn", next);
+    }
+    if (attackKind === "melee" && hit && isTruthyAeFlag(defender.system.combat?.missAfterFirstMeleeHit)) {
+      const defenderC =
+        combat.getCombatantByActor?.(defender.id) ??
+        combat.combatants?.find((c) => c.actorId === defender.id);
+      if (defenderC) {
+        const stored = defenderC.getFlag("wwn", "meleeHitThisRound");
+        if (!stored?.attackerId || Number(stored.round) !== Number(combat.round)) {
+          await defenderC.setFlag("wwn", "meleeHitThisRound", {
+            attackerId: attacker.id,
+            round: combat.round,
+          });
+        }
+      }
+    }
   }
 
   /**
@@ -382,21 +426,51 @@ export class WwnDice {
     let badge = null;
     let targetName = null;
     let hit = true;
+    let blockedByTl = false;
     if (target?.actor) {
       targetName = target.name;
-      const tc = target.actor.system.combat;
-      const meleeAc = tc?.ac?.melee?.value;
-      const rangedAc = tc?.ac?.ranged?.value;
-      if (Number.isFinite(meleeAc) || Number.isFinite(rangedAc)) {
-        const targetAC =
-          attackKind === "ranged" && separateRanged
-            ? (Number.isFinite(rangedAc) ? rangedAc : meleeAc)
-            : (Number.isFinite(meleeAc) ? meleeAc : rangedAc);
-        hit = attackRoll.total >= targetAC;
+      const { blocked } = resolveWeaponTlGate(actor, target.actor, weapon, attackKind);
+      if (blocked) {
+        blockedByTl = true;
+        hit = false;
         badge = {
-          label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
-          type: hit ? "hit" : "miss",
+          label: game.i18n.localize("WWN.Roll.Miss"),
+          type: "miss",
         };
+      } else {
+        const tc = target.actor.system.combat;
+        const meleeAc = tc?.ac?.melee?.value;
+        const rangedAc = tc?.ac?.ranged?.value;
+        if (Number.isFinite(meleeAc) || Number.isFinite(rangedAc)) {
+          const targetAC =
+            attackKind === "ranged" && separateRanged
+              ? (Number.isFinite(rangedAc) ? rangedAc : meleeAc)
+              : (Number.isFinite(meleeAc) ? meleeAc : rangedAc);
+          hit = attackRoll.total >= targetAC;
+          badge = {
+            label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+            type: hit ? "hit" : "miss",
+          };
+        }
+      }
+
+      // Savage Fray L2: after first melee hit this round, other assailants auto-miss
+      if (
+        attackKind === "melee" &&
+        !blockedByTl &&
+        isTruthyAeFlag(target.actor.system.combat?.missAfterFirstMeleeHit)
+      ) {
+        const combat = game.combat;
+        const defenderC = combat?.getCombatantByActor?.(target.actor.id)
+          ?? combat?.combatants?.find((c) => c.actorId === target.actor.id);
+        const stored = defenderC?.getFlag?.("wwn", "meleeHitThisRound");
+        if (shouldMissAfterFirstMeleeHit(stored, actor.id, combat?.round)) {
+          hit = false;
+          badge = {
+            label: game.i18n.localize("WWN.Roll.Miss"),
+            type: "miss",
+          };
+        }
       }
     }
 
@@ -405,9 +479,7 @@ export class WwnDice {
     let trauma = null;
     if (useTrauma && weapon.system.trauma?.die && hit && target?.actor) {
       const dieMod = Number(actor.system.trauma?.dieMod) || 0;
-      const traumaFormula = dieMod
-        ? `${weapon.system.trauma.die}+${dieMod}`
-        : weapon.system.trauma.die;
+      const traumaFormula = traumaDieFormula(weapon.system.trauma.die, dieMod);
       const traumaRoll = await new WwnRoll(traumaFormula, rollData, { kind: "formula" }).evaluate();
       rolls.push(traumaRoll);
       const traumaTarget = target.actor.system.trauma?.value ?? 6;
@@ -444,7 +516,7 @@ export class WwnDice {
         altValue: straightValue,
         altLabel: straightValue !== null ? game.i18n.format("WWN.Roll.Straight", { value: straightValue }) : null,
       });
-    } else if (isPc(actor)) {
+    } else if (isPc(actor) && !blockedByTl) {
       const missFormula = this.#focusMissDamageFormula(actor, weapon, attackKind);
       if (missFormula) {
         const missRoll = await new WwnDamageRoll(missFormula, rollData, { kind: "damage" }).evaluate();
@@ -456,7 +528,7 @@ export class WwnDice {
         });
       }
     }
-    if (shockTotal !== null) {
+    if (shockTotal !== null && !blockedByTl) {
       const shockLabel = shockTargetAc !== null
         ? game.i18n.format("WWN.Roll.ShockVsTarget", {
           value: shockTotal,
@@ -479,6 +551,11 @@ export class WwnDice {
         label: game.i18n.format("WWN.Roll.TraumaDamage", { rating: trauma.rating }),
         value: trauma.multiplied,
       });
+    }
+
+    // Savage Fray / attack tracking (active combat only)
+    if (target?.actor && game.combat) {
+      await this.#recordCombatAttackFlags(actor, target.actor, attackKind, hit);
     }
 
     return createRollMessage({

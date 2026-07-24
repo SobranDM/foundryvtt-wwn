@@ -204,6 +204,20 @@ export class WwnActor extends Actor {
 
     let value = Math.floor(amount * multiplier);
 
+    // Starship: Star Captain combat bonus HP absorbs damage first
+    if (this.type === "starship" && value > 0) {
+      const { applyDamageThroughCombatBonus, remainingCombatBonusHp } = await import(
+        "../helpers/starship-combat-hp.mjs"
+      );
+      const bonus = remainingCombatBonusHp(this);
+      const split = applyDamageThroughCombatBonus(value, bonus);
+      if (split.bonusTaken > 0 || split.bonusRemaining !== bonus) {
+        if (split.bonusRemaining > 0) await this.setFlag("wwn", "combatBonusHp", split.bonusRemaining);
+        else await this.unsetFlag("wwn", "combatBonusHp");
+      }
+      value = split.hullDamage;
+    }
+
     // Armor soak (CWN): flat reduction of incoming damage only
     let soaked = 0;
     if (value > 0 && !ignoreSoak) {

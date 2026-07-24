@@ -78,6 +78,9 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
     context.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
     context.xpPerChar = game.settings.get("wwn", "xpPerChar");
     context.useTrauma = game.settings.get("wwn", "useTrauma");
+    context.immuneToSurprise = !!actor.system.combat?.immuneToSurprise
+      && actor.system.combat.immuneToSurprise !== "false";
+    context.stabilized = !!actor.getFlag("wwn", "stabilized");
 
     context.classEdges = context.classEdges ?? [];
 

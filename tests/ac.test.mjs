@@ -135,4 +135,22 @@ describe("deriveTraumaTarget", () => {
     assert.equal(actor.system.trauma.base, 8);
     assert.equal(actor.system.trauma.value, 8);
   });
+
+  it("adds AE targetMod onto base (Hard To Kill)", () => {
+    const actor = pcActor();
+    actor.system.trauma.targetMod = 1;
+    deriveTraumaTarget(actor, true);
+    assert.equal(actor.system.trauma.base, 6);
+    assert.equal(actor.system.trauma.value, 7);
+  });
+
+  it("stacks armor base with AE targetMod", () => {
+    const actor = pcActor({
+      items: [{ type: "armor", system: { equipped: true, type: "medium", traumaTarget: 8 } }],
+    });
+    actor.system.trauma.targetMod = 1;
+    deriveTraumaTarget(actor, true);
+    assert.equal(actor.system.trauma.base, 8);
+    assert.equal(actor.system.trauma.value, 9);
+  });
 });

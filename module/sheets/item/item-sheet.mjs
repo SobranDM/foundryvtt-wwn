@@ -3,11 +3,10 @@
  * swaps template per item type; Power and ClassEdge sheets additionally hide
  * fields whose subtype default is undefined via `getPowerSheetVisibility`.
  *
- * Ported from games-without-number/module/sheets/item/item-sheet.mjs and
- * adapted to WWN's item types (weapon/armor/item/skill/power/focus/classEdge/
- * asset/currency) and the pre-existing legacy `module/item/item-sheet.js`
- * behaviors (tag add/delete, melee/missile toggle, shield toggle, commitment
- * option add/remove, ClassEdge progression text parsing).
+ * Covers WWN item types (weapon/armor/item/skill/power/focus/classEdge/
+ * asset/currency) and legacy `module/item/item-sheet.js` behaviors (tag
+ * add/delete, melee/missile toggle, shield toggle, commitment option
+ * add/remove, ClassEdge progression text parsing).
  */
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../../helpers/effects.mjs";
 import { evaluatePoolFormula } from "../../derivations/resource-pools.mjs";

@@ -23,11 +23,14 @@ import {
   DEFAULT_STATION_SKILL,
   buildStationAssignmentUpdate,
 } from "../../helpers/starship-crew.mjs";
-import { rollStationCheck } from "../../helpers/starship-rolls.mjs";
+import { rollStationCheck, rollSpikeDrill } from "../../helpers/starship-rolls.mjs";
 import { applyHullPreset } from "../../config/starship-hulls.mjs";
 import {
-  starshipFocusBonusesForShip,
+  captainFocusBonusesForShip,
+  bridgeFocusBonusesForShip,
+  effectiveStarshipDrive,
 } from "../../helpers/starship-focus-bonuses.mjs";
+import { remainingCombatBonusHp } from "../../helpers/starship-combat-hp.mjs";
 import { showWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -52,6 +55,7 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
       openStationActor: WwnStarshipSheet.#onOpenStationActor,
       reassignCrew: WwnStarshipSheet.#onReassignCrew,
       rollStation: WwnStarshipSheet.#onRollStation,
+      rollSpikeDrill: WwnStarshipSheet.#onRollSpikeDrill,
       createItem: WwnStarshipSheet.#onCreateItem,
       toggleDisabled: WwnStarshipSheet.#onToggleDisabled,
       effectAction: WwnStarshipSheet.#onEffectAction,
@@ -116,11 +120,13 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
       system.description ?? ""
     );
 
-    const captainBonuses = await starshipFocusBonusesForShip(actor);
+    const captainBonuses = await captainFocusBonusesForShip(actor);
+    const bridgeBonuses = await bridgeFocusBonusesForShip(actor);
     context.captainFocusBonuses = captainBonuses;
+    context.bridgeFocusBonuses = bridgeBonuses;
     context.effectiveCommandPoints = (Number(system.npcCp) || 0) + captainBonuses.commandPointsBonus;
-    context.effectiveDrive =
-      (Number(system.drive) || 0) + captainBonuses.spikeDriveLevelBonus;
+    context.effectiveDrive = await effectiveStarshipDrive(actor);
+    context.combatBonusHp = remainingCombatBonusHp(actor);
 
     return context;
   }
@@ -356,6 +362,10 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
     const station = target.dataset.station;
     if (!station) return;
     return rollStationCheck(this.actor, station, { skipDialog: event.shiftKey || event.ctrlKey });
+  }
+
+  static #onRollSpikeDrill(event, _target) {
+    return rollSpikeDrill(this.actor, { skipDialog: event.shiftKey || event.ctrlKey });
   }
 
   static async #onCreateItem(event, target) {

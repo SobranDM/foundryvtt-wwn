@@ -29,6 +29,16 @@
             placeholder="6" disabled data-tooltip="{{localize 'WWN.TraumaTargetLong'}}" />
         </label>
         {{/if}}
+        {{#if immuneToSurprise}}
+        <span class="wwn-header-chip" title="{{localize 'WWN.Sheet.ImmuneToSurpriseHint'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.Sheet.ImmuneToSurprise"}}</span>
+        </span>
+        {{/if}}
+        {{#if stabilized}}
+        <span class="wwn-header-chip" title="{{localize 'WWN.Sheet.StabilizedHint'}}">
+          <span class="wwn-header-chip-label">{{localize "WWN.Sheet.Stabilized"}}</span>
+        </span>
+        {{/if}}
       </div>
     </div>
   </div>

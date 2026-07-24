@@ -72,17 +72,30 @@
           </div>
         </div>
         {{/if}}
-        {{#if captainFocusBonuses.spikeDriveLevelBonus}}
+        {{#if bridgeFocusBonuses.spikeDriveLevelBonus}}
         <div class="form-group">
           <label>{{localize "WWN.Starship.EffectiveDrive"}}</label>
           <div class="form-fields">
             <span>{{effectiveDrive}}
               <span class="units">({{localize "WWN.Starship.CaptainFocusBonus"}}
-                +{{captainFocusBonuses.spikeDriveLevelBonus}})</span>
+                +{{bridgeFocusBonuses.spikeDriveLevelBonus}})</span>
             </span>
           </div>
         </div>
         {{/if}}
+        {{#if combatBonusHp}}
+        <div class="form-group">
+          <label title="{{localize 'WWN.Starship.CombatBonusHpHint'}}">{{localize "WWN.Starship.CombatBonusHp"}}</label>
+          <div class="form-fields">
+            <span>{{combatBonusHp}}</span>
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-group wwn-form-span">
+          <button type="button" data-action="rollSpikeDrill">
+            <i class="fas fa-rocket"></i> {{localize "WWN.Starship.SpikeDrill"}}
+          </button>
+        </div>
       </div>
     </div>
 

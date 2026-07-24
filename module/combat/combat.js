@@ -5,6 +5,11 @@ import { WWN } from "../config/index.mjs"
 import WWNCombatGroupSelector from "./combat-set-groups.js"
 import { findAdjacentGroupTurn } from "./side-collapse.mjs"
 import { isNpc } from "../helpers/actor-types.mjs";
+import { applyEndOfTurnAdjacentShock } from "../helpers/end-of-turn-shock.mjs";
+import {
+  applyStarshipCombatBonusHp,
+  clearStarshipCombatBonusHp,
+} from "../helpers/starship-combat-hp.mjs";
 
 /**
  * An extension of Foundry's Combat class that implements initiative for individual combatants.
@@ -311,7 +316,22 @@ export class WWNCombat extends foundry.documents.Combat {
   async startCombat() {
     await super.startCombat()
     await this.smartRerollInitiative({ excludeAlreadyRolled: true })
+    for (const c of this.combatants) {
+      if (c.actor?.type === "starship") await applyStarshipCombatBonusHp(c.actor);
+    }
     return this
+  }
+
+  /** @inheritDoc */
+  async _onStartTurn(combatant, context) {
+    await super._onStartTurn(combatant, context);
+    if (combatant) await combatant.unsetFlag("wwn", "attackedThisTurn");
+  }
+
+  /** @inheritDoc */
+  async _onEndTurn(combatant, context) {
+    await super._onEndTurn(combatant, context);
+    if (combatant) await applyEndOfTurnAdjacentShock(combatant);
   }
 
   /** @inheritDoc */
@@ -337,6 +357,19 @@ export class WWNCombat extends foundry.documents.Combat {
         await weapon.update({ "system.counter.value": weapon.system.counter.max });
       }
     }
+
+    for (const c of this.combatants) {
+      await c.unsetFlag("wwn", "meleeHitThisRound");
+      await c.unsetFlag("wwn", "attackedThisTurn");
+    }
+  }
+
+  /** @inheritDoc */
+  async _onDelete(options, userId) {
+    for (const c of this.combatants) {
+      if (c.actor?.type === "starship") await clearStarshipCombatBonusHp(c.actor);
+    }
+    return super._onDelete(options, userId);
   }
 
   /** @inheritDoc */

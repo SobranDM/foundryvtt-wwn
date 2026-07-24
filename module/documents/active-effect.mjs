@@ -7,6 +7,8 @@
  * we additionally evaluate simple arithmetic and expose "@item" data for
  * effects transferred from items.
  */
+import { BOOLEAN_COMBAT_AE_KEYS, coerceAeBoolean } from "../helpers/combat-ae-flags.mjs";
+
 export class WwnActiveEffect extends foundry.documents.ActiveEffect {
   /**
    * Suppress transfer effects on unequipped weapons/armor (and similar).
@@ -92,6 +94,16 @@ export class WwnActiveEffect extends foundry.documents.ActiveEffect {
         // Leave the raw value; core will warn if it cannot resolve it.
       }
     }
+
+    // Ephemeral boolean combat/starship flags: Foundry's unguided !!raw makes
+    // "false" truthy. Coerce before apply when the key or current value is boolean.
+    const current = foundry.utils.getProperty(targetDoc, change.key);
+    const needsBool =
+      BOOLEAN_COMBAT_AE_KEYS.has(change.key) || typeof current === "boolean";
+    if (needsBool && change.type === "override") {
+      change = { ...change, value: coerceAeBoolean(change.value) };
+    }
+
     return super._applyChangeUnguided(targetDoc, change, changes, options);
   }
 }

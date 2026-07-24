@@ -1,11 +1,10 @@
 /**
  * Header resource bar preparation (HP / Strain / Alienation / Stress / XP).
  *
- * Ported from games-without-number/module/sheets/helpers/resource-bar.mjs and
- * adapted to WWN's tracker registry (`WWN.headerTrackers`) and settings
- * namespace ("wwn"). Imports `WWN` directly from module/config/index.mjs
- * (rather than the global `CONFIG.WWN`) so this helper stays unit-testable
- * under plain Node, matching the existing convention used by
+ * Uses WWN's tracker registry (`WWN.headerTrackers`) and settings namespace
+ * ("wwn"). Imports `WWN` directly from module/config/index.mjs (rather than
+ * the global `CONFIG.WWN`) so this helper stays unit-testable under plain
+ * Node, matching the existing convention used by
  * module/helpers/power-sections.mjs.
  */
 import { WWN } from "../../config/index.mjs";

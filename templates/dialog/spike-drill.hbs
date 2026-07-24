@@ -1,0 +1,11 @@
+<form class="wwn-dialog">
+  <div class="form-group">
+    <label>{{localize "WWN.Starship.SpikeDrillDifficulty"}}</label>
+    <div class="form-fields">
+      <input type="number" name="difficulty" value="{{difficulty}}" data-dtype="Number" />
+    </div>
+  </div>
+  {{#if autoThreshold}}
+  <p class="notes">{{localize "WWN.Effects.SpikeDrillAutoSucceedDiff"}}: {{autoThreshold}}</p>
+  {{/if}}
+</form>
