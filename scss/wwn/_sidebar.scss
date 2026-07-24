@@ -8,15 +8,22 @@
   margin: 4px;
 }
 
-#settings .wwn.game-license {
+.settings-sidebar .wwn.game-license {
   font-size: 12px;
-  padding: 10px;
-  flex-basis: 100%;
+  line-height: 1.4;
+  padding: 0.25rem 0 0;
 }
-#settings .wwn.game-license .button {
-  text-align: center;
-  margin: 4px;
+
+.settings-sidebar .wwn.game-license p {
+  margin: 0 0 0.5em;
 }
-#settings .wwn.game-license .footer {
+
+.settings-sidebar .wwn.game-license .kofi {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.settings-sidebar .wwn.game-license .footer {
   text-align: right;
 }

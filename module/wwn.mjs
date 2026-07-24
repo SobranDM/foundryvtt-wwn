@@ -356,11 +356,14 @@ Hooks.on("renderActorDirectory", (app, html) => party.addControl(app, html));
 Hooks.on("renderSettings", async (app, html) => {
   const systemInfo = html.querySelector(".info .system");
   if (!systemInfo) return;
-  const srdLink = document.createElement("sub");
-  srdLink.innerHTML = `<a href="https://oldschoolessentials.necroticgnome.com/srd/index.php">SRD</a>`;
+  const srdLink = document.createElement("a");
+  srdLink.href = "https://www.drivethrurpg.com/en/product/473939/worlds-without-number-system-reference-document";
+  srdLink.target = "_blank";
+  srdLink.rel = "nofollow noopener";
+  srdLink.textContent = "SRD";
   systemInfo.querySelector(".label")?.append(" ", srdLink);
   const rendered = await foundry.applications.handlebars.renderTemplate("systems/wwn/templates/chat/license.html");
-  html.querySelector(".info")?.insertAdjacentHTML("beforeend", rendered);
+  html.querySelector(".info")?.insertAdjacentHTML("afterend", rendered);
 });
 
 Hooks.on("renderChatLog", (_app, html) => WwnItem.chatListeners?.(html));
