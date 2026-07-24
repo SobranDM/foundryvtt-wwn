@@ -35,13 +35,15 @@
     },
     "internalResourceLength": "scene",
     "activation": {
-      "roll": "(@level)d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "",
       "duration": ""
-    }
+    },
+    "damageRoll": "(@level)d6",
+    "healing": false
   },
   "ownership": {
     "default": 0

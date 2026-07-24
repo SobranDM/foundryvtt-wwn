@@ -8,6 +8,7 @@ import assert from "node:assert/strict";
 import {
   getActorSpellSlotMode,
   deriveResourcePools,
+  evaluatePoolFormula,
 } from "../module/derivations/resource-pools.mjs";
 
 function makeActor({ classEdges = [], powers = [], level = 1 } = {}) {
@@ -84,5 +85,38 @@ describe("deriveResourcePools Spell Slots gate", () => {
       false,
       `unexpected pools: ${JSON.stringify(pools)}`
     );
+  });
+});
+
+describe("Vowed Effort formula", () => {
+  const formula = "max(1, @maxNonCombatSkill + max(@str, @dex, @con, @int, @wis, @cha))";
+
+  it("uses max non-combat skill rather than only exert", () => {
+    const { value, valid } = evaluatePoolFormula(formula, {
+      maxNonCombatSkill: 2,
+      exert: 0,
+      str: 1,
+      dex: 0,
+      con: 0,
+      int: 0,
+      wis: 0,
+      cha: 0,
+    });
+    assert.equal(valid, true);
+    assert.equal(value, 3);
+  });
+
+  it("floors at 1 when skills and mods are low", () => {
+    const { value, valid } = evaluatePoolFormula(formula, {
+      maxNonCombatSkill: -1,
+      str: 0,
+      dex: 0,
+      con: 0,
+      int: 0,
+      wis: 0,
+      cha: 0,
+    });
+    assert.equal(valid, true);
+    assert.equal(value, 1);
   });
 });

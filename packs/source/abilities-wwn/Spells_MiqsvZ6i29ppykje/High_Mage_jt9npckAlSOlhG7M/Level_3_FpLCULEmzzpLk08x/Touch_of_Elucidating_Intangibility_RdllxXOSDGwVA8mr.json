@@ -50,13 +50,15 @@
     "level": 3,
     "prepared": true,
     "activation": {
-      "roll": "2d10",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "Touch",
       "duration": "1 round per level"
-    }
+    },
+    "damageRoll": "2d10",
+    "healing": false
   },
   "_key": "!items!RdllxXOSDGwVA8mr"
 }

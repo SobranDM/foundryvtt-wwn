@@ -37,13 +37,15 @@
     "level": 2,
     "prepared": true,
     "activation": {
-      "roll": "1d6+@level",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "evasion",
       "range": "30 ft.",
       "duration": "Up to 1 scene"
-    }
+    },
+    "damageRoll": "1d6+@level",
+    "healing": false
   },
   "ownership": {
     "default": 0

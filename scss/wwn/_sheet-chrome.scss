@@ -24,6 +24,13 @@
     color: var(--wwn-text, var(--wwn-dark-alt));
   }
 
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--wwn-text-muted, #7a7971);
+    font-style: italic;
+    opacity: 1;
+  }
+
   select option {
     background: var(--wwn-select-option-bg, #fff);
     color: var(--wwn-select-option-text, #000);

@@ -221,6 +221,15 @@ export default class WwnPc extends WwnActorBase {
       data[slug] = skill.system.ownedLevel ?? -1;
     }
 
+    // Max primary non-combat skill (@maxNonCombatSkill) for pools like Vowed Effort
+    const combatSlugs = new Set(CONFIG.WWN?.combatSkills ?? ["stab", "shoot", "punch"]);
+    const cache = CONFIG.WWN?.skillSetCache ?? {};
+    const primarySlugs = cache.primarySlugs?.length ? cache.primarySlugs : (cache.allSlugs ?? []);
+    const nonCombatSlugs = primarySlugs.filter((slug) => !combatSlugs.has(slug));
+    data.maxNonCombatSkill = nonCombatSlugs.length
+      ? Math.max(...nonCombatSlugs.map((slug) => data[slug] ?? -1))
+      : -1;
+
     // Highest SWN psychic skill for Psychic Effort (untrained treated as 0, not -1)
     const PSYCHIC_SLUGS = [
       "biopsionics",

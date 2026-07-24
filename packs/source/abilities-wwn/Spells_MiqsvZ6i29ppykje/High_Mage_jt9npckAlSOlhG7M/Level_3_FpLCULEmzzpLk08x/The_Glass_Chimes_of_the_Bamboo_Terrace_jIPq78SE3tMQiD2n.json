@@ -50,13 +50,15 @@
     "level": 3,
     "prepared": true,
     "activation": {
-      "roll": "3d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "40 ft./ 10 miles per level",
       "duration": "Up to 1 scene"
-    }
+    },
+    "damageRoll": "3d6",
+    "healing": false
   },
   "_key": "!items!jIPq78SE3tMQiD2n"
 }

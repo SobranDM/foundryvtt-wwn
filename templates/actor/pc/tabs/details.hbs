@@ -43,21 +43,23 @@
             </a>
           </div>
         </div>
-        <ol class="item-list wwn-data-table">
-          {{#each system.languages as |lang|}}
-          <li class="item-entry" data-lang="{{lang}}">
-            <div class="item flexrow">
-              <div class="item-name">{{lang}}</div>
-              <div class="item-controls">
-                <a class="item-control" data-action="removeLanguage" data-language="{{lang}}"
-                  title="{{localize 'WWN.Delete'}}">
-                  <i class="fa fa-trash"></i>
-                </a>
+        <div class="wwn-data-table">
+          <ol class="item-list">
+            {{#each system.languages as |lang|}}
+            <li class="item-entry" data-lang="{{lang}}">
+              <div class="item flexrow">
+                <div class="item-name">{{lang}}</div>
+                <div class="item-controls">
+                  <a class="item-control" data-action="removeLanguage" data-language="{{lang}}"
+                    title="{{localize 'WWN.Delete'}}">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
       </div>
 
       <div class="wwn-form-panel">

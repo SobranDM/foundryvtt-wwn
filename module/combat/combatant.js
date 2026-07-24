@@ -8,7 +8,17 @@ export class WWNCombatant extends Combatant {
   get isDefeated() {
     if (this.defeated) return true
 
-    return !this.defeated && (this.actor.system.hp?.value === 0 || this.actor.system.health?.value === 0)
+    const actor = this.actor
+    if (!actor) return false
+
+    // Mortally damaged ships remain in the fight on a fuse; only burnt-out hulks / fighters at 0 HP are out.
+    if (actor.type === "starship") {
+      if (actor.getFlag("wwn", "burntOutHulk")) return true
+      if (actor.getFlag("wwn", "mortallyDamaged")) return false
+      return (actor.system.hp?.value === 0)
+    }
+
+    return (actor.system.hp?.value === 0 || actor.system.health?.value === 0)
   }
 
   // ===========================================================================
@@ -17,6 +27,22 @@ export class WWNCombatant extends Combatant {
 
   getInitiativeRoll(formula) {
     let term = formula || CONFIG.Combat.initiative.formula
+    if (this.combat?.isStarshipEncounter && this.actor?.type === "starship") {
+      const bridgeUuid = this.actor.system?.stations?.bridge?.actor;
+      let mod = 0;
+      if (bridgeUuid) {
+        try {
+          const bridge = fromUuidSync(bridgeUuid);
+          const abs = bridge?.system?.abilities;
+          if (abs) {
+            const int = Number(abs.int?.mod) || 0;
+            const dex = Number(abs.dex?.mod) || 0;
+            mod = Math.max(int, dex);
+          }
+        } catch { /* ignore */ }
+      }
+      term = mod >= 0 ? `1d8 + ${mod}` : `1d8 - ${Math.abs(mod)}`;
+    }
     if (this.isDefeated) term = `${WWNCombatant.INITIATIVE_VALUE_DEFEATED}`
     const rollData = this.actor?.getRollData() || {}
     return new Roll(term, rollData)

@@ -50,13 +50,15 @@
     "level": 3,
     "prepared": true,
     "activation": {
-      "roll": "1d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "",
       "duration": "Scene"
-    }
+    },
+    "damageRoll": "1d6",
+    "healing": false
   },
   "_key": "!items!HhPDYmUAOku35Gcf"
 }

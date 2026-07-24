@@ -50,13 +50,15 @@
     "level": 1,
     "prepared": true,
     "activation": {
-      "roll": "1d8",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "mental",
       "range": "100'/level",
       "duration": "Until dispelled"
-    }
+    },
+    "damageRoll": "1d8",
+    "healing": false
   },
   "_key": "!items!bl9m0Gz2XrL2ksmr"
 }

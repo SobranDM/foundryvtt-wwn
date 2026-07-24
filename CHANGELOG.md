@@ -40,8 +40,8 @@
   - Fittings, weapons, and defenses install on the ship; cost, power, and mass scale with hull class as in the rulebook.
   - Crew stations (bridge, gunnery, engineering, comms, captain) can link a world actor or use an NPC roll formula; roll checks and ship weapons from the sheet.
   - Compendiums: **Starship Fittings** and **Example Starships**.
+  - **Starship combat** (SWN): type-segregated encounters (ships / factions / personal cannot mix in the same combat); Command Points; department actions on the ship sheet; tracker CP/Escape/Crisis HUD; Armor/AP, Target Systems, Escape/Pursue, and Crises. Detection/pursuit deferred. WIP.
   - WIP. Largely untested.
-  - TODO: Starship combat.
 - **Dialogs and chat cards** share the selected UI theme. Party sheet and character creator use the same theming. Old chat/dialog templates are removed.
 - **Modular power armor** for Ashes Without Number.
   - Power armor actors with frame presets, mass/power budgets, Soak, power cells/runtime, and maintenance.

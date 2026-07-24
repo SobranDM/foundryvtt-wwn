@@ -15,6 +15,7 @@ import { WWNCombat } from "./combat/combat.js";
 import { registerRandomHpHook } from "./combat/random-hp.mjs";
 import WWNCombatTracker from "./combat/combat-tracker.js";
 import { WWNCombatant } from "./combat/combatant.js";
+import { canAddActorTypeToCombat } from "./combat/encounter-kind.mjs";
 import { ChatListener } from "./chat/chat-listener.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { checkMigration, migrateWorld } from "./migration/migrate.mjs";
@@ -381,16 +382,47 @@ Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);
 Hooks.on("renderRollTableSheet", treasure.augmentTable);
 Hooks.on("updateActor", party.update);
 
-Hooks.on("renderCombatTracker", (app, html) =>
-  app.renderGroups?.(html instanceof HTMLElement ? html : html[0])
-);
+Hooks.on("renderCombatTracker", (app, html) => {
+  app.renderGroups?.(html instanceof HTMLElement ? html : html[0]);
+  app.renderStarshipHud?.(html instanceof HTMLElement ? html : html[0]);
+});
+Hooks.on("preCreateCombatant", (combatant, data) => {
+  const parentCombat = combatant.parent
+    ?? game.combats.get(data.combatId)
+    ?? game.combats.get(combatant._source?.combat);
+  if (!parentCombat) return true;
+
+  let actorType = combatant.actor?.type ?? null;
+  if (!actorType && data.actorId) actorType = game.actors.get(data.actorId)?.type ?? null;
+  if (!actorType && data.tokenId) {
+    const scene = game.scenes.get(data.sceneId) ?? canvas?.scene;
+    const token = scene?.tokens?.get(data.tokenId);
+    actorType = token?.actor?.type
+      ?? (token?.actorId ? game.actors.get(token.actorId)?.type : null);
+  }
+  if (!actorType) return true;
+
+  const check = canAddActorTypeToCombat(parentCombat, actorType);
+  if (check.ok) return true;
+
+  const reasonKey = {
+    starshipIntoNonStarship: "WWN.Starship.Segregation.starshipIntoNonStarship",
+    factionIntoNonFaction: "WWN.Starship.Segregation.factionIntoNonFaction",
+    personalIntoSpecial: "WWN.Starship.Segregation.personalIntoSpecial",
+    unknown: "WWN.Starship.Segregation.unknown",
+  }[check.reason] ?? "WWN.Starship.Segregation.blocked";
+  ui.notifications.warn(game.i18n.localize(reasonKey));
+  return false;
+});
 Hooks.on("createCombatant", (combatant) => {
   if (game.settings.get(game.system.id, "initiative") !== "group") return;
+  if (combatant.combat?.isStarshipEncounter) return;
   combatant.assignGroup?.();
 });
 Hooks.on("updateCombatant", (combatant, updates) => {
   if (!foundry.utils.hasProperty(updates, "initiative")) return;
   if (game.settings.get(game.system.id, "initiative") !== "group") return;
+  if (combatant.combat?.isStarshipEncounter) return;
   combatant.updateGroup?.();
 });
 Hooks.on("updateCombatantGroup", async (_c, updates) => {

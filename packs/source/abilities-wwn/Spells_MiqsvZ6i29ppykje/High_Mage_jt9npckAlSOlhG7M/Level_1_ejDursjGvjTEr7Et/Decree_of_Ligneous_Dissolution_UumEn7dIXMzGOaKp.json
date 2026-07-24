@@ -37,13 +37,15 @@
     "level": 1,
     "prepared": true,
     "activation": {
-      "roll": "(@level)d10",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "physical",
       "range": "100 ft. per level",
       "duration": ""
-    }
+    },
+    "damageRoll": "(@level)d10",
+    "healing": false
   },
   "ownership": {
     "default": 0

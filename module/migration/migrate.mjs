@@ -62,8 +62,7 @@ export async function checkMigration() {
     }
   }
 
-  // One-shot: refresh stale PC foci/classEdges from system packs (also covers
-  // worlds that already finished data-model migration before this step shipped).
+  // Refresh stale PC foci/classEdges/powers from system packs when sync generation is behind.
   await maybeSyncPcCompendiumItems();
 
   // One-shot: archive retired Class Ability foci, strip Full Warrior AE, flag class assignment.

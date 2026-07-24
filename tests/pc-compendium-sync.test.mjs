@@ -9,6 +9,7 @@ import {
   itemSyncKey,
   effectsFingerprint,
   classEdgeGrantsFingerprint,
+  powerShapeFingerprint,
   itemShapeFingerprint,
   extractPreservedFields,
   buildReplacementData,
@@ -21,8 +22,15 @@ describe("itemSyncKey", () => {
     assert.equal(itemSyncKey({ type: "classEdge", name: "Warrior" }), "classEdge::warrior");
   });
 
-  it("returns null for other types", () => {
-    assert.equal(itemSyncKey({ type: "power", name: "Bolt" }), null);
+  it("keys powers by subtype and name", () => {
+    assert.equal(
+      itemSyncKey({ type: "power", name: "Shattering Strike", system: { subType: "art" } }),
+      "power::art::shattering strike"
+    );
+  });
+
+  it("returns null for unsupported types", () => {
+    assert.equal(itemSyncKey({ type: "skill", name: "Exert" }), null);
   });
 });
 
@@ -102,6 +110,38 @@ describe("classEdgeGrantsFingerprint", () => {
   });
 });
 
+describe("powerShapeFingerprint", () => {
+  it("ignores poolCommitted and prepared", () => {
+    const a = powerShapeFingerprint({
+      damageRoll: "(@level)d12",
+      healing: false,
+      activation: { roll: "" },
+      poolCommitted: { scene: 2 },
+      prepared: true,
+    });
+    const b = powerShapeFingerprint({
+      damageRoll: "(@level)d12",
+      healing: false,
+      activation: { roll: "" },
+      poolCommitted: { scene: 0 },
+      prepared: false,
+    });
+    assert.equal(a, b);
+  });
+
+  it("changes when damageRoll moves from activation", () => {
+    const owned = powerShapeFingerprint({
+      damageRoll: "",
+      activation: { roll: "1d12" },
+    });
+    const pack = powerShapeFingerprint({
+      damageRoll: "(@level)d12",
+      activation: { roll: "" },
+    });
+    assert.notEqual(owned, pack);
+  });
+});
+
 describe("itemShapeFingerprint / needsCompendiumSwap", () => {
   it("detects stale Alert without AEs", () => {
     const owned = { type: "focus", name: "Alert", effects: [], system: { ownedLevel: 2 } };
@@ -120,6 +160,22 @@ describe("itemShapeFingerprint / needsCompendiumSwap", () => {
       system: { ownedLevel: 1 },
     };
     assert.notEqual(itemShapeFingerprint(owned), itemShapeFingerprint(pack));
+    assert.equal(needsCompendiumSwap(owned, pack), true);
+  });
+
+  it("detects stale power roll placement", () => {
+    const owned = {
+      type: "power",
+      name: "Shattering Strike",
+      effects: [],
+      system: { subType: "art", damageRoll: "", activation: { roll: "1d12" } },
+    };
+    const pack = {
+      type: "power",
+      name: "Shattering Strike",
+      effects: [],
+      system: { subType: "art", damageRoll: "(@level)d12", activation: { roll: "" } },
+    };
     assert.equal(needsCompendiumSwap(owned, pack), true);
   });
 
@@ -199,5 +255,42 @@ describe("extractPreservedFields / buildReplacementData", () => {
     const created = buildReplacementData(pack, preserved);
     assert.equal(created.system.poolGrant.value, 4);
     assert.equal(created.system.poolGrant.formula, "1+@level");
+  });
+
+  it("preserves power spend and technique level", () => {
+    const owned = {
+      type: "power",
+      name: "Psychic Succor",
+      system: {
+        subType: "psychic",
+        poolCommitted: { none: 0, active: 0, scene: 0, day: 1 },
+        prepared: false,
+        isActive: true,
+        internalResource: { value: 2, max: 3 },
+        level: 2,
+      },
+    };
+    const preserved = extractPreservedFields(owned);
+    const pack = {
+      type: "power",
+      name: "Psychic Succor",
+      system: {
+        subType: "psychic",
+        damageRoll: "1d6+1",
+        healing: true,
+        poolCommitted: { none: 0, active: 0, scene: 0, day: 0 },
+        prepared: true,
+        isActive: false,
+        internalResource: { value: 0, max: 0 },
+        level: 0,
+      },
+      effects: [],
+    };
+    const created = buildReplacementData(pack, preserved);
+    assert.equal(created.system.poolCommitted.day, 1);
+    assert.equal(created.system.isActive, true);
+    assert.equal(created.system.level, 2);
+    assert.equal(created.system.damageRoll, "1d6+1");
+    assert.equal(created.system.healing, true);
   });
 });

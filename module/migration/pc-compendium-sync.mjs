@@ -1,19 +1,26 @@
 import { isPc } from "../helpers/actor-types.mjs";
 /**
- * PC focus/classEdge sync against system compendium definitions.
+ * PC focus/classEdge/power sync against system compendium definitions.
  * Pure fingerprint helpers are safe to import from Node unit tests.
  */
 
-const SYNC_TYPES = new Set(["focus", "classEdge"]);
+const SYNC_TYPES = new Set(["focus", "classEdge", "power"]);
+
+/** Bump when sync scope or fingerprints change so alpha worlds re-run. */
+export const PC_COMPENDIUM_SYNC_GENERATION = 2;
 
 /**
- * @param {{ type?: string, name?: string }} item
+ * @param {{ type?: string, name?: string, system?: { subType?: string } }} item
  * @returns {string|null}
  */
 export function itemSyncKey(item) {
   if (!item || !SYNC_TYPES.has(item.type)) return null;
   const name = String(item.name ?? "").trim().toLowerCase();
   if (!name) return null;
+  if (item.type === "power") {
+    const subType = String(item.system?.subType ?? "").trim().toLowerCase() || "power";
+    return `power::${subType}::${name}`;
+  }
   return `${item.type}::${name}`;
 }
 
@@ -75,6 +82,34 @@ export function classEdgeGrantsFingerprint(system) {
 }
 
 /**
+ * Sync-relevant power shape (excludes live spend / prepared state).
+ * @param {object} system
+ * @returns {string}
+ */
+export function powerShapeFingerprint(system) {
+  const s = system ?? {};
+  const activation = s.activation ?? {};
+  const payload = {
+    subType: s.subType ?? "",
+    damageRoll: s.damageRoll ?? "",
+    healing: !!s.healing,
+    activation: {
+      roll: activation.roll ?? "",
+      rollType: activation.rollType ?? "",
+      rollTarget: activation.rollTarget ?? 0,
+      save: activation.save ?? "",
+      range: activation.range ?? "",
+      duration: activation.duration ?? "",
+    },
+    commitmentOptions: s.commitmentOptions ?? [],
+    resourceName: s.resourceName ?? "",
+    source: s.source ?? "",
+    description: s.description ?? "",
+  };
+  return JSON.stringify(payload);
+}
+
+/**
  * @param {object} item
  * @returns {string}
  */
@@ -82,6 +117,9 @@ export function itemShapeFingerprint(item) {
   const effects = effectsFingerprint(item);
   if (item?.type === "classEdge") {
     return `${effects}::${classEdgeGrantsFingerprint(item.system)}`;
+  }
+  if (item?.type === "power") {
+    return `${effects}::${powerShapeFingerprint(item.system)}`;
   }
   return effects;
 }
@@ -106,6 +144,23 @@ export function extractPreservedFields(item) {
       out.bonusDice = Number(s.bonusDice);
     }
     return out;
+  }
+  if (item.type === "power") {
+    return {
+      poolCommitted: {
+        none: Number(s.poolCommitted?.none) || 0,
+        active: Number(s.poolCommitted?.active) || 0,
+        scene: Number(s.poolCommitted?.scene) || 0,
+        day: Number(s.poolCommitted?.day) || 0,
+      },
+      prepared: !!s.prepared,
+      isActive: !!s.isActive,
+      internalResource: {
+        value: Number(s.internalResource?.value) || 0,
+        max: Number(s.internalResource?.max) || 0,
+      },
+      level: Number(s.level) || 0,
+    };
   }
   return {
     poolGrant: {
@@ -166,6 +221,24 @@ export function buildReplacementData(packItemObject, preserved) {
           chosen: preserved.attributeGrant.chosen,
         };
       }
+    } else if (data.type === "power" && preserved) {
+      if (preserved.poolCommitted) {
+        data.system.poolCommitted = {
+          ...(data.system.poolCommitted ?? {}),
+          ...preserved.poolCommitted,
+        };
+      }
+      if (preserved.internalResource) {
+        data.system.internalResource = {
+          ...(data.system.internalResource ?? {}),
+          ...preserved.internalResource,
+        };
+      }
+      data.system.prepared = preserved.prepared ?? data.system.prepared;
+      data.system.isActive = preserved.isActive ?? data.system.isActive;
+      if (preserved.level != null && Number(preserved.level) > 0) {
+        data.system.level = preserved.level;
+      }
     }
   }
   return data;
@@ -185,6 +258,26 @@ export function needsCompendiumSwap(owned, pack) {
 
 const NS = "wwn";
 const SETTING_DONE = "pcCompendiumItemSyncDone";
+const SETTING_GEN = "pcCompendiumItemSyncGen";
+
+/**
+ * Effective completed sync generation for this world.
+ * Gen-1 boolean-only worlds count as generation 1.
+ * @returns {number}
+ */
+export function getCompletedSyncGeneration() {
+  const gen = Number(game.settings.get(NS, SETTING_GEN) || 0);
+  if (gen > 0) return gen;
+  if (game.settings.get(NS, SETTING_DONE)) return 1;
+  return 0;
+}
+
+/**
+ * @returns {boolean}
+ */
+export function isPcCompendiumSyncComplete() {
+  return getCompletedSyncGeneration() >= PC_COMPENDIUM_SYNC_GENERATION;
+}
 
 /**
  * Build lookup map type::name → plain item data from system Item packs.
@@ -305,11 +398,11 @@ async function swapOwnedItem(actor, ownedItem, packObject) {
 }
 
 /**
- * One-shot sync of PC focus/classEdge items against system packs.
+ * Sync PC focus/classEdge/power items against system packs when behind generation.
  * @returns {Promise<{ swapped: number, actors: number }>}
  */
 export async function syncPcCompendiumItems() {
-  if (game.settings.get(NS, SETTING_DONE)) {
+  if (isPcCompendiumSyncComplete()) {
     return { swapped: 0, actors: 0 };
   }
 
@@ -339,6 +432,7 @@ export async function syncPcCompendiumItems() {
     }
   }
 
+  await game.settings.set(NS, SETTING_GEN, PC_COMPENDIUM_SYNC_GENERATION);
   await game.settings.set(NS, SETTING_DONE, true);
 
   if (swapped > 0) {
@@ -350,18 +444,18 @@ export async function syncPcCompendiumItems() {
       { permanent: true }
     );
   } else {
-    console.info("WWN | PC compendium item sync: no stale focus/classEdge items found.");
+    console.info("WWN | PC compendium item sync: no stale focus/classEdge/power items found.");
   }
 
   return { swapped, actors: touched.size };
 }
 
 /**
- * Run sync once if the one-shot flag is unset (GM only).
+ * Run sync when the world is behind the current sync generation (GM only).
  */
 export async function maybeSyncPcCompendiumItems() {
   if (!game.user?.isGM) return;
-  if (game.settings.get(NS, SETTING_DONE)) return;
+  if (isPcCompendiumSyncComplete()) return;
   try {
     await syncPcCompendiumItems();
   } catch (err) {

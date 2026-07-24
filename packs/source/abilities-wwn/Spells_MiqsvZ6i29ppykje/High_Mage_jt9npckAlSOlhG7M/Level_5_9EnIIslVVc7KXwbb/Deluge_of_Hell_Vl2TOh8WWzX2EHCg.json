@@ -37,13 +37,15 @@
     "level": 5,
     "prepared": true,
     "activation": {
-      "roll": "(@level)d8",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "physical",
       "range": "200' radius per level within 3000'",
       "duration": ""
-    }
+    },
+    "damageRoll": "(@level)d8",
+    "healing": false
   },
   "ownership": {
     "default": 0

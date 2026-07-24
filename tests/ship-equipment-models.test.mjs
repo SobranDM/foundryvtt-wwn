@@ -50,6 +50,7 @@ test("ship fittings and defenses share the equipment schema", () => {
     assert.equal(schema.powerScales.options.initial, false);
     assert.equal(schema.massScales.options.initial, false);
     assert.equal(schema.disabled.options.initial, false);
+    assert.equal(schema.destroyed.options.initial, false);
     assert.equal(schema.specialCost.options.initial, false);
   }
 });

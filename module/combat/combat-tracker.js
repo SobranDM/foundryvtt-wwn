@@ -259,6 +259,62 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
   }
 
   /**
+   * Starship combat HUD: CP, Escape, crises on each combatant row.
+   * @param {HTMLElement} html
+   */
+  async renderStarshipHud(html) {
+    const combat = this.viewed;
+    if (!combat?.isStarshipEncounter) return;
+
+    const { getStarshipCombatState } = await import("./starship/combatant-state.mjs");
+    const { gainCp } = await import("./starship/cp.mjs");
+    const { updateStarshipCombatState } = await import("./starship/combatant-state.mjs");
+
+    for (const el of html.querySelectorAll(".combatant")) {
+      const id = el.dataset.combatantId;
+      const combatant = combat.combatants.get(id);
+      if (!combatant || combatant.actor?.type !== "starship") continue;
+      if (el.querySelector(".wwn-starship-combat-hud")) continue;
+
+      const state = getStarshipCombatState(combatant);
+      const escapeEntries = Object.entries(state.escape ?? {});
+      const escapeText = escapeEntries.length
+        ? escapeEntries.map(([oid, n]) => `${combat.combatants.get(oid)?.name ?? oid}:${n}`).join(", ")
+        : "—";
+      const crisisCount = (state.crises ?? []).filter((c) => !c.resolved).length;
+
+      const hud = document.createElement("div");
+      hud.className = "wwn-starship-combat-hud";
+      hud.innerHTML = `
+        <span class="cp" title="${game.i18n.localize("WWN.Starship.CP")}">CP ${state.cp}</span>
+        <span class="escape" title="${game.i18n.localize("WWN.Starship.Escape")}">${game.i18n.localize("WWN.Starship.Escape")}: ${escapeText}</span>
+        <span class="crises" title="${game.i18n.localize("WWN.Starship.ActiveCrises")}">${game.i18n.localize("WWN.Starship.CrisesShort")}: ${crisisCount}</span>
+      `;
+      if (game.user.isGM) {
+        const plus = document.createElement("a");
+        plus.href = "#";
+        plus.textContent = "+CP";
+        plus.addEventListener("click", async (ev) => {
+          ev.preventDefault();
+          await updateStarshipCombatState(combatant, (s) => gainCp(s, 1));
+          this.render(true);
+        });
+        const minus = document.createElement("a");
+        minus.href = "#";
+        minus.textContent = "−CP";
+        minus.addEventListener("click", async (ev) => {
+          ev.preventDefault();
+          await updateStarshipCombatState(combatant, (s) => gainCp(s, -1));
+          this.render(true);
+        });
+        hud.append(plus, minus);
+      }
+      const name = el.querySelector(".token-name") ?? el;
+      name.append(hud);
+    }
+  }
+
+  /**
    * Handle rendering of the combat tracker (flat / non-collapsed mode).
    * @param {HTMLElement} html - The HTML element
    */
@@ -266,6 +322,7 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
     if (!this.viewed || game.settings.get(game.system.id, "initiative") !== "group") {
       return;
     }
+    if (this.viewed.isStarshipEncounter) return;
     if (this.viewed.isSideCollapseEnabled) return;
 
     const tokenNames = html.querySelectorAll(".combatant > div.token-name");

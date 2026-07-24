@@ -33,6 +33,29 @@ globalThis.foundry.utils.getProperty ??= (object, key) => {
 };
 globalThis.foundry.utils.mergeObject ??= (original = {}, other = {}) => ({ ...original, ...other });
 
+/** Minimal Roll helpers for formula unit tests under Node. */
+globalThis.foundry.dice ??= {};
+globalThis.foundry.dice.Roll ??= {
+  replaceFormulaData(formula, data, { missing = "0" } = {}) {
+    return String(formula ?? "").replace(/@([a-zA-Z0-9._]+)/g, (_m, key) => {
+      const value = foundry.utils.getProperty(data, key);
+      return value == null || value === "" ? missing : String(value);
+    });
+  },
+  safeEval(expression) {
+    const fn = new Function(
+      "max",
+      "min",
+      "floor",
+      "ceil",
+      "abs",
+      "round",
+      `"use strict"; return (${expression});`
+    );
+    return fn(Math.max, Math.min, Math.floor, Math.ceil, Math.abs, Math.round);
+  },
+};
+
 Math.clamp ??= (value, min, max) => Math.min(Math.max(value, min), max);
 
 if (!Array.prototype.filterJoin) {

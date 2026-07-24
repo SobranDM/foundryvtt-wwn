@@ -1,0 +1,51 @@
+{{!-- Combat actions panel for starship sheet (hybrid UX). --}}
+{{#if starshipCombat}}
+<div class="wwn-panel wwn-starship-combat-panel">
+  <div class="wwn-section-header flexrow">
+    <span>{{localize "WWN.Starship.CombatActions"}}</span>
+    <span class="wwn-starship-cp">{{localize "WWN.Starship.CP"}}: <strong>{{starshipCombat.cp}}</strong></span>
+  </div>
+
+  {{#unless starshipCombat.isTurn}}
+  <p class="hint">{{localize "WWN.Starship.WaitingTurn"}}</p>
+  {{/unless}}
+
+  {{#if starshipCombat.crises.length}}
+  <div class="wwn-starship-crises">
+    <strong>{{localize "WWN.Starship.ActiveCrises"}}</strong>
+    <ul>
+      {{#each starshipCombat.crises as |c|}}
+      <li>{{localize c.labelKey}}{{#if c.resolved}} ({{localize "WWN.Starship.Resolved"}}){{/if}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+
+  {{#each starshipCombat.actionGroups as |group|}}
+  <div class="wwn-starship-action-group" data-department="{{group.key}}">
+    <div class="wwn-section-header">{{localize group.label}}</div>
+    <div class="flexrow wwn-starship-action-buttons">
+      {{#each group.actions as |action|}}
+      <button type="button" class="wwn-btn" data-action="starshipCombatAction" data-action-id="{{action.id}}"
+        {{#unless ../../starshipCombat.canAct}}disabled{{/unless}}
+        title="{{localize action.labelKey}} ({{action.cpCost}} CP)">
+        {{localize action.labelKey}}
+        {{#if action.cpCost}}<span class="cp-cost">{{action.cpCost}}</span>{{/if}}
+      </button>
+      {{/each}}
+    </div>
+  </div>
+  {{/each}}
+
+  <div class="flexrow" style="gap: 0.5rem; margin-top: 0.5rem;">
+    <button type="button" class="wwn-btn" data-action="autoDoYourDuty"
+      {{#unless starshipCombat.canAct}}disabled{{/unless}}>
+      {{localize "WWN.Starship.AutoDoYourDutyButton"}}
+    </button>
+    {{#if starshipCombat.isGM}}
+    <button type="button" class="wwn-btn" data-action="adjustCp" data-delta="1">+CP</button>
+    <button type="button" class="wwn-btn" data-action="adjustCp" data-delta="-1">−CP</button>
+    {{/if}}
+  </div>
+</div>
+{{/if}}

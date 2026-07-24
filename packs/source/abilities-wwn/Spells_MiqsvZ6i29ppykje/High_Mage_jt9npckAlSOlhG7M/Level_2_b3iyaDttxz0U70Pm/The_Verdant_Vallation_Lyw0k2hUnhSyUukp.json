@@ -50,13 +50,15 @@
     "level": 2,
     "prepared": true,
     "activation": {
-      "roll": "2d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "100 ft. per level",
       "duration": "Scene or longer"
-    }
+    },
+    "damageRoll": "2d6",
+    "healing": false
   },
   "_key": "!items!Lyw0k2hUnhSyUukp"
 }

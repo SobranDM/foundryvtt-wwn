@@ -21,6 +21,7 @@ export async function preloadHandlebarsTemplates() {
     wwnPowersTabBody: "systems/wwn/templates/partials/powers-tab-body.hbs",
     wwnStarshipCrewStations: "systems/wwn/templates/partials/starship-crew-stations.hbs",
     wwnStarshipEquipmentPanel: "systems/wwn/templates/partials/starship-equipment-panel.hbs",
+    wwnStarshipCombatActions: "systems/wwn/templates/actor/starship/partials/combat-actions.hbs",
     wwnFavoritesDock: "systems/wwn/templates/partials/favorites-dock.hbs",
   });
 }

@@ -22,6 +22,7 @@ export default class WwnShipEquipment extends WwnItemBase {
     schema.powerScales = new fields.BooleanField({ initial: false });
     schema.massScales = new fields.BooleanField({ initial: false });
     schema.disabled = new fields.BooleanField({ initial: false });
+    schema.destroyed = new fields.BooleanField({ initial: false });
     schema.specialCost = new fields.BooleanField({ initial: false });
 
     return schema;

@@ -50,13 +50,15 @@
     "level": 4,
     "prepared": true,
     "activation": {
-      "roll": "1d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "physical",
       "range": "100 ft. x 30 ft.",
       "duration": "1 hour per caster level"
-    }
+    },
+    "damageRoll": "1d6",
+    "healing": false
   },
   "_key": "!items!SXTcasiEc5J8Rc7b"
 }

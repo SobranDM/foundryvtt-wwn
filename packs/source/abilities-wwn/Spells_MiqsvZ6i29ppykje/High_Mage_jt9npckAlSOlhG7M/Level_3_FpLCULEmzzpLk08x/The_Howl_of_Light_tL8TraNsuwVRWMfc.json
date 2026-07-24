@@ -37,13 +37,15 @@
     "level": 3,
     "prepared": true,
     "activation": {
-      "roll": "(@level)d8",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "evasion",
       "range": "25-ft. radius",
       "duration": ""
-    }
+    },
+    "damageRoll": "(@level)d8",
+    "healing": false
   },
   "ownership": {
     "default": 0

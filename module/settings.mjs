@@ -348,6 +348,12 @@ export function registerSettings() {
     default: false,
   });
 
+  registerWwnSetting("pcCompendiumItemSyncGen", {
+    scope: "world",
+    type: Number,
+    default: 0,
+  });
+
   registerWwnSetting("classAbilityCleanupDone", {
     scope: "world",
     type: Boolean,

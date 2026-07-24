@@ -32,6 +32,19 @@ import {
 } from "../../helpers/starship-focus-bonuses.mjs";
 import { remainingCombatBonusHp } from "../../helpers/starship-combat-hp.mjs";
 import { showWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { actionsByDepartment } from "../../combat/starship/actions.mjs";
+import {
+  executeStarshipAction,
+  findStarshipCombatForActor,
+  autoDoYourDutyUnused,
+} from "../../combat/starship/execute-action.mjs";
+import { combatantForStarship, promptDisableTarget } from "../../combat/starship/attack.mjs";
+import {
+  getStarshipCombatState,
+  updateStarshipCombatState,
+  shipIsPcCrew,
+} from "../../combat/starship/combatant-state.mjs";
+import { gainCp } from "../../combat/starship/cp.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -59,6 +72,9 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
       createItem: WwnStarshipSheet.#onCreateItem,
       toggleDisabled: WwnStarshipSheet.#onToggleDisabled,
       effectAction: WwnStarshipSheet.#onEffectAction,
+      starshipCombatAction: WwnStarshipSheet.#onStarshipCombatAction,
+      autoDoYourDuty: WwnStarshipSheet.#onAutoDoYourDuty,
+      adjustCp: WwnStarshipSheet.#onAdjustCp,
     },
   };
 
@@ -127,8 +143,45 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
     context.effectiveCommandPoints = (Number(system.npcCp) || 0) + captainBonuses.commandPointsBonus;
     context.effectiveDrive = await effectiveStarshipDrive(actor);
     context.combatBonusHp = remainingCombatBonusHp(actor);
+    context.starshipCombat = this.#prepareStarshipCombatContext();
 
     return context;
+  }
+
+  /** Combat panel context when this ship is in a starship encounter. */
+  #prepareStarshipCombatContext() {
+    const combat = findStarshipCombatForActor(this.actor);
+    if (!combat) return null;
+    const combatant = combatantForStarship(combat, this.actor);
+    if (!combatant) return null;
+    const state = getStarshipCombatState(combatant);
+    const isTurn = combat.combatant?.id === combatant.id;
+    const canAct = isTurn || game.user.isGM;
+    const groups = actionsByDepartment();
+    const actionGroups = Object.entries(groups).map(([key, actions]) => ({
+      key,
+      label: `WWN.Starship.Station.${key === "general" ? "general" : key}`,
+      actions: actions.filter((a) => {
+        if (!shipIsPcCrew(this.actor) && a.department === "captain" && a.id !== "keepItTogether") {
+          return a.id === "keepItTogether";
+        }
+        return true;
+      }),
+    }));
+    // Fix general label
+    for (const g of actionGroups) {
+      if (g.key === "general") g.label = "WWN.Starship.GeneralActions";
+    }
+    return {
+      cp: state.cp,
+      crises: state.crises.filter((c) => !c.resolved),
+      isTurn,
+      canAct,
+      isGM: game.user.isGM,
+      actionGroups,
+      escape: state.escape,
+      pcCrew: shipIsPcCrew(this.actor),
+    };
   }
 
   /** Build station context rows for the sheet (and reassign dialog). */
@@ -385,5 +438,143 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
 
   static #onEffectAction(event, target) {
     return onManageActiveEffect(event, this.actor, target);
+  }
+
+  static async #onStarshipCombatAction(_event, target) {
+    const actionId = target.dataset.actionId;
+    if (!actionId) return;
+    const opts = { gmOverride: game.user.isGM };
+
+    if (actionId === "fireOneWeapon" || actionId === "targetSystems" || actionId === "fireAllGuns") {
+      const weapons = this.actor.items.filter(
+        (i) => i.type === "shipWeapon" && !i.system.disabled && !i.system.destroyed,
+      );
+      if (!weapons.length) {
+        return ui.notifications.warn(game.i18n.localize("WWN.Starship.NoWeapon"));
+      }
+      if (actionId !== "fireAllGuns") {
+        opts.weaponId = weapons[0].id;
+        if (weapons.length > 1) {
+          const choice = await showWwnDialog({
+            modifier: "pick-weapon",
+            title: game.i18n.localize("WWN.Starship.PickWeapon"),
+            content: `<p>${game.i18n.localize("WWN.Starship.PickWeaponHint")}</p>`,
+            buttons: [
+              ...weapons.map((w) => ({
+                action: w.id,
+                label: w.name,
+                callback: () => w.id,
+              })),
+              { ...cancelButton(), default: true },
+            ],
+          });
+          if (!choice || choice === "cancel") return;
+          opts.weaponId = choice;
+        }
+      }
+      if (actionId === "targetSystems") opts.targetSystems = true;
+
+      const combat = findStarshipCombatForActor(this.actor);
+      const foes = combat?.combatants.filter((c) => c.actor?.id !== this.actor.id && !c.isDefeated) ?? [];
+      if (foes.length === 1) opts.targetCombatantId = foes[0].id;
+      else if (foes.length > 1) {
+        const choice = await showWwnDialog({
+          modifier: "pick-target",
+          title: game.i18n.localize("WWN.Starship.PickTarget"),
+          content: `<p>${game.i18n.localize("WWN.Starship.SelectTarget")}</p>`,
+          buttons: [
+            ...foes.map((c) => ({
+              action: c.id,
+              label: c.name,
+              callback: () => c.id,
+            })),
+            { ...cancelButton(), default: true },
+          ],
+        });
+        if (!choice || choice === "cancel") return;
+        opts.targetCombatantId = choice;
+      }
+
+      if (actionId === "targetSystems" && opts.targetCombatantId) {
+        const defender = combat?.combatants.get(opts.targetCombatantId)?.actor;
+        if (defender) {
+          const picked = await promptDisableTarget(defender);
+          if (picked === null) return;
+          if (picked.disableDrive) opts.disableDrive = true;
+          else if (picked.disableItem) opts.disableItemId = picked.disableItem.id;
+        }
+      }
+    }
+
+    if (actionId === "pursueTarget" || actionId === "crashSystems" || actionId === "defeatEcm") {
+      const combat = findStarshipCombatForActor(this.actor);
+      const foes = combat?.combatants.filter((c) => c.actor?.id !== this.actor.id && !c.isDefeated) ?? [];
+      if (foes.length === 1) opts.targetCombatantId = foes[0].id;
+      else if (foes.length > 1) {
+        const choice = await showWwnDialog({
+          modifier: "pick-target",
+          title: game.i18n.localize("WWN.Starship.PickTarget"),
+          content: `<p>${game.i18n.localize("WWN.Starship.SelectTarget")}</p>`,
+          buttons: [
+            ...foes.map((c) => ({
+              action: c.id,
+              label: c.name,
+              callback: () => c.id,
+            })),
+            { ...cancelButton(), default: true },
+          ],
+        });
+        if (!choice || choice === "cancel") return;
+        opts.targetCombatantId = choice;
+      }
+    }
+
+    if (actionId === "emergencyRepairs") {
+      const disabled = this.actor.items.filter((i) => i.system?.disabled && !i.system?.destroyed);
+      const buttons = [
+        ...disabled.map((i) => ({
+          action: i.id,
+          label: i.name,
+          callback: () => i.id,
+        })),
+        {
+          action: "drive",
+          label: game.i18n.localize("WWN.Starship.RepairDrive"),
+          callback: () => "drive",
+        },
+        { ...cancelButton(), default: true },
+      ];
+      const choice = await showWwnDialog({
+        modifier: "emergency-repair",
+        title: game.i18n.localize("WWN.Starship.Action.emergencyRepairs"),
+        content: `<p>${game.i18n.localize("WWN.Starship.PickRepairTarget")}</p>`,
+        buttons,
+      });
+      if (!choice || choice === "cancel") return;
+      if (choice === "drive") opts.repairDrive = true;
+      else opts.itemId = choice;
+    }
+
+    const fireId = actionId === "targetSystems" ? "fireOneWeapon" : actionId;
+    if (actionId === "targetSystems") {
+      // Spend targetSystems (1) + fireOneWeapon (2) via fireOneWeapon with flag after paying targetSystems cost
+      await executeStarshipAction(this.actor, "targetSystems", opts);
+      return;
+    }
+    return executeStarshipAction(this.actor, fireId, opts);
+  }
+
+  static async #onAutoDoYourDuty() {
+    return autoDoYourDutyUnused(this.actor);
+  }
+
+  static async #onAdjustCp(_event, target) {
+    if (!game.user.isGM) return;
+    const delta = Number(target.dataset.delta) || 0;
+    const combat = findStarshipCombatForActor(this.actor);
+    const combatant = combat ? combatantForStarship(combat, this.actor) : null;
+    if (!combatant) return;
+    await updateStarshipCombatState(combatant, (s) => gainCp(s, delta));
+    this.render();
   }
 }

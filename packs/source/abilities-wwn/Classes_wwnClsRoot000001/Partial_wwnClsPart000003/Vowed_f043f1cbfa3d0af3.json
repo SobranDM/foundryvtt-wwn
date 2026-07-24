@@ -42,7 +42,7 @@
     "skillPointsPerLevel": 3,
     "poolGrant": {
       "name": "Vowed Effort",
-      "formula": "max(1, @exert + max(@str, @dex, @con, @int, @wis, @cha))",
+      "formula": "max(1, @maxNonCombatSkill + max(@str, @dex, @con, @int, @wis, @cha))",
       "value": 0,
       "progression": []
     },

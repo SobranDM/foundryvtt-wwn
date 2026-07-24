@@ -50,13 +50,15 @@
     "level": 5,
     "prepared": true,
     "activation": {
-      "roll": "10d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "",
       "range": "200 ft. per level",
       "duration": "1d6 rounds"
-    }
+    },
+    "damageRoll": "10d6",
+    "healing": false
   },
   "_key": "!items!4STQylBCJsd0H02c"
 }

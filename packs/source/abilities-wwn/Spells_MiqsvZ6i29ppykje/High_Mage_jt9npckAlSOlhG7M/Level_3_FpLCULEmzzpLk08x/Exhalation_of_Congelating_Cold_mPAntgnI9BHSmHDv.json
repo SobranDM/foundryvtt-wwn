@@ -37,13 +37,15 @@
     "level": 3,
     "prepared": true,
     "activation": {
-      "roll": "floor(@level/2)d6",
+      "roll": "",
       "rollType": "result",
       "rollTarget": 0,
       "save": "physical",
       "range": "radius of 10 ft. per level, within 100 ft. per level",
       "duration": ""
-    }
+    },
+    "damageRoll": "floor(@level/2)d6",
+    "healing": false
   },
   "ownership": {
     "default": 0

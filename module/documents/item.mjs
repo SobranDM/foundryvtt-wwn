@@ -265,6 +265,18 @@ export class WwnItem extends Item {
           length: game.i18n.localize(`WWN.Commitment.${chosenOption.length}`),
         })
       : null;
+    const resolvedPool = findNamedResourcePool(actor, system);
+    const resourceLabel =
+      resolvedPool?.name?.trim()
+      || String(system.resourceName ?? "").trim()
+      || null;
+    const commitmentMeta =
+      commitmentLabel && resourceLabel
+        ? game.i18n.format("WWN.Power.CommitmentWithResource", {
+            resource: resourceLabel,
+            commitment: commitmentLabel,
+          })
+        : commitmentLabel;
 
     /* ---- Card + rolls ---- */
     await createCardMessage({
@@ -279,8 +291,8 @@ export class WwnItem extends Item {
           { relativeTo: this, secrets: false }
         ),
         cost: chosenOption?.cost ?? null,
-        resourceName: system.resourceName,
-        commitment: commitmentLabel,
+        resourceName: resourceLabel ?? system.resourceName,
+        commitment: commitmentMeta,
         strainSpend: strainSpend > 0 ? strainSpend : null,
         hasTargetStrain,
         targetStrainLabel: hasTargetStrain ? targetStrainLabel : null,

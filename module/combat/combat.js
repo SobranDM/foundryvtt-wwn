@@ -10,6 +10,17 @@ import {
   applyStarshipCombatBonusHp,
   clearStarshipCombatBonusHp,
 } from "../helpers/starship-combat-hp.mjs";
+import { encounterKindFromCombatants } from "./encounter-kind.mjs";
+import {
+  onStarshipCombatStart,
+  onStarshipTurnStart,
+  onStarshipTurnEnd,
+  onStarshipCombatEnd,
+} from "./starship/lifecycle.mjs";
+import {
+  starshipInitiativeFormula,
+  compareStarshipInitiativeTie,
+} from "./starship/initiative.mjs";
 
 /**
  * An extension of Foundry's Combat class that implements initiative for individual combatants.
@@ -25,6 +36,18 @@ export class WWNCombat extends foundry.documents.Combat {
 
   #combatantGroups = new Map()
 
+  /**
+   * Encounter kind from combatants in THIS combat only.
+   * @returns {"empty"|"starship"|"faction"|"personal"}
+   */
+  get encounterKind() {
+    return encounterKindFromCombatants(this.combatants);
+  }
+
+  get isStarshipEncounter() {
+    return this.encounterKind === "starship";
+  }
+
   // ===========================================================================
   // INITIATIVE MANAGEMENT
   // ===========================================================================
@@ -34,6 +57,7 @@ export class WWNCombat extends foundry.documents.Combat {
   }
 
   get isGroupInitiative() {
+    if (this.isStarshipEncounter) return false;
     return game.settings.get(game.system.id, "initiative") === "group";
   }
 
@@ -315,6 +339,14 @@ export class WWNCombat extends foundry.documents.Combat {
   /** @inheritDoc */
   async startCombat() {
     await super.startCombat()
+    if (this.isStarshipEncounter) {
+      await this.#rollStarshipInitiative({ excludeAlreadyRolled: true });
+      await onStarshipCombatStart(this);
+      for (const c of this.combatants) {
+        if (c.actor?.type === "starship") await applyStarshipCombatBonusHp(c.actor);
+      }
+      return this;
+    }
     await this.smartRerollInitiative({ excludeAlreadyRolled: true })
     for (const c of this.combatants) {
       if (c.actor?.type === "starship") await applyStarshipCombatBonusHp(c.actor);
@@ -322,21 +354,84 @@ export class WWNCombat extends foundry.documents.Combat {
     return this
   }
 
+  /**
+   * Starship initiative: 1d8 + bridge Int/Dex, once per engagement. PCs win ties.
+   * @param {{ excludeAlreadyRolled?: boolean }} [opts]
+   */
+  async #rollStarshipInitiative({ excludeAlreadyRolled = false } = {}) {
+    const updates = [];
+    const combatants = this.combatants.filter(
+      (c) => !c.defeated && (!excludeAlreadyRolled || c.initiative === null),
+    );
+    for (const c of combatants) {
+      if (c.actor?.type !== "starship") continue;
+      const formula = starshipInitiativeFormula(c.actor);
+      const roll = await new Roll(formula).evaluate();
+      await roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: c.actor }),
+        flavor: game.i18n.format("WWN.Starship.InitiativeRoll", { name: c.name }),
+      });
+      updates.push({ _id: c.id, initiative: roll.total });
+    }
+    if (updates.length) {
+      await this.updateEmbeddedDocuments("Combatant", updates);
+      // PC tie-break: if two ships share initiative, bump PC bridge slightly
+      const byInit = new Map();
+      for (const c of this.combatants) {
+        if (c.initiative == null) continue;
+        const key = Number(c.initiative);
+        if (!byInit.has(key)) byInit.set(key, []);
+        byInit.get(key).push(c);
+      }
+      const tieUpdates = [];
+      for (const [, group] of byInit) {
+        if (group.length < 2) continue;
+        group.sort(compareStarshipInitiativeTie);
+        // First in sorted order (PC) keeps value; others get -0.01 * rank
+        for (let i = 1; i < group.length; i++) {
+          tieUpdates.push({
+            _id: group[i].id,
+            initiative: Number(group[i].initiative) - 0.01 * i,
+          });
+        }
+      }
+      if (tieUpdates.length) await this.updateEmbeddedDocuments("Combatant", tieUpdates);
+    }
+    this.setupTurns();
+    await ui.combat?.render(true);
+  }
+
   /** @inheritDoc */
   async _onStartTurn(combatant, context) {
     await super._onStartTurn(combatant, context);
     if (combatant) await combatant.unsetFlag("wwn", "attackedThisTurn");
+    if (this.isStarshipEncounter && combatant?.actor?.type === "starship") {
+      await onStarshipTurnStart(combatant);
+      combatant.actor?.sheet?.render?.(false);
+    }
   }
 
   /** @inheritDoc */
   async _onEndTurn(combatant, context) {
     await super._onEndTurn(combatant, context);
+    if (this.isStarshipEncounter && combatant?.actor?.type === "starship") {
+      await onStarshipTurnEnd(combatant, this.round ?? 1);
+      combatant.actor?.sheet?.render?.(false);
+      return;
+    }
     if (combatant) await applyEndOfTurnAdjacentShock(combatant);
   }
 
   /** @inheritDoc */
   async _onEndRound(context) {
     await super._onEndRound(context)
+    if (this.isStarshipEncounter) {
+      for (const c of this.combatants) {
+        await c.unsetFlag("wwn", "meleeHitThisRound");
+        await c.unsetFlag("wwn", "attackedThisTurn");
+      }
+      return;
+    }
     if (context?.round) {
       switch (this.#rerollBehavior) {
         case "reset":
@@ -366,6 +461,9 @@ export class WWNCombat extends foundry.documents.Combat {
 
   /** @inheritDoc */
   async _onDelete(options, userId) {
+    if (this.isStarshipEncounter) {
+      await onStarshipCombatEnd(this);
+    }
     for (const c of this.combatants) {
       if (c.actor?.type === "starship") await clearStarshipCombatBonusHp(c.actor);
     }
