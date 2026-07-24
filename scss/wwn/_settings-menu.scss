@@ -1,0 +1,51 @@
+/* Settings submenu: game-line tag chips on Core Rules rows */
+
+.wwn-settings-menu {
+  .wwn-setting-row {
+    position: relative;
+  }
+
+  .wwn-setting-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: flex-end;
+    margin-bottom: 0.15rem;
+  }
+
+  .wwn-setting-tag {
+    display: inline-block;
+    padding: 0.05rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+  }
+
+  .wwn-setting-tag--cwn {
+    color: #061a1f;
+    background: #00b4d8;
+    border-color: #0096b4;
+  }
+
+  .wwn-setting-tag--awn {
+    color: #fbeee4;
+    background: #c45c26;
+    border-color: #a34a1e;
+  }
+
+  .wwn-setting-tag--swn {
+    color: #0a1628;
+    background: #4cc9f0;
+    border-color: #3aa8cc;
+  }
+
+  .wwn-setting-tag--godbound {
+    color: #1a1200;
+    background: #e8b923;
+    border-color: #c49a1a;
+  }
+}

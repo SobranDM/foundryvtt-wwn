@@ -7,7 +7,16 @@
     <p class="hint">{{localize section.hint}}</p>
     {{/if}}
     {{#each section.entries as |entry|}}
-    {{formGroup entry.field value=entry.value input=entry.input localize=true}}
+    <div class="wwn-setting-row">
+      {{#if entry.tags.length}}
+      <div class="wwn-setting-tags" aria-hidden="true">
+        {{#each entry.tags as |tag|}}
+        <span class="wwn-setting-tag {{tag.cssClass}}">{{localize tag.label}}</span>
+        {{/each}}
+      </div>
+      {{/if}}
+      {{formGroup entry.field value=entry.value input=entry.input localize=true}}
+    </div>
     {{/each}}
   </fieldset>
   {{else if section.hint}}

@@ -4,10 +4,14 @@ import { isPc } from "../helpers/actor-types.mjs";
  * Pure fingerprint helpers are safe to import from Node unit tests.
  */
 
+const NS = "wwn";
 const SYNC_TYPES = new Set(["focus", "classEdge", "power"]);
 
 /** Bump when sync scope or fingerprints change so alpha worlds re-run. */
-export const PC_COMPENDIUM_SYNC_GENERATION = 2;
+export const PC_COMPENDIUM_SYNC_GENERATION = 3;
+
+/** Sole system Item pack used as the sync source of truth. */
+const SYNC_PACK_COLLECTION = `${NS}.abilities-wwn`;
 
 /**
  * @param {{ type?: string, name?: string, system?: { subType?: string } }} item
@@ -256,7 +260,6 @@ export function needsCompendiumSwap(owned, pack) {
   return itemShapeFingerprint(owned) !== itemShapeFingerprint(pack);
 }
 
-const NS = "wwn";
 const SETTING_DONE = "pcCompendiumItemSyncDone";
 const SETTING_GEN = "pcCompendiumItemSyncGen";
 
@@ -280,28 +283,27 @@ export function isPcCompendiumSyncComplete() {
 }
 
 /**
- * Build lookup map type::name → plain item data from system Item packs.
+ * Build lookup map type::name → plain item data from WWN Abilities only.
  * @returns {Promise<Map<string, object>>}
  */
 export async function buildSystemItemIndex() {
   const index = new Map();
-  for (const pack of game.packs) {
-    if (pack.metadata.packageType !== "system") continue;
-    if (pack.documentName !== "Item") continue;
-    // This system's packs are collections like "wwn.abilities-wwn"
-    if (!String(pack.collection).startsWith(`${NS}.`)) continue;
+  const pack = game.packs.get(SYNC_PACK_COLLECTION);
+  if (!pack || pack.documentName !== "Item") {
+    console.warn(`WWN | PC compendium sync: pack ${SYNC_PACK_COLLECTION} not found.`);
+    return index;
+  }
 
-    const docs = await pack.getDocuments();
-    for (const doc of docs) {
-      if (!SYNC_TYPES.has(doc.type)) continue;
-      const key = itemSyncKey(doc);
-      if (!key) continue;
-      if (index.has(key)) {
-        console.warn(`WWN | Duplicate system pack item for sync key ${key}; keeping first.`);
-        continue;
-      }
-      index.set(key, doc.toObject());
+  const docs = await pack.getDocuments();
+  for (const doc of docs) {
+    if (!SYNC_TYPES.has(doc.type)) continue;
+    const key = itemSyncKey(doc);
+    if (!key) continue;
+    if (index.has(key)) {
+      console.warn(`WWN | Duplicate system pack item for sync key ${key}; keeping first.`);
+      continue;
     }
+    index.set(key, doc.toObject());
   }
   return index;
 }

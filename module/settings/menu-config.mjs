@@ -1,6 +1,9 @@
 /**
- * WWN settings submenu layout: game line → concept sections → setting keys.
+ * WWN settings submenu layout: menu → concept sections → setting keys.
  * Keys must match those registered in settings.mjs.
+ *
+ * Section `settings` entries are either a string key or `{ key, tags }` where
+ * `tags` is a list of game-line ids (e.g. `"cwn"`, `"awn"`) shown as chips.
  */
 export const WWN_SETTING_MENUS = {
   appearance: {
@@ -16,16 +19,31 @@ export const WWN_SETTING_MENUS = {
       },
     ],
   },
-  wwn: {
-    name: "WWN.Setting.Menu.WWN.Name",
-    label: "WWN.Setting.Menu.WWN.Label",
-    hint: "WWN.Setting.Menu.WWN.Hint",
-    icon: "fa-solid fa-castle",
+  core: {
+    name: "WWN.Setting.Menu.CoreRules.Name",
+    label: "WWN.Setting.Menu.CoreRules.Label",
+    hint: "WWN.Setting.Menu.CoreRules.Hint",
+    icon: "fa-solid fa-book",
     restricted: true,
     sections: [
       {
         legend: "WWN.Setting.Section.Combat",
-        settings: ["initiative", "collapseSidesInGroupInitiative", "rerollInitiative", "randomHP", "morale"],
+        settings: [
+          "initiative",
+          "collapseSidesInGroupInitiative",
+          "rerollInitiative",
+          "randomHP",
+          "morale",
+          { key: "separateRangedAC", tags: ["cwn"] },
+          { key: "useTrauma", tags: ["cwn", "awn"] },
+        ],
+      },
+      {
+        legend: "WWN.Setting.Section.ResourceTrackers",
+        settings: [
+          { key: "useAlienation", tags: ["cwn"] },
+          { key: "useStress", tags: ["awn"] },
+        ],
       },
       {
         legend: "WWN.Setting.Section.AttributesSaves",
@@ -36,46 +54,53 @@ export const WWN_SETTING_MENUS = {
         settings: ["skillSet", "bonusSkillsGrantPointsAtFirstLevel", "flatSkillCost", "noSkillLevelReq"],
       },
       {
-        legend: "WWN.Setting.Section.HouseRules",
-        settings: ["attributeModType"],
-      },
-      {
         legend: "WWN.Setting.Section.Experience",
         settings: ["xpConfig", "xpCustomList", "xpPerChar"],
       },
       {
         legend: "WWN.Setting.Section.Movement",
-        settings: ["movementRate", "showMovement"],
+        settings: ["showMovement"],
       },
       {
         legend: "WWN.Setting.Section.Equipment",
-        settings: ["roundWeight", "defaultCurrencySet", "useFlatArmorPenalty"],
+        settings: [
+          "roundWeight",
+          "defaultCurrencySet",
+          { key: "useFlatArmorPenalty", tags: ["cwn"] },
+        ],
       },
       {
         legend: "WWN.Setting.Section.WorldNpc",
         settings: ["hideInstinct", "languageList"],
       },
-      {
-        legend: "WWN.Setting.Section.AWN",
-        hint: "WWN.Setting.Section.AWNHint",
-        settings: ["useStress"],
-      },
     ],
   },
-  cwn: {
-    name: "WWN.Setting.Menu.CWN.Name",
-    label: "WWN.Setting.Menu.CWN.Label",
-    hint: "WWN.Setting.Menu.CWN.Hint",
-    icon: "fa-solid fa-city",
+  houseRules: {
+    name: "WWN.Setting.Menu.HouseRules.Name",
+    label: "WWN.Setting.Menu.HouseRules.Label",
+    hint: "WWN.Setting.Menu.HouseRules.Hint",
+    icon: "fa-solid fa-screwdriver-wrench",
     restricted: true,
     sections: [
       {
-        legend: "WWN.Setting.Section.TraumaHorror",
-        settings: ["useTrauma", "useAlienation"],
+        legend: "WWN.Setting.Section.AttributesSaves",
+        settings: ["attributeModType"],
+      },
+      {
+        legend: "WWN.Setting.Section.Movement",
+        settings: ["movementRate"],
       },
       {
         legend: "WWN.Setting.Section.Combat",
-        settings: ["separateRangedAC", "medRange"],
+        settings: ["medRange"],
+      },
+      {
+        legend: "WWN.Setting.Section.Equipment",
+        settings: ["currencyTypes", "useGoldStandard"],
+      },
+      {
+        legend: "WWN.Setting.Section.Character",
+        settings: ["replaceStrainWithWounds"],
       },
     ],
   },

@@ -31,7 +31,7 @@
   - The old Tweaks menu is gone; bonuses live as Active Effects.
   - Powers, classes, and foci share one Powers tab. Alignment, background, and class list live on Details.
   - Attack bonus and hit dice come from your classes (adjust with Active Effects when needed).
-- **Foci and class features** on characters from world pre-2.0.0 refresh from system packs on migration. Your focus level and skill choices are kept; replaced copies go under Items → **Migration Backups** (one folder per character).
+- **Foci and class features** on characters from world pre-2.0.0 refresh from **WWN Abilities** on migration. Your focus level and skill choices are kept; replaced copies go under Items → **Migration Backups** (one folder per character).
 - **Weapons and ammo** support linked ammo and magazine-style reload more clearly. WIP. Ammo item type and proper items need creating.
 - **Group initiative** can collapse the tracker by side (default on), advancing one side at a time. WIP. Untested.
 - **Monsters** keep editable combat numbers on a Config tab.

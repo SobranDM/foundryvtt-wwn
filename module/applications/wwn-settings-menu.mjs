@@ -2,17 +2,52 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 const { FormDataExtended } = foundry.applications.ux;
 const fields = foundry.data.fields;
 
+/** @type {Record<string, { label: string, cssClass: string }>} */
+const SETTING_TAG_META = {
+  cwn: { label: "WWN.Setting.Tag.CWN", cssClass: "wwn-setting-tag--cwn" },
+  awn: { label: "WWN.Setting.Tag.AWN", cssClass: "wwn-setting-tag--awn" },
+  swn: { label: "WWN.Setting.Tag.SWN", cssClass: "wwn-setting-tag--swn" },
+  godbound: { label: "WWN.Setting.Tag.Godbound", cssClass: "wwn-setting-tag--godbound" },
+};
+
+/**
+ * Normalize a menu-config settings entry to `{ key, tags }`.
+ * @param {string|{ key: string, tags?: string[] }} ref
+ * @returns {{ key: string, tags: string[] }}
+ */
+function normalizeSettingRef(ref) {
+  if (typeof ref === "string") return { key: ref, tags: [] };
+  return { key: ref.key, tags: ref.tags ?? [] };
+}
+
+/**
+ * Resolve game-line tag chips for display.
+ * @param {string[]} tagIds
+ * @returns {{ id: string, label: string, cssClass: string }[]}
+ */
+function resolveSettingTags(tagIds) {
+  return tagIds
+    .map((id) => {
+      const meta = SETTING_TAG_META[id];
+      if (!meta) return null;
+      return { id, label: meta.label, cssClass: meta.cssClass };
+    })
+    .filter(Boolean);
+}
+
 /**
  * Build a form-group entry for a registered game setting.
  * @param {SettingConfig} setting
+ * @param {string[]} [tagIds]
  * @returns {object|null}
  */
-function settingToFormEntry(setting) {
+function settingToFormEntry(setting, tagIds = []) {
   if (!setting) return null;
 
   const entry = {
     label: setting.value,
     value: game.settings.get(setting.namespace, setting.key),
+    tags: resolveSettingTags(tagIds),
   };
 
   if (setting.type instanceof fields.DataField) {
@@ -54,7 +89,7 @@ export class WwnSettingsMenu extends HandlebarsApplicationMixin(ApplicationV2) {
     window: {
       title: "WWN.Setting.Menu.Title",
       icon: "fa-solid fa-gears",
-      contentClasses: ["standard-form"],
+      contentClasses: ["standard-form", "wwn-settings-menu"],
     },
     position: { width: 560 },
     form: {
@@ -67,6 +102,7 @@ export class WwnSettingsMenu extends HandlebarsApplicationMixin(ApplicationV2) {
   static PARTS = {
     form: {
       template: "systems/wwn/templates/settings/wwn-settings-menu.hbs",
+      classes: ["wwn-settings-menu"],
       scrollable: [""],
     },
     footer: {
@@ -83,8 +119,10 @@ export class WwnSettingsMenu extends HandlebarsApplicationMixin(ApplicationV2) {
       legend: section.legend,
       hint: section.hint,
       entries: section.settings
-        .map((key) => game.settings.settings.get(`wwn.${key}`))
-        .map(settingToFormEntry)
+        .map((ref) => {
+          const { key, tags } = normalizeSettingRef(ref);
+          return settingToFormEntry(game.settings.settings.get(`wwn.${key}`), tags);
+        })
         .filter(Boolean),
     }));
 
