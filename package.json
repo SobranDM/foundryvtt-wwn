@@ -9,7 +9,7 @@
     "build:packs": "npm run lint:packs && node ./build/build-packs.mjs",
     "extract:packs": "node ./build/extract-packs.mjs",
     "build": "npm run build:css && npm run build:packs",
-    "test": "node --test tests/**/*.test.mjs",
+    "test": "node --test",
     "migrate:packs": "node ./build/migrate-packs.mjs",
     "generate:skills": "node ./import-scripts/generate-swn-awn-skills.mjs",
     "generate:foci": "node ./import-scripts/generate-swn-awn-foci.mjs",
