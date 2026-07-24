@@ -14,6 +14,7 @@ import {
   extractPreservedFields,
   buildReplacementData,
   needsCompendiumSwap,
+  ensureBackupFolder,
 } from "../module/migration/pc-compendium-sync.mjs";
 
 describe("itemSyncKey", () => {
@@ -292,5 +293,157 @@ describe("extractPreservedFields / buildReplacementData", () => {
     assert.equal(created.system.level, 2);
     assert.equal(created.system.damageRoll, "1d6+1");
     assert.equal(created.system.healing, true);
+  });
+});
+
+/**
+ * Minimal Folder / game.folders mock for ensureBackupFolder.
+ */
+function installFolderMock(seed = []) {
+  const folders = [...seed];
+  let nextId = 1;
+
+  class MockFolder {
+    constructor({ name, type, folder = null, id }) {
+      this.id = id ?? `folder${nextId++}`;
+      this.name = name;
+      this.type = type;
+      this.folder = folder; // parent Folder doc or null
+    }
+    async update(data) {
+      if ("folder" in data) {
+        const parentId = data.folder;
+        this.folder = parentId
+          ? folders.find((f) => f.id === parentId) ?? null
+          : null;
+      }
+      return this;
+    }
+  }
+
+  globalThis.Folder = {
+    async create(data) {
+      const parent =
+        data.folder == null
+          ? null
+          : folders.find((f) => f.id === data.folder) ?? null;
+      const created = new MockFolder({
+        name: data.name,
+        type: data.type,
+        folder: parent,
+      });
+      folders.push(created);
+      return created;
+    },
+  };
+
+  globalThis.game = {
+    folders: {
+      find: (fn) => folders.find(fn),
+      some: (fn) => folders.some(fn),
+      [Symbol.iterator]: function* () {
+        yield* folders;
+      },
+    },
+  };
+
+  return { folders, MockFolder };
+}
+
+describe("ensureBackupFolder", () => {
+  it("creates Migration Backups parent and nested actor folder", async () => {
+    const { folders } = installFolderMock();
+    const child = await ensureBackupFolder("Ted");
+    const parent = folders.find((f) => f.name === "Migration Backups");
+    assert.ok(parent);
+    assert.equal(parent.folder, null);
+    assert.equal(parent.type, "Item");
+    assert.equal(child.name, "Migration Backup — Ted");
+    assert.equal(child.folder?.id, parent.id);
+  });
+
+  it("reuses existing nested actor folder", async () => {
+    const { folders, MockFolder } = installFolderMock();
+    const parent = new MockFolder({
+      name: "Migration Backups",
+      type: "Item",
+      folder: null,
+      id: "parent1",
+    });
+    const existing = new MockFolder({
+      name: "Migration Backup — Ted",
+      type: "Item",
+      folder: parent,
+      id: "child1",
+    });
+    folders.push(parent, existing);
+    const got = await ensureBackupFolder("Ted");
+    assert.equal(got.id, "child1");
+    assert.equal(folders.filter((f) => f.name === "Migration Backup — Ted").length, 1);
+  });
+
+  it("reparents a legacy top-level actor folder under Migration Backups", async () => {
+    const { folders, MockFolder } = installFolderMock();
+    const legacy = new MockFolder({
+      name: "Migration Backup — Tom",
+      type: "Item",
+      folder: null,
+      id: "legacy1",
+    });
+    folders.push(legacy);
+    const got = await ensureBackupFolder("Tom");
+    const parent = folders.find((f) => f.name === "Migration Backups");
+    assert.ok(parent);
+    assert.equal(got.id, "legacy1");
+    assert.equal(got.folder?.id, parent.id);
+  });
+
+  it("ignores same-named Item folder under unrelated parent", async () => {
+    const { folders, MockFolder } = installFolderMock();
+    const otherParent = new MockFolder({
+      name: "Other Parent",
+      type: "Item",
+      folder: null,
+      id: "otherParent1",
+    });
+    const unrelated = new MockFolder({
+      name: "Migration Backup — Ted",
+      type: "Item",
+      folder: otherParent,
+      id: "unrelated1",
+    });
+    folders.push(otherParent, unrelated);
+    const child = await ensureBackupFolder("Ted");
+    const parent = folders.find((f) => f.name === "Migration Backups");
+    assert.ok(parent);
+    assert.equal(child.name, "Migration Backup — Ted");
+    assert.equal(child.folder?.id, parent.id);
+    assert.notEqual(child.id, "unrelated1");
+  });
+
+  it("prefers nested folder when both nested and top-level exist", async () => {
+    const { folders, MockFolder } = installFolderMock();
+    const parent = new MockFolder({
+      name: "Migration Backups",
+      type: "Item",
+      folder: null,
+      id: "parent1",
+    });
+    const nested = new MockFolder({
+      name: "Migration Backup — Ted",
+      type: "Item",
+      folder: parent,
+      id: "nested1",
+    });
+    const top = new MockFolder({
+      name: "Migration Backup — Ted",
+      type: "Item",
+      folder: null,
+      id: "top1",
+    });
+    folders.push(parent, nested, top);
+    const got = await ensureBackupFolder("Ted");
+    assert.equal(got.id, "nested1");
+    assert.equal(top.folder, null);
   });
 });

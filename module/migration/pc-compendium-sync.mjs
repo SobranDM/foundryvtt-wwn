@@ -332,23 +332,58 @@ async function loadWorldPackPcs() {
   return out;
 }
 
+const MIGRATION_BACKUPS_PARENT_NAME = "Migration Backups";
+
+/**
+ * Top-level Items folder that contains per-actor migration backup folders.
+ * @returns {Promise<Folder>}
+ */
+async function ensureParentBackupFolder() {
+  const existing = game.folders.find(
+    (f) => f.type === "Item" && f.name === MIGRATION_BACKUPS_PARENT_NAME && !f.folder
+  );
+  if (existing) return existing;
+  return Folder.create({
+    name: MIGRATION_BACKUPS_PARENT_NAME,
+    type: "Item",
+    folder: null,
+  });
+}
+
 /**
  * @param {string} actorName
  * @returns {Promise<Folder>}
  */
-async function ensureBackupFolder(actorName) {
+export async function ensureBackupFolder(actorName) {
+  const parent = await ensureParentBackupFolder();
   const base = `Migration Backup — ${actorName}`;
-  const existing = game.folders.find(
+
+  const nested = game.folders.find(
+    (f) =>
+      f.type === "Item" &&
+      f.name === base &&
+      f.folder?.id === parent.id
+  );
+  if (nested) return nested;
+
+  const legacyTopLevel = game.folders.find(
     (f) => f.type === "Item" && f.name === base && !f.folder
   );
-  if (existing) return existing;
+  if (legacyTopLevel) {
+    await legacyTopLevel.update({ folder: parent.id });
+    return legacyTopLevel;
+  }
 
   let name = base;
   let n = 2;
-  while (game.folders.some((f) => f.type === "Item" && f.name === name)) {
+  while (
+    game.folders.some(
+      (f) => f.type === "Item" && f.name === name && f.folder?.id === parent.id
+    )
+  ) {
     name = `${base} (${n++})`;
   }
-  return Folder.create({ name, type: "Item", folder: null });
+  return Folder.create({ name, type: "Item", folder: parent.id });
 }
 
 /**
