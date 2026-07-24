@@ -225,17 +225,16 @@
 }
 
 .wwn-sheet .wwn-form-panel .form-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(3.25rem, 7rem);
   align-items: center;
-  gap: 0.35rem;
+  column-gap: 0.35rem;
   margin: 0;
   min-width: 0;
+  width: 100%;
 }
 
 .wwn-sheet .wwn-form-panel .form-group > label {
-  flex: 1 1 auto;
   min-width: 0;
   margin: 0;
   line-height: 1.2;
@@ -291,19 +290,21 @@
 }
 
 .wwn-sheet .wwn-form-panel .form-group .form-fields {
-  flex: 0 0 auto;
   min-width: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.25rem;
 }
 
-.wwn-sheet .wwn-form-panel .form-group .form-fields:has(input:not([type="checkbox"])),
-.wwn-sheet .wwn-form-panel .form-group .form-fields:has(select),
-.wwn-sheet .wwn-form-panel .form-group .form-fields:has(textarea) {
-  flex: 1 1 3rem;
-  min-width: 2.5rem;
+/* Full-width rows and ratio fields: control column may grow. */
+.wwn-sheet .wwn-form-panel .form-group.wwn-form-span {
+  grid-template-columns: minmax(0, 1fr) minmax(7rem, 1fr);
+}
+
+.wwn-sheet .wwn-form-panel .form-group.wwn-ratio-field {
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 1fr);
 }
 
 .wwn-sheet .wwn-form-panel .form-group .form-fields input[type="number"],
@@ -731,17 +732,16 @@
 }
 
 .wwn-sheet .wwn-field-grid > .form-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(3.25rem, 7rem);
   align-items: center;
-  gap: 0.35rem;
+  column-gap: 0.35rem;
   margin: 0;
   min-width: 0;
+  width: 100%;
 }
 
 .wwn-sheet .wwn-field-grid > .form-group > label {
-  flex: 1 1 auto;
   min-width: 0;
   margin: 0;
   line-height: 1.2;
@@ -752,19 +752,16 @@
 }
 
 .wwn-sheet .wwn-field-grid > .form-group .form-fields {
-  flex: 0 0 auto;
   min-width: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.25rem;
 }
 
-.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(input:not([type="checkbox"])),
-.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(select),
-.wwn-sheet .wwn-field-grid > .form-group .form-fields:has(textarea) {
-  flex: 1 1 3rem;
-  min-width: 2.5rem;
+.wwn-sheet .wwn-field-grid > .form-group.wwn-form-span {
+  grid-template-columns: minmax(0, 1fr) minmax(7rem, 1fr);
 }
 
 .wwn-sheet .wwn-attributes-body {
@@ -773,7 +770,8 @@
   gap: 0.5rem;
   width: 100%;
   min-width: 0;
-  overflow: auto;
+  /* Parent tab is the AppV2 scrollable part root — do not nest another scroller. */
+  overflow: visible;
 }
 
 .wwn-sheet .wwn-attributes-grid {

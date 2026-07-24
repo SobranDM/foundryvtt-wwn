@@ -53,7 +53,10 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
   static PARTS = {
     header: { template: `${TPL}/header.hbs` },
     tabs: { template: "templates/generic/tab-navigation.hbs" },
-    main: { template: `${TPL}/tabs/main.hbs`, scrollable: [""] },
+    main: {
+      template: `${TPL}/tabs/main.hbs`,
+      scrollable: [".wwn-skills-list", ".wwn-favorites-dock .item-list", ""],
+    },
     powers: { template: `${TPL}/tabs/powers.hbs`, scrollable: [""] },
     inventory: { template: `${TPL}/tabs/inventory.hbs`, scrollable: [""] },
     details: { template: `${TPL}/tabs/details.hbs`, scrollable: [""] },

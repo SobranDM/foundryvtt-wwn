@@ -51,6 +51,19 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     },
   };
 
+  /** Power sheets need more width for the nested Type/Activation panels. */
+  static #POWER_SHEET_WIDTH = 900;
+
+  /** @override */
+  _initializeApplicationOptions(options) {
+    const opts = super._initializeApplicationOptions(options);
+    if (opts.document?.type === "power") {
+      opts.classes = [...new Set([...opts.classes, "power"])];
+      opts.position = { ...opts.position, width: WwnItemSheet.#POWER_SHEET_WIDTH };
+    }
+    return opts;
+  }
+
   /** @override */
   static TABS = {
     primary: {
@@ -67,9 +80,9 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   static PARTS = {
     header: { template: `${TPL}/header.hbs` },
     tabs: { template: "templates/generic/tab-navigation.hbs" },
-    info: { template: `${TPL}/attributes/item.hbs`, scrollable: [""] },
-    description: { template: `${TPL}/description.hbs`, scrollable: [""] },
-    effects: { template: `${TPL}/effects.hbs`, scrollable: [""] },
+    info: { template: `${TPL}/attributes/item.hbs`, scrollable: [".wwn-attributes-body", ""] },
+    description: { template: `${TPL}/description.hbs`, scrollable: [".wwn-attributes-body", ""] },
+    effects: { template: `${TPL}/effects.hbs`, scrollable: [".wwn-attributes-body", ""] },
   };
 
   /** @override */
