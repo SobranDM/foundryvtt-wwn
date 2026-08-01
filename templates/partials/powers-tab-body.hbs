@@ -40,7 +40,16 @@
               <div class="item-name">
                 {{pool.name}}{{#if pool.level}} — {{localize "WWN.Power.Level"}} {{pool.level}}{{/if}}
               </div>
-              <div class="field-short powers-pool-value">{{pool.value}} / {{pool.max}}</div>
+              <div class="field-short powers-pool-value">
+                {{#if pool.editableMax}}
+                <span>{{pool.value}}</span>
+                <span class="powers-sep">/</span>
+                <input name="system.poolMaxOverrides.{{pool.id}}" type="number" value="{{pool.max}}"
+                  data-dtype="Number" min="0" title="{{localize 'WWN.Pools.ManualMaxHint'}}" />
+                {{else}}
+                {{pool.value}} / {{pool.max}}
+                {{/if}}
+              </div>
               {{#if pool.warning}}
               <i class="fas fa-exclamation-triangle" title="{{localize pool.warning}}"></i>
               {{/if}}
@@ -55,7 +64,16 @@
               <div class="item-name">
                 {{pool.name}}{{#if pool.level}} — {{localize "WWN.Power.Level"}} {{pool.level}}{{/if}}
               </div>
-              <div class="field-short powers-pool-value">{{pool.value}} / {{pool.max}}</div>
+              <div class="field-short powers-pool-value">
+                {{#if pool.editableMax}}
+                <span>{{pool.value}}</span>
+                <span class="powers-sep">/</span>
+                <input name="system.poolMaxOverrides.{{pool.id}}" type="number" value="{{pool.max}}"
+                  data-dtype="Number" min="0" title="{{localize 'WWN.Pools.ManualMaxHint'}}" />
+                {{else}}
+                {{pool.value}} / {{pool.max}}
+                {{/if}}
+              </div>
               {{#if pool.warning}}
               <i class="fas fa-exclamation-triangle" title="{{localize pool.warning}}"></i>
               {{/if}}

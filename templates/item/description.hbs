@@ -4,7 +4,10 @@
     <div class="wwn-form-panel wwn-item-description">
       <div class="wwn-section-header">{{localize "WWN.Tabs.Description"}}</div>
       <div class="description resizable-editor">
-        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable async=true}}
+        <prose-mirror name="system.description" toggled value="{{source.description}}"
+          data-document-uuid="{{item.uuid}}" {{#unless editable}}disabled{{/unless}}>
+          {{{enrichedDescription}}}
+        </prose-mirror>
       </div>
     </div>
   </div>

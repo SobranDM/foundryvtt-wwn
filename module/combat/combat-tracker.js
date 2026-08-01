@@ -278,17 +278,24 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
 
       const state = getStarshipCombatState(combatant);
       const escapeEntries = Object.entries(state.escape ?? {});
+      const esc = foundry.utils.escapeHTML;
       const escapeText = escapeEntries.length
-        ? escapeEntries.map(([oid, n]) => `${combat.combatants.get(oid)?.name ?? oid}:${n}`).join(", ")
+        ? escapeEntries
+          .map(([oid, n]) => `${esc(combat.combatants.get(oid)?.name ?? oid)}:${esc(String(n))}`)
+          .join(", ")
         : "—";
       const crisisCount = (state.crises ?? []).filter((c) => !c.resolved).length;
+      const cpLabel = esc(game.i18n.localize("WWN.Starship.CP"));
+      const escapeLabel = esc(game.i18n.localize("WWN.Starship.Escape"));
+      const crisesTitle = esc(game.i18n.localize("WWN.Starship.ActiveCrises"));
+      const crisesShort = esc(game.i18n.localize("WWN.Starship.CrisesShort"));
 
       const hud = document.createElement("div");
       hud.className = "wwn-starship-combat-hud";
       hud.innerHTML = `
-        <span class="cp" title="${game.i18n.localize("WWN.Starship.CP")}">CP ${state.cp}</span>
-        <span class="escape" title="${game.i18n.localize("WWN.Starship.Escape")}">${game.i18n.localize("WWN.Starship.Escape")}: ${escapeText}</span>
-        <span class="crises" title="${game.i18n.localize("WWN.Starship.ActiveCrises")}">${game.i18n.localize("WWN.Starship.CrisesShort")}: ${crisisCount}</span>
+        <span class="cp" title="${cpLabel}">CP ${esc(String(state.cp))}</span>
+        <span class="escape" title="${escapeLabel}">${escapeLabel}: ${escapeText}</span>
+        <span class="crises" title="${crisesTitle}">${crisesShort}: ${esc(String(crisisCount))}</span>
       `;
       if (game.user.isGM) {
         const plus = document.createElement("a");
@@ -335,10 +342,12 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
       if (!combatant || !combatant?.group) continue;
 
       const label = (combatant.group?.name ?? "").replace(/\*$/, "");
-
-      tokenName.style.background = `linear-gradient(90deg, var(--wwn-group-color-${label}, ${label}), transparent)`;
-      tokenName.style.borderRadius = "4px";
-      tokenName.style.padding = "2px";
+      const colorKeys = CONFIG.WWN?.colors ? Object.keys(CONFIG.WWN.colors) : [];
+      if (colorKeys.includes(label)) {
+        tokenName.style.background = `linear-gradient(90deg, var(--wwn-group-color-${label}), transparent)`;
+        tokenName.style.borderRadius = "4px";
+        tokenName.style.padding = "2px";
+      }
 
       if (game.user.isGM) {
         const controls = combatantElement.querySelector(".combatant-controls");

@@ -6,7 +6,116 @@ import { RollParts, resolveSkillDiceFormula } from "../dice/roll-parts.mjs";
 import { WwnRoll, WwnAttackRoll, WwnSkillRoll, WwnDamageRoll } from "../dice/rolls.mjs";
 import { createRollMessage } from "../chat/chat-card.mjs";
 import { resolvePilot, isPilotTrained } from "./power-armor-pilot.mjs";
-import { weaponMountBonuses } from "./power-armor-derive.mjs";
+import { resolveCamoStealthBonus, weaponMountBonuses, isShockImmuneTarget } from "./power-armor-derive.mjs";
+import {
+  floodlightsAttackPenalty,
+  targetLockAttackBonus,
+  tsukumogamiSkillBonus,
+} from "./power-armor-effects.mjs";
+import {
+  resolveAttackHit,
+  naturalAttackDie,
+  applyShockFloor,
+  buildAttackApplyRows,
+} from "./attack-outcome.mjs";
+import { resolveTargetAcForAttack } from "./attack-ac.mjs";
+import { resolveWeaponTlGate } from "./weapon-tl.mjs";
+import { resolvePilotWeaponSkill } from "./power-armor-pilot-skill.mjs";
+
+export { resolvePilotWeaponSkill } from "./power-armor-pilot-skill.mjs";
+
+function applyRowLabels() {
+  return {
+    damage: game.i18n.localize("WWN.Roll.Damage"),
+    damageFloored: game.i18n.localize("WWN.Roll.DamageFloored"),
+    missDamage: game.i18n.localize("WWN.Roll.MissDamage"),
+    straight: (value) => game.i18n.format("WWN.Roll.Straight", { value }),
+    shockVs: (value, ac) => game.i18n.format("WWN.Roll.ShockVs", { value, ac }),
+    shockVsTarget: (value, threshold, targetAcVal) => game.i18n.format("WWN.Roll.ShockVsTarget", {
+      value,
+      threshold,
+      targetAc: targetAcVal,
+    }),
+    trauma: (rating) => game.i18n.format("WWN.Roll.TraumaDamage", { rating }),
+  };
+}
+
+function suitAttackKind(weapon) {
+  if (weapon.system?.missile && weapon.system?.melee === false) return "ranged";
+  if (weapon.system?.melee === false) return "ranged";
+  return "melee";
+}
+
+/**
+ * Resolve hit / shock floor / apply rows against the current user target.
+ * @param {{ suit: Actor, weapon: object, attackKind: string, attackRoll: Roll, damageTotal: number, shockTotal?: number|null }} input
+ */
+export function resolveSuitWeaponOutcome({
+  suit,
+  weapon,
+  attackKind,
+  attackRoll,
+  damageTotal,
+  shockTotal = null,
+}) {
+  const target = game.user?.targets?.first?.() ?? [...(game.user?.targets ?? [])][0] ?? null;
+  let hit = true;
+  let blockedByTl = false;
+  let targetAc = null;
+  let shockAppliesOnMiss = false;
+  let shockLabelAc = weapon.system?.shockAcValue ?? weapon.system?.shock?.ac;
+  let shockTargetAc = null;
+  let badge = null;
+
+  if (target?.actor) {
+    const gate = resolveWeaponTlGate(suit, target.actor, weapon, attackKind);
+    blockedByTl = gate.blocked;
+    const separateRanged = game.settings.get("wwn", "separateRangedAC");
+    const acResult = resolveTargetAcForAttack(suit, target.actor, weapon, attackKind, { separateRanged });
+    targetAc = acResult.ac;
+    const hitResult = resolveAttackHit({
+      attackTotal: attackRoll.total,
+      naturalDie: naturalAttackDie(attackRoll),
+      targetAc,
+      blockedByTl,
+    });
+    hit = hitResult.hit;
+    badge = {
+      label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+      type: hit ? "hit" : "miss",
+    };
+
+    if (shockTotal != null && !blockedByTl) {
+      const shockCheck = WwnDice.shockAppliesOnMiss(suit, target.actor, weapon, attackKind, {
+        effectiveTargetAc: Number.isFinite(targetAc) ? targetAc : null,
+      });
+      shockLabelAc = shockCheck.threshold;
+      shockTargetAc = shockCheck.effectiveTargetAc;
+      shockAppliesOnMiss = shockCheck.applies;
+    }
+  } else if (shockTotal != null) {
+    shockAppliesOnMiss = true;
+  }
+
+  const shockForFloor = isShockImmuneTarget(target?.actor) ? null : shockTotal;
+  const floorInfo = applyShockFloor(damageTotal, hit ? shockForFloor : null);
+  const applyRows = buildAttackApplyRows({
+    hit,
+    blockedByTl,
+    damageValue: floorInfo.value,
+    damageFloored: floorInfo.floored,
+    straightValue: null,
+    shockTotal: shockForFloor,
+    shockAppliesOnMiss,
+    shockLabelAc,
+    shockTargetAc,
+    trauma: null,
+    missDamageValue: null,
+    labels: applyRowLabels(),
+  });
+
+  return { hit, applyRows, badge, targetName: target?.name ?? null };
+}
 
 async function resolvePilotLive(suit) {
   const uuid = suit.system.pilot?.actor ?? null;
@@ -78,12 +187,19 @@ export async function rollSuitCheck(suit, abilityKey, { skipDialog = false } = {
 }
 
 export async function rollSuitSave(suit, saveId, { skipDialog = false } = {}) {
-  const resolved = await resolvePilotLive(suit);
-  if (resolved.mode !== "actor") {
+  const emptySuit = !!suit.system.derived?.emptySuit?.active;
+  const saveTarget = emptySuit
+    ? (suit.system.derived.emptySuit.save ?? 14)
+    : null;
+
+  const resolved = emptySuit ? null : await resolvePilotLive(suit);
+  if (!emptySuit && resolved.mode !== "actor") {
     return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.NoPilot"));
   }
-  const pilot = resolved.actor;
-  const save = pilot.system.saves?.[saveId];
+  const pilot = resolved?.actor ?? null;
+  const save = emptySuit
+    ? { value: saveTarget, label: saveId }
+    : pilot.system.saves?.[saveId];
   if (!save) return;
 
   const label = game.i18n.localize(save.label ?? saveId);
@@ -91,26 +207,34 @@ export async function rollSuitSave(suit, saveId, { skipDialog = false } = {}) {
   const prompt = await WwnDice.promptModifier({ title, skipDialog });
   if (!prompt) return;
 
-  const untrained = !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
+  const untrained = emptySuit
+    ? false
+    : !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
   const formula = untrained ? "2d20kl" : "1d20";
   const parts = new RollParts().add(formula, game.i18n.localize("WWN.Roll.Die"));
   parts.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
 
-  const roll = await new WwnRoll(parts.formula(), pilot.getRollData(), { kind: "save" }).evaluate();
-  const success = roll.total >= save.value;
+  const rollData = emptySuit ? suit.getRollData() : pilot.getRollData();
+  const roll = await new WwnRoll(parts.formula(), rollData, { kind: "save" }).evaluate();
+  const target = emptySuit ? saveTarget : save.value;
+  const success = roll.total >= target;
 
   return createRollMessage({
     rolls: [roll],
     kind: "save",
     actor: suit,
     title,
-    subtitle: game.i18n.format("WWN.Roll.SaveTarget", { target: save.value }),
+    subtitle: game.i18n.format("WWN.Roll.SaveTarget", { target }),
     badge: {
       label: game.i18n.localize(success ? "WWN.Roll.Success" : "WWN.Roll.Failure"),
       type: success ? "hit" : "miss",
     },
     bodyTemplate: "systems/wwn/templates/chat/simple-roll.hbs",
-    context: { breakdown: parts.breakdown(), pilotName: pilot.name, untrained },
+    context: {
+      breakdown: parts.breakdown(),
+      pilotName: emptySuit ? game.i18n.localize("WWN.PowerArmor.EmptySuit") : pilot.name,
+      untrained,
+    },
   });
 }
 
@@ -144,9 +268,11 @@ export async function rollSuitSkill(suit, skill, { skipDialog = false, abilityKe
     if (slug === "sneak") {
       parts.add(-(pilot.system.skills?.sneakPenalty ?? 0), game.i18n.localize("WWN.Roll.ArmorPenalty"));
       parts.add(suit.system.stealthPenalty ?? 0, game.i18n.localize("WWN.PowerArmor.StealthPenalty"));
-      const camo = suit.system.derived?.stealthBonus ?? 0;
+      const camo = resolveCamoStealthBonus(suit.system.derived, null);
       if (camo) parts.add(camo, game.i18n.localize("WWN.PowerArmor.CamoBonus"));
     }
+    const viBonus = tsukumogamiSkillBonus(suit);
+    if (viBonus) parts.add(viBonus, game.i18n.localize("WWN.PowerArmor.ViAssist"));
     if (slug === "exert") {
       parts.add(-(pilot.system.skills?.exertPenalty ?? 0), game.i18n.localize("WWN.Roll.ArmorPenalty"));
     }
@@ -194,12 +320,15 @@ export function resolveMountBonus(suit, weapon) {
 }
 
 export async function rollSuitWeapon(suit, weapon, { skipDialog = false } = {}) {
-  const resolved = await resolvePilotLive(suit);
-  if (resolved.mode !== "actor") {
+  const emptySuit = !!suit.system.derived?.emptySuit?.active;
+  const resolved = emptySuit ? null : await resolvePilotLive(suit);
+  if (!emptySuit && resolved.mode !== "actor") {
     return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.NoPilot"));
   }
-  const pilot = resolved.actor;
-  const untrained = !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
+  const pilot = resolved?.actor ?? null;
+  const untrained = emptySuit
+    ? false
+    : !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
   const mount = resolveMountBonus(suit, weapon);
   const title = suitTitle(suit, weapon.name);
 
@@ -209,34 +338,53 @@ export async function rollSuitWeapon(suit, weapon, { skipDialog = false } = {}) 
 
   const derived = suit.system.derived ?? {};
   const attrKey = weapon.system.score ?? "str";
-  let attrMod = pilot.system.abilities?.[attrKey]?.mod ?? 0;
+  let attrMod = emptySuit ? 0 : (pilot.system.abilities?.[attrKey]?.mod ?? 0);
   if (attrKey === "str" && derived.effectiveStrengthMod != null) {
     attrMod = derived.effectiveStrengthMod;
   }
 
-  const skillName = weapon.system.linkedSkill || "";
-  const skill = pilot.items.find(
-    (i) => i.type === "skill" && i.name.toLowerCase() === String(skillName).toLowerCase(),
-  );
-  const skillLevel = skill ? WwnDice.effectiveSkillLevel(pilot, skill) : 0;
+  const skill = emptySuit ? null : resolvePilotWeaponSkill(pilot, weapon);
+  const skillLevel = emptySuit
+    ? 0
+    : (skill ? WwnDice.effectiveSkillLevel(pilot, skill) : -2);
+  const attackBonus = emptySuit
+    ? (derived.emptySuit?.ab ?? derived.attackBonus ?? 6)
+    : (pilot.system.combat?.ab ?? 0);
 
   const die = untrained ? "2d20kl" : "1d20";
   const attack = new RollParts().add(die, game.i18n.localize("WWN.Roll.Die"));
-  attack.add(pilot.system.combat?.ab ?? 0, game.i18n.localize("WWN.Roll.AttackBonus"));
-  attack.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
-  if (skill) attack.add(skillLevel, skill.name);
+  attack.add(attackBonus, game.i18n.localize("WWN.Roll.AttackBonus"));
+  if (attrMod) attack.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
+  if (!emptySuit) {
+    attack.add(skillLevel, skill?.name ?? game.i18n.localize("WWN.Roll.Unskilled"));
+  }
   attack.add(mount.attackBonus ?? 0, game.i18n.localize("WWN.PowerArmor.MountBonus"));
+  const lockTarget = [...(game.user?.targets ?? [])][0]?.actor ?? null;
+  const lockBonus = targetLockAttackBonus(suit, lockTarget);
+  if (lockBonus) attack.add(lockBonus, game.i18n.localize("WWN.PowerArmor.TargetLockBonus"));
+  const lightPen = floodlightsAttackPenalty(suit);
+  if (lightPen) attack.add(lightPen, game.i18n.localize("WWN.PowerArmor.FloodlightsPenalty"));
   attack.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
 
   const damageFormula = weapon.system.damage || "1d6";
   const damage = new RollParts().add(damageFormula, game.i18n.localize("WWN.Roll.WeaponDamage"));
-  damage.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
+  if (attrMod) damage.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
   damage.add(mount.damageBonus ?? 0, game.i18n.localize("WWN.PowerArmor.MountBonus"));
 
-  const attackRoll = await new WwnAttackRoll(attack.formula(), pilot.getRollData(), { kind: "attack" }).evaluate();
-  const damageRoll = await new WwnDamageRoll(damage.formula(), pilot.getRollData(), { kind: "damage" }).evaluate();
+  const rollData = emptySuit ? suit.getRollData() : pilot.getRollData();
+  const attackRoll = await new WwnAttackRoll(attack.formula(), rollData, { kind: "attack" }).evaluate();
+  const damageRoll = await new WwnDamageRoll(damage.formula(), rollData, { kind: "damage" }).evaluate();
+  const attackKind = suitAttackKind(weapon);
+  const outcome = resolveSuitWeaponOutcome({
+    suit,
+    weapon,
+    attackKind,
+    attackRoll,
+    damageTotal: damageRoll.total,
+    shockTotal: null,
+  });
 
-  return createRollMessage({
+  const msg = await createRollMessage({
     rolls: [attackRoll, damageRoll],
     kind: "attack",
     actor: suit,
@@ -246,15 +394,27 @@ export async function rollSuitWeapon(suit, weapon, { skipDialog = false } = {}) 
     context: {
       attackBreakdown: attack.breakdown(),
       damageBreakdown: damage.breakdown(),
-      applyRows: [
-        { id: "damage", label: game.i18n.localize("WWN.Roll.Damage"), value: damageRoll.total },
-      ],
-      hit: true,
-      pilotName: pilot.name,
+      applyRows: outcome.applyRows,
+      hit: outcome.hit,
+      badge: outcome.badge,
+      targetName: outcome.targetName,
+      pilotName: emptySuit ? game.i18n.localize("WWN.PowerArmor.EmptySuit") : pilot.name,
       untrained,
     },
-    flags: { applyRows: [{ id: "damage", value: damageRoll.total }] },
+    flags: {
+      applyRows: outcome.applyRows.map((r) => ({
+        id: r.id,
+        value: r.value,
+        altValue: r.altValue,
+      })),
+    },
   });
+
+  if (suit.system.derived?.capabilities?.linkedTargeting) {
+    ui.notifications?.info?.(game.i18n.localize("WWN.PowerArmor.LinkedTargetingHint"));
+  }
+
+  return msg;
 }
 
 /**
@@ -294,21 +454,24 @@ export async function rollSuitArmorFitting(suit, fitting, { skipDialog = false }
       getFlag: () => null,
     };
     // Ripper-style integral weapons do not get Weapon Mount bonuses.
-    const resolved = await resolvePilotLive(suit);
-    if (resolved.mode !== "actor") {
+    const emptySuit = !!suit.system.derived?.emptySuit?.active;
+    const resolved = emptySuit ? null : await resolvePilotLive(suit);
+    if (!emptySuit && resolved.mode !== "actor") {
       return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.NoPilot"));
     }
-    const pilot = resolved.actor;
-    const untrained = !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
+    const pilot = resolved?.actor ?? null;
+    const untrained = emptySuit
+      ? false
+      : !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
     const title = suitTitle(suit, fitting.name);
     const prompt = await WwnDice.promptModifier({ title, skipDialog });
     if (!prompt) return;
 
     const derived = suit.system.derived ?? {};
     let attrKey = synthetic.system.score;
-    let attrMod = pilot.system.abilities?.[attrKey]?.mod ?? 0;
+    let attrMod = emptySuit ? 0 : (pilot.system.abilities?.[attrKey]?.mod ?? 0);
     // Ripper: Str/Dex — use the better modifier
-    if (!system.score || system.score === "str") {
+    if (!emptySuit && (!system.score || system.score === "str")) {
       const str = pilot.system.abilities?.str?.mod ?? 0;
       const dex = pilot.system.abilities?.dex?.mod ?? 0;
       if (dex > str) {
@@ -325,35 +488,49 @@ export async function rollSuitArmorFitting(suit, fitting, { skipDialog = false }
       attrMod = derived.effectiveStrengthMod;
     }
 
+    const skill = emptySuit ? null : resolvePilotWeaponSkill(pilot, synthetic);
+    const skillLevel = emptySuit
+      ? 0
+      : (skill ? WwnDice.effectiveSkillLevel(pilot, skill) : -2);
+    const attackBonus = emptySuit
+      ? (derived.emptySuit?.ab ?? derived.attackBonus ?? 6)
+      : (pilot.system.combat?.ab ?? 0);
     const die = untrained ? "2d20kl" : "1d20";
     const attack = new RollParts().add(die, game.i18n.localize("WWN.Roll.Die"));
-    attack.add(pilot.system.combat?.ab ?? 0, game.i18n.localize("WWN.Roll.AttackBonus"));
-    attack.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
+    attack.add(attackBonus, game.i18n.localize("WWN.Roll.AttackBonus"));
+    if (attrMod) attack.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
+    if (!emptySuit) {
+      attack.add(skillLevel, skill?.name ?? game.i18n.localize("WWN.Roll.Unskilled"));
+    }
     attack.add(synthetic.system.bonus ?? 0, game.i18n.localize("WWN.Roll.WeaponBonus"));
     attack.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
 
     const damage = new RollParts().add(synthetic.system.damage, game.i18n.localize("WWN.Roll.WeaponDamage"));
-    damage.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
+    if (attrMod) damage.add(attrMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[attrKey] ?? attrKey));
 
+    const rollData = emptySuit ? suit.getRollData() : pilot.getRollData();
     const rolls = [];
-    const attackRoll = await new WwnAttackRoll(attack.formula(), pilot.getRollData(), { kind: "attack" }).evaluate();
-    const damageRollEval = await new WwnDamageRoll(damage.formula(), pilot.getRollData(), { kind: "damage" }).evaluate();
+    const attackRoll = await new WwnAttackRoll(attack.formula(), rollData, { kind: "attack" }).evaluate();
+    const damageRollEval = await new WwnDamageRoll(damage.formula(), rollData, { kind: "damage" }).evaluate();
     rolls.push(attackRoll, damageRollEval);
 
     let shockTotal = null;
     if (synthetic.system.shock?.damage) {
       const shock = new RollParts().add(synthetic.system.shock.damage, game.i18n.localize("WWN.Roll.ShockBase"));
-      const shockRoll = await new WwnDamageRoll(shock.formula(), pilot.getRollData(), { kind: "damage" }).evaluate();
+      const shockRoll = await new WwnDamageRoll(shock.formula(), rollData, { kind: "damage" }).evaluate();
       shockTotal = shockRoll.total;
       rolls.push(shockRoll);
     }
 
-    const applyRows = [
-      { id: "damage", label: game.i18n.localize("WWN.Roll.Damage"), value: damageRollEval.total },
-    ];
-    if (shockTotal != null) {
-      applyRows.push({ id: "shock", label: game.i18n.localize("WWN.Roll.Shock"), value: shockTotal });
-    }
+    const attackKind = suitAttackKind(synthetic);
+    const outcome = resolveSuitWeaponOutcome({
+      suit,
+      weapon: synthetic,
+      attackKind,
+      attackRoll,
+      damageTotal: damageRollEval.total,
+      shockTotal,
+    });
 
     return createRollMessage({
       rolls,
@@ -365,12 +542,20 @@ export async function rollSuitArmorFitting(suit, fitting, { skipDialog = false }
       context: {
         attackBreakdown: attack.breakdown(),
         damageBreakdown: damage.breakdown(),
-        applyRows,
-        hit: true,
-        pilotName: pilot.name,
+        applyRows: outcome.applyRows,
+        hit: outcome.hit,
+        badge: outcome.badge,
+        targetName: outcome.targetName,
+        pilotName: emptySuit ? game.i18n.localize("WWN.PowerArmor.EmptySuit") : pilot.name,
         untrained,
       },
-      flags: { applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })) },
+      flags: {
+        applyRows: outcome.applyRows.map((r) => ({
+          id: r.id,
+          value: r.value,
+          altValue: r.altValue,
+        })),
+      },
     });
   }
 

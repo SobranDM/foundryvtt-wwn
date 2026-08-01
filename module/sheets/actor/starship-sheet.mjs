@@ -32,6 +32,7 @@ import {
 } from "../../helpers/starship-focus-bonuses.mjs";
 import { remainingCombatBonusHp } from "../../helpers/starship-combat-hp.mjs";
 import { showWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { remapLegacySubmitData } from "../../helpers/sheet-legacy-bridge.mjs";
 import { actionsByDepartment } from "../../combat/starship/actions.mjs";
 import {
   executeStarshipAction,
@@ -104,6 +105,12 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
   /* -------------------------------------------- */
 
   /** @override */
+  _processFormData(event, form, formData) {
+    const remapped = remapLegacySubmitData(foundry.utils.flattenObject(formData.object));
+    return foundry.utils.expandObject(remapped);
+  }
+
+  /** @override */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     const actor = this.actor;
@@ -156,7 +163,7 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
     if (!combatant) return null;
     const state = getStarshipCombatState(combatant);
     const isTurn = combat.combatant?.id === combatant.id;
-    const canAct = isTurn || game.user.isGM;
+    const canAct = game.user.isGM || (isTurn && this.actor.isOwner);
     const groups = actionsByDepartment();
     const actionGroups = Object.entries(groups).map(([key, actions]) => ({
       key,
@@ -263,7 +270,9 @@ export class WwnStarshipSheet extends composeMixins(CollapsibleSectionsMixin, Ac
     const choice = await showWwnDialog({
       modifier: "starship-assign-role",
       title: game.i18n.localize("WWN.Starship.AssignRoleTitle"),
-      content: `<p>${game.i18n.format("WWN.Starship.AssignRolePrompt", { name: actor.name })}</p>`,
+      content: `<p>${game.i18n.format("WWN.Starship.AssignRolePrompt", {
+        name: foundry.utils.escapeHTML(actor.name),
+      })}</p>`,
       buttons: [
         ...STATIONS.map((key) => ({
           action: key,

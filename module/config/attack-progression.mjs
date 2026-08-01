@@ -23,7 +23,8 @@ export const ATTACK_PROGRESSIONS = {
   },
   partialWarrior: {
     label: "WWN.ClassEdge.AttackPartialWarrior",
-    compute: (level) => Math.floor(level / 2) + Math.ceil(level / 4),
+    // Expert half-level +1 at 1st and +1 at 5th (WWN Partial Warrior / SWN Adventurer).
+    compute: (level) => Math.floor(level / 2) + 1 + (level >= 5 ? 1 : 0),
   },
 };
 

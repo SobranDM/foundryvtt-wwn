@@ -72,10 +72,6 @@ export class AssetItemActions {
       attackSpecial: this.system.attackSpecial,
       assetsWithLocationNotes
     };
-    if (this.actor?.type == "faction") {
-      // Faction attacks are logged via sheet flows; keep parity with prior no-op branch.
-      return;
-    }
     await createCardMessage({
       title: dialogData.name,
       subtitle: dialogData.attackKey,
@@ -202,7 +198,7 @@ export class AssetItemActions {
     }
     const name = `${this.actor?.name} - ${this.name} attacking ${attackedAsset.name} (${attackedFaction.name})`;
     const cardData = {
-      desc: this.system.description,
+      desc: this.system.desc || this.system.description,
       name,
       hitRoll: await hitRoll.render(),
       defRoll: await defRoll.render(),
@@ -228,12 +224,11 @@ export class AssetItemActions {
   }
 
   async _assetLogAction() {
-    let body = "";
-    if ("description" in this.system) {
-      body = `<span class="flavor-text">${this.system.description}</span>`;
-    } else {
-      body = "<span class='flavor-text'> No Description</span>";
-    }
+    const raw = String(this.system.desc || this.system.description || "").trim();
+    const enriched = raw
+      ? await foundry.applications.ux.TextEditor.implementation.enrichHTML(raw, { async: true })
+      : foundry.utils.escapeHTML(game.i18n.localize("WWN.Asset.NoDescription"));
+    const bodyHtml = `<span class="flavor-text">${enriched}</span>`;
     if (this.actor?.type == "faction") {
       const gm_ids = ChatMessage.getWhisperRecipients("GM")
         .filter((i) => i)
@@ -242,7 +237,7 @@ export class AssetItemActions {
 
       await createNoticeMessage({
         title: this.name,
-        body,
+        bodyHtml,
         actor: this.actor,
         whisper: gm_ids,
         flags: { kind: "asset-action" },
@@ -254,24 +249,23 @@ export class AssetItemActions {
   async rollAsset(_shiftKey = false) {
     const data = this.system;
     if (data.unusable) {
-      ui.notifications?.error("Asset is unusable");
+      ui.notifications?.error(game.i18n.localize("WWN.Asset.Unusable"));
       return;
     }
     if ((data.attackDamage && data.attackDamage !== "") || data.counter) {
       const choice = await showWwnDialog({
         modifier: "asset-action",
-        title: "Attack with Asset",
-        content:
-          "<p>Do you want to roll an attack(default), counter, search for an asset to attack, or use asset/chat description?</p>",
+        title: game.i18n.localize("WWN.Asset.AttackDialogTitle"),
+        content: `<p>${game.i18n.localize("WWN.Asset.AttackDialogHint")}</p>`,
         buttons: [
-          { action: "attack", label: "Attack", default: true, callback: () => "attack" },
-          { action: "counter", label: "Counter", callback: () => "counter" },
+          { action: "attack", label: "WWN.Asset.Attack", default: true, callback: () => "attack" },
+          { action: "counter", label: "WWN.Asset.Counter", callback: () => "counter" },
           {
             action: "search",
-            label: "Search active factions for an asset to attack",
+            label: "WWN.Asset.SearchFactions",
             callback: () => "search",
           },
-          { action: "action", label: "Use Action", callback: () => "action" },
+          { action: "action", label: "WWN.Asset.UseAction", callback: () => "action" },
           cancelButton(),
         ],
       });

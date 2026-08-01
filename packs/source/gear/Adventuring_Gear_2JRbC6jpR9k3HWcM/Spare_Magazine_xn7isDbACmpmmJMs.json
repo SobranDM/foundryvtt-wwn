@@ -1,0 +1,36 @@
+{
+  "_id": "xn7isDbACmpmmJMs",
+  "name": "Spare Magazine",
+  "type": "ammo",
+  "flags": {},
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "system": {
+    "description": "<p>A spare magazine of ammunition for a slugthrower or similar magazine-fed weapon. Reload transfers rounds into the weapon magazine. Duplicate and rename for specific calibers as needed.</p>",
+    "price": 10,
+    "weight": 0.5,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 12,
+      "max": 12
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xn7isDbACmpmmJMs"
+}

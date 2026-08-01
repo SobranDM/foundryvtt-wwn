@@ -5,6 +5,7 @@ export { default as WwnStarship } from "./actor/starship.mjs";
 export { default as WwnPowerArmor } from "./actor/power-armor.mjs";
 
 export { default as WwnGear } from "./item/gear.mjs";
+export { default as WwnAmmo } from "./item/ammo.mjs";
 export { default as WwnWeapon } from "./item/weapon.mjs";
 export { default as WwnArmor } from "./item/armor.mjs";
 export { default as WwnSkill } from "./item/skill.mjs";

@@ -204,7 +204,7 @@ export function preparePowersTabContext(data, actor, { isSectionCollapsed } = {}
   data.resourcePools = actor.system.resourcePools ?? [];
   data.resourcePoolColumns = layoutResourcePoolColumns(data.resourcePools);
   data.hasSpellPowers = powers.some((p) => p.system.subType === "spell");
-  // WWN PC document type is "pc"
+  // Canonical PC type is "character" (alias "pc"); use isPc()
   data.showPreparedCounter = isPc(actor) && data.hasSpellPowers;
   // Monsters omit empty Class/Edge and Foci chrome; PCs always show create affordances.
   data.showClassEdgesSection = isPc(actor) || data.classEdges.length > 0;

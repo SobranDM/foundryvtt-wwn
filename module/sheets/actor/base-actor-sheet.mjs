@@ -127,6 +127,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
 
     context.weapons = items.filter((i) => i.type === "weapon");
     context.armors = items.filter((i) => i.type === "armor");
+    context.ammoItems = items.filter((i) => i.type === "ammo");
     context.gear = items.filter((i) => i.type === "item");
     context.currencies = items.filter((i) => i.type === "currency");
     context.skills = items.filter((i) => i.type === "skill").sort((a, b) => a.name.localeCompare(b.name));
@@ -158,6 +159,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     const favoritable = [
       ...context.weapons,
       ...context.gear,
+      ...context.ammoItems,
       ...context.armors,
       ...context.skills,
       ...(context.powerSections ?? []).flatMap((s) => s.powers),
@@ -472,7 +474,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     if (!item || item.type !== "power" || item.system.subType !== "spell") return;
 
     const markingPrepared = !item.system.prepared;
-    if (markingPrepared && this.actor.type === "pc") {
+    if (markingPrepared && isPc(this.actor)) {
       const prepared = this.actor.system.casting?.prepared ?? {};
       if ((prepared.max ?? 0) > 0 && (prepared.value ?? 0) >= prepared.max) {
         return ui.notifications.warn(game.i18n.localize("WWN.Power.PreparedAtMax"));

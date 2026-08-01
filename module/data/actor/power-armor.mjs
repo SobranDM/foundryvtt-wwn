@@ -1,5 +1,9 @@
 import { sumArmorFittingBudgets, fittingsAreInert } from "../../helpers/power-armor-budget.mjs";
 import { derivePowerArmorEffects } from "../../helpers/power-armor-derive.mjs";
+import {
+  applyEmptySuitDerived,
+  resolveEmptySuitMode,
+} from "../../helpers/power-armor-fitting-state.mjs";
 import { resolvePilot, isPilotTrained, buildMergedRollData } from "../../helpers/power-armor-pilot.mjs";
 
 const fields = foundry.data.fields;
@@ -37,6 +41,11 @@ export default class WwnPowerArmor extends foundry.abstract.TypeDataModel {
       value: new fields.NumberField({ ...requiredInteger, min: 0, initial: 0 }),
       max: new fields.NumberField({ ...requiredInteger, min: 0, initial: 0 }),
     });
+    /** VI empty-suit HP pool (Black Ofuda); unused while a pilot takes overflow damage. */
+    schema.viHp = new fields.SchemaField({
+      value: new fields.NumberField({ ...requiredInteger, min: 0, initial: 15 }),
+      max: new fields.NumberField({ ...requiredInteger, min: 0, initial: 15 }),
+    });
     schema.favorites = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
     schema.forbidEfficiency = new fields.BooleanField({ initial: false });
     schema.runtimeMultiplier = new fields.NumberField({ required: true, nullable: false, initial: 1 });
@@ -44,6 +53,9 @@ export default class WwnPowerArmor extends foundry.abstract.TypeDataModel {
     schema.transportFrames = new fields.NumberField({ ...requiredInteger, min: 1, initial: 1 });
     schema.stealthPenalty = new fields.NumberField({ ...requiredInteger, initial: 0 });
     schema.maxRuntimeCap = new fields.NumberField({ required: true, nullable: true, initial: null });
+
+    /** Phase B: per-fitting scene/maint/cooldown/mode counters keyed by effectId. */
+    schema.fittingState = new fields.ObjectField({ required: true, nullable: false, initial: () => ({}) });
 
     // Display mirrors for sheet (derived)
     schema.ac = new fields.NumberField({ ...requiredInteger, initial: 10 });
@@ -77,10 +89,18 @@ export default class WwnPowerArmor extends foundry.abstract.TypeDataModel {
       derived.runtimeMax = Math.min(derived.runtimeMax, this.maxRuntimeCap);
     }
 
-    this.derived = derived;
-    this.ac = derived.ac;
-    this.soak.max = derived.soakMax;
+    if (this.fittingState?._maint?.flags?.soakMaxHalf) {
+      derived.soakMax = Math.ceil((derived.soakMax ?? 0) / 2);
+    }
+    const emptyMode = resolveEmptySuitMode(this);
+    this.derived = applyEmptySuitDerived(derived, emptyMode);
+    this.ac = this.derived.ac;
+    this.soak.max = this.derived.soakMax;
     if (this.soak.value > this.soak.max) this.soak.value = this.soak.max;
+    if (emptyMode.active) {
+      this.viHp.max = emptyMode.hp;
+      if (this.viHp.value > this.viHp.max) this.viHp.value = this.viHp.max;
+    }
 
     this.runtime.max = derived.runtimeMax;
     if (derived.perpetual) {
@@ -89,6 +109,7 @@ export default class WwnPowerArmor extends foundry.abstract.TypeDataModel {
 
     this.fittings = actor.items.filter((i) => i.type === "armorFitting");
     this.weapons = actor.items.filter((i) => i.type === "weapon");
+    this.ammoItems = actor.items.filter((i) => i.type === "ammo");
     this.gear = actor.items.filter((i) => i.type === "item" || i.type === "armor");
 
     const resolve = (uuid) => {

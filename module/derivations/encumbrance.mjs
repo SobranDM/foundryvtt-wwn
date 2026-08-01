@@ -15,7 +15,7 @@ export function physicalItemWeight(type, s) {
   if (type === "armor") return s.weight ?? 0;
 
   let itemWeight = (s.weight ?? 0) * (s.quantity ?? 1);
-  if (type === "item" && (s.charges?.value || s.charges?.max)) {
+  if ((type === "item" || type === "ammo") && (s.charges?.value || s.charges?.max)) {
     if (!s.charges.max) itemWeight = s.charges.value * (s.weight ?? 0);
     else if (s.charges.value > s.charges.max) {
       itemWeight = (s.charges.value / s.charges.max) * (s.weight ?? 0);
@@ -39,7 +39,7 @@ export function deriveEncumbrance(actor) {
   const maxStowed = system.abilities?.str?.value ?? 10;
 
   for (const item of actor.items) {
-    if (!["weapon", "armor", "item"].includes(item.type)) continue;
+    if (!["weapon", "armor", "item", "ammo"].includes(item.type)) continue;
     const s = item.system;
     if (
       (s.weightless === "whenReadied" && s.equipped) ||

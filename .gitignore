@@ -33,8 +33,5 @@ packs/**/*.db
 # Local design/plan docs (not shipped)
 /docs/
 
-# Local scratch (not shipped)
-.superpowers/
-
 # One-shot content import/generator scripts (local only)
 /import-scripts/

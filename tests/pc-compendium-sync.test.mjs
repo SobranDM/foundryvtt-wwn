@@ -258,7 +258,7 @@ describe("extractPreservedFields / buildReplacementData", () => {
     assert.equal(created.system.poolGrant.formula, "1+@level");
   });
 
-  it("preserves power spend and technique level", () => {
+  it("preserves power spend, installation, and technique level", () => {
     const owned = {
       type: "power",
       name: "Psychic Succor",
@@ -267,6 +267,7 @@ describe("extractPreservedFields / buildReplacementData", () => {
         poolCommitted: { none: 0, active: 0, scene: 0, day: 1 },
         prepared: false,
         isActive: true,
+        installed: true,
         internalResource: { value: 2, max: 3 },
         level: 2,
       },
@@ -290,6 +291,7 @@ describe("extractPreservedFields / buildReplacementData", () => {
     const created = buildReplacementData(pack, preserved);
     assert.equal(created.system.poolCommitted.day, 1);
     assert.equal(created.system.isActive, true);
+    assert.equal(created.system.installed, true);
     assert.equal(created.system.level, 2);
     assert.equal(created.system.damageRoll, "1d6+1");
     assert.equal(created.system.healing, true);

@@ -31,11 +31,64 @@ import {
 } from "./systems.mjs";
 import { intoTheFire, resolveCrisisInstance, keepItTogetherCrisis } from "./crisis-flow.mjs";
 import { resolveShipWeaponHit, combatantForStarship } from "./attack.mjs";
+import {
+  extractChatRollTotal,
+  stationCheckSucceeded,
+  opposedCheckSucceeded,
+  pickFlakShot,
+  cloudDefenderIds,
+  STARSHIP_ACTION_DC,
+} from "./roll-resolve.mjs";
 import { rollStationCheck, rollShipWeapon } from "../../helpers/starship-rolls.mjs";
 import { WwnDice } from "../../dice/dice.mjs";
 import { findStationSkillItem, DEFAULT_STATION_SKILL } from "../../helpers/starship-crew.mjs";
 import { createNoticeMessage } from "../../chat/chat-card.mjs";
-import { showWwnDialog, confirmButton, cancelButton, confirmWwnDialog } from "../../applications/wwn-dialog.mjs";
+import { showWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
+
+/**
+ * Roll a station check and return its primary total, or null if cancelled / failed to roll.
+ * @param {Actor} starship
+ * @param {string} stationKey
+ * @returns {Promise<number|null>}
+ */
+async function stationRollTotal(starship, stationKey) {
+  const msg = await rollStationCheck(starship, stationKey, { skipDialog: false });
+  if (!msg) return null;
+  return extractChatRollTotal(msg);
+}
+
+/**
+ * Fixed-DC station check. Returns null if roll cancelled, else success boolean.
+ * @param {Actor} starship
+ * @param {string} stationKey
+ * @param {number} dc
+ * @returns {Promise<boolean|null>}
+ */
+async function stationVsDc(starship, stationKey, dc) {
+  const total = await stationRollTotal(starship, stationKey);
+  if (total == null) return null;
+  return stationCheckSucceeded(total, dc);
+}
+
+/**
+ * Opposed station checks (optional flat bonuses, e.g. Speed).
+ * @returns {Promise<boolean|null>} null if either roll cancelled
+ */
+async function opposedStations(attacker, atkStation, defenderActor, defStation, {
+  atkBonus = 0,
+  defBonus = 0,
+} = {}) {
+  const atk = await stationRollTotal(attacker, atkStation);
+  if (atk == null) return null;
+  if (!defenderActor) return stationCheckSucceeded(atk + atkBonus, 8);
+  const def = await stationRollTotal(defenderActor, defStation);
+  if (def == null) return null;
+  return opposedCheckSucceeded(atk + atkBonus, def + defBonus);
+}
+
+function notifyCheckFailed(starship) {
+  ui.notifications?.info?.(game.i18n.localize("WWN.Starship.CheckFailed"));
+}
 
 /**
  * Active starship combat containing this ship, if any.
@@ -69,6 +122,10 @@ export async function executeStarshipAction(starship, actionId, options = {}) {
 
   const combatant = combatantForStarship(combat, starship);
   if (!combatant) return;
+
+  if (!game.user.isGM && !starship.isOwner && !options.gmOverride) {
+    return ui.notifications.warn(game.i18n.localize("WWN.Starship.NotOwner"));
+  }
 
   const isTurn = combat.combatant?.id === combatant.id;
   if (!isTurn && !game.user.isGM && !options.gmOverride) {
@@ -188,31 +245,25 @@ export async function executeStarshipAction(starship, actionId, options = {}) {
       return doYourDuty(combatant, starship, options.actName, commitAction);
 
     case "aboveAndBeyond":
-      if (!(await commitAction())) return;
-      return aboveAndBeyond(combatant, starship, options.stationKey ?? "bridge");
+      return aboveAndBeyond(combatant, starship, options.stationKey ?? "bridge", commitAction);
 
     case "dealWithCrisis":
-      return dealWithCrisis(combatant, options.instanceId, commitAction);
+      return dealWithCrisis(combatant, starship, options.instanceId, commitAction);
 
     case "evasiveManeuvers":
-      if (!(await commitAction())) return;
-      return evasiveManeuvers(combatant, starship);
+      return evasiveManeuvers(combatant, starship, commitAction);
 
     case "sensorGhost":
-      if (!(await commitAction())) return;
-      return sensorGhost(combatant, starship);
+      return sensorGhost(combatant, starship, commitAction);
 
     case "boostEngines":
-      if (!(await commitAction())) return;
-      return boostEngines(combatant, starship);
+      return boostEngines(combatant, starship, commitAction);
 
     case "damageControl":
-      if (!(await commitAction())) return;
-      return damageControl(combatant, starship);
+      return damageControl(combatant, starship, commitAction);
 
     case "emergencyRepairs":
-      if (!(await commitAction())) return;
-      return emergencyRepairs(starship, options);
+      return emergencyRepairs(starship, options, commitAction);
 
     case "crashSystems":
       return crashSystems(combat, combatant, starship, options.targetCombatantId, commitAction);
@@ -289,45 +340,39 @@ async function doYourDuty(combatant, starship, actName, commitAction) {
   });
 }
 
-async function aboveAndBeyond(combatant, starship, stationKey) {
-  await rollStationCheck(starship, stationKey, { skipDialog: false });
-  // Simplified: prompt success
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.AboveAndBeyondSuccess")}</p>`,
-  });
+async function aboveAndBeyond(combatant, starship, stationKey, commitAction) {
+  const ok = await stationVsDc(starship, stationKey, STARSHIP_ACTION_DC.aboveAndBeyond);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
   const skill = await skillLevelForStation(starship, stationKey);
   if (ok) {
     await updateStarshipCombatState(combatant, (s) => gainCp(s, skill + 1));
   } else {
     await updateStarshipCombatState(combatant, (s) => gainCp(s, -1));
+    notifyCheckFailed(starship);
   }
 }
 
-async function dealWithCrisis(combatant, instanceId, commitAction) {
+async function dealWithCrisis(combatant, starship, instanceId, commitAction) {
   const state = getStarshipCombatState(combatant);
-  const crisis = state.crises.find((c) => c.instanceId === instanceId && !c.resolved);
+  let crisis = state.crises.find((c) => c.instanceId === instanceId && !c.resolved);
   if (!crisis) {
-    // Pick first unresolved
-    const first = state.crises.find((c) => !c.resolved);
-    if (!first) return ui.notifications.warn(game.i18n.localize("WWN.Starship.NoCrisis"));
-    instanceId = first.instanceId;
+    crisis = state.crises.find((c) => !c.resolved);
+    if (!crisis) return ui.notifications.warn(game.i18n.localize("WWN.Starship.NoCrisis"));
   }
+  const dc = Number(crisis.dc) || STARSHIP_ACTION_DC.dealWithCrisis;
+  const ok = await stationVsDc(starship, "engineering", dc);
+  if (ok == null) return; // cancelled — do not spend CP
   if (!(await commitAction())) return;
-  const ok = await confirmWwnDialog({
-    title: combatant.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.DealWithCrisisSuccess")}</p>`,
-  });
-  if (ok) await resolveCrisisInstance(combatant, instanceId);
+  if (ok) await resolveCrisisInstance(combatant, crisis.instanceId);
+  else notifyCheckFailed(starship);
 }
 
-async function evasiveManeuvers(combatant, starship) {
-  await rollStationCheck(starship, "bridge");
+async function evasiveManeuvers(combatant, starship, commitAction) {
   const skill = await skillLevelForStation(starship, "bridge");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.format("WWN.Starship.EvasiveSuccessPrompt", { dc: 9 })}</p>`,
-  });
+  const ok = await stationVsDc(starship, "bridge", STARSHIP_ACTION_DC.evasiveManeuvers);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
   if (ok) {
     await updateStarshipCombatState(combatant, (s) => ({
       ...s,
@@ -339,16 +384,15 @@ async function evasiveManeuvers(combatant, starship) {
       ...s,
       flags: { ...s.flags, usedEvasiveThisRound: true },
     }));
+    notifyCheckFailed(starship);
   }
 }
 
-async function sensorGhost(combatant, starship) {
-  await rollStationCheck(starship, "comms");
+async function sensorGhost(combatant, starship, commitAction) {
   const skill = await skillLevelForStation(starship, "comms");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.format("WWN.Starship.SensorGhostSuccessPrompt", { dc: 9 })}</p>`,
-  });
+  const ok = await stationVsDc(starship, "comms", STARSHIP_ACTION_DC.sensorGhost);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
   if (ok) {
     await updateStarshipCombatState(combatant, (s) => ({
       ...s,
@@ -360,36 +404,38 @@ async function sensorGhost(combatant, starship) {
       ...s,
       flags: { ...s.flags, usedSensorGhostThisRound: true },
     }));
+    notifyCheckFailed(starship);
   }
 }
 
-async function boostEngines(combatant, starship) {
-  await rollStationCheck(starship, "engineering");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.format("WWN.Starship.BoostEnginesSuccessPrompt", { dc: 8 })}</p>`,
-  });
+async function boostEngines(combatant, starship, commitAction) {
+  const ok = await stationVsDc(starship, "engineering", STARSHIP_ACTION_DC.boostEngines);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
   if (ok) {
     await updateStarshipCombatState(combatant, (s) => ({
       ...s,
       buffs: { ...s.buffs, boostSpeed: 2 },
     }));
+  } else {
+    notifyCheckFailed(starship);
   }
 }
 
-async function damageControl(combatant, starship) {
+async function damageControl(combatant, starship, commitAction) {
   const state = getStarshipCombatState(combatant);
   const dc = damageControlDifficulty(state.flags.damageControlAttempts);
-  await rollStationCheck(starship, "engineering");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.format("WWN.Starship.DamageControlSuccessPrompt", { dc })}</p>`,
-  });
+  const ok = await stationVsDc(starship, "engineering", dc);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
   await updateStarshipCombatState(combatant, (s) => ({
     ...s,
     flags: { ...s.flags, damageControlAttempts: (s.flags.damageControlAttempts || 0) + 1 },
   }));
-  if (!ok) return;
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
   const fix = await skillLevelForStation(starship, "engineering");
   const heal = damageControlHp(fix, starship.system.hullClass);
   const hp = Number(starship.system.hp?.value) || 0;
@@ -402,13 +448,14 @@ async function damageControl(combatant, starship) {
   });
 }
 
-async function emergencyRepairs(starship, options) {
-  await rollStationCheck(starship, "engineering");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.format("WWN.Starship.EmergencyRepairsSuccessPrompt", { dc: 8 })}</p>`,
-  });
-  if (!ok) return;
+async function emergencyRepairs(starship, options, commitAction) {
+  const ok = await stationVsDc(starship, "engineering", STARSHIP_ACTION_DC.emergencyRepairs);
+  if (ok == null) return;
+  if (!(await commitAction())) return;
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
   if (options.repairDrive) {
     await repairDriveStep(starship);
     return;
@@ -420,13 +467,13 @@ async function emergencyRepairs(starship, options) {
 async function crashSystems(combat, combatant, starship, targetId, commitAction) {
   const target = pickTargetCombatant(combat, combatant, targetId);
   if (!target) return;
+  const ok = await opposedStations(starship, "comms", target.actor, "comms");
+  if (ok == null) return;
   if (!(await commitAction())) return;
-  await rollStationCheck(starship, "comms");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.CrashSystemsSuccessPrompt")}</p>`,
-  });
-  if (!ok) return;
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
   const prog = await skillLevelForStation(starship, "comms");
   await updateStarshipCombatState(target, (s) => ({
     ...s,
@@ -437,13 +484,13 @@ async function crashSystems(combat, combatant, starship, targetId, commitAction)
 async function defeatEcm(combat, combatant, starship, targetId, commitAction) {
   const target = pickTargetCombatant(combat, combatant, targetId);
   if (!target) return;
+  const ok = await opposedStations(starship, "comms", target.actor, "comms");
+  if (ok == null) return;
   if (!(await commitAction())) return;
-  await rollStationCheck(starship, "comms");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.DefeatEcmSuccessPrompt")}</p>`,
-  });
-  if (!ok) return;
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
   const prog = await skillLevelForStation(starship, "comms");
   await updateStarshipCombatState(combatant, (s) => ({
     ...s,
@@ -458,15 +505,25 @@ async function escapeCombat(combat, combatant, starship, commitAction) {
   if (starship.system.speed == null) {
     return ui.notifications.warn(game.i18n.localize("WWN.Starship.StationNoManeuver"));
   }
-  if (!(await commitAction())) return;
-  await rollStationCheck(starship, "bridge");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.EscapeSuccessPrompt")}</p>`,
-  });
-  if (!ok) return;
 
   const foes = combat.combatants.filter((c) => c.id !== combatant.id && !c.isDefeated);
+  const primary = foes[0];
+  const atkSpeed = Number(starship.system.speed) || 0;
+  const defSpeed = Number(primary?.actor?.system?.speed) || 0;
+  const ok = await opposedStations(
+    starship,
+    "bridge",
+    primary?.actor ?? null,
+    "bridge",
+    { atkBonus: atkSpeed, defBonus: defSpeed },
+  );
+  if (ok == null) return;
+  if (!(await commitAction())) return;
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
+
   const foeIds = foes.map((c) => c.id);
   const { state, newlyEscapedFrom } = applyEscapeCombatSuccess(
     getStarshipCombatState(combatant),
@@ -496,20 +553,27 @@ async function escapeCombat(combat, combatant, starship, commitAction) {
 async function pursueTarget(combat, combatant, starship, targetId, commitAction) {
   const target = pickTargetCombatant(combat, combatant, targetId);
   if (!target) return;
+  const atkSpeed = Number(starship.system.speed) || 0;
+  const defSpeed = Number(target.actor?.system?.speed) || 0;
+  const ok = await opposedStations(
+    starship,
+    "bridge",
+    target.actor,
+    "bridge",
+    { atkBonus: atkSpeed, defBonus: defSpeed },
+  );
+  if (ok == null) return;
   if (!(await commitAction())) return;
-  await rollStationCheck(starship, "bridge");
-  const ok = await confirmWwnDialog({
-    title: starship.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.PursueSuccessPrompt")}</p>`,
-  });
-  if (!ok) return;
-  // Escape lives on the fleeing ship, keyed by pursuer combatant id.
+  if (!ok) {
+    notifyCheckFailed(starship);
+    return;
+  }
   const result = applyPursueSuccess(getStarshipCombatState(target), combatant.id);
   if (result.changed) await setStarshipCombatState(target, result.state);
   await createNoticeMessage({
     title: starship.name,
     actor: starship,
-    body: game.i18n.localize("WWN.Starship.PursueSuccessPrompt"),
+    body: game.i18n.localize("WWN.Starship.PursueApplied"),
   });
 }
 
@@ -549,28 +613,40 @@ async function fireWeapons(combat, combatant, starship, {
     weapons = [w];
   }
 
-  if (commitAction && !(await commitAction())) return;
+  // Cloud weapons: auto vs fighters that attacked *this* ship last round
+  const cloudIds = cloudDefenderIds(
+    getStarshipCombatState(combatant).flags.attackedByLastRound ?? [],
+    [...combat.combatants],
+  );
 
-  // Cloud weapons: auto vs fighters that attacked last round
-  const cloudTargets = getStarshipCombatState(combatant).flags.attackedByLastRound ?? [];
+  // Commit CP only once the first shot actually resolves (cancelable dialogs first).
+  let committed = !commitAction;
+  const ensureCommit = async () => {
+    if (committed) return true;
+    if (!(await commitAction())) return false;
+    committed = true;
+    return true;
+  };
 
   for (const weapon of weapons) {
     const q = (await import("./qualities.mjs")).parseWeaponQualities(weapon.system?.qualities);
     let defenders = [target];
     if (q.cloud) {
-      defenders = combat.combatants.filter(
-        (c) => cloudTargets.includes(c.id) && c.actor?.system?.hullClass === "fighter",
-      );
+      defenders = cloudIds.map((id) => combat.combatants.get(id)).filter(Boolean);
       if (!defenders.length) continue;
     }
 
     for (const defender of defenders) {
-      const msg = await rollShipWeapon(starship, weapon, { skipDialog: true });
-      // Extract totals from the last rolls if available — fallback dialog
-      const attackTotal = msg?.rolls?.[0]?.total;
-      const damageTotal = msg?.rolls?.[1]?.total;
+      let rolled = await rollShipWeapon(starship, weapon, {
+        skipDialog: true,
+        createMessage: false,
+        targetActor: defender.actor,
+      });
+      let attackTotal = rolled?.attackTotal ?? null;
+      let damageTotal = rolled?.damageTotal ?? null;
+      let attackRoll = rolled?.attackRoll ?? null;
+      let damageRoll = rolled?.damageRoll ?? null;
       if (attackTotal == null || damageTotal == null) {
-        // Manual entry fallback
         const result = await showWwnDialog({
           modifier: "ship-hit",
           title: weapon.name,
@@ -579,30 +655,34 @@ async function fireWeapons(combat, combatant, starship, {
           buttons: [confirmButton(), cancelButton()],
         }).catch(() => null);
         if (!result || result === "cancel") continue;
-        await resolveShipWeaponHit({
-          combat,
-          attacker: combatant,
-          defender,
-          weapon,
-          attackTotal: Number(result.attack) || 0,
-          damageTotal: Number(result.damage) || 0,
-          targetSystems: targetSystems && !all,
-          disableItem: disableItemId ? defender.actor?.items?.get(disableItemId) : null,
-          disableDrive,
-        });
-        continue;
+        attackTotal = Number(result.attack) || 0;
+        damageTotal = Number(result.damage) || 0;
+        attackRoll = null;
+        damageRoll = null;
       }
 
-      // Flak: roll twice conceptually — re-roll if flak and keep better
+      if (!(await ensureCommit())) return;
+
       let atk = attackTotal;
       let dmg = damageTotal;
       if (q.flak && defender.actor?.system?.hullClass === "fighter") {
-        const msg2 = await rollShipWeapon(starship, weapon, { skipDialog: true });
-        const a2 = msg2?.rolls?.[0]?.total ?? atk;
-        const d2 = msg2?.rolls?.[1]?.total ?? dmg;
-        if (a2 > atk) {
-          atk = a2;
-          dmg = d2;
+        const rolled2 = await rollShipWeapon(starship, weapon, {
+          skipDialog: true,
+          createMessage: false,
+          targetActor: defender.actor,
+        });
+        const picked = pickFlakShot(
+          { attack: atk, damage: dmg },
+          {
+            attack: rolled2?.attackTotal ?? atk,
+            damage: rolled2?.damageTotal ?? dmg,
+          },
+        );
+        atk = picked.attack;
+        dmg = picked.damage;
+        if (rolled2 && picked.attack === rolled2.attackTotal) {
+          attackRoll = rolled2.attackRoll;
+          damageRoll = rolled2.damageRoll;
         }
       }
 
@@ -613,9 +693,12 @@ async function fireWeapons(combat, combatant, starship, {
         weapon,
         attackTotal: atk,
         damageTotal: dmg,
+        attackRoll,
+        damageRoll,
         targetSystems: targetSystems && !all,
-        disableItem: disableItemId ? defender.actor?.items?.get(disableItemId) : null,
-        disableDrive,
+        title: rolled?.title,
+        attackBreakdown: rolled?.attackBreakdown,
+        damageBreakdown: rolled?.damageBreakdown,
       });
     }
   }

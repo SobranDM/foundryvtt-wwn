@@ -43,6 +43,25 @@ export function findPoolGrantEdge(actor, { resourceName = "", source = "" } = {}
 }
 
 /**
+ * Display name for a shared resource pool given a power's resourceName/source.
+ * Prefer a matching ClassEdge grant; otherwise map generic Effort → "{source} Effort".
+ *
+ * @param {Actor} actor
+ * @param {{ resourceName?: string, source?: string }} opts
+ * @returns {string} empty when unresolvable
+ */
+export function resolvePoolDisplayName(actor, { resourceName = "", source = "" } = {}) {
+  const edge = findPoolGrantEdge(actor, { resourceName, source });
+  if (edge) return String(edge.system.poolGrant.name).trim();
+
+  const name = String(resourceName ?? "").trim();
+  const src = String(source ?? "").trim();
+  if (!name) return "";
+  if (name === "Effort" && src) return `${src} Effort`;
+  return name;
+}
+
+/**
  * Find the derived resource pool entry for a power on its actor.
  * @param {Actor} actor
  * @param {{ resourceName?: string, source?: string, subType?: string, level?: number }} system
@@ -53,13 +72,12 @@ export function findNamedResourcePool(actor, system = {}, pools = null) {
   const list = pools ?? actor?.system?.resourcePools ?? [];
   if (!list.length) return null;
 
-  const edge = findPoolGrantEdge(actor, {
+  const displayName = resolvePoolDisplayName(actor, {
     resourceName: system.resourceName,
     source: system.source,
   });
-  if (edge) {
-    const grantName = String(edge.system.poolGrant.name).trim();
-    const matched = list.find((p) => p.name === grantName && p.level == null);
+  if (displayName) {
+    const matched = list.find((p) => p.name === displayName && p.level == null);
     if (matched) return matched;
   }
 

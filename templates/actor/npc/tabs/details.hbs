@@ -64,7 +64,10 @@
     <div class="wwn-form-panel">
       <div class="wwn-section-header">{{localize "WWN.category.notes"}}</div>
       <div class="resizable-editor" data-editor-size="320">
-        {{editor enrichedBiography target="system.biography" button=true editable=editable async=true}}
+        <prose-mirror name="system.biography" toggled value="{{source.system.biography}}"
+          data-document-uuid="{{actor.uuid}}" {{#unless editable}}disabled{{/unless}}>
+          {{{enrichedBiography}}}
+        </prose-mirror>
       </div>
     </div>
   </div>

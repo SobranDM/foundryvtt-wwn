@@ -1,6 +1,6 @@
 {
   "name": "wwn",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha2",
   "description": "Worlds Without Number system for Foundry VTT",
   "scripts": {
     "build:css": "sass scss/:styles/ --style compressed",

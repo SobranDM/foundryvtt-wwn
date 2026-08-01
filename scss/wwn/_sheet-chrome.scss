@@ -271,34 +271,33 @@
   color: var(--wwn-accent-strong, var(--wwn-accent));
 }
 
-/* AppV2 sheets are .application, not .app — port Foundry editor-edit chrome */
-.wwn-sheet .editor {
-  position: relative;
-  max-height: 100%;
-  max-width: 100%;
-  overflow: auto;
-  height: auto;
-  min-height: 8rem;
-}
-.wwn-sheet .editor .editor-edit {
-  display: none;
-  font-size: 1.25em;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 1;
-  background: rgba(187, 187, 187, 0.75);
-  border: 1px solid var(--color-border-dark-1, var(--wwn-border));
-  border-radius: 4px;
-  padding: 1px 2px;
-  box-shadow: 0 0 1px var(--color-shadow-dark, rgba(0, 0, 0, 0.5));
-}
-.wwn-sheet .editor:hover .editor-edit {
+/* AppV2 <prose-mirror> editors (replaces V1 {{editor}} / .editor-edit chrome) */
+.wwn-sheet prose-mirror {
   display: block;
+  min-height: 8rem;
+  max-width: 100%;
 }
 
-/* AppV2 window content flex utilities (replaces Tailwind contentClasses) */
-.wwn-sheet .window-content.flex {
+/*
+ * Foundry core shows the toggle with `display: block` on hover
+ * (public/less2/elements/prosemirror.less), which overrides the base
+ * `button { display: flex; … }` centering. Restore flex + zero padding.
+ */
+.wwn-sheet prose-mirror:hover button.toggle:enabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.wwn-sheet prose-mirror button.toggle > i {
+  margin: 0;
+  line-height: 1;
+}
+
+/* AppV2 window content flex utilities.
+   Gate display so unlayered rules do not override Foundry's layered
+   .minimized/.minimizing/.maximizing { .window-content { display: none } }. */
+.wwn-sheet:not(.minimized):not(.minimizing):not(.maximizing) .window-content.flex {
   display: flex;
 }
 .wwn-sheet .window-content.flex-col {
@@ -307,11 +306,16 @@
 .wwn-sheet .window-content.min-h-0 {
   min-height: 0;
 }
-.wwn-sheet .window-content {
+.wwn-sheet:not(.minimized):not(.minimizing):not(.maximizing) .window-content {
   display: flex;
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
+}
+.wwn-sheet.minimized .window-content,
+.wwn-sheet.minimizing .window-content,
+.wwn-sheet.maximizing .window-content {
+  display: none;
 }
 /* Unlayered sheet CSS can override Foundry's layered tab hide — keep inactive tabs gone. */
 .wwn-sheet .tab[data-tab]:not(.active) {
@@ -321,4 +325,20 @@
   flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
+}
+
+/*
+ * Sheet-type min-width/min-height (e.g. .wwn.sheet.actor.pc { 640×550 }) are
+ * unlayered and higher-specificity than Foundry's @layer applications
+ * minimize unset — and also beat a plain .application.wwn-sheet.minimized.
+ * Match or exceed those selectors so collapse can reach the header bar.
+ */
+.application.wwn.wwn-sheet.sheet.minimized,
+.application.wwn.wwn-sheet.sheet.minimizing,
+.application.wwn.wwn-sheet.sheet.maximizing,
+.application.wwn.actor.npc.minimized,
+.application.wwn.actor.npc.minimizing,
+.application.wwn.actor.npc.maximizing {
+  min-height: unset;
+  min-width: unset;
 }

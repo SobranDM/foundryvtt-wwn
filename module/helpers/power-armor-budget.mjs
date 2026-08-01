@@ -3,7 +3,9 @@
  * Pure helpers for unit tests; no Foundry imports.
  */
 
-export const PHASE_A_EFFECT_IDS = Object.freeze({
+/** All pack armor-fitting effectIds (Phase A + Phase B). */
+export const POWER_ARMOR_EFFECT_IDS = Object.freeze({
+  // Phase A core
   platingImprovised: "platingImprovised",
   platingBasic: "platingBasic",
   platingAdvanced: "platingAdvanced",
@@ -23,13 +25,74 @@ export const PHASE_A_EFFECT_IDS = Object.freeze({
   camoSkinBasic: "camoSkinBasic",
   camoSkinAdvanced: "camoSkinAdvanced",
   emergencyPowerCell: "emergencyPowerCell",
+  // Sensors / lights (AE)
+  floodlights: "floodlights",
+  nightVisionSensors: "nightVisionSensors",
+  multispectralOptics: "multispectralOptics",
+  // Movement
+  jumpJets: "jumpJets",
+  hydraulicJumpDampers: "hydraulicJumpDampers",
+  wallcrawlerAnchors: "wallcrawlerAnchors",
+  aquaticAdaptationSuite: "aquaticAdaptationSuite",
+  graviticFlightStruts: "graviticFlightStruts",
+  graviticFoldFlight: "graviticFoldFlight",
+  assaultChargeServos: "assaultChargeServos",
+  shortRangeWarpCapacitor: "shortRangeWarpCapacitor",
+  pathfinderBridgingSystem: "pathfinderBridgingSystem",
+  // Stealth / probes
+  ghostWalkerField: "ghostWalkerField",
+  ablativeMeteorShielding: "ablativeMeteorShielding",
+  weaselProbe: "weaselProbe",
+  smokethrower: "smokethrower",
+  // Combat
+  integralRipperBar: "integralRipperBar",
+  breacherFist: "breacherFist",
+  fingerOfDeath: "fingerOfDeath",
+  skysweeperLaserSystem: "skysweeperLaserSystem",
+  linkedTargetingSystem: "linkedTargetingSystem",
+  targetLockProcessor: "targetLockProcessor",
+  chokeCloudSprayer: "chokeCloudSprayer",
+  ricochetField: "ricochetField",
+  reactiveAntipersonnelArmor: "reactiveAntipersonnelArmor",
+  kineticRebukeShielding: "kineticRebukeShielding",
+  stunSkin: "stunSkin",
+  plagueWindGenerator: "plagueWindGenerator",
+  // Defense / env
+  sealedSystemsBasic: "sealedSystemsBasic",
+  sealedSystemsAdvanced: "sealedSystemsAdvanced",
+  thermalAblativeLayer: "thermalAblativeLayer",
+  stormReinforcement: "stormReinforcement",
+  deployableForceShield: "deployableForceShield",
+  // VI / locks
+  tsukumogamiProcessor: "tsukumogamiProcessor",
+  blackOfuda: "blackOfuda",
+  backseatDriverMod: "backseatDriverMod",
+  identificationLock: "identificationLock",
+  // Medical / recovery
+  onboardMedicalUnit: "onboardMedicalUnit",
+  traumaStabilizerUnit: "traumaStabilizerUnit",
+  neuralBuffer: "neuralBuffer",
+  // Utility / EW
+  commSuiteBasic: "commSuiteBasic",
+  commSuiteAdvanced: "commSuiteAdvanced",
+  ecmProjector: "ecmProjector",
+  qecmProjector: "qecmProjector",
+  droneMount: "droneMount",
+  integratedAmmoFeed: "integratedAmmoFeed",
+  brainguardCap: "brainguardCap",
 });
 
+/** @deprecated Use POWER_ARMOR_EFFECT_IDS */
+export const PHASE_A_EFFECT_IDS = POWER_ARMOR_EFFECT_IDS;
+
+/** Set of all known effectId strings for pack smoke tests. */
+export const POWER_ARMOR_EFFECT_ID_SET = new Set(Object.values(POWER_ARMOR_EFFECT_IDS));
+
 const PLATING_IDS = new Set([
-  PHASE_A_EFFECT_IDS.platingImprovised,
-  PHASE_A_EFFECT_IDS.platingBasic,
-  PHASE_A_EFFECT_IDS.platingAdvanced,
-  PHASE_A_EFFECT_IDS.platingPretech,
+  POWER_ARMOR_EFFECT_IDS.platingImprovised,
+  POWER_ARMOR_EFFECT_IDS.platingBasic,
+  POWER_ARMOR_EFFECT_IDS.platingAdvanced,
+  POWER_ARMOR_EFFECT_IDS.platingPretech,
 ]);
 
 /**
@@ -52,7 +115,7 @@ export function armorFittingItems(items) {
 export function sumArmorFittingBudgets(items, massMax = 0, powerMax = 0) {
   const fittings = armorFittingItems(items);
   const hasOptimization = fittings.some(
-    (f) => f.system?.effectId === PHASE_A_EFFECT_IDS.platingOptimization,
+    (f) => f.system?.effectId === POWER_ARMOR_EFFECT_IDS.platingOptimization,
   );
   const hasPlating = fittings.some((f) => PLATING_IDS.has(f.system?.effectId));
 
@@ -68,11 +131,10 @@ export function sumArmorFittingBudgets(items, massMax = 0, powerMax = 0) {
     let mass = system.mass ?? 0;
     let power = system.power ?? 0;
 
-    // Optimization discounts other fittings when plating is present; optimization itself uses table mass/power (-1/-1).
     if (
       hasOptimization
       && hasPlating
-      && system.effectId !== PHASE_A_EFFECT_IDS.platingOptimization
+      && system.effectId !== POWER_ARMOR_EFFECT_IDS.platingOptimization
     ) {
       mass = Math.ceil(mass / 2);
       power = Math.ceil(power / 2);

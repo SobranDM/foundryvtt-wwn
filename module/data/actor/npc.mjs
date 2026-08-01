@@ -36,6 +36,12 @@ export default class WwnNpc extends WwnActorBase {
     schema.favorites = new fields.ArrayField(new fields.StringField(), { required: true, initial: [] });
     schema.notes = new fields.HTMLField({ required: true, blank: true });
 
+    /** Manual pool maxes keyed by derived pool id (e.g. pool-vowed-effort). */
+    schema.poolMaxOverrides = new fields.TypedObjectField(
+      new fields.NumberField({ required: true, nullable: false, integer: true, min: 0, initial: 0 }),
+      { required: true, initial: {} }
+    );
+
     schema.combat = new fields.SchemaField({
       ab: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       damageBonus: new fields.NumberField({ ...requiredInteger, initial: 0 }),

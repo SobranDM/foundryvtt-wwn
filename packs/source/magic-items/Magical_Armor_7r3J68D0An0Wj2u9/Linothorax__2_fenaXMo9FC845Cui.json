@@ -27,7 +27,10 @@
     "equipped": false,
     "stowed": false,
     "weightless": "",
-    "containerId": ""
+    "containerId": "",
+    "tl": 1,
+    "magical": true,
+    "powered": false
   },
   "ownership": {
     "default": 0,

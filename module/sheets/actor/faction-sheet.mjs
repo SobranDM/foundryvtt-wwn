@@ -19,6 +19,7 @@ import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
 import { ActorItemActionsMixin } from "../mixins/actor-item-actions.mjs";
 import { showWwnDialog, confirmWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { remapLegacySubmitData } from "../../helpers/sheet-legacy-bridge.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -106,6 +107,12 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
     const tab = context.tabs?.[partId];
     if (tab) context.tab = tab;
     return context;
+  }
+
+  /** @override */
+  _processFormData(event, form, formData) {
+    const remapped = remapLegacySubmitData(foundry.utils.flattenObject(formData.object));
+    return foundry.utils.expandObject(remapped);
   }
 
   /** @override */
@@ -293,7 +300,10 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
 
     let longMsg = "";
     if (assetsWithTurn.length > 0) longMsg += "Assets with turn notes/rolls:<br>";
-    for (const a of assetsWithTurn) longMsg += `<i>${a.name}</i>: ${a.system.turnRoll} <br><br>`;
+    const esc = foundry.utils.escapeHTML;
+    for (const a of assetsWithTurn) {
+      longMsg += `<i>${esc(a.name)}</i>: ${esc(String(a.system.turnRoll ?? ""))} <br><br>`;
+    }
 
     if (newCreds < 0) {
       if (assetMaintTotal + newCreds < 0) {
@@ -316,9 +326,10 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
   static async #onAddTag() {
     let tagOptions = "";
     let tagDesc = "";
+    const esc = foundry.utils.escapeHTML;
     for (const tag of FACTION_TAGS) {
-      tagOptions += `<option value='${tag.name}'>${tag.name}</option>`;
-      tagDesc += `<div> <b>${tag.name}</b></div><div>${tag.desc}</div><div><i>Effect:</i> ${tag.effect}</div>`;
+      tagOptions += `<option value='${esc(tag.name)}'>${esc(tag.name)}</option>`;
+      tagDesc += `<div> <b>${esc(tag.name)}</b></div><div>${esc(tag.desc)}</div><div><i>Effect:</i> ${esc(tag.effect)}</div>`;
     }
     const actor = this.actor;
     const result = await showWwnDialog({
@@ -363,7 +374,7 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
     const confirmed = await confirmWwnDialog({
       modifier: "delete-tag",
       title: "Delete Tag",
-      content: `<p>Remove tag ${tag.name}?</p>`,
+      content: `<p>Remove tag ${foundry.utils.escapeHTML(tag.name)}?</p>`,
     });
     if (!confirmed) return;
     const next = tags.slice();
@@ -384,7 +395,13 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
     });
     if (!result || result === "cancel") return;
     const log = result.inputField;
-    if (log) await WwnFactionSheet.logMessage(actor, "Manual Faction Log", log);
+    if (log) {
+      await WwnFactionSheet.logMessage(
+        actor,
+        "Manual Faction Log",
+        foundry.utils.escapeHTML(String(log))
+      );
+    }
   }
 
   static async #onDeleteLog(event, target) {
@@ -437,7 +454,9 @@ export class WwnFactionSheet extends composeMixins(CollapsibleSectionsMixin, Act
       el?.querySelector?.(".message-header")?.remove();
       renderedContent = el?.innerHTML?.toString?.() ?? content;
     }
-    const log = [...actor.system.log, renderedContent];
+    // Sanitize before persist — log tab renders with triple-stash.
+    const cleaned = foundry.utils.cleanHTML(String(renderedContent ?? content ?? ""));
+    const log = [...actor.system.log, cleaned];
     await actor.update({ "system.log": log });
   }
 }

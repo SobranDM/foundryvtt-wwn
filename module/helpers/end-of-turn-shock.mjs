@@ -1,11 +1,25 @@
 /**
  * End-of-turn adjacent Shock for Savage Fray L1.
+ * Posts a chat card with apply rows — the damage target's owner applies.
  */
 import { WwnDice } from "../dice/dice.mjs";
 import { WwnDamageRoll } from "../dice/rolls.mjs";
 import { isTruthyAeFlag } from "./combat-ae-flags.mjs";
 import { adjacentShockTargets } from "./savage-fray.mjs";
-import { createNoticeMessage } from "../chat/chat-card.mjs";
+import { resolveTargetAcForAttack } from "./attack-ac.mjs";
+import { createRollMessage } from "../chat/chat-card.mjs";
+
+/**
+ * Grid spaces between two canvas points (Foundry v14 `measurePath`).
+ * @param {{x: number, y: number}} a
+ * @param {{x: number, y: number}} b
+ * @returns {number}
+ */
+function gridSpacesBetween(a, b) {
+  if (!canvas?.grid?.measurePath) return Infinity;
+  const result = canvas.grid.measurePath([a, b]);
+  return Number(result?.spaces) || 0;
+}
 
 /**
  * @param {TokenDocument} token
@@ -18,13 +32,7 @@ function adjacentHostileTokens(token) {
   for (const t of canvas.tokens.placeables) {
     if (!t.actor || t.id === token.object.id) continue;
     if (t.document.disposition === token.disposition) continue;
-    const dist = canvas.grid.measureDistance(origin, t.center, { gridSpaces: true });
-    // Adjacent = within 1 grid space
-    const spaces =
-      typeof dist === "number" && dist > 20
-        ? Math.round(dist / (canvas.dimensions?.distance || 5))
-        : dist;
-    if (spaces <= 1) foes.push(t.document);
+    if (gridSpacesBetween(origin, t.center) <= 1) foes.push(t.document);
   }
   return foes;
 }
@@ -42,7 +50,13 @@ export function readyMeleeShockWeapon(actor) {
       i.system?.melee &&
       i.system?.shock?.damage,
   ) ?? [];
-  return weapons[0] ?? null;
+  if (!weapons.length) return null;
+  // Prefer the highest shock damage formula total estimate (numeric prefix), else first.
+  return weapons.sort((a, b) => {
+    const av = Number(String(a.system.shock.damage).match(/\d+/)?.[0]) || 0;
+    const bv = Number(String(b.system.shock.damage).match(/\d+/)?.[0]) || 0;
+    return bv - av;
+  })[0];
 }
 
 /**
@@ -66,8 +80,12 @@ export async function applyEndOfTurnAdjacentShock(combatant) {
   })).filter((f) => f.id && f.actor);
 
   const targets = adjacentShockTargets(adjacent, attacked);
+  const separateRanged = game.settings.get("wwn", "separateRangedAC");
   for (const foe of targets) {
-    const { applies } = WwnDice.shockAppliesOnMiss(actor, foe.actor, weapon, "melee");
+    const acResult = resolveTargetAcForAttack(actor, foe.actor, weapon, "melee", { separateRanged });
+    const { applies } = WwnDice.shockAppliesOnMiss(actor, foe.actor, weapon, "melee", {
+      effectiveTargetAc: Number.isFinite(acResult.ac) ? acResult.ac : null,
+    });
     if (!applies) continue;
     const parts = WwnDice.assembleAttack(actor, weapon, { attackKind: "melee" });
     if (!parts.shock) continue;
@@ -76,13 +94,32 @@ export async function applyEndOfTurnAdjacentShock(combatant) {
       actor.getRollData(),
       { kind: "damage" },
     ).evaluate();
-    await foe.actor.applyDamage(shockRoll.total, 1, {
-      source: `${actor.name}: ${weapon.name} (end of turn Shock)`,
+    const applyRows = [{
+      id: "shock",
+      label: game.i18n.localize("WWN.Roll.ShockBase"),
+      value: shockRoll.total,
+    }];
+    await createRollMessage({
+      rolls: [shockRoll],
+      kind: "attack",
+      actor,
+      img: weapon.img,
+      title: game.i18n.format("WWN.Roll.AttackTitle", { weapon: weapon.name }),
+      subtitle: game.i18n.format("WWN.Roll.VsTarget", { target: foe.actor.name }),
+      badge: {
+        label: game.i18n.localize("WWN.Roll.ShockBase"),
+        type: "warn",
+      },
+      bodyTemplate: "systems/wwn/templates/chat/attack-card.hbs",
+      context: {
+        applyRows,
+        notices: [game.i18n.localize("WWN.Chat.EndOfTurnShock")],
+        hit: false,
+      },
+      flags: {
+        applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })),
+        kind: "shock",
+      },
     });
-    await createNoticeMessage({
-      title: actor.name,
-      body: `${foe.actor.name}: ${shockRoll.total} Shock`,
-      flags: { kind: "shock" },
-    }).catch(() => null);
   }
 }

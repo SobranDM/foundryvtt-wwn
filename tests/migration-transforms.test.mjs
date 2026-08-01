@@ -13,6 +13,9 @@ import {
   migrateItemData,
   migrateArmor,
   migrateActorData,
+  migratePcCombatAb,
+  inferAttackProgression,
+  isModernGearSystem,
   normalizeWeightless,
   normalizeArmorType,
   applyEmbeddedItemMigration,
@@ -176,6 +179,50 @@ describe("migrateItemData dispatcher", () => {
     assert.equal(migrateItemData({ type: "spell", system: {} }).type, "power");
     assert.equal(migrateItemData({ type: "ability", system: {} }).type, "power");
   });
+
+  it("no-ops modern gear so personal/treasure are not rebuilt away", () => {
+    const modern = {
+      _id: "g1",
+      name: "Gem",
+      type: "item",
+      system: {
+        treasure: true,
+        personal: true,
+        expendOnUse: false,
+        charges: { value: 0, max: 0 },
+        container: { isContainer: false, isOpen: true },
+        price: 50,
+        quantity: 1,
+      },
+    };
+    assert.equal(isModernGearSystem(modern.system), true);
+    assert.equal(migrateItemData(modern), null);
+    const again = applyEmbeddedItemMigration(modern);
+    assert.equal(again.system.personal, true);
+    assert.equal(again.system.treasure, true);
+  });
+});
+
+describe("migratePcCombatAb merge helpers", () => {
+  it("returns residual abMod without replacing other combat fields at call site", () => {
+    const patch = migratePcCombatAb(
+      { details: { level: 5 }, combat: { ab: 5, initiative: { mod: 2 } } },
+      { progression: "expert" }
+    );
+    assert.ok(patch);
+    assert.equal(typeof patch.combat.abMod, "number");
+  });
+
+  it("infers warrior progression from classEdge", () => {
+    assert.equal(
+      inferAttackProgression(
+        { items: [{ type: "classEdge", system: { attackProgression: "warrior" } }] },
+        {}
+      ),
+      "warrior"
+    );
+    assert.equal(inferAttackProgression({ items: [] }, {}), "expert");
+  });
 });
 
 describe("legacy physical field migration", () => {
@@ -192,6 +239,8 @@ describe("legacy physical field migration", () => {
     });
     assert.equal(armor.system.type, "light");
     assert.equal(armor.system.weightless, "");
+    assert.equal(armor.system.tl, 1);
+    assert.equal(armor.system.magical, false);
   });
 });
 
@@ -245,6 +294,26 @@ describe("isBarePlaceholderActorData", () => {
 });
 
 describe("migrateActorData type preservation", () => {
+  it("merges residual abMod without wiping other combat fields", () => {
+    const out = migrateActorData({
+      type: "character",
+      name: "Veteran",
+      system: {
+        abilities: { str: { value: 10, mod: 0 } },
+        details: { level: 4 },
+        combat: { ab: 4, initiative: { mod: 1 }, soak: 2 },
+        warrior: true,
+      },
+      items: [],
+      effects: [],
+    });
+    assert.equal(out.type, "character");
+    assert.equal(out.system.combat.abMod, 0); // warrior L4 base AB 4 → residual 0
+    assert.equal(out.system.combat.initiative.mod, 1);
+    assert.equal(out.system.combat.soak, 2);
+    assert.equal(out.system.combat.ab, 4);
+  });
+
   it("keeps character type when migrating scores shape", () => {
     const out = migrateActorData({
       type: "character",

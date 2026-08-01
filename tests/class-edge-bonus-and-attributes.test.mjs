@@ -83,7 +83,7 @@ describe("attack bonus with edges", () => {
           warrior: { compute: (l) => l },
           mage: { compute: (l) => Math.floor(l / 5) },
           partialWarrior: {
-            compute: (l) => Math.floor(l / 2) + Math.ceil(l / 4),
+            compute: (l) => Math.floor(l / 2) + 1 + (l >= 5 ? 1 : 0),
           },
         },
       },

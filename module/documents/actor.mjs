@@ -7,14 +7,14 @@
 import { computeLevelUpSkillGrant } from "../helpers/skill-points.mjs";
 import { mergeWeaponFavorites } from "../helpers/favorites.mjs";
 import { CREATABLE_ACTOR_TYPES, isNpc, isPc } from "../helpers/actor-types.mjs";
-import { migrateActorData, applyEmbeddedItemMigration } from "../migration/transforms.mjs";
+import { migrateActorData, migrateActorItems } from "../migration/transforms.mjs";
 import { splitSoakDamage } from "../helpers/power-armor-damage.mjs";
 import { getPrimarySkillData } from "../helpers/skill-set.mjs";
 
 export class WwnActor extends Actor {
   /**
-   * Migrate embedded items (art→power, etc.) and legacy system shapes before
-   * schema validation. Actor types stay `character`/`monster` (pc/npc are
+   * Migrate embedded items (art→power, gear→ammo, etc.) and legacy system shapes
+   * before schema validation. Actor types stay `character`/`monster` (pc/npc are
    * reverse aliases only — never remapped here).
    * @override
    */
@@ -33,7 +33,8 @@ export class WwnActor extends Actor {
           `WWN | Dropped ${before - source.items.length} invalid embedded item(s) on actor ${source.name ?? source._id}`
         );
       }
-      source.items = source.items.map((i) => applyEmbeddedItemMigration(i));
+      // Includes known-name + weapon-linked gear→ammo (power armor, starships, etc.).
+      source.items = migrateActorItems(source.items);
     }
 
     // Shape-only migration for PCs/NPCs (preserves stored type).
@@ -110,18 +111,19 @@ export class WwnActor extends Actor {
 
   async #postLevelUpSkillGrant({ newLevel, gained, perLevel }) {
     const { createCardMessage } = await import("../chat/chat-card.mjs");
+    const esc = foundry.utils.escapeHTML;
+    const body = game.i18n.format("WWN.Skills.LevelUpGrantBody", {
+      user: esc(game.user.name),
+      name: esc(this.name),
+      level: newLevel,
+      gained,
+      perLevel,
+    });
     await createCardMessage({
       actor: this,
       title: game.i18n.localize("WWN.Skills.LevelUpGrant"),
-      context: {
-        body: `<p>${game.i18n.format("WWN.Skills.LevelUpGrantBody", {
-          user: game.user.name,
-          name: this.name,
-          level: newLevel,
-          gained,
-          perLevel,
-        })}</p>`,
-      },
+      bodyTemplate: "systems/wwn/templates/chat/notice-body.hbs",
+      context: { bodyHtml: `<p>${body}</p>` },
     });
   }
 
@@ -276,6 +278,33 @@ export class WwnActor extends Actor {
       await this.update({ "system.soak.value": soakRemaining });
     }
 
+    const emptySuit = !!this.system.derived?.emptySuit?.active;
+
+    // Black Ofuda empty VI suit: overflow damages suit viHp, not the linked pilot.
+    if (emptySuit) {
+      const hpBefore = this.system.viHp?.value ?? 0;
+      const hpMax = this.system.viHp?.max ?? this.system.derived.emptySuit.hp ?? 15;
+      let hpAfter = hpBefore;
+      if (value !== 0) {
+        if (value < 0) hpAfter = Math.min(hpMax, hpBefore - value);
+        else hpAfter = Math.max(0, hpBefore - value);
+        await this.update({ "system.viHp.value": hpAfter });
+      }
+      Object.assign(ctx, {
+        applied: hpBefore - hpAfter,
+        excess: 0,
+        hpBefore,
+        hpAfter,
+        soakRemaining,
+        emptySuit: true,
+      });
+      Hooks.callAll("wwn.applyDamage", this, ctx);
+      if (hpAfter === 0 && hpBefore > 0) {
+        Hooks.callAll("wwn.actorZeroHp", this, ctx);
+      }
+      return;
+    }
+
     const pilotUuid = this.system.pilot?.actor;
     const pilot = pilotUuid ? await fromUuid(pilotUuid) : null;
 
@@ -319,8 +348,27 @@ export class WwnActor extends Actor {
       pilotUuid,
     });
     Hooks.callAll("wwn.applyDamage", this, ctx);
+
+    // Backseat Driver: ≥15 after soak split (overflow to pilot), not pre-soak total.
+    try {
+      const { checkBackseatIncap } = await import("../helpers/power-armor-effects.mjs");
+      await checkBackseatIncap(this, value);
+    } catch (err) {
+      console.warn("WWN | Backseat Driver check failed", err);
+    }
+
     if (hpAfter === 0 && hpBefore > 0) {
       Hooks.callAll("wwn.actorZeroHp", pilot, ctx);
+      if (this.system.derived?.capabilities?.traumaStabilizer) {
+        try {
+          if (!pilot.getFlag("wwn", "stabilized")) {
+            await pilot.setFlag("wwn", "stabilized", true);
+            ui.notifications?.info?.(game.i18n.localize("WWN.PowerArmor.TraumaStabilized"));
+          }
+        } catch (err) {
+          console.warn("WWN | Trauma Stabilizer flag failed", err);
+        }
+      }
     }
   }
 

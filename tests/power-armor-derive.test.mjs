@@ -1,6 +1,12 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { derivePowerArmorEffects, weaponMountBonuses } from "../module/helpers/power-armor-derive.mjs";
+import {
+  derivePowerArmorEffects,
+  weaponMountBonuses,
+  resolveCamoStealthBonus,
+  resolvePowerArmorTraumaGate,
+  isShockImmuneTarget,
+} from "../module/helpers/power-armor-derive.mjs";
 import { PHASE_A_EFFECT_IDS } from "../module/helpers/power-armor-budget.mjs";
 
 describe("power-armor-derive", () => {
@@ -99,5 +105,54 @@ describe("power-armor-derive", () => {
       { powered: true, inert: false },
     );
     assert.equal(d.emergencyCells, 2);
+  });
+
+  it("derives Phase B capability flags", () => {
+    const d = derivePowerArmorEffects(
+      [
+        { type: "armorFitting", system: { effectId: "sealedSystemsAdvanced" } },
+        { type: "armorFitting", system: { effectId: "thermalAblativeLayer" } },
+        { type: "armorFitting", system: { effectId: "graviticFoldFlight" } },
+        { type: "armorFitting", system: { effectId: "brainguardCap" } },
+      ],
+      { powered: true, inert: false },
+    );
+    assert.equal(d.capabilities.sealed, "advanced");
+    assert.equal(d.capabilities.thermalAblative, true);
+    assert.equal(d.capabilities.flight, "fold");
+    assert.equal(d.capabilities.brainguard, true);
+    assert.ok(d.capabilityBadges.length >= 3);
+  });
+
+  it("gates camo basic stealth bonus by range", () => {
+    const d = derivePowerArmorEffects(
+      [{ type: "armorFitting", system: { effectId: PHASE_A_EFFECT_IDS.camoSkinBasic } }],
+      { powered: true, inert: false },
+    );
+    assert.equal(d.stealthBonusRangeM, 20);
+    assert.equal(resolveCamoStealthBonus(d, 10), 2);
+    assert.equal(resolveCamoStealthBonus(d, 25), 0);
+    assert.equal(resolveCamoStealthBonus(d, null), 2);
+  });
+
+  it("applies trauma gate for pretech plating", () => {
+    const target = {
+      type: "powerArmor",
+      system: {
+        trauma: { value: 6 },
+        derived: { traumaTargetBonus: 2, traumaOnlyVehicles: true },
+      },
+    };
+    const blocked = resolvePowerArmorTraumaGate(target, { system: {} });
+    assert.equal(blocked.blocked, true);
+    assert.equal(blocked.traumaTarget, 8);
+    const ok = resolvePowerArmorTraumaGate(target, { system: { vehicleWeapon: true } });
+    assert.equal(ok.blocked, false);
+  });
+
+  it("detects shock immunity from derived plating", () => {
+    assert.equal(isShockImmuneTarget({ system: { derived: { shockImmune: true } } }), true);
+    assert.equal(isShockImmuneTarget({ system: { combat: { immuneToShock: true } } }), true);
+    assert.equal(isShockImmuneTarget({ system: {} }), false);
   });
 });

@@ -54,10 +54,14 @@ export function ActorItemActionsMixin(Base) {
     static async #onDeleteItem(event, target) {
       const item = this._getItem(target);
       if (!item) return;
+      const esc = foundry.utils.escapeHTML;
       const confirmed = await confirmWwnDialog({
         modifier: "delete-item",
         title: game.i18n.format("WWN.Delete", { name: item.name }),
-        content: `<p>${game.i18n.format("WWN.DeleteContent", { name: item.name, actor: this.actor.name })}</p>`,
+        content: `<p>${game.i18n.format("WWN.DeleteContent", {
+          name: esc(item.name),
+          actor: esc(this.actor.name),
+        })}</p>`,
       });
       if (confirmed) await item.delete();
     }

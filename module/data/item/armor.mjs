@@ -38,6 +38,11 @@ export default class WwnArmor extends PhysicalDataMixin(WwnItemBase) {
     schema.soak = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
     schema.traumaTarget = new fields.NumberField({ ...requiredInteger, initial: 6 });
     schema.ashesHeavy = new fields.BooleanField({ initial: false });
+    /** Tech level (≤2 ignorable by firearms / TL4+ weapons unless magical). */
+    schema.tl = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.magical = new fields.BooleanField({ initial: false });
+    /** Powered armor ignores weapons with effective TL ≤ 3 and unarmed. */
+    schema.powered = new fields.BooleanField({ initial: false });
 
     return schema;
   }

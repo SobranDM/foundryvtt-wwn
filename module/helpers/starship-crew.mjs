@@ -129,3 +129,20 @@ export function bestAttributeMod(abilities) {
   const dexMod = abilities?.dex?.mod ?? 0;
   return Math.max(intMod, dexMod);
 }
+
+/**
+ * Extract the flat skill/crew bonus from an NPC station formula.
+ * Station formulas are skill-check style (e.g. `2d6+2`); ship weapon attacks
+ * use 1d20 and only the numeric bonus from that formula.
+ *
+ * @param {string|null|undefined} formula
+ * @returns {number}
+ */
+export function npcStationSkillBonus(formula) {
+  const f = String(formula ?? "").replace(/\s+/g, "");
+  if (!f) return 0;
+  if (/^[+-]?\d+$/.test(f)) return Number(f);
+  const afterDice = f.match(/\d*d\d+(?:[khl]\d+)?([+-]\d+)/i);
+  if (afterDice) return Number(afterDice[1]);
+  return 0;
+}

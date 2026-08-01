@@ -133,7 +133,10 @@
     <div class="wwn-form-panel">
       <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
       <div class="wwn-sheet-editor">
-        {{editor enrichedDescription target="system.description" button=true editable=editable async=true}}
+        <prose-mirror name="system.description" toggled value="{{source.system.description}}"
+          data-document-uuid="{{actor.uuid}}" {{#unless editable}}disabled{{/unless}}>
+          {{{enrichedDescription}}}
+        </prose-mirror>
       </div>
     </div>
   </div>

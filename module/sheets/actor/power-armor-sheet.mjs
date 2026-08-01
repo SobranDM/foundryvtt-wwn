@@ -13,7 +13,19 @@ import {
   rollSuitSkill,
   rollSuitWeapon,
 } from "../../helpers/power-armor-rolls.mjs";
-import { useEmergencyPowerCell } from "../../helpers/power-armor-ops.mjs";
+import {
+  useEmergencyPowerCell,
+  resetPowerArmorScene,
+  markPowerArmorMaintained,
+  skipPowerArmorMaintenance,
+} from "../../helpers/power-armor-ops.mjs";
+import {
+  activateFitting,
+  triggerReaction,
+  isPilotAllowedByIdLock,
+  FITTING_HANDLERS,
+} from "../../helpers/power-armor-effects.mjs";
+import { getFittingState, fittingStateKey } from "../../helpers/power-armor-fitting-state.mjs";
 import { DEFAULT_RUNTIME_MINUTES } from "../../helpers/power-armor-derive.mjs";
 import { hasActiveCommitment } from "../../config/power-subtypes.mjs";
 import { isNpc } from "../../helpers/actor-types.mjs";
@@ -60,6 +72,11 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
       useEmergencyCell: WwnPowerArmorSheet.#onUseEmergencyCell,
       markMaintenance: WwnPowerArmorSheet.#onMarkMaintenance,
       skipMaintenance: WwnPowerArmorSheet.#onSkipMaintenance,
+      resetScene: WwnPowerArmorSheet.#onResetScene,
+      activateFitting: WwnPowerArmorSheet.#onActivateFitting,
+      triggerReaction: WwnPowerArmorSheet.#onTriggerReaction,
+      viMain: WwnPowerArmorSheet.#onViMain,
+      toggleEmptySuit: WwnPowerArmorSheet.#onToggleEmptySuit,
       togglePilotTrained: WwnPowerArmorSheet.#onTogglePilotTrained,
       transferFromPilot: WwnPowerArmorSheet.#onTransferFromPilot,
       toggleDisabled: WwnPowerArmorSheet.#onToggleDisabled,
@@ -107,6 +124,7 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
     const items = Array.from(this.actor.items.values()).sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.weapons = items.filter((i) => i.type === "weapon");
     context.armors = items.filter((i) => i.type === "armor");
+    context.ammoItems = items.filter((i) => i.type === "ammo");
     context.gear = items.filter((i) => i.type === "item" || i.type === "armor");
     context.currencies = [];
     context.skills = [];
@@ -157,6 +175,11 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
     context.massOver = (system.mass?.free ?? 0) < 0;
     context.powerOver = (system.power?.free ?? 0) < 0;
     context.favoritesEnabled = true;
+    context.capabilityBadges = derived.capabilityBadges ?? [];
+    context.hasTsukumogami = !!derived.capabilities?.tsukumogami;
+    context.hasBlackOfuda = !!derived.capabilities?.blackOfuda;
+    context.emptySuit = !!derived.emptySuit?.active;
+    context.emptySuitMove = derived.emptySuit?.active ? derived.move : null;
 
     const pilotResolved = system.pilotResolved ?? { mode: "unassigned" };
     context.pilot = {
@@ -211,10 +234,26 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
       context.powerSections = [];
     }
 
-    context.fittings = system.fittings ?? [];
+    context.fittings = (system.fittings ?? []).map((item) => {
+      const key = fittingStateKey(item);
+      const state = getFittingState(system, key);
+      const handler = FITTING_HANDLERS[item.system?.effectId];
+      const kind = handler?.kind ?? "passive";
+      return {
+        id: item.id,
+        name: item.name,
+        img: item.img,
+        system: item.system,
+        fittingKey: key,
+        fittingState: state,
+        canActivate: !item.system?.disabled && kind !== "passive",
+        isReaction: kind === "reaction",
+      };
+    });
     context.weapons = system.weapons ?? context.weapons ?? [];
+    context.ammoItems = system.ammoItems ?? context.ammoItems ?? [];
     context.gear = system.gear ?? context.gear ?? [];
-    for (const item of [...context.weapons, ...context.gear]) {
+    for (const item of [...context.weapons, ...context.ammoItems, ...context.gear]) {
       item.favorited = suitFavIds.has(item.id);
     }
 
@@ -269,10 +308,14 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
       const pilotUuid = this.actor.system.pilot?.actor;
       const pilot = pilotUuid ? await fromUuid(pilotUuid) : null;
       if (pilot) {
-        const update = {};
-        if (this._pendingPilotHp.value !== undefined) update["system.hp.value"] = this._pendingPilotHp.value;
-        if (this._pendingPilotHp.max !== undefined) update["system.hp.max"] = this._pendingPilotHp.max;
-        if (Object.keys(update).length) await pilot.update(update);
+        if (!pilot.isOwner && !game.user.isGM) {
+          ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.PilotNotOwned"));
+        } else {
+          const update = {};
+          if (this._pendingPilotHp.value !== undefined) update["system.hp.value"] = this._pendingPilotHp.value;
+          if (this._pendingPilotHp.max !== undefined) update["system.hp.max"] = this._pendingPilotHp.max;
+          if (Object.keys(update).length) await pilot.update(update);
+        }
       }
       this._pendingPilotHp = null;
     }
@@ -284,6 +327,12 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
     if (!actor || actor.documentName !== "Actor") return;
     if (!["character", "pc"].includes(actor.type)) {
       return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.PilotMustBePc"));
+    }
+    if (!isPilotAllowedByIdLock(this.actor, actor.uuid)) {
+      if (!game.user.isGM) {
+        return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.IdLockBlocked"));
+      }
+      ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.IdLockBlocked"));
     }
     await this.actor.update({ "system.pilot.actor": actor.uuid });
   }
@@ -371,12 +420,45 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
   }
 
   static async #onMarkMaintenance() {
-    await this.actor.update({ "system.maintenance.skipped": 0 });
+    return markPowerArmorMaintained(this.actor);
   }
 
   static async #onSkipMaintenance() {
-    const skipped = (this.actor.system.maintenance?.skipped ?? 0) + 1;
-    await this.actor.update({ "system.maintenance.skipped": skipped });
+    return skipPowerArmorMaintenance(this.actor);
+  }
+
+  static async #onResetScene() {
+    return resetPowerArmorScene(this.actor);
+  }
+
+  static async #onActivateFitting(event, target) {
+    const itemId = target.closest?.("[data-item-id]")?.dataset.itemId;
+    const item = itemId ? this.actor.items.get(itemId) : null;
+    if (!item) return;
+    return activateFitting(this.actor, item);
+  }
+
+  static async #onTriggerReaction(event, target) {
+    const itemId = target.closest?.("[data-item-id]")?.dataset.itemId;
+    const item = itemId ? this.actor.items.get(itemId) : null;
+    if (!item) return;
+    return triggerReaction(this.actor, item.system.effectId);
+  }
+
+  static async #onViMain() {
+    const item = this.actor.items.find(
+      (i) => i.type === "armorFitting" && i.system?.effectId === "tsukumogamiProcessor" && !i.system.disabled,
+    );
+    if (!item) return;
+    return activateFitting(this.actor, item);
+  }
+
+  static async #onToggleEmptySuit() {
+    const item = this.actor.items.find(
+      (i) => i.type === "armorFitting" && i.system?.effectId === "blackOfuda" && !i.system.disabled,
+    );
+    if (!item) return;
+    return activateFitting(this.actor, item);
   }
 
   static async #onTogglePilotTrained() {
@@ -400,7 +482,10 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
       return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.NoPilotWeapons"));
     }
 
-    const options = weapons.map((w) => `<option value="${w.id}">${w.name}</option>`).join("");
+    const esc = foundry.utils.escapeHTML;
+    const options = weapons
+      .map((w) => `<option value="${esc(w.id)}">${esc(w.name)}</option>`)
+      .join("");
     const content = `<form><div class="form-group"><label>${game.i18n.localize("WWN.PowerArmor.TransferWeapon")}</label><select name="weaponId">${options}</select></div></form>`;
     const result = await showWwnDialog({
       modifier: "power-armor-transfer",
@@ -414,6 +499,10 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
     if (!result || result === "cancel") return;
     const weapon = pilot.items.get(result.weaponId);
     if (!weapon) return;
+    if (!this.actor.isOwner && !game.user.isGM) return;
+    if (!weapon.isOwner && !game.user.isGM) {
+      return ui.notifications.warn(game.i18n.localize("WWN.PowerArmor.PilotNotOwned"));
+    }
 
     const data = weapon.toObject();
     delete data._id;
@@ -428,8 +517,14 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
         wwn: { armorMountEffectId: preferred.effectId },
       });
     }
-    await this.actor.createEmbeddedDocuments("Item", [data]);
-    await weapon.delete();
+    const created = await this.actor.createEmbeddedDocuments("Item", [data]);
+    try {
+      await weapon.delete();
+    } catch (err) {
+      console.error("WWN | Power-armor weapon transfer: delete failed; rolling back create:", err);
+      if (created?.[0]) await created[0].delete().catch(() => null);
+      throw err;
+    }
   }
 
   static async #onToggleDisabled(event, target) {

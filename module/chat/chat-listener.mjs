@@ -9,6 +9,7 @@ import {
   resolveStrainAmount,
 } from "../helpers/strain.mjs";
 import { applyPowerEffectsToActor } from "../helpers/power-effects.mjs";
+import { getApplyRows, resolveApplyRowAmount } from "./damage-amount.mjs";
 
 export class ChatListener {
   /** Attach the delegated listener to the chat log. */
@@ -17,7 +18,9 @@ export class ChatListener {
       html.addEventListener("click", (event) => {
         const target = event.target.closest("[data-action]");
         if (!target || !html.contains(target)) return;
-        ChatListener.#onAction(event, target, message);
+        void ChatListener.#onAction(event, target, message).catch((err) => {
+          console.error("WWN | Chat card action failed", err);
+        });
       });
     });
   }
@@ -44,10 +47,16 @@ export class ChatListener {
       }
       case "applyRow":
       case "applyStraight": {
-        const flags = message.getFlag("wwn", "applyRows") ?? [];
+        const flags = getApplyRows(message);
         const row = flags.find((r) => r.id === target.dataset.rowId);
         if (!row) return;
-        const raw = action === "applyStraight" ? row.altValue : row.value;
+        const raw = resolveApplyRowAmount(message, row, {
+          useAlt: action === "applyStraight",
+        });
+        if (raw == null) {
+          ui.notifications.warn(game.i18n.localize("WWN.Chat.ApplyDenied"));
+          return;
+        }
         const multiplier = Number(card?.dataset.multiplier ?? 1);
         const sign = card?.dataset.heal === "true" ? -1 : 1;
         await ChatListener.#applyToTokens(raw * sign, multiplier);
@@ -55,7 +64,9 @@ export class ChatListener {
       }
       case "rollCardSave": {
         const saveId = target.dataset.save;
-        for (const actor of ChatListener.#actorTargets()) {
+        const actors = ChatListener.#ownedActorTargets();
+        if (actors === null) return;
+        for (const actor of actors) {
           await game.wwn.WwnDice.rollSave(actor, saveId, { skipDialog: true });
         }
         break;
@@ -71,7 +82,12 @@ export class ChatListener {
       case "powerDamage": {
         const itemUuid = message.getFlag("wwn", "itemUuid");
         const item = await fromUuid(itemUuid);
-        if (item) await item.rollPowerDamage();
+        if (!item) return;
+        if (!(item.isOwner || game.user.isGM)) {
+          ui.notifications.warn(game.i18n.localize("WWN.Chat.ApplyDenied"));
+          return;
+        }
+        await item.rollPowerDamage();
         break;
       }
       case "applyTargetStrain": {
@@ -84,13 +100,16 @@ export class ChatListener {
           labelKey: "WWN.Power.TargetStrain",
         });
         if (amount === null || amount <= 0) return;
-        const actors = ChatListener.#actorTargets();
-        if (!actors.length) {
-          return ui.notifications.warn(game.i18n.localize("WWN.Chat.NoTokenSelected"));
-        }
+        const actors = ChatListener.#ownedActorTargets();
+        if (actors === null) return;
         let applied = 0;
         for (const actor of actors) {
-          if (await applyStrainToActor(actor, amount)) applied++;
+          try {
+            if (await applyStrainToActor(actor, amount)) applied++;
+          } catch (err) {
+            console.warn("WWN | applyTargetStrain failed", actor.name, err);
+            ui.notifications.warn(game.i18n.format("WWN.Chat.ApplyFailed", { name: actor.name }));
+          }
         }
         if (applied > 0) {
           ui.notifications.info(
@@ -105,16 +124,19 @@ export class ChatListener {
         if (!itemUuid || !durationScope) return;
         const item = await fromUuid(itemUuid);
         if (!item) return;
-        const actors = ChatListener.#actorTargets();
-        if (!actors.length) {
-          return ui.notifications.warn(game.i18n.localize("WWN.Chat.NoTokenSelected"));
-        }
+        const actors = ChatListener.#ownedActorTargets();
+        if (actors === null) return;
         let applied = 0;
         let skipped = 0;
         for (const actor of actors) {
-          const result = await applyPowerEffectsToActor(actor, item, { durationScope });
-          applied += result.applied;
-          skipped += result.skipped;
+          try {
+            const result = await applyPowerEffectsToActor(actor, item, { durationScope });
+            applied += result.applied;
+            skipped += result.skipped;
+          } catch (err) {
+            console.warn("WWN | applyPowerEffects failed", actor.name, err);
+            ui.notifications.warn(game.i18n.format("WWN.Chat.ApplyFailed", { name: actor.name }));
+          }
         }
         if (applied > 0) {
           ui.notifications.info(
@@ -135,13 +157,34 @@ export class ChatListener {
     return tokens.map((t) => t.actor).filter((a) => a);
   }
 
-  static async #applyToTokens(amount, multiplier) {
-    const actors = ChatListener.#actorTargets();
-    if (!actors.length) {
-      return ui.notifications.warn(game.i18n.localize("WWN.Chat.NoTokenSelected"));
+  /**
+   * Owned (or GM-accessible) targets for apply actions.
+   * @returns {Actor[]|null} null when the caller already received a warning
+   */
+  static #ownedActorTargets() {
+    const all = ChatListener.#actorTargets();
+    if (!all.length) {
+      ui.notifications.warn(game.i18n.localize("WWN.Chat.NoTokenSelected"));
+      return null;
     }
+    const owned = all.filter((a) => a.isOwner || game.user.isGM);
+    if (!owned.length) {
+      ui.notifications.warn(game.i18n.localize("WWN.Chat.ApplyDenied"));
+      return null;
+    }
+    return owned;
+  }
+
+  static async #applyToTokens(amount, multiplier) {
+    const actors = ChatListener.#ownedActorTargets();
+    if (actors === null) return;
     for (const actor of actors) {
-      await actor.applyDamage(amount, multiplier);
+      try {
+        await actor.applyDamage(amount, multiplier);
+      } catch (err) {
+        console.warn("WWN | applyDamage failed", actor.name, err);
+        ui.notifications.warn(game.i18n.format("WWN.Chat.ApplyFailed", { name: actor.name }));
+      }
     }
   }
 
@@ -166,10 +209,12 @@ export class ChatListener {
       "system.hp.value": actor.system.hp.value + gained,
     });
     const { createCardMessage } = await import("./chat-card.mjs");
+    const esc = foundry.utils.escapeHTML;
     return createCardMessage({
       actor,
       title: game.i18n.localize("WWN.Roll.HitDiceApplied"),
-      context: { body: `<p>${outcome}</p>` },
+      bodyTemplate: "systems/wwn/templates/chat/notice-body.hbs",
+      context: { bodyHtml: `<p>${esc(outcome)}</p>` },
     });
   }
 }

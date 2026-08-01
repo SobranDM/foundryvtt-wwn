@@ -610,7 +610,8 @@
 
 /* ---- Item sheet chrome ---- */
 
-.wwn-sheet .wwn-item-header {
+/* Keep row layout even if `wwn-sheet-header` (column / two-band) is also present. */
+.wwn-sheet .sheet-header.wwn-item-header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

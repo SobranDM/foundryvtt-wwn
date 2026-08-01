@@ -5,9 +5,24 @@ import { createRollMessage, createCardMessage } from "../chat/chat-card.mjs";
 import { hitDiceRollFormula } from "../derivations/hit-dice.mjs";
 import { getFocusSkillDiceBonus } from "../helpers/focus-skill-dice.mjs";
 import { spendAttackAmmo } from "../helpers/ammo.mjs";
+import { spendWeaponCounter, tracksWeaponCounter } from "../helpers/weapon-counter.mjs";
 import { isPc, isNpc } from "../helpers/actor-types.mjs";
 import { isTruthyAeFlag } from "../helpers/combat-ae-flags.mjs";
-import { resolveWeaponTlGate, traumaDieFormula } from "../helpers/weapon-tl.mjs";
+import { resolveWeaponTlGate, traumaDieFormula, isUnarmedWeapon } from "../helpers/weapon-tl.mjs";
+import {
+  isShockImmuneTarget,
+  resolvePowerArmorTraumaGate,
+} from "../helpers/power-armor-derive.mjs";
+import { resolveTargetAcForAttack } from "../helpers/attack-ac.mjs";
+import {
+  naturalAttackDie,
+  resolveAttackHit,
+  buildAttackNotices,
+  buildAttackApplyRows,
+  applyShockFloor,
+  skillLevelWithCb,
+  traumaticDamage,
+} from "../helpers/attack-outcome.mjs";
 import {
   shouldMissAfterFirstMeleeHit,
   appendAttackedThisTurn,
@@ -173,27 +188,30 @@ export class WwnDice {
 
   /**
    * Whether shock damage applies on a miss against the given target (WWN melee shock rule).
+   * Prefer `options.effectiveTargetAc` when the attack already resolved AC with armor ignore.
    * @param {Actor} attacker
    * @param {Actor} targetActor
    * @param {Item} weapon
    * @param {string} attackKind
+   * @param {{ effectiveTargetAc?: number|null }} [options]
    * @returns {{ applies: boolean, effectiveTargetAc: number, threshold: number }}
    */
-  static shockAppliesOnMiss(attacker, targetActor, weapon, attackKind) {
+  static shockAppliesOnMiss(attacker, targetActor, weapon, attackKind, options = {}) {
     const threshold = weapon.system.shockAcValue ?? weapon.system.shock?.ac ?? 0;
     if (attackKind !== "melee" || !weapon.system.shock?.damage) {
       return { applies: false, effectiveTargetAc: 0, threshold };
     }
-    if (targetActor.system.combat?.immuneToShock) {
+    if (isShockImmuneTarget(targetActor)) {
       return { applies: false, effectiveTargetAc: 0, threshold };
     }
     const { blocked } = resolveWeaponTlGate(attacker, targetActor, weapon, attackKind);
     if (blocked) {
       return { applies: false, effectiveTargetAc: 0, threshold };
     }
+    const resolved = options.effectiveTargetAc;
     const effectiveTargetAc = attacker.system.combat?.treatAllMeleeAsAcTen
       ? 10
-      : (targetActor.system.combat?.ac?.melee?.value ?? 10);
+      : (Number.isFinite(resolved) ? resolved : (targetActor.system.combat?.ac?.melee?.value ?? 10));
     return {
       applies: effectiveTargetAc <= threshold,
       effectiveTargetAc,
@@ -247,27 +265,32 @@ export class WwnDice {
   static async #recordCombatAttackFlags(attacker, defender, attackKind, hit) {
     const combat = game.combat;
     if (!combat) return;
-    const attackerC =
-      combat.getCombatantByActor?.(attacker.id) ??
-      combat.combatants?.find((c) => c.actorId === attacker.id);
-    if (attackerC) {
-      const prev = attackerC.getFlag("wwn", "attackedThisTurn") ?? [];
-      const next = appendAttackedThisTurn(prev, defender.id);
-      await attackerC.setFlag("wwn", "attackedThisTurn", next);
-    }
-    if (attackKind === "melee" && hit && isTruthyAeFlag(defender.system.combat?.missAfterFirstMeleeHit)) {
-      const defenderC =
-        combat.getCombatantByActor?.(defender.id) ??
-        combat.combatants?.find((c) => c.actorId === defender.id);
-      if (defenderC) {
-        const stored = defenderC.getFlag("wwn", "meleeHitThisRound");
-        if (!stored?.attackerId || Number(stored.round) !== Number(combat.round)) {
-          await defenderC.setFlag("wwn", "meleeHitThisRound", {
-            attackerId: attacker.id,
-            round: combat.round,
-          });
+    try {
+      const attackerC =
+        combat.getCombatantsByActor?.(attacker.id)?.[0] ??
+        combat.combatants?.find((c) => c.actorId === attacker.id);
+      if (attackerC) {
+        const prev = attackerC.getFlag("wwn", "attackedThisTurn") ?? [];
+        const next = appendAttackedThisTurn(prev, defender.id);
+        await attackerC.setFlag("wwn", "attackedThisTurn", next);
+      }
+      if (attackKind === "melee" && hit && isTruthyAeFlag(defender.system.combat?.missAfterFirstMeleeHit)) {
+        const defenderC =
+          combat.getCombatantsByActor?.(defender.id)?.[0] ??
+          combat.combatants?.find((c) => c.actorId === defender.id);
+        if (defenderC) {
+          const stored = defenderC.getFlag("wwn", "meleeHitThisRound");
+          if (!stored?.attackerId || Number(stored.round) !== Number(combat.round)) {
+            await defenderC.setFlag("wwn", "meleeHitThisRound", {
+              attackerId: attacker.id,
+              round: combat.round,
+            });
+          }
         }
       }
+    } catch (err) {
+      // Combatant flag updates require ownership; never abort the attack chat card.
+      console.warn("WWN | Failed to record combat attack flags", err);
     }
   }
 
@@ -291,7 +314,11 @@ export class WwnDice {
       game.i18n.localize(isMelee ? "WWN.Effects.AttackMelee" : "WWN.Effects.AttackRanged"));
     if (isPc(actor)) {
       attack.add(abilityMod, abilityLabel);
-      const skillLevel = skill ? this.effectiveSkillLevel(actor, skill) : -2;
+      const tags = weapon.system.tags ?? [];
+      const skillLevel = skillLevelWithCb(
+        skill ? this.effectiveSkillLevel(actor, skill) : -2,
+        tags,
+      );
       attack.add(skillLevel, skill?.name ?? game.i18n.localize("WWN.Roll.Unskilled"));
     } else {
       attack.add(system.skill ?? 0, game.i18n.localize("WWN.Roll.NpcSkill"));
@@ -384,10 +411,11 @@ export class WwnDice {
     }
     attackKind = options.attackKind;
 
-    if (options.charge) await actor.applyChargeEffect();
-
-    // Ammo / charges consumption
+    // Ammo / charges / NPC attack counter — only after dialog succeeds
     if (!(await spendAttackAmmo(weapon, { burst: options.burst }))) return;
+    if (tracksWeaponCounter(actor)) await spendWeaponCounter(weapon);
+    // Charge AE only after spend succeeds so empty mag does not leave a stuck effect
+    if (options.charge) await actor.applyChargeEffect();
 
     const rollData = actor.getRollData();
     const { attack, damage, shock } = this.assembleAttack(actor, weapon, options);
@@ -396,104 +424,115 @@ export class WwnDice {
     const damageRoll = await new WwnDamageRoll(damage.formula(), rollData, { kind: "damage" }).evaluate();
     const rolls = [attackRoll, damageRoll];
 
-    let shockTotal = null;
-    let shockLabelAc = weapon.system.shockAcValue ?? weapon.system.shock?.ac;
-    let shockTargetAc = null;
-    if (shock) {
-      const target = game.user.targets.first() ?? null;
-      let shouldRollShock = true;
-      if (target?.actor) {
-        const { applies, effectiveTargetAc, threshold } = this.shockAppliesOnMiss(
-          actor,
-          target.actor,
-          weapon,
-          attackKind
-        );
-        shockLabelAc = threshold;
-        shockTargetAc = effectiveTargetAc;
-        shouldRollShock = applies;
-      }
-      if (shouldRollShock) {
-        const shockRoll = await new WwnDamageRoll(shock.formula(), rollData, { kind: "damage" }).evaluate();
-        shockTotal = shockRoll.total;
-        rolls.push(shockRoll);
-      }
-    }
-
-    // Target comparison (melee/ranged AC per setting)
-    const separateRanged = game.settings.get("wwn", "separateRangedAC");
     const target = game.user.targets.first() ?? null;
     let badge = null;
     let targetName = null;
     let hit = true;
     let blockedByTl = false;
+    let hitReason = "noTarget";
+    let ignored = [];
+    let targetAc = null;
+    let acKind = "melee";
+    let shockTotal = null;
+    let shockLabelAc = weapon.system.shockAcValue ?? weapon.system.shock?.ac;
+    let shockTargetAc = null;
+    let shockAppliesOnMiss = false;
+    let shockSuppressedReason = null;
+
     if (target?.actor) {
       targetName = target.name;
-      const { blocked } = resolveWeaponTlGate(actor, target.actor, weapon, attackKind);
-      if (blocked) {
-        blockedByTl = true;
-        hit = false;
-        badge = {
-          label: game.i18n.localize("WWN.Roll.Miss"),
-          type: "miss",
-        };
-      } else {
-        const tc = target.actor.system.combat;
-        const meleeAc = tc?.ac?.melee?.value;
-        const rangedAc = tc?.ac?.ranged?.value;
-        if (Number.isFinite(meleeAc) || Number.isFinite(rangedAc)) {
-          const targetAC =
-            attackKind === "ranged" && separateRanged
-              ? (Number.isFinite(rangedAc) ? rangedAc : meleeAc)
-              : (Number.isFinite(meleeAc) ? meleeAc : rangedAc);
-          hit = attackRoll.total >= targetAC;
-          badge = {
-            label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
-            type: hit ? "hit" : "miss",
-          };
-        }
-      }
+      const gate = resolveWeaponTlGate(actor, target.actor, weapon, attackKind);
+      blockedByTl = gate.blocked;
+
+      const separateRanged = game.settings.get("wwn", "separateRangedAC");
+      const acResult = resolveTargetAcForAttack(actor, target.actor, weapon, attackKind, { separateRanged });
+      ignored = acResult.ignored;
+      targetAc = acResult.ac;
+      acKind = acResult.acKind;
+
+      const naturalDie = naturalAttackDie(attackRoll);
+      const hitResult = resolveAttackHit({
+        attackTotal: attackRoll.total,
+        naturalDie,
+        targetAc,
+        blockedByTl,
+      });
+      hit = hitResult.hit;
+      hitReason = hitResult.reason;
 
       // Savage Fray L2: after first melee hit this round, other assailants auto-miss
       if (
         attackKind === "melee" &&
         !blockedByTl &&
+        hit &&
         isTruthyAeFlag(target.actor.system.combat?.missAfterFirstMeleeHit)
       ) {
         const combat = game.combat;
-        const defenderC = combat?.getCombatantByActor?.(target.actor.id)
+        const defenderC = combat?.getCombatantsByActor?.(target.actor.id)?.[0]
           ?? combat?.combatants?.find((c) => c.actorId === target.actor.id);
         const stored = defenderC?.getFlag?.("wwn", "meleeHitThisRound");
         if (shouldMissAfterFirstMeleeHit(stored, actor.id, combat?.round)) {
           hit = false;
-          badge = {
-            label: game.i18n.localize("WWN.Roll.Miss"),
-            type: "miss",
-          };
+          hitReason = "miss";
         }
       }
+
+      badge = {
+        label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+        type: hit ? "hit" : "miss",
+      };
     }
 
-    // Trauma (on hit, when enabled)
+    // Shock: roll when weapon has shock and not TL-blocked (needed for hit floor + miss apply)
+    if (shock && !blockedByTl) {
+      if (target?.actor) {
+        const shockCheck = this.shockAppliesOnMiss(actor, target.actor, weapon, attackKind, {
+          // Prefer attack-resolved AC (armor ignore) when available; fall back inside helper.
+          effectiveTargetAc: Number.isFinite(targetAc) ? targetAc : null,
+        });
+        shockLabelAc = shockCheck.threshold;
+        shockTargetAc = shockCheck.effectiveTargetAc;
+        shockAppliesOnMiss = shockCheck.applies;
+        if (isShockImmuneTarget(target.actor)) {
+          shockSuppressedReason = "immune";
+        } else if (!shockCheck.applies && !hit) {
+          shockSuppressedReason = "ac";
+        }
+      } else {
+        shockAppliesOnMiss = true;
+      }
+
+      const canUseShock = !isShockImmuneTarget(target?.actor);
+      if (canUseShock && (hit || shockAppliesOnMiss || !target?.actor)) {
+        const shockRoll = await new WwnDamageRoll(shock.formula(), rollData, { kind: "damage" }).evaluate();
+        shockTotal = shockRoll.total;
+        rolls.push(shockRoll);
+      }
+    } else if (shock && blockedByTl) {
+      shockSuppressedReason = "tl";
+    }
+
+    // Trauma die (rating multiply applied after Godbound + Shock floor below)
     const useTrauma = game.settings.get("wwn", "useTrauma");
     let trauma = null;
-    if (useTrauma && weapon.system.trauma?.die && hit && target?.actor) {
-      const dieMod = Number(actor.system.trauma?.dieMod) || 0;
-      const traumaFormula = traumaDieFormula(weapon.system.trauma.die, dieMod);
-      const traumaRoll = await new WwnRoll(traumaFormula, rollData, { kind: "formula" }).evaluate();
-      rolls.push(traumaRoll);
-      const traumaTarget = target.actor.system.trauma?.value ?? 6;
-      const traumatic = traumaRoll.total >= traumaTarget;
-      trauma = {
-        die: traumaFormula,
-        result: traumaRoll.total,
-        target: traumaTarget,
-        rating: weapon.system.traumaRatingValue ?? weapon.system.trauma?.rating ?? 2,
-        traumatic,
-        multiplied: traumatic
-          ? damageRoll.total * (weapon.system.traumaRatingValue ?? weapon.system.trauma?.rating ?? 2)
-          : null,
-      };
+    if (useTrauma && weapon.system.trauma?.die && hit && target?.actor && !blockedByTl) {
+      const traumaGate = resolvePowerArmorTraumaGate(target.actor, weapon);
+      if (!traumaGate.blocked) {
+        const dieMod = Number(actor.system.trauma?.dieMod) || 0;
+        const traumaFormula = traumaDieFormula(weapon.system.trauma.die, dieMod);
+        const traumaRoll = await new WwnRoll(traumaFormula, rollData, { kind: "formula" }).evaluate();
+        rolls.push(traumaRoll);
+        const traumaTarget = traumaGate.traumaTarget;
+        const traumatic = traumaRoll.total >= traumaTarget;
+        trauma = {
+          die: traumaFormula,
+          result: traumaRoll.total,
+          target: traumaTarget,
+          rating: weapon.system.traumaRatingValue ?? weapon.system.trauma?.rating ?? 2,
+          traumatic,
+          multiplied: null,
+        };
+      }
     }
 
     // Godbound conversion (damage rolls only)
@@ -506,56 +545,85 @@ export class WwnDice {
       damageValue = conversion.total;
     }
 
-    // Apply rows for the card
-    const applyRows = [];
-    if (hit) {
-      applyRows.push({
-        id: "damage",
-        label: game.i18n.localize("WWN.Roll.Damage"),
-        value: damageValue,
-        altValue: straightValue,
-        altLabel: straightValue !== null ? game.i18n.format("WWN.Roll.Straight", { value: straightValue }) : null,
-      });
-    } else if (isPc(actor) && !blockedByTl) {
+    // Shock-immune targets: do not floor hit damage to Shock
+    const shockForFloor = isShockImmuneTarget(target?.actor) ? null : shockTotal;
+    const floorInfo = applyShockFloor(damageValue, hit ? shockForFloor : null);
+    // Godbound straight apply must use the same Shock floor as converted damage.
+    if (straightValue != null && hit) {
+      straightValue = applyShockFloor(straightValue, shockForFloor).value;
+    }
+    if (trauma?.traumatic) {
+      trauma.multiplied = traumaticDamage(floorInfo.value, trauma.rating);
+    }
+
+    let missDamageValue = null;
+    if (!hit && isPc(actor) && !blockedByTl) {
       const missFormula = this.#focusMissDamageFormula(actor, weapon, attackKind);
       if (missFormula) {
         const missRoll = await new WwnDamageRoll(missFormula, rollData, { kind: "damage" }).evaluate();
         rolls.push(missRoll);
-        applyRows.push({
-          id: "miss-damage",
-          label: game.i18n.localize("WWN.Roll.MissDamage"),
-          value: missRoll.total,
-        });
+        missDamageValue = missRoll.total;
       }
     }
-    if (shockTotal !== null && !blockedByTl) {
-      const shockLabel = shockTargetAc !== null
-        ? game.i18n.format("WWN.Roll.ShockVsTarget", {
-          value: shockTotal,
-          threshold: shockLabelAc,
-          targetAc: shockTargetAc,
-        })
-        : game.i18n.format("WWN.Roll.ShockVs", {
-          value: shockTotal,
-          ac: shockLabelAc,
-        });
-      applyRows.push({
-        id: "shock",
-        label: shockLabel,
-        value: shockTotal,
-      });
-    }
-    if (trauma?.traumatic) {
-      applyRows.push({
-        id: "trauma",
-        label: game.i18n.format("WWN.Roll.TraumaDamage", { rating: trauma.rating }),
-        value: trauma.multiplied,
-      });
-    }
+
+    const applyRows = buildAttackApplyRows({
+      hit,
+      blockedByTl,
+      damageValue: floorInfo.value,
+      damageFloored: floorInfo.floored,
+      straightValue,
+      shockTotal: shockForFloor,
+      shockAppliesOnMiss,
+      shockLabelAc,
+      shockTargetAc,
+      trauma,
+      missDamageValue,
+      labels: {
+        damage: game.i18n.localize("WWN.Roll.Damage"),
+        damageFloored: game.i18n.localize("WWN.Roll.DamageFloored"),
+        missDamage: game.i18n.localize("WWN.Roll.MissDamage"),
+        straight: (value) => game.i18n.format("WWN.Roll.Straight", { value }),
+        shockVs: (value, ac) => game.i18n.format("WWN.Roll.ShockVs", { value, ac }),
+        shockVsTarget: (value, threshold, targetAcVal) => game.i18n.format("WWN.Roll.ShockVsTarget", {
+          value,
+          threshold,
+          targetAc: targetAcVal,
+        }),
+        trauma: (rating) => game.i18n.format("WWN.Roll.TraumaDamage", { rating }),
+      },
+    });
+
+    const notices = buildAttackNotices({
+      blockedByTl,
+      hitReason,
+      ignored,
+      ac: target ? targetAc : null,
+      acKind,
+      shockSuppressedReason: (!hit && shockTotal == null) ? shockSuppressedReason : (shockSuppressedReason === "tl" ? "tl" : null),
+      shockTargetAc,
+      shockThreshold: shockLabelAc,
+      shockFloored: hit && floorInfo.floored,
+      shockTotal,
+      rawDamage: damageValue,
+    }, (key, data) => (data ? game.i18n.format(key, data) : game.i18n.localize(key)));
 
     // Savage Fray / attack tracking (active combat only)
     if (target?.actor && game.combat) {
       await this.#recordCombatAttackFlags(actor, target.actor, attackKind, hit);
+    }
+
+    // Power-armor automatic reactions (best-effort; sheet Trigger remains available).
+    if (target?.actor?.type === "powerArmor" && !blockedByTl) {
+      try {
+        const { onSuitAttacked } = await import("../helpers/power-armor-effects.mjs");
+        await onSuitAttacked(target.actor, {
+          unarmed: isUnarmedWeapon(weapon),
+          ballistic: attackKind === "ranged" && (!!weapon.system?.firearm || Number(weapon.system?.tl) >= 4),
+          distanceM: null,
+        });
+      } catch (err) {
+        console.warn("WWN | Power armor onSuitAttacked failed", err);
+      }
     }
 
     return createRollMessage({
@@ -572,6 +640,7 @@ export class WwnDice {
         damageBreakdown: damage.breakdown(),
         applyRows,
         trauma,
+        notices,
         save: weapon.system.save || null,
         hit,
       },

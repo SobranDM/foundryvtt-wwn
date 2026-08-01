@@ -11,18 +11,60 @@ import {
   evaluatePoolFormula,
 } from "../module/derivations/resource-pools.mjs";
 
-function makeActor({ classEdges = [], powers = [], level = 1 } = {}) {
+function makeActor({
+  type = "character",
+  classEdges = [],
+  powers = [],
+  level = 1,
+  poolMaxOverrides = {},
+} = {}) {
   const items = [...classEdges, ...powers];
   return {
+    type,
     items: {
       filter: (fn) => items.filter(fn),
       some: (fn) => items.some(fn),
       [Symbol.iterator]: () => items[Symbol.iterator](),
     },
     getRollData: () => ({ level }),
-    system: {},
+    system: { poolMaxOverrides },
   };
 }
+
+function sharedArt({
+  id = "art1",
+  resourceName = "Effort",
+  source = "Vowed",
+  poolCommittedSum = 0,
+} = {}) {
+  return {
+    id,
+    type: "power",
+    system: {
+      subType: "art",
+      resourceName,
+      source,
+      usesSharedPool: true,
+      effectiveCommitmentOptions: [{ cost: 1, length: "scene" }],
+      poolCommittedSum,
+    },
+  };
+}
+
+const vowedEdge = {
+  id: "vowed",
+  type: "classEdge",
+  name: "Vowed",
+  system: {
+    poolGrant: {
+      name: "Vowed Effort",
+      formula: "",
+      progression: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+    },
+    slotGrant: { enabled: false, progression: [], leveledProgression: [] },
+    preparedGrant: { progression: [] },
+  },
+};
 
 describe("getActorSpellSlotMode", () => {
   it("returns null when slotGrant.enabled with empty leveledProgression", () => {
@@ -118,5 +160,48 @@ describe("Vowed Effort formula", () => {
     });
     assert.equal(valid, true);
     assert.equal(value, 1);
+  });
+});
+
+describe("NPC pool max overrides and orphan pools", () => {
+  it("applies poolMaxOverrides to ClassEdge-granted NPC pools", () => {
+    const poolId = "pool-Vowed Effort".slugify();
+    const actor = makeActor({
+      type: "monster",
+      classEdges: [vowedEdge],
+      powers: [sharedArt()],
+      poolMaxOverrides: { [poolId]: 7 },
+    });
+    deriveResourcePools(actor);
+    const vowed = actor.system.resourcePools.find((p) => p.name === "Vowed Effort");
+    assert.ok(vowed);
+    assert.equal(vowed.max, 7);
+    assert.equal(vowed.editableMax, true);
+  });
+
+  it("creates orphan NPC pools for shared-pool powers without a grant", () => {
+    const poolId = "pool-Vowed Effort".slugify();
+    const actor = makeActor({
+      type: "monster",
+      powers: [sharedArt({ poolCommittedSum: 1 })],
+      poolMaxOverrides: { [poolId]: 3 },
+    });
+    deriveResourcePools(actor);
+    const vowed = actor.system.resourcePools.find((p) => p.name === "Vowed Effort");
+    assert.ok(vowed, `unexpected pools: ${JSON.stringify(actor.system.resourcePools)}`);
+    assert.equal(vowed.value, 1);
+    assert.equal(vowed.max, 3);
+    assert.equal(vowed.editableMax, true);
+  });
+
+  it("does not create orphan pools or editableMax on PCs", () => {
+    const actor = makeActor({
+      type: "character",
+      powers: [sharedArt()],
+    });
+    deriveResourcePools(actor);
+    const pools = actor.system.resourcePools ?? [];
+    assert.equal(pools.length, 0);
+    assert.equal(pools.some((p) => p.editableMax), false);
   });
 });

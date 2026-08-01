@@ -111,7 +111,7 @@ function staticGroups() {
           modes: ["add", "override"],
           valueType: "number",
           phase: "initial",
-          itemTypes: ["item"],
+          itemTypes: ["item", "ammo"],
         },
       },
     },

@@ -90,8 +90,8 @@ async function applyAcuteDisaster(combatant, state, crisis) {
   if (crisis.id === "hullBreach") {
     const dice = hullBreachDisasterDice(actor.system.hullClass);
     const roll = await new Roll(dice).evaluate();
-    const hp = Math.max(0, (actor.system.hp?.value ?? 0) - roll.total);
-    await actor.update({ "system.hp.value": hp });
+    const { applyStarshipHullDamage } = await import("./hull-damage.mjs");
+    await applyStarshipHullDamage(actor, roll.total);
     await createNoticeMessage({
       title: actor.name,
       actor,

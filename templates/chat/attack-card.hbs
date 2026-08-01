@@ -2,15 +2,25 @@
      lives in data- attributes managed by the ChatListener. --}}
 
 {{#if attackBreakdown}}
-<div class="wwn-chat-meta" title="{{attackBreakdown}}">
-  <i class="fa-solid fa-crosshairs"></i> {{attackBreakdown}}
+<div class="wwn-chat-meta wwn-chat-breakdown">
+  <i class="fa-solid fa-crosshairs"></i>
+  <span class="wwn-chat-breakdown-label">{{localize "WWN.Roll.Attack"}}</span>
+  <i class="fa-solid fa-circle-question wwn-chat-hint" data-tooltip="{{attackBreakdown}}"
+    title="{{attackBreakdown}}" aria-label="{{localize 'WWN.Roll.BreakdownHint'}}"></i>
 </div>
 {{/if}}
 {{#if damageBreakdown}}
-<div class="wwn-chat-meta" title="{{damageBreakdown}}">
-  <i class="fa-solid fa-burst"></i> {{damageBreakdown}}
+<div class="wwn-chat-meta wwn-chat-breakdown">
+  <i class="fa-solid fa-burst"></i>
+  <span class="wwn-chat-breakdown-label">{{localize "WWN.Roll.Damage"}}</span>
+  <i class="fa-solid fa-circle-question wwn-chat-hint" data-tooltip="{{damageBreakdown}}"
+    title="{{damageBreakdown}}" aria-label="{{localize 'WWN.Roll.BreakdownHint'}}"></i>
 </div>
 {{/if}}
+
+{{#each notices}}
+<div class="wwn-chat-meta wwn-chat-notice">{{this}}</div>
+{{/each}}
 
 {{#if trauma}}
 <div class="wwn-chat-meta">

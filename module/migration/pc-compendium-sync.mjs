@@ -159,6 +159,7 @@ export function extractPreservedFields(item) {
       },
       prepared: !!s.prepared,
       isActive: !!s.isActive,
+      installed: !!s.installed,
       internalResource: {
         value: Number(s.internalResource?.value) || 0,
         max: Number(s.internalResource?.max) || 0,
@@ -240,6 +241,7 @@ export function buildReplacementData(packItemObject, preserved) {
       }
       data.system.prepared = preserved.prepared ?? data.system.prepared;
       data.system.isActive = preserved.isActive ?? data.system.isActive;
+      data.system.installed = preserved.installed ?? data.system.installed;
       if (preserved.level != null && Number(preserved.level) > 0) {
         data.system.level = preserved.level;
       }

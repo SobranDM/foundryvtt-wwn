@@ -1,0 +1,36 @@
+{
+  "_id": "ZIAiIe6FX7NvEKuq",
+  "name": "Type B Energy Cell",
+  "type": "ammo",
+  "flags": {},
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "system": {
+    "description": "<p>Heavy TL4 energy cell for high-drain weapons and equipment. One cell typically reloads a weapon magazine.</p>",
+    "price": 100,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "folder": "2JRbC6jpR9k3HWcM",
+  "sort": 0,
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZIAiIe6FX7NvEKuq"
+}

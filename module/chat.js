@@ -1,3 +1,7 @@
+import { getChatDamageAmount } from "./chat/damage-amount.mjs";
+
+export { getChatDamageAmount };
+
 /**
  * Chat Log context-menu options for applying damage from roll messages.
  *
@@ -8,12 +12,7 @@
 export const addChatMessageContextOptions = function (html, options) {
   const canApply = (li) => {
     const message = game.messages.get(li.dataset.messageId);
-    return !!canvas.tokens.controlled.length && !!message?.rolls?.length;
-  };
-
-  const getDamageAmount = (message) => {
-    if (message.rolls?.length) return message.rolls[0].total;
-    return null;
+    return !!canvas.tokens.controlled.length && getChatDamageAmount(message) != null;
   };
 
   const damageOptions = [
@@ -56,7 +55,7 @@ export const addChatMessageContextOptions = function (html, options) {
       condition: canApply,
       callback: (li) => {
         const message = game.messages.get(li.dataset.messageId);
-        const damage = getDamageAmount(message);
+        const damage = getChatDamageAmount(message);
         if (damage !== null) {
           applyChatCardDamage(damage, opt.multiplier);
         }
@@ -75,7 +74,12 @@ export const addChatMessageContextOptions = function (html, options) {
  * @return {Promise}
  */
 export async function applyChatCardDamage(amount, multiplier) {
-  const targets = canvas.tokens.controlled;
+  const targets = (canvas.tokens.controlled ?? []).filter(
+    (t) => t.actor && (t.actor.isOwner || game.user.isGM)
+  );
+  if (!targets.length) {
+    return ui.notifications.warn(game.i18n.localize("WWN.Chat.ApplyDenied"));
+  }
 
   const title =
     multiplier > 0
@@ -91,9 +95,14 @@ export async function applyChatCardDamage(amount, multiplier) {
     flags: { kind: "apply-damage" },
   });
   return Promise.all(
-    targets.map((t) => {
-      const a = t.actor;
-      return a.applyDamage(amount, multiplier);
+    targets.map(async (t) => {
+      try {
+        return await t.actor.applyDamage(amount, multiplier);
+      } catch (err) {
+        console.warn("WWN | applyChatCardDamage failed", t.actor?.name, err);
+        ui.notifications.warn(game.i18n.format("WWN.Chat.ApplyFailed", { name: t.actor.name }));
+        return null;
+      }
     })
   );
 }

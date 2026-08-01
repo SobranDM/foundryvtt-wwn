@@ -1,7 +1,7 @@
 {
   "_id": "QyEzGefuNXB83shT",
   "name": "Arrows",
-  "type": "item",
+  "type": "ammo",
   "flags": {},
   "img": "systems/wwn/assets/icons/items/gear.png",
   "effects": [],
@@ -12,17 +12,11 @@
     "quantity": 1,
     "equipped": false,
     "stowed": false,
-    "weightless": "never",
+    "weightless": "",
     "containerId": "",
-    "treasure": false,
     "charges": {
       "value": 20,
       "max": 20
-    },
-    "roll": "",
-    "container": {
-      "isContainer": false,
-      "isOpen": true
     }
   },
   "ownership": {

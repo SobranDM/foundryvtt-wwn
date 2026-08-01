@@ -20,6 +20,28 @@
             </select>
           </div>
         </div>
+        {{#if capabilityBadges.length}}
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.PowerArmor.Capabilities"}}</label>
+          <div class="form-fields wwn-power-armor-caps">
+            {{#each capabilityBadges as |badge|}}
+            <span class="wwn-chip"><span class="wwn-chip-label">{{localize badge.labelKey}}</span></span>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-group wwn-form-span">
+          <label>{{localize "WWN.PowerArmor.Ops"}}</label>
+          <div class="form-fields">
+            <a class="wwn-chip" data-action="resetScene"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.NewScene"}}</span></a>
+            {{#if hasTsukumogami}}
+            <a class="wwn-chip" data-action="viMain"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.ViMain"}}</span></a>
+            {{/if}}
+            {{#if hasBlackOfuda}}
+            <a class="wwn-chip" data-action="toggleEmptySuit"><span class="wwn-chip-label">{{localize "WWN.PowerArmor.EmptySuit"}}</span></a>
+            {{/if}}
+          </div>
+        </div>
       </div>
       <div class="wwn-stat-grid wwn-power-armor-budget">
         <div class="wwn-stat-chip{{#if massOver}} wwn-budget-over{{/if}}">
@@ -56,6 +78,7 @@
         <div class="field-short">{{localize "WWN.PowerArmor.TL"}}</div>
         <div class="field-short">{{localize "WWN.PowerArmor.MassAbbr"}}</div>
         <div class="field-short">{{localize "WWN.PowerArmor.PowerAbbr"}}</div>
+        <div class="field-short">{{localize "WWN.PowerArmor.FittingUses"}}</div>
         <div class="item-controls"></div>
       </div>
       <ol class="item-list">
@@ -70,7 +93,24 @@
             <div class="field-short">{{item.system.tl}}</div>
             <div class="field-short">{{item.system.mass}}</div>
             <div class="field-short">{{item.system.power}}</div>
+            <div class="field-short">
+              {{#if item.fittingState.usesScene}}S:{{item.fittingState.usesScene}}{{/if}}
+              {{#if item.fittingState.usesMaint}} M:{{item.fittingState.usesMaint}}{{/if}}
+              {{#if item.fittingState.active}} ON{{/if}}
+              {{#if item.fittingState.deadUntilMaint}} DEAD{{/if}}
+              {{#if item.fittingState.doses}} D:{{item.fittingState.doses}}{{/if}}
+            </div>
             <div class="item-controls">
+              {{#if item.canActivate}}
+              <a class="item-control" data-action="activateFitting" title="{{localize 'WWN.PowerArmor.ActivateFitting'}}">
+                <i class="fas fa-bolt"></i>
+              </a>
+              {{/if}}
+              {{#if item.isReaction}}
+              <a class="item-control" data-action="triggerReaction" title="{{localize 'WWN.PowerArmor.TriggerReaction'}}">
+                <i class="fas fa-reply"></i>
+              </a>
+              {{/if}}
               <a class="item-control" data-action="toggleDisabled" title="{{localize 'WWN.PowerArmor.Disabled'}}">
                 <i class="fas {{#if item.system.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
               </a>

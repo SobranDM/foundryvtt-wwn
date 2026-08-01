@@ -8,9 +8,84 @@ import { applyFocusBonusSkillSeed, seedFocusAutomationEffects } from "../helpers
 
 import { remapAssetPath } from "./asset-map.mjs";
 import { normalizeInternalResourceLength } from "../config/power-subtypes.mjs";
-import { mapWeaponAmmoMigration } from "../helpers/ammo.mjs";
+import { mapWeaponAmmoMigration, ammoNameMatches } from "../helpers/ammo.mjs";
 
 const MODE_TO_TYPE = { 0: "custom", 1: "multiply", 2: "add", 3: "downgrade", 4: "upgrade", 5: "override" };
+
+/** Pack / common names that should become type `ammo` (lowercase). */
+export const KNOWN_AMMO_NAMES = new Set([
+  "arrows",
+  "bolts",
+  "hurlant bolts",
+  "type a energy cell",
+  "type b energy cell",
+  "spare magazine",
+]);
+
+/** Pack document ids for known ammo items. */
+export const KNOWN_AMMO_IDS = new Set([
+  "QyEzGefuNXB83shT", // Arrows
+  "zBd4INtbBae9gvJo", // Hurlant Bolts
+  "fKTjqM5pmhNiUb9U", // Bolts
+  "0nGH8QXmniZ9CMfY", // Type A Energy Cell
+  "ZIAiIe6FX7NvEKuq", // Type B Energy Cell
+  "xn7isDbACmpmmJMs", // Spare Magazine
+]);
+
+/** Pack document ids for hurlants / firearms that must get `system.firearm`. */
+export const KNOWN_FIREARM_IDS = new Set([
+  "wdcD13A9Jyz8vQyW", // Hurlant, Great
+  "eoum0sXFmbTP5WCk", // Hurlant, Hand
+  "TxqFhPGpKtp4Ccn8", // Hurlant, Long
+  "juM4B6cuR9fAKbuZ", // Hurlant, Great +1
+  "FYG39orGKw06pQqm", // Hurlant, Great +2
+  "TY1pehIYbrb9wu3L", // Hurlant, Great +3
+  "iEl19VQdFgdFLDwr", // Hurlant, Hand +1
+  "WQUbfR5eJDCAjHyM", // Hurlant, Hand +2
+  "ujpdaoaG46iyiJsU", // Hurlant, Hand +3
+  "7VS7fUb0oPRDZqdo", // Hurlant, Long +1
+  "xUU3hS1qRCcqnapj", // Hurlant, Long +2
+  "ZqdMDwDFwKz6ty4g", // Hurlant, Long +3
+]);
+
+/**
+ * Whether a gear item should become type ammo (by id or known name).
+ * @param {object} item
+ * @returns {boolean}
+ */
+export function isKnownAmmoItem(item) {
+  if (!item || item.type !== "item") return false;
+  const id = item._id ?? item.id ?? "";
+  if (KNOWN_AMMO_IDS.has(id)) return true;
+  const name = String(item.name ?? "").trim().toLowerCase();
+  return KNOWN_AMMO_NAMES.has(name);
+}
+
+/**
+ * Whether a weapon should be flagged as a firearm (pack id, ammoFallback, or name).
+ * @param {object} item
+ * @returns {boolean}
+ */
+export function isKnownFirearmWeapon(item) {
+  if (!item || item.type !== "weapon") return false;
+  const id = item._id ?? item.id ?? "";
+  if (KNOWN_FIREARM_IDS.has(id)) return true;
+  const fb = String(item.system?.ammoFallback ?? "").trim().toLowerCase();
+  if (fb === "hurlant") return true;
+  const name = String(item.name ?? "").trim().toLowerCase();
+  return name.startsWith("hurlant");
+}
+
+/**
+ * Set `firearm: true` on known hurlants / firearms missing the flag.
+ * @param {object} item
+ * @returns {object|null} Partial system patch
+ */
+export function repairWwnWeaponFirearm(item) {
+  if (!isKnownFirearmWeapon(item)) return null;
+  if (item.system?.firearm) return null;
+  return { firearm: true };
+}
 
 /** Legacy `weightless: "never"` → blank (current schema choice). */
 export function normalizeWeightless(value) {
@@ -25,6 +100,52 @@ export function normalizeArmorType(system = {}) {
   if (system.type === "unarmored") return "light";
   if (["light", "medium", "heavy", "shield"].includes(system.type)) return system.type;
   return "light";
+}
+
+/**
+ * Default tech level for armor by class (firearms ignore TL≤2 non-magical).
+ * Medium/heavy are TL3 so firearms do not strip them.
+ * @param {string} type
+ * @returns {number}
+ */
+export function defaultArmorTlForType(type) {
+  const t = normalizeArmorType({ type });
+  if (t === "medium" || t === "heavy") return 3;
+  return 1;
+}
+
+/**
+ * Whether armor should be flagged magical (blocks firearm/TL/AP ignore).
+ * @param {object} item
+ * @returns {boolean}
+ */
+export function armorLooksMagical(item) {
+  if (item?.system?.magical) return true;
+  if (/\+\s*\d/.test(String(item?.name ?? ""))) return true;
+  const sourceId = item?.flags?.core?.sourceId;
+  if (typeof sourceId === "string" && sourceId.includes("magic-items")) return true;
+  return false;
+}
+
+/**
+ * Backfill armor `tl` / `magical` when missing schema defaults would make
+ * firearms ignore plate and magic armor.
+ * @param {object} item
+ * @returns {object|null} Partial system patch
+ */
+export function repairWwnArmorTlMagical(item) {
+  if (!item || item.type !== "armor") return null;
+  const s = item.system ?? {};
+  const patch = {};
+  const armorType = normalizeArmorType(s);
+  const tl = Number(s.tl);
+  if (!Number.isFinite(tl) || tl === 0) {
+    patch.tl = defaultArmorTlForType(armorType);
+  }
+  if (!s.magical && armorLooksMagical(item)) {
+    patch.magical = true;
+  }
+  return Object.keys(patch).length ? patch : null;
 }
 
 /** Attack progression base values for AB residual migration (mirrors attack-progression.mjs). */
@@ -47,15 +168,34 @@ function abProgressionBase(key, level) {
 /**
  * Migrate persisted combat.ab on WWN PCs to combat.abMod (residual offset).
  * @param {object} system
- * @param {{ warrior?: boolean }} [options]
+ * @param {{ warrior?: boolean, progression?: string }} [options]
  * @returns {{ combat: { abMod: number } } | null}
  */
-export function migratePcCombatAb(system, { warrior = false } = {}) {
+export function migratePcCombatAb(system, { warrior = false, progression } = {}) {
   if (system?.combat?.abMod !== undefined) return null;
   const level = Math.max(system.details?.level ?? 1, 1);
   const oldAb = Number(system.combat?.ab) || 0;
-  const baseKey = warrior ? "warrior" : "expert";
+  const baseKey = progression
+    ?? (warrior ? "warrior" : "expert");
   return { combat: { abMod: oldAb - abProgressionBase(baseKey, level) } };
+}
+
+/**
+ * Infer attack progression for residual abMod from classEdges (or legacy warrior flag).
+ * @param {object} actor  Plain actor data
+ * @param {object} system
+ * @returns {string}
+ */
+export function inferAttackProgression(actor, system) {
+  const order = ["warrior", "partialWarrior", "expert", "mage", "none"];
+  let best = system?.warrior ? "warrior" : null;
+  for (const item of actor?.items ?? []) {
+    if (item.type !== "classEdge") continue;
+    const p = item.system?.attackProgression;
+    if (!p || p === "none") continue;
+    if (!best || order.indexOf(p) < order.indexOf(best)) best = p;
+  }
+  return best && best !== "none" ? best : "expert";
 }
 
 /** Remap item-local AE keys that target persisted bases instead of mod buckets. */
@@ -535,6 +675,8 @@ export function migrateWeapon(item) {
       stowed: !!s.stowed,
       weightless: normalizeWeightless(s.weightless),
       containerId: s.containerId ?? "",
+      firearm: !!s.firearm || isKnownFirearmWeapon(item),
+      tl: Number.isFinite(Number(s.tl)) ? Number(s.tl) : (isKnownFirearmWeapon(item) ? 4 : 0),
     },
   };
 }
@@ -542,6 +684,8 @@ export function migrateWeapon(item) {
 export function migrateArmor(item) {
   const s = item.system ?? {};
   const ac = Number(s.aac?.value) || 10;
+  const armorType = normalizeArmorType(s);
+  const tlNum = Number(s.tl);
   return {
     _id: item._id,
     name: item.name,
@@ -555,10 +699,13 @@ export function migrateArmor(item) {
       ac,
       acRanged: ac,
       mod: Number(s.aac?.mod) || 0,
-      type: normalizeArmorType(s),
+      type: armorType,
       soak: 0,
       traumaTarget: 6 + (Number(s.traumaMod) || 0),
       ashesHeavy: !!s.ashesHeavy,
+      tl: Number.isFinite(tlNum) && tlNum > 0 ? tlNum : defaultArmorTlForType(armorType),
+      magical: !!s.magical || armorLooksMagical(item),
+      powered: !!s.powered,
       price: Number(s.price) || 0,
       weight: Number(s.weight) || 0,
       quantity: 1,
@@ -568,6 +715,17 @@ export function migrateArmor(item) {
       containerId: s.containerId ?? "",
     },
   };
+}
+
+/**
+ * Gear that already has the WWN container block is considered modern and should
+ * not be fully rebuilt (rebuilds churn data and can drop fields).
+ * @param {object} system
+ * @returns {boolean}
+ */
+export function isModernGearSystem(system) {
+  const s = system ?? {};
+  return typeof s.container === "object" && s.container != null && "isContainer" in s.container;
 }
 
 export function migrateGear(item) {
@@ -590,6 +748,7 @@ export function migrateGear(item) {
       weightless: normalizeWeightless(s.weightless),
       containerId: s.containerId ?? "",
       treasure: !!s.treasure,
+      personal: !!s.personal,
       charges: {
         value: Number(s.charges?.value) || 0,
         max: Number(s.charges?.max) || 0,
@@ -602,6 +761,82 @@ export function migrateGear(item) {
       },
     },
   };
+}
+
+/**
+ * Convert gear used as ammunition into type `ammo`.
+ * @param {object} item
+ */
+export function migrateGearToAmmo(item) {
+  const s = item.system ?? {};
+  return {
+    _id: item._id,
+    name: item.name,
+    type: "ammo",
+    img: item.img,
+    sort: item.sort,
+    flags: item.flags ?? {},
+    effects: (item.effects ?? []).map(migrateEffectData),
+    system: {
+      description: s.description ?? "",
+      price: Number(s.price) || 0,
+      weight: Number(s.weight) || 0,
+      quantity: Number(s.quantity) || 1,
+      equipped: !!s.equipped,
+      stowed: !!s.stowed,
+      weightless: normalizeWeightless(s.weightless),
+      containerId: s.containerId ?? "",
+      charges: {
+        value: Number(s.charges?.value) || 0,
+        max: Number(s.charges?.max) || 0,
+      },
+    },
+  };
+}
+
+/**
+ * Collect ammo id / fallback needles from weapon items on an actor.
+ * @param {object[]} items
+ * @returns {{ ids: Set<string>, fallbacks: string[] }}
+ */
+export function collectWeaponAmmoNeedles(items) {
+  const ids = new Set();
+  const fallbacks = [];
+  for (const i of items ?? []) {
+    if (i.type !== "weapon") continue;
+    const s = i.system ?? {};
+    if (s.ammoId) ids.add(s.ammoId);
+    const fb = String(s.ammoFallback ?? "").trim();
+    if (fb) fallbacks.push(fb);
+  }
+  return { ids, fallbacks };
+}
+
+/**
+ * Whether a gear item matches a weapon ammo link needle.
+ * @param {object} item
+ * @param {{ ids: Set<string>, fallbacks: string[] }} needles
+ */
+export function gearMatchesAmmoNeedle(item, needles) {
+  if (!item || item.type !== "item") return false;
+  const id = item._id ?? item.id ?? "";
+  if (needles.ids.has(id)) return true;
+  return needles.fallbacks.some((fb) => ammoNameMatches(fb, item.name));
+}
+
+/**
+ * Migrate embedded item list with a second pass for weapon-linked gear → ammo.
+ * @param {object[]} items
+ * @returns {object[]}
+ */
+export function migrateActorItems(items) {
+  const first = (items ?? []).map((i) => applyEmbeddedItemMigration(i));
+  const needles = collectWeaponAmmoNeedles(first);
+  return first.map((i) => {
+    if (i.type !== "item") return i;
+    if (!gearMatchesAmmoNeedle(i, needles)) return i;
+    return applyEmbeddedItemMigration(migrateGearToAmmo(i));
+  });
 }
 
 /** Add NPC per-round attack counter defaults to WWN weapons missing the field. */
@@ -707,6 +942,7 @@ export function migrateItemData(item) {
         const patch = {
           ...(repairWwnWeaponCounter(s) ?? {}),
           ...(repairWwnWeaponAmmo(s) ?? {}),
+          ...(repairWwnWeaponFirearm(item) ?? {}),
         };
         // Always coerce legacy blank shock.ac even when ammo/counter are fine.
         const shockAc = s.shock?.ac;
@@ -719,11 +955,38 @@ export function migrateItemData(item) {
       }
       break;
     }
-    case "armor":
-      if (s.aac !== undefined || s.acRanged === undefined) result = migrateArmor(item);
-      else result = migrateWwnArmorTrauma(item);
+    case "armor": {
+      if (s.aac !== undefined || s.acRanged === undefined) {
+        result = migrateArmor(item);
+      } else {
+        const trauma = migrateWwnArmorTrauma(item);
+        const tlMag = repairWwnArmorTlMagical(item);
+        if (trauma || tlMag) {
+          result = {
+            _id: item._id,
+            system: {
+              ...(trauma?.system ?? {}),
+              ...(tlMag ?? {}),
+            },
+          };
+        } else {
+          result = null;
+        }
+      }
       break;
-    case "item": result = migrateGear(item); break;
+    }
+    case "item":
+      if (isKnownAmmoItem(item)) {
+        result = migrateGearToAmmo(item);
+      } else if (isModernGearSystem(s)) {
+        result = null;
+      } else {
+        result = migrateGear(item);
+      }
+      break;
+    case "ammo":
+      result = null;
+      break;
     case "skill": result = s.slug !== undefined ? null : migrateSkill(item); break;
     default: return null; // asset etc. — out of scope
   }
@@ -795,17 +1058,21 @@ export function migrateActorData(actor) {
 function migrateCharacter(actor) {
   const s = actor.system ?? {};
   const isWwn = !!s.scores;
-  const items = (actor.items ?? []).map((i) => applyEmbeddedItemMigration(i));
+  const items = migrateActorItems(actor.items ?? []);
   const effects = (actor.effects ?? []).map(migrateEffectData);
 
   if (!isWwn) {
-    const combatPatch = migratePcCombatAb(s, { warrior: !!s.warrior });
+    const progression = inferAttackProgression(actor, s);
+    const combatPatch = migratePcCombatAb(s, { progression });
     const remappedEffects = effects.map((e) => remapCombatAbEffect(e));
     if (!combatPatch) {
       return { type: actor.type, items, effects: remappedEffects, system: null };
     }
     const system = foundry.utils.deepClone(s);
-    system.combat = { abMod: combatPatch.combat.abMod };
+    system.combat = {
+      ...(typeof s.combat === "object" && s.combat ? foundry.utils.deepClone(s.combat) : {}),
+      abMod: combatPatch.combat.abMod,
+    };
     return { type: actor.type, items, effects: remappedEffects, system };
   }
 
@@ -896,7 +1163,11 @@ function migrateCharacter(actor) {
             ? !s.skills.locked
             : false,
     },
-    favorites: [],
+    favorites: (() => {
+      const itemIds = new Set(items.map((i) => i._id || i.id).filter(Boolean));
+      const prev = Array.isArray(s.favorites) ? s.favorites : [];
+      return prev.filter((id) => typeof id === "string" && itemIds.has(id));
+    })(),
     languages: Array.isArray(s.languages?.value) ? s.languages.value : [],
     casting: {
       prepared: {
@@ -920,7 +1191,7 @@ function migrateCharacter(actor) {
 function migrateMonster(actor) {
   const s = actor.system ?? {};
   const isWwn = !!s.hp?.hd && !s.hd;
-  const items = (actor.items ?? []).map((i) => applyEmbeddedItemMigration(i));
+  const items = migrateActorItems(actor.items ?? []);
   const effects = (actor.effects ?? []).map(migrateEffectData);
 
   if (!isWwn) return { type: actor.type, items, effects, system: null };

@@ -11,6 +11,7 @@ import {
   gunnerySkillName,
   bestAttributeMod,
   buildStationAssignmentUpdate,
+  npcStationSkillBonus,
 } from "../module/helpers/starship-crew.mjs";
 
 describe("starship-crew", () => {
@@ -123,6 +124,22 @@ describe("bestAttributeMod", () => {
   it("defaults missing mods to 0", () => {
     assert.equal(bestAttributeMod({}), 0);
     assert.equal(bestAttributeMod(undefined), 0);
+  });
+});
+
+describe("npcStationSkillBonus", () => {
+  it("takes the flat bonus from skill-check style formulas", () => {
+    assert.equal(npcStationSkillBonus("2d6+2"), 2);
+    assert.equal(npcStationSkillBonus("2d6 + 3"), 3);
+    assert.equal(npcStationSkillBonus("2d6-1"), -1);
+    assert.equal(npcStationSkillBonus("1d20+5"), 5);
+  });
+
+  it("handles bare numbers and formulas with no bonus", () => {
+    assert.equal(npcStationSkillBonus("2"), 2);
+    assert.equal(npcStationSkillBonus("+4"), 4);
+    assert.equal(npcStationSkillBonus("2d6"), 0);
+    assert.equal(npcStationSkillBonus(""), 0);
   });
 });
 

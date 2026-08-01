@@ -87,7 +87,7 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
 
     context.classEdges = context.classEdges ?? [];
 
-    context.inventorySections = ["weapons", "armors", "gear", "treasure", "currency"].map((id) => ({
+    context.inventorySections = ["weapons", "armors", "ammo", "gear", "treasure", "currency"].map((id) => ({
       id: `inventory.${id}`,
       collapsed: this.isSectionCollapsed(`inventory.${id}`),
     }));

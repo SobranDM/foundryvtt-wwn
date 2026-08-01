@@ -3,4 +3,4 @@
   {{#each list}}<li>{{this}}</li>{{/each}}
 </ul>
 {{/if}}
-{{#if body}}{{{body}}}{{/if}}
+{{#if bodyHtml}}{{{bodyHtml}}}{{else}}{{#if body}}{{body}}{{/if}}{{/if}}

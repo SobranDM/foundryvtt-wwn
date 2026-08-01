@@ -1,7 +1,7 @@
 import WwnItemBase from "./base.mjs";
 import { PhysicalDataMixin } from "../mixins/physical.mjs";
 import { mergeFormulaMod } from "../../derivations/item-formulas.mjs";
-import { AMMO_MODES, mapWeaponAmmoMigration } from "../../helpers/ammo.mjs";
+import { AMMO_MODES, mapWeaponAmmoMigration, resolveLinkedAmmo } from "../../helpers/ammo.mjs";
 
 const fields = foundry.data.fields;
 
@@ -69,6 +69,8 @@ export default class WwnWeapon extends PhysicalDataMixin(WwnItemBase) {
     schema.burst = new fields.BooleanField({ initial: false });
     /** Tech level (0–3 primitive; 4+ advanced). Default 0 = primitive. */
     schema.tl = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    /** Firearms (and hurlants) ignore TL≤2 non-magical armor/shields for hit rolls. */
+    schema.firearm = new fields.BooleanField({ initial: false });
 
     schema.range = new fields.SchemaField({
       short: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -120,17 +122,10 @@ export default class WwnWeapon extends PhysicalDataMixin(WwnItemBase) {
   get linkedAmmo() {
     const actor = this.parent?.actor;
     if (!actor) return null;
-    if (this.ammoId) {
-      const ammo = actor.items.get(this.ammoId);
-      if (ammo) return ammo;
-    }
-    if (this.ammoFallback) {
-      const fallback = this.ammoFallback.toLowerCase();
-      return actor.items.find(
-        (i) => i.type === "item" && i.name.toLowerCase().includes(fallback)
-      ) ?? null;
-    }
-    return null;
+    return resolveLinkedAmmo(actor.items, {
+      ammoId: this.ammoId,
+      ammoFallback: this.ammoFallback,
+    });
   }
 
   /** @override */

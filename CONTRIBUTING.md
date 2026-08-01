@@ -76,7 +76,7 @@ See [module/MODULES.md](module/MODULES.md) for folder responsibilities and impor
 - **TypeDataModels** define Actor/Item schemas (`module/data/`). There is no `template.json`.
 - **Active Effects** target curated bonus/mod fields (`module/config/ae-targets.mjs`); derived values are computed in `module/derivations/`.
 - **Migration** lives in `module/migration/` only. Do not use `TypeDataModel.migrateData()` for iterative schema fixes.
-- **Sheets** are the existing WWN Application V1 sheets (adapted to new data paths).
+- **Sheets** are Application V2 (`ActorSheetV2` / `ItemSheetV2` with Handlebars mixins).
 - **PCs** use Active Effects for combat/stat bonuses (Effects tab). **NPCs** use the Config tab for direct values; AE is optional.
 
 ## Releases

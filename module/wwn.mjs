@@ -16,6 +16,7 @@ import { registerRandomHpHook } from "./combat/random-hp.mjs";
 import WWNCombatTracker from "./combat/combat-tracker.js";
 import { WWNCombatant } from "./combat/combatant.js";
 import { canAddActorTypeToCombat } from "./combat/encounter-kind.mjs";
+import { validateGroupInitiativeRollRequest } from "./combat/group-initiative-socket.mjs";
 import { ChatListener } from "./chat/chat-listener.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { checkMigration, migrateWorld } from "./migration/migrate.mjs";
@@ -106,6 +107,7 @@ Hooks.once("init", async function () {
   };
   Object.assign(CONFIG.Item.dataModels, {
     item: models.WwnGear,
+    ammo: models.WwnAmmo,
     weapon: models.WwnWeapon,
     armor: models.WwnArmor,
     skill: models.WwnSkill,
@@ -124,6 +126,7 @@ Hooks.once("init", async function () {
     ability: models.WwnPower,
   });
   Object.assign(CONFIG.Item.typeLabels, {
+    ammo: "TYPES.Item.ammo",
     shipFitting: "TYPES.Item.shipFitting",
     shipWeapon: "TYPES.Item.shipWeapon",
     shipDefense: "TYPES.Item.shipDefense",
@@ -301,7 +304,7 @@ Hooks.once("setup", function () {
     "saves",
     "abilityAbbreviations",
     "armor",
-    "weightless",
+    "weightlessOptions",
     "colors",
     "tags",
     "skills",
@@ -320,6 +323,10 @@ Hooks.once("setup", function () {
   if (CONFIG.WWN.abilityAbbreviations) {
     CONFIG.WWN.scores = { ...CONFIG.WWN.abilityAbbreviations };
   }
+  // Alias after localize so both names share the schema-correct choices.
+  if (CONFIG.WWN.weightlessOptions) {
+    CONFIG.WWN.weightless = CONFIG.WWN.weightlessOptions;
+  }
 });
 
 Hooks.once("ready", async function () {
@@ -329,8 +336,7 @@ Hooks.once("ready", async function () {
   await refreshSkillSetCache({ notify: false });
 
   Hooks.on("hotbarDrop", (bar, data, slot) => {
-    macros.createWwnMacro(data, slot);
-    return false;
+    return macros.createWwnMacro(data, slot);
   });
 
   await checkMigration();
@@ -348,12 +354,60 @@ Hooks.once("ready", async function () {
     }
   }
 
-  game.socket.on("system.wwn", async ({ action, data }) => {
+  game.socket.on("system.wwn", async (payload, userId) => {
     if (!game.user.isGM) return;
-    if (action === "updateGroupInitiative") {
-      const { combatantGroupUpdates, combatantUpdates } = data;
-      await game.combat.updateEmbeddedDocuments("CombatantGroup", combatantGroupUpdates);
-      await game.combat.updateEmbeddedDocuments("Combatant", combatantUpdates);
+    const { action, data } = payload ?? {};
+    if (action !== "updateGroupInitiative") return;
+
+    const combat = game.combat;
+    if (!combat) return;
+
+    const sender = game.users.get(userId);
+    const ownsCombatant = (combatant) => {
+      if (!sender || !combatant) return false;
+      if (sender.isGM) return true;
+      return !!combatant.actor?.testUserPermission?.(sender, "OWNER");
+    };
+
+    const validated = validateGroupInitiativeRollRequest({
+      combatId: data?.combatId,
+      activeCombatId: combat.id,
+      combatantId: data?.combatantId,
+      combatantIds: combat.combatants.map((c) => c.id),
+      canUpdateCombatant: (id) => ownsCombatant(combat.combatants.get(id)),
+      getGroupMemberIds: (id) => {
+        const combatant = combat.combatants.get(id);
+        const group = combatant?.group;
+        if (!group) return [];
+        const older = [...combat.groups].find((g) => g.name === `${group.name}*`);
+        const members = [...(group.members ?? [])];
+        if (older?.members?.size) members.push(...older.members);
+        return members.map((c) => c.id);
+      },
+    });
+    if (!validated.ok) {
+      console.warn("WWN | Rejected group initiative socket payload:", validated.reason);
+      return;
+    }
+
+    const combatant = combat.combatants.get(validated.combatantId);
+    const group = combatant?.group;
+    if (!group) {
+      console.warn("WWN | Rejected group initiative socket payload: no group");
+      return;
+    }
+    const olderSiblingGroup = [...combat.groups].find((g) => g.name === `${group.name}*`);
+    const rollData = await combat._getGroupInitiativeData(group, olderSiblingGroup);
+    if (!rollData) return;
+
+    if (rollData.combatantGroupUpdates.length) {
+      await combat.updateEmbeddedDocuments("CombatantGroup", rollData.combatantGroupUpdates);
+    }
+    if (rollData.combatantUpdates.length) {
+      await combat.updateEmbeddedDocuments("Combatant", rollData.combatantUpdates);
+    }
+    if (rollData.chatMessage) {
+      await foundry.documents.ChatMessage.implementation.create(rollData.chatMessage);
     }
   });
 });
@@ -372,10 +426,8 @@ Hooks.on("renderSettings", async (app, html) => {
   html.querySelector(".info")?.insertAdjacentHTML("afterend", rendered);
 });
 
-Hooks.on("renderChatLog", (_app, html) => WwnItem.chatListeners?.(html));
 Hooks.on("renderChatMessageHTML", (_message, html) => {
   themeChatMessage(_message, html);
-  WwnItem.chatListeners?.(html);
 });
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
 Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);

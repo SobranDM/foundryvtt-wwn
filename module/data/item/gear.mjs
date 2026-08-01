@@ -4,7 +4,7 @@ import { PhysicalDataMixin } from "../mixins/physical.mjs";
 const fields = foundry.data.fields;
 
 /**
- * Generic gear (item type "item"): ported from WWN `item`.
+ * Generic gear (item type "item").
  */
 export default class WwnGear extends PhysicalDataMixin(WwnItemBase) {
   static defineSchema() {

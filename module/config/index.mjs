@@ -172,6 +172,7 @@ WWN.armorTypes = {
   shield: "WWN.Armor.shield",
 };
 
+/** Schema choices for physical `system.weightless` (`""` = never weightless). */
 WWN.weightlessOptions = {
   "": "WWN.Item.WeightlessNever",
   whenReadied: "WWN.Item.WeightlessReadied",
@@ -285,11 +286,8 @@ WWN.encumbLocation = {
   other: "WWN.items.other",
 };
 
-WWN.weightless = {
-  never: "WWN.items.WeightlessNever",
-  whenReadied: "WWN.items.WeightlessReadied",
-  whenStowed: "WWN.items.WeightlessStowed",
-};
+/** @deprecated Prefer weightlessOptions; kept as an alias for older templates/hooks. */
+WWN.weightless = WWN.weightlessOptions;
 
 WWN.armor = {
   unarmored: "WWN.armor.unarmored",

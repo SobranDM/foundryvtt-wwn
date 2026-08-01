@@ -6,7 +6,6 @@ import {
   parseStrainField,
   resolveStrainAmount,
 } from "../helpers/strain.mjs";
-import { spendWeaponCounter, tracksWeaponCounter } from "../helpers/weapon-counter.mjs";
 import { expendGear } from "../helpers/ammo.mjs";
 import { getActorSpellSlotMode } from "../derivations/resource-pools.mjs";
 import { findNamedResourcePool } from "../helpers/resource-pool-resolve.mjs";
@@ -18,12 +17,42 @@ import {
 import { AssetItemActions } from "../item/asset-actions.mjs";
 import { migrateItemData } from "../migration/transforms.mjs";
 import { rollShipWeapon } from "../helpers/starship-rolls.mjs";
-import { rollSuitArmorFitting } from "../helpers/power-armor-rolls.mjs";
 
 /**
  * WWN Item document: roll dispatch and power usage flow.
  */
+/** Item types creatable from the UI (legacy load aliases omitted). */
+const CREATABLE_ITEM_TYPES = new Set([
+  "item",
+  "ammo",
+  "weapon",
+  "armor",
+  "skill",
+  "power",
+  "classEdge",
+  "focus",
+  "currency",
+  "asset",
+  "shipFitting",
+  "shipWeapon",
+  "shipDefense",
+  "armorFitting",
+]);
+
+/** In-flight power-use locks (double-click / lag). */
+const _powerUseLocks = new WeakMap();
+
 export class WwnItem extends Item {
+  /**
+   * Hide legacy load aliases (`art` / `spell` / `ability`) from the create dialog.
+   * @override
+   */
+  static async createDialog(data = {}, createOptions = {}, dialogOptions = {}, renderOptions = {}) {
+    const types = (dialogOptions.types?.length ? dialogOptions.types : Object.keys(CONFIG.Item.dataModels ?? {}))
+      .filter((t) => CREATABLE_ITEM_TYPES.has(t));
+    return super.createDialog(data, createOptions, { ...dialogOptions, types }, renderOptions);
+  }
+
   /**
    * Remap legacy item types (`art` / `spell` / `ability`) before schema validation.
    * @override
@@ -112,10 +141,8 @@ export class WwnItem extends Item {
     const actor = this.actor;
     if (!actor) return;
     switch (this.type) {
-      case "weapon": {
-        if (tracksWeaponCounter(actor)) await spendWeaponCounter(this);
+      case "weapon":
         return WwnDice.rollAttack(actor, this, { skipDialog });
-      }
       case "power":
         return this.usePower({ skipDialog });
       case "skill":
@@ -137,7 +164,8 @@ export class WwnItem extends Item {
       }
       case "armorFitting": {
         if (actor.type === "powerArmor") {
-          return rollSuitArmorFitting(actor, this, { skipDialog });
+          const { activateFitting } = await import("../helpers/power-armor-effects.mjs");
+          return activateFitting(actor, this, { skipDialog });
         }
         return this.show();
       }
@@ -172,6 +200,17 @@ export class WwnItem extends Item {
    */
   async usePower({ skipDialog = false } = {}) {
     if (this.type !== "power") return;
+    if (_powerUseLocks.get(this)) return;
+    _powerUseLocks.set(this, true);
+    try {
+      return await this.#usePowerLocked({ skipDialog });
+    } finally {
+      _powerUseLocks.delete(this);
+    }
+  }
+
+  /** @param {{ skipDialog?: boolean }} [options] */
+  async #usePowerLocked({ skipDialog = false } = {}) {
     const actor = this.actor;
     const system = this.system;
     const usesShared = system.usesSharedPool;
@@ -200,7 +239,12 @@ export class WwnItem extends Item {
       if (!chosenOption) return;
 
       const pool = this.#findPool();
-      if (pool && pool.value + chosenOption.cost > pool.max) {
+      if (!pool) {
+        return ui.notifications.warn(
+          game.i18n.format("WWN.Power.NoPool", { name: this.name })
+        );
+      }
+      if (pool.value + chosenOption.cost > pool.max) {
         return ui.notifications.warn(
           game.i18n.format("WWN.Power.PoolEmpty", { name: pool.name })
         );
@@ -345,7 +389,12 @@ export class WwnItem extends Item {
     if (!chosenOption) return;
 
     const pool = this.#findPool();
-    if (pool && pool.value + chosenOption.cost > pool.max) {
+    if (!pool) {
+      return ui.notifications.warn(
+        game.i18n.format("WWN.Power.NoPool", { name: this.name })
+      );
+    }
+    if (pool.value + chosenOption.cost > pool.max) {
       return ui.notifications.warn(
         game.i18n.format("WWN.Power.PoolEmpty", { name: pool.name })
       );
@@ -414,6 +463,13 @@ export class WwnItem extends Item {
       }
       case "armor":
         return `${formatTag(CONFIG.WWN.armor?.[data.type], "fa-tshirt")}`;
+      case "ammo": {
+        const max = data.charges?.maxValue ?? data.charges?.max ?? 0;
+        if (max > 0) {
+          return formatTag(`${data.charges?.value ?? 0}/${max}`, "fa-bullseye");
+        }
+        return formatTag(String(data.quantity ?? 0), "fa-cubes");
+      }
       case "power": {
         if (data.subType === "spell") {
           let sTags = `${formatTag(data.source)}${formatTag(data.activation?.range)}${formatTag(data.activation?.duration)}${formatTag(data.activation?.roll)}`;

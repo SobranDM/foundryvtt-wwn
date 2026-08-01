@@ -1,11 +1,11 @@
 {{!-- Shared item sheet header: identity band + chips + weapon tags. --}}
-<header class="sheet-header wwn-sheet-header wwn-item-header">
-  <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt="" />
+<header class="sheet-header wwn-item-header">
+  <img class="profile-img" src="{{item.img}}" data-action="editImage" data-edit="img" title="{{item.name}}" alt="" />
   <div class="wwn-item-header-fields">
     <input class="wwn-header-name" name="name" type="text" value="{{item.name}}"
       placeholder="{{localize 'WWN.details.name'}}" />
     <div class="wwn-item-header-chips">
-      {{#if (evalOr (eq item.type "weapon") (evalOr (eq item.type "armor") (eq item.type "item")))}}
+      {{#if (evalOr (eq item.type "weapon") (evalOr (eq item.type "armor") (evalOr (eq item.type "item") (eq item.type "ammo"))))}}
       <label class="wwn-chip" title="{{localize 'WWN.items.Price'}}">
         <span class="wwn-chip-label"><i class="fas fa-circle"></i></span>
         <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number" />

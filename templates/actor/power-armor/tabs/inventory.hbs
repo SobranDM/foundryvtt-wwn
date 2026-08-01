@@ -86,6 +86,59 @@
     </ol>
     {{/wwnCollapsibleSection}}
 
+    {{#> wwnCollapsibleSection sectionId="powerArmor.ammo"
+      label=(localize "TYPES.Item.ammo")
+      count=ammoItems.length
+      collapsed=(lookup @root.collapsed "powerArmor.ammo")
+      searchType="ammo"
+      createType="ammo"}}
+    <div class="item-titles item-col-header wwn-col-header flexrow">
+      <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
+      <div class="field-short" title="{{localize 'WWN.Ammo.Rounds'}}"><i class="fas fa-magic"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></div>
+      <div class="item-controls"></div>
+    </div>
+    <ol class="item-list">
+      {{#each ammoItems as |item|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{item.id}}">
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{item.img}}" alt="" />
+            <h4 title="{{item.name}}">{{item.name}}</h4>
+          </div>
+          <div class="field-short charges">
+            {{#if (evalOr item.system.charges.value item.system.charges.max)}}
+            <input value="{{item.system.charges.value}}" type="number" data-item-field="system.charges.value" />
+            {{else}}
+            <input value="" type="text" disabled />
+            {{/if}}
+          </div>
+          <div class="field-short quantity">
+            {{#if (evalOr item.system.charges.value item.system.charges.max)}}
+            <input value="1" type="number" disabled />
+            {{else}}
+            <input value="{{item.system.quantity}}" type="number" data-item-field="system.quantity" />
+            {{/if}}
+          </div>
+          <div class="field-short">
+            <input value="{{item.system.weight}}" type="number" readonly />
+          </div>
+          <div class="item-controls">
+            {{#if @root.owner}}
+            {{> wwnItemControls showEquip=true showStow=true equipped=item.system.equipped stowed=item.system.stowed favoritable=@root.favoritesEnabled favorited=item.favorited}}
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{else}}
+      <li class="item-entry">
+        <p class="hint">{{localize "WWN.None"}}</p>
+      </li>
+      {{/each}}
+    </ol>
+    {{/wwnCollapsibleSection}}
+
     {{#> wwnCollapsibleSection sectionId="powerArmor.gear"
       label=(localize "WWN.category.items")
       count=gear.length

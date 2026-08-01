@@ -1,10 +1,13 @@
 /**
- * Weapon tech level vs advanced armor / Ironhide immunity.
+ * Weapon tech level vs powered armor / Ironhide immunity, and armor-ignore thresholds.
  */
 import { isTruthyAeFlag } from "./combat-ae-flags.mjs";
 
-/** Ironhide / basic+advanced plating: block TL ≤ this value (and unarmed). */
+/** Ironhide / powered armor / plating: block weapons with effective TL ≤ this (and unarmed). */
 export const PRIMITIVE_IMMUNE_TL = 3;
+
+/** Armor/shield TL at or below this may be ignored by firearms / TL≥4 (unless magical). */
+export const IGNORABLE_ARMOR_TL = 2;
 
 /**
  * Whether the weapon skill/name counts as Punch / unarmed.
@@ -36,18 +39,42 @@ export function effectiveWeaponTl(attacker, weapon, attackKind) {
 }
 
 /**
+ * Iterate actor items whether Collection or array.
+ * @param {Actor|object} actor
+ * @returns {object[]}
+ */
+function actorItems(actor) {
+  const items = actor?.items;
+  if (!items) return [];
+  if (typeof items.filter === "function" && !Array.isArray(items)) {
+    return items.filter(() => true);
+  }
+  return Array.from(items);
+}
+
+/**
  * Highest TL the target is immune to (null = no TL immunity).
+ * Powered body armor, Ironhide AE, and power-armor plating all contribute.
  * @param {Actor|object} target
  * @returns {number|null}
  */
 export function targetImmuneWeaponTl(target) {
   if (!target) return null;
+  let immune = null;
   if (isTruthyAeFlag(target.system?.combat?.immuneToPrimitiveWeapons)) {
-    return PRIMITIVE_IMMUNE_TL;
+    immune = PRIMITIVE_IMMUNE_TL;
   }
   const derived = target.system?.derived?.immuneWeaponTl;
-  if (derived != null && Number.isFinite(Number(derived))) return Number(derived);
-  return null;
+  if (derived != null && Number.isFinite(Number(derived))) {
+    immune = Math.max(immune ?? Number.NEGATIVE_INFINITY, Number(derived));
+  }
+  for (const item of actorItems(target)) {
+    if (item.type !== "armor" || !item.system?.equipped || item.system?.type === "shield") continue;
+    if (item.system?.powered) {
+      immune = Math.max(immune ?? Number.NEGATIVE_INFINITY, PRIMITIVE_IMMUNE_TL);
+    }
+  }
+  return immune == null || !Number.isFinite(immune) ? null : immune;
 }
 
 /**

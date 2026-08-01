@@ -3,15 +3,18 @@ import WwnItemBase from "./base.mjs";
 const fields = foundry.data.fields;
 
 /**
- * Faction asset item data model (ported from WWN `asset`).
+ * Faction asset item data model.
  *
  * Assets belong to `faction` actors and carry a Force/Cunning/Wealth type,
  * hit points, purchase/maintenance economics, and attack/counter stats.
+ * Canonical HTML field is `system.desc` (not the shared `description` mixin field).
  */
 export default class WwnAsset extends WwnItemBase {
   static defineSchema() {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
+    // Prefer `desc` (declared in system.json htmlFields); drop mixin description.
+    delete schema.description;
 
     schema.desc = new fields.HTMLField({ required: true, blank: true });
 
@@ -46,5 +49,15 @@ export default class WwnAsset extends WwnItemBase {
     schema.magic = new fields.StringField({ required: true, initial: "none" });
 
     return schema;
+  }
+
+  /** @override */
+  static migrateData(source) {
+    super.migrateData(source);
+    if (source && typeof source === "object") {
+      if (!source.desc && source.description) source.desc = source.description;
+      delete source.description;
+    }
+    return source;
   }
 }

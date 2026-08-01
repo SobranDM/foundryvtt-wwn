@@ -4,6 +4,12 @@
 import { remainingCombatBonusHp } from "../../helpers/starship-combat-hp.mjs";
 import { createNoticeMessage } from "../../chat/chat-card.mjs";
 import { confirmWwnDialog } from "../../applications/wwn-dialog.mjs";
+import { rollStationCheck } from "../../helpers/starship-rolls.mjs";
+import {
+  extractChatRollTotal,
+  stationCheckSucceeded,
+  STARSHIP_ACTION_DC,
+} from "./roll-resolve.mjs";
 
 /**
  * @param {Actor} starship
@@ -62,25 +68,18 @@ async function handleZeroHp(starship) {
   });
   if (!tryHulk) return;
 
-  // Engineer Fix vs 10 — simplified: ask for total or roll station later; use prompt number for now
-  const { showWwnDialog, rollButton, cancelButton } = await import("../../applications/wwn-dialog.mjs");
-  const result = await showWwnDialog({
-    modifier: "hulk-save",
-    title: game.i18n.localize("WWN.Starship.HulkSaveTitle"),
-    template: "systems/wwn/templates/dialog/modifier.hbs",
-    context: { modifier: 0 },
-    buttons: [rollButton(), cancelButton()],
-  });
-  if (!result || result === "cancel") return;
+  const msg = await rollStationCheck(starship, "engineering", { skipDialog: false });
+  const total = extractChatRollTotal(msg);
+  if (total == null) return;
 
-  // Roll 2d6 + modifier vs 10 as a stand-in when full station roll isn't wired here
-  const roll = await new Roll(`2d6 + ${Number(result.modifier) || 0}`).evaluate();
-  if (roll.total >= 10) {
+  if (stationCheckSucceeded(total, STARSHIP_ACTION_DC.hulkSave)) {
     await starship.setFlag("wwn", "burntOutHulk", true);
     await createNoticeMessage({
       title: starship.name,
       actor: starship,
       body: game.i18n.localize("WWN.Starship.BurntOutHulk"),
     });
+  } else {
+    ui.notifications?.info?.(game.i18n.localize("WWN.Starship.HulkSaveFailed"));
   }
 }

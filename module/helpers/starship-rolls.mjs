@@ -19,8 +19,10 @@ import {
   findStationSkillItem,
   gunnerySkillName,
   bestAttributeMod,
+  npcStationSkillBonus,
 } from "./starship-crew.mjs";
 import { bridgeFocusBonusesForShip } from "./starship-focus-bonuses.mjs";
+import { postResolvedShipWeaponCard, combatantForStarship } from "../combat/starship/attack.mjs";
 
 /** Resolve a station against the live actor it points at (async `fromUuid`). */
 async function resolveStationLive(starship, stationKey) {
@@ -100,40 +102,69 @@ async function rollNpcStationCheck(actor, { title, skipDialog = false } = {}) {
 /*  Ship weapons                                */
 /* -------------------------------------------- */
 
-/** Shared chat-card finalization for both the actor and formula gunnery paths. */
-async function postShipWeaponCard({ starship, weapon, title, attack, damage, rollData }) {
+/**
+ * Evaluate ship weapon rolls; optionally post a hit/miss card.
+ * @returns {Promise<ChatMessage|object|undefined>}
+ */
+async function postShipWeaponCard({
+  starship,
+  weapon,
+  title,
+  attack,
+  damage,
+  rollData,
+  createMessage = true,
+  targetActor = null,
+}) {
   const attackRoll = await new WwnAttackRoll(attack.formula(), rollData, { kind: "attack" }).evaluate();
   const damageRoll = await new WwnDamageRoll(damage.formula(), rollData, { kind: "damage" }).evaluate();
-
-  return createRollMessage({
-    rolls: [attackRoll, damageRoll],
-    kind: "attack",
-    actor: starship,
-    img: weapon.img,
+  const evaluated = {
+    attackRoll,
+    damageRoll,
+    attackTotal: attackRoll.total,
+    damageTotal: damageRoll.total,
+    attackBreakdown: attack.breakdown(),
+    damageBreakdown: damage.breakdown(),
     title,
-    bodyTemplate: "systems/wwn/templates/chat/attack-card.hbs",
-    context: {
-      attackBreakdown: attack.breakdown(),
-      damageBreakdown: damage.breakdown(),
-      applyRows: [
-        { id: "damage", label: game.i18n.localize("WWN.Roll.Damage"), value: damageRoll.total },
-      ],
-      hit: true,
-    },
-    flags: { applyRows: [{ id: "damage", value: damageRoll.total }] },
+  };
+  if (!createMessage) return evaluated;
+
+  const target = targetActor
+    ?? [...(game.user?.targets ?? [])][0]?.actor
+    ?? null;
+  const combat = game.combat;
+  const attackerCombatant = combat ? combatantForStarship(combat, starship) : null;
+  const defenderCombatant = (combat && target)
+    ? combatantForStarship(combat, target)
+    : null;
+
+  return postResolvedShipWeaponCard({
+    starship,
+    weapon,
+    title,
+    attackRoll,
+    damageRoll,
+    attackBreakdown: attack.breakdown(),
+    damageBreakdown: damage.breakdown(),
+    targetActor: target,
+    attackerCombatant,
+    defenderCombatant,
   });
 }
 
 /**
- * Roll a ship weapon attack. Crewed by the gunnery station's linked PC
- * (live ability/skill stats; the weapon's own `attackBonus` is ignored —
- * live stats win) or by its NPC gunnery formula (weapon damage + the
- * weapon's flat `attackBonus`, no ability mod).
+ * Roll a ship weapon attack (always 1d20). Crewed by the gunnery station's
+ * linked PC (live AB / ability / skill) or by an NPC station formula, from
+ * which only the flat crew bonus is taken (e.g. `2d6+2` → +2 on the d20).
  * @param {Actor} starship
  * @param {Item} weapon
- * @param {{skipDialog?: boolean}} [options]
+ * @param {{skipDialog?: boolean, createMessage?: boolean, targetActor?: Actor|null}} [options]
  */
-export async function rollShipWeapon(starship, weapon, { skipDialog = false } = {}) {
+export async function rollShipWeapon(starship, weapon, {
+  skipDialog = false,
+  createMessage = true,
+  targetActor = null,
+} = {}) {
   const resolved = await resolveStationLive(starship, "gunnery");
   const stationLabel = game.i18n.localize("WWN.Starship.Station.gunnery");
 
@@ -155,10 +186,23 @@ export async function rollShipWeapon(starship, weapon, { skipDialog = false } = 
   const damageFormula = weapon.system.damage || "1d6";
 
   if (resolved.mode === "formula") {
-    const attack = new RollParts().add(resolved.formula, stationLabel);
+    const prompt = await WwnDice.promptModifier({ title, skipDialog });
+    if (!prompt) return;
+    const attack = new RollParts().add("1d20", game.i18n.localize("WWN.Roll.Die"));
+    attack.add(npcStationSkillBonus(resolved.formula), stationLabel);
     attack.add(weapon.system.attackBonus ?? 0, game.i18n.localize("WWN.Starship.AttackBonus"));
+    attack.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
     const damage = new RollParts().add(damageFormula, game.i18n.localize("WWN.Roll.WeaponDamage"));
-    return postShipWeaponCard({ starship, weapon, title, attack, damage, rollData: starship.getRollData() });
+    return postShipWeaponCard({
+      starship,
+      weapon,
+      title,
+      attack,
+      damage,
+      rollData: starship.getRollData(),
+      createMessage,
+      targetActor,
+    });
   }
 
   const actor = resolved.actor;
@@ -181,7 +225,16 @@ export async function rollShipWeapon(starship, weapon, { skipDialog = false } = 
   const damage = new RollParts().add(damageFormula, game.i18n.localize("WWN.Roll.WeaponDamage"));
   damage.add(attrMod, game.i18n.localize("WWN.Starship.IntDex"));
 
-  return postShipWeaponCard({ starship, weapon, title, attack, damage, rollData: actor.getRollData() });
+  return postShipWeaponCard({
+    starship,
+    weapon,
+    title,
+    attack,
+    damage,
+    rollData: actor.getRollData(),
+    createMessage,
+    targetActor,
+  });
 }
 
 /* -------------------------------------------- */
@@ -262,7 +315,7 @@ export async function rollSpikeDrill(starship, { difficulty, skipDialog = false 
     const prompt = await WwnDice.promptModifier({ title, skipDialog });
     if (!prompt) return;
     const parts = new RollParts().add(
-      resolveSkillDiceFormula(skill.system?.dice || "2d6"),
+      resolveSkillDiceFormula(skill.system?.skillDice || "2d6"),
       game.i18n.localize("WWN.Roll.SkillDice"),
     );
     parts.add(doubled, game.i18n.localize("WWN.Starship.SpikeDrillDoublePilot"));

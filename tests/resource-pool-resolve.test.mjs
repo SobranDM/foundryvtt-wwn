@@ -8,6 +8,7 @@ import assert from "node:assert/strict";
 import {
   findPoolGrantEdge,
   findNamedResourcePool,
+  resolvePoolDisplayName,
 } from "../module/helpers/resource-pool-resolve.mjs";
 import { deriveResourcePools } from "../module/derivations/resource-pools.mjs";
 
@@ -144,5 +145,18 @@ describe("findNamedResourcePool", () => {
     });
     assert.equal(pool?.name, "Vowed Effort");
     assert.equal(pool?.max, 4);
+  });
+
+  it("finds orphan NPC pools via source-mapped Effort name", () => {
+    const actor = makeActor({
+      pools: [{ name: "Vowed Effort", level: null, value: 0, max: 3 }],
+    });
+    assert.equal(resolvePoolDisplayName(actor, { resourceName: "Effort", source: "Vowed" }), "Vowed Effort");
+    const pool = findNamedResourcePool(actor, {
+      resourceName: "Effort",
+      source: "Vowed",
+    });
+    assert.equal(pool?.name, "Vowed Effort");
+    assert.equal(pool?.max, 3);
   });
 });

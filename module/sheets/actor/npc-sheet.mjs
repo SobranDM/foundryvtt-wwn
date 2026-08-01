@@ -64,10 +64,11 @@ export class WwnNpcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBase
     context.favoritesEnabled = false;
 
     // Legacy "attributes" tab lists weapons as an attack-pattern group, then
-    // armor/gear beneath. Both lists already come from the base sheet's
-    // `_prepareItems` (context.weapons/armors/gear); just merge armor+gear here.
+    // armor/gear/ammo beneath. Lists come from the base sheet's `_prepareItems`.
     context.attackPatterns = [...context.weapons].sort((a, b) => a.name.localeCompare(b.name));
-    context.otherItems = [...context.armors, ...context.gear].sort((a, b) => a.name.localeCompare(b.name));
+    context.otherItems = [...context.armors, ...context.ammoItems, ...context.gear].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
 
     // Schema stores a RollTable UUID (or legacy `{ table }` object).
     const instinctUuid = system.details?.instinctTable;

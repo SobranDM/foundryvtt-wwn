@@ -54,7 +54,9 @@
     "weightless": "",
     "containerId": "",
     "ammoMode": "linked",
-    "ammoFallback": "Hurlant"
+    "ammoFallback": "Hurlant",
+    "firearm": true,
+    "tl": 4
   },
   "_key": "!items!TxqFhPGpKtp4Ccn8",
   "folder": "X7ZjQRXF78TzM1O2",

@@ -91,6 +91,7 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     const type = this.document.type;
     const byType = {
       item: "item",
+      ammo: "ammo",
       weapon: "weapon",
       armor: "armor",
       skill: "skill",
@@ -229,7 +230,7 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     }
     const choices = { "": "" };
     for (const gear of actor.items) {
-      if (gear.type !== "item") continue;
+      if (gear.type !== "ammo") continue;
       choices[gear.id] = gear.name;
     }
     context.ammoChoices = choices;

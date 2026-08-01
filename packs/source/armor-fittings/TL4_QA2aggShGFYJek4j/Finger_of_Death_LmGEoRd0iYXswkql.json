@@ -20,9 +20,9 @@
     "healing": false,
     "isWeapon": false,
     "weaponBonus": 0,
-    "melee": true,
-    "missile": false,
-    "score": "str",
+    "melee": false,
+    "missile": true,
+    "score": "dex",
     "linkedSkill": "",
     "shock": {
       "damage": "",

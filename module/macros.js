@@ -13,14 +13,14 @@ export function createWwnMacro(data, slot) {
   if (data.type !== "Item") return true;
   (async () => {
     const item = fromUuidSync(data.uuid);
-    if (!("system" in item))
+    if (!item || !("system" in item))
       return ui.notifications.warn(
         "You can only create macro buttons for owned Items"
       );
     // const item = itemFetch.system;
 
-    // Create the macro command
-    const command = `game.wwn.rollItemMacro("${item.name}");`;
+    // Create the macro command (JSON-escape the name so quotes cannot break out).
+    const command = `game.wwn.rollItemMacro(${JSON.stringify(item.name)});`;
     let macro = game.macros.find(
       (m) => m.name === item.name && m.command === command
     );
@@ -48,9 +48,7 @@ export function createWwnMacro(data, slot) {
  */
 export async function rollItemMacro(itemName) {
   const speaker = ChatMessage.getSpeaker();
-  let actor;
-  if (speaker.token) actor = game.actors.tokens[speaker.token];
-  if (!actor) actor = game.actors.get(speaker.actor);
+  const actor = ChatMessage.getSpeakerActor(speaker) ?? game.actors.get(speaker.actor);
 
   // Get matching items
   const items = actor ? actor.items.filter((i) => i.name === itemName) : [];

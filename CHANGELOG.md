@@ -32,7 +32,7 @@
   - Powers, classes, and foci share one Powers tab. Alignment, background, and class list live on Details.
   - Attack bonus and hit dice come from your classes (adjust with Active Effects when needed).
 - **Foci and class features** on characters from world pre-2.0.0 refresh from **WWN Abilities** on migration. Your focus level and skill choices are kept; replaced copies go under Items → **Migration Backups** (one folder per character).
-- **Weapons and ammo** support linked ammo and magazine-style reload more clearly. WIP. Ammo item type and proper items need creating.
+- **Weapons and ammo** support linked ammo and magazine-style reload more clearly, with a dedicated ammo item type for arrows, bolts, energy cells, and spare magazines. Personal attacks better follow Without Number rules: natural 1 and 20, Shock as a damage floor on hits, firearms (including hurlants) and high-tech weapons ignoring light non-magical armor, and powered armor stopping primitive or unarmed attacks.
 - **Group initiative** can collapse the tracker by side (default on), advancing one side at a time. WIP. Untested.
 - **Monsters** keep editable combat numbers on a Config tab.
 - **Starships** for Stars Without Number.
@@ -40,17 +40,17 @@
   - Fittings, weapons, and defenses install on the ship; cost, power, and mass scale with hull class as in the rulebook.
   - Crew stations (bridge, gunnery, engineering, comms, captain) can link a world actor or use an NPC roll formula; roll checks and ship weapons from the sheet.
   - Compendiums: **Starship Fittings** and **Example Starships**.
-  - **Starship combat** (SWN): type-segregated encounters (ships / factions / personal cannot mix in the same combat); Command Points; department actions on the ship sheet; tracker CP/Escape/Crisis HUD; Armor/AP, Target Systems, Escape/Pursue, and Crises. Detection/pursuit deferred. WIP.
-  - WIP. Largely untested.
-- **Dialogs and chat cards** share the selected UI theme. Party sheet and character creator use the same theming. Old chat/dialog templates are removed.
+  - **Starship combat** (SWN): type-segregated encounters (ships / factions / personal cannot mix in the same combat); Command Points; department actions on the ship sheet; tracker CP/Escape/Crisis HUD; Armor/AP, Target Systems, Escape/Pursue, and Crises. Department actions and hulk saves resolve from station roll totals vs DC (or opposed totals), not success confirms; Flak/Cloud helpers covered by unit tests. Detection locks / pre-combat pursuit still deferred. Manual smoke recommended (see `docs/design/specs/2026-07-31-starship-combat-harden-design.md`).
+- **Dialogs and chat cards** share the selected UI theme. Party sheet and character creator use the same theming. Old chat/dialog templates are removed. Attack cards explain hit outcomes and tuck roll breakdowns behind a help icon.
 - **Modular power armor** for Ashes Without Number.
   - Power armor actors with frame presets, mass/power budgets, Soak, power cells/runtime, and maintenance.
   - Armor fittings install on the suit; over-budget builds shut down fittings per the rules.
   - Link a PC pilot: the suit shows pilot skills and HP while AC, Soak, and exo Strength stay on the suit. Damage hits Soak first, then the pilot.
   - Automation for common fittings (plating, exo boost, efficiency, training disadvantage, weapon mounts, and selected special fittings).
+  - **Phase B effect engine (WIP):** `fittingState` scene/maint uses, Activate / Trigger Reaction on the Armor tab, capability badges, movement/mode chat actions (no auto-token move), best-effort auto reactions plus manual Trigger, target lock / linked targeting / ammo feed hooks, VI (Tsukumogami assist when activated; Black Ofuda empty-suit mode with suit AB/HP/Soak/Move/saves), Identification Lock, Backseat Driver incap, medical doses, trauma stabilizer, and skipped-maintenance failure dice. Plating shock/trauma flags apply in the attack pipeline.
   - Compendiums: **Armor Fittings** and **Example Power Armor**. FOR TESTING ONLY. This compendium will be removed later, as it is part of paid content.
   - WIP. Largely untested.
-- Assorted sheet, combat, and pack fixes for Foundry v14.
+- Assorted sheet and pack fixes for Foundry v14.
 
 ## New in 1.6.1
 

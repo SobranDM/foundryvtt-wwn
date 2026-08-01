@@ -56,6 +56,12 @@
               <input type="number" name="system.tl" value="{{system.tl}}" data-dtype="Number" min="0" />
             </div>
           </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.FirearmHint'}}">{{localize "WWN.items.Firearm"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.firearm" {{checked system.firearm}} data-dtype="Boolean" />
+            </div>
+          </div>
           {{#if system.missile}}
           <div class="form-group wwn-form-span">
             <label>{{localize "WWN.items.Range"}}</label>
@@ -151,7 +157,7 @@
             <label>{{localize "WWN.items.WeightlessLabel"}}</label>
             <div class="form-fields">
               <select name="system.weightless">
-                {{selectOptions config.weightless selected=system.weightless}}
+                {{selectOptions config.weightlessOptions selected=system.weightless localize=true}}
               </select>
             </div>
           </div>

@@ -1,0 +1,25 @@
+{{!-- Ammo attributes: loose rounds / cells (quantity) or charge stacks (spare mags, arrow bundles). --}}
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-attributes-body">
+    <div class="wwn-attributes-grid">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.Ammo.StackSection"}}</div>
+        <div class="wwn-form-panel-fields">
+          <p class="notes">{{localize "WWN.Ammo.StackHint"}}</p>
+          {{> wwnRatioField labelKey="WWN.Ammo.Rounds"
+            valueName="system.charges.value" value=system.charges.value
+            maxName="system.charges.max" max=system.charges.max
+            valueTitleKey="WWN.Ammo.RoundsValueHint" maxTitleKey="WWN.Ammo.RoundsMaxHint"}}
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.WeightlessLabel'}}">{{localize "WWN.items.WeightlessLabel"}}</label>
+            <div class="form-fields">
+              <select name="system.weightless">
+                {{selectOptions config.weightlessOptions selected=system.weightless localize=true}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

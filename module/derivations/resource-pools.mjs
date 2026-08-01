@@ -1,13 +1,19 @@
 import { WWN } from "../config/index.mjs";
 import { applyFocusResourceGrants } from "./focus-resources.mjs";
 import { progressionAtLevel, resolveCastProgression } from "./prepared-spells.mjs";
-import { findPoolGrantEdge } from "../helpers/resource-pool-resolve.mjs";
+import { isNpc } from "../helpers/actor-types.mjs";
+import {
+  findPoolGrantEdge,
+  resolvePoolDisplayName,
+} from "../helpers/resource-pool-resolve.mjs";
 
 /**
  * Resource pool builder.
  *
  * Pools are derived-only (never persisted): spend lives on each Power's
- * poolCommitted buckets. Maxes come from matching ClassEdge grants plus Focus resourceGrant bonuses.
+ * poolCommitted buckets. Maxes come from matching ClassEdge grants plus Focus
+ * resourceGrant bonuses. NPCs also get orphan pools for shared-pool powers
+ * without a matching grant, and may override maxes via system.poolMaxOverrides.
  */
 
 /** Safe deterministic formula evaluation against actor roll data. */
@@ -285,5 +291,76 @@ export function deriveResourcePools(actor) {
   }
 
   applyFocusResourceGrants(actor, pools);
+
+  if (isNpc(actor)) {
+    appendNpcOrphanPools(actor, namedPowers, pools);
+    applyNpcPoolMaxOverrides(actor, pools);
+  }
+
   actor.system.resourcePools = pools;
+}
+
+/**
+ * NPC-only: create pools for shared-pool powers whose resource has no ClassEdge grant.
+ * @param {Actor} actor
+ * @param {Item[]} namedPowers
+ * @param {object[]} pools
+ */
+function appendNpcOrphanPools(actor, namedPowers, pools) {
+  const existingNames = new Set(pools.filter((p) => p.level == null).map((p) => p.name));
+
+  for (const power of namedPowers) {
+    const edge = findPoolGrantEdge(actor, {
+      resourceName: power.system.resourceName,
+      source: power.system.source,
+    });
+    if (edge) continue;
+
+    const name = resolvePoolDisplayName(actor, {
+      resourceName: power.system.resourceName,
+      source: power.system.source,
+    });
+    if (!name || existingNames.has(name)) continue;
+
+    const members = namedPowers.filter(
+      (p) =>
+        !findPoolGrantEdge(actor, {
+          resourceName: p.system.resourceName,
+          source: p.system.source,
+        }) &&
+        resolvePoolDisplayName(actor, {
+          resourceName: p.system.resourceName,
+          source: p.system.source,
+        }) === name
+    );
+    const value = members.reduce((sum, p) => sum + (p.system.poolCommittedSum ?? 0), 0);
+    pools.push({
+      id: `pool-${name}`.slugify(),
+      name,
+      level: null,
+      value,
+      max: 0,
+      warning: null,
+    });
+    existingNames.add(name);
+  }
+}
+
+/**
+ * NPC-only: apply persisted max overrides and mark pools editable on the sheet.
+ * @param {Actor} actor
+ * @param {object[]} pools
+ */
+function applyNpcPoolMaxOverrides(actor, pools) {
+  const overrides = actor.system?.poolMaxOverrides ?? {};
+  for (const pool of pools) {
+    pool.editableMax = true;
+    const override = overrides[pool.id];
+    if (override !== undefined && override !== null && Number.isFinite(Number(override))) {
+      pool.max = Math.max(0, Math.floor(Number(override)));
+      if (pool.warning === "WWN.Pools.WarnInvalidFormula" || pool.warning === "WWN.Pools.WarnNoClassEdge") {
+        pool.warning = null;
+      }
+    }
+  }
 }

@@ -48,6 +48,15 @@ describe("targetBlocksWeapon", () => {
     assert.equal(targetBlocksWeapon(target, 3), true);
     assert.equal(targetBlocksWeapon(target, 4), false);
   });
+
+  it("powered body armor item grants immunity", () => {
+    const target = {
+      items: [{ type: "armor", system: { equipped: true, type: "heavy", powered: true } }],
+      system: { combat: {}, derived: {} },
+    };
+    assert.equal(targetBlocksWeapon(target, 3), true);
+    assert.equal(targetBlocksWeapon(target, 4), false);
+  });
 });
 
 describe("resolveWeaponTlGate", () => {

@@ -2,7 +2,7 @@
   "id": "wwn",
   "title": "Worlds Without Number",
   "description": "Play Worlds Without Number on Foundry VTT",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha2",
   "compatibility": {
     "minimum": "14",
     "verified": "14",
@@ -19,6 +19,7 @@
   "esmodules": [
     "module/wwn.mjs"
   ],
+  "socket": true,
   "styles": [
     "styles/main.css"
   ],
@@ -28,10 +29,10 @@
         "htmlFields": ["biography", "details.notes"]
       },
       "monster": {
-        "htmlFields": ["biography"]
+        "htmlFields": ["biography", "notes"]
       },
       "faction": {
-        "htmlFields": ["description"]
+        "htmlFields": ["description", "factionGoalDesc"]
       },
       "starship": {
         "htmlFields": ["description"]
@@ -43,11 +44,14 @@
         "htmlFields": ["biography", "details.notes"]
       },
       "npc": {
-        "htmlFields": ["biography"]
+        "htmlFields": ["biography", "notes"]
       }
     },
     "Item": {
       "item": {
+        "htmlFields": ["description"]
+      },
+      "ammo": {
         "htmlFields": ["description"]
       },
       "weapon": {
@@ -311,6 +315,7 @@
       "color": "#6b4a2f",
       "packs": [
         "abilities-awn",
+        "tables-awn",
         "armor-fittings",
         "example-power-armor"
       ],

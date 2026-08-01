@@ -34,6 +34,19 @@
   font-size: 12px;
   opacity: 0.75;
 }
+.wwn-chat-card .wwn-chat-breakdown {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.wwn-chat-card .wwn-chat-hint {
+  cursor: help;
+  opacity: 0.9;
+  font-size: 0.85em;
+}
+.wwn-chat-card .wwn-chat-notice {
+  opacity: 0.9;
+}
 .wwn-chat-card .wwn-chat-desc {
   font-size: 13px;
 }

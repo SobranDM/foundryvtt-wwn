@@ -1,14 +1,21 @@
 import {
   migrateActorData,
   migrateItemData,
+  migrateActorItems,
   applyEmbeddedItemMigration,
   isBarePlaceholderActorData,
+  isKnownAmmoItem,
+  collectWeaponAmmoNeedles,
+  gearMatchesAmmoNeedle,
+  repairWwnWeaponFirearm,
+  repairWwnArmorTlMagical,
 } from "./transforms.mjs";
 import { mergeWeaponFavorites } from "../helpers/favorites.mjs";
 import { isNpc, isPc } from "../helpers/actor-types.mjs";
 import { remapAssetPath } from "./asset-map.mjs";
 import { maybeSyncPcCompendiumItems } from "./pc-compendium-sync.mjs";
 import { maybeCleanupClassAbilities, repairInvalidEmbeddedItems } from "./class-ability-cleanup.mjs";
+import { embeddedItemsNeedReplace } from "./embedded-items.mjs";
 
 const NS = "wwn";
 
@@ -16,7 +23,31 @@ const NS = "wwn";
 const LEGACY_ITEM_TYPES = new Set(["art", "spell", "ability"]);
 
 /** Versions below this trigger migration. Bump when adding steps. */
-const NEEDS_MIGRATION_BELOW = "2.0.0";
+const NEEDS_MIGRATION_BELOW = "2.0.0-alpha2";
+
+/**
+ * Plain-ish item source from a world/embedded Item document.
+ * @param {Item|object} item
+ */
+function itemSource(item) {
+  return typeof item?.toObject === "function" ? item.toObject() : item;
+}
+
+/**
+ * Whether an item list still needs gear→ammo, hurlant firearm, or armor TL/magical backfill.
+ * @param {Iterable} items
+ */
+function itemsNeedAmmoOrFirearmMigration(items) {
+  const list = [...(items ?? [])].map(itemSource);
+  if (list.some((i) => isKnownAmmoItem(i))) return true;
+  if (list.some((i) => repairWwnWeaponFirearm(i))) return true;
+  if (list.some((i) => repairWwnArmorTlMagical(i))) return true;
+  const needles = collectWeaponAmmoNeedles(list);
+  if (needles.ids.size || needles.fallbacks.length) {
+    if (list.some((i) => gearMatchesAmmoNeedle(i, needles))) return true;
+  }
+  return false;
+}
 
 /** @param {any} value */
 function forcedReplace(value) {
@@ -49,13 +80,19 @@ export async function checkMigration() {
           && i.system?.internalResourceLength
           && !["scene", "day"].includes(i.system.internalResourceLength)
       ) ||
+      // World directory items (Item.migrateData does not gear→ammo).
+      itemsNeedAmmoOrFirearmMigration(game.items) ||
+      [...game.actors].some((a) => itemsNeedAmmoOrFirearmMigration(a.items)) ||
       game.actors.invalidDocumentIds.size > 0 ||
       game.items.invalidDocumentIds.size > 0 ||
       [...game.actors].some((a) =>
         [...(a.items?.invalidDocumentIds ?? [])].length > 0
         || [...a.items].some((i) => LEGACY_ITEM_TYPES.has(i.type))
       );
-    if (!needsWork) {
+    // Actor.migrateData can hide embedded ammo/firearm work on live docs; force a
+    // persisted pass when crossing into the ammo item / firearm-backfill release.
+    const forceAmmoReleasePass = !current || foundry.utils.isNewerVersion(NEEDS_MIGRATION_BELOW, current);
+    if (!needsWork && !forceAmmoReleasePass) {
       await game.settings.set(NS, "systemMigrationVersion", game.system.version);
     } else {
       await migrateWorld();
@@ -73,7 +110,8 @@ export async function checkMigration() {
 }
 
 /**
- * Migrate all world actors, items, scene token deltas, and compendium packs.
+ * Migrate all world actors, items, unlinked scene token actors, and unlocked
+ * world Actor/Item packs. Linked tokens use their world Actor (already covered).
  * Idempotent: documents already in WWN shape pass through unchanged.
  */
 export async function migrateWorld() {
@@ -94,6 +132,7 @@ export async function migrateWorld() {
   game.wwn ??= {};
   game.wwn.migrating = true;
 
+  let failures = 0;
   try {
     console.info("WWN | Migration: starting world items…");
     let itemCount = 0;
@@ -102,6 +141,7 @@ export async function migrateWorld() {
         await migrateWorldItem(item);
         itemCount++;
       } catch (err) {
+        failures++;
         console.error(`WWN | Item migration failed for ${item.name}:`, err);
       }
     }
@@ -113,10 +153,30 @@ export async function migrateWorld() {
         await migrateActorDocument(actor);
         console.info(`${actor.name}-- Migration Complete`);
       } catch (err) {
+        failures++;
         console.error(`WWN | Actor migration failed for ${actor.name}:`, err);
       }
     }
-    console.info("WWN | Migration: world actors done. Checking world packs…");
+    console.info("WWN | Migration: world actors done. Migrating unlinked scene tokens…");
+    for (const scene of game.scenes ?? []) {
+      for (const token of scene.tokens ?? []) {
+        if (token.actorLink) continue;
+        const actor = token.actor;
+        if (!actor) continue;
+        try {
+          console.info(`WWN | Migration: starting token actor ${actor.name} on scene ${scene.name}`);
+          await migrateActorDocument(actor);
+          console.info(`${actor.name}-- Token Migration Complete`);
+        } catch (err) {
+          failures++;
+          console.error(
+            `WWN | Token actor migration failed for ${actor.name} on ${scene.name}:`,
+            err
+          );
+        }
+      }
+    }
+    console.info("WWN | Migration: scene tokens done. Checking world packs…");
 
     for (const pack of game.packs) {
       if (pack.metadata.packageType !== "world") continue;
@@ -134,13 +194,18 @@ export async function migrateWorld() {
             console.info(`${doc.name}-- Migration Complete`);
           }
         } catch (err) {
+          failures++;
           console.error(`WWN | Pack migration failed for ${doc.name}:`, err);
         }
       }
     }
 
     console.info("WWN | Migration: post-steps (compendium sync, class cleanup)…");
-    await game.settings.set(NS, "systemMigrationVersion", game.system.version);
+    if (failures === 0) {
+      await game.settings.set(NS, "systemMigrationVersion", game.system.version);
+    } else {
+      console.warn(`WWN | Migration finished with ${failures} failure(s); version stamp skipped.`);
+    }
     await maybeSyncPcCompendiumItems();
     await maybeCleanupClassAbilities();
     console.info("WWN | Migration: all steps finished.");
@@ -149,10 +214,24 @@ export async function migrateWorld() {
     window.clearInterval(stillMigrating);
   }
 
-  ui.notifications.info(
-    game.i18n.format("WWN.Migration.Complete", { version: game.system.version }),
-    { permanent: true }
-  );
+  if (failures > 0) {
+    ui.notifications.error(
+      game.i18n.format("WWN.Migration.Failed", { count: failures }),
+      { permanent: true }
+    );
+  } else {
+    ui.notifications.info(
+      game.i18n.format("WWN.Migration.Complete", { version: game.system.version }),
+      { permanent: true }
+    );
+  }
+
+  const parkedWounds = [...game.actors].filter((a) => a.getFlag?.(NS, "legacyWounds")).length;
+  if (parkedWounds > 0) {
+    ui.notifications.warn(game.i18n.localize("WWN.Migration.LegacyWoundsParked"), {
+      permanent: true,
+    });
+  }
 }
 
 /**
@@ -172,13 +251,28 @@ async function migrateWorldItem(item) {
   if (needsRecreate) {
     const keepId = item.id;
     const pack = item.pack || null;
+    const folder = item.folder?.id ?? item.folder ?? null;
+    // Snapshot the pre-migration source so a failed recreate can restore the original.
+    const backup = foundry.utils.deepClone({ ...raw, _id: keepId, folder });
     foundry.utils.setProperty(migrated, `flags.${NS}.pendingTypeMigration`, null);
-    await item.delete();
-    await CONFIG.Item.documentClass.create({ ...migrated, _id: keepId }, {
-      keepId: true,
-      pack,
-      wwnMigrating: true,
-    });
+    const payload = { ...migrated, _id: keepId, folder };
+    await item.delete({ wwnMigrating: true });
+    try {
+      const created = await CONFIG.Item.documentClass.create(payload, {
+        keepId: true,
+        pack,
+        wwnMigrating: true,
+      });
+      if (!created) throw new Error("create returned empty");
+    } catch (err) {
+      console.error(`WWN | Recreate failed for ${backup.name} (${keepId}); restoring backup:`, err);
+      await CONFIG.Item.documentClass.create(backup, {
+        keepId: true,
+        pack,
+        wwnMigrating: true,
+      });
+      throw err;
+    }
     return;
   }
 
@@ -241,8 +335,17 @@ export async function migrateActorDocument(actor) {
     return;
   }
 
-  if (raw.system?.hp?.injuries || raw.system?.hp?.wounds) {
-    console.info(`WWN | ${actor.name}: WWN injuries/wounds data discarded (wound modules own that data).`);
+  const legacyWounds =
+    raw.system?.hp?.injuries != null || raw.system?.hp?.wounds != null
+      ? {
+          injuries: raw.system.hp.injuries ?? null,
+          wounds: raw.system.hp.wounds ?? null,
+        }
+      : null;
+  if (legacyWounds) {
+    console.info(
+      `WWN | ${actor.name}: injuries/wounds parked under flags.wwn.legacyWounds (wound modules own live data).`
+    );
   }
 
   const tokenSrc = foundry.utils.getProperty(raw, "prototypeToken.texture.src");
@@ -255,6 +358,7 @@ export async function migrateActorDocument(actor) {
     effects: bare ? null : result.effects,
     items: itemsChanged ? result.items : null,
     bare,
+    legacyWounds,
   });
 
   if (!bare && isNpc(actor)) await ensureNpcWeaponFavorites(actor);
@@ -292,6 +396,7 @@ async function finalizeActorMigrationHooks(actor) {
  *   effects?: object[]|null,
  *   items?: object[]|null,
  *   bare?: boolean,
+ *   legacyWounds?: { injuries?: unknown, wounds?: unknown }|null,
  * }} data
  */
 async function persistActorMigration(actor, data) {
@@ -300,6 +405,7 @@ async function persistActorMigration(actor, data) {
   if (data.system != null) update.system = forcedReplace(data.system);
   if (data.img) update.img = data.img;
   if (data.tokenSrc) update["prototypeToken.texture.src"] = data.tokenSrc;
+  if (data.legacyWounds) update[`flags.${NS}.legacyWounds`] = data.legacyWounds;
 
   if (Object.keys(update).length) {
     console.info(`WWN | ${label}: persisting system…`);
@@ -313,12 +419,8 @@ async function persistActorMigration(actor, data) {
 
   if (data.items == null) return;
 
-  const migratedItems = data.items.map((i) => applyEmbeddedItemMigration(i));
-  console.info(`WWN | ${label}: clearing ${actor.items?.size ?? 0} embedded items…`);
-  await clearEmbeddedItems(actor);
-  console.info(`WWN | ${label}: recreating ${migratedItems.length} embedded items…`);
-  await recreateEmbeddedItems(actor, migratedItems);
-  console.info(`WWN | ${label}: embedded items done.`);
+  const migratedItems = migrateActorItems(data.items);
+  await replaceEmbeddedItemsSafely(actor, migratedItems);
 }
 
 /**
@@ -395,19 +497,6 @@ function collectEmbeddedItemSources(actor, raw) {
   return Array.from(byId.values());
 }
 
-/** @param {object[]} before @param {object[]} after */
-function embeddedItemsNeedReplace(before, after) {
-  if ((before?.length ?? 0) !== (after?.length ?? 0)) return true;
-  for (let i = 0; i < after.length; i++) {
-    const a = before[i];
-    const b = after[i];
-    if (!a || !b) return true;
-    if (a.type !== b.type) return true;
-    if (LEGACY_ITEM_TYPES.has(a.type) || LEGACY_ITEM_TYPES.has(b.type)) return true;
-  }
-  return before.some((i) => LEGACY_ITEM_TYPES.has(i.type));
-}
-
 /**
  * Replace embedded items when legacy types remain (no actor system rewrite needed).
  * @param {Actor} actor
@@ -415,21 +504,38 @@ function embeddedItemsNeedReplace(before, after) {
  * @returns {Promise<boolean>} true if items were cleared/recreated
  */
 async function replaceEmbeddedItemsIfNeeded(actor, itemSources) {
-  const items = itemSources.map((i) => applyEmbeddedItemMigration(i));
-  const needs = itemSources.some((src, idx) => {
-    const next = items[idx];
-    if (!next) return true;
-    if (LEGACY_ITEM_TYPES.has(src.type) || src.type !== next.type) return true;
-    return JSON.stringify(src.system ?? {}) !== JSON.stringify(next.system ?? {});
-  });
-  if (!needs) return false;
+  const items = migrateActorItems(itemSources);
+  if (!embeddedItemsNeedReplace(itemSources, items)) return false;
+  await replaceEmbeddedItemsSafely(actor, items);
+  return true;
+}
+
+/**
+ * Clear then recreate embeds; restore the pre-clear snapshot if recreate fails.
+ * @param {Actor} actor
+ * @param {object[]} migratedItems
+ */
+async function replaceEmbeddedItemsSafely(actor, migratedItems) {
   const label = actor.name ?? actor.id;
+  const backup = foundry.utils.deepClone(collectEmbeddedItemSources(actor, actor.toObject()));
   console.info(`WWN | ${label}: clearing ${actor.items?.size ?? 0} embedded items…`);
   await clearEmbeddedItems(actor);
-  console.info(`WWN | ${label}: recreating ${items.length} embedded items…`);
-  await recreateEmbeddedItems(actor, items);
-  console.info(`WWN | ${label}: embedded items done.`);
-  return true;
+  try {
+    console.info(`WWN | ${label}: recreating ${migratedItems.length} embedded items…`);
+    await recreateEmbeddedItems(actor, migratedItems);
+    console.info(`WWN | ${label}: embedded items done.`);
+  } catch (err) {
+    console.error(
+      `WWN | ${label}: recreate failed; restoring ${backup.length} embedded items…`,
+      err
+    );
+    try {
+      await recreateEmbeddedItems(actor, backup);
+    } catch (restoreErr) {
+      console.error(`WWN | ${label}: embed restore also failed:`, restoreErr);
+    }
+    throw err;
+  }
 }
 
 /**

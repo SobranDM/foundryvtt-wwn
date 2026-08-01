@@ -14,8 +14,19 @@ import {
   planReload,
   planExpendGear,
   mapWeaponAmmoMigration,
+  ammoNameMatches,
+  ammoNameScore,
 } from "../module/helpers/ammo.mjs";
-import { repairWwnWeaponAmmo, migrateItemData } from "../module/migration/transforms.mjs";
+import {
+  repairWwnWeaponAmmo,
+  migrateItemData,
+  migrateGearToAmmo,
+  isKnownAmmoItem,
+  isKnownFirearmWeapon,
+  repairWwnWeaponFirearm,
+  repairWwnArmorTlMagical,
+  migrateActorItems,
+} from "../module/migration/transforms.mjs";
 import "../build/foundry-shim.mjs";
 
 describe("availableAmmoCount / usesChargeStack", () => {
@@ -30,6 +41,32 @@ describe("availableAmmoCount / usesChargeStack", () => {
   });
 });
 
+describe("ammoNameScore / ammoNameMatches", () => {
+  it("scores exact and plural highest", () => {
+    assert.equal(ammoNameScore("Arrow", "Arrows"), 100);
+    assert.equal(ammoNameScore("Bolt", "Bolts"), 100);
+    assert.equal(ammoNameScore("Bolts", "Bolt"), 100);
+    assert.equal(ammoNameMatches("Arrow", "Arrows"), true);
+  });
+
+  it("scores multi-word includes and prefix compounds", () => {
+    assert.equal(ammoNameScore("Type A", "Type A Energy Cell"), 80);
+    assert.equal(ammoNameScore("Hurlant", "Hurlant Bolts"), 60);
+  });
+
+  it("scores token match for renamed stacks without preferring compounds", () => {
+    assert.equal(ammoNameScore("Arrow", "Silver Arrows"), 40);
+    assert.equal(ammoNameMatches("Arrow", "Silver Arrows"), true);
+    assert.equal(ammoNameScore("Bolt", "Hurlant Bolts"), 40);
+    assert.equal(ammoNameMatches("Bolt", "Hurlant Bolts"), true);
+  });
+
+  it("returns 0 for unrelated names", () => {
+    assert.equal(ammoNameScore("Bolt", "Arrows"), 0);
+    assert.equal(ammoNameMatches("Bolt", "Arrows"), false);
+  });
+});
+
 describe("magazineMax", () => {
   it("prefers maxValue then max+maxMod", () => {
     assert.equal(magazineMax({ charges: { max: 6, maxValue: 8 } }), 8);
@@ -39,16 +76,39 @@ describe("magazineMax", () => {
 
 describe("resolveLinkedAmmo", () => {
   const items = [
-    { id: "a1", type: "item", name: "Arrows", system: { charges: { value: 20, max: 20 } } },
-    { id: "b1", type: "item", name: "Bolts", system: { charges: { value: 10, max: 10 } } },
+    { id: "a1", type: "ammo", name: "Arrows", system: { charges: { value: 20, max: 20 } } },
+    { id: "b1", type: "ammo", name: "Bolts", system: { charges: { value: 10, max: 10 } } },
+    { id: "h1", type: "ammo", name: "Hurlant Bolts", system: { charges: { value: 5, max: 20 } } },
+    { id: "s1", type: "ammo", name: "Silver Arrows", system: { charges: { value: 12, max: 20 } } },
+    { id: "g1", type: "item", name: "Legacy Bolts", system: { charges: { value: 8, max: 10 } } },
   ];
 
-  it("resolves by id first", () => {
+  it("resolves by id among ammo", () => {
     assert.equal(resolveLinkedAmmo(items, { ammoId: "b1", ammoFallback: "Arrow" }).id, "b1");
   });
 
-  it("falls back to name includes", () => {
+  it("resolves by id for legacy type item", () => {
+    assert.equal(resolveLinkedAmmo(items, { ammoId: "g1", ammoFallback: "Bolt" }).id, "g1");
+  });
+
+  it("falls back by name score and prefers Bolts over Hurlant Bolts", () => {
     assert.equal(resolveLinkedAmmo(items, { ammoId: "", ammoFallback: "arrow" }).id, "a1");
+    assert.equal(resolveLinkedAmmo(items, { ammoId: "", ammoFallback: "Bolt" }).id, "b1");
+  });
+
+  it("matches renamed stacks via token score when no exact plural", () => {
+    const onlySilver = items.filter((i) => i.id === "s1" || i.id === "h1");
+    assert.equal(resolveLinkedAmmo(onlySilver, { ammoFallback: "Arrow" }).id, "s1");
+  });
+
+  it("name fallback ignores gear type", () => {
+    assert.equal(
+      resolveLinkedAmmo(
+        [{ id: "g1", type: "item", name: "Bolts", system: {} }],
+        { ammoFallback: "Bolt" }
+      ),
+      null
+    );
   });
 });
 
@@ -86,7 +146,7 @@ describe("planAttackAmmoSpend", () => {
 });
 
 describe("planReload", () => {
-  it("transfers from linked ammo into magazine up to maxValue", () => {
+  it("transfers from charge-stack ammo into magazine up to maxValue", () => {
     const weapon = {
       ammoMode: AMMO_MODES.magazine,
       charges: { value: 1, max: 6, maxValue: 8 },
@@ -97,6 +157,18 @@ describe("planReload", () => {
     assert.equal(plan.transferred, 7);
     assert.equal(plan.updates[0].data["system.charges.value"], 8);
     assert.equal(plan.updates[1].data["system.charges.value"], 3);
+  });
+
+  it("quantity energy cell spends one unit to fill magazine", () => {
+    const weapon = {
+      ammoMode: AMMO_MODES.magazine,
+      charges: { value: 2, max: 10, maxValue: 10 },
+    };
+    const ammo = { id: "c1", system: { charges: { value: 0, max: 0 }, quantity: 3 } };
+    const plan = planReload(weapon, ammo);
+    assert.equal(plan.ok, true);
+    assert.equal(plan.updates[0].data["system.charges.value"], 10);
+    assert.equal(plan.updates[1].data["system.quantity"], 2);
   });
 
   it("rejects non-magazine modes", () => {
@@ -159,5 +231,123 @@ describe("mapWeaponAmmoMigration / repairWwnWeaponAmmo", () => {
     });
     assert.equal(out.system.ammoMode, AMMO_MODES.magazine);
     assert.equal(out.system.charges.max, 6);
+  });
+});
+
+describe("migrateGearToAmmo", () => {
+  it("converts known Arrows gear to ammo type", () => {
+    const gear = {
+      _id: "QyEzGefuNXB83shT",
+      name: "Arrows",
+      type: "item",
+      system: {
+        price: 2,
+        weight: 1,
+        quantity: 1,
+        charges: { value: 20, max: 20 },
+        treasure: false,
+        expendOnUse: false,
+        roll: "",
+        container: { isContainer: false },
+      },
+    };
+    assert.equal(isKnownAmmoItem(gear), true);
+    const out = migrateItemData(gear);
+    assert.equal(out.type, "ammo");
+    assert.equal(out.system.charges.max, 20);
+    assert.equal(out.system.treasure, undefined);
+  });
+
+  it("converts weapon-linked gear via migrateActorItems", () => {
+    const items = [
+      {
+        _id: "w1",
+        name: "Laser",
+        type: "weapon",
+        system: { ammoMode: "magazine", ammoFallback: "Type A", ammoId: "", charges: { value: 5, max: 10 } },
+      },
+      {
+        _id: "c1",
+        name: "My Type A Pack",
+        type: "item",
+        system: { quantity: 4, charges: { value: 0, max: 0 }, price: 10, weight: 0.25 },
+      },
+    ];
+    const out = migrateActorItems(items);
+    const cell = out.find((i) => i._id === "c1");
+    assert.equal(cell.type, "ammo");
+  });
+
+  it("migrateGearToAmmo drops gear-only fields", () => {
+    const out = migrateGearToAmmo({
+      _id: "x",
+      name: "Bolts",
+      type: "item",
+      system: {
+        treasure: true,
+        expendOnUse: true,
+        roll: "1d6",
+        container: { isContainer: true },
+        charges: { value: 5, max: 10 },
+        quantity: 1,
+        price: 1,
+        weight: 1,
+      },
+    });
+    assert.equal(out.type, "ammo");
+    assert.equal(out.system.treasure, undefined);
+    assert.equal(out.system.expendOnUse, undefined);
+    assert.equal(out.system.charges.max, 10);
+  });
+
+  it("backfills firearm on known hurlants", () => {
+    const hurlant = {
+      _id: "eoum0sXFmbTP5WCk",
+      name: "Hurlant, Hand",
+      type: "weapon",
+      system: {
+        skillId: "",
+        ammoFallback: "Hurlant",
+        ammoMode: "linked",
+        firearm: false,
+        shock: { damage: "1d6", ac: 15 },
+        charges: { value: 1, max: 1 },
+      },
+    };
+    assert.equal(isKnownFirearmWeapon(hurlant), true);
+    assert.deepEqual(repairWwnWeaponFirearm(hurlant), { firearm: true });
+    const out = migrateItemData(hurlant);
+    assert.equal(out?.system?.firearm, true);
+  });
+
+  it("defaults omitted stowed to false on gear→ammo", () => {
+    const out = migrateGearToAmmo({
+      _id: "x",
+      name: "Arrows",
+      type: "item",
+      system: { charges: { value: 20, max: 20 }, quantity: 1 },
+    });
+    assert.equal(out.system.stowed, false);
+  });
+
+  it("backfills tl on medium/heavy and magical on +N armor", () => {
+    const plate = {
+      _id: "p1",
+      name: "Great Armor",
+      type: "armor",
+      system: { ac: 18, acRanged: 18, type: "heavy", tl: 0, magical: false },
+    };
+    assert.deepEqual(repairWwnArmorTlMagical(plate), { tl: 3 });
+    const buff = {
+      _id: "b1",
+      name: "Buff Coat +1",
+      type: "armor",
+      system: { ac: 12, acRanged: 12, type: "light", tl: 0, magical: false },
+      flags: { core: { sourceId: "Compendium.wwn.magic-items.jkHznizd2Qm6DoZG" } },
+    };
+    assert.deepEqual(repairWwnArmorTlMagical(buff), { tl: 1, magical: true });
+    const migrated = migrateItemData(buff);
+    assert.equal(migrated?.system?.tl, 1);
+    assert.equal(migrated?.system?.magical, true);
   });
 });

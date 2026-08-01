@@ -1,25 +1,22 @@
 /**
- * Apply ship weapon hits: armor, defenses, HP, optional Target Systems, Crisis prompt data.
+ * Resolve ship weapon hits: armor, defenses, hit/miss chat card with owner apply.
+ * Never auto-applies hull damage — the defender owner clicks Apply on the card.
  */
-import { parseWeaponQualities, qualityAttackModifier } from "./qualities.mjs";
-import { resolveStarshipDamage } from "./armor.mjs";
-import { armorWithCrises, weaponsLockedOut } from "./crises.mjs";
 import {
   getStarshipCombatState,
   updateStarshipCombatState,
 } from "./combatant-state.mjs";
 import {
-  hasHardenedPolyceramic,
-  hasPointDefense,
-  hasBurstEcm,
   hasGravEddy,
-  disableShipSystem,
-  degradeDrive,
   disableTargetCandidates,
 } from "./systems.mjs";
-import { effectiveStarshipAc } from "./state.mjs";
-import { createNoticeMessage } from "../../chat/chat-card.mjs";
-import { showWwnDialog, cancelButton, confirmWwnDialog } from "../../applications/wwn-dialog.mjs";
+import { weaponsLockedOut } from "./crises.mjs";
+import { createRollMessage } from "../../chat/chat-card.mjs";
+import { showWwnDialog, cancelButton } from "../../applications/wwn-dialog.mjs";
+import { WwnAttackRoll, WwnDamageRoll } from "../../dice/rolls.mjs";
+import { computeShipWeaponOutcome } from "./weapon-outcome.mjs";
+
+export { computeShipWeaponOutcome } from "./weapon-outcome.mjs";
 
 /**
  * Ask which defender system/drive to disable for Target Systems.
@@ -71,16 +68,21 @@ export function combatantForStarship(combat, starship) {
 }
 
 /**
+ * Resolve a ship weapon attack into a hit/miss chat card with owner-driven apply.
+ *
  * @param {object} opts
- * @param {Combat} opts.combat
+ * @param {Combat} [opts.combat]
  * @param {Combatant} opts.attacker
  * @param {Combatant} opts.defender
  * @param {Item} opts.weapon
  * @param {number} opts.attackTotal
  * @param {number} opts.damageTotal
+ * @param {Roll} [opts.attackRoll]
+ * @param {Roll} [opts.damageRoll]
  * @param {boolean} [opts.targetSystems]
- * @param {Item|null} [opts.disableItem]
- * @param {boolean} [opts.disableDrive]
+ * @param {string} [opts.title]
+ * @param {string} [opts.attackBreakdown]
+ * @param {string} [opts.damageBreakdown]
  */
 export async function resolveShipWeaponHit({
   combat,
@@ -89,48 +91,23 @@ export async function resolveShipWeaponHit({
   weapon,
   attackTotal,
   damageTotal,
+  attackRoll = null,
+  damageRoll = null,
   targetSystems = false,
-  disableItem = null,
-  disableDrive = false,
+  title = null,
+  attackBreakdown = null,
+  damageBreakdown = null,
 }) {
   const target = defender.actor;
   if (!target || target.type !== "starship") return { hit: false };
 
-  const defState = getStarshipCombatState(defender);
-  if (weaponsLockedOut(defState.crises)) {
-    // Attacker lock-out is on attacker crises — check attacker
-  }
   const atkState = getStarshipCombatState(attacker);
   if (weaponsLockedOut(atkState.crises)) {
     ui.notifications.warn(game.i18n.localize("WWN.Starship.WeaponsLockedOut"));
     return { hit: false, reason: "lockedOut" };
   }
 
-  const qualities = parseWeaponQualities(weapon.system?.qualities);
-  const isAmmoWeapon = qualities.ammo != null || (weapon.system?.ammo != null && weapon.system.ammo !== null);
-  const pointDefense = isAmmoWeapon && hasPointDefense(target);
-
-  let ac = effectiveStarshipAc(target.system.ac, defState, { pointDefense });
-  // Defeat ECM bonus from attacker buffs vs this defender
-  const ecmBonus = Number(atkState.buffs?.defeatEcm?.[defender.id]) || 0;
-  const clumsyMod = qualityAttackModifier(qualities, target.system.hullClass);
-  const adjustedAttack = attackTotal + ecmBonus + clumsyMod;
-
-  // Flak: roll hit twice conceptually — caller may pass better of two; we just note flak
-  const hit = adjustedAttack >= ac;
-  if (!hit) {
-    await createNoticeMessage({
-      title: game.i18n.format("WWN.Starship.AttackMissed", {
-        weapon: weapon.name,
-        target: target.name,
-      }),
-      actor: attacker.actor,
-      body: `${adjustedAttack} vs AC ${ac}`,
-    });
-    return { hit: false, ac, attack: adjustedAttack };
-  }
-
-  // Ammo spend
+  // Ammo: spend on fire (hit or miss) — attacker owns the weapon.
   if (weapon.system?.ammo != null && Number.isFinite(Number(weapon.system.ammo))) {
     const ammo = Number(weapon.system.ammo);
     if (ammo <= 0) {
@@ -140,127 +117,220 @@ export async function resolveShipWeaponHit({
     await weapon.update({ "system.ammo": ammo - 1 });
   }
 
-  const baseArmor = armorWithCrises(target.system.armor, defState.crises);
-  const dmg = resolveStarshipDamage({
-    rawDamage: damageTotal,
-    armor: baseArmor,
-    ap: qualities.ap,
-    hardenedPolyceramic: hasHardenedPolyceramic(target),
+  let outcome = computeShipWeaponOutcome({
+    attacker,
+    defender,
+    weapon,
+    attackTotal,
+    damageTotal,
     targetSystems,
   });
 
-  // Burst ECM / Grav Eddy after damage known
-  let negated = false;
-  if (hasBurstEcm(target) && !defState.flags.usedBurstEcmThisFight) {
-    const use = await confirmWwnDialog({
-    title: target.name,
-    content: `<p>${game.i18n.localize("WWN.Starship.UseBurstEcm")}</p>`,
-  });
-    if (use) {
-      negated = true;
-      await updateStarshipCombatState(defender, (s) => ({
-        ...s,
-        flags: { ...s.flags, usedBurstEcmThisFight: true },
-      }));
-    }
+  if (outcome.reason === "lockedOut") {
+    ui.notifications.warn(game.i18n.localize("WWN.Starship.WeaponsLockedOut"));
+    return { hit: false, reason: "lockedOut" };
   }
-  if (!negated && hasGravEddy(target)) {
+
+  // Grav Eddy: random negate (not a damage apply — resolves whether the hit stands).
+  let negated = false;
+  if (outcome.hit && hasGravEddy(target)) {
     const eddy = await new Roll("1d6").evaluate();
     if (eddy.total === 1) {
       negated = true;
-      await createNoticeMessage({
-        title: target.name,
-        actor: target,
-        body: game.i18n.localize("WWN.Starship.GravEddyNegate"),
-      });
+      outcome = {
+        ...outcome,
+        finalDamage: 0,
+        notices: [
+          ...outcome.notices,
+          game.i18n.localize("WWN.Starship.GravEddyNegate"),
+        ],
+      };
     }
   }
 
-  if (negated) {
-    return { hit: true, negated: true, damage: 0, ac, attack: adjustedAttack };
+  // Best-effort cloud-tracking flag (may fail if the attacker cannot update the defender).
+  if (outcome.hit && !negated) {
+    try {
+      await updateStarshipCombatState(defender, (s) => ({
+        ...s,
+        flags: {
+          ...s.flags,
+          attackedByThisRound: [...new Set([...(s.flags.attackedByThisRound ?? []), attacker.id])],
+        },
+      }));
+    } catch (err) {
+      console.warn("WWN | Could not record starship attack flag on defender", err);
+    }
   }
 
-  // Record attacker for Cloud weapons next round
-  await updateStarshipCombatState(defender, (s) => ({
-    ...s,
-    flags: {
-      ...s.flags,
-      attackedByThisRound: [...new Set([...(s.flags.attackedByThisRound ?? []), attacker.id])],
-    },
-  }));
+  const rolls = [];
+  if (attackRoll) rolls.push(attackRoll);
+  else {
+    rolls.push(await new WwnAttackRoll(String(attackTotal), {}, { kind: "attack" }).evaluate());
+  }
+  if (damageRoll) rolls.push(damageRoll);
+  else if (outcome.hit && !negated) {
+    rolls.push(await new WwnDamageRoll(String(damageTotal), {}, { kind: "damage" }).evaluate());
+  }
 
-  // Offer Crisis conversion
-  const crisisOffered = await offerCrisisOrApplyDamage({
-    combat,
-    defender,
-    damage: dmg.finalDamage,
-    canDisable: dmg.canDisable,
-    disableItem,
-    disableDrive,
-    targetSystems,
+  const applyRows = (outcome.hit && !negated && outcome.finalDamage > 0)
+    ? [{
+      id: "damage",
+      label: game.i18n.localize("WWN.Roll.Damage"),
+      value: outcome.finalDamage,
+    }]
+    : [];
+
+  const badge = {
+    label: game.i18n.localize(
+      negated ? "WWN.Roll.Miss" : (outcome.hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+    ),
+    type: negated || !outcome.hit ? "miss" : "hit",
+  };
+
+  const notices = [];
+  if (!outcome.hit) {
+    notices.push(
+      game.i18n.format("WWN.Starship.AttackMissed", {
+        weapon: weapon.name,
+        target: target.name,
+      }) + ` (${outcome.attack} vs AC ${outcome.ac})`,
+    );
+  }
+  notices.push(...outcome.notices);
+
+  await createRollMessage({
+    rolls,
+    kind: "attack",
+    actor: attacker.actor,
+    img: weapon.img,
+    title: title ?? weapon.name,
+    subtitle: game.i18n.format("WWN.Roll.VsTarget", { target: target.name }),
+    badge,
+    bodyTemplate: "systems/wwn/templates/chat/attack-card.hbs",
+    context: {
+      attackBreakdown: attackBreakdown ?? `${outcome.attack} vs AC ${outcome.ac}`,
+      damageBreakdown: damageBreakdown ?? null,
+      applyRows,
+      notices,
+      hit: outcome.hit && !negated,
+    },
+    flags: {
+      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })),
+    },
   });
 
+  void combat;
+
   return {
-    hit: true,
-    negated: false,
-    damage: crisisOffered.applied ? dmg.finalDamage : 0,
-    crisis: crisisOffered.crisis,
-    ac,
-    attack: adjustedAttack,
-    canDisable: dmg.canDisable,
+    hit: outcome.hit,
+    negated,
+    damage: applyRows[0]?.value ?? 0,
+    ac: outcome.ac,
+    attack: outcome.attack,
+    canDisable: outcome.canDisable,
   };
 }
 
 /**
+ * Post a sheet-driven ship weapon card with optional target AC resolution.
+ * Used when rolls were already evaluated outside combat fireWeapons.
+ *
  * @param {object} opts
  */
-async function offerCrisisOrApplyDamage({
-  combat,
-  defender,
-  damage,
-  canDisable,
-  disableItem,
-  disableDrive,
-  targetSystems,
+export async function postResolvedShipWeaponCard({
+  starship,
+  weapon,
+  title,
+  attackRoll,
+  damageRoll,
+  attackBreakdown,
+  damageBreakdown,
+  targetActor = null,
+  attackerCombatant = null,
+  defenderCombatant = null,
 }) {
-  const target = defender.actor;
-  const state = getStarshipCombatState(defender);
-  const canHitCrisis = !state.flags.usedHitCrisisThisRound;
+  let hit = null;
+  let applyRows = [];
+  const notices = [];
 
-  let acceptCrisis = false;
-  if (canHitCrisis && damage > 0) {
-    acceptCrisis = await confirmWwnDialog({
-    title: target.name,
-    content: `<p>${game.i18n.format("WWN.Starship.AcceptCrisisPrompt", { damage })}</p>`,
-  });
-  }
-
-  if (acceptCrisis) {
-    const { acceptHitCrisis } = await import("./crisis-flow.mjs");
-    await acceptHitCrisis(defender, combat?.round ?? 1, { source: "hit" });
-    return { applied: false, crisis: true };
-  }
-
-  if (damage > 0) {
-    const { applyStarshipHullDamage } = await import("./hull-damage.mjs");
-    await applyStarshipHullDamage(target, damage);
-  }
-
-  if (targetSystems && canDisable) {
-    let item = disableItem;
-    let drive = disableDrive;
-    if (!item && !drive) {
-      const picked = await promptDisableTarget(target);
-      if (picked === null) {
-        // Cancelled disable pick — still apply hull damage, skip disable
-      } else {
-        item = picked.disableItem;
-        drive = picked.disableDrive;
+  if (targetActor?.type === "starship") {
+    const attacker = attackerCombatant ?? {
+      id: starship.id,
+      actor: starship,
+      getFlag: () => null,
+      setFlag: async () => null,
+    };
+    const defender = defenderCombatant ?? {
+      id: targetActor.id,
+      actor: targetActor,
+      getFlag: () => null,
+      setFlag: async () => null,
+    };
+    // Spend ammo when firing from the sheet against a target.
+    if (weapon.system?.ammo != null && Number.isFinite(Number(weapon.system.ammo))) {
+      const ammo = Number(weapon.system.ammo);
+      if (ammo <= 0) {
+        ui.notifications.warn(game.i18n.localize("WWN.Starship.OutOfAmmo"));
+        return null;
       }
+      await weapon.update({ "system.ammo": ammo - 1 });
     }
-    if (drive) await degradeDrive(target);
-    else if (item) await disableShipSystem(item);
+
+    const outcome = computeShipWeaponOutcome({
+      attacker,
+      defender,
+      weapon,
+      attackTotal: attackRoll.total,
+      damageTotal: damageRoll.total,
+    });
+    hit = outcome.hit;
+    notices.push(...outcome.notices);
+    if (hit && outcome.finalDamage > 0) {
+      applyRows = [{
+        id: "damage",
+        label: game.i18n.localize("WWN.Roll.Damage"),
+        value: outcome.finalDamage,
+      }];
+    }
+    if (!hit) {
+      notices.push(game.i18n.format("WWN.Starship.AttackMissed", {
+        weapon: weapon.name,
+        target: targetActor.name,
+      }) + ` (${outcome.attack} vs AC ${outcome.ac})`);
+    }
+  } else {
+    // No target: offer raw damage apply (owner of whatever is selected applies).
+    applyRows = [{
+      id: "damage",
+      label: game.i18n.localize("WWN.Roll.Damage"),
+      value: damageRoll.total,
+    }];
   }
 
-  return { applied: true, crisis: false };
+  return createRollMessage({
+    rolls: [attackRoll, damageRoll],
+    kind: "attack",
+    actor: starship,
+    img: weapon.img,
+    title,
+    subtitle: targetActor
+      ? game.i18n.format("WWN.Roll.VsTarget", { target: targetActor.name })
+      : null,
+    badge: hit == null ? null : {
+      label: game.i18n.localize(hit ? "WWN.Roll.Hit" : "WWN.Roll.Miss"),
+      type: hit ? "hit" : "miss",
+    },
+    bodyTemplate: "systems/wwn/templates/chat/attack-card.hbs",
+    context: {
+      attackBreakdown,
+      damageBreakdown,
+      applyRows,
+      notices,
+      hit: hit !== false,
+    },
+    flags: {
+      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })),
+    },
+  });
 }

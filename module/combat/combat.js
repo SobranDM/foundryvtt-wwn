@@ -236,25 +236,27 @@ export class WWNCombat extends foundry.documents.Combat {
     if (!this.isGroupInitiative) {
       return await super.rollInitiative(ids, { formula, updateTurn, messageOptions });
     }
-    ids = typeof ids === "string" ? [ids] : ids;
-    if (ids.size > 1) return;
+    ids = typeof ids === "string" ? [ids] : (ids ?? []);
+    if (!Array.isArray(ids) || ids.length !== 1) return;
     const combatant = this.combatants.get(ids[0]);
+    if (!combatant?.group) return;
     const group = combatant.group;
     const olderSiblingGroup = this.groups.find(g => g.name === group.name + "*");
-    const data = await this._getGroupInitiativeData(group, olderSiblingGroup);
-    if (!data) return;
-    if (game.user.isGM) {
-      await this.updateEmbeddedDocuments("CombatantGroup", data.combatantGroupUpdates);
-      await this.updateEmbeddedDocuments("Combatant", data.combatantUpdates);
-    } else {
+    if (!game.user.isGM) {
+      // GM re-rolls and posts the chat card so clients cannot supply totals.
       game.socket.emit("system.wwn", {
         action: "updateGroupInitiative",
         data: {
-          combatantGroupUpdates: data.combatantGroupUpdates,
-          combatantUpdates: data.combatantUpdates
-        }
+          combatId: this.id,
+          combatantId: combatant.id,
+        },
       });
+      return;
     }
+    const data = await this._getGroupInitiativeData(group, olderSiblingGroup);
+    if (!data) return;
+    await this.updateEmbeddedDocuments("CombatantGroup", data.combatantGroupUpdates);
+    await this.updateEmbeddedDocuments("Combatant", data.combatantUpdates);
     await foundry.documents.ChatMessage.implementation.create(data.chatMessage);
   }
 
@@ -419,7 +421,13 @@ export class WWNCombat extends foundry.documents.Combat {
       combatant.actor?.sheet?.render?.(false);
       return;
     }
-    if (combatant) await applyEndOfTurnAdjacentShock(combatant);
+    if (combatant) {
+      try {
+        await applyEndOfTurnAdjacentShock(combatant);
+      } catch (err) {
+        console.error("WWN | End-of-turn Shock failed:", err);
+      }
+    }
   }
 
   /** @inheritDoc */

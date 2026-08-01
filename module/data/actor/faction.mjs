@@ -13,7 +13,7 @@ export const HEALTH_XP_TABLE = {
 };
 
 /**
- * Faction actor data model (ported from WWN `faction`).
+ * Faction actor data model.
  *
  * Factions do not use the shared PC/NPC combat pipeline; they track ratings,
  * treasure, goals, tags, and a log, and own `asset` items.

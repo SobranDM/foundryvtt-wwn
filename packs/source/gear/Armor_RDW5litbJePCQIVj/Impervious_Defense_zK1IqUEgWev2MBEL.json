@@ -16,7 +16,7 @@
     "ac": 16,
     "acRanged": 16,
     "mod": 0,
-    "type": "unarmored",
+    "type": "light",
     "soak": 0,
     "traumaTarget": 6,
     "ashesHeavy": false,
@@ -26,7 +26,10 @@
     "equipped": false,
     "stowed": false,
     "weightless": "",
-    "containerId": ""
+    "containerId": "",
+    "tl": 1,
+    "magical": false,
+    "powered": false
   },
   "_key": "!items!zK1IqUEgWev2MBEL",
   "ownership": {
