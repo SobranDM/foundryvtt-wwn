@@ -6,7 +6,10 @@ import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
 import { prepareXpBar } from "../helpers/resource-bar.mjs";
 import { maybeShowClassAssignmentDialog } from "../../dialog/class-assignment.mjs";
-import { computeSkillPurchaseCost } from "../../helpers/skill-points.mjs";
+import {
+  computeSkillPurchaseCost,
+  evaluateSkillLevelRequirement,
+} from "../../helpers/skill-points.mjs";
 
 const TPL = "systems/wwn/templates/actor/pc";
 
@@ -71,7 +74,7 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
 
     context.abilities = Object.entries(system.abilities ?? {}).map(([key, ability]) => ({
       key,
-      label: CONFIG.WWN.abilityAbbreviations?.[key] ?? key,
+      label: CONFIG.WWN.abilities?.[key] ?? CONFIG.WWN.abilityAbbreviations?.[key] ?? key,
       ...ability,
     }));
 
@@ -81,11 +84,10 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
     context.replaceStrainWithWounds = game.settings.get("wwn", "replaceStrainWithWounds");
     context.xpPerChar = game.settings.get("wwn", "xpPerChar");
     context.useTrauma = game.settings.get("wwn", "useTrauma");
-    context.immuneToSurprise = !!actor.system.combat?.immuneToSurprise
-      && actor.system.combat.immuneToSurprise !== "false";
     context.stabilized = !!actor.getFlag("wwn", "stabilized");
 
     context.classEdges = context.classEdges ?? [];
+    context.classEdgesTooltip = context.classEdges.map((edge) => edge.name).join(" · ");
 
     context.inventorySections = ["weapons", "armors", "ammo", "gear", "treasure", "currency"].map((id) => ({
       id: `inventory.${id}`,
@@ -192,9 +194,10 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
     const rank = item.system.ownedLevel;
     const level = this.actor.system.details?.level ?? 1;
     if (!game.settings.get("wwn", "noSkillLevelReq")) {
-      const minLevel = rank === 1 ? 3 : rank === 2 ? 6 : rank === 3 ? 9 : Infinity;
-      if (rank >= 0 && level < minLevel) {
-        return ui.notifications.error(game.i18n.localize("WWN.Skills.LevelTooLow"));
+      const gate = evaluateSkillLevelRequirement(rank, level);
+      if (!gate.ok) {
+        const key = gate.reason === "maxRank" ? "WWN.Skills.MaxRank" : "WWN.Skills.LevelTooLow";
+        return ui.notifications.error(game.i18n.localize(key));
       }
     }
     const { fromInvested, fromUnspent } = computeSkillPurchaseCost(item, this.actor);

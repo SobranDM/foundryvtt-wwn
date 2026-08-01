@@ -133,7 +133,9 @@ async function applyAcuteDisaster(combatant, state, crisis) {
 }
 
 /**
- * Clear ephemeral combat flags when combat ends.
+ * Clear ephemeral combatant flags while the Combat still exists.
+ * Do not call this from Combat `_onDelete`: embedded combatants cannot be
+ * updated after Foundry removes the parent Combat from the collection.
  * @param {Combat} combat
  */
 export async function onStarshipCombatEnd(combat) {

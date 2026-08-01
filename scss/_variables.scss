@@ -6,4 +6,6 @@
   --wwn-light: #f5f5f5;
   --wwn-border: #7a7971;
   --wwn-border-dark: rgba(0, 0, 0, 0.9);
+  /* Weapon trait icons are dark-on-transparent; dark themes override with invert. */
+  --wwn-tag-icon-filter: none;
 }

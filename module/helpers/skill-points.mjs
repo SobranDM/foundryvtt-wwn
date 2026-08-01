@@ -38,6 +38,24 @@ export function computeLevelUpSkillGrant(actor, oldLevel, newLevel) {
 }
 
 /**
+ * Character-level gate for buying the next skill rank (WWN RAW thresholds).
+ * Rank 0→1 has no level gate; 1→2 needs 3; 2→3 needs 6; 3→4 needs 9; above 4 blocked.
+ * @param {number} ownedLevel Current skill rank before the purchase
+ * @param {number} characterLevel
+ * @returns {{ ok: true } | { ok: false, reason: "levelTooLow"|"maxRank" }}
+ */
+export function evaluateSkillLevelRequirement(ownedLevel, characterLevel) {
+  const rank = Number.isFinite(Number(ownedLevel)) ? Number(ownedLevel) : -1;
+  const level = Number.isFinite(Number(characterLevel)) ? Number(characterLevel) : 1;
+  if (rank <= 0) return { ok: true };
+  if (rank === 1 && level < 3) return { ok: false, reason: "levelTooLow" };
+  if (rank === 2 && level < 6) return { ok: false, reason: "levelTooLow" };
+  if (rank === 3 && level < 9) return { ok: false, reason: "levelTooLow" };
+  if (rank > 3) return { ok: false, reason: "maxRank" };
+  return { ok: true };
+}
+
+/**
  * Cost to raise a skill from `ownedLevel` to the next rank.
  * @param {number} ownedLevel
  * @param {{ flatCost?: boolean }} [options]

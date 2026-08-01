@@ -15,8 +15,8 @@ import {
   onStarshipCombatStart,
   onStarshipTurnStart,
   onStarshipTurnEnd,
-  onStarshipCombatEnd,
 } from "./starship/lifecycle.mjs";
+import { starshipActorsToClearOnCombatDelete } from "./starship/combat-delete-cleanup.mjs";
 import {
   starshipInitiativeFormula,
   compareStarshipInitiativeTie,
@@ -467,15 +467,21 @@ export class WWNCombat extends foundry.documents.Combat {
     }
   }
 
-  /** @inheritDoc */
-  async _onDelete(options, userId) {
-    if (this.isStarshipEncounter) {
-      await onStarshipCombatEnd(this);
+  /**
+   * Actor-scoped starship cleanup must run in `_preDelete` (still in the DB).
+   * Do not update combatants in `_onDelete`: Foundry already removed this Combat
+   * from the collection, and async work there can skip `super._onDelete`.
+   * @inheritDoc
+   */
+  async _preDelete(options, user) {
+    for (const actor of starshipActorsToClearOnCombatDelete(this.combatants)) {
+      try {
+        await clearStarshipCombatBonusHp(actor);
+      } catch (err) {
+        console.error("WWN | Failed to clear starship combat bonus HP on combat end:", err);
+      }
     }
-    for (const c of this.combatants) {
-      if (c.actor?.type === "starship") await clearStarshipCombatBonusHp(c.actor);
-    }
-    return super._onDelete(options, userId);
+    return super._preDelete(options, user);
   }
 
   /** @inheritDoc */

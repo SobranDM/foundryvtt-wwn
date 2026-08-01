@@ -14,11 +14,12 @@
       <div class="wwn-ability-grid">
         {{#each abilities as |ability|}}
         <div class="wwn-ability-row" data-score="{{ability.key}}">
-          <a class="wwn-rollable wwn-ability-label" data-action="rollCheck" data-ability="{{ability.key}}"
+          <a class="wwn-rollable wwn-section-header" data-action="rollCheck" data-ability="{{ability.key}}"
             title="{{localize ability.label}}">{{localize ability.label}}</a>
           <div class="wwn-ability-body">
             <input type="number" name="system.abilities.{{ability.key}}.value" value="{{ability.value}}"
               data-dtype="Number" placeholder="0" class="wwn-ability-value" />
+            <span class="wwn-combat-sep">·</span>
             <span class="wwn-ability-mod">{{wwnSigned ability.mod}}</span>
           </div>
         </div>
@@ -73,17 +74,17 @@
             <div class="field-xshort unhidden reverse-lock{{#if @root.system.skills.levelsUnlocked}} hidden{{/if}}">
               {{lookup @root.config.scores skill.system.score}}
             </div>
-            <div class="field-xshort unhidden reverse-lock{{#if @root.system.skills.levelsUnlocked}} hidden{{/if}}">
+            <div class="field-xshort">
               <input type="number" value="{{skill.system.ownedLevel}}" data-item-field="system.ownedLevel"
                 {{#unless @root.system.skills.levelsUnlocked}}disabled{{/unless}} />
             </div>
             {{#if @root.owner}}
             <div class="item-controls skill-lock{{#unless @root.system.skills.levelsUnlocked}} hidden{{/unless}}">
-              <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
-                <i class="fas fa-edit"></i>
-              </a>
               <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
                 <i class="fas fa-trash"></i>
+              </a>
+              <a class="item-control" data-action="editItem" title="{{localize 'WWN.Edit'}}">
+                <i class="fas fa-edit"></i>
               </a>
               <a class="item-control" data-action="skillUp" title="{{localize 'WWN.Up'}}">
                 <i class="fas fa-level-up-alt"></i>

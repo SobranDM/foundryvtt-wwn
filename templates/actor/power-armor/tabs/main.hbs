@@ -8,10 +8,11 @@
       <div class="wwn-ability-grid">
         {{#each abilities as |ability|}}
         <div class="wwn-ability-row" data-score="{{ability.key}}">
-          <a class="wwn-rollable wwn-ability-label" data-action="rollCheck" data-ability="{{ability.key}}"
+          <a class="wwn-rollable wwn-section-header" data-action="rollCheck" data-ability="{{ability.key}}"
             title="{{localize ability.label}}">{{localize ability.label}}</a>
           <div class="wwn-ability-body">
             <span class="wwn-ability-value{{#if ability.overlay}} wwn-overlay{{/if}}">{{ability.value}}</span>
+            <span class="wwn-combat-sep">·</span>
             <span class="wwn-ability-mod">{{wwnSigned ability.mod}}</span>
           </div>
         </div>

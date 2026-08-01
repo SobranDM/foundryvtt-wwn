@@ -25,9 +25,29 @@
   letter-spacing: 0.04em;
   font-size: 0.75rem;
   font-weight: 700;
-  line-height: 1.2;
-  padding: 0.2rem 0.45rem;
+  line-height: 1;
+  padding: 0.35rem 0.45rem;
   white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.wwn-sheet .wwn-section-header > i,
+.wwn-sheet .wwn-section-header > .fa,
+.wwn-sheet .wwn-section-header > .fas,
+.wwn-sheet .wwn-section-header > .far,
+.wwn-sheet .wwn-section-header > .fab {
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
+  width: 1em;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.wwn-sheet .wwn-section-header > span {
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ---- Collapsible sections ---- */
@@ -58,12 +78,19 @@
 
 .wwn-sheet .wwn-collapsible > .wwn-collapsible-header.item-titles {
   margin-top: 0;
+  margin-bottom: 0;
   border: none;
   box-shadow: none;
   justify-content: flex-start;
   gap: 0.35rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.4rem 0.55rem;
+  min-height: 1.5rem;
   text-align: left;
+  border-radius: 3px 3px 0 0;
+}
+
+.wwn-sheet .wwn-collapsible.collapsed > .wwn-collapsible-header.item-titles {
+  border-radius: 3px;
 }
 
 .wwn-sheet .wwn-collapsible-label {
@@ -102,12 +129,16 @@
 
 .wwn-sheet .wwn-chip,
 .wwn-sheet .wwn-header-chip {
+  /* Override Foundry's 2rem --input-height so label + value share a line. */
+  --input-height: 1.35rem;
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.25rem;
   flex: 0 0 auto;
   margin: 0;
   font-size: 0.7rem;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -117,13 +148,24 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 .wwn-sheet .wwn-chip input,
 .wwn-sheet .wwn-header-chip input {
   width: 2.75rem;
+  flex: 0 0 2.75rem;
+  max-width: 2.75rem;
+  height: var(--input-height);
+  min-height: 0;
+  line-height: var(--input-height);
+  padding: 0;
+  margin: 0;
   text-align: center;
   font-size: 0.8rem;
+  box-sizing: border-box;
 }
 
 .wwn-sheet .wwn-chip a {
@@ -398,6 +440,13 @@
   background-position: center;
 }
 
+/* Item rows use <h4>; inherit body face instead of Foundry's display heading font. */
+.wwn-sheet .item-list h4,
+.wwn-sheet .item-name h4,
+.wwn-sheet .item-name-short h4 {
+  font-family: inherit;
+}
+
 .wwn-sheet .wwn-data-table .item-name h4,
 .wwn-sheet .wwn-data-table .item-name-short h4 {
   margin: 0;
@@ -417,6 +466,8 @@
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
+  /* Dark game-icons are near-black; themes invert them on dark backgrounds. */
+  filter: var(--wwn-tag-icon-filter, none);
 }
 
 .wwn-sheet .wwn-data-table .icon-row span {
@@ -458,8 +509,11 @@
   margin-right: 4px;
 }
 
-.wwn-sheet .wwn-data-table .item-controls .item-off {
-  opacity: 0.35;
+.wwn-sheet .wwn-data-table .item-controls .item-off,
+.wwn-sheet .wwn-data-table .item-controls .item-unequipped,
+.wwn-sheet .wwn-data-table .item-controls .item-unstowed,
+.wwn-sheet .wwn-data-table .item-controls .item-unprepared {
+  opacity: 0.45;
 }
 
 /* Quiet column headers — same flex metrics as cells so labels center over content */
@@ -475,9 +529,11 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   opacity: 0.65;
-  margin-top: 0.15rem;
-  margin-bottom: 0;
-  padding: 0.2rem 0.35rem;
+  margin: 0;
+  /* No horizontal padding — it shrinks the flex track vs item rows and skews columns. */
+  padding: calc(0.15rem + 1px) 0;
+  min-height: 0;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -486,6 +542,8 @@
   text-align: left;
   text-indent: 0.5rem;
   justify-content: flex-start;
+  min-height: 0;
+  height: auto;
 }
 
 .wwn-sheet .wwn-data-table .wwn-col-header .field-short,
@@ -823,6 +881,10 @@
 .wwn-sheet .wwn-combat-sep {
   opacity: 0.4;
   font-weight: 400;
+}
+
+.wwn-sheet .wwn-main-abilities .wwn-combat-sep {
+  padding: 0 13px;
 }
 
 .wwn-sheet .wwn-save-grid {

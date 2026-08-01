@@ -1293,6 +1293,7 @@
   "WWN.Skills.PointsInvested": "+{value}",
   "WWN.Skills.NotEnoughPoints": "Not enough unspent skill points.",
   "WWN.Skills.LevelTooLow": "Character level is too low for that skill level.",
+  "WWN.Skills.MaxRank": "Cannot auto-level above skill-4 (edit manually to override).",
   "WWN.Skills.LevelUpGrant": "Skill Points from Level-Up",
   "WWN.Skills.LevelUpGrantBody": "{user} increased {name} to level {level}. {gained} skill point(s) added ({perLevel} per level).",
   "WWN.Tabs.Main": "Main",

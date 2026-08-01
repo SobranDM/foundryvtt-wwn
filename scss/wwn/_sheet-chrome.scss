@@ -190,6 +190,37 @@
   min-width: 0;
 }
 
+.wwn-sheet .wwn-header-class-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.35rem;
+  overflow: hidden;
+  white-space: nowrap;
+  min-height: 1.75rem;
+  line-height: 1.2;
+}
+
+.wwn-sheet .wwn-header-class-link {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+
+  &:hover {
+    text-shadow: 0 0 4px var(--color-shadow-primary, rgba(255, 100, 0, 0.45));
+  }
+}
+
+.wwn-sheet .wwn-header-class-sep {
+  flex: 0 0 auto;
+  opacity: 0.65;
+}
+
 .wwn-sheet .wwn-header-bars {
   width: 100%;
   min-width: 0;

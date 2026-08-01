@@ -52,12 +52,13 @@ $actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
   }
 }
 
-/* Abilities */
+/* Abilities — top-align with saves (same panel padding / section-header chrome) */
 #{$actor-main} .wwn-main-abilities {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 12px;
 }
 
 .wwn.sheet.actor.pc .wwn-main-abilities {
@@ -76,81 +77,75 @@ $actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
-  height: 100%;
-  align-content: center;
+  align-content: start;
 }
 
+/* Same stacked label / value pattern as saves + combat stats */
 #{$actor-main} .wwn-ability-row {
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
+  gap: 0.15rem;
   min-width: 0;
-  min-height: 1.75rem;
-  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
-  border-radius: 3px;
-  overflow: hidden;
-  background: var(--wwn-input-bg, rgba(255, 255, 255, 0.6));
 }
 
-#{$actor-main} .wwn-ability-label {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.25rem;
-  padding: 0.2rem 0.35rem;
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  text-align: center;
+#{$actor-main} .wwn-ability-row > .wwn-section-header {
+  width: 100%;
   text-decoration: none;
-  color: var(--wwn-header-text, var(--wwn-light));
-  background: var(--wwn-header-bg, var(--wwn-dark));
-  border-radius: 0;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* 1fr · 1fr keeps the separator centered between score and mod */
 #{$actor-main} .wwn-ability-body {
-  flex: 1 1 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
+  column-gap: 0.25rem;
   min-width: 0;
-  padding: 0 0.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 0.1rem;
 }
 
 /* Input (PC) and span (power armor) must share the same box so chips match height. */
 #{$actor-main} .wwn-ability-value {
   box-sizing: border-box;
-  width: 2.5rem;
-  height: 1.5rem;
+  width: 100%;
+  max-width: 2.5rem;
+  height: 1.35rem;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   border: none;
   background: transparent;
-  text-align: center;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.5rem;
+  text-align: right;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.35rem;
+  justify-self: end;
 }
 
 #{$actor-main} .wwn-ability-mod {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  min-width: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
+  justify-content: flex-start;
+  justify-self: start;
+  min-width: 0;
+  text-align: left;
 }
 
 #{$actor-main} .wwn-main-saves {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 12px;
+}
+
+#{$actor-main} .wwn-main-saves .wwn-save-grid {
+  align-content: start;
+  /* Ability rows are taller (score · mod); extra row gap lines up the 2nd row. */
+  row-gap: 0.8rem;
 }
 
 /* Skills */
@@ -183,6 +178,7 @@ $actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
   background: transparent;
   border: 1px solid color-mix(in srgb, var(--wwn-header-text, #fff) 35%, transparent);
   border-radius: 0.15rem;
+  max-height: 21px;
 }
 
 .wwn.sheet.actor.pc .wwn-main-skills-controls .item-control {
@@ -289,19 +285,6 @@ $actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
 }
 
 /* Details tab (Config folded in) */
-.wwn.sheet.actor.pc .notes-tab .owned-class-edges {
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.15rem 0.5rem;
-  min-height: 24px;
-  line-height: 1.4;
-}
-
-.wwn.sheet.actor.pc .notes-tab .owned-class-edges .unowned-hint {
-  opacity: 0.65;
-  font-style: italic;
-}
-
 .wwn.sheet.actor.pc .notes-tab .wwn-form-panel .item-list .item-entry {
   margin: 0;
 }

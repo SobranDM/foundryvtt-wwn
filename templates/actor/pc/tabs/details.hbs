@@ -11,26 +11,6 @@
               <input type="text" name="system.details.alignment" value="{{system.details.alignment}}" />
             </div>
           </div>
-          <div class="form-group">
-            <label>{{localize "WWN.details.background"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.details.background" value="{{system.details.background}}" />
-            </div>
-          </div>
-          <div class="form-group wwn-form-span">
-            <label>{{localize "WWN.details.class"}}</label>
-            <div class="form-fields owned-class-edges">
-              {{#if classEdges.length}}
-              {{#each classEdges as |edge|}}
-              <span class="item" data-item-id="{{edge.id}}">
-                <a data-action="editItem" title="{{localize 'WWN.Edit'}}">{{edge.name}}</a>
-              </span>
-              {{/each}}
-              {{else}}
-              <span class="unowned-hint">{{localize "WWN.ClassEdge.NoneOnDetails"}}</span>
-              {{/if}}
-            </div>
-          </div>
         </div>
       </div>
 

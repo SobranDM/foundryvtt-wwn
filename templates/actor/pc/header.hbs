@@ -15,8 +15,18 @@
       <div class="wwn-header-row wwn-header-row--secondary">
         <input class="wwn-header-background" type="text" name="system.details.background"
           value="{{system.details.background}}" placeholder="{{localize 'WWN.details.background'}}" />
+        {{#if classEdges.length}}
+        <div class="wwn-header-class wwn-header-class-list" title="{{classEdgesTooltip}}">
+          {{#each classEdges as |edge|}}
+          {{#unless @first}}<span class="wwn-header-class-sep" aria-hidden="true">·</span>{{/unless}}
+          <a class="wwn-header-class-link" data-item-id="{{edge.id}}" data-action="editItem"
+            title="{{localize 'WWN.Edit'}}">{{edge.name}}</a>
+          {{/each}}
+        </div>
+        {{else}}
         <input class="wwn-header-class" type="text" name="system.details.class"
           value="{{system.details.class}}" placeholder="{{localize 'WWN.details.classPlaceholder'}}" />
+        {{/if}}
         <label class="wwn-header-chip" title="{{localize 'WWN.details.renown.short'}}">
           <span class="wwn-header-chip-label">{{localize "WWN.details.renown.short"}}</span>
           <input type="number" name="system.details.renown.value" value="{{system.details.renown.value}}"
@@ -28,11 +38,6 @@
           <input type="number" name="system.trauma.value" value="{{system.trauma.value}}" data-dtype="Number"
             placeholder="6" disabled data-tooltip="{{localize 'WWN.TraumaTargetLong'}}" />
         </label>
-        {{/if}}
-        {{#if immuneToSurprise}}
-        <span class="wwn-header-chip" title="{{localize 'WWN.Sheet.ImmuneToSurpriseHint'}}">
-          <span class="wwn-header-chip-label">{{localize "WWN.Sheet.ImmuneToSurprise"}}</span>
-        </span>
         {{/if}}
         {{#if stabilized}}
         <span class="wwn-header-chip" title="{{localize 'WWN.Sheet.StabilizedHint'}}">

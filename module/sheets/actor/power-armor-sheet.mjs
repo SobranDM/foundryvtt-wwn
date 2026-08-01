@@ -198,7 +198,11 @@ export class WwnPowerArmorSheet extends composeMixins(CollapsibleSectionsMixin)(
 
     if (pilot) {
       const abilities = Object.entries(pilot.system.abilities ?? {}).map(([key, ability]) => {
-        const row = { key, label: CONFIG.WWN.abilityAbbreviations?.[key] ?? key, ...ability };
+        const row = {
+          key,
+          label: CONFIG.WWN.abilities?.[key] ?? CONFIG.WWN.abilityAbbreviations?.[key] ?? key,
+          ...ability,
+        };
         if (key === "str" && derived.effectiveStrength != null) {
           row.value = derived.effectiveStrength;
           row.mod = derived.effectiveStrengthMod ?? ability.mod;

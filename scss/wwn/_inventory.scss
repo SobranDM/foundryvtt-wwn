@@ -89,7 +89,8 @@
 .wwn.sheet.actor.npc .attributes-tab .inventory {
   width: 420px;
 }
-.wwn.sheet.actor .inventory .item-titles {
+/* Legacy item-titles chrome — exclude AppV2 section / column headers */
+.wwn.sheet.actor .inventory .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
   text-align: center;
   padding: 4px 0;
   border: 1px solid var(--wwn-border-dark);
@@ -103,10 +104,10 @@
 .wwn.sheet.actor .inventory .spell-resources {
   margin-left: 4px;
 }
-.wwn.sheet.actor.npc .inventory .item-titles {
+.wwn.sheet.actor.npc .inventory .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
   margin-top: 0px;
 }
-.wwn.sheet.actor .inventory .item-titles .item-name {
+.wwn.sheet.actor .inventory .item-titles:not(.wwn-col-header):not(.item-col-header) .item-name {
   text-align: left;
   text-indent: 8px;
 }
@@ -181,8 +182,7 @@
 .wwn.sheet.actor .inventory .item-list .item-rollable .item-image:hover {
   background-image: url("/icons/svg/d20-black.svg") !important;
 }
-.wwn.sheet.actor .inventory .item-list .item-name,
-.wwn.sheet.actor .inventory .item-titles .item-name {
+.wwn.sheet.actor .inventory .item-list .item-name {
   text-indent: 8px;
   text-align: left;
   overflow: hidden;
@@ -253,15 +253,9 @@
   text-align: right;
   margin-right: 1px;
 }
-.wwn.sheet.actor .inventory .item-controls .item-off,
-.wwn.sheet.actor .inventory .item-controls .item-unequipped,
-.wwn.sheet.actor .inventory .item-controls .item-unstowed,
-.wwn.sheet.actor .inventory .item-controls .item-unprepared {
-  color: rgba(0, 0, 0, 0.2);
-}
 .wwn.sheet.actor .inventory .item-controls a:hover {
-  color: var(--wwn-accent-strong, #44191a);
-  text-shadow: 0 0 5px var(--wwn-tan), 1px 0 5px var(--wwn-tan), 0 1px 5px var(--wwn-tan), 1px 1px 5px var(--wwn-tan);
+  color: var(--wwn-accent-strong, var(--wwn-accent));
+  text-shadow: none;
 }
 .wwn.sheet.actor .inventory .currency {
   position: relative;
@@ -338,7 +332,7 @@
 
 .wwn.sheet.actor .inventory .wwn-inventory-purse .wwn-section-header {
   flex: 0 0 auto;
-  padding: 0.15rem 0.45rem;
+  padding: 0.3rem 0.45rem;
   font-size: 0.7rem;
   justify-content: flex-start;
 }

@@ -267,8 +267,6 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
     if (!combat?.isStarshipEncounter) return;
 
     const { getStarshipCombatState } = await import("./starship/combatant-state.mjs");
-    const { gainCp } = await import("./starship/cp.mjs");
-    const { updateStarshipCombatState } = await import("./starship/combatant-state.mjs");
 
     for (const el of html.querySelectorAll(".combatant")) {
       const id = el.dataset.combatantId;
@@ -297,25 +295,6 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
         <span class="escape" title="${escapeLabel}">${escapeLabel}: ${escapeText}</span>
         <span class="crises" title="${crisesTitle}">${crisesShort}: ${esc(String(crisisCount))}</span>
       `;
-      if (game.user.isGM) {
-        const plus = document.createElement("a");
-        plus.href = "#";
-        plus.textContent = "+CP";
-        plus.addEventListener("click", async (ev) => {
-          ev.preventDefault();
-          await updateStarshipCombatState(combatant, (s) => gainCp(s, 1));
-          this.render(true);
-        });
-        const minus = document.createElement("a");
-        minus.href = "#";
-        minus.textContent = "−CP";
-        minus.addEventListener("click", async (ev) => {
-          ev.preventDefault();
-          await updateStarshipCombatState(combatant, (s) => gainCp(s, -1));
-          this.render(true);
-        });
-        hud.append(plus, minus);
-      }
       const name = el.querySelector(".token-name") ?? el;
       name.append(hud);
     }
