@@ -37,325 +37,355 @@
   }
 }
 
-/* Horizontal in-sheet tabs (replace sideways strip) */
-.wwn-sheet .sheet-tabs,
-.wwn-sheet nav.tabs {
-  flex: 0 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: none;
-  border-bottom: 1px solid var(--wwn-border-theme, var(--wwn-border));
-  margin: 0 0 0.5rem;
-  padding: 0;
-  height: auto;
-  transform: none;
-
-  > .item,
-  > a.item {
-    flex: 1 1 auto;
-    padding: 0.25rem 0.4rem;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: 0.25rem 0.25rem 0 0;
-    color: var(--wwn-text-muted, var(--wwn-dark-alt));
-    background: transparent;
-    writing-mode: horizontal-tb;
+.wwn-sheet {
+  /* Horizontal in-sheet tabs (replace sideways strip).
+     AppV2 tab-navigation.hbs uses <a data-tab> (often without .item). */
+  .sheet-tabs,
+  nav.tabs {
+    flex: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+    border: none;
+    border-bottom: 1px solid var(--wwn-border-theme, var(--wwn-border));
+    margin: 0 0 0.5rem;
+    padding: 0;
+    height: auto;
+    /* Foundry nav.tabs defaults to line-height: 2.5 — huge empty band above labels. */
+    line-height: normal;
     transform: none;
 
-    &.active {
-      color: var(--wwn-text, var(--wwn-dark-alt));
-      border-color: var(--wwn-border-theme, var(--wwn-border));
-      border-bottom-color: transparent;
-      background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
-      font-weight: 700;
+    > [data-tab],
+    > .item,
+    > a.item {
+      flex: 1 1 auto;
+      padding: 0.25rem 0.4rem;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 0.25rem 0.25rem 0 0;
+      color: var(--wwn-text-muted, var(--wwn-dark-alt));
+      background: transparent;
+      writing-mode: horizontal-tb;
+      transform: none;
+      line-height: 1.2;
+      text-shadow: none;
+
+      &.active {
+        color: var(--wwn-text, var(--wwn-dark-alt));
+        border-color: var(--wwn-border-theme, var(--wwn-border));
+        border-bottom-color: transparent;
+        background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
+        font-weight: 700;
+      }
+
+      &:hover {
+        color: var(--wwn-text, var(--wwn-dark-alt));
+        text-shadow: none;
+      }
     }
   }
-}
 
-/* Default sheet header (NPC / item / faction): horizontal portrait + details */
-.wwn-sheet .sheet-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
+  /* Default sheet header (NPC / item / faction): horizontal portrait + details */
+  .sheet-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: flex-start;
+    /* No border-bottom — active tab chrome already separates header from content. */
+    border-bottom: none;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
 
-  .profile-img {
-    flex: 0 0 5rem;
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border: 1px solid var(--wwn-border-theme, var(--wwn-border));
-    border-radius: 0.25rem;
-    cursor: pointer;
+    .profile-img {
+      flex: 0 0 5rem;
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+      border: 1px solid var(--wwn-border-theme, var(--wwn-border));
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    .header-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .charname input {
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+
+    .summary {
+      flex: 0 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 0.35rem;
+
+      li {
+        position: relative;
+        float: none;
+        height: auto;
+        padding-bottom: 0.45rem;
+        flex: 0 0 auto;
+
+        label {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          font-size: 0.65rem;
+          color: var(--wwn-text-muted, var(--wwn-dark-alt));
+        }
+
+        input {
+          width: 2.5rem;
+          text-align: center;
+        }
+      }
+    }
+
+    /* PC two-band header */
+    &.wwn-sheet-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
   }
 
-  .header-details {
-    flex: 1;
+  .wwn-header-identity {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .wwn-sheet-header .profile-img {
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .wwn-header-identity-fields {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .wwn-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     min-width: 0;
   }
 
-  .charname input {
+  .wwn-header-name {
+    flex: 1 1 auto;
+    min-width: 0;
     font-size: 1.15rem;
+    font-weight: 700;
     line-height: 1.2;
   }
 
-  .summary {
-    flex: 0 1 auto;
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 0.35rem;
+  .wwn-header-row--secondary {
+    .wwn-header-background {
+      flex: 2 1 0;
+      min-width: 0;
+    }
 
-    li {
-      position: relative;
-      float: none;
-      height: auto;
-      padding-bottom: 0.45rem;
-      flex: 0 0 auto;
+    .wwn-header-alignment {
+      flex: 1 1 0;
+      min-width: 4rem;
+      max-width: 8rem;
+    }
 
-      label {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 0.65rem;
-        color: var(--wwn-text-muted, var(--wwn-dark-alt));
-      }
-
-      input {
-        width: 2.5rem;
-        text-align: center;
-      }
+    .wwn-header-class {
+      flex: 3 1 0;
+      min-width: 0;
     }
   }
-}
 
-/* PC two-band header */
-.wwn-sheet .sheet-header.wwn-sheet-header {
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.5rem;
-}
-
-.wwn-sheet .wwn-header-identity {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-  min-width: 0;
-  width: 100%;
-}
-
-.wwn-sheet .wwn-sheet-header .profile-img {
-  flex: 0 0 4rem;
-  width: 4rem;
-  height: 4rem;
-}
-
-.wwn-sheet .wwn-header-identity-fields {
-  flex: 1 1 auto;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.wwn-sheet .wwn-header-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-}
-
-.wwn-sheet .wwn-header-name {
-  flex: 1 1 auto;
-  min-width: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.wwn-sheet .wwn-header-row--secondary .wwn-header-background {
-  flex: 2 1 0;
-  min-width: 0;
-}
-
-.wwn-sheet .wwn-header-row--secondary .wwn-header-class {
-  flex: 3 1 0;
-  min-width: 0;
-}
-
-.wwn-sheet .wwn-header-class-list {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0.35rem;
-  overflow: hidden;
-  white-space: nowrap;
-  min-height: 1.75rem;
-  line-height: 1.2;
-}
-
-.wwn-sheet .wwn-header-class-link {
-  flex: 0 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-
-  &:hover {
-    text-shadow: 0 0 4px var(--color-shadow-primary, rgba(255, 100, 0, 0.45));
+  .wwn-header-class-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.35rem;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 1.75rem;
+    line-height: 1.2;
   }
-}
 
-.wwn-sheet .wwn-header-class-sep {
-  flex: 0 0 auto;
-  opacity: 0.65;
-}
+  .wwn-header-class-link {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
 
-.wwn-sheet .wwn-header-bars {
-  width: 100%;
-  min-width: 0;
-}
+    &:hover {
+      text-shadow: 0 0 4px var(--color-shadow-primary, rgba(255, 100, 0, 0.45));
+    }
+  }
 
-.wwn-sheet .wwn-favorites-dock {
-  flex: 1 1 0;
-  min-width: 0;
-  max-height: none;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  .wwn-header-class-sep {
+    flex: 0 0 auto;
+    opacity: 0.65;
+  }
 
-  .item-list {
+  .wwn-header-bars {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .wwn-favorites-dock {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: none;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .item-list {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow: auto;
+
+      .item-name {
+        flex: 1 1 auto;
+        min-width: 0;
+        height: auto;
+        min-height: 1.75rem;
+        line-height: 1.2;
+        overflow: hidden;
+
+        h4 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .item-controls {
+        min-width: 0;
+      }
+    }
+
+    .powers-fav-counter {
+      flex: 0 0 auto;
+      font-size: 0.7rem;
+      opacity: 0.85;
+      padding: 0 0.25rem;
+    }
+  }
+
+  .wwn-favorites-empty {
+    opacity: 0.65;
+    font-style: italic;
+    padding: 0.5rem;
+  }
+
+  .greyrow {
+    color: var(--wwn-text-muted, var(--wwn-dark-alt));
+    opacity: 0.75;
+  }
+
+  .wwn-badge {
+    display: inline-block;
+    padding: 0 0.4rem;
+    margin-left: 0.35rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.4;
+    background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
+    border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+    color: var(--wwn-text-muted, var(--wwn-dark-alt));
+  }
+
+  .item-rollable,
+  .wwn-rollable {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--wwn-accent-strong, var(--wwn-accent));
+    }
+  }
+
+  /* AppV2 <prose-mirror> editors (replaces V1 {{editor}} / .editor-edit chrome) */
+  prose-mirror {
+    display: block;
+    min-height: 8rem;
+    max-width: 100%;
+
+    /*
+     * Foundry core shows the toggle with `display: block` on hover
+     * (public/less2/elements/prosemirror.less), which overrides the base
+     * `button { display: flex; … }` centering. Restore flex + zero padding.
+     */
+    &:hover button.toggle:enabled {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    button.toggle > i {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  /* AppV2 window content flex utilities.
+     Gate display so unlayered rules do not override Foundry's layered
+     .minimized/.minimizing/.maximizing { .window-content { display: none } }. */
+  &:not(.minimized):not(.minimizing):not(.maximizing) .window-content.flex {
+    display: flex;
+  }
+
+  .window-content.flex-col {
+    flex-direction: column;
+  }
+
+  .window-content.min-h-0 {
+    min-height: 0;
+  }
+
+  &:not(.minimized):not(.minimizing):not(.maximizing) .window-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &.minimized .window-content,
+  &.minimizing .window-content,
+  &.maximizing .window-content {
+    display: none;
+  }
+
+  /* Unlayered sheet CSS can override Foundry's layered tab hide — keep inactive tabs gone. */
+  .tab[data-tab]:not(.active) {
+    display: none;
+  }
+
+  .window-content > .tab.active {
     flex: 1 1 auto;
     min-height: 0;
     overflow: auto;
   }
-
-  .item-list .item-name {
-    flex: 1 1 auto;
-    min-width: 0;
-    height: auto;
-    min-height: 1.75rem;
-    line-height: 1.2;
-    overflow: hidden;
-  }
-
-  .item-list .item-name h4 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .item-list .item-controls {
-    min-width: 0;
-  }
-
-  .powers-fav-counter {
-    flex: 0 0 auto;
-    font-size: 0.7rem;
-    opacity: 0.85;
-    padding: 0 0.25rem;
-  }
-}
-
-.wwn-sheet .wwn-favorites-empty {
-  opacity: 0.65;
-  font-style: italic;
-  padding: 0.5rem;
-}
-
-.wwn-sheet .greyrow {
-  color: var(--wwn-text-muted, var(--wwn-dark-alt));
-  opacity: 0.75;
-}
-
-.wwn-sheet .wwn-badge {
-  display: inline-block;
-  padding: 0 0.4rem;
-  margin-left: 0.35rem;
-  border-radius: 9999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1.4;
-  background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.45));
-  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
-  color: var(--wwn-text-muted, var(--wwn-dark-alt));
-}
-
-.wwn-sheet .item-rollable,
-.wwn-sheet .wwn-rollable {
-  cursor: pointer;
-}
-
-.wwn-sheet .item-rollable:hover,
-.wwn-sheet .wwn-rollable:hover {
-  color: var(--wwn-accent-strong, var(--wwn-accent));
-}
-
-/* AppV2 <prose-mirror> editors (replaces V1 {{editor}} / .editor-edit chrome) */
-.wwn-sheet prose-mirror {
-  display: block;
-  min-height: 8rem;
-  max-width: 100%;
-}
-
-/*
- * Foundry core shows the toggle with `display: block` on hover
- * (public/less2/elements/prosemirror.less), which overrides the base
- * `button { display: flex; … }` centering. Restore flex + zero padding.
- */
-.wwn-sheet prose-mirror:hover button.toggle:enabled {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-.wwn-sheet prose-mirror button.toggle > i {
-  margin: 0;
-  line-height: 1;
-}
-
-/* AppV2 window content flex utilities.
-   Gate display so unlayered rules do not override Foundry's layered
-   .minimized/.minimizing/.maximizing { .window-content { display: none } }. */
-.wwn-sheet:not(.minimized):not(.minimizing):not(.maximizing) .window-content.flex {
-  display: flex;
-}
-.wwn-sheet .window-content.flex-col {
-  flex-direction: column;
-}
-.wwn-sheet .window-content.min-h-0 {
-  min-height: 0;
-}
-.wwn-sheet:not(.minimized):not(.minimizing):not(.maximizing) .window-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
-}
-.wwn-sheet.minimized .window-content,
-.wwn-sheet.minimizing .window-content,
-.wwn-sheet.maximizing .window-content {
-  display: none;
-}
-/* Unlayered sheet CSS can override Foundry's layered tab hide — keep inactive tabs gone. */
-.wwn-sheet .tab[data-tab]:not(.active) {
-  display: none;
-}
-.wwn-sheet .window-content > .tab.active {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: auto;
 }
 
 /*

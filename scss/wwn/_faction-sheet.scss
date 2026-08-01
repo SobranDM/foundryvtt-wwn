@@ -4,136 +4,141 @@
 
 .wwn.sheet.actor.faction {
   min-width: 960px;
-}
 
-.wwn.sheet.actor.faction .wwn-faction-header .faction-header-img {
-  flex: 0 0 5rem;
-  width: 5rem;
-  height: 5rem;
-}
+  .wwn-faction-header {
+    .faction-header-img {
+      flex: 0 0 5rem;
+      width: 5rem;
+      height: 5rem;
+    }
 
-.wwn.sheet.actor.faction .wwn-faction-header .wwn-chip select {
-  width: auto;
-  min-width: 4rem;
-  font-size: 0.8rem;
-}
+    .wwn-chip select {
+      width: auto;
+      min-width: 4rem;
+      font-size: 0.8rem;
+    }
 
-.wwn.sheet.actor.faction .wwn-faction-header .wwn-chip--grow input[type="text"] {
-  width: auto;
-  flex: 1 1 auto;
-  min-width: 4rem;
-}
+    .wwn-chip--grow input[type="text"] {
+      width: auto;
+      flex: 1 1 auto;
+      min-width: 4rem;
+    }
+  }
 
-.wwn.sheet.actor.faction .wwn-faction-turn {
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
+  .wwn-faction-turn {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
 
-.wwn.sheet.actor.faction .wwn-faction-hp-xp {
-  grid-template-columns: 1fr 1fr;
-}
+  .wwn-faction-hp-xp {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.wwn.sheet.actor.faction .wwn-faction-ratings-2x2 {
-  grid-template-columns: 1fr 1fr;
-}
+  .wwn-faction-ratings-2x2 {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.wwn.sheet.actor.faction .wwn-stat-chip .wwn-section-header a {
-  color: inherit;
-  margin-left: 0.25rem;
-}
+  .wwn-stat-chip .wwn-section-header a {
+    color: inherit;
+    margin-left: 0.25rem;
+  }
 
-.wwn.sheet.actor.faction .wwn-form-panel > .wwn-section-header .item-controls {
-  margin-left: auto;
-  color: inherit;
-  min-width: 0;
-  width: auto;
-  max-width: none;
-  flex: 0 0 auto;
-}
+  .wwn-form-panel > .wwn-section-header {
+    .item-controls {
+      margin-left: auto;
+      color: inherit;
+      min-width: 0;
+      width: auto;
+      max-width: none;
+      flex: 0 0 auto;
 
-.wwn.sheet.actor.faction .wwn-form-panel > .wwn-section-header .item-controls a {
-  color: inherit;
-  opacity: 0.9;
-}
+      a {
+        color: inherit;
+        opacity: 0.9;
+      }
+    }
+  }
 
-/* Goals are short catalog blurbs — keep the editor compact */
-.wwn.sheet.actor.faction .wwn-faction-editor--goal {
-  min-height: 0;
-}
+  /* Goals are short catalog blurbs — keep the editor compact */
+  .wwn-faction-editor--goal {
+    min-height: 0;
 
-.wwn.sheet.actor.faction .wwn-faction-editor--goal .editor {
-  min-height: 3.5rem;
-  max-height: 5.5rem;
-  overflow: auto;
-}
+    .editor {
+      min-height: 3.5rem;
+      max-height: 5.5rem;
+      overflow: auto;
+    }
+  }
 
-.wwn.sheet.actor.faction .wwn-faction-goal .form-fields input {
-  text-align: left;
+  .wwn-faction-goal .form-fields input {
+    text-align: left;
+  }
+
+  .wwn-data-table .item-name.faction-name {
+    min-width: 6rem;
+  }
+
+  .wwn-faction-asset-actions {
+    justify-content: flex-end;
+    gap: 0.35rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  .wwn-faction-tag,
+  .wwn-faction-log {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .wwn-faction-tag-header {
+    align-items: center;
+    gap: 0.35rem;
+
+    .item-controls {
+      margin-left: auto;
+      min-width: 0;
+      width: auto;
+      max-width: none;
+      flex: 0 0 auto;
+    }
+  }
 }
 
 /* Asset table metric columns (wider than PC inventory shorts) */
-.wwn .faction-field {
-  @include wwn-metric-col(3.25rem);
-  font-size: 11px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.wwn {
+  .faction-field {
+    @include wwn-metric-col(3.25rem);
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.wwn .faction-field-wide {
-  @include wwn-metric-col(5.5rem);
-  font-size: 11px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+    &.counter {
+      text-align: center;
+    }
+  }
 
-.wwn .faction-field-wide.damage {
-  flex: 0 0 7rem;
-  width: 7rem;
-  min-width: 7rem;
-  max-width: 7rem;
-}
+  .faction-field-wide {
+    @include wwn-metric-col(5.5rem);
+    font-size: 11px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
-.wwn .faction-field.counter {
-  text-align: center;
-}
-
-.wwn.sheet.actor.faction .wwn-data-table .item-name.faction-name {
-  min-width: 6rem;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-asset-actions {
-  justify-content: flex-end;
-  gap: 0.35rem;
-  padding: 0.15rem 0.35rem;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-tag,
-.wwn.sheet.actor.faction .wwn-faction-log {
-  padding: 0.35rem 0;
-  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
-}
-
-.wwn.sheet.actor.faction .wwn-faction-tag:last-child,
-.wwn.sheet.actor.faction .wwn-faction-log:last-child {
-  border-bottom: none;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-tag-header {
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.wwn.sheet.actor.faction .wwn-faction-tag-header .item-controls {
-  margin-left: auto;
-  min-width: 0;
-  width: auto;
-  max-width: none;
-  flex: 0 0 auto;
+    &.damage {
+      flex: 0 0 7rem;
+      width: 7rem;
+      min-width: 7rem;
+      max-width: 7rem;
+    }
+  }
 }

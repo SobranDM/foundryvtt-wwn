@@ -1,433 +1,605 @@
 /* Attribute grid and inventory lists shared by every actor sheet type (AppV2) */
 
-.wwn.sheet.actor .attributes {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: space-evenly;
+.wwn.sheet.actor {
+  .attributes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+
+    .attribute {
+      position: relative;
+      border: 1px solid var(--wwn-border);
+      box-shadow: 0 0 2px var(--wwn-border);
+      height: 40px;
+
+      .attribute-name {
+        color: var(--wwn-light);
+        padding: 2px;
+        margin: 0;
+        border: 1px solid var(--wwn-border-dark);
+        background: var(--wwn-dark);
+        text-align: center;
+      }
+
+      .attribute-value {
+        line-height: 36px;
+        width: auto;
+        min-width: 15px;
+        text-align: center;
+        padding: 4px;
+
+        .sep {
+          line-height: 24px;
+        }
+      }
+
+      .attribute-mod {
+        border-left: 1px solid var(--wwn-border);
+        padding: 4px;
+        text-align: center;
+      }
+    }
+  }
+
+  .attribute-group {
+    padding-left: 5px;
+    padding-right: 0px;
+    margin-right: 0px;
+    max-width: 160px;
+
+    .attributes {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      gap: 0.25rem;
+
+      .attribute {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+
+        .attribute-name {
+          width: 40px;
+          margin: 0;
+          line-height: 35px;
+
+          a {
+            margin: auto;
+          }
+        }
+
+        .attribute-value {
+          width: 45px;
+
+          input {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .inventory.skills .item {
+    border: none;
+    border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  }
+
+  .inventory {
+    /* Legacy item-titles chrome — exclude AppV2 section / column headers */
+    .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
+      text-align: center;
+      padding: 4px 0;
+      border: 1px solid var(--wwn-border-dark);
+      box-shadow: 0 0 5px var(--wwn-border-dark);
+      font-weight: 300;
+      font-size: 12px;
+      background: var(--wwn-dark);
+      color: var(--wwn-header-text, #fff);
+      margin-top: 7px;
+    }
+
+    .spell-resources {
+      margin-left: 4px;
+    }
+
+    .item-titles:not(.wwn-col-header):not(.item-col-header) .item-name {
+      text-align: left;
+      text-indent: 8px;
+    }
+
+    .item-titles {
+      .item-name-short {
+        text-align: left;
+        text-indent: 2px;
+        flex-basis: 25px;
+      }
+
+      input {
+        color: var(--wwn-header-text, #fff);
+        margin: auto;
+      }
+    }
+
+    .item-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > * {
+        line-height: 1.2;
+      }
+
+      .item-summary {
+        font-size: 12px;
+        padding: 0.35rem 0.5rem;
+        line-height: 1.35;
+        height: auto;
+        box-shadow: 0 0 3px var(--wwn-border-dark);
+        background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.35));
+
+        .tag-list {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+
+          .tag {
+            margin: 1px 2px;
+            border: 1px solid var(--wwn-tan);
+            font-size: 11px;
+            line-height: 14px;
+            background: var(--wwn-dark-alt);
+            padding: 1px 4px;
+            color: var(--wwn-light);
+            border-radius: 3px;
+            box-shadow: 0 0 1px var(--wwn-tan);
+          }
+        }
+      }
+
+      .item-header {
+        padding: 0px;
+        margin-bottom: 0px;
+      }
+
+      .item-entry:nth-child(even) .item {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      .item {
+        line-height: 1.2;
+        min-height: 1.75rem;
+        height: auto;
+        overflow: visible;
+        align-items: center;
+      }
+
+      .item-rollable {
+        &:hover .item-image {
+          box-sizing: border-box;
+          padding-left: 30px;
+          width: 0;
+          height: 30px;
+          overflow: hidden;
+          background-image: url("/icons/svg/d20-grey.svg") !important;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer;
+        }
+
+        .item-image:hover {
+          background-image: url("/icons/svg/d20-black.svg") !important;
+        }
+      }
+
+      .item-name {
+        text-indent: 8px;
+        text-align: left;
+        overflow: hidden;
+        height: auto;
+        min-height: 1.75rem;
+        margin: 0;
+        line-height: 1.2;
+        /* Fill leftover space so metric cols + controls stay right-aligned */
+        flex: 1 1 0;
+        min-width: 7rem;
+        max-width: none;
+        display: flex;
+        align-items: center;
+
+        &[data-action="showItem"] {
+          cursor: pointer;
+
+          > h4 {
+            flex: 1 1 auto;
+            min-width: 0;
+          }
+        }
+
+        .item-image {
+          flex: 0 0 30px;
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+          border: none;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 0.875rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .item-name-short h4 {
+        margin: 0;
+        font-size: 0.875rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    /* Row metric columns live on `.wwn-data-table` in _components.scss.
+       Inventory-only extras below. */
+    .field-long.memorize input {
+      border-bottom: none;
+      margin: 3px 0;
+    }
+
+    .field-xshort {
+      font-size: 11px;
+      flex-basis: 16px;
+      flex-grow: 0;
+      text-align: center;
+    }
+
+    .field-short.quantity {
+      display: flex;
+
+      input {
+        margin: 3px 0;
+        border-bottom: none;
+      }
+    }
+
+    .item-caret {
+      flex: 0 0 10px;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+
+    .item-controls-short {
+      font-size: 11px;
+      flex-basis: 15px;
+      flex-grow: 0;
+      text-align: right;
+      margin-right: 1px;
+    }
+
+    .item-controls a:hover {
+      color: var(--wwn-accent-strong, var(--wwn-accent));
+      text-shadow: none;
+    }
+
+    .currency {
+      position: relative;
+      padding: 0.15rem 0.25rem;
+      border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+      box-shadow: none;
+      margin-top: 2px;
+      margin-bottom: 0;
+      display: block;
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 1.75rem;
+      height: auto;
+      text-align: center;
+      background: var(--wwn-input-bg, rgba(255, 255, 255, 0.6));
+      border-radius: 0.15rem;
+    }
+
+    .currency-adjust {
+      margin-left: 0.35rem;
+      color: var(--wwn-tan, var(--wwn-header-text));
+      opacity: 0.9;
+
+      &:hover {
+        color: var(--wwn-header-text, #fff);
+        opacity: 1;
+      }
+    }
+
+    .readied {
+      position: relative;
+      padding: 0.15rem 0.25rem;
+      border: 1px solid var(--wwn-border-dark, #000);
+      box-shadow: 0 0 2px var(--wwn-border);
+      margin-top: 2px;
+      display: flex;
+      flex: 1 1 auto;
+      min-width: 0;
+      align-items: center;
+      justify-content: center;
+      min-height: 1.75rem;
+      height: auto;
+    }
+
+    .wwn-inventory-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .wwn-inventory-purse {
+      flex: 0 0 auto;
+      padding: 0.35rem 0.5rem;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+
+      .wwn-section-header {
+        flex: 0 0 auto;
+        padding: 0.3rem 0.45rem;
+        font-size: 0.7rem;
+        justify-content: flex-start;
+      }
+    }
+
+    .wwn-inventory-purse-header {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .wwn-inventory-purse-fields {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5.75rem, 1fr));
+      gap: 0.35rem 0.5rem;
+      align-items: end;
+      width: 100%;
+    }
+
+    .wwn-purse-field {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-end;
+      gap: 0.15rem;
+      margin: 0;
+      min-width: 0;
+
+      .currency {
+        width: 100%;
+        flex: 0 0 auto;
+        margin: 0;
+        min-height: 1.5rem;
+        padding: 0.1rem 0.2rem;
+        box-sizing: border-box;
+      }
+    }
+
+    .wwn-purse-label {
+      opacity: 0.7;
+      font-size: 0.65rem;
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Collapsible sections fill the stack width (chrome from _components.scss) */
+    .wwn-collapsible {
+      flex: 0 0 auto;
+      min-width: 0;
+    }
+
+    /* Reload button styling */
+    .field-short.charges {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+
+      .item-reload {
+        flex: 0 0 16px;
+        color: var(--wwn-border);
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--wwn-tan);
+          text-shadow: 0 0 5px var(--wwn-tan);
+        }
+      }
+
+      .charges-input:disabled {
+        cursor: not-allowed;
+      }
+
+      .charges-reload-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+
+        .item-reload {
+          background-color: #fff;
+          border-radius: 3px;
+          padding: 4px 6px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          font-size: 1.1em;
+        }
+      }
+
+      &:hover .charges-reload-overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &.pc .tab.inventory.active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  &.npc {
+    .attributes-tab {
+      flex-direction: row;
+      flex-grow: 0;
+
+      section.flexrow {
+        flex-direction: column;
+      }
+
+      .attribute-value.flexrow {
+        flex-direction: row;
+      }
+
+      .inventory {
+        width: 420px;
+      }
+    }
+
+    .inventory {
+      padding-top: 0px;
+      margin-top: 0px;
+      max-height: 380px;
+      overflow: auto;
+
+      .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  /* Powers tab */
+  .powers-tab {
+    &.active {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: auto;
+    }
+
+    .wwn-powers {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .wwn-powers-prepared {
+      align-items: center;
+      gap: 0.35rem;
+      flex-wrap: nowrap;
+    }
+
+    .wwn-powers-pools > .wwn-section-header {
+      justify-content: flex-start;
+      margin-bottom: 0.35rem;
+
+      .item-controls {
+        margin-left: auto;
+        color: inherit;
+        min-width: 0;
+        width: auto;
+        max-width: none;
+        flex: 0 0 auto;
+
+        a {
+          color: inherit;
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .powers-pools-grid {
+      gap: 8px;
+
+      > .item-list {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+    }
+
+    .powers-pool-value {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .powers-sep {
+      line-height: 24px;
+      padding: 0 2px;
+    }
+
+    .powers-muted {
+      opacity: 0.75;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .powers-uses input {
+      width: 2.5rem;
+      text-align: right;
+    }
+
+    .powers-active-badge {
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--wwn-dark);
+    }
+
+    .powers-empty-hint,
+    .powers-add-footer {
+      text-align: center;
+      padding: 6px;
+      opacity: 0.8;
+    }
+
+    .powers-empty-state {
+      font-size: 16px;
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .item-unprepared {
+      opacity: 0.45;
+    }
+  }
 }
-.wwn.sheet.actor .attributes .attribute {
-  position: relative;
-  border: 1px solid var(--wwn-border);
-  box-shadow: 0 0 2px var(--wwn-border);
-  height: 40px;
-}
-.wwn.sheet.actor .attributes .attribute .attribute-name {
-  color: var(--wwn-light);
-  padding: 2px;
-  margin: 0;
-  border: 1px solid var(--wwn-border-dark);
-  background: var(--wwn-dark);
-  text-align: center;
-}
-.wwn.sheet.actor .attributes .attribute .attribute-value {
-  line-height: 36px;
-  width: auto;
-  min-width: 15px;
-  text-align: center;
-  padding: 4px;
-}
-.wwn.sheet.actor .attributes .attribute .attribute-mod {
-  border-left: 1px solid var(--wwn-border);
-  padding: 4px;
-  text-align: center;
-}
-.wwn.sheet.actor .attributes .attribute .attribute-value .sep {
-  line-height: 24px;
-}
-.wwn.sheet.actor .attribute-group {
-  padding-left: 5px;
-  padding-right: 0px;
-  margin-right: 0px;
-  max-width: 160px;
-}
-.wwn.sheet.actor.npc .attributes-tab {
-  flex-direction: row;
-  flex-grow: 0;
-}
-.wwn.sheet.actor.npc .attributes-tab section.flexrow {
-  flex-direction: column;
-}
-.wwn.sheet.actor.npc .attributes-tab .attribute-value.flexrow {
-  flex-direction: row;
-}
-.wwn.sheet.actor .inventory.skills .item {
-  border: none;
-  border-bottom: 1px solid var(--wwn-border-soft, var(--wwn-border));
-}
-.wwn.sheet.actor .attribute-group .attributes {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-  gap: 0.25rem;
-}
-.wwn.sheet.actor .attribute-group .attributes .attribute {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0;
-}
-.wwn.sheet.actor .attribute-group .attributes .attribute .attribute-name {
-  width: 40px;
-  margin: 0;
-  line-height: 35px;
-}
-.wwn.sheet.actor .attribute-group .attributes .attribute .attribute-name a {
-  margin: auto;
-}
-.wwn.sheet.actor .attribute-group .attributes .attribute .attribute-value {
-  width: 45px;
-}
-.wwn.sheet.actor .attribute-group .attributes .attribute .attribute-value input {
-  padding: 0;
-}
-.wwn.sheet.actor.npc .inventory {
-  padding-top: 0px;
-  margin-top: 0px;
-  max-height: 380px;
-  overflow: auto;
-}
-.wwn.sheet.actor.npc .attributes-tab .inventory {
-  width: 420px;
-}
-/* Legacy item-titles chrome — exclude AppV2 section / column headers */
-.wwn.sheet.actor .inventory .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
-  text-align: center;
-  padding: 4px 0;
-  border: 1px solid var(--wwn-border-dark);
-  box-shadow: 0 0 5px var(--wwn-border-dark);
-  font-weight: 300;
-  font-size: 12px;
-  background: var(--wwn-dark);
-  color: var(--wwn-header-text, #fff);
-  margin-top: 7px;
-}
-.wwn.sheet.actor .inventory .spell-resources {
-  margin-left: 4px;
-}
-.wwn.sheet.actor.npc .inventory .item-titles:not(.wwn-section-header):not(.wwn-col-header):not(.item-col-header) {
-  margin-top: 0px;
-}
-.wwn.sheet.actor .inventory .item-titles:not(.wwn-col-header):not(.item-col-header) .item-name {
-  text-align: left;
-  text-indent: 8px;
-}
-.wwn.sheet.actor .inventory .item-titles .item-name-short {
-  text-align: left;
-  text-indent: 2px;
-  flex-basis: 25px;
-}
-.wwn.sheet.actor .inventory .item-titles input {
-  color: var(--wwn-header-text, #fff);
-  margin: auto;
-}
-.wwn.sheet.actor .inventory .item-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.wwn.sheet.actor .inventory .item-list > * {
-  line-height: 1.2;
-}
-.wwn.sheet.actor .inventory .item-list .item-summary {
-  font-size: 12px;
-  padding: 0.35rem 0.5rem;
-  line-height: 1.35;
-  height: auto;
-  box-shadow: 0 0 3px var(--wwn-border-dark);
-  background: var(--wwn-panel-bg, rgba(255, 255, 255, 0.35));
-}
-.wwn.sheet.actor .inventory .item-list .item-summary .tag-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-}
-.wwn.sheet.actor .inventory .item-list .item-summary .tag-list .tag {
-  margin: 1px 2px;
-  border: 1px solid var(--wwn-tan);
-  font-size: 11px;
-  line-height: 14px;
-  background: var(--wwn-dark-alt);
-  padding: 1px 4px;
-  color: var(--wwn-light);
-  border-radius: 3px;
-  box-shadow: 0 0 1px var(--wwn-tan);
-}
-.wwn.sheet.actor .inventory .item-list .item-header {
-  padding: 0px;
-  margin-bottom: 0px;
-}
-.wwn.sheet.actor .inventory .item-list .item-entry:nth-child(even) .item {
-  background: rgba(0, 0, 0, 0.1);
-}
-.wwn.sheet.actor .inventory .item-list .item {
-  line-height: 1.2;
-  min-height: 1.75rem;
-  height: auto;
-  overflow: visible;
-  align-items: center;
-}
-.wwn.sheet.actor .inventory .item-list .item-rollable:hover .item-image {
-  box-sizing: border-box;
-  padding-left: 30px;
-  width: 0;
-  height: 30px;
-  overflow: hidden;
-  background-image: url("/icons/svg/d20-grey.svg") !important;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-.wwn.sheet.actor .inventory .item-list .item-rollable .item-image:hover {
-  background-image: url("/icons/svg/d20-black.svg") !important;
-}
-.wwn.sheet.actor .inventory .item-list .item-name {
-  text-indent: 8px;
-  text-align: left;
-  overflow: hidden;
-  height: auto;
-  min-height: 1.75rem;
-  margin: 0;
-  line-height: 1.2;
-  /* Fill leftover space so metric cols + controls stay right-aligned */
-  flex: 1 1 0;
-  min-width: 7rem;
-  max-width: none;
-  display: flex;
-  align-items: center;
-}
-.wwn.sheet.actor .inventory .item-list .item-name[data-action="showItem"] {
-  cursor: pointer;
-}
-.wwn.sheet.actor .inventory .item-list .item-name[data-action="showItem"] > h4 {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.wwn.sheet.actor .inventory .item-list .item-name .item-image {
-  flex: 0 0 30px;
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  border: none;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.wwn.sheet.actor .inventory .item-list .item-name h4,
-.wwn.sheet.actor .inventory .item-list .item-name-short h4 {
-  margin: 0;
-  font-size: 0.875rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-/* Row metric columns live on `.wwn-data-table` in _components.scss.
-   Inventory-only extras below. */
-.wwn.sheet.actor .inventory .field-long.memorize input {
-  border-bottom: none;
-  margin: 3px 0;
-}
-.wwn.sheet.actor .inventory .field-xshort {
-  font-size: 11px;
-  flex-basis: 16px;
-  flex-grow: 0;
-  text-align: center;
-}
-.wwn.sheet.actor .inventory .field-short.quantity {
-  display: flex;
-}
-.wwn.sheet.actor .inventory .field-short.quantity input {
-  margin: 3px 0;
-  border-bottom: none;
-}
-.wwn.sheet.actor .inventory .item-caret {
-  flex: 0 0 10px;
-  margin: 0 4px;
-  cursor: pointer;
-}
-.wwn.sheet.actor .inventory .item-controls-short {
-  font-size: 11px;
-  flex-basis: 15px;
-  flex-grow: 0;
-  text-align: right;
-  margin-right: 1px;
-}
-.wwn.sheet.actor .inventory .item-controls a:hover {
-  color: var(--wwn-accent-strong, var(--wwn-accent));
-  text-shadow: none;
-}
-.wwn.sheet.actor .inventory .currency {
-  position: relative;
-  padding: 0.15rem 0.25rem;
-  border: 1px solid var(--wwn-border-soft, var(--wwn-border));
-  box-shadow: none;
-  margin-top: 2px;
-  margin-bottom: 0;
-  display: block;
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 1.75rem;
-  height: auto;
-  text-align: center;
-  background: var(--wwn-input-bg, rgba(255, 255, 255, 0.6));
-  border-radius: 0.15rem;
-}
-.wwn.actor .inventory .currency-adjust,
-.wwn.sheet.actor .inventory .currency-adjust {
+
+/* Also match non-sheet actor inventory chrome (currency adjust) */
+.wwn.actor .inventory .currency-adjust {
   margin-left: 0.35rem;
   color: var(--wwn-tan, var(--wwn-header-text));
   opacity: 0.9;
-}
-.wwn.actor .inventory .currency-adjust:hover,
-.wwn.sheet.actor .inventory .currency-adjust:hover {
-  color: var(--wwn-header-text, #fff);
-  opacity: 1;
-}
-.wwn.sheet.actor .inventory .readied {
-  position: relative;
-  padding: 0.15rem 0.25rem;
-  border: 1px solid var(--wwn-border-dark, #000);
-  box-shadow: 0 0 2px var(--wwn-border);
-  margin-top: 2px;
-  display: flex;
-  flex: 1 1 auto;
-  min-width: 0;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.75rem;
-  height: auto;
-}
 
-/* single-column inventory stack */
-.wwn.sheet.actor.pc .tab.inventory.active {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: auto;
-}
-
-.wwn.sheet.actor .inventory .wwn-inventory-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
-  min-width: 0;
-}
-
-.wwn.sheet.actor .inventory .wwn-inventory-purse {
-  flex: 0 0 auto;
-  padding: 0.35rem 0.5rem;
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.wwn.sheet.actor .inventory .wwn-inventory-purse-header {
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-}
-
-.wwn.sheet.actor .inventory .wwn-inventory-purse .wwn-section-header {
-  flex: 0 0 auto;
-  padding: 0.3rem 0.45rem;
-  font-size: 0.7rem;
-  justify-content: flex-start;
-}
-
-.wwn.sheet.actor .inventory .wwn-inventory-purse-fields {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(5.75rem, 1fr));
-  gap: 0.35rem 0.5rem;
-  align-items: end;
-  width: 100%;
-}
-
-.wwn.sheet.actor .inventory .wwn-purse-field {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-  gap: 0.15rem;
-  margin: 0;
-  min-width: 0;
-}
-
-.wwn.sheet.actor .inventory .wwn-purse-label {
-  opacity: 0.7;
-  font-size: 0.65rem;
-  line-height: 1.2;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.wwn.sheet.actor .inventory .wwn-purse-field .currency {
-  width: 100%;
-  flex: 0 0 auto;
-  margin: 0;
-  min-height: 1.5rem;
-  padding: 0.1rem 0.2rem;
-  box-sizing: border-box;
-}
-
-/* Collapsible sections fill the stack width (chrome from _components.scss) */
-.wwn.sheet.actor .inventory .wwn-collapsible {
-  flex: 0 0 auto;
-  min-width: 0;
-}
-
-/* Reload button styling */
-.wwn.sheet.actor .inventory .field-short.charges {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  position: relative;
-}
-.wwn.sheet.actor .inventory .field-short.charges .item-reload {
-  flex: 0 0 16px;
-  color: var(--wwn-border);
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-.wwn.sheet.actor .inventory .field-short.charges .item-reload:hover {
-  color: var(--wwn-tan);
-  text-shadow: 0 0 5px var(--wwn-tan);
-}
-
-/* Disabled charges input styling */
-.wwn.sheet.actor .inventory .field-short.charges .charges-input:disabled {
-  cursor: not-allowed;
-}
-
-/* Charges reload overlay */
-.wwn.sheet.actor .inventory .field-short.charges .charges-reload-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-.wwn.sheet.actor .inventory .field-short.charges:hover .charges-reload-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-.wwn.sheet.actor .inventory .field-short.charges .charges-reload-overlay .item-reload {
-  background-color: #fff;
-  border-radius: 3px;
-  padding: 4px 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 1.1em;
+  &:hover {
+    color: var(--wwn-header-text, #fff);
+    opacity: 1;
+  }
 }
 
 /* Nested container items (e.g. a backpack holding other items) */
@@ -437,102 +609,22 @@
   align-items: center;
   justify-content: center;
   padding: 0 2px;
+
+  i {
+    cursor: pointer;
+    color: var(--wwn-text-muted, #999);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--wwn-header-text, #fff);
+      transform: scale(1.2);
+    }
+  }
 }
-.container-arrow i {
-  cursor: pointer;
-  color: var(--wwn-text-muted, #999);
-  transition: color 0.2s ease;
-}
-.container-arrow i:hover {
-  color: var(--wwn-header-text, #fff);
-  transform: scale(1.2);
-}
+
 .container-spacer {
   flex: 0 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Powers tab */
-.wwn.sheet.actor .powers-tab.active {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: auto;
-}
-
-.wwn.sheet.actor .powers-tab .wwn-powers {
-  width: 100%;
-  min-width: 0;
-}
-
-.wwn.sheet.actor .powers-tab .wwn-powers-prepared {
-  align-items: center;
-  gap: 0.35rem;
-  flex-wrap: nowrap;
-}
-
-.wwn.sheet.actor .powers-tab .wwn-powers-pools > .wwn-section-header {
-  justify-content: flex-start;
-  margin-bottom: 0.35rem;
-}
-
-.wwn.sheet.actor .powers-tab .wwn-powers-pools > .wwn-section-header .item-controls {
-  margin-left: auto;
-  color: inherit;
-  min-width: 0;
-  width: auto;
-  max-width: none;
-  flex: 0 0 auto;
-}
-
-.wwn.sheet.actor .powers-tab .wwn-powers-pools > .wwn-section-header .item-controls a {
-  color: inherit;
-  opacity: 0.9;
-}
-
-.wwn.sheet.actor .powers-tab .powers-pools-grid {
-  gap: 8px;
-}
-.wwn.sheet.actor .powers-tab .powers-pools-grid > .item-list {
-  flex: 1 1 0;
-  min-width: 0;
-}
-.wwn.sheet.actor .powers-tab .powers-pool-value {
-  text-align: right;
-  white-space: nowrap;
-}
-.wwn.sheet.actor .powers-tab .powers-sep {
-  line-height: 24px;
-  padding: 0 2px;
-}
-.wwn.sheet.actor .powers-tab .powers-muted {
-  opacity: 0.75;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.wwn.sheet.actor .powers-tab .powers-uses input {
-  width: 2.5rem;
-  text-align: right;
-}
-.wwn.sheet.actor .powers-tab .powers-active-badge {
-  font-size: 11px;
-  font-weight: bold;
-  color: var(--wwn-dark);
-}
-.wwn.sheet.actor .powers-tab .powers-empty-hint,
-.wwn.sheet.actor .powers-tab .powers-add-footer {
-  text-align: center;
-  padding: 6px;
-  opacity: 0.8;
-}
-.wwn.sheet.actor .powers-tab .powers-empty-state {
-  font-size: 16px;
-  padding-top: 24px;
-  text-align: center;
-}
-.wwn.sheet.actor .powers-tab .item-unprepared {
-  opacity: 0.45;
 }

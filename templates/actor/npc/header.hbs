@@ -15,6 +15,7 @@
           <input type="number" name="system.details.xp" value="{{system.details.xp}}" data-dtype="Number" />
         </label>
       </div>
+      {{#if showAlignment}}
       <div class="wwn-header-row wwn-header-row--secondary">
         <label class="wwn-chip wwn-chip--grow">
           <span class="wwn-chip-label">{{localize "WWN.details.alignment"}}</span>
@@ -22,6 +23,7 @@
           <a data-action="rollReaction" title="{{localize 'WWN.roll.reaction'}}"><i class="fas fa-dice"></i></a>
         </label>
       </div>
+      {{/if}}
     </div>
   </div>
 </header>

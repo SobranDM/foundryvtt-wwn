@@ -1669,5 +1669,7 @@
   "WWN.Setting.UseGoldStandard": "Gold Standard",
   "WWN.Setting.UseGoldStandardHint": "Use a gold standard for currency, rather than a silver standard.",
   "WWN.Setting.ReplaceStrainWithWounds": "Replace Strain with Wounds",
-  "WWN.Setting.ReplaceStrainWithWoundsHint": "Replace System Strain with Injuries/Wounds tracking."
+  "WWN.Setting.ReplaceStrainWithWoundsHint": "Replace System Strain with Injuries/Wounds tracking.",
+  "WWN.Setting.ShowAlignment": "Show Alignment",
+  "WWN.Setting.ShowAlignmentHint": "Show an Alignment field on PC and NPC sheets. Off by default; Alignment is not part of core WWN."
 }

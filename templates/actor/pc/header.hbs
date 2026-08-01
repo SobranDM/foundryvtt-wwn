@@ -15,6 +15,11 @@
       <div class="wwn-header-row wwn-header-row--secondary">
         <input class="wwn-header-background" type="text" name="system.details.background"
           value="{{system.details.background}}" placeholder="{{localize 'WWN.details.background'}}" />
+        {{#if showAlignment}}
+        <input class="wwn-header-alignment" type="text" name="system.details.alignment"
+          value="{{system.details.alignment}}" placeholder="{{localize 'WWN.Profile.Alignment'}}"
+          title="{{localize 'WWN.Profile.Alignment'}}" />
+        {{/if}}
         {{#if classEdges.length}}
         <div class="wwn-header-class wwn-header-class-list" title="{{classEdgesTooltip}}">
           {{#each classEdges as |edge|}}

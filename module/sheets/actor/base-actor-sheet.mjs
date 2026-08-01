@@ -79,6 +79,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     context.separateRangedAC = game.settings.get("wwn", "separateRangedAC");
     context.useTrauma = game.settings.get("wwn", "useTrauma");
     context.showMovement = game.settings.get("wwn", "showMovement");
+    context.showAlignment = game.settings.get("wwn", "showAlignment");
     context.favoritesEnabled = isPc(actor);
     applyLegacySheetAliases(context.system, { separateRangedAC: context.separateRangedAC });
 

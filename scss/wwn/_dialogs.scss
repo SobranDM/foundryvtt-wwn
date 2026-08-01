@@ -1,130 +1,153 @@
 /* Dialog / ApplicationV2 windows opened via showWwnDialog and themed apps */
 
-.wwn-app--creator .attribute-list .form-fields,
-.wwn-dialog--creator .attribute-list .form-fields {
-  flex: 0 0 50px;
-}
-.wwn-app--creator .attribute-list .form-fields input,
-.wwn-dialog--creator .attribute-list .form-fields input {
-  text-align: center;
-  font-weight: bold;
-}
-.wwn-app--creator .roll-stats,
-.wwn-dialog--creator .roll-stats {
-  flex: 0 0 65px;
-  padding: 5px;
-  margin-left: 4px;
-  border-left: 1px solid var(--wwn-border);
-}
-.wwn-app--creator .roll-stats .form-group .form-fields span,
-.wwn-dialog--creator .roll-stats .form-group .form-fields span {
-  text-align: center;
-  line-height: 24px;
-  flex: 0;
+.wwn-app--creator,
+.wwn-dialog--creator {
+  .attribute-list .form-fields {
+    flex: 0 0 50px;
+
+    input {
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .roll-stats {
+    flex: 0 0 65px;
+    padding: 5px;
+    margin-left: 4px;
+    border-left: 1px solid var(--wwn-border);
+
+    .form-group .form-fields span {
+      text-align: center;
+      line-height: 24px;
+      flex: 0;
+    }
+  }
 }
 
-.wwn-dialog--party-xp .actors,
-.wwn-dialog--party-coin .actors {
-  height: 270px;
-  padding: 0;
-  overflow-y: auto;
-}
-.wwn-dialog--party-xp .actors .form-group input,
-.wwn-dialog--party-coin .actors .form-group input {
-  max-width: 100px;
-}
-.wwn-dialog--party-xp .form-group button,
-.wwn-dialog--party-coin .form-group button {
-  line-height: 18px;
-  flex-grow: 0;
+.wwn-dialog--party-xp,
+.wwn-dialog--party-coin {
+  .actors {
+    height: 270px;
+    padding: 0;
+    overflow-y: auto;
+
+    .form-group input {
+      max-width: 100px;
+    }
+  }
+
+  .form-group button {
+    line-height: 18px;
+    flex-grow: 0;
+  }
 }
 
 .wwn-app--party-sheet {
   min-width: 250px;
   min-height: 250px;
-}
-.wwn-app--party-sheet .window-content {
-  padding: 0;
-}
-.wwn-app--party-sheet .header {
-  color: var(--wwn-light);
-  background: var(--wwn-dark);
-  padding: 2px 10px;
-  line-height: 20px;
-  text-align: left;
-}
-.wwn-app--party-sheet .header .item-controls .item-control {
-  padding: 0 2px;
-}
-.wwn-app--party-sheet .header .item-controls .item-control button {
-  line-height: 15px;
-  margin: 0 1px;
-  background: rgba(255, 255, 240, 0.8);
-  border: 1px solid #b5b3a4;
-}
-.wwn-app--party-sheet .actor-list {
-  margin: 0;
-  overflow: auto;
-  list-style: none;
-  padding: 0;
-}
-.wwn-app--party-sheet .actor-list .actor {
-  border-bottom: 1px solid var(--wwn-border);
-  border-top: 1px solid var(--wwn-border);
-  margin-bottom: 2px;
-  font-size: 12px;
-  text-align: center;
-}
-.wwn-app--party-sheet .actor-list .actor .fas {
-  padding: 0 2px;
-  font-size: 10px;
-}
-.wwn-app--party-sheet .actor-list .actor .fields .field-row:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.wwn-app--party-sheet .actor-list .actor .field-img {
-  flex: 0 0 50px;
-  position: relative;
-  object-fit: contain;
-}
-.wwn-app--party-sheet .actor-list .actor .field-img:hover .img-btns button {
-  display: block;
-}
-.wwn-app--party-sheet .actor-list .actor .field-img img {
-  border: none;
-  width: 45px;
-  height: 45px;
-}
-.wwn-app--party-sheet .actor-list .actor .field-img .img-btns {
-  position: absolute;
-  bottom: 6px;
-  left: 3px;
-  width: 45px;
-  height: 12px;
-}
-.wwn-app--party-sheet .actor-list .actor .field-img .img-btns button {
-  display: none;
-  cursor: pointer;
-  font-size: 10px;
-  height: 18px;
-  width: 14px;
-  line-height: 13px;
-  margin: 0 1px;
-  border: 1px solid var(--wwn-dark-alt);
-  padding: 2px;
-  background: var(--wwn-tan);
-  box-shadow: inset 0 0px 3px var(--wwn-border);
-}
-.wwn-app--party-sheet .field-name {
-  text-align: left;
-  text-indent: 10px;
+
+  .window-content {
+    padding: 0;
+  }
+
+  .header {
+    color: var(--wwn-light);
+    background: var(--wwn-dark);
+    padding: 2px 10px;
+    line-height: 20px;
+    text-align: left;
+
+    .item-controls .item-control {
+      padding: 0 2px;
+
+      button {
+        line-height: 15px;
+        margin: 0 1px;
+        background: rgba(255, 255, 240, 0.8);
+        border: 1px solid #b5b3a4;
+      }
+    }
+  }
+
+  .actor-list {
+    margin: 0;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+
+    .actor {
+      border-bottom: 1px solid var(--wwn-border);
+      border-top: 1px solid var(--wwn-border);
+      margin-bottom: 2px;
+      font-size: 12px;
+      text-align: center;
+
+      .fas {
+        padding: 0 2px;
+        font-size: 10px;
+      }
+
+      .fields .field-row:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .field-img {
+        flex: 0 0 50px;
+        position: relative;
+        object-fit: contain;
+
+        &:hover .img-btns button {
+          display: block;
+        }
+
+        img {
+          border: none;
+          width: 45px;
+          height: 45px;
+        }
+
+        .img-btns {
+          position: absolute;
+          bottom: 6px;
+          left: 3px;
+          width: 45px;
+          height: 12px;
+
+          button {
+            display: none;
+            cursor: pointer;
+            font-size: 10px;
+            height: 18px;
+            width: 14px;
+            line-height: 13px;
+            margin: 0 1px;
+            border: 1px solid var(--wwn-dark-alt);
+            padding: 2px;
+            background: var(--wwn-tan);
+            box-shadow: inset 0 0px 3px var(--wwn-border);
+          }
+        }
+      }
+    }
+  }
+
+  .field-name {
+    text-align: left;
+    text-indent: 10px;
+  }
 }
 
-.wwn-dialog--modifiers .attribute-bonuses label {
-  font-weight: bold;
-}
-.wwn-dialog--modifiers .attribute-bonuses ol {
-  list-style: outside;
+.wwn-dialog--modifiers {
+  .attribute-bonuses {
+    label {
+      font-weight: bold;
+    }
+
+    ol {
+      list-style: outside;
+    }
+  }
 }
 
 .currency-adjustment {
@@ -132,19 +155,23 @@
 }
 
 /* Class assignment: two columns per Full / Partial section */
-.wwn-dialog--class-assignment .wwn-class-assignment fieldset {
-  margin: 0.5rem 0;
-  padding: 0.35rem 0.5rem 0.5rem;
-}
-.wwn-dialog--class-assignment .class-assignment-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 0.75rem;
-  row-gap: 0.25rem;
-}
-.wwn-dialog--class-assignment .class-assignment-grid .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0;
+.wwn-dialog--class-assignment {
+  .wwn-class-assignment fieldset {
+    margin: 0.5rem 0;
+    padding: 0.35rem 0.5rem 0.5rem;
+  }
+
+  .class-assignment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin: 0;
+    }
+  }
 }

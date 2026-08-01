@@ -5,181 +5,182 @@
 .wwn.actor.npc {
   min-height: 565px;
   min-width: 560px;
-}
 
-.wwn.actor.npc .wwn-npc-header .wwn-chip input[type="text"] {
-  width: 4rem;
-}
+  .wwn-npc-header {
+    .wwn-chip input[type="text"] {
+      width: 4rem;
+    }
 
-.wwn.actor.npc .wwn-npc-header .wwn-chip--grow {
-  flex: 1 1 auto;
-  min-width: 8rem;
-}
+    .wwn-chip--grow {
+      flex: 1 1 auto;
+      min-width: 8rem;
 
-.wwn.actor.npc .wwn-npc-header .wwn-chip--grow input[type="text"] {
-  width: auto;
-  flex: 1 1 auto;
-  min-width: 3rem;
-}
-
-.wwn.actor.npc .wwn-npc-main {
-  width: 100%;
-  min-width: 0;
-  flex: 1 1 auto;
-  min-height: 0;
-}
-
-.wwn.actor.npc .attributes-tab.active {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: auto;
-}
-
-.wwn.actor.npc .notes-tab.active {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  overflow: auto;
-}
-
-/* Top: three concept cards */
-.wwn.actor.npc .wwn-npc-stat-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-  flex: 0 0 auto;
-}
-
-@media (width < 48rem) {
-  .wwn.actor.npc .wwn-npc-stat-cards {
-    grid-template-columns: 1fr;
+      input[type="text"] {
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 3rem;
+      }
+    }
   }
-}
 
-.wwn.actor.npc .wwn-npc-card {
-  min-width: 0;
-}
-
-.wwn.actor.npc .wwn-combat-stat .wwn-section-header a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.wwn.actor.npc .wwn-combat-stat .wwn-section-header a:hover {
-  color: var(--wwn-tan, var(--wwn-header-text));
-}
-
-.wwn.actor.npc .wwn-combat-stat-value input {
-  width: 100%;
-  max-width: 4rem;
-  text-align: center;
-  border: none;
-  background: transparent;
-  font-weight: 700;
-}
-
-.wwn.actor.npc .wwn-combat-stat-value a {
-  color: inherit;
-  opacity: 0.85;
-  flex: 0 0 auto;
-}
-
-.wwn.actor.npc .wwn-combat-stat-value a:hover {
-  opacity: 1;
-}
-
-.wwn.actor.npc .wwn-npc-instinct-table {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0;
-}
-
-.wwn.actor.npc .wwn-npc-instinct-table-link {
-  font-size: 0.75rem;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 0.1rem;
-}
-
-.wwn.actor.npc .wwn-npc-card--saves {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.wwn.actor.npc .wwn-npc-hp {
-  flex: 0 0 auto;
-  min-width: 0;
-}
-
-.wwn.actor.npc .wwn-npc-hp .wwn-resource-bars {
-  grid-template-columns: 1fr;
-  gap: 0;
-}
-
-.wwn.actor.npc .wwn-npc-hp .wwn-resource-bar-box {
-  padding: 0.25rem 0.35rem;
-}
-
-/* Bottom: Attacks | Powers */
-.wwn.actor.npc .wwn-npc-main-lists {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  align-items: start;
-  min-width: 0;
-  min-height: 0;
-}
-
-@media (width < 48rem) {
-  .wwn.actor.npc .wwn-npc-main-lists {
-    grid-template-columns: 1fr;
+  .wwn-npc-main {
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+    min-height: 0;
   }
-}
 
-.wwn.actor.npc .wwn-npc-equipment,
-.wwn.actor.npc .wwn-npc-powers {
-  min-width: 0;
-  min-height: 0;
-}
+  .attributes-tab.active,
+  .notes-tab.active {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: auto;
+  }
 
-.wwn.actor.npc .wwn-npc-powers {
-  max-height: 28rem;
-  overflow: auto;
-}
+  /* Top: three concept cards */
+  .wwn-npc-stat-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    flex: 0 0 auto;
 
-.wwn.actor.npc .wwn-npc-powers .wwn-powers {
-  gap: 0.35rem;
-}
+    @media (width < 48rem) {
+      grid-template-columns: 1fr;
+    }
+  }
 
-.wwn.actor.npc .wwn-data-table .field-long.counter {
-  gap: 0.15rem;
-}
+  .wwn-npc-card {
+    min-width: 0;
+  }
 
-.wwn.actor.npc .wwn-data-table .field-long.counter input {
-  width: 1.75rem;
-  text-align: center;
-  flex: 0 0 auto;
-}
+  .wwn-combat-stat {
+    .wwn-section-header a {
+      color: inherit;
+      text-decoration: none;
 
-.wwn.actor.npc .notes-tab .wwn-form-stack {
-  width: 100%;
-  min-width: 0;
-}
+      &:hover {
+        color: var(--wwn-tan, var(--wwn-header-text));
+      }
+    }
+  }
 
-.wwn.actor.npc .notes-tab .editor {
-  min-height: 12rem;
-  height: auto;
-}
+  .wwn-combat-stat-value {
+    input {
+      width: 100%;
+      max-width: 4rem;
+      text-align: center;
+      border: none;
+      background: transparent;
+      font-weight: 700;
+    }
 
-/* Legacy attribute grid helpers (shared inventory lists) */
-.wwn.actor.npc .header-details .summary .treasure-table {
-  text-align: center;
-}
-.wwn.actor.npc .header-details .summary {
-  @include wwn-check-field-reveal;
+    a {
+      color: inherit;
+      opacity: 0.85;
+      flex: 0 0 auto;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .wwn-npc-instinct-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .wwn-npc-instinct-table-link {
+    font-size: 0.75rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.1rem;
+  }
+
+  .wwn-npc-card--saves {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .wwn-npc-hp {
+    flex: 0 0 auto;
+    min-width: 0;
+
+    .wwn-resource-bars {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .wwn-resource-bar-box {
+      padding: 0.25rem 0.35rem;
+    }
+  }
+
+  /* Bottom: Attacks | Powers */
+  .wwn-npc-main-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    align-items: start;
+    min-width: 0;
+    min-height: 0;
+
+    @media (width < 48rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wwn-npc-equipment,
+  .wwn-npc-powers {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .wwn-npc-powers {
+    max-height: 28rem;
+    overflow: auto;
+
+    .wwn-powers {
+      gap: 0.35rem;
+    }
+  }
+
+  .wwn-data-table .field-long.counter {
+    gap: 0.15rem;
+
+    input {
+      width: 1.75rem;
+      text-align: center;
+      flex: 0 0 auto;
+    }
+  }
+
+  .notes-tab {
+    .wwn-form-stack {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .editor {
+      min-height: 12rem;
+      height: auto;
+    }
+  }
+
+  /* Legacy attribute grid helpers (shared inventory lists) */
+  .header-details {
+    .summary {
+      @include wwn-check-field-reveal;
+
+      .treasure-table {
+        text-align: center;
+      }
+    }
+  }
 }

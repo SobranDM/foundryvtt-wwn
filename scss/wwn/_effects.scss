@@ -27,14 +27,14 @@
 .wwn-sheet .effects-tab {
   min-height: 0;
   overflow: auto;
-}
 
-.wwn-sheet .effects-tab .wwn-effects-list {
-  width: 100%;
-  min-width: 0;
-}
+  .wwn-effects-list {
+    width: 100%;
+    min-width: 0;
+  }
 
-.wwn-sheet .effects-tab .wwn-data-table .field-long {
-  text-align: center;
-  justify-content: center;
+  .wwn-data-table .field-long {
+    text-align: center;
+    justify-content: center;
+  }
 }

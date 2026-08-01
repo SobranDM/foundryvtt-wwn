@@ -329,6 +329,14 @@ export function registerSettings() {
     default: false,
   });
 
+  registerWwnSetting("showAlignment", {
+    name: "WWN.Setting.ShowAlignment",
+    hint: "WWN.Setting.ShowAlignmentHint",
+    scope: "world",
+    type: Boolean,
+    default: false,
+  });
+
   /* ---- Hidden / infrastructure ---- */
   registerWwnSetting("collapsedSections", {
     scope: "client",

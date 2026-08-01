@@ -2,101 +2,174 @@
 
 .wwn-chat-card {
   padding: 4px;
+
+  .wwn-chat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--wwn-border, #999);
+  }
+
+  .wwn-chat-img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--wwn-border, #999);
+    border-radius: 3px;
+    flex: 0 0 auto;
+  }
+
+  .wwn-chat-titles {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .wwn-chat-title {
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .wwn-chat-subtitle,
+  .wwn-chat-meta,
+  .wwn-chat-footer {
+    font-size: 12px;
+    opacity: 0.75;
+  }
+
+  .wwn-chat-breakdown {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .wwn-chat-hint {
+    cursor: help;
+    opacity: 0.9;
+    font-size: 0.85em;
+  }
+
+  .wwn-chat-notice {
+    opacity: 0.9;
+  }
+
+  .wwn-chat-desc {
+    font-size: 13px;
+  }
+
+  .wwn-chat-actions {
+    margin-top: 6px;
+    padding-top: 4px;
+    border-top: 1px solid var(--wwn-border, #ccc);
+
+    > button {
+      width: 100%;
+      margin: 2px 0;
+    }
+  }
+
+  .wwn-chat-apply-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+
+    button {
+      width: auto;
+      min-width: 1.75rem;
+      margin: 0;
+      padding: 1px 6px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+  }
+
+  .wwn-chat-apply-spacer {
+    flex: 1;
+  }
+
+  .wwn-chat-apply-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 2px 0;
+
+    button {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  .wwn-chat-apply-main {
+    flex: 1;
+    text-align: left;
+  }
+
+  .wwn-chat-trauma {
+    color: var(--wwn-failure, #8b2a2a);
+  }
+
+  button.active {
+    font-weight: bold;
+  }
+
+  &.wwn-heal-mode {
+    .wwn-chat-actions button[data-action="toggleHeal"] {
+      font-weight: bold;
+    }
+
+    button[data-action="applyRow"],
+    button[data-action="applyStraight"] {
+      border-color: #2d5a27;
+      color: #2d5a27;
+    }
+  }
+
+  .treasure-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+
+    .treasure {
+      line-height: 36px;
+
+      img {
+        flex: 0 0 36px;
+        border: none;
+      }
+
+      div {
+        text-indent: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .sub {
+      padding-left: 25px;
+      line-height: 28px;
+
+      img {
+        flex: 0 0 28px;
+        border: none;
+      }
+
+      div {
+        text-indent: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .wwn-chat-notice-list {
+    margin: 0;
+    padding-left: 1.25em;
+  }
 }
-.wwn-chat-card .wwn-chat-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 4px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--wwn-border, #999);
-}
-.wwn-chat-card .wwn-chat-img {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--wwn-border, #999);
-  border-radius: 3px;
-  flex: 0 0 auto;
-}
-.wwn-chat-card .wwn-chat-titles {
-  flex: 1;
-  min-width: 0;
-}
-.wwn-chat-card .wwn-chat-title {
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.wwn-chat-card .wwn-chat-subtitle,
-.wwn-chat-card .wwn-chat-meta,
-.wwn-chat-card .wwn-chat-footer {
-  font-size: 12px;
-  opacity: 0.75;
-}
-.wwn-chat-card .wwn-chat-breakdown {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.wwn-chat-card .wwn-chat-hint {
-  cursor: help;
-  opacity: 0.9;
-  font-size: 0.85em;
-}
-.wwn-chat-card .wwn-chat-notice {
-  opacity: 0.9;
-}
-.wwn-chat-card .wwn-chat-desc {
-  font-size: 13px;
-}
-.wwn-chat-card .wwn-chat-actions {
-  margin-top: 6px;
-  padding-top: 4px;
-  border-top: 1px solid var(--wwn-border, #ccc);
-}
-.wwn-chat-card .wwn-chat-actions > button {
-  width: 100%;
-  margin: 2px 0;
-}
-.wwn-chat-card .wwn-chat-apply-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 4px;
-  font-size: 12px;
-}
-.wwn-chat-card .wwn-chat-apply-spacer {
-  flex: 1;
-}
-.wwn-chat-card .wwn-chat-apply-toolbar button {
-  width: auto;
-  min-width: 1.75rem;
-  margin: 0;
-  padding: 1px 6px;
-  font-size: 11px;
-  line-height: 1.4;
-}
-.wwn-chat-card .wwn-chat-apply-row {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin: 2px 0;
-}
-.wwn-chat-card .wwn-chat-apply-row button {
-  width: auto;
-  margin: 0;
-}
-.wwn-chat-card .wwn-chat-apply-main {
-  flex: 1;
-  text-align: left;
-}
-.wwn-chat-card .wwn-chat-trauma {
-  color: var(--wwn-failure, #8b2a2a);
-}
-.wwn-chat-card button.active {
-  font-weight: bold;
-}
+
 .wwn-badge {
   display: inline-block;
   padding: 1px 6px;
@@ -104,60 +177,21 @@
   font-size: 11px;
   font-weight: bold;
   flex: 0 0 auto;
-}
-.wwn-badge--hit {
-  background: #2d5a27;
-  color: #fff;
-}
-.wwn-badge--miss {
-  background: #8b2a2a;
-  color: #fff;
-}
-.wwn-badge--warn {
-  background: #8a6d1d;
-  color: #fff;
-}
-.wwn-chat-card.wwn-heal-mode .wwn-chat-actions button[data-action="toggleHeal"] {
-  font-weight: bold;
-}
-.wwn-chat-card.wwn-heal-mode button[data-action="applyRow"],
-.wwn-chat-card.wwn-heal-mode button[data-action="applyStraight"] {
-  border-color: #2d5a27;
-  color: #2d5a27;
-}
 
-.wwn-chat-card .treasure-list {
-  padding: 0;
-  list-style: none;
-  margin: 0;
-}
-.wwn-chat-card .treasure-list .treasure {
-  line-height: 36px;
-}
-.wwn-chat-card .treasure-list .treasure img {
-  flex: 0 0 36px;
-  border: none;
-}
-.wwn-chat-card .treasure-list .treasure div {
-  text-indent: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.wwn-chat-card .treasure-list .sub {
-  padding-left: 25px;
-  line-height: 28px;
-}
-.wwn-chat-card .treasure-list .sub img {
-  flex: 0 0 28px;
-  border: none;
-}
-.wwn-chat-card .treasure-list .sub div {
-  text-indent: 10px;
-  font-size: 14px;
-}
-.wwn-chat-card .wwn-chat-notice-list {
-  margin: 0;
-  padding-left: 1.25em;
+  &--hit {
+    background: #2d5a27;
+    color: #fff;
+  }
+
+  &--miss {
+    background: #8b2a2a;
+    color: #fff;
+  }
+
+  &--warn {
+    background: #8a6d1d;
+    color: #fff;
+  }
 }
 
 /* Godbound damage conversion block, injected into weapon/asset attack chat cards */
@@ -170,6 +204,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .godbound-details {
   display: flex;
   flex-direction: column;
@@ -177,10 +212,12 @@
   align-items: center;
   width: 100%;
 }
+
 .godbound-label {
   font-size: 0.9em;
   color: #666;
 }
+
 .godbound-values {
   font-family: "Roboto Mono", monospace;
   font-size: 0.9em;

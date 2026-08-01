@@ -12,18 +12,18 @@
   font-size: 12px;
   line-height: 1.4;
   padding: 0.25rem 0 0;
-}
 
-.settings-sidebar .wwn.game-license p {
-  margin: 0 0 0.5em;
-}
+  p {
+    margin: 0 0 0.5em;
+  }
 
-.settings-sidebar .wwn.game-license .kofi {
-  display: flex;
-  justify-content: center;
-  margin: 0.5rem 0;
-}
+  .kofi {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
 
-.settings-sidebar .wwn.game-license .footer {
-  text-align: right;
+  .footer {
+    text-align: right;
+  }
 }

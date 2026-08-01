@@ -100,7 +100,7 @@ export const WWN_SETTING_MENUS = {
       },
       {
         legend: "WWN.Setting.Section.Character",
-        settings: ["replaceStrainWithWounds"],
+        settings: ["replaceStrainWithWounds", "showAlignment"],
       },
     ],
   },
