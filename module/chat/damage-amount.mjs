@@ -119,6 +119,11 @@ export function resolveApplyRowAmount(message, row, { useAlt = false } = {}) {
       // Untrusted floored flags: fall back to the damage roll when present.
       return rollTotal;
     }
+    if (row.armorReduced) {
+      // Starship damage: value is intentionally lower than the raw roll
+      // (target armor/AP already subtracted) — never inflate it back up.
+      return flagged;
+    }
     if (rollTotal != null) return rollTotal;
     if (trusted) return flagged;
     return null;

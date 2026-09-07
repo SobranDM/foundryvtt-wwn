@@ -1,3 +1,5 @@
+import { parseWeaponQualities } from "./combat/starship/qualities.mjs";
+
 export const registerHelpers = async function () {
   // Handlebars template helpers
   Handlebars.registerHelper("eq", function (a, b) {
@@ -66,6 +68,11 @@ export const registerHelpers = async function () {
   Handlebars.registerHelper("getTagDesc", function (tag) {
     let idd = Object.keys(CONFIG.WWN.tags).find(k => (CONFIG.WWN.tags[k] == tag));
     return game.i18n.localize(CONFIG.WWN.tag_desc[idd]);
+  });
+
+  Handlebars.registerHelper("shipWeaponAp", function (qualities) {
+    const { ap } = parseWeaponQualities(qualities);
+    return ap > 0 ? ap : "";
   });
 
   Handlebars.registerHelper("counter", function (status, value, max) {

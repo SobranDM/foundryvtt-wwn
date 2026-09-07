@@ -10,6 +10,7 @@
     <div class="item-name">{{localize "WWN.Sheet.Name"}}</div>
     {{#if isWeapon}}
     <div class="field-short" title="{{localize 'WWN.Starship.Damage'}}">{{localize "WWN.Starship.DamageAbbr"}}</div>
+    <div class="field-short" title="{{localize 'WWN.Starship.ArmorPiercing'}}">{{localize "WWN.Starship.ApAbbr"}}</div>
     <div class="field-short" title="{{localize 'WWN.Starship.Hardpoints'}}">
       {{localize "WWN.Starship.HardpointsAbbr"}}
     </div>
@@ -28,8 +29,9 @@
             <h4 title="{{item.system.description}}">{{item.name}}</h4>
           </a>
         </div>
-        {{#if isWeapon}}
+        {{#if ../isWeapon}}
         <div class="field-short">{{item.system.damage}}</div>
+        <div class="field-short">{{shipWeaponAp item.system.qualities}}</div>
         <div class="field-short">{{item.system.hardpoints}}</div>
         {{/if}}
         <div class="field-short">{{item.system.power}}</div>

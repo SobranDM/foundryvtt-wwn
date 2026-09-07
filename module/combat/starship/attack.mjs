@@ -179,6 +179,7 @@ export async function resolveShipWeaponHit({
       id: "damage",
       label: game.i18n.localize("WWN.Roll.Damage"),
       value: outcome.finalDamage,
+      armorReduced: true,
     }]
     : [];
 
@@ -227,7 +228,7 @@ export async function resolveShipWeaponHit({
       hit: outcome.hit && !negated,
     },
     flags: {
-      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })),
+      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value, armorReduced: r.armorReduced })),
     },
   });
 
@@ -302,6 +303,7 @@ export async function postResolvedShipWeaponCard({
         id: "damage",
         label: game.i18n.localize("WWN.Roll.Damage"),
         value: outcome.finalDamage,
+        armorReduced: true,
       }];
     }
     if (!hit) {
@@ -344,7 +346,7 @@ export async function postResolvedShipWeaponCard({
       hit: hit !== false,
     },
     flags: {
-      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value })),
+      applyRows: applyRows.map((r) => ({ id: r.id, value: r.value, armorReduced: r.armorReduced })),
     },
   });
 }

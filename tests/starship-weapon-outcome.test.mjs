@@ -54,4 +54,43 @@ describe("computeShipWeaponOutcome", () => {
     assert.equal(r.hit, true);
     assert.equal(r.finalDamage, 5);
   });
+
+  it("notes when a hit fails to penetrate armor", () => {
+    const target = ship({ ac: 10, armor: 10 });
+    const r = computeShipWeaponOutcome({
+      attacker: combatant(ship(), "atk"),
+      defender: combatant(target, "def"),
+      weapon: weapon(),
+      attackTotal: 12,
+      damageTotal: 6,
+    });
+    assert.equal(r.hit, true);
+    assert.equal(r.finalDamage, 0);
+    assert.ok(r.notices.includes("WWN.Starship.DamageInsufficientArmor"));
+  });
+
+  it("does not note insufficient penetration when damage gets through", () => {
+    const target = ship({ ac: 10, armor: 5 });
+    const r = computeShipWeaponOutcome({
+      attacker: combatant(ship(), "atk"),
+      defender: combatant(target, "def"),
+      weapon: weapon(),
+      attackTotal: 12,
+      damageTotal: 10,
+    });
+    assert.ok(!r.notices.includes("WWN.Starship.DamageInsufficientArmor"));
+  });
+
+  it("AP reduces effective armor before computing final damage", () => {
+    const target = ship({ ac: 10, armor: 10 });
+    const r = computeShipWeaponOutcome({
+      attacker: combatant(ship(), "atk"),
+      defender: combatant(target, "def"),
+      weapon: weapon({ qualities: "AP 10" }),
+      attackTotal: 12,
+      damageTotal: 17,
+    });
+    assert.equal(r.hit, true);
+    assert.equal(r.finalDamage, 17);
+  });
 });

@@ -97,6 +97,9 @@ export function computeShipWeaponOutcome({
   });
 
   const notices = [];
+  if (dmg.finalDamage <= 0) {
+    notices.push(localize("WWN.Starship.DamageInsufficientArmor"));
+  }
   if (hasBurstEcm(target) && !defState.flags?.usedBurstEcmThisFight) {
     notices.push(localize("WWN.Starship.BurstEcmApplyHint"));
   }
