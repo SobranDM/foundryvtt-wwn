@@ -1,5 +1,8 @@
-{{!-- Project contribution panel: one row per contributing actor (PC or NPC),
-      cloned in spirit from templates/partials/faction-asset-panel.hbs. --}}
+{{!-- Project contribution panel: one row per contributing actor (PC or NPC).
+      Kept deliberately compact — most projects have a handful of
+      contributors, not an inventory-sized list — so the row only shows
+      Name / Influence / Dominion (or Silver, for WWN) / controls; Note is
+      tucked behind a per-row expand toggle instead of its own column. --}}
 {{#> wwnCollapsibleSection sectionId="project.contributions"
   label=(localize "WWN.project.contributions")
   count=contributions.length
@@ -19,7 +22,6 @@
     {{#if isWwn}}
     <div class="project-field" title="{{localize 'WWN.project.resourceContributed'}}">{{localize "WWN.project.resourceContributed"}}</div>
     {{/if}}
-    <div class="project-field-wide" title="{{localize 'WWN.project.note'}}">{{localize "WWN.project.note"}}</div>
     <div class="item-controls"></div>
   </div>
   <ol class="item-list">
@@ -28,7 +30,7 @@
       <div class="item flexrow" data-item-id="{{row.item.id}}">
         <div class="item-name flexrow project-contributor-name">
           <img class="item-image" src="{{row.item.img}}" alt="" />
-          <h4 title="{{#if row.linkedActor}}{{row.linkedActor.name}}{{else if row.broken}}{{localize 'WWN.project.brokenLink'}}{{else}}{{localize 'WWN.project.linkActor'}}{{/if}}">
+          <h4 title="{{#if row.broken}}{{localize 'WWN.project.brokenLink'}}: {{row.item.name}}{{else}}{{row.item.name}}{{/if}}">
             {{row.item.name}}
             {{#if row.broken}}<i class="fas fa-unlink" style="color: var(--wwn-danger, #a33);"></i>{{/if}}
           </h4>
@@ -49,11 +51,12 @@
             data-item-field="system.resourceContributed" {{#unless @root.editable}}disabled{{/unless}} />
         </div>
         {{/if}}
-        <div class="project-field-wide">
-          <input type="text" value="{{row.item.system.note}}" data-item-field="system.note"
-            {{#unless @root.editable}}disabled{{/unless}} />
-        </div>
         <div class="item-controls">
+          <a class="item-control project-note-toggle{{#unless row.item.system.note}} item-off{{/unless}}"
+            data-action="toggleContributionNote"
+            title="{{#if row.item.system.note}}{{row.item.system.note}}{{else}}{{localize 'WWN.project.note'}}{{/if}}">
+            <i class="fas fa-note-sticky"></i>
+          </a>
           {{#if row.linkedActor}}
           <a class="item-control" data-action="openContributionActor" title="{{localize 'WWN.project.openActor'}}">
             <i class="fas fa-external-link-alt"></i>
@@ -64,6 +67,11 @@
           {{/if}}
           <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}"><i class="fas fa-trash"></i></a>
         </div>
+      </div>
+      <div class="wwn-project-contribution-note-row" hidden>
+        <label>{{localize "WWN.project.note"}}</label>
+        <input type="text" value="{{row.item.system.note}}" data-item-field="system.note"
+          placeholder="{{localize 'WWN.project.noteEmpty'}}" {{#unless @root.editable}}disabled{{/unless}} />
       </div>
     </li>
     {{/each}}

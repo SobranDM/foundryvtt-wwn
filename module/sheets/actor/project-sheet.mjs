@@ -5,26 +5,61 @@
  * and have no powers/effects-pipeline/inventory concepts, so this sheet
  * extends `ActorSheetV2` directly — mirroring module/sheets/actor/faction-sheet.mjs.
  *
- * Single "main" tab: header (name/rules-line/scale/magnitude/status) + a
- * resource/time progress readout + an optional suggested-cost calculator on
- * the left, a Contributions panel (add/link/unlink/delete contributor rows,
- * cloned in spirit from the faction asset panel) on the right, and
- * effects/notes prose editors below.
+ * Header (name/rules-line/scale/magnitude/status) + two tabs:
+ * - Progress: resource/time progress readout, the Contributions panel
+ *   (add/link/unlink/delete contributor rows, cloned in spirit from the
+ *   faction asset panel — kept compact since most projects only have a
+ *   handful of contributors), and the optional suggested-cost calculator.
+ * - Description: the effects/notes prose editors.
  *
  * Contribution rows are inline-editable only (no item-sheet pencil): the
  * shared `WwnItemSheet` maps unmapped item types to a generic template that
  * doesn't match this schema, so exposing `editItem` here would render a
  * mismatched sheet. Delete/open-linked-actor/unlink cover the row's needs.
+ *
+ * The suggested-cost calculator result is *derived*, not cached: every
+ * render recomputes it straight from the persisted `system.calc` inputs
+ * (see the module-level `computeCalcResult` below), so it can never go
+ * stale relative to the inputs on screen — there is no separate
+ * "Calculate" click step to forget.
+ * "Apply" is the only action, and it fills `resource.max`/`time.max` from
+ * that same live computation.
  */
 import composeMixins from "../mixins/compose-mixins.mjs";
 import { CollapsibleSectionsMixin } from "../mixins/collapsible-sections.mjs";
 import { ActorItemActionsMixin } from "../mixins/actor-item-actions.mjs";
-import { computeWwnCost, computeGodboundCost } from "../../helpers/project-calculator.mjs";
+import { computeWwnCost, computeGodboundCost, compareByName } from "../../helpers/project-calculator.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 const TPL = "systems/wwn/templates/actor/project";
+
+/**
+ * Pure derivation of the suggested-cost readout from a project's persisted
+ * `system.calc` scratch inputs. Used both for the always-live sheet display
+ * and for "Apply", so the two can never disagree.
+ * @param {object} system Project actor system data (`gameLine`, `calc`).
+ * @returns {{ gameLine: "wwn"|"godbound", cost: number, weeks?: number, difficulty?: number }}
+ */
+function computeCalcResult(system) {
+  const calc = system.calc;
+  if (system.gameLine === "wwn") {
+    return {
+      gameLine: "wwn",
+      ...computeWwnCost({ effectPoints: calc.effectPoints, areaKey: calc.area, doubleSilver: calc.doubleSilver }),
+    };
+  }
+  return {
+    gameLine: "godbound",
+    ...computeGodboundCost({
+      scope: calc.scope,
+      wardRating: calc.wardRating,
+      resistanceRating: calc.resistanceRating,
+      magnitudeMult: calc.magnitudeMult,
+    }),
+  };
+}
 
 export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, ActorItemActionsMixin)(
   HandlebarsApplicationMixin(ActorSheetV2)
@@ -32,14 +67,14 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
   /** @override */
   static DEFAULT_OPTIONS = {
     classes: ["wwn", "wwn-sheet", "sheet", "actor", "project"],
-    position: { width: 900, height: 760 },
+    position: { width: 820, height: 760 },
     form: { submitOnChange: true },
     window: { resizable: true, contentClasses: ["flex", "flex-col", "min-h-0"] },
     actions: {
       contributionCreate: WwnProjectSheet.#onContributionCreate,
       openContributionActor: WwnProjectSheet.#onOpenContributionActor,
       unlinkContribution: WwnProjectSheet.#onUnlinkContribution,
-      calculate: WwnProjectSheet.#onCalculate,
+      toggleContributionNote: WwnProjectSheet.#onToggleContributionNote,
       applyCalculated: WwnProjectSheet.#onApplyCalculated,
     },
   };
@@ -47,8 +82,11 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
   /** @override */
   static TABS = {
     primary: {
-      tabs: [{ id: "main", label: "WWN.Tabs.Main" }],
-      initial: "main",
+      tabs: [
+        { id: "progress", label: "WWN.Tabs.Progress" },
+        { id: "description", label: "WWN.Tabs.Description" },
+      ],
+      initial: "progress",
     },
   };
 
@@ -56,11 +94,9 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
   static PARTS = {
     header: { template: `${TPL}/header.hbs` },
     tabs: { template: "templates/generic/tab-navigation.hbs" },
-    main: { template: `${TPL}/tabs/main.hbs`, scrollable: [""] },
+    progress: { template: `${TPL}/tabs/progress.hbs`, scrollable: [""] },
+    description: { template: `${TPL}/tabs/description.hbs`, scrollable: [""] },
   };
-
-  /** Last calculator result, kept only for the "apply" button; not persisted. */
-  #calcResult = null;
 
   /** @override */
   async _prepareContext(options) {
@@ -77,7 +113,7 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
     context.isWwn = system.gameLine === "wwn";
     context.isGodbound = system.gameLine === "godbound";
     context.fundedPct = Math.round((system.fundedFraction ?? 0) * 100);
-    context.calcResult = this.#calcResult;
+    context.calcResult = computeCalcResult(system);
     context.resourceLabelDefault = game.i18n.localize(
       context.isGodbound ? "WWN.project.resourceLabelDefaultGodbound" : "WWN.project.resourceLabelDefaultWwn"
     );
@@ -92,7 +128,7 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
           broken: !!item.system.actorUuid && !linked,
         };
       })
-      .sort((a, b) => (a.item.name > b.item.name ? 1 : -1));
+      .sort((a, b) => compareByName(a.item, b.item));
 
     context.enrichedEffects = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
       system.effects ?? ""
@@ -190,36 +226,20 @@ export class WwnProjectSheet extends composeMixins(CollapsibleSectionsMixin, Act
   }
 
   /**
-   * Compute a suggested cost (and, for WWN, time) from `system.calc` and
-   * stash it on the sheet instance for the "apply" button/inline readout.
-   * Pure display — never writes to `resource`/`time` on its own.
+   * Reveal/hide a row's Note field. Note is kept out of the always-visible
+   * row (most projects only have a handful of contributors, but a note can
+   * still run long) — this is a pure DOM toggle, not a document update, so
+   * it doesn't cost a render.
    */
-  static async #onCalculate() {
-    const system = this.actor.system;
-    const calc = system.calc;
-    if (system.gameLine === "wwn") {
-      const result = computeWwnCost({
-        effectPoints: calc.effectPoints,
-        areaKey: calc.area,
-        doubleSilver: calc.doubleSilver,
-      });
-      this.#calcResult = { gameLine: "wwn", ...result };
-    } else {
-      const result = computeGodboundCost({
-        scopeBase: calc.scopeBase,
-        wardRating: calc.wardRating,
-        resistanceRating: calc.resistanceRating,
-        magnitudeMult: calc.magnitudeMult,
-      });
-      this.#calcResult = { gameLine: "godbound", ...result };
-    }
-    this.render({ parts: ["main"] });
+  static #onToggleContributionNote(event, target) {
+    const noteRow = target.closest(".item-entry")?.querySelector(".wwn-project-contribution-note-row");
+    if (!noteRow) return;
+    noteRow.hidden = !noteRow.hidden;
   }
 
-  /** Fill `resource.max` (and `time.max` for WWN) from the last calculator result. */
+  /** Fill `resource.max` (and `time.max` for WWN) from the live calculator result. */
   static async #onApplyCalculated() {
-    const result = this.#calcResult;
-    if (!result) return;
+    const result = computeCalcResult(this.actor.system);
     const updates = { "system.resource.max": result.cost };
     if (result.gameLine === "wwn") updates["system.time.max"] = result.weeks;
     await this.actor.update(updates);

@@ -6,6 +6,8 @@ import {
   resolveCommitmentOptions,
   usesSharedPool,
   hasActiveToggle,
+  canToggleActive,
+  usesInstalledField,
 } from "../config/power-subtypes.mjs";
 import { WWN } from "../config/index.mjs";
 import { isPc } from "./actor-types.mjs";
@@ -73,7 +75,7 @@ export function buildPowerSectionColumns(subType, powers) {
     showLevel: !!showUnion.level,
     showSource: !!showUnion.source,
     showPrepared: subType === "spell",
-    showInstalled: subType === "cyberware",
+    showInstalled: usesInstalledField(subType),
     showCommitment: powers.some(
       (p) => resolveCommitmentOptions(p.system.subType, p.system).some((o) => o.cost > 0)
     ),
@@ -100,7 +102,7 @@ export function annotatePowerRows(powers) {
       img: item.img,
       type: item.type,
       system: item.system,
-      canActivatePower: hasActiveToggle(subType, item.system) && !item.system.isActive,
+      canActivatePower: canToggleActive(subType, item.system) && !item.system.isActive,
       canDeactivatePower: !!item.system.isActive,
       tabShowLevel: getPowerSheetVisibility(subType, item.system).show.level,
     };

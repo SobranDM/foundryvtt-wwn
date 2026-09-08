@@ -14,7 +14,6 @@ import {
 import { remapAssetPath } from "./asset-map.mjs";
 import { normalizeInternalResourceLength } from "../config/power-subtypes.mjs";
 import { mapWeaponAmmoMigration, ammoNameMatches } from "../helpers/ammo.mjs";
-import { isSpuriousExpertAbResidual } from "../derivations/attack-bonus.mjs";
 
 const MODE_TO_TYPE = { 0: "custom", 1: "multiply", 2: "add", 3: "downgrade", 4: "upgrade", 5: "override" };
 
@@ -186,6 +185,26 @@ export function migratePcCombatAb(system, { warrior = false, progression } = {})
   const baseKey = progression
     ?? (warrior ? "warrior" : "expert");
   return { combat: { abMod: oldAb - abProgressionBase(baseKey, level) } };
+}
+
+/**
+ * Build a visible, GM-editable Active Effect for a legacy/residual attack
+ * bonus delta instead of writing it as a raw persisted `combat.abMod`
+ * number nobody can see or change without console access. `abMod` is a
+ * pure AE target (prepareBaseData always zeroes the persisted value), so
+ * this is the only supported way a migrated flat attack-bonus adjustment
+ * can still apply.
+ * @param {number} delta
+ * @returns {{ name: string, img: string, system: { changes: object[] } }}
+ */
+export function buildMigratedAttackBonusEffect(delta) {
+  return {
+    name: "Migrated: Attack Bonus",
+    img: "icons/svg/upgrade.svg",
+    system: {
+      changes: [{ key: "system.combat.abMod", type: "add", value: delta, phase: "initial" }],
+    },
+  };
 }
 
 /**
@@ -1149,18 +1168,39 @@ function migrateCharacter(actor) {
   const effects = (actor.effects ?? []).map(migrateEffectData);
 
   if (!isWwn) {
-    // Residuals are a one-shot world-migrate concern. Recomputing them here
-    // on every Actor.migrateData treats pruned `abMod: 0` as missing and
-    // writes `0 - floor(level / 2)` when the payload is a partial update.
+    // One-shot world-migrate concern: recomputing/clearing this on every
+    // Actor.migrateData (which runs on every load, not just world migrate)
+    // is unsafe — it can't tell a real persisted residual from a pruned
+    // partial-update payload. So this branch only acts here, in the
+    // world-migrate pass, on the actor's full persisted data.
+    //
+    // Any nonzero persisted combat.abMod at this point is stale: it is
+    // either the original legacy-ab residual from the 2.0.0 rewrite, or
+    // leftover from the 2026-07-21..2026-08-15 window where this exact
+    // conversion ran on every Actor.migrateData call and could misfire on
+    // partial-update payloads (see isSpuriousExpertAbResidual). Either way
+    // prepareBaseData now always zeroes the persisted value at runtime, so
+    // it contributes nothing live and would otherwise just sit there as an
+    // invisible, unexplained number nobody can see or fix through the UI —
+    // exactly how the Decimus bug had to be diagnosed by hand. Convert it
+    // into a visible, GM-editable "Migrated: Attack Bonus" Active Effect
+    // instead of silently discarding or silently preserving it as data.
+    // Do not try to distinguish the two origins; surfacing either as an
+    // editable effect is strictly better than the status quo.
     const remappedEffects = effects.map((e) => remapCombatAbEffect(e));
-    const level = Math.max(s.details?.level ?? 1, 1);
-    if (isSpuriousExpertAbResidual(s.combat?.abMod, level)) {
+    const staleAbMod = Number(s.combat?.abMod) || 0;
+    if (staleAbMod !== 0) {
       const system = foundry.utils.deepClone(s);
       system.combat = {
         ...(typeof s.combat === "object" && s.combat ? foundry.utils.deepClone(s.combat) : {}),
         abMod: 0,
       };
-      return { type: actor.type, items, effects: remappedEffects, system };
+      return {
+        type: actor.type,
+        items,
+        effects: [...remappedEffects, buildMigratedAttackBonusEffect(staleAbMod)],
+        system,
+      };
     }
     return { type: actor.type, items, effects: remappedEffects, system: null };
   }
@@ -1216,10 +1256,17 @@ function migrateCharacter(actor) {
   /* Hit dice */
   const hd = parseHdString(s.hp?.hd) ?? { die: "d6", perLevelMod: 0 };
   const level = Number(s.details?.level) || 1;
+  // Legacy `thac0.bba` was a hand-typed attack-bonus number (no class-based
+  // formula existed pre-2.0.0). Preserve any nonzero delta from the newly
+  // assigned class(es) as a visible "Migrated: Attack Bonus" Active Effect
+  // rather than baking it into persisted combat.abMod, which is a pure AE
+  // target that prepareBaseData always zeroes and nothing on the sheet can
+  // see or edit.
   const abMod = migratePcCombatAb(
     { combat: { ab: Number(s.thac0?.bba) || 0 }, details: { level } },
     { warrior: !!s.warrior }
   )?.combat?.abMod ?? 0;
+  if (abMod) effects.push(buildMigratedAttackBonusEffect(abMod));
 
   const system = {
     hp: { value: Number(s.hp?.value) || 1, max: Number(s.hp?.max) || 1 },
@@ -1269,7 +1316,6 @@ function migrateCharacter(actor) {
       wage: String(s.retainer?.wage ?? ""),
     },
     currencyShare: Number(s.currency?.share) || 100,
-    combat: { abMod },
     movement: { base: { value: Number(s.movement?.base) || 30 } },
     biography: s.details?.biography ?? "",
   };

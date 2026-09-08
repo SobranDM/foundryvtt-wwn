@@ -1,0 +1,17 @@
+{{!-- Project Description tab: Effects (what the Working/change actually
+      does) and Notes (complications, opposition, decay risk). --}}
+<section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-form-stack">
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.project.effects"}}</div>
+      {{> wwnSheetEditor name="system.effects" value=source.effects
+        documentUuid=actor.uuid enriched=enrichedEffects}}
+    </div>
+
+    <div class="wwn-form-panel">
+      <div class="wwn-section-header">{{localize "WWN.project.notes"}}</div>
+      {{> wwnSheetEditor name="system.notes" value=source.notes
+        documentUuid=actor.uuid enriched=enrichedNotes}}
+    </div>
+  </div>
+</section>

@@ -519,7 +519,7 @@ describe("migrateActorData type preservation", () => {
     assert.equal(out.system, null);
   });
 
-  it("clears a spurious -half-level abMod left by live actor migration", () => {
+  it("sweeps a spurious -half-level abMod left by live actor migration into a visible effect", () => {
     const out = migrateActorData({
       type: "character",
       name: "High Mage",
@@ -533,6 +533,107 @@ describe("migrateActorData type preservation", () => {
     });
     assert.equal(out.system.combat.abMod, 0);
     assert.equal(out.system.combat.initiative.mod, 1);
+    const abEffect = out.effects.find((e) => e.name === "Migrated: Attack Bonus");
+    assert.ok(abEffect, "expected a Migrated: Attack Bonus effect");
+    assert.deepEqual(abEffect.system.changes, [
+      { key: "system.combat.abMod", type: "add", value: -3, phase: "initial" },
+    ]);
+  });
+
+  it("sweeps any stray nonzero persisted abMod (not just the -half-level fingerprint), like Decimus's pre-fix state", () => {
+    const out = migrateActorData({
+      type: "character",
+      name: "Decimus-like",
+      system: {
+        abilities: { int: { value: 15, mod: 1 } },
+        details: { level: 6 },
+        combat: { abMod: 3, initiative: { mod: 1 } },
+      },
+      items: [
+        { type: "classEdge", system: { attackProgression: "partialWarrior" } },
+        { type: "classEdge", system: { attackProgression: "mage" } },
+      ],
+      effects: [],
+    });
+    assert.equal(out.system.combat.abMod, 0);
+    assert.equal(out.system.combat.initiative.mod, 1);
+    const abEffect = out.effects.find((e) => e.name === "Migrated: Attack Bonus");
+    assert.ok(abEffect, "expected a Migrated: Attack Bonus effect");
+    assert.deepEqual(abEffect.system.changes, [
+      { key: "system.combat.abMod", type: "add", value: 3, phase: "initial" },
+    ]);
+
+    // Re-running on the swept output (abMod already 0) must be a no-op —
+    // no second effect, no system rewrite. Idempotent by construction: the
+    // sweep only fires while persisted abMod is nonzero.
+    const again = migrateActorData({
+      type: "character",
+      name: "Decimus-like",
+      system: {
+        abilities: { int: { value: 15, mod: 1 } },
+        details: { level: 6 },
+        combat: out.system.combat,
+      },
+      items: [
+        { type: "classEdge", system: { attackProgression: "partialWarrior" } },
+        { type: "classEdge", system: { attackProgression: "mage" } },
+      ],
+      effects: [abEffect],
+    });
+    assert.equal(again.system, null);
+    assert.equal(
+      again.effects.filter((e) => e.name === "Migrated: Attack Bonus").length,
+      1,
+      "must not duplicate the Migrated: Attack Bonus effect"
+    );
+  });
+
+  it("is a no-op for an already-clean actor (abMod already 0)", () => {
+    const out = migrateActorData({
+      type: "character",
+      name: "Already Clean",
+      system: {
+        abilities: { int: { value: 15, mod: 1 } },
+        details: { level: 6 },
+        combat: { abMod: 0, initiative: { mod: 1 } },
+      },
+      items: [],
+      effects: [],
+    });
+    assert.equal(out.system, null);
+    assert.equal(out.effects.find((e) => e.name === "Migrated: Attack Bonus"), undefined);
+  });
+
+  it("converts legacy thac0.bba into a visible 'Migrated: Attack Bonus' effect, never persisted abMod", () => {
+    const out = migrateActorData({
+      type: "character",
+      name: "Old Timer",
+      system: {
+        scores: {
+          str: { value: 10 }, dex: { value: 10 }, con: { value: 10 },
+          int: { value: 10 }, wis: { value: 10 }, cha: { value: 10 },
+        },
+        hp: { value: 10, max: 10, hd: "1d6" },
+        details: { level: 4 },
+        thac0: { bba: 6 },
+        warrior: true,
+        skills: {},
+        saves: {},
+        aac: {},
+        initiative: {},
+        movement: { base: 30 },
+      },
+      items: [],
+      effects: [],
+    });
+    assert.equal(out.type, "character");
+    // abMod must never be baked into persisted combat data.
+    assert.equal(out.system.combat, undefined);
+    const abEffect = out.effects.find((e) => e.name === "Migrated: Attack Bonus");
+    assert.ok(abEffect, "expected a Migrated: Attack Bonus effect");
+    assert.deepEqual(abEffect.system.changes, [
+      { key: "system.combat.abMod", type: "add", value: 2, phase: "initial" },
+    ]);
   });
 
   it("does not inject combat into a partial level-only migrate payload", () => {

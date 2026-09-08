@@ -68,8 +68,14 @@ export default class WwnProject extends foundry.abstract.TypeDataModel {
         choices: ["room", "building", "village", "city", "region"],
       }),
       doubleSilver: new fields.BooleanField({ initial: false }),
-      // Godbound
-      scopeBase: new fields.NumberField({ ...requiredInteger, initial: 1 }),
+      // Godbound — named scope tier (rulebook pp.126-130), not a raw point
+      // value; resolved to its base points via GODBOUND_SCOPE_BASE at
+      // calculation time (see helpers/project-calculator.mjs).
+      scope: new fields.StringField({
+        required: true,
+        initial: "village",
+        choices: ["village", "city", "region", "nation", "realm"],
+      }),
       wardRating: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       resistanceRating: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       magnitudeMult: new fields.NumberField({ ...requiredInteger, initial: 1, min: 1 }),

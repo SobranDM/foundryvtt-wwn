@@ -13,6 +13,7 @@ import {
   hasActiveCommitment,
   hasFreeActiveToggle,
   hasActiveToggle,
+  canToggleActive,
   usesInstalledField,
   EFFECT_APPLICATION_CHOICES,
 } from "./power-subtypes.mjs";
@@ -152,6 +153,7 @@ WWN.hasSceneOrDayCommitment = hasSceneOrDayCommitment;
 WWN.hasActiveCommitment = hasActiveCommitment;
 WWN.hasFreeActiveToggle = hasFreeActiveToggle;
 WWN.hasActiveToggle = hasActiveToggle;
+WWN.canToggleActive = canToggleActive;
 WWN.usesInstalledField = usesInstalledField;
 WWN.effectApplicationChoices = EFFECT_APPLICATION_CHOICES;
 /** Commitment choices for power commitmentOptions (shared pool tiers). */
@@ -427,6 +429,15 @@ WWN.wwnProjectAreas = {
   village: "WWN.project.areaVillage",
   city: "WWN.project.areaCity",
   region: "WWN.project.areaRegion",
+};
+
+/** Godbound Changing the World scope tiers/base points (rulebook pp.126-130). */
+WWN.godboundProjectScopes = {
+  village: "WWN.project.scopeVillage",
+  city: "WWN.project.scopeCity",
+  region: "WWN.project.scopeRegion",
+  nation: "WWN.project.scopeNation",
+  realm: "WWN.project.scopeRealm",
 };
 
 /** Godbound Changing the World magnitude multipliers (rulebook pp.126-130). */

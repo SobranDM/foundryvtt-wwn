@@ -8,7 +8,7 @@ import { deriveInitiative } from "../../derivations/initiative.mjs";
 import { deriveHitDice } from "../../derivations/hit-dice.mjs";
 import { deriveResourcePools } from "../../derivations/resource-pools.mjs";
 import { applyInstalledPermanentStrain } from "../../derivations/strain-max.mjs";
-import { deriveAttackBonus, isSpuriousExpertAbResidual } from "../../derivations/attack-bonus.mjs";
+import { deriveAttackBonus } from "../../derivations/attack-bonus.mjs";
 import { derivePreparedMax } from "../../derivations/prepared-spells.mjs";
 import { skillSlugOf } from "../../helpers/skill-set.mjs";
 
@@ -92,6 +92,13 @@ export default class WwnPc extends WwnActorBase {
 
   /**
    * Fill newly required details fields so pre-2.0 world PCs can load.
+   *
+   * Deliberately does NOT touch a stray persisted combat.abMod: this runs
+   * on every document load (not just world migrate), and any residual left
+   * there is a world-migrate sweep concern (transforms.mjs migrateCharacter,
+   * `!isWwn` branch) that converts it into a visible "Migrated: Attack
+   * Bonus" Active Effect. Silently zeroing it here first would erase the
+   * value before that sweep ever sees it to convert.
    * @override
    */
   static migrateData(source) {
@@ -107,10 +114,6 @@ export default class WwnPc extends WwnActorBase {
       source.details.renown = { value: source.details.renown };
     } else if (typeof source.details.renown === "object" && source.details.renown.value === undefined) {
       source.details.renown.value = 0;
-    }
-    if (isSpuriousExpertAbResidual(source.combat?.abMod, source.details.level)) {
-      source.combat ??= {};
-      source.combat.abMod = 0;
     }
     return source;
   }

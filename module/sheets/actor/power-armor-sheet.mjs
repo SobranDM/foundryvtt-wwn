@@ -27,7 +27,7 @@ import {
 } from "../../helpers/power-armor-effects.mjs";
 import { getFittingState, fittingStateKey } from "../../helpers/power-armor-fitting-state.mjs";
 import { DEFAULT_RUNTIME_MINUTES } from "../../helpers/power-armor-derive.mjs";
-import { hasActiveToggle } from "../../config/power-subtypes.mjs";
+import { canToggleActive } from "../../config/power-subtypes.mjs";
 import { isNpc } from "../../helpers/actor-types.mjs";
 import { showWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
 
@@ -48,7 +48,7 @@ function favoriteEntry(item, source) {
   };
   if (item.type === "power") {
     entry.isActive = item.system.isActive;
-    entry.canActivatePower = hasActiveToggle(item.system.subType, item.system) && !item.system.isActive;
+    entry.canActivatePower = canToggleActive(item.system.subType, item.system) && !item.system.isActive;
     entry.canDeactivatePower = item.system.isActive;
   }
   if (item.type === "weapon" && isNpc(item.actor)) {

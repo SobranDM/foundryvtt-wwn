@@ -11,6 +11,7 @@ import {
   buildPowerSections,
   layoutResourcePoolColumns,
   buildPowerSectionColumns,
+  annotatePowerRows,
 } from "../module/helpers/power-sections.mjs";
 
 // Ensure config is populated for helper (index side effects)
@@ -123,5 +124,78 @@ describe("buildPowerSectionColumns", () => {
     ]);
     assert.equal(cols.showCommitment, true);
     assert.equal(cols.showPoolCommitted, true);
+  });
+
+  // Regression: showInstalled used to be hardcoded to `subType === "cyberware"`,
+  // silently omitting the Installed toggle for custom-subtype powers even
+  // though `installed` is one of custom's visible fields too.
+  it("shows the Installed column for cyberware", () => {
+    const cols = buildPowerSectionColumns("cyberware", [
+      makePower({ id: "1", name: "Dermal Armor", subType: "cyberware", extra: { installed: false } }),
+    ]);
+    assert.equal(cols.showInstalled, true);
+  });
+
+  it("shows the Installed column for custom (previously missing)", () => {
+    const cols = buildPowerSectionColumns("custom", [
+      makePower({ id: "1", name: "Custom Implant", subType: "custom", extra: { installed: false } }),
+    ]);
+    assert.equal(cols.showInstalled, true);
+  });
+
+  it("does not show the Installed column for subtypes with no installed concept", () => {
+    const cols = buildPowerSectionColumns("art", [
+      makePower({ id: "1", name: "Art", subType: "art" }),
+    ]);
+    assert.equal(cols.showInstalled, false);
+  });
+});
+
+describe("annotatePowerRows: canActivatePower respects the installed gate (finding #2)", () => {
+  it("cyberware opted into the free toggle but not installed -> canActivatePower is false", () => {
+    const [row] = annotatePowerRows([
+      makePower({
+        id: "1",
+        name: "Adrenal Suppression Pump",
+        subType: "cyberware",
+        extra: {
+          installed: false,
+          isActive: false,
+          commitmentOptions: [{ cost: 0, length: "active", note: "" }],
+        },
+      }),
+    ]);
+    assert.equal(row.canActivatePower, false);
+  });
+
+  it("cyberware opted into the free toggle AND installed -> canActivatePower is true", () => {
+    const [row] = annotatePowerRows([
+      makePower({
+        id: "1",
+        name: "Adrenal Suppression Pump",
+        subType: "cyberware",
+        extra: {
+          installed: true,
+          isActive: false,
+          commitmentOptions: [{ cost: 0, length: "active", note: "" }],
+        },
+      }),
+    ]);
+    assert.equal(row.canActivatePower, true);
+  });
+
+  it("art with a paid active commitment is unaffected by the installed gate (no installed concept)", () => {
+    const [row] = annotatePowerRows([
+      makePower({
+        id: "1",
+        name: "Art",
+        subType: "art",
+        extra: {
+          isActive: false,
+          commitmentOptions: [{ cost: 1, length: "active", note: "" }],
+        },
+      }),
+    ]);
+    assert.equal(row.canActivatePower, true);
   });
 });

@@ -10,7 +10,7 @@ import { WwnDice } from "../../dice/dice.mjs";
 import { refreshPowers } from "../../helpers/power-refresh.mjs";
 import { preparePowersTabContext } from "../../helpers/power-sections.mjs";
 import { reloadWeapon } from "../../helpers/ammo.mjs";
-import { applySubtypeDefaults, POWER_SUBTYPES, hasActiveToggle } from "../../config/power-subtypes.mjs";
+import { applySubtypeDefaults, POWER_SUBTYPES, canToggleActive } from "../../config/power-subtypes.mjs";
 import { syncPowerTransferEffects } from "../../helpers/power-effects.mjs";
 import { isNpc, isPc } from "../../helpers/actor-types.mjs";
 import { showWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
@@ -148,7 +148,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
         const entry = { id: i.id, name: i.name, img: i.img, type: i.type };
         if (i.type === "power") {
           entry.isActive = i.system.isActive;
-          entry.canActivatePower = hasActiveToggle(i.system.subType, i.system) && !i.system.isActive;
+          entry.canActivatePower = canToggleActive(i.system.subType, i.system) && !i.system.isActive;
           entry.canDeactivatePower = i.system.isActive;
         }
         if (i.type === "weapon" && isNpc(actor)) {

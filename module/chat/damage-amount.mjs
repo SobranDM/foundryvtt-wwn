@@ -121,8 +121,11 @@ export function resolveApplyRowAmount(message, row, { useAlt = false } = {}) {
     }
     if (row.armorReduced) {
       // Starship damage: value is intentionally lower than the raw roll
-      // (target armor/AP already subtracted) — never inflate it back up.
-      return flagged;
+      // (target armor/AP already subtracted). Trusted sources may apply it
+      // as-is; an untrusted/forged flag can't be relied on to shrink damage
+      // in the target's favor, so fall back to the raw roll instead.
+      if (trusted) return flagged;
+      return rollTotal;
     }
     if (rollTotal != null) return rollTotal;
     if (trusted) return flagged;

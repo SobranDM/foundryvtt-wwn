@@ -57,7 +57,7 @@ import { WwnStarshipSheet } from "./sheets/actor/starship-sheet.mjs";
 import { WwnPowerArmorSheet } from "./sheets/actor/power-armor-sheet.mjs";
 import { WwnProjectSheet } from "./sheets/actor/project-sheet.mjs";
 import { applyUiTheme, sheetThemeChoices, themeChatMessage } from "./config/themes.mjs";
-import { checkGodboundAutoLapse } from "./helpers/project-lapse.mjs";
+import { checkGodboundAutoLapse, AUTO_LAPSE_UPDATE_FLAG } from "./helpers/project-lapse.mjs";
 
 const { DocumentSheetConfig } = foundry.applications.apps;
 
@@ -297,6 +297,40 @@ Hooks.once("init", async function () {
     }
     if (item.effects.size) refreshActorDerivedData(item.parent);
   });
+  Hooks.on("updateActor", async (actor, changes, options, userId) => {
+    if (actor.type !== "project") return;
+    if (game.wwn?.migrating || options?.wwnMigrating) return;
+    // Skip the write checkGodboundAutoLapse itself just made — its own
+    // `Actor#update` fires this same hook, and without this guard the
+    // recheck would call back into checkGodboundAutoLapse indefinitely
+    // instead of the one bounded extra pass its status check alone allows.
+    if (options?.[AUTO_LAPSE_UPDATE_FLAG]) return;
+    if (userId !== game.user.id) return;
+    // Direct edits to the project itself (GM raises resource.max once the
+    // true cost is known, or flips status straight to inProgress on an
+    // already-underfunded project) can drop it below cost the same way a
+    // contribution edit can — the updateItem/deleteItem hooks above only see
+    // contribution-side changes, so this covers the actor-side ones.
+    const flat = foundry.utils.flattenObject(changes);
+    const relevant = ["system.resource.max", "system.status", "system.gameLine"].some((k) => k in flat);
+    if (!relevant) return;
+    await checkGodboundAutoLapse(actor);
+  });
+  // NOTE: these three only cover *item-owned transfer* effects (`effect.parent`
+  // is an Item embedded in an Actor, `effect.transfer` true). Non-transfer
+  // effects a power applies directly to an actor (scene/day self-cast, or a
+  // chat-card "apply to targets" button — see `applyPowerEffectsToActor` /
+  // `expireScopedPowerEffects` in power-effects.mjs) have `effect.parent` be
+  // the Actor itself and `transfer: false`, so they never satisfy either
+  // condition here; those call sites refresh derived data themselves instead.
+  // This fan-out (7 call sites total across create/update/delete-Item and
+  // create/update/delete-ActiveEffect) could in principle be consolidated
+  // onto WwnActor's own `_onCreateDescendantDocuments` / (a new)
+  // `_onUpdateDescendantDocuments` / `_onDeleteDescendantDocuments`
+  // overrides (it already has the first and third, for unrelated NPC
+  // favorites bookkeeping) — left as a follow-up, since doing it well means
+  // carefully re-threading the focus/classEdge/contribution/bonus-skills
+  // logic below too, not just the effects-refresh piece.
   Hooks.on("createActiveEffect", (effect) => {
     if (game.wwn?.migrating) return;
     const item = effect.parent;

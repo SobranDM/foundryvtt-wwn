@@ -23,7 +23,7 @@ const NS = "wwn";
 const LEGACY_ITEM_TYPES = new Set(["art", "spell", "ability"]);
 
 /** Versions below this trigger migration. Bump when adding steps. */
-const NEEDS_MIGRATION_BELOW = "2.0.0-alpha2";
+const NEEDS_MIGRATION_BELOW = "2.0.0-beta3";
 
 /**
  * Plain-ish item source from a world/embedded Item document.
@@ -71,6 +71,12 @@ export async function checkMigration() {
       game.actors.some(
         (a) => isPc(a) && a.system?.combat?.ab !== undefined && a.system?.combat?.abMod === undefined
       ) ||
+      // 2.0.0-beta3: sweep any PC still carrying a nonzero persisted
+      // combat.abMod (original legacy-ab residual, or leftover from the
+      // 2026-07-21..2026-08-15 repeated-migrate misfire) into a visible
+      // "Migrated: Attack Bonus" Active Effect. See migrateCharacter's
+      // `!isWwn` branch in transforms.mjs.
+      game.actors.some((a) => isPc(a) && (Number(a.system?.combat?.abMod) || 0) !== 0) ||
       game.actors.some((a) => isNpc(a) && a.system?.hp?.hd && !a.system?.hd) ||
       game.items.some((i) => ["art", "spell", "ability"].includes(i.type)) ||
       game.items.some((i) => i.type === "armor" && i.system?.traumaTargetMod !== undefined) ||

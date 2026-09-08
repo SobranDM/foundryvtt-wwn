@@ -3,7 +3,7 @@
 @use "mixins" as *;
 
 .wwn.sheet.actor.project {
-  min-width: 860px;
+  min-width: 720px;
 
   .wwn-project-header {
     .project-header-img {
@@ -18,15 +18,29 @@
       font-size: 0.8rem;
     }
 
+    .wwn-chip--grow {
+      flex: 0 1 auto;
+    }
+
     .wwn-chip--grow input[type="text"] {
-      width: auto;
-      flex: 1 1 auto;
+      width: 9rem;
+      flex: 0 1 9rem;
       min-width: 4rem;
     }
   }
 
+  /* Rules/Status/Scale/Magnitude chips: wrap onto additional rows rather
+     than compressing, so this stays readable on a narrower window. */
+  .wwn-project-header-chips {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  /* Each progress chip needs enough width for its (editable, occasionally
+     long, e.g. "Influence + Dominion") label — auto-fit stacks them onto
+     their own row instead of compressing when there isn't room. */
   .wwn-project-progress {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   }
 
   .wwn-inline-label {
@@ -36,9 +50,11 @@
     color: inherit;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    font-size: 0.7rem;
     font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .wwn-project-funded-bar {
@@ -97,31 +113,74 @@
     padding: 0.15rem 0.35rem;
   }
 
+  /* The shared .wwn-col-header rule zeroes gap so data-table columns stay
+     pixel-aligned with their body rows; that leaves "INFLUENCE"/"DOMINION"
+     header words butting up against each other with no breathing room.
+     Body rows already get spacing from .item's own gap — only the header
+     row needs this override. */
+  .wwn-project-contributions .wwn-col-header {
+    gap: 0.4rem;
+  }
+
+  /* Compact rows: most projects only have a handful of contributors, so
+     this should read as a short list, not a scrolling inventory table. */
+  .wwn-project-contributions {
+    .item-list .item {
+      min-height: 1.5rem;
+    }
+  }
+
   .wwn-data-table .item-name.project-contributor-name {
-    min-width: 8rem;
+    /* Grows via the base .item-name flex:1 rule; this just raises the floor
+       so a real actor/contributor name has room before anything truncates. */
+    min-width: 11rem;
+
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .wwn-project-contribution-empty {
     padding: 0.35rem;
   }
+
+  /* Per-row Note expand toggle + its (hidden-by-default) sub-row. */
+  .project-note-toggle.item-off {
+    opacity: 0.35;
+  }
+
+  .wwn-project-contribution-note-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.5rem 0.4rem 2.25rem;
+    font-size: 11px;
+
+    label {
+      flex: 0 0 auto;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: 10px;
+    }
+
+    input[type="text"] {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
 }
 
-/* Contribution table metric columns */
+/* Contribution table numeric columns: fixed, they only ever hold a couple digits. */
 .wwn {
   .project-field {
-    @include wwn-metric-col(4rem);
+    @include wwn-metric-col(4.5rem);
     font-size: 11px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .project-field-wide {
-    @include wwn-metric-col(8rem);
-    font-size: 11px;
-    text-align: left;
-    display: flex;
-    align-items: center;
   }
 }

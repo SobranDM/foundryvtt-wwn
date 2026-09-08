@@ -195,10 +195,17 @@ export class WwnActor extends Actor {
     if (!this.items.some((i) => i.type === "currency")) {
       const setKey = game.settings.get("wwn", "defaultCurrencySet") ?? "silver";
       const set = CONFIG.WWN.currencySets[setKey] ?? CONFIG.WWN.currencySets.silver;
+      // Items built here are merged straight into the creation payload via
+      // updateSource (see below), which bypasses Item#_preCreate — so its
+      // per-type default-icon fallback never runs for these. Set img
+      // explicitly, same source and fallback as the legacy migration
+      // transform (module/migration/transforms.mjs, WWN_CURRENCIES seeding).
+      const icon = CONFIG.WWN?.defaultIcons?.currency ?? "icons/svg/coins.svg";
       for (const c of set) {
         toCreate.push({
           type: "currency",
           name: game.i18n.localize(c.name),
+          img: icon,
           system: { multiplier: c.multiplier, perSlot: c.perSlot, carried: 0, banked: 0 },
         });
       }

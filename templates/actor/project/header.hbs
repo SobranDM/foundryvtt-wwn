@@ -6,7 +6,9 @@
       <div class="wwn-header-row wwn-header-row--primary">
         <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
           placeholder="{{localize 'WWN.details.name'}}" />
-        <label class="wwn-chip">
+      </div>
+      <div class="wwn-header-row wwn-header-row--secondary wwn-project-header-chips">
+        <label class="wwn-chip" title="{{localize 'WWN.project.gameLineHint'}}">
           <span class="wwn-chip-label">{{localize "WWN.project.gameLine"}}</span>
           <select name="system.gameLine">
             {{selectOptions config.projectGameLines selected=system.gameLine localize=true}}
@@ -18,8 +20,6 @@
             {{selectOptions config.projectStatuses selected=system.status localize=true}}
           </select>
         </label>
-      </div>
-      <div class="wwn-header-row wwn-header-row--secondary">
         <label class="wwn-chip wwn-chip--grow">
           <span class="wwn-chip-label">{{localize "WWN.project.scale"}}</span>
           <input type="text" name="system.scale" value="{{system.scale}}" />

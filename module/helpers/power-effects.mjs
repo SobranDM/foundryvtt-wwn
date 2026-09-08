@@ -5,6 +5,7 @@ import {
   hasFreeActiveToggle,
 } from "../config/power-subtypes.mjs";
 import { safeDeleteActorActiveEffects } from "./safe-delete-active-effects.mjs";
+import { refreshActorDerivedData } from "./actor-refresh.mjs";
 
 const FLAG = "wwn";
 
@@ -114,7 +115,16 @@ export async function applyPowerEffectsToActor(actor, item, { durationScope }) {
     }
     toCreate.push(data);
   }
-  if (toCreate.length) await actor.createEmbeddedDocuments("ActiveEffect", toCreate);
+  if (toCreate.length) {
+    await actor.createEmbeddedDocuments("ActiveEffect", toCreate);
+    // These effects are created directly on the actor (transfer: false), so
+    // `effect.parent` is the actor itself, not an item -- the generic
+    // createActiveEffect/updateActiveEffect/deleteActiveEffect hooks in
+    // wwn.mjs only refresh when `effect.transfer` is true, so they never
+    // fire for these. Refresh explicitly here (see actor-refresh.mjs for
+    // why a plain document update doesn't reliably do this on its own).
+    refreshActorDerivedData(actor);
+  }
   return { applied: toCreate.length, skipped };
 }
 
@@ -142,5 +152,9 @@ export async function expireScopedPowerEffects(actor, scope) {
         && e.getFlag(FLAG, "durationScope") === scope
     )
     .map((e) => e.id);
-  await safeDeleteActorActiveEffects(actor, ids);
+  const deleted = await safeDeleteActorActiveEffects(actor, ids);
+  // Same reasoning as applyPowerEffectsToActor above: these are non-transfer
+  // effects living directly on the actor, so the generic delete hook never
+  // refreshes derived data for them. Do it explicitly.
+  if (deleted.length) refreshActorDerivedData(actor);
 }

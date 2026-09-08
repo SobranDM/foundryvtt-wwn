@@ -377,6 +377,24 @@ export function hasActiveToggle(subType, system) {
   return hasActiveCommitment(subType, system) || hasFreeActiveToggle(subType, system);
 }
 
+/**
+ * True when this power's Activate/Deactivate toggle can actually be engaged
+ * right now: it has a toggle at all (`hasActiveToggle`), AND, for subtypes
+ * where `installed` is a precondition (cyberware / custom), it is actually
+ * installed. Without the installed check, a not-yet-installed cyberware item
+ * could be flipped "Active" in the UI while `getPowerTransferMode` still
+ * gates its transfer effect off on `installed` alone -- a silently inert
+ * Active state. Deliberately does NOT check `isActive` itself; callers
+ * combine this with `!isActive` for "can activate" (deactivating/uninstalling
+ * an already-active item is always allowed, so it doesn't get stuck on).
+ * @param {string} subType
+ * @param {object} system
+ */
+export function canToggleActive(subType, system) {
+  if (!hasActiveToggle(subType, system)) return false;
+  return !usesInstalledField(subType) || !!system.installed;
+}
+
 export const EFFECT_APPLICATION_CHOICES = {
   self: "WWN.Power.EffectApplicationSelf",
   targets: "WWN.Power.EffectApplicationTargets",

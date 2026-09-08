@@ -11,7 +11,7 @@ import "../build/foundry-shim.mjs";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { getPowerTransferMode } from "../module/helpers/power-effects.mjs";
-import { hasFreeActiveToggle, hasActiveToggle } from "../module/config/power-subtypes.mjs";
+import { hasFreeActiveToggle, hasActiveToggle, canToggleActive } from "../module/config/power-subtypes.mjs";
 
 /** @param {object} overrides */
 function power(overrides) {
@@ -198,6 +198,45 @@ describe("hasActiveToggle", () => {
   it("false for the plain cyberware default (no toggle shown in the UI)", () => {
     assert.equal(
       hasActiveToggle("cyberware", { commitmentOptions: [{ cost: 0, length: "none", note: "" }] }),
+      false
+    );
+  });
+});
+
+describe("canToggleActive", () => {
+  const optedIn = { commitmentOptions: [{ cost: 0, length: "active", note: "" }] };
+  const paidActive = { commitmentOptions: [{ cost: 1, length: "active", note: "" }] };
+
+  it("cyberware opted into the free toggle but NOT installed -> false (the Activate button must not appear/work)", () => {
+    assert.equal(canToggleActive("cyberware", { installed: false, ...optedIn }), false);
+  });
+
+  it("cyberware opted into the free toggle AND installed -> true", () => {
+    assert.equal(canToggleActive("cyberware", { installed: true, ...optedIn }), true);
+  });
+
+  it("custom with a paid active commitment but NOT installed -> false (installed gates the paid path too)", () => {
+    assert.equal(canToggleActive("custom", { installed: false, ...paidActive }), false);
+  });
+
+  it("custom with a paid active commitment AND installed -> true", () => {
+    assert.equal(canToggleActive("custom", { installed: true, ...paidActive }), true);
+  });
+
+  it("art has no installed concept -> a paid active commitment is enough regardless of (absent) installed", () => {
+    assert.equal(canToggleActive("art", { installed: false, ...paidActive }), true);
+  });
+
+  it("plain cyberware default (no opt-in) -> false even when installed (nothing to toggle)", () => {
+    assert.equal(
+      canToggleActive("cyberware", { installed: true, commitmentOptions: [{ cost: 0, length: "none", note: "" }] }),
+      false
+    );
+  });
+
+  it("cyberware with no toggle at all and not installed -> false", () => {
+    assert.equal(
+      canToggleActive("cyberware", { installed: false, commitmentOptions: [{ cost: 0, length: "none", note: "" }] }),
       false
     );
   });

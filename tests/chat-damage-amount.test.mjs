@@ -118,13 +118,35 @@ describe("resolveApplyRowAmount", () => {
     );
   });
 
-  it("uses the armor-reduced value instead of the raw damage roll", () => {
+  it("uses the armor-reduced value instead of the raw damage roll for trusted sources", () => {
+    assert.equal(
+      resolveApplyRowAmount(
+        gmMessage({
+          rolls: [{ total: 17, options: { kind: "damage" } }],
+        }),
+        { id: "damage", value: 12, armorReduced: true },
+      ),
+      12
+    );
+  });
+
+  it("rejects untrusted armor-reduced flags, falling back to the damage roll", () => {
     assert.equal(
       resolveApplyRowAmount(
         { author: { isGM: false, id: "p1" }, rolls: [{ total: 17, options: { kind: "damage" } }] },
         { id: "damage", value: 12, armorReduced: true },
       ),
-      12
+      17
+    );
+  });
+
+  it("rejects untrusted shock-floored flags, falling back to the damage roll", () => {
+    assert.equal(
+      resolveApplyRowAmount(
+        { author: { isGM: false, id: "p1" }, rolls: [{ total: 2, options: { kind: "damage" } }] },
+        { id: "damage", value: 5, shockFloored: true },
+      ),
+      2
     );
   });
 });

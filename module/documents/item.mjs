@@ -10,7 +10,7 @@ import { expendGear } from "../helpers/ammo.mjs";
 import { getActorSpellSlotMode } from "../derivations/resource-pools.mjs";
 import { findNamedResourcePool } from "../helpers/resource-pool-resolve.mjs";
 import { WWN } from "../config/index.mjs";
-import { resolveCommitmentOptions } from "../config/power-subtypes.mjs";
+import { usesInstalledField, hasFreeActiveToggle } from "../config/power-subtypes.mjs";
 import {
   applySceneDayPowerEffects,
   syncPowerTransferEffects,
@@ -381,6 +381,17 @@ export class WwnItem extends Item {
     const actor = this.actor;
     if (!actor) return;
     const system = this.system;
+
+    // Cyberware/custom: refuse to activate while not installed. Without
+    // this, the sheet could show a silently inert "Active" state -- the
+    // toggle would flip but getPowerTransferMode() still gates the transfer
+    // effect off on `installed` alone, so nothing would actually apply.
+    if (usesInstalledField(system.subType) && !system.installed) {
+      return ui.notifications.warn(
+        game.i18n.format("WWN.Power.NotInstalled", { name: this.name })
+      );
+    }
+
     const paidOptions = (system.effectiveCommitmentOptions ?? []).filter(
       (o) => o.cost > 0 && o.length === "active"
     );
@@ -409,10 +420,7 @@ export class WwnItem extends Item {
       return this;
     }
 
-    const freeToggle = resolveCommitmentOptions(system.subType, system).some(
-      (o) => o.cost === 0 && o.length === "active"
-    );
-    if (!freeToggle) return;
+    if (!hasFreeActiveToggle(system.subType, system)) return;
 
     await this.update({ "system.isActive": true });
     await syncPowerTransferEffects(this);

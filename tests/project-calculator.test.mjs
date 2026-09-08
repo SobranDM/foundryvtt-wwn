@@ -2,6 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
   WWN_AREA_MULTIPLIERS,
+  GODBOUND_SCOPE_BASE,
   parseEffectPoints,
   combineWwnDifficulty,
   computeWwnCost,
@@ -10,6 +11,7 @@ import {
   fundedTotalFor,
   fundedFraction,
   shouldAutoLapse,
+  compareByName,
 } from "../module/helpers/project-calculator.mjs";
 
 describe("project-calculator: WWN Working cost/time", () => {
@@ -63,9 +65,15 @@ describe("project-calculator: WWN Working cost/time", () => {
   });
 });
 
+describe("project-calculator: Godbound scope tiers (rulebook pp.126-130)", () => {
+  it("resolves each named tier to its rulebook base points", () => {
+    assert.deepEqual(GODBOUND_SCOPE_BASE, { village: 1, city: 2, region: 4, nation: 8, realm: 16 });
+  });
+});
+
 describe("project-calculator: Godbound Fact-change cost", () => {
   it("City scope, Plausible magnitude, no opposition", () => {
-    assert.deepEqual(computeGodboundCost({ scopeBase: 2, wardRating: 0, resistanceRating: 0, magnitudeMult: 1 }), {
+    assert.deepEqual(computeGodboundCost({ scope: "city", wardRating: 0, resistanceRating: 0, magnitudeMult: 1 }), {
       cost: 2,
     });
   });
@@ -73,7 +81,7 @@ describe("project-calculator: Godbound Fact-change cost", () => {
   it("Region scope with a ward and a rival, Improbable magnitude", () => {
     // (4 + 5 + 3) * 2 = 24
     assert.deepEqual(
-      computeGodboundCost({ scopeBase: 4, wardRating: 5, resistanceRating: 3, magnitudeMult: 2 }),
+      computeGodboundCost({ scope: "region", wardRating: 5, resistanceRating: 3, magnitudeMult: 2 }),
       { cost: 24 }
     );
   });
@@ -81,8 +89,29 @@ describe("project-calculator: Godbound Fact-change cost", () => {
   it("Nation scope, Impossible-vast magnitude", () => {
     // (8 + 0 + 0) * 8 = 64
     assert.deepEqual(
-      computeGodboundCost({ scopeBase: 8, wardRating: 0, resistanceRating: 0, magnitudeMult: 8 }),
+      computeGodboundCost({ scope: "nation", wardRating: 0, resistanceRating: 0, magnitudeMult: 8 }),
       { cost: 64 }
+    );
+  });
+
+  it("Village scope (smallest tier)", () => {
+    assert.deepEqual(
+      computeGodboundCost({ scope: "village", wardRating: 0, resistanceRating: 0, magnitudeMult: 1 }),
+      { cost: 1 }
+    );
+  });
+
+  it("Realm scope (largest tier)", () => {
+    assert.deepEqual(
+      computeGodboundCost({ scope: "realm", wardRating: 0, resistanceRating: 0, magnitudeMult: 1 }),
+      { cost: 16 }
+    );
+  });
+
+  it("an unrecognized/blank scope resolves to 0 base points rather than throwing", () => {
+    assert.deepEqual(
+      computeGodboundCost({ scope: "", wardRating: 5, resistanceRating: 0, magnitudeMult: 1 }),
+      { cost: 5 }
     );
   });
 });
@@ -157,5 +186,42 @@ describe("project-calculator: Godbound auto-lapse", () => {
       shouldAutoLapse({ gameLine: "godbound", status: "inProgress", fundedTotal: 0, resourceMax: 0 }),
       false
     );
+  });
+});
+
+describe("project-calculator: compareByName (contribution row sort)", () => {
+  it("returns 0 for equal names — the bug in `a.name > b.name ? 1 : -1`", () => {
+    // The naive two-way comparator returns -1 (claims a < b) even when the
+    // names are equal, which is what this test guards against.
+    assert.equal(compareByName({ name: "New Contribution" }, { name: "New Contribution" }), 0);
+  });
+
+  it("is antisymmetric: swapping arguments flips the sign for distinct names", () => {
+    const forward = compareByName({ name: "Ally A" }, { name: "Ally B" });
+    const backward = compareByName({ name: "Ally B" }, { name: "Ally A" });
+    assert.ok(forward < 0, "Ally A should sort before Ally B");
+    assert.ok(backward > 0, "Ally B should sort after Ally A");
+    assert.equal(Math.sign(forward), -Math.sign(backward));
+  });
+
+  it("produces a stable, deterministic order across repeated sorts, including duplicate names", () => {
+    const rows = [
+      { name: "New Contribution" },
+      { name: "Ally B" },
+      { name: "New Contribution" },
+      { name: "Ally A" },
+    ];
+    const sortedOnce = [...rows].sort(compareByName).map((r) => r.name);
+    const sortedTwice = [...rows].sort(compareByName).sort(compareByName).map((r) => r.name);
+    assert.deepEqual(sortedOnce, ["Ally A", "Ally B", "New Contribution", "New Contribution"]);
+    // Re-sorting an already-sorted (or any) permutation must not reorder it
+    // differently — that non-determinism is exactly what an invalid
+    // comparator without an equality case can produce.
+    assert.deepEqual(sortedTwice, sortedOnce);
+  });
+
+  it("treats a missing name as an empty string rather than throwing", () => {
+    assert.equal(compareByName({}, { name: "Anything" }) < 0, true);
+    assert.doesNotThrow(() => compareByName(undefined, undefined));
   });
 });

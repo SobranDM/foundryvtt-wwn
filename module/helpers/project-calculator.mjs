@@ -9,6 +9,23 @@
  * supplies. That is a deliberate scope boundary; do not add gating here.
  */
 
+/**
+ * Locale-aware, total-order string comparator for sorting display rows by
+ * name (contribution rows, etc.). `a.name > b.name ? 1 : -1` — a tempting
+ * one-liner — is an INVALID comparator: it returns -1 (claims a < b) even
+ * when the names are equal, which breaks the symmetry/equality contract
+ * `Array.prototype.sort` requires and can produce non-deterministic order
+ * across renders whenever two rows share a display name (e.g. two unlinked
+ * "New Contribution" rows). `localeCompare` returns 0 on equality and is
+ * antisymmetric otherwise, so it satisfies the contract.
+ * @param {{ name?: string }} a
+ * @param {{ name?: string }} b
+ * @returns {number}
+ */
+export function compareByName(a, b) {
+  return (a?.name ?? "").localeCompare(b?.name ?? "");
+}
+
 /** WWN Building Magical Workings area multipliers (rulebook pp.90-92). */
 export const WWN_AREA_MULTIPLIERS = {
   room: 1,
@@ -78,11 +95,16 @@ export function computeWwnCost({ effectPoints, areaKey, doubleSilver }) {
 /**
  * Suggested Godbound Fact-change cost.
  * `(scope base + ward rating + resistance rating) x magnitude multiplier`.
- * @param {{ scopeBase: number, wardRating: number, resistanceRating: number, magnitudeMult: number }} input
+ * `scope` is the named tier ("village"/"city"/"region"/"nation"/"realm") —
+ * the GM picks a tier from the rulebook table, not a raw point value, so
+ * the stored `system.calc.scope` stays self-documenting; the base points
+ * are resolved here via `GODBOUND_SCOPE_BASE`.
+ * @param {{ scope: string, wardRating: number, resistanceRating: number, magnitudeMult: number }} input
  * @returns {{ cost: number }}
  */
-export function computeGodboundCost({ scopeBase, wardRating, resistanceRating, magnitudeMult }) {
-  const base = (Number(scopeBase) || 0) + (Number(wardRating) || 0) + (Number(resistanceRating) || 0);
+export function computeGodboundCost({ scope, wardRating, resistanceRating, magnitudeMult }) {
+  const scopeBase = GODBOUND_SCOPE_BASE[scope] ?? 0;
+  const base = scopeBase + (Number(wardRating) || 0) + (Number(resistanceRating) || 0);
   const mult = Number(magnitudeMult) || 1;
   return { cost: base * mult };
 }
