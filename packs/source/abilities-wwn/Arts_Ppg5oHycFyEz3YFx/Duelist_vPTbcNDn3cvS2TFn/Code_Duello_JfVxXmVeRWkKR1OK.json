@@ -1,0 +1,58 @@
+{
+  "folder": "vPTbcNDn3cvS2TFn",
+  "name": "Code Duello",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action when engaged with a single foe. So long as no other combatant attacks either your target or you, and you attack no one but your target, you gain a +4 bonus to your Armor Class and can roll your hit rolls twice, taking the better result. Once the Code Duello has been disrupted or ended, it cannot be invoked again during that scene.</p>",
+    "source": "Duelist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.JfVxXmVeRWkKR1OK"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "JfVxXmVeRWkKR1OK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JfVxXmVeRWkKR1OK"
+}

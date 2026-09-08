@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Block Memory",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Target a visible living creature and Commit Effort for the day as a Main Action while specifying a particular event or situation that didn&rsquo;t extend longer than a scene. The target gets a Mental saving throw; on a failure, they simply cannot remember the event and will construct a plausible false memory to paper over the gap. The memory can be restored by use of this power once more or a magical dispelling ability, but detecting the alteration is difficult; any power that detects enchantments on a target does so with a +2 difficulty penalty to any skill check made to discern the ban.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.2SjvsxGBJARzVvMB"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "2SjvsxGBJARzVvMB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2SjvsxGBJARzVvMB"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Tendrils of Night",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action. While Committed, you exude numerous tentacles or eldritch arms that can manipulate objects with your strength up to 20&rsquo; away. You gain no bonus actions, but the arms can melee at range. These arms have&nbsp;your AC, and you are damaged if they are hurt.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.LCmHzG01QFZEjUBm"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "LCmHzG01QFZEjUBm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LCmHzG01QFZEjUBm"
+}

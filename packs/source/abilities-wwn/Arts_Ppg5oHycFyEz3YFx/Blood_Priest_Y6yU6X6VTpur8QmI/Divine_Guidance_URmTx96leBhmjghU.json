@@ -1,0 +1,58 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "Divine Guidance",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action and meditate upon a choice or potential action before you. The GM will tell you whether the likely outcome of that choice is weal, woe, a mix of both, or nothing significant, using their own best estimation. This insight cannot perceive likely outcomes more than an hour or so into the future.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.URmTx96leBhmjghU"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "URmTx96leBhmjghU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!URmTx96leBhmjghU"
+}

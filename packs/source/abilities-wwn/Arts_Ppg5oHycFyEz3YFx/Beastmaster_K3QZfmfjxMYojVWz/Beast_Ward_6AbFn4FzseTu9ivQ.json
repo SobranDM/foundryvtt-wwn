@@ -1,0 +1,58 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Beast Ward",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action. So long as the Effort remains Committed, the Beastmaster will not be attacked by unintelligent beasts unless the beast is commanded to do so by its master, the beast is starving, or the Beastmaster or their allies performs some hostile act against it. Once the ward ends or is broken, it cannot be re-established in the same scene. Magical beasts and those trained specifically as guardians of an area get a Mental save to resist this power.</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.6AbFn4FzseTu9ivQ"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6AbFn4FzseTu9ivQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6AbFn4FzseTu9ivQ"
+}

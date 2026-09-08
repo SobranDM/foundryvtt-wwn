@@ -1,0 +1,58 @@
+{
+  "name": "Soul Consumption",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As an Instant action, Commit Effort for the day when you fell an intelligent target with Accursed Bolt or Accursed Blade. They die instantly. You heal 1d6 hit points plus your level&nbsp;and lose one accumulated System Strain.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.yCVEWSytJxr9ZaTM"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "yCVEWSytJxr9ZaTM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yCVEWSytJxr9ZaTM"
+}

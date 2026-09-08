@@ -1,0 +1,58 @@
+{
+  "name": "Accursed Bolt",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As Accursed Blade, but you launch blasts of occult force instead of meleeing. Their damage is 1d8 plus your Magic skill, their range is 200&rsquo;, and the bolts can be thrown in melee at&nbsp;a -4 penalty to hit. These bolts need both hands free to hurl them.</p>\n<p>@UUID[Compendium.wwn.gear.Item.lBDPd1G0QIw9RI4h]{Accursed Bolt}</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.HaKAmTAMrI2KKvdH"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "HaKAmTAMrI2KKvdH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HaKAmTAMrI2KKvdH"
+}

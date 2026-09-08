@@ -1,0 +1,58 @@
+{
+  "name": "Accursed Blade",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As an On Turn action, manifest an occult melee weapon as a one-handed 1d8 weapon or a two-handed 2d6 weapon. Both add your Magic skill to the damage roll, have a Shock rating of 2/15, and use Magic as the attack skill and the&nbsp;best of Str, Dex, Int, or Cha as its modifying attribute.</p>\n<p>@UUID[Compendium.wwn.gear.Item.7f0P2HCxZ89Bwovv]{Accursed Blade (1H)}</p>\n<p>@UUID[Compendium.wwn.gear.Item.Cgf0J8XDila3E2l6]{Accursed Blade (2H)}</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.loN9iQesyGeceWeP"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "loN9iQesyGeceWeP",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!loN9iQesyGeceWeP"
+}

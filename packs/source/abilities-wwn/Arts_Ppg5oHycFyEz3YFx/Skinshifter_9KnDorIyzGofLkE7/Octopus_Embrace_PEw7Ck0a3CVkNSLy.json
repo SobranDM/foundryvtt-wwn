@@ -1,0 +1,58 @@
+{
+  "folder": "9KnDorIyzGofLkE7",
+  "name": "Octopus’ Embrace",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>This shape can have more than four usable limbs. These additional tentacles, arms, legs, or grippers can hold and manipulate things; up to four Stowed objects can be held Ready by these limbs without counting against your Readied Encumbrance limit. These extra limbs cannot effectively employ extra shields, perform additional attacks or actions, or do other things that require significant focus beyond your current action.</p>",
+    "source": "Skinshifter",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.PEw7Ck0a3CVkNSLy"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "PEw7Ck0a3CVkNSLy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PEw7Ck0a3CVkNSLy"
+}

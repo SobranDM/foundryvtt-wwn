@@ -167,31 +167,32 @@ $actor-main: ":is(.wwn.sheet.actor.pc, .wwn.sheet.actor.power-armor)";
     padding: 0.1rem;
   }
 
-  /* Input (PC) and span (power armor) must share the same box so chips match height. */
+  /* Input (PC) and span (power armor) must share the same box so chips match height.
+     Centered (not edge-hugged) so the score sits centered in its own field, matching
+     every other single-value stat chip on the sheet (see wwn-centered-value). */
   .wwn-ability-value {
     box-sizing: border-box;
     width: 100%;
     max-width: 2.5rem;
     height: 1.35rem;
     margin: 0;
-    margin-left: auto;
     padding: 0;
     border: none;
     background: transparent;
-    text-align: right;
+    text-align: center;
     font-size: inherit;
     font-weight: inherit;
     line-height: 1.35rem;
-    justify-self: end;
+    justify-self: center;
   }
 
   .wwn-ability-mod {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
-    justify-self: start;
+    justify-content: center;
+    justify-self: center;
     min-width: 0;
-    text-align: left;
+    text-align: center;
   }
 
   .wwn-main-saves {

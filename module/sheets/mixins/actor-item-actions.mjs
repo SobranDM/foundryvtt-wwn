@@ -14,6 +14,8 @@ export function ActorItemActionsMixin(Base) {
         editItem: ActorItemActions.#onEditItem,
         deleteItem: ActorItemActions.#onDeleteItem,
         rollItem: ActorItemActions.#onRollItem,
+        showItem: ActorItemActions.#onShowItem,
+        postItem: ActorItemActions.#onPostItem,
       },
     };
 
@@ -69,6 +71,101 @@ export function ActorItemActionsMixin(Base) {
     static #onRollItem(event, target) {
       return this._getItem(target)?.roll({
         skipDialog: event.shiftKey || event.ctrlKey,
+      });
+    }
+
+    /** Post the item's description card without triggering roll()'s side effects. */
+    static #onPostItem(event, target) {
+      return this._getItem(target)?.show();
+    }
+
+    /** Toggle an in-row description drawer; Shift+click posts a chat card. */
+    static async #onShowItem(event, target) {
+      const item = this._getItem(target);
+      if (!item) return;
+      if (event.shiftKey) return item.show();
+
+      const entry = target.closest(".item-entry");
+      if (!entry) return item.show();
+      const row = entry.querySelector(":scope > .item");
+
+      const existing = entry.querySelector(":scope > .item-summary");
+      if (existing) {
+        row?.classList.remove("expanded");
+        await ActorItemActions.#slideUpRemove(existing);
+        return;
+      }
+
+      const list = entry.closest(".item-list");
+      const others = list
+        ? [...list.querySelectorAll(":scope > .item-entry > .item-summary")]
+        : [];
+      await Promise.all(
+        others.map((el) => {
+          el.closest(".item-entry")?.querySelector(":scope > .item")?.classList.remove("expanded");
+          return ActorItemActions.#slideUpRemove(el);
+        })
+      );
+
+      const enriched = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        item.system.description ?? "",
+        { async: true, relativeTo: item }
+      );
+      const summary = document.createElement("div");
+      summary.classList.add("item-summary");
+      summary.innerHTML = enriched || `<p><em>${game.i18n.localize("WWN.None")}</em></p>`;
+      row?.classList.add("expanded");
+      await ActorItemActions.#slideDownAppend(entry, summary);
+    }
+
+    /** Animate an element to height 0 then remove (legacy jQuery slideUp(200)). */
+    static #slideUpRemove(el) {
+      return new Promise((resolve) => {
+        if (!el?.isConnected) return resolve();
+        const finish = () => {
+          el.removeEventListener("transitionend", onEnd);
+          clearTimeout(fallback);
+          el.remove();
+          resolve();
+        };
+        const onEnd = (event) => {
+          if (event.target !== el || event.propertyName !== "height") return;
+          finish();
+        };
+        el.style.overflow = "hidden";
+        el.style.height = `${el.scrollHeight}px`;
+        void el.offsetHeight;
+        el.style.transition = "height 200ms ease";
+        el.style.height = "0px";
+        el.addEventListener("transitionend", onEnd);
+        const fallback = setTimeout(finish, 250);
+      });
+    }
+
+    /** Append then animate from height 0 (legacy jQuery slideDown(200)). */
+    static #slideDownAppend(parent, el) {
+      return new Promise((resolve) => {
+        const finish = () => {
+          el.removeEventListener("transitionend", onEnd);
+          clearTimeout(fallback);
+          el.style.height = "";
+          el.style.overflow = "";
+          el.style.transition = "";
+          resolve();
+        };
+        const onEnd = (event) => {
+          if (event.target !== el || event.propertyName !== "height") return;
+          finish();
+        };
+        el.style.overflow = "hidden";
+        el.style.height = "0px";
+        parent.appendChild(el);
+        const targetHeight = el.scrollHeight;
+        void el.offsetHeight;
+        el.style.transition = "height 200ms ease";
+        el.style.height = `${targetHeight}px`;
+        el.addEventListener("transitionend", onEnd);
+        const fallback = setTimeout(finish, 250);
       });
     }
   };

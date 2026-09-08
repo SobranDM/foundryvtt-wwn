@@ -1,0 +1,58 @@
+{
+  "name": "Dire Pact",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Foes suffer a penalty equal to your Magic skill on all saves versus your Accursed arts. If they succeed, however, you&nbsp;gain one System Strain.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.cT7idx66eiq1Cbeh"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "cT7idx66eiq1Cbeh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cT7idx66eiq1Cbeh"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Weeping Wounds",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Once per round, Commit Effort for the scene as an Instant action when a visible enemy takes damage. They must make a Physical save or suffer 1d6 damage per round for one round per level. They cannot heal or regenerate any hit point&nbsp;damage during this effect. This art does not stack.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "physical",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.95TmrB3ZHJp3DrGV"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "95TmrB3ZHJp3DrGV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!95TmrB3ZHJp3DrGV"
+}

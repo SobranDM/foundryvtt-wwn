@@ -1,0 +1,58 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Howl of Distant Summons",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You can call former animal companions to your side by Committing Effort for the day as a Main Action. The howl extends through time as well as space, and the subject will have received the message in time to reach your side within five minutes after you call for it. Once summoned, you may bind it again if you have no current companion. If the journey is exceptionally dangerous, difficult, or long, you&rsquo;ll need to make a Cha/Survive skill check against a difficulty of 10 or more; on a failure, the beast could not make the journey and cannot be called by this power for another week.</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.CVR1wKwGTfJVfnAL"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "CVR1wKwGTfJVfnAL",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CVR1wKwGTfJVfnAL"
+}

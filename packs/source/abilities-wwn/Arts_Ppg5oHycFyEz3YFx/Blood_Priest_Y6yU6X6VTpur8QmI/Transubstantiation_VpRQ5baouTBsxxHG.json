@@ -1,0 +1,58 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "Transubstantiation",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action to transform up to a gallon of any liquid into sacred blood. A draught of this holy liquid is sufficient to sustain a drinker for a day without further food or drink and will heal 1d6 plus the user&rsquo;s Pray skill in lost hit points. A gallon of blood is sufficient to help a half-dozen people. The benefits of this art can be enjoyed only once per day, and any undrunk blood sublimates away within a minute.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "1d6+@pray",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.VpRQ5baouTBsxxHG"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "VpRQ5baouTBsxxHG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VpRQ5baouTBsxxHG"
+}

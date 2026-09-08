@@ -1,0 +1,58 @@
+{
+  "name": "Luck Blessing",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As a Main Action, confer a blessing on a visible target. The next skill check they make that day will have a +1 bonus. Only&nbsp;one luck blessing can be in place for a creature at a time.</p>",
+    "source": "Wise",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.bPKnfQ4bl9Z2dlxe"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "sQH0mAWNfPAHy40E",
+  "_id": "bPKnfQ4bl9Z2dlxe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bPKnfQ4bl9Z2dlxe"
+}

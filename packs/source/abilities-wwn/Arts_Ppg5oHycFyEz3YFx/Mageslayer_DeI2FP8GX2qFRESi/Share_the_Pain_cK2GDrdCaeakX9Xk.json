@@ -1,0 +1,58 @@
+{
+  "name": "Share the Pain",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.cK2GDrdCaeakX9Xk"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>As an Instant action, Commit Effort for&nbsp;the day when you are targeted by a hostile spell or are in its area of effect. Make a Mental saving throw; on a success, the spell&rsquo;s caster is treated as also having affected by the spell that just targeted you. This art can be used only once per round.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "cK2GDrdCaeakX9Xk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cK2GDrdCaeakX9Xk"
+}

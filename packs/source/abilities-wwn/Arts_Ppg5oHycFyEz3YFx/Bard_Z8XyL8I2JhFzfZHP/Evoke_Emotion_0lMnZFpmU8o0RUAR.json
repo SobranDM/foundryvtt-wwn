@@ -1,0 +1,58 @@
+{
+  "folder": "Z8XyL8I2JhFzfZHP",
+  "name": "Evoke Emotion",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action while performing. You evoke a desired emotion in listeners, whether intelligent or animal, granting a +1 bonus to relevant social skill checks for the scene for you and your allies. If desired, you can force a new Reaction Roll, taking it if it&rsquo;s more favorable than the original. This art does not work in combat and can be used only once per scene.</p>",
+    "source": "Bard",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.0lMnZFpmU8o0RUAR"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "0lMnZFpmU8o0RUAR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0lMnZFpmU8o0RUAR"
+}

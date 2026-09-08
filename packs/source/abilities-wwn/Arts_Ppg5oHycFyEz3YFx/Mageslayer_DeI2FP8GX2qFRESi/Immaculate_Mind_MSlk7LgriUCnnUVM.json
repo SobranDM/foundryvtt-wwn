@@ -1,0 +1,58 @@
+{
+  "name": "Immaculate Mind",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.MSlk7LgriUCnnUVM"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>You are impervious to unwanted&nbsp;mind-affecting or mind-reading spells or magical effects, and you automatically see through illusions and magical invisibility. Note that this applies to all such magical effects, not merely spells.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "MSlk7LgriUCnnUVM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MSlk7LgriUCnnUVM"
+}

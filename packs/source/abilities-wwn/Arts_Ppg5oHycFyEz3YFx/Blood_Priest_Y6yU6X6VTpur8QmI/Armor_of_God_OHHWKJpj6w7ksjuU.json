@@ -1,0 +1,74 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "Armor of God",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action. While the Effort remains Committed, you have a natural Armor Class of 15 plus half your level, rounded down. This AC can be modified by shields or your Dexterity modifier, but not by other worn armor.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [
+    {
+      "_id": "OHHWacInnate0001",
+      "type": "base",
+      "name": "Armor of God",
+      "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.combat.innateAc.min", "type": "upgrade", "value": "15 + floor(@level / 2)", "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!OHHWKJpj6w7ksjuU.OHHWacInnate0001"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.OHHWKJpj6w7ksjuU"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "OHHWKJpj6w7ksjuU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OHHWKJpj6w7ksjuU"
+}

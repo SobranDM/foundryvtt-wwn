@@ -1,0 +1,58 @@
+{
+  "name": "Compel Truth",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>The diviner compels a person to drink a particular brew, participate in a specific ritual, or otherwise undergo a scene-long ordeal. Afterwards, the diviner may ask the target a single question and the GM secretly rolls a Cha/Magic skill check against a difficulty of the target&rsquo;s Morale+1, or level+6 for PCs. On a success, the subject must answer the question truthfully and fully. On a failure, they may give any answer they wish. The same or substantially same&nbsp;question may not be asked twice with this art.</p>",
+    "source": "Wise",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.9VNyMa3xfFWjl0b2"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "sQH0mAWNfPAHy40E",
+  "_id": "9VNyMa3xfFWjl0b2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9VNyMa3xfFWjl0b2"
+}

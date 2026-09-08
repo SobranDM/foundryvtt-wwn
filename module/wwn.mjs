@@ -23,6 +23,7 @@ import { checkMigration, migrateWorld } from "./migration/migrate.mjs";
 import { refreshPowers } from "./helpers/power-refresh.mjs";
 import { syncPowerTransferEffects } from "./helpers/power-effects.mjs";
 import { syncActorFocusEffects, syncFocusTransferEffects } from "./helpers/focus-effects.mjs";
+import { refreshActorDerivedData } from "./helpers/actor-refresh.mjs";
 import {
   syncFocusBonusSkills,
   revokeFocusBonusSkills,
@@ -216,6 +217,7 @@ Hooks.once("init", async function () {
         await syncWildPsychicEffort(item);
       }
     }
+    if (item.effects.size) refreshActorDerivedData(item.parent);
   });
   Hooks.on("updateItem", async (item, changes, _options, userId) => {
     if (item.parent?.documentName !== "Actor") return;
@@ -261,6 +263,7 @@ Hooks.once("init", async function () {
         await promptFocusSkillBonus(item, item.parent);
       }
     }
+    if (item.effects.size) refreshActorDerivedData(item.parent);
   });
   Hooks.on("deleteItem", async (item, _options, userId) => {
     if (item.parent?.documentName !== "Actor") return;
@@ -274,16 +277,24 @@ Hooks.once("init", async function () {
     if (item.type === "classEdge" && isPc(item.parent) && userId === game.user.id) {
       await revokePowerBonusSkills(item, item.parent);
     }
+    if (item.effects.size) refreshActorDerivedData(item.parent);
   });
   Hooks.on("createActiveEffect", (effect) => {
     if (game.wwn?.migrating) return;
     const item = effect.parent;
     if (item?.type === "focus" && item.parent?.documentName === "Actor") syncFocusTransferEffects(item);
+    if (effect.transfer && item?.parent?.documentName === "Actor") refreshActorDerivedData(item.parent);
   });
   Hooks.on("updateActiveEffect", (effect) => {
     if (game.wwn?.migrating) return;
     const item = effect.parent;
     if (item?.type === "focus" && item.parent?.documentName === "Actor") syncFocusTransferEffects(item);
+    if (effect.transfer && item?.parent?.documentName === "Actor") refreshActorDerivedData(item.parent);
+  });
+  Hooks.on("deleteActiveEffect", (effect) => {
+    if (game.wwn?.migrating) return;
+    const item = effect.parent;
+    if (effect.transfer && item?.parent?.documentName === "Actor") refreshActorDerivedData(item.parent);
   });
 
   await preloadHandlebarsTemplates();
@@ -352,6 +363,10 @@ Hooks.once("ready", async function () {
       await syncActorFocusBonusSkills(actor);
       await syncActorPowerBonusSkills(actor);
     }
+    // A freshly-loaded actor's transfer-effect-derived fields (e.g.
+    // innateAc.min-based AC) can be stale relative to prepareDerivedData()
+    // until something explicitly re-derives them — see actor-refresh.mjs.
+    refreshActorDerivedData(actor);
   }
 
   game.socket.on("system.wwn", async (payload, userId) => {

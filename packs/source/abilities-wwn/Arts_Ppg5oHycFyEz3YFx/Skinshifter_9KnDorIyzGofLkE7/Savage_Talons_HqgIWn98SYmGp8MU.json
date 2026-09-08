@@ -1,0 +1,58 @@
+{
+  "folder": "9KnDorIyzGofLkE7",
+  "name": "Savage Talons",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>This shape has extremely dangerous claws, fangs, pincers, or other body weapons. At first level these weapons do 1d8 damage, use either Str or Dex as the modifying attribute, Punch as the combat skill, and have a Shock value of 2/AC 13. At level 3 the damage and Shock increase by +1, at level 6 they increase to +2, and at level 9 they increase to +3. These weapons can harm even creatures immune to non-magical weaponry.</p>\n<p><strong>Level 1:</strong> @UUID[Compendium.wwn.gear.Item.nPj4oREdpXinnTyP]{Savage Talons (L1)}</p>\n<p><strong>Level 3:</strong> @UUID[Compendium.wwn.gear.Item.kLnpRk6BDRayn6WQ]{Savage Talons (L3)}</p>\n<p><strong>Level 6:</strong> @UUID[Compendium.wwn.gear.Item.jwFw1H5kk2Zq95Xc]{Savage Talons (L6)}</p>\n<p><strong>Level 9: </strong>@UUID[Compendium.wwn.gear.Item.qBrn4G9YB3xkWsJ2]{Savage Talons (L9)}</p>",
+    "source": "Skinshifter",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.HqgIWn98SYmGp8MU"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "HqgIWn98SYmGp8MU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HqgIWn98SYmGp8MU"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "vPTbcNDn3cvS2TFn",
+  "name": "Spiritual Weapon",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You are able to translate examples of your favored weapon into a spiritual template that you may manifest as you wish. Any favored weapon can be turned into such a template, including a magical weapon, but the process destroys the object&rsquo;s physical form. To manifest a template, Commit Effort as an Instant action; a ghostly copy of the weapon appears Readied in hand for you until you release the Effort or stop touching the weapon. Dual-wielders can summon the same weapon into both hands with one use of this art.</p>",
+    "source": "Duelist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.hXMhy2ulDzwrVRck"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "hXMhy2ulDzwrVRck",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hXMhy2ulDzwrVRck"
+}

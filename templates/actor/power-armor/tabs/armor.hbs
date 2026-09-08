@@ -86,9 +86,9 @@
         <li class="item-entry">
           <div class="item flexrow{{#if item.system.disabled}} greyrow{{/if}}{{#if item.system.integral}} integral{{/if}}"
             data-item-id="{{item.id}}">
-            <div class="item-name flexrow">
+            <div class="item-name item-rollable flexrow" data-action="showItem">
               <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
-              <a data-action="rollItem"><h4 title="{{item.system.effectId}}">{{item.name}}{{#if item.system.integral}} *{{/if}}</h4></a>
+              <h4 title="{{item.system.effectId}}">{{item.name}}{{#if item.system.integral}} *{{/if}}</h4>
             </div>
             <div class="field-short">{{item.system.tl}}</div>
             <div class="field-short">{{item.system.mass}}</div>

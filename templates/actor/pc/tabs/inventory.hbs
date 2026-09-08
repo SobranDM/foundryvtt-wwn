@@ -127,7 +127,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             <h4 title="{{item.name}}">{{item.name~}}</h4>
           </div>
           <div class="field-short">{{item.system.acValue}}</div>
@@ -166,7 +166,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             <h4 title="{{item.name}}">{{item.name~}}</h4>
           </div>
           <div class="field-short charges">
@@ -213,7 +213,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             <h4 title="{{item.name}}">{{item.name~}}</h4>
           </div>
           <div class="field-short charges">
@@ -250,7 +250,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             {{#if item.system.container.isContainer}}
             <a class="container-arrow" data-action="toggleContainer">
               <i class="fas {{#if item.system.container.isOpen}}fa-caret-down{{else}}fa-caret-right{{/if}}"
@@ -313,7 +313,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             <h4 title="{{item.name}}">{{item.name~}}</h4>
           </div>
           <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
@@ -350,7 +350,7 @@
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
           <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" />
+            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
             <h4 title="{{item.name}}">{{item.name~}}</h4>
           </div>
           <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
@@ -383,8 +383,8 @@
       {{#each currencies as |currency|}}
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{currency.id}}">
-          <div class="item-name flexrow" data-action="showItem">
-            <img class="item-image" src="{{currency.img}}" alt="" />
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{currency.img}}" alt="" data-action="rollItem" />
             <h4>{{currency.name}}</h4>
             <span class="greyrow">×{{currency.system.multiplier}}</span>
           </div>

@@ -34,7 +34,6 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     window: { resizable: true, contentClasses: ["flex", "flex-col", "min-h-0"] },
     actions: {
       createItem: WwnBaseActorSheet.#onCreateItem,
-      showItem: WwnBaseActorSheet.#onShowItem,
       itemSearch: WwnBaseActorSheet.#onItemSearch,
       effectAction: WwnBaseActorSheet.#onEffectAction,
       rollCheck: WwnBaseActorSheet.#onRollCheck,
@@ -273,96 +272,6 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     });
     if (!result || result === "cancel") return null;
     return result.subType ?? null;
-  }
-
-  /** Toggle an in-row description drawer; Shift+click posts a chat card. */
-  static async #onShowItem(event, target) {
-    const item = this._getItem(target);
-    if (!item) return;
-    if (event.shiftKey) return item.show();
-
-    const entry = target.closest(".item-entry");
-    if (!entry) return item.show();
-    const row = entry.querySelector(":scope > .item");
-
-    const existing = entry.querySelector(":scope > .item-summary");
-    if (existing) {
-      row?.classList.remove("expanded");
-      await WwnBaseActorSheet.#slideUpRemove(existing);
-      return;
-    }
-
-    const list = entry.closest(".item-list");
-    const others = list
-      ? [...list.querySelectorAll(":scope > .item-entry > .item-summary")]
-      : [];
-    await Promise.all(
-      others.map((el) => {
-        el.closest(".item-entry")?.querySelector(":scope > .item")?.classList.remove("expanded");
-        return WwnBaseActorSheet.#slideUpRemove(el);
-      })
-    );
-
-    const enriched = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-      item.system.description ?? "",
-      { async: true, relativeTo: item }
-    );
-    const summary = document.createElement("div");
-    summary.classList.add("item-summary");
-    summary.innerHTML = enriched || `<p><em>${game.i18n.localize("WWN.None")}</em></p>`;
-    row?.classList.add("expanded");
-    await WwnBaseActorSheet.#slideDownAppend(entry, summary);
-  }
-
-  /** Animate an element to height 0 then remove (legacy jQuery slideUp(200)). */
-  static #slideUpRemove(el) {
-    return new Promise((resolve) => {
-      if (!el?.isConnected) return resolve();
-      const finish = () => {
-        el.removeEventListener("transitionend", onEnd);
-        clearTimeout(fallback);
-        el.remove();
-        resolve();
-      };
-      const onEnd = (event) => {
-        if (event.target !== el || event.propertyName !== "height") return;
-        finish();
-      };
-      el.style.overflow = "hidden";
-      el.style.height = `${el.scrollHeight}px`;
-      void el.offsetHeight;
-      el.style.transition = "height 200ms ease";
-      el.style.height = "0px";
-      el.addEventListener("transitionend", onEnd);
-      const fallback = setTimeout(finish, 250);
-    });
-  }
-
-  /** Append then animate from height 0 (legacy jQuery slideDown(200)). */
-  static #slideDownAppend(parent, el) {
-    return new Promise((resolve) => {
-      const finish = () => {
-        el.removeEventListener("transitionend", onEnd);
-        clearTimeout(fallback);
-        el.style.height = "";
-        el.style.overflow = "";
-        el.style.transition = "";
-        resolve();
-      };
-      const onEnd = (event) => {
-        if (event.target !== el || event.propertyName !== "height") return;
-        finish();
-      };
-      el.style.overflow = "hidden";
-      el.style.height = "0px";
-      parent.appendChild(el);
-      const targetHeight = el.scrollHeight;
-      void el.offsetHeight;
-      el.style.transition = "height 200ms ease";
-      el.style.height = `${targetHeight}px`;
-      el.addEventListener("transitionend", onEnd);
-      const fallback = setTimeout(finish, 250);
-    });
   }
 
   /** Search all visible compendiums for items of a type (optionally power subtype) and add one. */

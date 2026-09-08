@@ -1,0 +1,58 @@
+{
+  "folder": "9KnDorIyzGofLkE7",
+  "name": "Manifest Wings",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>This shape can form usable wings. You can&rsquo;t effectively attack while concentrating on remaining aloft, but you can fly at your normal movement rate +10&rsquo; per action. If unhindered and flying overland you can travel up to ten miles an hour and fly up to five hours a day.</p>",
+    "source": "Skinshifter",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.714GQkEcnayai09a"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "714GQkEcnayai09a",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!714GQkEcnayai09a"
+}

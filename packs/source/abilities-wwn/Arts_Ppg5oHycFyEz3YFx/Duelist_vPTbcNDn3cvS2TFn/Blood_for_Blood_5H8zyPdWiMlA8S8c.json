@@ -1,0 +1,58 @@
+{
+  "folder": "vPTbcNDn3cvS2TFn",
+  "name": "Blood for Blood",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as an Instant action when an enemy hits you with a physical attack. If you attack that enemy with your favored weapon before the end of the next round, the first blow hits automatically and can do no less damage than was done to you, up to the weapon&rsquo;s maximum.</p>",
+    "source": "Duelist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.5H8zyPdWiMlA8S8c"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "5H8zyPdWiMlA8S8c",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5H8zyPdWiMlA8S8c"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Thoughts Like Razors",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As a Main Action, Commit Effort for the day to launch a psychic assault on any visible living creature within sixty feet. The target gets a Mental saving throw to resist; on a failure, it takes 1d8 damage per level of the Thought Noble. The damage can knock it unconscious but cannot kill. On a successful save, the Thought Noble is stunned by the backlash, taking one quarter of the damage, rounded down, and losing their next turn&rsquo;s actions. This ability can be used only once per scene.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "(@level)d8",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.j4bqXoMjVQhYk4ek"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "j4bqXoMjVQhYk4ek",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!j4bqXoMjVQhYk4ek"
+}

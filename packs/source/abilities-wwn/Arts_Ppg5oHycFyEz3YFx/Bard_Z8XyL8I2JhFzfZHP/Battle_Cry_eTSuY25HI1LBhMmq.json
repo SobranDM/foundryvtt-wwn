@@ -1,0 +1,58 @@
+{
+  "folder": "Z8XyL8I2JhFzfZHP",
+  "name": "Battle Cry",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action to bolster your allies. They gain +1 to hit, saving throws, and damage, including Shock, for one round per level. At 4th level this bonus increases to +2, and at 9th, to +3.</p>",
+    "source": "Bard",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.eTSuY25HI1LBhMmq"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "eTSuY25HI1LBhMmq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eTSuY25HI1LBhMmq"
+}

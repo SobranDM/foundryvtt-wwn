@@ -1,0 +1,58 @@
+{
+  "folder": "9KnDorIyzGofLkE7",
+  "name": "Pliant Flesh",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You&rsquo;ve mastered your shapeshifting skills, and Change Form can be used as an On Turn action, albeit only once per round. Alternately, it can take as long as a minute but cost no Effort. Whenever you spend Effort to shift shape, you heal lost hit points equal to 1d6 plus your level; this does not apply when merely reverting a form&rsquo;s change. This art is intrinsic to you, and doesn&rsquo;t count against the total number of arts allowed to apply to a form.</p>",
+    "source": "Skinshifter",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.4MV9na6T2Tu3AMqm"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "4MV9na6T2Tu3AMqm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4MV9na6T2Tu3AMqm"
+}

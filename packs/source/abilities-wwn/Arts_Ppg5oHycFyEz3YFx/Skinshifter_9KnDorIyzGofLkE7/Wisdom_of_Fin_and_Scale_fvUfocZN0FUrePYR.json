@@ -1,0 +1,58 @@
+{
+  "folder": "9KnDorIyzGofLkE7",
+  "name": "Wisdom of Fin and Scale",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>This shape can breathe water, swim at double your usual Move rate, and is impervious to any normal climatic extreme of cold or undersea pressure. It can see up to sixty feet while underwater even in the absence of normal light.</p>",
+    "source": "Skinshifter",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.fvUfocZN0FUrePYR"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "fvUfocZN0FUrePYR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fvUfocZN0FUrePYR"
+}

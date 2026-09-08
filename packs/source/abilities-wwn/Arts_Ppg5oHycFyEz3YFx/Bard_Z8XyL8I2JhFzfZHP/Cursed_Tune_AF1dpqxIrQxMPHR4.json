@@ -1,0 +1,58 @@
+{
+  "folder": "Z8XyL8I2JhFzfZHP",
+  "name": "Cursed Tune",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as a Main Action while targeting an intelligent creature. Your imprecations cause them to falter, inflicting a -1 penalty to their hit, damage, and saving throw rolls for one round per level. At 4th level this penalty becomes -2, and at 9th it becomes -3.</p>",
+    "source": "Bard",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.AF1dpqxIrQxMPHR4"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "AF1dpqxIrQxMPHR4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AF1dpqxIrQxMPHR4"
+}

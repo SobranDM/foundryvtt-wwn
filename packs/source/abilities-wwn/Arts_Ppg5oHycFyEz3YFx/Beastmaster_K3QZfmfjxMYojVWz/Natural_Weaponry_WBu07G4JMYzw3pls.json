@@ -1,0 +1,58 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Natural Weaponry",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You may have physically grown fangs and claws, or it may be that you just intuitively absorbed effective unarmed fighting techniques from your animal companions. When unarmed, your attacks count as weapons that use either Str or Dex as their modifier, use Punch or Stab as the skill, do 1d8 damage, and have a Shock value of 2/AC 13. These unarmed attacks can harm even creatures immune to non-magical weapons. The damage and Shock of these weapons gains a +1 bonus at level 3, a +2 bonus at level 6, and a +3 bonus at level 9.</p>\n<p><strong>Level 1: </strong>@UUID[Compendium.wwn.gear.Item.CzC1LEcVLxUttB6A]{Natural Weaponry (L1)}</p>\n<p><strong>Level 3:</strong> @UUID[Compendium.wwn.gear.Item.Rsv5N5xdCvF9UHp4]{Natural Weaponry (L3)}</p>\n<p><strong>Level 6:</strong> @UUID[Compendium.wwn.gear.Item.uqZvgESnCfhw1eY0]{Natural Weaponry (L6)}</p>\n<p><strong>Level 9:</strong> @UUID[Compendium.wwn.gear.Item.Un4Wi6C3dmuFhyLu]{Natural Weaponry (L9)}</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.WBu07G4JMYzw3pls"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "WBu07G4JMYzw3pls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WBu07G4JMYzw3pls"
+}

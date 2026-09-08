@@ -1,0 +1,58 @@
+{
+  "folder": "vPTbcNDn3cvS2TFn",
+  "name": "Favored Weapon",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Choose one specific type of non-unarmed melee weapon from the list on page 37. You begin play with such a weapon, and when using this type you may use the Favored Weapon attack bonus column on the Duelist table to determine your base hit bonus, unless it&rsquo;s already better for some other reason. If your second partial class is Partial Warrior, your class&rsquo; base hit bonus with the weapon is instead equal to your level. You cannot apply this or other Duelist arts to thrown weapons.</p>",
+    "source": "Duelist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.j2lEsT3Xxk7TBiZ6"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "j2lEsT3Xxk7TBiZ6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!j2lEsT3Xxk7TBiZ6"
+}

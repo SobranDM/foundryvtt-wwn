@@ -68,11 +68,11 @@ export class WwnItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   static TABS = {
     primary: {
       tabs: [
-        { id: "info", label: "WWN.category.attributes" },
         { id: "description", label: "WWN.Tabs.Description" },
+        { id: "info", label: "WWN.category.attributes" },
         { id: "effects", label: "WWN.Tabs.Effects" },
       ],
-      initial: "info",
+      initial: "description",
     },
   };
 

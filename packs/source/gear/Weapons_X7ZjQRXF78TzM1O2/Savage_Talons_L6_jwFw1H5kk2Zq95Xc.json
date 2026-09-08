@@ -1,0 +1,73 @@
+{
+  "folder": "X7ZjQRXF78TzM1O2",
+  "name": "Savage Talons (L6)",
+  "type": "weapon",
+  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "system": {
+    "description": "<p>This shape has extremely dangerous claws, fangs, pincers, or other body weapons. At first level these weapons do 1d8 damage, use either Str or Dex as the modifying attribute, Punch as the combat skill, and have a Shock value of 2/AC 13. At level 3 the damage and Shock increase by +1, at level 6 they increase to +2, and at level 9 they increase to +3. These weapons can harm even creatures immune to non-magical weaponry.</p>",
+    "damage": "1d8+2",
+    "bonus": 0,
+    "shock": {
+      "damage": "4",
+      "ac": 13
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "punch",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "firearm": false,
+    "tl": 0
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.jwFw1H5kk2Zq95Xc"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "jwFw1H5kk2Zq95Xc",
+  "sort": 0,
+  "_key": "!items!jwFw1H5kk2Zq95Xc"
+}

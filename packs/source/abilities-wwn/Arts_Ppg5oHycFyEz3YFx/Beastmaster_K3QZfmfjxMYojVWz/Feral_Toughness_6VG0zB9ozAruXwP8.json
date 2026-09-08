@@ -1,0 +1,74 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Feral Toughness",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Your maximum hit point total is increased by the natural, unmodified hit dice of your companion; thus, a 5 hit die companion increases your maximum hit points by 5. You are impervious to normal outdoor extremes of heat or cold. Your base Armor Class is equal to 13 plus half your level, rounded up. This AC can be modified by shields or Dexterity modifiers, but not by armor.</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [
+    {
+      "_id": "6VG0acInnate0001",
+      "type": "base",
+      "name": "Feral Toughness",
+      "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+      "transfer": true,
+      "disabled": false,
+      "system": {
+        "changes": [
+          { "key": "system.combat.innateAc.min", "type": "upgrade", "value": "13 + ceil(@level / 2)", "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!6VG0zB9ozAruXwP8.6VG0acInnate0001"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.6VG0zB9ozAruXwP8"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "6VG0zB9ozAruXwP8",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6VG0zB9ozAruXwP8"
+}

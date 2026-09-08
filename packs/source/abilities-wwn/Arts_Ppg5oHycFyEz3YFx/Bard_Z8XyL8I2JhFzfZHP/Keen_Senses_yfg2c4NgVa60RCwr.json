@@ -1,0 +1,58 @@
+{
+  "folder": "Z8XyL8I2JhFzfZHP",
+  "name": "Keen Senses",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>First practiced by the blind music masters of the Second Dynasty, this art gives you the equivalent of sight out to 60&rsquo; even if blinded. You cannot distinguish colors, but you can perceive physical details as readily as if with your eyes. Physically-invisible creatures and objects are obvious to you.</p>",
+    "source": "Bard",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.yfg2c4NgVa60RCwr"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "yfg2c4NgVa60RCwr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yfg2c4NgVa60RCwr"
+}

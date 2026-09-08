@@ -1,0 +1,58 @@
+{
+  "folder": "Z8XyL8I2JhFzfZHP",
+  "name": "Swift Misdirection",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as a Main Action and target one intelligent creature within earshot. Tell them something in no more than one sentence; unless what you say is physically impossible or emotionally unendurable, they must make a Mental save or believe it for one round. After that, they can judge your words with their normal reason. This art can affect a creature only once per scene.</p>",
+    "source": "Bard",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.LnPUdK96NvLTX6YY"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "LnPUdK96NvLTX6YY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LnPUdK96NvLTX6YY"
+}

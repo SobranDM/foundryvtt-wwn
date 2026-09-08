@@ -1,0 +1,73 @@
+{
+  "folder": "X7ZjQRXF78TzM1O2",
+  "name": "Accursed Bolt",
+  "type": "weapon",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "description": "<p><span class=\"fontstyle0\">You launch blasts of occult force using Magic as the attack skill and the best of Str, Dex, Int, or Cha as its modifying attribute. Their damage is 1d8 plus your Magic skill, their range is 200&rsquo;, and the bolts can be thrown in melee at a -4 penalty to hit. These bolts need both hands free to hurl them.&nbsp;</span></p>",
+    "damage": "1d8+@magic",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "Magic",
+    "score": "int",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "range": {
+      "short": 200,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": true,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "firearm": false,
+    "tl": 0
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.lBDPd1G0QIw9RI4h"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "lBDPd1G0QIw9RI4h",
+  "sort": 0,
+  "_key": "!items!lBDPd1G0QIw9RI4h"
+}

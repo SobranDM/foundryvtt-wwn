@@ -1,0 +1,58 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "Merciful Healing",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action and touch a target within melee range. The target receives 1d6+2 points of magical healing. If done in combat or used to revive a Mortally Wounded subject, the rushed haste of the healing adds 1 System Strain to the target, but no System Strain is added if it is applied outside of combat. At fourth level the healing done increases to 2d6+4 and at eighth level it becomes 4d6+8.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "1d6+2",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.JgUOHFlUrPbFcmn1"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "JgUOHFlUrPbFcmn1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JgUOHFlUrPbFcmn1"
+}

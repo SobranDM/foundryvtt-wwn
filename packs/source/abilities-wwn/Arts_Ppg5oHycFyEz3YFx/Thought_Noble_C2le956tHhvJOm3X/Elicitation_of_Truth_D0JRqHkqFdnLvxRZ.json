@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Elicitation of Truth",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>This art can only be taken by those who have mastered <em><strong>Surface Apprehension</strong></em>. It can only be used on a helpless or cooperative target; the Thought Noble may Commit Effort for the day and ask the target a question that takes no more than two sentences to ask. If the target fails a Mental saving throw, they must fully and completely answer the question. They need not exercise any personal judgment or speculation, but they must answer directly and without conscious deception.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.D0JRqHkqFdnLvxRZ"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "D0JRqHkqFdnLvxRZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!D0JRqHkqFdnLvxRZ"
+}

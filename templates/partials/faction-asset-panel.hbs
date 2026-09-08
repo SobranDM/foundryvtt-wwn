@@ -29,14 +29,12 @@
     {{#each assets as |item|}}
     <li class="item-entry">
       <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-name item-rollable flexrow faction-name">
+        <div class="item-name item-rollable flexrow faction-name" data-action="showItem">
           <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
-          <a data-action="rollItem">
-            <h4 title="{{item.system.description}}">
-              {{item.name}}
-              {{#if item.system.baseOfInfluence}}<i class="fas fa-home" style="color: rgba(0, 0, 0, 0.2);"></i>{{/if}}
-            </h4>
-          </a>
+          <h4 title="{{item.system.description}}">
+            {{item.name}}
+            {{#if item.system.baseOfInfluence}}<i class="fas fa-home" style="color: rgba(0, 0, 0, 0.2);"></i>{{/if}}
+          </h4>
         </div>
         <div class="faction-field">{{item.system.rating}}</div>
         <div class="faction-field">{{item.system.health.value}}/{{item.system.health.max}}</div>

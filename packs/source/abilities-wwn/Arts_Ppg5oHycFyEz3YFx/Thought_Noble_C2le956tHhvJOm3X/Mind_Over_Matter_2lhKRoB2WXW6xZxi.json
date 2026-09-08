@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Mind Over Matter",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Your mental control over your physical processes is considerable. Commit Effort for the day as an Instant action to gain one of the following benefits: automatically stabilize if Mortally Wounded, go without sleep for twenty-four hours, heal 1d6 hit points of damage you&rsquo;ve suffered, or completely ignore normal climatic extremes of heat or cold for one day. Similar tricks of bodily control may be allowed at the GM&rsquo;s discretion.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.2lhKRoB2WXW6xZxi"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "2lhKRoB2WXW6xZxi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2lhKRoB2WXW6xZxi"
+}

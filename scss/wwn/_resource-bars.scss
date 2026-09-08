@@ -100,7 +100,10 @@
   }
 
   .wwn-resource-bar-values > span:not(.sep) {
-    min-width: 1.5rem;
+    /* Match the sibling <input>'s fixed width so read-only ceilings
+       (Strain/Alienation/Stress max — no editableMax) don't shrink
+       relative to editable ones (HP/XP max). */
+    width: 2.25rem;
     padding: 0 0.15rem;
     font-size: 0.8rem;
     line-height: 1.15rem;

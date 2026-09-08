@@ -1,0 +1,58 @@
+{
+  "name": "Bewitching Distraction",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as a Main Action when talking to an intelligent target when not in combat. They must make a Mental save or become dazed, oblivious to their surroundings and forgetting you and all else that happened in that&nbsp;scene. Danger ends the daze but not the forgetting.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.dFYIIVRxhMo5aux7"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "dFYIIVRxhMo5aux7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dFYIIVRxhMo5aux7"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Read Intent",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>As an Instant action, Commit Effort for the scene and target a visible living creature. It gets a Mental saving throw to resist; on a failure, the GM will tell you exactly what it is currently intending to do on its next turn, or its next relevant action if used out of combat. If you perform a <em><strong>Total Defense</strong></em> action this round, your insight into its motions ensures that no attack it makes that you could theoretically physically avoid can hit you for the rest of the round.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.0Q2xRER9oXRTRf5s"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "0Q2xRER9oXRTRf5s",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0Q2xRER9oXRTRf5s"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Bind Companion",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>With a day&rsquo;s work in a location you can find and bind a suitable animal companion. If looking for a particular type of companion, it must be found in the area and may require a Wis/Survive skill check at a difficulty of 10 or more if it&rsquo;s a particularly rare creature. If you encounter a suitable animal on an adventure, you may bind it as a Main Action, with the creature allowed a Mental saving throw to resist and become impervious to your powers. You may release a companion as a Main Action if you no longer wish its service or want to bind a different beast.</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.kJTvDhjRPrOUnsnx"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "kJTvDhjRPrOUnsnx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kJTvDhjRPrOUnsnx"
+}

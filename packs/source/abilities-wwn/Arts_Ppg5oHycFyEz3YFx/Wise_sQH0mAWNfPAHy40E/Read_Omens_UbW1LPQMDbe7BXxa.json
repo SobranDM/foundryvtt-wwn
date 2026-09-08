@@ -1,0 +1,58 @@
+{
+  "name": "Read Omens",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>A petitioner proposes a course of action to the PC. After a scene-long ritual involving at least 10 sp worth of livestock or sacrificial material, the GM makes a secret Wis/Magic skill check against difficulty 10. On a success, the PC gets an impression of whether the course of action will lead to success or failure, as the GM thinks most likely. On a failure, the GM gives a random result. Multiplying the ritual costs by 10 adds +1 to the skill check, thus, a sacrifice of 1,000 sp worth of livestock gets a +2 on the check. The&nbsp;same course of action cannot be divined more than once a month.</p>",
+    "source": "Wise",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.UbW1LPQMDbe7BXxa"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "sQH0mAWNfPAHy40E",
+  "_id": "UbW1LPQMDbe7BXxa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UbW1LPQMDbe7BXxa"
+}

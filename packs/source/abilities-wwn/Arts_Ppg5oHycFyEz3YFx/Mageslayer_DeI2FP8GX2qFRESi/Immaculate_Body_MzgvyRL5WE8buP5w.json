@@ -1,0 +1,58 @@
+{
+  "name": "Immaculate Body",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.MzgvyRL5WE8buP5w"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>Magical transformations, curses, or lingering negative magical penalties last a maximum of one scene on you. Such malisons cannot kill you, reducing you to 1 HP at worst. This applies to all&nbsp;magical effects, and not only to hostile spells.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "MzgvyRL5WE8buP5w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MzgvyRL5WE8buP5w"
+}

@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Mind Light",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Your <em><strong>Open Mind</strong></em> art is enhanced. While active, you become aware of the location of all living minds within sixty feet of you provided there isn&rsquo;t a physical barrier between you and the subject and they are not actively hiding from you. You can identify the species of these minds, if the species is known to you, any strong emotional states, and can recognize known individuals. While <em><strong>Open Mind</strong></em> is active you cannot be surprised by a living creature.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.KaLPwpdS4WFXkP48"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "KaLPwpdS4WFXkP48",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KaLPwpdS4WFXkP48"
+}

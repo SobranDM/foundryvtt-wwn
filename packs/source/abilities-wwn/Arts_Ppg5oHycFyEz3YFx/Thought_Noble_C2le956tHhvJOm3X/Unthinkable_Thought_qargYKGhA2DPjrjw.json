@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Unthinkable Thought",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Target a visible living creature and Commit Effort for the day as a Main Action while specifying a particular person, object, or situation that is currently ongoing in their presence. The target may make a Mental save to resist; on a failure, they simply cannot consciously acknowledge the existence of the subject or its actions unless ignoring it would obviously put their life at risk. This forced ignorance lasts for up to a scene; at its end, the target will have no memory of the subject.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.qargYKGhA2DPjrjw"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "qargYKGhA2DPjrjw",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qargYKGhA2DPjrjw"
+}

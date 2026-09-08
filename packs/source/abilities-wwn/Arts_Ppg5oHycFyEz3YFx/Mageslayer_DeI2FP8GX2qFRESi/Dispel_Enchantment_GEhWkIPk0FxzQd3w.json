@@ -1,0 +1,58 @@
+{
+  "name": "Dispel Enchantment",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.GEhWkIPk0FxzQd3w"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>As a Main Action, touch an ally and Commit Effort for the day. Your touch acts as an Extirpate Arcana spell. This art can only be applied to creatures, not objects, and can be applied to yourself or a given target only once per day.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "GEhWkIPk0FxzQd3w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GEhWkIPk0FxzQd3w"
+}

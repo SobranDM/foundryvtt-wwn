@@ -1,0 +1,73 @@
+{
+  "folder": "X7ZjQRXF78TzM1O2",
+  "name": "Accursed Blade (2H)",
+  "type": "weapon",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "description": "<p>As an On Turn action, manifest an occult melee weapon as a one-handed 1d8 weapon or a two-handed 2d6 weapon. Both add your Magic skill to the damage roll, have a Shock rating of 2/15, and use Magic as the attack skill and the best of Str, Dex, Int, or Cha as its modifying attribute.</p>",
+    "damage": "2d6+@magic",
+    "bonus": 0,
+    "shock": {
+      "damage": "2",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "Magic",
+    "score": "int",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "firearm": false,
+    "tl": 0
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.gear.Cgf0J8XDila3E2l6"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Cgf0J8XDila3E2l6",
+  "sort": 0,
+  "_key": "!items!Cgf0J8XDila3E2l6"
+}

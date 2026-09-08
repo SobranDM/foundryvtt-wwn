@@ -1,0 +1,58 @@
+{
+  "folder": "vPTbcNDn3cvS2TFn",
+  "name": "Burst of Speed",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action. You may move your full normal movement rate as an On Turn action. This art can be used only once per round.</p>",
+    "source": "Duelist",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.Pxr2NPqEYIqxYb4o"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "Pxr2NPqEYIqxYb4o",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Pxr2NPqEYIqxYb4o"
+}

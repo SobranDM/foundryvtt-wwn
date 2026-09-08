@@ -1,0 +1,58 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "Fear No Flame",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the day as an On Turn action while nominating a visible target. For the rest of the scene, they are immune to non-magical flame, smoke, or explosive damage, and decrease any sources of such magical damage they take by five points per level of Pray you have.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.AeX191gbjyFmZ8pU"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "AeX191gbjyFmZ8pU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AeX191gbjyFmZ8pU"
+}

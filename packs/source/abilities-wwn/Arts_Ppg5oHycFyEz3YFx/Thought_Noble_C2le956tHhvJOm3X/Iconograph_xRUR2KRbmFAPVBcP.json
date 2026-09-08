@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Iconograph",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort for the scene as a Main Action and target a visible written text, piece of sculpture, iconographic symbol, or other visible artifact. You receive a short description of the message or idea the maker was trying to convey with the object. Optionally, you may use this art when making a sigil, art object, or text of your own; any valid target will automatically understand your intended message when they see the item. You may restrict your audience to particular people or types if you wish.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.xRUR2KRbmFAPVBcP"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "xRUR2KRbmFAPVBcP",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xRUR2KRbmFAPVBcP"
+}

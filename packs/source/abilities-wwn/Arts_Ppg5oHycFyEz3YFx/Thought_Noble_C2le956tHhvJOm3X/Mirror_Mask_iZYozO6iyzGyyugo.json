@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Mirror Mask",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You become instantly aware of any mind-affecting power directed at you and can identify the user if they&rsquo;re within your current sensory range. You may reroll any Mental saving throw the attacking ability allows you; if it doesn&rsquo;t allow a save, you get a single Mental save to resist anyway. If you succeed, you may Commit Effort for the day as an Instant action to give the power false information of your choice or a false impression of success.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.iZYozO6iyzGyyugo"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "iZYozO6iyzGyyugo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!iZYozO6iyzGyyugo"
+}

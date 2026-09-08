@@ -1,0 +1,58 @@
+{
+  "folder": "K3QZfmfjxMYojVWz",
+  "name": "Know the Weak Spot",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Whenever inflicting damage on a beast with a weapon or physical attack, roll the damage twice and take the higher score. Optionally, Commit Effort for the scene as an Instant action when an ally within earshot hits a beast; your shouted advice or distracting help allows them to roll damage twice and take the better result as well.</p>",
+    "source": "Beastmaster",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.UbRwWuhp8AbEqAZp"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "UbRwWuhp8AbEqAZp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UbRwWuhp8AbEqAZp"
+}

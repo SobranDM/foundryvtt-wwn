@@ -1,0 +1,58 @@
+{
+  "name": "Know Your Prey",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.bsPaO54A8LIZspNT"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>Your Magic skill is treated as one point&nbsp;higher than it is, up to a maximum of level-4 skill. This benefit adds to your Effort as usual, and may allow you to have a higher Magic skill than your character level would usually allow.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "bsPaO54A8LIZspNT",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bsPaO54A8LIZspNT"
+}

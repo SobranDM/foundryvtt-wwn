@@ -1,0 +1,58 @@
+{
+  "name": "Magebane",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.EuCB11G7nn5q1mSS"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>You add half your level, rounded up, to all&nbsp;damage you inflict on casters from any source, be it by weapon, Shock, or violent action. This does not stack with a Warrior&rsquo;s Killing Blow class ability.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "EuCB11G7nn5q1mSS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EuCB11G7nn5q1mSS"
+}

@@ -1,9 +1,6 @@
 /* Modern chat card shell (createCardMessage / createRollMessage / createNoticeMessage) */
 
-.chat-message.themed,
-.chat-message.themed.whisper,
-.chat-message.themed.blind,
-.chat-message.themed.emote {
+.chat-message.themed {
   color-scheme: var(--color-scheme);
   color: var(--wwn-text, var(--color-text-primary));
   background: var(--wwn-bg-solid);
@@ -16,6 +13,20 @@
   .message-header .message-sender {
     color: var(--wwn-text, var(--color-text-primary));
   }
+}
+
+/* Keep GM-whisper/blind messages visually distinct from public ones,
+   mirroring vanilla Foundry's own whisper/blind treatment (a differently
+   tinted background + border) instead of flattening every message to the
+   same look. Token-driven so it holds under every theme. */
+.chat-message.themed.whisper,
+.chat-message.themed.blind {
+  background: color-mix(in srgb, var(--wwn-bg-solid) 65%, var(--wwn-border-theme) 35%);
+  border-color: var(--wwn-border-theme);
+}
+
+.chat-message.themed.blind {
+  border-style: dashed;
 }
 
 .wwn-chat-card {

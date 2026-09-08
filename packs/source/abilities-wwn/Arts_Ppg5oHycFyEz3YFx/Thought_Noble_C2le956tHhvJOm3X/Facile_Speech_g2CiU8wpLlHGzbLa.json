@@ -1,0 +1,58 @@
+{
+  "folder": "C2le956tHhvJOm3X",
+  "name": "Facile Speech",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>An improvement to the <em><strong>Far Speech</strong></em> art, you may now nominate up to a half-dozen companions to be favored targets for <em><strong>Far Speech</strong></em>. You may link with a favored target as an On Turn action without Committing Effort. The range to contact a favored target is one mile per Thought Noble level. You can change your nominated companions with an hour&rsquo;s meditation in the new companion&rsquo;s presence.</p>",
+    "source": "Thought Noble",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.g2CiU8wpLlHGzbLa"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "g2CiU8wpLlHGzbLa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!g2CiU8wpLlHGzbLa"
+}

@@ -783,10 +783,18 @@
     gap: 0.5rem;
   }
 
+  /* Fill editors grow to use spare space in a tall window, but the panel
+     wrapping one must never shrink smaller than its own header + the
+     editor's own min-height (base .wwn-form-panel sets min-height:0, which
+     let this panel get squeezed past that and silently clip with no
+     scrollbar anywhere). No overflow override here — .editor-content already
+     scrolls internally on its own (Foundry core), so this panel just needs
+     enough floor height to contain header + editor without bleeding, while
+     the outer .tab.active scroll (already working) handles anything taller
+     than the window. */
   .wwn-form-panel:has(> .wwn-sheet-editor--fill) {
-    flex: 1 1 0;
-    min-height: 0;
-    overflow: hidden;
+    flex: 1 1 auto;
+    min-height: 9rem;
   }
 
   /* Stat chips (Main combat / NPC combat stats) */

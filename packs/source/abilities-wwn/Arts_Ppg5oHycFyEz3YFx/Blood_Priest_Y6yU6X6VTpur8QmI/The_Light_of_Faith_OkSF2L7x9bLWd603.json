@@ -1,0 +1,58 @@
+{
+  "folder": "Y6yU6X6VTpur8QmI",
+  "name": "The Light of Faith",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Commit Effort as an On Turn action; while it remains Committed, you can cast a clear, bright radiance that extends up to thirty feet away from you. At your discretion, this light is visible only to you and your comrades, including up to a dozen allies.</p>",
+    "source": "Blood Priest",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "active",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.OkSF2L7x9bLWd603"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_id": "OkSF2L7x9bLWd603",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OkSF2L7x9bLWd603"
+}

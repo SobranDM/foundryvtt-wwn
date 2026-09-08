@@ -1,0 +1,58 @@
+{
+  "name": "Healer",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>You are a trained and capable healer. Gain a +1 on all Heal skill checks; once per day, as an On Turn action, automatically&nbsp;succeed at a skill check to stabilize a Mortally Wounded subject.</p>",
+    "source": "Wise",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.3PgnRN1xqrgGpQGh"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "sQH0mAWNfPAHy40E",
+  "_id": "3PgnRN1xqrgGpQGh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3PgnRN1xqrgGpQGh"
+}

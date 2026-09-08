@@ -1,0 +1,58 @@
+{
+  "name": "Snaring Speech",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Once per round as an Instant action, Commit Effort for the day when failing a skill check to persuade or tempt someone. They must make a Mental save or agree with your proposal if it&rsquo;s something they would normally consider doing. Gain&nbsp;one System Strain when using this art.</p>",
+    "source": "Accursed",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "day",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "mental",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.QT8zTWsWXJbRpFI2"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "8cUrtS4ZASqFQBnj",
+  "_id": "QT8zTWsWXJbRpFI2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QT8zTWsWXJbRpFI2"
+}

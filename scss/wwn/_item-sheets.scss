@@ -39,19 +39,24 @@
     }
   }
 
-  /* ---- Power commitment options (shared column grid) ---- */
+  /* ---- Power commitment options ---- */
 
-  .wwn-shared-pool-columns {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
-    gap: 0.5rem;
-    align-items: start;
-    width: 100%;
-    min-width: 0;
-  }
+  .wwn-shared-pool-header {
+    justify-content: flex-start;
 
-  .wwn-shared-pool-meta {
-    grid-template-columns: 1fr;
+    .item-controls {
+      margin-left: auto;
+      color: inherit;
+      min-width: 0;
+      width: auto;
+      max-width: none;
+      flex: 0 0 auto;
+
+      a {
+        color: inherit;
+        opacity: 0.9;
+      }
+    }
   }
 
   .wwn-commitment-list {
@@ -60,12 +65,6 @@
     gap: 0.35rem;
     width: 100%;
     min-width: 0;
-  }
-
-  .wwn-commitment-toolbar {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
   }
 
   .wwn-commitment-grid {
@@ -142,24 +141,12 @@
     align-items: start;
     width: 100%;
 
-    > .wwn-form-panel.wwn-form-span {
-      grid-column: 1 / -1;
-    }
-
     @media (width < 36rem) {
       grid-template-columns: 1fr;
-
-      > .wwn-form-panel.wwn-form-span {
-        grid-column: auto;
-      }
     }
   }
 
   @media (width < 36rem) {
-    .wwn-shared-pool-columns {
-      grid-template-columns: 1fr;
-    }
-
     .wwn-commitment-header,
     .wwn-commitment-row {
       grid-template-columns: 3.5rem 7rem 1.5rem;

@@ -1,0 +1,58 @@
+{
+  "name": "Skilled",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "system": {
+    "subType": "art",
+    "description": "<p>Gain three skill points to spend on any non-combat skills, up to the maximum skill level allowed by your character level. This&nbsp;art may be taken more than once.</p>",
+    "source": "Wise",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.OEunwqYEPUXf6Tbt"
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "sQH0mAWNfPAHy40E",
+  "_id": "OEunwqYEPUXf6Tbt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OEunwqYEPUXf6Tbt"
+}

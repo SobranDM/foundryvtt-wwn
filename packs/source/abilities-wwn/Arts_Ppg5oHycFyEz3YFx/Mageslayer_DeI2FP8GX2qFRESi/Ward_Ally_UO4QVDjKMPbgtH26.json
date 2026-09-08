@@ -1,0 +1,58 @@
+{
+  "name": "Ward Ally",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/powers/mageslayer-art.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-wwn.UO4QVDjKMPbgtH26"
+    }
+  },
+  "system": {
+    "subType": "art",
+    "description": "<p>As an Instant action, Commit Effort for the&nbsp;scene when an ally within thirty feet is affected by a spell; you are affected by the spell in place of your ally. If you are both in the same area of effect, the spell hits you twice. Any defenses or arts you have against sorcery may be applied as usual to this transferred effect.</p>",
+    "source": "Mageslayer",
+    "resourceName": "Effort",
+    "commitmentOptions": [
+      {
+        "cost": 1,
+        "length": "scene",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "folder": "DeI2FP8GX2qFRESi",
+  "_id": "UO4QVDjKMPbgtH26",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UO4QVDjKMPbgtH26"
+}

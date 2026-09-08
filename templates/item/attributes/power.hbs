@@ -1,10 +1,12 @@
 {{!-- Power attributes: panel visibility from showPanel/show.
-      Left stack: Type → Strain; right: Activation (includes Uses X/Y). --}}
+      Left stack: Type → Strain → Shared Pool → Commitment Options.
+      Right stack: Activation → Traits → Bonus Skills.
+      Each side is a flex column (.wwn-form-stack) so its height never
+      depends on the other column — see scss/wwn/_item-sheets.scss. --}}
 <section class="tab power-attributes {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="wwn-attributes-body">
     <div class="power-panels">
 
-      {{#if (evalOr showPanel.type showPanel.strain)}}
       <div class="wwn-form-stack">
         {{#if showPanel.type}}
         <div class="wwn-form-panel">
@@ -78,99 +80,13 @@
           </div>
         </div>
         {{/if}}
-      </div>
-      {{/if}}
 
-      {{#if showPanel.activation}}
-      <div class="wwn-form-panel">
-        <div class="wwn-section-header">{{localize "WWN.Power.PanelActivation"}}</div>
-        <div class="wwn-form-panel-fields">
-          {{#if show.internalResource}}
-          {{#> wwnRatioField labelKey="WWN.Power.InternalMax" hintKey="WWN.Power.InternalMaxHint"
-            valueName="system.internalResource.value" value=system.internalResource.value
-            maxName="system.internalResource.max" max=system.internalResource.max
-            valueTitleKey="WWN.Power.InternalValue" maxTitleKey="WWN.Power.InternalMax"
-            min=0 span=true}}
-            {{#if show.internalResourceLength}}
-            <select name="system.internalResourceLength" title="{{localize 'WWN.Power.UseRefreshHint'}}"
-              aria-label="{{localize 'WWN.Power.UseRefresh'}}">
-              {{selectOptions internalResourceLengthChoices selected=system.internalResourceLength localize=true}}
-            </select>
-            {{/if}}
-          {{/wwnRatioField}}
-          {{/if}}
-          {{#if show.damageRoll}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.DamageRoll"}} {{> wwnFieldHint hintKey="WWN.Power.DamageRollHint"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.damageRoll" value="{{system.damageRoll}}" placeholder="2d8" />
-            </div>
-          </div>
-          {{#if show.healing}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Healing"}} {{> wwnFieldHint hintKey="WWN.Power.HealingHint"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.healing" {{checked system.healing}} data-dtype="Boolean" />
-            </div>
-          </div>
-          {{/if}}
-          {{/if}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.ActivationRoll"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.activation.roll" value="{{system.activation.roll}}" placeholder="2d6" />
-            </div>
-          </div>
-          {{#if show.activationRollType}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.ActivationRollType"}} {{> wwnFieldHint hintKey="WWN.Power.ActivationRollTypeHint"}}</label>
-            <div class="form-fields">
-              <select name="system.activation.rollType">
-                {{selectOptions rollTypeChoices selected=system.activation.rollType localize=true}}
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.Power.ActivationRollTarget"}} {{> wwnFieldHint hintKey="WWN.Power.ActivationRollTargetHint"}}</label>
-            <div class="form-fields">
-              <input type="number" name="system.activation.rollTarget" value="{{system.activation.rollTarget}}"
-                data-dtype="Number" />
-            </div>
-          </div>
-          {{/if}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Save"}}</label>
-            <div class="form-fields">
-              <select name="system.activation.save">
-                <option value=""></option>
-                {{selectOptions config.saves selected=system.activation.save}}
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Range"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.activation.range" value="{{system.activation.range}}" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Duration"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.activation.duration" value="{{system.activation.duration}}" />
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/if}}
-
-      {{#if showPanel.sharedPool}}
-      <div class="wwn-form-panel {{#if show.commitmentOptions}}wwn-form-span{{/if}}">
-        <div class="wwn-section-header">{{localize "WWN.Power.PanelSharedPool"}}</div>
-        {{#if show.commitmentOptions}}
-        <div class="wwn-shared-pool-columns">
-          <div class="wwn-form-panel-fields wwn-shared-pool-meta">
+        {{#if showPanel.sharedPool}}
+        <div class="wwn-form-panel">
+          <div class="wwn-section-header">{{localize "WWN.Power.PanelSharedPool"}}</div>
+          <div class="wwn-form-panel-fields">
             {{#if show.resourceName}}
-            <div class="form-group wwn-form-span">
+            <div class="form-group">
               <label>{{localize "WWN.Power.ResourceName"}} {{> wwnFieldHint hintKey="WWN.Power.ResourceNameHint"}}</label>
               <div class="form-fields">
                 <input type="text" name="system.resourceName" value="{{system.resourceName}}" />
@@ -178,7 +94,7 @@
             </div>
             {{/if}}
             {{#if show.effectApplication}}
-            <div class="form-group wwn-form-span">
+            <div class="form-group">
               <label>{{localize "WWN.Power.EffectApplication"}} {{> wwnFieldHint hintKey="WWN.Power.EffectApplicationHint"}}</label>
               <div class="form-fields">
                 <select name="system.effectApplication">
@@ -188,14 +104,21 @@
             </div>
             {{/if}}
           </div>
-          <div class="wwn-commitment-list">
+        </div>
+
+        <div class="wwn-form-panel">
+          <div class="wwn-section-header wwn-shared-pool-header">
+            <span class="wwn-collapsible-label">{{localize "WWN.Power.CommitmentOptions"}}</span>
             {{#if commitmentOptionsEditable}}
-            <div class="wwn-commitment-toolbar">
-              <a data-action="addCommitmentOption" title="{{localize 'WWN.Power.AddCommitmentOption'}}">
+            <div class="item-controls">
+              <a class="item-control" data-action="addCommitmentOption" title="{{localize 'WWN.Power.AddCommitmentOption'}}">
                 <i class="fas fa-plus"></i> {{localize "WWN.Power.AddCommitmentOption"}}
               </a>
             </div>
             {{/if}}
+          </div>
+          {{#if show.commitmentOptions}}
+          <div class="wwn-commitment-list">
             {{#if source.commitmentOptions.length}}
             <div class="wwn-commitment-grid">
               <div class="wwn-commitment-header">
@@ -231,112 +154,176 @@
             <p class="notes">{{localize "WWN.Power.NoCommitmentOptions"}}</p>
             {{/if}}
           </div>
-        </div>
-        {{else}}
-        <div class="wwn-form-panel-fields">
-          {{#if show.resourceName}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.ResourceName"}} {{> wwnFieldHint hintKey="WWN.Power.ResourceNameHint"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.resourceName" value="{{system.resourceName}}" />
-            </div>
-          </div>
-          {{/if}}
-          {{#if show.effectApplication}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.EffectApplication"}} {{> wwnFieldHint hintKey="WWN.Power.EffectApplicationHint"}}</label>
-            <div class="form-fields">
-              <select name="system.effectApplication">
-                {{selectOptions effectApplicationChoices selected=system.effectApplication localize=true}}
-              </select>
-            </div>
-          </div>
-          {{/if}}
+          {{else}}
           {{#if commitmentSummary}}
-          <p class="notes wwn-form-span">{{localize "WWN.Power.FixedCommitment"}}: {{commitmentSummary}}</p>
+          <p class="notes">{{localize "WWN.Power.FixedCommitment"}}: {{commitmentSummary}}</p>
+          {{/if}}
           {{/if}}
         </div>
         {{/if}}
       </div>
-      {{/if}}
 
-      {{#if showPanel.traits}}
-      <div class="wwn-form-panel">
-        <div class="wwn-section-header">{{localize "WWN.Power.PanelTraits"}}</div>
-        <div class="wwn-form-panel-fields">
-          {{#if show.prepared}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Prepared"}} {{> wwnFieldHint hintKey="WWN.Power.PreparedHint"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.prepared" {{checked system.prepared}} data-dtype="Boolean" />
-            </div>
-          </div>
-          {{/if}}
-          {{#if show.installed}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.Installed"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.installed" {{checked system.installed}} data-dtype="Boolean" />
-            </div>
-          </div>
-          {{/if}}
-          {{#if show.alienationCost}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.AlienationCost"}}</label>
-            <div class="form-fields">
-              <input type="number" name="system.alienationCost" value="{{system.alienationCost}}" min="0"
-                data-dtype="Number" />
-            </div>
-          </div>
-          {{/if}}
-        </div>
-      </div>
-      {{/if}}
-
-      {{#if showPanel.bonusSkills}}
-      <div class="wwn-form-panel">
-        <div class="wwn-section-header">{{localize "WWN.Power.PanelBonusSkills"}}</div>
-        <div class="wwn-form-panel-fields">
-          {{#if show.bonusSkills}}
-          <div class="form-group wwn-form-span">
-            <label title="{{localize 'WWN.Power.BonusSkillsListHint'}}">{{localize "WWN.Power.BonusSkillsList"}}</label>
-            <div class="form-fields">
-              <input type="text" name="system.bonusSkills" value="{{join system.bonusSkills ","}}" />
-            </div>
-          </div>
-          {{/if}}
-          {{#if show.bonusSkillsPick}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.BonusSkillsPick"}}</label>
-            <div class="form-fields">
-              <input type="number" name="system.bonusSkillsPick" value="{{system.bonusSkillsPick}}" min="0"
-                data-dtype="Number" />
-            </div>
-          </div>
-          {{/if}}
-          {{#if show.bonusSkillsMode}}
-          <div class="form-group">
-            <label>{{localize "WWN.Power.BonusSkillsMode"}} {{> wwnFieldHint hintKey="WWN.Power.BonusSkillsModeHint"}}</label>
-            <div class="form-fields">
-              <select name="system.bonusSkillsMode">
-                <option value="" {{#unless system.bonusSkillsMode}}selected{{/unless}}>{{localize "WWN.Power.BonusSkillsModeListed"}}</option>
-                <option value="any" {{#if (eq system.bonusSkillsMode "any")}}selected{{/if}}>{{localize "WWN.Power.BonusSkillsModeAny"}}</option>
-                <option value="noncombat" {{#if (eq system.bonusSkillsMode "noncombat")}}selected{{/if}}>{{localize "WWN.Power.BonusSkillsModeNoncombat"}}</option>
+      <div class="wwn-form-stack">
+        {{#if showPanel.activation}}
+        <div class="wwn-form-panel">
+          <div class="wwn-section-header">{{localize "WWN.Power.PanelActivation"}}</div>
+          <div class="wwn-form-panel-fields">
+            {{#if show.internalResource}}
+            {{#> wwnRatioField labelKey="WWN.Power.InternalMax" hintKey="WWN.Power.InternalMaxHint"
+              valueName="system.internalResource.value" value=system.internalResource.value
+              maxName="system.internalResource.max" max=system.internalResource.max
+              valueTitleKey="WWN.Power.InternalValue" maxTitleKey="WWN.Power.InternalMax"
+              min=0 span=true}}
+              {{#if show.internalResourceLength}}
+              <select name="system.internalResourceLength" title="{{localize 'WWN.Power.UseRefreshHint'}}"
+                aria-label="{{localize 'WWN.Power.UseRefresh'}}">
+                {{selectOptions internalResourceLengthChoices selected=system.internalResourceLength localize=true}}
               </select>
+              {{/if}}
+            {{/wwnRatioField}}
+            {{/if}}
+            {{#if show.damageRoll}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.DamageRoll"}} {{> wwnFieldHint hintKey="WWN.Power.DamageRollHint"}}</label>
+              <div class="form-fields">
+                <input type="text" name="system.damageRoll" value="{{system.damageRoll}}" placeholder="2d8" />
+              </div>
+            </div>
+            {{#if show.healing}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Healing"}} {{> wwnFieldHint hintKey="WWN.Power.HealingHint"}}</label>
+              <div class="form-fields">
+                <input type="checkbox" name="system.healing" {{checked system.healing}} data-dtype="Boolean" />
+              </div>
+            </div>
+            {{/if}}
+            {{/if}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.ActivationRoll"}}</label>
+              <div class="form-fields">
+                <input type="text" name="system.activation.roll" value="{{system.activation.roll}}" placeholder="2d6" />
+              </div>
+            </div>
+            {{#if show.activationRollType}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.ActivationRollType"}} {{> wwnFieldHint hintKey="WWN.Power.ActivationRollTypeHint"}}</label>
+              <div class="form-fields">
+                <select name="system.activation.rollType">
+                  {{selectOptions rollTypeChoices selected=system.activation.rollType localize=true}}
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{localize "WWN.Power.ActivationRollTarget"}} {{> wwnFieldHint hintKey="WWN.Power.ActivationRollTargetHint"}}</label>
+              <div class="form-fields">
+                <input type="number" name="system.activation.rollTarget" value="{{system.activation.rollTarget}}"
+                  data-dtype="Number" />
+              </div>
+            </div>
+            {{/if}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Save"}}</label>
+              <div class="form-fields">
+                <select name="system.activation.save">
+                  <option value=""></option>
+                  {{selectOptions config.saves selected=system.activation.save}}
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Range"}}</label>
+              <div class="form-fields">
+                <input type="text" name="system.activation.range" value="{{system.activation.range}}" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Duration"}}</label>
+              <div class="form-fields">
+                <input type="text" name="system.activation.duration" value="{{system.activation.duration}}" />
+              </div>
             </div>
           </div>
-          {{/if}}
-          {{#if system.bonusSkillsChosen.length}}
-          <div class="form-group wwn-form-span">
-            <label>{{localize "WWN.Power.BonusSkillsChosen"}}</label>
-            <div class="form-fields">
-              <input type="text" value="{{join system.bonusSkillsChosen ","}}" disabled />
-            </div>
-          </div>
-          {{/if}}
         </div>
+        {{/if}}
+
+        {{#if showPanel.traits}}
+        <div class="wwn-form-panel">
+          <div class="wwn-section-header">{{localize "WWN.Power.PanelTraits"}}</div>
+          <div class="wwn-form-panel-fields">
+            {{#if show.prepared}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Prepared"}} {{> wwnFieldHint hintKey="WWN.Power.PreparedHint"}}</label>
+              <div class="form-fields">
+                <input type="checkbox" name="system.prepared" {{checked system.prepared}} data-dtype="Boolean" />
+              </div>
+            </div>
+            {{/if}}
+            {{#if show.installed}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.Installed"}}</label>
+              <div class="form-fields">
+                <input type="checkbox" name="system.installed" {{checked system.installed}} data-dtype="Boolean" />
+              </div>
+            </div>
+            {{/if}}
+            {{#if show.alienationCost}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.AlienationCost"}}</label>
+              <div class="form-fields">
+                <input type="number" name="system.alienationCost" value="{{system.alienationCost}}" min="0"
+                  data-dtype="Number" />
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if showPanel.bonusSkills}}
+        <div class="wwn-form-panel">
+          <div class="wwn-section-header">{{localize "WWN.Power.PanelBonusSkills"}}</div>
+          <div class="wwn-form-panel-fields">
+            {{#if show.bonusSkills}}
+            <div class="form-group wwn-form-span">
+              <label title="{{localize 'WWN.Power.BonusSkillsListHint'}}">{{localize "WWN.Power.BonusSkillsList"}}</label>
+              <div class="form-fields">
+                <input type="text" name="system.bonusSkills" value="{{join system.bonusSkills ","}}" />
+              </div>
+            </div>
+            {{/if}}
+            {{#if show.bonusSkillsPick}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.BonusSkillsPick"}}</label>
+              <div class="form-fields">
+                <input type="number" name="system.bonusSkillsPick" value="{{system.bonusSkillsPick}}" min="0"
+                  data-dtype="Number" />
+              </div>
+            </div>
+            {{/if}}
+            {{#if show.bonusSkillsMode}}
+            <div class="form-group">
+              <label>{{localize "WWN.Power.BonusSkillsMode"}} {{> wwnFieldHint hintKey="WWN.Power.BonusSkillsModeHint"}}</label>
+              <div class="form-fields">
+                <select name="system.bonusSkillsMode">
+                  <option value="" {{#unless system.bonusSkillsMode}}selected{{/unless}}>{{localize "WWN.Power.BonusSkillsModeListed"}}</option>
+                  <option value="any" {{#if (eq system.bonusSkillsMode "any")}}selected{{/if}}>{{localize "WWN.Power.BonusSkillsModeAny"}}</option>
+                  <option value="noncombat" {{#if (eq system.bonusSkillsMode "noncombat")}}selected{{/if}}>{{localize "WWN.Power.BonusSkillsModeNoncombat"}}</option>
+                </select>
+              </div>
+            </div>
+            {{/if}}
+            {{#if system.bonusSkillsChosen.length}}
+            <div class="form-group wwn-form-span">
+              <label>{{localize "WWN.Power.BonusSkillsChosen"}}</label>
+              <div class="form-fields">
+                <input type="text" value="{{join system.bonusSkillsChosen ","}}" disabled />
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+        {{/if}}
       </div>
-      {{/if}}
 
     </div>
   </div>

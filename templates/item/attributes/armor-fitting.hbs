@@ -2,6 +2,7 @@
 <section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="wwn-attributes-body">
     <div class="wwn-attributes-grid">
+      <div class="wwn-form-stack">
       <div class="wwn-form-panel">
         <div class="wwn-section-header">{{localize "WWN.PowerArmor.Fitting"}}</div>
         <div class="wwn-form-panel-fields">
@@ -33,35 +34,6 @@
             <label>{{localize "WWN.PowerArmor.Cost"}}</label>
             <div class="form-fields">
               <input type="number" name="system.cost" value="{{system.cost}}" min="0" step="1" data-dtype="Number" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wwn-form-panel">
-        <div class="wwn-section-header">{{localize "WWN.PowerArmor.Flags"}}</div>
-        <div class="wwn-form-panel-fields">
-          <div class="form-group">
-            <label>{{localize "WWN.PowerArmor.Stackable"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.stackable" {{checked system.stackable}} data-dtype="Boolean" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.PowerArmor.Integral"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.integral" {{checked system.integral}} data-dtype="Boolean" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.PowerArmor.Disabled"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.disabled" {{checked system.disabled}} data-dtype="Boolean" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>{{localize "WWN.PowerArmor.IsWeapon"}}</label>
-            <div class="form-fields">
-              <input type="checkbox" name="system.isWeapon" {{checked system.isWeapon}} data-dtype="Boolean" />
             </div>
           </div>
         </div>
@@ -114,6 +86,39 @@
             </div>
           </div>
         </div>
+      </div>
+      </div>
+
+      <div class="wwn-form-stack">
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.PowerArmor.Flags"}}</div>
+        <div class="wwn-form-panel-fields">
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Stackable"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.stackable" {{checked system.stackable}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Integral"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.integral" {{checked system.integral}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.Disabled"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.disabled" {{checked system.disabled}} data-dtype="Boolean" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.PowerArmor.IsWeapon"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.isWeapon" {{checked system.isWeapon}} data-dtype="Boolean" />
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
