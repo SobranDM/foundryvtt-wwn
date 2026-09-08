@@ -20,7 +20,12 @@
     "generate:example-power-armor": "node ./import-scripts/generate-example-power-armor.mjs",
     "generate:wire-foci": "node ./import-scripts/wire-foci-automation.mjs",
     "generate:awn-mutations": "node ./import-scripts/generate-awn-mutations.mjs",
-    "generate:swn-psychic": "node ./import-scripts/generate-swn-psychic.mjs"
+    "generate:swn-psychic": "node ./import-scripts/generate-swn-psychic.mjs",
+    "generate:gear-swn": "node ./import-scripts/generate-gear-swn.mjs",
+    "generate:gear-cwn": "node ./import-scripts/generate-gear-cwn.mjs",
+    "generate:gear-awn": "node ./import-scripts/generate-gear-awn.mjs",
+    "generate:cyberware-swn": "node ./import-scripts/generate-cyberware-swn.mjs",
+    "generate:cyberware-cwn": "node ./import-scripts/generate-cyberware-cwn.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.4",

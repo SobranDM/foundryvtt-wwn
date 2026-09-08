@@ -1,0 +1,44 @@
+{
+  "_id": "DkIP6tZyf2OC32L8",
+  "name": "Boneshaker",
+  "type": "item",
+  "img": "icons/consumables/potions/vial-cork-red.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A filthy mix of jailbroken corp industrial chems and amphetamine scrapings, Boneshaker is a popular combat drug among the most impoverished or savage street gangs. On application, the subject is filled with blind aggression, gaining a +2 Morale bonus and a +2 bonus to hit rolls, damage, and Shock. The recklessness induced by Boneshaker leaves them wide open, however, and all attacks against them add +2 to any Trauma Die rolls. Boneshaker lasts for one scene and adds 2 System Strain at the end of it. Heal skill required: None.</p>",
+    "price": 10,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 1,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DkIP6tZyf2OC32L8"
+}

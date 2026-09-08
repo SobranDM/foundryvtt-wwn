@@ -1,0 +1,66 @@
+{
+  "name": "Identity Submersion Trigger",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.YJVCzriRF1zpts9Q"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 25,000cr</strong></p><p>This cyberware involves micronized neural stimulation technology which is imperceptible to anything short of TL5 medical scanning or TL4 surgical examination of the subject's brain tissue. When active, the IST allows the subject to adopt a secondary persona, complete with a library of manufactured memories. So long as the IST is active, the subject will honestly and completely believe himself to be the secondary persona, a conviction that cannot be penetrated by telepathy or TL4 methods of interrogation. The persona can be activated at the user's discretion, but it only deactivates on a preset trigger, leaving the subject in full possession of all memories experienced. The trigger can be any perceptible stimulus: a particular time, the sight of a specific person, a code phrase, or any other sign, and it may be changed by the user each time they activate the cyberware. Many ISTs are also implanted with a \"master key\" that will automatically deactivate the triggered identity.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Activated at the user's discretion; deactivates only on a preset trigger"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "YJVCzriRF1zpts9Q",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 11000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YJVCzriRF1zpts9Q"
+}

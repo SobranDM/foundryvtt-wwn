@@ -1,0 +1,127 @@
+/* Project sheet — shared components + project-specific columns/bar */
+
+@use "mixins" as *;
+
+.wwn.sheet.actor.project {
+  min-width: 860px;
+
+  .wwn-project-header {
+    .project-header-img {
+      flex: 0 0 5rem;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .wwn-chip select {
+      width: auto;
+      min-width: 4rem;
+      font-size: 0.8rem;
+    }
+
+    .wwn-chip--grow input[type="text"] {
+      width: auto;
+      flex: 1 1 auto;
+      min-width: 4rem;
+    }
+  }
+
+  .wwn-project-progress {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wwn-inline-label {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .wwn-project-funded-bar {
+    position: relative;
+    margin-top: 0.5rem;
+    height: 1.35rem;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--wwn-track-bg, rgba(0, 0, 0, 0.12));
+    border: 1px solid var(--wwn-border-soft, var(--wwn-border));
+  }
+
+  .wwn-project-funded-bar-fill {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background: var(--wwn-accent, #6a8759);
+    transition: width 150ms ease;
+  }
+
+  .wwn-project-funded-bar-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-shadow: 0 0 2px var(--wwn-panel-bg, #fff);
+  }
+
+  .wwn-project-lapsed-notice {
+    color: var(--wwn-danger, #a33);
+    font-weight: 600;
+  }
+
+  .wwn-project-calculator-actions {
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+
+    .wwn-chip {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .wwn-project-calc-result {
+    margin-top: 0.35rem;
+    font-weight: 600;
+  }
+
+  .wwn-project-contribution-actions {
+    justify-content: flex-end;
+    gap: 0.35rem;
+    padding: 0.15rem 0.35rem;
+  }
+
+  .wwn-data-table .item-name.project-contributor-name {
+    min-width: 8rem;
+  }
+
+  .wwn-project-contribution-empty {
+    padding: 0.35rem;
+  }
+}
+
+/* Contribution table metric columns */
+.wwn {
+  .project-field {
+    @include wwn-metric-col(4rem);
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-field-wide {
+    @include wwn-metric-col(8rem);
+    font-size: 11px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+}

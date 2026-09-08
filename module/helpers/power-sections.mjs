@@ -5,7 +5,7 @@ import {
   getPowerSheetVisibility,
   resolveCommitmentOptions,
   usesSharedPool,
-  hasActiveCommitment,
+  hasActiveToggle,
 } from "../config/power-subtypes.mjs";
 import { WWN } from "../config/index.mjs";
 import { isPc } from "./actor-types.mjs";
@@ -80,7 +80,7 @@ export function buildPowerSectionColumns(subType, powers) {
     showPoolCommitted: powers.some((p) => usesSharedPool(p.system.subType, p.system)),
     showUses: powers.some((p) => (p.system.internalResource?.max ?? 0) > 0),
     showStatus: powers.some(
-      (p) => p.system.isActive || hasActiveCommitment(p.system.subType, p.system)
+      (p) => p.system.isActive || hasActiveToggle(p.system.subType, p.system)
     ),
     showDamage: powers.some((p) => !!p.system.damageRoll),
   };
@@ -100,7 +100,7 @@ export function annotatePowerRows(powers) {
       img: item.img,
       type: item.type,
       system: item.system,
-      canActivatePower: hasActiveCommitment(subType, item.system) && !item.system.isActive,
+      canActivatePower: hasActiveToggle(subType, item.system) && !item.system.isActive,
       canDeactivatePower: !!item.system.isActive,
       tabShowLevel: getPowerSheetVisibility(subType, item.system).show.level,
     };

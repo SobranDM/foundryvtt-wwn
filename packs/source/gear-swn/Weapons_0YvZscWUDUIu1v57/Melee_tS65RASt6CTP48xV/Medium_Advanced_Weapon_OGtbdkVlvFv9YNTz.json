@@ -1,0 +1,69 @@
+{
+  "_id": "OGtbdkVlvFv9YNTz",
+  "name": "Medium Advanced Weapon",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-runed-glowing.webp",
+  "effects": [],
+  "folder": "tS65RASt6CTP48xV",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>An advanced medium weapon has been given a monoblade edge, kinetic sheathing, thermal wires, a chainsaw blade, or some other TL4 touch. Advanced weapons can ignore primitive plate and hide protections.</p>",
+    "damage": "1d8+1",
+    "bonus": 0,
+    "shock": {
+      "damage": "2",
+      "ac": 13
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "none",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 60,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OGtbdkVlvFv9YNTz"
+}

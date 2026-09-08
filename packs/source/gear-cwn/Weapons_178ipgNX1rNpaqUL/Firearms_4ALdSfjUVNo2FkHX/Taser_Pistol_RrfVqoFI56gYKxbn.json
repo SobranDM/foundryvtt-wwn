@@ -1,0 +1,71 @@
+{
+  "_id": "RrfVqoFI56gYKxbn",
+  "name": "Taser Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-energy-blast.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Taser pistols cover a family of ranged non-lethal weapons small and light enough to carry concealed. Most rely on tried-and-true electrical shocks to drop a target; they inflict non-lethal hit point damage and cannot make Traumatic Hits.</p>",
+    "damage": "1d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 15
+    },
+    "save": "",
+    "tags": [
+      "LL"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Spare Magazine",
+    "charges": {
+      "value": 2,
+      "max": 2
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 500,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "4ALdSfjUVNo2FkHX",
+  "sort": 10,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RrfVqoFI56gYKxbn"
+}

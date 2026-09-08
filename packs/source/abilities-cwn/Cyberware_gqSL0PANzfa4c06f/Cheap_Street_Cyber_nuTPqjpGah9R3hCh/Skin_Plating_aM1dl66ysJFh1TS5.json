@@ -1,0 +1,87 @@
+{
+  "name": "Skin Plating",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "OXBWSSyFOe5tL9u9",
+      "type": "base",
+      "name": "Skin Plating (AC)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.ac.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!aM1dl66ysJFh1TS5.OXBWSSyFOe5tL9u9"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.aM1dl66ysJFh1TS5"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $500 &middot; Concealment Sight &middot; System Strain 1</strong></p><p>Grants +2 Ranged/Melee AC, to a maximum of 18 (the cap is not enforced by this Active Effect). It stacks with armor but not with other cyber. It applies a -1 penalty to all Dex skill checks.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "aM1dl66ysJFh1TS5",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aM1dl66ysJFh1TS5"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Eelskin Capacitor Mesh",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.k6Cclgj7Q2JjtT7H"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 25,000cr</strong></p><p>A hair-fine mesh of almost imperceptible wiring along the user's palms and fingers allow them to trigger brief, controlled bursts of electrical energy at targets within five meters. As an Instant action it adds 2d4 non-lethal damage to a successful Punch attack. In its intended use, it also allows the user to override and disable most electronic locks and security systems with a successful Sneak or Fix skill check. Both triggering a burst and hacking a security system tax the user's biology; one System Strain point is gained with each attack or skill check.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "5m",
+      "duration": "Instant action"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "k6Cclgj7Q2JjtT7H",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!k6Cclgj7Q2JjtT7H"
+}

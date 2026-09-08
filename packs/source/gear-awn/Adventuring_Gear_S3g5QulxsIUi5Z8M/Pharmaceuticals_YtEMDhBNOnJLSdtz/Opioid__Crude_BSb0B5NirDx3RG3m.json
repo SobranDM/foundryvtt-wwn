@@ -1,0 +1,44 @@
+{
+  "_id": "BSb0B5NirDx3RG3m",
+  "name": "Opioid, Crude",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pill-powder.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p>Grants 1d10 temporary hit points for an hour, which can exceed the user's normal maximum. The points vanish at the hour's end, leaving at least 1 HP. Adds 1 System Strain the first time the user takes damage while affected.</p>",
+    "price": 1,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BSb0B5NirDx3RG3m"
+}

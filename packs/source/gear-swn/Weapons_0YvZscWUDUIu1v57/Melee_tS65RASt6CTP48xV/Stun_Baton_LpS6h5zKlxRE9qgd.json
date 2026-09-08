@@ -1,0 +1,71 @@
+{
+  "_id": "LpS6h5zKlxRE9qgd",
+  "name": "Stun Baton",
+  "type": "weapon",
+  "img": "icons/weapons/clubs/baton-energy-stun-silver-yellow.webp",
+  "effects": [],
+  "folder": "tS65RASt6CTP48xV",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p>Stun batons are common law enforcement tools. The damage they do can drop a target to zero hit points, but will not kill them, the victim awakening in ten minutes with one hit point. Stun batons trickle-charge from normal movement and will not run out of electrical energy under normal use conditions.</p>",
+    "damage": "1d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "dex",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "Nonlethal"
+    ],
+    "ammoId": "",
+    "ammoMode": "none",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LpS6h5zKlxRE9qgd"
+}

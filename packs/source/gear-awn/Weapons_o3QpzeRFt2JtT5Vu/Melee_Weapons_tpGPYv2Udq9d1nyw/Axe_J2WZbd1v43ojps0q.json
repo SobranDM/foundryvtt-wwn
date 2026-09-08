@@ -1,0 +1,69 @@
+{
+  "_id": "J2WZbd1v43ojps0q",
+  "name": "Axe",
+  "type": "weapon",
+  "img": "icons/weapons/axes/axe-broad-worn-brown.webp",
+  "effects": [],
+  "folder": "tpGPYv2Udq9d1nyw",
+  "sort": 5,
+  "flags": {},
+  "system": {
+    "description": "<p>A hand axe, equally useful for chopping wood or hostile mutants.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 5,
+      "medium": 0,
+      "long": 10
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!J2WZbd1v43ojps0q"
+}

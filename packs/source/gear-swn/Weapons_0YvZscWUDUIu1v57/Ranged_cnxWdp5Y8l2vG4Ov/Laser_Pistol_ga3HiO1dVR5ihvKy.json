@@ -1,0 +1,69 @@
+{
+  "_id": "ga3HiO1dVR5ihvKy",
+  "name": "Laser Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-energy-blaster.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 18,
+  "flags": {},
+  "system": {
+    "description": "<p>Laser pistols and laser rifles are the most common type of energy weapon. The lack of recoil for non-Heavy energy weapons makes them more accurate, granting a +1 bonus to hit rolls. One Type A power cell is sufficient to recharge an energy weapon's magazine.</p>",
+    "damage": "1d6",
+    "bonus": 1,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Power Cell, Type A",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 200,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ga3HiO1dVR5ihvKy"
+}

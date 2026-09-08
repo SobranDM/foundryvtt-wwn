@@ -1,0 +1,66 @@
+{
+  "name": "Zombie Wires",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.GuDnGvPbGKwYqO4I"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $60,000 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>Functioning only for a user with at least one Body cybersystem to serve as a motor substrate, \"zombie wires\" allow a user to keep functioning even at zero hit points. As an Instant action at zero hit points, the user can give their body a one-sentence command involving physical action. Their insensate flesh will blindly carry out that action for up to six rounds until it is complete or they take up to one quarter of their maximum hit points in further damage, which will kill them instantly. Time spent under Zombie Wires counts against a user's stabilization time limit. Triggering this cyber adds 2 System Strain.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "2",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 4,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "GuDnGvPbGKwYqO4I",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GuDnGvPbGKwYqO4I"
+}

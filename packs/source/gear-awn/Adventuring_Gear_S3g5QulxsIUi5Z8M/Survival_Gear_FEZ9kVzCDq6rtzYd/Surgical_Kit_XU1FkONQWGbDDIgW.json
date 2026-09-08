@@ -1,0 +1,44 @@
+{
+  "_id": "XU1FkONQWGbDDIgW",
+  "name": "Surgical Kit",
+  "type": "item",
+  "img": "icons/tools/medical/toolkit-surgical-pink.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 33,
+  "flags": {},
+  "system": {
+    "description": "<p>A heavy case of tools and drugs, no substitute for an actual medical facility but enough for complicated surgery to be minimally feasible. No risk of running out if used only for a small PC party's needs.</p>",
+    "price": 500,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XU1FkONQWGbDDIgW"
+}

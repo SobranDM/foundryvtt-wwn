@@ -1,0 +1,66 @@
+{
+  "name": "Hemosynthetic Filter System",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.y3d6TLl96w5wzH8p"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A wide-spectrum array of blood scrubbers, intake filters, and microbial barriers grants the user effective immunity to most natural diseases and non-synthetic toxins. Weaponized toxins and certain exotic natural afflictions can still affect the user, but they get a +2 bonus on all saving throws against them. The system automatically alerts the user if they have been exposed to a recognized disease or toxin, whether or not it affects them.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "y3d6TLl96w5wzH8p",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!y3d6TLl96w5wzH8p"
+}

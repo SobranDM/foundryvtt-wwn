@@ -1,0 +1,71 @@
+{
+  "_id": "p9678ItilWDNT6uF",
+  "name": "TL4 Sword",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-tech-blue.webp",
+  "effects": [],
+  "folder": "tpGPYv2Udq9d1nyw",
+  "sort": 10,
+  "flags": {},
+  "system": {
+    "description": "<p>A high-tech blade with vibrating serrations or a thermal edge, capable of harming targets in full-suit powered armor.</p>",
+    "damage": "1d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "3",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "High-Tech"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 300,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!p9678ItilWDNT6uF"
+}

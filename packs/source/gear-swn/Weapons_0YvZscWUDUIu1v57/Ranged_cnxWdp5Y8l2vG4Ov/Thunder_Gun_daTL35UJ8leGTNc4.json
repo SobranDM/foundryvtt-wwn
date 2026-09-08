@@ -1,0 +1,71 @@
+{
+  "_id": "daTL35UJ8leGTNc4",
+  "name": "Thunder Gun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-energy-steel-red.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 23,
+  "flags": {},
+  "system": {
+    "description": "<p>Thunder guns are named for the basso vibrations caused by their operation, a sound that can be felt as far as thirty meters away from an operator. This two-handed weapon uses grav plates to create rapid, randomized disruptions in a target. If a thunder gun hits a target with an unmodified hit roll of 16 or higher an extra 1d10 damage is rolled; this bonus damage always applies to inanimate targets.</p>",
+    "damage": "2d10",
+    "bonus": 1,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 5,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "2H"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Power Cell, Type A",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 1000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!daTL35UJ8leGTNc4"
+}

@@ -117,17 +117,41 @@ export default class WwnPc extends WwnActorBase {
 
   prepareBaseData() {
     super.prepareBaseData();
-    // AE-only / AE-add targets: restore persisted source each prepare so
-    // add-mode AEs do not stack across prepareData() calls.
     const src = this.parent?._source?.system ?? {};
+    // abilities.*.baseMod is a pure AE target (see ae-targets.mjs
+    // "system.abilities.<key>.baseMod", e.g. the "Developed [Attribute]"
+    // focus and the legacy "Migrated: WWN Tweaks" effect both grant it via
+    // AE, never by writing the schema field directly). No sheet input ever
+    // edits it, and even the ancient full-schema migration only ever wrote
+    // literal 0 or a proper Active Effect here — never a direct number.
+    // Zero it unconditionally so stray/residual persisted data can't leak
+    // into ability mods, same fix as combat.abMod above.
     for (const key of Object.keys(this.abilities ?? {})) {
-      this.abilities[key].baseMod = Number(src.abilities?.[key]?.baseMod) || 0;
+      this.abilities[key].baseMod = 0;
     }
+    // hitDice.perLevelMod is NOT the same shape as abMod/baseMod: it has a
+    // genuinely editable sheet input (details tab) used as a real chargen
+    // choice whenever the character's hit dice are not classEdge-granted
+    // (see the `{{#unless system.hitDice.fromEdges}}` input in
+    // details.hbs, and the "do not treat as sheet-editable when classEdges
+    // own... " comment in derivations/hit-dice.mjs). It is also a
+    // registered AE target, but AEs add on top of this restored value
+    // rather than replacing it, and deriveHitDice() overrides it entirely
+    // once classEdge hdGrant applies. Persisted source must be honored here
+    // — do not zero it.
     this.hitDice.perLevelMod = Number(src.hitDice?.perLevelMod) || 0;
     this.hitDice.staticMod = 0;
     this.hitDice.fromEdges = false;
     this.skills.floor = -1;
-    this.combat.abMod = Number(src.combat?.abMod) || 0;
+    // abMod is a pure AE target (see ae-targets.mjs "system.combat.abMod"),
+    // not a manually-set or migration-preserved value: nothing in the sheet
+    // UI ever writes to it, and the only supported way to grant a flat
+    // attack-bonus adjustment is a "phase: initial" Active Effect targeting
+    // this key. Zero it unconditionally here (never trust persisted source)
+    // so stale/garbage residue from old migrations can never leak into the
+    // live attack bonus; a real AE still applies its own add/override value
+    // on top of this baseline immediately afterward, same as allAttack et al.
+    this.combat.abMod = 0;
     this.combat.abBase = 0;
     this.combat.ab = 0;
   }

@@ -1,0 +1,592 @@
+{
+  "weapons": {
+    "firearms": [
+      {
+        "name": "Light Pistol",
+        "img": "icons/weapons/guns/pistol-handgun-small.webp",
+        "description": "<p>Light and heavy pistols are categorized by the caliber of the bullet they fire. Some operators prefer the low recoil and high mag capacity possible with a low-caliber round, while others like to have a little more certainty in dropping the targets they hit.</p>",
+        "damage": "1d6", "range": [10, 80], "cost": 200, "mag": 15, "enc": 1,
+        "traumaDie": "1d8", "traumaRating": 2
+      },
+      {
+        "name": "Heavy Pistol",
+        "img": "icons/weapons/guns/pistol-handgun-large.webp",
+        "description": "<p>Light and heavy pistols are categorized by the caliber of the bullet they fire. Some operators prefer the low recoil and high mag capacity possible with a low-caliber round, while others like to have a little more certainty in dropping the targets they hit.</p>",
+        "damage": "1d8", "range": [10, 100], "cost": 200, "mag": 8, "enc": 1,
+        "traumaDie": "1d6", "traumaRating": 3
+      },
+      {
+        "name": "Advanced Bow",
+        "img": "icons/weapons/bows/bow-recurve-black.webp",
+        "description": "<p>Advanced bows are used by a few specialists who prefer the near-silence that modern composites provide or the massive blood loss induced by a modern fractal broadhead carried on a fifty-gram arrow. This weapon can be reloaded with a Move action, or an On Turn action if the user has at least Shoot-1 skill.</p>",
+        "damage": "1d8+1", "range": [30, 200], "cost": 500, "mag": 1, "enc": 2,
+        "traumaDie": "1d8+1", "traumaRating": 3, "ammoFallback": "Advanced Arrows", "firearm": false
+      },
+      {
+        "name": "Rifle",
+        "img": "icons/weapons/guns/rifle-hunting-scoped-sight.webp",
+        "description": "<p>Rifles and combat rifles are similar semi-automatic tech, though the latter is equipped with a burst-fire selector and usually trades the range of a heavier caliber for the ability to carry more ammunition.</p>",
+        "damage": "1d10+2", "range": [200, 400], "cost": 1000, "mag": 6, "enc": 2,
+        "traumaDie": "1d8", "traumaRating": 3
+      },
+      {
+        "name": "Combat Rifle",
+        "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+        "description": "<p>Rifles and combat rifles are similar semi-automatic tech, though the latter is equipped with a burst-fire selector and usually trades the range of a heavier caliber for the ability to carry more ammunition. This weapon may use burst fire when attacking, firing three rounds to gain +2 to hit and damage rolls. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "1d12", "range": [100, 300], "cost": 2500, "mag": 30, "enc": 2,
+        "traumaDie": "1d8", "traumaRating": 3, "burst": true
+      },
+      {
+        "name": "Submachine Gun",
+        "img": "icons/weapons/guns/machine-gun-sub-pistol.webp",
+        "description": "<p>Submachine guns are popular for their small form factor and convenient burst fire, though like other burst-fire weaponry the corps frown heavily on civilian possession. This weapon may use burst fire when attacking, firing three rounds to gain +2 to hit and damage rolls. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "1d8", "range": [30, 100], "cost": 2000, "mag": 20, "enc": 1,
+        "traumaDie": "1d6", "traumaRating": 2, "burst": true
+      },
+      {
+        "name": "Shotgun",
+        "img": "icons/weapons/guns/shotgun-pump.webp",
+        "description": "<p>Shotguns of various stripes can be found under the counter of practically every bar and shop in a slum. Simple double-barrel models can be made by any home gunsmith with a pulse. Ranges and damages given are for shot shells; slugs double the normal and extreme ranges but apply a -1 penalty to hit rolls.</p>",
+        "damage": "3d4", "range": [10, 30], "cost": 200, "mag": 2, "enc": 2,
+        "traumaDie": "1d10", "traumaRating": 3
+      },
+      {
+        "name": "Semi-Auto Shotgun",
+        "img": "icons/weapons/guns/shotgun-short-steel.webp",
+        "description": "<p>Shotguns of various stripes can be found under the counter of practically every bar and shop in a slum. Ranges and damages given are for shot shells; slugs double the normal and extreme ranges but apply a -1 penalty to hit rolls.</p>",
+        "damage": "3d4", "range": [10, 30], "cost": 1000, "mag": 6, "enc": 2,
+        "traumaDie": "1d10", "traumaRating": 3
+      },
+      {
+        "name": "Combat Shotgun",
+        "img": "icons/weapons/guns/shotgun-tech-green-yellow.webp",
+        "description": "<p>The finer tolerances and more elaborate machining of a burst-fire capable combat shotgun leave it as a more selective product. Ranges and damages given are for shot shells; slugs double the normal and extreme ranges but apply a -1 penalty to hit rolls. This weapon may use burst fire when attacking, firing three rounds to gain +2 to hit and damage rolls. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "3d4", "range": [10, 30], "cost": 3000, "mag": 12, "enc": 2,
+        "traumaDie": "1d10", "traumaRating": 3, "burst": true
+      },
+      {
+        "name": "Sniper Rifle",
+        "img": "icons/weapons/guns/rifle-sniper-long.webp",
+        "description": "<p>Sniper rifles are often nothing more than bolt-action rifles with expensive tuning and optics. If not fired from a rest in a prepared position, a sniper rifle's statistics are the same as a normal rifle.</p>",
+        "damage": "2d8", "range": [1000, 2000], "cost": 3000, "mag": 1, "enc": 2,
+        "traumaDie": "1d10", "traumaRating": 4
+      },
+      {
+        "name": "Taser Pistol",
+        "img": "icons/weapons/guns/pistol-energy-blast.webp",
+        "description": "<p>Taser pistols cover a family of ranged non-lethal weapons small and light enough to carry concealed. Most rely on tried-and-true electrical shocks to drop a target; they inflict non-lethal hit point damage and cannot make Traumatic Hits.</p>",
+        "damage": "1d8", "range": [10, 15], "cost": 500, "mag": 2, "enc": 1,
+        "traumaDie": "", "traumaRating": 0, "tags": ["LL"]
+      },
+      {
+        "name": "Automatic Rifle",
+        "img": "icons/weapons/guns/rifle-assault-heavy.webp",
+        "description": "<p>Automatic rifles include a large range of barely man-portable firearms designed to hurl vast amounts of lead through the air, and unlike smaller firearms, they can use suppressive fire if properly braced. Ammunition for these guns comes in belts or boxes, with each round costing $50 worth of ammunition. This weapon can fire to suppress if braced against a solid support or the gunner is prone. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "2d8", "range": [200, 400], "cost": 10000, "mag": 10, "enc": 4,
+        "traumaDie": "1d10", "traumaRating": 3
+      }
+    ],
+    "melee": [
+      {
+        "name": "Unarmed Attack",
+        "img": "icons/skills/melee/unarmed-punch-fist.webp",
+        "description": "<p>A common punch or kick, unimproved by cyberware or a Focus. Unarmed attacks are always non-lethal unless the attacker desires otherwise, and use the Punch skill.</p>",
+        "damage": "1d2+@punch", "cost": 0, "enc": 0, "skillFallback": "punch",
+        "traumaDie": "1d6", "traumaRating": 1, "tags": ["LL"]
+      },
+      {
+        "name": "Knife",
+        "img": "icons/weapons/daggers/dagger-black.webp",
+        "description": "<p>Knives, clubs, swords, and other simple melee weapons are available almost anywhere on the street.</p>",
+        "damage": "1d4", "range": [10, 20], "cost": 20, "enc": 1,
+        "shockDamage": "1", "shockAc": 15, "traumaDie": "1d6", "traumaRating": 3, "tags": ["T"]
+      },
+      {
+        "name": "Club",
+        "img": "icons/weapons/clubs/baton-night-stick-truncheon.webp",
+        "description": "<p>Particularly impoverished gangers sometimes fashion makeshift machetes and improvised shivs when better can't be obtained. A club's damage is always non-lethal, unless desired otherwise.</p>",
+        "damage": "1d4", "range": [10, 20], "cost": 0, "enc": 1,
+        "shockDamage": "1", "shockAc": 18, "traumaDie": "1d6", "traumaRating": 2, "tags": ["LL"]
+      },
+      {
+        "name": "Spear",
+        "img": "icons/weapons/polearms/spear-simple-stone.webp",
+        "description": "<p>Knives, clubs, swords, and other simple melee weapons are available almost anywhere on the street.</p>",
+        "damage": "1d6", "range": [10, 20], "cost": 50, "enc": 1,
+        "shockDamage": "2", "shockAc": 13, "traumaDie": "1d8", "traumaRating": 3, "tags": ["T"]
+      },
+      {
+        "name": "Sword",
+        "img": "icons/weapons/swords/shortsword-guard.webp",
+        "description": "<p>Knives, clubs, swords, and other simple melee weapons are available almost anywhere on the street.</p>",
+        "damage": "1d8", "cost": 200, "enc": 1,
+        "shockDamage": "2", "shockAc": 13, "traumaDie": "1d8", "traumaRating": 2
+      },
+      {
+        "name": "Big Sword",
+        "img": "icons/weapons/swords/greatsword-guard.webp",
+        "description": "<p>A two-handed blade, too large to wield alongside a Readied item in the off-hand.</p>",
+        "damage": "2d6", "cost": 500, "enc": 2,
+        "shockDamage": "2", "shockAc": 15, "traumaDie": "1d8", "traumaRating": 3, "tags": ["2H"]
+      },
+      {
+        "name": "Big Club",
+        "img": "icons/weapons/clubs/baseball-bat-metal.webp",
+        "description": "<p>A two-handed bludgeon, too large to wield alongside a Readied item in the off-hand. Its damage is always non-lethal, unless desired otherwise.</p>",
+        "damage": "1d10", "cost": 100, "enc": 2,
+        "shockDamage": "2", "shockAc": 18, "traumaDie": "1d8", "traumaRating": 3, "tags": ["2H", "LL"]
+      },
+      {
+        "name": "Advanced Knife",
+        "img": "icons/weapons/daggers/dagger-curved-guard-black.webp",
+        "description": "<p>Advanced weapons employ modern polymers, sophisticated metallurgy, fractal edges, and electro-stun tech. An advanced micro-edged blade can go through bone like bamboo and keep an edge for weeks between sharpenings.</p>",
+        "damage": "1d6", "range": [10, 20], "cost": 200, "enc": 1,
+        "shockDamage": "2", "shockAc": 15, "traumaDie": "1d8", "traumaRating": 3, "tags": ["T"]
+      },
+      {
+        "name": "Advanced Sword",
+        "img": "icons/weapons/swords/shortsword-guard-gold.webp",
+        "description": "<p>Advanced weapons employ modern polymers, sophisticated metallurgy, fractal edges, and electro-stun tech.</p>",
+        "damage": "1d10", "cost": 1000, "enc": 1,
+        "shockDamage": "3", "shockAc": 15, "traumaDie": "1d8", "traumaRating": 3
+      },
+      {
+        "name": "Advanced Big Sword",
+        "img": "icons/weapons/swords/greatsword-crossguard-silver.webp",
+        "description": "<p>A two-handed advanced blade, too large to wield alongside a Readied item in the off-hand.</p>",
+        "damage": "2d8", "cost": 2500, "enc": 2,
+        "shockDamage": "4", "shockAc": 15, "traumaDie": "1d8", "traumaRating": 3, "tags": ["2H"]
+      },
+      {
+        "name": "Advanced Club",
+        "img": "icons/weapons/clubs/club-banded-steel.webp",
+        "description": "<p>Powered impact plates, vibrating serrations, or other after-market adjustments improve on the plain steel edges of a prior age. Its damage is always non-lethal, unless desired otherwise.</p>",
+        "damage": "1d8", "cost": 500, "enc": 1,
+        "shockDamage": "2", "shockAc": 18, "traumaDie": "1d8", "traumaRating": 3, "tags": ["LL"]
+      },
+      {
+        "name": "Grenade, Flash",
+        "img": "icons/weapons/thrown/grenade-tech-stun-cannister.webp",
+        "description": "<p>Flash grenades force victims without eye and ear protection to make a Physical save; on a failure, the victim loses their next Main Action and takes a -2 penalty to hit rolls and AC for the next 1d6 rounds. Flashbang effects don't stack, and a target who makes their save cannot be flashbanged again that same round. Grenades may be thrown at a point within range and always target AC 10. On a miss, the grenade bounces 1d10 meters in a random direction before exploding. Grenades have a 5-meter radius of effect.</p>",
+        "damage": "", "range": [10, 30], "cost": 50, "enc": 1, "tags": ["T"], "save": "physical",
+        "melee": false, "score": "dex", "skillFallback": "shoot", "firearm": false
+      },
+      {
+        "name": "Grenade, Frag",
+        "img": "icons/weapons/thrown/grenade-frag-green.webp",
+        "description": "<p>Frag grenades inflict damage on all victims in range, plus the chance for a Traumatic Hit. An Evasion save can halve a frag grenade's damage, and each point of melee AC the target has above 14 reduces the final damage total by one point, possibly down to zero. Requires an applicable Contact to buy, being generally illegal for open sale. Grenades may be thrown at a point within range and always target AC 10; on a miss, the grenade bounces 1d10 meters before exploding, with a 5-meter radius of effect.</p>",
+        "damage": "2d6", "range": [10, 30], "cost": 100, "enc": 1, "tags": ["T"],
+        "traumaDie": "1d8", "traumaRating": 2, "save": "evasion",
+        "melee": false, "score": "dex", "skillFallback": "shoot", "firearm": false
+      },
+      {
+        "name": "Grenade, Gas",
+        "img": "icons/weapons/thrown/grenade-gas.webp",
+        "description": "<p>Gas grenades create a 10-meter-diameter cloud of opaque, choking, irritating gas that disperses in one round. They inflict non-lethal damage, halved on a successful Physical save, and are useless against targets with breathing protection. They provide full concealment for those within the gas. Gas isn't enough to defeat IR or augmented visuals.</p>",
+        "damage": "1d10", "range": [10, 30], "cost": 50, "enc": 1, "tags": ["T", "LL"], "save": "physical",
+        "melee": false, "score": "dex", "skillFallback": "shoot", "firearm": false
+      },
+      {
+        "name": "Grenade, Smoke",
+        "img": "icons/commodities/tech/smoke-bomb-purple.webp",
+        "description": "<p>Smoke grenades are harmless, but provide a 10-meter dome of concealment where it's necessary. Smoke isn't enough to defeat IR or augmented visuals.</p>",
+        "damage": "", "range": [10, 30], "cost": 25, "enc": 1, "tags": ["T"],
+        "melee": false, "score": "dex", "skillFallback": "shoot", "firearm": false
+      }
+    ],
+    "heavy": [
+      {
+        "name": "Anti-Materiel Rifle",
+        "img": "icons/weapons/guns/rifle-sniper-heavy-long.webp",
+        "description": "<p>Anti-materiel rifles have encountered something of a renaissance with the ubiquity of armored drones and heavily cybered combatants. While not suitable for downing tanks or other heavily armored vehicles, their 20mm rounds are more than sufficient to punch through lighter armor plating, concrete walls, and full body conversion cyborgs. Use of a secure firing rest is recommended; if not fired from a stationary rest, this weapon's statistics are the same as a regular rifle. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+        "damage": "3d8", "range": [1000, 2000], "cost": 8000, "mag": 5, "enc": 3,
+        "traumaDie": "1d12", "traumaRating": 3
+      },
+      {
+        "name": "Grenade Launcher",
+        "img": "icons/weapons/artillery/mount-weapon-launcher-steel.webp",
+        "description": "<p>Grenade launchers are accessories mounted on rifle-sized firearms, adding 1 Encumbrance to their bulk. These weapons launch specially-designed grenades to the listed range, targeting them as if they were thrown normally; such grenades cost and function the same as their regular equivalents but cannot be thrown by hand. When attacking, the user chooses whether to fire the grenade launcher or the weapon it's mounted to, but both cannot be fired in the same round. Stand-alone models for vehicle or drone mounting count as 2 Encumbrance but are otherwise identical. Damage and Trauma Die depend on the grenade type loaded. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "", "range": [150, 350], "cost": 3000, "mag": 3, "enc": 1,
+        "traumaDie": "", "traumaRating": 0, "ammoFallback": "Grenade, Frag"
+      },
+      {
+        "name": "Demo Charge",
+        "img": "icons/weapons/thrown/bomb-timer.webp",
+        "description": "<p>Demo charges are shaped explosive charges usually meant to knock human-sized holes in anything short of fortified defensive walls. While ineffective as thrown weapons, when used as part of a trap or ambush they inflict their listed damage in a cone out to normal range, with an Evasion save for half damage. If applied carefully to a vehicle target, the following explosion will inevitably destroy it. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+        "damage": "3d10", "range": [20, 20], "cost": 1000, "enc": 1,
+        "traumaDie": "1d10", "traumaRating": 3, "save": "evasion", "score": "dex", "skillFallback": "shoot",
+        "melee": false, "firearm": false
+      },
+      {
+        "name": "Heavy Machine Gun",
+        "img": "icons/weapons/guns/machine-gun-drum.webp",
+        "description": "<p>Heavy machine guns are old tech, but reliable. Without a fixed firing position or vehicle mount, their recoil makes them almost uncontrollable. Due to the mass of lead involved in firing an HMG, each round of its ammunition costs $100 and counts as a full item of encumbrance. This weapon can fire to suppress if fixed to a vehicle or stationary firing position. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+        "damage": "3d6", "range": [500, 2000], "cost": 10000, "mag": 10, "enc": 3,
+        "traumaDie": "1d12", "traumaRating": 3
+      },
+      {
+        "name": "Mortar",
+        "img": "icons/weapons/artillery/mount-weapon-cannon-steel.webp",
+        "description": "<p>Mortars are rare, but have their uses amid the tall buildings of an urban sprawl. They have a minimum range of 20 meters, but can lob indirect fire over buildings and obstacles. Mortars always target AC 20 at first, but each round of fire at the same target grants a +1 hit bonus if there's a forward spotter to adjust the aim. Mortar rounds act as frag grenades on the target point, but do 3d6 damage at base with a 10-meter radius; armor doesn't lessen harm from mortar rounds. A mortar round costs $50 and counts as one item of encumbrance. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "3d6", "range": [1000, 2000], "cost": 5000, "mag": 1, "enc": 3,
+        "traumaDie": "1d12", "traumaRating": 2, "score": "wis", "skillFallback": "shoot",
+        "firearm": false
+      },
+      {
+        "name": "Rocket Launcher",
+        "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+        "description": "<p>Rocket launchers include a wide variety of single-shot disposable launchers. Their general imprecision forces a -4 hit penalty against human-sized targets, but they inflict frag grenade damage on any target within 5 meters of the rocket's landing point. Specialized anti-armor warheads lose this frag grenade bonus, but do double damage to vehicles or obstacles. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+        "damage": "3d10", "range": [2000, 4000], "cost": 5000, "enc": 2,
+        "traumaDie": "1d10", "traumaRating": 2, "firearm": false
+      },
+      {
+        "name": "Land Mine, Anti-Personnel",
+        "img": "icons/weapons/ammunition/explosive-mine.webp",
+        "description": "<p>Land mines come in anti-personnel and anti-vehicle flavors. The anti-personnel mine activates on any human-sized approach within 1 meter, inflicting damage in a 2-meter radius with an Evasion save for half. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+        "damage": "1d8", "cost": 150, "enc": 1,
+        "traumaDie": "1d10", "traumaRating": 2, "save": "evasion", "melee": false, "score": "dex", "skillFallback": "",
+        "firearm": false
+      },
+      {
+        "name": "Land Mine, Anti-Vehicle",
+        "img": "icons/weapons/ammunition/explosive-mine-depth-charge.webp",
+        "description": "<p>Anti-vehicle mines can only be activated by vehicular levels of ground pressure or vehicle-sized proximate metal masses, but do their damage in a 5-meter radius. Humans get an Evasion save for half damage. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+        "damage": "3d8", "cost": 1000, "enc": 2,
+        "traumaDie": "1d20", "traumaRating": 2, "save": "evasion", "melee": false, "score": "dex", "skillFallback": "",
+        "firearm": false
+      }
+    ]
+  },
+  "armor": [
+    {
+      "name": "Ordinary Clothing",
+      "img": "icons/equipment/chest/shirt-tee-white.webp",
+      "description": "<p>Some bold, impoverished, or highly fashionable people still insist on wearing clothing that has no functional use as armor.</p>",
+      "ac": 10, "acRanged": 10, "soak": 0, "enc": 0, "traumaMod": 0, "type": "light", "tl": 0, "cost": 25
+    },
+    {
+      "name": "Reinforced Clothing",
+      "img": "icons/equipment/chest/vest-reinforced-leather.webp",
+      "description": "<p>Subtle polymer sheets and reinforced weaves are used to provide a modicum of protection in this clothing without sacrificing taste.</p>",
+      "ac": 10, "acRanged": 13, "soak": 2, "enc": 0, "traumaMod": 0, "type": "light", "tl": 1, "cost": 100
+    },
+    {
+      "name": "War Harness",
+      "img": "icons/equipment/chest/vest-improvised-plated-medium.webp",
+      "description": "<p>An upgraded form of street leathers, these outfits have sacrificed all discretion for whatever spare ballistic plates and advanced polymer weaves its owner can sew or bolt on. It's usually the best armor that local gangs or common thugs can afford.</p>",
+      "ac": 14, "acRanged": 13, "soak": 5, "enc": 1, "traumaMod": 0, "type": "medium", "tl": 1, "cost": 200
+    },
+    {
+      "name": "Street Leathers",
+      "img": "icons/equipment/chest/jacket-motorcycle-leather-black.webp",
+      "description": "<p>Fashionable, aggressive, and often mismatched, \"street leathers\" seldom have any non-synthetic leather in their makeup, but are light and comfortable enough to wear as a habit.</p>",
+      "ac": 12, "acRanged": 13, "soak": 3, "enc": 0, "traumaMod": 0, "type": "light", "tl": 1, "cost": 250
+    },
+    {
+      "name": "Reinforced Longcoat",
+      "img": "icons/equipment/chest/coat-trench-brown.webp",
+      "description": "<p>Long, draping clothing is bolstered with advanced fabrics and discreetly-placed absorption plates, the whole remaining deniable as armor.</p>",
+      "ac": 13, "acRanged": 15, "soak": 5, "enc": 1, "traumaMod": 1, "type": "medium", "tl": 2, "cost": 500
+    },
+    {
+      "name": "Armored Clothing",
+      "img": "icons/equipment/chest/coat-collared-studded-red.webp",
+      "description": "<p>The bulky plates and heavy ballistic weaves of this outfit are disguised as drapes and fashion elements.</p>",
+      "ac": 14, "acRanged": 16, "soak": 5, "enc": 2, "traumaMod": 1, "type": "medium", "tl": 2, "cost": 1000
+    },
+    {
+      "name": "Plated Longcoat",
+      "img": "icons/equipment/chest/heavy-steel.webp",
+      "description": "<p>An ankle-length coat, robe, or mantle is used as a substrate for numerous reinforced plates and swaths of ballistic weave. It's heavy, bulky, and blatant, but it can absorb a lot of punishment. This armor applies a -1 penalty to all Sneak or Exert skill checks; multiple heavy items stack.</p>",
+      "ac": 15, "acRanged": 17, "soak": 5, "enc": 3, "traumaMod": 1, "type": "heavy", "tl": 3, "cost": 2000, "ashesHeavy": true
+    },
+    {
+      "name": "Impact Jacket",
+      "img": "icons/equipment/chest/jacket-modern-green.webp",
+      "description": "<p>Built to absorb the impact of various contact sports, extreme athletic pursuits, and unguided vehicle races, these jackets usually come as part of a full-body protective outfit.</p>",
+      "ac": 14, "acRanged": 12, "soak": 8, "enc": 1, "traumaMod": 1, "type": "medium", "tl": 2, "cost": 1000
+    },
+    {
+      "name": "Light Armored Suit",
+      "img": "icons/equipment/chest/vest-tactical-reinforced.webp",
+      "description": "<p>Ordinary law enforcement and security guards will be wearing suits like this, usually brightly emblazoned with their corporate affiliation. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+      "ac": 13, "acRanged": 16, "soak": 5, "enc": 2, "traumaMod": 2, "type": "medium", "tl": 4, "cost": 5000
+    },
+    {
+      "name": "Medium Armored Suit",
+      "img": "icons/equipment/chest/vest-powered-tactical.webp",
+      "description": "<p>Heavy security usually sports armor on this level, including police rapid response teams. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+      "ac": 14, "acRanged": 18, "soak": 10, "enc": 3, "traumaMod": 2, "type": "heavy", "tl": 4, "cost": 10000
+    },
+    {
+      "name": "Heavy Armored Suit",
+      "img": "icons/equipment/chest/suit-armored-chest-plated.webp",
+      "description": "<p>A head-to-toe suit of interlocking plates and impact absorption units, these suits are reserved for high-end response teams and military operations. This armor applies a -1 penalty to all Sneak or Exert skill checks; multiple heavy items stack. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+      "ac": 18, "acRanged": 20, "soak": 15, "enc": 3, "traumaMod": 3, "type": "heavy", "tl": 4, "cost": 20000, "ashesHeavy": true
+    }
+  ],
+  "ammo": [
+    {
+      "name": "Spare Magazine",
+      "img": "icons/weapons/ammunition/ammo-magazine-clip.webp",
+      "description": "<p>A spare magazine of ammunition for a pistol, rifle, shotgun, submachine gun, or similar magazine-fed firearm. Reload transfers rounds into the weapon's magazine. Duplicate and rename for specific calibers as needed; belt-fed heavy weapons (Automatic Rifle, Heavy Machine Gun) cost more per round in play but use this same generic reload item for simplicity.</p>",
+      "price": 10, "weight": 1, "charges": { "value": 0, "max": 0 }
+    },
+    {
+      "name": "Advanced Arrows",
+      "img": "icons/containers/ammunition/arrows-quiver-black.webp",
+      "description": "<p>A quiver of modern fractal-broadhead arrows for an advanced bow.</p>",
+      "price": 50, "weight": 1, "charges": { "value": 20, "max": 20 }
+    }
+  ],
+  "gear": [
+    {
+      "name": "Active Hearing Protection",
+      "img": "icons/tools/instruments/microphone-headset.webp",
+      "description": "<p>This headset protects the wearer from disorientation due to loud noises. It passes along conversational-level speech without difficulty. Must be Readied to be employed.</p>",
+      "price": 250, "weight": 1
+    },
+    {
+      "name": "Ammunition, Loose Rounds",
+      "img": "icons/weapons/ammunition/ammunition-bullet-round.webp",
+      "description": "<p>Individual rounds are loaded into empty magazines that are specific to individual firearms. No Encumbrance for any reasonable amount.</p>",
+      "price": 1, "weight": 0, "quantity": 20
+    },
+    {
+      "name": "Backpack or Gear Harness",
+      "img": "icons/containers/bags/pack-canvas-white-brown.webp",
+      "description": "<p>Backpacks, gear harnesses, and other such kit may add some bulk to an operator's burden, but without them the GM is perfectly justified in asking how a PC is fitting their entire loadout in their jacket pockets.</p>",
+      "price": 25, "weight": 1, "weightless": "whenReadied"
+    },
+    {
+      "name": "Binoculars",
+      "img": "icons/tools/navigation/spyglass-telescope-blue.webp",
+      "description": "<p>Most modern binocs have low-light functionality and magnification sufficient to bring targets as much as a kilometer distant into view.</p>",
+      "price": 100, "weight": 1
+    },
+    {
+      "name": "Bus Pass, Monthly",
+      "img": "icons/sundries/documents/document-letter-tan.webp",
+      "description": "<p>A critical mobility resource for the first mission of many operators.</p>",
+      "price": 50, "weight": 0
+    },
+    {
+      "name": "Climbing Kit",
+      "img": "icons/sundries/survival/rope-braided-yellow.webp",
+      "description": "<p>Ultralight cord, a grapnel, some grip handholds, and a fast-acting, ultra-strong wall adhesive make up this kit.</p>",
+      "price": 150, "weight": 2
+    },
+    {
+      "name": "Clothing, Fashionable",
+      "img": "icons/equipment/chest/jacket-suit-leather.webp",
+      "description": "<p>Clothing has no Encumbrance when worn, but it's sometimes prudent to have a spare outfit in your pack.</p>",
+      "price": 500, "weight": 1, "weightless": "whenReadied"
+    },
+    {
+      "name": "Clothing, Haute Couture",
+      "img": "icons/equipment/chest/robe-layered-white.webp",
+      "description": "<p>Clothing has no Encumbrance when worn, but it's sometimes prudent to have a spare outfit in your pack.</p>",
+      "price": 10000, "weight": 1, "weightless": "whenReadied"
+    },
+    {
+      "name": "Clothing, Ordinary",
+      "img": "icons/equipment/chest/shirt-simple-grey.webp",
+      "description": "<p>Clothing has no Encumbrance when worn, but it's sometimes prudent to have a spare outfit in your pack.</p>",
+      "price": 25, "weight": 1, "weightless": "whenReadied"
+    },
+    {
+      "name": "Gas Mask",
+      "img": "icons/equipment/head/gas-mask.webp",
+      "description": "<p>Bulky and uncomfortable, but once Readied it leaves the user immune to most inhaled gases, including tear gas grenades.</p>",
+      "price": 1000, "weight": 1
+    },
+    {
+      "name": "Goggles, Anti-Flash",
+      "img": "icons/equipment/head/goggles-glass.webp",
+      "description": "<p>Basic anti-flash goggles defuse the visual threat of flashbangs and similar dazzlers. Must be Readied to be employed.</p>",
+      "price": 100, "weight": 1
+    },
+    {
+      "name": "Goggles, IR",
+      "img": "icons/equipment/head/goggles-tech.webp",
+      "description": "<p>IR goggles include anti-flash tech, but also give the user effective IR vision out to 50 meters in most environments. Must be Readied to be employed.</p>",
+      "price": 1000, "weight": 1
+    },
+    {
+      "name": "Kit, Basic Tools",
+      "img": "icons/tools/hand/wrench-adjustable.webp",
+      "description": "<p>These bundles of gear are carefully packed for minimal weight. Toolkits give a tech the gear they need for basic repairs and construction.</p>",
+      "price": 100, "weight": 2
+    },
+    {
+      "name": "Kit, Cyberdoc",
+      "img": "icons/tools/medical/toolkit-surgical-pink.webp",
+      "description": "<p>Cyberdoc kits contain everything medical kits do, as well as gear for cyber maintenance or even emergency implantation.</p>",
+      "price": 500, "weight": 2
+    },
+    {
+      "name": "Kit, Medkit",
+      "img": "icons/tools/medical/medkit-white-red.webp",
+      "description": "<p>Medical kits provide first aid implements.</p>",
+      "price": 100, "weight": 1
+    },
+    {
+      "name": "Kit, Survival",
+      "img": "icons/sundries/survival/shelter-tent-small.webp",
+      "description": "<p>Survival kits are for badlands operations, with water filtration, fire-making tools, and other such gear for extended wilderness stays.</p>",
+      "price": 100, "weight": 2
+    },
+    {
+      "name": "Lockpicks",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "description": "<p>Both manual lockpicks and a selection of useful electronic shims sufficient to threaten most modern locks.</p>",
+      "price": 100, "weight": 1
+    },
+    {
+      "name": "Military Ration, per Day",
+      "img": "icons/consumables/food/berries-ration-round-red.webp",
+      "description": "<p>This food brick is unappetizing but contains the nutrition necessary for a day of heavy activity. Water can be included for an extra point of Encumbrance per day.</p>",
+      "price": 20, "weight": 1, "expendOnUse": true
+    },
+    {
+      "name": "Portable Video Camera",
+      "img": "icons/tools/tech/camera.webp",
+      "description": "<p>Palm-sized and discreet, this camera can record up to twelve hours of high-def video before its internal memory is filled.</p>",
+      "price": 300, "weight": 1
+    },
+    {
+      "name": "Radio, Handheld",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "description": "<p>Both conventional handheld radios and ultra-convenient headset or collar-tab radios can be had. Ranges are one kilometer in the city and six in an open, flat area.</p>",
+      "price": 50, "weight": 1
+    },
+    {
+      "name": "Radio, Ultralight Tab",
+      "img": "icons/commodities/tech/badge-communicator.webp",
+      "description": "<p>An ultra-convenient collar-tab radio. Ranges are one kilometer in the city and six in an open, flat area.</p>",
+      "price": 500, "weight": 0
+    },
+    {
+      "name": "Smartphone, Basic",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "description": "<p>Corp-approved media devices are cheap and ubiquitous, but few operators trust them with sensitive information. No Encumbrance for any reasonable amount.</p>",
+      "price": 50, "weight": 0
+    },
+    {
+      "name": "Smartphone, Fashionable",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "description": "<p>Corp-approved media devices are cheap and ubiquitous, but few operators trust them with sensitive information. No Encumbrance for any reasonable amount.</p>",
+      "price": 2000, "weight": 0
+    },
+    {
+      "name": "VR Crown, Cheap",
+      "img": "icons/equipment/head/goggles-tech.webp",
+      "description": "<p>A cheap headset for a VR addict or a hacker too poor for a cranial jack.</p>",
+      "price": 50, "weight": 1
+    },
+    {
+      "name": "Wearable Light",
+      "img": "systems/wwn/assets/icons/items/gear.png",
+      "description": "<p>These clip-on lights can illuminate up to 30 meters ahead of the wearer.</p>",
+      "price": 25, "weight": 1, "weightless": "whenReadied"
+    }
+  ],
+  "pharmaceuticals": [
+    {
+      "name": "Avalanche",
+      "img": "icons/consumables/potions/potion-vial-corked-purple.webp",
+      "description": "<p>A somewhat pricey combat drug favored by shock troops and those first out of the trenches, Avalanche numbs sensations of pain or exhaustion for one hour, granting the user an effective +10 to their current hit points, even if it takes them above their maximum. This numbness tends to make it harder to notice serious harms, however, and the d12 roll for any Major Injury suffered while under its effects takes a -1 penalty. Heal skill required: None.</p>",
+      "price": 100
+    },
+    {
+      "name": "Boneshaker",
+      "img": "icons/consumables/potions/vial-cork-red.webp",
+      "description": "<p>A filthy mix of jailbroken corp industrial chems and amphetamine scrapings, Boneshaker is a popular combat drug among the most impoverished or savage street gangs. On application, the subject is filled with blind aggression, gaining a +2 Morale bonus and a +2 bonus to hit rolls, damage, and Shock. The recklessness induced by Boneshaker leaves them wide open, however, and all attacks against them add +2 to any Trauma Die rolls. Boneshaker lasts for one scene and adds 2 System Strain at the end of it. Heal skill required: None.</p>",
+      "price": 10
+    },
+    {
+      "name": "Chokeout",
+      "img": "icons/consumables/potions/vial-cork-green.webp",
+      "description": "<p>A chem that briefly induces severe swelling of the mucous membranes, Chokeout is odorless and tasteless, but must be consumed in food or drink and naturally degrades after twelve hours. A subject who consumes a dose of Chokeout must make a Physical saving throw; on a failure, they are strangled to unconsciousness for an hour, waking up with one hit point at the end. On a success, they take 1d10 non-lethal damage as they struggle to breathe. On a natural saving throw of 1, the victim chokes to death. Heal skill required: None.</p>",
+      "price": 50
+    },
+    {
+      "name": "Control-Delete",
+      "img": "icons/consumables/potions/vial-cork-blue.webp",
+      "description": "<p>A chemical that temporarily destroys a person's ability to form long-term memories, Control-Delete must be ingested in food or drink. Toxin-filtering cyber can fend it off, but it otherwise grants no saving throw. Once affected, the target continues to act normally, but anything that happens to them between then and their next sleep or unconsciousness is completely forgotten by the time they awake. Heal skill required: None.</p>",
+      "price": 25
+    },
+    {
+      "name": "Hellbender",
+      "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+      "description": "<p>A watery black toxin that must be administered through food or direct injection, Hellbender causes the victim to convulse with bone-cracking force shortly after consumption. A dose has a distinct acrid taste, but if the victim consumes it they must make a Physical saving throw or begin convulsing helplessly for 1d6 rounds, suffering 1d10 damage each round unless restrained by at least two associates. This damage can kill an unfortunate victim. Heal skill required: None.</p>",
+      "price": 100
+    },
+    {
+      "name": "Lurch",
+      "img": "icons/tools/laboratory/injector-needle-syringe-plunger.webp",
+      "description": "<p>An emergency stimulant meant to shock a downed ally back into mobility, Lurch heals 1d10 damage plus the physician's Heal skill on application, adding one System Strain to the target. Each dose of Lurch after the first each day increases the required Heal skill by one, so the third dose requires Heal-2 to successfully administer. Lurch only works on conscious and stabilized targets; the shock will kill a Mortally Wounded subject that hasn't been made stable. Heal skill required: 0.</p>",
+      "price": 25
+    },
+    {
+      "name": "Madeleine",
+      "img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+      "description": "<p>A chem that intensely stimulates a subject's memory centers, Madeleine has its dangers. Users normally focus on a particular memory before injecting the drug; for the next 1d6 hours, they relive some portion of that memory with perfect fidelity while remaining oblivious to their physical surroundings. Psychological addiction is a considerable risk for long-term users. Heal skill required: None.</p>",
+      "price": 100
+    },
+    {
+      "name": "Medical Prescription",
+      "img": "icons/tools/medical/medication-pills-bottle.webp",
+      "description": "<p>One of a thousand different medical drugs, a prescription like this is often necessary to treat some chronic condition or keep a medical problem from growing worse. Corp employees get their drugs for a pittance, but less fortunate souls need to source their drugs from extortionate corp pharmacies or street docs. Heal skill required: None.</p>",
+      "price": 20
+    },
+    {
+      "name": "Olympus",
+      "img": "icons/consumables/potions/vial-ornet-silver-black.webp",
+      "description": "<p>A \"respectable\" combat chem used by certain units of corporate security, Olympus numbs pain, sharpens mental focus, and slows down instinctive panic or rush instincts, allowing a calm observation of the battlefield. Users can reroll their first failed Morale check in a fight and gain a +2 bonus to hit rolls. One dose lasts for one scene, and adds one System Strain at its end. Heal skill required: None.</p>",
+      "price": 100
+    },
+    {
+      "name": "Panacea",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "description": "<p>Not so much a single drug as a pharmaceutical suite in a single injection system, this chem requires a skilled physician to adjust its mix. When used as part of a first aid attempt, this drug doubles the amount of hit points recovered by the attempt, with a minimum healing rate of 6 HP. Heal skill required: 1.</p>",
+      "price": 200
+    },
+    {
+      "name": "Pillow",
+      "img": "icons/consumables/potions/potion-vial-tube-yellow.webp",
+      "description": "<p>A powerful sedative that requires medical expertise to administer properly, Pillow must be injected into a restrained or helpless subject, as vigorous physical action can disrupt the effects. Once injected, the subject falls into a torpor indistinguishable from death that lasts for 24 hours, requiring only trace amounts of oxygen. If administered with less than a 24-hour gap between doses, the victim must make a Physical save or die sometime before the dose ends. Heal skill required: 1.</p>",
+      "price": 10
+    },
+    {
+      "name": "Psycho",
+      "img": "icons/tools/medical/medication-pill-powder.webp",
+      "description": "<p>Ingesting one of these small pills rapidly flattens a user's capacity for emotional distress while heavily increasing their aggressiveness. For roughly one hour, users gain a +2 bonus to Morale checks and experience no immediate emotional trauma from performing even the most heinous and violent actions. Heal skill required: None.</p>",
+      "price": 10
+    },
+    {
+      "name": "Reset",
+      "img": "icons/weapons/thrown/bomb-detonator.webp",
+      "description": "<p>A rare drug of desperation, Reset is a combination injector patch and wireless cyber override key. When applied to a willing subject with at least one Body or Nerve cyber system, it deluges the user's system with safety override commands and neurotransmitter stimulants, clearing accumulated System Strain in excess of their permanent minimum before maximizing it five minutes later and forcing a Physical save (at a penalty equal to System Strain gained since the drug was taken) or the subject becomes Mortally Wounded. Using Reset more than once a week is invariably fatal. Requires a Contact or other connection to obtain it on the street. Heal skill required: None.</p>",
+      "price": 1000
+    },
+    {
+      "name": "Sand",
+      "img": "icons/tools/laboratory/vials-blue-pink.webp",
+      "description": "<p>A gritty powder trafficked to those addicts too poor to afford anything better, a snorted dose of Sand will put its user into a euphoric haze for as long as an hour, depending on tolerance. Beautiful visions and dreamy contentment give way to shooting pains and intense light sensitivity afterwards, with most heavy users dying within six to twelve months of picking up the habit. Heal skill required: None.</p>",
+      "price": 2
+    },
+    {
+      "name": "Trauma Patch",
+      "img": "icons/tools/medical/bandages-adhesive.webp",
+      "description": "<p>A theoretically foolproof cocktail of coagulants, stimulants, and painkillers, a trauma patch can be applied to a Mortally Wounded ally to stabilize them on a successful Int or Dex/Heal skill check against difficulty 6, with a +1 difficulty penalty for each full round since the subject went down. The patch is useless after six rounds. Trauma patches cannot revive victims downed by poisons or diseases, or those dismembered by explosives or heavy weapons. Heal skill required: None.</p>",
+      "price": 50
+    },
+    {
+      "name": "Window",
+      "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+      "description": "<p>A neurobooster favored among hackers and knowledge workers, Window augments the user's focus and mental reaction speed at the cost of distracting them from their terrestrial surroundings. A Window user can trade their Move action to gain a bonus Main Action that can only be used for cyberspace actions. Each time this is done in a scene, the user gains one System Strain. One dose lasts for one scene. Heal skill required: None.</p>",
+      "price": 200
+    }
+  ]
+}

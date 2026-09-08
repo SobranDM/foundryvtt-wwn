@@ -1,0 +1,44 @@
+{
+  "_id": "qEr6IbMrp59PwZtP",
+  "name": "Titan",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-blue.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p>A Harmony Bureau enforcer's performance drug lasting one hour: +2 to hit rolls, +1 to Strength and Dexterity modifiers (up to +2 maximum), and 6 extra temporary hit points lost before any others. Adds 1 System Strain. Requires Heal-0 to apply.</p>",
+    "price": 250,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qEr6IbMrp59PwZtP"
+}

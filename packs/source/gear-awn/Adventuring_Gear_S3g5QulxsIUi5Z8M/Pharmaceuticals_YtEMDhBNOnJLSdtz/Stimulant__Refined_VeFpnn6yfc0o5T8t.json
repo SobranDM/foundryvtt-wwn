@@ -1,0 +1,44 @@
+{
+  "_id": "VeFpnn6yfc0o5T8t",
+  "name": "Stimulant, Refined",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>As crude stimulants, but the effect lasts 24 hours and makes sleep unnecessary and impossible during that time. Requires Heal-0 to apply.</p>",
+    "price": 40,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!VeFpnn6yfc0o5T8t"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Poseidon Implants",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.4Rfv41w7UF6QQgIS"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $30,000 &middot; Concealment Touch &middot; System Strain 1</strong></p><p>These implants allow the user to function normally while submerged for an indefinite period, drawing any necessary oxygen or drinking water from the surrounding salt or freshwater. Normal temperature extremes are managed without difficulty, and pressure can be handled down to depths of one kilometer. Visual augments and pressure gradient sensors allow the equivalent of normal sight up to 30 meters even in lightless water, and miniaturized support jets allow three-dimensional movement at twice the user's normal Move rating.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "4Rfv41w7UF6QQgIS",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4Rfv41w7UF6QQgIS"
+}

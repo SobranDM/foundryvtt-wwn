@@ -11,6 +11,9 @@ import {
   usesSharedPool,
   hasSceneOrDayCommitment,
   hasActiveCommitment,
+  hasFreeActiveToggle,
+  hasActiveToggle,
+  usesInstalledField,
   EFFECT_APPLICATION_CHOICES,
 } from "./power-subtypes.mjs";
 import { THEMES } from "./themes.mjs";
@@ -147,6 +150,9 @@ WWN.coerceCommitmentOptionsArray = coerceCommitmentOptionsArray;
 WWN.usesSharedPool = usesSharedPool;
 WWN.hasSceneOrDayCommitment = hasSceneOrDayCommitment;
 WWN.hasActiveCommitment = hasActiveCommitment;
+WWN.hasFreeActiveToggle = hasFreeActiveToggle;
+WWN.hasActiveToggle = hasActiveToggle;
+WWN.usesInstalledField = usesInstalledField;
 WWN.effectApplicationChoices = EFFECT_APPLICATION_CHOICES;
 /** Commitment choices for power commitmentOptions (shared pool tiers). */
 WWN.commitmentLengths = COMMITMENT_LENGTHS;
@@ -199,6 +205,8 @@ WWN.defaultIcons = {
   focus: "icons/svg/eye.svg",
   currency: "icons/svg/coins.svg",
   item: "icons/svg/item-bag.svg",
+  project: "icons/svg/tower.svg",
+  contribution: "icons/svg/card-hand.svg",
 };
 
 /* -------------------------------------------- */
@@ -245,7 +253,6 @@ WWN.xpRates = {
 
 WWN.defaultCollapsedSections = {
   "inventory.containers": true,
-  "inventory.currency": true,
 };
 
 WWN.themes = THEMES;
@@ -393,4 +400,39 @@ WWN.assetMagic = {
   low: "WWN.asset.magicLow",
   medium: "WWN.asset.magicMedium",
   high: "WWN.asset.magicHigh",
+};
+
+/* -------------------------------------------- */
+/*  Project (Magical Working / Changing the World)                */
+/* -------------------------------------------- */
+
+/** Which rulebook's Project tracking rules apply. */
+WWN.projectGameLines = {
+  wwn: "WWN.project.gameLineWwn",
+  godbound: "WWN.project.gameLineGodbound",
+};
+
+WWN.projectStatuses = {
+  planning: "WWN.project.statusPlanning",
+  inProgress: "WWN.project.statusInProgress",
+  maintained: "WWN.project.statusMaintained",
+  complete: "WWN.project.statusComplete",
+  lapsed: "WWN.project.statusLapsed",
+};
+
+/** WWN Building Magical Workings area multipliers (rulebook pp.90-92). */
+WWN.wwnProjectAreas = {
+  room: "WWN.project.areaRoom",
+  building: "WWN.project.areaBuilding",
+  village: "WWN.project.areaVillage",
+  city: "WWN.project.areaCity",
+  region: "WWN.project.areaRegion",
+};
+
+/** Godbound Changing the World magnitude multipliers (rulebook pp.126-130). */
+WWN.godboundProjectMagnitudes = {
+  1: "WWN.project.magnitudePlausible",
+  2: "WWN.project.magnitudeImprobable",
+  4: "WWN.project.magnitudeImpossible",
+  8: "WWN.project.magnitudeImpossibleVast",
 };

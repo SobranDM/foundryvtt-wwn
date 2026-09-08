@@ -1,0 +1,72 @@
+{
+  "_id": "oBJv5Mbd8EB93o5q",
+  "name": "Void Carbine",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-assault-energy-gauss.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 14,
+  "flags": {},
+  "system": {
+    "description": "<p>Void carbines are designed for vacuum and zero-gee use, and have essentially no recoil. Their rounds cannot penetrate ordinary ship equipment plating.</p>",
+    "damage": "2d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "2H",
+      "Zero-G"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 400,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!oBJv5Mbd8EB93o5q"
+}

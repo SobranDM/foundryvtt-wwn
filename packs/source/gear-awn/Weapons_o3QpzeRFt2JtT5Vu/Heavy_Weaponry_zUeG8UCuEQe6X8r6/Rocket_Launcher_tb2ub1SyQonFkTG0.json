@@ -1,0 +1,71 @@
+{
+  "_id": "tb2ub1SyQonFkTG0",
+  "name": "Rocket Launcher",
+  "type": "weapon",
+  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 5,
+  "flags": {},
+  "system": {
+    "description": "<p>A single-shot disposable launcher, suffering -4 to hit human-sized targets directly, though a miss still does frag grenade damage to anything within 5 meters. Anti-armor warheads lose the miss damage but do double damage to vehicles or obstacles. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 2000,
+      "medium": 0,
+      "long": 4000
+    },
+    "save": "",
+    "tags": [
+      "Anti-Vehicle"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 1,
+      "max": 1
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tb2ub1SyQonFkTG0"
+}

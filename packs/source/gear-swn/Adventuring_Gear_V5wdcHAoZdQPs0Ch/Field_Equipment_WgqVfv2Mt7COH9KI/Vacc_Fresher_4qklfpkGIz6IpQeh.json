@@ -1,0 +1,44 @@
+{
+  "_id": "4qklfpkGIz6IpQeh",
+  "name": "Vacc Fresher",
+  "type": "item",
+  "img": "icons/commodities/tech/fuel-tank-tech-red-green.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 26,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>This three-kilo tube filters and compresses atmosphere to refill vacc suit oxygen tanks. It can extract oxygen from any atmosphere which contains it, even in the form of carbon dioxide.</p>",
+    "price": 400,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4qklfpkGIz6IpQeh"
+}

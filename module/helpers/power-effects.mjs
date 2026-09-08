@@ -1,6 +1,8 @@
 import {
   usesSharedPool,
   resolveCommitmentOptions,
+  usesInstalledField,
+  hasFreeActiveToggle,
 } from "../config/power-subtypes.mjs";
 import { safeDeleteActorActiveEffects } from "./safe-delete-active-effects.mjs";
 
@@ -14,10 +16,32 @@ export function getPowerTransferMode(power) {
   if (power.type !== "power") return "none";
   const subType = power.system.subType;
   const system = power.system;
-  if (!usesSharedPool(subType, system)) return "passive";
-  const paid = resolveCommitmentOptions(subType, system).filter((o) => o.cost > 0);
-  if (paid.some((o) => o.length === "active")) return "active";
-  return "none";
+
+  let mode;
+  if (!usesSharedPool(subType, system)) {
+    mode = "passive";
+  } else {
+    const paid = resolveCommitmentOptions(subType, system).filter((o) => o.cost > 0);
+    mode = paid.some((o) => o.length === "active") ? "active" : "none";
+  }
+
+  // Cyberware / custom: `installed` gates transfer effects regardless of the
+  // shared-pool-derived mode above. Subtypes with no `installed` concept
+  // (art/spell/ability/psychic/mutation/gift) are unaffected.
+  if (usesInstalledField(subType)) {
+    if (!system.installed) return "none";
+    // Layered on top of `installed`: cyberware/custom that opted into a
+    // poolless active/inactive toggle (a zero-cost "active"-length
+    // commitment option) additionally require `isActive`. Cyberware that
+    // did NOT opt in (the default) keeps the base `mode` above (normally
+    // "passive" for cyberware's zero-cost/no-shared-pool default) -- i.e.
+    // installed alone is enough, matching most cyberware's "always-on while
+    // installed" book text.
+    if (hasFreeActiveToggle(subType, system)) return system.isActive ? "active" : "none";
+    return mode;
+  }
+
+  return mode;
 }
 
 /**

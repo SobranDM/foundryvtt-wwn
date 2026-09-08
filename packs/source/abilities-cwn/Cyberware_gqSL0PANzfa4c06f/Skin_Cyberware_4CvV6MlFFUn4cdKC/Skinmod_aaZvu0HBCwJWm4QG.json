@@ -1,0 +1,66 @@
+{
+  "name": "Skinmod",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.aaZvu0HBCwJWm4QG"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $250 &middot; Concealment Sight &middot; System Strain 0</strong></p><p>Various neon tattoos, skin texture and color changes, and other superficial physical mods can be performed with no real systemic burden beyond the usual need for regular maintenance.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "aaZvu0HBCwJWm4QG",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aaZvu0HBCwJWm4QG"
+}

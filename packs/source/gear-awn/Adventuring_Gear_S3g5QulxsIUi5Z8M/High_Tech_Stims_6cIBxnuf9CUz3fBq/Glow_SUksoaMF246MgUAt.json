@@ -1,0 +1,44 @@
+{
+  "_id": "SUksoaMF246MgUAt",
+  "name": "Glow",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-bottle.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 1,
+  "flags": {},
+  "system": {
+    "description": "<p>Cures up to 1d6 points of Constitution lost to radiation damage. Requires Heal-1 to apply.</p>",
+    "price": 500,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SUksoaMF246MgUAt"
+}

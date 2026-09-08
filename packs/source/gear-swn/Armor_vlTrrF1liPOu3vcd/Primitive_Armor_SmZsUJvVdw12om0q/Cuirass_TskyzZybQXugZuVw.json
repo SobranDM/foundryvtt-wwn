@@ -1,0 +1,42 @@
+{
+  "_id": "TskyzZybQXugZuVw",
+  "name": "Cuirass",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+  "effects": [],
+  "folder": "SmZsUJvVdw12om0q",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Cuirasses, brigandine, linothorax, and half-plate are sturdier primitive armor varieties, offering good protection but useless against advanced TL4 melee weapons and firearms of all kinds.</p>",
+    "ac": 15,
+    "acRanged": 15,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 1,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TskyzZybQXugZuVw"
+}

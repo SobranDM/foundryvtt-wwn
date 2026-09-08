@@ -1,0 +1,44 @@
+{
+  "_id": "9N2x94JAuQVyKDCG",
+  "name": "Stiletto Charge",
+  "type": "item",
+  "img": "icons/commodities/tech/electronics-tech-sensor-gold-blue.webp",
+  "effects": [],
+  "folder": "zI5Bu9i3j7qBoj7s",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 5</strong></p><p>These ancient Mandate-era polymorphic intrusion charges were originally made to allow Mandate agents to easily overcome primitive colonial data security measures. When used as part of a hack against a TL4 system, it causes the skill check to automatically succeed. These devices are single-use, and are prized so highly that they are almost always unavailable for conventional purchase.</p>",
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9N2x94JAuQVyKDCG"
+}

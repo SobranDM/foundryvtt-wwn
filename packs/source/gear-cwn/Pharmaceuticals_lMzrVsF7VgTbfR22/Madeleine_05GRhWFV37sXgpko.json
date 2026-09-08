@@ -1,0 +1,44 @@
+{
+  "_id": "05GRhWFV37sXgpko",
+  "name": "Madeleine",
+  "type": "item",
+  "img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A chem that intensely stimulates a subject's memory centers, Madeleine has its dangers. Users normally focus on a particular memory before injecting the drug; for the next 1d6 hours, they relive some portion of that memory with perfect fidelity while remaining oblivious to their physical surroundings. Psychological addiction is a considerable risk for long-term users. Heal skill required: None.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 6,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!05GRhWFV37sXgpko"
+}

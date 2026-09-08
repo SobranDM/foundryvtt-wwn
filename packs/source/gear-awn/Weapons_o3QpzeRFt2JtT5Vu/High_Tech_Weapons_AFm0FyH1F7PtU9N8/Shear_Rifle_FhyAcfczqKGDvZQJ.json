@@ -1,0 +1,72 @@
+{
+  "_id": "FhyAcfczqKGDvZQJ",
+  "name": "Shear Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-energy-purple.webp",
+  "effects": [],
+  "folder": "AFm0FyH1F7PtU9N8",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>An elegantly silent weapon requiring sophisticated gravitic tech, cleaving targets into neatly sliced pieces. Not normally available for sale. Gains a +1 bonus to hit from a lack of recoil, but suffers -4 to hit shooting into heavy smoke or particulates.</p>",
+    "damage": "2d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 5,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "Energy",
+      "Burst"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Energy Cell, Type A",
+    "charges": {
+      "value": 10,
+      "max": 10
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FhyAcfczqKGDvZQJ"
+}

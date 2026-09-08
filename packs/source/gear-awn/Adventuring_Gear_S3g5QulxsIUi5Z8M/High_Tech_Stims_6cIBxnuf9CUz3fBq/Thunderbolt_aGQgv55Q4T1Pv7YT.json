@@ -1,0 +1,44 @@
+{
+  "_id": "aGQgv55Q4T1Pv7YT",
+  "name": "Thunderbolt",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 7,
+  "flags": {},
+  "system": {
+    "description": "<p>Lasts one scene. As an On Turn action once per round, the user takes a bonus Main Action. Each use adds 1d4 System Strain, one cumulative die per trigger in the scene; if this pushes System Strain over the user's maximum, their heart explodes once the action completes. Requires Heal-1 to apply.</p>",
+    "price": 500,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!aGQgv55Q4T1Pv7YT"
+}

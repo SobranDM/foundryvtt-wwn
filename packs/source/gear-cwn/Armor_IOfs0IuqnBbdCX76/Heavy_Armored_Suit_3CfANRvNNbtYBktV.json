@@ -1,0 +1,42 @@
+{
+  "_id": "3CfANRvNNbtYBktV",
+  "name": "Heavy Armored Suit",
+  "type": "armor",
+  "img": "icons/equipment/chest/suit-armored-chest-plated.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A head-to-toe suit of interlocking plates and impact absorption units, these suits are reserved for high-end response teams and military operations. This armor applies a -1 penalty to all Sneak or Exert skill checks; multiple heavy items stack. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+    "ac": 18,
+    "acRanged": 20,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 15,
+    "traumaTarget": 9,
+    "ashesHeavy": true,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 20000,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 10,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!3CfANRvNNbtYBktV"
+}

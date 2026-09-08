@@ -1,0 +1,44 @@
+{
+  "_id": "6jlSn8UFJGBB0nBe",
+  "name": "Scout Report",
+  "type": "item",
+  "img": "icons/sundries/documents/blueprint-magical-brown.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 19,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A collation of survey scans and merchant reports on a particular lost world or isolated colony. Scouting reports provide maps, basic information, and note any critical cultural taboos.</p>",
+    "price": 200,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6jlSn8UFJGBB0nBe"
+}

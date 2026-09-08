@@ -1,0 +1,42 @@
+{
+  "_id": "Oy0hcT8lxrWtOwQp",
+  "name": "Full Plate",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+  "effects": [],
+  "folder": "SmZsUJvVdw12om0q",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>Full plate and layered mail represent the best protection a primitive world can produce, though it remains useless against advanced TL4 melee weapons and firearms of all kinds.</p>",
+    "ac": 17,
+    "acRanged": 17,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 100,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 1,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Oy0hcT8lxrWtOwQp"
+}

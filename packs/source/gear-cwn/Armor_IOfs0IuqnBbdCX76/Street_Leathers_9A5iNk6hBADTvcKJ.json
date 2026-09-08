@@ -1,0 +1,42 @@
+{
+  "_id": "9A5iNk6hBADTvcKJ",
+  "name": "Street Leathers",
+  "type": "armor",
+  "img": "icons/equipment/chest/jacket-motorcycle-leather-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Fashionable, aggressive, and often mismatched, \"street leathers\" seldom have any non-synthetic leather in their makeup, but are light and comfortable enough to wear as a habit.</p>",
+    "ac": 12,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 3,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 1,
+    "magical": false,
+    "powered": false,
+    "price": 250,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 3,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9A5iNk6hBADTvcKJ"
+}

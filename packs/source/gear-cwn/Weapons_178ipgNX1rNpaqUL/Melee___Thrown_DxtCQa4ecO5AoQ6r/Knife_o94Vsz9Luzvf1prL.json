@@ -1,0 +1,71 @@
+{
+  "_id": "o94Vsz9Luzvf1prL",
+  "name": "Knife",
+  "type": "weapon",
+  "img": "icons/weapons/daggers/dagger-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Knives, clubs, swords, and other simple melee weapons are available almost anywhere on the street.</p>",
+    "damage": "1d4",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 20
+    },
+    "save": "",
+    "tags": [
+      "T"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 1,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!o94Vsz9Luzvf1prL"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Ear Mod/Positional Detection",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.cTTIV6LSJrYoZmZz"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>This ear mod constructs a spatial map of significant surrounding sounds, allowing the user to know the exact location of anything making audible noise. The precise location of distant shooters, the location of targets in visual concealment, and the positions of moving creatures in darkness are all clear.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "cTTIV6LSJrYoZmZz",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cTTIV6LSJrYoZmZz"
+}

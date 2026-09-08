@@ -1,0 +1,66 @@
+{
+  "name": "Revenant Wiring",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.UJKwfpaRdOGSUeMT"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 5 &middot; Cost 50,000cr</strong></p><p>One of the more grotesque results of late pretech augmentation research, revenant wiring permeates the user's body with a web of supplementary limb actuators and sensor clusters. In combat, the user may designate up to a half-dozen targets to the system's braked micro-AI. If the user goes unconscious or is killed, the micro-AI will engage the limb actuators to keep fighting, even if the user is nothing more than a ragged mass of mangled tissue. The micro-AI is not brilliant, but it is capable of negotiating most terrain and dealing with physical impediments to killing the designated targets. The actuators have power to keep operating for 3d4 rounds, or until the wearer takes 25 more hit points of damage, whichever comes first. The stress produced by revenant wiring makes it much more difficult to revive a downed user with Lazarus patches or biopsionics; all revivification chances are half normal.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 3,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "UJKwfpaRdOGSUeMT",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 18000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UJKwfpaRdOGSUeMT"
+}

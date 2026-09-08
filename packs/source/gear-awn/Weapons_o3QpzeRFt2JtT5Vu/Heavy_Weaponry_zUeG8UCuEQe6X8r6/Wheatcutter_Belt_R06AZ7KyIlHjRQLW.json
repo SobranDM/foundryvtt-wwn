@@ -1,0 +1,71 @@
+{
+  "_id": "R06AZ7KyIlHjRQLW",
+  "name": "Wheatcutter Belt",
+  "type": "weapon",
+  "img": "icons/weapons/artillery/mount-weapon-sprayer-chem-green-purple.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>Found largely on Mandate riot control vehicles and defensive fixtures. When detonated, all creatures within 10 meters of that side of the vehicle make an Evasion save for half shrapnel damage; those within 20 meters take half damage and can save to take none. Not man-portable; typically mounted on a vehicle or fortification.</p>",
+    "damage": "2d12",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d12",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 20
+    },
+    "save": "",
+    "tags": [
+      "Fixed Emplacement"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Energy Cell, Type B",
+    "charges": {
+      "value": 5,
+      "max": 5
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!R06AZ7KyIlHjRQLW"
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "i439ZsOirlqnCRAP",
+  "name": "Lift",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p><strong>Heal-0.</strong> A Lift stim augments and amplifies the body's natural response to physical injury and exhaustion, healing 1d8 plus the user's Heal skill in hit points after five minutes of rest. Each application adds 1 System Strain to the target.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!i439ZsOirlqnCRAP"
+}

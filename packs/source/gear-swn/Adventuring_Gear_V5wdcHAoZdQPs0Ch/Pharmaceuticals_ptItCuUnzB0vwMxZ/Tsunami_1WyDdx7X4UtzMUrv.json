@@ -1,0 +1,44 @@
+{
+  "_id": "1WyDdx7X4UtzMUrv",
+  "name": "Tsunami",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-corked-blue.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p><strong>Heal-1.</strong> An emergency combat stim used to juice certain expendable soldiers before an assault. Subjects gain a Morale score of 12, 10 extra hit points for ten minutes and a +2 bonus on all hit rolls. Each application adds 2 System Strain to the target.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!1WyDdx7X4UtzMUrv"
+}

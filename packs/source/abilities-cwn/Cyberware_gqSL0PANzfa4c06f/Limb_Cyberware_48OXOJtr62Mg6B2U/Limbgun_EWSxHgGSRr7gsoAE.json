@@ -1,0 +1,66 @@
+{
+  "name": "Limbgun",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.EWSxHgGSRr7gsoAE"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $30,000 &middot; Concealment Touch &middot; System Strain 1</strong></p><p>A ranged weapon is implanted into an arm, tail, or other significant limb, along with space for two magazines worth of ammunition. A full reload of this space can be accomplished as a Main Action. Limbguns can be used with Gunlink cyber, count as Readied at all times, and can be used even while both hands are occupied, but can be bound up in melee as normal guns can. Limbguns have an intrinsic +1 hit bonus, in addition to whatever bonus the implanted weapon may have. The maximum size of the gun is Encumbrance 1 for legs or neolimb tails, or Encumbrance 2 for arms. The buyer must supply the gun. Different guns can be swapped in as desired during the system's monthly maintenance, but once implanted, a gun is useless for later conventional use.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "EWSxHgGSRr7gsoAE",
+  "folder": "48OXOJtr62Mg6B2U",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EWSxHgGSRr7gsoAE"
+}

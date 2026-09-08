@@ -1,0 +1,44 @@
+{
+  "_id": "fS8KWwSejtQRlURi",
+  "name": "Lantern",
+  "type": "item",
+  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 22,
+  "flags": {},
+  "system": {
+    "description": "<p>A hooded oil lantern casting light in a 10-meter radius, burning 4 hours on one flask of oil, protected from rain or wind.</p>",
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fS8KWwSejtQRlURi"
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "HZVHm9QLIYOwVn3e",
+  "name": "Mortar",
+  "type": "weapon",
+  "img": "icons/weapons/artillery/cannon-simple.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>Lobs indirect fire with a minimum range of 20 meters. Always targets AC 20 at first, gaining +1 per round of continued fire on the same target if a forward spotter adjusts the aim. Acts as a frag grenade on the target point but does 3d6 base damage in a 10-meter radius; armor does not lessen the harm.</p>",
+    "damage": "3d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d12",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "wis",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 1000,
+      "medium": 0,
+      "long": 2000
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 1,
+      "max": 1
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HZVHm9QLIYOwVn3e"
+}

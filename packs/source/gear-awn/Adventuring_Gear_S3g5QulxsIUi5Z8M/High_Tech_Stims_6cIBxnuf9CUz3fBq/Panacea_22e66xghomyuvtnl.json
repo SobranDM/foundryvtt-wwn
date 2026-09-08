@@ -1,0 +1,44 @@
+{
+  "_id": "22e66xghomyuvtnl",
+  "name": "Panacea",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>Immediately cures any non-biowarfare disease, though there is a 1 in 6 chance it worsens the disease by one degree instead, or instantly kills the victim of a Lethal disease. Requires Heal-2 to apply.</p>",
+    "price": 5000,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!22e66xghomyuvtnl"
+}

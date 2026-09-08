@@ -1,0 +1,66 @@
+{
+  "name": "Cranial Jack",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.I1fzpbgAx7po8Sbl"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $1,000 &middot; Concealment Touch &middot; System Strain 0.25 (stored as permanentStrain 0 -- see import notes on fractional Strain)</strong></p><p>A discreetly-placed plug socket in the user's head or neck allows interfacing with cyberdecks and gear equipped with a jack line.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "I1fzpbgAx7po8Sbl",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!I1fzpbgAx7po8Sbl"
+}

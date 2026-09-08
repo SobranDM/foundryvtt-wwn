@@ -1,0 +1,44 @@
+{
+  "_id": "R8wyIY6htIJNRCML",
+  "name": "Radio, Long-Distance",
+  "type": "item",
+  "img": "icons/tools/tech/badge-communicator.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 27,
+  "flags": {},
+  "system": {
+    "description": "<p>A long-range ham rig requiring an appropriate background or Program-0 skill to operate effectively, but able to reach hundreds of kilometers given a few hours to make the connection. Functions about a week on one set of modern batteries.</p>",
+    "price": 250,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!R8wyIY6htIJNRCML"
+}

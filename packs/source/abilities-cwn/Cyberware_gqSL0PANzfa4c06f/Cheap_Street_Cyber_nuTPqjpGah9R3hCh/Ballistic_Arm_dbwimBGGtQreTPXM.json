@@ -1,0 +1,66 @@
+{
+  "name": "Ballistic Arm",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.dbwimBGGtQreTPXM"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $1,500 &middot; Concealment Obvious &middot; System Strain 2</strong></p><p>A cybernetic arm with a crudely-integrated shotgun or heavy pistol. Works as a limbgun with its +1 bonus to hit, but the weapon can't be replaced and can carry only its own integral magazine of ammunition. Reloading takes one Main Action.</p><p><em>Optional \"Cheap Cyber\" rule (p.228): low-cost street-grade cyberware, priced and detailed separately from the main cyberware price list.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "dbwimBGGtQreTPXM",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dbwimBGGtQreTPXM"
+}

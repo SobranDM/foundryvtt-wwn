@@ -1,0 +1,42 @@
+{
+  "_id": "mkwEzrWZAsmfYJe0",
+  "name": "Protective Sport Gear",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-layered-leather-studded.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Dirt bike gear, athletic pads, and other sporting protection pressed into service. Obvious. Primitive: gives no benefit against gunfire, explosives, or TL4+ melee weapons.</p>",
+    "ac": 14,
+    "acRanged": 14,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 3,
+    "magical": false,
+    "powered": false,
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mkwEzrWZAsmfYJe0"
+}

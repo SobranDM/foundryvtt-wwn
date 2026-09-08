@@ -1,0 +1,71 @@
+{
+  "_id": "HK9zC4CeogVsUDr4",
+  "name": "Unarmed Attack",
+  "type": "weapon",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "effects": [],
+  "folder": "tpGPYv2Udq9d1nyw",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>Punches and kicks add the attacker's Punch skill level to the damage done. Unarmed damage is always non-lethal unless the attacker chooses otherwise.</p>",
+    "damage": "1d2+@punch",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 1
+    },
+    "skillId": "",
+    "skillFallback": "punch",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 0,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "Non-Lethal"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HK9zC4CeogVsUDr4"
+}

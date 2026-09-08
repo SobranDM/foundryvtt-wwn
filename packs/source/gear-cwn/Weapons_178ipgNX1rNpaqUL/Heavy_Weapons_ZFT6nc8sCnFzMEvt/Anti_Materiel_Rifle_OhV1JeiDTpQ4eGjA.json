@@ -1,0 +1,69 @@
+{
+  "_id": "OhV1JeiDTpQ4eGjA",
+  "name": "Anti-Materiel Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-sniper-heavy-long.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Anti-materiel rifles have encountered something of a renaissance with the ubiquity of armored drones and heavily cybered combatants. While not suitable for downing tanks or other heavily armored vehicles, their 20mm rounds are more than sufficient to punch through lighter armor plating, concrete walls, and full body conversion cyborgs. Use of a secure firing rest is recommended; if not fired from a stationary rest, this weapon's statistics are the same as a regular rifle. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d12",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 1000,
+      "medium": 1000,
+      "long": 2000
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Spare Magazine",
+    "charges": {
+      "value": 5,
+      "max": 5
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 8000,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "ZFT6nc8sCnFzMEvt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OhV1JeiDTpQ4eGjA"
+}

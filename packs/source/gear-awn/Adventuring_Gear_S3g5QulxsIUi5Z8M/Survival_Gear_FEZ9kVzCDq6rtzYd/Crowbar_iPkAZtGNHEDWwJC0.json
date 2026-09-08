@@ -1,0 +1,44 @@
+{
+  "_id": "iPkAZtGNHEDWwJC0",
+  "name": "Crowbar",
+  "type": "item",
+  "img": "icons/tools/hand/pry-bar-steel.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p>Breaking bars, demo axes, and similar prying tools for getting through rubble; can also serve as a makeshift club.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iPkAZtGNHEDWwJC0"
+}

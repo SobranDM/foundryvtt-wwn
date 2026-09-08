@@ -1,0 +1,44 @@
+{
+  "_id": "GnN6hXPlxvPLyTeI",
+  "name": "Smile",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 5,
+  "flags": {},
+  "system": {
+    "description": "<p>A social disinhibitor lasting 1d6 hours, increasing the user's Charisma modifier by +1 (up to +2 maximum) for 1 point of System Strain. A natural 12 on a social skill check while affected is an automatic failure.</p>",
+    "price": 250,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GnN6hXPlxvPLyTeI"
+}

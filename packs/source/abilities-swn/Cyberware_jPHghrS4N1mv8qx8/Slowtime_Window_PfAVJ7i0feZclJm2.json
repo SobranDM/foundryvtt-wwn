@@ -1,0 +1,66 @@
+{
+  "name": "Slowtime Window",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.PfAVJ7i0feZclJm2"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 5 &middot; Cost 30,000cr</strong></p><p>A piece of cutting-edge pretech cyberware, the slowtime window was installed in crisis responders and others reliant on split-second decision making. When engaged, the implants accelerate the user's cogitation speed by more than three thousand percent. While there is no corresponding acceleration of the user's physical reflexes, they have time to process the situation and take in its details. A person who triggers a slowtime window cannot be surprised; they always roll initiative as normal no matter how unexpected the attacker. This brain acceleration is highly stressful on the tissues, however, and one point of System Strain is gained each time it is engaged.</p><p><em>Immunity to surprise applies only while actively engaged (a per-use System Strain cost, not a standing trait), so it is left as text only rather than an always-on Active Effect.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "PfAVJ7i0feZclJm2",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 19000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PfAVJ7i0feZclJm2"
+}

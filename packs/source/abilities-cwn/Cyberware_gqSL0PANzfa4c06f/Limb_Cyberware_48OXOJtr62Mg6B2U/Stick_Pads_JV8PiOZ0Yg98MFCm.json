@@ -1,0 +1,66 @@
+{
+  "name": "Stick Pads",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.JV8PiOZ0Yg98MFCm"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Touch &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>Macroscale van der Waals generators allow the user's hands and feet to stick to vertical or overhanging surfaces, their full weight supported by one arm. They can climb such surfaces at their full movement rate with one free hand.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "JV8PiOZ0Yg98MFCm",
+  "folder": "48OXOJtr62Mg6B2U",
+  "sort": 11000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JV8PiOZ0Yg98MFCm"
+}

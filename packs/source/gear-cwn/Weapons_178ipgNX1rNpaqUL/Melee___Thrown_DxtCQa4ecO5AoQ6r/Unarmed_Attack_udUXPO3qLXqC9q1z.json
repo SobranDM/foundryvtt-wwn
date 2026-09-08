@@ -1,0 +1,71 @@
+{
+  "_id": "udUXPO3qLXqC9q1z",
+  "name": "Unarmed Attack",
+  "type": "weapon",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A common punch or kick, unimproved by cyberware or a Focus. Unarmed attacks are always non-lethal unless the attacker desires otherwise, and use the Punch skill.</p>",
+    "damage": "1d2+@punch",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 1
+    },
+    "skillId": "",
+    "skillFallback": "punch",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "LL"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!udUXPO3qLXqC9q1z"
+}

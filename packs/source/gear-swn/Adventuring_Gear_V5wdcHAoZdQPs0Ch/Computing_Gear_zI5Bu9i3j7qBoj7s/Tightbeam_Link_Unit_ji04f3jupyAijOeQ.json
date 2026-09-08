@@ -1,0 +1,44 @@
+{
+  "_id": "ji04f3jupyAijOeQ",
+  "name": "Tightbeam Link Unit",
+  "type": "item",
+  "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+  "effects": [],
+  "folder": "zI5Bu9i3j7qBoj7s",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>Much like a remote link unit, a tightbeam unit uses a laser to connect via line-of-sight transmission. There's almost no chance for a conventional security system to detect this link, but it requires that the infiltrators get a clear line of sight between the unit and the receiving end.</p>",
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ji04f3jupyAijOeQ"
+}

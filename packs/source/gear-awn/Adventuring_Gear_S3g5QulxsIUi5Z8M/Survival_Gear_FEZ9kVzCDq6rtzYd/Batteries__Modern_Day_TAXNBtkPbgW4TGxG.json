@@ -1,0 +1,44 @@
+{
+  "_id": "TAXNBtkPbgW4TGxG",
+  "name": "Batteries, Modern-Day",
+  "type": "item",
+  "img": "icons/commodities/tech/battery-small.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>Non-rechargeable modern batteries in whatever format the PCs may need.</p>",
+    "price": 2,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TAXNBtkPbgW4TGxG"
+}

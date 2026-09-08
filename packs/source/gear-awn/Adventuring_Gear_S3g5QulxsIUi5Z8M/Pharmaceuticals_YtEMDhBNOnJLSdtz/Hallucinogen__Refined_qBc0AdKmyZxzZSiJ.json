@@ -1,0 +1,44 @@
+{
+  "_id": "qBc0AdKmyZxzZSiJ",
+  "name": "Hallucinogen, Refined",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 7,
+  "flags": {},
+  "system": {
+    "description": "<p>Ends any current Breakdown, lasting 1d4 hours, removing 1d4 Stress but adding 1 System Strain. Requires Heal-0 to apply.</p>",
+    "price": 40,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qBc0AdKmyZxzZSiJ"
+}

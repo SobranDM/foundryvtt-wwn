@@ -1,0 +1,66 @@
+{
+  "name": "Ear Mod/Sonar",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.D4DiAQz9jg5N2qb2"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $20,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>The user can navigate even in darkness or while blinded by means of ultrasonic sensors, being able to construct a crude map of people and obstacles in front of them out to 20 meters. This sense is the equivalent of vision, though it can't discern details more subtle than faces.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "D4DiAQz9jg5N2qb2",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!D4DiAQz9jg5N2qb2"
+}

@@ -1,0 +1,71 @@
+{
+  "_id": "EIILHsqgGMzSrKUu",
+  "name": "Hydra Array",
+  "type": "weapon",
+  "img": "icons/weapons/artillery/missile-long.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 10,
+  "flags": {},
+  "system": {
+    "description": "<p>Spams missiles: three hit rolls divided among up to three targets. Hit and damage rolls are made normally, but a single target only takes the heaviest hit of any missiles that connect. Not man-portable; typically mounted on a vehicle or fortification.</p>",
+    "damage": "3d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d20",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 4000,
+      "medium": 0,
+      "long": 8000
+    },
+    "save": "",
+    "tags": [
+      "Fixed Emplacement"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Energy Cell, Type B",
+    "charges": {
+      "value": 10,
+      "max": 10
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EIILHsqgGMzSrKUu"
+}

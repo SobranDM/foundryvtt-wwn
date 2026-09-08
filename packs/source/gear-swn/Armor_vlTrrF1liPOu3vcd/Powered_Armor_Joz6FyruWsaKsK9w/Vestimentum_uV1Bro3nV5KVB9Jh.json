@@ -1,0 +1,42 @@
+{
+  "_id": "uV1Bro3nV5KVB9Jh",
+  "name": "Vestimentum",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-layered-gilded-orange.webp",
+  "effects": [],
+  "folder": "Joz6FyruWsaKsK9w",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>A &quot;vestimentum&quot; is a catch-all term for one of the many ancient Mandate ceremonial armors meant chiefly for parade guards, ritual officiants, cultural reenactors, or other roles that put elaborate style at a premium. While these outfits often look wildly unmilitary, their hyper-advanced components and micronized force fields give them the same protection against primitive weapons as any other powered armor.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 15000,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 5,
+    "magical": false,
+    "powered": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uV1Bro3nV5KVB9Jh"
+}

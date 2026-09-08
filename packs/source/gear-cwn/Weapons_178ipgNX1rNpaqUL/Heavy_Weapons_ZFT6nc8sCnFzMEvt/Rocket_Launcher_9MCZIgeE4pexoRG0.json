@@ -1,0 +1,69 @@
+{
+  "_id": "9MCZIgeE4pexoRG0",
+  "name": "Rocket Launcher",
+  "type": "weapon",
+  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Rocket launchers include a wide variety of single-shot disposable launchers. Their general imprecision forces a -4 hit penalty against human-sized targets, but they inflict frag grenade damage on any target within 5 meters of the rocket's landing point. Specialized anti-armor warheads lose this frag grenade bonus, but do double damage to vehicles or obstacles. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 2000,
+      "medium": 2000,
+      "long": 4000
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 5000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "ZFT6nc8sCnFzMEvt",
+  "sort": 5,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9MCZIgeE4pexoRG0"
+}

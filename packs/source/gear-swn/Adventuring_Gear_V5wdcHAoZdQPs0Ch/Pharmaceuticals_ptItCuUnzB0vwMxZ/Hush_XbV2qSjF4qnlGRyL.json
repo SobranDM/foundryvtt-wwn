@@ -1,0 +1,44 @@
+{
+  "_id": "XbV2qSjF4qnlGRyL",
+  "name": "Hush",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p><strong>Heal-0.</strong> An extremely heavy neurotranquilizer, Hush leaves the subject awake and responsive to simple, untaxing commands. A subject must be immobilized or willing to be affected by it.</p>",
+    "price": 200,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XbV2qSjF4qnlGRyL"
+}

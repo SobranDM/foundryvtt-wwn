@@ -1,0 +1,66 @@
+{
+  "name": "Prosthetic Cyber II",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.nr71BV2X2U6fLaTL"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Medical &middot; System Strain 0.25 (stored as permanentStrain 0 -- see import notes on fractional Strain)</strong></p><p>A more sophisticated and expensive version of basic prosthetic cyber, inobvious to anything but a medical scan and far less burdensome on the user's system.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "nr71BV2X2U6fLaTL",
+  "folder": "wcDAe5zFJQ3OtJmI",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nr71BV2X2U6fLaTL"
+}

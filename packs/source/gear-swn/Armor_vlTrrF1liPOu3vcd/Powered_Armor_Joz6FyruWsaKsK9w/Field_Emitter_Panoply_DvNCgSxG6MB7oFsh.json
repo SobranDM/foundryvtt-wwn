@@ -1,0 +1,42 @@
+{
+  "_id": "DvNCgSxG6MB7oFsh",
+  "name": "Field Emitter Panoply",
+  "type": "armor",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
+  "effects": [],
+  "folder": "Joz6FyruWsaKsK9w",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>A field emitter panoply is a heavy-duty pretech defensive system composed of a half-dozen worn emitter nodes that sheath the wearer in a nimbus of close-fitting damper fields. It provides all the benefits of storm armor with no power source required, and is particularly effective at filtering radiation.</p>",
+    "ac": 20,
+    "acRanged": 20,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 40000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 5,
+    "magical": false,
+    "powered": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DvNCgSxG6MB7oFsh"
+}

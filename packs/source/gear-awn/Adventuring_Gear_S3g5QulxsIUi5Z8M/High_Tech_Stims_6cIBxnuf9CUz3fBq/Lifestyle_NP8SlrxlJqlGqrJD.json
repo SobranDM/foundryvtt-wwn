@@ -1,0 +1,44 @@
+{
+  "_id": "NP8SlrxlJqlGqrJD",
+  "name": "Lifestyle",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pill-powder.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>A cosmetic and hygienic tab whose therapeutic substrate heals 1d6+1 lost hit points. The user gains 1 System Strain if it heals them.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NP8SlrxlJqlGqrJD"
+}

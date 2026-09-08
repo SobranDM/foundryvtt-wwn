@@ -1,0 +1,44 @@
+{
+  "_id": "qzlUgoc70M5HB8pl",
+  "name": "Medical Prescription",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-bottle.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>One of a thousand different medical drugs, a prescription like this is often necessary to treat some chronic condition or keep a medical problem from growing worse. Corp employees get their drugs for a pittance, but less fortunate souls need to source their drugs from extortionate corp pharmacies or street docs. Heal skill required: None.</p>",
+    "price": 20,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 7,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qzlUgoc70M5HB8pl"
+}

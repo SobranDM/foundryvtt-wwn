@@ -1,0 +1,44 @@
+{
+  "_id": "SpWruHAgBVW1rEj0",
+  "name": "Squeal",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-round-corked-blue.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 7,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p><strong>Heal-1.</strong> This &quot;truth serum&quot; is unreliable but still one of the best available options for field interrogations. The subject must be immobilized or willing to be affected by it.</p>",
+    "price": 300,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SpWruHAgBVW1rEj0"
+}

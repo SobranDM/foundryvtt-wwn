@@ -1,0 +1,66 @@
+{
+  "name": "Holoskin Emitters",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.FGjL4TBixBcngvvJ"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 15,000cr</strong></p><p>Multiple holographic emitters are implanted on the user, allowing them to alter their external appearance to match anything of their approximate size and dimensions, including other people. Shifting appearances is a Main Action, and the user can't shift to an appearance that isn't in the cyberware's shape library. The library is vast and contains \"generic\" examples of numerous human-sized objects and people, but mimicking a specific other person requires at least five minutes of close examination. The holograms projected by the emitters are good, but imperfect; anyone who closely examines the user will be able to tell that something is artificial about their appearance, and touch instantly confirms any suspicions. The emitters can fake clothing and can produce sounds to complement the illusion or modify the user's voice, if records of the true subject are available. The disguise lasts until the user dies or ends it.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action to shift appearance; lasts until the user ends it"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "FGjL4TBixBcngvvJ",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FGjL4TBixBcngvvJ"
+}

@@ -4,7 +4,14 @@ export const PC_TYPES = Object.freeze(["character", "pc"]);
 export const NPC_TYPES = Object.freeze(["monster", "npc"]);
 
 /** Types shown in Actor.createDialog (aliases hidden). */
-export const CREATABLE_ACTOR_TYPES = Object.freeze(["character", "monster", "faction", "starship", "powerArmor"]);
+export const CREATABLE_ACTOR_TYPES = Object.freeze([
+  "character",
+  "monster",
+  "faction",
+  "starship",
+  "powerArmor",
+  "project",
+]);
 
 /**
  * @param {string|{type?: string}|null|undefined} actorOrType

@@ -1,0 +1,42 @@
+{
+  "_id": "MIwG1mRACr1KYHZ3",
+  "name": "Assault Suit",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 12,
+  "flags": {},
+  "system": {
+    "description": "<p>The most common form of powered armor surviving after the collapse of the Mandate. Voraciously power-hungry, requiring a Type B power cell for 24 hours of operation, but provides encrypted military comms, vacc suit functionality, low-light and infrared visuals, and an energy feed port. Renders the wearer immune to harm from unarmed attacks, grenades, or weapons of TL3 or lower. Obvious. Sealed-suit armor, unusable by wearers without a basically human body plan. Not normally available for sale.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 8,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": true,
+    "price": 0,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MIwG1mRACr1KYHZ3"
+}

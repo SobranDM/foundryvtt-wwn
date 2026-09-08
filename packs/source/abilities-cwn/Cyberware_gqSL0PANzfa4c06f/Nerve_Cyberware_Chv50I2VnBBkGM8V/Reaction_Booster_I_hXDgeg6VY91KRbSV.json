@@ -1,0 +1,87 @@
+{
+  "name": "Reaction Booster I",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "ni9SGBJEafiQRtVC",
+      "type": "base",
+      "name": "Reaction Booster I (Initiative)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.individual.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!hXDgeg6VY91KRbSV.ni9SGBJEafiQRtVC"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.hXDgeg6VY91KRbSV"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $50,000 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>These implants grant a +2 bonus to your Initiative, perhaps making you act before the rest of your team. Once per scene, as an Instant action, ignore Snap Attack hit penalties.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 4,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "hXDgeg6VY91KRbSV",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hXDgeg6VY91KRbSV"
+}

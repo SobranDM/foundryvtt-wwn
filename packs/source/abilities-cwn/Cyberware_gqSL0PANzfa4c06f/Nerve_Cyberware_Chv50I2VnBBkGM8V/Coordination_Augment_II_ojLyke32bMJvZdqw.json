@@ -1,0 +1,107 @@
+{
+  "name": "Coordination Augment II",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "rP8CX6oMDFNTE9Su",
+      "type": "base",
+      "name": "Coordination Augment II (Dexterity)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.dex.value",
+            "type": "override",
+            "value": 18,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!ojLyke32bMJvZdqw.rP8CX6oMDFNTE9Su"
+    },
+    {
+      "_id": "xBAXPJduM2YvzK8s",
+      "type": "base",
+      "name": "Coordination Augment II (Move)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.movement.base.value",
+            "type": "add",
+            "value": 10,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!ojLyke32bMJvZdqw.xBAXPJduM2YvzK8s"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.ojLyke32bMJvZdqw"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $200,000 &middot; Concealment Touch &middot; System Strain 3</strong></p><p>As Coordination Augment I, but the subject's Dexterity score becomes 18, and their base Move rate is increased by 10 meters.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 3,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 5,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "ojLyke32bMJvZdqw",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ojLyke32bMJvZdqw"
+}

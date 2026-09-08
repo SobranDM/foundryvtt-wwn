@@ -1,0 +1,44 @@
+{
+  "_id": "omnTGvrPlQdyufkr",
+  "name": "Control-Delete",
+  "type": "item",
+  "img": "icons/consumables/potions/vial-cork-blue.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A chemical that temporarily destroys a person's ability to form long-term memories, Control-Delete must be ingested in food or drink. Toxin-filtering cyber can fend it off, but it otherwise grants no saving throw. Once affected, the target continues to act normally, but anything that happens to them between then and their next sleep or unconsciousness is completely forgotten by the time they awake. Heal skill required: None.</p>",
+    "price": 25,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 3,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!omnTGvrPlQdyufkr"
+}

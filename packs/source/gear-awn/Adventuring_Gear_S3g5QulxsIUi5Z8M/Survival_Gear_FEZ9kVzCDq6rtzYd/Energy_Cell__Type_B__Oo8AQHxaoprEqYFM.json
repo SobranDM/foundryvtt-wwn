@@ -1,0 +1,36 @@
+{
+  "_id": "Oo8AQHxaoprEqYFM",
+  "name": "Energy Cell, Type B+",
+  "type": "ammo",
+  "img": "icons/commodities/tech/electronics-tech-battery-energy-blue.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 15,
+  "flags": {},
+  "system": {
+    "description": "<p>A rechargeable variant of the Type B cell, rechargeable with a week of conventional mains power but more fragile. Not commonly found for sale; usually looted from an intact cache.</p>",
+    "price": 0,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Oo8AQHxaoprEqYFM"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "qqWY4liblpqc0mPu",
+  "name": "War Harness",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-improvised-plated-medium.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>An upgraded form of street leathers, these outfits have sacrificed all discretion for whatever spare ballistic plates and advanced polymer weaves its owner can sew or bolt on. It's usually the best armor that local gangs or common thugs can afford.</p>",
+    "ac": 14,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "medium",
+    "soak": 5,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 1,
+    "magical": false,
+    "powered": false,
+    "price": 200,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 2,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qqWY4liblpqc0mPu"
+}

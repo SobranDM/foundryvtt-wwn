@@ -1,0 +1,71 @@
+{
+  "_id": "vK6otYF71MrZ4qMS",
+  "name": "Club",
+  "type": "weapon",
+  "img": "icons/weapons/clubs/baton-night-stick-truncheon.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Particularly impoverished gangers sometimes fashion makeshift machetes and improvised shivs when better can't be obtained. A club's damage is always non-lethal, unless desired otherwise.</p>",
+    "damage": "1d4",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 18
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 20
+    },
+    "save": "",
+    "tags": [
+      "LL"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 2,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vK6otYF71MrZ4qMS"
+}

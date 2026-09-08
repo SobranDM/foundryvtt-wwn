@@ -1,0 +1,69 @@
+{
+  "_id": "P4ZKV3r6DobhriaJ",
+  "name": "Land Mine, Anti-Personnel",
+  "type": "weapon",
+  "img": "icons/weapons/ammunition/explosive-mine.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p>Activates on any human-sized approach within 1 meter, inflicting damage in a 2-meter radius with an Evasion save for half.</p>",
+    "damage": "1d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!P4ZKV3r6DobhriaJ"
+}

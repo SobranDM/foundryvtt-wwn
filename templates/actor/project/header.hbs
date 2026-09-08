@@ -1,0 +1,36 @@
+{{!-- Project sheet header: identity band + rules-line/status chips. --}}
+<header class="sheet-header wwn-sheet-header wwn-project-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img project-header-img" src="{{actor.img}}" data-action="editImage" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.project.gameLine"}}</span>
+          <select name="system.gameLine">
+            {{selectOptions config.projectGameLines selected=system.gameLine localize=true}}
+          </select>
+        </label>
+        <label class="wwn-chip">
+          <span class="wwn-chip-label">{{localize "WWN.project.status"}}</span>
+          <select name="system.status">
+            {{selectOptions config.projectStatuses selected=system.status localize=true}}
+          </select>
+        </label>
+      </div>
+      <div class="wwn-header-row wwn-header-row--secondary">
+        <label class="wwn-chip wwn-chip--grow">
+          <span class="wwn-chip-label">{{localize "WWN.project.scale"}}</span>
+          <input type="text" name="system.scale" value="{{system.scale}}" />
+        </label>
+        {{#if isGodbound}}
+        <label class="wwn-chip wwn-chip--grow">
+          <span class="wwn-chip-label">{{localize "WWN.project.magnitude"}}</span>
+          <input type="text" name="system.magnitude" value="{{system.magnitude}}" />
+        </label>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>

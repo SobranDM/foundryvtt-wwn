@@ -1,0 +1,42 @@
+{
+  "_id": "8NexVtpQUVJHiKMu",
+  "name": "Light Armored Suit",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-tactical-reinforced.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Ordinary law enforcement and security guards will be wearing suits like this, usually brightly emblazoned with their corporate affiliation. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+    "ac": 13,
+    "acRanged": 16,
+    "mod": 0,
+    "type": "medium",
+    "soak": 5,
+    "traumaTarget": 8,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 5000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 8,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8NexVtpQUVJHiKMu"
+}

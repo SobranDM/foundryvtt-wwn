@@ -1,0 +1,66 @@
+{
+  "name": "Hype Gland",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.CKCSIFxifvnup9OA"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $750 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>A mentally-triggered chem dispenser that pours a cocktail of combat drugs into the user as an On Turn action. The drugs last for one scene, adding 2 System Strain and increasing the user's effective HP by 10 and granting a +2 bonus to hit rolls and damage, not including Shock. Any excess temporary hit points are lost at the end of the scene. Each year, a hype gland has a 5% chance of causing non-treatable cancer in a user.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "2",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "CKCSIFxifvnup9OA",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CKCSIFxifvnup9OA"
+}

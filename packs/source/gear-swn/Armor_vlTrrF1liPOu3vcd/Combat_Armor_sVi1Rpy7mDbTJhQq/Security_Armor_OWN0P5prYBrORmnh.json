@@ -1,0 +1,42 @@
+{
+  "_id": "OWN0P5prYBrORmnh",
+  "name": "Security Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/tech-blue.webp",
+  "effects": [],
+  "folder": "sVi1Rpy7mDbTJhQq",
+  "sort": 1,
+  "flags": {},
+  "system": {
+    "description": "<p>Security armor is the ordinary working uniform of most law enforcement officials and security personnel. Various rigid plates and anti-ballistic panels provide protection for the wearer at minimal extra weight.</p>",
+    "ac": 14,
+    "acRanged": 14,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 700,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 4,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OWN0P5prYBrORmnh"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "GfbuQMrfOUqWu3Up",
+  "name": "Scrap Mail",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>Jury-rigged mail fashioned from small pieces of scavenged metal, still ineffective against bullets. Obvious, Heavy (-1 to Sneak or Exert checks). Primitive: gives no benefit against gunfire, explosives, or TL4+ melee weapons.</p>",
+    "ac": 15,
+    "acRanged": 15,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": true,
+    "tl": 2,
+    "magical": false,
+    "powered": false,
+    "price": 100,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GfbuQMrfOUqWu3Up"
+}

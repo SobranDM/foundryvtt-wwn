@@ -1,0 +1,42 @@
+{
+  "_id": "TYkfPtpcoFCi0MNM",
+  "name": "Military Body Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-bulletproof-body-armor.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 5,
+  "flags": {},
+  "system": {
+    "description": "<p>Full military-grade body armor, one of the best protective options a modern-day scavenger can generally hope to get. Obvious, Heavy (-1 to Sneak or Exert checks).</p>",
+    "ac": 16,
+    "acRanged": 16,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": true,
+    "tl": 3,
+    "magical": false,
+    "powered": false,
+    "price": 300,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TYkfPtpcoFCi0MNM"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Bioadaptation Augments",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.IiiIVd0VDDRCwvne"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 10,000cr</strong></p><p>These additional synthetic organs and filters allow the bearer to survive in thin-atmosphere conditions, as well as tolerate temperatures ranging from Antarctic chill to heat sufficient to boil water. They can also eat a wide range of native life forms for sustenance; no normal planet's native biology is ever considered immiscible for consumption.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "IiiIVd0VDDRCwvne",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IiiIVd0VDDRCwvne"
+}

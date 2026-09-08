@@ -1,0 +1,36 @@
+{
+  "_id": "4lPo8ghII4dJ5BSP",
+  "name": "Power Cell, Type A",
+  "type": "ammo",
+  "img": "icons/commodities/tech/electronics-tech-battery-energy-blue.webp",
+  "effects": [],
+  "folder": "MeHJZax1u9X14H1e",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>Power cells are small cylindrical objects designed to take and hold electrical charges. Type A cells are usually used for personal equipment. Power cells can be recharged off a ship's power plant or other grid; recharging requires 30 minutes for a type A cell.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 1,
+      "max": 1
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4lPo8ghII4dJ5BSP"
+}

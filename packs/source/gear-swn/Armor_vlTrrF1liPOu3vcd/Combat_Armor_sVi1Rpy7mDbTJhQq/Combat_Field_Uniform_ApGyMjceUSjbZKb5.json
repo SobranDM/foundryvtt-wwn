@@ -1,0 +1,42 @@
+{
+  "_id": "ApGyMjceUSjbZKb5",
+  "name": "Combat Field Uniform",
+  "type": "armor",
+  "img": "icons/equipment/chest/tech-green.webp",
+  "effects": [],
+  "folder": "sVi1Rpy7mDbTJhQq",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>A combat field uniform is sophisticated battle dress fabricated from TL4 ablative coatings, rigid plates, and shock-activated soft components. The CFU is the standard uniform for well-equipped TL4 front-line soldiers.</p>",
+    "ac": 16,
+    "acRanged": 16,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 4,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ApGyMjceUSjbZKb5"
+}

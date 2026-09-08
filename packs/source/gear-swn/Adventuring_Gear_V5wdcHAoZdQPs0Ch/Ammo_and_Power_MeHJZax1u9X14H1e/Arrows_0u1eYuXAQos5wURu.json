@@ -1,0 +1,36 @@
+{
+  "_id": "0u1eYuXAQos5wURu",
+  "name": "Arrows",
+  "type": "ammo",
+  "img": "icons/weapons/ammunition/arrows-war-white.webp",
+  "effects": [],
+  "folder": "MeHJZax1u9X14H1e",
+  "sort": 1,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 1</strong></p><p>A bundle of twenty arrows, sized for use with a primitive bow, advanced bow, or conversion bow. Bows are uncommon weapons in the far future, though some lostworlder barbarians have nothing better.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 20,
+      "max": 20
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0u1eYuXAQos5wURu"
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "RMGDbiBUZtaGJ6Kc",
+  "name": "Sand",
+  "type": "item",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A gritty powder trafficked to those addicts too poor to afford anything better, a snorted dose of Sand will put its user into a euphoric haze for as long as an hour, depending on tolerance. Beautiful visions and dreamy contentment give way to shooting pains and intense light sensitivity afterwards, with most heavy users dying within six to twelve months of picking up the habit. Heal skill required: None.</p>",
+    "price": 2,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 13,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RMGDbiBUZtaGJ6Kc"
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "M5miyXXYudrZSocM",
+  "name": "Trade Goods",
+  "type": "item",
+  "img": "icons/containers/boxes/crate-reinforced-brown.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 24,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>Glowbugs, ceramic fire lighters, antibiotics, ceraplast tools, and the other fruits of a TL4 civilization that might be valuable on more primitive worlds. A kilo of trade goods can usually be traded for at least a hundred credits worth of local products.</p>",
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!M5miyXXYudrZSocM"
+}

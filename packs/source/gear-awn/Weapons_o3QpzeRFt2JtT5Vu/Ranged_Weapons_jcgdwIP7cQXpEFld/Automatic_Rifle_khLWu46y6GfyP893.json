@@ -1,0 +1,71 @@
+{
+  "_id": "khLWu46y6GfyP893",
+  "name": "Automatic Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/machine-gun-silver.webp",
+  "effects": [],
+  "folder": "jcgdwIP7cQXpEFld",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>A barely man-portable weapon meant to hurl vast amounts of lead. Each magazine costs ten times as much ammunition as a conventional round, where it can be bought at all. Can fire to suppress if braced or prone.</p>",
+    "damage": "2d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 200,
+      "medium": 0,
+      "long": 400
+    },
+    "save": "",
+    "tags": [
+      "Suppressive"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Ammo, 5 Rounds",
+    "charges": {
+      "value": 10,
+      "max": 10
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 4,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!khLWu46y6GfyP893"
+}

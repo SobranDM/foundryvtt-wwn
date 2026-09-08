@@ -1,0 +1,66 @@
+{
+  "name": "Reaction Booster II",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.tnUDQ9pJxJGNwvMq"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $100,000 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>As Reaction Booster I, but the user automatically wins initiative against targets that don't also automatically win initiative; if both have this ability, initiative is rolled without modifications. The user can act normally during surprise rounds.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 4,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "tnUDQ9pJxJGNwvMq",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tnUDQ9pJxJGNwvMq"
+}

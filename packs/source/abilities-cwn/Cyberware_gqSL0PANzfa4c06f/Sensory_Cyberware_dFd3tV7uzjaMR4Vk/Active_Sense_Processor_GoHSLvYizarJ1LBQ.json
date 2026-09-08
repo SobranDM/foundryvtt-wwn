@@ -1,0 +1,66 @@
+{
+  "name": "Active Sense Processor",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.GoHSLvYizarJ1LBQ"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $50,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>Augmented sensory processing. <em>Apply by hand: grants a +1 Wisdom modifier for all skill checks involving sensing or noticing things, to a maximum +2 modifier (when stacked with other such bonuses).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "GoHSLvYizarJ1LBQ",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GoHSLvYizarJ1LBQ"
+}

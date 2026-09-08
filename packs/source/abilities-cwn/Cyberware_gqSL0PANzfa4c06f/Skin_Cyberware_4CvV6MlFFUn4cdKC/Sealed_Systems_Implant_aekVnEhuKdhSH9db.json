@@ -1,0 +1,66 @@
+{
+  "name": "Sealed Systems Implant",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.aekVnEhuKdhSH9db"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>When triggered as an Instant action, implanted shields deploy and skin-weaves energize to seal the user off from hostile external environments. For the next six hours, the user can operate as if wearing a vacuum suit, ignoring vacuum, contact poisons, non-immediately-lethal levels of radiation, toxic gases, low or high-pressure atmospheres, and environmental temperature hazards short of open flame. After deployment, the implant needs an equal time of recovery before it can be deployed again.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "aekVnEhuKdhSH9db",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aekVnEhuKdhSH9db"
+}

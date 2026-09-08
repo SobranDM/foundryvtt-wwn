@@ -1,0 +1,66 @@
+{
+  "name": "Viper Sting",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.2He5DvyhBfC7Ym23"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>A tool of assassins, a Viper Sting is a fang, fingernail needle, palm injector, or more exotic implement for injecting an unsuspecting target with a drug of the user's choice. A Viper Sting can be loaded with up to four doses of pharmaceuticals, dispensed as the user wishes. If loaded with a toxin, it does 1d12 damage with a 1d10/x3 Trauma Die. If a tranquilizer is used, the damage is the same, but unconsciousness will result instead of death. A Viper Sting can only be effectively used as part of an Execution Attack, as an alert opponent can avoid it easily. This cyber inflicts a -2 penalty on any check to detect its presence.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "1d12",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "2He5DvyhBfC7Ym23",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 18000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2He5DvyhBfC7Ym23"
+}

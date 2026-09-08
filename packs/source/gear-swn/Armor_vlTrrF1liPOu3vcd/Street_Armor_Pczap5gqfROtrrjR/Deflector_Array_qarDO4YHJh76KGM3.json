@@ -1,0 +1,42 @@
+{
+  "_id": "qarDO4YHJh76KGM3",
+  "name": "Deflector Array",
+  "type": "armor",
+  "img": "icons/magic/defensive/barrier-shield-dome-deflect-blue.webp",
+  "effects": [],
+  "folder": "Pczap5gqfROtrrjR",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>A deflector array consists of several force field nodes worn beneath ordinary clothing. The invisible shield it produces flares only when dangerous energies or impact is impending, glowing a brief, bright blue as it deflects the attack.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 30000,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 5,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qarDO4YHJh76KGM3"
+}

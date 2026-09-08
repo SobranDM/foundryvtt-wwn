@@ -1,0 +1,87 @@
+{
+  "name": "Adrenal Suppression Pump",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [
+    {
+      "_id": "Jm3Uqr5K3eBejNCW",
+      "type": "base",
+      "name": "Adrenal Suppression Pump (Initiative +2)",
+      "img": "systems/wwn/assets/icons/items/gear.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.initiative.individual.mod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!Duo6C969EGVr6NhC.Jm3Uqr5K3eBejNCW"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.Duo6C969EGVr6NhC"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 30,000cr</strong></p><p>These endocrine pumps neutralize numerous brain chemicals in the user when activated while exciting the user's perceptual centers. This combination produces a cold, dispassionate situational awareness that grants the user +2 on initiative rolls when the system is engaged. Most systems have built-in safety overrides to prevent psychological addiction and brain damage, allowing the unit to be used for no more than an hour each day. The user takes a -2 penalty on all social skill checks while the unit is active, and it requires five rounds to toggle it.</p><p><em>The +2 initiative bonus below is modeled as an Active Effect that requires both Installed and Active (use the power's Activate/Deactivate toggle to engage or disengage the pump) -- it only applies while both are true, matching the book's \"when the system is engaged\" wording. The -2 social skill penalty has no matching per-category Active Effect target in this system and is left as text only; apply it by hand while the pump is engaged.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "active",
+        "note": "Engage/disengage (5 rounds); usable for at most 1 hour per day"
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Use the Active/Inactive toggle to engage or disengage (5 rounds each way); usable for at most 1 hour per day"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Duo6C969EGVr6NhC",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Duo6C969EGVr6NhC"
+}

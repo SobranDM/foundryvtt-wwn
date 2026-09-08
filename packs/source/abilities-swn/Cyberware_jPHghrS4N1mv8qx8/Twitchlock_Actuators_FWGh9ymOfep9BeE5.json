@@ -1,0 +1,66 @@
+{
+  "name": "Twitchlock Actuators",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.FWGh9ymOfep9BeE5"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 30,000cr</strong></p><p>Neural override fibers are woven into the user's hands and arms and linked to a perceptual modulator implanted at the base of the user's brain stem. When presented with a direct exercise of hand-eye coordination, the twitchlock can be engaged to produce superhuman accuracy and precision. Any attack roll or skill check reliant chiefly on manual dexterity or aim can be rerolled, though the power surge inflicts two points of System Strain on the user. A given roll can only be rerolled once with this cyberware. While the twitchlock allows superhuman accuracy when engaged, the overrides fuzz ordinary nerve impulses and reduce the user's Dexterity modifier by 1 when active. Activating or deactivating the cyberware requires a Main Action.</p><p><em>The -1 Dexterity modifier applies only while the twitchlock is actively engaged, not merely while installed, so it is left as text only rather than an always-on Active Effect.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "2",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Main Action to engage or disengage"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "FWGh9ymOfep9BeE5",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 23000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FWGh9ymOfep9BeE5"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Synthears (pair)",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.Po9itC5edHMCfTuH"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Medical &middot; System Strain 0.25 (stored as permanentStrain 0 -- see import notes on fractional Strain)</strong></p><p>This model of artificial ear is designed to be indistinguishable from normal ears, though they have all the properties of a normal pair of cyberears.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Po9itC5edHMCfTuH",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 16000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Po9itC5edHMCfTuH"
+}

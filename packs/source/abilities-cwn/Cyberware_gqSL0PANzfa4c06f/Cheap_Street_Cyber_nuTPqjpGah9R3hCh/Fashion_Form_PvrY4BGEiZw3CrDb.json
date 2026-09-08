@@ -1,0 +1,66 @@
+{
+  "name": "Fashion Form",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.PvrY4BGEiZw3CrDb"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $250 &middot; Concealment Sight &middot; System Strain 1</strong></p><p>Cheap, fast biomodding that sculpts a skin-deep beauty or a niche look suitable for professional performers or companions. Grants a +1 to most social skill checks, but the stigma applies a -1 penalty instead to any skill check reliant on being respected.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "PvrY4BGEiZw3CrDb",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PvrY4BGEiZw3CrDb"
+}

@@ -1,0 +1,71 @@
+{
+  "_id": "Wi3w3SswHazDiFly",
+  "name": "Combat Shotgun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/shotgun-tech-green-yellow.webp",
+  "effects": [],
+  "folder": "jcgdwIP7cQXpEFld",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p>A modern select-fire combat shotgun. May burst fire, expending three rounds for +2 to hit and damage. Slug ammunition doubles its normal and maximum ranges but reduces damage by 1.</p>",
+    "damage": "3d4",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 30
+    },
+    "save": "",
+    "tags": [
+      "Burst"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Ammo, 5 Rounds",
+    "charges": {
+      "value": 12,
+      "max": 12
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 300,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Wi3w3SswHazDiFly"
+}

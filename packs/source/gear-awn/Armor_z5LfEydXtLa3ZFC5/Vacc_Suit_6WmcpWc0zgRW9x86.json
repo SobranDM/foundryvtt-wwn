@@ -1,0 +1,42 @@
+{
+  "_id": "6WmcpWc0zgRW9x86",
+  "name": "Vacc Suit",
+  "type": "armor",
+  "img": "icons/equipment/body/suit-biohazard-protection.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>Provides a sealed, heated environment for up to six hours on a tank of air, requiring one Type A power cell for every twelve hours of use. Lowers radiation exposure, decreasing Radiation save intervals by one step. Obvious. Sealed-suit armor, unusable by wearers without a basically human body plan.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 250,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6WmcpWc0zgRW9x86"
+}

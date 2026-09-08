@@ -318,6 +318,17 @@ export function usesSharedPool(subType, system) {
   return resolveCommitmentOptions(subType, system).some((o) => o.cost > 0);
 }
 
+/**
+ * True when this subtype's `installed` toggle is a meaningful concept
+ * (cyberware / custom) and should gate the power's transfer effects.
+ * Subtypes with no `installed` concept (art/spell/ability/psychic/mutation/
+ * gift) are unaffected and keep their existing always-on passive behavior.
+ * @param {string} subType
+ */
+export function usesInstalledField(subType) {
+  return POWER_SUBTYPES[subType]?.visibleFields?.installed === true;
+}
+
 /** @param {string} subType @param {object} system */
 export function hasSceneOrDayCommitment(subType, system) {
   return resolveCommitmentOptions(subType, system).some(
@@ -330,6 +341,40 @@ export function hasActiveCommitment(subType, system) {
   return resolveCommitmentOptions(subType, system).some(
     (o) => o.cost > 0 && o.length === "active"
   );
+}
+
+/**
+ * True when this power opted into a poolless (zero-cost) manual active/
+ * inactive toggle -- an `installed`-field subtype (cyberware / custom) whose
+ * `commitmentOptions` includes a `{ cost: 0, length: "active" }` entry.
+ * Distinct from `hasActiveCommitment` (a *paid* shared-pool "active" tier,
+ * e.g. an Art committing Effort for the scene): this draws no resource at
+ * all, it just lets the item's own `isActive` flag be flipped by hand.
+ * Most cyberware does NOT opt into this -- it stays on the default
+ * `{ cost: 0, length: "none" }` and its transfer effects are gated on
+ * `installed` alone (always-on while installed). Only cyberware whose book
+ * text ties its bonus to being actively engaged/switched on (not merely
+ * installed) should opt in, by giving it a `{ cost: 0, length: "active" }`
+ * commitment option.
+ * @param {string} subType
+ * @param {object} system
+ */
+export function hasFreeActiveToggle(subType, system) {
+  if (!usesInstalledField(subType)) return false;
+  return resolveCommitmentOptions(subType, system).some(
+    (o) => o.cost === 0 && o.length === "active"
+  );
+}
+
+/**
+ * True when this power exposes an Activate/Deactivate toggle in the sheet UI
+ * at all -- either a paid shared-pool "active" tier (existing behavior for
+ * arts/gifts/etc.) or a cyberware/custom poolless opt-in toggle.
+ * @param {string} subType
+ * @param {object} system
+ */
+export function hasActiveToggle(subType, system) {
+  return hasActiveCommitment(subType, system) || hasFreeActiveToggle(subType, system);
 }
 
 export const EFFECT_APPLICATION_CHOICES = {

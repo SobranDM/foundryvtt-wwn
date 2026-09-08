@@ -1,0 +1,66 @@
+{
+  "name": "Coordination Augment I",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.WYtgnFC3J4i7K4lZ"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $50,000 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>The user's natural mind-body interface is tightened. <em>Apply by hand: the subject's Dexterity score becomes 14, or gains a +2 score bonus if already 14 or higher.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 4,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "WYtgnFC3J4i7K4lZ",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WYtgnFC3J4i7K4lZ"
+}

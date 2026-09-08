@@ -1,0 +1,66 @@
+{
+  "name": "Razornails",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.prAWD3wpuLUt3feY"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $500 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>Finger-mounted retractable blades that do 1d6+1 damage with 1d6/x3 Trauma Die and 1/15 Shock. They grant +1 to hit with them, using Punch or Stab.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "1d6+1",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "prAWD3wpuLUt3feY",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!prAWD3wpuLUt3feY"
+}

@@ -10,7 +10,7 @@ import { WwnDice } from "../../dice/dice.mjs";
 import { refreshPowers } from "../../helpers/power-refresh.mjs";
 import { preparePowersTabContext } from "../../helpers/power-sections.mjs";
 import { reloadWeapon } from "../../helpers/ammo.mjs";
-import { applySubtypeDefaults, POWER_SUBTYPES, hasActiveCommitment } from "../../config/power-subtypes.mjs";
+import { applySubtypeDefaults, POWER_SUBTYPES, hasActiveToggle } from "../../config/power-subtypes.mjs";
 import { syncPowerTransferEffects } from "../../helpers/power-effects.mjs";
 import { isNpc, isPc } from "../../helpers/actor-types.mjs";
 import { showWwnDialog, confirmButton, cancelButton } from "../../applications/wwn-dialog.mjs";
@@ -130,7 +130,9 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     context.armors = items.filter((i) => i.type === "armor");
     context.ammoItems = items.filter((i) => i.type === "ammo");
     context.gear = items.filter((i) => i.type === "item");
-    context.currencies = items.filter((i) => i.type === "currency");
+    context.currencies = items
+      .filter((i) => i.type === "currency")
+      .sort((a, b) => (a.system.multiplier ?? 1) - (b.system.multiplier ?? 1));
     context.skills = items.filter((i) => i.type === "skill").sort((a, b) => a.name.localeCompare(b.name));
 
     // Powers / ClassEdges / Foci / resource pools
@@ -146,7 +148,7 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
         const entry = { id: i.id, name: i.name, img: i.img, type: i.type };
         if (i.type === "power") {
           entry.isActive = i.system.isActive;
-          entry.canActivatePower = hasActiveCommitment(i.system.subType, i.system) && !i.system.isActive;
+          entry.canActivatePower = hasActiveToggle(i.system.subType, i.system) && !i.system.isActive;
           entry.canDeactivatePower = i.system.isActive;
         }
         if (i.type === "weapon" && isNpc(actor)) {

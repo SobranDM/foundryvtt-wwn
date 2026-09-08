@@ -1,0 +1,44 @@
+{
+  "_id": "T1woUKSweVrETjj4",
+  "name": "Bus Pass, Monthly",
+  "type": "item",
+  "img": "icons/sundries/documents/document-letter-tan.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A critical mobility resource for the first mission of many operators.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 6,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!T1woUKSweVrETjj4"
+}

@@ -1,0 +1,71 @@
+{
+  "_id": "GwcsChq1ZmhZZcuo",
+  "name": "Grenade, Gas",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/grenade-chemical-gas.webp",
+  "effects": [],
+  "folder": "YlpuSUE4DUeSFsGf",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Grenades always attack against AC 10; on a miss they land 1d10 meters off in a random direction. Creates a 5-meter cloud of choking gas that disperses in one round, non-lethal damage halved on a Physical save, useless against breathing protection, and provides full concealment.</p>",
+    "damage": "1d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 30
+    },
+    "save": "",
+    "tags": [
+      "Non-Lethal"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GwcsChq1ZmhZZcuo"
+}

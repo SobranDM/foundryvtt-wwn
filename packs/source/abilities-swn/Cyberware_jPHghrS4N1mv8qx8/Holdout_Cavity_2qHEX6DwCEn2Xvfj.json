@@ -1,0 +1,66 @@
+{
+  "name": "Holdout Cavity",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.2qHEX6DwCEn2Xvfj"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 10,000cr</strong></p><p>Usually implanted somewhere in the torso, a holdout cavity is a small recess shaped into the wearer's body and designed to be overlooked by most standard forms of medical or security scanning. It automatically defeats a security inspection that uses less than TL4 scanners, and even advanced tech requires careful personal inspection to have a chance of revealing it. The cavity can hold an object up to the size of a pistol and is opened and shut by the user's mental command.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "2qHEX6DwCEn2Xvfj",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2qHEX6DwCEn2Xvfj"
+}

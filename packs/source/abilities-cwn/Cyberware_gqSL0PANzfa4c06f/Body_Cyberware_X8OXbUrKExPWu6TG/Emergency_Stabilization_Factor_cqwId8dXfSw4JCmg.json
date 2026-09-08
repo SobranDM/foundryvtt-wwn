@@ -1,0 +1,87 @@
+{
+  "name": "Emergency Stabilization Factor",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "ZFZhb3KFokuqjQ4g",
+      "type": "base",
+      "name": "Emergency Stabilization Factor",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.autoStabilize",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!cqwId8dXfSw4JCmg.ZFZhb3KFokuqjQ4g"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.cqwId8dXfSw4JCmg"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $30,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>When brought to zero hit points by an injury that does not instantly kill them, the user automatically stabilizes, gaining one System Strain, and will regain consciousness at the end of the scene with 1 hit point. If they are already at maximum strain, this cyberware does not function.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "cqwId8dXfSw4JCmg",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cqwId8dXfSw4JCmg"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Skull Citadel",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.V6rlEkWEuEdKGBWi"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $100,000 &middot; Concealment Medical &middot; System Strain 2</strong></p><p>The user's head is augmented with independent blood oxygenation pumps, armor plating, and trauma buffers designed to keep the brain intact even after the rest of the body is critically damaged. Barring dismemberment or the use of high-powered ammunition directly on the target's head, the subject ignores head-affecting Major Injuries and can be stabilized even as long as ten minutes after their technical \"death\". Each such delayed revivification permanently reduces a randomly-chosen attribute by 2 points, however. This ability damage cannot be undone.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "V6rlEkWEuEdKGBWi",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!V6rlEkWEuEdKGBWi"
+}

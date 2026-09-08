@@ -1,0 +1,66 @@
+{
+  "name": "Induced Coma Trigger",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.xwOVq3udMo5xwi9X"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 20,000cr</strong></p><p>A series of implants are wired to the user's brain stem, allowing them to trigger an induced therapeutic coma at a mental command. The user appears dead to anything short of a medical inspection, and has no need of respiration, food, or water while the coma is in effect. The user does not heal while in a coma, but any diseases or poisons also halt progression. The user determines how long the coma is to last before triggering it, and is unconscious for its duration. A character can survive in a coma up to two weeks before needing to regain consciousness for as long as they were in the coma.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": "Mental command; user sets coma length up to two weeks, unconscious for its duration"
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "xwOVq3udMo5xwi9X",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xwOVq3udMo5xwi9X"
+}

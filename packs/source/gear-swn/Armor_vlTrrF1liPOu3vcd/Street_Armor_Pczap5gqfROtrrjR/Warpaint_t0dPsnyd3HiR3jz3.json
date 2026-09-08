@@ -1,0 +1,42 @@
+{
+  "_id": "t0dPsnyd3HiR3jz3",
+  "name": "Warpaint",
+  "type": "armor",
+  "img": "icons/equipment/body/armor-coveralls.webp",
+  "effects": [],
+  "folder": "Pczap5gqfROtrrjR",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>Warpaint is the common term for the bizarre combat fashions and scrap-built street harness of gangers, cult enforcers, street toughs, and other marginal sorts with little money but much need for protection. An NPC in warpaint that is meaningful to them gains a +1 Morale bonus.</p>",
+    "ac": 12,
+    "acRanged": 12,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 300,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 4,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!t0dPsnyd3HiR3jz3"
+}

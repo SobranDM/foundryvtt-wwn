@@ -1,0 +1,66 @@
+{
+  "name": "Enhanced Reflexes III",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.3Kq604u8oEDhgyjS"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $750,000 &middot; Concealment Touch &middot; System Strain 4</strong></p><p>Twice per scene, as an On Turn action up to once per round, the user gains a bonus non-cyberspace Main Action and bonus Move Action. By accepting one System Strain, this ability can be used as an Instant action.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 4,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 6,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "3Kq604u8oEDhgyjS",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3Kq604u8oEDhgyjS"
+}

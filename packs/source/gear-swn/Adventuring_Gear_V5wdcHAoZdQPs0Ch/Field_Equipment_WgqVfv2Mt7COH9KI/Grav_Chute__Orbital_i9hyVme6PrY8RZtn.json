@@ -1,0 +1,44 @@
+{
+  "_id": "i9hyVme6PrY8RZtn",
+  "name": "Grav Chute, Orbital",
+  "type": "item",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 5</strong></p><p>A TL5 grav chute capable of operating from orbital heights. Like the standard version, it burns out after one use.</p>",
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!i9hyVme6PrY8RZtn"
+}

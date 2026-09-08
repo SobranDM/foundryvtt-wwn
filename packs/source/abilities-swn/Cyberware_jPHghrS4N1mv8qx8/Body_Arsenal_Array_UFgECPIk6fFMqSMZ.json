@@ -1,0 +1,66 @@
+{
+  "name": "Body Arsenal Array",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.UFgECPIk6fFMqSMZ"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 10,000cr</strong></p><p>Some personnel need to be armed at all times without giving any indication of such. Improvised weaponry and conventional holdout weapons are useful enough against soft targets, but disabling a target in powered armor requires more. The details of the array vary from user to user, but usually act as advanced medium weapons that can be used with either Punch or Stab skills and at least one integral energy projector equal to a laser rifle (1d10 damage, +1 attack bonus), one that must be powered by an insertable Type A power cell. Retracted body arsenals can be detected only by a medical examination.</p><p><em>The array bundles two distinct weapon profiles (a concealed medium melee weapon plus a laser-rifle-equivalent energy projector); no single damageRoll can represent both, so no damage roll is set on this item -- resolve melee hits with the GM's chosen medium-weapon Punch/Stab statline and ranged hits as a laser rifle (1d10+1).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "UFgECPIk6fFMqSMZ",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UFgECPIk6fFMqSMZ"
+}

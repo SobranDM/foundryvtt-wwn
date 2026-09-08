@@ -1,0 +1,44 @@
+{
+  "_id": "XWZqzW9OAx6ToHu2",
+  "name": "Navcomp",
+  "type": "item",
+  "img": "icons/tools/navigation/compass-plain-blue.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 13,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A combination of low-tech compasses, automappers, astronomic charts, and gyroscopes packed into a flat, one-kilo case. A character with a navcomp will never get lost on worlds with GPS satellites.</p>",
+    "price": 500,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XWZqzW9OAx6ToHu2"
+}

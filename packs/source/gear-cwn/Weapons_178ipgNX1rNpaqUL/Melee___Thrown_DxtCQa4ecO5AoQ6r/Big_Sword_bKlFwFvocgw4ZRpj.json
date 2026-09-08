@@ -1,0 +1,71 @@
+{
+  "_id": "bKlFwFvocgw4ZRpj",
+  "name": "Big Sword",
+  "type": "weapon",
+  "img": "icons/weapons/swords/greatsword-guard.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A two-handed blade, too large to wield alongside a Readied item in the off-hand.</p>",
+    "damage": "2d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "2",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "2H"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 500,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 5,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!bKlFwFvocgw4ZRpj"
+}

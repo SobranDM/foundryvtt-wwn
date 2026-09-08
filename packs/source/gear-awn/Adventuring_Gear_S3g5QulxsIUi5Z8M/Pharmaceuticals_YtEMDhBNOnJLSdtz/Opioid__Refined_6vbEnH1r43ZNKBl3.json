@@ -1,0 +1,44 @@
+{
+  "_id": "6vbEnH1r43ZNKBl3",
+  "name": "Opioid, Refined",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-bottle.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p>Rolls 1d10 twice and takes the higher result for temporary hit points, otherwise as crude opioids. Requires Heal-0 to apply.</p>",
+    "price": 20,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6vbEnH1r43ZNKBl3"
+}

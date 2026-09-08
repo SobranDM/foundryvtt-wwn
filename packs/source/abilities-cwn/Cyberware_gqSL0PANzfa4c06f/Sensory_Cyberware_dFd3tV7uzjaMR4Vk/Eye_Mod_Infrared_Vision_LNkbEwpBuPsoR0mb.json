@@ -1,0 +1,66 @@
+{
+  "name": "Eye Mod/Infrared Vision",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.LNkbEwpBuPsoR0mb"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $5,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>The infrared vision this mod allows permits basic navigation in dark areas and makes the presence of heat sources such as humans, engines, and infrared tripwires very obvious. The user gains a +1 bonus on any Notice checks to detect the presence of thermally-unshielded living creatures.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "LNkbEwpBuPsoR0mb",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LNkbEwpBuPsoR0mb"
+}

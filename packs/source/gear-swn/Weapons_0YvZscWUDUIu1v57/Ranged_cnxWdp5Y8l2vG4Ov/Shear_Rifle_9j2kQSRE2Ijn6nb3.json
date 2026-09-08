@@ -1,0 +1,73 @@
+{
+  "_id": "9j2kQSRE2Ijn6nb3",
+  "name": "Shear Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-energy-purple.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 22,
+  "flags": {},
+  "system": {
+    "description": "<p>Shear rifles are the product of a relatively few functioning pretech manufactories. These weapons use miniaturized grav projectors to create dangerous repulsor fields inside a target, tearing the object apart along perfectly smooth planes. Shear rifles are completely silent in operation.</p>",
+    "damage": "2d8",
+    "bonus": 1,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 5,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "2H",
+      "Burst",
+      "Silent"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Power Cell, Type A",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 600,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9j2kQSRE2Ijn6nb3"
+}

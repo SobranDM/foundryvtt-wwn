@@ -1,0 +1,69 @@
+{
+  "_id": "lIqzPUjnZVZLEaDG",
+  "name": "Grenade, Smoke",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/grenade-gas.webp",
+  "effects": [],
+  "folder": "YlpuSUE4DUeSFsGf",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>Grenades always attack against AC 10; on a miss they land 1d10 meters off in a random direction. Creates the same dome of opaque, harmless smoke as a gas grenade; IR or augmented visuals see through it.</p>",
+    "damage": "",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 30
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!lIqzPUjnZVZLEaDG"
+}

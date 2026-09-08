@@ -1,0 +1,66 @@
+{
+  "name": "Regulated Anagathic Substrate",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.G6fHPlG1ia5qLtk6"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $200,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>This whole-body network of chem regulators can prolong human lifespans by up to 1d4+2 decades. Maintenance on this cyber costs $50,000 a month, however, and interruptions have catastrophic consequences. Rumors persist of even more effective models existing among the megacorp ultra-elite.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "G6fHPlG1ia5qLtk6",
+  "folder": "wcDAe5zFJQ3OtJmI",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G6fHPlG1ia5qLtk6"
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "3ljRlzwM8D4tL5Vo",
+  "name": "Energy Cell, Type B",
+  "type": "ammo",
+  "img": "icons/commodities/tech/battery-fuel-cell-teal.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 14,
+  "flags": {},
+  "system": {
+    "description": "<p>A large, heavy cell that fuels vehicles and heavy equipment. Non-rechargeable.</p>",
+    "price": 100,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!3ljRlzwM8D4tL5Vo"
+}

@@ -10,6 +10,7 @@ import { expendGear } from "../helpers/ammo.mjs";
 import { getActorSpellSlotMode } from "../derivations/resource-pools.mjs";
 import { findNamedResourcePool } from "../helpers/resource-pool-resolve.mjs";
 import { WWN } from "../config/index.mjs";
+import { resolveCommitmentOptions } from "../config/power-subtypes.mjs";
 import {
   applySceneDayPowerEffects,
   syncPowerTransferEffects,
@@ -367,36 +368,53 @@ export class WwnItem extends Item {
     return WwnDice.rollPowerDamage(this.actor, this);
   }
 
-  /** Activate a power with an `active` commitment tier, spending pool resources. */
+  /**
+   * Activate a power's active/inactive toggle.
+   * - Paid shared-pool "active" commitment tier (arts/gifts/etc.): spends
+   *   pool resources as before.
+   * - Poolless opt-in (cyberware/custom with a zero-cost "active"-length
+   *   commitment option): just flips `isActive`, no resource spend -- these
+   *   items don't draw from an Effort-style pool at all.
+   */
   async activatePower({ skipDialog = false } = {}) {
     if (this.type !== "power" || this.system.isActive) return;
     const actor = this.actor;
     if (!actor) return;
     const system = this.system;
-    const options = (system.effectiveCommitmentOptions ?? []).filter(
+    const paidOptions = (system.effectiveCommitmentOptions ?? []).filter(
       (o) => o.cost > 0 && o.length === "active"
     );
-    if (!options.length) return;
 
-    const chosenOption = await pickCommitmentOption(this, { options, skipDialog });
-    if (!chosenOption) return;
+    if (paidOptions.length) {
+      const chosenOption = await pickCommitmentOption(this, { options: paidOptions, skipDialog });
+      if (!chosenOption) return;
 
-    const pool = this.#findPool();
-    if (!pool) {
-      return ui.notifications.warn(
-        game.i18n.format("WWN.Power.NoPool", { name: this.name })
-      );
+      const pool = this.#findPool();
+      if (!pool) {
+        return ui.notifications.warn(
+          game.i18n.format("WWN.Power.NoPool", { name: this.name })
+        );
+      }
+      if (pool.value + chosenOption.cost > pool.max) {
+        return ui.notifications.warn(
+          game.i18n.format("WWN.Power.PoolEmpty", { name: pool.name })
+        );
+      }
+
+      await this.update({
+        "system.isActive": true,
+        "system.poolCommitted.active": (system.poolCommitted?.active ?? 0) + chosenOption.cost,
+      });
+      await syncPowerTransferEffects(this);
+      return this;
     }
-    if (pool.value + chosenOption.cost > pool.max) {
-      return ui.notifications.warn(
-        game.i18n.format("WWN.Power.PoolEmpty", { name: pool.name })
-      );
-    }
 
-    await this.update({
-      "system.isActive": true,
-      "system.poolCommitted.active": (system.poolCommitted?.active ?? 0) + chosenOption.cost,
-    });
+    const freeToggle = resolveCommitmentOptions(system.subType, system).some(
+      (o) => o.cost === 0 && o.length === "active"
+    );
+    if (!freeToggle) return;
+
+    await this.update({ "system.isActive": true });
     await syncPowerTransferEffects(this);
     return this;
   }

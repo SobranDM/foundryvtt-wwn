@@ -40,6 +40,9 @@
       "powerArmor": {
         "htmlFields": ["description"]
       },
+      "project": {
+        "htmlFields": ["effects", "notes"]
+      },
       "pc": {
         "htmlFields": ["biography", "details.notes"]
       },
@@ -92,6 +95,9 @@
       },
       "art": {
         "htmlFields": ["description"]
+      },
+      "contribution": {
+        "htmlFields": []
       },
       "spell": {
         "htmlFields": ["description"]
@@ -239,6 +245,24 @@
       "flags": {}
     },
     {
+      "name": "gear-swn",
+      "label": "SWN Gear",
+      "system": "wwn",
+      "path": "packs/gear-swn",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "gear-cwn",
+      "label": "CWN Gear",
+      "system": "wwn",
+      "path": "packs/gear-cwn",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "armor-fittings",
       "label": "Armor Fittings",
       "system": "wwn",
@@ -253,6 +277,15 @@
       "system": "wwn",
       "path": "packs/example-power-armor",
       "type": "Actor",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "gear-awn",
+      "label": "AWN Gear",
+      "system": "wwn",
+      "path": "packs/gear-awn",
+      "type": "Item",
       "private": false,
       "flags": {}
     }
@@ -305,7 +338,8 @@
       "packs": [
         "abilities-swn",
         "starship-fittings",
-        "example-starships"
+        "example-starships",
+        "gear-swn"
       ],
       "folders": []
     },
@@ -317,7 +351,8 @@
         "abilities-awn",
         "tables-awn",
         "armor-fittings",
-        "example-power-armor"
+        "example-power-armor",
+        "gear-awn"
       ],
       "folders": []
     },
@@ -326,7 +361,8 @@
       "sorting": "m",
       "color": "#5a3d5c",
       "packs": [
-        "abilities-cwn"
+        "abilities-cwn",
+        "gear-cwn"
       ],
       "folders": []
     }

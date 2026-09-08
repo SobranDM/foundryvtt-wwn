@@ -1,0 +1,66 @@
+{
+  "name": "Iron Hand Aegis",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.DYebh9v5g6YnVp79"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $40,000 &middot; Concealment Sight &middot; System Strain 2</strong></p><p>Absorption plates and kinetic ablation units are implanted in the user's arms and linked with a reactive ballistic calculator. Once per scene, as an Instant action, the user can deflect a successful ranged bullet, arrow, or thrown weapon attack, including burst or suppressive fire. Surprise attacks cannot be deflected this way, nor can melee attacks or explosives.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "DYebh9v5g6YnVp79",
+  "folder": "48OXOJtr62Mg6B2U",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DYebh9v5g6YnVp79"
+}

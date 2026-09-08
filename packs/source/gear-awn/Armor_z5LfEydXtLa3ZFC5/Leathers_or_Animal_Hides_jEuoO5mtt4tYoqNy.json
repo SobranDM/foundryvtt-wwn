@@ -1,0 +1,42 @@
+{
+  "_id": "jEuoO5mtt4tYoqNy",
+  "name": "Leathers or Animal Hides",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-leather-brown.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 1,
+  "flags": {},
+  "system": {
+    "description": "<p>Heavy leather jackets, boiled leather plates, or thick furs. Subtle. Primitive: gives no benefit against gunfire, explosives, or TL4+ melee weapons.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 0,
+    "magical": false,
+    "powered": false,
+    "price": 25,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!jEuoO5mtt4tYoqNy"
+}

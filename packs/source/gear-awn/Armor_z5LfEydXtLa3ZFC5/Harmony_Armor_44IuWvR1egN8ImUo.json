@@ -1,0 +1,42 @@
+{
+  "_id": "44IuWvR1egN8ImUo",
+  "name": "Harmony Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-powered-tactical.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 10,
+  "flags": {},
+  "system": {
+    "description": "<p>The sinister glossy-black plate worn by enforcers of the Mandate's Bureau of Harmony. Its ultra-light materials shift slightly to obscure the wearer's body shape, and its blank faceplate and voice distortion module conceal their identity. Obvious.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 1500,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!44IuWvR1egN8ImUo"
+}

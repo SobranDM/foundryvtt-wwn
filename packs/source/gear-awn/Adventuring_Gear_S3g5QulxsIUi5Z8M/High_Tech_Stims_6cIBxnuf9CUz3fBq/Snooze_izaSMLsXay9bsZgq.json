@@ -1,0 +1,44 @@
+{
+  "_id": "izaSMLsXay9bsZgq",
+  "name": "Snooze",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pill-powder.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p>An over-the-counter sleep aid granting 8 hours of restful sleep regardless of discomfort, hunger, or privation, for full normal recovery. The user falls asleep 1d6 rounds after taking it and cannot be awoken early.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!izaSMLsXay9bsZgq"
+}

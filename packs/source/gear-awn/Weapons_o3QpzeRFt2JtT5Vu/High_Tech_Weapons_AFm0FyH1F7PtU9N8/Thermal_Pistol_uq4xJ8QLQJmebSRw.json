@@ -1,0 +1,71 @@
+{
+  "_id": "uq4xJ8QLQJmebSRw",
+  "name": "Thermal Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-energy-plasma.webp",
+  "effects": [],
+  "folder": "AFm0FyH1F7PtU9N8",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p>Discharges a sphere of coherent plasma that causes large-scale tissue destruction, though the wounds tend to self-cauterize. Not normally available for sale. Gains a +1 bonus to hit from a lack of recoil.</p>",
+    "damage": "2d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 25,
+      "medium": 0,
+      "long": 50
+    },
+    "save": "",
+    "tags": [
+      "Energy"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Energy Cell, Type A",
+    "charges": {
+      "value": 5,
+      "max": 5
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uq4xJ8QLQJmebSRw"
+}

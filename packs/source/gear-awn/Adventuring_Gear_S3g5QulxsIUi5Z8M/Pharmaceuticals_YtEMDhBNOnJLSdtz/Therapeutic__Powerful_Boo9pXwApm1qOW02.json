@@ -1,0 +1,44 @@
+{
+  "_id": "Boo9pXwApm1qOW02",
+  "name": "Therapeutic, Powerful",
+  "type": "item",
+  "img": "icons/tools/medical/bandage-worn.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 13,
+  "flags": {},
+  "system": {
+    "description": "<p>As common therapeutics, but can be applied up to a week after the injury if the victim has survived that long. Requires Heal-1 to apply.</p>",
+    "price": 500,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Boo9pXwApm1qOW02"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Neural Buffer",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.SZCItTGIPmZKZBKo"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $40,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A system favored by hackers, a Neural Buffer rearranges the user's brain topography, making it more difficult to harm the user with neural feedback. The user gains an additional 3 hit points per level that can only absorb cyberspace damage from Stun or Kill Verbs. These phantom hit points refresh completely each hour.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "SZCItTGIPmZKZBKo",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SZCItTGIPmZKZBKo"
+}

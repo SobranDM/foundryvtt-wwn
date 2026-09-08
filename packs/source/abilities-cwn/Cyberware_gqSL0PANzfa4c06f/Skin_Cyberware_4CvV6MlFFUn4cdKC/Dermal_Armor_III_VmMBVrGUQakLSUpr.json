@@ -1,0 +1,107 @@
+{
+  "name": "Dermal Armor III",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "2a3nhvBM69PA8gej",
+      "type": "base",
+      "name": "Dermal Armor III (Base AC)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": 20,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!VmMBVrGUQakLSUpr.2a3nhvBM69PA8gej"
+    },
+    {
+      "_id": "5zXfsro1x2PWCRCT",
+      "type": "base",
+      "name": "Dermal Armor III (Trauma Target)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": 2,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!VmMBVrGUQakLSUpr.5zXfsro1x2PWCRCT"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.VmMBVrGUQakLSUpr"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $200,000 &middot; Concealment Sight &middot; System Strain 3</strong></p><p>Overt ceramic body plating and double-mesh joint reinforcement acts as Dermal Armor II, but with a base ranged and melee AC of 20 and +2 to the user's Trauma Target.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 3,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 3,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "VmMBVrGUQakLSUpr",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VmMBVrGUQakLSUpr"
+}

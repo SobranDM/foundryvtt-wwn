@@ -1,0 +1,44 @@
+{
+  "_id": "X9I48L5GuBYM0Aaq",
+  "name": "Kit, Basic Tools",
+  "type": "item",
+  "img": "icons/tools/hand/wrench-adjustable.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>These bundles of gear are carefully packed for minimal weight. Toolkits give a tech the gear they need for basic repairs and construction.</p>",
+    "price": 100,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 14,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!X9I48L5GuBYM0Aaq"
+}

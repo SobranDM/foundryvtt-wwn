@@ -1,0 +1,42 @@
+{
+  "_id": "NEnnQPy39fBSyrrM",
+  "name": "Secure Clothing",
+  "type": "armor",
+  "img": "icons/equipment/body/suit-modern-business.webp",
+  "effects": [],
+  "folder": "Pczap5gqfROtrrjR",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Secure clothing comes in assorted styles and fashions ranging from casual street wear to haute couture. Normal fabrics and components are replaced with light, flexible armor components that are only slightly hindering to the wearer.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 300,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 4,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NEnnQPy39fBSyrrM"
+}

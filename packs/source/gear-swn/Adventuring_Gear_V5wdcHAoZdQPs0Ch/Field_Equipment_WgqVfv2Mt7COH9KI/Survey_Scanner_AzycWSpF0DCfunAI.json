@@ -1,0 +1,44 @@
+{
+  "_id": "AzycWSpF0DCfunAI",
+  "name": "Survey Scanner",
+  "type": "item",
+  "img": "icons/commodities/tech/electronics-tech-sensor-blue.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 20,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A multipurpose scanner that can take atmospheric and gravitic readings, provide basic chemical analysis of samples of up to one cubic centimeter in size, and record up to two hundred hours of video information.</p>",
+    "price": 250,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!AzycWSpF0DCfunAI"
+}

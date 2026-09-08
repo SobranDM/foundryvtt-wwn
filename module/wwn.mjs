@@ -55,7 +55,9 @@ import { WwnNpcSheet } from "./sheets/actor/npc-sheet.mjs";
 import { WwnFactionSheet } from "./sheets/actor/faction-sheet.mjs";
 import { WwnStarshipSheet } from "./sheets/actor/starship-sheet.mjs";
 import { WwnPowerArmorSheet } from "./sheets/actor/power-armor-sheet.mjs";
+import { WwnProjectSheet } from "./sheets/actor/project-sheet.mjs";
 import { applyUiTheme, sheetThemeChoices, themeChatMessage } from "./config/themes.mjs";
+import { checkGodboundAutoLapse } from "./helpers/project-lapse.mjs";
 
 const { DocumentSheetConfig } = foundry.applications.apps;
 
@@ -93,6 +95,7 @@ Hooks.once("init", async function () {
     faction: models.WwnFaction,
     starship: models.WwnStarship,
     powerArmor: models.WwnPowerArmor,
+    project: models.WwnProject,
     // Reverse aliases — load half-migrated worlds that already remapped to pc/npc.
     pc: models.WwnPc,
     npc: models.WwnNpc,
@@ -103,6 +106,7 @@ Hooks.once("init", async function () {
     faction: "TYPES.Actor.faction",
     starship: "TYPES.Actor.starship",
     powerArmor: "TYPES.Actor.powerArmor",
+    project: "TYPES.Actor.project",
     pc: "TYPES.Actor.pc",
     npc: "TYPES.Actor.npc",
   };
@@ -121,6 +125,7 @@ Hooks.once("init", async function () {
     shipWeapon: models.WwnShipWeapon,
     shipDefense: models.WwnShipDefense,
     armorFitting: models.WwnArmorFitting,
+    contribution: models.WwnContribution,
     // Legacy item types — load aliases during migration.
     art: models.WwnPower,
     spell: models.WwnPower,
@@ -132,6 +137,7 @@ Hooks.once("init", async function () {
     shipWeapon: "TYPES.Item.shipWeapon",
     shipDefense: "TYPES.Item.shipDefense",
     armorFitting: "TYPES.Item.armorFitting",
+    contribution: "TYPES.Item.contribution",
   });
 
   CONFIG.Dice.rolls.unshift(WwnDamageRoll, WwnSkillRoll, WwnAttackRoll, WwnRoll);
@@ -171,6 +177,12 @@ Hooks.once("init", async function () {
     types: ["powerArmor"],
     makeDefault: true,
     label: "WWN.SheetClassPowerArmor",
+    themes,
+  });
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnProjectSheet, {
+    types: ["project"],
+    makeDefault: true,
+    label: "WWN.SheetClassProject",
     themes,
   });
   DocumentSheetConfig.registerSheet(Item, "wwn", WwnItemSheet, {
@@ -263,6 +275,9 @@ Hooks.once("init", async function () {
         await promptFocusSkillBonus(item, item.parent);
       }
     }
+    if (item.type === "contribution" && userId === game.user.id) {
+      await checkGodboundAutoLapse(item.parent);
+    }
     if (item.effects.size) refreshActorDerivedData(item.parent);
   });
   Hooks.on("deleteItem", async (item, _options, userId) => {
@@ -276,6 +291,9 @@ Hooks.once("init", async function () {
     }
     if (item.type === "classEdge" && isPc(item.parent) && userId === game.user.id) {
       await revokePowerBonusSkills(item, item.parent);
+    }
+    if (item.type === "contribution" && userId === game.user.id) {
+      await checkGodboundAutoLapse(item.parent, { excludeItemId: item.id });
     }
     if (item.effects.size) refreshActorDerivedData(item.parent);
   });

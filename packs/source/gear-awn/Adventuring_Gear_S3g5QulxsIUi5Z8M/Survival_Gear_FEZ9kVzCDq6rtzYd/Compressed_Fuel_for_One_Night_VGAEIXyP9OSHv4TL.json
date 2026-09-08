@@ -1,0 +1,44 @@
+{
+  "_id": "VGAEIXyP9OSHv4TL",
+  "name": "Compressed Fuel for One Night",
+  "type": "item",
+  "img": "icons/sundries/survival/fuel-canister-green.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p>Compressed charcoal or other high-density fuel, useful when firewood can't be gathered or foraged.</p>",
+    "price": 1,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!VGAEIXyP9OSHv4TL"
+}

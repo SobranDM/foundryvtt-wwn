@@ -1,0 +1,44 @@
+{
+  "_id": "IeRTMokDfugW53Os",
+  "name": "Military Ration, per Day",
+  "type": "item",
+  "img": "icons/consumables/food/berries-ration-round-red.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>This food brick is unappetizing but contains the nutrition necessary for a day of heavy activity. Water can be included for an extra point of Encumbrance per day.</p>",
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 19,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!IeRTMokDfugW53Os"
+}

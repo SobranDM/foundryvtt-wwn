@@ -1,0 +1,36 @@
+{
+  "_id": "694JLZ93U0J51cEn",
+  "name": "Advanced Arrows",
+  "type": "ammo",
+  "img": "icons/containers/ammunition/arrows-quiver-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A quiver of modern fractal-broadhead arrows for an advanced bow.</p>",
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 20,
+      "max": 20
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 1,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!694JLZ93U0J51cEn"
+}

@@ -1,0 +1,107 @@
+{
+  "name": "Dermal Armor I",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "SnDOzcRLMu1eVT8D",
+      "type": "base",
+      "name": "Dermal Armor I (Base AC)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": 16,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!5b7WKwXVXWnODY48.SnDOzcRLMu1eVT8D"
+    },
+    {
+      "_id": "qf7HgoSId7mHTGAh",
+      "type": "base",
+      "name": "Dermal Armor I (Trauma Target)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!5b7WKwXVXWnODY48.qf7HgoSId7mHTGAh"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.5b7WKwXVXWnODY48"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $40,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>Subtle dermal weave reinforcement grants a base ranged and melee Armor Class of 16 and a +1 bonus to the user's Trauma Target.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "5b7WKwXVXWnODY48",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5b7WKwXVXWnODY48"
+}

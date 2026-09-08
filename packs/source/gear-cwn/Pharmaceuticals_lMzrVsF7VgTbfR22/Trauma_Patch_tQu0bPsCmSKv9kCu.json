@@ -1,0 +1,44 @@
+{
+  "_id": "tQu0bPsCmSKv9kCu",
+  "name": "Trauma Patch",
+  "type": "item",
+  "img": "icons/tools/medical/bandages-adhesive.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A theoretically foolproof cocktail of coagulants, stimulants, and painkillers, a trauma patch can be applied to a Mortally Wounded ally to stabilize them on a successful Int or Dex/Heal skill check against difficulty 6, with a +1 difficulty penalty for each full round since the subject went down. The patch is useless after six rounds. Trauma patches cannot revive victims downed by poisons or diseases, or those dismembered by explosives or heavy weapons. Heal skill required: None.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 14,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tQu0bPsCmSKv9kCu"
+}

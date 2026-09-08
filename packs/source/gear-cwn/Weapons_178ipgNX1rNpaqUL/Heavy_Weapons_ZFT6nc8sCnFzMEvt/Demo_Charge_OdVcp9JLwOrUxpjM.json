@@ -1,0 +1,69 @@
+{
+  "_id": "OdVcp9JLwOrUxpjM",
+  "name": "Demo Charge",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/bomb-timer.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Demo charges are shaped explosive charges usually meant to knock human-sized holes in anything short of fortified defensive walls. While ineffective as thrown weapons, when used as part of a trap or ambush they inflict their listed damage in a cone out to normal range, with an Evasion save for half damage. If applied carefully to a vehicle target, the following explosion will inevitably destroy it. Requires an applicable Contact to buy, being generally illegal for open sale. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 20,
+      "medium": 20,
+      "long": 20
+    },
+    "save": "evasion",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "ZFT6nc8sCnFzMEvt",
+  "sort": 2,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OdVcp9JLwOrUxpjM"
+}

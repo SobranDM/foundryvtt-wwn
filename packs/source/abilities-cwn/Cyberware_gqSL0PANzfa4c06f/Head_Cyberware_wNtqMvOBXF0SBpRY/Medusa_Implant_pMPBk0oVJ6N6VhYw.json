@@ -1,0 +1,66 @@
+{
+  "name": "Medusa Implant",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.pMPBk0oVJ6N6VhYw"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $20,000 &middot; Concealment Sight &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>These prehensile cranial tendrils take multiple forms, from thick armored cables to bundles of brightly-colored articulated polymer fibers not unlike normal hair. The tendrils are shoulder-length under most circumstances, but can extend to manipulate objects up to three meters distant with the agility of a human hand. The bundles are not very strong, however, and cannot lift more than ten kilograms. Like other extra limbs, they do not grant extra actions, but can hold and use items as any other limb could.</p><p><em>Listed in the book as concealment \"Obvious,\" normalized here to Sight.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "pMPBk0oVJ6N6VhYw",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pMPBk0oVJ6N6VhYw"
+}

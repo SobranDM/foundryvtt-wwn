@@ -1,0 +1,44 @@
+{
+  "_id": "ciFwTOdRLmsd4WUa",
+  "name": "Alcohol, Common",
+  "type": "item",
+  "img": "icons/consumables/drinks/beer-mug-brown-tan.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>A dose is enough to render a drinker pleasantly tipsy. Effects last 1d4 hours: -1 Stress gained during that time, but -2 to hit rolls and -1 to skill checks.</p>",
+    "price": 1,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ciFwTOdRLmsd4WUa"
+}

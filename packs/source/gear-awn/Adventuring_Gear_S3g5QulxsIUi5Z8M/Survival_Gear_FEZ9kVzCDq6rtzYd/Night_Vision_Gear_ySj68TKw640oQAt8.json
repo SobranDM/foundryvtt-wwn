@@ -1,0 +1,44 @@
+{
+  "_id": "ySj68TKw640oQAt8",
+  "name": "Night Vision Gear",
+  "type": "item",
+  "img": "icons/equipment/head/goggles-tech.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 25,
+  "flags": {},
+  "system": {
+    "description": "<p>Somewhat bulky, applying a -1 penalty to Notice checks, but allows normal vision in dark environments for three hours per modern battery loaded into it.</p>",
+    "price": 150,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ySj68TKw640oQAt8"
+}

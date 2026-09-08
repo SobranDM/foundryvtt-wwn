@@ -1,0 +1,42 @@
+{
+  "_id": "yTkyAWDscsSwvQ0e",
+  "name": "Armored Clothing",
+  "type": "armor",
+  "img": "icons/equipment/chest/coat-collared-studded-red.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>The bulky plates and heavy ballistic weaves of this outfit are disguised as drapes and fashion elements.</p>",
+    "ac": 14,
+    "acRanged": 16,
+    "mod": 0,
+    "type": "medium",
+    "soak": 5,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 2,
+    "magical": false,
+    "powered": false,
+    "price": 1000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 5,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!yTkyAWDscsSwvQ0e"
+}

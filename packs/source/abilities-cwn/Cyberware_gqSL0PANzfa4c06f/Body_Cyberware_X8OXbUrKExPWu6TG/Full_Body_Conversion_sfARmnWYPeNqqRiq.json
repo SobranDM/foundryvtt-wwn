@@ -1,0 +1,87 @@
+{
+  "name": "Full Body Conversion",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "papzidXr3dINlbVg",
+      "type": "base",
+      "name": "Full Body Conversion (Trauma Target)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": 6,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!sfARmnWYPeNqqRiq.papzidXr3dINlbVg"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.sfARmnWYPeNqqRiq"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $6,000,000 &middot; Concealment Sight &middot; System Strain 0</strong></p><p>The user's brain and central nervous system are transplanted into a cutting-edge synthetic shell at a cost and difficulty as if this cyber took 4 System Strain. Once converted, the subject has an effective Constitution of 20 for System Strain purposes, but cannot be healed by conventional first aid or medical drugs, requiring ten minutes of repair work with a toolkit to repair any amount of damage, and $250 worth of parts for each hit point to be restored. A full conversion borg no longer requires food, water, air, or sleep, but each day without the latter adds one System Strain due to the mental stress. The conversion requires twelve hours of maintenance every two weeks, and missing it will result in the user's death in 2d6 days unless the omitted maintenance is performed. Current full-body conversion tech is unstable; after 1d4 years, the subject has a cumulative 5% death chance each year. Borgs do not take Major Injuries and gain a +6 bonus to their Trauma Target that stacks with existing bonuses.</p><p><em>Because the book prices this installation \"as if\" it took 4 System Strain, this item's Alienation cost is set to 4 even though its own SysStr table entry (and this item's permanent Strain reduction) is 0 -- the real benefit is an effective Con 20 for strain purposes, not a flat strain-max reduction. The +6 Trauma Target is applied automatically; apply the Major Injury immunity by hand.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 4,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "sfARmnWYPeNqqRiq",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sfARmnWYPeNqqRiq"
+}

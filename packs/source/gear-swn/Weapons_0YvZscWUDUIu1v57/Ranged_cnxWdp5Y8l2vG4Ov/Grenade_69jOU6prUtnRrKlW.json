@@ -1,0 +1,72 @@
+{
+  "_id": "69jOU6prUtnRrKlW",
+  "name": "Grenade",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/grenade-frag-green.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>Grenade users always roll to attack AC 10. On a miss, the grenade lands 1d10 meters away from the target in a random direction. Hit or miss, the grenade then explodes for 2d6 damage to all targets within 5 meters. Victims are allowed an Evasion save for half damage. Targets take 1 less point of damage for each point of AC above 14. Grenades can be thrown with the Exert skill instead of Shoot, if desired.</p>",
+    "damage": "2d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 30
+    },
+    "save": "",
+    "tags": [
+      "Thrown",
+      "AC 10 to hit"
+    ],
+    "ammoId": "",
+    "ammoMode": "none",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 25,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!69jOU6prUtnRrKlW"
+}

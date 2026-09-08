@@ -1,0 +1,66 @@
+{
+  "name": "Neolimb",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.O341OPDzJ504x0Bp"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Sight &middot; System Strain 1</strong></p><p>The user gains an additional limb that normal humans lack. Usual choices involve an additional pair of arms or manipulatory mechano-tentacles, though functional prehensile tails are popular too. One installation of the cyber covers paired limbs or a single tail or body-mounted tendril up to 3 meters long. Neolimbs can support up to one Encumbrance point of non-weaponry built-in tech and add two items to the user's Readied encumbrance allowance. Neolimbs can hold or grip objects, but cannot employ additional shields or grant extra actions.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "O341OPDzJ504x0Bp",
+  "folder": "48OXOJtr62Mg6B2U",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!O341OPDzJ504x0Bp"
+}

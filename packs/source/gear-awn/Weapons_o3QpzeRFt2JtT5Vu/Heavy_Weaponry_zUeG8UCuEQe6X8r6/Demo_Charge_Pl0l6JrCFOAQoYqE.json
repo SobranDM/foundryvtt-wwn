@@ -1,0 +1,71 @@
+{
+  "_id": "Pl0l6JrCFOAQoYqE",
+  "name": "Demo Charge",
+  "type": "weapon",
+  "img": "icons/weapons/ammunition/explosive-charge-timer.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Must be hand-placed but can be remotely triggered. Anything within a cone out to its maximum range takes damage, Evasion for half. Applied carefully to a vehicle or door, the object is destroyed. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d10",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": false,
+    "range": {
+      "short": 20,
+      "medium": 0,
+      "long": 20
+    },
+    "save": "",
+    "tags": [
+      "Anti-Vehicle"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Pl0l6JrCFOAQoYqE"
+}

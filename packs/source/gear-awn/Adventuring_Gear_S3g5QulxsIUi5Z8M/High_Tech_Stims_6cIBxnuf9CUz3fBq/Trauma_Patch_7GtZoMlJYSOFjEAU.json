@@ -1,0 +1,44 @@
+{
+  "_id": "7GtZoMlJYSOFjEAU",
+  "name": "Trauma Patch",
+  "type": "item",
+  "img": "icons/tools/medical/bandages-gauze-rough.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p>Stabilizes a Mortally Wounded victim on a successful Int or Dex/Heal check against difficulty 6 plus 1 per full round since they went down. A failed attempt can be retried with a fresh patch; useless after six rounds. Cannot revive victims downed by poison, explosives, or other massive trauma. Unlike most stims, this is bulky and counts as one item of Encumbrance.</p>",
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!7GtZoMlJYSOFjEAU"
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "qLwnIXS0HfQBPJAi",
+  "name": "Ammo, 20 Rounds",
+  "type": "ammo",
+  "img": "icons/weapons/ammunition/ammunition-bullets-round.webp",
+  "effects": [],
+  "folder": "MeHJZax1u9X14H1e",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 2</strong></p><p>For ease of play, ammunition can be used interchangeably with any projectile weapon. A cartridge of twenty rounds sufficient to reload most firearms.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 20,
+      "max": 20
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qLwnIXS0HfQBPJAi"
+}

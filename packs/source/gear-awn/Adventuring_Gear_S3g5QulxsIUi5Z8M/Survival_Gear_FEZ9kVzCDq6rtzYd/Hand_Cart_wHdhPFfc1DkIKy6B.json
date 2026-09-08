@@ -1,0 +1,44 @@
+{
+  "_id": "wHdhPFfc1DkIKy6B",
+  "name": "Hand Cart",
+  "type": "item",
+  "img": "icons/environment/settlement/mine-cart-rocks-red.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 19,
+  "flags": {},
+  "system": {
+    "description": "<p>Carries either 15 units of Encumbrance or one helpless rider without significantly slowing overland travel, given fresh hands to trade off pulling it. Can't readily cross rough terrain.</p>",
+    "price": 50,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wHdhPFfc1DkIKy6B"
+}

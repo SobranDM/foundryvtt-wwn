@@ -1,0 +1,42 @@
+{
+  "_id": "9S5dHviptm8QLWtO",
+  "name": "Insurgent Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-bulletproof-improvised-plated.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 9,
+  "flags": {},
+  "system": {
+    "description": "<p>A catch-all for the homemade suits of armor pieced together by rebels, malcontents, and other enemies of the Harmony Bureau. Inelegant, but the makeshift tech and repurposed materials of Old Terra make for extremely sturdy protective gear. Obvious.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9S5dHviptm8QLWtO"
+}

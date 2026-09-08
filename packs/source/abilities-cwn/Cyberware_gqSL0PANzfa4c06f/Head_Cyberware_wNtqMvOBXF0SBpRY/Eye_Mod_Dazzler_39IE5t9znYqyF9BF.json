@@ -1,0 +1,66 @@
+{
+  "name": "Eye Mod/Dazzler",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.39IE5t9znYqyF9BF"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>This mod can emit a dazzling strobe of intense light, dazing and disorienting those standing up to five meters in front of the user. The strobe is triggered up to once per round as an On Turn action and adds one System Strain. Victims without eye protection must make a Physical saving throw or take a -4 penalty to their AC and hit rolls for the next 1d6 rounds. A victim can be targeted by this dazzling only once per scene.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "39IE5t9znYqyF9BF",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!39IE5t9znYqyF9BF"
+}

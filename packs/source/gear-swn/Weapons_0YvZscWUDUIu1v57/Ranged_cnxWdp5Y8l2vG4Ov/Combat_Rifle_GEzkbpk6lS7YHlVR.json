@@ -1,0 +1,72 @@
+{
+  "_id": "GEzkbpk6lS7YHlVR",
+  "name": "Combat Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>Combat rifles are favored by the militaries of tech level 3 worlds, trading some of the often-unnecessary range and penetration of a conventional rifle for a larger ammunition capacity and burst fire capabilities. On more strait-laced worlds such military weaponry is often illegal for civilians to possess.</p>",
+    "damage": "1d12",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "2H",
+      "Burst"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 300,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GEzkbpk6lS7YHlVR"
+}

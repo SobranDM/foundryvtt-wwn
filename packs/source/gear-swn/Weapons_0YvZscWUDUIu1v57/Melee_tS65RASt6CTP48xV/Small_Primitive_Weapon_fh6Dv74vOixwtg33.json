@@ -1,0 +1,69 @@
+{
+  "_id": "fh6Dv74vOixwtg33",
+  "name": "Small Primitive Weapon",
+  "type": "weapon",
+  "img": "icons/weapons/daggers/dagger-black.webp",
+  "effects": [],
+  "folder": "tS65RASt6CTP48xV",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>Small weapons are small one-handed implements no larger than a baton or knife. They are easily concealed in normal clothing, and can even be kept Readied up sleeves or in tailored pockets. Many can be thrown at a range up to 10 meters.</p><p>A primitive weapon is one of ordinary metal or wood, with no high-tech augmentations. Primitive weapons are often unable to harm targets in powered armor.</p>",
+    "damage": "1d4",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "dex",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 0,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "none",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fh6Dv74vOixwtg33"
+}

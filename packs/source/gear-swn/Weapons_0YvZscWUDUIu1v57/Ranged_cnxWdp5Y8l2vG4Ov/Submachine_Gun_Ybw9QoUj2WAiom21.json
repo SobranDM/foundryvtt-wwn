@@ -1,0 +1,71 @@
+{
+  "_id": "Ybw9QoUj2WAiom21",
+  "name": "Submachine Gun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 10,
+  "flags": {},
+  "system": {
+    "description": "<p>Submachine guns take pistol ammunition but fire it at a high rate of speed. These weapons can fire in burst mode.</p>",
+    "damage": "1d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 30,
+      "medium": 0,
+      "long": 100
+    },
+    "save": "",
+    "tags": [
+      "Burst"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 200,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Ybw9QoUj2WAiom21"
+}

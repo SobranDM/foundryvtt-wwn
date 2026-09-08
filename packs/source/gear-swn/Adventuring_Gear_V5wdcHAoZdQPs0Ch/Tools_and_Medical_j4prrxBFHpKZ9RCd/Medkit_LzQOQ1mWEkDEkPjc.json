@@ -1,0 +1,44 @@
+{
+  "_id": "LzQOQ1mWEkDEkPjc",
+  "name": "Medkit",
+  "type": "item",
+  "img": "icons/tools/medical/medkit-white-red.webp",
+  "effects": [],
+  "folder": "j4prrxBFHpKZ9RCd",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>Containing a broad supply of pharmaceuticals, spray bandages, glue sutures, and a succinct handbook of injury care, the medkit is designed for handling sudden and drastic injuries as well as long-term recuperative care.</p>",
+    "price": 100,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LzQOQ1mWEkDEkPjc"
+}

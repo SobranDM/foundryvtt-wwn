@@ -1,0 +1,69 @@
+{
+  "_id": "urXlDQe8IGXl1RZd",
+  "name": "Combat Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Rifles and combat rifles are similar semi-automatic tech, though the latter is equipped with a burst-fire selector and usually trades the range of a heavier caliber for the ability to carry more ammunition. This weapon may use burst fire when attacking, firing three rounds to gain +2 to hit and damage rolls. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+    "damage": "1d12",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 100,
+      "long": 300
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Spare Magazine",
+    "charges": {
+      "value": 30,
+      "max": 30
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 2500,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "4ALdSfjUVNo2FkHX",
+  "sort": 4,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!urXlDQe8IGXl1RZd"
+}

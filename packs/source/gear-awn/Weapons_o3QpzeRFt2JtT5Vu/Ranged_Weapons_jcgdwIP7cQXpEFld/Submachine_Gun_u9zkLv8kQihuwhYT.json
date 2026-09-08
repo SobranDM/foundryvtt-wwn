@@ -1,0 +1,71 @@
+{
+  "_id": "u9zkLv8kQihuwhYT",
+  "name": "Submachine Gun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/machine-gun-sub-pistol.webp",
+  "effects": [],
+  "folder": "jcgdwIP7cQXpEFld",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p>A compact, selective-fire carbine favored for close quarters. May burst fire, expending three rounds for +2 to hit and damage.</p>",
+    "damage": "1d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 30,
+      "medium": 0,
+      "long": 100
+    },
+    "save": "",
+    "tags": [
+      "Burst"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Ammo, 5 Rounds",
+    "charges": {
+      "value": 20,
+      "max": 20
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 200,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!u9zkLv8kQihuwhYT"
+}

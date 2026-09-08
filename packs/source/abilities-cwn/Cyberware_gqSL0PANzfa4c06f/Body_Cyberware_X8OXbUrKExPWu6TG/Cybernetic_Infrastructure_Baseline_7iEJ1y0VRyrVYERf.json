@@ -1,0 +1,66 @@
+{
+  "name": "Cybernetic Infrastructure Baseline",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.7iEJ1y0VRyrVYERf"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $20,000 &middot; Concealment Medical &middot; System Strain 0</strong></p><p>A set of standardized support implants provide a baseline degree of cyber-compatibility to a subject. They can ignore System Strain from cyber implants equal to 12 minus their Constitution score -- so a PC with a Constitution of 9 could ignore three points worth of System Strain from cyber implants. PCs with a Con of 12 or more have no use for this system.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "7iEJ1y0VRyrVYERf",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7iEJ1y0VRyrVYERf"
+}

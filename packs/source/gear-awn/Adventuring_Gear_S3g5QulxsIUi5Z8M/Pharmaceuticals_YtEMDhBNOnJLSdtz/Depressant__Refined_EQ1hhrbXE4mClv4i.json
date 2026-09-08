@@ -1,0 +1,44 @@
+{
+  "_id": "EQ1hhrbXE4mClv4i",
+  "name": "Depressant, Refined",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 5,
+  "flags": {},
+  "system": {
+    "description": "<p>Removes 2 points of Stress and ends any current Breakdown, but adds 1 System Strain. Requires Heal-0 to apply.</p>",
+    "price": 20,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EQ1hhrbXE4mClv4i"
+}

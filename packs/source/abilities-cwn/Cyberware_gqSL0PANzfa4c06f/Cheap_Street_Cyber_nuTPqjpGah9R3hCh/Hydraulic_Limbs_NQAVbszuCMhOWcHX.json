@@ -1,0 +1,66 @@
+{
+  "name": "Hydraulic Limbs",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.NQAVbszuCMhOWcHX"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $2,000 &middot; Concealment Sight &middot; System Strain 3</strong></p><p>Requiring skeletal reinforcement and the replacement of both arms, these cyberlimbs grant an effective Strength of 18 for all non-combat purposes and as a Main Action can break, smash, or crush any inanimate object a strong man with a sledgehammer could smash.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 3,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 3,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "NQAVbszuCMhOWcHX",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NQAVbszuCMhOWcHX"
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "hkO206COxkIPHrzT",
+  "name": "Panacea",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-red-blue.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Not so much a single drug as a pharmaceutical suite in a single injection system, this chem requires a skilled physician to adjust its mix. When used as part of a first aid attempt, this drug doubles the amount of hit points recovered by the attempt, with a minimum healing rate of 6 HP. Heal skill required: 1.</p>",
+    "price": 200,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 9,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hkO206COxkIPHrzT"
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "4uACoNZFoWsrOy8c",
+  "name": "Horse, Riding",
+  "type": "item",
+  "img": "icons/environment/creatures/horse-brown.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 21,
+  "flags": {},
+  "system": {
+    "description": "<p>A riding horse, not trained for combat and prone to panic in a fight. Combat-trained steeds cost twice as much where they can be had; actual warhorses are eight times as much in the few societies that can raise them.</p>",
+    "price": 250,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4uACoNZFoWsrOy8c"
+}

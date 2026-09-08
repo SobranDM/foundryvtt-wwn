@@ -1,0 +1,71 @@
+{
+  "_id": "MGzLCUdxNq4CJKz4",
+  "name": "Grenade, Flash",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/grenade-tech-stun-cannister.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Flash grenades force victims without eye and ear protection to make a Physical save; on a failure, the victim loses their next Main Action and takes a -2 penalty to hit rolls and AC for the next 1d6 rounds. Flashbang effects don't stack, and a target who makes their save cannot be flashbanged again that same round. Grenades may be thrown at a point within range and always target AC 10. On a miss, the grenade bounces 1d10 meters in a random direction before exploding. Grenades have a 5-meter radius of effect.</p>",
+    "damage": "",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 30
+    },
+    "save": "physical",
+    "tags": [
+      "T"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 50,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 11,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MGzLCUdxNq4CJKz4"
+}

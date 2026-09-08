@@ -1,0 +1,42 @@
+{
+  "_id": "0EVTW9htMwJE2mLc",
+  "name": "Reinforced Longcoat",
+  "type": "armor",
+  "img": "icons/equipment/chest/coat-trench-brown.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Long, draping clothing is bolstered with advanced fabrics and discreetly-placed absorption plates, the whole remaining deniable as armor.</p>",
+    "ac": 13,
+    "acRanged": 15,
+    "mod": 0,
+    "type": "medium",
+    "soak": 5,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 2,
+    "magical": false,
+    "powered": false,
+    "price": 500,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 4,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0EVTW9htMwJE2mLc"
+}

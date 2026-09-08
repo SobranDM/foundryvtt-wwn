@@ -1,0 +1,66 @@
+{
+  "name": "Immunofiltration System",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.nTedc3JHnpzEOLvx"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 25,000cr</strong></p><p>This broad-spectrum scrub system carefully identifies and contains toxic substances introduced into the user's system. Whenever the subject would normally have to make a saving throw to resist some disease or toxin, they may instead gain one System Strain to automatically succeed on the save. Most of these systems are calibrated to automatically filter any toxins or chemicals in standard use by police or military forces in the sector, but if presented with a special biowarfare toxin, the filters are less effective. In such cases, the most it can do is either grant a second saving throw if the first is failed, or grant a single saving throw if none is normally allowed.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "1",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "nTedc3JHnpzEOLvx",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 12000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nTedc3JHnpzEOLvx"
+}

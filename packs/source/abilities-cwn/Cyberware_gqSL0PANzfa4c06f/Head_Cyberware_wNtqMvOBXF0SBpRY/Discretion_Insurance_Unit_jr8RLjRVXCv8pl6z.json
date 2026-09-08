@@ -1,0 +1,66 @@
+{
+  "name": "Discretion Insurance Unit",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.jr8RLjRVXCv8pl6z"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $10,000 &middot; Concealment Medical &middot; System Strain 0.5 (stored as permanentStrain 1 -- see import notes on fractional Strain)</strong></p><p>A small cranial bomb that can be keyed go off when it receives -- or does not receive -- certain codes or transmissions. Its unfortunate tendency to misfire its anti-removal protocols makes it an unpopular choice for use in anyone but the most disposable subjects. Removing this cyber is done at a +2 difficulty, and failure causes the death of the subject and a Physical save to avoid the death of the physician, with 5d6 damage taken on success.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "jr8RLjRVXCv8pl6z",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jr8RLjRVXCv8pl6z"
+}

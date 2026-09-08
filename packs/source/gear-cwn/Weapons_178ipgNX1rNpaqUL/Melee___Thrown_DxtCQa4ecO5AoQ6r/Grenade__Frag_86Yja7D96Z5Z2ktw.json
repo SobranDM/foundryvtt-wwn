@@ -1,0 +1,71 @@
+{
+  "_id": "86Yja7D96Z5Z2ktw",
+  "name": "Grenade, Frag",
+  "type": "weapon",
+  "img": "icons/weapons/thrown/grenade-frag-green.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Frag grenades inflict damage on all victims in range, plus the chance for a Traumatic Hit. An Evasion save can halve a frag grenade's damage, and each point of melee AC the target has above 14 reduces the final damage total by one point, possibly down to zero. Requires an applicable Contact to buy, being generally illegal for open sale. Grenades may be thrown at a point within range and always target AC 10; on a miss, the grenade bounces 1d10 meters before exploding, with a 5-meter radius of effect.</p>",
+    "damage": "2d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 30
+    },
+    "save": "evasion",
+    "tags": [
+      "T"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 100,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 12,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!86Yja7D96Z5Z2ktw"
+}

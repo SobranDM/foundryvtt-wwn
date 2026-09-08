@@ -1,0 +1,42 @@
+{
+  "_id": "6uINk7rL08GK5Vzv",
+  "name": "Woven Body Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-bulletproof-body-armor.webp",
+  "effects": [],
+  "folder": "sVi1Rpy7mDbTJhQq",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Woven body armor represents the best armor that a TL3 world can manufacture, or an up-armored version of security armor used by TL4 high-threat response teams. The design is significantly more cumbersome, but allows for multiple layers of protection.</p>",
+    "ac": 15,
+    "acRanged": 15,
+    "mod": 0,
+    "type": "medium",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 400,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 3,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6uINk7rL08GK5Vzv"
+}

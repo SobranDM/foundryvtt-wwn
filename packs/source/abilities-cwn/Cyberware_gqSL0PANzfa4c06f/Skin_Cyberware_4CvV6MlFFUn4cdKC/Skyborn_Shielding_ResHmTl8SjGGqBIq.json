@@ -1,0 +1,66 @@
+{
+  "name": "Skyborn Shielding",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.ResHmTl8SjGGqBIq"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $40,000 &middot; Concealment Sight &middot; System Strain 2</strong></p><p>A set of implants and skin treatments meant for those who spend extended periods in hard vacuum, this implant can be triggered as an Instant action. When deployed, the user gains the benefits of a Sealed Systems Implant and low-G microjets that allow 30m/round flight in microgravity conditions. Skyborn Shielding can operate for up to 72 hours before needing an hour of downtime to regenerate.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "ResHmTl8SjGGqBIq",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ResHmTl8SjGGqBIq"
+}

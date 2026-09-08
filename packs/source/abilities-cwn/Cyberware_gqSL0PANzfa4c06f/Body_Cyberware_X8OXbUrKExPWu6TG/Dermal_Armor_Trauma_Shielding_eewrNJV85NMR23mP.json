@@ -1,0 +1,87 @@
+{
+  "name": "Dermal Armor/Trauma Shielding",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "Hg5jOsH5p0d2pshv",
+      "type": "base",
+      "name": "Dermal Armor/Trauma Shielding (Trauma Target)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.trauma.targetMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!eewrNJV85NMR23mP.Hg5jOsH5p0d2pshv"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.eewrNJV85NMR23mP"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $100,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A system that can only be installed on a user with at least one level of Dermal Armor, the trauma shielding addition adds +1 to the user's Trauma Target. This benefit stacks with any existing Dermal Armor bonus to the roll.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "eewrNJV85NMR23mP",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eewrNJV85NMR23mP"
+}

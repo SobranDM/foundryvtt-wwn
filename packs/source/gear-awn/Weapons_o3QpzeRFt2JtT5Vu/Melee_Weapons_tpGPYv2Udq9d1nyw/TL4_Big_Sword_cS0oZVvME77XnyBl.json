@@ -1,0 +1,72 @@
+{
+  "_id": "cS0oZVvME77XnyBl",
+  "name": "TL4 Big Sword",
+  "type": "weapon",
+  "img": "icons/weapons/swords/greatsword-crossguard-flanged-purple.webp",
+  "effects": [],
+  "folder": "tpGPYv2Udq9d1nyw",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>A two-handed high-tech blade with a monomolecular edge, capable of harming targets in full-suit powered armor.</p>",
+    "damage": "2d8",
+    "bonus": 0,
+    "shock": {
+      "damage": "4",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [
+      "High-Tech",
+      "Two-Handed"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 400,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!cS0oZVvME77XnyBl"
+}

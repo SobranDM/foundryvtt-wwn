@@ -1,0 +1,107 @@
+{
+  "name": "Stabilization Overrides",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [
+    {
+      "_id": "cuwksTbLVJDLsSSr",
+      "type": "base",
+      "name": "Stabilization Overrides (Auto-Stabilize)",
+      "img": "systems/wwn/assets/icons/items/gear.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.autoStabilize",
+            "type": "override",
+            "value": "true",
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!lWwAcYrpruKBdSYn.cuwksTbLVJDLsSSr"
+    },
+    {
+      "_id": "2y7VoHbTacMyIFnO",
+      "type": "base",
+      "name": "Stabilization Overrides (CON -1)",
+      "img": "systems/wwn/assets/icons/items/gear.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!lWwAcYrpruKBdSYn.2y7VoHbTacMyIFnO"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.lWwAcYrpruKBdSYn"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 25,000cr</strong></p><p>An intricate interweaving of microcapillaries and backup organs is implanted in the subject's torso and spinal column. These overrides can stabilize the user when severe physical trauma would otherwise kill them. A user reduced to 0 hit points is automatically stabilized, as if a Lazarus patch had been successfully applied to them, assuming that a patch could have saved them. Stabilization overrides tend to interfere with the ordinary operation of the user's organs, however, and the wearer's Constitution modifier is lowered by 1, with all the attendant consequences in loss of maximum hit points.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "lWwAcYrpruKBdSYn",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lWwAcYrpruKBdSYn"
+}

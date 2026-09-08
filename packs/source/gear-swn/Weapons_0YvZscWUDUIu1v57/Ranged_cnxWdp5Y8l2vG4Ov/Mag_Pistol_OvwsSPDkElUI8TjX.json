@@ -1,0 +1,69 @@
+{
+  "_id": "OvwsSPDkElUI8TjX",
+  "name": "Mag Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-tech-auto-pink.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 15,
+  "flags": {},
+  "system": {
+    "description": "<p>Mag weaponry involves the magnetic acceleration of metal flechettes. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons.</p>",
+    "damage": "2d6+2",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 400,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OvwsSPDkElUI8TjX"
+}

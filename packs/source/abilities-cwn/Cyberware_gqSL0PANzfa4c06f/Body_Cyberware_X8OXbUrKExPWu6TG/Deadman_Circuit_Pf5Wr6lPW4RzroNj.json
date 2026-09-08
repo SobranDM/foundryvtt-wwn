@@ -1,0 +1,66 @@
+{
+  "name": "Deadman Circuit",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.Pf5Wr6lPW4RzroNj"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $10,000 &middot; Concealment Sight &middot; System Strain 0.25 (stored as permanentStrain 0 -- see import notes on fractional Strain)</strong></p><p>A common corporate implant to discourage kidnapping and warelegging. Any attempt to remove any of the user's cyber without the right access codes will fry that hardware unless a difficulty 13 Int/Heal skill check is made.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 0,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Pf5Wr6lPW4RzroNj",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Pf5Wr6lPW4RzroNj"
+}

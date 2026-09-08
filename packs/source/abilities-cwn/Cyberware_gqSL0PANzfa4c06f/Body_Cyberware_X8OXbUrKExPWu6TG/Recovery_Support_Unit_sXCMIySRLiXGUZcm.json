@@ -1,0 +1,66 @@
+{
+  "name": "Recovery Support Unit",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.sXCMIySRLiXGUZcm"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $30,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A number of support systems and blood purification filters are installed. The user can absorb up to four points of System Strain incurred from healing or wound stabilization effects; this is a separate pool that recovers one point every night at the same time as the user's natural System Strain recovers.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "sXCMIySRLiXGUZcm",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sXCMIySRLiXGUZcm"
+}

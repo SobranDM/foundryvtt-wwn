@@ -1,0 +1,66 @@
+{
+  "name": "Funes Complex",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.O1DtI66JPta46luU"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $40,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A synthetic eidetic memory is granted by this implant, with formalized bodies of knowledge easily cross-referenced and recollected. Once per day, as an Instant action, reroll any failed Int-based skill check. This memory can be difficult to control, however, and unwanted allusions can overwhelm the desired datum. If the user rolls a natural 2 on any Int skill check, it automatically fails and cannot be recovered by any rerolling ability.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "O1DtI66JPta46luU",
+  "folder": "wNtqMvOBXF0SBpRY",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!O1DtI66JPta46luU"
+}

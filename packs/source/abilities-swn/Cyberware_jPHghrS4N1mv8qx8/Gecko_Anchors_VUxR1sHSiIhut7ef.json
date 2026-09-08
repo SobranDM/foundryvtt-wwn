@@ -1,0 +1,66 @@
+{
+  "name": "Gecko Anchors",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.VUxR1sHSiIhut7ef"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 15,000cr</strong></p><p>Miniaturized gravitic manipulators are embedded in the subject's hands and feet as part of this complex surgery. While they are too weak to allow levitation or damping fall damage, they can twist localized gravity around those limbs to anchor the subject to the nearest surface capable of bearing their weight. As a result, the user can freely run or climb up or down sheer surfaces at their normal movement rate, carrying no more than their normal maximum encumbrance.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "VUxR1sHSiIhut7ef",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VUxR1sHSiIhut7ef"
+}

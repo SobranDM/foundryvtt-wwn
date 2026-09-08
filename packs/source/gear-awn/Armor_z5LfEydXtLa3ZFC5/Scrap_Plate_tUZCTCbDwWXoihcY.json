@@ -1,0 +1,42 @@
+{
+  "_id": "tUZCTCbDwWXoihcY",
+  "name": "Scrap Plate",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-improvised-plated-heavy.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p>Jury-rigged plate armor pieced together from scavenged sheet metal. Still ineffective against bullets, but enough battered plating makes a wearer very difficult to harm with less sophisticated tools. Obvious, Heavy (-1 to Sneak or Exert checks). Primitive: gives no benefit against gunfire, explosives, or TL4+ melee weapons.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": true,
+    "tl": 2,
+    "magical": false,
+    "powered": false,
+    "price": 300,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tUZCTCbDwWXoihcY"
+}

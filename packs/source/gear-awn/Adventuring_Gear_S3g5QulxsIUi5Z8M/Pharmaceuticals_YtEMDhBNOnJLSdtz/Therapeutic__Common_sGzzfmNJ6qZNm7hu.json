@@ -1,0 +1,44 @@
+{
+  "_id": "sGzzfmNJ6qZNm7hu",
+  "name": "Therapeutic, Common",
+  "type": "item",
+  "img": "icons/tools/medical/bandages-adhesive.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 12,
+  "flags": {},
+  "system": {
+    "description": "<p>Applied to a person who suffered a Major Injury within the past scene, allows a reroll of any failed saving throw that injury forced, with a bonus equal to the physician's Heal skill. Only one reroll. Requires Heal-0 to apply.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!sGzzfmNJ6qZNm7hu"
+}

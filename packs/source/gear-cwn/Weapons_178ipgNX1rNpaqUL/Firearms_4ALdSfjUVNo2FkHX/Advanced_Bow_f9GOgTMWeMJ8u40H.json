@@ -1,0 +1,69 @@
+{
+  "_id": "f9GOgTMWeMJ8u40H",
+  "name": "Advanced Bow",
+  "type": "weapon",
+  "img": "icons/weapons/bows/bow-recurve-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Advanced bows are used by a few specialists who prefer the near-silence that modern composites provide or the massive blood loss induced by a modern fractal broadhead carried on a fifty-gram arrow. This weapon can be reloaded with a Move action, or an On Turn action if the user has at least Shoot-1 skill.</p>",
+    "damage": "1d8+1",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d8+1",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 30,
+      "medium": 30,
+      "long": 200
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Advanced Arrows",
+    "charges": {
+      "value": 1,
+      "max": 1
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 500,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "4ALdSfjUVNo2FkHX",
+  "sort": 2,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!f9GOgTMWeMJ8u40H"
+}

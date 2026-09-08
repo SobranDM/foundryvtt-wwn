@@ -1,0 +1,44 @@
+{
+  "_id": "6JckIJ1hrzZe8CTD",
+  "name": "Olympus",
+  "type": "item",
+  "img": "icons/consumables/potions/vial-ornet-silver-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A \"respectable\" combat chem used by certain units of corporate security, Olympus numbs pain, sharpens mental focus, and slows down instinctive panic or rush instincts, allowing a calm observation of the battlefield. Users can reroll their first failed Morale check in a fight and gain a +2 bonus to hit rolls. One dose lasts for one scene, and adds one System Strain at its end. Heal skill required: None.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "lMzrVsF7VgTbfR22",
+  "sort": 8,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6JckIJ1hrzZe8CTD"
+}

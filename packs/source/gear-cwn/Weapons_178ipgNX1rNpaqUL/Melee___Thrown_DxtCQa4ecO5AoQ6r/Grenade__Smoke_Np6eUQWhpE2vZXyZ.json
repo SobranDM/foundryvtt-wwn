@@ -1,0 +1,71 @@
+{
+  "_id": "Np6eUQWhpE2vZXyZ",
+  "name": "Grenade, Smoke",
+  "type": "weapon",
+  "img": "icons/commodities/tech/smoke-bomb-purple.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Smoke grenades are harmless, but provide a 10-meter dome of concealment where it's necessary. Smoke isn't enough to defeat IR or augmented visuals.</p>",
+    "damage": "",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "",
+      "rating": 0
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 30
+    },
+    "save": "",
+    "tags": [
+      "T"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 25,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 14,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Np6eUQWhpE2vZXyZ"
+}

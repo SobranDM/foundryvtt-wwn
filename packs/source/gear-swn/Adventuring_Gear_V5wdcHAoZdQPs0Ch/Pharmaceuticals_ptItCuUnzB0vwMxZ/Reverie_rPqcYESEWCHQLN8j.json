@@ -1,0 +1,44 @@
+{
+  "_id": "rPqcYESEWCHQLN8j",
+  "name": "Reverie",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-corked-red.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 6,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p><strong>Heal-1.</strong> This very dangerous combat drug completely subdues the subject's fear centers and adrenaline production, leaving them perfectly calm even in the midst of mortal danger, though slowed to acting only on even-numbered combat rounds and taking double damage. Lasts ten minutes and adds 2 System Strain.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!rPqcYESEWCHQLN8j"
+}

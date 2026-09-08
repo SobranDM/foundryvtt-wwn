@@ -1,0 +1,66 @@
+{
+  "name": "Trajectory Optimization Node",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.HBhucEjt9UZHUZsY"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $50,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>This cyber can calculate the optimal path for bypassing defenses and striking a target. Once per scene, as an Instant action, turn a missed hit roll into a success. Melee and unarmed attacks can be used as-is, but using this unit with a ranged attack requires an active Gunlink with the weapon.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 3,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "HBhucEjt9UZHUZsY",
+  "folder": "Chv50I2VnBBkGM8V",
+  "sort": 12000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HBhucEjt9UZHUZsY"
+}

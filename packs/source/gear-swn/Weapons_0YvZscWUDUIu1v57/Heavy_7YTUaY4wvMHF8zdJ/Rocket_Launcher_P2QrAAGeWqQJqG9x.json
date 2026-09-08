@@ -1,0 +1,72 @@
+{
+  "_id": "P2QrAAGeWqQJqG9x",
+  "name": "Rocket Launcher",
+  "type": "weapon",
+  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "effects": [],
+  "folder": "7YTUaY4wvMHF8zdJ",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>Rocket launchers cover a wide variety of man-portable missile launchers of varying degrees of sophistication. The weapons are usually equipped with basic tracking sensors, but are of limited accuracy against human-sized targets, taking a -4 hit penalty against them. Unlike most Heavy weapons, rocket launchers can be shoulder-fired without a prepared emplacement to support them.</p>",
+    "damage": "3d10",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 2000,
+      "medium": 0,
+      "long": 4000
+    },
+    "save": "",
+    "tags": [
+      "2H",
+      "-4 vs human-sized"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, Missile",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 4000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!P2QrAAGeWqQJqG9x"
+}

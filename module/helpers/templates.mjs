@@ -18,6 +18,7 @@ export async function preloadHandlebarsTemplates() {
     wwnRatioField: "systems/wwn/templates/partials/ratio-field.hbs",
     wwnContainerItem: "systems/wwn/templates/partials/container-item.hbs",
     wwnFactionAssetPanel: "systems/wwn/templates/partials/faction-asset-panel.hbs",
+    wwnProjectContributionPanel: "systems/wwn/templates/partials/project-contribution-panel.hbs",
     wwnPowersTabBody: "systems/wwn/templates/partials/powers-tab-body.hbs",
     wwnStarshipCrewStations: "systems/wwn/templates/partials/starship-crew-stations.hbs",
     wwnStarshipEquipmentPanel: "systems/wwn/templates/partials/starship-equipment-panel.hbs",

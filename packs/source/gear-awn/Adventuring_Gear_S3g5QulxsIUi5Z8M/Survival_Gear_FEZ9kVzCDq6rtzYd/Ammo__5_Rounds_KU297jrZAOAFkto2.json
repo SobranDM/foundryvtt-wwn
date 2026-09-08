@@ -1,0 +1,36 @@
+{
+  "_id": "KU297jrZAOAFkto2",
+  "name": "Ammo, 5 Rounds",
+  "type": "ammo",
+  "img": "icons/weapons/ammunition/ammunition-bullets-round.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>For simplicity's sake, ammo is considered fungible between guns without concern for caliber. Sold in bundles of five rounds; reload a weapon's magazine from a stock of this ammo.</p>",
+    "price": 1,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 5,
+      "max": 5
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KU297jrZAOAFkto2"
+}

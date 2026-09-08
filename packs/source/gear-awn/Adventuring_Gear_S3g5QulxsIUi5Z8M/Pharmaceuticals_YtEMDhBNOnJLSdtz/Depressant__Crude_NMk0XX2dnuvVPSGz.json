@@ -1,0 +1,44 @@
+{
+  "_id": "NMk0XX2dnuvVPSGz",
+  "name": "Depressant, Crude",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+  "effects": [],
+  "folder": "YtEMDhBNOnJLSdtz",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>Removes one point of Stress, once per day.</p>",
+    "price": 1,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NMk0XX2dnuvVPSGz"
+}

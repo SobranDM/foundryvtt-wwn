@@ -1,0 +1,69 @@
+{
+  "_id": "ZOVFseQHUbVycB5k",
+  "name": "Spear",
+  "type": "weapon",
+  "img": "icons/weapons/polearms/spear-simple-tan.webp",
+  "effects": [],
+  "folder": "tpGPYv2Udq9d1nyw",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>A simple thrusting weapon, cheap to make and easy enough to hurl in a pinch.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "2",
+      "ac": 13
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 0,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 20
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 5,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZOVFseQHUbVycB5k"
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "G5jOSf9gNEujLVoJ",
+  "name": "Power Cell, Type B",
+  "type": "ammo",
+  "img": "icons/commodities/tech/electronics-tech-battery-energy-blue.webp",
+  "effects": [],
+  "folder": "MeHJZax1u9X14H1e",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>Power cells are small cylindrical objects designed to take and hold electrical charges. The larger type B cells are used for vehicles and heavy gear. Recharging a type B cell requires 24 hours.</p>",
+    "price": 100,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 1,
+      "max": 1
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!G5jOSf9gNEujLVoJ"
+}

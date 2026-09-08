@@ -1,0 +1,44 @@
+{
+  "_id": "rIoHBBSfoPJ4TQb8",
+  "name": "Psych",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+  "effects": [],
+  "folder": "ptItCuUnzB0vwMxZ",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A military drug duplicated in rougher form by many street chemists, Psych fills the user with an intense sense of confidence and reckless courage, granting a Morale score of 12 and a +1 bonus on all skill checks for fifteen minutes, but adds 1 System Strain and is highly psychologically addictive.</p>",
+    "price": 25,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!rIoHBBSfoPJ4TQb8"
+}

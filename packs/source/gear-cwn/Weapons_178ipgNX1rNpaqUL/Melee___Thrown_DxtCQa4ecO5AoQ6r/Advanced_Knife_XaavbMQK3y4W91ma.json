@@ -1,0 +1,71 @@
+{
+  "_id": "XaavbMQK3y4W91ma",
+  "name": "Advanced Knife",
+  "type": "weapon",
+  "img": "icons/weapons/daggers/dagger-curved-guard-black.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Advanced weapons employ modern polymers, sophisticated metallurgy, fractal edges, and electro-stun tech. An advanced micro-edged blade can go through bone like bamboo and keep an edge for weeks between sharpenings.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "2",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d8",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "str",
+    "melee": true,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 1,
+    "firearm": false,
+    "range": {
+      "short": 10,
+      "medium": 10,
+      "long": 20
+    },
+    "save": "",
+    "tags": [
+      "T"
+    ],
+    "ammoMode": "none",
+    "ammoId": "",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 200,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "DxtCQa4ecO5AoQ6r",
+  "sort": 7,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XaavbMQK3y4W91ma"
+}

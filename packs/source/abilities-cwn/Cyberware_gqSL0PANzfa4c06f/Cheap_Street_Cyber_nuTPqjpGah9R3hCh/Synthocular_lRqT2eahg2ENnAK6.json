@@ -1,0 +1,66 @@
+{
+  "name": "Synthocular",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.lRqT2eahg2ENnAK6"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $250 &middot; Concealment Sight &middot; System Strain 1</strong></p><p>A crudely obvious cybernetic eye replacement, usually sold in single units to those who can't afford a pair of tailored cybereyes. Like cybereyes, they come with integral flash protection and halve further eye implant costs. Synthocular users take -2 to all ranged attack rolls.</p><p><em>Optional \"Cheap Cyber\" rule (p.228).</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "lRqT2eahg2ENnAK6",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 11000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lRqT2eahg2ENnAK6"
+}

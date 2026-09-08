@@ -1,0 +1,66 @@
+{
+  "name": "Body Blades II",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.yDKgU6zghuFner1u"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Sight &middot; System Strain 2</strong></p><p>As Body Blades I, but the user's body armament includes not only conventional blades, but assorted improvements such as monomolecular edges, cutting vibrations, or thermal augmentation. Their unarmed attacks do 2d6 damage with a Shock of 4/15, and a Trauma Die 1d10/x3. Anyone who sees or touches their arms can detect signs of the cyber, however.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "2d6",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "yDKgU6zghuFner1u",
+  "folder": "48OXOJtr62Mg6B2U",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yDKgU6zghuFner1u"
+}

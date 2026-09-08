@@ -1,0 +1,42 @@
+{
+  "_id": "uiAVe1eiJtCrOPb7",
+  "name": "Medium Armored Suit",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-powered-tactical.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Heavy security usually sports armor on this level, including police rapid response teams. Requires a relevant Contact to purchase, or some other special opportunity.</p>",
+    "ac": 14,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 10,
+    "traumaTarget": 8,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 10000,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 9,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uiAVe1eiJtCrOPb7"
+}

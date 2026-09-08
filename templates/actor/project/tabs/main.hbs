@@ -1,0 +1,136 @@
+{{!-- Project Main: left progress/calculator/description | right contributions. --}}
+<section class="tab attributes-tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+  <div class="wwn-sheet-main-grid">
+    <div class="wwn-sheet-main-left wwn-form-stack">
+
+      {{!-- Resource / Time progress --}}
+      <div class="wwn-panel">
+        <div class="wwn-stat-grid wwn-project-progress">
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">
+              <input type="text" class="wwn-inline-label" name="system.resource.label" value="{{system.resource.label}}"
+                placeholder="{{resourceLabelDefault}}" />
+            </div>
+            <div class="wwn-stat-chip-value">
+              <span>{{system.fundedTotal}}</span>
+              <span class="sep">/</span>
+              <input type="number" step="1" data-dtype="Number" name="system.resource.max" value="{{system.resource.max}}" min="0" />
+            </div>
+          </div>
+          <div class="wwn-stat-chip">
+            <div class="wwn-section-header">
+              <input type="text" class="wwn-inline-label" name="system.time.label" value="{{system.time.label}}" />
+            </div>
+            <div class="wwn-stat-chip-value">
+              <input type="number" step="1" data-dtype="Number" name="system.time.value" value="{{system.time.value}}" min="0" />
+              <span class="sep">/</span>
+              <input type="number" step="1" data-dtype="Number" name="system.time.max" value="{{system.time.max}}" min="0" />
+            </div>
+          </div>
+        </div>
+        <div class="wwn-project-funded-bar" title="{{localize 'WWN.project.funded'}}: {{fundedPct}}%">
+          <div class="wwn-project-funded-bar-fill" style="width: {{fundedPct}}%;"></div>
+          <span class="wwn-project-funded-bar-label">{{localize "WWN.project.funded"}}: {{system.fundedTotal}} / {{system.resource.max}} ({{fundedPct}}%)</span>
+        </div>
+        {{#if isGodbound}}
+        <p class="wwn-field-hint">
+          {{localize "WWN.project.contributor"}}: {{system.contributionSums.influence}} {{localize "WWN.project.influenceCommitted"}}
+          + {{system.contributionSums.dominion}} {{localize "WWN.project.dominionSpent"}}
+        </p>
+        {{/if}}
+        {{#if (eq system.status "lapsed")}}
+        <p class="wwn-field-hint wwn-project-lapsed-notice">{{localize "WWN.project.autoLapseNotice"}}</p>
+        {{/if}}
+      </div>
+
+      {{!-- Suggested cost calculator --}}
+      <div class="wwn-form-panel wwn-project-calculator">
+        <div class="wwn-section-header">{{localize "WWN.project.calculator"}}</div>
+        <p class="wwn-field-hint">{{localize "WWN.project.calculatorHint"}}</p>
+        <div class="wwn-form-panel-fields">
+          {{#if isWwn}}
+          <div class="form-group wwn-form-span">
+            <label>{{localize "WWN.project.effectPoints"}}</label>
+            <div class="form-fields">
+              <input type="text" name="system.calc.effectPoints" value="{{system.calc.effectPoints}}" placeholder="e.g. 12, 6, 4" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.project.area"}}</label>
+            <div class="form-fields">
+              <select name="system.calc.area">
+                {{selectOptions config.wwnProjectAreas selected=system.calc.area localize=true}}
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.project.doubleSilver"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.calc.doubleSilver" {{checked system.calc.doubleSilver}} />
+            </div>
+          </div>
+          {{else}}
+          <div class="form-group">
+            <label>{{localize "WWN.project.scopeBase"}}</label>
+            <div class="form-fields">
+              <input type="number" step="1" data-dtype="Number" name="system.calc.scopeBase" value="{{system.calc.scopeBase}}" min="0" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.project.wardRating"}}</label>
+            <div class="form-fields">
+              <input type="number" step="1" data-dtype="Number" name="system.calc.wardRating" value="{{system.calc.wardRating}}" min="0" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.project.resistanceRating"}}</label>
+            <div class="form-fields">
+              <input type="number" step="1" data-dtype="Number" name="system.calc.resistanceRating" value="{{system.calc.resistanceRating}}" min="0" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>{{localize "WWN.project.magnitudeMult"}}</label>
+            <div class="form-fields">
+              <select name="system.calc.magnitudeMult">
+                {{selectOptions config.godboundProjectMagnitudes selected=system.calc.magnitudeMult localize=true}}
+              </select>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+        <div class="wwn-project-calculator-actions flexrow">
+          <a class="wwn-chip" data-action="calculate">{{localize "WWN.project.calculate"}}</a>
+          {{#if calcResult}}
+          <a class="wwn-chip" data-action="applyCalculated">{{localize "WWN.project.applyResult"}}</a>
+          {{/if}}
+        </div>
+        {{#if calcResult}}
+        <p class="wwn-project-calc-result">
+          {{#if (eq calcResult.gameLine "wwn")}}
+          {{localize "WWN.project.calculatedResult" cost=calcResult.cost weeks=calcResult.weeks}}
+          {{else}}
+          {{localize "WWN.project.calculatedResultGodbound" cost=calcResult.cost}}
+          {{/if}}
+        </p>
+        {{/if}}
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.project.effects"}}</div>
+        {{> wwnSheetEditor name="system.effects" value=source.effects
+          documentUuid=actor.uuid enriched=enrichedEffects}}
+      </div>
+
+      <div class="wwn-form-panel">
+        <div class="wwn-section-header">{{localize "WWN.project.notes"}}</div>
+        {{> wwnSheetEditor name="system.notes" value=source.notes
+          documentUuid=actor.uuid enriched=enrichedNotes}}
+      </div>
+    </div>
+
+    <div class="wwn-sheet-main-right wwn-form-stack">
+      {{> wwnProjectContributionPanel contributions=contributions isWwn=isWwn isGodbound=isGodbound
+        collapsed=(lookup collapsed "project.contributions")}}
+    </div>
+  </div>
+</section>

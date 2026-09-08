@@ -1,0 +1,44 @@
+{
+  "_id": "e22ovF9bhf8vwsOd",
+  "name": "Goggles, IR",
+  "type": "item",
+  "img": "icons/equipment/head/goggles-tech.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>IR goggles include anti-flash tech, but also give the user effective IR vision out to 50 meters in most environments. Must be Readied to be employed.</p>",
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": false
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 13,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!e22ovF9bhf8vwsOd"
+}

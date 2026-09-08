@@ -1,0 +1,69 @@
+{
+  "_id": "hwUU587tBgjgalbm",
+  "name": "Thermal Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-energy-plasma.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 20,
+  "flags": {},
+  "system": {
+    "description": "<p>Thermal pistols and their larger, two-handed plasma projector cousins replace the beam of a laser with a small sphere of magnetically-shaped plasma. The spheres tend to dissipate at much shorter ranges than a laser beam, but do significantly more damage to targets within range.</p>",
+    "damage": "2d6",
+    "bonus": 1,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 25,
+      "medium": 0,
+      "long": 50
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Power Cell, Type A",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 300,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hwUU587tBgjgalbm"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Sharkskin Electrodes",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.dcXu9EgQeDtJAc7h"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $20,000 &middot; Concealment Touch &middot; System Strain 1</strong></p><p>An implanted mesh of electrodes beneath the user's skin allows them to deliver debilitating shocks while grappling a target, even if both are heavily clothed. At the end of each round of grappling, the user inflicts 2d6 non-lethal electrical damage on anyone they grapple or who is grappling them. The shielding built into the cyber automatically negates non-lethal electrical damage for the user and halves lethal shocks.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "dcXu9EgQeDtJAc7h",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dcXu9EgQeDtJAc7h"
+}

@@ -100,6 +100,18 @@ export class WwnActor extends Actor {
     if (allowed === false) return false;
     if (isPc(this)) {
       this.updateSource({ prototypeToken: { actorLink: true, disposition: 1 } });
+      if (options.wwnSkipSeeding !== true) await this.#seedNewPcItems();
+    }
+    if (this.type === "project") {
+      // Projects are placed as stationary structures/effects; link the token
+      // so edits from a placed token's sheet write back to the world Actor
+      // (an unlinked token would silently fork into a synthetic copy).
+      this.updateSource({ prototypeToken: { actorLink: true } });
+    }
+    // Per-type default icons (mirrors WwnItem._preCreate).
+    if (!data.img || data.img === Actor.DEFAULT_ICON) {
+      const icon = CONFIG.WWN.defaultIcons[this.type];
+      if (icon) this.updateSource({ img: icon });
     }
   }
 
@@ -150,15 +162,27 @@ export class WwnActor extends Actor {
     });
   }
 
-  /** @inheritDoc */
-  _onCreate(data, options, userId) {
-    super._onCreate(data, options, userId);
-    if (userId !== game.user.id) return;
-    if (isPc(this) && options.wwnSkipSeeding !== true) this.#seedNewPc();
-  }
-
-  /** Seed primary skills from the configured skill pack and the default currency set. */
-  async #seedNewPc() {
+  /**
+   * Build starter skills + currency for a brand-new PC and merge them directly
+   * into the creation payload via updateSource (called from _preCreate).
+   *
+   * This intentionally does NOT create the items via a post-creation
+   * createEmbeddedDocuments call from _onCreate. That approach seeded exactly
+   * once under normal conditions, but _onCreate's `userId === game.user.id`
+   * guard only checks "did my logged-in account initiate this" — if the same
+   * account is connected from more than one client (two browser tabs/windows
+   * open to the same world, a common dev/GM habit), every such client passes
+   * that guard independently and each one runs the post-create seeding, so a
+   * single actor creation could get its starter skills and currency doubled
+   * (observed: 2x Copper/Silver/Gold instead of 1x). Building the items into
+   * the creation payload in _preCreate avoids the whole category of bug:
+   * _preCreate only ever runs on the single client that actually initiates
+   * the `Actor.create()` call, so the actor and its starter items are written
+   * to the database together as one atomic create — every other connected
+   * client (including a duplicate session of the same account) just receives
+   * the already-complete document and never runs this method at all.
+   */
+  async #seedNewPcItems() {
     const toCreate = [];
 
     if (!this.items.some((i) => i.type === "skill")) {
@@ -180,7 +204,9 @@ export class WwnActor extends Actor {
       }
     }
 
-    if (toCreate.length) await this.createEmbeddedDocuments("Item", toCreate, { wwnSeeding: true });
+    if (!toCreate.length) return;
+    const itemsData = toCreate.map((d) => ({ ...foundry.utils.deepClone(d), _id: foundry.utils.randomID() }));
+    this.updateSource({ items: itemsData });
   }
 
   /** @inheritDoc */

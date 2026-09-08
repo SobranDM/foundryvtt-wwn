@@ -1,0 +1,44 @@
+{
+  "_id": "70uI6fFFdEKoYGUt",
+  "name": "Zen",
+  "type": "item",
+  "img": "icons/tools/medical/medication-pills-red-blue.webp",
+  "effects": [],
+  "folder": "6cIBxnuf9CUz3fBq",
+  "sort": 11,
+  "flags": {},
+  "system": {
+    "description": "<p>Temporarily suppresses any Breakdown or psychic scar for 24 hours, making it impossible to gain Stress during that time. The enforced calm compels a successful Mental save before any violent action, the action wasted on failure.</p>",
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!70uI6fFFdEKoYGUt"
+}

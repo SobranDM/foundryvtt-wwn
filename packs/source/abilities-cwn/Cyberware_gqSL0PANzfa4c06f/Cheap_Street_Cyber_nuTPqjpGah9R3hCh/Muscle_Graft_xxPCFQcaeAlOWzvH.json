@@ -1,0 +1,107 @@
+{
+  "name": "Muscle Graft",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "JBcwIJqWn0dtBKJS",
+      "type": "base",
+      "name": "Muscle Graft (Strength)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.baseMod",
+            "type": "add",
+            "value": 1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!xxPCFQcaeAlOWzvH.JBcwIJqWn0dtBKJS"
+    },
+    {
+      "_id": "zywv8C98PojIhGv6",
+      "type": "base",
+      "name": "Muscle Graft (Charisma)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.baseMod",
+            "type": "add",
+            "value": -1,
+            "phase": "initial"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!xxPCFQcaeAlOWzvH.zywv8C98PojIhGv6"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.xxPCFQcaeAlOWzvH"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $750 &middot; Concealment Sight &middot; System Strain 1</strong></p><p>Crude slabs of muscle and synthetic sinew are stitched onto the user's limbs and torso. Grants a +1 bonus to Strength modifier and a -1 penalty to Charisma modifier (the book caps these at a maximum +2 and minimum -2 respectively if stacked with other sources -- not enforced by this single +1/-1 Active Effect).</p><p><em>Optional \"Cheap Cyber\" rule (p.228); as a rule, the benefits of this low-grade cyber do not stack with other cyber of a similar kind.</em></p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "xxPCFQcaeAlOWzvH",
+  "folder": "nuTPqjpGah9R3hCh",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xxPCFQcaeAlOWzvH"
+}

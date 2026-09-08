@@ -1,0 +1,71 @@
+{
+  "_id": "EuIQmjTu4ftwiqb3",
+  "name": "Distortion Cannon",
+  "type": "weapon",
+  "img": "icons/weapons/guns/gun-heavy-energy-blue.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 24,
+  "flags": {},
+  "system": {
+    "description": "<p>Distortion cannons are among the most sophisticated man-portable weapons designed before the Scream, manipulating the underlying fabric of space to disrupt a target. Provided the wielder can see a target within range or accurately fix its location within one meter, the distortion cannon can ignore up to one meter of solid cover between the gun and its target.</p>",
+    "damage": "2d12",
+    "bonus": 1,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 5,
+    "firearm": true,
+    "range": {
+      "short": 100,
+      "medium": 0,
+      "long": 300
+    },
+    "save": "",
+    "tags": [
+      "2H"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Power Cell, Type A",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 1250,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EuIQmjTu4ftwiqb3"
+}

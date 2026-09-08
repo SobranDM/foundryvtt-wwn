@@ -1,0 +1,44 @@
+{
+  "_id": "SDF1v483tHektBQi",
+  "name": "Rope, Synthetic (40 Meters)",
+  "type": "item",
+  "img": "icons/sundries/survival/rope-coiled-tan.webp",
+  "effects": [],
+  "folder": "WgqVfv2Mt7COH9KI",
+  "sort": 18,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A metatool can be used to cut and join the synthetics used in TL4 rope, which counts as one encumbrance item per 40 meters.</p>",
+    "price": 40,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": false,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SDF1v483tHektBQi"
+}

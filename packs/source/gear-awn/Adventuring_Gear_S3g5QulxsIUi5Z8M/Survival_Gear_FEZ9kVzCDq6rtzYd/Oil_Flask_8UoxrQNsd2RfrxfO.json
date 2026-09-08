@@ -1,0 +1,44 @@
+{
+  "_id": "8UoxrQNsd2RfrxfO",
+  "name": "Oil Flask",
+  "type": "item",
+  "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+  "effects": [],
+  "folder": "FEZ9kVzCDq6rtzYd",
+  "sort": 26,
+  "flags": {},
+  "system": {
+    "description": "<p>Oil or kerosene, usable to fuel a lantern or spilled to create a 1-meter pool of flame doing 1d6 damage to creatures caught in it (Evasion negates). The pool lasts 1d6 rounds.</p>",
+    "price": 2,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "treasure": false,
+    "personal": false,
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8UoxrQNsd2RfrxfO"
+}

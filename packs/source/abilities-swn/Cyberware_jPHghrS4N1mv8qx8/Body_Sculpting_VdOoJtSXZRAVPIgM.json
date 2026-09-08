@@ -1,0 +1,66 @@
+{
+  "name": "Body Sculpting",
+  "type": "power",
+  "img": "systems/wwn/assets/icons/items/gear.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-swn.VdOoJtSXZRAVPIgM"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Tech Level 4 &middot; Cost 10,000cr</strong></p><p>Not so much a single implant as a series of complex surgeries, body sculpting is available on many TL4 worlds with fairly advanced medical services. After a week of alterations and treatments a subject's external appearance can be set within any human or near-human range, including full retinal and fingerprint matching to a desired target.</p><p>A TL5 version of this treatment that costs ten times as much can involve extensive DNA reprogramming to change the subject at a genetic level, making their alterations heritable and allowing female-targeted shapes to bear offspring. This TL5 treatment is not reversible, and any further major alterations to the subject require further permanent System Strain.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 0,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "VdOoJtSXZRAVPIgM",
+  "folder": "jPHghrS4N1mv8qx8",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VdOoJtSXZRAVPIgM"
+}

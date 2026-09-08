@@ -1,0 +1,66 @@
+{
+  "name": "Redundant Systems",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.c0R7kbNiE9YlaAub"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $15,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>Several pieces of prosthetic support cyber are preemptively installed to mitigate future trauma. When the user takes a Major Injury, they may instead choose to have the Redundant Systems critically damaged instead of accepting the major injury roll result. Redundant Systems can be installed more than once, but the System Strain inflicted increases by one point each time (not modeled by this compendium entry -- apply additional installations' Strain cost by hand).</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "c0R7kbNiE9YlaAub",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 14000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!c0R7kbNiE9YlaAub"
+}

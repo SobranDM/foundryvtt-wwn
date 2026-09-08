@@ -1,0 +1,42 @@
+{
+  "_id": "SSONicpIWNBwXN5T",
+  "name": "Reinforced Clothing",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-reinforced-leather.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Subtle polymer sheets and reinforced weaves are used to provide a modicum of protection in this clothing without sacrificing taste.</p>",
+    "ac": 10,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 2,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 1,
+    "magical": false,
+    "powered": false,
+    "price": 100,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 1,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SSONicpIWNBwXN5T"
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "LHSsvztOHmdPuKoK",
+  "name": "Mortar",
+  "type": "weapon",
+  "img": "icons/weapons/artillery/mount-weapon-cannon-steel.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Mortars are rare, but have their uses amid the tall buildings of an urban sprawl. They have a minimum range of 20 meters, but can lob indirect fire over buildings and obstacles. Mortars always target AC 20 at first, but each round of fire at the same target grants a +1 hit bonus if there's a forward spotter to adjust the aim. Mortar rounds act as frag grenades on the target point, but do 3d6 damage at base with a 10-meter radius; armor doesn't lessen harm from mortar rounds. A mortar round costs $50 and counts as one item of encumbrance. Requires an applicable Contact to buy, being generally illegal for open sale.</p>",
+    "damage": "3d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 0
+    },
+    "trauma": {
+      "die": "1d12",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "wis",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 1000,
+      "medium": 1000,
+      "long": 2000
+    },
+    "save": "",
+    "tags": [],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Spare Magazine",
+    "charges": {
+      "value": 1,
+      "max": 1
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 5000,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "ZFT6nc8sCnFzMEvt",
+  "sort": 4,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LHSsvztOHmdPuKoK"
+}

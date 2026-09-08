@@ -1,0 +1,42 @@
+{
+  "_id": "7vydiKn0zGe7yujP",
+  "name": "Storm Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/suit-armored-chest-plated.webp",
+  "effects": [],
+  "folder": "Joz6FyruWsaKsK9w",
+  "sort": 2,
+  "flags": {},
+  "system": {
+    "description": "<p>Storm armor is a more advanced form of assault suit, one that can be fabricated only by those worlds that have retained some degree of Mandate-grade technical infrastructure. Its exo-augments allow the wearer to treat their Strength as 4 points higher for encumbrance purposes, and integral gravitic boosters allow the wearer to leap up to 20 meters or fall up to 40 meters without harm. Storm armor requires the same type B power cell as an assault suit.</p>",
+    "ac": 19,
+    "acRanged": 19,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 20000,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 5,
+    "magical": false,
+    "powered": true
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!7vydiKn0zGe7yujP"
+}

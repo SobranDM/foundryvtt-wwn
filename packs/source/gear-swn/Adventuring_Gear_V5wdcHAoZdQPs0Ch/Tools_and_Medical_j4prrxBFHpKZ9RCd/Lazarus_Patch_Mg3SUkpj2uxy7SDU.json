@@ -1,0 +1,44 @@
+{
+  "_id": "Mg3SUkpj2uxy7SDU",
+  "name": "Lazarus Patch",
+  "type": "item",
+  "img": "icons/tools/medical/bandages-gauze.webp",
+  "effects": [],
+  "folder": "j4prrxBFHpKZ9RCd",
+  "sort": 1,
+  "flags": {},
+  "system": {
+    "description": "<p><strong>Tech Level 4</strong></p><p>A vital tool for adventurers, the lazarus patch is a heavy compress laced with antibiotics, coagulants, system stabilizers, plasma, and a one-shot diagnostic suite. If applied to a character at 0 hit points, allows an Int/Heal or Dex/Heal check to stabilize the subject.</p>",
+    "price": 30,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "treasure": false,
+    "personal": false,
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "expendOnUse": true,
+    "roll": "",
+    "container": {
+      "isContainer": false,
+      "isOpen": true
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Mg3SUkpj2uxy7SDU"
+}

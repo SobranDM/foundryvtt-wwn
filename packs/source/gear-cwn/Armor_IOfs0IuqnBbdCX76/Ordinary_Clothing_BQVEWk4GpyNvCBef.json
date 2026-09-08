@@ -1,0 +1,42 @@
+{
+  "_id": "BQVEWk4GpyNvCBef",
+  "name": "Ordinary Clothing",
+  "type": "armor",
+  "img": "icons/equipment/chest/shirt-tee-white.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Some bold, impoverished, or highly fashionable people still insist on wearing clothing that has no functional use as armor.</p>",
+    "ac": 10,
+    "acRanged": 10,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 0,
+    "magical": false,
+    "powered": false,
+    "price": 25,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BQVEWk4GpyNvCBef"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Gunlink",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.KQfOzxnyF1Lulk77"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Touch &middot; System Strain 1</strong></p><p>Hardwired control points interface with the onboard targeting systems of most modern firearms. When using a modern firearm, the PC ignores range penalties and negates up to 2 points of hit penalties for cover, concealment, or prone targets. Once per scene, as an Instant action, they can reroll a missed attack roll with a gun.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "KQfOzxnyF1Lulk77",
+  "folder": "dFd3tV7uzjaMR4Vk",
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KQfOzxnyF1Lulk77"
+}

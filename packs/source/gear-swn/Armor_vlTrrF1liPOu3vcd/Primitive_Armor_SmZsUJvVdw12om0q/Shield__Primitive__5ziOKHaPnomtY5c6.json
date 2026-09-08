@@ -1,0 +1,42 @@
+{
+  "_id": "5ziOKHaPnomtY5c6",
+  "name": "Shield (Primitive)",
+  "type": "armor",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "effects": [],
+  "folder": "SmZsUJvVdw12om0q",
+  "sort": 0,
+  "flags": {},
+  "system": {
+    "description": "<p>Primitive shields are usually of wood or stretched hide. If the bearer is already wearing equal or better armor, the shield simply grants a +1 bonus to their AC. Shields also render the bearer immune to the first instance of melee Shock they might otherwise suffer in a round. All shields require one free hand to use effectively.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "shield",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "price": 10,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": "",
+    "tl": 0,
+    "magical": false,
+    "powered": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5ziOKHaPnomtY5c6"
+}

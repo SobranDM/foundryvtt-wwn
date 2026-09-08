@@ -1,0 +1,87 @@
+{
+  "name": "Dermal Armor II",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [
+    {
+      "_id": "bCKfETi2vFn9Orka",
+      "type": "base",
+      "name": "Dermal Armor II (Base AC)",
+      "img": "icons/svg/upgrade.svg",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.combat.innateAc.min",
+            "type": "upgrade",
+            "value": 18,
+            "phase": "final"
+          }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!Zi8dEXdYJhVFLNMu.bCKfETi2vFn9Orka"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.Zi8dEXdYJhVFLNMu"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $80,000 &middot; Concealment Touch &middot; System Strain 2</strong></p><p>Heavier subcutaneous plating acts as Dermal Armor I with a base ranged and melee AC of 18. In addition, the user can ignore the first instance of Shock in a round (not modeled by an Active Effect -- there is no \"ignore first Shock instance\" target in the registry, only full Shock immunity; apply by hand). The base-AC bonus does not stack additively with Dermal Armor I/III -- all three target the same innate-AC floor, so having more than one installed simply keeps the highest.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 2,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 2,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "Zi8dEXdYJhVFLNMu",
+  "folder": "4CvV6MlFFUn4cdKC",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Zi8dEXdYJhVFLNMu"
+}

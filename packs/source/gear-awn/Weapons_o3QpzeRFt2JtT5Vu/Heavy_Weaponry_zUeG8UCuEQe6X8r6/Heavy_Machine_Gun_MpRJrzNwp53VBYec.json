@@ -1,0 +1,72 @@
+{
+  "_id": "MpRJrzNwp53VBYec",
+  "name": "Heavy Machine Gun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/machine-gun-drum.webp",
+  "effects": [],
+  "folder": "zUeG8UCuEQe6X8r6",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>So bulky as to require a fixed position or prepared rest. Each magazine costs twenty times the ammunition of an ordinary round, but given time it can saw through reinforced concrete. Can fire to suppress if fixed to a stationary firing position. Its Trauma Die can inflict Traumatic Hits on drones, vehicles, and other machines.</p>",
+    "damage": "3d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d12",
+      "rating": 3
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 500,
+      "medium": 0,
+      "long": 2000
+    },
+    "save": "",
+    "tags": [
+      "Anti-Vehicle",
+      "Suppressive"
+    ],
+    "ammoMode": "magazine",
+    "ammoId": "",
+    "ammoFallback": "Ammo, 5 Rounds",
+    "charges": {
+      "value": 10,
+      "max": 10
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 0,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MpRJrzNwp53VBYec"
+}

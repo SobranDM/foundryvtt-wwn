@@ -1,0 +1,42 @@
+{
+  "_id": "KloIAlBW1a7sjHNv",
+  "name": "Protection Field",
+  "type": "armor",
+  "img": "icons/equipment/finger/ring-plain-band-gold.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 13,
+  "flags": {},
+  "system": {
+    "description": "<p>A rare, exotic defensive screen once used by high-ranking Mandate officials, its physical component nothing more than a ring, bracelet, or other token. Shields the wearer with an invisible force field with vacc suit functionality, imperceptible except for a brief flash when struck. Operates indefinitely on its own internal power source. Renders the wearer immune to harm from unarmed attacks, grenades, or weapons of TL3 or lower. Subtle. Not normally available for sale.</p>",
+    "ac": 18,
+    "acRanged": 18,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 5,
+    "magical": false,
+    "powered": true,
+    "price": 0,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KloIAlBW1a7sjHNv"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "NUofy95QvtaM7LWo",
+  "name": "Plated Longcoat",
+  "type": "armor",
+  "img": "icons/equipment/chest/heavy-steel.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>An ankle-length coat, robe, or mantle is used as a substrate for numerous reinforced plates and swaths of ballistic weave. It's heavy, bulky, and blatant, but it can absorb a lot of punishment. This armor applies a -1 penalty to all Sneak or Exert skill checks; multiple heavy items stack.</p>",
+    "ac": 15,
+    "acRanged": 17,
+    "mod": 0,
+    "type": "heavy",
+    "soak": 5,
+    "traumaTarget": 7,
+    "ashesHeavy": true,
+    "tl": 3,
+    "magical": false,
+    "powered": false,
+    "price": 2000,
+    "weight": 3,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 6,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NUofy95QvtaM7LWo"
+}

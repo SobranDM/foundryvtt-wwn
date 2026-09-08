@@ -1,0 +1,69 @@
+{
+  "_id": "mCuEY0d0OxXwYwMq",
+  "name": "Small Advanced Weapon",
+  "type": "weapon",
+  "img": "icons/weapons/fist/claw-tech-spike-red.webp",
+  "effects": [],
+  "folder": "tS65RASt6CTP48xV",
+  "sort": 3,
+  "flags": {},
+  "system": {
+    "description": "<p>An advanced weapon has been given a monoblade edge, kinetic sheathing, thermal wires, a chainsaw blade, or some other TL4 touch. Advanced weapons can ignore primitive plate and hide protections.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "1",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "stab",
+    "score": "dex",
+    "melee": true,
+    "missile": false,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": false,
+    "range": {
+      "short": 0,
+      "medium": 0,
+      "long": 0
+    },
+    "save": "",
+    "tags": [],
+    "ammoId": "",
+    "ammoMode": "none",
+    "ammoFallback": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 40,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mCuEY0d0OxXwYwMq"
+}

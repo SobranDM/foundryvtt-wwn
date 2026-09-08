@@ -1,0 +1,66 @@
+{
+  "name": "Therapeutic Control Dampers",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.NhdLEJDMTZBWebqi"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $25,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>A set of customized medical and therapeutic implants are used to control the side-effects of a partially-successful cyberware implant. For each implantation of this system, the user can choose to ignore one implant side-effect they currently suffer. The skill check to implant this system can fail, but it never induces any side effects on its own.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "NhdLEJDMTZBWebqi",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 16000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NhdLEJDMTZBWebqi"
+}

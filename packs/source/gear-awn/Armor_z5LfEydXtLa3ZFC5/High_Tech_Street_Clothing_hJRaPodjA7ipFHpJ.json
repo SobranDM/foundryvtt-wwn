@@ -1,0 +1,42 @@
+{
+  "_id": "hJRaPodjA7ipFHpJ",
+  "name": "High-Tech Street Clothing",
+  "type": "armor",
+  "img": "icons/equipment/chest/vest-tactical-camo.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 7,
+  "flags": {},
+  "system": {
+    "description": "<p>Ancient pre-collapse street couture fabricated from exotic materials capable of resisting blades and punctures. Its style may be outlandish, but its durability makes it valuable to scavengers. Subtle.</p>",
+    "ac": 13,
+    "acRanged": 13,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 6,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 200,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hJRaPodjA7ipFHpJ"
+}

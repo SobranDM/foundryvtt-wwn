@@ -1,0 +1,72 @@
+{
+  "_id": "FRHm9J5Rno18XwjN",
+  "name": "Combat Shotgun",
+  "type": "weapon",
+  "img": "icons/weapons/guns/shotgun-short-steel.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 12,
+  "flags": {},
+  "system": {
+    "description": "<p>Combat shotguns are more complicated and temperamental versions of conventional shotguns. These weapons have substantially larger ammunition capacity and are capable of firing in burst mode.</p>",
+    "damage": "3d4",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": true,
+    "tl": 3,
+    "firearm": true,
+    "range": {
+      "short": 10,
+      "medium": 0,
+      "long": 30
+    },
+    "save": "",
+    "tags": [
+      "2H",
+      "Burst"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 300,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FRHm9J5Rno18XwjN"
+}

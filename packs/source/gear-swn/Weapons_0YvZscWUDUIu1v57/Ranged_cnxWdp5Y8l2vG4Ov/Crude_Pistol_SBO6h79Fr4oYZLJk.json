@@ -1,0 +1,71 @@
+{
+  "_id": "SBO6h79Fr4oYZLJk",
+  "name": "Crude Pistol",
+  "type": "weapon",
+  "img": "icons/weapons/guns/pistol-flintlock.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 4,
+  "flags": {},
+  "system": {
+    "description": "<p>Crude pistols represent the rawest and most primitive forms of gunpowder weaponry, usually makeshift weapons improvised by criminals or the desperate. Reloading a crude pistol requires two rounds instead of one.</p>",
+    "damage": "1d6",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 2,
+    "firearm": true,
+    "range": {
+      "short": 5,
+      "medium": 0,
+      "long": 15
+    },
+    "save": "",
+    "tags": [
+      "Reload x2"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 20,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SBO6h79Fr4oYZLJk"
+}

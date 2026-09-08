@@ -1,0 +1,42 @@
+{
+  "_id": "MmPA4DofNoIOyd99",
+  "name": "Impact Jacket",
+  "type": "armor",
+  "img": "icons/equipment/chest/jacket-modern-green.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>Built to absorb the impact of various contact sports, extreme athletic pursuits, and unguided vehicle races, these jackets usually come as part of a full-body protective outfit.</p>",
+    "ac": 14,
+    "acRanged": 12,
+    "mod": 0,
+    "type": "medium",
+    "soak": 8,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 2,
+    "magical": false,
+    "powered": false,
+    "price": 1000,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "folder": "IOfs0IuqnBbdCX76",
+  "sort": 7,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MmPA4DofNoIOyd99"
+}

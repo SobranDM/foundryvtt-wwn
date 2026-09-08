@@ -1,0 +1,66 @@
+{
+  "name": "Banshee Module",
+  "type": "power",
+  "img": "icons/svg/upgrade.svg",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wwn.abilities-cwn.h0Gbsp0b3zW9LZAw"
+    }
+  },
+  "system": {
+    "subType": "cyberware",
+    "description": "<p><strong>Price $30,000 &middot; Concealment Medical &middot; System Strain 1</strong></p><p>Resonant cavities are designed into the user's torso, along with an advanced amplification system. They can reproduce any sound or voice they have heard before, audible clearly up to five hundred meters away at maximum volume. Once per day, as a Main Action, this sound can be used to shatter normal glass in a ten-meter line in front of the user; creatures without ear protection in this area must make a Physical save or take 2d6 non-lethal damage.</p>",
+    "source": "",
+    "customTypeName": "",
+    "resourceName": "",
+    "commitmentOptions": [
+      {
+        "cost": 0,
+        "length": "none",
+        "note": ""
+      }
+    ],
+    "poolCommitted": {
+      "none": 0,
+      "active": 0,
+      "scene": 0,
+      "day": 0
+    },
+    "internalResource": {
+      "value": 0,
+      "max": 0
+    },
+    "internalResourceLength": "scene",
+    "isActive": false,
+    "effectApplication": "self",
+    "level": 0,
+    "prepared": false,
+    "permanentStrain": 1,
+    "userStrain": "",
+    "targetStrain": "",
+    "installed": false,
+    "alienationCost": 1,
+    "activation": {
+      "roll": "",
+      "rollType": "result",
+      "rollTarget": 0,
+      "save": "",
+      "range": "",
+      "duration": ""
+    },
+    "damageRoll": "",
+    "healing": false,
+    "bonusSkills": [],
+    "bonusSkillsPick": 0,
+    "bonusSkillsChosen": [],
+    "bonusSkillsMode": ""
+  },
+  "_id": "h0Gbsp0b3zW9LZAw",
+  "folder": "X8OXbUrKExPWu6TG",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!h0Gbsp0b3zW9LZAw"
+}

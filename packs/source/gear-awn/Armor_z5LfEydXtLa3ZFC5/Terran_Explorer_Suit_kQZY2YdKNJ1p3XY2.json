@@ -1,0 +1,42 @@
+{
+  "_id": "kQZY2YdKNJ1p3XY2",
+  "name": "Terran Explorer Suit",
+  "type": "armor",
+  "img": "icons/equipment/body/suit-military-flight.webp",
+  "effects": [],
+  "folder": "z5LfEydXtLa3ZFC5",
+  "sort": 8,
+  "flags": {},
+  "system": {
+    "description": "<p>A rustic outfit fashioned in the latter years of the Mandate for bold citizens roaming the uninhabited wilds of Old Terra. Built-in suit tech keeps the wearer clean and dry, identifies toxic foodstuffs on touch, and keeps them warm in anything short of a blizzard. Subtle.</p>",
+    "ac": 16,
+    "acRanged": 16,
+    "mod": 0,
+    "type": "light",
+    "soak": 0,
+    "traumaTarget": 7,
+    "ashesHeavy": false,
+    "tl": 4,
+    "magical": false,
+    "powered": false,
+    "price": 500,
+    "weight": 0,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!kQZY2YdKNJ1p3XY2"
+}

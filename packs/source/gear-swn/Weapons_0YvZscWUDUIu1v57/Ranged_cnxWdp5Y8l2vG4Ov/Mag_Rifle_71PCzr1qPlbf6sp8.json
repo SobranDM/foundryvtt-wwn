@@ -1,0 +1,71 @@
+{
+  "_id": "71PCzr1qPlbf6sp8",
+  "name": "Mag Rifle",
+  "type": "weapon",
+  "img": "icons/weapons/guns/rifle-assault-heavy.webp",
+  "effects": [],
+  "folder": "cnxWdp5Y8l2vG4Ov",
+  "sort": 16,
+  "flags": {},
+  "system": {
+    "description": "<p>Mag weaponry involves the magnetic acceleration of metal flechettes. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons.</p>",
+    "damage": "2d8+2",
+    "bonus": 0,
+    "shock": {
+      "damage": "",
+      "ac": 15
+    },
+    "trauma": {
+      "die": "1d6",
+      "rating": 2
+    },
+    "skillId": "",
+    "skillFallback": "shoot",
+    "score": "dex",
+    "melee": false,
+    "missile": true,
+    "slow": false,
+    "burst": false,
+    "tl": 4,
+    "firearm": true,
+    "range": {
+      "short": 300,
+      "medium": 0,
+      "long": 600
+    },
+    "save": "",
+    "tags": [
+      "2H"
+    ],
+    "ammoId": "",
+    "ammoMode": "linked",
+    "ammoFallback": "Ammo, 20 Rounds",
+    "charges": {
+      "value": 0,
+      "max": 0
+    },
+    "counter": {
+      "value": 1,
+      "max": 1
+    },
+    "price": 500,
+    "weight": 2,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": false,
+    "weightless": "",
+    "containerId": ""
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!71PCzr1qPlbf6sp8"
+}

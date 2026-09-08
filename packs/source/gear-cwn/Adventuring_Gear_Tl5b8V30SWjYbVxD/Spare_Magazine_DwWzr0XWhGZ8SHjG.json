@@ -1,0 +1,36 @@
+{
+  "_id": "DwWzr0XWhGZ8SHjG",
+  "name": "Spare Magazine",
+  "type": "ammo",
+  "img": "icons/weapons/ammunition/ammo-magazine-clip.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": "<p>A spare magazine of ammunition for a pistol, rifle, shotgun, submachine gun, or similar magazine-fed firearm. Reload transfers rounds into the weapon's magazine. Duplicate and rename for specific calibers as needed; belt-fed heavy weapons (Automatic Rifle, Heavy Machine Gun) cost more per round in play but use this same generic reload item for simplicity.</p>",
+    "price": 10,
+    "weight": 1,
+    "quantity": 1,
+    "equipped": false,
+    "stowed": true,
+    "weightless": "",
+    "containerId": "",
+    "charges": {
+      "value": 0,
+      "max": 0
+    }
+  },
+  "folder": "Tl5b8V30SWjYbVxD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wwn",
+    "systemVersion": null,
+    "coreVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DwWzr0XWhGZ8SHjG"
+}
