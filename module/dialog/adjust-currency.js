@@ -30,7 +30,7 @@ export async function showAdjustCurrencyDialog(actor) {
     title: game.i18n.localize("WWN.items.adjustCurrency"),
     template: "systems/wwn/templates/actors/dialogs/adjust-currency.html",
     context,
-    position: { width: 280 },
+    position: { width: 300 },
     buttons: [
       confirmButton({ label: "WWN.items.adjustCurrency" }),
       cancelButton(),

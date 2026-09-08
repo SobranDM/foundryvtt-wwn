@@ -46,8 +46,6 @@ jobs:
         run: |
           zip -r wwn.zip \
             system.json \
-            template.json \
-            wwn.js \
             README.md \
             CHANGELOG.md \
             LICENSE.GPL \

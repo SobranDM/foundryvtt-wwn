@@ -57,15 +57,24 @@ Symlink (or copy) this repo into Foundry's `Data/systems/wwn` directory so Found
 
 ## Compendium layout
 
+Abilities are split one pack per game line, each with its own Skills folder
+plus that line's classes/edges and arts/foci/etc.:
+
 | Pack | Visibility | Contents |
 |------|------------|----------|
+| `abilities-wwn` | Players | Skills, Classes, Arts, Spells, Foci |
+| `abilities-swn` | Players | Skills, Classes, Psychic Techniques, Foci |
+| `abilities-awn` | Players | Skills, Edges, Mutations, Foci |
+| `abilities-cwn` | Players | Skills, Edges, Foci |
 | `gear` | Players | Adventuring Gear, Weapons, Armor (non-magical) |
 | `magic-items` | GM only (`private`) | Magic Items, Magical Weapons, Magical Armor |
-| `abilities` | Players | Skills / Arts / Spells (by class & level) / Foci |
 | `assets` | Players | Faction assets by type (Cunning / Force / Wealth) |
-| `tags`, `tables` | Players | Location tags; generation & magic-item tables |
+| `starship-fittings` | Players | Starship fittings, weapons, and defenses |
+| `armor-fittings` | Players | Power armor fittings |
+| `tags`, `tables`, `tables-awn` | Players | Location tags; generation & magic-item tables; AWN mutation/stigma tables |
 | `creatures-of-a-far-age` | Players | WWN monsters |
 | `ose-monsters`, `ose-spells` | Players | OSE content |
+| `example-starships`, `example-power-armor` | Players | Pre-built example Actors (Power Armor examples are for testing only — will be removed) |
 
 ## Module layout
 

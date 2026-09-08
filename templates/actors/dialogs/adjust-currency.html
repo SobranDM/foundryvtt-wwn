@@ -1,16 +1,20 @@
 <form autocomplete="off">
-  <div class="currency-adjustment">
+  <div class="wwn-dialog-body">
     {{#each currencies as |currency|}}
     <div class="form-group">
       <label title="×{{currency.multiplier}}">{{currency.name}}</label>
-      <input name="carried_{{currency.id}}" placeholder="0" type="number" data-dtype="Number"
-        title="{{localize 'WWN.Currency.Carried'}} ({{currency.carried}})" />
+      <div class="form-fields">
+        <input name="carried_{{currency.id}}" placeholder="0" type="number" data-dtype="Number"
+          title="{{localize 'WWN.Currency.Carried'}} ({{currency.carried}})" />
+      </div>
     </div>
     {{/each}}
     <div class="form-group">
       <label>{{localize "WWN.items.bank.short"}}</label>
-      <input name="bank" placeholder="0" type="number" data-dtype="Number"
-        title="{{localize 'WWN.Currency.BankedHint'}}" />
+      <div class="form-fields">
+        <input name="bank" placeholder="0" type="number" data-dtype="Number"
+          title="{{localize 'WWN.Currency.BankedHint'}}" />
+      </div>
     </div>
   </div>
 </form>

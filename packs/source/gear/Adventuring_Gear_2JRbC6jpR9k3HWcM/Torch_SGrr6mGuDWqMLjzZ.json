@@ -3,7 +3,7 @@
   "name": "Torch",
   "type": "item",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/gear.png",
+  "img": "icons/sundries/lights/torch-brown-lit.webp",
   "effects": [],
   "system": {
     "description": "<p>A lantern or torch casts usable light in a thirty-foot radius. Objects outside this range are too indistinct to be made out in the typical stygian gloom of a Deep.</p>\n<p>A torch lasts for 6 turns (1 hour) before burning out.</p>\n<p>This item can be bundled in units of three for the same encumbrance, with a Main Action to break open a bundle to get at the contents.</p>",

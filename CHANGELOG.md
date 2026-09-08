@@ -42,6 +42,7 @@
   - Compendiums: **Starship Fittings** and **Example Starships**.
   - **Starship combat** (SWN): type-segregated encounters (ships / factions / personal cannot mix in the same combat); Command Points; department actions on the ship sheet; tracker CP/Escape/Crisis HUD; Armor/AP, Target Systems, Escape/Pursue, and Crises. Department actions and hulk saves resolve from station roll totals vs DC (or opposed totals), not success confirms; Flak/Cloud helpers covered by unit tests. Detection locks / pre-combat pursuit still deferred. Manual smoke recommended (see `docs/design/specs/2026-07-31-starship-combat-harden-design.md`).
 - **Dialogs and chat cards** share the selected UI theme. Party sheet and character creator use the same theming. Old chat/dialog templates are removed. Attack cards explain hit outcomes and tuck roll breakdowns behind a help icon.
+- **Power rolls now get the same breakdown tooltip as weapon attacks.** Activation, damage, and healing rolls list their contributing parts behind the same help-icon hover used on attack cards. Damage/healing rolls also fold in the existing Damage Bonus (All) Active Effect and, for NPCs, the flat damage bonus, so those show up in the breakdown too. Activation rolls (generic checks, not necessarily attacks) show only the power's own formula. No new Active Effect targets.
 - **Modular power armor** for Ashes Without Number.
   - Power armor actors with frame presets, mass/power budgets, Soak, power cells/runtime, and maintenance.
   - Armor fittings install on the suit; over-budget builds shut down fittings per the rules.
@@ -50,6 +51,14 @@
   - **Phase B effect engine (WIP):** `fittingState` scene/maint uses, Activate / Trigger Reaction on the Armor tab, capability badges, movement/mode chat actions (no auto-token move), best-effort auto reactions plus manual Trigger, target lock / linked targeting / ammo feed hooks, VI (Tsukumogami assist when activated; Black Ofuda empty-suit mode with suit AB/HP/Soak/Move/saves), Identification Lock, Backseat Driver incap, medical doses, trauma stabilizer, and skipped-maintenance failure dice. Plating shock/trauma flags apply in the attack pipeline.
   - Compendiums: **Armor Fittings** and **Example Power Armor**. FOR TESTING ONLY. This compendium will be removed later, as it is part of paid content.
   - WIP. Largely untested.
+- Restored roughly 133 Arts across 9 WWN classes (Accursed, Bard, Beastmaster, Blood Priest, Duelist, Mageslayer, Skinshifter, Thought Noble, Wise) that were dropped during the compendium reorg; recovered from git history and re-migrated to the current Power schema. Active Effects were added where they match the existing classes' conventions (see `docs/qa/wwn-foci-arts-ae-checklist.md`).
+- Fixed a bug where derived Armor Class could go stale after granting or toggling an AC-affecting Active Effect (for example Cold Flesh, Impervious Defense, or the newly restored Arts) until a full page reload.
+- Starship weapons: armor piercing now correctly reduces target armor before damage is computed for the chat button (previously only the displayed total was correct); added a chat notice when a hit fails to penetrate armor; added an AP column and fixed a blank DMG column on the starship weapons table.
+- Restored distinct styling for private/blind chat messages (whisper and blind messages were rendering identically to normal messages).
+- Fixed item icon/name click routing on actor sheets: clicking an item's icon now reliably rolls or activates it (or posts its description to chat if it has no roll behavior, e.g. armor or currency); clicking its name opens an inline description drawer instead. This was broken for most gear on PC/NPC sheets and for most items on Starship, Faction, and Power Armor sheets.
+- Added a "Show" (eye) icon to item rows that posts the item's description to chat without triggering any roll side effects (no attack roll, no charge or Effort spend) — restored from the pre-ApplicationV2 sheets.
+- Power sheet: "Add Commitment Option" moved into its own Commitment Options panel, split out from Shared Pool.
+- Fixed a layout bug where two-column item/power attribute panels (Power, Weapon, Armor, and other item sheets) could show a large gap when the box in one column was shorter than the box beside it.
 - Assorted sheet and pack fixes for Foundry v14.
 
 ## New in 1.6.1

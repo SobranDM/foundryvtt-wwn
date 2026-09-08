@@ -724,13 +724,37 @@ export class WwnDice {
   }
 
   /* -------------------------------------------- */
-  /*  Standalone damage                           */
+  /*  Power damage / healing                      */
   /* -------------------------------------------- */
 
-  static async rollDamage(actor, formula, { title, img, defaultHealing = false } = {}) {
-    const npcBonus = WwnDice.#npcDamageBonus(actor);
-    const rollFormula = npcBonus ? `(${formula}) + ${npcBonus}` : formula;
-    const roll = await new WwnDamageRoll(rollFormula, actor.getRollData(), { kind: "damage" }).evaluate();
+  /**
+   * Roll a power's damage/healing formula (Godbound-eligible). Built with
+   * {@link RollParts} — same breakdown mechanism as weapon damage — so the
+   * existing `system.combat.allDamage` Active Effect target (already
+   * consumed by weapon damage in {@link WwnDice.assembleAttack}) and the NPC
+   * flat damage bonus show up in the chat card's roll breakdown tooltip
+   * instead of vanishing into a flat formula string. No new AE targets.
+   * @param {Actor} actor
+   * @param {Item} power
+   */
+  static async rollPowerDamage(actor, power) {
+    const formula = power.system.damageRoll;
+    if (!formula?.trim()) return;
+    const healing = !!power.system.healing;
+    const rollData = actor.getRollData();
+    const combat = actor.system.combat ?? {};
+
+    const parts = new RollParts(rollData).add(formula, power.name);
+    const npcBonus = this.#npcDamageBonus(actor);
+    if (npcBonus) parts.add(npcBonus, game.i18n.localize("WWN.Npc.DamageBonus"));
+    if (combat.allDamage) {
+      parts.add(
+        this.#resolveCombatFormula(combat.allDamage, rollData),
+        game.i18n.localize("WWN.Effects.DamageAll"),
+      );
+    }
+
+    const roll = await new WwnDamageRoll(parts.formula(), rollData, { kind: "damage" }).evaluate();
     const godbound = game.settings.get("wwn", "godboundDamage");
     let value = roll.total;
     let altValue = null;
@@ -740,11 +764,15 @@ export class WwnDice {
     }
     return createRollMessage({
       rolls: [roll],
+      rollMeta: [{
+        label: game.i18n.localize(healing ? "WWN.Roll.Healing" : "WWN.Roll.Damage"),
+        breakdown: parts.breakdown(),
+      }],
       kind: "damage",
       actor,
-      img,
-      title: title ?? game.i18n.localize("WWN.Roll.Damage"),
-      defaultHealing,
+      img: power.img,
+      title: game.i18n.format(healing ? "WWN.Power.HealingTitle" : "WWN.Power.DamageTitle", { name: power.name }),
+      defaultHealing: healing,
       bodyTemplate: "systems/wwn/templates/chat/attack-card.hbs",
       context: {
         applyRows: [{
@@ -755,7 +783,7 @@ export class WwnDice {
           altLabel: altValue !== null ? game.i18n.format("WWN.Roll.Straight", { value: altValue }) : null,
         }],
         hit: true,
-        defaultHealing,
+        defaultHealing: healing,
       },
       flags: {
         applyRows: [{ id: "damage", value, altValue }],
@@ -781,7 +809,12 @@ export class WwnDice {
   }
 
   /**
-   * Power activation roll with optional above/below target comparison.
+   * Power activation roll with optional above/below target comparison. Built
+   * with {@link RollParts} — same breakdown mechanism as weapon rolls — so
+   * the tooltip shows the power's own formula clearly labeled. Activation
+   * rolls are generic checks (not necessarily attacks), so unlike weapon
+   * attacks and power damage/healing this does not fold in
+   * `system.combat.allAttack`.
    * @param {Actor} actor
    * @param {Item} power
    */
@@ -790,7 +823,10 @@ export class WwnDice {
     const formula = activation?.roll;
     if (!formula?.trim()) return;
 
-    const roll = await new WwnRoll(formula, actor.getRollData(), { kind: "formula" }).evaluate();
+    const rollData = actor.getRollData();
+    const parts = new RollParts(rollData).add(formula, power.name);
+
+    const roll = await new WwnRoll(parts.formula(), rollData, { kind: "formula" }).evaluate();
     const target = Number(activation.rollTarget) || 0;
     const rollType = activation.rollType ?? "result";
     let badge = null;
@@ -815,6 +851,10 @@ export class WwnDice {
       badge,
       bodyTemplate: "systems/wwn/templates/chat/simple-roll.hbs",
       context: {},
+      rollMeta: [{
+        label: game.i18n.localize("WWN.Roll.Formula"),
+        breakdown: parts.breakdown(),
+      }],
     });
   }
 

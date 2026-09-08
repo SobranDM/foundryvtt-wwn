@@ -21,7 +21,7 @@ export async function showPartyCurrencyDialog() {
       user: game.user,
       settings: game.settings,
     },
-    position: { width: 280, height: 400 },
+    position: { width: 320 },
     buttons: [
       confirmButton({
         label: "WWN.dialog.currency.deal",

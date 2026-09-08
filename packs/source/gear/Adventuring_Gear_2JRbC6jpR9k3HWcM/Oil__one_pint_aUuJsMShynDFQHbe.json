@@ -3,7 +3,7 @@
   "name": "Oil, one pint",
   "type": "item",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/gear.png",
+  "img": "icons/consumables/potions/flask-corked-yellow-glow.webp",
   "effects": [],
   "system": {
     "description": "<p>This item can be bundled in units of three for the same encumbrance, with a Main Action to break open a bundle to get at the contents.</p>",

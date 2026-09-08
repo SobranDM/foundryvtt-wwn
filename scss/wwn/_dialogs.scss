@@ -53,10 +53,27 @@
       justify-content: flex-end;
     }
 
+    /* A fields box holding only a checkbox shouldn't reserve number/select
+       width — shrink it to the checkbox so the label can use the row.
+       (Core .standard-form .form-fields sets width:100%, which flex-basis:auto
+       would otherwise inherit, so width must be reset here too.) */
+    .form-fields:has(> input[type="checkbox"]:only-child) {
+      flex: 0 0 auto;
+      width: auto;
+      min-width: 0;
+    }
+
     input[type="number"],
     select {
       width: 100%;
       min-width: 0;
+    }
+
+    input[type="checkbox"] {
+      flex: 0 0 1rem;
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
     }
   }
 }
@@ -102,19 +119,19 @@
 
 .wwn-dialog--party-xp,
 .wwn-dialog--party-coin {
+  .wwn-dialog-body {
+    min-width: 17rem;
+  }
+
   .actors {
-    height: 270px;
+    max-height: 270px;
     padding: 0;
     overflow-y: auto;
-
-    .form-group input {
-      max-width: 100px;
-    }
   }
 
   .form-group button {
+    flex: 0 0 auto;
     line-height: 18px;
-    flex-grow: 0;
   }
 }
 
@@ -139,8 +156,16 @@
       button {
         line-height: 15px;
         margin: 0 1px;
+        /* Buttons keep their own light chip background regardless of the
+           dark .header text color above — use the standard dark-on-light
+           icon color (matches .wwn-dialog .window-content) so icons read. */
+        color: var(--wwn-dark-alt);
         background: rgba(255, 255, 240, 0.8);
         border: 1px solid #b5b3a4;
+
+        &:hover {
+          color: var(--wwn-dark);
+        }
       }
     }
   }
@@ -223,10 +248,6 @@
       list-style: outside;
     }
   }
-}
-
-.currency-adjustment {
-  flex-direction: column;
 }
 
 /* Class assignment: two columns per Full / Partial section */

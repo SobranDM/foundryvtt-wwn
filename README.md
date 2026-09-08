@@ -8,11 +8,16 @@ Everything you need to play Worlds Without Number in Foundry VTT.
 
 ## Features
 
+- **Classes and Edges** as items you add to a character (Full/Partial classes for WWN and SWN; Edges for AWN and CWN) drive attack bonus, hit dice, Effort/spell capacity, and class features automatically.
+- **Powers** (Arts, Spells, Psychic Techniques, Mutations, and related abilities) commit Effort or another shared pool automatically, with class-specific pools kept in sync as you level.
+- **Active Effects** drive PC combat/stat bonuses from Foci, class features, and Arts — no more manual math or a separate "Tweaks" menu.
+- **Modern character sheet** with tabs (Main / Powers / Inventory / Details / Effects), selectable UI themes (WWN / SWN / AWN / CWN), and a Favorites dock. Clicking an item's icon rolls or activates it (or posts its description if it has no roll behavior); clicking its name opens an inline description drawer; a dedicated eye icon on every item row posts its description to chat without triggering any roll side effects.
+- **NPCs** keep editable combat numbers on a Config tab, with optional Active Effects.
+- **Starships** for Stars Without Number: hull presets, fittings/weapons/defenses that scale cost/power/mass with hull class, crew stations linked to world actors or NPC roll formulas, and full starship combat (Command Points, department actions, Armor/AP, Target Systems, Escape/Pursue, Crises).
+- **Modular power armor** for Ashes Without Number: frame presets, mass/power budgets, Soak, power cells/runtime, maintenance, and a linked pilot overlay.
 - Calculated Readied/Stowed values, including dynamic tracking of currency weight
 - Calculates total wealth from carried coin, bank, and treasure items
 - Track weapon tags; hovering over the tag icon or name displays the full tag description
-- Track Effort commitment by Art and have class-specific Effort updated automatically
-  - Click Tweaks in the character title bar to activate spellcasting and enter caster class(es)
 - Visual indicator of health/strain percentage
 - Auto-calculate saves for PCs and NPCs alike
 - Calculates movement rates based on Readied/Stowed values
@@ -21,8 +26,8 @@ Everything you need to play Worlds Without Number in Foundry VTT.
 - Adds attribute bonuses to hit chance, damage, and shock
   - A per-weapon checkbox enables adding skill value to damage and shock
 - Shock and damage account for attribute bonuses, the Killing Blow warrior ability, and Foci that add skill levels to damage
-  - Click Full Warrior in Tweaks menu to activate Killing Blow
   - Skill damage is activated on a per-item basis, due to the variable nature of Foci
+- Weapons and ammo support linked ammo and magazine-style reload, with a dedicated ammo item type for arrows, bolts, energy cells, and spare magazines
 - Support for Specialist and other Foci that allow rolling 3d6/4d6 on skill checks
 - Distribute XP through the party sheet
   - Assign percentage shares to henchmen, to support silver-as-XP (and custom XP values) for B/X-style play
@@ -31,8 +36,8 @@ Everything you need to play Worlds Without Number in Foundry VTT.
   - Currently supports Nation, Government, Society, and History Construction. More will be added in the future.
 - Roll Morale and Instinct checks with two clicks
   - Link appropriate Instinct tables from Compendium to NPC sheet to auto-roll when Instinct check is failed
-- Compendium includes weapons, armor, adventuring gear, arts, spells, and foci. Deluxe edition content is not included.
-  - Thanks to Gavin over at Necrotic Gnome, the Compendium now includes OSE spells and (some) monsters.
+- Compendiums by game line (WWN / SWN / AWN / CWN Abilities) plus shared gear, magic items, faction assets, starship fittings, power armor fittings, and generation tables. Deluxe edition content is not included.
+  - Thanks to Gavin over at Necrotic Gnome, the Compendium also includes OSE spells and (some) monsters.
 
 ## Development
 

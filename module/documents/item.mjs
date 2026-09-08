@@ -364,14 +364,7 @@ export class WwnItem extends Item {
   /** Roll a power's damageRoll (kind damage — Godbound-eligible). */
   async rollPowerDamage() {
     if (this.type !== "power" || !this.system.damageRoll) return;
-    return WwnDice.rollDamage(this.actor, this.system.damageRoll, {
-      title: game.i18n.format(
-        this.system.healing ? "WWN.Power.HealingTitle" : "WWN.Power.DamageTitle",
-        { name: this.name }
-      ),
-      img: this.img,
-      defaultHealing: !!this.system.healing,
-    });
+    return WwnDice.rollPowerDamage(this.actor, this);
   }
 
   /** Activate a power with an `active` commitment tier, spending pool resources. */

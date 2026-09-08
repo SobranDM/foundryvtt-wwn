@@ -3,7 +3,7 @@
   "name": "Unarmed Attack",
   "type": "weapon",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/weapon.png",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
   "effects": [],
   "system": {
     "description": "<p>The <em><strong>unarmed attack </strong></em>given here is a common punch or kick, unimproved by a Vowed&rsquo;s arts or a Focus. Unarmed attacks add the assailant&rsquo;s Punch skill to the damage roll as well as the attack roll.</p>",
