@@ -135,6 +135,13 @@ export function itemShapeFingerprint(item) {
 export function extractPreservedFields(item) {
   if (!item || !SYNC_TYPES.has(item.type)) return null;
   const s = item.system ?? {};
+  // Which skills this item has already granted (flags.wwn.bonusSkillsGranted,
+  // see bonus-skills-shared.mjs) must survive the swap below, or the
+  // replacement item starts with no grant history and re-grants the first
+  // time it's edited again.
+  const bonusSkillsGranted = Array.isArray(item.flags?.wwn?.bonusSkillsGranted)
+    ? [...item.flags.wwn.bonusSkillsGranted]
+    : undefined;
   if (item.type === "focus") {
     const out = {
       ownedLevel: Number(s.ownedLevel) || 1,
@@ -143,6 +150,7 @@ export function extractPreservedFields(item) {
         value: Number(s.internalResource?.value) || 0,
         max: Number(s.internalResource?.max) || 0,
       },
+      bonusSkillsGranted,
     };
     if (s.bonusDice != null && s.bonusDice !== "") {
       out.bonusDice = Number(s.bonusDice);
@@ -165,6 +173,7 @@ export function extractPreservedFields(item) {
         max: Number(s.internalResource?.max) || 0,
       },
       level: Number(s.level) || 0,
+      bonusSkillsGranted,
     };
   }
   return {
@@ -175,6 +184,7 @@ export function extractPreservedFields(item) {
     attributeGrant: {
       chosen: String(s.attributeGrant?.chosen ?? ""),
     },
+    bonusSkillsGranted,
   };
 }
 
@@ -245,6 +255,12 @@ export function buildReplacementData(packItemObject, preserved) {
       if (preserved.level != null && Number(preserved.level) > 0) {
         data.system.level = preserved.level;
       }
+    }
+    if (preserved.bonusSkillsGranted) {
+      data.flags = {
+        ...(data.flags ?? {}),
+        wwn: { ...(data.flags?.wwn ?? {}), bonusSkillsGranted: preserved.bonusSkillsGranted },
+      };
     }
   }
   return data;

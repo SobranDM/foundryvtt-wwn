@@ -249,14 +249,10 @@ describe("power/classEdge bonus grants stay rank-only", () => {
     // computeFocusBonusGrant(skill, false) — always rank, never points.
     const skill = { system: { ownedLevel: -1, pointsInvested: 0 } };
     const grant = computeFocusBonusGrant(skill, false);
-    assert.equal(grant.focusBonusMode, "rank");
     assert.equal(grant.ownedLevel, 0);
-    assert.equal(grant.focusBonusLevelDelta, 1);
-    assert.equal(grant.focusBonusPointsDelta, 0);
 
     // Contrast: focus points path at the same skill state would cascade +3.
     const pointsGrant = computeFocusBonusGrant(skill, true);
-    assert.equal(pointsGrant.focusBonusMode, "points");
     assert.equal(pointsGrant.ownedLevel, 1);
   });
 });

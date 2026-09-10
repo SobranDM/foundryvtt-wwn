@@ -55,6 +55,11 @@ Pack folder depth is limited to **3** (Foundry's compendium limit). `npm run bui
 
 Symlink (or copy) this repo into Foundry's `Data/systems/wwn` directory so Foundry loads your working tree. Prefer a separate Foundry userData for development so live worlds are not at risk.
 
+## Testing
+
+- **Node (`tests/`)** — pure helpers, pack JSON invariants, migration transforms. Run with `npm test`.
+- **Quench (`wwn-system-tests/`)** — live-Document/hook integration tests (Actor/Item CRUD, sheets, rolls, combat). Not a separate package — no `module.json`, nothing to symlink or enable on its own. `module/wwn.mjs` registers these batches itself on `quenchReady`, dynamically importing this folder only when that fires. It's still never part of the shipped system: the release zip whitelist in `.github/workflows/release.yml` doesn't name it, so a release build simply doesn't have these files. Enable Quench in a dev world running this checkout and run the `wwn.*` batches from the Quench sidebar. See [wwn-system-tests/README.md](wwn-system-tests/README.md).
+
 ## Compendium layout
 
 Abilities are split one pack per game line, each with its own Skills folder

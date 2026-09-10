@@ -1,9 +1,6 @@
 import { isPc } from "./actor-types.mjs";
 import { getSkillSetCache } from "./skill-set.mjs";
-import {
-  computeFocusBonusGrant,
-  computeFocusBonusRevoke,
-} from "./focus-bonus-skills.mjs";
+import { computeFocusBonusGrant } from "./focus-bonus-skills.mjs";
 import {
   ensureActorSkillBySlug,
   declaredBonusSkills,
@@ -12,38 +9,15 @@ import {
   resolveListedBonusSkillSlugs,
   promptBonusSkillChoiceDialog,
   filterOpenBonusSkillSlugs,
+  hasGrantedSkill,
+  recordGrantedSkill,
 } from "./bonus-skills-shared.mjs";
-
-const FLAG = "wwn";
 
 /** Item types that use power-style bonusSkills fields. */
 const BONUS_SKILL_ITEM_TYPES = new Set(["power", "classEdge"]);
 
 /**
- * @param {Item} item
- * @returns {{ from: string, mode: string, levelDelta: string, pointsDelta: string, granted: string }}
- */
-function flagKeys(item) {
-  if (item.type === "classEdge") {
-    return {
-      from: "classEdgeBonusFrom",
-      mode: "classEdgeBonusMode",
-      levelDelta: "classEdgeBonusLevelDelta",
-      pointsDelta: "classEdgeBonusPointsDelta",
-      granted: "classEdgeBonusGranted",
-    };
-  }
-  return {
-    from: "powerBonusFrom",
-    mode: "powerBonusMode",
-    levelDelta: "powerBonusLevelDelta",
-    pointsDelta: "powerBonusPointsDelta",
-    granted: "powerBonusGranted",
-  };
-}
-
-/**
- * @param {Item} item
+ * @param {string} mode
  * @returns {boolean}
  */
 function isOpenBonusMode(mode) {
@@ -107,39 +81,28 @@ async function promptBonusSkillChoice(item, _actor) {
 }
 
 /**
+ * Always grant a single rank (train untrained → 0). Never uses the focus
+ * points path. Only ever called from the createItem/updateItem hooks (item
+ * dropped onto a character, or its bonus-skill choice changes) — never
+ * re-synced on a timer or login, so this only ever runs once per item/skill
+ * pair. Idempotency is tracked on the granting item itself via
+ * hasGrantedSkill/recordGrantedSkill (bonus-skills-shared.mjs) — see the
+ * note there for why a shared "who granted this" slot on the skill can't
+ * work once more than one source targets the same skill.
  * @param {Item} item
  * @param {Item} skill
- * @returns {boolean}
+ * @param {string} slug
  */
-function isGrantedByItem(item, skill) {
-  const keys = flagKeys(item);
-  return skill.getFlag(FLAG, keys.from) === item.id;
-}
+async function grantBonusSkill(item, skill, slug) {
+  if (hasGrantedSkill(item, slug)) return;
 
-/**
- * Always grant a single rank (train untrained → 0). Never uses the focus points path.
- * @param {Item} item
- * @param {Item} skill
- */
-async function grantBonusSkill(item, skill) {
-  if (isGrantedByItem(item, skill)) return;
-
-  const keys = flagKeys(item);
   // Powers and classEdges always use rank grants — never FOCUS_BONUS_SKILL_POINTS.
   const grant = computeFocusBonusGrant(skill, false);
-  const updates = {
-    [`flags.${FLAG}.${keys.from}`]: item.id,
+  await skill.update({
     "system.ownedLevel": grant.ownedLevel,
     "system.pointsInvested": grant.pointsInvested,
-    [`flags.${FLAG}.${keys.mode}`]: grant.focusBonusMode,
-    [`flags.${FLAG}.${keys.levelDelta}`]: grant.focusBonusLevelDelta,
-    [`flags.${FLAG}.${keys.pointsDelta}`]: grant.focusBonusPointsDelta,
-  };
-
-  await skill.update(updates);
-  if (!item.getFlag(FLAG, keys.granted)) {
-    await item.update({ [`flags.${FLAG}.${keys.granted}`]: true });
-  }
+  });
+  await recordGrantedSkill(item, slug);
 }
 
 /**
@@ -161,42 +124,22 @@ export async function syncPowerBonusSkills(item, actor, { prompt = false } = {})
     if (!prompt) return;
     slugs = await promptBonusSkillChoice(item, actor);
     if (!slugs?.length) return;
-    await item.update({ "system.bonusSkillsChosen": slugs });
+    // wwnBonusSkillSync: see the matching note in focus-bonus-skills.mjs's
+    // syncFocusBonusSkills — stops this write's own updateItem hook fire
+    // from re-entering this function before the grant loop below finishes.
+    await item.update({ "system.bonusSkillsChosen": slugs }, { wwnBonusSkillSync: true });
   }
   if (!slugs?.length) return;
 
   for (const slug of slugs) {
     const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(item, skill);
+    if (skill) await grantBonusSkill(item, skill, slug);
   }
 }
-export async function revokePowerBonusSkills(item, actor) {
-  if (!BONUS_SKILL_ITEM_TYPES.has(item?.type) || !isPc(actor)) return;
 
-  const keys = flagKeys(item);
-  for (const skill of actor.items.filter((i) => i.type === "skill")) {
-    if (!isGrantedByItem(item, skill)) continue;
-
-    const levelDelta = Number(skill.getFlag(FLAG, keys.levelDelta)) || 0;
-    const pointsDelta = Number(skill.getFlag(FLAG, keys.pointsDelta)) || 0;
-    const legacyRank = !skill.getFlag(FLAG, keys.mode);
-
-    const del = new foundry.data.operators.ForcedDeletion();
-    const updates = {
-      [`flags.${FLAG}.${keys.from}`]: del,
-      [`flags.${FLAG}.${keys.mode}`]: del,
-      [`flags.${FLAG}.${keys.levelDelta}`]: del,
-      [`flags.${FLAG}.${keys.pointsDelta}`]: del,
-      ...Object.fromEntries(
-        Object.entries(
-          computeFocusBonusRevoke(skill, { levelDelta, pointsDelta, legacyRank }),
-        ).map(([key, value]) => [`system.${key}`, value]),
-      ),
-    };
-
-    await skill.update(updates);
-  }
-}
+/**
+ * @param {Actor} actor
+ */
 export async function syncActorPowerBonusSkills(actor) {
   for (const item of actor.items.filter((i) => BONUS_SKILL_ITEM_TYPES.has(i.type))) {
     await syncPowerBonusSkills(item, actor, { prompt: false });

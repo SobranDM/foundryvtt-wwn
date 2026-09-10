@@ -7,6 +7,38 @@
  */
 import { getSkillCreateDataBySlug, getSkillLabelChoices, skillSlugOf } from "./skill-set.mjs";
 
+const FLAG = "wwn";
+
+/** Flag key (under the `wwn` namespace) an item's own granted-skills list lives under. */
+export const GRANTED_SKILLS_FLAG = "bonusSkillsGranted";
+
+/**
+ * Whether `item` has already granted its bonus for `slug`. Tracked on the
+ * granting item itself (which skills *it* has granted), never on the
+ * skill — a shared "who granted this" slot on the skill breaks once more
+ * than one source targets the same skill: each grant overwrites the
+ * other's stamp, so neither guard ever holds and both re-grant forever.
+ * Per-item tracking has no shared slot to contend over, so it can't
+ * collide no matter how many other items also touch the same skill.
+ * @param {Item} item
+ * @param {string} slug
+ * @returns {boolean}
+ */
+export function hasGrantedSkill(item, slug) {
+  const granted = item.getFlag(FLAG, GRANTED_SKILLS_FLAG);
+  return Array.isArray(granted) && granted.includes(slug);
+}
+
+/**
+ * Record that `item` has granted `slug`.
+ * @param {Item} item
+ * @param {string} slug
+ */
+export async function recordGrantedSkill(item, slug) {
+  const granted = item.getFlag(FLAG, GRANTED_SKILLS_FLAG) ?? [];
+  await item.setFlag(FLAG, GRANTED_SKILLS_FLAG, [...granted, slug]);
+}
+
 /**
  * @param {Actor} actor
  * @param {string} slug

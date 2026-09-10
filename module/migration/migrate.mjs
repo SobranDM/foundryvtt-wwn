@@ -15,6 +15,7 @@ import { isNpc, isPc } from "../helpers/actor-types.mjs";
 import { remapAssetPath } from "./asset-map.mjs";
 import { maybeSyncPcCompendiumItems } from "./pc-compendium-sync.mjs";
 import { maybeCleanupClassAbilities, repairInvalidEmbeddedItems } from "./class-ability-cleanup.mjs";
+import { maybeBackfillBonusSkillsGranted } from "./bonus-skills-backfill.mjs";
 import { embeddedItemsNeedReplace } from "./embedded-items.mjs";
 
 const NS = "wwn";
@@ -60,6 +61,15 @@ function forcedReplace(value) {
  */
 export async function checkMigration() {
   if (!game.user.isGM) return;
+
+  // Must run before migrateWorld() below: that pass can re-run
+  // syncActorFocusBonusSkills/syncActorPowerBonusSkills on actors whose
+  // items changed (finalizeActorMigrationHooks), and those checks are only
+  // collision-safe once flags.wwn.bonusSkillsGranted exists. Seeding it
+  // first keeps a world crossing the beta3 boundary from re-granting
+  // legacy foci during its own migration pass.
+  await maybeBackfillBonusSkillsGranted();
+
   const current = game.settings.get(NS, "systemMigrationVersion");
   const needsVersionMigrate =
     !current || foundry.utils.isNewerVersion(NEEDS_MIGRATION_BELOW, current);

@@ -43,6 +43,11 @@ jobs:
           download: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/wwn.zip
 
       - name: Zip
+        # This list is a whitelist, not a blacklist -- anything not named
+        # here is excluded automatically. In particular wwn-system-tests/
+        # (dev-only Quench batches, dynamically imported by module/wwn.mjs's
+        # quenchReady listener -- never present on a release install) and
+        # tests/ (the Node unit suite) must stay out of it; do not add them.
         run: |
           zip -r wwn.zip \
             system.json \

@@ -24,16 +24,8 @@ import { refreshPowers } from "./helpers/power-refresh.mjs";
 import { syncPowerTransferEffects } from "./helpers/power-effects.mjs";
 import { syncActorFocusEffects, syncFocusTransferEffects } from "./helpers/focus-effects.mjs";
 import { refreshActorDerivedData } from "./helpers/actor-refresh.mjs";
-import {
-  syncFocusBonusSkills,
-  revokeFocusBonusSkills,
-  syncActorFocusBonusSkills,
-} from "./helpers/focus-bonus-skills.mjs";
-import {
-  syncPowerBonusSkills,
-  revokePowerBonusSkills,
-  syncActorPowerBonusSkills,
-} from "./helpers/power-bonus-skills.mjs";
+import { syncFocusBonusSkills } from "./helpers/focus-bonus-skills.mjs";
+import { syncPowerBonusSkills } from "./helpers/power-bonus-skills.mjs";
 import { promptFocusSkillBonus } from "./helpers/focus-skill-dice.mjs";
 import {
   promptSparkSkillPool,
@@ -237,7 +229,16 @@ Hooks.once("init", async function () {
     if (item.type === "power") {
       syncPowerTransferEffects(item);
       const flat = foundry.utils.flattenObject(changes);
-      if (isPc(item.parent) && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)) {
+      // wwnBonusSkillSync: syncPowerBonusSkills's own bonusSkillsChosen write
+      // (after a prompt resolves) fires this same hook — skip re-entering it
+      // for that write, or the grant loop it's already mid-way through would
+      // race a second copy of itself. See the note on that write's call site.
+      if (
+        isPc(item.parent)
+        && userId === game.user.id
+        && !_options?.wwnBonusSkillSync
+        && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)
+      ) {
         await syncPowerBonusSkills(item, item.parent, { prompt: false });
       }
     }
@@ -246,6 +247,7 @@ Hooks.once("init", async function () {
       if (
         isPc(item.parent)
         && userId === game.user.id
+        && !_options?.wwnBonusSkillSync
         && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)
       ) {
         await syncPowerBonusSkills(item, item.parent, { prompt: false });
@@ -261,8 +263,17 @@ Hooks.once("init", async function () {
     if (item.type === "focus") {
       await syncFocusTransferEffects(item);
       const flat = foundry.utils.flattenObject(changes);
-      if (isPc(item.parent) && ["system.ownedLevel", "system.bonusSkillsChosen"].some((k) => k in flat)) {
-        await syncFocusBonusSkills(item, item.parent, { prompt: false });
+      if (
+        isPc(item.parent)
+        && userId === game.user.id
+        && ["system.ownedLevel", "system.bonusSkillsChosen"].some((k) => k in flat)
+      ) {
+        // wwnBonusSkillSync: see the note above the power branch — same
+        // re-entrancy risk from syncFocusBonusSkills's own bonusSkillsChosen
+        // write.
+        if (!_options?.wwnBonusSkillSync) {
+          await syncFocusBonusSkills(item, item.parent, { prompt: false });
+        }
         await syncWildPsychicEffort(item);
       }
       if (
@@ -283,15 +294,11 @@ Hooks.once("init", async function () {
   Hooks.on("deleteItem", async (item, _options, userId) => {
     if (item.parent?.documentName !== "Actor") return;
     if (game.wwn?.migrating || _options?.wwnMigrating) return;
-    if (item.type === "focus" && isPc(item.parent) && userId === game.user.id) {
-      await revokeFocusBonusSkills(item, item.parent);
-    }
-    if (item.type === "power" && isPc(item.parent) && userId === game.user.id) {
-      await revokePowerBonusSkills(item, item.parent);
-    }
-    if (item.type === "classEdge" && isPc(item.parent) && userId === game.user.id) {
-      await revokePowerBonusSkills(item, item.parent);
-    }
+    // Deleting a focus/power/classEdge does not claw back the skill points
+    // or ranks it granted — that bonus is treated as a permanent, sunk
+    // grant. Reversing it would require per-source delta bookkeeping on the
+    // skill, which is exactly the shared-slot design that caused foci
+    // targeting the same skill to perpetually re-grant on every login.
     if (item.type === "contribution" && userId === game.user.id) {
       await checkGodboundAutoLapse(item.parent, { excludeItemId: item.id });
     }
@@ -392,6 +399,23 @@ Hooks.once("setup", function () {
   }
 });
 
+// Dev-only Quench integration tests (wwn-system-tests/ at the repo root).
+// Registering this listener costs nothing when Quench isn't active — the
+// event simply never fires, and the dynamic import below is only attempted
+// once it does. wwn-system-tests/ is deliberately excluded from the release
+// zip (.github/workflows/release.yml's zip step is a path whitelist that
+// never names it), so a normal end-user install never has these files on
+// disk; the try/catch keeps that expected 404 from surfacing as an error in
+// the rare case Quench is active in someone else's non-dev world.
+Hooks.once("quenchReady", async (quench) => {
+  try {
+    const { registerAllBatches } = await import("../wwn-system-tests/module/wwn-tests.mjs");
+    registerAllBatches(quench);
+  } catch (err) {
+    console.warn("WWN | Quench dev-test batches unavailable (expected on a normal release install):", err);
+  }
+});
+
 Hooks.once("ready", async function () {
   applyUiTheme(game.settings.get("wwn", "uiTheme"));
 
@@ -409,11 +433,21 @@ Hooks.once("ready", async function () {
     void onActorZeroHpAutoStabilize(actor, ctx);
   });
 
+  // Focus/power/classEdge bonus-skill grants are applied once, at
+  // item-create or relevant-update time (see the createItem/updateItem
+  // hooks below) — never re-synced here. A login-time resync used to walk
+  // every actor and re-apply any grant whose "already granted" flag
+  // mismatched; when two items on the same actor grant a bonus to the same
+  // skill, each one's grant overwrites the other's flag, so the mismatch
+  // never resolves and every login re-applied both grants again, forever.
+  // syncActorFocusEffects below is gated the same way, for the same reason:
+  // it persists effect.update() writes a player's client has no permission
+  // to make for actors they don't own. Owners (not just the GM) may still
+  // run it for their own actors — effect.update() only writes when the
+  // computed disabled state actually differs, so this can't double-apply.
   for (const actor of game.actors) {
-    await syncActorFocusEffects(actor);
-    if (isPc(actor)) {
-      await syncActorFocusBonusSkills(actor);
-      await syncActorPowerBonusSkills(actor);
+    if (game.user.isGM || actor.isOwner) {
+      await syncActorFocusEffects(actor);
     }
     // A freshly-loaded actor's transfer-effect-derived fields (e.g.
     // innateAc.min-based AC) can be stale relative to prepareDerivedData()

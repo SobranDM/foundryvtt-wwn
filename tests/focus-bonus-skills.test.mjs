@@ -17,7 +17,6 @@ import {
   focusNeedsBonusSkillChoice,
   shouldUseFocusBonusPoints,
   computeFocusBonusGrant,
-  computeFocusBonusRevoke,
   specialistSkillBonusPatch,
   levelBonusSkills,
 } from "../module/helpers/focus-bonus-skills.mjs";
@@ -178,43 +177,22 @@ describe("shouldUseFocusBonusPoints", () => {
   });
 });
 
-describe("computeFocusBonusGrant / revoke", () => {
+describe("computeFocusBonusGrant", () => {
   it("L1 rank path trains untrained skills to 0", () => {
     const grant = computeFocusBonusGrant({ system: { ownedLevel: -1, pointsInvested: 0 } }, false);
-    assert.equal(grant.focusBonusMode, "rank");
     assert.equal(grant.ownedLevel, 0);
-    assert.equal(grant.focusBonusLevelDelta, 1);
-    assert.equal(grant.focusBonusPointsDelta, 0);
+    assert.equal(grant.pointsInvested, 0);
   });
 
   it("L1 rank path leaves already-trained skills unchanged", () => {
     const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, false);
-    assert.equal(grant.focusBonusMode, "rank");
     assert.equal(grant.ownedLevel, 1);
-    assert.equal(grant.focusBonusLevelDelta, 0);
   });
 
-  it("points path cascades and stores deltas", () => {
+  it("points path cascades", () => {
     const grant = computeFocusBonusGrant({ system: { ownedLevel: -1, pointsInvested: 0 } }, true);
-    assert.equal(grant.focusBonusMode, "points");
     assert.equal(grant.ownedLevel, 1);
     assert.equal(grant.pointsInvested, 0);
-    assert.equal(grant.focusBonusLevelDelta, 2);
-    assert.equal(grant.focusBonusPointsDelta, 0);
-  });
-
-  it("revoke reverses rank and points deltas", () => {
-    const rankRevoke = computeFocusBonusRevoke(
-      { system: { ownedLevel: 1, pointsInvested: 0 } },
-      { levelDelta: 1, pointsDelta: 0 },
-    );
-    assert.deepEqual(rankRevoke, { ownedLevel: 0, pointsInvested: 0 });
-
-    const pointsRevoke = computeFocusBonusRevoke(
-      { system: { ownedLevel: 1, pointsInvested: 0 } },
-      { levelDelta: 2, pointsDelta: 0 },
-    );
-    assert.deepEqual(pointsRevoke, { ownedLevel: -1, pointsInvested: 0 });
   });
 });
 

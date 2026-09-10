@@ -378,6 +378,12 @@ export function registerSettings() {
     default: false,
   });
 
+  registerWwnSetting("bonusSkillsGrantedBackfillDone", {
+    scope: "world",
+    type: Boolean,
+    default: false,
+  });
+
   /* ---- Submenus (game line → concept sections) ---- */
   for (const [key, config] of Object.entries(WWN_SETTING_MENUS)) {
     const MenuClass = defineWwnSettingsMenu(key, config);

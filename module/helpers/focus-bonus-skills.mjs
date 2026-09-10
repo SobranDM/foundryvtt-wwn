@@ -9,11 +9,13 @@ import {
   needsBonusSkillChoice,
   resolveListedBonusSkillSlugs,
   promptBonusSkillChoiceDialog,
+  hasGrantedSkill,
+  recordGrantedSkill,
+  GRANTED_SKILLS_FLAG,
 } from "./bonus-skills-shared.mjs";
 
-export { findSkillBySlug };
+export { findSkillBySlug, GRANTED_SKILLS_FLAG };
 
-const FLAG = "wwn";
 const SPECIALIST_EXCLUDED = new Set(["magic", "stab", "shoot", "punch"]);
 const NON_COMBAT_NON_MAGIC_EXCLUDED = new Set(["magic", "stab", "shoot", "punch"]);
 
@@ -175,44 +177,20 @@ export async function promptBonusSkillChoice(focus, actor) {
 /**
  * @param {{ system: { ownedLevel?: number, pointsInvested?: number } }} skill
  * @param {boolean} usePoints
- * @returns {{
- *   ownedLevel: number,
- *   pointsInvested: number,
- *   focusBonusMode: "rank"|"points",
- *   focusBonusLevelDelta: number,
- *   focusBonusPointsDelta: number
- * }}
+ * @returns {{ ownedLevel: number, pointsInvested: number }}
  */
 export function computeFocusBonusGrant(skill, usePoints) {
   const beforeLevel = skill.system.ownedLevel ?? -1;
   const beforeInvested = skill.system.pointsInvested ?? 0;
   if (usePoints) {
     const after = applySkillPoints(beforeLevel, beforeInvested, FOCUS_BONUS_SKILL_POINTS);
-    return {
-      ownedLevel: after.ownedLevel,
-      pointsInvested: after.pointsInvested,
-      focusBonusMode: "points",
-      focusBonusLevelDelta: after.ownedLevel - beforeLevel,
-      focusBonusPointsDelta: after.pointsInvested - beforeInvested,
-    };
+    return { ownedLevel: after.ownedLevel, pointsInvested: after.pointsInvested };
   }
   // Rank path: train untrained skills to 0; leave already-trained skills unchanged.
   if (beforeLevel < 0) {
-    return {
-      ownedLevel: 0,
-      pointsInvested: beforeInvested,
-      focusBonusMode: "rank",
-      focusBonusLevelDelta: 1,
-      focusBonusPointsDelta: 0,
-    };
+    return { ownedLevel: 0, pointsInvested: beforeInvested };
   }
-  return {
-    ownedLevel: beforeLevel,
-    pointsInvested: beforeInvested,
-    focusBonusMode: "rank",
-    focusBonusLevelDelta: 0,
-    focusBonusPointsDelta: 0,
-  };
+  return { ownedLevel: beforeLevel, pointsInvested: beforeInvested };
 }
 
 /**
@@ -229,60 +207,24 @@ export function specialistSkillBonusPatch(focus, choiceSlugs) {
 }
 
 /**
- * Reverse a prior focus bonus grant.
- * @param {{ system: { ownedLevel?: number, pointsInvested?: number }, getFlag?: Function }} skill
- * @param {{ levelDelta?: number, pointsDelta?: number, legacyPoints?: number }} deltas
- * @returns {{ ownedLevel?: number, pointsInvested?: number }}
- */
-export function computeFocusBonusRevoke(skill, deltas) {
-  const levelDelta = Number(deltas.levelDelta) || 0;
-  const pointsDelta = Number(deltas.pointsDelta) || 0;
-  const legacyPoints = Number(deltas.legacyPoints) || 0;
-  const out = {};
-  if (levelDelta || pointsDelta) {
-    out.ownedLevel = (skill.system.ownedLevel ?? -1) - levelDelta;
-    out.pointsInvested = Math.max((skill.system.pointsInvested ?? 0) - pointsDelta, 0);
-  } else if (legacyPoints > 0) {
-    out.pointsInvested = Math.max((skill.system.pointsInvested ?? 0) - legacyPoints, 0);
-  } else if (deltas.legacyRank && (skill.system.ownedLevel ?? -1) === 0) {
-    // Pre-delta grants only trained -1 → 0; reverse that when no stored mode/deltas exist.
-    out.ownedLevel = -1;
-  }
-  return out;
-}
-
-/**
- * @param {Item} focus
- * @param {Item} skill
- * @returns {boolean}
- */
-function isGrantedByFocus(focus, skill) {
-  return skill.getFlag(FLAG, "focusBonusFrom") === focus.id;
-}
-
-/**
  * Focus grant: may use +3 skill points when level > 1 or the setting is on.
+ * Only ever called from the createItem/updateItem hooks (item dropped onto
+ * a character, or its bonus-skill choice changes) — never re-synced on a
+ * timer or login, so this only ever runs once per focus/skill pair.
  * @param {Item} focus
  * @param {Actor} actor
  * @param {Item} skill
+ * @param {string} slug
  */
-async function grantBonusSkill(focus, actor, skill) {
-  if (isGrantedByFocus(focus, skill)) return;
+async function grantBonusSkill(focus, actor, skill, slug) {
+  if (hasGrantedSkill(focus, slug)) return;
 
   const grant = computeFocusBonusGrant(skill, shouldUseFocusBonusPoints(actor));
-  const updates = {
-    [`flags.${FLAG}.focusBonusFrom`]: focus.id,
+  await skill.update({
     "system.ownedLevel": grant.ownedLevel,
     "system.pointsInvested": grant.pointsInvested,
-    [`flags.${FLAG}.focusBonusMode`]: grant.focusBonusMode,
-    [`flags.${FLAG}.focusBonusLevelDelta`]: grant.focusBonusLevelDelta,
-    [`flags.${FLAG}.focusBonusPointsDelta`]: grant.focusBonusPointsDelta,
-  };
-
-  await skill.update(updates);
-  if (!focus.getFlag(FLAG, "focusBonusGranted")) {
-    await focus.update({ [`flags.${FLAG}.focusBonusGranted`]: true });
-  }
+  });
+  await recordGrantedSkill(focus, slug);
 }
 
 /**
@@ -306,7 +248,7 @@ export async function syncFocusBonusSkills(focus, actor, { prompt = false } = {}
   const always = alwaysBonusSkills(focus);
   for (const slug of always) {
     const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(focus, actor, skill);
+    if (skill) await grantBonusSkill(focus, actor, skill, slug);
   }
 
   let choice = resolveChoiceBonusSkillSlugs(focus);
@@ -314,7 +256,13 @@ export async function syncFocusBonusSkills(focus, actor, { prompt = false } = {}
     if (!prompt) return;
     choice = await promptBonusSkillChoice(focus, actor);
     if (!choice?.length) return;
-    await focus.update({ "system.bonusSkillsChosen": choice });
+    // wwnBonusSkillSync tells the updateItem hook this write is this same
+    // sync call persisting its own choice, not a fresh edit to re-sync for —
+    // the grant loop below already covers it. Without the marker, the
+    // update's own hook fire would re-enter this function concurrently
+    // (Hooks.callAll doesn't await async listeners) and both copies could
+    // pass grantBonusSkill's guard before either had written its result back.
+    await focus.update({ "system.bonusSkillsChosen": choice }, { wwnBonusSkillSync: true });
   }
   if (!choice?.length) {
     await syncSpecialistSkillBonus(focus, focus.system.bonusSkillsChosen ?? []);
@@ -323,43 +271,9 @@ export async function syncFocusBonusSkills(focus, actor, { prompt = false } = {}
 
   for (const slug of choice) {
     const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(focus, actor, skill);
+    if (skill) await grantBonusSkill(focus, actor, skill, slug);
   }
   await syncSpecialistSkillBonus(focus, choice);
-}
-
-/**
- * @param {Item} focus
- * @param {Actor} actor
- */
-export async function revokeFocusBonusSkills(focus, actor) {
-  if (focus.type !== "focus" || !isPc(actor)) return;
-
-  for (const skill of actor.items.filter((i) => i.type === "skill")) {
-    if (!isGrantedByFocus(focus, skill)) continue;
-
-    const levelDelta = Number(skill.getFlag(FLAG, "focusBonusLevelDelta")) || 0;
-    const pointsDelta = Number(skill.getFlag(FLAG, "focusBonusPointsDelta")) || 0;
-    // Legacy: older grants stored focusBonusPoints without level deltas.
-    const legacyPoints = Number(skill.getFlag(FLAG, "focusBonusPoints")) || 0;
-    const legacyRank = !skill.getFlag(FLAG, "focusBonusMode");
-
-    const del = new foundry.data.operators.ForcedDeletion();
-    const updates = {
-      [`flags.${FLAG}.focusBonusFrom`]: del,
-      [`flags.${FLAG}.focusBonusMode`]: del,
-      [`flags.${FLAG}.focusBonusLevelDelta`]: del,
-      [`flags.${FLAG}.focusBonusPointsDelta`]: del,
-      [`flags.${FLAG}.focusBonusPoints`]: del,
-      ...Object.fromEntries(
-        Object.entries(
-          computeFocusBonusRevoke(skill, { levelDelta, pointsDelta, legacyPoints, legacyRank }),
-        ).map(([key, value]) => [`system.${key}`, value]),
-      ),
-    };
-
-    await skill.update(updates);
-  }
 }
 
 /**

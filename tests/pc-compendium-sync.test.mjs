@@ -224,10 +224,12 @@ describe("extractPreservedFields / buildReplacementData", () => {
         internalResource: { value: 1, max: 2 },
         bonusDice: 1,
       },
+      flags: { wwn: { bonusSkillsGranted: ["notice"] } },
     };
     const preserved = extractPreservedFields(owned);
     assert.equal(preserved.ownedLevel, 2);
     assert.deepEqual(preserved.bonusSkillsChosen, ["notice"]);
+    assert.deepEqual(preserved.bonusSkillsGranted, ["notice"]);
 
     const pack = {
       _id: "packid",
@@ -248,6 +250,11 @@ describe("extractPreservedFields / buildReplacementData", () => {
     assert.deepEqual(created.system.bonusSkillsChosen, ["notice"]);
     assert.equal(created.system.description, "New text");
     assert.equal(created.effects[0]._id, undefined);
+    assert.deepEqual(
+      created.flags?.wwn?.bonusSkillsGranted,
+      ["notice"],
+      "grant history must survive a compendium swap, or the replacement item re-grants on its next edit",
+    );
   });
 
   it("preserves classEdge poolGrant.value only", () => {
