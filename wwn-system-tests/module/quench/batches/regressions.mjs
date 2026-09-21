@@ -606,7 +606,11 @@ export default function register(quench) {
             await actor.update({ "system.details.level": 1 });
             await settle();
             await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
-              const [stab, notice] = await actor.createEmbeddedDocuments(
+              // createEmbeddedDocuments does NOT return the new documents in
+              // input order (they come back in server/_id order, which is
+              // random per run), so a positional destructure here silently
+              // swaps stab/notice on some runs. Look them up by name instead.
+              const createdSkills = await actor.createEmbeddedDocuments(
                 "Item",
                 [
                   { name: "Stab", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "str" } },
@@ -614,6 +618,8 @@ export default function register(quench) {
                 ],
                 { wwnMigrating: true },
               );
+              const stab = createdSkills.find((i) => i.name === "Stab");
+              const notice = createdSkills.find((i) => i.name === "Notice");
 
               // No wwnMigrating here -- let the real createItem hook grant
               // it (prompt: true), matching an actual drag-and-drop.
@@ -823,7 +829,8 @@ export default function register(quench) {
             await actor.update({ "system.details.level": 1 });
             await settle();
             await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
-              const [stab, notice] = await actor.createEmbeddedDocuments(
+              // Looked up by name, not positionally -- see the rank-redirect test above.
+              const createdSkills = await actor.createEmbeddedDocuments(
                 "Item",
                 [
                   { name: "Stab", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "str" } },
@@ -831,6 +838,8 @@ export default function register(quench) {
                 ],
                 { wwnMigrating: true },
               );
+              const stab = createdSkills.find((i) => i.name === "Stab");
+              const notice = createdSkills.find((i) => i.name === "Notice");
 
               const [focus] = await actor.createEmbeddedDocuments("Item", [
                 {
@@ -917,7 +926,8 @@ export default function register(quench) {
             await actor.update({ "system.details.level": 1 });
             await settle();
             await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
-              const [fix, notice] = await actor.createEmbeddedDocuments(
+              // Looked up by name, not positionally -- see the rank-redirect test above.
+              const createdSkills = await actor.createEmbeddedDocuments(
                 "Item",
                 [
                   { name: "Fix", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "int" } },
@@ -925,6 +935,8 @@ export default function register(quench) {
                 ],
                 { wwnMigrating: true },
               );
+              const fix = createdSkills.find((i) => i.name === "Fix");
+              const notice = createdSkills.find((i) => i.name === "Notice");
 
               // Level 1: Ace Driver only grants Drive (Fix unlocks at focus
               // level 2 via LEVEL_BONUS_SKILLS) -- no dialog expected here.
