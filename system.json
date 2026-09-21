@@ -43,6 +43,9 @@
       "project": {
         "htmlFields": ["effects", "notes"]
       },
+      "party": {
+        "htmlFields": ["description"]
+      },
       "pc": {
         "htmlFields": ["biography", "details.notes"]
       },

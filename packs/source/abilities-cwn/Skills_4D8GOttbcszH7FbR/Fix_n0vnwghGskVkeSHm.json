@@ -8,7 +8,6 @@
     "description": "Create and repair devices both simple and complex. Your PC may be specialized in some field depending on their background, but this skill can be applied generally by most operators. Roll it to fix things, build things, and identify what something is supposed to do.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

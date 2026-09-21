@@ -4,6 +4,7 @@ export { default as WwnFaction } from "./actor/faction.mjs";
 export { default as WwnStarship } from "./actor/starship.mjs";
 export { default as WwnPowerArmor } from "./actor/power-armor.mjs";
 export { default as WwnProject } from "./actor/project.mjs";
+export { default as WwnParty } from "./actor/party.mjs";
 
 export { default as WwnGear } from "./item/gear.mjs";
 export { default as WwnAmmo } from "./item/ammo.mjs";

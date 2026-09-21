@@ -178,7 +178,9 @@ export default function register(quench) {
             await syncActorPowerBonusSkills(actor);
             await settle();
             const afterFirstPass = actor.items.get(skill.id).system.ownedLevel;
-            assert.equal(afterFirstPass, 0, "rank-mode grant: untrained -1 -> 0, regardless of how many sources hit it");
+            // Each source's rank-mode grant is a real +1: edgeA trains -1 -> 0,
+            // then edgeB's independent grant raises the now-trained skill 0 -> 1.
+            assert.equal(afterFirstPass, 1, "two independent rank grants stack: -1 -> 0 -> 1");
 
             for (let i = 0; i < 5; i++) {
               await syncActorPowerBonusSkills(actor);

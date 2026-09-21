@@ -268,6 +268,56 @@ export default function register(quench) {
           }
         });
 
+        it("code-review fix: a single Alert PC's group-initiative roll adds +1, not +2", async function () {
+          // Regression for a code-review finding: deriveInitiative already
+          // folds group.mod into group.value, but _getGroupInitiativeData
+          // (module/combat/combat.js) separately re-added +1 whenever any
+          // member had group.mod >= 1 -- doubling Alert's bonus for even a
+          // single PC (rolled "... + 2" instead of "... + 1").
+          const a = await createFociTestPc({ label: "alert-solo" });
+          let combat = null;
+          try {
+            await embedPackItem(a, "Alert");
+            a.prepareData();
+            assert.equal(a.system.combat.initiative.group.mod, 1);
+            const groupRollFormula = a.system.combat.initiative.group.roll || "1d8";
+
+            let dieFace;
+            let group;
+            await withSetting("initiative", "group", async () => {
+              await withPinnedDice(PIN_D20_LOW, async () => {
+                dieFace = (await new Roll(groupRollFormula).evaluate()).total;
+
+                combat = await Combat.create({ scene: null });
+                const [combatant] = await combat.createEmbeddedDocuments("Combatant", [
+                  { actorId: a.id },
+                ]);
+                await settle();
+                // Assign explicitly rather than relying on disposition-based
+                // auto-assignment, which needs a real scene/token.
+                await combat.assignGroup(combatant, "green");
+                await settle();
+
+                group = combat.groups.find((g) => [...g.members].some((m) => m.actorId === a.id));
+                assert.exists(group, "the combatant should be in a group before rolling");
+
+                await combat.smartRerollInitiative({ excludeAlreadyRolled: true });
+                await settle();
+              });
+            });
+
+            const rolled = combat.groups.get(group.id)?.initiative;
+            assert.equal(
+              rolled,
+              dieFace + 1,
+              "a single Alert PC's group roll must add the +1 group.mod exactly once, not twice",
+            );
+          } finally {
+            if (combat?.id) await combat.delete();
+            await deleteTestActor(a);
+          }
+        });
+
         it("Alert 2 adds +100 individual init and leaves L1 enabled", async function () {
           const actor = await createFociTestPc({ label: "alert-2" });
           try {

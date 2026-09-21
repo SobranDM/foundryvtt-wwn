@@ -12,7 +12,6 @@
     "description": "Treat wounds, cure diseases, neutralize poisons, diagnose psychological health issues, and otherwise tend to the wounds of body and mind. The Heal skill cannot cure lost hit points directly, but it’s a vital skill in stabilizing Mortally Wounded allies or ensuring clean recovery from grievous injuries.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

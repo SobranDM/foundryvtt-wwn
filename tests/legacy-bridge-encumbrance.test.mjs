@@ -2,14 +2,14 @@
  * Tests for sheet-legacy-bridge remaps, migrateCharacter Tweaks→AE, encumbrance weights.
  */
 import "../build/foundry-shim.mjs";
-import { describe, it } from "node:test";
+import { describe, it, afterEach } from "node:test";
 import assert from "node:assert/strict";
 import {
   applyLegacySheetAliases,
   remapLegacySubmitData,
 } from "../module/helpers/sheet-legacy-bridge.mjs";
 import { migrateActorData } from "../module/migration/transforms.mjs";
-import { physicalItemWeight } from "../module/derivations/encumbrance.mjs";
+import { physicalItemWeight, deriveEncumbrance } from "../module/derivations/encumbrance.mjs";
 
 describe("sheet-legacy-bridge", () => {
   it("aliases abilities to scores and builds system.ac display", () => {
@@ -90,6 +90,129 @@ describe("physicalItemWeight (charge encumbrance)", () => {
       physicalItemWeight("weapon", { weight: 2, quantity: 1, charges: { value: 6, max: 6 } }),
       2
     );
+  });
+});
+
+describe("deriveEncumbrance (party-carried parity)", () => {
+  const originalGame = globalThis.game;
+  afterEach(() => {
+    globalThis.game = originalGame;
+  });
+
+  function pcActor({ uuid, items, str = 10 }) {
+    return {
+      type: "character",
+      uuid,
+      items,
+      system: { abilities: { str: { value: str } } },
+    };
+  }
+
+  it("an identical gold stack encumbers the same whether owned directly or carried for the party", () => {
+    globalThis.game = { settings: { get: () => false }, actors: [] };
+
+    const direct = pcActor({
+      uuid: "Actor.direct",
+      items: [{ type: "currency", system: { carried: 500, perSlot: 100 } }],
+    });
+    deriveEncumbrance(direct);
+
+    const carrier = pcActor({ uuid: "Actor.carrier", items: [] });
+    globalThis.game.actors = [
+      {
+        type: "party",
+        items: [{ id: "c1", type: "currency", system: { carried: 500, perSlot: 100 } }],
+        system: { carrierAssignments: { c1: "Actor.carrier" } },
+      },
+    ];
+    deriveEncumbrance(carrier);
+
+    assert.equal(direct.system.encumbrance.stowed.value, carrier.system.encumbrance.stowed.value);
+    assert.equal(carrier.system.encumbrance.partyCarried, direct.system.encumbrance.stowed.value);
+  });
+
+  it("an identical physical item encumbers the same whether owned directly or carried for the party", () => {
+    globalThis.game = { settings: { get: () => true }, actors: [] }; // roundWeight on
+
+    const direct = pcActor({
+      uuid: "Actor.direct",
+      items: [{ type: "item", system: { weight: 1.5, quantity: 1, stowed: true, equipped: false } }],
+    });
+    deriveEncumbrance(direct);
+
+    const carrier = pcActor({ uuid: "Actor.carrier", items: [] });
+    globalThis.game.actors = [
+      {
+        type: "party",
+        items: [{ id: "i1", type: "item", system: { weight: 1.5, quantity: 1 } }],
+        system: { carrierAssignments: { i1: "Actor.carrier" } },
+      },
+    ];
+    deriveEncumbrance(carrier);
+
+    assert.equal(direct.system.encumbrance.stowed.value, carrier.system.encumbrance.stowed.value);
+  });
+
+  it("party-carried weight is zero when nothing is assigned to this actor", () => {
+    globalThis.game = {
+      settings: { get: () => false },
+      actors: [
+        {
+          type: "party",
+          items: [{ id: "i1", type: "item", system: { weight: 5, quantity: 1 } }],
+          system: { carrierAssignments: { i1: "Actor.other" } },
+        },
+      ],
+    };
+    const actor = pcActor({ uuid: "Actor.pc1", items: [] });
+    deriveEncumbrance(actor);
+    assert.equal(actor.system.encumbrance.stowed.value, 0);
+    assert.equal(actor.system.encumbrance.partyCarried, 0);
+  });
+
+  it("sums many small party-carried items raw instead of rounding each one up individually", () => {
+    globalThis.game = {
+      settings: { get: () => true }, // roundWeight on
+      actors: [
+        {
+          type: "party",
+          items: [
+            { id: "i1", type: "item", system: { weight: 0.4, quantity: 1 } },
+            { id: "i2", type: "item", system: { weight: 0.4, quantity: 1 } },
+            { id: "i3", type: "item", system: { weight: 0.4, quantity: 1 } },
+          ],
+          system: { carrierAssignments: { i1: "Actor.pc1", i2: "Actor.pc1", i3: "Actor.pc1" } },
+        },
+      ],
+    };
+    const actor = pcActor({ uuid: "Actor.pc1", items: [] });
+    deriveEncumbrance(actor);
+    // Per-item rounding would give ceil(0.4)*3 = 3; raw-summed-then-rounded-
+    // once gives ceil(1.2) = 2.
+    assert.equal(actor.system.encumbrance.stowed.value, 2);
+  });
+
+  it("a party-assigned coin rides along for free once the PC's own currency already rounds up a slot", () => {
+    globalThis.game = {
+      settings: { get: () => true }, // roundWeight on
+      actors: [
+        {
+          type: "party",
+          items: [{ id: "c1", type: "currency", system: { carried: 5, perSlot: 100 } }], // 0.05 slots
+          system: { carrierAssignments: { c1: "Actor.pc1" } },
+        },
+      ],
+    };
+    // Own currency: 5/100 = 0.05 slots -- already rounds up to occupy 1 slot by itself.
+    const actor = pcActor({
+      uuid: "Actor.pc1",
+      items: [{ type: "currency", system: { carried: 5, perSlot: 100 } }],
+    });
+    deriveEncumbrance(actor);
+    assert.equal(actor.system.encumbrance.stowed.value, 1);
+    // The raw display number still honestly reflects the party's own tiny
+    // slice, even though it changed nothing about the rounded total above.
+    assert.equal(actor.system.encumbrance.partyCarried, 0.05);
   });
 });
 

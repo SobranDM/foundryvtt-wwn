@@ -31,6 +31,7 @@ import registerPowerArmorCombat from "./quench/batches/power-armor-combat.mjs";
 import registerCyberware from "./quench/batches/cyberware.mjs";
 import registerProjects from "./quench/batches/projects.mjs";
 import registerBonusSkillsBackfill from "./quench/batches/bonus-skills-backfill.mjs";
+import registerParty from "./quench/batches/party.mjs";
 
 const BATCH_REGISTRARS = [
   registerApi,
@@ -63,6 +64,7 @@ const BATCH_REGISTRARS = [
   registerCyberware,
   registerProjects,
   registerBonusSkillsBackfill,
+  registerParty,
 ];
 
 /**

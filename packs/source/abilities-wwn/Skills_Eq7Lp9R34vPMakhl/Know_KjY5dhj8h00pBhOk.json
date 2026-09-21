@@ -12,7 +12,6 @@
     "description": "Know matters of history, geography, natural science, zoology, and other academic fields appropriate to a sage or scholar. While some sages might specialize in particular fields, most learned men and women in this age have a broad range of understanding, and will rarely be unable to even attempt to answer a question relevant to this skill.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

@@ -11,7 +11,7 @@
     "commitmentOptions": [
       {
         "cost": 0,
-        "length": "none",
+        "length": "active",
         "note": ""
       }
     ],
@@ -35,7 +35,53 @@
       "duration": ""
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "HqFAStrMod000001",
+      "type": "base",
+      "name": "Feral Prowess (Strength)",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.abilities.str.baseMod", "type": "add", "value": 1, "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!HqFAPoei27Nr6UYy.HqFAStrMod000001"
+    },
+    {
+      "_id": "HqFADexMod000001",
+      "type": "base",
+      "name": "Feral Prowess (Dexterity)",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.abilities.dex.baseMod", "type": "add", "value": 1, "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!HqFAPoei27Nr6UYy.HqFADexMod000001"
+    },
+    {
+      "_id": "HqFAConMod000001",
+      "type": "base",
+      "name": "Feral Prowess (Constitution)",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.abilities.con.baseMod", "type": "add", "value": 1, "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!HqFAPoei27Nr6UYy.HqFAConMod000001"
+    }
+  ],
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities-wwn.HqFAPoei27Nr6UYy"

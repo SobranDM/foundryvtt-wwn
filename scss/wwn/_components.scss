@@ -339,6 +339,19 @@
           flex: 0 0 3.25rem;
         }
 
+        /* Shock's "Any AC" swap (weapon.hbs): keep the same footprint as the
+           AC number input it replaces so the damage input beside it doesn't
+           shift when this flex-end row's content width changes. */
+        .wwn-shock-any-ac {
+          box-sizing: border-box;
+          width: 3.25rem;
+          flex: 0 0 3.25rem;
+          height: var(--input-height);
+          line-height: var(--input-height);
+          text-align: center;
+          font-style: italic;
+        }
+
         input[type="text"] {
           width: 5.5rem;
           max-width: 7rem;
@@ -556,6 +569,16 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+      }
+
+      /* An <i> icon glyph standing in for an item's <img> (e.g. the
+         Encumbrance row) inherits .item-image's 30x30 box, but a font
+         glyph doesn't auto-center in a box taller than its line-height the
+         way an <img> does -- without this it renders flush to the top. */
+      i.item-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       h4 {

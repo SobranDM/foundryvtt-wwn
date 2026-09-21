@@ -1,0 +1,22 @@
+{{!-- Party sheet header: identity band + member/XP/currency actions. --}}
+<header class="sheet-header wwn-sheet-header wwn-party-header">
+  <div class="wwn-header-identity">
+    <img class="profile-img party-header-img" src="{{actor.img}}" data-action="editImage" data-edit="img" title="{{actor.name}}" alt="" />
+    <div class="wwn-header-identity-fields">
+      <div class="wwn-header-row wwn-header-row--primary">
+        <input class="wwn-header-name" name="name" type="text" value="{{actor.name}}"
+          placeholder="{{localize 'WWN.details.name'}}" />
+        {{#if isGM}}
+        <a class="wwn-chip" data-action="dealXp" title="{{localize 'WWN.dialog.xp.deal'}}">
+          <i class="fas fa-level-up-alt"></i>
+          <span class="wwn-chip-label">{{localize "WWN.dialog.xp.deal"}}</span>
+        </a>
+        <a class="wwn-chip" data-action="dealCurrency" title="{{localize 'WWN.dialog.currency.deal'}}">
+          <i class="fas fa-coins"></i>
+          <span class="wwn-chip-label">{{localize "WWN.dialog.currency.deal"}}</span>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>

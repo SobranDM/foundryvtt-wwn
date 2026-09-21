@@ -1,4 +1,5 @@
 import {
+  answerActiveDialog,
   createTestActor,
   deleteTestActor,
   settle,
@@ -63,8 +64,10 @@ export default function register(quench) {
           });
         });
 
-        it("focus skill dice bonus stacks on skillDice tier (not hardcoded 2)", async function () {
-          const { skillDiceCount } = await wwnImport("/systems/wwn/module/dice/roll-parts.mjs");
+        it("focus skill dice bonus adds onto the fixed 2d6 base", async function () {
+          // Skills no longer carry their own skillDice field (removed --
+          // every skill is 2d6 unless a focus/power says otherwise); a
+          // focus's extraDice always stacks onto that fixed base.
           const { getFocusSkillDiceBonus } = await wwnImport(
             "/systems/wwn/module/helpers/focus-skill-dice.mjs",
           );
@@ -79,13 +82,13 @@ export default function register(quench) {
               {
                 name: "Know",
                 type: "skill",
-                system: { slug: "know", skillDice: "3d6kh2", ownedLevel: 1 },
+                system: { slug: "know", ownedLevel: 1 },
               },
             ]);
             await settle();
             const { extraDice } = getFocusSkillDiceBonus(actor, "know");
             assert.equal(extraDice, 1);
-            assert.equal(skillDiceCount("3d6kh2") + extraDice, 4);
+            assert.equal(2 + extraDice, 3, "2d6 base + 1 focus die = 3d6, drop the lowest");
           } finally {
             await deleteTestActor(actor);
           }
@@ -482,8 +485,9 @@ export default function register(quench) {
           const actor = await createTestActor("character", "reg-focus-collision", {}, { wwnSkipSeeding: true });
           try {
             // Level 2 forces the +3 skill-points path (shouldUseFocusBonusPoints),
-            // matching the original incident -- rank-mode grants are already
-            // self-limiting (untrained -1 -> 0 only) and would mask growth.
+            // matching the original incident, where each pass injected +3
+            // points rather than +1 rank -- makes runaway growth from a
+            // reintroduced collision unmistakable in the assertion below.
             await actor.update({ "system.details.level": 2 });
             await settle();
 
@@ -539,6 +543,468 @@ export default function register(quench) {
               "each focus tracks its own grant independently -- no shared slot to collide over",
             );
             assert.deepEqual(actor.items.get(focusB.id).getFlag("wwn", "bonusSkillsGranted"), ["talk"]);
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("a level-1 character's already-rank-1 skill is not pushed to rank 2 by a new focus grant", async function () {
+          // Reported bug: fixing the rank path to "+1 always, never clamp
+          // to 0" (so two foci could legitimately stack rank -1 -> 0 -> 1)
+          // still needs to respect the same character-level rank cap a
+          // manual purchase would -- rank 1 -> 2 needs character level 3
+          // (evaluateSkillLevelRequirement). Without that cap, dropping a
+          // focus granting a bonus to an already-rank-1 skill on a level-1
+          // character pushed it straight to rank 2, which a level-1
+          // character could never buy normally.
+          const actor = await createTestActor("character", "reg-rank-cap", {}, { wwnSkipSeeding: true });
+          try {
+            await actor.update({ "system.details.level": 1 });
+            await settle();
+            await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
+              const [skill] = await actor.createEmbeddedDocuments(
+                "Item",
+                [{ name: "Stab", type: "skill", system: { slug: "stab", ownedLevel: 1, pointsInvested: 0, score: "str" } }],
+                { wwnMigrating: true },
+              );
+
+              // No wwnMigrating here -- let the real createItem hook grant
+              // it, matching an actual drag-and-drop onto the sheet.
+              await actor.createEmbeddedDocuments("Item", [
+                {
+                  name: "Quench Rank Cap Focus",
+                  type: "focus",
+                  system: { ownedLevel: 1, bonusSkills: ["stab"], bonusSkillsPick: 1, bonusSkillsChosen: [] },
+                },
+              ]);
+              await settle();
+
+              assert.equal(
+                actor.items.get(skill.id).system.ownedLevel,
+                1,
+                "rank 1 -> 2 needs character level 3; a level-1 character's free grant must not bypass that",
+              );
+              // No other skill exists to redirect the bonus to, so it must
+              // stay unresolved rather than being recorded (and thus
+              // permanently forfeited) as granted -- see the redirect test
+              // below for the case where a substitute is available.
+              assert.notOk(
+                game.actors.get(actor.id).items.find((i) => i.type === "focus")?.getFlag("wwn", "bonusSkillsGranted"),
+              );
+            });
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("a rank-path grant blocked by the level cap redirects to another skill the player picks", async function () {
+          // Per WWN rules: a blocked grant isn't just lost -- the player
+          // chooses a different, currently-eligible skill to receive it
+          // instead (still subject to the same rank cap).
+          const actor = await createTestActor("character", "reg-rank-redirect", {}, { wwnSkipSeeding: true });
+          try {
+            await actor.update({ "system.details.level": 1 });
+            await settle();
+            await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
+              const [stab, notice] = await actor.createEmbeddedDocuments(
+                "Item",
+                [
+                  { name: "Stab", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "str" } },
+                  { name: "Notice", type: "skill", system: { ownedLevel: 0, pointsInvested: 0, score: "int" } },
+                ],
+                { wwnMigrating: true },
+              );
+
+              // No wwnMigrating here -- let the real createItem hook grant
+              // it (prompt: true), matching an actual drag-and-drop.
+              const [focus] = await actor.createEmbeddedDocuments("Item", [
+                {
+                  name: "Quench Rank Redirect Focus",
+                  type: "focus",
+                  system: { ownedLevel: 1, bonusSkills: ["stab"], bonusSkillsPick: 1, bonusSkillsChosen: [] },
+                },
+              ]);
+
+              await answerActiveDialog("Bonus Skill Blocked", { selectValue: notice.id });
+              await settle();
+
+              assert.equal(
+                actor.items.get(stab.id).system.ownedLevel,
+                1,
+                "the blocked skill itself must stay at rank 1",
+              );
+              assert.equal(
+                actor.items.get(notice.id).system.ownedLevel,
+                1,
+                "the player's chosen substitute must receive the bonus instead",
+              );
+              assert.deepEqual(
+                actor.items.get(focus.id).getFlag("wwn", "bonusSkillsGranted"),
+                ["stab"],
+                "the focus tracks the declared slug as resolved, whichever skill actually received it",
+              );
+            });
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("an unrelated weapon update does not reset ammoMode/ammoFallback/charges or shock.ac (code-review fix)", async function () {
+          // Same hazard as the renown/morale fix above, found in
+          // WwnWeapon.migrateData: it used to recompute ammoMode from
+          // scratch whenever ammoMode/ammoFallback were ABSENT from the
+          // update diff (not just genuinely missing on a full document
+          // load) -- so toggling Equipped, adjusting price, or any other
+          // partial weapon.update() call recomputed ammoMode from an
+          // incomplete diff and stamped ammoMode:"none" + wiped
+          // ammoFallback/charges into the real document. shock.ac had the
+          // identical shape: any update touching `shock` without mentioning
+          // `ac` reset it to the default 15.
+          const actor = await createTestActor("character", "reg-weapon-partial-update", {}, { wwnSkipSeeding: true });
+          try {
+            const [weapon] = await actor.createEmbeddedDocuments("Item", [
+              {
+                name: "Quench Probe Rifle",
+                type: "weapon",
+                system: {
+                  ammoMode: "linked",
+                  ammoFallback: "Rifle Rounds",
+                  charges: { value: 12, max: 12 },
+                  shock: { ac: 12 },
+                },
+              },
+            ]);
+            await settle();
+            assert.equal(weapon._source.system.ammoMode, "linked");
+
+            await weapon.update({ "system.equipped": true });
+            await settle();
+            assert.equal(weapon._source.system.ammoMode, "linked", "toggling Equipped must not reset ammoMode");
+            assert.equal(weapon._source.system.ammoFallback, "Rifle Rounds");
+            assert.deepEqual(weapon._source.system.charges, { value: 12, max: 12 });
+            assert.equal(weapon._source.system.shock.ac, 12, "toggling Equipped must not reset shock.ac");
+
+            await weapon.update({ "system.price": 500 });
+            await settle();
+            assert.equal(weapon._source.system.ammoMode, "linked", "an unrelated price update must not reset ammoMode");
+            assert.deepEqual(weapon._source.system.charges, { value: 12, max: 12 });
+
+            await weapon.update({ "system.shock.damage": "1d4" });
+            await settle();
+            assert.equal(weapon._source.system.shock.ac, 12, "editing shock.damage alone must not reset shock.ac");
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("a pre-2.0.0-beta4 blank Shock AC migrates to the anyAc flag, not just a default number", async function () {
+          // Pre-2.0.0-beta4 worlds represented "Shock applies to any AC" by
+          // leaving system.shock.ac blank ("" or null) -- the schema now
+          // requires a real integer (WwnWeapon.defineSchema), so
+          // WwnWeapon.migrateData must translate that legacy blank signal
+          // into system.shock.anyAc = true, not just silently pick a
+          // default AC number and lose the "any AC" intent. Written via a
+          // raw, non-recursive update (diff:false/recursive:false) to
+          // simulate genuine legacy document data landing through
+          // migrateData, exactly like a real pre-2.0.0-beta4 world load
+          // would -- a normal weapon.update() would go through the
+          // modern schema and never produce a blank ac in the first place.
+          const actor = await createTestActor("character", "reg-weapon-blank-ac-migration", {}, { wwnSkipSeeding: true });
+          try {
+            const [emptyString] = await actor.createEmbeddedDocuments("Item", [
+              { name: "Quench Legacy Any-AC Sword", type: "weapon", system: { damage: "1d8" } },
+            ]);
+            await settle();
+            await emptyString.update(
+              { "system.shock": { damage: "1d4", ac: "" } },
+              { diff: false, recursive: false, enforceTypes: false },
+            );
+            await settle();
+            assert.deepEqual(
+              emptyString._source.system.shock,
+              { damage: "1d4", ac: 15, anyAc: true },
+              "a blank ('') legacy shock.ac must migrate to ac:15 + anyAc:true, keeping the real shock damage",
+            );
+            emptyString.prepareData();
+            assert.equal(
+              emptyString.system.shockAcValue,
+              Infinity,
+              "the migrated anyAc flag must derive shockAcValue as unconditional (Infinity)",
+            );
+
+            const [nullAc] = await actor.createEmbeddedDocuments("Item", [
+              { name: "Quench Legacy Any-AC Axe", type: "weapon", system: { damage: "1d8" } },
+            ]);
+            await settle();
+            await nullAc.update(
+              { "system.shock": { damage: "1d6", ac: null } },
+              { diff: false, recursive: false, enforceTypes: false },
+            );
+            await settle();
+            assert.equal(nullAc._source.system.shock.anyAc, true, "a null legacy shock.ac must migrate the same way as blank");
+
+            // Control: a genuinely numeric legacy AC must NOT be treated as
+            // "any" -- only true blanks carry that meaning.
+            const [numeric] = await actor.createEmbeddedDocuments("Item", [
+              { name: "Quench Legacy Numeric-AC Mace", type: "weapon", system: { damage: "1d6" } },
+            ]);
+            await settle();
+            await numeric.update(
+              { "system.shock": { damage: "1d4", ac: "13" } },
+              { diff: false, recursive: false, enforceTypes: false },
+            );
+            await settle();
+            assert.equal(numeric._source.system.shock.ac, 13);
+            assert.equal(numeric._source.system.shock.anyAc, false, "a real numeric legacy AC must not flip anyAc");
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("an unrelated classEdge update does not reset hdGrant/poolGrant/bonusSkills/companions (code-review fix)", async function () {
+          // Same hazard: WwnClassEdge.migrateData used to manufacture
+          // hdGrant/poolGrant/preparedGrant/attributeGrant out of thin air
+          // (`source.hdGrant ??= {}`, etc.) and default bonusSkills/
+          // bonusSkillsChosen/companions to [] whenever they were ABSENT
+          // from the update diff -- so something as mundane as editing a
+          // class edge's description wiped its hit-dice grant, resource
+          // pool progression, resolved bonus-skill choices, and companion
+          // list.
+          const actor = await createTestActor("character", "reg-classedge-partial-update", {}, { wwnSkipSeeding: true });
+          try {
+            const [edge] = await actor.createEmbeddedDocuments("Item", [
+              {
+                name: "Quench Probe Edge",
+                type: "classEdge",
+                system: {
+                  edgeType: "class",
+                  hdGrant: { die: "d8", perLevelMod: 1 },
+                  poolGrant: { name: "Effort", formula: "3", value: 3, progression: [1, 2, 3, 4, 5, 6] },
+                  bonusSkills: ["stab"],
+                  bonusSkillsPick: 1,
+                  bonusSkillsChosen: ["stab"],
+                  companions: ["Ally A"],
+                },
+              },
+            ]);
+            await settle();
+
+            await edge.update({ "system.description": "Updated flavor text." });
+            await settle();
+
+            assert.deepEqual(edge._source.system.hdGrant, { die: "d8", perLevelMod: 1 });
+            assert.deepEqual(
+              edge._source.system.poolGrant,
+              { name: "Effort", formula: "3", value: 3, progression: [1, 2, 3, 4, 5, 6] },
+            );
+            assert.deepEqual(edge._source.system.bonusSkills, ["stab"]);
+            assert.deepEqual(edge._source.system.bonusSkillsChosen, ["stab"]);
+            assert.deepEqual(edge._source.system.companions, ["Ally A"]);
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        // --- code-review fix coverage -----------------------------------
+
+        it("deleting the skill a redirected bonus actually landed on clears the stale grant record so it can be retried (code-review fix)", async function () {
+          // Code-review finding: a redirected grant recorded only the
+          // ORIGINAL (blocked) slug as "already granted" forever, even
+          // though the skill it actually landed on -- and the bonus it
+          // carried -- could later be deleted entirely. Fixed by tracking
+          // the actual target skill id (flags.wwn.bonusSkillsGrantedTargets)
+          // and clearing the stale entry from the real deleteItem hook
+          // (module/wwn.mjs) when that skill is deleted, via
+          // clearGrantedSkillsForDeletedTarget. This exercises the real hook
+          // wiring end-to-end, not just the mocked helper (already covered
+          // by tests/bonus-skills-shared.test.mjs).
+          const actor = await createTestActor("character", "reg-redirect-target-deleted", {}, { wwnSkipSeeding: true });
+          try {
+            await actor.update({ "system.details.level": 1 });
+            await settle();
+            await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
+              const [stab, notice] = await actor.createEmbeddedDocuments(
+                "Item",
+                [
+                  { name: "Stab", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "str" } },
+                  { name: "Notice", type: "skill", system: { ownedLevel: 0, pointsInvested: 0, score: "int" } },
+                ],
+                { wwnMigrating: true },
+              );
+
+              const [focus] = await actor.createEmbeddedDocuments("Item", [
+                {
+                  name: "Quench Redirect Target Deleted Focus",
+                  type: "focus",
+                  system: { ownedLevel: 1, bonusSkills: ["stab"], bonusSkillsPick: 1, bonusSkillsChosen: [] },
+                },
+              ]);
+
+              await answerActiveDialog("Bonus Skill Blocked", { selectValue: notice.id });
+              await settle(200);
+
+              assert.equal(actor.items.get(notice.id).system.ownedLevel, 1, "redirect must have granted Notice");
+              assert.deepEqual(actor.items.get(focus.id).getFlag("wwn", "bonusSkillsGranted"), ["stab"]);
+              assert.equal(
+                actor.items.get(focus.id).getFlag("wwn", "bonusSkillsGrantedTargets")?.stab,
+                notice.id,
+                "the focus must track which skill the redirected grant actually landed on",
+              );
+
+              // Notice -- the redirect target, not the originally-blocked
+              // skill -- is deleted. Only the real deleteItem hook can catch
+              // this and clean up (nothing calls clearGrantedSkillsForDeletedTarget directly here).
+              await actor.items.get(notice.id).delete();
+              await settle(200);
+
+              const refreshedFocus = actor.items.get(focus.id);
+              assert.notInclude(
+                refreshedFocus.getFlag("wwn", "bonusSkillsGranted") ?? [],
+                "stab",
+                "deleting the skill the bonus actually landed on must clear the stale 'already granted' record",
+              );
+              assert.notExists(
+                refreshedFocus.getFlag("wwn", "bonusSkillsGrantedTargets")?.stab,
+                "the target-tracking entry for the deleted skill must be cleared too",
+              );
+
+              // Prove this is genuinely recoverable, not just cleared and
+              // still stuck: a fresh eligible skill appears, and the next
+              // prompt-enabled sync (e.g. the GM reopening the sheet) can
+              // grant the bonus again.
+              const [survive] = await actor.createEmbeddedDocuments(
+                "Item",
+                [{ name: "Survive", type: "skill", system: { ownedLevel: 0, pointsInvested: 0, score: "con" } }],
+                { wwnMigrating: true },
+              );
+              const { syncFocusBonusSkills } = await wwnImport("/systems/wwn/module/helpers/focus-bonus-skills.mjs");
+              // Do not `await` this directly -- it awaits the redirect dialog
+              // internally, so awaiting it here before answering the dialog
+              // would deadlock (nothing else is left to click it). Start it,
+              // answer the dialog via the usual poll-and-click helper, then
+              // await the sync call itself to know the grant has landed.
+              const syncPromise = syncFocusBonusSkills(actor.items.get(focus.id), actor, { prompt: true });
+              await answerActiveDialog("Bonus Skill Blocked", { selectValue: survive.id });
+              await syncPromise;
+              await settle(200);
+
+              assert.equal(
+                actor.items.get(survive.id).system.ownedLevel,
+                1,
+                "the bonus must be grantable again once the stale record was cleared, not lost for good",
+              );
+              assert.equal(
+                actor.items.get(focus.id).getFlag("wwn", "bonusSkillsGrantedTargets")?.stab,
+                survive.id,
+                "the target map must now point at the new recipient",
+              );
+            });
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("a level-gated bonus skill unlocked by a focus leveling up still gets a redirect chance, not just at initial drop", async function () {
+          // Code-review finding: the redirect dialog was originally only
+          // reachable from the createItem hook (prompt: true). Ace Driver's
+          // Fix bonus unlocks later, via the focus's *own* ownedLevel
+          // increasing -- routed through the updateItem hook, which passes
+          // prompt: false to avoid re-asking the top-level choice. Without
+          // allowRedirectPrompt, a newly-unlocked-but-blocked grant here had
+          // no recovery path at all and was stuck forever.
+          const actor = await createTestActor("character", "reg-level-unlock-redirect", {}, { wwnSkipSeeding: true });
+          try {
+            await actor.update({ "system.details.level": 1 });
+            await settle();
+            await withSetting("bonusSkillsGrantPointsAtFirstLevel", false, async () => {
+              const [fix, notice] = await actor.createEmbeddedDocuments(
+                "Item",
+                [
+                  { name: "Fix", type: "skill", system: { ownedLevel: 1, pointsInvested: 0, score: "int" } },
+                  { name: "Notice", type: "skill", system: { ownedLevel: 0, pointsInvested: 0, score: "int" } },
+                ],
+                { wwnMigrating: true },
+              );
+
+              // Level 1: Ace Driver only grants Drive (Fix unlocks at focus
+              // level 2 via LEVEL_BONUS_SKILLS) -- no dialog expected here.
+              const [focus] = await actor.createEmbeddedDocuments("Item", [
+                {
+                  name: "Ace Driver",
+                  type: "focus",
+                  system: { ownedLevel: 1, bonusSkills: ["drive"], bonusSkillsPick: 1, bonusSkillsChosen: [] },
+                },
+              ]);
+              await settle();
+
+              // The focus levels up -- a plain edit, not a fresh drop -- so
+              // this goes through the updateItem hook (prompt: false).
+              // Fix is already rank 1 (blocked at character level 1); the
+              // player must still get a chance to redirect it.
+              await actor.items.get(focus.id).update({ "system.ownedLevel": 2 });
+              await answerActiveDialog("Bonus Skill Blocked", { selectValue: notice.id });
+              await settle();
+
+              assert.equal(
+                actor.items.get(fix.id).system.ownedLevel,
+                1,
+                "Fix itself must stay at rank 1 -- the character isn't level 3",
+              );
+              assert.equal(
+                actor.items.get(notice.id).system.ownedLevel,
+                1,
+                "the level-unlocked grant must still redirect to an eligible skill instead of being stuck forever",
+              );
+            });
+          } finally {
+            await deleteTestActor(actor);
+          }
+        });
+
+        it("an unrelated partial update does not reset details.renown/morale to their schema defaults (code-review fix)", async function () {
+          // WwnPc.migrateData runs on every update diff, not just a full
+          // document load. It used to unconditionally default an ABSENT
+          // details.renown/morale to {value:0}/7 -- which stamped that
+          // default into any partial update that touched `details` (Deal
+          // XP's "system.details.xp.value") or even `system` at all (a
+          // plain ability-score edit), silently overwriting the real
+          // persisted value on merge. Same hazard as combat.abMod above,
+          // just for renown/morale.
+          const actor = await createTestActor("character", "reg-renown-partial-update");
+          try {
+            await actor.update({ "system.details.renown.value": 13, "system.details.morale": 9 });
+            await settle();
+            assert.equal(actor._source.system.details.renown.value, 13);
+            assert.equal(actor._source.system.details.morale, 9);
+
+            // Deal XP's exact update shape: a partial write into a sibling
+            // details field, never mentioning renown/morale at all.
+            await actor.update({ "system.details.xp.value": 5 });
+            await settle();
+            assert.equal(
+              actor._source.system.details.renown.value,
+              13,
+              "an unrelated details.xp update must not reset renown",
+            );
+            assert.equal(
+              actor._source.system.details.morale,
+              9,
+              "an unrelated details.xp update must not reset morale",
+            );
+
+            // Even further removed: an update with no `details` key at all.
+            await actor.update({ "system.abilities.str.value": 14 });
+            await settle();
+            assert.equal(
+              actor._source.system.details.renown.value,
+              13,
+              "an update unrelated to details must not manufacture and reset renown",
+            );
+            assert.equal(
+              actor._source.system.details.morale,
+              9,
+              "an update unrelated to details must not manufacture and reset morale",
+            );
           } finally {
             await deleteTestActor(actor);
           }

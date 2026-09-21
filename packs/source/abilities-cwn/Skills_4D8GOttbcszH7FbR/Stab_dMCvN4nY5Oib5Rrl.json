@@ -8,7 +8,6 @@
     "description": "Use it as a combat skill when wielding melee weapons, whether primitive or complex. It can also be used when throwing weapons.",
     "ownedLevel": -1,
     "score": "str",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

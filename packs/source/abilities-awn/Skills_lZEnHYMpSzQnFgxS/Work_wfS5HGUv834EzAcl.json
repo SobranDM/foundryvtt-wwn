@@ -8,7 +8,6 @@
     "description": "This is a catch-all skill for professions not represented by other skills, such as farmers or fine artists. Pick a profession; you have the technical skills associated with that role and can roll Work as Connect when dealing with others associated with your line of work.",
     "ownedLevel": -1,
     "score": "con",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

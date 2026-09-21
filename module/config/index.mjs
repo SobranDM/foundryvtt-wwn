@@ -134,9 +134,6 @@ WWN.skillSetPacks = {
 /** Combat skills are exempt from the skills.floor (Polymath) derivation. */
 WWN.combatSkills = ["stab", "shoot", "punch"];
 
-/** Skill dice options. */
-WWN.skillDice = ["2d6", "3d6kh2", "4d6kh2"];
-
 /* -------------------------------------------- */
 /*  Powers                                      */
 /* -------------------------------------------- */
@@ -209,6 +206,7 @@ WWN.defaultIcons = {
   item: "icons/svg/item-bag.svg",
   project: "icons/svg/tower.svg",
   contribution: "icons/svg/card-hand.svg",
+  party: "icons/svg/chest.svg",
 };
 
 /* -------------------------------------------- */

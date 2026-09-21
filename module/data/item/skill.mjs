@@ -12,7 +12,6 @@ export default class WwnSkill extends WwnItemBase {
 
     schema.ownedLevel = new fields.NumberField({ ...requiredInteger, initial: -1, min: -1 });
     schema.score = new fields.StringField({ required: true, initial: "int" });
-    schema.skillDice = new fields.StringField({ required: true, initial: "2d6" });
     schema.secondary = new fields.BooleanField({ initial: false });
     schema.pointsInvested = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 

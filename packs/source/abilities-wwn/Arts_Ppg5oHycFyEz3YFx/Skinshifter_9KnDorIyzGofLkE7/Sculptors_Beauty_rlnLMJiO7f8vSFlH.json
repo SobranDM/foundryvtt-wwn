@@ -11,7 +11,7 @@
     "commitmentOptions": [
       {
         "cost": 0,
-        "length": "none",
+        "length": "active",
         "note": ""
       }
     ],
@@ -35,7 +35,23 @@
       "duration": ""
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "rlnLChaMod000001",
+      "type": "base",
+      "name": "Sculptor’s Beauty",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.abilities.cha.baseMod", "type": "add", "value": 1, "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!rlnLMJiO7f8vSFlH.rlnLChaMod000001"
+    }
+  ],
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities-wwn.rlnLMJiO7f8vSFlH"

@@ -58,6 +58,13 @@ describe("chat roll rows", () => {
     assert.equal(formatShockAcDetail(null), "");
   });
 
+  it("formats an infinite (Any AC) threshold as the dedicated Any-AC detail, not blank", () => {
+    // Weapon.shock.anyAc / NPC combat.allWeaponsShockAnyAc both resolve to
+    // shockAcValue = Infinity (module/data/item/weapon.mjs) so this is the
+    // real threshold shape those flags produce.
+    assert.equal(formatShockAcDetail(Infinity), "WWN.Roll.ShockAcAnyDetail");
+  });
+
   it("formats attack AC as unified or melee/ranged", () => {
     assert.equal(formatAttackAcDetail(16), "WWN.Roll.AttackAc:ac=16");
     assert.equal(formatAttackAcDetail(null), "");

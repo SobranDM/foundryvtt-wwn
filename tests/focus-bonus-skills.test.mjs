@@ -20,6 +20,7 @@ import {
   specialistSkillBonusPatch,
   levelBonusSkills,
 } from "../module/helpers/focus-bonus-skills.mjs";
+import { eligibleBonusSkillRedirectTargets } from "../module/helpers/bonus-skills-shared.mjs";
 import { applyFocusBonusSkillSeed } from "../module/helpers/focus-automation-seeds.mjs";
 import { migrateFocus } from "../module/migration/transforms.mjs";
 import "../build/foundry-shim.mjs";
@@ -178,14 +179,17 @@ describe("shouldUseFocusBonusPoints", () => {
 });
 
 describe("computeFocusBonusGrant", () => {
-  it("L1 rank path trains untrained skills to 0", () => {
+  it("rank path trains an untrained skill to 0", () => {
     const grant = computeFocusBonusGrant({ system: { ownedLevel: -1, pointsInvested: 0 } }, false);
     assert.equal(grant.ownedLevel, 0);
     assert.equal(grant.pointsInvested, 0);
   });
 
-  it("L1 rank path leaves already-trained skills unchanged", () => {
-    const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, false);
+  it("rank path raises an already-trained skill by one more rank", () => {
+    // A second focus granting a bonus to a skill you're already trained in
+    // (e.g. two different foci both choosing the same skill) is a real
+    // rank increase, not a wasted no-op.
+    const grant = computeFocusBonusGrant({ system: { ownedLevel: 0, pointsInvested: 0 } }, false);
     assert.equal(grant.ownedLevel, 1);
   });
 
@@ -193,6 +197,123 @@ describe("computeFocusBonusGrant", () => {
     const grant = computeFocusBonusGrant({ system: { ownedLevel: -1, pointsInvested: 0 } }, true);
     assert.equal(grant.ownedLevel, 1);
     assert.equal(grant.pointsInvested, 0);
+  });
+
+  describe("respects the character-level rank cap (evaluateSkillLevelRequirement)", () => {
+    const originalGame = globalThis.game;
+
+    afterEach(() => {
+      globalThis.game = originalGame;
+    });
+
+    it("rank path: untrained -> 0 is never gated, even at level 1", () => {
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: -1, pointsInvested: 0 } }, false, 1);
+      assert.equal(grant.ownedLevel, 0);
+    });
+
+    it("rank path: a level-1 character's already-trained (rank 0) skill can still reach rank 1", () => {
+      // Rank 0 -> 1 has no level gate (matches two stacked focus grants
+      // reaching rank 1 at level 1, per evaluateSkillLevelRequirement).
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 0, pointsInvested: 0 } }, false, 1);
+      assert.equal(grant.ownedLevel, 1);
+    });
+
+    it("rank path: a level-1 character's rank-1 skill cannot be pushed to rank 2 by a focus grant", () => {
+      // This is the reported bug: rank 1 -> 2 needs character level 3.
+      // A free grant must respect the same cap a manual purchase would.
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, false, 1);
+      assert.equal(grant.ownedLevel, 1, "must stay at rank 1 -- the character isn't level 3 yet");
+      assert.equal(grant.blocked, true, "blocked grants are flagged so the caller can offer a redirect");
+    });
+
+    it("rank path: an unblocked grant reports blocked: false", () => {
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 0, pointsInvested: 0 } }, false, 1);
+      assert.equal(grant.blocked, false);
+    });
+
+    it("rank path: the same rank-1 skill CAN advance once the character is level 3", () => {
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, false, 3);
+      assert.equal(grant.ownedLevel, 2);
+      assert.equal(grant.blocked, false);
+    });
+
+    it("rank path: the noSkillLevelReq house-rule setting bypasses the gate", () => {
+      globalThis.game = { settings: { get: (_ns, key) => key === "noSkillLevelReq" } };
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, false, 1);
+      assert.equal(grant.ownedLevel, 2);
+    });
+
+    it("points path: a level-2 character's rank-1 skill does not cascade past rank 1", () => {
+      // Level 2 forces the points path (shouldUseFocusBonusPoints), but
+      // rank 1 -> 2 still needs character level 3 -- the +3 points must
+      // bank rather than push past the cap.
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, true, 2);
+      assert.equal(grant.ownedLevel, 1);
+      assert.equal(grant.pointsInvested, 3, "the points are banked, not spent past the gate");
+    });
+
+    it("points path: the same rank-1 skill cascades normally once the character is level 3", () => {
+      const grant = computeFocusBonusGrant({ system: { ownedLevel: 1, pointsInvested: 0 } }, true, 3);
+      assert.equal(grant.ownedLevel, 2);
+      assert.equal(grant.pointsInvested, 0);
+    });
+  });
+});
+
+describe("eligibleBonusSkillRedirectTargets", () => {
+  const originalGame = globalThis.game;
+  afterEach(() => {
+    globalThis.game = originalGame;
+  });
+
+  function makeActor(skills) {
+    return {
+      items: skills.map((s) => ({ id: s.id, type: "skill", system: { ownedLevel: s.ownedLevel } })),
+    };
+  }
+
+  it("excludes the blocked skill itself", () => {
+    const actor = makeActor([{ id: "blocked", ownedLevel: 1 }, { id: "other", ownedLevel: 0 }]);
+    const targets = eligibleBonusSkillRedirectTargets(actor, ["blocked"], 1);
+    assert.deepEqual(targets.map((s) => s.id), ["other"]);
+  });
+
+  it("excludes other skills that would also be blocked by the same level cap", () => {
+    const actor = makeActor([
+      { id: "blocked", ownedLevel: 1 },
+      { id: "also-capped", ownedLevel: 1 },
+      { id: "eligible", ownedLevel: 0 },
+    ]);
+    const targets = eligibleBonusSkillRedirectTargets(actor, ["blocked"], 1);
+    assert.deepEqual(targets.map((s) => s.id), ["eligible"]);
+  });
+
+  it("returns nothing when every other skill is also capped", () => {
+    const actor = makeActor([{ id: "blocked", ownedLevel: 1 }, { id: "also-capped", ownedLevel: 1 }]);
+    const targets = eligibleBonusSkillRedirectTargets(actor, ["blocked"], 1);
+    assert.deepEqual(targets, []);
+  });
+
+  it("allows any other skill when the noSkillLevelReq house-rule is on", () => {
+    globalThis.game = { settings: { get: (_ns, key) => key === "noSkillLevelReq" } };
+    const actor = makeActor([{ id: "blocked", ownedLevel: 1 }, { id: "also-rank-1", ownedLevel: 1 }]);
+    const targets = eligibleBonusSkillRedirectTargets(actor, ["blocked"], 1);
+    assert.deepEqual(targets.map((s) => s.id), ["also-rank-1"]);
+  });
+
+  it("excludes reserved sibling skills even when they'd otherwise be eligible", () => {
+    // A sibling slug this same grant pass is also about to touch has its
+    // own pending entitlement -- it must not be offered as a dumping
+    // ground for a different slug's blocked grant (see the code-review
+    // finding this test guards against: two declared bonus skills on one
+    // focus, where the first is blocked and the second isn't yet granted).
+    const actor = makeActor([
+      { id: "blocked", ownedLevel: 1 },
+      { id: "sibling", ownedLevel: 0 },
+      { id: "unrelated", ownedLevel: 0 },
+    ]);
+    const targets = eligibleBonusSkillRedirectTargets(actor, ["blocked", "sibling"], 1);
+    assert.deepEqual(targets.map((s) => s.id), ["unrelated"]);
   });
 });
 

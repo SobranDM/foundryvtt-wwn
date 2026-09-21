@@ -91,29 +91,38 @@ export default class WwnPc extends WwnActorBase {
   }
 
   /**
-   * Fill newly required details fields so pre-2.0 world PCs can load.
+   * Heal pre-2.0 legacy shapes (bare-number renown) so old-world PCs load.
    *
-   * Deliberately does NOT touch a stray persisted combat.abMod: this runs
-   * on every document load (not just world migrate), and any residual left
-   * there is a world-migrate sweep concern (transforms.mjs migrateCharacter,
-   * `!isWwn` branch) that converts it into a visible "Migrated: Attack
-   * Bonus" Active Effect. Silently zeroing it here first would erase the
-   * value before that sweep ever sees it to convert.
+   * `source` here can be a PARTIAL update diff (e.g. Deal XP's
+   * `{"system.details.xp.value": n}`, or any other narrow `actor.update`
+   * call), not just a full document load -- this runs on every document
+   * load AND on every update. Never default/inject a key that is simply
+   * ABSENT from the payload: `source.details ??= {}` would manufacture a
+   * details object out of thin air even for an update touching a totally
+   * unrelated field (e.g. an ability score), and unconditionally defaulting
+   * an absent renown/morale would then stamp that default into the diff,
+   * silently overwriting the real persisted value on merge. A genuinely
+   * missing field on a full document load is already covered by the
+   * schema's own `initial` (renown: 0, morale: 7) -- only heal a key that
+   * is PRESENT but malformed. Same hazard already fixed once for
+   * combat.abMod (see transforms.mjs migrateCharacter `!isWwn` branch,
+   * which converts a stray residual into a visible "Migrated: Attack
+   * Bonus" Active Effect instead of zeroing it here).
    * @override
    */
   static migrateData(source) {
     source = super.migrateData(source);
     if (!source || typeof source !== "object") return source;
-    source.details ??= {};
-    if (source.details.morale === undefined || source.details.morale === null) {
-      source.details.morale = 7;
-    }
-    if (source.details.renown === undefined || source.details.renown === null) {
-      source.details.renown = { value: 0 };
-    } else if (typeof source.details.renown === "number") {
-      source.details.renown = { value: source.details.renown };
-    } else if (typeof source.details.renown === "object" && source.details.renown.value === undefined) {
-      source.details.renown.value = 0;
+    const d = source.details;
+    if (d && typeof d === "object") {
+      if (d.morale === null) d.morale = 7;
+      if (typeof d.renown === "number") {
+        d.renown = { value: d.renown };
+      } else if (d.renown === null) {
+        d.renown = { value: 0 };
+      } else if (d.renown && typeof d.renown === "object" && d.renown.value === undefined) {
+        d.renown.value = 0;
+      }
     }
     return source;
   }
@@ -210,15 +219,11 @@ export default class WwnPc extends WwnActorBase {
 
   #computeTreasure() {
     let total = 0;
-    let personal = 0;
     for (const item of this.parent.items) {
       if (item.type !== "item" || !item.system.treasure) continue;
-      const value = (item.system.quantity ?? 1) * (item.system.price ?? 0);
-      total += value;
-      if (item.system.personal) personal += value;
+      total += (item.system.quantity ?? 1) * (item.system.price ?? 0);
     }
     this.treasure = total;
-    this.personalTreasure = personal;
 
     // Total wealth in base-currency units
     let wealth = 0;

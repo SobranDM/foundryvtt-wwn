@@ -8,7 +8,6 @@
     "description": "Create and repair devices both simple and complex. Building gear out of salvaged components generally requires the Fix skill when creating anything of significant complexity.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

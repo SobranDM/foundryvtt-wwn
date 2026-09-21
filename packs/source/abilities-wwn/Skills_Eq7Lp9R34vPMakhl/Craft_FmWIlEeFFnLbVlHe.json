@@ -12,7 +12,6 @@
     "description": "Craft or repair goods and technology appropriate to the PC’s background and society. The Craft skill can be used for a wide range of artisan pursuits, though a GM is within their rights to keep the PC from building complex things that are too far away from their past background and experience.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

@@ -9,8 +9,10 @@ import { maybeShowClassAssignmentDialog } from "../../dialog/class-assignment.mj
 import {
   computeSkillPurchaseCost,
   evaluateSkillLevelRequirement,
+  isSkillLevelGateEnforced,
 } from "../../helpers/skill-points.mjs";
 import { usesDailyTravel } from "../../derivations/movement.mjs";
+import { partiesCarryingFor, getPartyActors } from "../../helpers/party-treasury.mjs";
 
 const TPL = "systems/wwn/templates/actor/pc";
 
@@ -36,6 +38,7 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
       addSkills: WwnPcSheet.#onAddSkills,
       skillUp: WwnPcSheet.#onSkillUp,
       toggleSkillLevelsUnlock: WwnPcSheet.#onToggleSkillLevelsUnlock,
+      openPartySheet: WwnPcSheet.#onOpenPartySheet,
     },
   };
 
@@ -100,6 +103,11 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
       system.details?.notes ?? "",
       { relativeTo: actor, secrets: actor.isOwner, rollData: context.rollData }
     );
+
+    context.carryingParties = partiesCarryingFor(actor.uuid, getPartyActors()).map((p) => ({
+      uuid: p.uuid,
+      name: p.name,
+    }));
 
     return context;
   }
@@ -195,7 +203,7 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
 
     const rank = item.system.ownedLevel;
     const level = this.actor.system.details?.level ?? 1;
-    if (!game.settings.get("wwn", "noSkillLevelReq")) {
+    if (isSkillLevelGateEnforced(level)) {
       const gate = evaluateSkillLevelRequirement(rank, level);
       if (!gate.ok) {
         const key = gate.reason === "maxRank" ? "WWN.Skills.MaxRank" : "WWN.Skills.LevelTooLow";
@@ -218,5 +226,26 @@ export class WwnPcSheet extends composeMixins(CollapsibleSectionsMixin)(WwnBaseA
 
   static async #onToggleSkillLevelsUnlock() {
     await this.actor.update({ "system.skills.levelsUnlocked": !this.actor.system.skills?.levelsUnlocked });
+  }
+
+  /** Open the Party sheet this PC carries for -- direct if there's exactly one, else a small picker. */
+  static async #onOpenPartySheet() {
+    const parties = partiesCarryingFor(this.actor.uuid, getPartyActors());
+    if (parties.length === 1) return parties[0].sheet.render(true);
+    if (!parties.length) return;
+
+    const { showWwnDialog, confirmButton, cancelButton } = await import("../../applications/wwn-dialog.mjs");
+    const result = await showWwnDialog({
+      modifier: "party-picker",
+      title: game.i18n.localize("WWN.party.carriedForParty"),
+      content: `<div class="form-group"><div class="form-fields">
+        <select name="partyUuid">${parties
+          .map((p) => `<option value="${p.uuid}">${foundry.utils.escapeHTML(p.name)}</option>`)
+          .join("")}</select>
+      </div></div>`,
+      buttons: [confirmButton(), cancelButton()],
+    });
+    if (!result || result === "cancel" || !result.partyUuid) return;
+    fromUuidSync(result.partyUuid)?.sheet?.render(true);
   }
 }

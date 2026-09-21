@@ -1,1 +1,10 @@
-/** binary
+# Extracted pack JSON is text: keep it LF in the repo AND the working tree so
+# extract:packs output never shows up as line-ending-only churn.
+*.json text eol=lf
+
+# Anything else under packs/ (LevelDB output when not ignored) is opaque.
+*.ldb binary
+*.log binary
+CURRENT binary
+LOCK binary
+MANIFEST-* binary

@@ -11,7 +11,7 @@
     "commitmentOptions": [
       {
         "cost": 0,
-        "length": "none",
+        "length": "active",
         "note": ""
       }
     ],
@@ -35,7 +35,23 @@
       "duration": ""
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "fUeoInnate000001",
+      "type": "base",
+      "name": "Intrinsic Armor",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.combat.innateAc.min", "type": "upgrade", "value": "14 + floor(@level / 2)", "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!fUeoUmKKN6I7GQQC.fUeoInnate000001"
+    }
+  ],
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities-wwn.fUeoUmKKN6I7GQQC"

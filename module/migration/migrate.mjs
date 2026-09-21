@@ -16,6 +16,7 @@ import { remapAssetPath } from "./asset-map.mjs";
 import { maybeSyncPcCompendiumItems } from "./pc-compendium-sync.mjs";
 import { maybeCleanupClassAbilities, repairInvalidEmbeddedItems } from "./class-ability-cleanup.mjs";
 import { maybeBackfillBonusSkillsGranted } from "./bonus-skills-backfill.mjs";
+import { maybeCreateDefaultParty } from "./party-migration.mjs";
 import { embeddedItemsNeedReplace } from "./embedded-items.mjs";
 
 const NS = "wwn";
@@ -69,6 +70,7 @@ export async function checkMigration() {
   // first keeps a world crossing the beta3 boundary from re-granting
   // legacy foci during its own migration pass.
   await maybeBackfillBonusSkillsGranted();
+  await maybeCreateDefaultParty();
 
   const current = game.settings.get(NS, "systemMigrationVersion");
   const needsVersionMigrate =

@@ -201,6 +201,38 @@ export async function renderSheetRoundTrip({ doc, fieldPath, value, assert }) {
   }
 }
 
+/**
+ * Poll for an open DialogV2 whose title includes `titleIncludes`, then click
+ * its confirm button (optionally after setting a `<select name="...">`'s
+ * value first). Used to drive a real player-facing dialog to completion
+ * instead of bypassing it with `{ prompt: false }`. Dialogs are AppV2, so
+ * they live in `foundry.applications.instances`, not the legacy `ui.windows`.
+ * @param {string} titleIncludes
+ * @param {{ selectName?: string, selectValue?: string, timeoutMs?: number }} [opts]
+ */
+export async function answerActiveDialog(titleIncludes, { selectName = "skill", selectValue, timeoutMs = 2000 } = {}) {
+  const deadline = Date.now() + timeoutMs;
+  let dialog;
+  while (Date.now() < deadline) {
+    dialog = Array.from(foundry.applications.instances.values())
+      .find((a) => a.constructor.name === "DialogV2" && a.title?.includes(titleIncludes));
+    if (dialog) break;
+    await settle(20);
+  }
+  if (!dialog) throw new Error(`answerActiveDialog: no open dialog titled like "${titleIncludes}"`);
+
+  if (selectValue != null) {
+    const select = dialog.element.querySelector(`select[name="${selectName}"]`);
+    if (!select) throw new Error(`answerActiveDialog: no <select name="${selectName}"> in dialog`);
+    select.value = selectValue;
+  }
+
+  const confirmBtn = dialog.element.querySelector('button[data-action="confirm"]');
+  if (!confirmBtn) throw new Error("answerActiveDialog: no confirm button in dialog");
+  confirmBtn.click();
+  await settle();
+}
+
 /** @param {string} collection e.g. "wwn.abilities-wwn" */
 export function packAvailable(collection) {
   return Boolean(game.packs.get(collection));

@@ -49,6 +49,13 @@ export default class WwnNpc extends WwnActorBase {
       damageBonusHalfLevel: new fields.BooleanField({ initial: false }),
       /** Flat initiative bonus for NPCs (no AE required). */
       initMod: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      /**
+       * Every weapon this NPC wields Shocks regardless of the target's AC
+       * ("N/Any" in AWN/CWN stat blocks), without needing to edit each
+       * compendium weapon dragged onto the sheet. Read by
+       * WwnWeapon#prepareDerivedData (module/data/item/weapon.mjs).
+       */
+      allWeaponsShockAnyAc: new fields.BooleanField({ initial: false }),
       acManual: new fields.SchemaField({
         melee: new fields.NumberField({ ...requiredInteger, initial: 10 }),
         ranged: new fields.NumberField({ ...requiredInteger, initial: 10 }),

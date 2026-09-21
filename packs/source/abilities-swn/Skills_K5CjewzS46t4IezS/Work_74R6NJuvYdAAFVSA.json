@@ -8,7 +8,6 @@
     "description": "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade.",
     "ownedLevel": -1,
     "score": "con",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

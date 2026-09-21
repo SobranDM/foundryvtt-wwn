@@ -49,7 +49,6 @@ export async function createFociTestPc({
       slug,
       ownedLevel,
       pointsInvested: 0,
-      skillDice: "2d6",
       score: slug === "shoot" || slug === "punch" ? "dex" : "str",
     },
   }));

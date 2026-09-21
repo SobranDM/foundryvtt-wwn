@@ -35,6 +35,7 @@
         <div class="field-short">{{item.system.power}}</div>
         <div class="field-short">{{item.system.mass}}</div>
         <div class="item-controls">
+          {{#if @root.owner}}
           <a class="item-control{{#unless item.system.disabled}} item-off{{/unless}}" data-action="toggleDisabled"
             title="{{localize 'WWN.Starship.Disabled'}}">
             <i class="fas fa-ban"></i>
@@ -45,6 +46,7 @@
           <a class="item-control" data-action="deleteItem" title="{{localize 'WWN.Delete'}}">
             <i class="fas fa-trash"></i>
           </a>
+          {{/if}}
         </div>
       </div>
     </li>

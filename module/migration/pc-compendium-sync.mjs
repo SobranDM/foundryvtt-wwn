@@ -7,8 +7,12 @@ import { isPc } from "../helpers/actor-types.mjs";
 const NS = "wwn";
 const SYNC_TYPES = new Set(["focus", "classEdge", "power"]);
 
-/** Bump when sync scope or fingerprints change so alpha worlds re-run. */
-export const PC_COMPENDIUM_SYNC_GENERATION = 5;
+/**
+ * Bump when sync scope, fingerprints, or the source pack's focus/classEdge/
+ * power content change so existing worlds re-run.
+ * 6: 2.0.0-beta4 -- restored WWN Arts (beta3) and Skinshifter Art AEs.
+ */
+export const PC_COMPENDIUM_SYNC_GENERATION = 6;
 
 /** Sole system Item pack used as the sync source of truth. */
 const SYNC_PACK_COLLECTION = `${NS}.abilities-wwn`;
@@ -447,7 +451,11 @@ async function swapOwnedItem(actor, ownedItem, packObject) {
   }
   if (created?.type === "classEdge") {
     const { syncPowerBonusSkills } = await import("../helpers/power-bonus-skills.mjs");
-    await syncPowerBonusSkills(created, actor, { prompt: false });
+    // allowRedirectPrompt: this sync already shows a dialog for a genuinely
+    // unresolved bonus-skill choice elsewhere in this file (the prompt:
+    // true pass in syncPcCompendiumItems) -- a blocked grant deserves the
+    // same one-time chance to redirect rather than being stuck forever.
+    await syncPowerBonusSkills(created, actor, { prompt: false, allowRedirectPrompt: true });
   }
 
   console.info(

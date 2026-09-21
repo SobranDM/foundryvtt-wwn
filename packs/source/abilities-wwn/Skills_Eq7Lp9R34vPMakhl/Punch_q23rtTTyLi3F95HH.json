@@ -12,7 +12,6 @@
     "description": "Fight unarmed or with natural body weaponry. Punch, kick, grapple, or otherwise brawl without the benefit of man-made tools. This mode of fighting is inefficient at best without some special Focus to improve it, but it’s reliably non-lethal.",
     "ownedLevel": -1,
     "score": "str",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

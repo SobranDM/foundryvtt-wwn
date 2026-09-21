@@ -105,6 +105,25 @@ export default class WWNCombatTracker extends foundry.applications.sidebar.tabs
     return groups;
   }
 
+  /**
+   * @inheritDoc
+   * Core's own `_onRender` dereferences `this.viewed` without a null-check.
+   * `this.viewed` goes transiently undefined during renders that aren't
+   * triggered by a direct mutation of the currently-viewed combat -- e.g.
+   * another unrelated Combat's active state toggling, or a vetoed
+   * Combatant creation (see preCreateCombatant in wwn.mjs) still cycling
+   * the tracker's refresh bookkeeping. Every WWN override in this file
+   * already guards the same getter with `?.`; this one just never got the
+   * same treatment, so those renders throw `'turn' in undefined` and (since
+   * `_configureRenderParts`/`_prepareTrackerContext` see the same undefined
+   * `viewed` and silently skip the grouped template) the collapsed-side
+   * view reverts to a flat list until the next direct render.
+   */
+  async _onRender(context, options) {
+    if (!this.viewed) return;
+    return super._onRender(context, options);
+  }
+
   /** @inheritDoc */
   _onUpdateInitiative(event) {
     const groupHeader = event.target.closest(".combatant-group-header");

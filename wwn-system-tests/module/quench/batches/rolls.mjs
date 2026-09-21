@@ -22,7 +22,7 @@ export default function register(quench) {
               {
                 name: "Quench Stab",
                 type: "skill",
-                system: { slug: "stab", ownedLevel: 1, skillDice: "2d6", score: "str" },
+                system: { slug: "stab", ownedLevel: 1, score: "str" },
               },
             ]);
             await settle();

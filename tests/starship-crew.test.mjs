@@ -181,6 +181,11 @@ describe("starship station roll wiring", () => {
       source,
       /WwnDice\.rollSkill\(resolved\.actor, skill, \{ skipDialog, title \}\)/,
     );
-    assert.match(source, /resolveSkillDiceFormula/);
+    // NPC station checks (no skill item) roll a fixed 2d6 base -- skills no
+    // longer carry their own skillDice tier.
+    assert.match(
+      source,
+      /new RollParts\(\)\.add\(`\$\{BASE_SKILL_DICE_COUNT\}d6`, game\.i18n\.localize\("WWN\.Roll\.SkillDice"\)\)/,
+    );
   });
 });

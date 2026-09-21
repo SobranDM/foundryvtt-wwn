@@ -21,32 +21,6 @@ export function getBaseCurrencyItem(actor) {
 }
 
 /**
- * Add (or subtract) amount to the base currency item's banked total.
- * @param {Actor} actor
- * @param {number} value
- * @param {{ chat?: boolean }} [options]
- * @returns {Promise<Item|null>}
- */
-export async function depositBank(actor, value, { chat = true } = {}) {
-  const amount = Math.floor(Number(value) || 0);
-  if (!amount) return null;
-  const item = getBaseCurrencyItem(actor);
-  if (!item) {
-    ui.notifications.warn(game.i18n.format("WWN.Currency.NoCurrencyItems", { name: actor.name }));
-    return null;
-  }
-  const next = Math.max((item.system.banked ?? 0) + amount, 0);
-  await item.update({ "system.banked": next });
-  if (chat) {
-    await ChatMessage.create({
-      content: game.i18n.format("WWN.messages.GetCurrency", { name: actor.name, value: amount }),
-      speaker: ChatMessage.getSpeaker({ actor }),
-    });
-  }
-  return item;
-}
-
-/**
  * Apply carried deltas keyed by item id, plus optional bank delta on the base item.
  * @param {Actor} actor
  * @param {{ carriedDeltas?: Record<string, number>, bankDelta?: number }} deltas

@@ -8,7 +8,6 @@
     "description": "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship's gunnery.",
     "ownedLevel": -1,
     "score": "dex",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

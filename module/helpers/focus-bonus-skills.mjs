@@ -1,14 +1,20 @@
 import { isPc } from "./actor-types.mjs";
 import { getSkillSetCache } from "./skill-set.mjs";
-import { applySkillPoints, FOCUS_BONUS_SKILL_POINTS } from "./skill-points.mjs";
+import {
+  applySkillPoints,
+  evaluateSkillLevelRequirement,
+  isSkillLevelGateEnforced,
+  FOCUS_BONUS_SKILL_POINTS,
+} from "./skill-points.mjs";
 import {
   findSkillBySlug,
-  ensureActorSkillBySlug,
+  resolveSkillsBySlug,
   declaredBonusSkills,
   bonusSkillsPickCount,
   needsBonusSkillChoice,
   resolveListedBonusSkillSlugs,
   promptBonusSkillChoiceDialog,
+  promptBonusSkillRedirect,
   hasGrantedSkill,
   recordGrantedSkill,
   GRANTED_SKILLS_FLAG,
@@ -177,20 +183,32 @@ export async function promptBonusSkillChoice(focus, actor) {
 /**
  * @param {{ system: { ownedLevel?: number, pointsInvested?: number } }} skill
  * @param {boolean} usePoints
- * @returns {{ ownedLevel: number, pointsInvested: number }}
+ * @param {number} [characterLevel] When given, grants respect the same
+ *   character-level rank cap as a manual purchase (evaluateSkillLevelRequirement),
+ *   unless the `noSkillLevelReq` house-rule setting is on.
+ * @returns {{ ownedLevel: number, pointsInvested: number, blocked: boolean }}
+ *   `blocked` is only ever true on the rank path: the grant could not raise
+ *   this skill at all (as opposed to the points path, which always banks
+ *   what it can't spend on the skill itself). The caller can offer to
+ *   redirect a blocked grant to a different skill -- see
+ *   {@link module:bonus-skills-shared.promptBonusSkillRedirect}.
  */
-export function computeFocusBonusGrant(skill, usePoints) {
+export function computeFocusBonusGrant(skill, usePoints, characterLevel) {
   const beforeLevel = skill.system.ownedLevel ?? -1;
   const beforeInvested = skill.system.pointsInvested ?? 0;
   if (usePoints) {
-    const after = applySkillPoints(beforeLevel, beforeInvested, FOCUS_BONUS_SKILL_POINTS);
-    return { ownedLevel: after.ownedLevel, pointsInvested: after.pointsInvested };
+    const after = applySkillPoints(beforeLevel, beforeInvested, FOCUS_BONUS_SKILL_POINTS, { characterLevel });
+    return { ownedLevel: after.ownedLevel, pointsInvested: after.pointsInvested, blocked: false };
   }
-  // Rank path: train untrained skills to 0; leave already-trained skills unchanged.
-  if (beforeLevel < 0) {
-    return { ownedLevel: 0, pointsInvested: beforeInvested };
+  // Rank path: each grant raises the skill by one rank (untrained -1 -> 0,
+  // trained 0 -> 1, etc.) -- stacking a second grant on an already-trained
+  // skill is a real rank increase, not a wasted no-op. But it must still
+  // respect the same level cap a manual purchase would (e.g. a level-1
+  // character can reach rank 1 but never rank 2, which needs level 3).
+  if (isSkillLevelGateEnforced(characterLevel) && !evaluateSkillLevelRequirement(beforeLevel, characterLevel).ok) {
+    return { ownedLevel: beforeLevel, pointsInvested: beforeInvested, blocked: true };
   }
-  return { ownedLevel: beforeLevel, pointsInvested: beforeInvested };
+  return { ownedLevel: beforeLevel + 1, pointsInvested: beforeInvested, blocked: false };
 }
 
 /**
@@ -207,24 +225,50 @@ export function specialistSkillBonusPatch(focus, choiceSlugs) {
 }
 
 /**
- * Focus grant: may use +3 skill points when level > 1 or the setting is on.
- * Only ever called from the createItem/updateItem hooks (item dropped onto
- * a character, or its bonus-skill choice changes) — never re-synced on a
- * timer or login, so this only ever runs once per focus/skill pair.
- * @param {Item} focus
+ * Grant `slug`'s bonus to `skill` on `actor`. Shared by focus, power, and
+ * classEdge grants (only ever called from the createItem/updateItem hooks —
+ * item dropped onto a character, or its bonus-skill choice changes — never
+ * re-synced on a timer or login, so this only ever runs once per
+ * item/skill pair; idempotency is tracked on the granting item itself via
+ * hasGrantedSkill/recordGrantedSkill).
+ *
+ * A rank-path grant blocked by the character-level rank cap isn't just
+ * dropped: the player is offered a different, currently-eligible skill to
+ * redirect the bonus to instead (still subject to the same cap). If no
+ * prompt is allowed right now, or none is available/chosen, the grant is
+ * left unrecorded so a later prompt-enabled sync can retry it.
+ * @param {Item} item Granting focus/power/classEdge
  * @param {Actor} actor
  * @param {Item} skill
  * @param {string} slug
+ * @param {{ usePoints: boolean, prompt: boolean, reservedSkillIds?: Iterable<string> }} options
+ *   `usePoints` only ever applies to focus grants (power/classEdge always
+ *   grant a rank). `reservedSkillIds` are sibling skills this same item's
+ *   bonus-skill list is also granting in this pass -- excluded as redirect
+ *   targets since they have their own pending entitlement (see the
+ *   `resolveSkillsBySlug` call sites in syncFocusBonusSkills/syncPowerBonusSkills).
  */
-async function grantBonusSkill(focus, actor, skill, slug) {
-  if (hasGrantedSkill(focus, slug)) return;
+export async function grantBonusSkill(item, actor, skill, slug, { usePoints, prompt, reservedSkillIds = [] }) {
+  if (hasGrantedSkill(item, slug)) return;
 
-  const grant = computeFocusBonusGrant(skill, shouldUseFocusBonusPoints(actor));
-  await skill.update({
+  const characterLevel = actor.system.details?.level ?? 1;
+  let target = skill;
+  let grant = computeFocusBonusGrant(target, usePoints, characterLevel);
+
+  if (grant.blocked) {
+    if (!prompt) return;
+    const redirect = await promptBonusSkillRedirect({ item, actor, blockedSkill: skill, characterLevel, reservedSkillIds });
+    if (!redirect) return;
+    target = redirect;
+    grant = computeFocusBonusGrant(target, usePoints, characterLevel);
+    if (grant.blocked) return;
+  }
+
+  await target.update({
     "system.ownedLevel": grant.ownedLevel,
     "system.pointsInvested": grant.pointsInvested,
   });
-  await recordGrantedSkill(focus, slug);
+  await recordGrantedSkill(item, slug, target.id);
 }
 
 /**
@@ -239,16 +283,35 @@ async function syncSpecialistSkillBonus(focus, choiceSlugs) {
 /**
  * @param {Item} focus
  * @param {Actor} actor
- * @param {{ prompt?: boolean }} [options]
+ * @param {{ prompt?: boolean, allowRedirectPrompt?: boolean }} [options]
+ *   `prompt` gates the top-level "which skill(s) does this grant" choice
+ *   dialog. `allowRedirectPrompt` (defaults to `prompt`) separately gates
+ *   the one-time "this grant is blocked, pick another skill" dialog --
+ *   callers running from a live hook but not wanting to re-ask the
+ *   top-level choice (e.g. an existing focus's ownedLevel/bonusSkillsChosen
+ *   changing) can pass `{ prompt: false, allowRedirectPrompt: true }` so a
+ *   newly-unlocked, newly-blocked grant still gets a chance to redirect
+ *   instead of being stuck forever (nothing else ever re-syncs this
+ *   focus/skill pair with a prompt allowed). Batch/migration callers
+ *   (`syncActorFocusBonusSkills`) leave both false.
  */
-export async function syncFocusBonusSkills(focus, actor, { prompt = false } = {}) {
+export async function syncFocusBonusSkills(focus, actor, { prompt = false, allowRedirectPrompt = prompt } = {}) {
   if (focus.type !== "focus" || !isPc(actor)) return;
   if ((focus.system.ownedLevel ?? 1) < 1) return;
 
+  const usePoints = shouldUseFocusBonusPoints(actor);
   const always = alwaysBonusSkills(focus);
+  const alwaysSkills = await resolveSkillsBySlug(actor, always);
+  const alwaysReserved = new Set([...alwaysSkills.values()].map((s) => s.id));
   for (const slug of always) {
-    const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(focus, actor, skill, slug);
+    const skill = alwaysSkills.get(slug);
+    if (skill) {
+      await grantBonusSkill(focus, actor, skill, slug, {
+        usePoints,
+        prompt: allowRedirectPrompt,
+        reservedSkillIds: alwaysReserved,
+      });
+    }
   }
 
   let choice = resolveChoiceBonusSkillSlugs(focus);
@@ -269,9 +332,20 @@ export async function syncFocusBonusSkills(focus, actor, { prompt = false } = {}
     return;
   }
 
+  // Re-resolved (rather than reusing alwaysSkills) so a redirect during this
+  // loop can't land on an "always" skill either -- that skill has its own
+  // pending entitlement whether or not it's been granted yet.
+  const choiceSkills = await resolveSkillsBySlug(actor, [...always, ...choice]);
+  const choiceReserved = new Set([...choiceSkills.values()].map((s) => s.id));
   for (const slug of choice) {
-    const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(focus, actor, skill, slug);
+    const skill = choiceSkills.get(slug);
+    if (skill) {
+      await grantBonusSkill(focus, actor, skill, slug, {
+        usePoints,
+        prompt: allowRedirectPrompt,
+        reservedSkillIds: choiceReserved,
+      });
+    }
   }
   await syncSpecialistSkillBonus(focus, choice);
 }

@@ -12,7 +12,6 @@
     "description": "Sail or repair a ship, build small craft, navigate by the stars, read sea weather, manage sailors, and otherwise conduct the business of a professional mariner. This skill may apply to more esoteric means of vehicular travel in some societies.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

@@ -12,7 +12,6 @@
     "description": "Fire a bow or crossbow or throw a hurled weapon. Maintain ranged weaponry and fletch arrows.",
     "ownedLevel": -1,
     "score": "dex",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

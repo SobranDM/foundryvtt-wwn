@@ -12,7 +12,6 @@
     "description": "Ride an animal, drive a cart or carriage, or otherwise deal with land transportation. This skill also includes competence at mount care and tending, basic cart or carriage repair, judging good horseflesh, and other skills appropriate to a beast-rider of whatever society the PC comes from.",
     "ownedLevel": -1,
     "score": "dex",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

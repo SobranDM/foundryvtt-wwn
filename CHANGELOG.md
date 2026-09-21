@@ -35,6 +35,10 @@
 - **Weapons and ammo** support linked ammo and magazine-style reload more clearly, with a dedicated ammo item type for arrows, bolts, energy cells, and spare magazines. Personal attacks better follow Without Number rules: natural 1 and 20, Shock as a damage floor on hits, firearms (including hurlants) and high-tech weapons ignoring light non-magical armor, and powered armor stopping primitive or unarmed attacks.
 - **Group initiative** can collapse the tracker by side (default on), advancing one side at a time. WIP. Untested.
 - **Monsters** keep editable combat numbers on a Config tab.
+- **Party** is now an Actor type with its own sheet, replacing the old Party button in the Actors sidebar and the party flag on PCs.
+  - Drag PCs onto the sheet to build the roster; a PC can belong to more than one party. **Deal XP** and **Deal Currency** live on the sheet.
+  - Shared treasure and currency are items on the Party actor. Each pool item can be assigned a carrier from the roster, and carried weight counts toward that PC's encumbrance; currency stacks can be split off onto a carrier. The PC Inventory tab shows what a character is carrying for the party and links to the party sheet.
+  - On first load a default **Party** actor is created, seeded from any PCs that were flagged as party members before 2.0.0. A world always has at least one Party actor.
 - **Starships** for Stars Without Number.
   - Hull presets seed speed, armor, HP, crew limits, AC, and power/mass/hardpoint budgets; stats stay editable.
   - Fittings, weapons, and defenses install on the ship; cost, power, and mass scale with hull class as in the rulebook.

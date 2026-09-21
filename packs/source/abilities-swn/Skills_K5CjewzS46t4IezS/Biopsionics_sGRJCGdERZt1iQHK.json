@@ -8,7 +8,6 @@
     "description": "Master powers of physical repair, body augmentation, and shapeshifting.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": true
   },
   "_stats": {

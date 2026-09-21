@@ -3,7 +3,7 @@
  */
 import { WwnDice } from "../dice/dice.mjs";
 import { skillRollAbilityChoices } from "../dice/roll-prompt.mjs";
-import { RollParts, resolveSkillDiceFormula } from "../dice/roll-parts.mjs";
+import { RollParts, BASE_SKILL_DICE_COUNT } from "../dice/roll-parts.mjs";
 import { WwnRoll, WwnAttackRoll, WwnSkillRoll, WwnDamageRoll } from "../dice/rolls.mjs";
 import { createRollMessage } from "../chat/chat-card.mjs";
 import { enrichItemDescription } from "../chat/item-description.mjs";
@@ -292,11 +292,10 @@ export async function rollSuitSkill(suit, skill, { skipDialog = false, abilityKe
 
   const untrained = !isPilotTrained(resolved.uuid, suit.system.trainedPilots);
   const slug = skillSlugOf(skill);
-  const baseDice = resolveSkillDiceFormula(skill.system.skillDice);
 
   const buildParts = () => {
     const parts = new RollParts();
-    parts.add(baseDice, game.i18n.localize("WWN.Roll.SkillDice"));
+    parts.add(`${BASE_SKILL_DICE_COUNT}d6`, game.i18n.localize("WWN.Roll.SkillDice"));
     parts.add(WwnDice.effectiveSkillLevel(pilot, skill), skill.name);
     parts.add(abilityMod, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[abilityKey] ?? abilityKey));
     if (slug === "sneak") {

@@ -66,6 +66,28 @@ describe("getPowerTransferMode", () => {
     assert.equal(mode, "none");
   });
 
+  it("code-review fix: a paid non-active shared-pool tier mixed with a free active-length tier still resolves 'active', not forced 'none'", () => {
+    // Checking only the paid entries for length:"active" (as this used to)
+    // meant a homebrew item combining a paid scene/day commitment with an
+    // unrelated free (cost:0) manual toggle lost that toggle entirely --
+    // usesSharedPool matched on the paid (non-active) tier and
+    // short-circuited to "none" before the free active-length tier was ever
+    // consulted. Like the sibling "paid active-length commitment" test
+    // above, mode:"active" here doesn't itself gate on isActive -- that
+    // gating happens in syncPowerTransferEffects's own "active" branch.
+    const mode = getPowerTransferMode(
+      power({
+        subType: "custom",
+        installed: true,
+        commitmentOptions: [
+          { cost: 2, length: "scene", note: "" },
+          { cost: 0, length: "active", note: "" },
+        ],
+      })
+    );
+    assert.equal(mode, "active");
+  });
+
   it("mutation: no installed concept, no shared pool -> always passive regardless of (absent) installed", () => {
     assert.equal(
       getPowerTransferMode(power({ subType: "mutation", installed: false, commitmentOptions: [{ cost: 0, length: "none", note: "" }] })),
@@ -91,6 +113,18 @@ describe("getPowerTransferMode", () => {
       ),
       "active"
     );
+  });
+
+  describe("art with a free (cost:0) active-length toggle (Skinshifter Feral Prowess/Warform/etc. style)", () => {
+    const freeToggle = { subType: "art", installed: false, commitmentOptions: [{ cost: 0, length: "active", note: "" }] };
+
+    it("not active -> none (disabled), NOT forced 'passive'/permanently-on", () => {
+      assert.equal(getPowerTransferMode(power({ ...freeToggle, isActive: false })), "none");
+    });
+
+    it("active -> active (enabled)", () => {
+      assert.equal(getPowerTransferMode(power({ ...freeToggle, isActive: true })), "active");
+    });
   });
 
   it("non-power items always resolve none", () => {
@@ -165,10 +199,15 @@ describe("hasFreeActiveToggle", () => {
     );
   });
 
-  it("false for a subtype with no installed concept (art), even with a zero-cost 'active' entry", () => {
+  it("true for a subtype with no installed concept (art) with a zero-cost 'active' entry (Skinshifter-style free toggle)", () => {
+    // Originally cyberware/custom-only; broadened (code-review fix) so a
+    // non-cyberware manual toggle that genuinely costs nothing -- e.g.
+    // Skinshifter's form-specific traits, where Effort is already spent on
+    // Change Form itself, not per trait -- isn't forced permanently on by
+    // getPowerTransferMode's "passive" default.
     assert.equal(
       hasFreeActiveToggle("art", { commitmentOptions: [{ cost: 0, length: "active", note: "" }] }),
-      false
+      true
     );
   });
 

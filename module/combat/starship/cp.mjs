@@ -66,6 +66,38 @@ export function maybeGrantSoloFighterCp(state, grantSoloFighterBonus) {
 }
 
 /**
+ * "Only one exclusive general action (Do Your Duty / Above and Beyond / Deal
+ * With a Crisis) per turn" -- and nothing more. Extracted as a pure
+ * predicate so this specific rule can be unit-tested without needing to
+ * drive a full department action (most of which pop a real roll/target
+ * dialog) through a live Foundry runtime.
+ *
+ * Code-review fix: this used to also reject `def.department !== "general"`,
+ * which meant taking any exclusive general action silently blocked every
+ * other department (Bridge/Gunnery/Engineering/Comms/most-Captain) for the
+ * rest of the ship's turn, not just other exclusive/general actions.
+ *
+ * Code-review fix: there used to be a second `if` here checking the exact
+ * same two booleans with the operands swapped (`state... && def.exclusive`
+ * vs `def.exclusive && state...`), returning a distinct "ExclusiveBlocks"
+ * reason that could therefore never actually be reached -- the first branch
+ * always matched first. There is only one condition this guard needs to
+ * express ("already took the turn's one exclusive general action, and this
+ * is another exclusive action"), so the dead branch and its now-unreachable
+ * WWN.Starship.ExclusiveBlocks string were removed rather than invented a
+ * second real distinction that was never specified anywhere.
+ * @param {{flags: {tookExclusiveGeneralAction?: boolean}}} state
+ * @param {{exclusive?: boolean}} def
+ * @returns {{ ok: boolean, reasonKey?: string }}
+ */
+export function checkExclusiveActionGuard(state, def) {
+  if (def.exclusive && state.flags.tookExclusiveGeneralAction) {
+    return { ok: false, reasonKey: "WWN.Starship.ExclusiveAlready" };
+  }
+  return { ok: true };
+}
+
+/**
  * Spend CP if affordable.
  * @param {object} state
  * @param {number} cost

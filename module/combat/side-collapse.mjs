@@ -63,13 +63,25 @@ export function isGroupFullyDefeated(turns, groupId) {
  * @param {number|null} options.currentTurnIndex
  * @param {1|-1} options.direction
  * @param {boolean} [options.skipDefeated=false]
+ * @param {Set<string>|null} [options.actedGroupIds=null] Group ids that have
+ *   already had a turn this round. Only consulted going forward. When
+ *   omitted, behavior is unchanged from a plain positional walk (existing
+ *   callers/tests that never manually jump `combat.turn` out of round-robin
+ *   order don't need it). When provided, a positional walk that runs off the
+ *   end wraps back around to look for any not-yet-acted group before
+ *   conceding the round is over -- this covers a GM manually activating a
+ *   group to break a tie: that jump can land `combat.turn` on a group that's
+ *   positionally *after* an untouched sibling, and a purely positional walk
+ *   would otherwise skip that sibling's turn entirely and roll to the next
+ *   round.
  * @returns {{ kind: "turn", turnIndex: number } | { kind: "round" } | { kind: "none" }}
  */
 export function findAdjacentGroupTurn({
   turns,
   currentTurnIndex,
   direction,
-  skipDefeated = false
+  skipDefeated = false,
+  actedGroupIds = null
 }) {
   if (!turns.length) return { kind: "none" };
 
@@ -92,12 +104,24 @@ export function findAdjacentGroupTurn({
   }
 
   const step = direction > 0 ? 1 : -1;
+  const isEligible = (groupId) => {
+    if (skipDefeated && isGroupFullyDefeated(turns, groupId)) return false;
+    if (actedGroupIds && actedGroupIds.has(groupId)) return false;
+    return firstTurnIndexForGroup(turns, groupId, skipDefeated) !== -1;
+  };
+
   for (let i = groupIndex + step; i >= 0 && i < groupIds.length; i += step) {
     const groupId = groupIds[i];
-    if (skipDefeated && isGroupFullyDefeated(turns, groupId)) continue;
-    const turnIndex = firstTurnIndexForGroup(turns, groupId, skipDefeated);
-    if (turnIndex === -1) continue;
-    return { kind: "turn", turnIndex };
+    if (!isEligible(groupId)) continue;
+    return { kind: "turn", turnIndex: firstTurnIndexForGroup(turns, groupId, skipDefeated) };
+  }
+
+  if (direction > 0 && actedGroupIds) {
+    for (let i = 0; i < groupIndex; i++) {
+      const groupId = groupIds[i];
+      if (groupId === currentGroupId || !isEligible(groupId)) continue;
+      return { kind: "turn", turnIndex: firstTurnIndexForGroup(turns, groupId, skipDefeated) };
+    }
   }
 
   return { kind: "round" };

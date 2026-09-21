@@ -19,26 +19,31 @@ export function getPowerTransferMode(power) {
   const system = power.system;
 
   let mode;
-  if (!usesSharedPool(subType, system)) {
-    mode = "passive";
+  if (usesSharedPool(subType, system)) {
+    // A power can mix a paid shared-pool tier (e.g. cost:2/length:"scene")
+    // with an unrelated free (cost:0) "active"-length toggle tier in the
+    // same commitmentOptions array -- checking only the paid entries here
+    // would silently drop that free toggle's ability to enable/disable the
+    // transfer effect. Any "active"-length entry, paid or free, means this
+    // power has a manual toggle; syncPowerTransferEffects gates the actual
+    // enabled state on system.isActive for "active" mode either way.
+    const hasActiveLength = resolveCommitmentOptions(subType, system).some((o) => o.length === "active");
+    mode = hasActiveLength ? "active" : "none";
+  } else if (hasFreeActiveToggle(subType, system)) {
+    // A free (cost:0) "active"-length commitment option is a real manual
+    // toggle, not a plain always-on passive art -- without this, the
+    // "passive" branch below would force it permanently enabled on every
+    // createItem/updateItem sync (see syncPowerTransferEffects).
+    mode = system.isActive ? "active" : "none";
   } else {
-    const paid = resolveCommitmentOptions(subType, system).filter((o) => o.cost > 0);
-    mode = paid.some((o) => o.length === "active") ? "active" : "none";
+    mode = "passive";
   }
 
   // Cyberware / custom: `installed` gates transfer effects regardless of the
-  // shared-pool-derived mode above. Subtypes with no `installed` concept
-  // (art/spell/ability/psychic/mutation/gift) are unaffected.
+  // mode derived above. Subtypes with no `installed` concept (art/spell/
+  // ability/psychic/mutation/gift) are unaffected.
   if (usesInstalledField(subType)) {
     if (!system.installed) return "none";
-    // Layered on top of `installed`: cyberware/custom that opted into a
-    // poolless active/inactive toggle (a zero-cost "active"-length
-    // commitment option) additionally require `isActive`. Cyberware that
-    // did NOT opt in (the default) keeps the base `mode` above (normally
-    // "passive" for cyberware's zero-cost/no-shared-pool default) -- i.e.
-    // installed alone is enough, matching most cyberware's "always-on while
-    // installed" book text.
-    if (hasFreeActiveToggle(subType, system)) return system.isActive ? "active" : "none";
     return mode;
   }
 

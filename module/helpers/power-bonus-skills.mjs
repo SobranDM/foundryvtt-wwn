@@ -1,16 +1,14 @@
 import { isPc } from "./actor-types.mjs";
 import { getSkillSetCache } from "./skill-set.mjs";
-import { computeFocusBonusGrant } from "./focus-bonus-skills.mjs";
+import { grantBonusSkill } from "./focus-bonus-skills.mjs";
 import {
-  ensureActorSkillBySlug,
+  resolveSkillsBySlug,
   declaredBonusSkills,
   bonusSkillsPickCount,
   needsBonusSkillChoice,
   resolveListedBonusSkillSlugs,
   promptBonusSkillChoiceDialog,
   filterOpenBonusSkillSlugs,
-  hasGrantedSkill,
-  recordGrantedSkill,
 } from "./bonus-skills-shared.mjs";
 
 /** Item types that use power-style bonusSkills fields. */
@@ -81,36 +79,15 @@ async function promptBonusSkillChoice(item, _actor) {
 }
 
 /**
- * Always grant a single rank (train untrained → 0). Never uses the focus
- * points path. Only ever called from the createItem/updateItem hooks (item
- * dropped onto a character, or its bonus-skill choice changes) — never
- * re-synced on a timer or login, so this only ever runs once per item/skill
- * pair. Idempotency is tracked on the granting item itself via
- * hasGrantedSkill/recordGrantedSkill (bonus-skills-shared.mjs) — see the
- * note there for why a shared "who granted this" slot on the skill can't
- * work once more than one source targets the same skill.
- * @param {Item} item
- * @param {Item} skill
- * @param {string} slug
- */
-async function grantBonusSkill(item, skill, slug) {
-  if (hasGrantedSkill(item, slug)) return;
-
-  // Powers and classEdges always use rank grants — never FOCUS_BONUS_SKILL_POINTS.
-  const grant = computeFocusBonusGrant(skill, false);
-  await skill.update({
-    "system.ownedLevel": grant.ownedLevel,
-    "system.pointsInvested": grant.pointsInvested,
-  });
-  await recordGrantedSkill(item, slug);
-}
-
-/**
  * @param {Item} item
  * @param {Actor} actor
- * @param {{ prompt?: boolean }} [options]
+ * @param {{ prompt?: boolean, allowRedirectPrompt?: boolean }} [options]
+ *   `prompt` gates the top-level "which skill(s) does this grant" choice
+ *   dialog. `allowRedirectPrompt` (defaults to `prompt`) separately gates
+ *   the one-time "this grant is blocked, pick another skill" dialog -- see
+ *   the matching note on `syncFocusBonusSkills`.
  */
-export async function syncPowerBonusSkills(item, actor, { prompt = false } = {}) {
+export async function syncPowerBonusSkills(item, actor, { prompt = false, allowRedirectPrompt = prompt } = {}) {
   if (!BONUS_SKILL_ITEM_TYPES.has(item?.type) || !isPc(actor)) return;
 
   const hasBonusConfig =
@@ -131,9 +108,21 @@ export async function syncPowerBonusSkills(item, actor, { prompt = false } = {})
   }
   if (!slugs?.length) return;
 
+  // Resolved up front so a blocked slug's redirect can't land on a sibling
+  // slug from this same list -- that sibling has its own pending
+  // entitlement, whether or not it's been granted yet in this loop.
+  const skillsBySlug = await resolveSkillsBySlug(actor, slugs);
+  const reservedSkillIds = new Set([...skillsBySlug.values()].map((s) => s.id));
   for (const slug of slugs) {
-    const skill = await ensureActorSkillBySlug(actor, slug);
-    if (skill) await grantBonusSkill(item, skill, slug);
+    const skill = skillsBySlug.get(slug);
+    // Powers and classEdges always use rank grants — never the focus points path.
+    if (skill) {
+      await grantBonusSkill(item, actor, skill, slug, {
+        usePoints: false,
+        prompt: allowRedirectPrompt,
+        reservedSkillIds,
+      });
+    }
   }
 }
 

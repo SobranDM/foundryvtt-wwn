@@ -24,8 +24,10 @@ import { refreshPowers } from "./helpers/power-refresh.mjs";
 import { syncPowerTransferEffects } from "./helpers/power-effects.mjs";
 import { syncActorFocusEffects, syncFocusTransferEffects } from "./helpers/focus-effects.mjs";
 import { refreshActorDerivedData } from "./helpers/actor-refresh.mjs";
-import { syncFocusBonusSkills } from "./helpers/focus-bonus-skills.mjs";
-import { syncPowerBonusSkills } from "./helpers/power-bonus-skills.mjs";
+import { buildCarrierClearUpdate } from "./helpers/party-treasury.mjs";
+import { syncFocusBonusSkills, syncActorFocusBonusSkills } from "./helpers/focus-bonus-skills.mjs";
+import { syncPowerBonusSkills, syncActorPowerBonusSkills } from "./helpers/power-bonus-skills.mjs";
+import { clearGrantedSkillsForDeletedTarget } from "./helpers/bonus-skills-shared.mjs";
 import { promptFocusSkillBonus } from "./helpers/focus-skill-dice.mjs";
 import {
   promptSparkSkillPool,
@@ -39,7 +41,6 @@ import { registerHelpers } from "./helpers.js";
 import * as chat from "./chat.js";
 import * as treasure from "./treasure.js";
 import * as macros from "./macros.js";
-import * as party from "./party.js";
 
 import { WwnItemSheet } from "./sheets/item/item-sheet.mjs";
 import { WwnPcSheet } from "./sheets/actor/pc-sheet.mjs";
@@ -48,8 +49,10 @@ import { WwnFactionSheet } from "./sheets/actor/faction-sheet.mjs";
 import { WwnStarshipSheet } from "./sheets/actor/starship-sheet.mjs";
 import { WwnPowerArmorSheet } from "./sheets/actor/power-armor-sheet.mjs";
 import { WwnProjectSheet } from "./sheets/actor/project-sheet.mjs";
+import { WwnPartySheet } from "./sheets/actor/party-sheet.mjs";
 import { applyUiTheme, sheetThemeChoices, themeChatMessage } from "./config/themes.mjs";
 import { checkGodboundAutoLapse, AUTO_LAPSE_UPDATE_FLAG } from "./helpers/project-lapse.mjs";
+import { safeFromUuidSync } from "./helpers/safe-resolve.mjs";
 
 const { DocumentSheetConfig } = foundry.applications.apps;
 
@@ -88,6 +91,7 @@ Hooks.once("init", async function () {
     starship: models.WwnStarship,
     powerArmor: models.WwnPowerArmor,
     project: models.WwnProject,
+    party: models.WwnParty,
     // Reverse aliases — load half-migrated worlds that already remapped to pc/npc.
     pc: models.WwnPc,
     npc: models.WwnNpc,
@@ -99,6 +103,7 @@ Hooks.once("init", async function () {
     starship: "TYPES.Actor.starship",
     powerArmor: "TYPES.Actor.powerArmor",
     project: "TYPES.Actor.project",
+    party: "TYPES.Actor.party",
     pc: "TYPES.Actor.pc",
     npc: "TYPES.Actor.npc",
   };
@@ -177,6 +182,12 @@ Hooks.once("init", async function () {
     label: "WWN.SheetClassProject",
     themes,
   });
+  DocumentSheetConfig.registerSheet(Actor, "wwn", WwnPartySheet, {
+    types: ["party"],
+    makeDefault: true,
+    label: "WWN.SheetClassParty",
+    themes,
+  });
   DocumentSheetConfig.registerSheet(Item, "wwn", WwnItemSheet, {
     makeDefault: true,
     label: "WWN.SheetClassItem",
@@ -221,11 +232,13 @@ Hooks.once("init", async function () {
         await syncWildPsychicEffort(item);
       }
     }
+    if (item.parent.type === "party") refreshPartyRosterMembers(item.parent);
     if (item.effects.size) refreshActorDerivedData(item.parent);
   });
   Hooks.on("updateItem", async (item, changes, _options, userId) => {
     if (item.parent?.documentName !== "Actor") return;
     if (game.wwn?.migrating || _options?.wwnMigrating) return;
+    if (item.parent.type === "party") refreshPartyRosterMembers(item.parent);
     if (item.type === "power") {
       syncPowerTransferEffects(item);
       const flat = foundry.utils.flattenObject(changes);
@@ -239,7 +252,11 @@ Hooks.once("init", async function () {
         && !_options?.wwnBonusSkillSync
         && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)
       ) {
-        await syncPowerBonusSkills(item, item.parent, { prompt: false });
+        // allowRedirectPrompt: don't re-ask the top-level choice, but a
+        // newly-blocked grant (e.g. a level-gated bonus just unlocked) still
+        // deserves a chance to redirect -- nothing else ever re-syncs this
+        // item/skill pair with a prompt allowed otherwise.
+        await syncPowerBonusSkills(item, item.parent, { prompt: false, allowRedirectPrompt: true });
       }
     }
     if (item.type === "classEdge") {
@@ -250,7 +267,7 @@ Hooks.once("init", async function () {
         && !_options?.wwnBonusSkillSync
         && ["system.bonusSkillsChosen", "system.bonusSkills", "system.bonusSkillsPick", "system.bonusSkillsMode"].some((k) => k in flat)
       ) {
-        await syncPowerBonusSkills(item, item.parent, { prompt: false });
+        await syncPowerBonusSkills(item, item.parent, { prompt: false, allowRedirectPrompt: true });
       }
       if (
         isPc(item.parent)
@@ -272,7 +289,7 @@ Hooks.once("init", async function () {
         // re-entrancy risk from syncFocusBonusSkills's own bonusSkillsChosen
         // write.
         if (!_options?.wwnBonusSkillSync) {
-          await syncFocusBonusSkills(item, item.parent, { prompt: false });
+          await syncFocusBonusSkills(item, item.parent, { prompt: false, allowRedirectPrompt: true });
         }
         await syncWildPsychicEffort(item);
       }
@@ -302,7 +319,86 @@ Hooks.once("init", async function () {
     if (item.type === "contribution" && userId === game.user.id) {
       await checkGodboundAutoLapse(item.parent, { excludeItemId: item.id });
     }
+    if (item.type === "skill" && isPc(item.parent) && userId === game.user.id) {
+      // Unlike a deleted focus/power/classEdge (whose sunk grant stays on the
+      // skill it already reached), a deleted SKILL takes its granted bonus
+      // with it -- clear any granting item's stale "already granted" record
+      // that pointed here so a later sync can retry instead of the bonus
+      // being lost for good (see clearGrantedSkillsForDeletedTarget).
+      await clearGrantedSkillsForDeletedTarget(item.parent, item.id);
+      await syncActorFocusBonusSkills(item.parent);
+      await syncActorPowerBonusSkills(item.parent);
+    }
+    if (item.parent.type === "party") {
+      refreshPartyRosterMembers(item.parent);
+      // Drop the now-meaningless assignment entry rather than leaving a
+      // stale item-id key in the map forever. Gated like every other write
+      // in this hook so only the acting client performs it, not every
+      // connected client watching the same delete.
+      if (userId === game.user.id && item.parent.system.carrierAssignments?.[item.id] !== undefined) {
+        await item.parent.update({ [`system.carrierAssignments.-=${item.id}`]: null });
+      }
+    }
     if (item.effects.size) refreshActorDerivedData(item.parent);
+  });
+  Hooks.on("preUpdateActor", (actor, changes, options) => {
+    if (actor.type !== "party") return;
+    if (foundry.utils.hasProperty(changes, "system.members")) {
+      // Stash the pre-update roster: by the time the post-update "updateActor"
+      // hook fires, actor._source already reflects the NEW value, so reading
+      // it there for a before/after diff would silently no-op (before ===
+      // after) and a removed member would never get refreshed.
+      options.wwnPriorPartyMembers = [...(actor.system.members ?? [])];
+    }
+  });
+  Hooks.on("updateActor", (actor, changes, options) => {
+    if (game.wwn?.migrating || options?.wwnMigrating) return;
+    if (actor.type === "party") {
+      const flat = foundry.utils.flattenObject(changes);
+      const membersChanged = "system.members" in flat;
+      const assignmentsChanged = Object.keys(flat).some((k) => k.startsWith("system.carrierAssignments"));
+      if (membersChanged || assignmentsChanged) {
+        // A carrier reassignment only ever touches current roster members
+        // (the dropdown only offers those), so refreshing the current
+        // roster covers it. A membership change additionally needs the
+        // pre-update roster too, to catch a member who just dropped off it.
+        const uuids = new Set(actor.system.members ?? []);
+        if (membersChanged) {
+          for (const uuid of options.wwnPriorPartyMembers ?? []) uuids.add(uuid);
+        }
+        for (const uuid of uuids) refreshActorDerivedData(safeFromUuidSync(uuid));
+      }
+      return;
+    }
+    // Any open WwnPartySheet whose roster includes this actor (e.g. its HP
+    // just changed) needs its own re-render -- Foundry's own auto-render
+    // only covers `actor`'s own sheet, not a different party's roster view.
+    for (const app of foundry.applications.instances.values()) {
+      if (app instanceof WwnPartySheet && app.actor.system.members?.includes(actor.uuid)) {
+        app.render(false);
+      }
+    }
+  });
+  Hooks.on("deleteActor", async (actor, _options, userId) => {
+    if (game.wwn?.migrating) return;
+    if (actor.type === "party") {
+      for (const uuid of actor.system.members ?? []) {
+        refreshActorDerivedData(safeFromUuidSync(uuid));
+      }
+      return;
+    }
+    // A deleted PC/NPC might still be listed as a party member or as the
+    // carrier of party-pool items -- clean up those dangling references
+    // rather than leaving carrierAssignments pointed at a UUID that can
+    // never resolve again. Only the acting client performs the write, like
+    // every other write-triggering hook in this file.
+    if (userId !== game.user.id) return;
+    for (const party of game.actors.filter((a) => a.type === "party")) {
+      const wasMember = party.system.members?.includes(actor.uuid);
+      const update = buildCarrierClearUpdate(party.system.carrierAssignments, actor.uuid);
+      if (wasMember) update["system.members"] = party.system.members.filter((u) => u !== actor.uuid);
+      if (Object.keys(update).length) await party.update(update);
+    }
   });
   Hooks.on("updateActor", async (actor, changes, options, userId) => {
     if (actor.type !== "project") return;
@@ -513,7 +609,6 @@ Hooks.once("ready", async function () {
   });
 });
 
-Hooks.on("renderActorDirectory", (app, html) => party.addControl(app, html));
 Hooks.on("renderSettings", async (app, html) => {
   const systemInfo = html.querySelector(".info .system");
   if (!systemInfo) return;
@@ -533,7 +628,6 @@ Hooks.on("renderChatMessageHTML", (_message, html) => {
 Hooks.on("getChatMessageContextOptions", chat.addChatMessageContextOptions);
 Hooks.on("getHeaderControlsRollTableSheet", treasure.addTreasureToggleControl);
 Hooks.on("renderRollTableSheet", treasure.augmentTable);
-Hooks.on("updateActor", party.update);
 
 Hooks.on("renderCombatTracker", (app, html) => {
   app.renderGroups?.(html instanceof HTMLElement ? html : html[0]);
@@ -589,4 +683,18 @@ async function endScene() {
 
 async function endDay() {
   for (const actor of game.actors) await refreshPowers(actor, "day");
+}
+
+/**
+ * Refresh every current member of a Party actor's roster. Used on any
+ * create/update/delete of one of its embedded items (gear, currency) rather
+ * than tracking the specific old/new carrier UUID through the change diff --
+ * rosters are small, and this trivially covers a reassignment's effect on
+ * both the previous and new carrier without extra bookkeeping.
+ * @param {Actor} partyActor
+ */
+function refreshPartyRosterMembers(partyActor) {
+  for (const uuid of partyActor.system.members ?? []) {
+    refreshActorDerivedData(safeFromUuidSync(uuid));
+  }
 }

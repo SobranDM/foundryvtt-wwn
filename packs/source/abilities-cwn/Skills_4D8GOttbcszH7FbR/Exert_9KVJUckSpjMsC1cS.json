@@ -8,7 +8,6 @@
     "description": "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn't qualify as a combat skill for other uses.",
     "ownedLevel": -1,
     "score": "con",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

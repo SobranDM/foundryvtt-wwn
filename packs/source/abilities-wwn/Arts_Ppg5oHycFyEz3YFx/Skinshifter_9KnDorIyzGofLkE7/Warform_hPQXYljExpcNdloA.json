@@ -11,7 +11,7 @@
     "commitmentOptions": [
       {
         "cost": 0,
-        "length": "none",
+        "length": "active",
         "note": ""
       }
     ],
@@ -35,7 +35,23 @@
       "duration": ""
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "hPQXMelee0000001",
+      "type": "base",
+      "name": "Warform",
+      "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+      "transfer": true,
+      "disabled": true,
+      "system": {
+        "changes": [
+          { "key": "system.combat.meleeAttack", "type": "add", "value": 2, "phase": "final" }
+        ]
+      },
+      "flags": {},
+      "_key": "!items.effects!hPQXYljExpcNdloA.hPQXMelee0000001"
+    }
+  ],
   "flags": {
     "core": {
       "sourceId": "Compendium.wwn.abilities-wwn.hPQXYljExpcNdloA"

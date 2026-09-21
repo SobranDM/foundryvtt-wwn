@@ -8,7 +8,6 @@
     "description": "Use this skill to pilot vehicles or ride beasts. Roll it to fly spaceships, drive vehicles, ride animals, or tend to basic vehicle repair. This skill doesn't help you with things entirely outside the scope of your background or experience, though with some practice a PC can expand their expertise.",
     "ownedLevel": -1,
     "score": "dex",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

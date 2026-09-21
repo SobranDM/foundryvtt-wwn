@@ -345,22 +345,28 @@ export function hasActiveCommitment(subType, system) {
 
 /**
  * True when this power opted into a poolless (zero-cost) manual active/
- * inactive toggle -- an `installed`-field subtype (cyberware / custom) whose
- * `commitmentOptions` includes a `{ cost: 0, length: "active" }` entry.
- * Distinct from `hasActiveCommitment` (a *paid* shared-pool "active" tier,
- * e.g. an Art committing Effort for the scene): this draws no resource at
- * all, it just lets the item's own `isActive` flag be flipped by hand.
+ * inactive toggle -- any power whose `commitmentOptions` includes a
+ * `{ cost: 0, length: "active" }` entry. Distinct from `hasActiveCommitment`
+ * (a *paid* shared-pool "active" tier, e.g. an Art committing Effort for the
+ * scene): this draws no resource at all, it just lets the item's own
+ * `isActive` flag be flipped by hand.
+ *
+ * Originally cyberware/custom-only (an `installed`-field subtype whose book
+ * text ties its bonus to being actively engaged/switched on, not merely
+ * installed) -- now subtype-agnostic, since the same shape is also the
+ * correct fit for a non-cyberware manual toggle that genuinely costs nothing
+ * (e.g. Skinshifter's form-specific traits: Effort is already spent on
+ * Change Form itself, not per individual trait, so these must toggle for
+ * free without `getPowerTransferMode` forcing them permanently on the way a
+ * plain `{ cost: 0, length: "none" }` passive art would be).
+ *
  * Most cyberware does NOT opt into this -- it stays on the default
  * `{ cost: 0, length: "none" }` and its transfer effects are gated on
- * `installed` alone (always-on while installed). Only cyberware whose book
- * text ties its bonus to being actively engaged/switched on (not merely
- * installed) should opt in, by giving it a `{ cost: 0, length: "active" }`
- * commitment option.
+ * `installed` alone (always-on while installed).
  * @param {string} subType
  * @param {object} system
  */
 export function hasFreeActiveToggle(subType, system) {
-  if (!usesInstalledField(subType)) return false;
   return resolveCommitmentOptions(subType, system).some(
     (o) => o.cost === 0 && o.length === "active"
   );

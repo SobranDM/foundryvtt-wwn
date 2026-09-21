@@ -8,7 +8,6 @@
     "description": "The Cast skill reflects a caster's talent at spellcasting and their intellectual mastery of the complex formulas, rituals, and incantations necessary to use their spells. Anyone can learn it as a strictly intellectual exercise, but only those with the Spellcaster Edge can actually use it to cast spells.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": true
   },
   "_stats": {

@@ -8,7 +8,6 @@
     "description": "This is a catch-all skill for professions not represented by other skills. When you take it, pick a particular profession, such as lawyering, stevedore work, painting, or some other career. The skill then applies to performing that work or making contacts with people in its sphere.",
     "ownedLevel": -1,
     "score": "con",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

@@ -8,7 +8,7 @@
  * itself — it isn't unit tested under plain Node; exercise it via manual QA.
  */
 import { WwnDice } from "../dice/dice.mjs";
-import { RollParts, resolveSkillDiceFormula } from "../dice/roll-parts.mjs";
+import { RollParts, BASE_SKILL_DICE_COUNT } from "../dice/roll-parts.mjs";
 import { WwnAttackRoll, WwnDamageRoll, WwnSkillRoll } from "../dice/rolls.mjs";
 import { createRollMessage, createNoticeMessage } from "../chat/chat-card.mjs";
 import { showWwnDialog, rollButton, cancelButton } from "../applications/wwn-dialog.mjs";
@@ -84,7 +84,7 @@ async function rollNpcStationCheck(actor, { title, skipDialog = false } = {}) {
   const prompt = await WwnDice.promptModifier({ title, skipDialog });
   if (!prompt) return;
 
-  const parts = new RollParts().add(resolveSkillDiceFormula("2d6"), game.i18n.localize("WWN.Roll.SkillDice"));
+  const parts = new RollParts().add(`${BASE_SKILL_DICE_COUNT}d6`, game.i18n.localize("WWN.Roll.SkillDice"));
   parts.add(actor.system.skill ?? 0, game.i18n.localize("WWN.Roll.NpcSkill"));
   parts.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
 
@@ -318,10 +318,7 @@ export async function rollSpikeDrill(starship, { difficulty, skipDialog = false 
     const doubled = baseLevel * 2;
     const prompt = await WwnDice.promptModifier({ title, skipDialog });
     if (!prompt) return;
-    const parts = new RollParts().add(
-      resolveSkillDiceFormula(skill.system?.skillDice || "2d6"),
-      game.i18n.localize("WWN.Roll.SkillDice"),
-    );
+    const parts = new RollParts().add(`${BASE_SKILL_DICE_COUNT}d6`, game.i18n.localize("WWN.Roll.SkillDice"));
     parts.add(doubled, game.i18n.localize("WWN.Starship.SpikeDrillDoublePilot"));
     const attrKey = skill.system?.score || "int";
     parts.add(actor.system.abilities?.[attrKey]?.mod ?? 0, attrKey.toUpperCase());

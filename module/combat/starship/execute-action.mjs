@@ -10,6 +10,7 @@ import {
 } from "./combatant-state.mjs";
 import {
   applySupportDiscount,
+  checkExclusiveActionGuard,
   spendCp,
   gainCp,
   maybeGrantSoloFighterCp,
@@ -134,11 +135,9 @@ export async function executeStarshipAction(starship, actionId, options = {}) {
 
   let state = getStarshipCombatState(combatant);
 
-  if (def.exclusive && state.flags.tookExclusiveGeneralAction) {
-    return ui.notifications.warn(game.i18n.localize("WWN.Starship.ExclusiveAlready"));
-  }
-  if (state.flags.tookExclusiveGeneralAction && def.department !== "general") {
-    return ui.notifications.warn(game.i18n.localize("WWN.Starship.ExclusiveBlocks"));
+  const exclusiveCheck = checkExclusiveActionGuard(state, def);
+  if (!exclusiveCheck.ok) {
+    return ui.notifications.warn(game.i18n.localize(exclusiveCheck.reasonKey));
   }
 
   if (def.department === "bridge" && bridgeActionsBlocked(state.crises, enginesDestroyed(starship))) {
@@ -209,6 +208,12 @@ export async function executeStarshipAction(starship, actionId, options = {}) {
     }
     await setStarshipCombatState(combatant, next);
     commitAction.done = true;
+    // setStarshipCombatState only writes a Combatant flag, which doesn't
+    // trigger the default Actor-update sheet re-render -- so a successful
+    // action with no chat card (evasiveManeuvers/boostEngines/crashSystems
+    // are intentionally silent on success, per the hardening design doc)
+    // left an already-open sheet showing a stale CP counter/buff state.
+    starship.sheet?.render(false);
     return true;
   };
   commitAction.done = false;

@@ -86,6 +86,13 @@
                   {{checked system.combat.damageBonusHalfLevel}} data-dtype="Boolean" />
               </div>
             </div>
+            <div class="form-group">
+              <label title="{{localize 'WWN.Npc.AllWeaponsShockAnyAcHint'}}">{{localize "WWN.Npc.AllWeaponsShockAnyAc"}}</label>
+              <div class="form-fields">
+                <input type="checkbox" name="system.combat.allWeaponsShockAnyAc"
+                  {{checked system.combat.allWeaponsShockAnyAc}} data-dtype="Boolean" />
+              </div>
+            </div>
             {{#if separateRangedAC}}
             <div class="form-group">
               <label>{{localize "WWN.ArmorClass"}} ({{localize "WWN.Missile"}})</label>

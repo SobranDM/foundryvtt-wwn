@@ -84,16 +84,36 @@ export class WWNCombat extends foundry.documents.Combat {
     }));
   }
 
+  /**
+   * Group ids that have already had a turn this round (side-collapse mode
+   * only), persisted as a Combat flag so it stays in sync across clients and
+   * survives reloads. Reset each round in `_onEndRound`.
+   * @returns {Set<string>}
+   */
+  #actedGroupIds() {
+    return new Set(this.getFlag("wwn", "actedGroupIds") ?? []);
+  }
+
   /** @inheritDoc */
   async nextTurn() {
     if (!this.isSideCollapseEnabled) return super.nextTurn();
     if (this.round === 0) return this.nextRound();
 
+    const sideCollapseTurns = this.#sideCollapseTurns();
+    // The group we're leaving just had its turn -- mark it acted *before*
+    // searching, so a manual tie-break activation (which can jump `turn` to
+    // a group positioned after an untouched sibling, see #onActivateGroup)
+    // doesn't get treated as "nothing left, round must be over."
+    const actedGroupIds = this.#actedGroupIds();
+    const departingGroupId = sideCollapseTurns[this.turn]?.groupId ?? null;
+    if (departingGroupId) actedGroupIds.add(departingGroupId);
+
     const result = findAdjacentGroupTurn({
-      turns: this.#sideCollapseTurns(),
+      turns: sideCollapseTurns,
       currentTurnIndex: this.turn,
       direction: 1,
-      skipDefeated: this.settings.skipDefeated
+      skipDefeated: this.settings.skipDefeated,
+      actedGroupIds
     });
 
     if (result.kind === "none") return this.nextRound();
@@ -101,7 +121,11 @@ export class WWNCombat extends foundry.documents.Combat {
 
     const nextTurn = result.turnIndex;
     const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, nextTurn);
-    const updateData = { round: this.round, turn: nextTurn };
+    const updateData = {
+      round: this.round,
+      turn: nextTurn,
+      "flags.wwn.actedGroupIds": [...actedGroupIds]
+    };
     const updateOptions = { direction: 1, worldTime: { delta: advanceTime } };
     Hooks.callAll("combatTurn", this, updateData, updateOptions);
     await this.update(updateData, updateOptions);
@@ -113,19 +137,38 @@ export class WWNCombat extends foundry.documents.Combat {
     if (!this.isSideCollapseEnabled) return super.previousTurn();
     if (this.round === 0) return this;
 
+    const sideCollapseTurns = this.#sideCollapseTurns();
     const result = findAdjacentGroupTurn({
-      turns: this.#sideCollapseTurns(),
+      turns: sideCollapseTurns,
       currentTurnIndex: this.turn,
       direction: -1,
       skipDefeated: this.settings.skipDefeated
     });
 
     if (result.kind === "none") return this;
-    if (result.kind === "round") return this.previousRound();
+    // Rewinding a full round: nothing in the round we're entering has acted
+    // yet, matching the forward-direction reset in _onEndRound.
+    if (result.kind === "round") {
+      if (this.getFlag("wwn", "actedGroupIds")?.length) await this.unsetFlag("wwn", "actedGroupIds");
+      return this.previousRound();
+    }
 
     const previousTurn = result.turnIndex;
+    // The group we're rewinding TO hasn't actually acted in this pass --
+    // nextTurn() only marks a group acted when *departing* it, so without
+    // this it stays stuck in actedGroupIds from the earlier forward pass
+    // that walked through it, and a later nextTurn() would skip it again
+    // instead of giving it its turn.
+    const targetGroupId = sideCollapseTurns[previousTurn]?.groupId ?? null;
+    const actedGroupIds = this.#actedGroupIds();
+    if (targetGroupId) actedGroupIds.delete(targetGroupId);
+
     const advanceTime = this.getTimeDelta(this.round, this.turn, this.round, previousTurn);
-    const updateData = { round: this.round, turn: previousTurn };
+    const updateData = {
+      round: this.round,
+      turn: previousTurn,
+      "flags.wwn.actedGroupIds": [...actedGroupIds]
+    };
     const updateOptions = { direction: -1, worldTime: { delta: advanceTime } };
     Hooks.callAll("combatTurn", this, updateData, updateOptions);
     await this.update(updateData, updateOptions);
@@ -142,11 +185,11 @@ export class WWNCombat extends foundry.documents.Combat {
 
     let initRoll;
     let maxInitValue = -Infinity;
-    // AE-seeded init: group.mod >= 1 ≈ Alert L1; individual/group mod >= 100 ≈ Alert L2 / Vigilant
-    const hasAlert = [...group.members].some((combatant) => {
-      const init = combatant.actor?.system?.combat?.initiative;
-      return (Number(init?.group?.mod) || 0) >= 1 && (Number(init?.individual?.mod) || 0) < 100;
-    });
+    // AE-seeded init: individual/group mod >= 100 ≈ Alert L2 / Vigilant. Note:
+    // Alert L1's plain group.mod (+1) is NOT re-added here -- deriveInitiative
+    // (module/derivations/initiative.mjs) already folds group.mod into
+    // group.value below, so a separate "hasAlert" bonus here would double it
+    // (this was a real bug: a single Alert L1 PC rolled `+2` instead of `+1`).
     const hasTopCombatant = [...group.members].some((combatant) => {
       const init = combatant.actor?.system?.combat?.initiative;
       return (Number(init?.individual?.mod) || 0) >= 100 || (Number(init?.group?.mod) || 0) >= 100;
@@ -167,7 +210,7 @@ export class WWNCombat extends foundry.documents.Combat {
     if (maxInitValue === -Infinity) maxInitValue = 0;
 
     let rollBonus = maxInitValue;
-    if (hasAlert || hasTopCombatant || !!olderSiblingGroup) rollBonus += 1;
+    if (hasTopCombatant || !!olderSiblingGroup) rollBonus += 1;
     if (hasTopCombatant) rollBonus += 100;
     let roll = new Roll(`${initRoll} + ${rollBonus}`);
     await roll.evaluate();
@@ -464,6 +507,10 @@ export class WWNCombat extends foundry.documents.Combat {
     for (const c of this.combatants) {
       await c.unsetFlag("wwn", "meleeHitThisRound");
       await c.unsetFlag("wwn", "attackedThisTurn");
+    }
+
+    if (this.isSideCollapseEnabled && this.getFlag("wwn", "actedGroupIds")?.length) {
+      await this.unsetFlag("wwn", "actedGroupIds");
     }
   }
 

@@ -11,6 +11,7 @@ export const CREATABLE_ACTOR_TYPES = Object.freeze([
   "starship",
   "powerArmor",
   "project",
+  "party",
 ]);
 
 /**

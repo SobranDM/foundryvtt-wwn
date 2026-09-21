@@ -11,7 +11,8 @@ export function defaultRollRowLabel(kind) {
 export function formatShockAcDetail(threshold) {
   if (threshold == null || threshold === "") return "";
   const ac = Number(threshold);
-  if (!Number.isFinite(ac)) return "";
+  if (Number.isNaN(ac)) return "";
+  if (!Number.isFinite(ac)) return game.i18n.localize("WWN.Roll.ShockAcAnyDetail");
   return game.i18n.format("WWN.Roll.ShockAcDetail", { ac });
 }
 

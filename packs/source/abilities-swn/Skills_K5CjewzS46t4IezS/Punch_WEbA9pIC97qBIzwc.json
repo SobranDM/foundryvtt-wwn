@@ -8,7 +8,6 @@
     "description": "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Combatant focus described later.",
     "ownedLevel": -1,
     "score": "str",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

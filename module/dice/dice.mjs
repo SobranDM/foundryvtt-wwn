@@ -1,4 +1,4 @@
-import { RollParts, resolveSkillDiceFormula, skillDiceCount } from "./roll-parts.mjs";
+import { RollParts, BASE_SKILL_DICE_COUNT } from "./roll-parts.mjs";
 import { WwnRoll, WwnAttackRoll, WwnSkillRoll, WwnDamageRoll } from "./rolls.mjs";
 import { showWwnDialog, rollButton, cancelButton } from "../applications/wwn-dialog.mjs";
 import { skillRollAbilityChoices, parseRollDialogResult } from "./roll-prompt.mjs";
@@ -166,10 +166,9 @@ export class WwnDice {
     const parts = new RollParts();
     const { extraDice, dropLowest } = getFocusSkillDiceBonus(actor, slug);
     if (extraDice > 0) {
-      const totalDice = skillDiceCount(skill.system.skillDice) + extraDice;
-      parts.add(`${totalDice}d6dl${dropLowest}`, game.i18n.localize("WWN.Roll.SkillDice"));
+      parts.add(`${BASE_SKILL_DICE_COUNT + extraDice}d6dl${dropLowest}`, game.i18n.localize("WWN.Roll.SkillDice"));
     } else {
-      parts.add(resolveSkillDiceFormula(skill.system.skillDice), game.i18n.localize("WWN.Roll.SkillDice"));
+      parts.add(`${BASE_SKILL_DICE_COUNT}d6`, game.i18n.localize("WWN.Roll.SkillDice"));
     }
     parts.add(this.effectiveSkillLevel(actor, skill), skill.name);
     parts.add(ability?.mod ?? 0, game.i18n.localize(CONFIG.WWN.abilityAbbreviations[abilityKey] ?? abilityKey));
@@ -934,7 +933,7 @@ export class WwnDice {
     });
     if (!prompt) return;
 
-    const parts = new RollParts().add("2d6", game.i18n.localize("WWN.Roll.SkillDice"));
+    const parts = new RollParts().add(`${BASE_SKILL_DICE_COUNT}d6`, game.i18n.localize("WWN.Roll.SkillDice"));
     parts.add(skill, game.i18n.localize("WWN.Roll.NpcSkill"));
     parts.add(prompt.modifier, game.i18n.localize("WWN.Roll.Situational"));
 

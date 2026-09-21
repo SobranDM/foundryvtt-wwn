@@ -56,6 +56,17 @@ export function evaluateSkillLevelRequirement(ownedLevel, characterLevel) {
 }
 
 /**
+ * Whether the character-level rank cap ({@link evaluateSkillLevelRequirement})
+ * applies right now -- false when no character level was given, or the
+ * `noSkillLevelReq` house-rule setting is on.
+ * @param {number} [characterLevel]
+ * @returns {boolean}
+ */
+export function isSkillLevelGateEnforced(characterLevel) {
+  return characterLevel != null && globalThis.game?.settings?.get?.("wwn", "noSkillLevelReq") !== true;
+}
+
+/**
  * Cost to raise a skill from `ownedLevel` to the next rank.
  * @param {number} ownedLevel
  * @param {{ flatCost?: boolean }} [options]
@@ -68,10 +79,15 @@ export function nextSkillLevelCost(ownedLevel, { flatCost = false } = {}) {
 
 /**
  * Apply skill points with automatic rank-ups while cost is covered.
+ * When `characterLevel` is given, each rank-up also respects
+ * {@link evaluateSkillLevelRequirement} (unless the `noSkillLevelReq`
+ * house-rule setting is on) -- a lump-sum grant stops at the same cap a
+ * player clicking "buy" one rank at a time would hit, banking any
+ * leftover points rather than pushing past it.
  * @param {number} ownedLevel
  * @param {number} pointsInvested
  * @param {number} points
- * @param {{ flatCost?: boolean }} [options]
+ * @param {{ flatCost?: boolean, characterLevel?: number }} [options]
  * @returns {{ ownedLevel: number, pointsInvested: number, levelsGained: number }}
  */
 export function applySkillPoints(ownedLevel, pointsInvested, points, options = {}) {
@@ -79,12 +95,14 @@ export function applySkillPoints(ownedLevel, pointsInvested, points, options = {
   if (flatCost === undefined) {
     flatCost = globalThis.game?.settings?.get?.("wwn", "flatSkillCost") === true;
   }
+  const enforceLevelGate = isSkillLevelGateEnforced(options.characterLevel);
 
   let level = Number.isFinite(Number(ownedLevel)) ? Number(ownedLevel) : -1;
   let invested = Math.max((Number(pointsInvested) || 0) + (Number(points) || 0), 0);
   let levelsGained = 0;
 
   while (true) {
+    if (enforceLevelGate && !evaluateSkillLevelRequirement(level, options.characterLevel).ok) break;
     const cost = nextSkillLevelCost(level, { flatCost });
     if (invested < cost) break;
     invested -= cost;

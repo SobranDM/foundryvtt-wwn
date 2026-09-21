@@ -8,7 +8,6 @@
     "description": "Know facts about academic or scientific fields. Roll it to understand academic topics, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics. For tribal societies, it also covers tribal law, custom, and lore.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

@@ -8,7 +8,6 @@
     "description": "Master the remote control of kinetic energy to move objects and fabricate force constructs.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": true
   },
   "_stats": {

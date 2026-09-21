@@ -8,7 +8,6 @@
     "description": "The Summon skill reflects the summoner's knowledge of spiritual entities and the rigors of their training in channeling the otherworldly energies of the spirits. Anyone can learn it as a purely intellectual study, but only those with the Summoner Edge can actually use it to beckon or banish spirits.",
     "ownedLevel": -1,
     "score": "int",
-    "skillDice": "2d6",
     "secondary": true
   },
   "_stats": {

@@ -1,25 +1,36 @@
 <form autocomplete="off">
     <div class="wwn-dialog-body">
-        <div class="form-group">
-            <label>{{localize "WWN.dialog.amount"}}</label>
-            <div class="form-fields">
-                <input name="total" placeholder="0" type="number" data-dtype="Number" />
-            </div>
-            <button type="button" data-action="calculate-share" title="{{localize 'WWN.dialog.calculateShare'}}">
-                <i class="fas fa-calculator"></i>
-            </button>
-        </div>
         <p class="wwn-dialog-hint">{{localize "WWN.dialog.currency.dealHint"}}</p>
-        <hr />
-        <div class="actors">
-            {{#each actors as |e|}}
-            <div class="actor form-group" data-actor-id="{{e.id}}">
-                <label>{{e.name}} ({{e.system.currencyShare}}%)</label>
-                <div class="form-fields">
-                    <input name="" placeholder="0" type="number" data-dtype="Number" />
-                </div>
-            </div>
-            {{/each}}
-        </div>
+        <table class="wwn-party-deal-currency">
+            <thead>
+                <tr>
+                    <th></th>
+                    {{#each denominations as |d|}}
+                    <th title="{{d.name}}"><img src="{{d.img}}" alt="" />{{d.name}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="wwn-party-deal-totals">
+                    <td>
+                        {{localize "WWN.dialog.amount"}}
+                        <button type="button" data-action="calculate-share" title="{{localize 'WWN.dialog.calculateShare'}}">
+                            <i class="fas fa-calculator"></i>
+                        </button>
+                    </td>
+                    {{#each denominations as |d key|}}
+                    <td><input type="number" data-denom-total-idx="{{key}}" value="{{d.total}}" data-dtype="Number" /></td>
+                    {{/each}}
+                </tr>
+                {{#each actors as |e|}}
+                <tr class="actor" data-actor-id="{{e.id}}">
+                    <td>{{e.name}} ({{e.system.currencyShare}}%)</td>
+                    {{#each ../denominations as |d key|}}
+                    <td><input type="number" placeholder="0" data-actor-id="{{e.id}}" data-denom-idx="{{key}}" data-dtype="Number" /></td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
 </form>

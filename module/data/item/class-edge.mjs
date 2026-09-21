@@ -116,34 +116,55 @@ export default class WwnClassEdge extends WwnItemBase {
   }
 
   /**
-   * Ensure grant sub-objects exist for classEdges created before hdGrant/preparedGrant.
+   * Heal grant sub-fields that are PRESENT but malformed (null, or wrong
+   * shape) on classEdges created before hdGrant/preparedGrant existed.
+   *
+   * `source` here can be a partial update diff (e.g. a GM editing just the
+   * description text), not just a full document load. The previous version
+   * of this method unconditionally defaulted every grant field whenever it
+   * was simply ABSENT from the payload -- `source.hdGrant ??= {}` etc. --
+   * which manufactured hdGrant, poolGrant, preparedGrant, bonusSkills,
+   * attributeGrant, and companions out of thin air on any update that didn't
+   * happen to touch them, and merged the wiped-out defaults (empty
+   * progression arrays, cleared bonusSkillsChosen, cleared companions)
+   * into the real document -- silently erasing a class's hit-dice grant,
+   * resource-pool progression, resolved bonus-skill choices, and companion
+   * list on essentially any unrelated edit. A genuinely missing field on a
+   * full document load is already covered by the schema's own `initial`
+   * defaults (see defineSchema above) -- only heal a key that is actually
+   * present in this payload. Same hazard already fixed for WwnPc's
+   * renown/morale and WwnWeapon's ammoMode.
    * @override
    */
   static migrateData(source) {
     source = super.migrateData(source);
     if (!source || typeof source !== "object") return source;
-    source.hdGrant ??= {};
-    if (source.hdGrant.die === undefined || source.hdGrant.die === null) source.hdGrant.die = "";
-    if (source.hdGrant.perLevelMod === undefined || source.hdGrant.perLevelMod === null) {
-      source.hdGrant.perLevelMod = 0;
+    if (source.hdGrant && typeof source.hdGrant === "object") {
+      if (source.hdGrant.die === null) source.hdGrant.die = "";
+      if (source.hdGrant.perLevelMod === null) source.hdGrant.perLevelMod = 0;
     }
-    source.preparedGrant ??= {};
-    if (!Array.isArray(source.preparedGrant.progression)) source.preparedGrant.progression = [];
-    source.poolGrant ??= {};
-    if (!Array.isArray(source.poolGrant.progression)) source.poolGrant.progression = [];
-    if (!Array.isArray(source.bonusSkills)) source.bonusSkills = [];
-    if (source.bonusSkillsPick === undefined || source.bonusSkillsPick === null) source.bonusSkillsPick = 0;
-    if (!Array.isArray(source.bonusSkillsChosen)) source.bonusSkillsChosen = [];
-    if (source.bonusSkillsMode === undefined || source.bonusSkillsMode === null) source.bonusSkillsMode = "";
-    source.attributeGrant ??= {};
-    if (source.attributeGrant.mode === undefined || source.attributeGrant.mode === null) {
-      source.attributeGrant.mode = "";
+    if (source.preparedGrant && typeof source.preparedGrant === "object") {
+      if ("progression" in source.preparedGrant && !Array.isArray(source.preparedGrant.progression)) {
+        source.preparedGrant.progression = [];
+      }
     }
-    if (!Array.isArray(source.attributeGrant.exclude)) source.attributeGrant.exclude = [];
-    if (source.attributeGrant.chosen === undefined || source.attributeGrant.chosen === null) {
-      source.attributeGrant.chosen = "";
+    if (source.poolGrant && typeof source.poolGrant === "object") {
+      if ("progression" in source.poolGrant && !Array.isArray(source.poolGrant.progression)) {
+        source.poolGrant.progression = [];
+      }
     }
-    if (!Array.isArray(source.companions)) source.companions = [];
+    if ("bonusSkills" in source && !Array.isArray(source.bonusSkills)) source.bonusSkills = [];
+    if (source.bonusSkillsPick === null) source.bonusSkillsPick = 0;
+    if ("bonusSkillsChosen" in source && !Array.isArray(source.bonusSkillsChosen)) source.bonusSkillsChosen = [];
+    if (source.bonusSkillsMode === null) source.bonusSkillsMode = "";
+    if (source.attributeGrant && typeof source.attributeGrant === "object") {
+      if (source.attributeGrant.mode === null) source.attributeGrant.mode = "";
+      if ("exclude" in source.attributeGrant && !Array.isArray(source.attributeGrant.exclude)) {
+        source.attributeGrant.exclude = [];
+      }
+      if (source.attributeGrant.chosen === null) source.attributeGrant.chosen = "";
+    }
+    if ("companions" in source && !Array.isArray(source.companions)) source.companions = [];
     return source;
   }
 }

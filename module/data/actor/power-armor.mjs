@@ -5,6 +5,7 @@ import {
   resolveEmptySuitMode,
 } from "../../helpers/power-armor-fitting-state.mjs";
 import { resolvePilot, isPilotTrained, buildMergedRollData } from "../../helpers/power-armor-pilot.mjs";
+import { safeFromUuidSync } from "../../helpers/safe-resolve.mjs";
 
 const fields = foundry.data.fields;
 
@@ -112,26 +113,12 @@ export default class WwnPowerArmor extends foundry.abstract.TypeDataModel {
     this.ammoItems = actor.items.filter((i) => i.type === "ammo");
     this.gear = actor.items.filter((i) => i.type === "item" || i.type === "armor");
 
-    const resolve = (uuid) => {
-      try {
-        return typeof fromUuidSync === "function" ? fromUuidSync(uuid) : null;
-      } catch {
-        return null;
-      }
-    };
-    this.pilotResolved = resolvePilot(this.pilot, resolve);
+    this.pilotResolved = resolvePilot(this.pilot, safeFromUuidSync);
     this.pilotTrained = isPilotTrained(this.pilot.actor, this.trainedPilots);
   }
 
   getRollData() {
-    const resolve = (uuid) => {
-      try {
-        return typeof fromUuidSync === "function" ? fromUuidSync(uuid) : null;
-      } catch {
-        return null;
-      }
-    };
-    const pilot = resolvePilot(this.pilot, resolve);
+    const pilot = resolvePilot(this.pilot, safeFromUuidSync);
     const merged = buildMergedRollData(pilot.actor ?? null, this.derived ?? {}, this);
     return foundry.utils.deepClone({ ...merged, suitSystem: foundry.utils.deepClone(this) });
   }

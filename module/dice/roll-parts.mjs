@@ -15,36 +15,10 @@ export function normalizeRollPart(value) {
 }
 
 /**
- * Resolve a skill's dice pool to a real dice formula.
- *
- * Bare integers like `"2"` / `"3"` must not pass through {@link normalizeRollPart}
- * as flat modifiers — that yields skill+attribute with no 2d6/3d6kh2 pool.
- * Map known counts onto the system skill-dice options; otherwise default to 2d6.
- *
- * @param {string|number|null|undefined} skillDice
- * @returns {string}
+ * Base number of dice in a skill check's dice pool. All skills are 2d6
+ * unless a focus/power bonus adds extra dice (see `getFocusSkillDiceBonus`).
  */
-export function resolveSkillDiceFormula(skillDice) {
-  const raw = String(skillDice ?? "").trim();
-  if (/\dd\d/i.test(raw)) return raw;
-
-  const n = Number(raw);
-  if (n === 3) return "3d6kh2";
-  if (n === 4) return "4d6kh2";
-  if (n === 1) return "1d6";
-  return "2d6";
-}
-
-/**
- * Number of dice in a skill pool formula (e.g. 3d6kh2 → 3, bare "4" → 4).
- * @param {string|number|null|undefined} skillDice
- * @returns {number}
- */
-export function skillDiceCount(skillDice) {
-  const formula = resolveSkillDiceFormula(skillDice);
-  const match = formula.match(/^(\d+)d/i);
-  return match ? Number(match[1]) : 2;
-}
+export const BASE_SKILL_DICE_COUNT = 2;
 
 export class RollParts {
   /** @type {Array<{value: number|string, label: string}>} */

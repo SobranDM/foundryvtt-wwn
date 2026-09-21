@@ -379,14 +379,13 @@ describe("migrateItemData dispatcher", () => {
     assert.equal(migrateItemData({ type: "ability", system: {} }).type, "power");
   });
 
-  it("no-ops modern gear so personal/treasure are not rebuilt away", () => {
+  it("no-ops modern gear so treasure is not rebuilt away", () => {
     const modern = {
       _id: "g1",
       name: "Gem",
       type: "item",
       system: {
         treasure: true,
-        personal: true,
         expendOnUse: false,
         charges: { value: 0, max: 0 },
         container: { isContainer: false, isOpen: true },
@@ -397,7 +396,6 @@ describe("migrateItemData dispatcher", () => {
     assert.equal(isModernGearSystem(modern.system), true);
     assert.equal(migrateItemData(modern), null);
     const again = applyEmbeddedItemMigration(modern);
-    assert.equal(again.system.personal, true);
     assert.equal(again.system.treasure, true);
   });
 });

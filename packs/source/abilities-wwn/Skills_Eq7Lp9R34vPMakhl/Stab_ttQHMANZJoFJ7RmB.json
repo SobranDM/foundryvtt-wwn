@@ -12,7 +12,6 @@
     "description": "Fight with melee weapons or throw a hurled weapon. Maintain and identify weaponry.",
     "ownedLevel": -1,
     "score": "str",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

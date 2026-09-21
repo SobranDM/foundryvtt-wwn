@@ -8,7 +8,6 @@
     "description": "Drive vehicles, sail ships, fly planes, pilot drones, and perform maintenance and basic repairs on such devices. A PC's background may incline them to a particular kind of driving, but with some practice this skill can be applied generally.",
     "ownedLevel": -1,
     "score": "dex",
-    "skillDice": "2d6",
     "secondary": false
   },
   "_stats": {

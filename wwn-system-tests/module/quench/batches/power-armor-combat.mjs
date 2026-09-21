@@ -59,11 +59,30 @@ export default function register(quench) {
             assert.isAtLeast(Number(armor.system.derived?.soakMax ?? 0), 5);
 
             const pilotBefore = pilot.system.hp.value;
-            await armor.applyDamage(8);
-            await settle();
+            // Code-review fix: this path used to throw a DataModelValidationError
+            // ("hp.value must be a number") mid-flow even though the final
+            // numbers came out correct. Spy on console.error so a regression
+            // fails the test loudly instead of being invisible.
+            const errors = [];
+            const originalError = console.error;
+            console.error = (...args) => {
+              errors.push(args);
+              originalError.apply(console, args);
+            };
+            try {
+              await armor.applyDamage(8);
+              await settle();
+            } finally {
+              console.error = originalError;
+            }
 
             assert.equal(armor.system.soak.value, 0);
             assert.equal(pilot.system.hp.value, pilotBefore - 3);
+            assert.equal(
+              errors.length,
+              0,
+              `applyDamage overflow must not log any console error, got: ${JSON.stringify(errors)}`,
+            );
           } finally {
             await deleteTestActor(armor);
             await deleteTestActor(pilot);

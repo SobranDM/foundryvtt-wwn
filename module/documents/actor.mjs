@@ -108,6 +108,23 @@ export class WwnActor extends Actor {
       // (an unlinked token would silently fork into a synthetic copy).
       this.updateSource({ prototypeToken: { actorLink: true } });
     }
+    if (this.type === "party") {
+      // Players need to see the shared pool/roster without per-actor grants.
+      if (!foundry.utils.hasProperty(data, "ownership.default")) {
+        this.updateSource({ "ownership.default": CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER });
+      }
+      if (!this.items.some((i) => i.type === "currency")) {
+        // Same atomic-create mechanism as #seedNewPcItems below (updateSource
+        // in _preCreate, not a post-create createEmbeddedDocuments call) --
+        // see that method's doc-comment for why the latter double-seeds
+        // under a two-client GM session.
+        const itemsData = buildDefaultCurrencyItemsData().map((d) => ({
+          ...d,
+          _id: foundry.utils.randomID(),
+        }));
+        this.updateSource({ items: itemsData });
+      }
+    }
     // Per-type default icons (mirrors WwnItem._preCreate).
     if (!data.img || data.img === Actor.DEFAULT_ICON) {
       const icon = CONFIG.WWN.defaultIcons[this.type];
@@ -193,22 +210,7 @@ export class WwnActor extends Actor {
     }
 
     if (!this.items.some((i) => i.type === "currency")) {
-      const setKey = game.settings.get("wwn", "defaultCurrencySet") ?? "silver";
-      const set = CONFIG.WWN.currencySets[setKey] ?? CONFIG.WWN.currencySets.silver;
-      // Items built here are merged straight into the creation payload via
-      // updateSource (see below), which bypasses Item#_preCreate — so its
-      // per-type default-icon fallback never runs for these. Set img
-      // explicitly, same source and fallback as the legacy migration
-      // transform (module/migration/transforms.mjs, WWN_CURRENCIES seeding).
-      const icon = CONFIG.WWN?.defaultIcons?.currency ?? "icons/svg/coins.svg";
-      for (const c of set) {
-        toCreate.push({
-          type: "currency",
-          name: game.i18n.localize(c.name),
-          img: icon,
-          system: { multiplier: c.multiplier, perSlot: c.perSlot, carried: 0, banked: 0 },
-        });
-      }
+      toCreate.push(...buildDefaultCurrencyItemsData());
     }
 
     if (!toCreate.length) return;
@@ -289,7 +291,14 @@ export class WwnActor extends Actor {
     value = ctx.amount;
 
     const hpBefore = this.system.hp.value;
-    const hpAfter = Math.clamp(hpBefore - value, 0, this.system.hp.max);
+    let hpAfter = Math.clamp(hpBefore - value, 0, this.system.hp.max);
+    // Defensive: a NaN/undefined input anywhere upstream (a hook mutating
+    // ctx.amount to something non-numeric, or a corrupt hp.value already on
+    // the actor) must never reach update() -- hp.value is a required,
+    // non-nullable NumberField and a bad write here throws a
+    // DataModelValidationError (seen intermittently on the power-armor
+    // pilot-overflow path even when the final numbers looked correct).
+    if (!Number.isFinite(hpAfter)) hpAfter = Number.isFinite(hpBefore) ? hpBefore : 0;
     const excess = value > 0 ? Math.max(value - hpBefore, 0) : 0;
 
     await this.update({ "system.hp.value": hpAfter });
@@ -331,7 +340,8 @@ export class WwnActor extends Actor {
     value = ctx.amount;
 
     if (soakTaken > 0) {
-      await this.update({ "system.soak.value": soakRemaining });
+      const safeSoakRemaining = Number.isFinite(soakRemaining) ? soakRemaining : 0;
+      await this.update({ "system.soak.value": safeSoakRemaining });
     }
 
     const emptySuit = !!this.system.derived?.emptySuit?.active;
@@ -344,6 +354,7 @@ export class WwnActor extends Actor {
       if (value !== 0) {
         if (value < 0) hpAfter = Math.min(hpMax, hpBefore - value);
         else hpAfter = Math.max(0, hpBefore - value);
+        if (!Number.isFinite(hpAfter)) hpAfter = Number.isFinite(hpBefore) ? hpBefore : 0;
         await this.update({ "system.viHp.value": hpAfter });
       }
       Object.assign(ctx, {
@@ -468,4 +479,28 @@ export class WwnActor extends Actor {
     else favorites.push(itemId);
     return this.update({ "system.favorites": favorites });
   }
+}
+
+/**
+ * Build plain currency-item data for the world's configured default
+ * currency set (no `_id` -- callers assign one before merging into a
+ * creation payload). Shared by a new PC's starter currency
+ * (#seedNewPcItems) and a new Party actor's starter pool.
+ * @returns {object[]}
+ */
+function buildDefaultCurrencyItemsData() {
+  const setKey = game.settings.get("wwn", "defaultCurrencySet") ?? "silver";
+  const set = CONFIG.WWN.currencySets[setKey] ?? CONFIG.WWN.currencySets.silver;
+  // Items built here are merged straight into the creation payload via
+  // updateSource, which bypasses Item#_preCreate — so its per-type
+  // default-icon fallback never runs for these. Set img explicitly, same
+  // source and fallback as the legacy migration transform
+  // (module/migration/transforms.mjs, WWN_CURRENCIES seeding).
+  const icon = CONFIG.WWN?.defaultIcons?.currency ?? "icons/svg/coins.svg";
+  return set.map((c) => ({
+    type: "currency",
+    name: game.i18n.localize(c.name),
+    img: icon,
+    system: { multiplier: c.multiplier, perSlot: c.perSlot, carried: 0, banked: 0 },
+  }));
 }

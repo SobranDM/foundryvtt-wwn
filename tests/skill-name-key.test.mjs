@@ -65,7 +65,6 @@ describe("skill slug migration", () => {
         description: "",
         ownedLevel: 1,
         score: "int",
-        skillDice: "2d6",
         secondary: false,
         slug: "biopsionics",
         pointsInvested: 0,
@@ -87,7 +86,6 @@ describe("skill slug migration", () => {
       system: {
         ownedLevel: 1,
         score: "str",
-        skillDice: "2d6",
         secondary: false,
         pointsInvested: 0,
       },

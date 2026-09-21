@@ -96,8 +96,19 @@
               <input type="number" name="system.shock.damage" value="{{system.shock.damage}}" data-dtype="Number"
                 placeholder="{{localize 'WWN.items.Damage'}}" title="{{localize 'WWN.items.ShockDamage'}}" />
               /
-              <input type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="String"
+              {{#if system.shock.anyAc}}
+              <em class="wwn-shock-any-ac" title="{{localize 'WWN.items.ShockAnyAcHint'}}">{{localize
+                "WWN.items.ShockAnyAcValue"}}</em>
+              {{else}}
+              <input type="number" name="system.shock.ac" value="{{system.shock.ac}}" data-dtype="Number"
                 placeholder="{{localize 'WWN.items.ArmorAC'}}" title="{{localize 'WWN.items.ShockAC'}}" />
+              {{/if}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label title="{{localize 'WWN.items.ShockAnyAcHint'}}">{{localize "WWN.items.ShockAnyAc"}}</label>
+            <div class="form-fields">
+              <input type="checkbox" name="system.shock.anyAc" {{checked system.shock.anyAc}} data-dtype="Boolean" />
             </div>
           </div>
           {{#if useTrauma}}

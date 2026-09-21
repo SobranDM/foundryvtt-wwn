@@ -51,6 +51,54 @@ describe("side-collapse helpers", () => {
     assert.deepEqual(result, { kind: "round" });
   });
 
+  it("wraps around to an untouched sibling instead of ending the round, when acted groups are tracked", () => {
+    // Regression: a GM manually activates the positionally-last group (e.g.
+    // to break a tie) before any of its earlier siblings ever went. A pure
+    // positional walk forward from "red*" (the last group) finds nothing and
+    // would wrongly end the round -- skipping the untouched siblings' turns
+    // entirely. With acted-tracking, it must wrap and find the first
+    // untouched group by position ("red").
+    const result = findAdjacentGroupTurn({
+      turns,
+      currentTurnIndex: 3, // "red*", the last group positionally
+      direction: 1,
+      actedGroupIds: new Set() // nothing has acted yet this round
+    });
+    assert.deepEqual(result, { kind: "turn", turnIndex: 0 }); // "red"
+  });
+
+  it("wraps to a specific still-untouched sibling, skipping ones already acted", () => {
+    // Same manual-activation scenario, but "red" already had its turn this
+    // round (e.g. the GM went red -> [manually jumped to] red*, skipping
+    // green) -- the wrap must land on "green", not re-offer "red".
+    const result = findAdjacentGroupTurn({
+      turns,
+      currentTurnIndex: 3, // "red*"
+      direction: 1,
+      actedGroupIds: new Set(["red"])
+    });
+    assert.deepEqual(result, { kind: "turn", turnIndex: 2 }); // "green"
+  });
+
+  it("still ends the round once every group has actually acted", () => {
+    const result = findAdjacentGroupTurn({
+      turns,
+      currentTurnIndex: 3,
+      direction: 1,
+      actedGroupIds: new Set(["red", "green", "red*"])
+    });
+    assert.deepEqual(result, { kind: "round" });
+  });
+
+  it("omitting actedGroupIds keeps the plain positional behavior (no regression for normal sequential play)", () => {
+    const result = findAdjacentGroupTurn({
+      turns,
+      currentTurnIndex: 3,
+      direction: 1
+    });
+    assert.deepEqual(result, { kind: "round" });
+  });
+
   it("skips a fully defeated side when skipDefeated is on", () => {
     const withDead = [
       { id: "a1", groupId: "red", isDefeated: false },

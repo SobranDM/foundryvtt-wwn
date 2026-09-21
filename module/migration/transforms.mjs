@@ -838,7 +838,6 @@ export function migrateGear(item) {
       weightless: normalizeWeightless(s.weightless),
       containerId: s.containerId ?? "",
       treasure: !!s.treasure,
-      personal: !!s.personal,
       charges: {
         value: Number(s.charges?.value) || 0,
         max: Number(s.charges?.max) || 0,

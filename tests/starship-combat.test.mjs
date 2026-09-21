@@ -13,6 +13,7 @@ import {
 import {
   startingCommandPoints,
   applySupportDiscount,
+  checkExclusiveActionGuard,
   spendCp,
   startTurnState,
   endTurnState,
@@ -110,6 +111,39 @@ describe("command points", () => {
     s = endTurnState(s);
     assert.equal(s.cp, 0);
     assert.equal(s.buffs.evasiveAcBonus, 0);
+  });
+});
+
+describe("checkExclusiveActionGuard", () => {
+  // Code-review fix: taking one exclusive general action (Do Your Duty, etc.)
+  // must not block every OTHER department for the rest of the turn -- only
+  // other exclusive/general actions.
+  const doYourDuty = getStarshipAction("doYourDuty");
+  const evasiveManeuvers = getStarshipAction("evasiveManeuvers");
+  const aboveAndBeyond = getStarshipAction("aboveAndBeyond");
+
+  it("allows a non-general department action after an exclusive general action already ran", () => {
+    const state = { flags: { tookExclusiveGeneralAction: true } };
+    const result = checkExclusiveActionGuard(state, evasiveManeuvers);
+    assert.equal(result.ok, true);
+  });
+
+  it("still blocks a second exclusive general action the same turn", () => {
+    const state = { flags: { tookExclusiveGeneralAction: true } };
+    const result = checkExclusiveActionGuard(state, aboveAndBeyond);
+    assert.equal(result.ok, false);
+    assert.equal(result.reasonKey, "WWN.Starship.ExclusiveAlready");
+  });
+
+  it("allows the first exclusive general action of the turn", () => {
+    const state = { flags: { tookExclusiveGeneralAction: false } };
+    const result = checkExclusiveActionGuard(state, doYourDuty);
+    assert.equal(result.ok, true);
+  });
+
+  it("allows department actions freely when no exclusive action has been taken", () => {
+    const state = { flags: { tookExclusiveGeneralAction: false } };
+    assert.equal(checkExclusiveActionGuard(state, evasiveManeuvers).ok, true);
   });
 });
 

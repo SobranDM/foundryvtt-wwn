@@ -388,6 +388,13 @@ describe("shouldShowShockRow", () => {
     assert.equal(shouldShowShockRow(15, [compare]), true);
     assert.equal(shouldShowShockRow(9, [compare]), false);
   });
+
+  it("always shows Shock for an Any-AC weapon/NPC, regardless of target AC", () => {
+    // weapon.system.shock.anyAc / NPC combat.allWeaponsShockAnyAc both
+    // resolve to shockAcValue = Infinity (module/data/item/weapon.mjs).
+    assert.equal(shouldShowShockRow(Infinity, [999]), true);
+    assert.equal(shouldShowShockRow(Infinity, []), true);
+  });
 });
 
 describe("shouldEmitNoShockPlaceholder", () => {

@@ -1,0 +1,9 @@
+<p>{{localize "WWN.BonusSkillRedirect.Body" skill=blockedName}}</p>
+<label class="form-group">
+  <span>{{localize "WWN.BonusSkillRedirect.Label"}}</span>
+  <select name="skill">
+    {{#each skillOptions as |opt|}}
+    <option value="{{opt.id}}">{{opt.label}}</option>
+    {{/each}}
+  </select>
+</label>

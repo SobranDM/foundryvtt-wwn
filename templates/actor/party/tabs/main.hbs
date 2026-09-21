@@ -1,0 +1,198 @@
+{{!-- Party Main: roster above shared currency/treasure. Wrapped in
+      wwn-data-table so the item lists pick up the same item-list/item-name/
+      image sizing rules the PC inventory tab uses (scss/wwn/_inventory.scss
+      is scoped to ".wwn-sheet .wwn-data-table ..."). --}}
+<section class="tab active wwn-party-main">
+
+  <div class="wwn-form-panel wwn-party-roster">
+    <div class="wwn-section-header">{{localize "WWN.party.rosterTab"}}</div>
+    <ol class="actor-list">
+      {{#each resolvedMembers as |m|}}
+      {{#if m.broken}}
+      <li class="actor flexrow wwn-party-member-broken">
+        <span>{{localize "WWN.party.brokenMember"}}</span>
+      </li>
+      {{else}}
+      <li class="actor flexrow" data-actor-uuid="{{m.uuid}}">
+        <div class="field-img">
+          <img src="{{m.actor.img}}" alt="" />
+        </div>
+        <div class="field-name flex2">
+          <a class="wwn-rollable" data-action="openMemberSheet" title="{{localize 'WWN.party.openSheet'}}">
+            <strong>{{m.actor.name}}</strong>
+          </a>
+        </div>
+        <div class="fields">
+          <div class="flexrow field-row">
+            <div class="field-short" title="{{localize 'WWN.details.level'}}">
+              <strong>{{localize "WWN.details.level"}}</strong>
+              {{m.actor.system.details.level}}
+            </div>
+            <div class="field-long flex2" title="{{localize 'WWN.details.background'}}">
+              {{m.actor.system.details.background}}
+            </div>
+            <div class="field-long flex2" title="{{localize 'WWN.details.class'}}">
+              {{m.classLabel}}
+            </div>
+          </div>
+          <div class="flexrow field-row">
+            <div class="field-long" title="{{localize 'WWN.Health'}}">
+              <i class="fas fa-heart"></i>
+              {{m.actor.system.hp.value}}/{{m.actor.system.hp.max}}
+            </div>
+            <div class="field-short" title="{{localize 'WWN.SystemStrainLong'}}">
+              <i class="fas fa-tint"></i>
+              <strong>{{m.actor.system.strain.value}}</strong>
+              <sub>{{m.actor.system.strain.max}}</sub>
+            </div>
+            <div class="field-short flex2">
+              <i class="fas fa-shoe-prints" title="{{localize 'WWN.movement.base'}}"></i>
+              <strong title="{{localize 'WWN.movement.round'}}">{{m.actor.system.movement.combat}}</strong>
+              <span title="{{localize 'WWN.movement.turn'}}">{{m.actor.system.movement.exploration}}</span>
+            </div>
+            <div class="field-short flex2" title="{{localize 'WWN.Inventory.EncumbranceHint'}}">
+              <i class="fas fa-weight-hanging"></i>
+              <strong>{{m.actor.system.encumbrance.stowed.value}}</strong>
+              <sub>{{m.actor.system.encumbrance.stowed.max}}</sub>
+            </div>
+          </div>
+        </div>
+        {{#if @root.isGM}}
+        <div class="item-controls wwn-party-member-remove">
+          <a class="item-control" data-action="removeMember" title="{{localize 'WWN.party.removeMember'}}">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+        {{/if}}
+      </li>
+      {{/if}}
+      {{/each}}
+      {{#unless resolvedMembers.length}}
+      <li class="wwn-party-roster-empty">{{localize "WWN.party.noMembers"}}</li>
+      {{/unless}}
+    </ol>
+  </div>
+
+  <div class="wwn-party-treasure-stack wwn-data-table">
+
+  <div class="wwn-form-panel">
+    <div class="wwn-section-header">
+      {{localize "WWN.items.Currency"}}
+      {{#if owner}}
+      <div class="item-controls">
+        <a class="item-control" data-action="createCurrency" title="{{localize 'WWN.Sheet.CreateItem'}}">
+          <i class="fa fa-plus"></i>
+        </a>
+      </div>
+      {{/if}}
+    </div>
+    {{#if poolCurrency.length}}
+    <div class="item-titles item-col-header wwn-col-header flexrow">
+      <div class="item-name"></div>
+      <div class="field-long" title="{{localize 'WWN.Currency.Carried'}}"><i class="fas fa-coins"></i></div>
+      <div class="field-long">{{localize "WWN.party.carrier"}}</div>
+      <div class="item-controls"></div>
+    </div>
+    {{/if}}
+    <ol class="item-list">
+      {{#each poolCurrency as |item|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{item.id}}">
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{item.img}}" alt="" />
+            <h4 title="{{item.name}}">{{item.name~}}</h4>
+          </div>
+          <div class="field-long">
+            <input type="number" value="{{item.system.carried}}" data-item-field="system.carried" {{#unless @root.owner}}readonly{{/unless}} />
+          </div>
+          <div class="field-long">
+            <select data-carrier-select {{#unless @root.owner}}disabled{{/unless}}>
+              <option value="">{{localize "WWN.party.unassigned"}}</option>
+              {{#each ../resolvedMembers as |m|}}
+              {{#unless m.broken}}
+              <option value="{{m.uuid}}" {{#if (eq (lookup @root.carrierAssignments item.id) m.uuid)}}selected{{/if}}>{{m.actor.name}}</option>
+              {{/unless}}
+              {{/each}}
+            </select>
+          </div>
+          <div class="item-controls">
+            {{#if @root.owner}}
+            <a class="item-control" data-action="splitCurrency" title="{{localize 'WWN.party.split'}}">
+              <i class="fas fa-cut"></i>
+            </a>
+            {{> wwnItemControls}}
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+      {{#unless poolCurrency.length}}
+      <li class="wwn-party-pool-empty">{{localize "WWN.party.noCurrency"}}</li>
+      {{/unless}}
+    </ol>
+  </div>
+
+  <div class="wwn-form-panel">
+    <div class="wwn-section-header">
+      {{localize "WWN.items.Treasure"}}
+      {{#if owner}}
+      <div class="item-controls">
+        <a class="item-control" data-action="createGear" title="{{localize 'WWN.Sheet.CreateItem'}}">
+          <i class="fa fa-plus"></i>
+        </a>
+      </div>
+      {{/if}}
+    </div>
+    {{#if poolItems.length}}
+    <div class="item-titles item-col-header wwn-col-header flexrow">
+      <div class="item-name"></div>
+      <div class="field-short" title="{{localize 'WWN.items.Quantity'}}"><i class="fas fa-hashtag"></i></div>
+      <div class="field-short" title="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></div>
+      <div class="field-long">{{localize "WWN.party.carrier"}}</div>
+      <div class="item-controls"></div>
+    </div>
+    {{/if}}
+    <ol class="item-list">
+      {{#each poolItems as |item|}}
+      <li class="item-entry">
+        <div class="item flexrow" data-item-id="{{item.id}}">
+          <div class="item-name item-rollable flexrow" data-action="showItem">
+            <img class="item-image" src="{{item.img}}" alt="" />
+            <h4 title="{{item.name}}">{{item.name~}}</h4>
+          </div>
+          <div class="field-short">
+            <input type="number" value="{{item.system.quantity}}" data-item-field="system.quantity" {{#unless @root.owner}}readonly{{/unless}} />
+          </div>
+          <div class="field-short" title="{{localize 'WWN.items.Weight'}}">
+            <input type="number" value="{{item.system.weight}}" data-item-field="system.weight" {{#unless @root.owner}}readonly{{/unless}} />
+          </div>
+          <div class="field-long">
+            <select data-carrier-select {{#unless @root.owner}}disabled{{/unless}}>
+              <option value="">{{localize "WWN.party.unassigned"}}</option>
+              {{#each ../resolvedMembers as |m|}}
+              {{#unless m.broken}}
+              <option value="{{m.uuid}}" {{#if (eq (lookup @root.carrierAssignments item.id) m.uuid)}}selected{{/if}}>{{m.actor.name}}</option>
+              {{/unless}}
+              {{/each}}
+            </select>
+          </div>
+          <div class="item-controls">
+            {{#if @root.owner}}{{> wwnItemControls}}{{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+      {{#unless poolItems.length}}
+      <li class="wwn-party-pool-empty">{{localize "WWN.party.noItems"}}</li>
+      {{/unless}}
+    </ol>
+  </div>
+
+  </div>
+
+  <div class="wwn-form-panel">
+    <div class="wwn-section-header">{{localize "WWN.category.description"}}</div>
+    {{> wwnSheetEditor name="system.description" value=source.system.description
+      documentUuid=actor.uuid enriched=enrichedDescription fill=true}}
+  </div>
+</section>

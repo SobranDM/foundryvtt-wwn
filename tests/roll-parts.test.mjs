@@ -1,63 +1,29 @@
 import "../build/foundry-shim.mjs";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import {
-  RollParts,
-  normalizeRollPart,
-  resolveSkillDiceFormula,
-  skillDiceCount,
-} from "../module/dice/roll-parts.mjs";
+import { RollParts, normalizeRollPart, BASE_SKILL_DICE_COUNT } from "../module/dice/roll-parts.mjs";
 import { caseInsensitiveRollData } from "../module/helpers/roll-data.mjs";
 
-describe("resolveSkillDiceFormula", () => {
-  it("keeps real dice formulas", () => {
-    assert.equal(resolveSkillDiceFormula("2d6"), "2d6");
-    assert.equal(resolveSkillDiceFormula("3d6kh2"), "3d6kh2");
-    assert.equal(resolveSkillDiceFormula("4d6kh2"), "4d6kh2");
-    assert.equal(resolveSkillDiceFormula(" 3d6dl1 "), "3d6dl1");
-  });
-
-  it("maps bare dice counts onto skill-dice options", () => {
-    assert.equal(resolveSkillDiceFormula(2), "2d6");
-    assert.equal(resolveSkillDiceFormula("2"), "2d6");
-    assert.equal(resolveSkillDiceFormula("3"), "3d6kh2");
-    assert.equal(resolveSkillDiceFormula(4), "4d6kh2");
-    assert.equal(resolveSkillDiceFormula("1"), "1d6");
-  });
-
-  it("defaults blank or invalid values to 2d6", () => {
-    assert.equal(resolveSkillDiceFormula(""), "2d6");
-    assert.equal(resolveSkillDiceFormula(null), "2d6");
-    assert.equal(resolveSkillDiceFormula(undefined), "2d6");
-    assert.equal(resolveSkillDiceFormula("nope"), "2d6");
-  });
-});
-
-describe("skillDiceCount", () => {
-  it("reads dice count from formulas and bare tiers", () => {
-    assert.equal(skillDiceCount("2d6"), 2);
-    assert.equal(skillDiceCount("3d6kh2"), 3);
-    assert.equal(skillDiceCount("4"), 4);
-    assert.equal(skillDiceCount(""), 2);
-  });
-});
-
 describe("RollParts + skill dice", () => {
+  it("exports 2 as the base skill dice count", () => {
+    assert.equal(BASE_SKILL_DICE_COUNT, 2);
+  });
+
   it("does not coerce 2d6 into a flat modifier", () => {
     assert.equal(normalizeRollPart("2d6"), "2d6");
     const parts = new RollParts();
-    parts.add(resolveSkillDiceFormula("2d6"), "Skill Dice");
+    parts.add(`${BASE_SKILL_DICE_COUNT}d6`, "Skill Dice");
     parts.add(2, "Pilot");
     parts.add(1, "INT");
     assert.equal(parts.formula(), "2d6 + 2 + 1");
   });
 
-  it("bare skillDice counts become a dice pool, not a flat +2/+3", () => {
+  it("a focus's extra dice raise the pool above the 2d6 base", () => {
     const parts = new RollParts();
-    parts.add(resolveSkillDiceFormula("3"), "Skill Dice");
+    parts.add(`${BASE_SKILL_DICE_COUNT + 1}d6dl1`, "Skill Dice");
     parts.add(1, "Pilot");
-    assert.equal(parts.formula(), "3d6kh2 + 1");
-    assert.match(parts.breakdown(), /3d6kh2/);
+    assert.equal(parts.formula(), "3d6dl1 + 1");
+    assert.match(parts.breakdown(), /3d6dl1/);
   });
 
   it("breakdown uses minus for negative modifiers", () => {

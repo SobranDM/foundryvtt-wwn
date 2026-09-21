@@ -1,0 +1,73 @@
+/* Party sheet — Roster tab (module/sheets/actor/party-sheet.mjs). Roster row
+   styling ported from the retired standalone party-sheet dialog. */
+
+.wwn.sheet.actor.party {
+  .wwn-party-roster {
+    .actor-list {
+      margin: 0;
+      overflow: auto;
+      list-style: none;
+      padding: 0;
+
+      .actor {
+        border-bottom: 1px solid var(--wwn-border);
+        border-top: 1px solid var(--wwn-border);
+        margin-bottom: 2px;
+        font-size: 12px;
+        text-align: center;
+        align-items: stretch;
+
+        .fas {
+          padding: 0 2px;
+          font-size: 10px;
+        }
+
+        .fields .field-row:nth-child(odd) {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .field-img {
+          flex: 0 0 50px;
+          position: relative;
+          object-fit: contain;
+
+          img {
+            border: none;
+            width: 45px;
+            height: 45px;
+          }
+        }
+
+        .wwn-party-member-remove {
+          flex: 0 0 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .field-name {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding-left: 10px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover strong {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .wwn-party-pool-empty,
+  .wwn-party-roster-empty {
+    padding: 0.5rem;
+    font-style: italic;
+    opacity: 0.75;
+  }
+}

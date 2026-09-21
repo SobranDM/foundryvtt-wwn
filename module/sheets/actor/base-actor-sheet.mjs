@@ -234,8 +234,8 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
     const system = {};
     const subtype = target.dataset.subtype;
     // Inventory section headers pass createSubType as data-subtype for gear
-    // kinds (consumable/treasure/personal). Power create uses the same attr
-    // for real power subtypes — only apply as system.subType for powers.
+    // kinds (consumable/treasure). Power create uses the same attr for real
+    // power subtypes — only apply as system.subType for powers.
     if (type === "power") {
       system.subType = subtype || (await WwnBaseActorSheet.#pickPowerSubType());
       if (!system.subType) return;
@@ -246,9 +246,6 @@ export class WwnBaseActorSheet extends composeMixins(ActorItemActionsMixin)(
         system.charges = { value: 0, max: 1 };
       } else if (kind === "treasure" || "treasure" in target.dataset) {
         system.treasure = true;
-      } else if (kind === "personal" || "personal" in target.dataset) {
-        system.treasure = true;
-        system.personal = true;
       }
     } else if (subtype) {
       system.subType = subtype;

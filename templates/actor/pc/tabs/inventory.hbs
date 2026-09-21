@@ -1,6 +1,6 @@
 {{!-- Inventory tab: single-column stack — purse strip, then weapons,
-      armor, consumables, misc (containers), personal/party treasure, treasure,
-      and currency items. --}}
+      armor, consumables, misc (containers), treasure, and currency items.
+      Shared party treasure lives on a Party actor's own sheet, not here. --}}
 <section class="tab inventory {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
   <div class="wwn-inventory-stack wwn-data-table">
 
@@ -55,10 +55,6 @@
         {{/each}}
       </ol>
       <div class="wwn-inventory-purse-fields">
-        <label class="wwn-purse-field" title="{{localize 'WWN.items.PersonalTreasureHint'}}">
-          <span class="wwn-purse-label">{{localize "WWN.items.PersonalTreasure"}}</span>
-          <input class="currency" type="number" value="{{system.personalTreasure}}" data-dtype="Number" disabled />
-        </label>
         <label class="wwn-purse-field" title="{{localize 'WWN.items.TreasureSP'}}">
           <span class="wwn-purse-label">{{localize "WWN.items.Treasure"}}</span>
           <input class="currency" type="number" value="{{system.treasure}}" data-dtype="Number" disabled />
@@ -68,6 +64,34 @@
           <input class="currency" type="number" value="{{system.wealth}}" data-dtype="Number" disabled />
         </label>
       </div>
+    </div>
+
+    <div class="wwn-panel">
+      <div class="item-titles item-col-header wwn-col-header flexrow">
+        <div class="item-name"></div>
+        <div class="field-long" title="{{localize 'WWN.Inventory.EncumbranceHint'}}">{{localize "WWN.Inventory.Readied"}}</div>
+        <div class="field-long" title="{{localize 'WWN.Inventory.EncumbranceHint'}}">{{localize "WWN.Inventory.Stowed"}}</div>
+        <div class="field-long" title="{{localize 'WWN.party.carriedForPartyHint'}}">{{localize "WWN.party.carriedForPartyShort"}}</div>
+      </div>
+      <ol class="item-list">
+        <li class="item-entry">
+          <div class="item flexrow">
+            <div class="item-name flexrow">
+              <i class="fas fa-weight-hanging item-image"></i>
+              <h4>{{localize "WWN.Inventory.Encumbrance"}}</h4>
+            </div>
+            <div class="field-long">{{system.encumbrance.readied.value}}/{{system.encumbrance.readied.max}}</div>
+            <div class="field-long">{{system.encumbrance.stowed.value}}/{{system.encumbrance.stowed.max}}</div>
+            <div class="field-long">
+              {{#if carryingParties.length}}
+              <a data-action="openPartySheet" title="{{#each carryingParties}}{{name}} {{/each}}">{{system.encumbrance.partyCarried}}</a>
+              {{else}}
+              <span>&mdash;</span>
+              {{/if}}
+            </div>
+          </div>
+        </li>
+      </ol>
     </div>
 
     {{#> wwnCollapsibleSection sectionId="inventory.weapons" label=(localize "WWN.items.Weapons")
@@ -244,7 +268,7 @@
     </div>
     <ol class="item-list">
       {{#each gear as |item|}}
-      {{#if (evalAnd (evalOr item.system.charges.value item.system.charges.max) (evalNor item.system.personal item.system.treasure))}}
+      {{#if (evalAnd (evalOr item.system.charges.value item.system.charges.max) (nt item.system.treasure true))}}
       {{#unless item.system.containerId}}
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
@@ -281,7 +305,7 @@
     </div>
     <ol class="item-list">
       {{#each gear as |item|}}
-      {{#unless (evalOr (evalOr (evalOr item.system.charges.value item.system.charges.max) item.system.personal) item.system.treasure)}}
+      {{#unless (evalOr (evalOr item.system.charges.value item.system.charges.max) item.system.treasure)}}
       {{#unless item.system.containerId}}
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
@@ -333,43 +357,6 @@
     </ol>
     {{/wwnCollapsibleSection}}
 
-    {{#> wwnCollapsibleSection sectionId="inventory.personalTreasure" label=(localize "WWN.category.partyShares")
-      collapsed=(lookup @root.collapsed "inventory.personalTreasure") createType="item" createSubType="personal"}}
-    <div class="item-titles item-col-header wwn-col-header flexrow">
-      <div class="item-name"></div>
-      <div class="field-long">{{system.treasure}} <i class="fas fa-circle"></i></div>
-      <div class="field-short"><i class="fas fa-hashtag"></i></div>
-      <div class="field-short" data-tooltip="{{localize 'WWN.items.Weight'}}"><i class="fas fa-weight-hanging"></i></div>
-      <div class="item-controls"></div>
-    </div>
-    <ol class="item-list">
-      {{#each gear as |item|}}
-      {{#if item.system.personal}}
-      {{#unless item.system.containerId}}
-      <li class="item-entry">
-        <div class="item flexrow" data-item-id="{{item.id}}">
-          <div class="item-name item-rollable flexrow" data-action="showItem">
-            <img class="item-image" src="{{item.img}}" alt="" data-action="rollItem" />
-            <h4 title="{{item.name}}">{{item.name~}}</h4>
-          </div>
-          <div class="field-long">{{mult item.system.quantity item.system.price}}</div>
-          <div class="field-short quantity">
-            <input value="{{item.system.quantity}}" type="number" placeholder="0" data-item-field="system.quantity" />
-          </div>
-          <div class="field-short">{{item.system.weight}}</div>
-          <div class="item-controls">
-            {{#if @root.owner}}
-            {{> wwnItemControls favoritable=@root.favoritesEnabled favorited=item.favorited}}
-            {{/if}}
-          </div>
-        </div>
-      </li>
-      {{/unless}}
-      {{/if}}
-      {{/each}}
-    </ol>
-    {{/wwnCollapsibleSection}}
-
     {{#> wwnCollapsibleSection sectionId="inventory.treasure" label=(localize "WWN.items.Treasure")
       collapsed=(lookup @root.collapsed "inventory.treasure") createType="item" createSubType="treasure"}}
     <div class="item-titles item-col-header wwn-col-header flexrow">
@@ -381,7 +368,7 @@
     </div>
     <ol class="item-list">
       {{#each gear as |item|}}
-      {{#if (evalAnd item.system.treasure (nt item.system.personal true))}}
+      {{#if item.system.treasure}}
       {{#unless item.system.containerId}}
       <li class="item-entry">
         <div class="item flexrow" data-item-id="{{item.id}}">
