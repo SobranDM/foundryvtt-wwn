@@ -344,9 +344,18 @@ export class WwnDice {
         tags,
       );
       attack.add(skillLevel, skill?.name ?? game.i18n.localize("WWN.Roll.Unskilled"));
-    } else {
-      attack.add(system.skill ?? 0, game.i18n.localize("WWN.Roll.NpcSkill"));
     }
+    // NPCs deliberately add nothing here. `system.skill` is the creature's
+    // bonus for SKILL CHECKS only -- WWN p.283: "Skill is the creature's total
+    // Skill bonus for any skill checks it makes" -- and a stat block's Atk
+    // already bakes in everything else. SWN p.195 is explicit: "Atk is the
+    // NPC's attack bonus. For the sake of simplicity, this includes any
+    // attribute modifiers, skill bonus, or other extra lethality that the NPC
+    // might have earned." Adding system.skill to the hit roll (as this branch
+    // did from 2.0.0-alpha1 through beta3) double-counted it, giving every
+    // stock monster a silent +1..+3 to hit. The legitimate consumers of the
+    // field are rollNpcSkill below and the starship department checks in
+    // helpers/starship-rolls.mjs.
     attack.add(weapon.system.bonusValue ?? weapon.system.bonus ?? 0, game.i18n.localize("WWN.Roll.WeaponBonus"));
     if (burst) attack.add(2, game.i18n.localize("WWN.Roll.Burst"));
     attack.add(modifier, game.i18n.localize("WWN.Roll.Situational"));

@@ -1102,6 +1102,47 @@ export default function register(quench) {
             await deleteTestActor(actor);
           }
         });
+
+        it("an NPC's Skill bonus is not added to its attack rolls", async function () {
+          // `system.skill` is a SKILL-CHECK stat (WWN p.283), and a stat
+          // block's Atk already folds in attribute mods and skill bonus
+          // (SWN p.195). assembleAttack's non-PC branch used to add it to the
+          // hit roll anyway, silently giving every stock monster its Skill
+          // bonus (+1..+3) on every attack. Regression guard for that removal.
+          const npc = await createTestActor("monster", "reg-npc-skill-attack", {
+            system: { skill: 3, hd: "2d8", combat: { ab: 2 } },
+          });
+          try {
+            const [weapon] = await npc.createEmbeddedDocuments("Item", [
+              { name: "Quench NPC Claw", type: "weapon", system: { damage: "1d6", bonus: 1, equipped: true } },
+            ]);
+            await settle();
+
+            const { attack } = game.wwn.WwnDice.assembleAttack(npc, weapon, { attackKind: "melee" });
+            const npcSkillLabel = game.i18n.localize("WWN.Roll.NpcSkill");
+
+            assert.isFalse(
+              attack.parts.some((part) => part.label === npcSkillLabel),
+              "the attack breakdown must carry no NPC Skill term",
+            );
+            assert.isFalse(
+              attack.parts.some((part) => part.value === 3),
+              "the Skill value itself must not reach the roll under any label",
+            );
+            // Sanity: the parts that SHOULD be there still are, so this test
+            // fails loudly if the whole branch is gutted rather than fixed.
+            assert.isTrue(
+              attack.parts.some((part) => part.label === game.i18n.localize("WWN.Roll.AttackBonus") && part.value === 2),
+              "the stat block's own Atk bonus must still apply",
+            );
+            assert.isTrue(
+              attack.parts.some((part) => part.label === game.i18n.localize("WWN.Roll.WeaponBonus") && part.value === 1),
+              "the weapon bonus must still apply",
+            );
+          } finally {
+            await deleteTestActor(npc);
+          }
+        });
       });
     },
     { displayName: "WWN: Regressions" },
