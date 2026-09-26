@@ -1087,6 +1087,46 @@ export function migrateItemData(item) {
 }
 
 /**
+ * Whether a {@link migrateItemData} result is a full document replacement
+ * rather than a partial patch. Full rebuilds (art→power, gear→ammo, legacy
+ * armor, …) always carry name + type + system. Four dispatcher paths instead
+ * return a bare `system` fragment: the power internal-resource repair and the
+ * weapon `skillId` repair (which carry no `_id` either), the modern-armor
+ * trauma / TL repair, and {@link migrateSkill}.
+ *
+ * The two MUST be applied differently, and both call sites depend on this:
+ * {@link applyEmbeddedItemMigration} merges a patch instead of swapping the
+ * document, and migrate.mjs must not pass `recursive: false` for a patch --
+ * that option makes Foundry wrap each root key in a ForcedReplacement (see
+ * DataModel#updateSource → #performNonRecursiveUpdate), so a partial `system`
+ * would replace the whole object and every field the patch omits would
+ * silently reset to its schema `initial`.
+ * @param {object|null} data
+ * @returns {boolean}
+ */
+export function isFullItemReplacement(data) {
+  return data?.type != null && data?.system != null && data?.name != null;
+}
+
+/**
+ * Foundry update options for applying a {@link migrateItemData} result to a
+ * live world Item.
+ *
+ * NOTE the direction of `recursive`, which is easy to get backwards: Foundry's
+ * `recursive: false` is the REPLACE mode (each root key is wrapped in a
+ * ForcedReplacement), and `recursive: true` is the MERGE mode. So a full
+ * rebuild wants `false` and a partial patch wants `true` -- verified against
+ * a live v14 world: a skill patch applied with `false` reset ownedLevel 2 → -1,
+ * pointsInvested 4 → 0, score str → int and cleared the description, while
+ * `true` kept all of them and still dropped the legacy key.
+ * @param {object} data  A migrateItemData result
+ * @returns {{ enforceTypes: boolean, diff: boolean, recursive: boolean }}
+ */
+export function worldItemUpdateOptions(data) {
+  return { enforceTypes: false, diff: false, recursive: !isFullItemReplacement(data) };
+}
+
+/**
  * Apply {@link migrateItemData} onto a plain item object, preserving identity.
  * Full rebuilds (art→power, etc.) replace the document shape; patches merge.
  * @param {object} item
@@ -1096,8 +1136,7 @@ export function applyEmbeddedItemMigration(item) {
   if (!item || typeof item !== "object") return item;
   const migrated = migrateItemData(item);
   if (!migrated) return item;
-  // Full document replacements always include name + type + system.
-  if (migrated.type != null && migrated.system != null && migrated.name != null) {
+  if (isFullItemReplacement(migrated)) {
     return {
       ...migrated,
       _id: item._id ?? migrated._id,

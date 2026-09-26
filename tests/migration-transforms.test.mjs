@@ -21,6 +21,10 @@ import {
   applyEmbeddedItemMigration,
   migrateActorItems,
   isBarePlaceholderActorData,
+  isFullItemReplacement,
+  worldItemUpdateOptions,
+  migrateSkill,
+  migrateWwnArmorTrauma,
 } from "../module/migration/transforms.mjs";
 
 describe("migrateArtToPower", () => {
@@ -688,5 +692,110 @@ describe("migrateActorData type preservation", () => {
     });
     assert.equal(out.type, "monster");
     assert.equal(out.system.hd, "1d6");
+  });
+});
+
+describe("isFullItemReplacement", () => {
+  // Guards the rule migrate.mjs relies on when choosing its update options.
+  // A partial patch applied with `recursive: false` gets each root key wrapped
+  // in a ForcedReplacement, so `system` would be swapped wholesale and every
+  // field the patch omits would reset to its schema `initial` -- a world skill
+  // dropping to ownedLevel -1, an armor item losing AC / weight / cost / tags.
+
+  it("treats a full rebuild (name + type + system) as a replacement", () => {
+    const rebuilt = migrateArtToPower({
+      _id: "a1",
+      name: "Healing Touch",
+      type: "art",
+      system: { source: "Healer", time: "scene", effort: 1, description: "Heal" },
+    });
+    assert.equal(isFullItemReplacement(rebuilt), true);
+  });
+
+  it("treats the skill slug patch as a partial", () => {
+    const patch = migrateSkill({ _id: "s1", system: { slug: "stab", ownedLevel: 2 } });
+    assert.ok(patch, "a skill carrying a legacy slug must produce a patch");
+    assert.equal(isFullItemReplacement(patch), false);
+  });
+
+  it("treats the armor trauma patch as a partial", () => {
+    const patch = migrateWwnArmorTrauma({ _id: "r1", type: "armor", system: { traumaTargetMod: 2, ac: 15 } });
+    assert.ok(patch, "armor carrying traumaTargetMod must produce a patch");
+    assert.equal(isFullItemReplacement(patch), false);
+  });
+
+  it("rejects null and partial shapes", () => {
+    assert.equal(isFullItemReplacement(null), false);
+    assert.equal(isFullItemReplacement(undefined), false);
+    assert.equal(isFullItemReplacement({ _id: "x", system: {} }), false);
+    assert.equal(isFullItemReplacement({ name: "x", system: {} }), false);
+    assert.equal(isFullItemReplacement({ name: "x", type: "skill" }), false);
+  });
+
+  it("classifies all four partial-producing dispatcher paths as partials", () => {
+    // End-to-end through the dispatcher -- the exact shapes migrate.mjs sees.
+    // The power and weapon repair paths return `{ system: … }` with no `_id`
+    // at all, so nothing but this predicate distinguishes them from a rebuild.
+    const partials = {
+      power: { _id: "p1", name: "Art", type: "power", system: { internalResourceLength: "round" } },
+      weapon: { _id: "w1", name: "Sword", type: "weapon", system: { skillId: "abc", shock: { ac: "" } } },
+      armor: { _id: "r1", name: "Mail", type: "armor", system: { ac: 15, acRanged: 15, traumaTargetMod: 2 } },
+      skill: { _id: "s1", name: "Stab", type: "skill", system: { slug: "stab", ownedLevel: 3 } },
+    };
+    for (const [label, item] of Object.entries(partials)) {
+      const out = migrateItemData(item);
+      assert.ok(out, `${label}: expected a migration patch for this shape`);
+      assert.equal(isFullItemReplacement(out), false, `${label}: must be applied as a merge, not a replacement`);
+    }
+  });
+
+  it("classifies a legacy rebuild of the same item type as a replacement", () => {
+    // Legacy-shaped armor (no acRanged) is a full rebuild, not a patch -- so
+    // the predicate must not simply answer "armor => partial".
+    const rebuilt = migrateItemData({ _id: "r2", name: "Mail", type: "armor", system: { ac: 15, traumaTargetMod: 1 } });
+    assert.ok(rebuilt);
+    assert.equal(isFullItemReplacement(rebuilt), true);
+  });
+});
+
+describe("worldItemUpdateOptions", () => {
+  // These guard the MAPPING, not just the classification -- the direction of
+  // `recursive` is inverted relative to how it reads ("replace the whole item"
+  // is recursive:false), and an earlier version of this code got it backwards.
+  // A predicate-only test passed anyway, so assert the concrete option here.
+
+  it("MERGES a partial patch (recursive: true)", () => {
+    const patch = migrateSkill({ _id: "s1", system: { slug: "stab", ownedLevel: 2 } });
+    assert.equal(worldItemUpdateOptions(patch).recursive, true);
+  });
+
+  it("REPLACES a full rebuild (recursive: false)", () => {
+    const rebuilt = migrateArtToPower({
+      _id: "a1",
+      name: "Healing Touch",
+      type: "art",
+      system: { source: "Healer", time: "scene", effort: 1, description: "Heal" },
+    });
+    assert.equal(worldItemUpdateOptions(rebuilt).recursive, false);
+  });
+
+  it("merges every partial-producing dispatcher path", () => {
+    const partials = {
+      power: { _id: "p1", name: "Art", type: "power", system: { internalResourceLength: "round" } },
+      weapon: { _id: "w1", name: "Sword", type: "weapon", system: { skillId: "abc", shock: { ac: "" } } },
+      armor: { _id: "r1", name: "Mail", type: "armor", system: { ac: 15, acRanged: 15, traumaTargetMod: 2 } },
+      skill: { _id: "s2", name: "Stab", type: "skill", system: { slug: "stab", ownedLevel: 3 } },
+    };
+    for (const [label, item] of Object.entries(partials)) {
+      const data = migrateItemData(item);
+      assert.ok(data, `${label}: expected a patch`);
+      assert.equal(worldItemUpdateOptions(data).recursive, true, `${label}: must merge, not replace`);
+    }
+  });
+
+  it("keeps the non-negotiable options", () => {
+    const opts = worldItemUpdateOptions({ name: "x", type: "skill", system: {} });
+    assert.equal(opts.enforceTypes, false);
+    assert.equal(opts.diff, false);
   });
 });

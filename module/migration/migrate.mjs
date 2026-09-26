@@ -9,6 +9,7 @@ import {
   gearMatchesAmmoNeedle,
   repairWwnWeaponFirearm,
   repairWwnArmorTlMagical,
+  worldItemUpdateOptions,
 } from "./transforms.mjs";
 import { mergeWeaponFavorites } from "../helpers/favorites.mjs";
 import { isNpc, isPc } from "../helpers/actor-types.mjs";
@@ -296,7 +297,10 @@ async function migrateWorldItem(item) {
 
   const data = migrateItemData(raw);
   if (!data) return;
-  await item.update(data, { enforceTypes: false, diff: false, recursive: false });
+  // Full rebuilds replace the system wholesale; partial patches must merge or
+  // every field they omit resets to its schema initial. See
+  // worldItemUpdateOptions for why `recursive` reads inverted.
+  await item.update(data, worldItemUpdateOptions(data));
 }
 
 /**

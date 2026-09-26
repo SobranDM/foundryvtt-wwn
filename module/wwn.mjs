@@ -335,8 +335,16 @@ Hooks.once("init", async function () {
       // stale item-id key in the map forever. Gated like every other write
       // in this hook so only the acting client performs it, not every
       // connected client watching the same delete.
+      //
+      // ForcedDeletion (not a `-=${id}` key, and not a null value): the key
+      // itself has to go, since the item id it names can never resolve again --
+      // unlike buildCarrierClearUpdate, which writes null to mean "this item
+      // is still here, just unassigned". v14 only shims the old `-=` key form
+      // with a deprecation error, so spell the operator out.
       if (userId === game.user.id && item.parent.system.carrierAssignments?.[item.id] !== undefined) {
-        await item.parent.update({ [`system.carrierAssignments.-=${item.id}`]: null });
+        await item.parent.update({
+          [`system.carrierAssignments.${item.id}`]: new foundry.data.operators.ForcedDeletion(),
+        });
       }
     }
     if (item.effects.size) refreshActorDerivedData(item.parent);
