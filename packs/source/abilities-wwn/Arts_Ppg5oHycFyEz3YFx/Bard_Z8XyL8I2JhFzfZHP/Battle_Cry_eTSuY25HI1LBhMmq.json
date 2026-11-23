@@ -2,7 +2,7 @@
   "folder": "Z8XyL8I2JhFzfZHP",
   "name": "Battle Cry",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "img": "modules/game-icons-net/blackbackground/shouting.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as an On Turn action to bolster your allies. They gain +1 to hit, saving throws, and damage, including Shock, for one round per level. At 4th level this bonus increases to +2, and at 9th, to +3.</p>",

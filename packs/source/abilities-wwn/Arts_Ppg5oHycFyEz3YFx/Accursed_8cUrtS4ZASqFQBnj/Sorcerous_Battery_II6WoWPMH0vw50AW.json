@@ -1,7 +1,7 @@
 {
   "name": "Sorcerous Battery",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/heart-battery.svg",
   "system": {
     "subType": "art",
     "description": "<p>Once per day, as an On Turn action, Commit Effort for the day. You or a visible ally refresh the spell slot of a spell that has been cast since the start of the prior round. Gain one&nbsp;System Strain.</p>",

@@ -3,7 +3,7 @@
   "name": "Lucky",
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/focus.png",
+  "img": "modules/game-icons-net/blackbackground/clover.svg",
   "effects": [],
   "system": {
     "description": "<p>Some fund of remarkable luck has preserved your life at least once in the past, and continues to give you an edge in otherwise hopeless situations. This luck does not favor the already-blessed; this Focus can only be taken by a PC with at least one attribute modifier of -1 or less.</p>\n<p><strong>Level 1: </strong>Once per week, a blow or effect that would otherwise have left you killed, mortally wounded, or rendered helpless somehow fails to connect or affect you. You make any rolls related to games of chance twice, taking the better roll.</p>\n<p><strong>Level 2:</strong> Once per session, in a situation of need or peril, you can trust to your luck and roll 1d6. On a 2 or more, something fortunate will happen to further your goal, provide an escape from immediate peril, or otherwise give you an advantage you need, if not immediate victory. On a 1, the situation will immediately grow much worse, as the GM sees fit.</p>",

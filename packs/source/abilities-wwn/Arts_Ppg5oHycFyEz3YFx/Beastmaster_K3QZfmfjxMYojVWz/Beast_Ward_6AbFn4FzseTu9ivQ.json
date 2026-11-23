@@ -2,7 +2,7 @@
   "folder": "K3QZfmfjxMYojVWz",
   "name": "Beast Ward",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "img": "modules/game-icons-net/blackbackground/wolf-head.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort as an On Turn action. So long as the Effort remains Committed, the Beastmaster will not be attacked by unintelligent beasts unless the beast is commanded to do so by its master, the beast is starving, or the Beastmaster or their allies performs some hostile act against it. Once the ward ends or is broken, it cannot be re-established in the same scene. Magical beasts and those trained specifically as guardians of an area get a Mental save to resist this power.</p>",

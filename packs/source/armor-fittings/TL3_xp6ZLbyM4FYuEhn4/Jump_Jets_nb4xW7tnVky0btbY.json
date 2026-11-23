@@ -2,7 +2,7 @@
   "_id": "nb4xW7tnVky0btbY",
   "name": "Jump Jets",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/jetpack.svg",
   "effects": [],
   "system": {
     "description": "<p>Move action: leap 30m H/V; ignore falls ≤30m. Not usable two consecutive rounds.</p>",

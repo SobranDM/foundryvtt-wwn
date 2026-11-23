@@ -12,7 +12,7 @@
       "_id": "XB0WnjCg0hiY2xu0",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -76,7 +76,7 @@
       "_id": "xRuuK7xLdqhk1oUz",
       "name": "Sword, Short",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/gladius.svg",
       "sort": 0,
       "flags": {
         "core": {

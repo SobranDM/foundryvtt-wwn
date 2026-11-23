@@ -2,7 +2,7 @@
   "folder": "Y6yU6X6VTpur8QmI",
   "name": "Merciful Healing",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "img": "modules/game-icons-net/blackbackground/healing.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as a Main Action and touch a target within melee range. The target receives 1d6+2 points of magical healing. If done in combat or used to revive a Mortally Wounded subject, the rushed haste of the healing adds 1 System Strain to the target, but no System Strain is added if it is applied outside of combat. At fourth level the healing done increases to 2d6+4 and at eighth level it becomes 4d6+8.</p>",

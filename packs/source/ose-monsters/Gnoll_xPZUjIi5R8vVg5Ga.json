@@ -7,7 +7,7 @@
       "_id": "UqCneEpTxrnGXqfU",
       "name": "Bite",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/fangs.svg",
       "sort": 0,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "ZrR2Vc23RUs6H3kK",
       "name": "Spear, Light",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-spear.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -125,7 +125,7 @@
       "_id": "M3cOQF4Q5oqf78kG",
       "name": "Sword, Short",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/gladius.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -185,7 +185,7 @@
       "_id": "0jnjifNopKhyNWY0",
       "name": "Bow, Large",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/pocket-bow.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -249,7 +249,7 @@
       "_id": "sNaPGecHdeFI1BIO",
       "name": "Leader",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/crown.svg",
       "sort": 0,
       "flags": {},
       "effects": [],

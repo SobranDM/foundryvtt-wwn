@@ -2,7 +2,7 @@
   "folder": "Z8XyL8I2JhFzfZHP",
   "name": "Cursed Tune",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "img": "modules/game-icons-net/blackbackground/zigzag-tune.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the scene as a Main Action while targeting an intelligent creature. Your imprecations cause them to falter, inflicting a -1 penalty to their hit, damage, and saving throw rolls for one round per level. At 4th level this penalty becomes -2, and at 9th it becomes -3.</p>",

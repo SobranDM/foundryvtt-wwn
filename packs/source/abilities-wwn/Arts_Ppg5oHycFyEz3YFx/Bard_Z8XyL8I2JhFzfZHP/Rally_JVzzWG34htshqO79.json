@@ -2,7 +2,7 @@
   "folder": "Z8XyL8I2JhFzfZHP",
   "name": "Rally",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "img": "modules/game-icons-net/blackbackground/rally-the-troops.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as a Main Action to exhort a wounded or fallen ally, removing any Frailty. The target regains 2d6 plus your level in hit points, but you incur one System Strain.</p>",

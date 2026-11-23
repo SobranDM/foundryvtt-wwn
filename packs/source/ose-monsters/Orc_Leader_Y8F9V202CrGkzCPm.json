@@ -7,7 +7,7 @@
       "_id": "peG31tv7RFGGf3s4",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -71,7 +71,7 @@
       "_id": "bRajB4t9b7Y7n6xR",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -131,7 +131,7 @@
       "_id": "Rc9fPtlJ9Y1tB8vo",
       "name": "Axe, War",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/battle-axe.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -193,7 +193,7 @@
       "_id": "1ZndTxRUn0flXnh2",
       "name": "Spear, Heavy",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/barbed-spear.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -255,7 +255,7 @@
       "_id": "siu7vRs4zdzDo8d4",
       "name": "Club, Great",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/spiked-bat.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -317,7 +317,7 @@
       "_id": "B5gapQewCJY9n1EO",
       "name": "Hate the Sun",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/sunrise.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -361,7 +361,7 @@
       "_id": "5jPBMChXv6JvJIBv",
       "name": "Craven",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shrug.svg",
       "sort": 0,
       "flags": {
         "core": {

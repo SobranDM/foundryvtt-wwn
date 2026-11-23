@@ -2,7 +2,7 @@
   "folder": "9KnDorIyzGofLkE7",
   "name": "Change Form",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "img": "modules/game-icons-net/blackbackground/transform.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as a Main Action to transform into an available alternate form. This shift persists until you die, shift to a new form, or end the transformation as an On Turn action. Your hit points, System Strain, and other scores remain the same in any new form, but in a non-humanoid form your class&rsquo; base attack bonus can be no worse than the one listed on the table. If your shape is quadrupedal, its Move is 10&rsquo; faster than your base.</p>",

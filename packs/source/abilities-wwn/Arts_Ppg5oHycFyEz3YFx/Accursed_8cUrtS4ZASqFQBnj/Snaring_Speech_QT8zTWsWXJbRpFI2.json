@@ -1,7 +1,7 @@
 {
   "name": "Snaring Speech",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/snake-tongue.svg",
   "system": {
     "subType": "art",
     "description": "<p>Once per round as an Instant action, Commit Effort for the day when failing a skill check to persuade or tempt someone. They must make a Mental save or agree with your proposal if it&rsquo;s something they would normally consider doing. Gain&nbsp;one System Strain when using this art.</p>",

@@ -12,7 +12,7 @@
       "_id": "WnZWCY4hce3fn3qL",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -72,7 +72,7 @@
       "_id": "JbpoQxbf4D5wlnmU",
       "name": "Crossbow",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/crossbow.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -136,7 +136,7 @@
       "_id": "zybProEobDLuSh5W",
       "name": "Light (Mage)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/candlebright.svg",
       "sort": 500000,
       "flags": {
         "cf": null,
@@ -185,7 +185,7 @@
       "_id": "W5Pv5qhYdlORnZR2",
       "name": "Magic Missile",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/energy-arrow.svg",
       "sort": 700000,
       "flags": {
         "cf": null,
@@ -234,7 +234,7 @@
       "_id": "Ox0KAau6ENAlqbmB",
       "name": "Shield",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/magic-shield.svg",
       "sort": 900000,
       "flags": {
         "cf": null,
@@ -283,7 +283,7 @@
       "_id": "YIXjeqMhrPv1ZCxI",
       "name": "Water Breathing",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/snorkel.svg",
       "sort": 1000000,
       "flags": {
         "cf": null,
@@ -332,7 +332,7 @@
       "_id": "mS2Bs6CJYTutGAKb",
       "name": "Invisibility",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/invisible.svg",
       "sort": 1200000,
       "flags": {
         "cf": null,
@@ -381,7 +381,7 @@
       "_id": "l5W7n0TVsSPc8k9J",
       "name": "Web",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/spider-web.svg",
       "sort": 1400000,
       "flags": {
         "cf": null,
@@ -430,7 +430,7 @@
       "_id": "ucXqjCngNyO45bx4",
       "name": "Knock",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/unlocking.svg",
       "sort": 1600000,
       "flags": {
         "cf": null,
@@ -479,7 +479,7 @@
       "_id": "MxUPXKp6SvcjAji2",
       "name": "Protection from Normal Missiles",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/arrows-shield.svg",
       "sort": 1700000,
       "flags": {
         "cf": null,
@@ -528,7 +528,7 @@
       "_id": "1ANorGoQUeBL1kUH",
       "name": "Lightning Bolt",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/lightning-branches.svg",
       "sort": 2000000,
       "flags": {
         "cf": null,
@@ -577,7 +577,7 @@
       "_id": "r0IYXjO56f9Hw7kv",
       "name": "Hallucinatory Terrain",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/mountains.svg",
       "sort": 2200000,
       "flags": {
         "cf": null,
@@ -626,7 +626,7 @@
       "_id": "UTruX7DRHRswRKDt",
       "name": "Dimension Door",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/magic-portal.svg",
       "sort": 2300000,
       "flags": {
         "cf": null,
@@ -675,7 +675,7 @@
       "_id": "nVagfm2FgVzGVFIt",
       "name": "Polymorph Self",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/transform.svg",
       "sort": 2400000,
       "flags": {
         "cf": null,
@@ -724,7 +724,7 @@
       "_id": "O030yl7yi8tArR6c",
       "name": "Polymorph Others",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/frog-prince.svg",
       "sort": 2500000,
       "flags": {
         "cf": null,
@@ -773,7 +773,7 @@
       "_id": "ljPLfS9qnKaR7d1s",
       "name": "Wall of Ice",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/ice-shield.svg",
       "sort": 2600000,
       "flags": {
         "cf": null,
@@ -822,7 +822,7 @@
       "_id": "6iR65ODiW4IfQuM3",
       "name": "Teleport",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/teleport.svg",
       "sort": 2700000,
       "flags": {
         "cf": null,
@@ -871,7 +871,7 @@
       "_id": "KOORlF9XoMhTCnz9",
       "name": "Conjure Elemental",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/ifrit.svg",
       "sort": 3000000,
       "flags": {
         "cf": null,
@@ -920,7 +920,7 @@
       "_id": "Mp2SHbWUoNzYfvIR",
       "name": "Cloudkill",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/poison-cloud.svg",
       "sort": 3300000,
       "flags": {
         "cf": null,

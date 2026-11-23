@@ -7,7 +7,7 @@
       "_id": "NH2XukUCMw7QVCnr",
       "name": "Punch/Claw",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/claws.svg",
       "sort": 400000,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "aL7y62V5yzesBMZ1",
       "name": "Halberd",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/halberd.svg",
       "sort": 500000,
       "flags": {
         "core": {
@@ -126,7 +126,7 @@
       "_id": "AqHk5xzl1HWYTx53",
       "name": "Sword, Short",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/gladius.svg",
       "sort": 450000,
       "flags": {
         "core": {
@@ -186,7 +186,7 @@
       "_id": "1NBNoa8IPwx9i9zA",
       "name": "Spear, Light",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-spear.svg",
       "sort": 475000,
       "flags": {
         "core": {
@@ -248,7 +248,7 @@
       "_id": "sY4MjwjyquqicJHh",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 487500,
       "flags": {
         "core": {
@@ -312,7 +312,7 @@
       "_id": "jF1i1CHAPHZC0XCg",
       "name": "Undead",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shambling-zombie.svg",
       "sort": 600000,
       "flags": {},
       "effects": [],

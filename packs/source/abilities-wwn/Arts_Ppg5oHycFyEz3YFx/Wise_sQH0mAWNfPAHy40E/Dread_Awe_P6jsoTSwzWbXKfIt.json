@@ -1,7 +1,7 @@
 {
   "name": "Dread Awe",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/terror.svg",
   "system": {
     "subType": "art",
     "description": "<p>Your kind are figures of fear and mistrust. Gain a +1 bonus on all skill checks related to intimidation or threat. You can spend a Main Action cursing your foes in battle; those who hear suffer a -1 penalty to their next Morale check. You can do this only&nbsp;once per scene.</p>",

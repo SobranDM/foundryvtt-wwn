@@ -12,7 +12,7 @@
       "_id": "6Qm8sIOSXm38OAnJ",
       "name": "Shield, Large",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/bordered-shield.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -43,7 +43,7 @@
       "_id": "DQ74qKMSgRAHpgQT",
       "name": "Plate Armor",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/breastplate.svg",
       "sort": 400000,
       "flags": {
         "core": {
@@ -74,7 +74,7 @@
       "_id": "WGUhMMacD4jOl258",
       "name": "Bless",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/holy-symbol.svg",
       "sort": 500000,
       "flags": {
         "cf": null,
@@ -123,7 +123,7 @@
       "_id": "RF36KWPHNuqaZsxE",
       "name": "Cure Light Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-normal.svg",
       "sort": 600000,
       "flags": {
         "cf": null,
@@ -172,7 +172,7 @@
       "_id": "jvjqfRdROSzLrg7I",
       "name": "Cure Serious Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-increase.svg",
       "sort": 700000,
       "flags": {
         "cf": null,
@@ -221,7 +221,7 @@
       "_id": "maOOYNc8ets4Lm6q",
       "name": "Detect Evil (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/evil-eyes.svg",
       "sort": 800000,
       "flags": {
         "cf": null,
@@ -270,7 +270,7 @@
       "_id": "TlzkQ1voJdPecaKM",
       "name": "Protection from Evil (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/templar-shield.svg",
       "sort": 900000,
       "flags": {
         "cf": null,
@@ -319,7 +319,7 @@
       "_id": "4x4kWCMOY68bx3Dm",
       "name": "Protection from Evil 10' Radius (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/surrounded-shield.svg",
       "sort": 1000000,
       "flags": {
         "cf": null,
@@ -368,7 +368,7 @@
       "_id": "CVlPNXE059vM4sKp",
       "name": "Purify Food and Water",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/water-recycling.svg",
       "sort": 1100000,
       "flags": {
         "cf": null,
@@ -417,7 +417,7 @@
       "_id": "CF88ASMlz2vjQoUa",
       "name": "Raise Dead",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/resting-vampire.svg",
       "sort": 1200000,
       "flags": {
         "cf": null,
@@ -466,7 +466,7 @@
       "_id": "eI7eviwFKuAMwfAX",
       "name": "Hold Person (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/imprisoned.svg",
       "sort": 1300000,
       "flags": {
         "cf": null,
@@ -515,7 +515,7 @@
       "_id": "lKVzYegTygBrF7oi",
       "name": "Cure Disease",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/remedy.svg",
       "sort": 1400000,
       "flags": {
         "cf": null,
@@ -564,7 +564,7 @@
       "_id": "zbd6he1dEIFIaAqj",
       "name": "Remove Curse (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/broken-skull.svg",
       "sort": 1500000,
       "flags": {
         "cf": null,
@@ -613,7 +613,7 @@
       "_id": "7KuuyfS9v1LgmJ1H",
       "name": "Continual Light (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/sun.svg",
       "sort": 1600000,
       "flags": {
         "cf": null,
@@ -662,7 +662,7 @@
       "_id": "zyRl1gLTiKheMS3j",
       "name": "Know Alignment",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/scales.svg",
       "sort": 1700000,
       "flags": {
         "cf": null,
@@ -711,7 +711,7 @@
       "_id": "7PWOOYatDIe9GtJD",
       "name": "Silence 15' Radius",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/silence.svg",
       "sort": 1800000,
       "flags": {
         "cf": null,
@@ -760,7 +760,7 @@
       "_id": "VzBOrYqmQUzziDUY",
       "name": "Dispel Evil",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/sunbeams.svg",
       "sort": 1900000,
       "flags": {
         "cf": null,
@@ -809,7 +809,7 @@
       "_id": "dHPkDY7j1jkRifaz",
       "name": "Quest",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/journey.svg",
       "sort": 2000000,
       "flags": {
         "cf": null,
@@ -858,7 +858,7 @@
       "_id": "sw2MHsGtVRZk5seZ",
       "name": "Sticks to Snakes",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/snake.svg",
       "sort": 2100000,
       "flags": {
         "cf": null,
@@ -907,7 +907,7 @@
       "_id": "lmSnXZDvzTiTcBhV",
       "name": "Mace",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/flanged-mace.svg",
       "sort": 2200000,
       "flags": {
         "core": {

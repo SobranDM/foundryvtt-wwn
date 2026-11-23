@@ -2,7 +2,7 @@
   "_id": "DcMBnwhJHSQaER7U",
   "name": "Ghost Walker Field",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/ghost.svg",
   "effects": [],
   "system": {
     "description": "<p>On Turn: invisible/inaudible to unaided and typical TL4 sensors. Melee -4 if location known; ranged futile. Breaks on run/attack/sharp motion/psychic use. Up to 15 min; 15 min recharge.</p>",

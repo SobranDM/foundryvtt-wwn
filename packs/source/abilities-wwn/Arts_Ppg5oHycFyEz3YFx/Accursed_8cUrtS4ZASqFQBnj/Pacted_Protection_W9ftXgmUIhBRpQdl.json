@@ -1,7 +1,7 @@
 {
   "name": "Pacted Protection",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/pentagram-rose.svg",
   "system": {
     "subType": "art",
     "description": "<p>Choose a type of harmful energy: fire, frost, acid, electricity, or the like. You become immune to natural degrees of this energy and take half damage from magical attacks&nbsp;involving it.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Weight of Sin",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/weight-crush.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, Commit Effort for the day and target a visible foe. They must make a Physical save or lose their&nbsp;Move action for 1d6 rounds plus your level.</p>",

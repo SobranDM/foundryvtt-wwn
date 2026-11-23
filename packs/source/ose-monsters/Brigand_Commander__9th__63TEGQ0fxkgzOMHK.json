@@ -12,7 +12,7 @@
       "_id": "aC2sr7d3idwvTaod",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 800000,
       "flags": {
         "core": {
@@ -72,7 +72,7 @@
       "_id": "44CVhzsiYAAn5gHx",
       "name": "Plate Armor",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/breastplate.svg",
       "sort": 900000,
       "flags": {
         "core": {
@@ -103,7 +103,7 @@
       "_id": "38Zs2ILQLA7rFll5",
       "name": "Spear, Heavy",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/barbed-spear.svg",
       "sort": 1000000,
       "flags": {
         "core": {

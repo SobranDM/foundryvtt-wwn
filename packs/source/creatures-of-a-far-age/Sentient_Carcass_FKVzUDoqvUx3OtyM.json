@@ -10,7 +10,7 @@
       "_id": "T0t7VNQ38HQxdMPR",
       "name": "Averse",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/interdiction.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -56,7 +56,7 @@
       "_id": "09udGeFuNNHQvB9C",
       "name": "Beguiling",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/smitten.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -102,7 +102,7 @@
       "_id": "p83iF2w1ze5FKSJ3",
       "name": "Desynchrony",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/time-synchronization.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -148,7 +148,7 @@
       "_id": "VFAHn10J06vw18lg",
       "name": "Draining",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/life-tap.svg",
       "sort": 400000,
       "flags": {
         "core": {
@@ -194,7 +194,7 @@
       "_id": "uDQYzj24cWdplwQE",
       "name": "Intangible",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/ghost.svg",
       "sort": 600000,
       "flags": {
         "core": {
@@ -240,7 +240,7 @@
       "_id": "cxMd9qXXu82LMFRM",
       "name": "Ravenous",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/gluttony.svg",
       "sort": 700000,
       "flags": {
         "core": {
@@ -286,7 +286,7 @@
       "_id": "ecPYZqqWRI6rCYzz",
       "name": "Red Hunger",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/bleeding-heart.svg",
       "sort": 800000,
       "flags": {
         "core": {
@@ -332,7 +332,7 @@
       "_id": "xP9tvcgQeputZw3Y",
       "name": "Sunscorch",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/sun-radiations.svg",
       "sort": 900000,
       "flags": {
         "core": {
@@ -378,7 +378,7 @@
       "_id": "InjnyEc52mYhIpBk",
       "name": "Terrifying",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/terror.svg",
       "sort": 925000,
       "flags": {
         "core": {
@@ -424,7 +424,7 @@
       "_id": "XG5lHmbsFeMWfXI9",
       "name": "Impure",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/vile-fluid.svg",
       "sort": 500000,
       "flags": {
         "core": {
@@ -470,7 +470,7 @@
       "_id": "VbaY3bosGVEK5nDe",
       "name": "Unending",
       "type": "power",
-      "img": "systems/wwn/assets/icons/powers/necromancer-art.png",
+      "img": "modules/game-icons-net/blackbackground/infinity.svg",
       "sort": 950000,
       "flags": {
         "core": {
@@ -516,7 +516,7 @@
       "_id": "p4jJeiwPfcIIIZiV",
       "name": "Punch/Claw",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/claws.svg",
       "sort": 1050000,
       "flags": {},
       "effects": [],

@@ -3,7 +3,7 @@
   "name": "Spare Magazine",
   "type": "ammo",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/gear.png",
+  "img": "modules/game-icons-net/blackbackground/machine-gun-magazine.svg",
   "effects": [],
   "system": {
     "description": "<p>A spare magazine of ammunition for a slugthrower or similar magazine-fed weapon. Reload transfers rounds into the weapon magazine. Duplicate and rename for specific calibers as needed.</p>",

@@ -7,7 +7,7 @@
       "_id": "o1tkmagXG8R9xy0u",
       "name": "Bite",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/fangs.svg",
       "sort": 100000,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "Yjym0FsUcoCjqXN6",
       "name": "Feeding Frenzy",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shark-jaws.svg",
       "sort": 0,
       "flags": {
         "core": {

@@ -12,7 +12,7 @@
       "_id": "TvaLV4XiYEpVRop7",
       "name": "Mace",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/flanged-mace.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -74,7 +74,7 @@
       "_id": "ZPjF5CtGcF3POPRM",
       "name": "Cure Light Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-normal.svg",
       "sort": 200000,
       "flags": {
         "cf": {
@@ -127,7 +127,7 @@
       "_id": "aXX29AqfzgMGvzLw",
       "name": "Detect Evil",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/evil-eyes.svg",
       "sort": 250000,
       "flags": {
         "cf": {
@@ -180,7 +180,7 @@
       "_id": "wqJ3M6uiUn4SGAIj",
       "name": "Detect Magic",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/extra-lucid.svg",
       "sort": 275000,
       "flags": {
         "cf": {
@@ -233,7 +233,7 @@
       "_id": "o4MvzTNIIld1eZ7L",
       "name": "Light",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/candlebright.svg",
       "sort": 287500,
       "flags": {
         "cf": {
@@ -286,7 +286,7 @@
       "_id": "JR4v90gody3k4iPt",
       "name": "Protection from Evil",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/templar-shield.svg",
       "sort": 293750,
       "flags": {
         "cf": {
@@ -339,7 +339,7 @@
       "_id": "hfKzk2TbATEqAFYA",
       "name": "Purify Food and Water",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/water-recycling.svg",
       "sort": 296875,
       "flags": {
         "cf": {
@@ -392,7 +392,7 @@
       "_id": "rHiudTGuR42e5sh1",
       "name": "Remove Fear",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/cheerful.svg",
       "sort": 300000,
       "flags": {
         "cf": {
@@ -445,7 +445,7 @@
       "_id": "MjxAXFCTPTTozJ8C",
       "name": "Resist Cold",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/thermometer-cold.svg",
       "sort": 600000,
       "flags": {
         "cf": {
@@ -498,7 +498,7 @@
       "_id": "nEBrsfubWEINiIB3",
       "name": "Bless",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/holy-symbol.svg",
       "sort": 700000,
       "flags": {
         "cf": {
@@ -551,7 +551,7 @@
       "_id": "o7oddinRi5dXRjeb",
       "name": "Find Traps",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/wolf-trap.svg",
       "sort": 800000,
       "flags": {
         "cf": {
@@ -604,7 +604,7 @@
       "_id": "1OLS6glnfcPwi33q",
       "name": "Hold Person",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/imprisoned.svg",
       "sort": 900000,
       "flags": {
         "cf": {
@@ -657,7 +657,7 @@
       "_id": "qeP3e3qQq9a2xKHB",
       "name": "Know Alignment",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/scales.svg",
       "sort": 1000000,
       "flags": {
         "cf": {
@@ -710,7 +710,7 @@
       "_id": "paZL5n8hunngu6ld",
       "name": "Resist Fire",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/fire-shield.svg",
       "sort": 1100000,
       "flags": {
         "cf": {
@@ -763,7 +763,7 @@
       "_id": "SFcIqKUeAf4Og3XB",
       "name": "Silence 15' Radius",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/silence.svg",
       "sort": 1200000,
       "flags": {
         "cf": {
@@ -816,7 +816,7 @@
       "_id": "jAcB1stqKJH6ThGN",
       "name": "Snake Charm",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/snake-totem.svg",
       "sort": 1300000,
       "flags": {
         "cf": {
@@ -869,7 +869,7 @@
       "_id": "zDFXW44OjEvwTouq",
       "name": "Speak with Animals",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/parrot-head.svg",
       "sort": 1400000,
       "flags": {
         "cf": {

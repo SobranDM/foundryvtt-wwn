@@ -2,7 +2,7 @@
   "folder": "Z8XyL8I2JhFzfZHP",
   "name": "Entangle Incantation",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/bard-art.png",
+  "img": "modules/game-icons-net/blackbackground/vines.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the scene as an Instant action when an foe within 60&rsquo; incants a spell. Your voice tangles with their words, forcing them to make an opposed Int/Magic vs Cha/Perform skill check against you, with a +2 bonus to your roll. If you tie or succeed, the spell fizzles and is wasted. This art can be used only once per round.</p>",

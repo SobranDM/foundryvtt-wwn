@@ -2,7 +2,7 @@
   "folder": "vPTbcNDn3cvS2TFn",
   "name": "Dodge Doom",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "img": "modules/game-icons-net/blackbackground/dodging.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as an Instant action when caught in some explosion or other burst effect. You take half damage, or no damage if the effect allows a save and you succeed at it. You can move yourself up to ten feet away from your original location, provided the new location is behind cover or away from the blast&rsquo;s point of origin.</p>",

@@ -7,7 +7,7 @@
       "_id": "a329GhXEVllxcsVS",
       "name": "Antlers or Hoofs",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/deer-head.svg",
       "sort": 0,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "EyvMKiQ7wnbqNnLH",
       "name": "Stampede",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/trample.svg",
       "sort": 0,
       "flags": {
         "core": {

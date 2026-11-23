@@ -12,7 +12,7 @@
       "_id": "wjroZ7vw5qvrhw0a",
       "name": "Hoof",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/hoof.svg",
       "sort": 100000,
       "flags": {},
       "effects": [],
@@ -68,7 +68,7 @@
       "_id": "V5nmPqTfMa201R58",
       "name": "Club",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/wood-club.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -131,7 +131,7 @@
       "_id": "8OQsbG8omClfVTSJ",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -195,7 +195,7 @@
       "_id": "UVF4hP87O3Z4GH7x",
       "name": "Spear, Heavy",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/barbed-spear.svg",
       "sort": 400000,
       "flags": {
         "core": {

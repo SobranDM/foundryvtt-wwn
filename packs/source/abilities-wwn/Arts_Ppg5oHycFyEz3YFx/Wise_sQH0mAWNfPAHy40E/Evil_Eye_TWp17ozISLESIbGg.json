@@ -1,7 +1,7 @@
 {
   "name": "Evil Eye",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/evil-eyes.svg",
   "system": {
     "subType": "art",
     "description": "<p>This art improves your curse and blessing arts. You can now use these arts as an Instant action, albeit still only one such art per round, and you need do no more than look at the target rather than&nbsp;vocalizing any particular curse or blessing.</p>",

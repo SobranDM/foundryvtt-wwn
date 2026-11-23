@@ -2,7 +2,7 @@
   "folder": "Y6yU6X6VTpur8QmI",
   "name": "Armor of God",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/blood-priest-art.png",
+  "img": "modules/game-icons-net/blackbackground/templar-shield.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort as an On Turn action. While the Effort remains Committed, you have a natural Armor Class of 15 plus half your level, rounded down. This AC can be modified by shields or your Dexterity modifier, but not by other worn armor.</p>",

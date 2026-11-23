@@ -2,7 +2,7 @@
   "_id": "ZbEWt0mQVXj3hawK",
   "name": "Charged Particle Caster",
   "type": "shipWeapon",
-  "img": "icons/svg/explosion.svg",
+  "img": "modules/game-icons-net/blackbackground/sinusoidal-beam.svg",
   "effects": [],
   "system": {
     "description": "<p>A focalized upgrade to the reaper battery, the CPC has a much better armor penetration profile.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Read Omens",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/tarot-10-wheel-of-fortune.svg",
   "system": {
     "subType": "art",
     "description": "<p>A petitioner proposes a course of action to the PC. After a scene-long ritual involving at least 10 sp worth of livestock or sacrificial material, the GM makes a secret Wis/Magic skill check against difficulty 10. On a success, the PC gets an impression of whether the course of action will lead to success or failure, as the GM thinks most likely. On a failure, the GM gives a random result. Multiplying the ritual costs by 10 adds +1 to the skill check, thus, a sacrifice of 1,000 sp worth of livestock gets a +2 on the check. The&nbsp;same course of action cannot be divined more than once a month.</p>",

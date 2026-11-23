@@ -2,7 +2,7 @@
   "_id": "EFX2QlII7t4OnC1F",
   "name": "Identification Lock",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/finger-print.svg",
   "effects": [],
   "system": {
     "description": "<p>Whitelist lock. Reset: Int/Fix or Int/Program vs 12, one day. Unauthorized uninstall: Int/Fix vs 12 or slag suit.</p>",

@@ -7,7 +7,7 @@
       "_id": "dKhFZtlgz4lN2SSZ",
       "name": "Small Shield",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/round-shield.svg",
       "sort": 700000,
       "flags": {
         "core": {
@@ -38,7 +38,7 @@
       "_id": "LKETDfMGb1Chpk0h",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 800000,
       "flags": {
         "core": {
@@ -98,7 +98,7 @@
       "_id": "IwItIGanYXvUY9xH",
       "name": "Mail Shirt",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/mail-shirt.svg",
       "sort": 900000,
       "flags": {
         "core": {

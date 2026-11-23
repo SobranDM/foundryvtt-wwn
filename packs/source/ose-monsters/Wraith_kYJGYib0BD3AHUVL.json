@@ -7,7 +7,7 @@
       "_id": "Cth3e7N5cn8UMqYw",
       "name": "Touch",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/open-palm.svg",
       "sort": 0,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "deAI5tuSQGt6mwKs",
       "name": "Energy Drain",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/battery-0.svg",
       "sort": 0,
       "flags": {},
       "effects": [],
@@ -103,7 +103,7 @@
       "_id": "pmuF8XG8z0rU3SH8",
       "name": "Undead",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shambling-zombie.svg",
       "sort": 600000,
       "flags": {
         "core": {
@@ -147,7 +147,7 @@
       "_id": "IiPTIwS7IuFLqkhH",
       "name": "Mundane Damage Immunity",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shield-disabled.svg",
       "sort": 0,
       "flags": {
         "core": {

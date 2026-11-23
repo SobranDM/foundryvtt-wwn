@@ -1,7 +1,7 @@
 {
   "name": "Soul Consumption",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/soul-vessel.svg",
   "system": {
     "subType": "art",
     "description": "<p>As an Instant action, Commit Effort for the day when you fell an intelligent target with Accursed Bolt or Accursed Blade. They die instantly. You heal 1d6 hit points plus your level&nbsp;and lose one accumulated System Strain.</p>",

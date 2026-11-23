@@ -2,7 +2,7 @@
   "folder": "vPTbcNDn3cvS2TFn",
   "name": "Whirling Evasion",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "img": "modules/game-icons-net/blackbackground/evasion.svg",
   "system": {
     "subType": "art",
     "description": "<p>Your base Armor Class becomes equal to 13 plus half your level, rounded up. This AC can be modified by small shields and your Dexterity modifier, but not by armor or large shields.</p>",

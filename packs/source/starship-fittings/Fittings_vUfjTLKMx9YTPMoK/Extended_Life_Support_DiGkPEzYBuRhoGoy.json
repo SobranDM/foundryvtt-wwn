@@ -2,7 +2,7 @@
   "_id": "DiGkPEzYBuRhoGoy",
   "name": "Extended Life Support",
   "type": "shipFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/life-support.svg",
   "effects": [],
   "system": {
     "description": "<p>Doubles maximum crew size. Can be fitted multiple times, each adding another 100% of the base maximum.</p>",

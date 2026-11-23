@@ -3,7 +3,7 @@
   "name": "Type B Energy Cell",
   "type": "ammo",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/gear.png",
+  "img": "modules/game-icons-net/blackbackground/battery-pack-alt.svg",
   "effects": [],
   "system": {
     "description": "<p>Heavy TL4 energy cell for high-drain weapons and equipment. One cell typically reloads a weapon magazine.</p>",

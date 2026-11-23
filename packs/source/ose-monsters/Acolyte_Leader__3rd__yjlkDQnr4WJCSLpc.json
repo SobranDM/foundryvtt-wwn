@@ -12,7 +12,7 @@
       "_id": "TvaLV4XiYEpVRop7",
       "name": "Mace",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/flanged-mace.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -74,7 +74,7 @@
       "_id": "7jueF6JASNTJOxmR",
       "name": "Cure Light Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-normal.svg",
       "sort": 200000,
       "flags": {
         "cf": {
@@ -127,7 +127,7 @@
       "_id": "oW56QOVTS4nND6d1",
       "name": "Detect Evil",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/evil-eyes.svg",
       "sort": 250000,
       "flags": {
         "cf": {
@@ -180,7 +180,7 @@
       "_id": "AAWmhZTttVxXw6Pl",
       "name": "Detect Magic",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/extra-lucid.svg",
       "sort": 275000,
       "flags": {
         "cf": {
@@ -233,7 +233,7 @@
       "_id": "JvW24Kux09mIyBLL",
       "name": "Light",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/candlebright.svg",
       "sort": 287500,
       "flags": {
         "cf": {
@@ -286,7 +286,7 @@
       "_id": "6ON4veq1qf4t5vad",
       "name": "Protection from Evil",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/templar-shield.svg",
       "sort": 293750,
       "flags": {
         "cf": {
@@ -339,7 +339,7 @@
       "_id": "3CCEHD3u4DAdyB4w",
       "name": "Purify Food and Water",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/water-recycling.svg",
       "sort": 296875,
       "flags": {
         "cf": {
@@ -392,7 +392,7 @@
       "_id": "ZGht80j8Wf8bvJpi",
       "name": "Remove Fear",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/cheerful.svg",
       "sort": 300000,
       "flags": {
         "cf": {
@@ -445,7 +445,7 @@
       "_id": "9u5DjB3wWEMeX8Oc",
       "name": "Resist Cold",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/thermometer-cold.svg",
       "sort": 600000,
       "flags": {
         "cf": {

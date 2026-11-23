@@ -2,7 +2,7 @@
   "folder": "X7ZjQRXF78TzM1O2",
   "name": "Savage Talons (L1)",
   "type": "weapon",
-  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "img": "modules/game-icons-net/blackbackground/claw-slashes.svg",
   "system": {
     "description": "<p>This shape has extremely dangerous claws, fangs, pincers, or other body weapons. At first level these weapons do 1d8 damage, use either Str or Dex as the modifying attribute, Punch as the combat skill, and have a Shock value of 2/AC 13. At level 3 the damage and Shock increase by +1, at level 6 they increase to +2, and at level 9 they increase to +3. These weapons can harm even creatures immune to non-magical weaponry.</p>",
     "damage": "1d8",

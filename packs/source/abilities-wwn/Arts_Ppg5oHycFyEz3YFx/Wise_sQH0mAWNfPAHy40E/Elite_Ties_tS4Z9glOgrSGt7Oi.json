@@ -1,7 +1,7 @@
 {
   "name": "Elite Ties",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/tie.svg",
   "system": {
     "subType": "art",
     "description": "<p>You have ties with figures of societal importance. You can get audiences with them with minimal effort. Once per game session, get a favor from them that would not particularly inconvenience them to grant.</p>",

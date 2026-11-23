@@ -10,7 +10,7 @@
       "_id": "7XLM0EbrohIO0zPk",
       "name": "Plate Armor",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/breastplate.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -41,7 +41,7 @@
       "_id": "7cNTi2Gfxh2nNHS6",
       "name": "Shield, Small",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/round-shield.svg",
       "sort": 200000,
       "flags": {
         "core": {

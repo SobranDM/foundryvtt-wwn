@@ -3,7 +3,7 @@
   "name": "Specialist",
   "type": "focus",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/focus.png",
+  "img": "modules/game-icons-net/blackbackground/achievement.svg",
   "effects": [],
   "system": {
     "description": "<p>You are remarkably talented at a particular skill. Whether a marvelous cat burglar, a famed athlete, a brilliant scholar, or some other savant, your expertise is extremely reliable. You may take this Focus more than once for different skills.</p>\n<p><strong>Level 1: </strong>Gain any skill as a bonus, except for Magic, Stab, Shoot, or Punch. Roll 3d6 and drop the lowest die for all skill checks in this skill.</p>\n<p><strong>Level 2:</strong> Roll 4d6 and drop the two lowest dice for all skill checks in this skill.</p>",

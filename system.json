@@ -305,6 +305,18 @@
     "distance": 5,
     "units": "ft"
   },
+  "relationships": {
+    "requires": [
+      {
+        "id": "game-icons-net",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/datdamnzotz/icons/master/module.json",
+        "compatibility": {
+          "minimum": "0.0.45"
+        }
+      }
+    ]
+  },
   "url": "https://github.com/SobranDM/foundryvtt-wwn",
   "manifest": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/system.json",
   "download": "https://github.com/SobranDM/foundryvtt-wwn/releases/latest/download/wwn.zip",

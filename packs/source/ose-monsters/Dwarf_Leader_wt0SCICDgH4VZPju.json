@@ -7,7 +7,7 @@
       "_id": "f0vdUaJq8fxyZ5bQ",
       "name": "Punch/Headbutt",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/punch.svg",
       "sort": 100000,
       "flags": {},
       "effects": [],
@@ -63,7 +63,7 @@
       "_id": "OPUHKn6c0fhKOoUW",
       "name": "Axe, War",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/battle-axe.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -125,7 +125,7 @@
       "_id": "j1JmC47mMtsDzvqW",
       "name": "Hammer, War",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/war-pick.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -185,7 +185,7 @@
       "_id": "aQ9B68nKa3cP64ln",
       "name": "Morale",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/knight-banner.svg",
       "sort": 400000,
       "flags": {},
       "effects": [],

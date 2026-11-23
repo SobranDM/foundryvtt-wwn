@@ -2,7 +2,7 @@
   "_id": "sAgVKz20dHOoJGEf",
   "name": "Hardened Polyceramic Overlay",
   "type": "shipDefense",
-  "img": "icons/svg/shield.svg",
+  "img": "modules/game-icons-net/blackbackground/diamond-hard.svg",
   "effects": [],
   "system": {
     "description": "<p>AP quality of attacking weapons reduced by 5, via a complex glazing process that hardens the ship's armor surface.</p>",

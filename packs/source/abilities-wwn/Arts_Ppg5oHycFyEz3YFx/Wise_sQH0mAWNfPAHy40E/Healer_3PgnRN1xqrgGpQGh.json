@@ -1,7 +1,7 @@
 {
   "name": "Healer",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/healing.svg",
   "system": {
     "subType": "art",
     "description": "<p>You are a trained and capable healer. Gain a +1 on all Heal skill checks; once per day, as an On Turn action, automatically&nbsp;succeed at a skill check to stabilize a Mortally Wounded subject.</p>",

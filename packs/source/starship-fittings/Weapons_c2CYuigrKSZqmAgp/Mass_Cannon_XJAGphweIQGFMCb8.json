@@ -2,7 +2,7 @@
   "_id": "XJAGphweIQGFMCb8",
   "name": "Mass Cannon",
   "type": "shipWeapon",
-  "img": "icons/svg/explosion.svg",
+  "img": "modules/game-icons-net/blackbackground/cannon.svg",
   "effects": [],
   "system": {
     "description": "<p>By firing projectiles almost as large as fighter-scale craft, the mass cannon inflicts tremendous damage on a target. Serious ammunition limitations hamper its wider-scale use.</p>",
