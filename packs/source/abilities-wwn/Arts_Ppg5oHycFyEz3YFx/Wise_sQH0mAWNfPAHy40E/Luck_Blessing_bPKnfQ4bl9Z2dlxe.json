@@ -1,7 +1,7 @@
 {
   "name": "Luck Blessing",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/clover-spiked.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, confer a blessing on a visible target. The next skill check they make that day will have a +1 bonus. Only&nbsp;one luck blessing can be in place for a creature at a time.</p>",

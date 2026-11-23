@@ -1,7 +1,7 @@
 {
   "name": "Dire Pact",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/pentacle.svg",
   "system": {
     "subType": "art",
     "description": "<p>Foes suffer a penalty equal to your Magic skill on all saves versus your Accursed arts. If they succeed, however, you&nbsp;gain one System Strain.</p>",

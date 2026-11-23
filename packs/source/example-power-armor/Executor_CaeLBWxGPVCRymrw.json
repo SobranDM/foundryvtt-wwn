@@ -8,7 +8,7 @@
       "_id": "CPcEk1HAZsyzsDps",
       "name": "Plating, Pretech",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/metal-scales.svg",
       "effects": [],
       "system": {
         "description": "<p>AC 22, Soak 30, +2 Trauma Target; Trauma only from vehicle-Trauma weapons; Shock immune; immune TL3−. Only one plating.</p>",
@@ -30,7 +30,7 @@
       "_id": "D6Hnpb0a2l0ubBVv",
       "name": "Short-Range Warp Capacitor",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/teleport.svg",
       "effects": [],
       "system": {
         "description": "<p>On Turn: teleport ≤30m to visible location. After first use in scene: 1d6, 3− fails for rest of scene.</p>",
@@ -52,7 +52,7 @@
       "_id": "tk7HiY5YHF29tZQE",
       "name": "Exoskeletal Boost, Pretech",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/megabot.svg",
       "effects": [],
       "system": {
         "description": "<p>As Advanced; Str 22 for Encumbrance; lift/bend/break unarmored objects up to compact-car size as Main Action.</p>",
@@ -74,7 +74,7 @@
       "_id": "GBldEnJ1dDb8Qulz",
       "name": "Sealed Systems, Advanced",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/gas-mask_1.svg",
       "effects": [],
       "system": {
         "description": "<p>Immune toxic gases; nullifies non-instantly-lethal radiation; oxygen/thermal for deep space/underwater while powered.</p>",

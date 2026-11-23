@@ -2,7 +2,7 @@
   "_id": "ialaysZ7RjUBW1Vv",
   "name": "Drop Pod",
   "type": "shipFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/apollo-capsule.svg",
   "effects": [],
   "system": {
     "description": "<p>Stealthed, armored landing pod for troops. Twice as fast as a cargo lighter, applies -3 to tracking/targeting checks against it, and can carry up to 100 troops. Can be purchased multiple times.</p>",

@@ -2,7 +2,7 @@
   "_id": "bMHnawo8qEy4ZTsv",
   "name": "Ship's Locker",
   "type": "shipFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/lockers.svg",
   "effects": [],
   "system": {
     "description": "<p>General TL4 equipment for the crew; giving it away or losing it in use may deplete it until restocked.</p>",

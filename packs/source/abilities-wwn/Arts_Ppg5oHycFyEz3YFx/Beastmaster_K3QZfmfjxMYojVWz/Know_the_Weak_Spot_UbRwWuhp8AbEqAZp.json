@@ -2,7 +2,7 @@
   "folder": "K3QZfmfjxMYojVWz",
   "name": "Know the Weak Spot",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "img": "modules/game-icons-net/blackbackground/achilles-heel.svg",
   "system": {
     "subType": "art",
     "description": "<p>Whenever inflicting damage on a beast with a weapon or physical attack, roll the damage twice and take the higher score. Optionally, Commit Effort for the scene as an Instant action when an ally within earshot hits a beast; your shouted advice or distracting help allows them to roll damage twice and take the better result as well.</p>",

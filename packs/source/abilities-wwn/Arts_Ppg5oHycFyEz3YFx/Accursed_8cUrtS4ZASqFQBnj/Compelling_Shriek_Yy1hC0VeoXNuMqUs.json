@@ -1,7 +1,7 @@
 {
   "name": "Compelling Shriek",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/sonic-screech.svg",
   "system": {
     "subType": "art",
     "description": "<p>Once per scene, Commit Effort for the day as a Main Action and shout a command of no more than seven words. Chosen targets who hear and understand must make a Mental save or perform that action for one round, provided it is not totally&nbsp;contrary to their character.</p>",

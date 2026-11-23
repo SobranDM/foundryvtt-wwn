@@ -2,7 +2,7 @@
   "folder": "9KnDorIyzGofLkE7",
   "name": "Feline Leap",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/skinshifter-art.png",
+  "img": "modules/game-icons-net/blackbackground/pounce.svg",
   "system": {
     "subType": "art",
     "description": "<p>This form can vault great distances. You can jump your full Move rating as a Move action, crossing the full distance horizontally or up to half the distance vertically. You subtract your Move rating from fall distance for damage calculations.</p>",

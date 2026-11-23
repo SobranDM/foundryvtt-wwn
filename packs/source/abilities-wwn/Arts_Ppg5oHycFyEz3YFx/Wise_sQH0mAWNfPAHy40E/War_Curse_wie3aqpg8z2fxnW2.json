@@ -1,7 +1,7 @@
 {
   "name": "War Curse",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/crossed-axes.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, curse a visible enemy. They suffer a -2 penalty to hit rolls, damage rolls, and Shock damage for the rest of the scene. If they miss an attack with a raw to-hit die roll less than the Wise&rsquo;s Magic skill, they accidentally hurt themselves for normal&nbsp;damage. Only one war curse can be applied at a time.</p>",

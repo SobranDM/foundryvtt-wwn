@@ -1,7 +1,7 @@
 {
   "name": "Bewitching Distraction",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/distraction.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the day as a Main Action when talking to an intelligent target when not in combat. They must make a Mental save or become dazed, oblivious to their surroundings and forgetting you and all else that happened in that&nbsp;scene. Danger ends the daze but not the forgetting.</p>",

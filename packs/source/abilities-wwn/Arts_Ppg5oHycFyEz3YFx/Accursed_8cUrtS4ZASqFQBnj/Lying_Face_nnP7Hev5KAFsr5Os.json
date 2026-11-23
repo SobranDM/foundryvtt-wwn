@@ -1,7 +1,7 @@
 {
   "name": "Lying Face",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/liar.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort as a Main Action; while it remains Committed, you can disguise yourself as any humanoid of the same&nbsp;general size, including clothing, scent, and voice.</p>",

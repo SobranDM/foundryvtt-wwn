@@ -2,7 +2,7 @@
   "_id": "QJQ5bmUJU7g8cqtF",
   "name": "Fuel Scoops",
   "type": "shipFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/gas-pump.svg",
   "effects": [],
   "system": {
     "description": "<p>Ship can scoop fuel from a gas giant or star. Extraction takes four days but completely refuels the ship.</p>",

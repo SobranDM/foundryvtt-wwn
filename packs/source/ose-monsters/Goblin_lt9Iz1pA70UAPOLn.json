@@ -7,7 +7,7 @@
       "_id": "ugex58AVPhTmd7R7",
       "name": "Sword, Short",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/gladius.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -67,7 +67,7 @@
       "_id": "R244WztL4Aj8DF0U",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -131,7 +131,7 @@
       "_id": "9mbzc40Ln9FdOcpl",
       "name": "Dagger",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/plain-dagger.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -195,7 +195,7 @@
       "_id": "ul1jUEfcuYWVCFgY",
       "name": "Spear, Light",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-spear.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -257,7 +257,7 @@
       "_id": "X8hBrp4cALDwQ3vi",
       "name": "Hate Dwarves",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/dwarf-face.svg",
       "sort": 0,
       "flags": {},
       "effects": [],

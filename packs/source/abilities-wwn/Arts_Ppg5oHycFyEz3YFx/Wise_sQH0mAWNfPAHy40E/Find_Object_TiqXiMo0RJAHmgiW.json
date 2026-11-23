@@ -1,7 +1,7 @@
 {
   "name": "Find Object",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/water-diviner-stick.svg",
   "system": {
     "subType": "art",
     "description": "<p>The diviner spends a scene performing a ritual to locate a particular animal, object or type of substance known to them, be it gold, water, or a specific stolen cow. People cannot be found with this art. The GM makes a secret Wis/Magic skill check against a difficulty of 8 to 11, depending on how close the nearest suitable object is; something in the same village is 8, something a mile or more away is 11, and something more than five miles away is undetectable. If the check is successful, the diviner gets an impression of the direction the object is in. On a failure, roll 1d12 and use it as a clock face to give&nbsp;a random direction. This art can be used once per day.</p>",

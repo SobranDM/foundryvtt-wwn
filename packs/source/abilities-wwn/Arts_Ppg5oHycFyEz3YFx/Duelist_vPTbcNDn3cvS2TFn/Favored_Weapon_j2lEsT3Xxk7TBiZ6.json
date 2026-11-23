@@ -2,7 +2,7 @@
   "folder": "vPTbcNDn3cvS2TFn",
   "name": "Favored Weapon",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/duelist-art.png",
+  "img": "modules/game-icons-net/blackbackground/sword-altar.svg",
   "system": {
     "subType": "art",
     "description": "<p>Choose one specific type of non-unarmed melee weapon from the list on page 37. You begin play with such a weapon, and when using this type you may use the Favored Weapon attack bonus column on the Duelist table to determine your base hit bonus, unless it&rsquo;s already better for some other reason. If your second partial class is Partial Warrior, your class&rsquo; base hit bonus with the weapon is instead equal to your level. You cannot apply this or other Duelist arts to thrown weapons.</p>",

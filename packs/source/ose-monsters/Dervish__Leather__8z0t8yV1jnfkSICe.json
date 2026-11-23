@@ -12,7 +12,7 @@
       "_id": "oUctl3iWxSEcuZXQ",
       "name": "Buff Coat",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/leather-vest.svg",
       "sort": 100000,
       "flags": {
         "core": {
@@ -43,7 +43,7 @@
       "_id": "6Qm8sIOSXm38OAnJ",
       "name": "Shield, Large",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/bordered-shield.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -74,7 +74,7 @@
       "_id": "XA2vwFAniyJYv5hA",
       "name": "Spear, Light",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-spear.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -136,7 +136,7 @@
       "_id": "vCrh0XZ0mTzRuIZa",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 400000,
       "flags": {
         "core": {
@@ -200,7 +200,7 @@
       "_id": "DNzRkQPSI7mT4fuL",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 500000,
       "flags": {
         "core": {

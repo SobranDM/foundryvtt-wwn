@@ -1,7 +1,7 @@
 {
   "name": "Compel Truth",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/justice-star.svg",
   "system": {
     "subType": "art",
     "description": "<p>The diviner compels a person to drink a particular brew, participate in a specific ritual, or otherwise undergo a scene-long ordeal. Afterwards, the diviner may ask the target a single question and the GM secretly rolls a Cha/Magic skill check against a difficulty of the target&rsquo;s Morale+1, or level+6 for PCs. On a success, the subject must answer the question truthfully and fully. On a failure, they may give any answer they wish. The same or substantially same&nbsp;question may not be asked twice with this art.</p>",

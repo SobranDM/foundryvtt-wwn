@@ -1,7 +1,7 @@
 {
   "name": "Erudite",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/open-book.svg",
   "system": {
     "subType": "art",
     "description": "<p>You are uncommonly learned. Once per day, reroll a failed skill check related to intellectual pursuits or things a scholar&nbsp;would know about.</p>",

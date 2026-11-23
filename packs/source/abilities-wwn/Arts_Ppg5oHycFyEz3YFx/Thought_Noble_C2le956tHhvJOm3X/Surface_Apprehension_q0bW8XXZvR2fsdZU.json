@@ -2,7 +2,7 @@
   "folder": "C2le956tHhvJOm3X",
   "name": "Surface Apprehension",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "img": "modules/game-icons-net/blackbackground/think.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commit Effort for the scene as a Main Action while targeting a visible living creature. If it fails a Mental saving throw, you become aware of its immediate surface thoughts for the rest of the round. If you ask specific questions of the creature during this round it will instinctively think of the answers, though the detail of these surface thoughts is generally limited to one or two sentences of information.</p>",

@@ -12,7 +12,7 @@
       "_id": "zvIdwhFdbOpSTxH4",
       "name": "Mail Shirt",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/mail-shirt.svg",
       "sort": 400000,
       "flags": {
         "core": {
@@ -43,7 +43,7 @@
       "_id": "Od1ddSbYRV6dfKyJ",
       "name": "Crossbow",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/crossbow.svg",
       "sort": 500000,
       "flags": {
         "core": {
@@ -107,7 +107,7 @@
       "_id": "lyGMmVbUL7WdhN3Z",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 400000,
       "flags": {
         "core": {

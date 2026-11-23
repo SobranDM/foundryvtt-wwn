@@ -12,7 +12,7 @@
       "_id": "6Qm8sIOSXm38OAnJ",
       "name": "Shield, Large",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/bordered-shield.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -43,7 +43,7 @@
       "_id": "XA2vwFAniyJYv5hA",
       "name": "Spear, Light",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-spear.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -105,7 +105,7 @@
       "_id": "3jF1Vz2hLOwsaHuN",
       "name": "Mail Shirt",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/mail-shirt.svg",
       "sort": 400000,
       "flags": {
         "core": {

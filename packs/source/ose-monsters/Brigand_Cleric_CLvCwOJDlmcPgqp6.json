@@ -12,7 +12,7 @@
       "_id": "JbpoQxbf4D5wlnmU",
       "name": "Crossbow",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/crossbow.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -76,7 +76,7 @@
       "_id": "zvIdwhFdbOpSTxH4",
       "name": "Mail Shirt",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/mail-shirt.svg",
       "sort": 400000,
       "flags": {
         "core": {
@@ -107,7 +107,7 @@
       "_id": "TQItIn1odYyP2EVD",
       "name": "Mace",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/flanged-mace.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -169,7 +169,7 @@
       "_id": "gl1TFb1oNTNj9sxs",
       "name": "Cure Light Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-normal.svg",
       "sort": 500000,
       "flags": {
         "cf": null,
@@ -218,7 +218,7 @@
       "_id": "dZnRNNPq4BWHLxa7",
       "name": "Cure Serious Wounds",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/health-increase.svg",
       "sort": 600000,
       "flags": {
         "cf": null,
@@ -267,7 +267,7 @@
       "_id": "6sHVbK6Becw6xQWI",
       "name": "Purify Food and Water",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/water-recycling.svg",
       "sort": 700000,
       "flags": {
         "cf": null,
@@ -316,7 +316,7 @@
       "_id": "TbQ1ReGz9QskzsIp",
       "name": "Remove Curse (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/broken-skull.svg",
       "sort": 800000,
       "flags": {
         "cf": null,
@@ -365,7 +365,7 @@
       "_id": "IeBafs65HtgwruwR",
       "name": "Remove Fear",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/cheerful.svg",
       "sort": 900000,
       "flags": {
         "cf": null,
@@ -414,7 +414,7 @@
       "_id": "LZgho7kFtAhXCCR6",
       "name": "Resist Cold",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/thermometer-cold.svg",
       "sort": 1000000,
       "flags": {
         "cf": null,
@@ -463,7 +463,7 @@
       "_id": "7BI5GGuLwefGSnsW",
       "name": "Bless",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/holy-symbol.svg",
       "sort": 1100000,
       "flags": {
         "cf": null,
@@ -512,7 +512,7 @@
       "_id": "z7qtdOU1gpWGkcR3",
       "name": "Find Traps",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/wolf-trap.svg",
       "sort": 1200000,
       "flags": {
         "cf": null,
@@ -561,7 +561,7 @@
       "_id": "qq4UfQFMN1gHqIa2",
       "name": "Hold Person (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/imprisoned.svg",
       "sort": 1300000,
       "flags": {
         "cf": null,
@@ -610,7 +610,7 @@
       "_id": "HIdJJyDP4U1kFOQO",
       "name": "Cure Disease",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/remedy.svg",
       "sort": 1400000,
       "flags": {
         "cf": null,
@@ -659,7 +659,7 @@
       "_id": "QePURLcy4n5gZNXH",
       "name": "Resist Fire",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/fire-shield.svg",
       "sort": 1500000,
       "flags": {
         "cf": null,
@@ -708,7 +708,7 @@
       "_id": "3xS8zdIfGwek9KBQ",
       "name": "Create Food",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/bread.svg",
       "sort": 1600000,
       "flags": {
         "cf": null,
@@ -757,7 +757,7 @@
       "_id": "4s5CI1NAex17yLiq",
       "name": "Create Water",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/water-drop.svg",
       "sort": 1700000,
       "flags": {
         "cf": null,
@@ -806,7 +806,7 @@
       "_id": "ld64wiNMCRq8VVS2",
       "name": "Neutralize Poison",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/chemical-drop.svg",
       "sort": 1800000,
       "flags": {
         "cf": null,
@@ -855,7 +855,7 @@
       "_id": "Vba7Fie1nhsNXGge",
       "name": "Insect Plague",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/fly.svg",
       "sort": 1900000,
       "flags": {
         "cf": null,
@@ -904,7 +904,7 @@
       "_id": "v5ltDCQo22XKEYyb",
       "name": "Quest",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/journey.svg",
       "sort": 2000000,
       "flags": {
         "cf": null,
@@ -953,7 +953,7 @@
       "_id": "RyDrAh0TphbLttyh",
       "name": "Sticks to Snakes",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/snake.svg",
       "sort": 2100000,
       "flags": {
         "cf": null,
@@ -1002,7 +1002,7 @@
       "_id": "AsCHhlF4POAl6CYy",
       "name": "Continual Light (Cleric)",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/sun.svg",
       "sort": 2200000,
       "flags": {
         "cf": null,
@@ -1051,7 +1051,7 @@
       "_id": "gRKeXWnYOBA8Ktjy",
       "name": "Striking",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/spell.png",
+      "img": "modules/game-icons-net/blackbackground/sword-wound.svg",
       "sort": 2300000,
       "flags": {
         "cf": null,

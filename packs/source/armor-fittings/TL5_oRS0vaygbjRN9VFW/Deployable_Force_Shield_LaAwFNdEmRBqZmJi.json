@@ -2,7 +2,7 @@
   "_id": "LaAwFNdEmRBqZmJi",
   "name": "Deployable Force Shield",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/energy-shield.svg",
   "effects": [],
   "system": {
     "description": "<p>Main Action: 3×3m force shield, hard cover, 20 HP (heavy weapons). Scene / deactivate / reuse. Second+ use in scene: 1d6, 5+ drains for scene.</p>",

@@ -2,7 +2,7 @@
   "_id": "uQTCAslbvAEPp3uy",
   "name": "Weasel Probe",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/spider-bot.svg",
   "effects": [],
   "system": {
     "description": "<p>Ferret probe on fiber cable; Move 20m/round to 200m; darkvision; +2 Stealth; AC 15, 4 HP. Destroyed → unusable until maintenance.</p>",

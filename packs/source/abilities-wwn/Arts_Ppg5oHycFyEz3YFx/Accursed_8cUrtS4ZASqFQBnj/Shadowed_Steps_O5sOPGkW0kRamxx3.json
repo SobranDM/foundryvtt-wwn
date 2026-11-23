@@ -1,7 +1,7 @@
 {
   "name": "Shadowed Steps",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/shadow-follower.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Move Action, Commit Effort for the scene and teleport up to your Move distance. You cannot bypass walls or physical obstacles, but you can teleport vertically or into high&nbsp;places.</p>",

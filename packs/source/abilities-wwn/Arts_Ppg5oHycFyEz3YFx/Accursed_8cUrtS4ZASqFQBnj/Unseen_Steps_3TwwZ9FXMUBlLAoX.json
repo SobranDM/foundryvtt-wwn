@@ -1,7 +1,7 @@
 {
   "name": "Unseen Steps",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/invisible.svg",
   "system": {
     "subType": "art",
     "description": "<p>As an On Turn action, Commit Effort for the day to turn invisible for 1d6 rounds plus your level. This invisibility breaks before you attack, cast spells, or perform other vigorous or violent&nbsp;actions.</p>",

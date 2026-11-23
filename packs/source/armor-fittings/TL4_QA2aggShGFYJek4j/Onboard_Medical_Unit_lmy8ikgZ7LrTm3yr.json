@@ -2,7 +2,7 @@
   "_id": "lmy8ikgZ7LrTm3yr",
   "name": "Onboard Medical Unit",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/medical-drip.svg",
   "effects": [],
   "system": {
     "description": "<p>Up to 12 pharma doses; On Turn administer to self or adjacent ally (1/round). Heal-1 if user lower. Counts as medkit.</p>",

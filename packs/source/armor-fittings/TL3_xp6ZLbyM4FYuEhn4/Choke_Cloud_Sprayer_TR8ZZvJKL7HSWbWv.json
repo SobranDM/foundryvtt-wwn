@@ -2,7 +2,7 @@
   "_id": "TR8ZZvJKL7HSWbWv",
   "name": "Choke Cloud Sprayer",
   "type": "armorFitting",
-  "img": "icons/svg/upgrade.svg",
+  "img": "modules/game-icons-net/blackbackground/poison-gas.svg",
   "effects": [],
   "system": {
     "description": "<p>Move action: trigger Readied gas grenade; affects burst including user without sealed systems.</p>",

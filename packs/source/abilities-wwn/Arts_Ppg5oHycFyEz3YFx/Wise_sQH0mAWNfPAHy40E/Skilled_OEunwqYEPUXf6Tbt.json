@@ -1,7 +1,7 @@
 {
   "name": "Skilled",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/skills.svg",
   "system": {
     "subType": "art",
     "description": "<p>Gain three skill points to spend on any non-combat skills, up to the maximum skill level allowed by your character level. This&nbsp;art may be taken more than once.</p>",

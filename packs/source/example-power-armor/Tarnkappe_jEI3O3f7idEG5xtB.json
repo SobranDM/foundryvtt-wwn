@@ -8,7 +8,7 @@
       "_id": "17tJF9JULMKPsopO",
       "name": "Exoskeletal Boost, Pretech",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/megabot.svg",
       "effects": [],
       "system": {
         "description": "<p>As Advanced; Str 22 for Encumbrance; lift/bend/break unarmored objects up to compact-car size as Main Action.</p>",
@@ -30,7 +30,7 @@
       "_id": "HQyX67DVV05OiUzR",
       "name": "Ghost Walker Field",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/ghost.svg",
       "effects": [],
       "system": {
         "description": "<p>On Turn: invisible/inaudible to unaided and typical TL4 sensors. Melee -4 if location known; ranged futile. Breaks on run/attack/sharp motion/psychic use. Up to 15 min; 15 min recharge.</p>",
@@ -52,7 +52,7 @@
       "_id": "shCN5i8TLzrBkU2u",
       "name": "Plating, Pretech",
       "type": "armorFitting",
-      "img": "icons/svg/upgrade.svg",
+      "img": "modules/game-icons-net/blackbackground/metal-scales.svg",
       "effects": [],
       "system": {
         "description": "<p>AC 22, Soak 30, +2 Trauma Target; Trauma only from vehicle-Trauma weapons; Shock immune; immune TL3−. Only one plating.</p>",

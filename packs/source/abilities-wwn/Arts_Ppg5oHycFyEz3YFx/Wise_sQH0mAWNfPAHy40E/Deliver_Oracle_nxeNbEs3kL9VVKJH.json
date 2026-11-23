@@ -1,7 +1,7 @@
 {
   "name": "Deliver Oracle",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/crystal-ball.svg",
   "system": {
     "subType": "art",
     "description": "<p>A petitioner asks about the outcome of a particular course of action. The diviner then spends a day in various rituals, seeking an oracular answer. At the end, the GM makes a secret Wis/Magic skill check. If the skill check beats difficulty 8, an oracular sentence with some truth in it is produced. If the skill check beats difficulty 12, a direct and obvious oracle is produced. If the skill check is 7 or less, a hopelessly ambiguous oracle is produced, and if the dice roll a natural 2 an intentionally misleading oracle is delivered. Oracles are usually delivered as metaphors, poetry, or visions. The GM should&nbsp;ensure that some element of a true oracle actually does come to pass.</p>",

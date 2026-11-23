@@ -7,7 +7,7 @@
       "_id": "wDosQPr7GawsbO91",
       "name": "Sword, Short",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/gladius.svg",
       "sort": 200000,
       "flags": {
         "core": {
@@ -67,7 +67,7 @@
       "_id": "sZUOjc0m3nuEiiVc",
       "name": "Throwing Blade",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/thrown-knife.svg",
       "sort": 300000,
       "flags": {
         "core": {
@@ -131,7 +131,7 @@
       "_id": "JTXlNuEBkyTbyLLF",
       "name": "Bow, Small",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/bow-arrow.svg",
       "sort": 500000,
       "flags": {
         "core": {
@@ -195,7 +195,7 @@
       "_id": "9yTQ1OyqP84I7faa",
       "name": "Buff Coat",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/leather-vest.svg",
       "sort": 600000,
       "flags": {
         "core": {
@@ -226,7 +226,7 @@
       "_id": "dKhFZtlgz4lN2SSZ",
       "name": "Small Shield",
       "type": "armor",
-      "img": "systems/wwn/assets/icons/items/armor.png",
+      "img": "modules/game-icons-net/blackbackground/round-shield.svg",
       "sort": 700000,
       "flags": {
         "core": {

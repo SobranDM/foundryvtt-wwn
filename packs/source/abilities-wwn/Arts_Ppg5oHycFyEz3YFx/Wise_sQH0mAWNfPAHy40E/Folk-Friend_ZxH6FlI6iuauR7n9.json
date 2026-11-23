@@ -1,7 +1,7 @@
 {
   "name": "Folk-Friend",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/village.svg",
   "system": {
     "subType": "art",
     "description": "<p>Commoners and other lower-class natives consider you a useful healer and helper. Once per day, get a modest favor&nbsp;from a commoner who doesn&rsquo;t hate you in exchange for a blessing</p>",

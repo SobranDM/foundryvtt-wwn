@@ -2,7 +2,7 @@
   "folder": "X7ZjQRXF78TzM1O2",
   "name": "Natural Weaponry (L9)",
   "type": "weapon",
-  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "img": "modules/game-icons-net/blackbackground/claw.svg",
   "system": {
     "description": "<p><span class=\"fontstyle0\">You may have physically grown fangs and claws, or it may be that you just intuitively absorbed effective unarmed fighting techniques from your animal companions. When unarmed, your attacks count as weapons that use either Str or Dex </span><span class=\"fontstyle0\">as their modifier, use Punch or Stab as the skill, do 1d8 damage, and have a Shock value of 2/AC 13. These unarmed attacks can harm even creatures immune to non-magical weapons. The damage and Shock of these weapons gains a +1 bonus at level 3, a +2 bonus at level 6, and a +3 bonus at level 9.</span>&nbsp;</p>",
     "damage": "1d8+3",

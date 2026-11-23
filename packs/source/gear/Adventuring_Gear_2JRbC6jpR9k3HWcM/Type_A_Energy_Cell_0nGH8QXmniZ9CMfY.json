@@ -3,7 +3,7 @@
   "name": "Type A Energy Cell",
   "type": "ammo",
   "flags": {},
-  "img": "systems/wwn/assets/icons/items/gear.png",
+  "img": "modules/game-icons-net/blackbackground/battery-pack.svg",
   "effects": [],
   "system": {
     "description": "<p>Standard TL4 energy cell used to reload energy weapons and many devices. One cell typically reloads a weapon magazine.</p>",

@@ -2,7 +2,7 @@
   "folder": "K3QZfmfjxMYojVWz",
   "name": "Feral Toughness",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/beastmaster-art.png",
+  "img": "modules/game-icons-net/blackbackground/bear-face.svg",
   "system": {
     "subType": "art",
     "description": "<p>Your maximum hit point total is increased by the natural, unmodified hit dice of your companion; thus, a 5 hit die companion increases your maximum hit points by 5. You are impervious to normal outdoor extremes of heat or cold. Your base Armor Class is equal to 13 plus half your level, rounded up. This AC can be modified by shields or Dexterity modifiers, but not by armor.</p>",

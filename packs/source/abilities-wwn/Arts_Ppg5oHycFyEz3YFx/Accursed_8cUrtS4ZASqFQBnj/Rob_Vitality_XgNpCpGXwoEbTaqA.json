@@ -1,7 +1,7 @@
 {
   "name": "Rob Vitality",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/life-tap.svg",
   "system": {
     "subType": "art",
     "description": "<p>Once per scene, as an On Turn action, Commit Effort for the scene and target a visible foe. They must make a Physical save or lose their next Main Action, which you immediately gain&nbsp;instead.</p>",

@@ -7,7 +7,7 @@
       "_id": "SBOCKY1jG3IodjLj",
       "name": "Axe, War",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/battle-axe.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -69,7 +69,7 @@
       "_id": "3sWduP3Sn0pMPfHu",
       "name": "Sword, Long",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/broadsword.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -129,7 +129,7 @@
       "_id": "A57ukuTQNetCBRzm",
       "name": "Mundane Damage Immunity",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/shield-disabled.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -173,7 +173,7 @@
       "_id": "A9IPjaFzj8zOnQHj",
       "name": "Immunity",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/surrounded-shield.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -217,7 +217,7 @@
       "_id": "5gtkO6qrO0g3t8nt",
       "name": "Weapons",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/switch-weapon.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -261,7 +261,7 @@
       "_id": "VvQxrfQpoN164UXo",
       "name": "Energy Immunity",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/lightning-shield.svg",
       "sort": 0,
       "flags": {
         "core": {
@@ -305,7 +305,7 @@
       "_id": "V791qCUsmQQSWLrB",
       "name": "Attack Multiple Opponents",
       "type": "power",
-      "img": "systems/wwn/assets/icons/items/ability.png",
+      "img": "modules/game-icons-net/blackbackground/multiple-targets.svg",
       "sort": 0,
       "flags": {},
       "effects": [],
@@ -345,7 +345,7 @@
       "_id": "bQ1eymtY84ETJW0e",
       "name": "Fists",
       "type": "weapon",
-      "img": "systems/wwn/assets/icons/items/weapon.png",
+      "img": "modules/game-icons-net/blackbackground/fist.svg",
       "sort": 0,
       "flags": {},
       "effects": [],

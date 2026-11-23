@@ -2,7 +2,7 @@
   "folder": "C2le956tHhvJOm3X",
   "name": "Read Intent",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/thought-noble-art.png",
+  "img": "modules/game-icons-net/blackbackground/thought-bubble.svg",
   "system": {
     "subType": "art",
     "description": "<p>As an Instant action, Commit Effort for the scene and target a visible living creature. It gets a Mental saving throw to resist; on a failure, the GM will tell you exactly what it is currently intending to do on its next turn, or its next relevant action if used out of combat. If you perform a <em><strong>Total Defense</strong></em> action this round, your insight into its motions ensures that no attack it makes that you could theoretically physically avoid can hit you for the rest of the round.</p>",

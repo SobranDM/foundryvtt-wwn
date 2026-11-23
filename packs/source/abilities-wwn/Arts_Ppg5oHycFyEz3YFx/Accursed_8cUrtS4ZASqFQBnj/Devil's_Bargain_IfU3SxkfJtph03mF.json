@@ -1,7 +1,7 @@
 {
   "name": "Devil's Bargain",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/accursed-art.png",
+  "img": "modules/game-icons-net/blackbackground/contract.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, consecrate a deal you&rsquo;ve made with an uncoerced person. If they violate the deal or its spirit, you know instantly and may inflict 1d6 damage per level&nbsp;on them if desired.</p>",

@@ -1,7 +1,7 @@
 {
   "name": "Auspicious Undertaking",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/sun.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, bless a particular plan or undertaking currently sought by the target. During the plan&rsquo;s execution or while seeking the desired end, the blessed subject can reroll one failed skill check or one missed hit roll. The blessing lasts until it is used, the plan is finished, or one day per caster level has&nbsp;passed. Only one plan can be blessed at a time.</p>",

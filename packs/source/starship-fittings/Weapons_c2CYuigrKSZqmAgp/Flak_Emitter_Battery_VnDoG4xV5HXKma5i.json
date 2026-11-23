@@ -2,7 +2,7 @@
   "_id": "VnDoG4xV5HXKma5i",
   "name": "Flak Emitter Battery",
   "type": "shipWeapon",
-  "img": "icons/svg/explosion.svg",
+  "img": "modules/game-icons-net/blackbackground/anti-aircraft-gun.svg",
   "effects": [],
   "system": {
     "description": "<p>A baseline frigate anti-fighter system, this battery fires waves of lasers or charged particles to knock down small craft.</p>",

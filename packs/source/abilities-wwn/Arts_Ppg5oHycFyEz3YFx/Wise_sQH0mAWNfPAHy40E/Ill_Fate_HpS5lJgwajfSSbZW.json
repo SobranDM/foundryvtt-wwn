@@ -1,7 +1,7 @@
 {
   "name": "Ill Fate",
   "type": "power",
-  "img": "systems/wwn/assets/icons/powers/wise-art.png",
+  "img": "modules/game-icons-net/blackbackground/broken-heart.svg",
   "system": {
     "subType": "art",
     "description": "<p>As a Main Action, curse a visible target. You may specify a particular kind of undertaking or apply the curse to anything they may do. The next pertinent skill check they make is made at a -1 penalty. If their raw die roll is equal or less than the PC&rsquo;s Magic skill plus one their effort goes disastrously wrong. The curse lasts until the&nbsp;next relevant skill check.</p>",
